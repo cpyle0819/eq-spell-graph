@@ -1,0 +1,16 @@
+{
+  "name": "eq-spell-graph",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/server.ts",
+    "migrate": "bun run migrations/001-import-from-markdown.ts"
+  },
+  "dependencies": {
+    "cytoscape": "^3.30.4"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.21.8",
+    "typescript": "^5.7.0"
+  }
+}
