@@ -4,10 +4,12 @@ Faction-aware spell shopping route planner for EverQuest. Given your race, prima
 
 ## Usage
 
+Requires [Bun](https://bun.sh/) >= 1.0.
+
 ```bash
 bun install
-bun run dev
-# → http://localhost:4321
+bun run dev        # → http://localhost:4321
+bun run typecheck  # TypeScript validation
 ```
 
 ## How it works
@@ -39,11 +41,20 @@ Currently loaded: **Shaman** (159 spells, levels 1–50, full vendor mappings). 
 
 ## API
 
+The `levels` parameter takes discrete values, not a range. `levels=5,6,7` returns spells at those three levels. The frontend sends every level in the selected range.
+
 | Endpoint | Purpose |
 |----------|---------|
-| `GET /api/plan?class=shaman&levels=1,9&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
+| `GET /api/plan?class=shaman&levels=5,6,7&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
 | `GET /api/spells?class=shaman&levels=9` | List spells for a class/level |
 | `GET /api/spell/:id/vendors` | NPCs and zones selling a spell |
-| `GET /api/zones` | All zones (for autocomplete) |
+| `GET /api/zones` | All zones |
 | `GET /api/classes` | Classes with loaded spell data |
-| `POST /api/spell`, `/api/npc`, `/api/sells`, `/api/connects` | Mutations |
+| `GET /api/graph` | Full Cytoscape-format graph |
+| `GET /api/stats` | Node/edge counts |
+| `POST /api/spell` | Add a spell |
+| `POST /api/npc` | Add an NPC |
+| `POST /api/zone` | Add a zone |
+| `POST /api/sells` | Link NPC → spell |
+| `POST /api/connects` | Link zone ↔ zone |
+| `DELETE /api/node/:id` | Remove a node and its edges |
