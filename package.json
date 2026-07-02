@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --hot src/server.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "scrape": "bun scripts/scrape-spells.ts",
+    "migrate:008": "bun migrations/008-import-all-classes.ts"
   },
   "engines": {
     "bun": ">=1.0.0"

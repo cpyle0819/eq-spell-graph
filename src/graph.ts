@@ -27,6 +27,7 @@ export interface EdgeData {
   source: string;
   target: string;
   type: string;
+  transport?: "boat";
 }
 
 export interface GraphData {
@@ -98,36 +99,48 @@ export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: Node
   });
 }
 
-export function getZoneAdjacency(): Map<string, string[]> {
+interface AdjEntry { zoneId: string; transport?: "boat"; }
+
+export function getZoneAdjacency(): Map<string, AdjEntry[]> {
   const graph = load();
-  const adj = new Map<string, string[]>();
+  const adj = new Map<string, AdjEntry[]>();
   for (const e of graph.edges) {
     if (e.data.type !== "connects_to") continue;
     if (!adj.has(e.data.source)) adj.set(e.data.source, []);
-    adj.get(e.data.source)!.push(e.data.target);
+    const entry: AdjEntry = { zoneId: e.data.target };
+    if (e.data.transport === "boat") entry.transport = "boat";
+    adj.get(e.data.source)!.push(entry);
   }
   return adj;
 }
 
-export function shortestPath(fromZoneId: string, toZoneId: string): number | null {
-  if (fromZoneId === toZoneId) return 0;
+interface PathStep { zoneId: string; via?: "boat"; }
+
+export interface RouteStep { name: string; via?: "boat"; }
+
+export function shortestPath(fromZoneId: string, toZoneId: string): PathStep[] | null {
+  if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
   const adj = getZoneAdjacency();
-  const visited = new Set<string>([fromZoneId]);
-  let queue = [fromZoneId];
-  let hops = 0;
+  const parent = new Map<string, { from: string; via?: "boat" }>([[fromZoneId, { from: "" }]]);
+  const queue = [fromZoneId];
   while (queue.length > 0) {
-    hops++;
-    const next: string[] = [];
-    for (const z of queue) {
-      for (const neighbor of adj.get(z) || []) {
-        if (neighbor === toZoneId) return hops;
-        if (!visited.has(neighbor)) {
-          visited.add(neighbor);
-          next.push(neighbor);
+    const z = queue.shift()!;
+    for (const { zoneId: neighbor, transport } of adj.get(z) || []) {
+      if (!parent.has(neighbor)) {
+        parent.set(neighbor, { from: z, via: transport });
+        if (neighbor === toZoneId) {
+          const path: PathStep[] = [];
+          let cur: string = neighbor;
+          while (cur !== "") {
+            const p = parent.get(cur)!;
+            path.unshift({ zoneId: cur, ...(p.via ? { via: p.via } : {}) });
+            cur = p.from;
+          }
+          return path;
         }
+        queue.push(neighbor);
       }
     }
-    queue = next;
   }
   return null;
 }
@@ -153,6 +166,7 @@ export interface ZoneRanking {
   zoneId: string;
   zoneName: string;
   hops: number | null;
+  route: RouteStep[];
   faction: FactionStanding;
   spells: SpellVendorInfo[];
   score: number;
@@ -209,7 +223,16 @@ export function rankZones(
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
     const zoneNode = graph.nodes.find((n) => n.data.id === zoneId);
-    const hops = shortestPath(currentZoneId, zoneId);
+    const pathIds = shortestPath(currentZoneId, zoneId);
+    const hops = pathIds ? pathIds.length - 1 : null;
+    const route: RouteStep[] = pathIds
+      ? pathIds.map((step) => {
+          const n = graph.nodes.find((n) => n.data.id === step.zoneId);
+          const entry: RouteStep = { name: n?.data.label || step.zoneId };
+          if (step.via) entry.via = step.via;
+          return entry;
+        })
+      : [];
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
@@ -237,6 +260,7 @@ export function rankZones(
       zoneId,
       zoneName: zoneNode?.data.label || zoneId,
       hops,
+      route,
       faction,
       spells: spells.sort((a, b) => a.level - b.level),
       score,
