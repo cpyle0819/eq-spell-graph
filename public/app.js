@@ -1,7 +1,9 @@
 // --- State ---
 let zones = [];
 let availableClasses = [];
-let cy = null;
+let lastRankings = null;
+let lastLevels = [];
+let showAllSpells = false;
 
 // --- Init ---
 async function init() {
@@ -10,40 +12,194 @@ async function init() {
     fetch("/api/classes").then((r) => r.json()),
   ]);
   populateZoneList();
-  populateShoppingClassSelects();
+  populateShoppingClassSelect();
   setupLevelRange();
-  populateSpellLevelSelect();
-  setupTabs();
   setupPlanner();
-  setupSpellsPanel();
+  setupProfiles();
 }
 
-function populateShoppingClassSelects() {
-  const selects = [document.getElementById("class-select"), document.getElementById("spell-class-select")];
-  for (const select of selects) {
-    select.innerHTML = "";
-    for (const cls of availableClasses) {
-      const opt = document.createElement("option");
-      opt.value = cls;
-      opt.textContent = cls.charAt(0).toUpperCase() + cls.slice(1);
-      select.appendChild(opt);
-    }
+// --- Profiles ---
+const PROFILES_KEY = "eq-planner-profiles";
+const LAST_PROFILE_KEY = "eq-planner-last-profile";
+
+function loadProfiles() {
+  try { return JSON.parse(localStorage.getItem(PROFILES_KEY) || "[]"); }
+  catch { return []; }
+}
+
+function saveProfiles(profiles) {
+  localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
+}
+
+function getFormSnapshot() {
+  return {
+    race: document.getElementById("race-select").value,
+    primaryClass: document.getElementById("primary-class-select").value,
+    deity: document.getElementById("deity-select").value,
+    cls: document.getElementById("class-select").value,
+    zone: document.getElementById("zone-input").value,
+    levelMin: document.getElementById("level-min").value,
+    levelMax: document.getElementById("level-max").value,
+  };
+}
+
+function applyProfile(profile) {
+  document.getElementById("race-select").value = profile.race;
+  document.getElementById("primary-class-select").value = profile.primaryClass;
+  document.getElementById("deity-select").value = profile.deity;
+  document.getElementById("class-select").value = profile.cls;
+  document.getElementById("zone-input").value = profile.zone;
+  document.getElementById("level-min").value = profile.levelMin;
+  document.getElementById("level-max").value = profile.levelMax;
+  document.getElementById("level-min").dispatchEvent(new Event("input"));
+}
+
+function refreshProfileSelect(selectedName = "") {
+  const profiles = loadProfiles();
+  const sel = document.getElementById("profile-select");
+  sel.innerHTML = '<option value="">— select profile —</option>';
+  for (const p of profiles) {
+    const opt = document.createElement("option");
+    opt.value = p.name;
+    opt.textContent = p.name;
+    if (p.name === selectedName) opt.selected = true;
+    sel.appendChild(opt);
   }
 }
 
-// --- Tabs ---
-function setupTabs() {
-  document.querySelectorAll(".tab").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
-      document.querySelectorAll(".panel").forEach((p) => p.classList.remove("active"));
-      tab.classList.add("active");
-      const panel = document.getElementById(tab.dataset.panel);
-      panel.classList.add("active");
-      if (tab.dataset.panel === "graph-panel" && !cy) initGraph();
-    });
+function setProfileMode(mode) {
+  const createRow = document.getElementById("profile-create-row");
+  const sel = document.getElementById("profile-select");
+  const updateBtn = document.getElementById("profile-update-btn");
+  const deleteBtn = document.getElementById("profile-delete-btn");
+  const newBtn = document.getElementById("profile-new-btn");
+
+  if (mode === "create") {
+    createRow.style.display = "flex";
+    newBtn.style.display = "none";
+    updateBtn.style.display = "none";
+    deleteBtn.style.display = "none";
+    sel.disabled = true;
+    document.getElementById("profile-name").value = "";
+    document.getElementById("profile-name").focus();
+  } else {
+    createRow.style.display = "none";
+    sel.disabled = false;
+    newBtn.style.display = "";
+    const hasSelection = !!sel.value;
+    updateBtn.style.display = hasSelection ? "" : "none";
+    deleteBtn.style.display = hasSelection ? "" : "none";
+  }
+}
+
+function setupProfiles() {
+  const lastProfile = localStorage.getItem(LAST_PROFILE_KEY);
+  const autoLoad = lastProfile && loadProfiles().find((p) => p.name === lastProfile);
+  refreshProfileSelect(autoLoad ? lastProfile : "");
+  setProfileMode("browse");
+  if (autoLoad) applyProfile(autoLoad);
+
+  document.getElementById("profile-select").addEventListener("change", (e) => {
+    const name = e.target.value;
+    if (!name) { localStorage.removeItem(LAST_PROFILE_KEY); setProfileMode("browse"); return; }
+    const profile = loadProfiles().find((p) => p.name === name);
+    if (profile) {
+      applyProfile(profile);
+      localStorage.setItem(LAST_PROFILE_KEY, name);
+    }
+    setProfileMode("browse");
+    if (lastRankings) renderRankings(lastRankings, lastLevels);
+  });
+
+  document.getElementById("profile-new-btn").addEventListener("click", () => setProfileMode("create"));
+
+  document.getElementById("profile-cancel-btn").addEventListener("click", () => setProfileMode("browse"));
+
+  document.getElementById("profile-save-btn").addEventListener("click", () => {
+    const name = document.getElementById("profile-name").value.trim();
+    if (!name) return;
+    const profiles = loadProfiles();
+    const idx = profiles.findIndex((p) => p.name === name);
+    const profile = { name, ...getFormSnapshot() };
+    if (idx >= 0) profiles[idx] = profile; else profiles.push(profile);
+    saveProfiles(profiles);
+    refreshProfileSelect(name);
+    localStorage.setItem(LAST_PROFILE_KEY, name);
+    setProfileMode("browse");
+  });
+
+  document.getElementById("profile-update-btn").addEventListener("click", () => {
+    const name = document.getElementById("profile-select").value;
+    if (!name) return;
+    const profiles = loadProfiles();
+    const idx = profiles.findIndex((p) => p.name === name);
+    if (idx >= 0) profiles[idx] = { name, ...getFormSnapshot() };
+    saveProfiles(profiles);
+    localStorage.setItem(LAST_PROFILE_KEY, name);
+  });
+
+  document.getElementById("profile-delete-btn").addEventListener("click", () => {
+    const name = document.getElementById("profile-select").value;
+    if (!name) return;
+    saveProfiles(loadProfiles().filter((p) => p.name !== name));
+    if (localStorage.getItem(LAST_PROFILE_KEY) === name) localStorage.removeItem(LAST_PROFILE_KEY);
+    refreshProfileSelect();
+    setProfileMode("browse");
   });
 }
+
+// --- Owned Spells ---
+const OWNED_GLOBAL_KEY = "eq-planner-owned-global";
+
+function getOwnedSpells() {
+  const name = document.getElementById("profile-select").value;
+  if (name) {
+    const p = loadProfiles().find((p) => p.name === name);
+    return new Set(p?.ownedSpells || []);
+  }
+  try { return new Set(JSON.parse(localStorage.getItem(OWNED_GLOBAL_KEY) || "[]")); }
+  catch { return new Set(); }
+}
+
+function setSpellOwned(spellId, owned) {
+  const name = document.getElementById("profile-select").value;
+  if (name) {
+    const profiles = loadProfiles();
+    const idx = profiles.findIndex((p) => p.name === name);
+    if (idx < 0) return;
+    const set = new Set(profiles[idx].ownedSpells || []);
+    owned ? set.add(spellId) : set.delete(spellId);
+    profiles[idx].ownedSpells = [...set];
+    saveProfiles(profiles);
+  } else {
+    const set = getOwnedSpells();
+    owned ? set.add(spellId) : set.delete(spellId);
+    localStorage.setItem(OWNED_GLOBAL_KEY, JSON.stringify([...set]));
+  }
+}
+
+function clearOwnedSpells() {
+  const name = document.getElementById("profile-select").value;
+  if (name) {
+    const profiles = loadProfiles();
+    const idx = profiles.findIndex((p) => p.name === name);
+    if (idx >= 0) { profiles[idx].ownedSpells = []; saveProfiles(profiles); }
+  } else {
+    localStorage.removeItem(OWNED_GLOBAL_KEY);
+  }
+}
+
+function populateShoppingClassSelect() {
+  const select = document.getElementById("class-select");
+  select.innerHTML = "";
+  for (const cls of availableClasses) {
+    const opt = document.createElement("option");
+    opt.value = cls;
+    opt.textContent = cls.charAt(0).toUpperCase() + cls.slice(1);
+    select.appendChild(opt);
+  }
+}
+
 
 // --- Planner ---
 function populateZoneList() {
@@ -89,6 +245,24 @@ function getSelectedLevels() {
 
 function setupPlanner() {
   document.getElementById("plan-btn").addEventListener("click", runPlan);
+
+  const results = document.getElementById("results");
+  results.addEventListener("change", (e) => {
+    const cb = e.target.closest("input[data-spell-id]");
+    if (!cb) return;
+    setSpellOwned(cb.dataset.spellId, cb.checked);
+    renderRankings(lastRankings, lastLevels);
+  });
+  results.addEventListener("click", (e) => {
+    if (e.target.matches("#toggle-owned-btn")) {
+      showAllSpells = !showAllSpells;
+      renderRankings(lastRankings, lastLevels);
+    }
+    if (e.target.matches("#clear-owned-btn")) {
+      clearOwnedSpells();
+      renderRankings(lastRankings, lastLevels);
+    }
+  });
 }
 
 async function runPlan() {
@@ -105,6 +279,8 @@ async function runPlan() {
     return;
   }
 
+  document.getElementById("results").innerHTML = '<div class="loading">Searching Norrath...</div>';
+
   const params = new URLSearchParams({ class: cls, levels: levels.join(","), from, race, primaryClass, deity });
   const rankings = await fetch(`/api/plan?${params}`).then((r) => r.json());
 
@@ -114,6 +290,8 @@ async function runPlan() {
     return;
   }
 
+  lastRankings = rankings;
+  lastLevels = levels;
   renderRankings(rankings, levels);
 }
 
@@ -124,175 +302,77 @@ function renderRankings(rankings, levels) {
     return;
   }
 
+  const owned = getOwnedSpells();
   const accessible = rankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = rankings.filter((r) => r.faction === "wont_sell");
   const kos = rankings.filter((r) => r.faction === "kos");
-  const totalSpells = new Set(accessible.flatMap((r) => r.spells.map((s) => s.id))).size;
+  const allSpellIds = new Set(accessible.flatMap((r) => r.spells.map((s) => s.id)));
+  const totalSpells = allSpellIds.size;
+  const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
 
   const warnings = [];
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
+  const ownedLabel = ownedCount > 0 ? ` · <span style="color:#4ade80">${ownedCount} owned</span>` : "";
+  const toggleBtn = `<button class="secondary" id="toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
+  const clearBtn = ownedCount > 0 ? `<button class="secondary" id="clear-owned-btn">Clear owned</button>` : "";
+
   el.innerHTML = `<div class="results-header">
-    ${totalSpells} spell(s) across ${accessible.length} accessible zone(s) for levels ${levels.join(", ")}
-    ${warnings.length ? " — " + warnings.join(", ") : ""}
+    <span>${totalSpells} spell(s) across ${accessible.length} zone(s) for levels ${levels.join(", ")}${ownedLabel}${warnings.length ? " — " + warnings.join(", ") : ""}</span>
+    <span class="results-actions">${toggleBtn}${clearBtn}</span>
   </div>`;
 
   const FACTION_LABELS = { safe: "safe", neutral: "neutral", wont_sell: "won't sell", kos: "kill on sight" };
 
   for (const r of rankings) {
+    const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
+    if (!showAllSpells && visibleSpells.length === 0) continue;
+
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const card = document.createElement("div");
     card.className = `zone-card ${r.faction}`;
 
-    const spellRows = r.spells.map((s) => `
-      <div class="spell-row">
-        <span class="spell-chip">${s.name}<span class="lvl">L${s.level}</span></span>
-        <span class="vendor-names">${s.vendors.map((v) => `<span class="vendor-tag">${v}</span>`).join("")}</span>
-      </div>
-    `).join("");
+    const spellRows = r.spells.map((s) => {
+      const isOwned = owned.has(s.id);
+      if (!showAllSpells && isOwned) return "";
+      return `
+        <div class="spell-row${isOwned ? " spell-owned" : ""}">
+          <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
+          <span class="spell-chip">${s.name}<span class="lvl">L${s.level}</span></span>
+          <span class="vendor-names">${s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ","))).map((v) => `<span class="vendor-tag">${v}</span>`).join("")}</span>
+        </div>
+      `;
+    }).join("");
+
+    const routeHtml = r.route && r.route.length > 1
+      ? `<div class="route-path">
+          <span class="route-label">Route</span>
+          <div class="route-steps">${r.route.map((step, i) => {
+            if (i === 0) return `<span class="route-zone">${step.name}</span>`;
+            return step.via === "boat"
+              ? `<span class="boat-sep">⚓</span><span class="route-zone">${step.name}</span>`
+              : `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
+          }).join("")}</div>
+        </div>`
+      : "";
+
+    const spellCount = visibleSpells.length;
+    const ownedHere = r.spells.length - visibleSpells.length;
+    const spellBadge = spellCount + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
 
     card.innerHTML = `
       <div class="zone-card-header">
         <span class="zone-name">${r.zoneName}</span>
         <span class="faction-badge ${r.faction}">${FACTION_LABELS[r.faction] || r.faction}</span>
-        <span class="zone-badge">${r.spells.length} spell${r.spells.length > 1 ? "s" : ""}</span>
+        <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>
       </div>
+      ${routeHtml}
       <div class="spell-vendor-list">${spellRows}</div>
     `;
     el.appendChild(card);
   }
-}
-
-// --- Spells Panel ---
-function populateSpellLevelSelect() {
-  const sel = document.getElementById("spell-level-select");
-  for (let i = 1; i <= 50; i++) {
-    const opt = document.createElement("option");
-    opt.value = String(i);
-    opt.textContent = `Level ${i}`;
-    sel.appendChild(opt);
-  }
-}
-
-function setupSpellsPanel() {
-  const fetch_ = () => fetchSpells();
-  document.getElementById("spell-class-select").addEventListener("change", fetch_);
-  document.getElementById("spell-level-select").addEventListener("change", fetch_);
-  let timeout;
-  document.getElementById("spell-search").addEventListener("input", () => {
-    clearTimeout(timeout);
-    timeout = setTimeout(fetch_, 200);
-  });
-  fetchSpells();
-}
-
-async function fetchSpells() {
-  const cls = document.getElementById("spell-class-select").value;
-  const level = document.getElementById("spell-level-select").value;
-  const search = document.getElementById("spell-search").value.toLowerCase().trim();
-
-  const params = new URLSearchParams({ class: cls });
-  if (level !== "all") params.set("levels", level);
-  const spells = await fetch(`/api/spells?${params}`).then((r) => r.json());
-
-  const filtered = search
-    ? spells.filter((s) => s.label.toLowerCase().includes(search))
-    : spells;
-
-  renderSpellList(filtered, cls);
-}
-
-async function renderSpellList(spells, cls) {
-  const el = document.getElementById("spell-results");
-  if (!spells.length) {
-    el.innerHTML = '<div class="no-results">No spells found.</div>';
-    return;
-  }
-
-  el.innerHTML = "";
-  for (const spell of spells) {
-    const level = spell.class_levels.find((cl) => cl.class === cls)?.level || "?";
-    const detail = document.createElement("div");
-    detail.className = "spell-detail";
-    detail.innerHTML = `<h3>${spell.label} <span style="font-size:12px;color:#888;">(Level ${level})</span></h3>
-      <div class="vendor-loading" style="color:#666;font-size:12px;">Click to load vendors...</div>`;
-    detail.style.cursor = "pointer";
-    detail.addEventListener("click", async () => {
-      const existing = detail.querySelector(".vendor-list");
-      if (existing) { existing.remove(); return; }
-      detail.querySelector(".vendor-loading")?.remove();
-      const vendors = await fetch(`/api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
-      const list = document.createElement("div");
-      list.className = "vendor-list";
-      if (!vendors.length) {
-        list.innerHTML = '<div style="color:#666;font-size:12px;">No vendors found</div>';
-      } else {
-        list.innerHTML = vendors.map((v) =>
-          `<div class="vendor-row"><span>${v.npc.label}</span><span class="zone-tag">— ${v.zone?.label || "unknown zone"}</span></div>`
-        ).join("");
-      }
-      detail.appendChild(list);
-    }, { once: false });
-    el.appendChild(detail);
-  }
-}
-
-// --- Graph (lazy loaded) ---
-async function initGraph() {
-  const graph = await fetch("/api/graph").then((r) => r.json());
-  const elements = [
-    ...graph.nodes.map((n) => ({ group: "nodes", data: n.data })),
-    ...graph.edges
-      .filter((e) => e.data.type !== "connects_to")
-      .map((e) => ({ group: "edges", data: e.data })),
-  ];
-
-  cy = cytoscape({
-    container: document.getElementById("cy"),
-    elements,
-    style: [
-      {
-        selector: "node",
-        style: {
-          label: "data(label)",
-          "font-size": "7px",
-          color: "#ddd",
-          "text-valign": "bottom",
-          "text-margin-y": 3,
-          "background-color": (ele) => {
-            const t = ele.data("type");
-            if (t === "spell") return "#e94560";
-            if (t === "zone") return "#0f3460";
-            return "#533483";
-          },
-          width: (ele) => (ele.data("type") === "zone" ? 28 : ele.data("type") === "spell" ? 16 : 10),
-          height: (ele) => (ele.data("type") === "zone" ? 28 : ele.data("type") === "spell" ? 16 : 10),
-          shape: (ele) => {
-            const t = ele.data("type");
-            if (t === "spell") return "star";
-            if (t === "zone") return "diamond";
-            return "ellipse";
-          },
-        },
-      },
-      {
-        selector: "edge",
-        style: {
-          width: 0.4,
-          "line-color": "#333",
-          "curve-style": "bezier",
-          "target-arrow-shape": "triangle",
-          "target-arrow-color": "#444",
-          "arrow-scale": 0.4,
-        },
-      },
-    ],
-    layout: { name: "cose", animate: false, nodeRepulsion: 6000 },
-    minZoom: 0.05,
-    maxZoom: 5,
-  });
 }
 
 init();

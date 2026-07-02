@@ -3,140 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EQ Spell Planner</title>
+  <title>Norrath Spell Planner</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #1a1a2e;
-      color: #eee;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #141210;
+      color: #f0e4c8;
       height: 100vh;
       display: flex;
       flex-direction: column;
+      font-size: 14px;
     }
+
     header {
-      padding: 12px 20px;
-      background: #16213e;
-      border-bottom: 1px solid #0f3460;
+      padding: 14px 28px;
+      background: #1a1610;
+      border-bottom: 1px solid #3a2e18;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
     }
-    header h1 { font-size: 18px; color: #e94560; }
-    .tabs {
-      display: flex;
-      gap: 4px;
-      margin-left: auto;
-    }
-    .tab {
-      padding: 6px 14px;
-      background: #0f3460;
-      border: 1px solid #533483;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 13px;
-      color: #aaa;
-    }
-    .tab.active { background: #533483; color: #fff; }
-    .panel { display: none; flex: 1; overflow: hidden; }
-    .panel.active { display: flex; flex-direction: column; }
+    .header-title { display: flex; flex-direction: column; gap: 3px; }
+    header h1 { font-size: 22px; font-weight: 800; color: #e8a82a; letter-spacing: -0.01em; }
+    .header-sub { font-size: 11px; color: #6a5438; letter-spacing: 0.18em; text-transform: uppercase; }
 
-    /* Planner */
-    #planner { padding: 20px; overflow-y: auto; }
+    .nav-link {
+      padding: 8px 18px; background: transparent;
+      border: 1px solid #3a2e18; border-radius: 6px;
+      font-size: 12px; color: #8a6838; text-decoration: none;
+      letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
+      transition: all 150ms ease-out; margin-left: auto;
+    }
+    .nav-link:hover { border-color: #5a4828; color: #c8a860; background: rgba(200,168,42,0.06); }
+    .nav-link:focus-visible { outline: 2px solid #e8a82a; outline-offset: 2px; }
+
+    /* ── Planner ── */
+    #planner { padding: 24px 28px 0; display: flex; flex-direction: column; overflow: hidden; flex: 1; }
+    #results {
+      flex: 1; min-height: 0; overflow-y: auto;
+      padding-bottom: 24px; padding-right: 20px;
+      scrollbar-width: thin; scrollbar-color: #3a2e18 transparent;
+    }
+    #results::-webkit-scrollbar { width: 5px; }
+    #results::-webkit-scrollbar-track { background: transparent; }
+    #results::-webkit-scrollbar-thumb { background: #3a2e18; border-radius: 3px; }
+    #results::-webkit-scrollbar-thumb:hover { background: #5a4828; }
+
+    .controls-panel {
+      background: #1d1810; border: 1px solid #3a2e18;
+      border-radius: 12px; margin-bottom: 24px; overflow: hidden; flex-shrink: 0;
+    }
+
+    .profile-bar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      padding: 12px 20px; border-bottom: 1px solid #2e2418;
+      background: #191510;
+    }
+    .profile-bar .field input[type="text"] { width: 160px; }
+    .profile-label { font-size: 11px; color: #6a5438; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+
     .planner-controls {
-      display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
-      margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #0f3460;
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 16px 20px;
     }
-    .field { display: flex; align-items: center; gap: 6px; }
-    .field label { font-size: 12px; color: #888; white-space: nowrap; }
+    .control-sep { width: 100%; height: 1px; background: #3a2e18; margin: 4px 0; flex-shrink: 0; }
+
+    .field { display: flex; align-items: center; gap: 10px; }
+    .field label { font-size: 11px; color: #8a6838; white-space: nowrap; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; min-width: 100px; }
     .field select, .field input {
-      background: #0f3460; border: 1px solid #533483; color: #eee;
-      padding: 6px 10px; border-radius: 4px; font-size: 14px;
+      background: #0f0e0b; border: 1px solid #4a3818; color: #f0e4c8;
+      padding: 7px 12px; border-radius: 6px; font-size: 13px;
+      transition: border-color 150ms, box-shadow 150ms;
+      flex: 1; min-width: 0;
     }
-    .field input[type="text"] { width: 200px; }
-    .range-picker { display: flex; align-items: center; gap: 8px; }
+    .field .range-picker { flex: 1; min-width: 0; }
+    .field select:hover, .field input:hover { border-color: #6a5028; }
+    .field select:focus, .field input:focus { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); outline: none; }
+
+    .range-picker { display: flex; align-items: center; gap: 10px; }
     .range-picker input[type="range"] {
-      -webkit-appearance: none; appearance: none; width: 80px; height: 6px;
-      background: #0f3460; border-radius: 3px; outline: none;
+      -webkit-appearance: none; appearance: none; width: 90px; height: 3px;
+      background: #3a2e18; border-radius: 2px; cursor: pointer;
     }
     .range-picker input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none; width: 16px; height: 16px;
-      background: #e94560; border-radius: 50%; cursor: pointer;
+      background: #e8a82a; border-radius: 50%; cursor: pointer;
     }
-    .range-display { font-size: 13px; color: #e94560; font-weight: 600; white-space: nowrap; width: 50px; text-align: center; }
-    button {
-      padding: 8px 16px; background: #e94560; border: none; color: #fff;
-      border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500;
-    }
-    button:hover { background: #c73e54; }
+    .range-picker input[type="range"]:focus-visible { outline: 2px solid #e8a82a; outline-offset: 3px; }
+    .range-display { font-size: 14px; color: #e8a82a; font-weight: 700; white-space: nowrap; min-width: 58px; text-align: center; }
 
-    /* Results */
-    .results-header { font-size: 14px; color: #aaa; margin-bottom: 12px; }
+    button {
+      padding: 9px 22px; background: #e8a82a; border: none;
+      color: #1a0e00; border-radius: 6px; cursor: pointer;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
+      transition: all 150ms ease-out;
+    }
+    button:hover { background: #f0b840; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,168,42,0.35); }
+    button:active { transform: none; box-shadow: none; }
+    button:focus-visible { outline: 2px solid #f0e4c8; outline-offset: 2px; }
+
+    button.secondary {
+      background: transparent; border: 1px solid #3a2e18;
+      color: #8a6838; padding: 6px 14px; font-size: 12px;
+      font-weight: 400; letter-spacing: 0.03em; box-shadow: none; transform: none;
+    }
+    button.secondary:hover { border-color: #5a4828; color: #c8a860; background: rgba(200,168,42,0.06); box-shadow: none; transform: none; }
+    button.secondary:focus-visible { outline: 2px solid #e8a82a; outline-offset: 2px; }
+
+    /* ── Results ── */
+    .results-header {
+      font-size: 13px; color: #8a6838; margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .results-actions { display: flex; gap: 6px; margin-left: auto; }
+    .spell-check { display: flex; align-items: center; }
+    .spell-check input { cursor: pointer; accent-color: #e8a82a; width: 15px; height: 15px; }
+    .spell-owned { opacity: 0.3; }
+    .spell-owned .spell-chip { text-decoration: line-through; }
+
+    /* Zone cards — top accent border + faction gradient */
     .zone-card {
-      background: #16213e; border: 1px solid #0f3460; border-radius: 8px;
-      padding: 14px 18px; margin-bottom: 12px;
+      background: #1d1810; border: 1px solid #3a2e18;
+      border-top: 2px solid #4a3818;
+      border-radius: 10px; padding: 18px 22px; margin-bottom: 14px;
+      transition: border-color 150ms, transform 150ms, box-shadow 150ms;
     }
-    .zone-card-header {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
-    }
-    .zone-name { font-size: 16px; font-weight: 600; color: #e94560; }
+    .zone-card:hover { border-color: #5a4828; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+
+    .zone-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+    .zone-name { font-size: 20px; font-weight: 700; color: #f0e4c8; }
+
     .zone-badge {
-      font-size: 11px; padding: 2px 8px; border-radius: 10px;
-      background: #533483; color: #ddd;
+      font-size: 12px; padding: 3px 10px; border-radius: 20px;
+      background: #141210; border: 1px solid #3a2e18; color: #8a6838;
     }
-    .zone-badge.hops { background: #0f3460; }
-    .spell-vendor-list { display: flex; flex-direction: column; gap: 6px; }
+    .zone-badge.hops { color: #b89050; }
+
+    .route-path {
+      margin-top: 14px; margin-bottom: 16px; padding: 12px 16px; border-radius: 8px;
+      background: rgba(232,168,42,0.07); border: 1px solid rgba(232,168,42,0.18);
+    }
+    .route-label {
+      display: block; font-size: 10px; color: #8a6838;
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2; }
+    .route-zone { color: #c8a860; font-weight: 500; }
+    .route-sep { color: #e8a82a; margin: 0 5px; font-weight: 700; }
+    .boat-sep { color: #60a5fa; margin: 0 6px; font-size: 15px; }
+
+    .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
     .spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .spell-chip {
-      font-size: 12px; padding: 3px 8px; border-radius: 4px;
-      background: #1a1a2e; border: 1px solid #533483; color: #ccc;
-      white-space: nowrap;
+      font-size: 13px; padding: 3px 10px; border-radius: 5px;
+      background: #141210; border: 1px solid #3a2e18; color: #e8d0a0; white-space: nowrap;
     }
-    .spell-chip .lvl { color: #888; margin-left: 4px; }
-    .vendor-names { display: flex; flex-wrap: wrap; gap: 4px; }
+    .spell-chip .lvl { color: #8a6838; margin-left: 4px; font-size: 12px; }
+
+    .vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
     .vendor-tag {
-      font-size: 11px; padding: 2px 6px; border-radius: 3px;
-      background: #0f3460; color: #8ab4f8;
+      font-size: 12px; padding: 3px 8px; border-radius: 4px;
+      background: #141210; border: 1px solid rgba(255,255,255,0.08); color: #6a8898;
     }
-    .zone-card.kos { opacity: 0.4; border-color: #661020; }
-    .zone-card.kos .zone-name { color: #993040; }
-    .zone-card.wont_sell { opacity: 0.7; border-color: #664420; }
-    .zone-card.wont_sell .zone-name { color: #cc8833; }
-    .zone-card.neutral { border-color: #555; }
-    .faction-badge { font-size: 10px; padding: 2px 6px; border-radius: 8px; text-transform: uppercase; font-weight: 600; }
-    .faction-badge.safe { background: #1a4d2e; color: #4ade80; }
-    .faction-badge.neutral { background: #4a4520; color: #fbbf24; }
-    .faction-badge.wont_sell { background: #4d3a1a; color: #f59e0b; }
-    .faction-badge.kos { background: #4d1a1a; color: #f87171; }
-    .no-results { color: #666; font-style: italic; padding: 40px 0; text-align: center; }
 
-    /* Spell detail */
+    /* Faction */
+    .zone-card.safe    { border-top-color: #22c55e; background: linear-gradient(180deg, rgba(34,197,94,0.06) 0%, #1d1810 60px); }
+    .zone-card.neutral { border-top-color: #f59e0b; background: linear-gradient(180deg, rgba(245,158,11,0.06) 0%, #1d1810 60px); }
+    .zone-card.wont_sell { opacity: 0.5; border-top-color: #f97316; }
+    .zone-card.kos     { opacity: 0.22; border-top-color: #ef4444; }
+
+    .faction-badge {
+      font-size: 11px; padding: 3px 9px; border-radius: 5px;
+      text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;
+    }
+    .faction-badge.safe    { background: rgba(34,197,94,0.12);  color: #22c55e; border: 1px solid rgba(34,197,94,0.25); }
+    .faction-badge.neutral { background: rgba(245,158,11,0.12); color: #f59e0b; border: 1px solid rgba(245,158,11,0.25); }
+    .faction-badge.wont_sell { background: rgba(249,115,22,0.12); color: #f97316; border: 1px solid rgba(249,115,22,0.25); }
+    .faction-badge.kos     { background: rgba(239,68,68,0.12);  color: #ef4444; border: 1px solid rgba(239,68,68,0.25); }
+
+    .no-results { color: #6a5438; font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
+    .loading    { color: #8a6838; padding: 52px 0; text-align: center; letter-spacing: 0.2em; font-size: 11px; text-transform: uppercase; }
+
+    /* Spell detail (Spells tab) */
     .spell-detail {
-      background: #16213e; border: 1px solid #0f3460; border-radius: 8px;
-      padding: 14px 18px; margin-bottom: 12px;
+      background: #1d1810; border: 1px solid #3a2e18; border-radius: 10px;
+      padding: 16px 20px; margin-bottom: 12px; cursor: pointer;
+      transition: border-color 150ms, transform 150ms, box-shadow 150ms;
     }
-    .spell-detail h3 { color: #e94560; margin-bottom: 8px; }
-    .vendor-row { display: flex; gap: 8px; padding: 4px 0; font-size: 13px; color: #ccc; }
-    .vendor-row .zone-tag { color: #888; }
+    .spell-detail:hover { border-color: #5a4828; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.35); }
+    .spell-detail h3 { color: #e8a82a; margin-bottom: 8px; font-size: 15px; }
+    .vendor-row { display: flex; gap: 8px; padding: 4px 0; font-size: 13px; color: #8a6838; }
+    .vendor-row .zone-tag { color: #6a5438; }
 
-    /* Graph tab */
-    #graph-panel { position: relative; }
-    #cy { flex: 1; }
+    /* Footer */
+    footer {
+      padding: 10px 28px; border-top: 1px solid #2a1e0c; flex-shrink: 0;
+      font-size: 11px; color: #4a3818; text-align: center; letter-spacing: 0.04em;
+    }
+
+    /* Wide layout: sidebar */
+    @media (min-width: 1100px) {
+      #planner { flex-direction: row; padding: 24px 28px; gap: 24px; align-items: flex-start; overflow: visible; }
+      .controls-panel { width: 300px; min-width: 300px; flex-shrink: 0; margin-bottom: 0; position: sticky; top: 24px; }
+      .field label { min-width: 0; width: 100%; }
+      .field { flex-direction: column; align-items: stretch; gap: 4px; }
+      #plan-btn { width: 100%; margin-top: 6px; }
+      #results { overflow-y: auto; padding-bottom: 0; padding-right: 16px; }
+    }
+
+    /* Narrow: stack vertically */
+    @media (max-width: 700px) {
+      #planner { padding: 14px 16px 0; }
+      .planner-controls { gap: 12px; padding: 14px 16px; }
+      .profile-bar { padding: 10px 16px; }
+      .control-sep { display: none; }
+      button { min-height: 44px; }
+      button.secondary { min-height: 40px; }
+    }
 
   </style>
 </head>
 <body>
   <header>
-    <h1>EQ Spell Planner</h1>
-    <div class="tabs">
-      <div class="tab active" data-panel="planner">Planner</div>
-      <div class="tab" data-panel="spells-panel">Spells</div>
-      <div class="tab" data-panel="graph-panel">Graph</div>
+    <div class="header-title">
+      <h1>Norrath Spell Planner</h1>
+      <p class="header-sub">Fan-Made Route Tool</p>
     </div>
+    <a class="nav-link" href="/spells.html">Spell Browser</a>
   </header>
 
-  <!-- Planner Panel -->
-  <div id="planner" class="panel active">
+  <div id="planner">
+    <div class="controls-panel">
+    <div class="profile-bar">
+      <span class="profile-label">Character</span>
+      <div class="field">
+        <select id="profile-select"><option value="">— select profile —</option></select>
+      </div>
+      <button class="secondary" id="profile-new-btn">+ New</button>
+      <button class="secondary" id="profile-update-btn" style="display:none">Update</button>
+      <button class="secondary" id="profile-delete-btn" style="display:none">Delete</button>
+      <div id="profile-create-row" style="display:none; gap:8px; align-items:center;">
+        <input type="text" id="profile-name" placeholder="profile name...">
+        <button class="secondary" id="profile-save-btn">Save</button>
+        <button class="secondary" id="profile-cancel-btn">Cancel</button>
+      </div>
+    </div>
     <div class="planner-controls">
       <div class="field">
         <label>Race</label>
@@ -198,6 +311,7 @@
           <option value="veeshan">Veeshan</option>
         </select>
       </div>
+      <div class="control-sep" aria-hidden="true"></div>
       <div class="field">
         <label>Shopping For (class)</label>
         <select id="class-select"></select>
@@ -218,38 +332,11 @@
       </div>
       <button id="plan-btn">Plan Route</button>
     </div>
+    </div><!-- .controls-panel -->
     <div id="results"></div>
   </div>
 
-  <!-- Spells List Panel -->
-  <div id="spells-panel" class="panel">
-    <div style="padding: 20px; overflow-y: auto; flex: 1;">
-      <div class="planner-controls">
-        <div class="field">
-          <label>Class</label>
-          <select id="spell-class-select"></select>
-        </div>
-        <div class="field">
-          <label>Level</label>
-          <select id="spell-level-select">
-            <option value="all">All</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Search</label>
-          <input type="text" id="spell-search" placeholder="spell name...">
-        </div>
-      </div>
-      <div id="spell-results"></div>
-    </div>
-  </div>
-
-  <!-- Graph Panel -->
-  <div id="graph-panel" class="panel">
-    <div id="cy"></div>
-  </div>
-
-  <script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak.</footer>
   <script src="app.js"></script>
 </body>
 </html>
