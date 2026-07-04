@@ -13,11 +13,20 @@ bun run migrations/NNN-*.ts  # Run a specific migration
 
 ## Structure
 
-- `data/graph.json` — source of truth (never regenerate from markdown; mutate through `src/graph.ts`)
+- `data/graph.json` — source of truth (never regenerate from markdown; mutate through `src/graph.ts`, in practice via a migration — see below)
 - `src/graph.ts` — data access layer, all reads and writes
-- `src/server.ts` — HTTP API + static file serving
-- `public/` — SPA (vanilla HTML/JS, no build step)
+- `src/api.ts` — read-only route table, shared by both entry points below
+- `src/server.ts` — local Bun dev server: `src/api.ts` routes + dev-only mutation routes + static file serving
+- `src/lambda.ts` — Lambda handler wrapping `src/api.ts`; no mutation routes, no knowledge of deployment domain/path
+- `scripts/build-lambda.ts` — packages `src/lambda.ts` + `data/graph.json` into `dist-lambda.zip`
+- `public/` — SPA (vanilla HTML/JS, no build step); all links/fetches are path-relative, not domain-root-absolute
 - `migrations/` — historical, numbered, run-once transformations
+
+## Updating the graph
+
+Never hand-edit `data/graph.json` or regenerate it wholesale. Write a new numbered migration in `migrations/` following the pattern of any existing one (read the file, transform, write it back), run it once with `bun run migrations/NNN-*.ts`, and it stays applied.
+
+**If this app is deployed as a Lambda, the deployment holds its own bundled snapshot of `data/graph.json` from whenever `bun run build:lambda` last ran.** It does not read live from this repo or fetch data at runtime. Running a migration locally has zero effect on a live deployment until someone rebuilds and redeploys — this repo has no hook that does that automatically, and doesn't know how deployment is done for whatever's consuming its Lambda build (see `README.md`'s "Deploying" section, and note that's a deliberate boundary — this repo has no code, comments, or docs describing a specific domain, path, or cloud setup; that lives entirely in whichever separate infra repo does the deploying).
 
 ## Design Decisions
 

@@ -12,14 +12,14 @@ interface LambdaResponse {
   body: string;
 }
 
-// CloudFront routes /norraph/api/* here with the prefix intact; strip it
-// before matching against the same route table src/server.ts uses locally.
-const PATH_PREFIX = "/norraph";
-
+// This handler has no knowledge of where it's mounted (domain, path prefix,
+// etc.) — it expects rawPath already relative to its own root, matching the
+// same route table src/server.ts uses locally. Whatever's in front of this
+// Lambda (CloudFront, API Gateway, ...) is responsible for stripping any
+// path prefix before forwarding the request; that's a deployment concern,
+// not an application one.
 export async function handler(event: LambdaFunctionUrlEvent): Promise<LambdaResponse> {
-  const pathname = event.rawPath.startsWith(PATH_PREFIX)
-    ? event.rawPath.slice(PATH_PREFIX.length) || "/"
-    : event.rawPath;
+  const pathname = event.rawPath || "/";
   const searchParams = new URLSearchParams(event.rawQueryString);
 
   const result = await handleApi(pathname, searchParams);

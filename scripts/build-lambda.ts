@@ -1,6 +1,7 @@
 /**
- * Builds the Lambda deployment package for the Norraph API (coreypyle.com/norraph/api/*).
- * Output: dist-lambda.zip, ready for `aws_lambda_function.filename` / Terraform.
+ * Builds the Lambda deployment package for src/lambda.ts (see that file for
+ * why it has no knowledge of where/how it's actually deployed).
+ * Output: dist-lambda.zip, consumed by whatever infra repo deploys this app.
  *
  * Layout mirrors the source tree (src/lambda.js next to data/graph.json) so
  * graph.ts's `resolve(__dirname, "../data/graph.json")` resolves the same

@@ -37,26 +37,46 @@ Spell, NPC, and zone data lives in a single graph (`data/graph.json`). The plann
 
 ## Data
 
-Currently loaded: **Shaman** (159 spells, levels 1–50, full vendor mappings). Other classes can be added by extending `spell.class_levels` on existing nodes or importing new spells.
+All 12 classes, 1,064 spells, 73 zones (47 with vendors), full bidirectional zone connectivity, boat crossings flagged. Most spells also carry description/mana/cast-time/etc. detail (see `DECISIONS.md`).
 
-71 zones with full bidirectional connectivity. 251 NPCs with zone and spell associations.
+**Updating the graph:** `data/graph.json` is never hand-edited or regenerated wholesale. Changes go through a numbered, run-once migration in `migrations/` (e.g. `bun run migrations/012-normalize-skill-names.ts`) that reads the current file, transforms it, and writes it back — see any existing migration for the pattern. `src/graph.ts` is the only code allowed to read/write it outside of migrations.
 
-## API
+If this app is deployed as a Lambda (see "Deploying" below), **the deployment has its own bundled snapshot of `data/graph.json` — it does not read live from this repo.** Running a migration locally changes nothing for a live deployment until that deployment is rebuilt and redeployed.
 
-The `levels` parameter takes discrete values, not a range. `levels=5,6,7` returns spells at those three levels. The frontend sends every level in the selected range.
+## API (read-only, shared between local dev and any Lambda deployment)
+
+The `levelMin`/`levelMax` params take a range; `class`/`spells`/`zones` take comma-separated lists.
 
 | Endpoint | Purpose |
 |----------|---------|
-| `GET /api/plan?class=shaman&levels=5,6,7&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
+| `GET /api/plan?class=shaman,druid&levelMin=5&levelMax=7&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
+| `GET /api/route?from=Halas&to=Kelethin` | Point-to-point route, boat hops flagged |
 | `GET /api/spells?class=shaman&levels=9` | List spells for a class/level |
+| `GET /api/spells/search?q=spirit` | Spell name autocomplete |
 | `GET /api/spell/:id/vendors` | NPCs and zones selling a spell |
 | `GET /api/zones` | All zones |
 | `GET /api/classes` | Classes with loaded spell data |
 | `GET /api/graph` | Full Cytoscape-format graph |
 | `GET /api/stats` | Node/edge counts |
+
+## Mutation endpoints (local dev only — not in the Lambda build)
+
+| Endpoint | Purpose |
+|----------|---------|
 | `POST /api/spell` | Add a spell |
 | `POST /api/npc` | Add an NPC |
 | `POST /api/zone` | Add a zone |
 | `POST /api/sells` | Link NPC → spell |
 | `POST /api/connects` | Link zone ↔ zone |
 | `DELETE /api/node/:id` | Remove a node and its edges |
+
+These have no auth and only exist in `src/server.ts` (the local Bun server) — see `DECISIONS.md` for why they're never bundled into the Lambda build.
+
+## Deploying
+
+This repo has no opinion on where or how it's hosted — no hardcoded domain, path prefix, or cloud-provider assumption anywhere in the code. It exposes two ways to run:
+
+- `bun run dev` — the full app (API + static frontend) via Bun, for local use.
+- `bun run build:lambda` — packages `src/lambda.ts` (a Lambda handler wrapping the same read-only route table `server.ts` uses) plus `data/graph.json` into `dist-lambda.zip`. Whatever infra deploys this app owns all routing/domain/path/CDN decisions — none of that lives here. `src/lambda.ts` expects to receive request paths already relative to its own root; stripping any external path prefix is the deploying infra's job.
+
+The frontend (`public/*`) doesn't assume it's served from a domain root either — all API calls and inter-page links are relative paths, not `/api/...` absolutes, so the same static files work whether served from `/` or from underneath some path prefix.
