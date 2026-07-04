@@ -24,6 +24,11 @@ Edges encode relationships, not containment. An NPC can be both vendor and quest
 ### Planning and routing are separate concerns
 `rankZones()` (shop planning: "where should I go?") and `getRoute()` (point-to-point: "how do I get from A to B?") are independent functions/endpoints even though both walk the same zone graph via `shortestPath()`. The Route Finder page (`public/route.html`) exists separately from the planner rather than folding routing into it, because "get me from A to B" is a distinct question from "where should I shop" and doesn't need faction or spell context.
 
+### Read-only routes are shared; mutation routes are Bun-server-only
+`src/api.ts` holds the GET route table (`/api/plan`, `/api/route`, `/api/spells`, etc.) and is imported by both `src/server.ts` (local Bun dev server) and `src/lambda.ts` (production Lambda for coreypyle.com/norraph/api/*) — one route table, no drift between the two entry points. The POST/DELETE mutation routes (`/api/spell`, `/api/npc`, `/api/node/:id`, ...) stay in `server.ts` only and are never deployed: they have no auth, and Lambda's `/var/task` filesystem is read-only at runtime anyway, so `graph.ts`'s `writeFileSync` would just fail there. Data changes still go through migrations, run locally, redeployed as part of the next Lambda package — not through live mutation calls.
+
+`graph.ts` resolves `data/graph.json`'s path via `fileURLToPath(import.meta.url)` rather than Bun's `import.meta.dir`, since the Lambda bundle runs under the Node.js runtime, not Bun.
+
 ## Faction System (EQ Domain)
 
 ### Three dimensions determine vendor access
