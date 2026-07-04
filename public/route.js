@@ -1,18 +1,27 @@
+const STATE_KEY = "eq-route-state";
+
 async function init() {
   const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
-  applyDefaults(zones);
-  document.getElementById("route-from").addEventListener("change", runRoute);
-  document.getElementById("route-to").addEventListener("change", runRoute);
+  restoreState();
+  document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
+  document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
   runRoute();
 }
 
-function applyDefaults(zones) {
-  const labels = zones.map((z) => z.label);
-  const pick = (preferred, fallbackIndex) =>
-    labels.includes(preferred) ? preferred : zones[fallbackIndex]?.label ?? "";
-  document.getElementById("route-from").value = pick("Halas", 0);
-  document.getElementById("route-to").value = pick("West Freeport", Math.floor(zones.length / 2));
+function restoreState() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
+    if (!s) return;
+    if (s.from) document.getElementById("route-from").value = s.from;
+    if (s.to) document.getElementById("route-to").value = s.to;
+  } catch { /* ignore malformed state */ }
+}
+
+function saveState() {
+  const from = document.getElementById("route-from").value;
+  const to = document.getElementById("route-to").value;
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to }));
 }
 
 function populateZones(zones) {
