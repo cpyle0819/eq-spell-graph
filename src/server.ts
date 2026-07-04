@@ -1,108 +1,17 @@
-import {
-  getGraph, getSpellsForClass, getVendorsForSpell,
-  rankZones, getRoute, addSpell, addZone, addNpc, addSellsEdge,
-  addConnectsTo, removeNode, stats
-} from "./graph";
-
-function slugify(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
+import { addSpell, addZone, addNpc, addSellsEdge, addConnectsTo, removeNode } from "./graph";
+import { handleApi } from "./api";
 
 const server = Bun.serve({
   port: 4321,
   async fetch(req) {
     const url = new URL(req.url);
 
-    // --- API ---
+    // --- API (read-only routes, shared with the Lambda deployment) ---
 
-    if (url.pathname === "/api/graph") {
-      return Response.json(getGraph());
-    }
+    const apiResult = await handleApi(url.pathname, url.searchParams);
+    if (apiResult) return Response.json(apiResult.body, { status: apiResult.status });
 
-    if (url.pathname === "/api/stats") {
-      return Response.json(stats());
-    }
-
-    // GET /api/spells/search?q=spirit
-    if (url.pathname === "/api/spells/search") {
-      const q = (url.searchParams.get("q") || "").toLowerCase().trim();
-      if (q.length < 2) return Response.json([]);
-      const graph = getGraph();
-      const matches = graph.nodes
-        .filter((n) => n.data.type === "spell" && n.data.label.toLowerCase().includes(q))
-        .map((n) => ({ id: n.data.id, label: n.data.label }))
-        .sort((a, b) => {
-          const ai = a.label.toLowerCase().indexOf(q), bi = b.label.toLowerCase().indexOf(q);
-          return ai !== bi ? ai - bi : a.label.localeCompare(b.label);
-        })
-        .slice(0, 12);
-      return Response.json(matches);
-    }
-
-    // GET /api/spells?class=shaman&levels=9,10,11
-    if (url.pathname === "/api/spells") {
-      const cls = url.searchParams.get("class") || "shaman";
-      const levelsParam = url.searchParams.get("levels");
-      const levels = levelsParam ? levelsParam.split(",").map(Number) : undefined;
-      return Response.json(getSpellsForClass(cls, levels));
-    }
-
-    // GET /api/spell/:id/vendors
-    if (url.pathname.startsWith("/api/spell/") && url.pathname.endsWith("/vendors")) {
-      const id = decodeURIComponent(url.pathname.slice("/api/spell/".length, -"/vendors".length));
-      return Response.json(getVendorsForSpell(id));
-    }
-
-    // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal
-    if (url.pathname === "/api/plan") {
-      const classNames = (url.searchParams.get("class") || "").split(",").filter(Boolean);
-      const levelMin = parseInt(url.searchParams.get("levelMin") || "1");
-      const levelMax = parseInt(url.searchParams.get("levelMax") || "1");
-      const levels: number[] = [];
-      for (let i = levelMin; i <= levelMax; i++) levels.push(i);
-      const from = url.searchParams.get("from") || "";
-      const race = url.searchParams.get("race") || undefined;
-      const primaryClass = url.searchParams.get("primaryClass") || undefined;
-      const deity = url.searchParams.get("deity") || undefined;
-      const fromId = `zone:${slugify(from)}`;
-      const extraSpellIds = (url.searchParams.get("spells") || "").split(",").filter(Boolean);
-      const specificZoneIds = (url.searchParams.get("zones") || "").split(",").filter(Boolean);
-      return Response.json(rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds));
-    }
-
-    // GET /api/route?from=Halas&to=Kelethin
-    if (url.pathname === "/api/route") {
-      const from = url.searchParams.get("from") || "";
-      const to = url.searchParams.get("to") || "";
-      if (!from || !to) return Response.json({ error: "from and to required" }, { status: 400 });
-      return Response.json(getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`));
-    }
-
-    // GET /api/classes — list classes that have spell data
-    if (url.pathname === "/api/classes") {
-      const graph = getGraph();
-      const classes = new Set<string>();
-      for (const n of graph.nodes) {
-        if (n.data.type === "spell" && n.data.class_levels) {
-          for (const cl of n.data.class_levels) {
-            classes.add(cl.class);
-          }
-        }
-      }
-      return Response.json([...classes].sort());
-    }
-
-    // GET /api/zones — list all zone nodes
-    if (url.pathname === "/api/zones") {
-      const graph = getGraph();
-      const zones = graph.nodes
-        .filter((n) => n.data.type === "zone")
-        .map((n) => ({ id: n.data.id, label: n.data.label }))
-        .sort((a, b) => a.label.localeCompare(b.label));
-      return Response.json(zones);
-    }
-
-    // --- Mutations ---
+    // --- Mutations (dev-only — never deployed to the public Lambda) ---
 
     if (req.method === "POST" && url.pathname === "/api/spell") {
       const body = await req.json();

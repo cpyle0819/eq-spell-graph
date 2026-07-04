@@ -6,7 +6,12 @@
  */
 
 import { readFileSync, writeFileSync } from "fs";
-import { resolve } from "path";
+import { dirname, resolve } from "path";
+import { fileURLToPath } from "url";
+
+// import.meta.dir is Bun-specific; this equivalent works under both Bun and
+// the Node.js runtime the Lambda deployment bundles against.
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export interface ClassLevel {
   class: string;
@@ -49,7 +54,7 @@ export interface GraphData {
   edges: { data: EdgeData }[];
 }
 
-const DATA_PATH = resolve(import.meta.dir, "../data/graph.json");
+const DATA_PATH = resolve(__dirname, "../data/graph.json");
 
 function load(): GraphData {
   return JSON.parse(readFileSync(DATA_PATH, "utf-8"));
