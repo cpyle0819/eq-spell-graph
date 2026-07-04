@@ -316,6 +316,21 @@ export function rankZones(
   });
 }
 
+export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[] } {
+  const graph = load();
+  const pathIds = shortestPath(fromZoneId, toZoneId);
+  const hops = pathIds ? pathIds.length - 1 : null;
+  const route: RouteStep[] = pathIds
+    ? pathIds.map((step) => {
+        const n = graph.nodes.find((n) => n.data.id === step.zoneId);
+        const entry: RouteStep = { name: n?.data.label || step.zoneId };
+        if (step.via) entry.via = step.via;
+        return entry;
+      })
+    : [];
+  return { hops, route };
+}
+
 // --- Writes ---
 
 export function addSpell(name: string, classLevels: ClassLevel[]): NodeData {

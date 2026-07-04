@@ -1,6 +1,6 @@
 import {
   getGraph, getSpellsForClass, getVendorsForSpell,
-  rankZones, addSpell, addZone, addNpc, addSellsEdge,
+  rankZones, getRoute, addSpell, addZone, addNpc, addSellsEdge,
   addConnectsTo, removeNode, stats
 } from "./graph";
 
@@ -68,6 +68,14 @@ const server = Bun.serve({
       const extraSpellIds = (url.searchParams.get("spells") || "").split(",").filter(Boolean);
       const specificZoneIds = (url.searchParams.get("zones") || "").split(",").filter(Boolean);
       return Response.json(rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds));
+    }
+
+    // GET /api/route?from=Halas&to=Kelethin
+    if (url.pathname === "/api/route") {
+      const from = url.searchParams.get("from") || "";
+      const to = url.searchParams.get("to") || "";
+      if (!from || !to) return Response.json({ error: "from and to required" }, { status: 400 });
+      return Response.json(getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`));
     }
 
     // GET /api/classes — list classes that have spell data
