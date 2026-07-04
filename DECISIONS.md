@@ -18,8 +18,11 @@ Edges encode relationships, not containment. An NPC can be both vendor and quest
 ### Spell class/level model
 `spell.class_levels: [{class: "shaman", level: 9}, ...]` — an array because the same spell can be available to multiple classes at different levels.
 
-### Boat transport is an edge attribute, not a node
-`connects_to` edges may carry `transport: "boat"` (migration 009). `shortestPath()` tracks transport per hop rather than modeling boats as intermediate nodes, so a route can flag "this hop is a boat crossing" without the graph needing a `boat` node type.
+### Transport is an edge attribute, not a node
+`connects_to` edges may carry `transport: "boat" | "translocator"` (migrations 009, 013). `shortestPath()` tracks transport per hop rather than modeling boats/translocators as intermediate nodes, so a route can flag "this hop is a boat crossing" or "this hop is a translocator" without the graph needing dedicated node types for either.
+
+### This game (EverQuest Legends) has different zone connectivity than classic EverQuest
+Don't assume classic-EQ knowledge (Project 1999, Allakhazam, etc.) applies here — verify against eqlwiki.com specifically. Case in point: classic EQ has no Qeynos-side translocator, but EQL added one between East Freeport and South Qeynos in a May 28, 2026 patch (1pp/level fee, not modeled — the planner optimizes for hops, not cost). Zone names, connectivity, and NPC services can all diverge from classic EQ, sometimes recently and without the wiki being fully caught up yet — cross-check multiple pages (individual zone pages *and* patch notes) when something seems off, since new content can lag its own zone-page documentation.
 
 ### Planning and routing are separate concerns
 `rankZones()` (shop planning: "where should I go?") and `getRoute()` (point-to-point: "how do I get from A to B?") are independent functions/endpoints even though both walk the same zone graph via `shortestPath()`. The Route Finder page (`public/route.html`) exists separately from the planner rather than folding routing into it, because "get me from A to B" is a distinct question from "where should I shop" and doesn't need faction or spell context.

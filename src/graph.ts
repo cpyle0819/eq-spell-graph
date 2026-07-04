@@ -27,12 +27,14 @@ export interface NodeData {
   [key: string]: unknown;
 }
 
+export type Transport = "boat" | "translocator";
+
 export interface EdgeData {
   id: string;
   source: string;
   target: string;
   type: string;
-  transport?: "boat";
+  transport?: Transport;
 }
 
 export interface SpellDetails {
@@ -118,7 +120,7 @@ export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: Node
   });
 }
 
-interface AdjEntry { zoneId: string; transport?: "boat"; }
+interface AdjEntry { zoneId: string; transport?: Transport; }
 
 export function getZoneAdjacency(): Map<string, AdjEntry[]> {
   const graph = load();
@@ -127,20 +129,20 @@ export function getZoneAdjacency(): Map<string, AdjEntry[]> {
     if (e.data.type !== "connects_to") continue;
     if (!adj.has(e.data.source)) adj.set(e.data.source, []);
     const entry: AdjEntry = { zoneId: e.data.target };
-    if (e.data.transport === "boat") entry.transport = "boat";
+    if (e.data.transport) entry.transport = e.data.transport;
     adj.get(e.data.source)!.push(entry);
   }
   return adj;
 }
 
-interface PathStep { zoneId: string; via?: "boat"; }
+interface PathStep { zoneId: string; via?: Transport; }
 
-export interface RouteStep { name: string; via?: "boat"; }
+export interface RouteStep { name: string; via?: Transport; }
 
 export function shortestPath(fromZoneId: string, toZoneId: string): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
   const adj = getZoneAdjacency();
-  const parent = new Map<string, { from: string; via?: "boat" }>([[fromZoneId, { from: "" }]]);
+  const parent = new Map<string, { from: string; via?: Transport }>([[fromZoneId, { from: "" }]]);
   const queue = [fromZoneId];
   while (queue.length > 0) {
     const z = queue.shift()!;
