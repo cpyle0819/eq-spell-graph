@@ -670,8 +670,8 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
           <span class="route-label">Route</span>
           <div class="route-steps">${r.route.map((step, i) => {
             if (i === 0) return `<span class="route-zone">${step.name}</span>`;
-            if (step.via === "boat") return `<span class="boat-sep">⚓</span><span class="route-zone">${step.name}</span>`;
-            if (step.via === "translocator") return `<span class="translocator-sep">✨</span><span class="route-zone">${step.name}</span>`;
+            if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span><span class="route-zone">${step.name}</span>`;
+            if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span><span class="route-zone">${step.name}</span>`;
             return `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
           }).join("")}</div>
         </div>`
