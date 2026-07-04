@@ -38,7 +38,10 @@ function addEdge(src: string, tgt: string, transport?: "boat"): void {
   graph.edges.push({ data });
 }
 
-// Ocean of Tears — boat connections (translocator NPCs Narrik, Fithop, Setikan operate here)
+// Ocean of Tears — boat connections. No translocator exists at these docks
+// in this game (confirmed against eqlwiki.com/East_Freeport and
+// /Ocean_of_Tears) — classic-EverQuest NPC names like Narrik, Fithop, and
+// Setikan don't apply here.
 addEdge("zone:ocean-of-tears", "zone:east-freeport", "boat");
 addEdge("zone:east-freeport", "zone:ocean-of-tears", "boat");
 addEdge("zone:ocean-of-tears", "zone:butcherblock-mountains", "boat");
