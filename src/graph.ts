@@ -30,6 +30,20 @@ export interface EdgeData {
   transport?: "boat";
 }
 
+export interface SpellDetails {
+  description?: string;
+  mana?: number;
+  skill?: string;
+  castTime?: number;
+  recastTime?: number;
+  fizzleTime?: number;
+  duration?: string;
+  targetType?: string;
+  spellType?: string;
+  resist?: string;
+  range?: number;
+}
+
 export interface GraphData {
   nodes: { data: NodeData }[];
   edges: { data: EdgeData }[];
@@ -155,10 +169,10 @@ function worstStanding(...standings: FactionStanding[]): FactionStanding {
   , "safe");
 }
 
-export interface SpellVendorInfo {
+export interface SpellVendorInfo extends SpellDetails {
   id: string;
   name: string;
-  level: number;
+  classes: { cls: string; level: number }[];
   vendors: string[];
 }
 
@@ -173,49 +187,76 @@ export interface ZoneRanking {
 }
 
 export function rankZones(
-  className: string,
+  classNames: string[],
   levels: number[],
   currentZoneId: string,
   race?: string,
   primaryClass?: string,
-  deity?: string
+  deity?: string,
+  specificSpellIds?: string[],
+  specificZoneIds?: string[]
 ): ZoneRanking[] {
   const graph = load();
 
-  // Find all spells needed
-  const neededSpells = graph.nodes.filter((n) => {
-    if (n.data.type !== "spell" || !n.data.class_levels) return false;
-    return n.data.class_levels.some(
-      (cl) => cl.class === className && levels.includes(cl.level)
-    );
-  });
+  // Step 1 — start with all purchasable spells
+  let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
 
-  // For each spell, find which zones sell it and which vendors in that zone
-  const zoneSpells = new Map<string, SpellVendorInfo[]>();
-  for (const spell of neededSpells) {
-    const sellers = graph.edges.filter(
-      (e) => e.data.type === "sells" && e.data.target === spell.data.id
+  // Step 2 — narrow by class (if any selected)
+  if (classNames.length > 0) {
+    candidates = candidates.filter((n) =>
+      n.data.class_levels!.some((cl) => classNames.includes(cl.class))
     );
+  }
+
+  // Step 3 — narrow to specific spells (if any pinned)
+  if (specificSpellIds?.length) {
+    const idSet = new Set(specificSpellIds);
+    candidates = candidates.filter((n) => idSet.has(n.data.id));
+  }
+
+  const zoneSpells = new Map<string, SpellVendorInfo[]>();
+
+  function addSpellToZones(spell: { data: NodeData }, matchingClasses: { cls: string; level: number }[]) {
+    if (!matchingClasses.length) return;
+    const sellers = graph.edges.filter((e) => e.data.type === "sells" && e.data.target === spell.data.id);
     for (const seller of sellers) {
       const npcNode = graph.nodes.find((n) => n.data.id === seller.data.source);
-      const locEdge = graph.edges.find(
-        (e) => e.data.type === "located_in" && e.data.source === seller.data.source
-      );
+      const locEdge = graph.edges.find((e) => e.data.type === "located_in" && e.data.source === seller.data.source);
       if (!locEdge || !npcNode) continue;
       const zoneId = locEdge.data.target;
       if (!zoneSpells.has(zoneId)) zoneSpells.set(zoneId, []);
-      const level = spell.data.class_levels!.find(
-        (cl) => cl.class === className && levels.includes(cl.level)
-      )!.level;
       const existing = zoneSpells.get(zoneId)!;
       const entry = existing.find((s) => s.id === spell.data.id);
       if (entry) {
-        if (!entry.vendors.includes(npcNode.data.label)) {
-          entry.vendors.push(npcNode.data.label);
-        }
+        if (!entry.vendors.includes(npcNode.data.label)) entry.vendors.push(npcNode.data.label);
       } else {
-        existing.push({ id: spell.data.id, name: spell.data.label, level, vendors: [npcNode.data.label] });
+        const d = spell.data;
+        const details: SpellDetails = {};
+        for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
+          if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
+        }
+        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.data.label], ...details });
       }
+    }
+  }
+
+  // Step 4 — apply level filter per-spell and map to vendor zones
+  for (const spell of candidates) {
+    const matchingClasses = classNames.length > 0
+      ? spell.data.class_levels!
+          .filter((cl) => classNames.includes(cl.class) && levels.includes(cl.level))
+          .map((cl) => ({ cls: cl.class, level: cl.level }))
+      : spell.data.class_levels!
+          .filter((cl) => levels.includes(cl.level))
+          .map((cl) => ({ cls: cl.class, level: cl.level }));
+    addSpellToZones(spell, matchingClasses);
+  }
+
+  // Step 5 — narrow to specific zones (if any pinned)
+  if (specificZoneIds?.length) {
+    const zoneSet = new Set(specificZoneIds);
+    for (const zoneId of zoneSpells.keys()) {
+      if (!zoneSet.has(zoneId)) zoneSpells.delete(zoneId);
     }
   }
 
@@ -262,7 +303,7 @@ export function rankZones(
       hops,
       route,
       faction,
-      spells: spells.sort((a, b) => a.level - b.level),
+      spells: spells.sort((a, b) => Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level))),
       score,
     });
   }

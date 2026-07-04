@@ -23,6 +23,22 @@ const server = Bun.serve({
       return Response.json(stats());
     }
 
+    // GET /api/spells/search?q=spirit
+    if (url.pathname === "/api/spells/search") {
+      const q = (url.searchParams.get("q") || "").toLowerCase().trim();
+      if (q.length < 2) return Response.json([]);
+      const graph = getGraph();
+      const matches = graph.nodes
+        .filter((n) => n.data.type === "spell" && n.data.label.toLowerCase().includes(q))
+        .map((n) => ({ id: n.data.id, label: n.data.label }))
+        .sort((a, b) => {
+          const ai = a.label.toLowerCase().indexOf(q), bi = b.label.toLowerCase().indexOf(q);
+          return ai !== bi ? ai - bi : a.label.localeCompare(b.label);
+        })
+        .slice(0, 12);
+      return Response.json(matches);
+    }
+
     // GET /api/spells?class=shaman&levels=9,10,11
     if (url.pathname === "/api/spells") {
       const cls = url.searchParams.get("class") || "shaman";
@@ -37,18 +53,21 @@ const server = Bun.serve({
       return Response.json(getVendorsForSpell(id));
     }
 
-    // GET /api/plan?class=shaman&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal
+    // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal
     if (url.pathname === "/api/plan") {
-      const cls = url.searchParams.get("class") || "shaman";
-      const levelsParam = url.searchParams.get("levels") || "";
-      const levels = levelsParam.split(",").map(Number).filter(Boolean);
+      const classNames = (url.searchParams.get("class") || "").split(",").filter(Boolean);
+      const levelMin = parseInt(url.searchParams.get("levelMin") || "1");
+      const levelMax = parseInt(url.searchParams.get("levelMax") || "1");
+      const levels: number[] = [];
+      for (let i = levelMin; i <= levelMax; i++) levels.push(i);
       const from = url.searchParams.get("from") || "";
       const race = url.searchParams.get("race") || undefined;
       const primaryClass = url.searchParams.get("primaryClass") || undefined;
       const deity = url.searchParams.get("deity") || undefined;
       const fromId = `zone:${slugify(from)}`;
-      if (!levels.length) return Response.json({ error: "levels required" }, { status: 400 });
-      return Response.json(rankZones(cls, levels, fromId, race, primaryClass, deity));
+      const extraSpellIds = (url.searchParams.get("spells") || "").split(",").filter(Boolean);
+      const specificZoneIds = (url.searchParams.get("zones") || "").split(",").filter(Boolean);
+      return Response.json(rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds));
     }
 
     // GET /api/classes — list classes that have spell data
