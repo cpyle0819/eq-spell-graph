@@ -175,6 +175,13 @@ export function getZoneAdjacency(): Map<string, AdjEntry[]> {
     if (e.data.transport) entry.transport = e.data.transport;
     adj.get(e.data.source)!.push(entry);
   }
+  // shortestPath()'s BFS keeps the first route it finds to each zone and
+  // ignores ties, so tie-breaking is really about which neighbor gets tried
+  // first here. Translocators sort first so an equally-short alternative
+  // via boat (or plain walking) never wins a tie against one.
+  for (const entries of adj.values()) {
+    entries.sort((a, b) => (a.transport === "translocator" ? -1 : 0) - (b.transport === "translocator" ? -1 : 0));
+  }
   return adj;
 }
 

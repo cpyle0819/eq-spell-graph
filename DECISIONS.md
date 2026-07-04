@@ -21,6 +21,9 @@ Edges encode relationships, not containment. An NPC can be both vendor and quest
 ### Transport is an edge attribute, not a node
 `connects_to` edges may carry `transport: "boat" | "translocator"` (migrations 009, 013). `shortestPath()` tracks transport per hop rather than modeling boats/translocators as intermediate nodes, so a route can flag "this hop is a boat crossing" or "this hop is a translocator" without the graph needing dedicated node types for either.
 
+### Translocator wins hop-count ties over boat (or walking)
+`shortestPath()`'s BFS keeps the first route it discovers to each zone and never revisits a tie, so the real tie-break is which neighbor `getZoneAdjacency()` hands it first. Each zone's neighbor list sorts translocator-linked entries to the front for exactly this reason — an equally-short alternative via boat or on foot should never beat a translocator hop by accident of edge insertion order in `graph.json`. No zone pair currently has more than one transport option between the same two zones, so this has no effect on today's routes; it's there for whenever one does.
+
 ### This game (EverQuest Legends) has different zone connectivity than classic EverQuest
 Don't assume classic-EQ knowledge (Project 1999, Allakhazam, etc.) applies here — verify against eqlwiki.com specifically. Case in point: classic EQ has no Qeynos-side translocator, but EQL added one between East Freeport and South Qeynos in a May 28, 2026 patch (1pp/level fee, not modeled — the planner optimizes for hops, not cost). Zone names, connectivity, and NPC services can all diverge from classic EQ, sometimes recently and without the wiki being fully caught up yet — cross-check multiple pages (individual zone pages *and* patch notes) when something seems off, since new content can lag its own zone-page documentation.
 
