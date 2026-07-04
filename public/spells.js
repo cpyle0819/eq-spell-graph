@@ -1,7 +1,7 @@
 let availableClasses = [];
 
 async function init() {
-  availableClasses = await fetch("/api/classes").then((r) => r.json());
+  availableClasses = await fetch("api/classes").then((r) => r.json());
   populateClassSelect();
   populateLevelSelect();
   setupFilters();
@@ -48,7 +48,7 @@ async function fetchSpells() {
 
   const params = new URLSearchParams({ class: cls });
   if (level !== "all") params.set("levels", level);
-  const spells = await fetch(`/api/spells?${params}`).then((r) => r.json());
+  const spells = await fetch(`api/spells?${params}`).then((r) => r.json());
 
   const filtered = search ? spells.filter((s) => s.label.toLowerCase().includes(search)) : spells;
   renderSpells(filtered, cls);
@@ -109,7 +109,7 @@ function renderSpells(spells, cls) {
         return;
       }
       card.querySelector(".vendor-hint").textContent = "Loading...";
-      const vendors = await fetch(`/api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
+      const vendors = await fetch(`api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
       card.querySelector(".vendor-hint").textContent = "Click to hide vendors";
       const list = document.createElement("div");
       list.className = "vendor-list";

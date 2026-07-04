@@ -89,8 +89,8 @@ const OWNED_KEY = "eq-planner-owned";
 // --- Init ---
 async function init() {
   [zones, availableClasses] = await Promise.all([
-    fetch("/api/zones").then((r) => r.json()),
-    fetch("/api/classes").then((r) => r.json()),
+    fetch("api/zones").then((r) => r.json()),
+    fetch("api/classes").then((r) => r.json()),
   ]);
   populateZoneList();
   setupLevelRange();
@@ -414,7 +414,7 @@ function setupSpellSearch() {
     if (q.length < 2) { closeDropdown(); return; }
     clearTimeout(searchDebounce);
     searchDebounce = setTimeout(async () => {
-      const results = await fetch(`/api/spells/search?q=${encodeURIComponent(q)}`).then((r) => r.json());
+      const results = await fetch(`api/spells/search?q=${encodeURIComponent(q)}`).then((r) => r.json());
       openDropdown(results);
     }, 200);
   });
@@ -603,7 +603,7 @@ async function runPlan() {
   const params = new URLSearchParams({ class: classes.join(","), levelMin: String(levelMin), levelMax: String(levelMax), from, race, primaryClass, deity });
   if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
-  const rankings = await fetch(`/api/plan?${params}`).then((r) => r.json());
+  const rankings = await fetch(`api/plan?${params}`).then((r) => r.json());
 
   if (rankings.error) {
     document.getElementById("results").innerHTML = `<div class="no-results">${rankings.error}</div>`;

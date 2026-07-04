@@ -1,5 +1,5 @@
 async function init() {
-  const zones = await fetch("/api/zones").then((r) => r.json());
+  const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
   applyDefaults(zones);
   document.getElementById("route-from").addEventListener("change", runRoute);
@@ -43,7 +43,7 @@ async function runRoute() {
 
   el.innerHTML = '<div class="loading">Charting course...</div>';
 
-  const result = await fetch(`/api/route?${new URLSearchParams({ from, to })}`).then((r) => r.json());
+  const result = await fetch(`api/route?${new URLSearchParams({ from, to })}`).then((r) => r.json());
 
   if (!result.route || result.route.length === 0) {
     el.innerHTML = `<div class="no-results">No route found from ${from} to ${to}.</div>`;
