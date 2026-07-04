@@ -137,7 +137,7 @@ function restoreState() {
     if (s.levelMin) document.getElementById("level-min").value = s.levelMin;
     if (s.levelMax) {
       document.getElementById("level-max").value = s.levelMax;
-      document.getElementById("level-min").dispatchEvent(new Event("input"));
+      updateLevelRangeDisplay();
     }
     if (Array.isArray(s.specificSpells) && s.specificSpells.length) {
       specificSpells = s.specificSpells;
@@ -158,7 +158,7 @@ function applyDefaults() {
   const qeynos = [...zoneSelect.options].find((o) => o.value === "South Qeynos" || o.value === "North Qeynos" || o.value === "Qeynos");
   if (qeynos) zoneSelect.value = qeynos.value;
   else if (zoneSelect.options.length > 1) zoneSelect.selectedIndex = 1;
-  document.getElementById("level-min").dispatchEvent(new Event("input"));
+  updateLevelRangeDisplay();
 }
 
 function setupAutoSave() {
@@ -307,6 +307,8 @@ function setupClassSearch() {
 }
 
 // --- Level range ---
+let updateLevelRangeDisplay = () => {};
+
 function setupLevelRange() {
   const minSlider = document.getElementById("level-min");
   const maxSlider = document.getElementById("level-max");
@@ -329,6 +331,7 @@ function setupLevelRange() {
   });
 
   updateDisplay();
+  updateLevelRangeDisplay = updateDisplay;
 }
 
 function getSelectedLevelRange() {
