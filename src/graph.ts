@@ -58,12 +58,55 @@ export interface GraphData {
 
 const DATA_PATH = resolve(__dirname, "../data/graph.json");
 
+// graph.json is 2MB+, and load() gets called many times per request —
+// once directly in rankZones(), then again inside shortestPath() for every
+// candidate zone. Caching the parsed result for the life of the process
+// keeps that at one disk read + parse per process instead of dozens per
+// request. save() invalidates the cache (and the index below); mutation
+// routes are local-dev-only, so staying in sync with a single writer is fine.
+let cachedGraph: GraphData | null = null;
+
 function load(): GraphData {
-  return JSON.parse(readFileSync(DATA_PATH, "utf-8"));
+  if (!cachedGraph) {
+    cachedGraph = JSON.parse(readFileSync(DATA_PATH, "utf-8")) as GraphData;
+  }
+  return cachedGraph;
+}
+
+interface GraphIndex {
+  nodeById: Map<string, NodeData>;
+  sellsByTarget: Map<string, EdgeData[]>;
+  locatedInBySource: Map<string, EdgeData>;
+}
+
+let cachedIndex: GraphIndex | null = null;
+
+// Precomputed lookups for the hot path in rankZones(): each candidate spell's
+// sellers, each seller's zone, and each zone's display node, all O(1) instead
+// of linear scans over every node/edge repeated per spell/seller.
+function getIndex(): GraphIndex {
+  if (cachedIndex) return cachedIndex;
+  const graph = load();
+  const nodeById = new Map<string, NodeData>();
+  const sellsByTarget = new Map<string, EdgeData[]>();
+  const locatedInBySource = new Map<string, EdgeData>();
+  for (const n of graph.nodes) nodeById.set(n.data.id, n.data);
+  for (const e of graph.edges) {
+    if (e.data.type === "sells") {
+      if (!sellsByTarget.has(e.data.target)) sellsByTarget.set(e.data.target, []);
+      sellsByTarget.get(e.data.target)!.push(e.data);
+    } else if (e.data.type === "located_in") {
+      locatedInBySource.set(e.data.source, e.data);
+    }
+  }
+  cachedIndex = { nodeById, sellsByTarget, locatedInBySource };
+  return cachedIndex;
 }
 
 function save(graph: GraphData): void {
   writeFileSync(DATA_PATH, JSON.stringify(graph, null, 2));
+  cachedGraph = graph;
+  cachedIndex = null;
 }
 
 function slugify(s: string): string {
@@ -204,6 +247,7 @@ export function rankZones(
   specificZoneIds?: string[]
 ): ZoneRanking[] {
   const graph = load();
+  const index = getIndex();
 
   // Step 1 — start with all purchasable spells
   let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
@@ -225,24 +269,24 @@ export function rankZones(
 
   function addSpellToZones(spell: { data: NodeData }, matchingClasses: { cls: string; level: number }[]) {
     if (!matchingClasses.length) return;
-    const sellers = graph.edges.filter((e) => e.data.type === "sells" && e.data.target === spell.data.id);
+    const sellers = index.sellsByTarget.get(spell.data.id) || [];
     for (const seller of sellers) {
-      const npcNode = graph.nodes.find((n) => n.data.id === seller.data.source);
-      const locEdge = graph.edges.find((e) => e.data.type === "located_in" && e.data.source === seller.data.source);
+      const npcNode = index.nodeById.get(seller.source);
+      const locEdge = index.locatedInBySource.get(seller.source);
       if (!locEdge || !npcNode) continue;
-      const zoneId = locEdge.data.target;
+      const zoneId = locEdge.target;
       if (!zoneSpells.has(zoneId)) zoneSpells.set(zoneId, []);
       const existing = zoneSpells.get(zoneId)!;
       const entry = existing.find((s) => s.id === spell.data.id);
       if (entry) {
-        if (!entry.vendors.includes(npcNode.data.label)) entry.vendors.push(npcNode.data.label);
+        if (!entry.vendors.includes(npcNode.label)) entry.vendors.push(npcNode.label);
       } else {
         const d = spell.data;
         const details: SpellDetails = {};
         for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
           if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
         }
-        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.data.label], ...details });
+        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.label], ...details });
       }
     }
   }
@@ -270,13 +314,13 @@ export function rankZones(
   // Rank with split faction awareness
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
-    const zoneNode = graph.nodes.find((n) => n.data.id === zoneId);
+    const zoneNode = index.nodeById.get(zoneId);
     const pathIds = shortestPath(currentZoneId, zoneId);
     const hops = pathIds ? pathIds.length - 1 : null;
     const route: RouteStep[] = pathIds
       ? pathIds.map((step) => {
-          const n = graph.nodes.find((n) => n.data.id === step.zoneId);
-          const entry: RouteStep = { name: n?.data.label || step.zoneId };
+          const n = index.nodeById.get(step.zoneId);
+          const entry: RouteStep = { name: n?.label || step.zoneId };
           if (step.via) entry.via = step.via;
           return entry;
         })
@@ -284,8 +328,8 @@ export function rankZones(
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
-    if (zoneNode?.data.faction) {
-      const zf = zoneNode.data.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
+    if (zoneNode?.faction) {
+      const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
       const raceStanding: FactionStanding = (race && zf.race?.[race]) || "neutral";
       const classStanding: FactionStanding = (primaryClass && zf.class?.[primaryClass]) || "safe";
       const deityStanding: FactionStanding = (deity && zf.deity?.[deity]) || "neutral";
@@ -306,7 +350,7 @@ export function rankZones(
 
     rankings.push({
       zoneId,
-      zoneName: zoneNode?.data.label || zoneId,
+      zoneName: zoneNode?.label || zoneId,
       hops,
       route,
       faction,
