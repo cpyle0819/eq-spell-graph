@@ -18,6 +18,12 @@ Edges encode relationships, not containment. An NPC can be both vendor and quest
 ### Spell class/level model
 `spell.class_levels: [{class: "shaman", level: 9}, ...]` — an array because the same spell can be available to multiple classes at different levels.
 
+### Boat transport is an edge attribute, not a node
+`connects_to` edges may carry `transport: "boat"` (migration 009). `shortestPath()` tracks transport per hop rather than modeling boats as intermediate nodes, so a route can flag "this hop is a boat crossing" without the graph needing a `boat` node type.
+
+### Planning and routing are separate concerns
+`rankZones()` (shop planning: "where should I go?") and `getRoute()` (point-to-point: "how do I get from A to B?") are independent functions/endpoints even though both walk the same zone graph via `shortestPath()`. The Route Finder page (`public/route.html`) exists separately from the planner rather than folding routing into it, because "get me from A to B" is a distinct question from "where should I shop" and doesn't need faction or spell context.
+
 ## Faction System (EQ Domain)
 
 ### Three dimensions determine vendor access
@@ -44,11 +50,14 @@ Standings are inferred from wiki research, not exact numerical values. Sufficien
 
 ## Data Coverage
 
-### Spell data: shaman only (levels 1-50)
-159 spells with full vendor associations. No other classes have data. The "Shopping For" dropdown filters to classes with loaded data.
+### Spell data: all 12 classes
+1,064 spells across bard, beastlord, cleric, druid, enchanter, magician, necromancer, paladin, ranger, shadow knight, shaman, and wizard (migration 008), superseding the original shaman-only (159-spell) dataset. The planner's "Shopping For" control is a multi-select — `rankZones()` takes a list of class names (plus optional pinned specific spells/zones) rather than a single class, so you can plan a shopping trip for more than one character's spell list at once.
+
+### Spell detail enrichment
+Migration 011 scrapes description, mana cost, cast/recast/fizzle time, duration, target type, spell type, resist, and range from the EQL wiki via Playwright (`scripts/scrape-spell-details.ts`) and merges them onto spell nodes; migration 012 cleans up a leftover "Skill:" prefix on the `skill` field from wikitext parsing. 1,059 of 1,064 spells have detail data (a handful of wiki pages didn't parse). Powers the spell tooltip in the planner and the detail cards on the spell browser page — cosmetic/informational only, not used in ranking logic.
 
 ### Zone connectivity
-71 zones with full bidirectional BFS connectivity. All 39 vendor zones are reachable from every shaman starting city.
+73 zones, 47 of which have spell vendors, all reachable via bidirectional BFS. Migration 010 fixed two vendor zones (Ocean of Tears, High Keep) that had `sells` edges but no `connects_to` edges, making them unreachable.
 
 ### Naming mismatches
 Some vendor data uses different zone names than adjacency data (e.g., "Neriak" vs "Neriak 3rd Gate"). Migration 005 bridges these with extra `connects_to` edges rather than renaming nodes (which would break existing edge references).
@@ -64,6 +73,9 @@ Primary use case: "where should I go to buy spells?" — a planning/table proble
 ### Level picker is a dual range slider
 Covers the common case: "I leveled from X to Y, what spells do I need?"
 
+### Planner state: single auto-saved snapshot, not named profiles
+The planner persists one last-used state (race, class selections, deity, zone, level range, pinned spells/zones, owned spells) to `localStorage` and restores it on load — it does not support multiple named/saved characters. This replaces an earlier per-character profile system (named profiles, per-profile owned-spell tracking) with something simpler for the common case of planning for one character at a time. Revisit if multi-character support turns out to matter — the per-profile version demonstrated it's a straightforward layer to add back on top of `getState()`/`restoreState()`.
+
 ## Tech Stack
 
 - **Bun** — runtime, bundler, dev server
@@ -71,3 +83,4 @@ Covers the common case: "I leveled from X to Y, what spells do I need?"
 - **Cytoscape.js** — graph visualization (CDN, not bundled)
 - **No framework** — vanilla HTML/JS frontend
 - **data/graph.json** — flat file persistence, no database
+- **Playwright** — devDependency used only offline by `scripts/scrape-spell-details.ts` to scrape the EQL wiki; not part of the running app
