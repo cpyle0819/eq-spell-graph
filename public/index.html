@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norrath Spell Planner</title>
+  <title>Norrgraph</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -56,13 +56,6 @@
       border-radius: 12px; margin-bottom: 24px; overflow: hidden; flex-shrink: 0;
     }
 
-    .profile-bar {
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-      padding: 12px 20px; border-bottom: 1px solid #2e2418;
-      background: #191510;
-    }
-    .profile-bar .field input[type="text"] { width: 160px; }
-    .profile-label { font-size: 11px; color: #6a5438; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
 
     .planner-controls {
       display: flex; flex-direction: column; gap: 8px;
@@ -81,6 +74,7 @@
     .field .range-picker { flex: 1; min-width: 0; }
     .field select:hover, .field input:hover { border-color: #6a5028; }
     .field select:focus, .field input:focus { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); outline: none; }
+
 
     .range-picker { display: flex; align-items: center; gap: 10px; }
     .range-picker input[type="range"] {
@@ -130,7 +124,7 @@
       border-radius: 10px; padding: 18px 22px; margin-bottom: 14px;
       transition: border-color 150ms, transform 150ms, box-shadow 150ms;
     }
-    .zone-card:hover { border-color: #5a4828; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
+    .zone-card:hover { border-color: #5a4828; box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
 
     .zone-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
     .zone-name { font-size: 20px; font-weight: 700; color: #f0e4c8; }
@@ -159,8 +153,10 @@
     .spell-chip {
       font-size: 13px; padding: 3px 10px; border-radius: 5px;
       background: #141210; border: 1px solid #3a2e18; color: #e8d0a0; white-space: nowrap;
+      text-decoration: none; display: inline-flex; align-items: center;
     }
-    .spell-chip .lvl { color: #8a6838; margin-left: 4px; font-size: 12px; }
+    @media (pointer: coarse) { .spell-chip { cursor: pointer; } }
+    .spell-chip .lvl { color: #8a6838; margin-left: 6px; font-size: 11px; }
 
     .vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
     .vendor-tag {
@@ -183,6 +179,7 @@
     .faction-badge.wont_sell { background: rgba(249,115,22,0.12); color: #f97316; border: 1px solid rgba(249,115,22,0.25); }
     .faction-badge.kos     { background: rgba(239,68,68,0.12);  color: #ef4444; border: 1px solid rgba(239,68,68,0.25); }
 
+
     .no-results { color: #6a5438; font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
     .loading    { color: #8a6838; padding: 52px 0; text-align: center; letter-spacing: 0.2em; font-size: 11px; text-transform: uppercase; }
 
@@ -197,6 +194,76 @@
     .vendor-row { display: flex; gap: 8px; padding: 4px 0; font-size: 13px; color: #8a6838; }
     .vendor-row .zone-tag { color: #6a5438; }
 
+    /* ── Tag inputs (Specific Spells & Specific Zones) ── */
+    .tag-wrap {
+      position: relative; flex: 1; min-width: 0;
+      background: #0f0e0b; border: 1px solid #4a3818; border-radius: 6px;
+      padding: 5px 8px; display: flex; flex-direction: column; gap: 4px;
+      transition: border-color 150ms, box-shadow 150ms; cursor: text;
+    }
+    .tag-wrap:focus-within { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag-list:empty { display: none; }
+    .tag-item {
+      display: inline-flex; align-items: center; gap: 3px;
+      background: rgba(232,168,42,0.12); border: 1px solid rgba(232,168,42,0.3);
+      border-radius: 4px; padding: 2px 4px 2px 8px; font-size: 11px; color: #c8a450;
+      white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+    }
+    .tag-item-name { overflow: hidden; text-overflow: ellipsis; }
+    .tag-item-remove {
+      flex-shrink: 0; width: 16px; height: 16px; border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: #8a6838; font-size: 12px; line-height: 1;
+      background: transparent; border: none; padding: 0;
+    }
+    .tag-item-remove:hover { background: rgba(239,68,68,0.15); color: #ef4444; }
+    .tag-wrap input {
+      background: transparent; border: none; box-shadow: none; outline: none;
+      color: #f0e4c8; font-size: 13px; width: 100%; padding: 1px 0;
+      min-width: 80px; flex: unset;
+    }
+    .tag-wrap input::placeholder { color: #4a3818; }
+
+    .tag-dropdown {
+      position: fixed; z-index: 300;
+      background: #1d1810; border: 1px solid #5a4828; border-radius: 8px;
+      max-height: 240px; overflow-y: auto;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+      display: none;
+    }
+    .tag-dropdown.open { display: block; }
+    .suggestion-item {
+      padding: 9px 14px; cursor: pointer; font-size: 13px; color: #c8a860;
+      border-bottom: 1px solid #2a2010;
+    }
+    .suggestion-item:last-child { border-bottom: none; }
+    .suggestion-item:hover, .suggestion-item.active {
+      background: rgba(232,168,42,0.08); color: #e8d080;
+    }
+    .suggestion-empty { padding: 10px 14px; font-size: 12px; color: #6a5438; font-style: italic; }
+
+    /* ── Spell tooltip (hover card) ── */
+    #spell-tooltip {
+      position: fixed; z-index: 1000;
+      background: #1d1810; border: 1px solid #5a4828;
+      border-top: 2px solid #e8a82a;
+      border-radius: 10px; padding: 14px 18px;
+      max-width: 320px; min-width: 220px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      pointer-events: none;
+      opacity: 0; transition: opacity 100ms ease-out;
+    }
+    #spell-tooltip.visible { opacity: 1; }
+    .tt-name { font-size: 14px; font-weight: 700; color: #e8a82a; margin-bottom: 6px; }
+    .tt-desc { font-size: 12px; color: #b8a070; font-style: italic; line-height: 1.4; margin-bottom: 8px; }
+    .tt-stats { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tt-stat {
+      font-size: 11px; padding: 2px 7px; border-radius: 4px;
+      background: #141210; border: 1px solid #2e2418; color: #8a7050;
+    }
+    .tt-stat.highlight { color: #c8a450; border-color: rgba(232,168,42,0.25); }
+
     /* Footer */
     footer {
       padding: 10px 28px; border-top: 1px solid #2a1e0c; flex-shrink: 0;
@@ -209,7 +276,7 @@
       .controls-panel { width: 300px; min-width: 300px; flex-shrink: 0; margin-bottom: 0; position: sticky; top: 24px; }
       .field label { min-width: 0; width: 100%; }
       .field { flex-direction: column; align-items: stretch; gap: 4px; }
-      #plan-btn { width: 100%; margin-top: 6px; }
+
       #results { overflow-y: auto; padding-bottom: 0; padding-right: 16px; }
     }
 
@@ -217,7 +284,6 @@
     @media (max-width: 700px) {
       #planner { padding: 14px 16px 0; }
       .planner-controls { gap: 12px; padding: 14px 16px; }
-      .profile-bar { padding: 10px 16px; }
       .control-sep { display: none; }
       button { min-height: 44px; }
       button.secondary { min-height: 40px; }
@@ -228,28 +294,17 @@
 <body>
   <header>
     <div class="header-title">
-      <h1>Norrath Spell Planner</h1>
-      <p class="header-sub">Fan-Made Route Tool</p>
+      <h1>Norrgraph</h1>
+      <p class="header-sub">Spell Finder</p>
     </div>
-    <a class="nav-link" href="/spells.html">Spell Browser</a>
+    <nav style="margin-left:auto;display:flex;gap:8px;">
+      <a class="nav-link" style="margin-left:0" href="/spells.html">Spell Browser</a>
+      <a class="nav-link" style="margin-left:0" href="/route.html">Route Finder</a>
+    </nav>
   </header>
 
   <div id="planner">
     <div class="controls-panel">
-    <div class="profile-bar">
-      <span class="profile-label">Character</span>
-      <div class="field">
-        <select id="profile-select"><option value="">— select profile —</option></select>
-      </div>
-      <button class="secondary" id="profile-new-btn">+ New</button>
-      <button class="secondary" id="profile-update-btn" style="display:none">Update</button>
-      <button class="secondary" id="profile-delete-btn" style="display:none">Delete</button>
-      <div id="profile-create-row" style="display:none; gap:8px; align-items:center;">
-        <input type="text" id="profile-name" placeholder="profile name...">
-        <button class="secondary" id="profile-save-btn">Save</button>
-        <button class="secondary" id="profile-cancel-btn">Cancel</button>
-      </div>
-    </div>
     <div class="planner-controls">
       <div class="field">
         <label>Race</label>
@@ -313,8 +368,25 @@
       </div>
       <div class="control-sep" aria-hidden="true"></div>
       <div class="field">
-        <label>Shopping For (class)</label>
-        <select id="class-select"></select>
+        <label>Spell Class</label>
+        <div class="tag-wrap" id="class-tag-wrap">
+          <div class="tag-list" id="class-tags"></div>
+          <input type="text" id="class-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+      <div class="field">
+        <label>Specific Spells</label>
+        <div class="tag-wrap" id="spell-tag-wrap">
+          <div class="tag-list" id="spell-tags"></div>
+          <input type="text" id="spell-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+      <div class="field">
+        <label>Specific Zones</label>
+        <div class="tag-wrap" id="zone-tag-wrap">
+          <div class="tag-list" id="zone-tags"></div>
+          <input type="text" id="zone-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
+        </div>
       </div>
       <div class="field">
         <label>Current Zone</label>
@@ -330,12 +402,15 @@
           <input type="range" id="level-max" min="1" max="50" value="10">
         </div>
       </div>
-      <button id="plan-btn">Plan Route</button>
     </div>
     </div><!-- .controls-panel -->
     <div id="results"></div>
   </div>
 
+  <div id="class-suggestions" class="tag-dropdown" role="listbox" aria-label="Class suggestions"></div>
+  <div id="spell-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell suggestions"></div>
+  <div id="zone-suggestions" class="tag-dropdown" role="listbox" aria-label="Zone suggestions"></div>
+  <div id="spell-tooltip" role="tooltip" aria-hidden="true"></div>
   <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak.</footer>
   <script src="app.js"></script>
 </body>

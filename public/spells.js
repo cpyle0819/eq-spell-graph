@@ -54,6 +54,17 @@ async function fetchSpells() {
   renderSpells(filtered, cls);
 }
 
+function fmtDuration(d) {
+  if (!d) return null;
+  if (/instant/i.test(d)) return "Instant";
+  return d.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s");
+}
+
+function fmtCast(t) {
+  if (t == null) return null;
+  return t % 1 === 0 ? `${t}s cast` : `${t.toFixed(1)}s cast`;
+}
+
 function renderSpells(spells, cls) {
   const el = document.getElementById("spell-results");
   if (!spells.length) {
@@ -66,16 +77,40 @@ function renderSpells(spells, cls) {
     const level = spell.class_levels.find((cl) => cl.class === cls)?.level ?? "?";
     const card = document.createElement("div");
     card.className = "spell-detail";
+
+    const badges = [];
+    if (spell.spellType) badges.push(`<span class="spell-badge type-badge">${spell.spellType}</span>`);
+    if (spell.mana != null) badges.push(`<span class="spell-badge mana-badge">${spell.mana} mana</span>`);
+    if (spell.skill) badges.push(`<span class="spell-badge skill-badge">${spell.skill}</span>`);
+
+    const stats = [];
+    if (spell.targetType) stats.push(`<span class="stat-tag">Target: ${spell.targetType}</span>`);
+    const dur = fmtDuration(spell.duration);
+    if (dur) stats.push(`<span class="stat-tag">Duration: ${dur}</span>`);
+    const cast = fmtCast(spell.castTime);
+    if (cast) stats.push(`<span class="stat-tag">${cast}</span>`);
+    if (spell.resist && !/unresist/i.test(spell.resist)) stats.push(`<span class="stat-tag">Resist: ${spell.resist}</span>`);
+
     card.innerHTML = `
-      <h3>${spell.label}<span class="spell-level">Level ${level}</span></h3>
+      <div class="spell-header">
+        <h3>${spell.label}<span class="spell-level">Level ${level}</span></h3>
+        ${badges.length ? `<div class="spell-badges">${badges.join("")}</div>` : ""}
+      </div>
+      ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
+      ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
       <div class="vendor-hint">Click to show vendors</div>
     `;
+
     card.addEventListener("click", async () => {
       const existing = card.querySelector(".vendor-list");
-      if (existing) { existing.remove(); card.querySelector(".vendor-hint").textContent = "Click to show vendors"; return; }
+      if (existing) {
+        existing.remove();
+        card.querySelector(".vendor-hint").textContent = "Click to show vendors";
+        return;
+      }
       card.querySelector(".vendor-hint").textContent = "Loading...";
       const vendors = await fetch(`/api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
-      card.querySelector(".vendor-hint").textContent = "Click to hide";
+      card.querySelector(".vendor-hint").textContent = "Click to hide vendors";
       const list = document.createElement("div");
       list.className = "vendor-list";
       list.innerHTML = vendors.length
@@ -83,6 +118,7 @@ function renderSpells(spells, cls) {
         : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
       card.appendChild(list);
     });
+
     el.appendChild(card);
   }
 }

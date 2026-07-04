@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norrath Spell Planner — Spell Browser</title>
+  <title>Norrgraph — Spell Browser</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -77,6 +77,16 @@
     .spell-detail h3 { color: #e8a82a; font-size: 15px; margin-bottom: 4px; }
     .spell-level { font-size: 12px; color: #8a6838; font-weight: 400; margin-left: 8px; }
 
+    .spell-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+    .spell-header h3 { margin: 0; }
+    .spell-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+    .spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 10px; font-weight: 500; }
+    .type-badge { background: rgba(232,168,42,0.12); color: #c8a450; border: 1px solid rgba(232,168,42,0.2); }
+    .mana-badge { background: rgba(96,165,250,0.1); color: #7ab0e0; border: 1px solid rgba(96,165,250,0.2); }
+    .skill-badge { background: rgba(160,140,100,0.1); color: #9a8060; border: 1px solid rgba(160,140,100,0.2); }
+    .spell-desc { font-size: 13px; color: #b8a070; margin: 5px 0 6px; line-height: 1.45; font-style: italic; }
+    .spell-stats { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+    .stat-tag { font-size: 11px; color: #7a6848; background: #141210; border: 1px solid #2e2418; padding: 2px 8px; border-radius: 4px; }
     .vendor-list { margin-top: 10px; border-top: 1px solid #2e2418; padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
     .vendor-row { display: flex; gap: 8px; font-size: 13px; color: #9a8060; padding: 2px 0; }
     .zone-tag { color: #6a5438; }
@@ -94,10 +104,13 @@
 <body>
   <header>
     <div class="header-title">
-      <h1>Norrath Spell Planner</h1>
+      <h1>Norrgraph</h1>
       <p class="header-sub">Spell Browser</p>
     </div>
-    <a class="nav-link" href="/">← Planner</a>
+    <nav style="margin-left:auto;display:flex;gap:8px;">
+      <a class="nav-link" style="margin-left:0" href="/">Spell Finder</a>
+      <a class="nav-link" style="margin-left:0" href="/route.html">Route Finder</a>
+    </nav>
   </header>
 
   <div id="spells-page">
