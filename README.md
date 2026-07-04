@@ -2,7 +2,7 @@
 
 Faction-aware spell shopping route planner for EverQuest. Given your race, primary class, deity, current zone, and desired spell levels, ranks destinations by spells available vs. travel distance — filtering out zones where you'd be killed on sight or refused service.
 
-![Norrgraph screenshot](docs/screenshot.png)
+![Norraph screenshot](docs/screenshot.png)
 
 ## Usage
 
