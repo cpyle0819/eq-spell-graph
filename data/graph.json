@@ -3062,7 +3062,7 @@
             "level": 10
           }
         ],
-        "description": "Causes your target to grow hard scales around their body, increasing their armor class for 27 min.  Consumes [[Snake Scales]] when cast.",
+        "description": "Causes your target to grow hard scales around their body, increasing their armor class for 27 min.  Consumes Snake Scales when cast.",
         "mana": 25,
         "skill": "Abjuration",
         "castTime": 2.5,
@@ -3448,7 +3448,7 @@
             "level": 4
           }
         ],
-        "description": "Opens a magical portal that returns you to your bind point.",
+        "description": "Opens a magical portal that returns you to your bind point.\n\nNPC casters may also gate according to their class, if they are under 25% HP and located some distance from their spawn point. If they are successful, they will immediately receive a heal for about 20% of their health, and will retain their aggro table, unless their spawn point is more distant than 1300 units from where the fight was happening.",
         "mana": 70,
         "skill": "Alteration",
         "castTime": 5,
@@ -3716,7 +3716,7 @@
             "level": 1
           }
         ],
-        "description": "Provides you with a mystical sense, pointing you towards the nearest [[:Category:Animal",
+        "description": "Provides you with a mystical sense, pointing you towards the nearest animal.",
         "mana": 5,
         "skill": "Divination",
         "castTime": 2,
@@ -4043,7 +4043,8 @@
         "duration": "27 minutes",
         "targetType": "Caster Group",
         "spellType": "Beneficial",
-        "range": 100
+        "range": 100,
+        "resist": "| other ="
       }
     },
     {
@@ -4152,7 +4153,8 @@
         "duration": "Instant",
         "targetType": "Single",
         "spellType": "Remove Curse",
-        "range": 100
+        "range": 100,
+        "resist": "| other ="
       }
     },
     {
@@ -4216,7 +4218,7 @@
             "level": 8
           }
         ],
-        "description": "Covers your skin in a light veil that renders you invisible to most [[:Category:Animal",
+        "description": "Covers your skin in a light veil that renders you invisible to most animals.",
         "mana": 30,
         "skill": "Divination",
         "castTime": 3,
@@ -4260,7 +4262,7 @@
             "level": 22
           }
         ],
-        "description": "Forms a cloud of dense air around your feet, allowing you to float slightly off the ground for up to 20 min 30s. Consumes a [[Bat Wing]] when cast.",
+        "description": "Forms a cloud of dense air around your feet, allowing you to float slightly off the ground for up to 20 min 30s. Consumes a Bat Wing when cast.",
         "mana": 30,
         "skill": "Alteration",
         "castTime": 3,
@@ -4534,7 +4536,7 @@
             "level": 20
           }
         ],
-        "description": "Magically fills your lungs with air, removing your need to breathe for 27 min. Consumes a handful of [[Fish Scales]] to cast.",
+        "description": "Magically fills your lungs with air, removing your need to breathe for 27 min. Consumes a handful of Fish Scales to cast.",
         "mana": 35,
         "skill": "Alteration",
         "castTime": 4,
@@ -4578,7 +4580,7 @@
             "level": 3
           }
         ],
-        "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 48 secs (2 ticks @L3 to 8 ticks @L14).",
+        "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 48 secs (2 ticks @L3 to 8 ticks @L14).\n\nMany other spells which immobilize targets are informally referred to as \"Root\" spells, including Enstill, Immobilize, Grasping Roots, Hungry Earth, etc. All of these spells have common qualities, such as randomly breaking early, being randomly broken sometimes by direct-damage spells, and causing rooted behavior in NPCs.\n\nSpells which reduce movement speed somewhat, but not necessarily completely, are called Snare spells. Snare spells are generally more reliable, longer lasting and do not change the hate behavior of NPCs.\n\nRoot spells lend to a strategy of solo casters called \"root rotting\", where a caster roots the enemy, casts one or more damage-over-time spells on them, and waits for them to die. Nukes are more compatible with snare spells, as they do not cause them to break like root.",
         "mana": 30,
         "skill": "Alteration",
         "castTime": 2,
@@ -4650,7 +4652,7 @@
             "level": 12
           }
         ],
-        "description": "Binds the soul of your target to their current location. Casters with this spell can bind themselves virtually anywhere, while casting this spell on another character is limited to allowable [[Bind Locations",
+        "description": "Binds the soul of your target to their current location. Casters with this spell can bind themselves virtually anywhere, while casting this spell on another character is limited to allowable bind locations.",
         "mana": 100,
         "skill": "Alteration",
         "castTime": 6,
@@ -5468,7 +5470,7 @@
             "level": 28
           }
         ],
-        "description": "Mends moderate wounds, healing between 135 and 175 hit points.  See [[Healing Spell Lines]] to compare with other heals.",
+        "description": "Mends moderate wounds, healing between 135 and 175 hit points.  See Healing Spell Lines to compare with other heals.",
         "mana": 65,
         "skill": "Alteration",
         "castTime": 2.5,
@@ -5834,7 +5836,7 @@
             "level": 26
           }
         ],
-        "description": "Imbues your target with the spirit of a scaled wolf, increasing their movement speed for 45.0 mins.  Any attack, or spell cast by your target will break the enchantment. The group cast version of this spell is [[Spirit of Scale]].",
+        "description": "Imbues your target with the spirit of a scaled wolf, increasing their movement speed for 45.0 mins.  Any attack, or spell cast by your target will break the enchantment. The group cast version of this spell is Spirit of Scale.\n\nConsider using this spell over Spirit of Wolf to travel long distances with few dangers (but be careful that you don't attack or cast if you do).",
         "mana": 60,
         "skill": "Alteration",
         "castTime": 4.5,
@@ -6071,7 +6073,8 @@
         "duration": "Instant",
         "targetType": "Single",
         "spellType": "Remove Curse",
-        "range": 100
+        "range": 100,
+        "resist": "| other ="
       }
     },
     {
@@ -6219,7 +6222,7 @@
             "level": 13
           }
         ],
-        "description": "Beckons to the [[:Category:Animal",
+        "description": "Beckons to the animals of the wild, allowing you to control them.",
         "mana": 70,
         "skill": "Alteration",
         "castTime": 4,
@@ -6323,16 +6326,17 @@
             "level": 25
           }
         ],
-        "description": "Illusion: Old Bear,  Increase Current Hit Points by 1 per Tick,   \tIncrease Wisdom by 5",
+        "description": "Illusion: Old Bear,  Increase Current Hit Points by 1 per Tick,   \tIncrease Wisdom by 5|classes=* Shaman - Level 25|slots=|skill=Alteration|mana=100|range=100|casting_time=4.00|fizzle_time=1.5|recast_time=12|duration=2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
         "mana": 100,
-        "skill": "Alteration",
+        "skill": "Alteration|mana=100|range=100|casting_time=4.00|fizzle_time=1.5|recast_time=12|duration=2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
         "castTime": 4,
         "recastTime": 12,
         "fizzleTime": 1.5,
-        "duration": "2h 24m",
-        "targetType": "Self",
-        "spellType": "Beneficial",
-        "range": 100
+        "duration": "2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+        "targetType": "Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+        "spellType": "Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+        "range": 100,
+        "resist": "|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain="
       }
     },
     {
@@ -6885,7 +6889,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Cazic Thule into amber. Consumes an amber when cast. Creates an [[Imbued Amber]].",
+        "description": "Focuses the power of Cazic Thule into amber. Consumes an amber when cast. Creates an Imbued Amber.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -6912,7 +6916,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Mithaniel Marr into a diamond. Consumes a diamond when cast. Creates an [[Imbued Diamond]].",
+        "description": "Focuses the power of Mithaniel Marr into a diamond. Consumes a diamond when cast. Creates an Imbued Diamond.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -6935,7 +6939,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of The Tribunal into a piece of Ivory.  Consumes an ivory when cast. Creates an [[Imbued Ivory]].",
+        "description": "Focuses the power of The Tribunal into a piece of Ivory.  Consumes an ivory when cast. Creates an Imbued Ivory.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 6,
@@ -6958,7 +6962,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Rallos Zek into a piece of jade.  Consumes a jade when cast. Creates an [[Imbued Jade]].",
+        "description": "Focuses the power of Rallos Zek into a piece of jade.  Consumes a jade when cast. Creates an Imbued Jade.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -6985,7 +6989,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Innoruuk into a sapphire. Consumes a sapphire when cast. Creates an [[Imbued Sapphire]]. Diety:  Innoruuk to mem spell.",
+        "description": "Focuses the power of Innoruuk into a sapphire. Consumes a sapphire when cast. Creates an Imbued Sapphire. Diety:  Innoruuk to mem spell.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -7104,7 +7108,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Cazic Thule into amber. Consumes an amber x5 when cast. Creates an [[Imbued Amber]] x5.",
+        "description": "Focuses the power of Cazic Thule into amber. Consumes an amber x5 when cast. Creates an Imbued Amber x5.",
         "mana": 600,
         "skill": "Alteration",
         "castTime": 10,
@@ -7131,7 +7135,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Mithanial into Diamond. Consumes an diamond x5 when cast. Creates an [[Imbued Diamond]] x5.",
+        "description": "Focuses the power of Mithanial into Diamond. Consumes an diamond x5 when cast. Creates an Imbued Diamond x5.",
         "mana": 600,
         "skill": "Alteration",
         "castTime": 10,
@@ -7154,7 +7158,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Tribunal into Ivory. Consumes an Ivory x5 when cast. Creates an [[Imbued Ivory]] x5.",
+        "description": "Focuses the power of Tribunal into Ivory. Consumes an Ivory x5 when cast. Creates an Imbued Ivory x5.",
         "mana": 675,
         "skill": "Alteration",
         "castTime": 10,
@@ -7177,7 +7181,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Rallos Zek into Jade. Consumes an Jade x5 when cast. Creates an [[Imbued Jade]] x5.",
+        "description": "Focuses the power of Rallos Zek into Jade. Consumes an Jade x5 when cast. Creates an Imbued Jade x5.",
         "mana": 600,
         "skill": "Alteration",
         "castTime": 10,
@@ -7204,16 +7208,16 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Innoruuk  into Sapphire. Consumes an Sapphire x5 when cast. Creates an [[Imbued Sapphire]] x5.",
+        "description": "Focuses the power of Innoruuk  into Sapphire. Consumes an Sapphire x5 when cast. Creates an Imbued Sapphire x5.|classes=* Cleric - Level 29 * Shaman - Level 29\n* Shaman - Level 29|slots={{SpellSlotRow | 1 | Summon Item: Imbued Sapphire",
         "mana": 600,
-        "skill": "Alteration",
+        "skill": "Alteration|mana=600|range=|casting_time=10.00|fizzle_time=1.5|recast_time=1.5|duration=Instant|target_type=Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' Jade|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | East Cabilis | Vessel Grymm | Temple of Terror (First Floor) | (1018,-163)",
         "castTime": 10,
         "recastTime": 1.5,
         "fizzleTime": 1.5,
-        "duration": "Instant",
-        "targetType": "Self",
-        "spellType": "Beneficial",
-        "resist": "Unresistable"
+        "duration": "Instant|target_type=Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
+        "targetType": "Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
+        "spellType": "Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
+        "resist": "Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)"
       }
     },
     {
@@ -7533,7 +7537,7 @@
             "level": 23
           }
         ],
-        "description": "Beckons to the [[:Category:Animal",
+        "description": "Beckons to the animals of the wild, allowing you to control them.",
         "mana": 120,
         "skill": "Alteration",
         "castTime": 5,
@@ -9400,7 +9404,7 @@
             "level": 49
           }
         ],
-        "description": "Infuses your target with the power of an avatar, increasing their strength, dexterity, agility, and attack rating for 6.0 mins.",
+        "description": "Infuses your target with the power of an avatar, increasing their strength, dexterity, agility, and attack rating for 6.0 mins.  \n\nConsumes an Emerald when cast (Emerald costs around 13p).\n\nThis spell stacks with all other buffs except Primal Essence and Aura of Battle.\n\n''Patch change 20 Feb, 2012: Kanras: Updated Avatar to give 100 AGI.''",
         "mana": 325,
         "skill": "Alteration",
         "castTime": 3,
@@ -9448,7 +9452,7 @@
             "level": 50
           }
         ],
-        "description": "Focuses your target's spiritual energy, granting increased hit points, strength, and dexterity for 1 hour(s) 40.0 mins.",
+        "description": "Focuses your target's spiritual energy, granting increased hit points, strength, and dexterity for 1 hour(s) 40.0 mins. \n\n<br> This spell has an unusual stacking mechanic. If a character has Focus, it will block the addition of Maniacal Strength, Mortal Deftness, and Voice of the Berserker spells. ''However'' if the character already has those buffs prior, the addition of Focus on top of those will not overwrite them, rather it will stack and both will apply to the character's statistics. Therefore, if a melee character would like all three buffs, they should click off any pre-existing Focus, then ask the Shaman for them. \n\n<br> Focus of Spirit will always overwrite other Talisman spells however. It also seems to overwrite lower level spells such as Dexterity.\n<br><br> Does not stack with Shield of the Magi and other INT caster HP buffs. Does not stack with Bedlam and other enchanter mat-free runes in that line. Does stack with Resurrection Effects.",
         "mana": 500,
         "skill": "Alteration",
         "castTime": 13,
@@ -11859,7 +11863,7 @@
           }
         ],
         "description": "This sonnet surrounds your body with a light fog, allowing you to slip by many creatures undetected.  This song also allows you to see invisible creatures.",
-        "skill": "Wind",
+        "skill": "Wind †",
         "castTime": 3,
         "duration": "3 ticks",
         "targetType": "Party",
@@ -11952,7 +11956,7 @@
           }
         ],
         "description": "A melody that strips the magical effects from everyone in your group.",
-        "skill": "Stringed",
+        "skill": "Stringed †",
         "castTime": 3,
         "duration": "Instant",
         "targetType": "Party",
@@ -12156,7 +12160,7 @@
           }
         ],
         "description": "An aria that allows your group to levitate for a short time.",
-        "skill": "Wind",
+        "skill": "Wind †",
         "castTime": 3,
         "duration": "3 ticks",
         "targetType": "Party",
@@ -12176,7 +12180,7 @@
             "level": 32
           }
         ],
-        "description": "A quiet chorus that clears the minds of your group, allowing them to regenerate their mana faster.",
+        "description": "A quiet chorus that clears the minds of your group, allowing them to regenerate their mana faster.\n\nUnlike other songs in the Cassindra line, Cassindra's chorus of Clarity (lvl 32) is not a buff. Singing this song will grant a single burst of mana. Therefore, you will grant mana faster by pulsing it instead of letting it play, and two (or more) bards singing it will mean even more mana to the group. Because this song is not a buff, it stacks with every single source of mana generation in the game, making it a useful pulsing song to play during downtime even at higher levels.\n\n<s>The mana gained from this song is affected by the instrument mod Singing (voice) currently granted only by the Singing Short Sword and level 60 discipline Puretone.</s> This is not true as of 2022-02-10, see [https://wiki.project1999.com/Talk:Cassindra%27s_Chorus_of_Clarity Discussion]",
         "skill": "Singing",
         "castTime": 3,
         "duration": "Instant",
@@ -12217,7 +12221,7 @@
           }
         ],
         "description": "A light cantana that regenerates the health, mana, and stamina of your entire group.",
-        "skill": "Stringed",
+        "skill": "Stringed †",
         "castTime": 3,
         "duration": "3 ticks",
         "targetType": "Party",
@@ -12573,7 +12577,8 @@
         "duration": "2 ticks",
         "targetType": "Group",
         "spellType": "Beneficial",
-        "range": 100
+        "range": 100,
+        "resist": "| other ="
       }
     },
     {
@@ -12628,7 +12633,7 @@
             "level": 48
           }
         ],
-        "description": "A collection of chords that binds nearby enemies in magical cords, slowing their attacks and causing them damage. This song does not stack with lv54 [[Selo's Assonant Strane]].",
+        "description": "A collection of chords that binds nearby enemies in magical cords, slowing their attacks and causing them damage. This song does not stack with lv54 Selo's Assonant Strane.",
         "skill": "Stringed",
         "castTime": 3,
         "duration": "3 ticks",
@@ -12670,8 +12675,8 @@
             "level": 50
           }
         ],
-        "description": "An archaic song that increases the attack speed of your group.  This increase is cumulative with most other effects that increase attack speed. It does stack with other haste buffs, it does not bypass the [[Haste_Guide#Haste_Caps",
-        "skill": "Brass",
+        "description": "An archaic song that increases the attack speed of your group.  This increase is cumulative with most other effects that increase attack speed. It does stack with other haste buffs, it does not bypass the Haste_Cap.",
+        "skill": "Brass †",
         "castTime": 3,
         "duration": "3 ticks",
         "targetType": "Party",
@@ -14956,7 +14961,7 @@
             "level": 8
           }
         ],
-        "description": "Provides your target with a sense of courage, increasing their hit points and armor class for 27.0 mins. Effectively serves as a heal; see [[Healing Spell Lines]] to compare with other heals.",
+        "description": "Provides your target with a sense of courage, increasing their hit points and armor class for 27.0 mins. Effectively serves as a heal; see Healing Spell Lines to compare with other heals.",
         "mana": 12,
         "skill": "Abjuration",
         "castTime": 2,
@@ -14984,7 +14989,7 @@
             "level": 48
           }
         ],
-        "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18-24 secs (3-4 ticks).",
+        "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18-24 secs (3-4 ticks).\n\nWhile active the user can't attack.",
         "mana": 10,
         "skill": "Abjuration",
         "castTime": 1,
@@ -15205,7 +15210,7 @@
             "level": 9
           }
         ],
-        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with [[Speed of the Shissar]].",
+        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar.",
         "mana": 1,
         "skill": "Abjuration",
         "castTime": 0.5,
@@ -15525,7 +15530,7 @@
             "level": 8
           }
         ],
-        "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 1. <br>",
+        "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 1. <br>\nSee Blessing of the Page for Spell Line.",
         "mana": 175,
         "skill": "Abjuration",
         "castTime": 3,
@@ -15549,7 +15554,7 @@
             "level": 8
           }
         ],
-        "description": "Fills your target's body with a renewing echo, immediately healing between 50 and 50 hit points, then healing twice more for between 20 and 20 hit points every 6 seconds for 0:00:06.",
+        "description": "Fills your target's body with a renewing echo, immediately healing between 50 and 50 hit points, then healing twice more for between 20 and 20 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
         "mana": 35,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -15715,7 +15720,7 @@
             "level": 24
           }
         ],
-        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 27.0 mins. Consumes a [[Cat's Eye Agate]] when cast.",
+        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 27.0 mins. Consumes a Cat's Eye Agate when cast.",
         "mana": 55,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -15830,7 +15835,7 @@
             "level": 7
           }
         ],
-        "description": "Provides you with a mystical awareness, pointing you towards the nearest [[:Category:Summoned",
+        "description": "Provides you with a mystical awareness, pointing you towards the nearest summoned creature.",
         "mana": 5,
         "skill": "Divination",
         "castTime": 2,
@@ -15889,7 +15894,7 @@
             "level": 14
           }
         ],
-        "description": "Fills your target's body with an echo of light, immediately healing between 140 and 140 hit points, then healing twice more for between 55 and 55 hit points every 6 seconds for 0:00:06.",
+        "description": "Fills your target's body with an echo of light, immediately healing between 140 and 140 hit points, then healing twice more for between 55 and 55 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
         "mana": 85,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -16028,7 +16033,7 @@
             "level": 16
           }
         ],
-        "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 2. <br>",
+        "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 2. <br>\nSee Blessing of the Page for Spell Line.",
         "mana": 350,
         "skill": "Abjuration",
         "castTime": 3,
@@ -16084,7 +16089,7 @@
             "level": 38
           }
         ],
-        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with [[Speed of the Shissar]].",
+        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar.",
         "mana": 1,
         "skill": "Abjuration",
         "castTime": 0.5,
@@ -16147,7 +16152,7 @@
             "level": 16
           }
         ],
-        "description": "A burst of holy power that inflicts between 35 and 41 damage to a [[:Category:Summoned",
+        "description": "A burst of holy power that inflicts between 35 and 41 damage to a summoned target.",
         "mana": 6,
         "skill": "Evocation",
         "castTime": 1.5,
@@ -16366,7 +16371,7 @@
             "level": 33
           }
         ],
-        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 36.0 mins. Consumes a [[bloodstone]] when cast.",
+        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 36.0 mins. Consumes a bloodstone when cast.",
         "mana": 111,
         "skill": "Abjuration",
         "castTime": 4,
@@ -16500,7 +16505,7 @@
             "level": 24
           }
         ],
-        "description": "Fills your target's body with a renewing echo, immediately healing between 190 and 280 hit points, then healing twice more for between 95 and 110 hit points every 6 seconds for 0:00:06.",
+        "description": "Fills your target's body with a renewing echo, immediately healing between 190 and 280 hit points, then healing twice more for between 95 and 110 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -16528,7 +16533,7 @@
             "level": 39
           }
         ],
-        "description": "Covers your target in a holy guard, increasing their armor class for 45.0 mins.",
+        "description": "Covers your target in a holy guard, increasing their armor class for 45.0 mins.\n\nMoved from level 49 to 39 for Paladins a few months after Velious launch [http://www.project1999.com/forums/showpost.php?p=1176734&postcount=8]. (February 21, 2001 3:00 am)",
         "mana": 80,
         "skill": "Abjuration",
         "castTime": 3,
@@ -16752,7 +16757,7 @@
             "level": 18
           }
         ],
-        "description": "A burst of holy light that inflicts between 88 and 94 damage to a [[:Category:Summoned",
+        "description": "A burst of holy light that inflicts between 88 and 94 damage to a summoned target.",
         "mana": 41,
         "skill": "Evocation",
         "castTime": 2.5,
@@ -16873,7 +16878,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Prexus into an [[Imbued Black Pearl]].  Consumes a black pearl when cast.",
+        "description": "Focuses the power of Prexus into an Imbued Black Pearl.  Consumes a black pearl when cast.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -16896,7 +16901,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Bertoxxulous into a black sapphire.  Consumes a black sapphire when cast. Creates an [[Imbued Black Sapphire]].",
+        "description": "Focuses the power of Bertoxxulous into a black sapphire.  Consumes a black sapphire when cast. Creates an Imbued Black Sapphire.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -16923,7 +16928,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Tunare into an emerald. Consumes an emerald when cast. Creates an [[Imbued Emerald]]. You MUST worship Tunare to scribe this spell and cast it.",
+        "description": "Focuses the power of Tunare into an emerald. Consumes an emerald when cast. Creates an Imbued Emerald. You MUST worship Tunare to scribe this spell and cast it.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -16946,7 +16951,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Rodcet Nife into an opal.  Consumes an opal when cast. Creates an [[Imbued Opal]].",
+        "description": "Focuses the power of Rodcet Nife into an opal.  Consumes an opal when cast. Creates an Imbued Opal.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -17006,7 +17011,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Karana into a plains pebble.  Consumes a plains pebble when cast. Creates an [[Imbued Plains Pebble]].",
+        "description": "Focuses the power of Karana into a plains pebble.  Consumes a plains pebble when cast. Creates an Imbued Plains Pebble.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -17029,7 +17034,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Erollisi Marr into a star rose quartz.  Consumes a star rose quartz when cast. Creates an [[Imbued Rose Quartz]].",
+        "description": "Focuses the power of Erollisi Marr into a star rose quartz.  Consumes a star rose quartz when cast. Creates an Imbued Rose Quartz.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -17052,7 +17057,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Brell Serilis into a ruby.  Consumes a ruby when cast. Creates an [[Imbued Ruby]].",
+        "description": "Focuses the power of Brell Serilis into a ruby.  Consumes a ruby when cast. Creates an Imbued Ruby.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -17075,7 +17080,7 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Quellious into a topaz. Consumes a topaz when cast. Creates an [[Imbued Topaz]].",
+        "description": "Focuses the power of Quellious into a topaz. Consumes a topaz when cast. Creates an Imbued Topaz.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -17496,7 +17501,7 @@
             "level": 46
           }
         ],
-        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 45.0 mins.  Consumes a [[Jasper]] when cast.",
+        "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 45.0 mins.  Consumes a Jasper when cast.",
         "mana": 200,
         "skill": "Abjuration",
         "castTime": 4.5,
@@ -17650,7 +17655,7 @@
             "level": 34
           }
         ],
-        "description": "Places mystic armor of protection around you, increasing your hit points and armor class for 1 hour(s) 42.0 mins @L34 to 2 hour(s) 24.0 mins @L48. This spell stacks with other Cleric buffs (AC, HP/AC, and Symbol lines). This spell does NOT stack with the [[Yaulp]] line of spells, or with [[Focus of Spirit]] as well as [[Talisman of Altuna]]. Does not stack with [[Spikecoat]] either for those with [[Girdle of Living Thorns]]. Focus of Spirit and Talisman of Altuna overrides.",
+        "description": "Places mystic armor of protection around you, increasing your hit points and armor class for 1 hour(s) 42.0 mins @L34 to 2 hour(s) 24.0 mins @L48. This spell stacks with other Cleric buffs (AC, HP/AC, and Symbol lines). This spell does NOT stack with the Yaulp line of spells, or with Focus of Spirit as well as Talisman of Altuna. Does not stack with Spikecoat either for those with Girdle of Living Thorns. Focus of Spirit and Talisman of Altuna overrides.",
         "mana": 110,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -17717,7 +17722,7 @@
             "level": 34
           }
         ],
-        "description": "Fills your target's body with a celestial echo, immediately healing between 310 and 480 hit points, then healing twice more for between 165 and 190 hit points every 6 seconds for 0:00:06.",
+        "description": "Fills your target's body with a celestial echo, immediately healing between 310 and 480 hit points, then healing twice more for between 165 and 190 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
         "mana": 245,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -17773,7 +17778,7 @@
             "level": 48
           }
         ],
-        "description": "Covers your target in the armor of faith, increasing their armor class for 1 hour(s) 3.0 mins.",
+        "description": "Covers your target in the armor of faith, increasing their armor class for 1 hour(s) 3.0 mins.\n\nMoved from level 53 to 49 for Paladins a few months after Velious launch [http://www.project1999.org/forums/showpost.php?p=1176734&postcount=8].  (February 21, 2001 3:00 am)",
         "mana": 150,
         "skill": "Abjuration",
         "castTime": 6,
@@ -17955,7 +17960,7 @@
             "level": 49
           }
         ],
-        "description": "Pacifies your target, lowering its aggressiveness for up to 210 secs.",
+        "description": "Pacifies your target, lowering its aggressiveness for up to 210 secs.\n\n<s>The correct duration for this spell was implemented on September 8th, 2019. [https://www.project1999.com/forums/showthread.php?t=333315  Sep 8th 2019 patch]\n[https://www.project1999.com/forums/showthread.php?t=328802 Bug Report]\n\nCHANGE Oct 24th 2024, discussion thread: https://www.project1999.com/forums/showthread.php?t=328802\nTimer lowered to 2 minutes!!</s>\n\nCHANGE Dec 19th 2024, discussion thread: https://project1999.com/forums/showpost.php?p=3712019&postcount=42\n\nPacify is now 3.5 minutes in duration.\n\n\nEffects mobs up to lvl 55.\n*Needs testing to see if it effects mobs above lvl 55.",
         "mana": 100,
         "skill": "Alteration",
         "castTime": 3,
@@ -18001,7 +18006,7 @@
             "level": 33
           }
         ],
-        "description": "A burst of holy power that inflicts between 140 and 162 damage against a [[:Category:Summoned",
+        "description": "A burst of holy power that inflicts between 140 and 162 damage against a summoned target (1.8 DPM).",
         "mana": 73,
         "skill": "Evocation",
         "castTime": 3,
@@ -18211,7 +18216,7 @@
             "level": 39
           }
         ],
-        "description": "Imbues your target with life after 0:00:18, healing for 5000.",
+        "description": "Imbues your target with life after 0:00:18, healing for 5000.\n\nSpell Line: Promised Renewal\n\nLegends exclusive spell replacing the Complete Heal spell line.",
         "mana": 915,
         "skill": "Alteration",
         "castTime": 1,
@@ -18378,7 +18383,7 @@
             "level": 41
           }
         ],
-        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with [[Speed of the Shissar]] or [[Armor of Protection]].",
+        "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar or Armor of Protection.",
         "mana": 1,
         "skill": "Abjuration",
         "castTime": 0.5,
@@ -18526,7 +18531,7 @@
             "level": 43
           }
         ],
-        "description": "Fills your target's body with a sacred echo, immediately healing between 640 and 640 hit points, then healing twice more for between 260 and 260 hit points every 6 seconds for 0:00:06.",
+        "description": "Fills your target's body with a sacred echo, immediately healing between 640 and 640 hit points, then healing twice more for between 260 and 260 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -18550,7 +18555,7 @@
             "level": 44
           }
         ],
-        "description": "Fills your target's body with celestial power, healing 180 hit points every 6 seconds for 24 secs (4 ticks). 3.2 HPM. This spell has the potential to tick a 5th time.",
+        "description": "Fills your target's body with celestial power, healing 180 hit points every 6 seconds for 24 secs (4 ticks). 3.2 HPM. This spell has the potential to tick a 5th time.\n\nSee Healing Spell Lines to compare with other heals.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 4,
@@ -18782,7 +18787,7 @@
             "level": 39
           }
         ],
-        "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1 min. <br> This fast-casting root is replaced by [[Fetter]].",
+        "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1 min. <br> This fast-casting root is replaced by Fetter.",
         "mana": 80,
         "skill": "Alteration",
         "castTime": 1.75,
@@ -18848,7 +18853,7 @@
             "level": 28
           }
         ],
-        "description": "A burst of holy power that inflicts between 243 and 273 damage to a [[:Category:Summoned",
+        "description": "A burst of holy power that inflicts between 243 and 273 damage to a summoned target (2.1 DPM).",
         "mana": 108,
         "skill": "Evocation",
         "castTime": 3.5,
@@ -19044,7 +19049,7 @@
             "level": 10
           }
         ],
-        "description": "Summons a swarm of mystic fireflies to your hands, providing light in dark areas. [[Summoned: Firefly Globe]], a light source. Can only be cast between 7pm and 4 am, outdoors.",
+        "description": "Summons a swarm of mystic fireflies to your hands, providing light in dark areas. Summoned: Firefly Globe, a light source. Can only be cast between 7pm and 4 am, outdoors.",
         "mana": 10,
         "skill": "Conjuration",
         "castTime": 3,
@@ -19071,7 +19076,7 @@
             "level": 3
           }
         ],
-        "description": "Surrounds your target in flickering flames, lowering their armor class, and damaging them.  Must have a",
+        "description": "Surrounds your target in flickering flames, lowering their armor class, and damaging them.  Must have a {{:Fire Beetle Eye",
         "mana": 12,
         "skill": "Evocation",
         "castTime": 1.5,
@@ -19099,7 +19104,7 @@
             "level": 4
           }
         ],
-        "description": "Lulls the ferocity of many [[:Category:Animal",
+        "description": "Lulls the ferocity of many animals, making them less likely to attack.  This spell works on creatures up to level @1.",
         "mana": 10,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -19155,7 +19160,7 @@
             "level": 7
           }
         ],
-        "description": "Hardens the skin of your target, increasing their hit points and armor class.  Effectively a heal;  see [[Healing Spell Lines]] to compare with other heals.",
+        "description": "Hardens the skin of your target, increasing their hit points and armor class.  Effectively a heal;  see Healing Spell Lines to compare with other heals.",
         "mana": 10,
         "skill": "Abjuration",
         "castTime": 3,
@@ -19183,7 +19188,7 @@
             "level": 6
           }
         ],
-        "description": "Entangles your target's feet with magical roots, slowing their movement speed.",
+        "description": "Entangles your target's feet with magical roots, slowing their movement speed.\n\nThis spell, and spells like it which reduce movement speed, are informally referred to as \"Snare\" spells. They include Ensnare, the necromancer/SK Engulfing Darkness line of spells, the wizard Bonds of Force and the druid Bonds of Tunare targeted AE snares, the bard Largo's Absonant Binding PBAE snare, and rogue poisons.\n\nSnare spells are essential to common kiting strategies, allowing casters ample time to cast their nukes and reliably keeping them safe for the duration of the fight.",
         "mana": 15,
         "skill": "Alteration",
         "castTime": 2,
@@ -19315,7 +19320,7 @@
             "level": 4
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 11 every 6 seconds for 0:00:24 and then healing for 18.<br>",
+        "description": "Seeds your target with healing energy, healing for 11 every 6 seconds for 0:00:24 and then healing for 18.<br>\n\nSpell Line: Budding Heal",
         "mana": 20,
         "skill": "Alteration",
         "castTime": 2,
@@ -19399,7 +19404,7 @@
             "level": 22
           }
         ],
-        "description": "Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack.  This spell only works outdoors.",
+        "description": "Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack.  This spell only works outdoors.\n\nThis spell can not be resisted by almost any NPC - however, it does not reduce the aggro/reaction radius as much as other lull spells so one must take into account how closely grouped your targets are. Despite that weaker reduction, this spell is much preferred over every other lull that comes with the risk of a critical resist and aggro. The power of an unresistable lull gives Druids/Rangers great utility to either pull themselves or aid monks/shadowknights in splitting pulls. A druid or ranger targeting a hidden/sneaking rogue can do some amazing work in areas like Plane of Hate's second floor where pulling tends to be uncontrolled at best; the rogue can position themselves in a specific spot where the harmony cast *on them* will only hit specific mobs in a room (like the Evangelist room) or area in order to allow pullers to more easily thin out larger packs of enemies.\n\nSpecial considerations: This spell will aggro Venril Sathir's Remains.",
         "mana": 25,
         "skill": "Abjuration",
         "castTime": 3,
@@ -19427,7 +19432,7 @@
             "level": 17
           }
         ],
-        "description": "Fills your hands with the force of flame, increasing your attack rating for 12.0 mins.",
+        "description": "Fills your hands with the force of flame, increasing your attack rating for 12.0 mins.\n\nDoesn't stack with some other ATK buffs such as Grim Aura, Strength of Nature, Yaulp spells, and Celestial Tranquility.",
         "mana": 30,
         "skill": "Evocation",
         "castTime": 3.5,
@@ -19450,7 +19455,7 @@
             "level": 6
           }
         ],
-        "description": "Transforms you into a stout tree, preventing movement, but increasing your regeneration. This spell also grants you improved night vision ([[Infravision]]). You can only cast this spell in the outdoors.",
+        "description": "Transforms you into a stout tree, preventing movement, but increasing your regeneration. This spell also grants you improved night vision (Infravision). You can only cast this spell in the outdoors.",
         "mana": 30,
         "skill": "Alteration",
         "castTime": 4,
@@ -19631,7 +19636,7 @@
             "level": 10
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 30 every 6 seconds for 0:00:24 and then healing for 100. <br>",
+        "description": "Seeds your target with healing energy, healing for 30 every 6 seconds for 0:00:24 and then healing for 100. <br>\n\nSpell Line: Budding Heal",
         "mana": 70,
         "skill": "Alteration",
         "castTime": 2,
@@ -19683,7 +19688,7 @@
             "level": 12
           }
         ],
-        "description": "Calls down a hailstorm from the sky, causing three waves of 27 damage, up to a maximum of 4 targets hit. (0.435DPM per hit)",
+        "description": "Calls down a hailstorm from the sky, causing three waves of 27 damage, up to a maximum of 4 targets hit. (0.435DPM per hit)\n\n\n*Note: Rain nukes are limited to 4 hits total. Either you can hit the same mobs 3 times, you can hit 2 mobs twice each, or you can hit 4 mobs once each.\n*You, the caster, are exempt from this. You will get hit with all 3 waves regardless of how many mobs you hit if you cast it on top of yourself",
         "mana": 62,
         "skill": "Evocation",
         "castTime": 2.75,
@@ -19779,7 +19784,7 @@
             "level": 31
           }
         ],
-        "description": "Calms the ferocity of many [[:Category:Animal",
+        "description": "Calms the ferocity of many animals, making them less likely to attack. Noticeably larger aggro radius than Calm.",
         "mana": 45,
         "skill": "Alteration",
         "castTime": 2.5,
@@ -19803,7 +19808,7 @@
             "level": 15
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Northern Plains of Karana]].",
+        "description": "Opens a mystical portal that transports you to the Northern Plains of Karana.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -19826,7 +19831,7 @@
             "level": 15
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Surefall Glade]].",
+        "description": "Opens a mystical portal that transports you to the Surefall Glade.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -19859,7 +19864,7 @@
             "level": 15
           }
         ],
-        "description": "Incites fear in an [[:Category:Animal",
+        "description": "Incites fear in an animal target, causing them to flee.\n\nThis spell has a longer duration and better mana efficiency cost than the level 51 spell Repulse Animal, but a slightly worse resist modifier.",
         "mana": 30,
         "skill": "Alteration",
         "castTime": 1.75,
@@ -19935,7 +19940,7 @@
             "level": 16
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Butcherblock Mountains]].",
+        "description": "Opens a mystical portal that transports you to the Butcherblock Mountains.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -19985,7 +19990,7 @@
             "level": 17
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Toxxulia Forest]].",
+        "description": "Opens a mystical portal that transports you to the Toxxulia Forest.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20008,7 +20013,7 @@
             "level": 17
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[West Commonlands",
+        "description": "Opens a mystical portal that transports you to the Western Commonlands.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20107,7 +20112,7 @@
             "level": 47
           }
         ],
-        "description": "Covers your target's body in a mystic cloak, allowing them to blend in with their surroundings. Unlike [[Camouflage]] this spell works both outdoors and indoors. <br> The effect of this spell is the same as that of [[Invisibility]].",
+        "description": "Covers your target's body in a mystic cloak, allowing them to blend in with their surroundings. Unlike Camouflage this spell works both outdoors and indoors. <br> The effect of this spell is the same as that of Invisibility.",
         "mana": 40,
         "skill": "Divination",
         "castTime": 5,
@@ -20155,7 +20160,7 @@
             "level": 20
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 60 every 6 seconds for 0:00:24 and then healing for 197. <br>",
+        "description": "Seeds your target with healing energy, healing for 60 every 6 seconds for 0:00:24 and then healing for 197. <br>\n\nSpell Line: Budding Heal",
         "mana": 130,
         "skill": "Alteration",
         "castTime": 2,
@@ -20179,7 +20184,7 @@
             "level": 20
           }
         ],
-        "description": "Opens a mystical portal that transports you to [[Southern Desert of Ro",
+        "description": "Opens a mystical portal that transports you to The Southern Desert of Ro.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20202,7 +20207,7 @@
             "level": 20
           }
         ],
-        "description": "Opens a mystical portal that transports you to [[Stonebrunt Mountains",
+        "description": "Opens a mystical portal that transports you to The Stonebrunt Mountains.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20229,7 +20234,7 @@
             "level": 48
           }
         ],
-        "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf for 1 hour @L20 to 1 hour(s) 12.0 mins @L24, increasing your movement speed, and attack rating. Can only cast this spell outdoors. This spell also grants you improved night vision ([[Infravision]]).",
+        "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf for 1 hour @L20 to 1 hour(s) 12.0 mins @L24, increasing your movement speed, and attack rating. Can only cast this spell outdoors. This spell also grants you improved night vision (Infravision).\n\n\nWolf Form affects faction and will make you indifferent to races that are otherwise KoS:\n*The Drachnids in the Dreadlands\n*The Undead in Unrest\n\nWolf Form makes you KoS in Firiona Vie and Halas. In Everfrost Peaks, Tundra Jack and Iceberg and all other Barbarian guards will attack you. Also KOS to Pirates of Iceclad (including Frankel the Pirate at the dock in North Ro).",
         "mana": 60,
         "skill": "Alteration",
         "castTime": 4,
@@ -20280,7 +20285,7 @@
             "level": 21
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Steamfont Mountains]].",
+        "description": "Opens a mystical portal that transports you to the Steamfont Mountains.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20303,7 +20308,7 @@
             "level": 22
           }
         ],
-        "description": "Calls down a hailstorm from the sky, causing three waves of 62 damage, up to a maximum of 4 targets hit. (0.496DPM per hit)",
+        "description": "Calls down a hailstorm from the sky, causing three waves of 62 damage, up to a maximum of 4 targets hit. (0.496DPM per hit)\n\n\n*Note: Rain nukes are limited to 4 hits total. Either you can hit the same mobs 3 times, you can hit 2 mobs twice each, or you can hit 4 mobs once each.\n*You, the caster, are exempt from this. You will get hit with all 3 waves regardless of how many mobs you hit if you cast it on top of yourself\n'''WARNING:''' This spell '''WILL NOT''' deal the final killing blow to any mob. Instead, it will just resist to infinity.",
         "mana": 125,
         "skill": "Evocation",
         "castTime": 3.5,
@@ -20327,7 +20332,7 @@
             "level": 22
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Feerrott]] Jungle.",
+        "description": "Opens a mystical portal that transports you to the Feerrott Jungle.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20350,7 +20355,7 @@
             "level": 22
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Lavastorm Mountains]].",
+        "description": "Opens a mystical portal that transports you to the Lavastorm Mountains.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20449,7 +20454,7 @@
             "level": 25
           }
         ],
-        "description": "Opens a mystical portal that transports your group to [[Butcherblock Mountains]].",
+        "description": "Opens a mystical portal that transports your group to Butcherblock Mountains.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -20473,7 +20478,7 @@
             "level": 25
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[Northern Plains of Karana]].",
+        "description": "Opens a mystical portal that transports your group to the Northern Plains of Karana.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -20533,7 +20538,7 @@
             "level": 44
           }
         ],
-        "description": "Inflicts burns on your target, causing 24 damage every 6 seconds for 66 secs (11 ticks). Requires a",
+        "description": "Inflicts burns on your target, causing 24 damage every 6 seconds for 66 secs (11 ticks). Requires a {{:Fire Beetle Eye",
         "mana": 72,
         "skill": "Evocation",
         "castTime": 2.5,
@@ -20557,7 +20562,7 @@
             "level": 25
           }
         ],
-        "description": "Opens a mystical portal that transports you to the [[Misty Thicket]].",
+        "description": "Opens a mystical portal that transports you to the Misty Thicket.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -20627,7 +20632,7 @@
             "level": 26
           }
         ],
-        "description": "Opens a mystical portal that transports your group to [[Eastern Plains of Karana",
+        "description": "Opens a mystical portal that transports your group to The Eastern Plains of Karana.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -20678,7 +20683,7 @@
             "level": 27
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[West Commonlands",
+        "description": "Opens a mystical portal that transports your group to the Western Commonlands.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -20754,7 +20759,7 @@
             "level": 28
           }
         ],
-        "description": "Beckons to the plants of the wild, allowing you to control them.",
+        "description": "Beckons to the plants of the wild, allowing you to control them.\n\n<!--'''NOTE:''' There are very few plant mobs of level 25 or below in the game.  Man Eating Vines in Swamp of No Hope  (level 25 exactly) are one of the best targets for this spell. -->",
         "mana": 170,
         "skill": "Alteration",
         "castTime": 6,
@@ -20778,7 +20783,7 @@
             "level": 28
           }
         ],
-        "description": "Opens a mystical portal that transports your group to [[Stonebrunt Mountains",
+        "description": "Opens a mystical portal that transports your group to The Stonebrunt Mountains.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -20854,7 +20859,7 @@
             "level": 30
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 90 every 6 seconds for 0:00:24 and then healing for 200. <br>",
+        "description": "Seeds your target with healing energy, healing for 90 every 6 seconds for 0:00:24 and then healing for 200. <br>\n\nSpell Line: Budding Heal",
         "mana": 195,
         "skill": "Alteration",
         "castTime": 2,
@@ -20878,7 +20883,7 @@
             "level": 30
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[Lavastorm Mountains]].",
+        "description": "Opens a mystical portal that transports your group to the Lavastorm Mountains.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -21018,7 +21023,7 @@
             "level": 32
           }
         ],
-        "description": "Opens a mystical portal that transports your group to [[Southern Desert of Ro",
+        "description": "Opens a mystical portal that transports your group to The Southern Desert of Ro.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -21066,7 +21071,7 @@
             "level": 32
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[Butcherblock Mountains]].",
+        "description": "Opens a mystical portal that transports your group to the Butcherblock Mountains.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -21090,7 +21095,7 @@
             "level": 32
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Toxxulia Forest]].",
+        "description": "Opens a mystical portal that teleports your target to the Toxxulia Forest.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21114,7 +21119,7 @@
             "level": 33
           }
         ],
-        "description": "Beckons to the [[:Category:Animal",
+        "description": "Beckons to the animals of the wild, allowing you to control them.",
         "mana": 170,
         "skill": "Alteration",
         "castTime": 6,
@@ -21138,7 +21143,7 @@
             "level": 33
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Butcherblock Mountains]].",
+        "description": "Opens a mystical portal that teleports your target to the Butcherblock Mountains.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21210,7 +21215,7 @@
             "level": 34
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Northern Plains of Karana]].",
+        "description": "Opens a mystical portal that teleports your target to the Northern Plains of Karana.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21281,7 +21286,7 @@
             "level": 35
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to [[Stonebrunt Mountains",
+        "description": "Opens a mystical portal that teleports your target to The Stonebrunt Mountains.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21305,7 +21310,7 @@
             "level": 35
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Surefall Glade]].",
+        "description": "Opens a mystical portal that teleports your target to the Surefall Glade.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21329,7 +21334,7 @@
             "level": 35
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[West Commonlands",
+        "description": "Opens a mystical portal that teleports your target to the Western Commonlands.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21353,7 +21358,7 @@
             "level": 36
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[Misty Thicket]].",
+        "description": "Opens a mystical portal that transports your group to the Misty Thicket.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -21425,7 +21430,7 @@
             "level": 37
           }
         ],
-        "description": "Calls down a hailstorm from the sky, causing three waves of 125 damage, up to a maximum of 4 targets hit. (0.625DPM per hit). On a single target where all 3 waves hit, 1.875 damage per mana, meaning it is less mana-efficient than Firestrike unless all 4 possible strikes land.",
+        "description": "Calls down a hailstorm from the sky, causing three waves of 125 damage, up to a maximum of 4 targets hit. (0.625DPM per hit). On a single target where all 3 waves hit, 1.875 damage per mana, meaning it is less mana-efficient than Firestrike unless all 4 possible strikes land.\n\n\n*Note: Rain nukes are limited to 4 hits total. Either you can hit the same mobs 3 times, you can hit 2 mobs twice each, or you can hit 4 mobs once each.\n*You, the caster, are exempt from this. You will get hit with all 3 waves regardless of how many mobs you hit if you cast it on top of yourself",
         "mana": 200,
         "skill": "Evocation",
         "castTime": 5,
@@ -21477,7 +21482,7 @@
             "level": 42
           }
         ],
-        "description": "Surrounds your body in a coat of spikes that increases your armor class, as well as harming those that strike you for 1 hour(s) 57.0 mins @L39 to 3 hour(s) 15.0 mins @L65. Overwrites [[Armor of Protection]] for clerics with the belt.",
+        "description": "Surrounds your body in a coat of spikes that increases your armor class, as well as harming those that strike you for 1 hour(s) 57.0 mins @L39 to 3 hour(s) 15.0 mins @L65. Overwrites Armor of Protection for clerics with the belt.",
         "mana": 110,
         "skill": "Abjuration",
         "castTime": 2,
@@ -21524,7 +21529,7 @@
             "level": 38
           }
         ],
-        "description": "Opens a mystical portal that transports your group to [[Southern Desert of Ro",
+        "description": "Opens a mystical portal that transports your group to The Southern Desert of Ro.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -21620,7 +21625,7 @@
             "level": 39
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Feerrott]] Jungle.",
+        "description": "Opens a mystical portal that teleports your target to the Feerrott Jungle.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21644,7 +21649,7 @@
             "level": 39
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Steamfont Mountains]].",
+        "description": "Opens a mystical portal that teleports your target to the Steamfont Mountains.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21668,7 +21673,7 @@
             "level": 40
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 120 every 6 seconds for 0:00:24 and then healing for 390. <br>",
+        "description": "Seeds your target with healing energy, healing for 120 every 6 seconds for 0:00:24 and then healing for 390. <br>\n\nSpell Line: Budding Heal",
         "mana": 250,
         "skill": "Alteration",
         "castTime": 2,
@@ -21739,7 +21744,7 @@
             "level": 40
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to [[Southern Desert of Ro",
+        "description": "Opens a mystical portal that teleports your target to The Southern Desert of Ro.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -21834,7 +21839,7 @@
             "level": 43
           }
         ],
-        "description": "Beckons to the [[:Category:Animal",
+        "description": "Beckons to the animals of the wild, allowing you to control them.",
         "mana": 220,
         "skill": "Alteration",
         "castTime": 9,
@@ -21862,7 +21867,7 @@
             "level": 48
           }
         ],
-        "description": "A burst of holy power that inflicts 585 damage to a [[:Category:Summoned",
+        "description": "A burst of holy power that inflicts 585 damage to a summoned target (2.6 DPM)",
         "mana": 136,
         "skill": "Evocation",
         "castTime": 4,
@@ -21988,7 +21993,7 @@
             "level": 45
           }
         ],
-        "description": "Fills your group with the spirit of the wild, allowing them to take the form of a wolf for 6:00:00 and granting [[Illusion Benefit Dena]].",
+        "description": "Fills your group with the spirit of the wild, allowing them to take the form of a wolf for 6:00:00 and granting Illusion Benefit Dena.",
         "mana": 350,
         "skill": "Alteration",
         "castTime": 6,
@@ -22011,7 +22016,7 @@
             "level": 45
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Misty Thicket]].",
+        "description": "Opens a mystical portal that teleports your target to the Misty Thicket.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -22083,7 +22088,7 @@
             "level": 46
           }
         ],
-        "description": "Opens a mystical portal that transports your group to the [[Northern Plains of Karana]].",
+        "description": "Opens a mystical portal that transports your group to the Northern Plains of Karana.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -22177,7 +22182,7 @@
             "level": 47
           }
         ],
-        "description": "Opens a mystical portal that teleports your target to the [[Lavastorm Mountains]].",
+        "description": "Opens a mystical portal that teleports your target to the Lavastorm Mountains.",
         "mana": 225,
         "skill": "Alteration",
         "castTime": 10,
@@ -22201,7 +22206,7 @@
             "level": 48
           }
         ],
-        "description": "Seeds your target with healing energy, healing for 150 every 6 seconds for 0:00:24 and then healing for 450. <br>",
+        "description": "Seeds your target with healing energy, healing for 150 every 6 seconds for 0:00:24 and then healing for 450. <br>\n\nSpell Line: Budding Heal",
         "mana": 255,
         "skill": "Alteration",
         "castTime": 2,
@@ -22249,7 +22254,7 @@
             "level": 48
           }
         ],
-        "description": "Covers your body in a mystic cloak, allowing you to blend in with your surroundings. This spell works both outdoors and indoors. Unlike [[Superior Camouflage]], this effect does not randomly break early and will always last the full duration.<br><span style=\"color:red;\">The name of the scroll for this spell is... Spell: Improved Superior Camo </span>",
+        "description": "Covers your body in a mystic cloak, allowing you to blend in with your surroundings. This spell works both outdoors and indoors. Unlike Superior Camouflage, this effect does not randomly break early and will always last the full duration.<br><span style=\"color:red;\">The name of the scroll for this spell is... Spell: Improved Superior Camo </span>",
         "mana": 75,
         "skill": "Divination",
         "castTime": 5,
@@ -22450,7 +22455,8 @@
         "duration": "3 minutes @L1 to 12 minutes @L4",
         "targetType": "Self",
         "spellType": "Beneficial",
-        "resist": "Unresistable"
+        "resist": "Unresistable",
+        "skill": "| mana = 60"
       }
     },
     {
@@ -22532,7 +22538,7 @@
             "level": 1
           }
         ],
-        "description": "Animates a weapon and shield to attack your enemies.  Consumes a [[Tiny Dagger]] when cast.",
+        "description": "Animates a weapon and shield to attack your enemies.  Consumes a Tiny Dagger when cast.",
         "mana": 12,
         "skill": "Conjuration",
         "castTime": 1.5,
@@ -22611,7 +22617,7 @@
             "level": 1
           }
         ],
-        "description": "Tears the magic from your target, causing their enchantments to fade.",
+        "description": "Tears the magic from your target, causing their enchantments to fade.\n\nAs of 7/14/2017 patch, Taper Enchantment will no longer completely remove an effect, it only reduces time remaining of an effect.\n\n\"Rather than remove an effect, it reduces its time remaining.\" - Haynar [https://www.project1999.com/forums/showthread.php?p=2557629#post2557629]",
         "mana": 5,
         "skill": "Abjuration",
         "castTime": 3,
@@ -22712,7 +22718,7 @@
             "level": 2
           }
         ],
-        "description": "Animates a weapon and shield to attack your enemies.  Consumes a [[Tiny Dagger]] when cast.",
+        "description": "Animates a weapon and shield to attack your enemies.  Consumes a Tiny Dagger when cast.",
         "mana": 24,
         "skill": "Conjuration",
         "castTime": 2,
@@ -23133,7 +23139,7 @@
             "level": 8
           }
         ],
-        "description": "Cloaks you in an amiable aura, causing creatures of your target's [[faction]] to view you more favorably.",
+        "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.\n\nOnly one faction can be boosted at a time.",
         "mana": 35,
         "skill": "Alteration",
         "castTime": 3.5,
@@ -23330,7 +23336,7 @@
             "level": 10
           }
         ],
-        "description": "Cloaks you in a shimmering illusion that makes you appear to be a Dark Elf. This spell also grants you greatly improved night vision ([[Ultravision]]).",
+        "description": "Cloaks you in a shimmering illusion that makes you appear to be a Dark Elf. This spell also grants you greatly improved night vision (Ultravision).",
         "mana": 30,
         "skill": "Divination",
         "castTime": 3,
@@ -23401,7 +23407,7 @@
             "level": 11
           }
         ],
-        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 25.",
+        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 25.\n\nAs of 2020, Vendor NPCs can '''not''' be charmed.[https://www.project1999.com/forums/showthread.php?t=370884]",
         "mana": 60,
         "skill": "Alteration",
         "castTime": 2.4,
@@ -23645,7 +23651,7 @@
             "level": 13
           }
         ],
-        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a",
+        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a {{:Cat's Eye Agate",
         "mana": 41,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -23679,7 +23685,7 @@
             "level": 14
           }
         ],
-        "description": "Calms your target's thoughts, allowing them to regenerate mana more quickly.",
+        "description": "Calms your target's thoughts, allowing them to regenerate mana more quickly.\n\nAdded after kunark launch\n\nHas no sound effect prior to luclin.[https://www.project1999.com/forums/showpost.php?p=3220525&postcount=6]",
         "mana": 35,
         "skill": "Alteration",
         "castTime": 2.5,
@@ -23989,7 +23995,7 @@
             "level": 17
           }
         ],
-        "description": "Cloaks you in a shimmering illusion that makes you appear to be an Ogre. This spell also grants you greatly improved night vision, and gives the ability Slam.",
+        "description": "Cloaks you in a shimmering illusion that makes you appear to be an Ogre. This spell also grants you greatly improved night vision, and gives the ability Slam.\n\nDoes '''not''' give ogre racial front stun immunity.",
         "mana": 50,
         "skill": "Divination",
         "castTime": 3,
@@ -24201,7 +24207,7 @@
             "level": 20
           }
         ],
-        "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.",
+        "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.\n\nOnly one faction can be boosted at a time.",
         "mana": 50,
         "skill": "Alteration",
         "castTime": 4,
@@ -24347,7 +24353,7 @@
             "level": 21
           }
         ],
-        "description": "Cloaks you in a shimmering illusion that makes you appear to be an Earth Elemental.  This spell also grants you increased strength. Increases faction with [[Minions of Underfoot]]",
+        "description": "Cloaks you in a shimmering illusion that makes you appear to be an Earth Elemental.  This spell also grants you increased strength. Increases faction with Minions of Underfoot",
         "mana": 50,
         "skill": "Divination",
         "castTime": 3,
@@ -24380,7 +24386,7 @@
             "level": 22
           }
         ],
-        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a",
+        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a {{:bloodstone",
         "mana": 83,
         "skill": "Abjuration",
         "castTime": 4,
@@ -24451,7 +24457,7 @@
             "level": 23
           }
         ],
-        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 37.",
+        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 37.\n\nMerchant class npcs can '''not''' be charmed.[https://www.project1999.com/forums/showthread.php?t=370884]",
         "mana": 120,
         "skill": "Alteration",
         "castTime": 3.5,
@@ -24709,7 +24715,7 @@
             "level": 26
           }
         ],
-        "description": "Constricts your target's throat, causing between 34 to 65 damage initially and 11 damage every six seconds for 1.5 mins @L29 to 1.8 mins @L36 (198 DoT dmg), as well as lowering their strength and agility.  Damage per mana: 1.99 (L29) - 2.63 (L60).",
+        "description": "Constricts your target's throat, causing between 34 to 65 damage initially and 11 damage every six seconds for 1.5 mins @L29 to 1.8 mins @L36 (198 DoT dmg), as well as lowering their strength and agility.  Damage per mana: 1.99 (L29) - 2.63 (L60).\n\nStacks with Cripple.",
         "mana": 115,
         "skill": "Alteration",
         "castTime": 3,
@@ -24804,7 +24810,7 @@
             "level": 28
           }
         ],
-        "description": "Spins your target in a circle, preventing them from taking any action up to 12 seconds. Like [[Whirl Till You Hurl]] this spell breaks randomly, and rarely lasts the full 12 seconds.",
+        "description": "Spins your target in a circle, preventing them from taking any action up to 12 seconds. Like Whirl Till You Hurl this spell breaks randomly, and rarely lasts the full 12 seconds.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 3,
@@ -25214,7 +25220,7 @@
             "level": 33
           }
         ],
-        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a [[jasper]] when cast. (Absorbs 1.54 HP per mana)",
+        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a jasper when cast. (Absorbs 1.54 HP per mana)",
         "mana": 149,
         "skill": "Abjuration",
         "castTime": 4.5,
@@ -25338,7 +25344,7 @@
             "level": 43
           }
         ],
-        "description": "'''Two different incompatible versions of this spell exists in game.''' One is crafted by [[Wizard]]s and the other is crafted by [[Enchanter]]s. Causes a sudden reversal in the gravity around your target, doing 214 damage. Only hits 4 mobs max. Please confirm damage at various levels.",
+        "description": "'''Two different incompatible versions of this spell exists in game.''' One is crafted by Wizards and the other is crafted by Enchanters. Causes a sudden reversal in the gravity around your target, doing 214 damage. Only hits 4 mobs max. Please confirm damage at various levels.\n<br>\n<br>\n\nQuad-kiting Wizards are recommended to use the more mana efficient Circle of Force until level 51, then Pillar of Frost.\nThis spell has an alternate use to project yourself/duel to locations not easily accessible like ramparts of CoM. \n\nWhen cast by NPCs, this spell can be very dangerous against players, as fall damage can be very brutal, especially if they are overweight or fall off nearby cliffs. Levitate and Dead Man Floating can counter this risk.",
         "mana": 337,
         "skill": "Alteration",
         "castTime": 5.9,
@@ -25409,7 +25415,7 @@
             "level": 37
           }
         ],
-        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 46.",
+        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 46.\n\nThis spell is superseded by Allure, although Allure provides little advantage besides having a higher maximum level limitation.\n\nMerchant class npcs can '''not''' be charmed.[https://www.project1999.com/forums/showthread.php?t=370884]",
         "mana": 195,
         "skill": "Alteration",
         "castTime": 5.5,
@@ -25642,7 +25648,7 @@
             "level": 40
           }
         ],
-        "description": "Transforms your target into a feral werewolf, increasing their attack rating, dexterity, and allowing a chance to perform a life draining attack.",
+        "description": "Transforms your target into a feral werewolf, increasing their attack rating, dexterity, and allowing a chance to perform a life draining attack.\n<br>\n\n Lifetap Proc Damage(Based on level of the person it is cast on):<br>\n  5 HP @ level 1<br>\n  30 HP @ level 50<br>\n  35 HP @ level 60 <br>\n<br>\n\nThis spell stacks with shaman dexterity buffs such as Mortal Deftness. It does not stack with other illusions.",
         "mana": 100,
         "skill": "Divination",
         "castTime": 1.5,
@@ -25730,7 +25736,7 @@
             "level": 41
           }
         ],
-        "description": "Expands your target's mind, increasing their intelligence and wisdom.",
+        "description": "Expands your target's mind, increasing their intelligence and wisdom.\n\nThis spell is dissimilar to Gift of Brilliance which buffs maximum mana and mana regeneration.",
         "mana": 125,
         "skill": "Alteration",
         "castTime": 4.25,
@@ -25835,7 +25841,7 @@
             "level": 42
           }
         ],
-        "description": "Calms your group's thoughts, allowing them to regenerate mana more quickly. ([http://www.project1999.org/forums/showthread.php?t=34660 level 52]) <br> A group-targeted mana regeneration spell. It gives 1 point more per tic than [[Clarity]].",
+        "description": "Calms your group's thoughts, allowing them to regenerate mana more quickly. ([http://www.project1999.org/forums/showthread.php?t=34660 level 52]) <br> A group-targeted mana regeneration spell. It gives 1 point more per tic than Clarity.",
         "mana": 175,
         "skill": "Alteration",
         "castTime": 3.5,
@@ -26237,7 +26243,7 @@
             "level": 46
           }
         ],
-        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 51.",
+        "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 51.\n\nThis spell supersedes Cajoling Whispers and is often used in planar raids for controlling higher level NPCs.\n\nMerchant class npcs can '''not''' be charmed.[https://www.project1999.com/forums/showthread.php?t=370884]",
         "mana": 245,
         "skill": "Alteration",
         "castTime": 6,
@@ -26309,7 +26315,7 @@
             "level": 47
           }
         ],
-        "description": "Causes your opponent to fall into an enchanted sleep for up to 1.6 mins (96 seconds).  This spell works on creatures up to level 55. (1.30 mana per second)",
+        "description": "Causes your opponent to fall into an enchanted sleep for up to 1.6 mins (96 seconds).  This spell works on creatures up to level 55. (1.30 mana per second)\n\nDoes not override Mesmerize, but will be overridden by it.",
         "mana": 110,
         "skill": "Conjuration",
         "castTime": 2.5,
@@ -26414,7 +26420,7 @@
             "level": 48
           }
         ],
-        "description": "Covers your group in a protective shield, increasing their magic resistance.<br>",
+        "description": "Covers your group in a protective shield, increasing their magic resistance.<br>\nDoes not stack with the single target version Resist Magic or Aura of Blue Petals.<br>\nNote: This spell is 15 more MR than the single target version.\n\nThe duration at launch was 27 minutes. It was originally upgraded to 36 minutes in June, 2000 (Hole Era).",
         "mana": 200,
         "skill": "Abjuration",
         "castTime": 6,
@@ -26461,7 +26467,7 @@
             "level": 48
           }
         ],
-        "description": "Causes your target's image to blur, making it harder for your opponents to hit you by increasing your armor class. Prevents [[Talisman of Kragg]] and [[Riotous Health]] from sticking.",
+        "description": "Causes your target's image to blur, making it harder for your opponents to hit you by increasing your armor class. Prevents Talisman of Kragg and Riotous Health from sticking.",
         "mana": 70,
         "skill": "Abjuration",
         "castTime": 7,
@@ -26485,7 +26491,7 @@
             "level": 50
           }
         ],
-        "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.",
+        "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.\n\nOnly one faction can be boosted at a time.",
         "mana": 75,
         "skill": "Alteration",
         "castTime": 3.5,
@@ -26509,7 +26515,7 @@
             "level": 50
           }
         ],
-        "description": "Cloaks you in a mystic veil, rendering you invisible to many creatures for 10.0 mins. Unlike [[Invisibility]], this effect does not randomly break early.",
+        "description": "Cloaks you in a mystic veil, rendering you invisible to many creatures for 10.0 mins. Unlike Invisibility, this effect does not randomly break early.",
         "mana": 75,
         "skill": "Divination",
         "castTime": 4,
@@ -26532,7 +26538,7 @@
             "level": 50
           }
         ],
-        "description": "Tears the energy from your target's mind, draining their mana and adding it to yours.",
+        "description": "Tears the energy from your target's mind, draining their mana and adding it to yours.\n\nNote: If the mob has less mana than Theft of Thought can steal, the spell still lands but you'll get a partial return for whatever amount of mana the mob had left.\n\nYou can Theft of thought certain mobs that aren't obvious casters like the shadow knights who only harm touch (notably howling stones skeletons) and the translucent spiders in velketor that cast invisibility.\n\nIf you cast it on an invalid target, you'll get a message saying so but you won't burn your cooldown.",
         "mana": 25,
         "skill": "Alteration",
         "castTime": 2,
@@ -26871,7 +26877,7 @@
             "level": 8
           }
         ],
-        "description": "Conjures a magical eye that allows you to scout dangerous areas. <br> While under the effect of this spell, a new low level NPC is spawned that looks like a spinning eye. After a short delay, the camera switches to follow this eye and the caster can control it with most normal movement commands. The eye has the same faction as the player, and if the player is not under [[Feign Death]], they will gain any aggro which the eye has. Thus, it is useful as a long-range pulling method. <br> Like other NPCs, players can attack the eye <s>and cannot buff it</s> ''(not sure if it's a case-by-case basis but I regularly cast [[Bedlam]] on my eyes without issue to get extra hits in)''. It's possible to summon the eye and hit it with weapons such as the [[Worker Sledgemallet]] just to gain a proc effect. It has good swimming speed but cannot jump and may have difficulty getting out of the water.",
+        "description": "Conjures a magical eye that allows you to scout dangerous areas. <br> While under the effect of this spell, a new low level NPC is spawned that looks like a spinning eye. After a short delay, the camera switches to follow this eye and the caster can control it with most normal movement commands. The eye has the same faction as the player, and if the player is not under Feign Death, they will gain any aggro which the eye has. Thus, it is useful as a long-range pulling method. <br> Like other NPCs, players can attack the eye <s>and cannot buff it</s> ''(not sure if it's a case-by-case basis but I regularly cast Bedlam on my eyes without issue to get extra hits in)''. It's possible to summon the eye and hit it with weapons such as the Worker Sledgemallet just to gain a proc effect. It has good swimming speed but cannot jump and may have difficulty getting out of the water.\n<br>\n<br>\nCan not be cast in Plane of Sky or Kedge Keep.",
         "mana": 30,
         "skill": "Conjuration",
         "castTime": 6,
@@ -27487,7 +27493,7 @@
             "level": 15
           }
         ],
-        "description": "Focuses mana into the form of heatstone that provides improved night vision ([[Serpent Sight]]).",
+        "description": "Focuses mana into the form of heatstone that provides improved night vision (Serpent Sight).",
         "mana": 40,
         "skill": "Conjuration",
         "castTime": 7,
@@ -29229,7 +29235,7 @@
             "level": 43
           }
         ],
-        "description": "Surrounds your target in an elemental maelstrom, causing 250 damage initially, and 70 damage every six seconds for 36 secs (6 ticks).",
+        "description": "Surrounds your target in an elemental maelstrom, causing 250 damage initially, and 70 damage every six seconds for 36 secs (6 ticks).\n\nIf the spell lasts fully, it does 250 + 70 * 6 = 670 total damage.  Given its mana cost that works out to 670 / 240 = 2.79 Damage Per Mana (DPM).",
         "mana": 87,
         "skill": "Evocation",
         "castTime": 3,
@@ -29725,7 +29731,7 @@
             "level": 6
           }
         ],
-        "description": "Tears strength from your target and infuses your muscles for 6 min.",
+        "description": "Tears strength from your target and infuses your muscles for 6 min.\n Effect: Decrease Target's STR by 5 (L1) to 10 (L10) \n Recourse Effect:  Increase Caster's STR by 5 (L1) to 10 (L10) Siphon Strength Recourse",
         "mana": 5,
         "skill": "Alteration",
         "castTime": 1.5,
@@ -29781,7 +29787,7 @@
             "level": 16
           }
         ],
-        "description": "Surrounds you in a dark aura, increasing your attack rating for 9.0 mins @L3 to 27.0 mins @L9.",
+        "description": "Surrounds you in a dark aura, increasing your attack rating for 9.0 mins @L3 to 27.0 mins @L9.\n\nDoesn't stack with some other ATK buffs such as Firefist, Strength of Nature, and Celestial Tranquility.",
         "mana": 25,
         "skill": "Alteration",
         "castTime": 3,
@@ -29836,7 +29842,7 @@
             "level": 11
           }
         ],
-        "description": "Summons a clinging darkness that binds your target's feet, decreasing their movement rate, and does 5 damage every 6 seconds for 12 secs (2 ticks @L4 to 8 ticks @L16). <br> Though cheaper in mana, this spell should generally be replaced by the superior [[Engulfing Darkness]].",
+        "description": "Summons a clinging darkness that binds your target's feet, decreasing their movement rate, and does 5 damage every 6 seconds for 12 secs (2 ticks @L4 to 8 ticks @L16). <br> Though cheaper in mana, this spell should generally be replaced by the superior Engulfing Darkness.",
         "mana": 20,
         "skill": "Alteration",
         "castTime": 1.75,
@@ -29864,7 +29870,7 @@
             "level": 7
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast.  The level 3 pet max-hits for 8, the level 4 pet max-hits for 10 and the level 5 pet max-hits for 12.",
         "mana": 40,
         "skill": "Conjuration",
         "castTime": 6,
@@ -29915,7 +29921,7 @@
             "level": 18
           }
         ],
-        "description": "Allows your eyes the vision of the dead, providing night vision and the ability to see invisible creatures for 15.0 mins @L5 to 27.0 mins @L9. This is similar to [[See Invisible]] and [[Serpent Sight]] except it is self-only.",
+        "description": "Allows your eyes the vision of the dead, providing night vision and the ability to see invisible creatures for 15.0 mins @L5 to 27.0 mins @L9. This is similar to See Invisible and Serpent Sight except it is self-only.",
         "mana": 35,
         "skill": "Divination",
         "castTime": 3,
@@ -30027,7 +30033,7 @@
             "level": 6
           }
         ],
-        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.",
+        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.\n\n'''1st''' spell of the \"Lich\" spell line\n\nDoes '''not''' stack with any clarity spells.\n\n'''Does''' stack with bard mana songs.",
         "mana": 5,
         "skill": "Alteration",
         "castTime": 3,
@@ -30132,7 +30138,7 @@
             "level": 14
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast. The level 6-7 pet max-hits for 10, the level 8 pet max-hits for 12 and the level 9 pet max-hits for 14. Attacks are non-magical.",
         "mana": 80,
         "skill": "Conjuration",
         "castTime": 7,
@@ -30281,7 +30287,7 @@
             "level": 28
           }
         ],
-        "description": "Heats the blood of your target, causing 17 damage every six seconds for 6 ticks at level 12 to 10 ticks at level 20.",
+        "description": "Heats the blood of your target, causing 17 damage every six seconds for 6 ticks at level 12 to 10 ticks at level 20.\n\nThus at level 20 it can deal a total of 170 damage for an efficiency of 2.36 damage per mana.",
         "mana": 88,
         "skill": "Alteration",
         "castTime": 3,
@@ -30385,7 +30391,7 @@
             "level": 22
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast.\n\nLevel to Max Hit Chart \n* level 8 = 10 damage\n* level 9 = 12 Damage\n* level 10 = 14 Damage\n* level 11 = 16 Damage",
         "mana": 120,
         "skill": "Conjuration",
         "castTime": 8,
@@ -30472,7 +30478,7 @@
             "level": 13
           }
         ],
-        "description": "Surrounds your skin in a protective aura that absorbs between 9 and 55 damage. Consumes a [[Cats Eye Agate]] when cast.",
+        "description": "Surrounds your skin in a protective aura that absorbs between 9 and 55 damage. Consumes a Cats Eye Agate when cast.",
         "mana": 41,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -30495,7 +30501,7 @@
             "level": 15
           }
         ],
-        "description": "Surrounds your body with an aura of vengeful spirits,  causing damage to anyone who strikes you for 4.0 mins @L15 to 9 mins @L35. Requires, but does not consume, a pearl when cast.",
+        "description": "Surrounds your body with an aura of vengeful spirits,  causing damage to anyone who strikes you for 4.0 mins @L15 to 9 mins @L35. Requires, but does not consume, a pearl when cast.\n\n'''Era info:''' Starts off doing a static 8 damage, before increasing to 9 and beginning to scale up with level in April 2000 era: https://www.project1999.com/forums/showthread.php?t=360588\n\n''Note: Updated Banshee Aura: buffdurationformula 7 -> 9, buffduration 30 -> 90, effect_base_value1 -8 -> -6, max1 0 -> 12, formula1 100 -> 110 (17 Feb, 2013 Patch, who knows what it means).''",
         "mana": 60,
         "skill": "Abjuration",
         "castTime": 5,
@@ -30546,7 +30552,7 @@
             "level": 24
           }
         ],
-        "description": "Causes you to stop breathing and appear dead to most creatures.",
+        "description": "Causes you to stop breathing and appear dead to most creatures.\nThis is the spell used by necromancers and shadowknights. Monks have a similar combat ability with the same name.",
         "mana": 60,
         "skill": "Abjuration",
         "castTime": 1.5,
@@ -30620,7 +30626,7 @@
             "level": 30
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast. Max hit range 13-20.",
         "mana": 160,
         "skill": "Conjuration",
         "castTime": 9,
@@ -30690,7 +30696,7 @@
             "level": 18
           }
         ],
-        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.",
+        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana. \n\n'''2nd''' of the \"Lich\" spell line\n\nDoes '''not''' stack with any clarity spells.\n\n'''Does''' stack with bard mana songs.",
         "mana": 5,
         "skill": "Alteration",
         "castTime": 3,
@@ -30796,7 +30802,7 @@
             "level": 38
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.",
         "mana": 200,
         "skill": "Conjuration",
         "castTime": 10,
@@ -30878,7 +30884,7 @@
             "level": 45
           }
         ],
-        "description": "Allows your metabolism to function without oxygen, allowing you to survive without air for 27.0 mins.  Consumes a [[Fish Scales]] to cast. This spell is nearly identical to [[Enduring Breath]] but is self-only.",
+        "description": "Allows your metabolism to function without oxygen, allowing you to survive without air for 27.0 mins.  Consumes a Fish Scales to cast. This spell is nearly identical to Enduring Breath but is self-only.",
         "mana": 45,
         "skill": "Alteration",
         "castTime": 2.5,
@@ -30977,7 +30983,7 @@
             "level": 21
           }
         ],
-        "description": "Covers you in a magical skin that absorbs 47 damage before dissipating.  Consumes a [[Bloodstone]] when cast.",
+        "description": "Covers you in a magical skin that absorbs 47 damage before dissipating.  Consumes a Bloodstone when cast.",
         "mana": 83,
         "skill": "Abjuration",
         "castTime": 4,
@@ -31283,7 +31289,7 @@
             "level": 46
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.",
         "mana": 290,
         "skill": "Conjuration",
         "castTime": 12,
@@ -31354,7 +31360,7 @@
             "level": 31
           }
         ],
-        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.",
+        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.\n\n'''3rd''' of the \"Lich\" Spell line\n\nDoes '''not''' stack with any clarity spells.\n\n'''Does''' stack with bard mana songs.",
         "mana": 5,
         "skill": "Alteration",
         "castTime": 3,
@@ -31619,7 +31625,7 @@
             "level": 49
           }
         ],
-        "description": "Drains your target of life energy, siphoning between 207 and 226 hit points.",
+        "description": "Drains your target of life energy, siphoning between 207 and 226 hit points.\n\n(February 21, 2001 3:00 am) Shadow Knight - \"Moved Drain Spirit to level 57\"",
         "mana": 213,
         "skill": "Alteration",
         "castTime": 3.2,
@@ -31643,7 +31649,7 @@
             "level": 39
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.\nThis pet seems to have higher than normal HP regen; About 3% per tick sitting on a max pet level summon. Highest Damage (39).",
         "mana": 390,
         "skill": "Conjuration",
         "castTime": 14,
@@ -31690,7 +31696,7 @@
             "level": 41
           }
         ],
-        "description": "Grants your target the power of the dead, including [[levitate",
+        "description": "Grants your target the power of the dead, including levitation, increased poison resistance, water breathing, and the ability to see invisible creatures.\n\nThis buff stacks with many other buffs, including Resist Poison.\n\nA self-only version is available to Shadow Knights called Bobbing Corpse.",
         "mana": 150,
         "skill": "Abjuration",
         "castTime": 6,
@@ -31847,7 +31853,7 @@
             "level": 44
           }
         ],
-        "description": "Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips",
+        "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast. Approx. level 37 skeleton warrior pet.",
         "mana": 450,
         "skill": "Conjuration",
         "castTime": 15,
@@ -32105,7 +32111,7 @@
             "level": 48
           }
         ],
-        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.",
+        "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.\n\n'''4th''' of the \"Lich\" spell line\n\nDoes '''not''' stack with any clarity spells.\n\n'''Does''' stack with bard mana songs.",
         "mana": 5,
         "skill": "Alteration",
         "castTime": 3,
@@ -32575,7 +32581,7 @@
             "level": 27
           }
         ],
-        "description": "Infuses your eyes with the vision of a cat, allowing you to see more clearly in the dark for 27.0 mins. This is similar to [[Serpent Sight]] except being self-only.",
+        "description": "Infuses your eyes with the vision of a cat, allowing you to see more clearly in the dark for 27.0 mins. This is similar to Serpent Sight except being self-only.",
         "mana": 35,
         "skill": "Divination",
         "castTime": 3,
@@ -32735,7 +32741,7 @@
             "level": 48
           }
         ],
-        "description": "Focuses your target with the call of earth, increasing their armor class, and causing damage to anything that strikes them for 1 hour.",
+        "description": "Focuses your target with the call of earth, increasing their armor class, and causing damage to anything that strikes them for 1 hour.\n\nThis effect stacks with cleric buffs like Aegolism, Aegis and Bulwark of Faith but doesn't stack with the following spells: Speed of the Shissar, Augment,  Shield of the Eighth,  Frostreaver's Blessing, Jonthan's Whistling Warsong, and Aura of Battle clickies. However, you may use Aura of Battle clickies after you have Call of Earth.",
         "mana": 50,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -33482,7 +33488,8 @@
         "duration": "Instant",
         "targetType": "Single",
         "spellType": "DD",
-        "range": 200
+        "range": 200,
+        "resist": "| msg_cast_on_you = Your body is wracked by shocks of venom."
       }
     },
     {
@@ -33596,7 +33603,8 @@
         "duration": "Instant",
         "targetType": "Single",
         "spellType": "Heal",
-        "range": 100
+        "range": 100,
+        "resist": "| msg_cast_on_you = Your wounds heal."
       }
     },
     {
@@ -33610,7 +33618,7 @@
             "level": 50
           }
         ],
-        "description": "Quickens your spiritual companion, providing increased strength, armor class, and attack speed for 6 minutes @L50 to 7 minutes @L60.",
+        "description": "Quickens your spiritual companion, providing increased strength, armor class, and attack speed for 6 minutes @L50 to 7 minutes @L60. \n\n\n\n''Haste is not v2 thus it can stack with other haste spells but the highest percentage is the only effect to apply.''",
         "mana": 50,
         "skill": "Alteration",
         "castTime": 6.5,
@@ -33975,7 +33983,8 @@
         "duration": "1 minute",
         "targetType": "Single Friendly (or Self)",
         "spellType": "Beneficial",
-        "range": 100
+        "range": 100,
+        "resist": "| msg_cast_on_you = You begin to radiate."
       }
     },
     {
@@ -34155,7 +34164,7 @@
             "level": 16
           }
         ],
-        "description": "Imbues your eyes with infravision, allowing greatly improved sight in dark areas. This spell is similar to [[Serpent Sight]] except it is self-only.",
+        "description": "Imbues your eyes with infravision, allowing greatly improved sight in dark areas. This spell is similar to Serpent Sight except it is self-only.",
         "mana": 30,
         "skill": "Divination",
         "castTime": 5,
@@ -34298,7 +34307,7 @@
             "level": 18
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Northern Plains of Karana]].",
+        "description": "Opens an arcane portal that teleports you to the Northern Plains of Karana.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34344,7 +34353,7 @@
             "level": 19
           }
         ],
-        "description": "Strikes your target with energy, stunning them briefly and causing between 29 and 50 damage. Superseded by [[Markar's Clash]].",
+        "description": "Strikes your target with energy, stunning them briefly and causing between 29 and 50 damage. Superseded by Markar's Clash.\n\nMana efficiency is .44 / .77 DPM.",
         "mana": 65,
         "skill": "Evocation",
         "castTime": 2.5,
@@ -34368,7 +34377,7 @@
             "level": 19
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Toxxulia Forest]].",
+        "description": "Opens an arcane portal that teleports you to the Toxxulia Forest.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34391,7 +34400,7 @@
             "level": 20
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Greater Faydark]].",
+        "description": "Opens an arcane portal that teleports you to the Greater Faydark.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34414,7 +34423,7 @@
             "level": 21
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Stonebrunt Mountains]].",
+        "description": "Opens an arcane portal that teleports you to the Stonebrunt Mountains.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34437,7 +34446,7 @@
             "level": 21
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[West Commonlands]].",
+        "description": "Opens an arcane portal that teleports you to the West Commonlands.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34460,7 +34469,7 @@
             "level": 22
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Nektulos Forest]].",
+        "description": "Opens an arcane portal that teleports you to the Nektulos Forest.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34483,7 +34492,7 @@
             "level": 22
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Northern Desert of Ro]].",
+        "description": "Opens an arcane portal that teleports you to the Northern Desert of Ro.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34506,7 +34515,7 @@
             "level": 23
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Cazic Thule (Zone)",
+        "description": "Opens an arcane portal that teleports you to the Temple of Cazic-Thule.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34553,7 +34562,7 @@
             "level": 23
           }
         ],
-        "description": "Opens an arcane portal that teleports you to the [[Western Plains of Karana]].",
+        "description": "Opens an arcane portal that teleports you to the Western Plains of Karana.",
         "mana": 150,
         "skill": "Alteration",
         "castTime": 7,
@@ -34599,7 +34608,7 @@
             "level": 24
           }
         ],
-        "description": "Creates a column of lightning, causing between 128 and 136 damage to several (up to 4) creatures in the vicinity of your target. Single target mana efficiency of 0.985 to 1.05.",
+        "description": "Creates a column of lightning, causing between 128 and 136 damage to several (up to 4) creatures in the vicinity of your target. Single target mana efficiency of 0.985 to 1.05.\n<br>\n<br>\nThis is a '''recommended''' quad-kiting spell for Wizards, being replaced by Circle of Force.",
         "mana": 130,
         "skill": "Evocation",
         "castTime": 3.6,
@@ -34670,7 +34679,7 @@
             "level": 25
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Northern Plains of Karana]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Northern Plains of Karana.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -34703,7 +34712,8 @@
         "duration": "Permanent",
         "targetType": "Self",
         "spellType": "Beneficial",
-        "range": 100
+        "range": 100,
+        "resist": "| msg_cast_on_you = You rise on a gust of hot air."
       }
     },
     {
@@ -34740,7 +34750,7 @@
             "level": 26
           }
         ],
-        "description": "Calls down an energy storm that falls in three waves, causing 96 damage to all creatures in the vicinity of your target.",
+        "description": "Calls down an energy storm that falls in three waves, causing 96 damage to all creatures in the vicinity of your target.\nAoE range: 25",
         "mana": 148,
         "skill": "Evocation",
         "castTime": 4,
@@ -34764,7 +34774,7 @@
             "level": 26
           }
         ],
-        "description": "Evacuates your group to the [[Northern Plains of Karana]]. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
+        "description": "Evacuates your group to the Northern Plains of Karana. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -34788,7 +34798,7 @@
             "level": 26
           }
         ],
-        "description": "Focuses the power of Solusek Ro into a [[Fire Opal]].  Consumes a fire opal when cast.",
+        "description": "Focuses the power of Solusek Ro into a Fire Opal.  Consumes a fire opal when cast.\nIf you are not a follower of Solusek Ro then you do NOT need to  purchase this spell for yourself.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 6,
@@ -34835,7 +34845,7 @@
             "level": 27
           }
         ],
-        "description": "Surrounds your target's feet in arcane shackles, slowing their movement speed. Superseded at level 51 by [[Atol's Spectral Shackles]].",
+        "description": "Surrounds your target's feet in arcane shackles, slowing their movement speed. Superseded at level 51 by Atol's Spectral Shackles.",
         "mana": 75,
         "skill": "Alteration",
         "castTime": 2.5,
@@ -34859,7 +34869,7 @@
             "level": 27
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Greater Faydark]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Greater Faydark.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -34883,7 +34893,7 @@
             "level": 27
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Stonebrunt Mountains]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Stonebrunt Mountains.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -34929,7 +34939,7 @@
             "level": 28
           }
         ],
-        "description": "Creates an energy spiral that causes between 111 and 118 damage to all creatures in the vicinity of your target.",
+        "description": "Creates an energy spiral that causes between 111 and 118 damage to all creatures in the vicinity of your target. \nNote that this spell is significantly less mana-efficient than Column of Lightning, but faster.",
         "mana": 200,
         "skill": "Evocation",
         "castTime": 4.05,
@@ -34977,7 +34987,7 @@
             "level": 28
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Toxxulia Forest]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Toxxulia Forest.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35047,7 +35057,7 @@
             "level": 31
           }
         ],
-        "description": "Creates a circle of force, causing between 193 and 216 damage to several creatures in the vicinity of your target. Single target mana efficiency of 1.15 to 1.23. <br>Targeted AoE / Rain Type spell without waves. Hits up to 4 creatures max.",
+        "description": "Creates a circle of force, causing between 193 and 216 damage to several creatures in the vicinity of your target. Single target mana efficiency of 1.15 to 1.23. <br>Targeted AoE / Rain Type spell without waves. Hits up to 4 creatures max.\n<br>\n<br>\nThis is a '''recommended''' quad-kiting spell for Wizards, replacing Column of Lightning and being replaced by Pillar of Frost.",
         "mana": 175,
         "skill": "Evocation",
         "castTime": 4.5,
@@ -35080,7 +35090,8 @@
         "duration": "1 minute",
         "targetType": "Single Friendly (or Self)",
         "spellType": "Beneficial",
-        "range": 100
+        "range": 100,
+        "resist": "| msg_cast_on_you = You begin to radiate."
       }
     },
     {
@@ -35094,7 +35105,7 @@
             "level": 32
           }
         ],
-        "description": "Evacuates your group to the [[Greater Faydark]]. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
+        "description": "Evacuates your group to the Greater Faydark. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -35165,7 +35176,7 @@
             "level": 32
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Nektulos Forest]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Nektulos Forest.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35189,7 +35200,7 @@
             "level": 33
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Cazic Thule (Zone)",
+        "description": "Opens an arcane portal that teleports your entire group to the Temple of Cazic-Thule.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35331,7 +35342,7 @@
             "level": 35
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[West Commonlands]].",
+        "description": "Opens an arcane portal that teleports your entire group to the West Commonlands.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35355,7 +35366,7 @@
             "level": 36
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Northern Desert of Ro]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Northern Desert of Ro.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35379,7 +35390,7 @@
             "level": 36
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Skyfire Mountains]]. This spell no longer has a Kunark dungeon requirement; it can currently be cast from anywhere in the world.",
+        "description": "Opens an arcane portal that teleports your entire group to the Skyfire Mountains. This spell no longer has a Kunark dungeon requirement; it can currently be cast from anywhere in the world.\n\n'''Warning: The port in location for this spell is very dangerous.''' If you port in while visible, you will most likely die when alone or porting another. There are swarms of dispelling mobs at the zone in area. However, while invis, this port in location is nearly 100% safe. No mobs see invis and the only threat is the possibility of it breaking early. You can enter the zone invisibly by getting a friendly person to invis prime you. To perform this, join a group, and have that person begin to invis you. Before their cast finishes, begin your cast of Tishan's Relocation. Once their invis hits you, disband or have them disband before you finish the cast. You will port over to skyfire while remaining invis, as finishing casts does not break invisibility. With a primed invis, the port in at skyfire is much safer, and a very useful tool to Wizards.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -35469,7 +35480,7 @@
             "level": 37
           }
         ],
-        "description": "Strikes your target with an arch of lightning, causing between 381 and 405 damage.",
+        "description": "Strikes your target with an arch of lightning, causing between 381 and 405 damage.\n\nDoes '''not''' have a knockback component.",
         "mana": 168,
         "skill": "Evocation",
         "castTime": 4,
@@ -35493,7 +35504,7 @@
             "level": 37
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Emerald Jungle]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Emerald Jungle.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -35539,7 +35550,7 @@
             "level": 37
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the [[Western Plains of Karana]].",
+        "description": "Opens an arcane portal that teleports your entire group to the Western Plains of Karana.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 16,
@@ -35586,7 +35597,7 @@
             "level": 38
           }
         ],
-        "description": "Evacuates your group to the [[Southern Desert of Ro]]. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
+        "description": "Evacuates your group to the Southern Desert of Ro. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -35610,7 +35621,7 @@
             "level": 39
           }
         ],
-        "description": "Cloaks you in a light aura, rendering you invisible to most undead creatures.",
+        "description": "Cloaks you in a light aura, rendering you invisible to most undead creatures.\n\nInvisibility to Undead is the wizard self-only version of the similarly-named Invisibility ''versus'' Undead.",
         "mana": 100,
         "skill": "Divination",
         "castTime": 4,
@@ -35750,7 +35761,7 @@
             "level": 42
           }
         ],
-        "description": "Evacuates your group to the [[Nektulos Forest]]. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
+        "description": "Evacuates your group to the Nektulos Forest. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -35960,7 +35971,7 @@
             "level": 45
           }
         ],
-        "description": "Creates a ring of chaotic flames, causing 854 damage to all nearby creatures.",
+        "description": "Creates a ring of chaotic flames, causing 854 damage to all nearby creatures.\n<BR>Single target mana efficiency of .98.  This spell is useful for farming large groups of up to 25 lower level mobs for a mana efficiency of up to 24.4 dmg/mana.",
         "mana": 875,
         "skill": "Evocation",
         "castTime": 6.3,
@@ -35983,7 +35994,7 @@
             "level": 46
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the Plane of Hate.  Consumes a [[Fuligan Soulstone of Innoruuk]] when cast.",
+        "description": "Opens an arcane portal that teleports your entire group to the Plane of Hate.  Consumes a Fuligan Soulstone of Innoruuk when cast.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 10,
@@ -36026,7 +36037,7 @@
             "level": 46
           }
         ],
-        "description": "Opens an arcane portal that teleports your entire group to the Plane of Sky.  Consumes a [[Cloudy Stone of Veeshan]] when cast.",
+        "description": "Opens an arcane portal that teleports your entire group to the Plane of Sky.  Consumes a Cloudy Stone of Veeshan when cast.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 10,
@@ -36049,7 +36060,7 @@
             "level": 47
           }
         ],
-        "description": "Evacuates your group to the [[Western Plains of Karana]]. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
+        "description": "Evacuates your group to the Western Plains of Karana. While faster casting than normal portal spells, it is more likely to leave one or more of your group members behind.",
         "mana": 300,
         "skill": "Alteration",
         "castTime": 9,
@@ -36073,7 +36084,7 @@
             "level": 47
           }
         ],
-        "description": "Strikes your target with energy, stunning them briefly and causing 200 damage. Supersedes [[Tishan's Clash]].",
+        "description": "Strikes your target with energy, stunning them briefly and causing 200 damage. Supersedes Tishan's Clash.\n\nMana efficiency is 1.0 DPM.",
         "mana": 200,
         "skill": "Evocation",
         "castTime": 3.3,
@@ -36097,7 +36108,7 @@
             "level": 47
           }
         ],
-        "description": "Tears the flesh from your target, causing between 774 and 784 damage. 124.4 DPS, 2.8 DPM.",
+        "description": "Tears the flesh from your target, causing between 774 and 784 damage. 124.4 DPS, 2.8 DPM.\n\nDoes '''not''' have a knockback component.",
         "mana": 227,
         "skill": "Evocation",
         "castTime": 5,
@@ -36217,7 +36228,7 @@
             "level": 50
           }
         ],
-        "description": "Opens an arcane portal that teleports your target to their bind point. Does not require [[Small Portal Fragments]] as a reagent.",
+        "description": "Opens an arcane portal that teleports your target to their bind point. Does not require Small Portal Fragments as a reagent.\n\nNote: The Translocate box lasts 5 minutes.",
         "mana": 200,
         "skill": "Alteration",
         "castTime": 8,

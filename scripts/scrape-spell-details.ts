@@ -34,26 +34,31 @@ async function sleep(ms: number) {
 }
 
 function extractField(wikitext: string, field: string): string | null {
-  const re = new RegExp(`\\|\\s*${field}\\s*=\\s*([^\\n|{}]+)`, "i");
+  // Field values can span a wikilink with its own "|" (e.g. [[Category:Animal | animal]]),
+  // so this can't just stop at the first "|" — that would truncate the value right there,
+  // losing the link's closing "]]" and everything after. Instead it looks ahead for the
+  // start of the *next* "| field = " line, or the closing "}}", whichever comes first.
+  const re = new RegExp(`\\|\\s*${field}\\s*=\\s*([\\s\\S]+?)(?=\\n\\s*\\|\\s*\\w+\\s*=|\\n*\\}\\})`, "i");
   const m = wikitext.match(re);
   return m ? m[1].trim() : null;
 }
 
+// [[Target|Display text]] → Display text; [[Target]] → Target
+function stripWikiLinks(text: string): string {
+  return text
+    .replace(/\[\[:?[^\]|]*\|\s*([^\]]+?)\s*\]\]/g, "$1")
+    .replace(/\[\[:?([^\]]+?)\]\]/g, "$1");
+}
+
 function extractSkill(value: string): string {
-  // [[Skill Alteration | Alteration]] → Alteration
-  const m = value.match(/\[\[.*?\|\s*(.+?)\s*\]\]/);
-  if (m) return m[1].trim();
-  // [[Alteration]] → Alteration
-  const m2 = value.match(/\[\[(.+?)\]\]/);
-  if (m2) return m2[1].replace(/^Skill\s+/i, "").trim();
-  return value.replace(/\[\[|\]\]/g, "").trim();
+  return stripWikiLinks(value).replace(/^Skill\s+/i, "").trim();
 }
 
 function parseWikitext(wikitext: string): SpellDetail {
   const d: SpellDetail = {};
 
   const desc = extractField(wikitext, "description");
-  if (desc) d.description = desc;
+  if (desc) d.description = stripWikiLinks(desc);
 
   const mana = extractField(wikitext, "mana");
   if (mana) d.mana = parseInt(mana, 10) || undefined;
