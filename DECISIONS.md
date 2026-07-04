@@ -24,6 +24,9 @@ Edges encode relationships, not containment. An NPC can be both vendor and quest
 ### Translocator wins hop-count ties over boat (or walking)
 `shortestPath()`'s BFS keeps the first route it discovers to each zone and never revisits a tie, so the real tie-break is which neighbor `getZoneAdjacency()` hands it first. Each zone's neighbor list sorts translocator-linked entries to the front for exactly this reason — an equally-short alternative via boat or on foot should never beat a translocator hop by accident of edge insertion order in `graph.json`. No zone pair currently has more than one transport option between the same two zones, so this has no effect on today's routes; it's there for whenever one does.
 
+### Hop count is a proxy for travel effort, not real-world time
+`shortestPath()` minimizes hop count, treating every `connects_to` edge as equally "costly" regardless of transport. In reality a boat hop takes real minutes (per eqlwiki.com, ~15 min dock-to-dock for Butcherblock<->Ocean of Tears<->Freeport) while a translocator hop is instant, so a route with more hops but more translocators can be faster in practice than a shorter one that's all boats or walking. Not modeled — would need per-edge time weights and a shortest-time search (Dijkstra) instead of plain BFS. Fine for now since most planner routes are short and boat-heavy detours are rare; revisit if that stops being true.
+
 ### This game (EverQuest Legends) has different zone connectivity than classic EverQuest
 Don't assume classic-EQ knowledge (Project 1999, Allakhazam, etc.) applies here — verify against eqlwiki.com specifically. Case in point: classic EQ has no Qeynos-side translocator, but EQL added one between East Freeport and South Qeynos in a May 28, 2026 patch (1pp/level fee, not modeled — the planner optimizes for hops, not cost). Zone names, connectivity, and NPC services can all diverge from classic EQ, sometimes recently and without the wiki being fully caught up yet — cross-check multiple pages (individual zone pages *and* patch notes) when something seems off, since new content can lag its own zone-page documentation.
 
@@ -72,6 +75,9 @@ Migration 011 scrapes description, mana cost, cast/recast/fizzle time, duration,
 
 ### Zone connectivity
 73 zones, 47 of which have spell vendors, all reachable via bidirectional BFS. Migration 010 fixed two vendor zones (Ocean of Tears, High Keep) that had `sells` edges but no `connects_to` edges, making them unreachable.
+
+### There is no non-stop Butcherblock<->Freeport boat
+Migration 014 removed a direct `connects_to` edge between Butcherblock Mountains and East Freeport. Per eqlwiki.com/Ocean_of_Tears, that boat makes real stops at two islands inside Ocean of Tears (Zachariah Reigh Isle, then Sister Isle) — actual zone transitions, not a pass-through. The only route between them is via Ocean of Tears (two boat hops), which migration 010 already models. Worth remembering when auditing other "direct" boat edges: a boat connecting two named zones doesn't necessarily mean the trip is non-stop — check the wiki's actual route description, not just whether an edge exists.
 
 ### Naming mismatches
 Some vendor data uses different zone names than adjacency data (e.g., "Neriak" vs "Neriak 3rd Gate"). Migration 005 bridges these with extra `connects_to` edges rather than renaming nodes (which would break existing edge references).
