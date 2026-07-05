@@ -284,6 +284,14 @@
       #results { overflow-y: auto; padding-bottom: 0; padding-right: 16px; }
     }
 
+    /* Below the sidebar breakpoint: one page-level scroll area instead of a
+       fixed controls panel + independently scrolling results pane. */
+    @media (max-width: 1099.98px) {
+      body { height: auto; min-height: 100vh; }
+      #planner { flex: none; overflow: visible; }
+      #results { flex: none; overflow-y: visible; min-height: 0; padding-right: 0; }
+    }
+
     /* Narrow: stack vertically */
     @media (max-width: 700px) {
       #planner { padding: 14px 16px 0; }
