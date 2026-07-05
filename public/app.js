@@ -638,12 +638,25 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const toggleBtn = `<button class="secondary" id="toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
   const clearBtn = ownedCount > 0 ? `<button class="secondary" id="clear-owned-btn">Clear owned</button>` : "";
 
+  const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
+  const hpBar = totalSpells
+    ? `<span class="mana-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalSpells}" aria-valuenow="${ownedCount}" aria-label="Spells owned: ${ownedCount} of ${totalSpells}" title="Spells owned: ${ownedCount} of ${totalSpells}"><span class="mana-fill" style="width:${pct}%"></span></span>`
+    : "";
+
   el.innerHTML = `<div class="results-header">
+    ${hpBar}
     <span>${totalSpells} spell(s) across ${accessible.length} zone(s) for ${levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`}${ownedLabel}${warnings.length ? " — " + warnings.join(", ") : ""}</span>
     <span class="results-actions">${toggleBtn}${clearBtn}</span>
   </div>`;
 
-  const FACTION_LABELS = { safe: "safe", neutral: "neutral", wont_sell: "won't sell", kos: "kill on sight" };
+  // EQ /consider verbiage; the title attribute carries the practical meaning
+  const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
+  const FACTION_TITLES = {
+    safe: "Regards you as an ally — sells at normal prices",
+    neutral: "Regards you indifferently — sells at normal prices",
+    wont_sell: "Looks upon you dubiously — merchants won't sell to you",
+    kos: "Scowls at you, ready to attack — kill on sight",
+  };
 
   for (const r of rankings) {
     const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
@@ -684,7 +697,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     card.innerHTML = `
       <div class="zone-card-header">
         <span class="zone-name">${r.zoneName}</span>
-        ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
+        ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${FACTION_TITLES[r.faction] || ""}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
         <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>
       </div>

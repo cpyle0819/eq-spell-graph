@@ -4,275 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norraph</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Page layout only — component styling lives in theme.css */
+    body { height: 100vh; display: flex; flex-direction: column; }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #141210;
-      color: #f0e4c8;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-size: 14px;
-    }
-
-    header {
-      padding: 14px 28px;
-      background: #1a1610;
-      border-bottom: 1px solid #3a2e18;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .header-title { display: flex; flex-direction: column; gap: 3px; }
-    header h1 { font-size: 22px; font-weight: 800; color: #e8a82a; letter-spacing: -0.01em; }
-    .header-sub { font-size: 11px; color: #6a5438; letter-spacing: 0.18em; text-transform: uppercase; }
-
-    .nav-link {
-      padding: 8px 18px; background: transparent;
-      border: 1px solid #3a2e18; border-radius: 6px;
-      font-size: 12px; color: #8a6838; text-decoration: none;
-      letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
-      transition: all 150ms ease-out; margin-left: auto;
-    }
-    .nav-link:hover { border-color: #5a4828; color: #c8a860; background: rgba(200,168,42,0.06); }
-    .nav-link:focus-visible { outline: 2px solid #e8a82a; outline-offset: 2px; }
-
-    /* ── Planner ── */
     #planner { padding: 24px 28px 0; display: flex; flex-direction: column; overflow: hidden; flex: 1; }
-    #results {
-      flex: 1; min-height: 0; overflow-y: auto;
-      padding-bottom: 24px; padding-right: 20px;
-      scrollbar-width: thin; scrollbar-color: #3a2e18 transparent;
-    }
-    #results::-webkit-scrollbar { width: 5px; }
-    #results::-webkit-scrollbar-track { background: transparent; }
-    #results::-webkit-scrollbar-thumb { background: #3a2e18; border-radius: 3px; }
-    #results::-webkit-scrollbar-thumb:hover { background: #5a4828; }
+    #results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; padding-right: 20px; }
 
-    .controls-panel {
-      background: #1d1810; border: 1px solid #3a2e18;
-      border-radius: 12px; margin-bottom: 24px; overflow: hidden; flex-shrink: 0;
-    }
-
-
-    .planner-controls {
-      display: flex; flex-direction: column; gap: 8px;
-      padding: 16px 20px;
-    }
-    .control-sep { width: 100%; height: 1px; background: #3a2e18; margin: 4px 0; flex-shrink: 0; }
+    .controls-panel { margin-bottom: 24px; overflow: hidden; flex-shrink: 0; }
+    .planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
 
     .field { display: flex; align-items: center; gap: 10px; }
-    .field label { font-size: 11px; color: #8a6838; white-space: nowrap; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; min-width: 100px; }
-    .field select, .field input {
-      background: #0f0e0b; border: 1px solid #4a3818; color: #f0e4c8;
-      padding: 7px 12px; border-radius: 6px; font-size: 13px;
-      transition: border-color 150ms, box-shadow 150ms;
-      flex: 1; min-width: 0;
-    }
+    .field label { min-width: 100px; }
+    .field select, .field input { flex: 1; min-width: 0; }
     .field .range-picker { flex: 1; min-width: 0; }
-    .field select:hover, .field input:hover { border-color: #6a5028; }
-    .field select:focus, .field input:focus { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); outline: none; }
-
 
     .range-picker { display: flex; align-items: center; gap: 10px; }
     .range-picker input[type="range"] {
       -webkit-appearance: none; appearance: none; width: 90px; height: 3px;
-      background: #3a2e18; border-radius: 2px; cursor: pointer;
+      background: var(--line); border-radius: 2px; cursor: pointer;
+      border: none; box-shadow: none; padding: 0;
     }
     .range-picker input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none; width: 16px; height: 16px;
-      background: #e8a82a; border-radius: 50%; cursor: pointer;
+      background: radial-gradient(circle at 35% 30%, #ffd97a, #c98f1f 60%, #8a5f10);
+      border-radius: 50%; cursor: pointer;
     }
-    .range-picker input[type="range"]:focus-visible { outline: 2px solid #e8a82a; outline-offset: 3px; }
-    .range-display { font-size: 14px; color: #e8a82a; font-weight: 700; white-space: nowrap; min-width: 58px; text-align: center; }
+    .range-picker input[type="range"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .range-display { font-size: 14px; color: var(--gold); font-weight: 700; white-space: nowrap; min-width: 58px; text-align: center; font-variant-numeric: tabular-nums; }
 
-    button {
-      padding: 9px 22px; background: #e8a82a; border: none;
-      color: #1a0e00; border-radius: 6px; cursor: pointer;
-      font-size: 14px; font-weight: 700; letter-spacing: 0.03em;
-      transition: all 150ms ease-out;
-    }
-    button:hover { background: #f0b840; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(232,168,42,0.35); }
-    button:active { transform: none; box-shadow: none; }
-    button:focus-visible { outline: 2px solid #f0e4c8; outline-offset: 2px; }
-
-    button.secondary {
-      background: transparent; border: 1px solid #3a2e18;
-      color: #8a6838; padding: 6px 14px; font-size: 12px;
-      font-weight: 400; letter-spacing: 0.03em; box-shadow: none; transform: none;
-    }
-    button.secondary:hover { border-color: #5a4828; color: #c8a860; background: rgba(200,168,42,0.06); box-shadow: none; transform: none; }
-    button.secondary:focus-visible { outline: 2px solid #e8a82a; outline-offset: 2px; }
-
-    /* ── Results ── */
-    .results-header {
-      font-size: 13px; color: #8a6838; margin-bottom: 20px;
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    }
-    .results-actions { display: flex; gap: 6px; margin-left: auto; }
-    .spell-check { display: flex; align-items: center; }
-    .spell-check input { cursor: pointer; accent-color: #e8a82a; width: 15px; height: 15px; }
-    .spell-owned { opacity: 0.3; }
-    .spell-owned .spell-chip { text-decoration: line-through; }
-
-    /* Zone cards — top accent border + faction gradient */
-    .zone-card {
-      background: #1d1810; border: 1px solid #3a2e18;
-      border-top: 2px solid #4a3818;
-      border-radius: 10px; padding: 18px 22px; margin-bottom: 14px;
-      transition: border-color 150ms, transform 150ms, box-shadow 150ms;
-    }
-    .zone-card:hover { border-color: #5a4828; box-shadow: 0 6px 24px rgba(0,0,0,0.4); }
-
-    .zone-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
-    .zone-name { font-size: 20px; font-weight: 700; color: #f0e4c8; }
-
-    .zone-badge {
-      font-size: 12px; padding: 3px 10px; border-radius: 20px;
-      background: #141210; border: 1px solid #3a2e18; color: #8a6838;
-    }
-    .zone-badge.hops { color: #b89050; }
-
-    .route-path {
-      margin-top: 14px; margin-bottom: 16px; padding: 12px 16px; border-radius: 8px;
-      background: rgba(232,168,42,0.07); border: 1px solid rgba(232,168,42,0.18);
-    }
-    .route-label {
-      display: block; font-size: 10px; color: #8a6838;
-      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px;
-    }
-    .route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2; }
-    .route-zone { color: #c8a860; font-weight: 500; }
-    .route-sep { color: #e8a82a; margin: 0 5px; font-weight: 700; }
-    .boat-sep, .translocator-sep { cursor: help; }
-    .boat-sep { color: #60a5fa; margin: 0 6px; font-size: 15px; }
-    .translocator-sep { color: #c77dff; margin: 0 6px; font-size: 15px; }
-
+    .results-header { margin-bottom: 20px; }
+    .zone-card { padding: 18px 22px; margin-bottom: 14px; }
+    .zone-card-header { margin-bottom: 12px; }
+    .route-path { margin-top: 14px; margin-bottom: 16px; }
     .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
-    .spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .spell-chip {
-      font-size: 13px; padding: 3px 10px; border-radius: 5px;
-      background: #141210; border: 1px solid #3a2e18; color: #e8d0a0; white-space: nowrap;
-      text-decoration: none; display: inline-flex; align-items: center;
-    }
-    @media (pointer: coarse) { .spell-chip { cursor: pointer; } }
-    .spell-chip .lvl { color: #8a6838; margin-left: 6px; font-size: 11px; }
-
-    .vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
-    .vendor-tag {
-      font-size: 12px; padding: 3px 8px; border-radius: 4px;
-      background: #141210; border: 1px solid rgba(255,255,255,0.08); color: #6a8898;
-    }
-
-    /* Faction */
-    .zone-card.safe    { border-top-color: #22c55e; background: linear-gradient(180deg, rgba(34,197,94,0.06) 0%, #1d1810 60px); }
-    .zone-card.neutral { border-top-color: #f59e0b; background: linear-gradient(180deg, rgba(245,158,11,0.06) 0%, #1d1810 60px); }
-    .zone-card.wont_sell { opacity: 0.5; border-top-color: #f97316; }
-    .zone-card.kos     { opacity: 0.22; border-top-color: #ef4444; }
-
-    .faction-badge {
-      font-size: 11px; padding: 3px 9px; border-radius: 5px;
-      text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;
-    }
-    .faction-badge.safe    { background: rgba(34,197,94,0.12);  color: #22c55e; border: 1px solid rgba(34,197,94,0.25); }
-    .faction-badge.neutral { background: rgba(245,158,11,0.12); color: #f59e0b; border: 1px solid rgba(245,158,11,0.25); }
-    .faction-badge.wont_sell { background: rgba(249,115,22,0.12); color: #f97316; border: 1px solid rgba(249,115,22,0.25); }
-    .faction-badge.kos     { background: rgba(239,68,68,0.12);  color: #ef4444; border: 1px solid rgba(239,68,68,0.25); }
-
-
-    .no-results { color: #6a5438; font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
-    .loading    { color: #8a6838; padding: 52px 0; text-align: center; letter-spacing: 0.2em; font-size: 11px; text-transform: uppercase; }
-
-    /* Spell detail (Spells tab) */
-    .spell-detail {
-      background: #1d1810; border: 1px solid #3a2e18; border-radius: 10px;
-      padding: 16px 20px; margin-bottom: 12px; cursor: pointer;
-      transition: border-color 150ms, box-shadow 150ms;
-    }
-    .spell-detail:hover { border-color: #5a4828; box-shadow: 0 4px 16px rgba(0,0,0,0.35); }
-    .spell-detail h3 { color: #e8a82a; margin-bottom: 8px; font-size: 15px; }
-    .vendor-row { display: flex; gap: 8px; padding: 4px 0; font-size: 13px; color: #8a6838; }
-    .vendor-row .zone-tag { color: #6a5438; }
-
-    /* ── Tag inputs (Specific Spells & Specific Zones) ── */
-    .tag-wrap {
-      position: relative; flex: 1; min-width: 0;
-      background: #0f0e0b; border: 1px solid #4a3818; border-radius: 6px;
-      padding: 5px 8px; display: flex; flex-direction: column; gap: 4px;
-      transition: border-color 150ms, box-shadow 150ms; cursor: text;
-    }
-    .tag-wrap:focus-within { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
-    .tag-list:empty { display: none; }
-    .tag-item {
-      display: inline-flex; align-items: center; gap: 3px;
-      background: rgba(232,168,42,0.12); border: 1px solid rgba(232,168,42,0.3);
-      border-radius: 4px; padding: 2px 4px 2px 8px; font-size: 11px; color: #c8a450;
-      white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
-    }
-    .tag-item-name { overflow: hidden; text-overflow: ellipsis; }
-    .tag-item-remove {
-      flex-shrink: 0; width: 16px; height: 16px; border-radius: 3px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; color: #8a6838; font-size: 12px; line-height: 1;
-      background: transparent; border: none; padding: 0;
-    }
-    .tag-item-remove:hover { background: rgba(239,68,68,0.15); color: #ef4444; }
-    .tag-wrap input {
-      background: transparent; border: none; box-shadow: none; outline: none;
-      color: #f0e4c8; font-size: 13px; width: 100%; padding: 1px 0;
-      min-width: 80px; flex: unset;
-    }
-    .tag-wrap input::placeholder { color: #4a3818; }
-
-    .tag-dropdown {
-      position: fixed; z-index: 300;
-      background: #1d1810; border: 1px solid #5a4828; border-radius: 8px;
-      max-height: 240px; overflow-y: auto;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.6);
-      display: none;
-    }
-    .tag-dropdown.open { display: block; }
-    .suggestion-item {
-      padding: 9px 14px; cursor: pointer; font-size: 13px; color: #c8a860;
-      border-bottom: 1px solid #2a2010;
-    }
-    .suggestion-item:last-child { border-bottom: none; }
-    .suggestion-item:hover, .suggestion-item.active {
-      background: rgba(232,168,42,0.08); color: #e8d080;
-    }
-    .suggestion-empty { padding: 10px 14px; font-size: 12px; color: #6a5438; font-style: italic; }
-
-    /* ── Spell tooltip (hover card) ── */
-    #spell-tooltip {
-      position: fixed; z-index: 1000;
-      background: #1d1810; border: 1px solid #5a4828;
-      border-top: 2px solid #e8a82a;
-      border-radius: 10px; padding: 14px 18px;
-      max-width: 320px; min-width: 220px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-      pointer-events: none;
-      opacity: 0; transition: opacity 100ms ease-out;
-    }
-    #spell-tooltip.visible { opacity: 1; }
-    .tt-name { font-size: 14px; font-weight: 700; color: #e8a82a; margin-bottom: 6px; }
-    .tt-desc { font-size: 12px; color: #b8a070; font-style: italic; line-height: 1.4; margin-bottom: 8px; }
-    .tt-stats { display: flex; flex-wrap: wrap; gap: 4px; }
-    .tt-stat {
-      font-size: 11px; padding: 2px 7px; border-radius: 4px;
-      background: #141210; border: 1px solid #2e2418; color: #8a7050;
-    }
-    .tt-stat.highlight { color: #c8a450; border-color: rgba(232,168,42,0.25); }
-
-    /* Footer */
-    footer {
-      padding: 10px 28px; border-top: 1px solid #2a1e0c; flex-shrink: 0;
-      font-size: 11px; color: #4a3818; text-align: center; letter-spacing: 0.04em;
-    }
-    footer a { color: #c8a860; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
 
     /* Wide layout: sidebar */
     @media (min-width: 1100px) {
@@ -297,11 +66,7 @@
       #planner { padding: 14px 16px 0; }
       .planner-controls { gap: 12px; padding: 14px 16px; }
       .control-sep { display: none; }
-      button { min-height: 44px; }
-      button.secondary { min-height: 40px; }
-      .tag-item-remove { min-height: 0; }
     }
-
   </style>
 </head>
 <body>
@@ -310,9 +75,9 @@
       <h1>Norraph</h1>
       <p class="header-sub">Spell Finder</p>
     </div>
-    <nav style="margin-left:auto;display:flex;gap:8px;">
-      <a class="nav-link" style="margin-left:0" href="spells.html">Spell Browser</a>
-      <a class="nav-link" style="margin-left:0" href="route.html">Route Finder</a>
+    <nav class="nav-links">
+      <a class="nav-link" href="spells.html">Spell Browser</a>
+      <a class="nav-link" href="route.html">Route Finder</a>
     </nav>
   </header>
 

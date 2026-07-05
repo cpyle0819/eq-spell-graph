@@ -4,41 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norraph — Route Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #141210;
-      color: #f0e4c8;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-size: 14px;
-    }
-
-    header {
-      padding: 14px 28px;
-      background: #1a1610;
-      border-bottom: 1px solid #3a2e18;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .header-title { display: flex; flex-direction: column; gap: 3px; }
-    header h1 { font-size: 22px; font-weight: 800; color: #e8a82a; letter-spacing: -0.01em; }
-    .header-sub { font-size: 11px; color: #6a5438; letter-spacing: 0.18em; text-transform: uppercase; }
-
-    .nav-links { margin-left: auto; display: flex; gap: 8px; }
-    .nav-link {
-      padding: 8px 18px; background: transparent;
-      border: 1px solid #3a2e18; border-radius: 6px;
-      font-size: 12px; color: #8a6838; text-decoration: none;
-      letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500;
-      transition: all 150ms ease-out;
-    }
-    .nav-link:hover { border-color: #5a4828; color: #c8a860; background: rgba(200,168,42,0.06); }
-    .nav-link:focus-visible { outline: 2px solid #e8a82a; outline-offset: 2px; }
+    /* Page layout only — component styling lives in theme.css */
+    body { height: 100vh; display: flex; flex-direction: column; }
 
     main {
       flex: 1; min-height: 0;
@@ -49,61 +21,18 @@
 
     .finder-bar {
       display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;
-      padding: 16px 20px; margin-bottom: 24px;
-      background: #1d1810; border: 1px solid #3a2e18;
-      border-radius: 10px; flex-shrink: 0;
+      padding: 16px 20px; margin-bottom: 24px; flex-shrink: 0;
     }
-
     .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
-    .field label { font-size: 11px; color: #8a6838; white-space: nowrap; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
-    .field select {
-      background: #0f0e0b; border: 1px solid #4a3818; color: #f0e4c8;
-      padding: 7px 12px; border-radius: 6px; font-size: 13px;
-      transition: border-color 150ms, box-shadow 150ms; width: 100%;
-    }
-    .field select:hover { border-color: #6a5028; }
-    .field select:focus { border-color: #e8a82a; box-shadow: 0 0 0 3px rgba(232,168,42,0.15); outline: none; }
+    .field select { width: 100%; }
 
-    .arrow { color: #4a3818; font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
-
+    .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
 
     #route-result { flex: 1; min-height: 0; overflow-y: auto; }
 
-    .route-card {
-      background: #1d1810; border: 1px solid #3a2e18; border-top: 2px solid #e8a82a;
-      border-radius: 10px; padding: 22px 26px;
-    }
-    .route-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
-    .route-card-title { font-size: 20px; font-weight: 700; color: #f0e4c8; }
-    .hops-badge {
-      font-size: 12px; padding: 3px 10px; border-radius: 20px;
-      background: #141210; border: 1px solid #3a2e18; color: #b89050;
-    }
-
-    .route-path {
-      padding: 14px 18px; border-radius: 8px;
-      background: rgba(232,168,42,0.07); border: 1px solid rgba(232,168,42,0.18);
-    }
-    .route-label {
-      display: block; font-size: 10px; color: #8a6838;
-      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px;
-    }
-    .route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 14px; line-height: 2.2; }
-    .route-zone { color: #c8a860; font-weight: 500; }
-    .route-sep { color: #e8a82a; margin: 0 6px; font-weight: 700; }
-    .boat-sep, .translocator-sep { cursor: help; }
-    .boat-sep { color: #60a5fa; margin: 0 8px; font-size: 16px; }
-    .translocator-sep { color: #c77dff; margin: 0 8px; font-size: 16px; }
-
-    .no-results { color: #6a5438; font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
-    .loading    { color: #8a6838; padding: 52px 0; text-align: center; letter-spacing: 0.2em; font-size: 11px; text-transform: uppercase; }
-
-    footer {
-      padding: 10px 28px; border-top: 1px solid #2a1e0c; flex-shrink: 0;
-      font-size: 11px; color: #4a3818; text-align: center; letter-spacing: 0.04em;
-    }
-    footer a { color: #c8a860; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    .route-card { border-top: 2px solid var(--gold); padding: 22px 26px; }
+    .route-card-header { margin-bottom: 18px; gap: 14px; }
+    .route-path { padding: 14px 18px; }
 
     @media (max-width: 600px) {
       main { padding: 14px 16px; }

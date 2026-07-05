@@ -1,0 +1,483 @@
+/* ── Norraph theme ─────────────────────────────────────────────────────
+   Classic-EverQuest (Velious-era stone UI) skin shared by all pages.
+   Pages keep only their own layout in an inline <style>; every
+   component's look-and-feel lives here.
+
+   The construction, taken from the original UI: COOL lavender-blue
+   marble stone (not gray, not brown) with large blotchy mottling, warm
+   parchment inserts with dark ink (the chat scroll), bone/ivory button
+   plates with dark serif caps sunk in a black groove (WHO/INVITE/CAMP),
+   and real two-tone bevels — light edge top/left, dark edge bottom/
+   right, inverted on sunken wells. Gold is trim, warm-vs-cool is the
+   charm.
+
+   Contrast: --ink-muted clears WCAG AA (4.5:1) against --stone-1, the
+   lightest dark surface text sits on — recheck it if you lighten the
+   stone. Parchment ink colors all clear 4.5:1 on --parch-bg. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  color-scheme: dark;
+
+  --bg: #121116;              /* cool near-black */
+  --stone-1: #565165;         /* marble panel gradient, lit top */
+  --stone-2: #3e3a4b;         /* marble panel gradient, shaded bottom */
+  --panel: #464254;           /* flat stone (dropdown rows) */
+  --panel-deep: #0d0c12;      /* sunken wells: inputs, chips, badges */
+
+  --edge-hi: #7d7794;         /* bevel light edge (top/left of raised) */
+  --edge-lo: #14121b;         /* bevel dark edge (bottom/right of raised) */
+  --line: #575163;            /* hairline rules inside panels */
+  --line-strong: #6e6885;
+
+  /* bone/ivory button plates */
+  --bone-1: #e9e1c9;          /* face, lit top */
+  --bone-2: #c3b595;          /* face, shaded bottom */
+  --bone-edge-hi: #f5f0de;
+  --bone-edge-lo: #8a7f63;
+  --bone-frame: #0e0d12;      /* black groove the plate sits in */
+  --bone-ink: #2a2417;        /* 7.4:1 even on --bone-2 */
+
+  /* parchment inserts */
+  --parch-bg: #e7ddc0;
+  --parch-line: #a3946c;
+  --parch-ink: #33301f;       /* 13:1 on --parch-bg */
+  --parch-ink-soft: #6b5f3e;  /* 4.6:1 */
+  --parch-accent: #7a4d05;    /* 5.2:1 */
+
+  --gold: #e8a82a;            /* 8.8:1 on --bg */
+  --gold-bright: #f2bc4b;
+  --gold-dim: #c8a860;        /* footer links on --bg only; fails AA on stone — use --ink-muted there */
+  --parchment: #f0e4c8;       /* body text on dark stone */
+  --ink-muted: #d8c9a5;       /* 4.6:1 on --stone-1 (lightest backdrop) */
+
+  /* marble veining — turbulence swirls, tiles at 320px. Gray veins at
+     moderate alpha: lightens dark stone, darkens light marble, so one
+     texture serves both. Knobs: baseFrequency = vein size (higher =
+     tighter), slope = intensity. */
+  --marble-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.022 0.028' numOctaves='4' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.17'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+  /* paper fiber for parchment surfaces */
+  --parch-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.09'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+  /* fine grain for the page background */
+  --grain-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  --font-display: 'Cinzel', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-body: Georgia, 'Palatino Linotype', 'Times New Roman', serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--parchment);
+  font-size: 14px;
+  background-color: var(--bg);
+  /* warm torchlight from above over cool stone, darkened corners, grain */
+  background-image:
+    radial-gradient(1100px 700px at 50% -8%, rgba(232, 168, 42, 0.06), transparent 60%),
+    radial-gradient(130% 130% at 50% 40%, transparent 55%, rgba(0, 0, 0, 0.5)),
+    var(--grain-tex);
+  background-attachment: fixed;
+}
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation: none !important; }
+}
+
+/* Thin stone scrollbars, everywhere */
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+*::-webkit-scrollbar { width: 6px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+*::-webkit-scrollbar-thumb:hover { background: #8b849f; }
+
+/* ── Header: a stone title bar ── */
+header {
+  padding: 14px 28px;
+  background: var(--marble-tex), linear-gradient(180deg, #524e61, #363242);
+  border-bottom: 2px solid var(--edge-lo);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.09), inset 0 -1px 0 rgba(0, 0, 0, 0.5), 0 3px 12px rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+/* gold inlay fading at the edges, under the banner */
+header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232, 168, 42, 0.55) 30%, rgba(232, 168, 42, 0.55) 70%, transparent);
+  pointer-events: none;
+}
+.header-title { display: flex; flex-direction: column; gap: 3px; }
+header h1 {
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  /* engraved: dark cut above, lit edge below */
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 236, 180, 0.18), 0 0 22px rgba(232, 168, 42, 0.25);
+}
+.header-sub { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.22em; text-transform: uppercase; }
+
+/* Nav: bone plates sunk into the stone, like WHO / INVITE / CAMP */
+.nav-links { margin-left: auto; display: flex; gap: 8px; }
+.nav-link {
+  padding: 8px 18px;
+  background: var(--parch-tex), linear-gradient(180deg, var(--bone-1), var(--bone-2));
+  border: 2px solid;
+  border-color: var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo) var(--bone-edge-hi);
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px var(--bone-frame), 0 2px 6px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-body);
+  font-size: 12px; color: var(--bone-ink); text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: filter 150ms;
+}
+.nav-link:hover { filter: brightness(1.05); }
+.nav-link:active {
+  border-color: var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo);
+  filter: brightness(0.96);
+}
+
+/* ── Panels: raised marble blocks with a real bevel ── */
+.controls-panel, .filter-bar, .finder-bar, .zone-card, .route-card,
+.tag-dropdown {
+  background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+  border: 4px solid;
+  border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.07), inset -1px -1px 0 rgba(0, 0, 0, 0.4), 0 3px 14px rgba(0, 0, 0, 0.55);
+}
+/* gold inlay hairline on the primary control surfaces */
+.controls-panel, .finder-bar, .route-card {
+  outline: 1px solid rgba(232, 168, 42, 0.22);
+  outline-offset: -5px;
+}
+
+/* ── Fields: sunken wells (bevel inverted) ── */
+.field label {
+  font-size: 11px; color: var(--ink-muted); white-space: nowrap;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+.field select, .field input, .tag-wrap {
+  background: var(--panel-deep);
+  border: 3px solid;
+  border-color: var(--edge-lo) #615b72 #615b72 var(--edge-lo);
+  color: var(--parchment);
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: var(--font-body);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.65);
+  transition: border-color 150ms, box-shadow 150ms;
+}
+.field select, .field input { padding: 6px 12px; }
+.field select:hover, .field input:hover, .tag-wrap:hover { border-color: var(--edge-lo) #837c9d #837c9d var(--edge-lo); }
+.field select:focus, .field input:focus, .tag-wrap:focus-within {
+  border-color: var(--gold);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.65), 0 0 0 3px rgba(232, 168, 42, 0.18);
+  outline: none;
+}
+input::placeholder { color: var(--ink-muted); opacity: 0.75; }
+
+/* ── Buttons: bone plates with dark serif caps, sunk in a black groove
+   (WHO / INVITE / DISBAND). One visual family — .secondary only sizes
+   down. The domed face: lit top edge, warm shadow at the bottom. ── */
+button {
+  padding: 8px 22px;
+  background: var(--parch-tex), linear-gradient(180deg, var(--bone-1) 0%, #d9cead 55%, var(--bone-2) 100%);
+  border: 2px solid;
+  border-color: var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo) var(--bone-edge-hi);
+  color: var(--bone-ink); border-radius: 2px; cursor: pointer;
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  font-family: var(--font-body);
+  box-shadow: 0 0 0 2px var(--bone-frame), 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: filter 150ms;
+}
+button:hover { filter: brightness(1.05); }
+button:active {
+  border-color: var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo);
+  filter: brightness(0.96);
+}
+button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+button.secondary { padding: 5px 14px; font-size: 11.5px; }
+
+/* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ── */
+.tag-wrap {
+  position: relative; flex: 1; min-width: 0;
+  padding: 5px 8px; display: flex; flex-direction: column; gap: 4px; cursor: text;
+}
+.tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag-list:empty { display: none; }
+.tag-item {
+  display: inline-flex; align-items: center; gap: 3px;
+  background: rgba(232, 168, 42, 0.14); border: 1px solid rgba(232, 168, 42, 0.35);
+  border-radius: 3px; padding: 2px 4px 2px 8px; font-size: 11px; color: #d4ad59;
+  white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
+}
+.tag-item-name { overflow: hidden; text-overflow: ellipsis; }
+.tag-item-remove {
+  flex-shrink: 0; width: 16px; height: 16px; border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--ink-muted); font-size: 12px; line-height: 1;
+  background: transparent; border: none; padding: 0; font-weight: 400;
+  box-shadow: none; text-shadow: none; text-transform: none; letter-spacing: 0;
+  font-family: var(--font-body);
+}
+.tag-item-remove:hover { background: rgba(239, 68, 68, 0.18); color: #f26b6b; filter: none; }
+.tag-wrap input {
+  background: transparent; border: none; box-shadow: none; outline: none;
+  color: var(--parchment); font-size: 13px; font-family: var(--font-body);
+  width: 100%; padding: 1px 0; min-width: 80px; flex: unset;
+}
+
+.tag-dropdown {
+  position: fixed; z-index: 300;
+  max-height: 240px; overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.tag-dropdown.open { display: block; }
+.suggestion-item {
+  padding: 9px 14px; cursor: pointer; font-size: 13px; color: #d8bd7c;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+.suggestion-item:last-child { border-bottom: none; }
+.suggestion-item:hover, .suggestion-item.active { background: rgba(232, 168, 42, 0.12); color: #f0d492; }
+.suggestion-empty { padding: 10px 14px; font-size: 12px; color: var(--ink-muted); font-style: italic; }
+
+/* ── Cards ── */
+.zone-name, .route-card-title {
+  font-family: var(--font-display);
+  font-size: 19px; font-weight: 700; color: var(--parchment);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.zone-card { transition: filter 150ms; } /* faction color rides the 4px top bevel edge */
+.zone-card:hover { filter: brightness(1.06); }
+.zone-card-header, .route-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.zone-badge, .hops-badge {
+  font-size: 12px; padding: 3px 10px; border-radius: 3px;
+  background: var(--panel-deep);
+  border: 1px solid; border-color: var(--edge-lo) #5a5570 #5a5570 var(--edge-lo);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+.zone-badge.hops, .hops-badge { color: #c9a25e; }
+
+/* Faction tint over the marble + colored top accent. Dimmed cards are
+   deliberate de-emphasis (inactive content), kept legible enough to read. */
+.zone-card.safe      { border-top-color: #22c55e; }
+.zone-card.neutral   { border-top-color: #f59e0b; }
+.zone-card.wont_sell { opacity: 0.6; border-top-color: #f97316; }
+.zone-card.kos       { opacity: 0.35; border-top-color: #ef4444; }
+.zone-card.safe    { background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent 70px), var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2)); }
+.zone-card.neutral { background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent 70px), var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2)); }
+
+/* Faction badges — worded like EQ /consider results (see app.js) */
+.faction-badge {
+  font-size: 11px; padding: 3px 9px; border-radius: 3px;
+  text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;
+  cursor: help;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+/* dark backing under the tint keeps badge text ≥4.5:1 on the light stone */
+.faction-badge.safe      { background: linear-gradient(rgba(34, 197, 94, 0.16), rgba(34, 197, 94, 0.16)), rgba(10, 9, 15, 0.6);  color: #43dd81; border: 1px solid rgba(34, 197, 94, 0.4); }
+.faction-badge.neutral   { background: linear-gradient(rgba(245, 158, 11, 0.16), rgba(245, 158, 11, 0.16)), rgba(10, 9, 15, 0.6); color: #fbaf1e; border: 1px solid rgba(245, 158, 11, 0.4); }
+.faction-badge.wont_sell { background: linear-gradient(rgba(249, 115, 22, 0.16), rgba(249, 115, 22, 0.16)), rgba(10, 9, 15, 0.6); color: #fb8534; border: 1px solid rgba(249, 115, 22, 0.4); }
+.faction-badge.kos       { background: linear-gradient(rgba(239, 68, 68, 0.16), rgba(239, 68, 68, 0.16)), rgba(10, 9, 15, 0.6);  color: #ff6b6b; border: 1px solid rgba(239, 68, 68, 0.4); }
+
+/* ── Route path: directions inked on a parchment scrap (the chat scroll) ── */
+.route-path {
+  padding: 12px 16px; border-radius: 2px;
+  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+  border: 1px solid var(--parch-line);
+  /* aged edges: warm inner vignette instead of a bevel — paper, not stone */
+  box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+.route-label {
+  display: block; font-size: 10px; color: var(--parch-ink-soft);
+  letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px;
+  text-shadow: none;
+}
+.route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2.1; color: var(--parch-ink); }
+.route-zone { color: var(--parch-ink); font-weight: 700; }
+.route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
+.boat-sep, .translocator-sep { cursor: help; }
+.boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
+.translocator-sep { color: #6d28d9; margin: 0 7px; font-size: 15px; }
+
+/* ── Spell chips (planner results) ── */
+.spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.spell-check { display: flex; align-items: center; }
+.spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
+.spell-owned { opacity: 0.4; }
+.spell-owned .spell-chip { text-decoration: line-through; }
+.spell-owned .spell-chip::before { filter: grayscale(1) brightness(0.6); }
+
+.spell-chip {
+  font-size: 13px; padding: 3px 10px 3px 7px; border-radius: 3px;
+  background: var(--panel-deep);
+  border: 1px solid; border-color: var(--edge-lo) #5a5570 #5a5570 var(--edge-lo);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #f0dfae;
+  white-space: nowrap; text-decoration: none;
+  display: inline-flex; align-items: center;
+}
+/* spell gem */
+.spell-chip::before {
+  content: ""; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; flex-shrink: 0;
+  background: radial-gradient(circle at 35% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55), 0 0 4px rgba(232, 168, 42, 0.3);
+}
+@media (pointer: coarse) { .spell-chip { cursor: pointer; } }
+.spell-chip .lvl { color: var(--ink-muted); margin-left: 6px; font-size: 11px; }
+
+.vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
+.vendor-tag {
+  font-size: 12px; padding: 3px 8px; border-radius: 3px;
+  background: var(--panel-deep); border: 1px solid rgba(255, 255, 255, 0.09); color: #91a7c4;
+}
+
+/* ── Results header (planner) ── */
+.results-header {
+  font-size: 13px; color: var(--ink-muted);
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.results-actions { display: flex; gap: 6px; margin-left: auto; }
+
+/* EQ status bar (spells-owned progress), mana-blue. Modeled on the
+   original party-window bars: five connected glass bubbles wider than
+   tall, specular highlight up top-left of each, shadow along the bottom,
+   black end-knobs with a wire loop and a metal support just inside. */
+.mana-bar {
+  position: relative;
+  display: inline-block; width: 150px; height: 15px; flex-shrink: 0;
+  background: #0b0a12;
+  border: 2px solid; border-color: var(--edge-lo) #615b72 #615b72 var(--edge-lo);
+  border-radius: 7px / 6px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.mana-fill {
+  display: block; height: 100%;
+  background: linear-gradient(180deg, #8fb3ff, #3054d8 40%, #14267c);
+  transition: width 300ms ease-out;
+}
+/* glasswork overlay: caps, wires, bubble pinches, speculars, bottom shade */
+.mana-bar::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    /* end knobs (black bead + metal sliver) */
+    linear-gradient(90deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0,0,0,0) 3px),
+    linear-gradient(270deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0,0,0,0) 3px),
+    /* wire wrapping the end bubbles: one thin dark line near each end */
+    linear-gradient(100deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5px, rgba(5,5,10,0.8) 5px, rgba(5,5,10,0.8) 6px, rgba(0,0,0,0) 6px),
+    linear-gradient(260deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5px, rgba(5,5,10,0.8) 5px, rgba(5,5,10,0.8) 6px, rgba(0,0,0,0) 6px),
+    /* per-bubble: specular streak top-left, then pinch at the seams */
+    radial-gradient(45% 55% at 36% 22%, rgba(255,255,255,0.7), rgba(255,255,255,0) 60%),
+    linear-gradient(90deg, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 86%, rgba(0,0,0,0.5) 100%),
+    /* glass shading: lit top edge, shadowed bottom */
+    linear-gradient(180deg, rgba(255,255,255,0.12) 0 10%, rgba(0,0,0,0) 30% 55%, rgba(0,0,0,0.5) 90% 100%);
+  background-size:
+    100% 100%, 100% 100%,
+    100% 100%, 100% 100%,
+    20% 100%, 20% 100%,
+    100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
+}
+
+/* ── Spell Browser cards: pages of the spellbook (parchment window) ── */
+.spell-detail {
+  cursor: pointer; transition: filter 150ms;
+  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+  border: 1px solid var(--parch-line);
+  border-radius: 2px;
+  color: var(--parch-ink);
+  box-shadow: inset 0 0 26px rgba(122, 96, 42, 0.32), 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.spell-detail:hover { filter: brightness(1.03); }
+.spell-detail h3 { font-family: var(--font-display); color: var(--parch-accent); font-size: 16px; font-weight: 700; }
+.spell-level { font-size: 12px; color: var(--parch-ink-soft); font-weight: 400; margin-left: 8px; font-family: var(--font-body); }
+.spell-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.spell-header h3 { margin: 0; }
+.spell-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+.spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
+.type-badge  { background: rgba(122, 77, 5, 0.1);   color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4); }
+.mana-badge  { background: rgba(30, 64, 175, 0.08); color: #1e40af; border: 1px solid rgba(30, 64, 175, 0.35); }
+.skill-badge { background: rgba(0, 0, 0, 0.05);     color: #4a4232; border: 1px solid var(--parch-line); }
+.spell-desc { font-size: 13px; color: #4a4232; margin: 5px 0 6px; line-height: 1.5; font-style: italic; }
+.spell-stats { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.stat-tag {
+  font-size: 11px; color: #4a4232; background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #b5a77e;
+  padding: 2px 8px; border-radius: 3px;
+}
+.vendor-list { margin-top: 10px; border-top: 1px solid #b5a77e; padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
+.vendor-row { display: flex; gap: 8px; font-size: 13px; color: #4a4232; padding: 2px 0; }
+.zone-tag { color: var(--parch-accent); }
+.vendor-hint { font-size: 12px; color: var(--parch-ink-soft); margin-top: 6px; }
+
+/* ── Spell tooltip: a page torn from the spellbook (parchment) ── */
+#spell-tooltip {
+  position: fixed; z-index: 1000;
+  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+  border: 1px solid var(--parch-line);
+  border-radius: 2px; padding: 14px 18px;
+  max-width: 320px; min-width: 220px;
+  box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 10px 34px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  opacity: 0; transition: opacity 100ms ease-out;
+}
+#spell-tooltip.visible { opacity: 1; }
+.tt-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--parch-accent); margin-bottom: 6px; }
+.tt-desc { font-size: 12px; color: var(--parch-ink); font-style: italic; line-height: 1.45; margin-bottom: 8px; }
+.tt-stats { display: flex; flex-wrap: wrap; gap: 4px; }
+.tt-stat {
+  font-size: 11px; padding: 2px 7px; border-radius: 3px;
+  background: rgba(0, 0, 0, 0.06); border: 1px solid #b5a77e; color: #4a4232;
+}
+.tt-stat.highlight { color: var(--parch-accent); border-color: var(--parch-accent); }
+
+/* ── Empty / loading states ── */
+.no-results { color: var(--ink-muted); font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
+.loading    { color: var(--ink-muted); padding: 52px 0; text-align: center; letter-spacing: 0.25em; font-size: 11px; text-transform: uppercase; }
+
+/* ── Ornamental separator (controls panel) ── */
+.control-sep {
+  width: 100%; height: 1px; margin: 4px 0; flex-shrink: 0; position: relative;
+  /* the line leaves a gap at center so the diamond needs no masking background */
+  background: linear-gradient(90deg,
+    transparent, var(--line-strong) 18%, var(--line-strong) 45%, transparent 47%,
+    transparent 53%, var(--line-strong) 55%, var(--line-strong) 82%, transparent);
+}
+.control-sep::after {
+  content: "◆";
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font-size: 8px; color: #9a7f3e; line-height: 1;
+}
+
+/* ── Footer ── */
+footer {
+  padding: 10px 28px; border-top: 1px solid #26232e; flex-shrink: 0;
+  font-size: 11px; color: var(--ink-muted); text-align: center; letter-spacing: 0.04em;
+}
+footer a { color: var(--gold-dim); text-decoration: none; }
+footer a:hover { text-decoration: underline; color: var(--gold-bright); }
+
+/* ── Shared narrow-screen adjustments ── */
+@media (max-width: 700px) {
+  header { padding: 12px 16px; }
+  button { min-height: 44px; }
+  button.secondary { min-height: 40px; }
+  .tag-item-remove { min-height: 0; }
+}

@@ -44,7 +44,7 @@ async function fetchSpells() {
   const level = document.getElementById("spell-level-select").value;
   const search = document.getElementById("spell-search").value.toLowerCase().trim();
 
-  document.getElementById("spell-results").innerHTML = '<div class="loading">Loading...</div>';
+  document.getElementById("spell-results").innerHTML = '<div class="loading">Loading, please wait...</div>';
 
   const params = new URLSearchParams({ class: cls });
   if (level !== "all") params.set("levels", level);

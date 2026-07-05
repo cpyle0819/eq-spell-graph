@@ -90,6 +90,12 @@ Some vendor data uses different zone names than adjacency data (e.g., "Neriak" v
 ### Planner-first
 Primary use case: "where should I go to buy spells?" — a planning/table problem. Cytoscape graph view is a secondary exploration tab.
 
+### EverQuest-themed skin lives in a shared `public/theme.css`
+All three pages link one stylesheet for the classic-EQ (Velious-era stone UI) look, modeled on an original-UI screenshot: cool lavender-blue marble panels with SVG-turbulence veining, real two-tone bevels (4px panels, inverted on sunken wells), warm parchment inserts with dark ink (route paths, spell tooltip, Spell Browser cards), bone/ivory button plates with dark serif caps sunk in a black groove, a five-bubble mana-blue progress bar for owned spells, Cinzel display serif via Google Fonts CDN, Georgia body text, and spell-gem chip bullets. Each page's inline `<style>` holds only its own layout. Textures are inline SVG data URIs (feTurbulence), not image assets — knobs documented in the CSS. Still no build step — it's a plain CSS file. Google Fonts is the only external dependency besides the Cytoscape CDN; the font stack falls back to Palatino/Georgia if it's unreachable. Faction badges use EQ /consider verbiage ("indifferent", "dubious", "scowls") with the practical meaning in a `title` tooltip — the header summary keeps plain language ("won't sell", "KOS") so nothing depends on knowing EQ slang. The reference screenshot lives at assets-cdn.daybreakgames.com/uploads/dcsclient/000/000/108/481.jpg.
+
+### Muted text must clear WCAG AA (4.5:1)
+The pre-reskin palette's muted browns (#8a6838, #6a5438) sat at 2.6–3.6:1 against the dark background and failed WCAG AA. All muted text now uses `--ink-muted` (≥4.5:1 against the lightest stone surface it appears on — recheck if lightening `--stone-1`) — don't reintroduce darker browns for text. Dimmed zone cards (`wont_sell` 0.6, `kos` 0.35 opacity) are deliberate de-emphasis of inactive content, not a contrast bug; they were raised from 0.5/0.22 to stay identifiable.
+
 ### Zone picker uses `<select>`
 `<datalist>` has a browser bug preventing re-selection after initial pick.
 
