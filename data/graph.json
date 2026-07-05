@@ -37754,6 +37754,295 @@
           }
         }
       }
+    },
+    {
+      "data": {
+        "id": "stance:balanced",
+        "label": "Balanced",
+        "type": "stance",
+        "description": "All incoming damage is reduced by 10% and your chance to hit is increased by 10%. Endurance regen excluding out of combat bonus regen is doubled. There is no endurance cost to upkeep this stance.",
+        "classes": [
+          "berserker",
+          "bard",
+          "beastlord",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:berserker",
+        "label": "Berserker",
+        "type": "stance",
+        "description": "While this stance is active, attack speed and combat skill recharge rate is doubled and your chance to hit and combat skill damage is increased by 25%. Every point of damage dealt consumes half that amount in endurance, with a reduction based on your strategy skill. You also take 8.3% of outgoing damage to yourself. Bonus damage from critical hits and similar effects do not cost endurance.",
+        "classes": [
+          "berserker"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:channeler",
+        "label": "Channeler",
+        "type": "stance",
+        "description": "All incoming damage is reduced by 40% and your chance to successfully channel is increased. Half of the mitigated damage is charged to both mana and endurance, with a reduction based on your strategy skill.",
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:defensive",
+        "label": "Defensive",
+        "type": "stance",
+        "description": "All incoming melee damage is reduced by 50% and incoming magical damage is reduced by 20%. Every point of damage reduced consumes an equal amount of endurance, with a reduction based on your strategy skill.",
+        "classes": [
+          "paladin",
+          "shadow knight",
+          "warrior"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:evasive",
+        "label": "Evasive",
+        "type": "stance",
+        "description": "You have a 95% chance to evade all incoming attacks. Every point of damage evaded consumes 2 endurance, with a reduction based on your strategy skill. Evasion will fail if you have insufficient endurance, or while playing dead.",
+        "classes": [
+          "bard",
+          "monk",
+          "ranger",
+          "beastlord",
+          "rogue"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:mage-hunter",
+        "label": "Mage Hunter",
+        "type": "stance",
+        "description": "All incoming spell damage is reduced by 50% and incoming physical damage is reduced by 20%. Every point of damage reduced consumes an equal amount of endurance, with a reduction based on your strategy skill.",
+        "classes": [
+          "berserker",
+          "paladin",
+          "shadow knight"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:offensive",
+        "label": "Offensive",
+        "type": "stance",
+        "description": "Outgoing melee damage is increased by 100% and your chance to hit is increased by 25%. Every point of bonus damage dealt consumes an equal amount of endurance, with a reduction based on your strategy skill. When below 25% endurance, the chance to hit bonus is reduced based on the remaining percent of endurance. Bonus damage from critical hits and similar effects do not cost endurance.",
+        "classes": [
+          "berserker",
+          "bard",
+          "beastlord",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:ranged",
+        "label": "Ranged",
+        "type": "stance",
+        "description": "Your range attack has no minimum distance, gains a 25% accuracy bonus, and can double and triple attack. Every point of damage consumes endurance, with a reduction based on your strategy skill.",
+        "classes": [
+          "berserker",
+          "monk",
+          "ranger",
+          "rogue"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "stance:striker",
+        "label": "Striker",
+        "type": "stance",
+        "description": "Outgoing weapon skill abilities deal 3x damage and non-weapon skill abilities deal 5x damage, and your chance to hit is increased by 25%. Every point of damage dealt consumes an equal amount of endurance, with a reduction based on your strategy skill. When below 25% endurance, the chance to hit bonus is reduced based on the remaining percent of endurance. Bonus damage from critical hits and similar effects do not cost endurance.",
+        "classes": [
+          "berserker",
+          "monk",
+          "rogue",
+          "warrior"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:arcane-mastery",
+        "label": "Arcane Mastery",
+        "type": "invocation",
+        "description": "Spell cast and recovery times are reduced by 25% plus 10% per additional intelligence class. The mana cost of detrimental spells is reduced by 15% plus 5% per additional intelligence class.",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shadow knight",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:divine",
+        "label": "Divine",
+        "type": "invocation",
+        "description": "Spending mana will heal the group member with the lowest hp percentage by that amount. For every additional wisdom class, this will repeat with a heal for 33% of the mana spent.",
+        "classes": [
+          "beastlord",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "shaman"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:empower",
+        "label": "Empower",
+        "type": "invocation",
+        "description": "Adds 40% plus 20% per additional non-hybrid casting class to Damage effects at the cost of 40% more mana. Adds 20% plus 10% per additional non-hybrid casting class to Healing effects at the cost of 20% more mana.",
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:inversion",
+        "label": "Inversion",
+        "type": "invocation",
+        "description": "Shifts two-thirds of spell cast time into the global recovery time and 20% of the mana cost into half as much in endurance cost.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "paladin",
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:inviolable",
+        "label": "Inviolable",
+        "type": "invocation",
+        "description": "Cast spells are uninterruptible at the cost of 100% more mana and the same amount as endurance.",
+        "classes": [
+          "bard",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:over-channel",
+        "label": "Over Channel",
+        "type": "invocation",
+        "description": "Cast spells have a -150 resist adjust plus another -15 for every non-hybrid caster class at a cost of 10% of the mana cost in endurance.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "paladin",
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:recovery",
+        "label": "Recovery",
+        "type": "invocation",
+        "description": "You regenerate mana twice as fast and spells have a 5% reduced mana cost. Out of combat regen bonus is not affected.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "paladin",
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "wizard"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:spellblade",
+        "label": "Spellblade",
+        "type": "invocation",
+        "description": "Treats the first spell-gem slot as a proc that consumes both mana and endurance on activation. 40% of the spells mana cost is paid as mana and 20% as endurance. The spell must have a reuse time less than or equal to its cast time.",
+        "classes": [
+          "beastlord",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "invocation:unyielding",
+        "label": "Unyielding",
+        "type": "invocation",
+        "description": "Health regen excluding out of combat bonus regen is doubled, with a 25% resistance increase to loss of control from fear, mez, and charm. There is no mana cost to upkeep this stance.",
+        "classes": [
+          "berserker",
+          "monk",
+          "rogue",
+          "warrior"
+        ]
+      }
     }
   ],
   "edges": [

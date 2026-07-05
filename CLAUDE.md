@@ -28,6 +28,12 @@ Never hand-edit `data/graph.json` or regenerate it wholesale. Write a new number
 
 **If this app is deployed as a Lambda, the deployment holds its own bundled snapshot of `data/graph.json` from whenever `bun run build:lambda` last ran.** It does not read live from this repo or fetch data at runtime. Running a migration locally has zero effect on a live deployment until someone rebuilds and redeploys — this repo has no hook that does that automatically, and doesn't know how deployment is done for whatever's consuming its Lambda build (see `README.md`'s "Deploying" section, and note that's a deliberate boundary — this repo has no code, comments, or docs describing a specific domain, path, or cloud setup; that lives entirely in whichever separate infra repo does the deploying).
 
+The infra repo that actually owns deployment is **`coreypyle-infra`**, a sibling directory (`../coreypyle-infra`, i.e. both repos live directly under the same parent — see that repo's own README). It holds the Terraform for the S3/CloudFront/Lambda setup and documents the exact redeploy steps (`bun run build:lambda`, `terraform apply`, `aws s3 sync`, CloudFront invalidation). This repo deliberately stays ignorant of those details; look there, not here, for anything domain/path/cloud-specific.
+
+## Delivery workflow
+
+After a feature in this repo is implemented and verified, the default is to commit, push, and deploy (via `coreypyle-infra` — see above) as part of finishing the work, not as a separate follow-up step someone has to ask for. Ask first if a change seems risky to ship immediately (e.g. touches live data, is hard to reverse) — otherwise treat delivery as including deployment.
+
 ## Design Decisions
 
 Read `DECISIONS.md` before making changes. It contains architecture choices and EQ domain knowledge that shaped the code.

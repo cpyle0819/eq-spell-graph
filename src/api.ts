@@ -93,6 +93,40 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: [...classes].sort() };
   }
 
+  // GET /api/classes/stances — list classes that have stance/invocation data.
+  // A separate roster from /api/classes: it includes classes with no
+  // purchasable spells (e.g. berserker) — see DECISIONS.md.
+  if (pathname === "/api/classes/stances") {
+    const graph = getGraph();
+    const classes = new Set<string>();
+    for (const n of graph.nodes) {
+      if ((n.data.type === "stance" || n.data.type === "invocation") && n.data.classes) {
+        for (const cls of n.data.classes as string[]) classes.add(cls);
+      }
+    }
+    return { status: 200, body: [...classes].sort() };
+  }
+
+  // GET /api/stances-invocations?class=warrior,paladin — stances/invocations
+  // available to any of the given classes (1-3 expected from the UI, but
+  // not enforced server-side).
+  if (pathname === "/api/stances-invocations") {
+    const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
+    const graph = getGraph();
+    const matches = (type: "stance" | "invocation") =>
+      graph.nodes
+        .filter((n) => n.data.type === type && n.data.classes &&
+          (classNames.length === 0 || (n.data.classes as string[]).some((c) => classNames.includes(c))))
+        .map((n) => ({
+          id: n.data.id,
+          name: n.data.label,
+          description: n.data.description,
+          classes: n.data.classes,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    return { status: 200, body: { stances: matches("stance"), invocations: matches("invocation") } };
+  }
+
   // GET /api/zones — list all zone nodes
   if (pathname === "/api/zones") {
     const graph = getGraph();

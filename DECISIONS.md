@@ -6,7 +6,15 @@
 `data/graph.json` is canonical. All mutations go through `src/graph.ts`.
 
 ### Node types
-Current: `spell`, `npc`, `zone`. Future: `quest`, `item`. Generic typed nodes avoid schema changes when adding entity types.
+Current: `spell`, `npc`, `zone`, `stance`, `invocation`. Future: `quest`, `item`. Generic typed nodes avoid schema changes when adding entity types.
+
+### Stance/invocation nodes: single-page scrape, not per-entity
+`stance` and `invocation` nodes (migration 016) carry `label`, `description`, and a `classes: string[]` array of full lowercase class names — no `level`, since both are granted at level 1 (unlike `spell.class_levels`, which pairs each class with a level). Unlike spell data (scraped per-spell, one wiki page per spell), all 18 stances/invocations live on a single eqlwiki.com page ("Stances & Invocations") as two summary wikitables. `scripts/scrape-stances.ts` fetches that one page via the MediaWiki API and parses both tables directly, rather than following per-ability links — there's only one page to fetch, so the batching/resume logic `scrape-spell-details.ts` needs doesn't apply here.
+
+Table-cell parsing has to treat any wikitext line not starting with `|` as a continuation of the previous cell, not a new one — some descriptions (e.g. Divine, Empower, Offensive, Striker) wrap across multiple source lines inside a single cell, and a naive "keep lines starting with `|`" filter silently truncates them at the first line break.
+
+### Stances/invocations cover a different, larger class roster than spells
+The Stances & Invocations page includes **Berserker**, a class with no purchasable spells and no entry in migration 007's `ALL_CLASSES` or the spell-derived `/api/classes` roster (`scrape-spells.ts` already skips Monk/Warrior/Rogue for the same "no vendor spells" reason — Berserker is the same case, just not previously encountered since nothing referenced it). Rather than reconciling this into one shared class list, `/api/classes/stances` derives its own roster directly from `stance`/`invocation` node `classes` fields, independent of `/api/classes`. The two endpoints will keep diverging by design — don't unify them into a single "all classes" list.
 
 ### Edge semantics
 - `npc --sells--> spell`
@@ -98,6 +106,9 @@ The pre-reskin palette's muted browns (#8a6838, #6a5438) sat at 2.6–3.6:1 agai
 
 ### Zone picker uses `<select>`
 `<datalist>` has a browser bug preventing re-selection after initial pick.
+
+### Stances & Invocations page: three `<select>` pickers, not a multi-select
+"Pick 1-3 classes" is implemented as three independent class `<select>` dropdowns (Class 1/2/3, each with a "— None —" option) rather than a single multi-select control, consistent with the zone picker decision above. Each select disables any class already chosen by one of the other two, preventing duplicate picks. Results are the union of stances/invocations available to any selected class; each ability card is badged with which of the *selected* classes grant it (not its full class list), so overlap between classes is visible at a glance.
 
 ### Level picker is a dual range slider
 Covers the common case: "I leveled from X to Y, what spells do I need?"
