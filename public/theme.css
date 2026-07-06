@@ -492,9 +492,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    zone-card) wrapping a parchment scroll insert (badges/description/
    stats/actions) — the same panel-plus-scroll composition Route Finder
    uses (.route-card + .route-path), including the wood-dowel end caps
-   (see DECISIONS.md — an earlier pass withheld the dowels here to avoid
-   repeating the ornament across 30+ stacked cards, but the user preferred
-   matching Route Finder exactly once they saw both side by side). */
+   (see DECISIONS.md for the reasoning). */
 .spell-detail {
   cursor: pointer; transition: box-shadow 150ms;
   padding: 14px 20px;

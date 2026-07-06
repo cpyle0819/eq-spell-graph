@@ -1,8 +1,7 @@
 const SELECT_IDS = ["class-select-1", "class-select-2", "class-select-3"];
 // Matches the planner's level-range slider bound (public/index.html
-// #level-max max="50") — the actual data tops out at level 50, so a Class
-// Browser level select running to 60 (an old spells.js leftover) offered
-// ten dead options that could never match a spell.
+// #level-max max="50") — the actual data tops out at level 50 (see
+// DECISIONS.md).
 const MAX_SPELL_LEVEL = 50;
 let availableClasses = [];
 

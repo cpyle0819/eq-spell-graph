@@ -285,14 +285,11 @@ export function rankZones(
   let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
 
   // Specific Spells is an *exclusive* override, not an addition: pinning any
-  // spell means "show me only these, regardless of Shopping For classes,"
-  // the same as it always has — this is what lets you say "forget class
-  // browsing for a second, just find this one spell." The bug was never
-  // that this narrowing existed; it's that Step 2 used to narrow by class
-  // *first*, so a pinned spell outside the current Shopping For classes was
-  // already gone by the time this ran, and its class/level pairs got
-  // filtered again below on top of that — so a pinned spell not matching
-  // both filters vanished instead of showing up as-is.
+  // spell means "show me only these, regardless of Shopping For classes" —
+  // this is what lets you say "forget class browsing for a second, just
+  // find this one spell." Pinned ids are checked here, before the class
+  // filter below, so a pinned spell outside the current Shopping For
+  // classes still shows up as-is rather than being filtered out twice.
   const pinnedIds = new Set(specificSpellIds || []);
 
   // Step 2 — narrow to specific spells (if any pinned), else by class
