@@ -12,16 +12,71 @@
     /* Page layout only — component styling lives in theme.css */
     body { height: 100vh; display: flex; flex-direction: column; }
 
-    #planner { padding: 24px 28px 0; display: flex; flex-direction: column; overflow: hidden; flex: 1; }
-    #results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; padding-right: 20px; }
+    /* #planner is the console frame — one continuous marble surface flush
+       against the header above and the viewport edges. Reference: EQ's
+       classic UI (wiki.project1999.com/File:Classic_Full_Screen_UI.jpg)
+       doesn't make everything flush and borderless — the macro-button
+       cluster and the WHO/INVITE cluster each sit in their own distinctly
+       beveled panel, inset from the console around them by a small honest
+       gap. What's flush is *within* a cluster: individual buttons pack
+       edge-to-edge, sharing a border instead of a gap, each still reading
+       as its own beveled block. .controls-panel and the zone-card list
+       follow that split: panel-level gap between the two clusters, zero
+       gap + shared borders between repeated items inside each. Scoped to
+       index.html only — .controls-panel/.zone-card aren't used elsewhere,
+       and the shared theme.css floating-panel treatment is still correct
+       for route.html/class-browser.html's .filter-bar etc. */
+    #planner {
+      display: flex; flex-direction: column; overflow: hidden; flex: 1;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      padding: 0 14px 14px; gap: 14px;
+    }
+    #results { flex: 1; min-height: 0; overflow-y: auto; }
 
-    .controls-panel { margin-bottom: 24px; overflow: hidden; flex-shrink: 0; }
+    .controls-panel, .status-panel {
+      flex-shrink: 0; overflow: hidden;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      border: 4px solid;
+      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      border-radius: 3px;
+      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
     .planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
+
+    /* Status panel: the vitals-bar-plus-action-buttons cluster, its own
+       console module echoing the reference client's right-side column
+       (portrait/bars up top, WHO/INVITE/etc. buttons below) rather than
+       sitting inline in the results text where the bar read as an odd
+       leftover once everything else became a proper panel. Empty
+       (innerHTML = "") between plans, so it collapses to nothing rather
+       than showing an empty bevel box. */
+    .status-panel:empty { display: none; }
+    /* All results metadata (counts, level range, faction warnings) lives
+       here now — #results holds only the zone-card list, no header/divider
+       of its own above it. */
+    .status-meta {
+      padding: 14px 20px; text-align: center; font-size: 12px; color: var(--ink-muted);
+      line-height: 1.5; border-bottom: 2px solid var(--edge-lo);
+    }
+    .status-warnings { margin-top: 4px; font-size: 11px; }
+    .status-summary { padding: 16px 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .status-summary .mana-bar { width: 100%; }
+    .status-owned-count { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
+    .status-actions {
+      display: flex; flex-direction: column; gap: 8px; align-items: center;
+      padding: 12px 20px 16px; border-top: 2px solid var(--edge-lo);
+    }
 
     .field { display: flex; align-items: center; gap: 10px; }
     .field label { min-width: 100px; }
     .field select, .field input { flex: 1; min-width: 0; }
     .field .range-picker { flex: 1; min-width: 0; }
+    .panel-actions { display: flex; justify-content: flex-end; }
+
+    /* The deeper input bevel (border-width 4px, heavier inset shadow) now
+       lives directly in theme.css's shared .field select/.field input/
+       .tag-wrap rule, propagated there after landing here first — no
+       page-specific override needed anymore. */
 
     .range-picker { display: flex; align-items: center; gap: 10px; }
     .range-picker input[type="range"] {
@@ -37,20 +92,76 @@
     .range-picker input[type="range"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
     .range-display { font-size: 14px; color: var(--gold); font-weight: 700; white-space: nowrap; min-width: 58px; text-align: center; font-variant-numeric: tabular-nums; }
 
-    .results-header { margin-bottom: 20px; }
-    .zone-card { padding: 18px 22px; margin-bottom: 14px; }
+    /* .text-action (plain muted text links, e.g. Show all/Clear owned/Reset
+       filters) now lives in theme.css — shared by all three pages. */
+
+    /* Zone rows: each one keeps a full, pronounced bevel border (its own
+       beveled box, not a flat divided row) but packs directly against its
+       neighbors — a negative margin overlaps each row's top border onto
+       the previous row's bottom border, one shared seam instead of two
+       stacked ones, the same way adjacent macro buttons in the reference
+       share an edge without a gap between them. */
+    .zone-card {
+      position: relative;
+      margin: 0; padding: 14px 20px;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      border: 4px solid;
+      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      border-radius: 3px;
+      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45);
+    }
+    .zone-card + .zone-card { margin-top: -4px; }
+    /* Faction is the LED dot's job now, not the box color — neutralize
+       theme.css's colored border-top/background-tint per faction so the
+       card's own bevel stays a plain stone plate on every row. */
+    .zone-card.safe, .zone-card.neutral, .zone-card.wont_sell, .zone-card.kos {
+      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+    }
     .zone-card-header { margin-bottom: 12px; }
-    .route-path { margin-top: 14px; margin-bottom: 16px; }
+    .zone-name { position: relative; padding-left: 17px; }
+    .zone-name::before {
+      content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 9px; height: 9px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #b8b4c8, #6e6885 65%, #4a4658);
+      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+    .zone-card.safe      .zone-name::before { background: radial-gradient(circle at 35% 30%, #7dffb0, #22c55e 60%, #157a3c); box-shadow: 0 0 6px rgba(34, 197, 94, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 35% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .route-path { margin-top: 12px; margin-bottom: 14px; }
     .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
 
-    /* Wide layout: sidebar */
+    /* Wide layout: sidebar. The sidebar column fills its full allocated
+       width — left bevel flush against the screen edge (no padding
+       outside it), right bevel flush against the results seam (no gap
+       to results, sidebar's own right border *is* the seam) — rather
+       than floating with a margin on both sides within the console. */
     @media (min-width: 1100px) {
-      #planner { flex-direction: row; padding: 24px 28px; gap: 24px; align-items: flex-start; overflow: visible; }
-      .controls-panel { width: 300px; min-width: 300px; flex-shrink: 0; margin-bottom: 0; position: sticky; top: 24px; }
+      #planner { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
+      .controls-panel {
+        width: 300px; min-width: 300px; flex-shrink: 0;
+        position: sticky; top: 0;
+        order: 0;
+      }
       .field label { min-width: 0; width: 100%; }
       .field { flex-direction: column; align-items: stretch; gap: 4px; }
 
-      #results { overflow-y: auto; padding-bottom: 0; padding-right: 16px; }
+      #results { overflow-y: auto; order: 1; }
+
+      /* Status panel sits to the right of results on desktop (DOM order
+         puts it right after .controls-panel, for mobile's stacking —
+         `order` reflows it to last here without duplicating markup). Fills
+         its column the same way the sidebar does: left bevel shares the
+         results seam (no gap, gap:0 on #planner), right bevel shares the
+         screen's own edge (no padding outside it, #planner's right padding
+         removed above). */
+      .status-panel {
+        width: 220px; min-width: 220px; flex-shrink: 0;
+        position: sticky; top: 0;
+        order: 2;
+      }
     }
 
     /* Below the sidebar breakpoint: one page-level scroll area instead of a
@@ -58,12 +169,12 @@
     @media (max-width: 1099.98px) {
       body { height: auto; min-height: 100vh; }
       #planner { flex: none; overflow: visible; }
-      #results { flex: none; overflow-y: visible; min-height: 0; padding-right: 0; }
+      #results { flex: none; overflow-y: visible; min-height: 0; }
     }
 
     /* Narrow: stack vertically */
     @media (max-width: 700px) {
-      #planner { padding: 14px 16px 0; }
+      #planner { padding: 0 10px 10px; gap: 10px; }
       .planner-controls { gap: 12px; padding: 14px 16px; }
       .control-sep { display: none; }
     }
@@ -143,6 +254,7 @@
           <option value="the tribunal" selected>The Tribunal</option>
           <option value="tunare">Tunare</option>
           <option value="veeshan">Veeshan</option>
+          <option value="any">Any (ignore faction)</option>
         </select>
       </div>
       <div class="control-sep" aria-hidden="true"></div>
@@ -181,8 +293,12 @@
           <input type="range" id="level-max" min="1" max="50" value="10">
         </div>
       </div>
+      <div class="panel-actions">
+        <button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
+      </div>
     </div>
     </div><!-- .controls-panel -->
+    <div id="status-panel" class="status-panel"></div>
     <div id="results"></div>
   </div>
 

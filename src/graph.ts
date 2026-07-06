@@ -239,7 +239,8 @@ export interface ZoneRanking {
   hops: number | null;
   route: RouteStep[];
   faction: FactionStanding;
-  factionIgnored?: boolean;
+  raceIgnored?: boolean;
+  deityIgnored?: boolean;
   spells: SpellVendorInfo[];
   score: number;
 }
@@ -257,12 +258,17 @@ export function rankZones(
   const graph = load();
   const index = getIndex();
 
-  // race="any" means "ignore faction entirely" — used when the caller has no
-  // real race/deity context (e.g. a spell pinned from the Class Browser,
-  // which never collects either). Short-circuits all three faction
-  // dimensions rather than just the race one, since a leftover primaryClass
-  // or deity could still produce a misleading wont_sell/KOS result otherwise.
-  const factionIgnored = race === "any";
+  // race="any"/deity="any" each neutralize only their own dimension in the
+  // worst-of computation below — contributing "safe" for that slot, not
+  // forcing the whole result to "safe." Deity data does affect real
+  // outcomes (confirmed against data/graph.json: 75 wont_sell and 2 kos
+  // results, e.g. Paineel vs. Mithaniel Marr/Tunare worshippers), so a real
+  // race-driven KOS or class-driven wont_sell still has to show through
+  // even when deity is set to "any" (and vice versa) — "any" means "don't
+  // let this dimension penalize the result," not "pretend nothing here is
+  // real."
+  const raceIgnored = race === "any";
+  const deityIgnored = deity === "any";
 
   // Step 1 — start with all purchasable spells
   let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
@@ -357,13 +363,11 @@ export function rankZones(
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
-    if (factionIgnored) {
-      faction = "safe";
-    } else if (zoneNode?.faction) {
+    if (zoneNode?.faction) {
       const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
-      const raceStanding: FactionStanding = (race && zf.race?.[race]) || "neutral";
+      const raceStanding: FactionStanding = raceIgnored ? "safe" : (race && zf.race?.[race]) || "neutral";
       const classStanding: FactionStanding = (primaryClass && zf.class?.[primaryClass]) || "safe";
-      const deityStanding: FactionStanding = (deity && zf.deity?.[deity]) || "neutral";
+      const deityStanding: FactionStanding = deityIgnored ? "safe" : (deity && zf.deity?.[deity]) || "neutral";
       faction = worstStanding(raceStanding, classStanding, deityStanding);
     }
 
@@ -385,7 +389,8 @@ export function rankZones(
       hops,
       route,
       faction,
-      ...(factionIgnored ? { factionIgnored: true } : {}),
+      ...(raceIgnored ? { raceIgnored: true } : {}),
+      ...(deityIgnored ? { deityIgnored: true } : {}),
       spells: spells.sort((a, b) => Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level))),
       score,
     });

@@ -68,6 +68,18 @@ function setupFilters() {
     clearTimeout(searchDebounce);
     searchDebounce = setTimeout(render, 150);
   });
+
+  document.getElementById("reset-filters-btn").addEventListener("click", resetFilters);
+}
+
+function resetFilters() {
+  for (const id of SELECT_IDS) document.getElementById(id).value = "";
+  document.getElementById("class-select-1").value = availableClasses[0] || "";
+  document.getElementById("level-select").value = "all";
+  document.getElementById("browser-search").value = "";
+  syncSelectOptions();
+  activeTab = null; // back to the first available tab, not wherever the user was
+  fetchAbilities();
 }
 
 function selectedClasses() {
@@ -124,11 +136,11 @@ function renderAbility(ability, selected) {
   const card = document.createElement("div");
   card.className = "spell-detail";
   card.innerHTML = `
-    <div class="spell-header">
-      <h3>${ability.name}</h3>
+    <div class="spell-header"><h3>${ability.name}</h3></div>
+    <div class="spell-scroll">
       <div class="spell-badges">${classBadges(ability.classes, selected)}</div>
+      <p class="spell-desc">${ability.description}</p>
     </div>
-    <p class="spell-desc">${ability.description}</p>
   `;
   return card;
 }
@@ -142,11 +154,11 @@ function renderAA(aa, selected) {
     classBadges(aa.classes, selected),
   ].join("");
   card.innerHTML = `
-    <div class="spell-header">
-      <h3>${aa.name}</h3>
+    <div class="spell-header"><h3>${aa.name}</h3></div>
+    <div class="spell-scroll">
       <div class="spell-badges">${badges}</div>
+      <p class="spell-desc">${aa.description}</p>
     </div>
-    <p class="spell-desc">${aa.description}</p>
   `;
   return card;
 }
@@ -166,10 +178,13 @@ function fmtCast(t) {
 // its own class/level filters entirely for a pinned spell (see DECISIONS.md),
 // so these params aren't load-bearing for correctness — but without them the
 // planner would keep showing whatever level range / Shopping For classes /
-// race were last saved there, which could be wildly unrelated to what you
-// were just looking at here. race=any is unconditional: Class Browser never
-// collects race/deity, so any leftover value in the planner would produce a
-// misleading KOS/won't-sell result that has nothing to do with this lookup.
+// race / deity were last saved there, which could be wildly unrelated to
+// what you were just looking at here. race=any and deity=any are both
+// unconditional: Class Browser never collects either, so any leftover value
+// in the planner could produce a misleading KOS/won't-sell result that has
+// nothing to do with this lookup. Each only neutralizes its own dimension
+// server-side, so this doesn't hide a real primaryClass-driven wont_sell —
+// there's just no primaryClass context to propagate either.
 function buildPinUrl(spell, selected) {
   const level = document.getElementById("level-select").value;
   const [levelMin, levelMax] = level === "all" ? [1, MAX_SPELL_LEVEL] : [level, level];
@@ -179,6 +194,7 @@ function buildPinUrl(spell, selected) {
     levelMin: String(levelMin),
     levelMax: String(levelMax),
     race: "any",
+    deity: "any",
   });
   if (selected.length) params.set("classes", selected.join(","));
   return `index.html?${params}`;
@@ -206,21 +222,22 @@ function renderSpellCard(spell, selected) {
   const pinUrl = buildPinUrl(spell, selected);
 
   card.innerHTML = `
-    <div class="spell-header">
-      <h3>${spell.label}</h3>
+    <div class="spell-header"><h3>${spell.label}</h3></div>
+    <div class="spell-scroll">
       <div class="spell-badges">${badges.join("")}</div>
-    </div>
-    ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
-    ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
-    <div class="spell-card-actions">
-      <span class="vendor-hint">Click to show vendors</span>
-      <a class="spell-finder-link" href="${pinUrl}">Find in Spell Finder →</a>
+      ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
+      ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
+      <div class="spell-card-actions">
+        <span class="vendor-hint">Click to show vendors</span>
+        <a class="spell-finder-link" href="${pinUrl}">Find in Spell Finder →</a>
+      </div>
     </div>
   `;
 
   card.addEventListener("click", async (e) => {
     if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
-    const existing = card.querySelector(".vendor-list");
+    const scroll = card.querySelector(".spell-scroll");
+    const existing = scroll.querySelector(".vendor-list");
     if (existing) {
       existing.remove();
       card.querySelector(".vendor-hint").textContent = "Click to show vendors";
@@ -234,7 +251,7 @@ function renderSpellCard(spell, selected) {
     list.innerHTML = vendors.length
       ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span><span class="zone-tag">— ${v.zone?.label ?? "unknown zone"}</span></div>`).join("")
       : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
-    card.appendChild(list);
+    scroll.appendChild(list);
   });
 
   return card;

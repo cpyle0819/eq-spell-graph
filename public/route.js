@@ -6,6 +6,14 @@ async function init() {
   restoreState();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
+  document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
+  runRoute();
+}
+
+function resetRoute() {
+  document.getElementById("route-from").value = "";
+  document.getElementById("route-to").value = "";
+  saveState();
   runRoute();
 }
 

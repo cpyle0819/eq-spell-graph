@@ -171,7 +171,11 @@ header h1 {
   border: 4px solid;
   border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
   border-radius: 3px;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.07), inset -1px -1px 0 rgba(0, 0, 0, 0.4), 0 3px 14px rgba(0, 0, 0, 0.55);
+  /* a modest outer shadow, not the old large diffuse one — panels read as
+     mounted plates in a console, not cards floating above a page. See
+     DECISIONS.md for how this was worked out on the Spell Finder page
+     before propagating here. */
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 /* gold inlay hairline on the primary control surfaces */
 .controls-panel, .finder-bar, .route-card {
@@ -187,20 +191,24 @@ header h1 {
 }
 .field select, .field input, .tag-wrap {
   background: var(--panel-deep);
-  border: 3px solid;
+  /* deeper, more pronounced socket than the original 3px/lighter shadow —
+     matches the reference client's carved-in button/field wells rather
+     than a thin groove. Worked out on the Spell Finder page; propagated
+     here for consistency across all three pages. */
+  border: 4px solid;
   border-color: var(--edge-lo) #615b72 #615b72 var(--edge-lo);
   color: var(--parchment);
   border-radius: 3px;
   font-size: 13px;
   font-family: var(--font-body);
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.65);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
   transition: border-color 150ms, box-shadow 150ms;
 }
 .field select, .field input { padding: 6px 12px; }
 .field select:hover, .field input:hover, .tag-wrap:hover { border-color: var(--edge-lo) #837c9d #837c9d var(--edge-lo); }
 .field select:focus, .field input:focus, .tag-wrap:focus-within {
   border-color: var(--gold);
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.65), 0 0 0 3px rgba(232, 168, 42, 0.18);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(232, 168, 42, 0.18);
   outline: none;
 }
 input::placeholder { color: var(--ink-muted); opacity: 0.75; }
@@ -229,8 +237,24 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
+/* Plain text actions (Show all / Clear owned / Reset filters), not bone
+   plates — as full buttons these read as too busy for a secondary,
+   infrequent toggle sitting next to other status text. Shared by all
+   three pages. ink-muted (not gold-dim) since these sit on the stone
+   panel, not --bg — gold-dim is documented as failing AA there. */
+.text-action {
+  background: none; border: none; box-shadow: none; border-radius: 0;
+  padding: 0; min-height: 0;
+  font-family: var(--font-body); font-size: 12px; font-weight: 400;
+  letter-spacing: normal; text-transform: none; text-shadow: none;
+  color: var(--ink-muted); text-decoration: none; cursor: pointer;
+}
+.text-action:hover { text-decoration: underline; color: var(--gold-bright); filter: none; }
+.text-action:active { filter: none; }
+.text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 /* ── Tab bar: switch between result categories without scrolling past them ── */
-.tab-bar { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--edge-lo); flex-shrink: 0; }
+.tab-bar { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 20px 14px; border-bottom: 2px solid var(--edge-lo); flex-shrink: 0; }
 .tab-button { padding: 6px 16px; font-size: 12px; }
 .tab-button .tab-count { margin-left: 6px; color: var(--parch-accent); }
 .tab-button[aria-selected="true"] {
@@ -291,8 +315,16 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   letter-spacing: 0.02em;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
-.zone-card { transition: filter 150ms; } /* faction color rides the 4px top bevel edge */
-.zone-card:hover { filter: brightness(1.06); }
+.zone-card { transition: box-shadow 150ms; } /* faction color rides the 4px top bevel edge */
+/* Brighten via box-shadow, not filter: filter forces its own compositing
+   layer, and these cards share a seam with their neighbor via a
+   negative-margin overlap (see .zone-card + .zone-card below) — that
+   layer promotion visibly desyncs the shared border during the hover
+   transition, flashing a thick double seam. box-shadow paints in the
+   normal flow, so the seam stays put. */
+.zone-card:hover {
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
+}
 .zone-card-header, .route-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
 .zone-badge, .hops-badge {
@@ -327,22 +359,24 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .faction-badge.wont_sell { background: linear-gradient(rgba(249, 115, 22, 0.16), rgba(249, 115, 22, 0.16)), rgba(10, 9, 15, 0.6); color: #fb8534; border: 1px solid rgba(249, 115, 22, 0.4); }
 .faction-badge.kos       { background: linear-gradient(rgba(239, 68, 68, 0.16), rgba(239, 68, 68, 0.16)), rgba(10, 9, 15, 0.6);  color: #ff6b6b; border: 1px solid rgba(239, 68, 68, 0.4); }
 
-/* ── Route path: directions inked on a parchment scrap, unrolled between
-   two wood dowels — the literal chat-scroll from the reference client.
-   Reserved for single-instance parchment (this + the spell tooltip below);
-   the repeated Spell Browser/Class Browser cards stay flat "book pages" —
-   dowels on every one of dozens of stacked cards would read as clutter,
-   not craft. ── */
-.route-path {
+/* ── Parchment scroll insert: directions/spell text inked on a parchment
+   scrap, unrolled between two wood dowels — the literal chat-scroll from
+   the reference client. Shared by Route Finder's `.route-path` and Class
+   Browser's `.spell-scroll` (see DECISIONS.md) — both are the same object
+   (a scroll insert nested in a stone panel), so they share one rule rather
+   than the dowels being a route-only ornament. ── */
+.route-path, .spell-scroll {
   position: relative;
   padding: 12px 20px; border-radius: 2px;
   background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
   border: 1px solid var(--parch-line);
   /* aged edges: warm inner vignette instead of a bevel — paper, not stone */
   box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
+  color: var(--parch-ink);
 }
 .route-path::before, .route-path::after,
-#spell-tooltip::before, #spell-tooltip::after {
+#spell-tooltip::before, #spell-tooltip::after,
+.spell-scroll::before, .spell-scroll::after {
   content: "";
   position: absolute; top: -3px; bottom: -3px; width: 11px;
   border-radius: 5px;
@@ -352,8 +386,8 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
     linear-gradient(90deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
 }
-.route-path::before, #spell-tooltip::before { left: -11px; }
-.route-path::after,  #spell-tooltip::after  { right: -11px; }
+.route-path::before, #spell-tooltip::before, .spell-scroll::before { left: -11px; }
+.route-path::after,  #spell-tooltip::after,  .spell-scroll::after  { right: -11px; }
 .route-label {
   display: block; font-size: 10px; color: var(--parch-ink-soft);
   letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px;
@@ -450,19 +484,33 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
 }
 
-/* ── Spell Browser cards: pages of the spellbook (parchment window) ── */
+/* ── Class Browser cards: a stone console row (name on stone, like a
+   zone-card) wrapping a parchment scroll insert (badges/description/
+   stats/actions) — the same panel-plus-scroll composition Route Finder
+   uses (.route-card + .route-path), including the wood-dowel end caps
+   (see DECISIONS.md — an earlier pass withheld the dowels here to avoid
+   repeating the ornament across 30+ stacked cards, but the user preferred
+   matching Route Finder exactly once they saw both side by side). */
 .spell-detail {
-  cursor: pointer; transition: filter 150ms;
-  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
-  border: 1px solid var(--parch-line);
-  border-radius: 2px;
-  color: var(--parch-ink);
-  box-shadow: inset 0 0 26px rgba(122, 96, 42, 0.32), 0 3px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer; transition: box-shadow 150ms;
+  padding: 14px 20px;
+  background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+  border: 4px solid;
+  border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45);
 }
-.spell-detail:hover { filter: brightness(1.03); }
-.spell-detail h3 { font-family: var(--font-display); color: var(--parch-accent); font-size: 16px; font-weight: 700; }
-.spell-level { font-size: 12px; color: var(--parch-ink-soft); font-weight: 400; margin-left: 8px; font-family: var(--font-body); }
-.spell-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+/* box-shadow, not filter — see the .zone-card:hover comment above; same
+   negative-margin seam-sharing trick, same desync risk. */
+.spell-detail:hover {
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
+}
+.spell-detail h3 {
+  font-family: var(--font-display); color: var(--parchment); font-size: 16px; font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.spell-level { font-size: 12px; color: var(--ink-muted); font-weight: 400; margin-left: 8px; font-family: var(--font-body); }
+.spell-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
 .spell-header h3 { margin: 0; }
 .spell-badges { display: flex; gap: 5px; flex-wrap: wrap; }
 .spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }

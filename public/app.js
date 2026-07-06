@@ -103,6 +103,27 @@ async function init() {
   consumePinnedSpellFromUrl();
   setupAutoSave();
   setupTooltip();
+  document.getElementById("reset-filters-btn").addEventListener("click", resetFilters);
+  runPlan();
+}
+
+// Restores every filter to its out-of-the-box default (same values the HTML
+// selects/inputs ship with) rather than just blanking them — "Barbarian /
+// Shaman / The Tribunal / levels 1-10" is a real usable starting point, an
+// empty form isn't. Doesn't touch owned-spell marks; that's a separate
+// concern with its own "Clear owned" action in the status panel.
+function resetFilters() {
+  document.getElementById("race-select").value = "barbarian";
+  document.getElementById("primary-class-select").value = "shaman";
+  document.getElementById("deity-select").value = "the tribunal";
+  document.getElementById("level-min").value = 1;
+  document.getElementById("level-max").value = 10;
+  specificSpells = [];
+  specificZones = [];
+  applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
+  renderSpellTags();
+  renderZoneTags();
+  saveState();
   runPlan();
 }
 
@@ -153,7 +174,7 @@ function restoreState() {
 }
 
 // Consumes a "Find in Spell Finder" link in from the Class Browser's merged
-// Spells tab: ?pinSpell=<id>&pinName=<name>&levelMin=&levelMax=&classes=&race=any
+// Spells tab: ?pinSpell=<id>&pinName=<name>&levelMin=&levelMax=&classes=&race=any&deity=any
 // Runs after restoreState() — that call fully replaces specificSpells (and
 // the other fields below) from localStorage, so applying the URL first would
 // just get clobbered.
@@ -187,6 +208,9 @@ function consumePinnedSpellFromUrl() {
 
   const race = params.get("race");
   if (race) document.getElementById("race-select").value = race;
+
+  const deity = params.get("deity");
+  if (deity) document.getElementById("deity-select").value = deity;
 
   saveState();
   history.replaceState(null, "", location.pathname);
@@ -613,7 +637,9 @@ function setupPlanner() {
     setSpellOwned(cb.dataset.spellId, cb.checked);
     renderRankings(lastRankings, lastLevelRange);
   });
-  results.addEventListener("click", (e) => {
+  // Delegated from #planner, not #results — the toggle/clear actions live
+  // in #status-panel, a sibling of #results, not a descendant of it.
+  document.getElementById("planner").addEventListener("click", (e) => {
     if (e.target.matches(".toggle-owned-btn")) {
       showAllSpells = !showAllSpells;
       renderRankings(lastRankings, lastLevelRange);
@@ -636,6 +662,7 @@ async function runPlan() {
   if (!from) {
     document.getElementById("results").innerHTML =
       '<div class="no-results">Select your current zone.</div>';
+    document.getElementById("status-panel").innerHTML = "";
     return;
   }
 
@@ -658,13 +685,20 @@ async function runPlan() {
 
 function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const el = document.getElementById("results");
+  const statusEl = document.getElementById("status-panel");
   if (!rankings.length) {
     el.innerHTML = '<div class="no-results">No vendors found for those levels.</div>';
+    statusEl.innerHTML = "";
     return;
   }
 
   const owned = getOwnedSpells();
-  const factionIgnored = rankings[0]?.factionIgnored === true;
+  // "any" only neutralizes its own dimension server-side (a real KOS from
+  // race, say, still shows even with deity set to Any) — so faction/badge
+  // rendering below needs no special-casing at all. This is purely an
+  // informational aside about which dimension(s) aren't being checked.
+  const raceIgnored = rankings[0]?.raceIgnored === true;
+  const deityIgnored = rankings[0]?.deityIgnored === true;
   const accessible = rankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = rankings.filter((r) => r.faction === "wont_sell");
   const kos = rankings.filter((r) => r.faction === "kos");
@@ -673,24 +707,37 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
 
   const warnings = [];
-  if (factionIgnored) warnings.push(`<span style="color:var(--ink-muted);">faction ignored (Any race)</span>`);
+  if (raceIgnored || deityIgnored) {
+    const ignoredLabel = raceIgnored && deityIgnored ? "race & deity" : raceIgnored ? "race" : "deity";
+    warnings.push(`<span style="color:var(--ink-muted);">${ignoredLabel} ignored</span>`);
+  }
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
-  const ownedLabel = ownedCount > 0 ? ` · <span style="color:#4ade80">${ownedCount} owned</span>` : "";
-  const toggleBtn = `<button class="secondary toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
-  const clearBtn = ownedCount > 0 ? `<button class="secondary" id="clear-owned-btn">Clear owned</button>` : "";
-
+  // Status panel: all results metadata now lives here, not in #results —
+  // counts/warnings, the progress bar + owned count, and the show/clear
+  // actions, echoing the reference client's right-side vitals-bar-plus-
+  // action-buttons column instead of a header/divider sitting above the
+  // zone list.
+  const toggleBtn = `<button class="text-action toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
+  const clearBtn = ownedCount > 0 ? `<button class="text-action" id="clear-owned-btn">Clear owned</button>` : "";
   const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
-  const hpBar = totalSpells
-    ? `<span class="mana-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalSpells}" aria-valuenow="${ownedCount}" aria-label="Spells owned: ${ownedCount} of ${totalSpells}" title="Spells owned: ${ownedCount} of ${totalSpells}"><span class="mana-fill" style="width:${pct}%"></span></span>`
-    : "";
+  statusEl.innerHTML = `
+    <div class="status-meta">
+      ${totalSpells} spell(s) across ${accessible.length} zone(s) for ${levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`}
+      ${warnings.length ? `<div class="status-warnings">${warnings.join(" · ")}</div>` : ""}
+    </div>
+    <div class="status-summary">
+      <span class="mana-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalSpells}" aria-valuenow="${ownedCount}" aria-label="Spells owned: ${ownedCount} of ${totalSpells}" title="Spells owned: ${ownedCount} of ${totalSpells}"><span class="mana-fill" style="width:${pct}%"></span></span>
+      <span class="status-owned-count">${ownedCount} / ${totalSpells} owned</span>
+    </div>
+    <div class="status-actions">
+      ${toggleBtn}
+      ${clearBtn}
+    </div>
+  `;
 
-  el.innerHTML = `<div class="results-header">
-    ${hpBar}
-    <span>${totalSpells} spell(s) across ${accessible.length} zone(s) for ${levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`}${ownedLabel}${warnings.length ? " — " + warnings.join(", ") : ""}</span>
-    <span class="results-actions">${toggleBtn}${clearBtn}</span>
-  </div>`;
+  el.innerHTML = "";
 
   // EQ /consider verbiage; the title attribute carries the practical meaning
   const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
@@ -709,11 +756,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
 
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const card = document.createElement("div");
-    // factionIgnored forces faction to "safe" server-side so scoring/sorting
-    // isn't faction-penalized, but showing the "safe" green tint here would
-    // read as "checked and confirmed safe" rather than "not evaluated" — so
-    // this is the one place that distinction still needs to show through.
-    card.className = r.factionIgnored ? "zone-card" : `zone-card ${r.faction}`;
+    card.className = `zone-card ${r.faction}`;
 
     const spellRows = r.spells.map((s) => {
       const isOwned = owned.has(s.id);
@@ -764,7 +807,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   if (renderedZones === 0) {
     const msg = document.createElement("div");
     msg.className = "no-results";
-    msg.innerHTML = `All matching spells are marked owned. <button class="secondary toggle-owned-btn">Show all</button>`;
+    msg.innerHTML = `All matching spells are marked owned. <button class="text-action toggle-owned-btn">Show all</button>`;
     el.appendChild(msg);
   }
 }

@@ -12,21 +12,33 @@
     /* Page layout only — component styling lives in theme.css */
     body { height: 100vh; display: flex; flex-direction: column; }
 
+    /* main is the console frame — flush against the header and the
+       viewport edges, matching the Spell Finder's #planner. .finder-bar
+       and .route-card each keep their own pronounced bevel border (from
+       theme.css's shared panel rule) which provides the framing directly
+       against the frame's edges, rather than main adding its own outer
+       padding around them. A small gap (not zero) separates finder-bar
+       from the result below — they're two distinct panels stacked
+       vertically, not repeated items in one list, the same distinction
+       the Spell Finder's sidebar/status-panel (gap) vs. zone-card list
+       (packed, zero gap) draws. */
     main {
       flex: 1; min-height: 0;
       display: flex; flex-direction: column;
-      padding: 24px 28px;
       overflow: hidden;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      padding: 0 0 14px; gap: 14px;
     }
 
     .finder-bar {
       display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;
-      padding: 16px 20px; margin-bottom: 24px; flex-shrink: 0;
+      padding: 16px 20px; flex-shrink: 0;
     }
     .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
     .field select { width: 100%; }
 
     .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
+    #reset-route-btn { margin-left: auto; padding-bottom: 8px; }
 
     #route-result { flex: 1; min-height: 0; overflow-y: auto; }
 
@@ -35,7 +47,7 @@
     .route-path { padding: 14px 18px; }
 
     @media (max-width: 600px) {
-      main { padding: 14px 16px; }
+      main { padding: 0 0 10px; gap: 10px; }
       .finder-bar { gap: 10px; padding: 14px 16px; }
       .arrow { display: none; }
     }
@@ -64,6 +76,7 @@
         <label>To</label>
         <select id="route-to"><option value="">— Select Zone —</option></select>
       </div>
+      <button type="button" class="text-action" id="reset-route-btn">Reset</button>
     </div>
     <div id="route-result"></div>
   </main>
