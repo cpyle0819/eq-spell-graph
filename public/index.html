@@ -128,7 +128,19 @@
     .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
     .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
     .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 35% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .route-path { margin-top: 12px; margin-bottom: 14px; }
+    /* Route: plain stone text, not the parchment scroll treatment —
+       .spell-scroll below is this page's focus content, the route is
+       wayfinding detail. Route-label/-steps/-zone/-sep/-boat-sep/
+       -translocator-sep are theme.css's parchment-tuned colors (dark ink
+       for a light background); overridden here for a dark stone one. */
+    .zone-route { margin-bottom: 12px; }
+    .zone-route .route-label { color: var(--ink-muted); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
+    .zone-route .route-steps { color: var(--parchment); font-size: 12px; line-height: 1.8; }
+    .zone-route .route-zone { color: var(--parchment); }
+    .zone-route .route-sep { color: var(--gold); }
+    .zone-route .boat-sep { color: #7ba7f5; }
+    .zone-route .translocator-sep { color: #c4a3f7; }
+    .spell-scroll { margin-top: 12px; }
     .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
 
     /* Wide layout: sidebar. The sidebar column fills its full allocated

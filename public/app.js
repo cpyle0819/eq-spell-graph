@@ -785,8 +785,11 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
       `;
     }).join("");
 
+    // Plain stone text, not a parchment scroll — the spell list is this
+    // page's focus content (see .spell-scroll below), so the route is
+    // wayfinding detail, not the thing to read closely.
     const routeHtml = r.route && r.route.length > 1
-      ? `<div class="route-path">
+      ? `<div class="zone-route">
           <span class="route-label">Route</span>
           <div class="route-steps">${r.route.map((step, i) => {
             if (i === 0) return `<span class="route-zone">${step.name}</span>`;
@@ -810,7 +813,9 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
         <span class="zone-badge hops">${hopsText}</span>
       </div>
       ${routeHtml}
-      <div class="spell-vendor-list">${spellRows}</div>
+      <div class="spell-scroll">
+        <div class="spell-vendor-list">${spellRows}</div>
+      </div>
     `;
     el.appendChild(card);
   }
