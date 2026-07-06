@@ -59,8 +59,11 @@
   /* marble veining — turbulence swirls, tiles at 320px. Gray veins at
      moderate alpha: lightens dark stone, darkens light marble, so one
      texture serves both. Knobs: baseFrequency = vein size (higher =
-     tighter), slope = intensity. */
-  --marble-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.022 0.028' numOctaves='4' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.17'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
+     tighter), slope = intensity. Slope raised from the original 0.17 —
+     the reference client's stone panels show clearly visible mottled
+     clouds even in flat, button-free areas; 0.17 read as almost smooth
+     at normal viewing size. */
+  --marble-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.022 0.028' numOctaves='4' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.3'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23m)'/%3E%3C/svg%3E");
   /* paper fiber for parchment surfaces */
   --parch-tex: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.11' numOctaves='3' seed='11'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.09'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
   /* fine grain for the page background */
@@ -402,10 +405,13 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 }
 .results-actions { display: flex; gap: 6px; margin-left: auto; }
 
-/* EQ status bar (spells-owned progress), mana-blue. Modeled on the
-   original party-window bars: five connected glass bubbles wider than
-   tall, specular highlight up top-left of each, shadow along the bottom,
-   black end-knobs with a wire loop and a metal support just inside. */
+/* EQ status bar (spells-owned progress), mana-blue (the reference client's
+   own vitals bars are HP-red/mana-blue/stamina-yellow; blue is kept here as
+   a deliberate "spells owned" reinterpretation — see DECISIONS.md). Modeled
+   on the character vitals bars (top-right, under the name), not the group
+   member list — those two look different in the reference: vitals bars are
+   a chain of five distinct beads with a bright seam between each; the group
+   list bars are one smooth tube. This one needs the beads. */
 .mana-bar {
   position: relative;
   display: inline-block; width: 150px; height: 15px; flex-shrink: 0;
@@ -420,27 +426,28 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   background: linear-gradient(180deg, #8fb3ff, #3054d8 40%, #14267c);
   transition: width 300ms ease-out;
 }
-/* glasswork overlay: caps, wires, bubble pinches, speculars, bottom shade */
+/* glasswork overlay: end knobs, five beaded segments with bright seams,
+   per-bead specular, overall glass shading */
 .mana-bar::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
     /* end knobs (black bead + metal sliver) */
-    linear-gradient(90deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0,0,0,0) 3px),
-    linear-gradient(270deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0,0,0,0) 3px),
-    /* wire wrapping the end bubbles: one thin dark line near each end */
-    linear-gradient(100deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5px, rgba(5,5,10,0.8) 5px, rgba(5,5,10,0.8) 6px, rgba(0,0,0,0) 6px),
-    linear-gradient(260deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 5px, rgba(5,5,10,0.8) 5px, rgba(5,5,10,0.8) 6px, rgba(0,0,0,0) 6px),
-    /* per-bubble: specular streak top-left, then pinch at the seams */
-    radial-gradient(45% 55% at 36% 22%, rgba(255,255,255,0.7), rgba(255,255,255,0) 60%),
-    linear-gradient(90deg, rgba(0,0,0,0.5) 0, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 86%, rgba(0,0,0,0.5) 100%),
+    linear-gradient(90deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0, 0, 0, 0) 3px),
+    linear-gradient(270deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0, 0, 0, 0) 3px),
+    /* bright ridge at each bead-to-bead seam, with a sliver of shadow on
+       either side of it — not a dark pinch, a lit ridge (confirmed against
+       a zoomed-in capture of the actual vitals bar) */
+    linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0 1px, rgba(255, 255, 255, 0.65) 1px 2px, rgba(0, 0, 0, 0.22) 2px 3px, transparent 3px),
+    /* per-bead specular streak, top-left of each */
+    radial-gradient(45% 55% at 36% 22%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%),
     /* glass shading: lit top edge, shadowed bottom */
-    linear-gradient(180deg, rgba(255,255,255,0.12) 0 10%, rgba(0,0,0,0) 30% 55%, rgba(0,0,0,0.5) 90% 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0 10%, rgba(0, 0, 0, 0) 30% 55%, rgba(0, 0, 0, 0.5) 90% 100%);
   background-size:
     100% 100%, 100% 100%,
-    100% 100%, 100% 100%,
-    20% 100%, 20% 100%,
+    20% 100%,
+    20% 100%,
     100% 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
 }
 
 /* ── Spell Browser cards: pages of the spellbook (parchment window) ── */
