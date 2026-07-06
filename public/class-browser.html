@@ -21,6 +21,7 @@
 
     .filter-bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding: 14px 20px; margin-bottom: 20px; flex-shrink: 0; }
     .field select { min-width: 160px; }
+    .field input[type="text"] { width: 220px; }
 
     #browser-results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; }
 
@@ -43,7 +44,6 @@
     </div>
     <nav class="nav-links">
       <a class="nav-link" href="index.html">Spell Finder</a>
-      <a class="nav-link" href="spells.html">Spell Browser</a>
       <a class="nav-link" href="route.html">Route Finder</a>
     </nav>
   </header>
@@ -61,6 +61,16 @@
       <div class="field">
         <label>Class 3</label>
         <select id="class-select-3"></select>
+      </div>
+      <div class="field" id="level-field" hidden>
+        <label>Level</label>
+        <select id="level-select">
+          <option value="all">All Levels</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Search</label>
+        <input type="text" id="browser-search" placeholder="name...">
       </div>
     </div>
     <div id="browser-tabs" class="tab-bar" hidden></div>

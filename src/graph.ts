@@ -239,6 +239,7 @@ export interface ZoneRanking {
   hops: number | null;
   route: RouteStep[];
   faction: FactionStanding;
+  factionIgnored?: boolean;
   spells: SpellVendorInfo[];
   score: number;
 }
@@ -256,20 +257,34 @@ export function rankZones(
   const graph = load();
   const index = getIndex();
 
+  // race="any" means "ignore faction entirely" — used when the caller has no
+  // real race/deity context (e.g. a spell pinned from the Class Browser,
+  // which never collects either). Short-circuits all three faction
+  // dimensions rather than just the race one, since a leftover primaryClass
+  // or deity could still produce a misleading wont_sell/KOS result otherwise.
+  const factionIgnored = race === "any";
+
   // Step 1 — start with all purchasable spells
   let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
 
-  // Step 2 — narrow by class (if any selected)
-  if (classNames.length > 0) {
+  // Specific Spells is an *exclusive* override, not an addition: pinning any
+  // spell means "show me only these, regardless of Shopping For classes,"
+  // the same as it always has — this is what lets you say "forget class
+  // browsing for a second, just find this one spell." The bug was never
+  // that this narrowing existed; it's that Step 2 used to narrow by class
+  // *first*, so a pinned spell outside the current Shopping For classes was
+  // already gone by the time this ran, and its class/level pairs got
+  // filtered again below on top of that — so a pinned spell not matching
+  // both filters vanished instead of showing up as-is.
+  const pinnedIds = new Set(specificSpellIds || []);
+
+  // Step 2 — narrow to specific spells (if any pinned), else by class
+  if (pinnedIds.size > 0) {
+    candidates = candidates.filter((n) => pinnedIds.has(n.data.id));
+  } else if (classNames.length > 0) {
     candidates = candidates.filter((n) =>
       n.data.class_levels!.some((cl) => classNames.includes(cl.class))
     );
-  }
-
-  // Step 3 — narrow to specific spells (if any pinned)
-  if (specificSpellIds?.length) {
-    const idSet = new Set(specificSpellIds);
-    candidates = candidates.filter((n) => idSet.has(n.data.id));
   }
 
   const zoneSpells = new Map<string, SpellVendorInfo[]>();
@@ -298,15 +313,22 @@ export function rankZones(
     }
   }
 
-  // Step 4 — apply level filter per-spell and map to vendor zones
+  // Step 4 — apply level filter per-spell and map to vendor zones; pinned
+  // spells bypass the level filter too and show all their real class/level
+  // pairs, same reasoning as the class bypass above.
   for (const spell of candidates) {
-    const matchingClasses = classNames.length > 0
-      ? spell.data.class_levels!
-          .filter((cl) => classNames.includes(cl.class) && levels.includes(cl.level))
-          .map((cl) => ({ cls: cl.class, level: cl.level }))
-      : spell.data.class_levels!
-          .filter((cl) => levels.includes(cl.level))
-          .map((cl) => ({ cls: cl.class, level: cl.level }));
+    let matchingClasses: { cls: string; level: number }[];
+    if (pinnedIds.has(spell.data.id)) {
+      matchingClasses = spell.data.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
+    } else if (classNames.length > 0) {
+      matchingClasses = spell.data.class_levels!
+        .filter((cl) => classNames.includes(cl.class) && levels.includes(cl.level))
+        .map((cl) => ({ cls: cl.class, level: cl.level }));
+    } else {
+      matchingClasses = spell.data.class_levels!
+        .filter((cl) => levels.includes(cl.level))
+        .map((cl) => ({ cls: cl.class, level: cl.level }));
+    }
     addSpellToZones(spell, matchingClasses);
   }
 
@@ -335,7 +357,9 @@ export function rankZones(
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
-    if (zoneNode?.faction) {
+    if (factionIgnored) {
+      faction = "safe";
+    } else if (zoneNode?.faction) {
       const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
       const raceStanding: FactionStanding = (race && zf.race?.[race]) || "neutral";
       const classStanding: FactionStanding = (primaryClass && zf.class?.[primaryClass]) || "safe";
@@ -361,6 +385,7 @@ export function rankZones(
       hops,
       route,
       faction,
+      ...(factionIgnored ? { factionIgnored: true } : {}),
       spells: spells.sort((a, b) => Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level))),
       score,
     });

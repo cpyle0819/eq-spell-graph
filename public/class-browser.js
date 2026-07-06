@@ -1,9 +1,15 @@
 const SELECT_IDS = ["class-select-1", "class-select-2", "class-select-3"];
+// Matches the planner's level-range slider bound (public/index.html
+// #level-max max="50") — the actual data tops out at level 50, so a Class
+// Browser level select running to 60 (an old spells.js leftover) offered
+// ten dead options that could never match a spell.
+const MAX_SPELL_LEVEL = 50;
 let availableClasses = [];
 
 async function init() {
   availableClasses = await fetch("api/classes/abilities").then((r) => r.json());
   populateClassSelects();
+  populateLevelSelect();
   setupFilters();
   fetchAbilities();
 }
@@ -23,6 +29,16 @@ function populateClassSelects() {
     }
   }
   document.getElementById("class-select-1").value = availableClasses[0] || "";
+}
+
+function populateLevelSelect() {
+  const sel = document.getElementById("level-select");
+  for (let i = 1; i <= MAX_SPELL_LEVEL; i++) {
+    const opt = document.createElement("option");
+    opt.value = String(i);
+    opt.textContent = `Level ${i}`;
+    sel.appendChild(opt);
+  }
 }
 
 // Keep the three pickers from selecting the same class twice — disable any
@@ -45,6 +61,13 @@ function setupFilters() {
       fetchAbilities();
     });
   }
+  document.getElementById("level-select").addEventListener("change", fetchAbilities);
+
+  let searchDebounce;
+  document.getElementById("browser-search").addEventListener("input", () => {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(render, 150);
+  });
 }
 
 function selectedClasses() {
@@ -62,6 +85,7 @@ async function fetchAbilities() {
 
   if (!classes.length) {
     document.getElementById("browser-tabs").hidden = true;
+    document.getElementById("level-field").hidden = true;
     resultsEl.innerHTML = '<div class="no-results">Pick at least one class.</div>';
     return;
   }
@@ -69,41 +93,53 @@ async function fetchAbilities() {
   resultsEl.innerHTML = '<div class="loading">Loading, please wait...</div>';
 
   const params = new URLSearchParams({ class: classes.join(",") });
-  const [{ stances, invocations }, aa] = await Promise.all([
+  const spellParams = new URLSearchParams({ class: classes.join(",") });
+  const level = document.getElementById("level-select").value;
+  if (level !== "all") spellParams.set("levels", level);
+
+  const [{ stances, invocations }, aa, spells] = await Promise.all([
     fetch(`api/stances-invocations?${params}`).then((r) => r.json()),
     fetch(`api/aa?${params}`).then((r) => r.json()),
+    fetch(`api/spells?${spellParams}`).then((r) => r.json()),
   ]);
   if (token !== fetchToken) return; // a newer filter change superseded this request
-  renderResults(stances, invocations, aa, classes);
+  renderResults(stances, invocations, aa, spells, classes);
 }
 
-function classBadges(entryClasses, selectedClasses) {
-  const granting = entryClasses.filter((c) => selectedClasses.includes(c));
+// Class + (for spells) per-class level badges — badged with only the
+// *selected* classes, not an entry's full class list, so overlap between
+// selections is visible at a glance.
+function classBadges(entryClasses, selected, levelLookup) {
+  const granting = entryClasses.filter((c) => selected.includes(c));
   return granting
-    .map((c) => `<span class="spell-badge class-badge">${c.charAt(0).toUpperCase() + c.slice(1)}</span>`)
+    .map((c) => {
+      const label = c.charAt(0).toUpperCase() + c.slice(1);
+      const level = levelLookup ? levelLookup(c) : null;
+      return `<span class="spell-badge class-badge">${label}${level != null ? ` L${level}` : ""}</span>`;
+    })
     .join("");
 }
 
-function renderAbility(ability, selectedClasses) {
+function renderAbility(ability, selected) {
   const card = document.createElement("div");
   card.className = "spell-detail";
   card.innerHTML = `
     <div class="spell-header">
       <h3>${ability.name}</h3>
-      <div class="spell-badges">${classBadges(ability.classes, selectedClasses)}</div>
+      <div class="spell-badges">${classBadges(ability.classes, selected)}</div>
     </div>
     <p class="spell-desc">${ability.description}</p>
   `;
   return card;
 }
 
-function renderAA(aa, selectedClasses) {
+function renderAA(aa, selected) {
   const card = document.createElement("div");
   card.className = "spell-detail";
   const badges = [
     `<span class="spell-badge type-badge">${aa.ranks} rank${aa.ranks === 1 ? "" : "s"}</span>`,
     `<span class="spell-badge mana-badge">${aa.cost} pts</span>`,
-    classBadges(aa.classes, selectedClasses),
+    classBadges(aa.classes, selected),
   ].join("");
   card.innerHTML = `
     <div class="spell-header">
@@ -115,44 +151,147 @@ function renderAA(aa, selectedClasses) {
   return card;
 }
 
+function fmtDuration(d) {
+  if (!d) return null;
+  if (/instant/i.test(d)) return "Instant";
+  return d.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s");
+}
+
+function fmtCast(t) {
+  if (t == null) return null;
+  return t % 1 === 0 ? `${t}s cast` : `${t.toFixed(1)}s cast`;
+}
+
+// Builds the "Find in Spell Finder" link. The planner's rankZones() bypasses
+// its own class/level filters entirely for a pinned spell (see DECISIONS.md),
+// so these params aren't load-bearing for correctness — but without them the
+// planner would keep showing whatever level range / Shopping For classes /
+// race were last saved there, which could be wildly unrelated to what you
+// were just looking at here. race=any is unconditional: Class Browser never
+// collects race/deity, so any leftover value in the planner would produce a
+// misleading KOS/won't-sell result that has nothing to do with this lookup.
+function buildPinUrl(spell, selected) {
+  const level = document.getElementById("level-select").value;
+  const [levelMin, levelMax] = level === "all" ? [1, MAX_SPELL_LEVEL] : [level, level];
+  const params = new URLSearchParams({
+    pinSpell: spell.id,
+    pinName: spell.label,
+    levelMin: String(levelMin),
+    levelMax: String(levelMax),
+    race: "any",
+  });
+  if (selected.length) params.set("classes", selected.join(","));
+  return `index.html?${params}`;
+}
+
+function renderSpellCard(spell, selected) {
+  const card = document.createElement("div");
+  card.className = "spell-detail";
+
+  const levelLookup = (c) => spell.class_levels.find((cl) => cl.class === c)?.level;
+  const badges = [];
+  if (spell.spellType) badges.push(`<span class="spell-badge type-badge">${spell.spellType}</span>`);
+  if (spell.mana != null) badges.push(`<span class="spell-badge mana-badge">${spell.mana} mana</span>`);
+  if (spell.skill) badges.push(`<span class="spell-badge skill-badge">${spell.skill}</span>`);
+  badges.push(classBadges(spell.class_levels.map((cl) => cl.class), selected, levelLookup));
+
+  const stats = [];
+  if (spell.targetType) stats.push(`<span class="stat-tag">Target: ${spell.targetType}</span>`);
+  const dur = fmtDuration(spell.duration);
+  if (dur) stats.push(`<span class="stat-tag">Duration: ${dur}</span>`);
+  const cast = fmtCast(spell.castTime);
+  if (cast) stats.push(`<span class="stat-tag">${cast}</span>`);
+  if (spell.resist && !/unresist/i.test(spell.resist)) stats.push(`<span class="stat-tag">Resist: ${spell.resist}</span>`);
+
+  const pinUrl = buildPinUrl(spell, selected);
+
+  card.innerHTML = `
+    <div class="spell-header">
+      <h3>${spell.label}</h3>
+      <div class="spell-badges">${badges.join("")}</div>
+    </div>
+    ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
+    ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
+    <div class="spell-card-actions">
+      <span class="vendor-hint">Click to show vendors</span>
+      <a class="spell-finder-link" href="${pinUrl}">Find in Spell Finder →</a>
+    </div>
+  `;
+
+  card.addEventListener("click", async (e) => {
+    if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
+    const existing = card.querySelector(".vendor-list");
+    if (existing) {
+      existing.remove();
+      card.querySelector(".vendor-hint").textContent = "Click to show vendors";
+      return;
+    }
+    card.querySelector(".vendor-hint").textContent = "Loading...";
+    const vendors = await fetch(`api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
+    card.querySelector(".vendor-hint").textContent = "Click to hide vendors";
+    const list = document.createElement("div");
+    list.className = "vendor-list";
+    list.innerHTML = vendors.length
+      ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span><span class="zone-tag">— ${v.zone?.label ?? "unknown zone"}</span></div>`).join("")
+      : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
+    card.appendChild(list);
+  });
+
+  return card;
+}
+
+// Raw fetch results, kept so the search box can re-filter/re-render without
+// a network round trip.
+let rawStances = [];
+let rawInvocations = [];
+let rawAA = { general: [], archetype: [], class: [], special: [] };
+let rawSpells = [];
+let rawClasses = [];
+
 // Tab state persists across filter changes (so switching classes doesn't
 // bounce you back to the first tab) but resets to the first available
 // section if the active one has no items for the new selection.
 let activeTab = null;
-let currentSections = [];
-let currentClasses = [];
 
-function buildSections(stances, invocations, aa) {
+function buildSections(searchQuery) {
+  const q = searchQuery.trim().toLowerCase();
+  const matches = (name) => !q || name.toLowerCase().includes(q);
   return [
-    { key: "stances", title: "Stances", items: stances, renderFn: renderAbility },
-    { key: "invocations", title: "Invocations", items: invocations, renderFn: renderAbility },
-    { key: "general", title: "General AAs", items: aa.general, renderFn: renderAA },
-    { key: "archetype", title: "Archetype AAs", items: aa.archetype, renderFn: renderAA },
-    { key: "class", title: "Class AAs", items: aa.class, renderFn: renderAA },
-    { key: "special", title: "Special AAs", items: aa.special, renderFn: renderAA },
+    { key: "spells", title: "Spells", items: rawSpells.filter((s) => matches(s.label)), renderFn: renderSpellCard },
+    { key: "stances", title: "Stances", items: rawStances.filter((s) => matches(s.name)), renderFn: renderAbility },
+    { key: "invocations", title: "Invocations", items: rawInvocations.filter((s) => matches(s.name)), renderFn: renderAbility },
+    { key: "general", title: "General AAs", items: rawAA.general.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "archetype", title: "Archetype AAs", items: rawAA.archetype.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "class", title: "Class AAs", items: rawAA.class.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "special", title: "Special AAs", items: rawAA.special.filter((s) => matches(s.name)), renderFn: renderAA },
   ].filter((section) => section.items.length);
 }
 
 function render() {
   const tabBar = document.getElementById("browser-tabs");
   const resultsEl = document.getElementById("browser-results");
+  const levelField = document.getElementById("level-field");
+  const searchQuery = document.getElementById("browser-search").value;
+  const sections = buildSections(searchQuery);
 
-  if (!currentSections.length) {
+  if (!sections.length) {
     tabBar.hidden = true;
     tabBar.innerHTML = "";
-    resultsEl.innerHTML = '<div class="no-results">No abilities found.</div>';
+    levelField.hidden = true;
+    resultsEl.innerHTML = '<div class="no-results">No results found.</div>';
     return;
   }
 
-  if (!currentSections.some((section) => section.key === activeTab)) {
-    activeTab = currentSections[0].key;
+  if (!sections.some((section) => section.key === activeTab)) {
+    activeTab = sections[0].key;
   }
+  levelField.hidden = activeTab !== "spells";
 
   // A lone section needs no tab to switch away from.
-  tabBar.hidden = currentSections.length <= 1;
+  tabBar.hidden = sections.length <= 1;
   tabBar.innerHTML = "";
   tabBar.setAttribute("role", "tablist");
-  for (const section of currentSections) {
+  for (const section of sections) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "tab-button";
@@ -166,14 +305,17 @@ function render() {
     tabBar.appendChild(btn);
   }
 
-  const active = currentSections.find((section) => section.key === activeTab);
+  const active = sections.find((section) => section.key === activeTab);
   resultsEl.innerHTML = "";
-  for (const item of active.items) resultsEl.appendChild(active.renderFn(item, currentClasses));
+  for (const item of active.items) resultsEl.appendChild(active.renderFn(item, rawClasses));
 }
 
-function renderResults(stances, invocations, aa, classes) {
-  currentSections = buildSections(stances, invocations, aa);
-  currentClasses = classes;
+function renderResults(stances, invocations, aa, spells, classes) {
+  rawStances = stances;
+  rawInvocations = invocations;
+  rawAA = aa;
+  rawSpells = spells;
+  rawClasses = classes;
   render();
 }
 

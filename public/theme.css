@@ -481,6 +481,15 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .zone-tag { color: var(--parch-accent); }
 .vendor-hint { font-size: 12px; color: var(--parch-ink-soft); margin-top: 6px; }
 
+/* ── Spell card footer: vendor toggle + jump to the planner ── */
+.spell-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
+.spell-card-actions .vendor-hint { margin-top: 0; }
+.spell-finder-link {
+  font-size: 12px; color: var(--parch-accent); text-decoration: none;
+  white-space: nowrap; flex-shrink: 0;
+}
+.spell-finder-link:hover { text-decoration: underline; }
+
 /* ── Spell tooltip: a page torn from the spellbook (parchment) ── */
 #spell-tooltip {
   position: fixed; z-index: 1000;

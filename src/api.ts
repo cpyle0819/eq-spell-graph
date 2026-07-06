@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getVendorsForSpell, rankZones, getRoute, stats } from "./graph";
+import { getGraph, getSpellsForClass, getVendorsForSpell, rankZones, getRoute, stats, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -40,12 +40,16 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: matches };
   }
 
-  // GET /api/spells?class=shaman&levels=9,10,11
+  // GET /api/spells?class=shaman,druid&levels=9,10,11
   if (pathname === "/api/spells") {
-    const cls = searchParams.get("class") || "shaman";
+    const classes = (searchParams.get("class") || "shaman").split(",").filter(Boolean);
     const levelsParam = searchParams.get("levels");
     const levels = levelsParam ? levelsParam.split(",").map(Number) : undefined;
-    return { status: 200, body: getSpellsForClass(cls, levels) };
+    const byId = new Map<string, NodeData>();
+    for (const cls of classes) {
+      for (const spell of getSpellsForClass(cls, levels)) byId.set(spell.id, spell);
+    }
+    return { status: 200, body: [...byId.values()] };
   }
 
   // GET /api/spell/:id/vendors

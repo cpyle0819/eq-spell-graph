@@ -100,6 +100,7 @@ async function init() {
   setupZoneSearch();
   const hadState = restoreState();
   if (!hadState) applyDefaults();
+  consumePinnedSpellFromUrl();
   setupAutoSave();
   setupTooltip();
   runPlan();
@@ -149,6 +150,46 @@ function restoreState() {
     }
     return true;
   } catch { return false; }
+}
+
+// Consumes a "Find in Spell Finder" link in from the Class Browser's merged
+// Spells tab: ?pinSpell=<id>&pinName=<name>&levelMin=&levelMax=&classes=&race=any
+// Runs after restoreState() — that call fully replaces specificSpells (and
+// the other fields below) from localStorage, so applying the URL first would
+// just get clobbered.
+//
+// rankZones() bypasses its own class/level filters entirely for a pinned
+// spell (see DECISIONS.md), so levelMin/levelMax/classes aren't load-bearing
+// for the spell actually showing up — they're here so the planner's displayed
+// range and Shopping For chips make sense for what you just clicked, instead
+// of showing a leftover range/class from whatever you last had open here.
+function consumePinnedSpellFromUrl() {
+  const params = new URLSearchParams(location.search);
+  const id = params.get("pinSpell");
+  if (!id) return;
+  const name = params.get("pinName") || id;
+  if (!specificSpells.some((s) => s.id === id)) {
+    specificSpells.push({ id, name });
+    renderSpellTags();
+  }
+
+  const levelMin = params.get("levelMin");
+  const levelMax = params.get("levelMax");
+  if (levelMin) document.getElementById("level-min").value = levelMin;
+  if (levelMax) document.getElementById("level-max").value = levelMax;
+  if (levelMin || levelMax) updateLevelRangeDisplay();
+
+  const classes = params.get("classes");
+  if (classes) {
+    selectedClasses = classes.split(",").filter(Boolean);
+    renderClassTags();
+  }
+
+  const race = params.get("race");
+  if (race) document.getElementById("race-select").value = race;
+
+  saveState();
+  history.replaceState(null, "", location.pathname);
 }
 
 function applyDefaults() {
@@ -623,6 +664,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   }
 
   const owned = getOwnedSpells();
+  const factionIgnored = rankings[0]?.factionIgnored === true;
   const accessible = rankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = rankings.filter((r) => r.faction === "wont_sell");
   const kos = rankings.filter((r) => r.faction === "kos");
@@ -631,6 +673,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
 
   const warnings = [];
+  if (factionIgnored) warnings.push(`<span style="color:var(--ink-muted);">faction ignored (Any race)</span>`);
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
@@ -664,7 +707,11 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
 
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const card = document.createElement("div");
-    card.className = `zone-card ${r.faction}`;
+    // factionIgnored forces faction to "safe" server-side so scoring/sorting
+    // isn't faction-penalized, but showing the "safe" green tint here would
+    // read as "checked and confirmed safe" rather than "not evaluated" — so
+    // this is the one place that distinction still needs to show through.
+    card.className = r.factionIgnored ? "zone-card" : `zone-card ${r.faction}`;
 
     const spellRows = r.spells.map((s) => {
       const isOwned = owned.has(s.id);
