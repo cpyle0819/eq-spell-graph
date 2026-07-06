@@ -167,7 +167,8 @@ Covers the common case: "I leveled from X to Y, what spells do I need?"
 ### Planner state: single auto-saved snapshot, not named profiles
 The planner persists one last-used state (race, class selections, deity, zone, level range, pinned spells/zones, owned spells) to `localStorage` and restores it on load — it does not support multiple named/saved characters. This replaces an earlier per-character profile system (named profiles, per-profile owned-spell tracking) with something simpler for the common case of planning for one character at a time. Revisit if multi-character support turns out to matter — the per-profile version demonstrated it's a straightforward layer to add back on top of `getState()`/`restoreState()`.
 
-## Tech Stack
+### "All owned" needs its own empty state, distinct from "no results"
+`renderRankings()`'s zone loop silently `continue`s past any zone where every spell is already marked owned (when `showAllSpells` is off) — correct, since there's nothing left to show there. But nothing checked whether *every* zone got skipped that way: the results header (built from pre-filter counts) would still say "9 spell(s) across 20 zone(s)," and the area below it would just be empty, with no visible reason why. Tracked a `renderedZones` counter through the loop; if it's still zero afterward, append a `.no-results` message ("All matching spells are marked owned.") with a `Show all` button. That button reuses the header's own toggle rather than a one-off — `#toggle-owned-btn`'s unique id was changed to a `.toggle-owned-btn` class so the same delegated click handler (matched by class now, not id) fires from either location, since two elements can't share one id on the same page.
 
 - **Bun** — runtime, bundler, dev server
 - **TypeScript** — graph module and server

@@ -614,7 +614,7 @@ function setupPlanner() {
     renderRankings(lastRankings, lastLevelRange);
   });
   results.addEventListener("click", (e) => {
-    if (e.target.matches("#toggle-owned-btn")) {
+    if (e.target.matches(".toggle-owned-btn")) {
       showAllSpells = !showAllSpells;
       renderRankings(lastRankings, lastLevelRange);
     }
@@ -678,7 +678,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
   const ownedLabel = ownedCount > 0 ? ` · <span style="color:#4ade80">${ownedCount} owned</span>` : "";
-  const toggleBtn = `<button class="secondary" id="toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
+  const toggleBtn = `<button class="secondary toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
   const clearBtn = ownedCount > 0 ? `<button class="secondary" id="clear-owned-btn">Clear owned</button>` : "";
 
   const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
@@ -701,9 +701,11 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     kos: "Scowls at you, ready to attack — kill on sight",
   };
 
+  let renderedZones = 0;
   for (const r of rankings) {
     const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
     if (!showAllSpells && visibleSpells.length === 0) continue;
+    renderedZones++;
 
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const card = document.createElement("div");
@@ -752,6 +754,18 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
       <div class="spell-vendor-list">${spellRows}</div>
     `;
     el.appendChild(card);
+  }
+
+  // Every zone had a real spell in it, but every one of those spells is
+  // marked owned — the header above still says "N spell(s) across M
+  // zone(s)," so without this the results area just goes blank with no clue
+  // why. Only reachable when !showAllSpells, since showAllSpells never
+  // filters anything out of visibleSpells.
+  if (renderedZones === 0) {
+    const msg = document.createElement("div");
+    msg.className = "no-results";
+    msg.innerHTML = `All matching spells are marked owned. <button class="secondary toggle-owned-btn">Show all</button>`;
+    el.appendChild(msg);
   }
 }
 
