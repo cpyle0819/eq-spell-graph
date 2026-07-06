@@ -26,9 +26,23 @@
        index.html only — .controls-panel/.zone-card aren't used elsewhere,
        and the shared theme.css floating-panel treatment is still correct
        for route.html/class-browser.html's .filter-bar etc. */
+    /* #planner's marble is the page-level backdrop, not a card's own
+       surface — on wide layouts the *document* scrolls (not an inner
+       #results container; #planner uses overflow:visible there so the
+       sticky sidebar/status-panel work), so without this the texture
+       visibly slides past as you scroll, instead of reading as one still
+       stone slab you're scrolling a sheet of cards over. Fixed only on
+       the marble-tex layer (not the lit-top/shaded-bottom gradient after
+       it) — the gradient still tracks #planner's own box, since that's
+       meant to shade this one panel's actual top/bottom edges, not repeat
+       every viewport height. Cards (.zone-card, .controls-panel,
+       .status-panel) keep their own default-attachment backgrounds — each
+       is a physical object that should carry its surface with it as it
+       moves, unlike the backdrop behind/between them. */
     #planner {
       display: flex; flex-direction: column; overflow: hidden; flex: 1;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      background-attachment: fixed, scroll;
       padding: 0 14px 14px; gap: 14px;
     }
     #results { flex: 1; min-height: 0; overflow-y: auto; }
