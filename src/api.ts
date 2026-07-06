@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getVendorsForSpell, rankZones, getRoute, stats, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -40,15 +40,19 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: matches };
   }
 
-  // GET /api/spells?class=shaman,druid&levels=9,10,11
+  // GET /api/spells?class=shaman,druid&levels=9,10,11 — omitting class (or
+  // passing an empty value) returns spells for every class, matching the
+  // "no filter = everything" convention /api/stances-invocations and /api/aa
+  // already use for an empty classNames list.
   if (pathname === "/api/spells") {
-    const classes = (searchParams.get("class") || "shaman").split(",").filter(Boolean);
+    const classes = (searchParams.get("class") || "").split(",").filter(Boolean);
     const levelsParam = searchParams.get("levels");
     const levels = levelsParam ? levelsParam.split(",").map(Number) : undefined;
     const byId = new Map<string, NodeData>();
-    for (const cls of classes) {
-      for (const spell of getSpellsForClass(cls, levels)) byId.set(spell.id, spell);
-    }
+    const spells = classes.length > 0
+      ? classes.flatMap((cls) => getSpellsForClass(cls, levels))
+      : getAllSpells(levels);
+    for (const spell of spells) byId.set(spell.id, spell);
     return { status: 200, body: [...byId.values()] };
   }
 

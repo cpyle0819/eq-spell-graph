@@ -146,6 +146,17 @@ export function getSpellsForClass(className: string, levels?: number[]): NodeDat
     .map((n) => n.data);
 }
 
+// No class filter — every purchasable spell, still narrowed by level if given.
+export function getAllSpells(levels?: number[]): NodeData[] {
+  const graph = load();
+  return graph.nodes
+    .filter((n) => {
+      if (n.data.type !== "spell" || !n.data.class_levels) return false;
+      return !levels || n.data.class_levels.some((cl) => levels.includes(cl.level));
+    })
+    .map((n) => n.data);
+}
+
 export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: NodeData | undefined }[] {
   const graph = load();
   const sellsEdges = graph.edges.filter(

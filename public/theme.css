@@ -255,6 +255,10 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
 /* ── Tab bar: switch between result categories without scrolling past them ── */
 .tab-bar { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 20px 14px; border-bottom: 2px solid var(--edge-lo); flex-shrink: 0; }
+/* Author `display: flex` above wins the cascade over the UA [hidden] rule
+   (author beats UA at equal specificity) — without this, setting the
+   `hidden` property on #browser-tabs leaves it visibly displayed. */
+.tab-bar[hidden] { display: none; }
 .tab-button { padding: 6px 16px; font-size: 12px; }
 .tab-button .tab-count { margin-left: 6px; color: var(--parch-accent); }
 .tab-button[aria-selected="true"] {

@@ -95,13 +95,6 @@ async function fetchAbilities() {
   const classes = selectedClasses();
   const resultsEl = document.getElementById("browser-results");
 
-  if (!classes.length) {
-    document.getElementById("browser-tabs").hidden = true;
-    document.getElementById("level-field").hidden = true;
-    resultsEl.innerHTML = '<div class="no-results">Pick at least one class.</div>';
-    return;
-  }
-
   resultsEl.innerHTML = '<div class="loading">Loading, please wait...</div>';
 
   const params = new URLSearchParams({ class: classes.join(",") });
