@@ -209,6 +209,17 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
+/* ── Tab bar: switch between result categories without scrolling past them ── */
+.tab-bar { display: flex; gap: 8px; flex-wrap: wrap; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 2px solid var(--edge-lo); flex-shrink: 0; }
+.tab-button { padding: 6px 16px; font-size: 12px; }
+.tab-button .tab-count { margin-left: 6px; color: var(--parch-accent); }
+.tab-button[aria-selected="true"] {
+  border-color: var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo);
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+  box-shadow: 0 0 0 2px var(--bone-frame), 0 0 8px rgba(232, 168, 42, 0.5);
+}
+.tab-button[aria-selected="true"] .tab-count { color: var(--bone-frame); opacity: 0.75; }
+
 /* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ── */
 .tag-wrap {
   position: relative; flex: 1; min-width: 0;
@@ -480,4 +491,6 @@ footer a:hover { text-decoration: underline; color: var(--gold-bright); }
   button { min-height: 44px; }
   button.secondary { min-height: 40px; }
   .tag-item-remove { min-height: 0; }
+  .tab-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 10px; }
+  .tab-button { flex-shrink: 0; min-height: 40px; }
 }

@@ -24,12 +24,6 @@
 
     #browser-results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; }
 
-    .ability-section-title {
-      font-family: var(--font-display); color: var(--gold); font-size: 15px;
-      letter-spacing: 0.08em; text-transform: uppercase; margin: 4px 0 14px;
-    }
-    .ability-section-title:not(:first-child) { margin-top: 28px; }
-
     .spell-detail { padding: 16px 20px; margin-bottom: 10px; }
     .spell-detail h3 { margin-bottom: 4px; }
     .class-badge { background: rgba(90, 60, 20, 0.08); color: #5a3c14; border: 1px solid rgba(90, 60, 20, 0.3); }
@@ -69,6 +63,7 @@
         <select id="class-select-3"></select>
       </div>
     </div>
+    <div id="browser-tabs" class="tab-bar" hidden></div>
     <div id="browser-results"></div>
   </div>
 

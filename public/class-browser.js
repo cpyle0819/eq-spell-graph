@@ -61,6 +61,7 @@ async function fetchAbilities() {
   const resultsEl = document.getElementById("browser-results");
 
   if (!classes.length) {
+    document.getElementById("browser-tabs").hidden = true;
     resultsEl.innerHTML = '<div class="no-results">Pick at least one class.</div>';
     return;
   }
@@ -114,32 +115,66 @@ function renderAA(aa, selectedClasses) {
   return card;
 }
 
-function appendSection(el, title, items, renderFn, classes) {
-  if (!items.length) return;
-  const heading = document.createElement("h2");
-  heading.className = "ability-section-title";
-  heading.textContent = title;
-  el.appendChild(heading);
-  for (const item of items) el.appendChild(renderFn(item, classes));
+// Tab state persists across filter changes (so switching classes doesn't
+// bounce you back to the first tab) but resets to the first available
+// section if the active one has no items for the new selection.
+let activeTab = null;
+let currentSections = [];
+let currentClasses = [];
+
+function buildSections(stances, invocations, aa) {
+  return [
+    { key: "stances", title: "Stances", items: stances, renderFn: renderAbility },
+    { key: "invocations", title: "Invocations", items: invocations, renderFn: renderAbility },
+    { key: "general", title: "General AAs", items: aa.general, renderFn: renderAA },
+    { key: "archetype", title: "Archetype AAs", items: aa.archetype, renderFn: renderAA },
+    { key: "class", title: "Class AAs", items: aa.class, renderFn: renderAA },
+    { key: "special", title: "Special AAs", items: aa.special, renderFn: renderAA },
+  ].filter((section) => section.items.length);
 }
 
-function renderResults(stances, invocations, aa, classes) {
-  const el = document.getElementById("browser-results");
-  el.innerHTML = "";
+function render() {
+  const tabBar = document.getElementById("browser-tabs");
+  const resultsEl = document.getElementById("browser-results");
 
-  const totalCount = stances.length + invocations.length +
-    aa.general.length + aa.archetype.length + aa.class.length + aa.special.length;
-  if (!totalCount) {
-    el.innerHTML = '<div class="no-results">No abilities found.</div>';
+  if (!currentSections.length) {
+    tabBar.hidden = true;
+    tabBar.innerHTML = "";
+    resultsEl.innerHTML = '<div class="no-results">No abilities found.</div>';
     return;
   }
 
-  appendSection(el, "Stances", stances, renderAbility, classes);
-  appendSection(el, "Invocations", invocations, renderAbility, classes);
-  appendSection(el, "General AAs", aa.general, renderAA, classes);
-  appendSection(el, "Archetype AAs", aa.archetype, renderAA, classes);
-  appendSection(el, "Class AAs", aa.class, renderAA, classes);
-  appendSection(el, "Special AAs", aa.special, renderAA, classes);
+  if (!currentSections.some((section) => section.key === activeTab)) {
+    activeTab = currentSections[0].key;
+  }
+
+  // A lone section needs no tab to switch away from.
+  tabBar.hidden = currentSections.length <= 1;
+  tabBar.innerHTML = "";
+  tabBar.setAttribute("role", "tablist");
+  for (const section of currentSections) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "tab-button";
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-selected", String(section.key === activeTab));
+    btn.innerHTML = `${section.title}<span class="tab-count">${section.items.length}</span>`;
+    btn.addEventListener("click", () => {
+      activeTab = section.key;
+      render();
+    });
+    tabBar.appendChild(btn);
+  }
+
+  const active = currentSections.find((section) => section.key === activeTab);
+  resultsEl.innerHTML = "";
+  for (const item of active.items) resultsEl.appendChild(active.renderFn(item, currentClasses));
+}
+
+function renderResults(stances, invocations, aa, classes) {
+  currentSections = buildSections(stances, invocations, aa);
+  currentClasses = classes;
+  render();
 }
 
 init();
