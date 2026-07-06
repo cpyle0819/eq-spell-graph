@@ -133,10 +133,18 @@
        wayfinding detail. Route-label/-steps/-zone/-sep/-boat-sep/
        -translocator-sep are theme.css's parchment-tuned colors (dark ink
        for a light background); overridden here for a dark stone one. */
+    /* Bold serif at small sizes reads cramped on this dark, busy marble
+       texture — bumped size back up to 13px (matching the parchment
+       version's own size rather than shrinking it further), added
+       letter-spacing and a wider flex gap so multi-word zone names
+       (e.g. "Steamfont Mountains") don't run into their own neighbors,
+       and dropped the weight from bold to 600 since true bold Georgia's
+       tight counters were most of the cramped feeling. */
     .zone-route { margin-bottom: 12px; }
     .zone-route .route-label { color: var(--ink-muted); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
-    .zone-route .route-steps { color: var(--parchment); font-size: 12px; line-height: 1.8; }
-    .zone-route .route-zone { color: var(--parchment); }
+    .zone-route .route-steps { color: var(--parchment); font-size: 13px; line-height: 2; letter-spacing: 0.055em; gap: 6px; }
+    .zone-route .route-zone { color: var(--parchment); font-weight: 600; }
+    .zone-route .route-sep, .zone-route .boat-sep, .zone-route .translocator-sep { margin: 0; }
     .zone-route .route-sep { color: var(--gold); }
     .zone-route .boat-sep { color: #7ba7f5; }
     .zone-route .translocator-sep { color: #c4a3f7; }
