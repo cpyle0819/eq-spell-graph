@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norraph — Stances & Invocations</title>
+  <title>Norraph — Class Browser</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
@@ -12,7 +12,7 @@
     /* Page layout only — component styling lives in theme.css */
     body { height: 100vh; display: flex; flex-direction: column; }
 
-    #stances-page {
+    #class-browser-page {
       flex: 1; min-height: 0;
       display: flex; flex-direction: column;
       padding: 24px 28px 0;
@@ -22,7 +22,7 @@
     .filter-bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding: 14px 20px; margin-bottom: 20px; flex-shrink: 0; }
     .field select { min-width: 160px; }
 
-    #stances-results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; }
+    #browser-results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; }
 
     .ability-section-title {
       font-family: var(--font-display); color: var(--gold); font-size: 15px;
@@ -35,7 +35,7 @@
     .class-badge { background: rgba(90, 60, 20, 0.08); color: #5a3c14; border: 1px solid rgba(90, 60, 20, 0.3); }
 
     @media (max-width: 700px) {
-      #stances-page { padding: 14px 16px 0; }
+      #class-browser-page { padding: 14px 16px 0; }
       .filter-bar { gap: 12px; padding: 12px 16px; }
       .field select { min-width: 0; flex: 1; }
     }
@@ -45,7 +45,7 @@
   <header>
     <div class="header-title">
       <h1>Norraph</h1>
-      <p class="header-sub">Stances &amp; Invocations</p>
+      <p class="header-sub">Class Browser</p>
     </div>
     <nav class="nav-links">
       <a class="nav-link" href="index.html">Spell Finder</a>
@@ -54,7 +54,7 @@
     </nav>
   </header>
 
-  <div id="stances-page">
+  <div id="class-browser-page">
     <div class="filter-bar">
       <div class="field">
         <label>Class 1</label>
@@ -69,10 +69,10 @@
         <select id="class-select-3"></select>
       </div>
     </div>
-    <div id="stances-results"></div>
+    <div id="browser-results"></div>
   </div>
 
   <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
-  <script src="stances.js"></script>
+  <script src="class-browser.js"></script>
 </body>
 </html>

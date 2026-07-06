@@ -93,14 +93,15 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: [...classes].sort() };
   }
 
-  // GET /api/classes/stances — list classes that have stance/invocation data.
-  // A separate roster from /api/classes: it includes classes with no
-  // purchasable spells (e.g. berserker) — see DECISIONS.md.
-  if (pathname === "/api/classes/stances") {
+  // GET /api/classes/abilities — list classes that have stance/invocation/AA
+  // data. A separate roster from /api/classes: it includes classes with no
+  // purchasable spells (e.g. berserker) — see DECISIONS.md. Powers the Class
+  // Browser page's class pickers.
+  if (pathname === "/api/classes/abilities") {
     const graph = getGraph();
     const classes = new Set<string>();
     for (const n of graph.nodes) {
-      if ((n.data.type === "stance" || n.data.type === "invocation") && n.data.classes) {
+      if ((n.data.type === "stance" || n.data.type === "invocation" || n.data.type === "aa") && n.data.classes) {
         for (const cls of n.data.classes as string[]) classes.add(cls);
       }
     }
@@ -125,6 +126,32 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
         }))
         .sort((a, b) => a.name.localeCompare(b.name));
     return { status: 200, body: { stances: matches("stance"), invocations: matches("invocation") } };
+  }
+
+  // GET /api/aa?class=warrior,paladin — Alternate Advancement entries
+  // available to any of the given classes, grouped by wiki category
+  // (general/archetype/class/special — general/archetype/special apply to
+  // every class, so they show up regardless of which classes are selected).
+  if (pathname === "/api/aa") {
+    const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
+    const graph = getGraph();
+    const categories = ["general", "archetype", "class", "special"] as const;
+    const matches = (category: (typeof categories)[number]) =>
+      graph.nodes
+        .filter((n) => n.data.type === "aa" && n.data.category === category && n.data.classes &&
+          (classNames.length === 0 || (n.data.classes as string[]).some((c) => classNames.includes(c))))
+        .map((n) => ({
+          id: n.data.id,
+          name: n.data.label,
+          description: n.data.description,
+          ranks: n.data.ranks,
+          cost: n.data.cost,
+          classes: n.data.classes,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    const body: Record<string, unknown> = {};
+    for (const category of categories) body[category] = matches(category);
+    return { status: 200, body };
   }
 
   // GET /api/zones — list all zone nodes
