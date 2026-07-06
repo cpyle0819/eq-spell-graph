@@ -1,6 +1,10 @@
-# EQ Spell Planner
+# Norraph
 
-Faction-aware spell shopping route planner for EverQuest. Given your race, primary class, deity, current zone, and desired spell levels, ranks destinations by spells available vs. travel distance — filtering out zones where you'd be killed on sight or refused service.
+Three tools for EverQuest Legends players, sharing one faction-aware zone/spell/class graph:
+
+- **Spell Finder** — given your race, primary class, deity, current zone, and desired spell levels, ranks destinations by spells available vs. travel distance, filtering out zones where you'd be killed on sight or refused service.
+- **Route Finder** — shortest path between any two zones, boat/translocator hops flagged.
+- **Class Browser** — everything a class has access to (spells, class-defining abilities, stances, invocations, and Alternate Advancements), filterable by up to three classes at once.
 
 ![Norraph screenshot](docs/screenshot.png)
 
@@ -16,13 +20,15 @@ bun run typecheck  # TypeScript validation
 
 ## How it works
 
-Spell, NPC, and zone data lives in a single graph (`data/graph.json`). The planner:
+Spell, NPC, zone, and class-ability data all live in a single graph (`data/graph.json`). Spell Finder (the planner):
 
 1. Finds spells matching your selected class and level range
 2. Traces which NPCs sell those spells and which zones those NPCs are in
 3. Computes hop distance from your current zone via BFS over zone adjacency edges
 4. Resolves faction standing from three dimensions (race, primary class, deity) — takes the worst
 5. Ranks zones by `spells_available / hops`, with KOS and won't-sell zones sorted to the bottom
+
+Route Finder walks the same zone adjacency graph via BFS for a plain point-to-point path, with no faction or spell context. Class Browser reads spell/stance/invocation/AA/ability nodes directly, filtered by whichever 1-3 classes are selected.
 
 ## Faction model
 
@@ -37,7 +43,7 @@ Spell, NPC, and zone data lives in a single graph (`data/graph.json`). The plann
 
 ## Data
 
-All 12 classes, 1,064 spells, 73 zones (47 with vendors), full bidirectional zone connectivity, boat crossings flagged. Most spells also carry description/mana/cast-time/etc. detail (see `DECISIONS.md`).
+1,064 spells across the 12 classes with purchasable spells, 88 zones (47 with vendors), full bidirectional zone connectivity, boat/translocator crossings flagged. Most spells also carry description/mana/cast-time/etc. detail. Class Browser adds 9 stances, 9 invocations, 131 Alternate Advancements, and 27 class-defining abilities (Rogue's poison disciplines, Backstab, Kick, Lay Hands, etc.) — this data covers 16 classes total, including 4 (Berserker, Monk, Rogue, Warrior) with no purchasable spells at all. See `DECISIONS.md` for why these are tracked as separate, independently-derived class rosters rather than one unified list.
 
 **Updating the graph:** `data/graph.json` is never hand-edited or regenerated wholesale. Changes go through a numbered, run-once migration in `migrations/` (e.g. `bun run migrations/012-normalize-skill-names.ts`) that reads the current file, transforms it, and writes it back — see any existing migration for the pattern. `src/graph.ts` is the only code allowed to read/write it outside of migrations.
 
@@ -51,11 +57,15 @@ The `levelMin`/`levelMax` params take a range; `class`/`spells`/`zones` take com
 |----------|---------|
 | `GET /api/plan?class=shaman,druid&levelMin=5&levelMax=7&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
 | `GET /api/route?from=Halas&to=Kelethin` | Point-to-point route, boat hops flagged |
-| `GET /api/spells?class=shaman&levels=9` | List spells for a class/level |
+| `GET /api/spells?class=shaman&levels=9` | List spells for a class/level (omit `class` for every class) |
 | `GET /api/spells/search?q=spirit` | Spell name autocomplete |
 | `GET /api/spell/:id/vendors` | NPCs and zones selling a spell |
 | `GET /api/zones` | All zones |
-| `GET /api/classes` | Classes with loaded spell data |
+| `GET /api/classes` | Classes with purchasable spell data |
+| `GET /api/classes/abilities` | Classes with stance/invocation/AA/ability data (a separate, broader roster — see `DECISIONS.md`) |
+| `GET /api/stances-invocations?class=warrior,paladin` | Stances and invocations for the given classes |
+| `GET /api/aa?class=warrior,paladin` | Alternate Advancements, grouped by category (general/archetype/class/special) |
+| `GET /api/abilities?class=rogue,paladin` | Class-defining special abilities (Rogue poison disciplines, Backstab, Kick, Lay Hands, etc.) |
 | `GET /api/graph` | Full Cytoscape-format graph |
 | `GET /api/stats` | Node/edge counts |
 
