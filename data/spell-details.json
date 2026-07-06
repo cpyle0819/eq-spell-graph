@@ -25,7 +25,7 @@
     "resist": "Unresistable"
   },
   "spell:gate": {
-    "description": "Opens a magical portal that returns you to your bind point.\n\nNPC casters may also gate according to their class, if they are under 25% HP and located some distance from their spawn point. If they are successful, they will immediately receive a heal for about 20% of their health, and will retain their aggro table, unless their spawn point is more distant than 1300 units from where the fight was happening.",
+    "description": "Opens a magical portal that returns you to your bind point.",
     "mana": 70,
     "skill": "Alteration",
     "castTime": 5,
@@ -37,7 +37,7 @@
     "resist": "Unresistable"
   },
   "spell:root": {
-    "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 48 secs (2 ticks @L3 to 8 ticks @L14).\n\nMany other spells which immobilize targets are informally referred to as \"Root\" spells, including Enstill, Immobilize, Grasping Roots, Hungry Earth, etc. All of these spells have common qualities, such as randomly breaking early, being randomly broken sometimes by direct-damage spells, and causing rooted behavior in NPCs.\n\nSpells which reduce movement speed somewhat, but not necessarily completely, are called Snare spells. Snare spells are generally more reliable, longer lasting and do not change the hate behavior of NPCs.\n\nRoot spells lend to a strategy of solo casters called \"root rotting\", where a caster roots the enemy, casts one or more damage-over-time spells on them, and waits for them to die. Nukes are more compatible with snare spells, as they do not cause them to break like root.",
+    "description": "Causes the earth to adhere to your target's feet, preventing them from moving.",
     "mana": 30,
     "skill": "Alteration",
     "castTime": 2,
@@ -50,7 +50,7 @@
     "range": 200
   },
   "spell:bind-affinity": {
-    "description": "Binds the soul of your target to their current location. Casters with this spell can bind themselves virtually anywhere, while casting this spell on another character is limited to allowable bind locations.",
+    "description": "Binds the soul of your target to their current location. Use of this spell is often limited to towns and cities.",
     "mana": 100,
     "skill": "Alteration",
     "castTime": 6,
@@ -115,7 +115,7 @@
     "range": 200
   },
   "spell:minor-healing": {
-    "description": "Mends minor wounds, healing 12 to 20 hit points.",
+    "description": "Mends minor wounds, healing 20 hit points.",
     "mana": 10,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -154,7 +154,7 @@
     "range": 100
   },
   "spell:light-healing": {
-    "description": "Mends light wounds, healing between 47 and 65 hit points.",
+    "description": "Mends light wounds, healing 65 hit points.",
     "mana": 28,
     "skill": "Alteration",
     "castTime": 2,
@@ -243,7 +243,7 @@
     "range": 100
   },
   "spell:burst-of-flame": {
-    "description": "Creates a ball of fire that burns your target, doing between 3 and 5 damage.",
+    "description": "Creates a ball of fire that burns your target, doing 5 damage.",
     "mana": 4,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -360,7 +360,7 @@
     "range": 100
   },
   "spell:scale-skin": {
-    "description": "Causes your target to grow hard scales around their body, increasing their armor class for 27 min.  Consumes Snake Scales when cast.",
+    "description": "Causes your target to grow hard scales around their body, increasing their armor class for 27 min. Consumes Snake Scales when cast.",
     "mana": 25,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -373,7 +373,7 @@
     "range": 100
   },
   "spell:sicken": {
-    "description": "Sickens your target with a fever, causing 8 damage initially and 1 to 11 damage every six seconds for 1 min 24s.",
+    "description": "Sickens your target with a fever, causing 8 damage initially and 11 damage every six seconds for 1 min 24s.",
     "mana": 11,
     "skill": "Conjuration",
     "castTime": 2.5,
@@ -424,7 +424,7 @@
     "range": 100
   },
   "spell:tainted-breath": {
-    "description": "Fills your target's blood with poison, causing 10 damage initially and between 10 and 22 damage every six seconds for 42s.",
+    "description": "Fills your target's blood with poison, causing 10 damage initially and 22 damage every six seconds for 42s.",
     "mana": 58,
     "skill": "Conjuration",
     "castTime": 2.5,
@@ -463,7 +463,7 @@
     "range": 100
   },
   "spell:spirit-strike": {
-    "description": "Creates a rift of bitter cold, causing between 74 and 78 damage to your target.",
+    "description": "Creates a rift of bitter cold, causing 78 damage to your target.",
     "mana": 44,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -573,7 +573,7 @@
     "castTime": 2,
     "recastTime": 30,
     "fizzleTime": 1.5,
-    "duration": "20 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
     "resist": "Unresistable"
@@ -708,7 +708,7 @@
     "range": 100
   },
   "spell:healing": {
-    "description": "Mends moderate wounds, healing between 135 and 175 hit points.  See Healing Spell Lines to compare with other heals.",
+    "description": "Mends moderate wounds, healing 175 hit points.",
     "mana": 65,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -734,7 +734,7 @@
     "range": 100
   },
   "spell:greater-healing": {
-    "description": "Mends major wounds, healing between 280 and 350 hit points.",
+    "description": "Mends major wounds, healing 350 hit points.",
     "mana": 115,
     "skill": "Alteration",
     "castTime": 3,
@@ -799,7 +799,7 @@
     "range": 200
   },
   "spell:spirit-of-cheetah": {
-    "description": "Imbues you with the spirit of the cheetah, greatly increasing your movement speed for 48 seconds. <br> Overrides (removes) other movement speed buffs when used.",
+    "description": "Imbues you with the spirit of the cheetah, greatly increasing your movement speed for 48s.",
     "mana": 20,
     "skill": "Alteration",
     "castTime": 0.5,
@@ -811,7 +811,7 @@
     "resist": "Unresistable"
   },
   "spell:scale-of-wolf": {
-    "description": "Imbues your target with the spirit of a scaled wolf, increasing their movement speed for 45.0 mins.  Any attack, or spell cast by your target will break the enchantment. The group cast version of this spell is Spirit of Scale.\n\nConsider using this spell over Spirit of Wolf to travel long distances with few dangers (but be careful that you don't attack or cast if you do).",
+    "description": "Imbues your target with the spirit of a scaled wolf, increasing their movement speed for 45 min. Any attack, or spell cast by your target will break the enchantment.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 4.5,
@@ -824,7 +824,7 @@
     "range": 100
   },
   "spell:regeneration": {
-    "description": "Hastens your target's natural healing, regenerating 5 hit points every tick (~6 seconds).",
+    "description": "Hastens your target's natural healing, regenerating up to 9 hit points every 6 seconds for 20 min 30s.",
     "mana": 100,
     "skill": "Alteration",
     "castTime": 6,
@@ -938,7 +938,7 @@
     "resist": "Unresistable"
   },
   "spell:envenomed-breath": {
-    "description": "Fills your target's blood with poison, causing 21 damage initially and between 54 and 90 damage every six seconds for 42s.",
+    "description": "Fills your target's blood with poison, causing 21 damage initially and 90 damage every six seconds for 42s.",
     "mana": 173,
     "skill": "Conjuration",
     "castTime": 3,
@@ -1003,7 +1003,7 @@
     "range": 100
   },
   "spell:spirit-of-ox": {
-    "description": "Fills your target with the sprit of the ox, increasing their stamina for 45 mins.",
+    "description": "Fills your target with the sprit of the ox, increasing their stamina for 45 min.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 5,
@@ -1074,13 +1074,13 @@
     "castTime": 2,
     "recastTime": 30,
     "fizzleTime": 1.5,
-    "duration": "20 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
     "resist": "Unresistable"
   },
   "spell:imbue-diamond": {
-    "description": "Focuses the power of Mithaniel Marr into a diamond. Consumes a diamond when cast. Creates an Imbued Diamond.",
+    "description": "Focuses the power of Mithaniel Marr into a diamond. Consumes a diamond when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -1092,7 +1092,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-sapphire": {
-    "description": "Focuses the power of Innoruuk into a sapphire. Consumes a sapphire when cast. Creates an Imbued Sapphire. Diety:  Innoruuk to mem spell.",
+    "description": "Focuses the power of Innoruuk into a sapphire. Consumes a sapphire when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -1104,7 +1104,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-amber": {
-    "description": "Focuses the power of Cazic Thule into amber. Consumes an amber when cast. Creates an Imbued Amber.",
+    "description": "Focuses the power of Cazic-Thule into amber. Consumes an amber when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -1166,7 +1166,7 @@
     "range": 100
   },
   "spell:mass-imbue-amber": {
-    "description": "Focuses the power of Cazic Thule into amber. Consumes an amber x5 when cast. Creates an Imbued Amber x5.",
+    "description": "Focuses the power of Cazic-Thule into five pieces of amber. Consumes five ambers when cast.",
     "mana": 600,
     "skill": "Alteration",
     "castTime": 10,
@@ -1178,7 +1178,7 @@
     "resist": "Unresistable"
   },
   "spell:mass-imbue-diamond": {
-    "description": "Focuses the power of Mithanial into Diamond. Consumes an diamond x5 when cast. Creates an Imbued Diamond x5.",
+    "description": "Focuses the power of Mithaniel Marr into five diamonds. Consumes five diamonds when cast.",
     "mana": 600,
     "skill": "Alteration",
     "castTime": 10,
@@ -1263,7 +1263,7 @@
     "range": 100
   },
   "spell:instill": {
-    "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1.2 mins @L20 to 1.6 mins @L27.",
+    "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1 min 36s.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -1366,7 +1366,7 @@
     "range": 200
   },
   "spell:chloroplast": {
-    "description": "Hastens your target's natural healing, regenerating 10 hit points and 10 endurance every 6 seconds.",
+    "description": "Hastens your target's natural healing, regenerating up to 19 hit points, and up to 10 endurance every 6 seconds for 20 min 30s.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -1950,7 +1950,7 @@
     "range": 100
   },
   "spell:brusco-s-boastful-bellow": {
-    "description": "A great bellow that causes direct magical damage to your opponent along with a slight knockback effect.",
+    "description": "A great bellow that causes 26 damage to your opponent.",
     "skill": "Singing",
     "castTime": 3,
     "recastTime": 30,
@@ -1970,7 +1970,7 @@
     "resist": "Unresistable"
   },
   "spell:kelin-s-lucid-lullaby": {
-    "description": "A quiet lullaby that causes targets around you to fall into an enchanted sleep.  Mesmerizes creatures up to level 25.",
+    "description": "A quiet lullaby that causes your target to fall into an enchanted sleep. Affects creatures up to level 30.",
     "skill": "Stringed",
     "castTime": 3,
     "duration": "1 ticks",
@@ -2103,7 +2103,7 @@
     "range": 200
   },
   "spell:crission-s-pixie-strike": {
-    "description": "A quiet lullaby that causes your target to fall into a magical sleep.  Affects creatures up to level 45. (Inaccurate, I just used this on a yellow con at level 50 and it worked)",
+    "description": "A quiet lullaby that causes your target to fall into a magical sleep. Affects creatures up to level 45.",
     "skill": "Wind",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2113,7 +2113,7 @@
     "range": 100
   },
   "spell:psalm-of-vitality": {
-    "description": "This psalm surrounds your group in an aura of vitality, affording them protection from disease, as well as curing diseases.",
+    "description": "This psalm surrounds your group in an aura of vitality, affording them protection from disease, as well as harming anything that attacks them.",
     "skill": "Singing",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2142,7 +2142,7 @@
     "range": 80
   },
   "spell:cassindra-s-chorus-of-clarity": {
-    "description": "A quiet chorus that clears the minds of your group, allowing them to regenerate their mana faster.\n\nUnlike other songs in the Cassindra line, Cassindra's chorus of Clarity (lvl 32) is not a buff. Singing this song will grant a single burst of mana. Therefore, you will grant mana faster by pulsing it instead of letting it play, and two (or more) bards singing it will mean even more mana to the group. Because this song is not a buff, it stacks with every single source of mana generation in the game, making it a useful pulsing song to play during downtime even at higher levels.\n\n<s>The mana gained from this song is affected by the instrument mod Singing (voice) currently granted only by the Singing Short Sword and level 60 discipline Puretone.</s> This is not true as of 2022-02-10, see [https://wiki.project1999.com/Talk:Cassindra%27s_Chorus_of_Clarity Discussion]",
+    "description": "A quiet chorus that clears the minds of your group, allowing them to regenerate their mana faster.",
     "skill": "Singing",
     "castTime": 3,
     "duration": "Instant",
@@ -2160,7 +2160,7 @@
     "resist": "Cold (0)"
   },
   "spell:cantata-of-soothing": {
-    "description": "A light cantana that regenerates the health, mana, and stamina of your entire group.",
+    "description": "A light cantata that regenerates the health, mana, and endurance of your entire group.",
     "skill": "Stringed †",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2197,7 +2197,7 @@
     "resist": "Unresistable"
   },
   "spell:psalm-of-purity": {
-    "description": "This psalm surrounds your group in an aura of purity, affording them protection from poison, as well as curing poison.",
+    "description": "This psalm surrounds your group in an aura of purity, affording them protection from poison, as well as harming anything that attacks them.",
     "skill": "Singing",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2206,7 +2206,7 @@
     "resist": "Poison (0)"
   },
   "spell:tuyen-s-chant-of-flame": {
-    "description": "A fiery chant that causes between 20 and 40 damage to your target every 6 seconds and makes them more vulnerable to fire.",
+    "description": "A fiery chant that causes between 26 and 40 damage to your target every 6 seconds and makes them more vulnerable to fire.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2249,7 +2249,7 @@
     "range": 30
   },
   "spell:elemental-rhythms": {
-    "description": "A mystic tune that offers your group protection from fire, ice and magic as well as increasing armor class.",
+    "description": "A mystic tune that offers your group protection from fire, ice, and magic.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2268,7 +2268,7 @@
     "range": 30
   },
   "spell:jaxan-s-jig-o-vigor": {
-    "description": "A simple jig which fills your group with energy, regenerating their stamina.",
+    "description": "Fills your group with an invigorating rhythm that increases endurance regeneration.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2278,7 +2278,7 @@
     "range": 35
   },
   "spell:kelin-s-lugubrious-lament": {
-    "description": "A sad song that calms the aggressive nature of many creatures. Pacifies creatures up to level 60.",
+    "description": "A sad song that calms the aggressive nature of many creatures. Affects creatures up to level 60.",
     "skill": "Stringed",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2288,7 +2288,7 @@
     "range": 200
   },
   "spell:selo-s-accelerando": {
-    "description": "The quick pace of this song fills your feet with speed, increasing the movement rate of your group. The movement rate is enhanced with a percussion instrument equipped.",
+    "description": "The quick pace of this song fills your feet with speed, increasing the movement rate of your group.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2318,7 +2318,7 @@
     "resist": "Unresistable"
   },
   "spell:amplification": {
-    "description": "Focuses the power of your voice, causing all songs that use the singing skill to increase in power by 0.7%.",
+    "description": "Focuses the power of your voice, causing all songs that use the singing skill to increase in power by 10%.",
     "skill": "Singing",
     "castTime": 3,
     "duration": "0:30",
@@ -2356,7 +2356,7 @@
     "resist": "Unresistable"
   },
   "spell:lull": {
-    "description": "Lulls the mind of your target, lowering its aggressiveness for 1.2 mins @L1 to 2.0 mins @L5. Affects creatures up to level 55?",
+    "description": "Lulls the mind of your target, lowering its aggressiveness for 2 min. Affects creatures up to level 30.",
     "mana": 10,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -2369,7 +2369,7 @@
     "range": 200
   },
   "spell:divine-aura": {
-    "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18-24 secs (3-4 ticks).\n\nWhile active the user can't attack.",
+    "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18s.",
     "mana": 10,
     "skill": "Abjuration",
     "castTime": 1,
@@ -2381,7 +2381,7 @@
     "resist": "Unresistable"
   },
   "spell:holy-armor": {
-    "description": "Covers your target in holy armor, increasing their armor class.",
+    "description": "Covers your target in holy armor, increasing their armor class for 27 min.",
     "mana": 20,
     "skill": "Abjuration",
     "castTime": 2,
@@ -2394,7 +2394,7 @@
     "range": 100
   },
   "spell:courage": {
-    "description": "Provides your target with a sense of courage, increasing their hit points and armor class for 27.0 mins. Effectively serves as a heal; see Healing Spell Lines to compare with other heals.",
+    "description": "Provides your target with a sense of courage, increasing their hit points and armor class for 27 min.",
     "mana": 12,
     "skill": "Abjuration",
     "castTime": 2,
@@ -2455,7 +2455,7 @@
     "resist": "Unresistable"
   },
   "spell:tuyen-s-chant-of-frost": {
-    "description": "A frozen chant that causes between 24 and 40 damage to an enemy and makes them more vulnerable to cold.",
+    "description": "A frozen chant that causes between 26 and 40 damage to an enemy and makes them more vulnerable to cold.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2493,7 +2493,7 @@
     "resist": "Unresistable"
   },
   "spell:melody-of-ervaj": {
-    "description": "An archaic song that increases the attack speed of your group.  This increase is cumulative with most other effects that increase attack speed. It does stack with other haste buffs, it does not bypass the Haste_Cap.",
+    "description": "An archaic song that increases the attack speed of your group. This increase is cumulative with most other effects that increase attack speed.",
     "skill": "Brass †",
     "castTime": 3,
     "duration": "3 ticks",
@@ -2534,7 +2534,7 @@
     "resist": "Unresistable"
   },
   "spell:sharik-s-replenishing": {
-    "description": "Restores your warder's health, healing between 50 and 55 hit points, as well as curing them of diseases, poisons, and curses.",
+    "description": "Restores your warder's health, healing 55 hit points, as well as curing them of diseases, poisons, and curses.",
     "mana": 26,
     "skill": "Alteration",
     "castTime": 2,
@@ -2560,7 +2560,7 @@
     "range": 200
   },
   "spell:spirit-of-lightning": {
-    "description": "Fills your warder with the power of a great spirit, increasing their dexterity and giving them a chance to perform Spirit of Lightning Strike.",
+    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Lightning Strike",
     "mana": 50,
     "skill": "Alteration",
     "castTime": 3,
@@ -2573,7 +2573,7 @@
     "range": 100
   },
   "spell:keshuval-s-rejuvenation": {
-    "description": "Restores your warder's health, healing between 127 and 149 hit points, as well as curing them of diseases, poisons, and curses.",
+    "description": "Restores your warder's health, healing 149 hit points, as well as curing them of diseases, poisons, and curses.",
     "mana": 61,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -2598,7 +2598,7 @@
     "resist": "Unresistable"
   },
   "spell:spirit-of-the-blizzard": {
-    "description": "Fills your warder with the power of a great spirit, increasing their dexterity and giving them a chance to perform Spirit of Blizzard Strike.",
+    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Blizzard Strike",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 3,
@@ -2658,7 +2658,7 @@
     "range": 100
   },
   "spell:rizlona-s-embers": {
-    "description": "Increases the damage of your companions' direct damage spells by up to 15%. This bonus will decay on spells over level 52.",
+    "description": "Increases the damage of your companions' direct damage spells by up to 1%. This bonus will decay on spells over level 52.",
     "skill": "Singing",
     "castTime": 3,
     "duration": "2 ticks",
@@ -2668,7 +2668,7 @@
     "range": 100
   },
   "spell:selo-s-accelerating-chorus": {
-    "description": "The rapid pace of this song fills your feet with speed, increasing the movement rate of your group for 0:02:30.",
+    "description": "The rapid pace of this song fills your feet with speed, increasing the movement rate of your group for 2 min 30s.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "2 minutes, 30 seconds",
@@ -2688,7 +2688,7 @@
     "range": 100
   },
   "spell:tuyen-s-chant-of-disease": {
-    "description": "A diseased chant that causes between 22 and 40 damage every six seconds to an enemy and makes them more vulnerable to disease.",
+    "description": "A diseased chant that causes between 26 and 40 damage every six seconds to an enemy and makes them more vulnerable to disease.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "2 ticks",
@@ -2698,7 +2698,7 @@
     "range": 200
   },
   "spell:tuyen-s-chant-of-poison": {
-    "description": "A poisoned chant that causes between 26 and 40 damage every six seconds to an enemy and makes them more vulnerable to disease.",
+    "description": "A poisoned chant that causes between 26 and 40 damage every six seconds to an enemy and makes them more vulnerable to poison.",
     "skill": "Percussion",
     "castTime": 3,
     "duration": "2 ticks",
@@ -2708,7 +2708,7 @@
     "range": 200
   },
   "spell:herikol-s-soothing": {
-    "description": "Restores your warder's health, healing between 274 and 298 hit points, as well as curing them of diseases, poisons, and curses.",
+    "description": "Restores your warder's health, healing 298 hit points, as well as curing them of diseases, poisons, and curses.",
     "mana": 108,
     "skill": "Alteration",
     "castTime": 3,
@@ -2734,7 +2734,7 @@
     "range": 100
   },
   "spell:yekan-s-recovery": {
-    "description": "Restores your warder's health, healing between 345 and 401 hit points, as well as curing them of diseases, poisons, and curses.",
+    "description": "Restores your warder's health, healing between 401 and 467 hit points, as well as curing them of diseases, poisons, and curses.",
     "mana": 159,
     "skill": "Alteration",
     "castTime": 3.5,
@@ -2747,7 +2747,7 @@
     "range": 100
   },
   "spell:spiritual-light": {
-    "description": "Envelops your target in an aura of spiritual light, increasing their mana, hit point, and endurance regeneration.",
+    "description": "Envelops your target in an aura of spiritual light, increasing their mana, endurance and hit point regeneration.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 5,
@@ -2760,7 +2760,7 @@
     "range": 200
   },
   "spell:malaria": {
-    "description": "Infects your target with a deadly plague of malaria, causing between 24 and 73 damage every six seconds for 1 min 12s.",
+    "description": "Infects your target with a deadly plague of malaria, causing between 73 and 93 damage every six seconds for 1 min 12s.",
     "mana": 173,
     "skill": "Conjuration",
     "recastTime": 1.5,
@@ -2833,7 +2833,7 @@
     "range": 100
   },
   "spell:spirit-of-vermin": {
-    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Vermin Strike",
+    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Vermin Strike",
     "mana": 90,
     "skill": "Alteration",
     "castTime": 3,
@@ -2846,7 +2846,7 @@
     "range": 100
   },
   "spell:spirit-of-inferno": {
-    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Inferno Strike",
+    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Inferno Strike",
     "mana": 70,
     "skill": "Alteration",
     "castTime": 3,
@@ -2859,7 +2859,7 @@
     "range": 100
   },
   "spell:spirit-of-the-scorpion": {
-    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Scorpion Strike",
+    "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Scorpion Strike",
     "mana": 80,
     "skill": "Alteration",
     "castTime": 3,
@@ -2898,7 +2898,7 @@
     "range": 200
   },
   "spell:frost-shard": {
-    "description": "Strikes your target with a frost shard, causing between 281 damage. Targets up to level 55 will be momentarily stunned, interrupting their spellcasting.",
+    "description": "Strikes your target with a frost shard, causing 281 damage. Targets up to level 55 will be momentarily stunned, interrupting their spellcasting.",
     "mana": 119,
     "skill": "Evocation",
     "castTime": 0.5,
@@ -2950,7 +2950,7 @@
     "range": 200
   },
   "spell:soothe": {
-    "description": "Soothes the mind of your target, lowering its aggressiveness for 1.5 mins @L5 to 2.5 mins @L15. Affects creatures up to level 55?",
+    "description": "Soothes the mind of your target, lowering its aggressiveness for 2 min 30s. Affects creatures up to level 40.",
     "mana": 30,
     "skill": "Alteration",
     "castTime": 2,
@@ -2963,7 +2963,7 @@
     "range": 200
   },
   "spell:invisibility-versus-undead": {
-    "description": "Cloaks your target in a light aura, rendering them invisible to most undead creatures for up to 3.0 mins @L1 to 27.0 mins @L9. You have to be grouped with your target.",
+    "description": "Cloaks your target in a light aura, rendering them invisible to most undead creatures for up to 27 min.",
     "mana": 40,
     "skill": "Divination",
     "castTime": 4,
@@ -2976,7 +2976,7 @@
     "range": 100
   },
   "spell:calm": {
-    "description": "Calms the mind of your target, lowering its aggressiveness for 180 secs (30 ticks). Affects creatures up to level 50.",
+    "description": "Calms the mind of your target, lowering its aggressiveness for 42s. Affects creatures up to level 50.",
     "mana": 50,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -3002,7 +3002,7 @@
     "range": 200
   },
   "spell:strike": {
-    "description": "Calls upon the power of the gods to strike your target, causing between 6 and 8 damage with a ''very'' slight knockback effect.",
+    "description": "Calls upon the power of the gods to strike your target, causing 10 damage.",
     "mana": 7,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -3015,7 +3015,7 @@
     "range": 200
   },
   "spell:yaulp": {
-    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar.",
+    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class.",
     "mana": 1,
     "skill": "Abjuration",
     "castTime": 0.5,
@@ -3027,7 +3027,7 @@
     "resist": "Unresistable"
   },
   "spell:furor": {
-    "description": "Calls upon the furor of the gods to strike your target, causing between 16 and 19 damage with a ''very'' slight knockback effect.",
+    "description": "Calls upon the furor of the gods to strike your target, causing 33 damage.",
     "mana": 19,
     "skill": "Evocation",
     "castTime": 2,
@@ -3040,7 +3040,7 @@
     "range": 200
   },
   "spell:reckless-strength": {
-    "description": "Focuses your target's strength into an intense burst, increasing it for a short time, but then gradually decaying over the next 3.0 mins.",
+    "description": "Focuses your target's strength into an intense burst, increasing it for a short time, but then gradually decaying over the next 3 min.",
     "mana": 30,
     "skill": "Alteration",
     "castTime": 3,
@@ -3066,7 +3066,7 @@
     "range": 200
   },
   "spell:ward-undead": {
-    "description": "A burst of holy power that inflicts between 35 and 41 damage to an undead target. 1.37 DPM",
+    "description": "A burst of holy power that inflicts 12 damage to an undead target.",
     "mana": 5,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -3079,7 +3079,7 @@
     "range": 200
   },
   "spell:center": {
-    "description": "Provides your target with a focused sense of self, increasing their hit points and armor class.",
+    "description": "Provides your target with a focused sense of self, increasing their hit points and armor class for 27 min.",
     "mana": 40,
     "skill": "Abjuration",
     "castTime": 2.25,
@@ -3128,7 +3128,7 @@
     "resist": "Magic (0)"
   },
   "spell:expulse-undead": {
-    "description": "A burst of holy power that inflicts between 88 and 94 damage to an undead target. (1.56 DPM @ L20)",
+    "description": "A burst of holy power that inflicts 106 damage to an undead target.",
     "mana": 36,
     "skill": "Evocation",
     "castTime": 2,
@@ -3165,7 +3165,7 @@
     "resist": "Unresistable"
   },
   "spell:smite": {
-    "description": "Calls upon the power of the gods to smite your target, causing between 74 and 83 damage with a ''very'' slight knockback effect. (1.18 DPM @ L23)",
+    "description": "Calls upon the power of the gods to smite your target, causing 88 damage.",
     "mana": 43,
     "skill": "Evocation",
     "castTime": 2.45,
@@ -3178,7 +3178,7 @@
     "range": 200
   },
   "spell:symbol-of-transal": {
-    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 27.0 mins. Consumes a Cat's Eye Agate when cast.",
+    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 27 min.",
     "mana": 55,
     "skill": "Abjuration",
     "castTime": 3.5,
@@ -3191,7 +3191,7 @@
     "range": 100
   },
   "spell:daring": {
-    "description": "Provides your target with a sense of daring, increasing their hit points and armor class for 36.0 mins.",
+    "description": "Provides your target with a sense of daring, increasing their hit points and armor class for 36 min.",
     "mana": 60,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -3204,7 +3204,7 @@
     "range": 100
   },
   "spell:spirit-armor": {
-    "description": "Covers your target in spiritual armor, increasing their armor class for 36.0 mins.",
+    "description": "Covers your target in spiritual armor, increasing their armor class for 36 min.",
     "mana": 75,
     "skill": "Abjuration",
     "castTime": 6,
@@ -3217,7 +3217,7 @@
     "range": 100
   },
   "spell:ward-summoned": {
-    "description": "A burst of holy power that inflicts between 35 and 41 damage to a summoned target.",
+    "description": "A burst of holy power that inflicts 14 damage to a summoned target.",
     "mana": 6,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -3230,7 +3230,7 @@
     "range": 200
   },
   "spell:yaulp-ii": {
-    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar.",
+    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class.",
     "mana": 1,
     "skill": "Abjuration",
     "castTime": 0.5,
@@ -3242,7 +3242,7 @@
     "resist": "Unresistable"
   },
   "spell:holy-might": {
-    "description": "Strikes an enemy with holy might, briefly stunning them and causing between 26 and 60 damage. This spell works on creatures up to level 55.",
+    "description": "Strikes an enemy with holy might, briefly stunning them and causing 60 damage. This spell works on creatures up to level 55.",
     "mana": 60,
     "skill": "Evocation",
     "castTime": 2,
@@ -3255,7 +3255,7 @@
     "range": 200
   },
   "spell:bravery": {
-    "description": "Provides your target with a sense of bravery, increasing their hit points and armor class for 45.0 mins.",
+    "description": "Provides your target with a sense of bravery, increasing their hit points and armor class for 45 min.",
     "mana": 70,
     "skill": "Abjuration",
     "castTime": 2.75,
@@ -3268,7 +3268,7 @@
     "range": 100
   },
   "spell:dismiss-undead": {
-    "description": "A burst of holy power that inflicts between 140 and 162 damage to an undead target. (1.8 DPM)",
+    "description": "A burst of holy power that inflicts 211 damage to an undead target.",
     "mana": 63,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -3306,7 +3306,7 @@
     "range": 200
   },
   "spell:symbol-of-ryltan": {
-    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 36.0 mins. Consumes a bloodstone when cast.",
+    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 36 min.",
     "mana": 111,
     "skill": "Abjuration",
     "castTime": 4,
@@ -3331,7 +3331,7 @@
     "resist": "Magic (0)"
   },
   "spell:expulse-summoned": {
-    "description": "A burst of holy light that inflicts between 88 and 94 damage to a summoned target.",
+    "description": "A burst of holy light that inflicts 122 damage to a summoned target.",
     "mana": 41,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -3344,7 +3344,7 @@
     "range": 200
   },
   "spell:guard": {
-    "description": "Covers your target in a holy guard, increasing their armor class for 45.0 mins.\n\nMoved from level 49 to 39 for Paladins a few months after Velious launch [http://www.project1999.com/forums/showpost.php?p=1176734&postcount=8]. (February 21, 2001 3:00 am)",
+    "description": "Covers your target in a holy guard, increasing their armor class for 45 min.",
     "mana": 80,
     "skill": "Abjuration",
     "castTime": 3,
@@ -3370,7 +3370,7 @@
     "range": 200
   },
   "spell:revive": {
-    "description": "Revives a slain ally.  It takes some time for the recently revived to fully recover. This spell does not restore any experience lost on death.",
+    "description": "Revives a slain ally, restoring 35% of their lost experience. It takes some time for the recently revived to fully recover.",
     "mana": 450,
     "skill": "Alteration",
     "castTime": 5.5,
@@ -3407,7 +3407,7 @@
     "resist": "Magic (0)"
   },
   "spell:renewing-echo": {
-    "description": "Fills your target's body with a renewing echo, immediately healing between 190 and 280 hit points, then healing twice more for between 95 and 110 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
+    "description": "Fills your target's body with a renewing echo, immediately healing between 265 and 280 hit points, then healing twice more for 110 hit points every 6 seconds for 6s.",
     "mana": 150,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -3420,7 +3420,7 @@
     "range": 100
   },
   "spell:echo-of-health": {
-    "description": "Fills your target's body with a renewing echo, immediately healing between 50 and 50 hit points, then healing twice more for between 20 and 20 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
+    "description": "Fills your target's body with an echo of health, immediately healing 50 hit points, then healing twice more for 20 hit points every 6 seconds for 6s.",
     "mana": 35,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -3433,7 +3433,7 @@
     "range": 100
   },
   "spell:blessing-of-the-page": {
-    "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 1. <br>\nSee Blessing of the Page for Spell Line.",
+    "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 1.",
     "mana": 175,
     "skill": "Abjuration",
     "castTime": 3,
@@ -3446,7 +3446,7 @@
     "range": 200
   },
   "spell:blessing-of-the-squire": {
-    "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 2. <br>\nSee Blessing of the Page for Spell Line.",
+    "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 2.",
     "mana": 350,
     "skill": "Abjuration",
     "castTime": 3,
@@ -3459,7 +3459,7 @@
     "range": 200
   },
   "spell:sanctuary": {
-    "description": "Creates a watchful ward at a location you choose, which will alert you to movement in the area every 2 seconds for up to 360 seconds.",
+    "description": "Creates a watchful ward at a location you choose, which will alert you to movement in the area every 2 seconds for up to %i seconds.",
     "mana": 25,
     "skill": "Divination",
     "castTime": 2.5,
@@ -3485,7 +3485,7 @@
     "range": 200
   },
   "spell:echoing-light": {
-    "description": "Fills your target's body with an echo of light, immediately healing between 140 and 140 hit points, then healing twice more for between 55 and 55 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
+    "description": "Fills your target's body with an echo of light, immediately healing 140 hit points, then healing twice more for 55 hit points every 6 seconds for 6s.",
     "mana": 85,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -3522,7 +3522,7 @@
     "range": 200
   },
   "spell:celestial-remedy": {
-    "description": "Fills your target's body with celestial light, healing between 35 and 65 hit points every 6 seconds for 24s.",
+    "description": "Fills your target's body with celestial light, healing 65 hit points every 6 seconds for 24s.",
     "mana": 75,
     "skill": "Alteration",
     "castTime": 4,
@@ -3558,7 +3558,7 @@
     "range": 200
   },
   "spell:sermon-of-the-righteous": {
-    "description": "Bathes your target with holy light, causing between 44 and 79 damage to undead every 6 seconds for 30s.",
+    "description": "Bathes your target with holy light, causing 79 damage to undead every 6 seconds for 30s.",
     "mana": 78,
     "skill": "Evocation",
     "castTime": 3,
@@ -3583,7 +3583,7 @@
     "range": 200
   },
   "spell:pacify": {
-    "description": "Pacifies your target, lowering its aggressiveness for up to 210 secs.\n\n<s>The correct duration for this spell was implemented on September 8th, 2019. [https://www.project1999.com/forums/showthread.php?t=333315  Sep 8th 2019 patch]\n[https://www.project1999.com/forums/showthread.php?t=328802 Bug Report]\n\nCHANGE Oct 24th 2024, discussion thread: https://www.project1999.com/forums/showthread.php?t=328802\nTimer lowered to 2 minutes!!</s>\n\nCHANGE Dec 19th 2024, discussion thread: https://project1999.com/forums/showpost.php?p=3712019&postcount=42\n\nPacify is now 3.5 minutes in duration.\n\n\nEffects mobs up to lvl 55.\n*Needs testing to see if it effects mobs above lvl 55.",
+    "description": "Pacifies your target, lowering its aggressiveness for 42s. Affects creatures up to level 55.",
     "mana": 100,
     "skill": "Alteration",
     "castTime": 3,
@@ -3608,7 +3608,7 @@
     "resist": "Unresistable"
   },
   "spell:divine-barrier": {
-    "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18 secs (3 ticks) and increasing hitpoint regeneration.",
+    "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18s and healing 1 hit points.",
     "mana": 100,
     "skill": "Abjuration",
     "castTime": 1,
@@ -3620,7 +3620,7 @@
     "resist": "Unresistable"
   },
   "spell:wrath": {
-    "description": "Calls upon the wrath of the gods to strike your target, inflicting between 198 and 218 damage with a ''very'' slight knockback effect. (1.50 DPM @ L39)",
+    "description": "Calls upon the wrath of the gods to strike your target, inflicting 176 damage.",
     "mana": 77,
     "skill": "Evocation",
     "castTime": 3,
@@ -3645,7 +3645,7 @@
     "resist": "Unresistable"
   },
   "spell:armor-of-protection": {
-    "description": "Places mystic armor of protection around you, increasing your hit points and armor class for 1 hour(s) 42.0 mins @L34 to 2 hour(s) 24.0 mins @L48. This spell stacks with other Cleric buffs (AC, HP/AC, and Symbol lines). This spell does NOT stack with the Yaulp line of spells, or with Focus of Spirit as well as Talisman of Altuna. Does not stack with Spikecoat either for those with Girdle of Living Thorns. Focus of Spirit and Talisman of Altuna overrides.",
+    "description": "Places mystic armor of protection around you, increasing your hit points and armor class.",
     "mana": 110,
     "skill": "Abjuration",
     "castTime": 3.5,
@@ -3657,7 +3657,7 @@
     "resist": "Unresistable"
   },
   "spell:atone": {
-    "description": "Calls upon the judgment of the gods, allowing a chance for the target to forget those that have harmed them.  Atone has a chance to fail, but the chance to succeed is much higher than 1% and closer to 50%.",
+    "description": "Calls upon the judgment of the gods, allowing a chance for the target to forget those that have harmed them.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 4.5,
@@ -3670,7 +3670,7 @@
     "range": 200
   },
   "spell:expel-undead": {
-    "description": "A burst of holy power that inflicts between 261 and 273 damage to an undead target (2.1 DPM).",
+    "description": "A burst of holy power that inflicts 333 damage to an undead target.",
     "mana": 93,
     "skill": "Evocation",
     "castTime": 3,
@@ -3683,7 +3683,7 @@
     "range": 200
   },
   "spell:force": {
-    "description": "Strikes an enemy with holy might, briefly stunning them and causing between 71 and 90 damage. This spell works on creatures up to level 55.",
+    "description": "Strikes an enemy with holy might, briefly stunning them and causing 90 damage. This spell works on creatures up to level 58.",
     "mana": 90,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -3696,7 +3696,7 @@
     "range": 200
   },
   "spell:frenzied-strength": {
-    "description": "Focuses your target's strength into an intense burst, increasing it for a short time, but then gradually decaying over the next 3.0 mins.",
+    "description": "Focuses your target's strength into an intense burst, increasing it for a short time, but then gradually decaying over the next 3 min.",
     "mana": 90,
     "skill": "Alteration",
     "castTime": 3,
@@ -3709,7 +3709,7 @@
     "range": 100
   },
   "spell:superior-healing": {
-    "description": "Mends severe wounds, healing between 565 and 583 hit points.",
+    "description": "Mends severe wounds, healing 600 hit points.",
     "mana": 185,
     "skill": "Alteration",
     "castTime": 3.5,
@@ -3722,7 +3722,7 @@
     "range": 100
   },
   "spell:symbol-of-pinzarn": {
-    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 45.0 mins.  Consumes a Jasper when cast.",
+    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 45 min.",
     "mana": 200,
     "skill": "Abjuration",
     "castTime": 4.5,
@@ -3748,7 +3748,7 @@
     "range": 30
   },
   "spell:valor": {
-    "description": "Provides your target with a sense of valor, increasing their hit points and armor class for 54.0 mins.",
+    "description": "Provides your target with a sense of valor, increasing their hit points and armor class for 54 min.",
     "mana": 90,
     "skill": "Abjuration",
     "castTime": 3,
@@ -3761,7 +3761,7 @@
     "range": 100
   },
   "spell:word-of-health": {
-    "description": "Mends the wounds of everyone in your group, Increase Hitpoints by 94 (L34) to 100 (L40).",
+    "description": "Mends the wounds of everyone in your group, healing 485 hit points.",
     "mana": 302,
     "skill": "Alteration",
     "castTime": 3.5,
@@ -3774,7 +3774,7 @@
     "range": 100
   },
   "spell:armor-of-faith": {
-    "description": "Covers your target in the armor of faith, increasing their armor class for 1 hour(s) 3.0 mins.\n\nMoved from level 53 to 49 for Paladins a few months after Velious launch [http://www.project1999.org/forums/showpost.php?p=1176734&postcount=8].  (February 21, 2001 3:00 am)",
+    "description": "Covers your target in the armor of faith, increasing their armor class for 63 min.",
     "mana": 150,
     "skill": "Abjuration",
     "castTime": 6,
@@ -3787,7 +3787,7 @@
     "range": 100
   },
   "spell:dismiss-summoned": {
-    "description": "A burst of holy power that inflicts between 140 and 162 damage against a summoned target (1.8 DPM).",
+    "description": "A burst of holy power that inflicts 244 damage to a summoned target.",
     "mana": 73,
     "skill": "Evocation",
     "castTime": 3,
@@ -3800,7 +3800,7 @@
     "range": 200
   },
   "spell:resuscitate": {
-    "description": "Revives a slain ally, restoring 50 percent of their lost experience.  It takes some time for the recently revived to fully recover.",
+    "description": "Revives a slain ally, restoring 60% of their lost experience. It takes some time for the recently revived to fully recover.",
     "mana": 650,
     "skill": "Alteration",
     "castTime": 3.95,
@@ -3813,7 +3813,7 @@
     "range": 200
   },
   "spell:turning-of-the-unnatural": {
-    "description": "Strikes your target with holy light, causing 25 damage to undead every 6 seconds for 1.6 minutes (400 damage; 2.5 DPM).",
+    "description": "Strikes your target with holy light, causing 120 damage to undead every 6 seconds for 30s.",
     "mana": 144,
     "skill": "Evocation",
     "castTime": 3,
@@ -3850,7 +3850,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-black-pearl": {
-    "description": "Focuses the power of Prexus into an Imbued Black Pearl.  Consumes a black pearl when cast.",
+    "description": "Focuses the power of Prexus into a black pearl. Consumes a black pearl when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3862,7 +3862,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-black-sapphire": {
-    "description": "Focuses the power of Bertoxxulous into a black sapphire.  Consumes a black sapphire when cast. Creates an Imbued Black Sapphire.",
+    "description": "Focuses the power of Bertoxxulous into a black sapphire. Consumes a black sapphire when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3874,7 +3874,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-emerald": {
-    "description": "Focuses the power of Tunare into an emerald. Consumes an emerald when cast. Creates an Imbued Emerald. You MUST worship Tunare to scribe this spell and cast it.",
+    "description": "Focuses the power of Tunare into an emerald. Consumes an emerald when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3886,7 +3886,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-opal": {
-    "description": "Focuses the power of Rodcet Nife into an opal.  Consumes an opal when cast. Creates an Imbued Opal.",
+    "description": "Focuses the power of Rodcet Nife into an opal. Consumes an opal when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3910,7 +3910,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-plains-pebble": {
-    "description": "Focuses the power of Karana into a plains pebble.  Consumes a plains pebble when cast. Creates an Imbued Plains Pebble.",
+    "description": "Focuses the power of Karana into a plains pebble. Consumes a plains pebble when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3922,7 +3922,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-rose-quartz": {
-    "description": "Focuses the power of Erollisi Marr into a star rose quartz.  Consumes a star rose quartz when cast. Creates an Imbued Rose Quartz.",
+    "description": "Focuses the power of Erollisi Marr into a star rose quartz. Consumes a star rose quartz when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3934,7 +3934,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-ruby": {
-    "description": "Focuses the power of Brell Serilis into a ruby.  Consumes a ruby when cast. Creates an Imbued Ruby.",
+    "description": "Focuses the power of Brell Serilis into a ruby. Consumes a ruby when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3946,7 +3946,7 @@
     "resist": "Unresistable"
   },
   "spell:imbue-topaz": {
-    "description": "Focuses the power of Quellious into a topaz. Consumes a topaz when cast. Creates an Imbued Topaz.",
+    "description": "Focuses the power of Quellious into a topaz. Consumes a topaz when cast.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -3983,7 +3983,7 @@
     "resist": "Unresistable"
   },
   "spell:mass-imbue-emerald": {
-    "description": "Focuses the power of Tunare into five emeralds. Consumes an emerald when cast.",
+    "description": "Focuses the power of Tunare into five emeralds. Consumes five emeralds when cast.",
     "mana": 600,
     "skill": "Alteration",
     "castTime": 10,
@@ -4008,7 +4008,7 @@
     "range": 200
   },
   "spell:blessing-of-faith": {
-    "description": "Bestows your target with a divine blessing, allowing them to cast spells faster for 0:40:00. This blessing works on spells up to level 61.",
+    "description": "Bestows your target with a divine blessing, allowing them to cast spells faster for 40 min. This blessing works on spells up to level 61.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -4021,7 +4021,7 @@
     "range": 100
   },
   "spell:celestial-echo": {
-    "description": "Fills your target's body with a celestial echo, immediately healing between 310 and 480 hit points, then healing twice more for between 165 and 190 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
+    "description": "Fills your target's body with a celestial echo, immediately healing between 310 and 480 hit points, then healing twice more for between 165 and 190 hit points every 6 seconds for 6s.",
     "mana": 245,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -4034,7 +4034,7 @@
     "range": 100
   },
   "spell:promised-renewal": {
-    "description": "Imbues your target with life after 0:00:18, healing for 5000.\n\nSpell Line: Promised Renewal\n\nLegends exclusive spell replacing the Complete Heal spell line.",
+    "description": "Imbues your target with life after 18s, healing for 5000.",
     "mana": 915,
     "skill": "Alteration",
     "castTime": 1,
@@ -4047,7 +4047,7 @@
     "range": 100
   },
   "spell:celestial-health": {
-    "description": "Fills your target's body with celestial health, healing between 115 and 115 hit points every 6 seconds for 24s.",
+    "description": "Fills your target's body with celestial health, healing 115 hit points every 6 seconds for 24s.",
     "mana": 155,
     "skill": "Alteration",
     "castTime": 3.5,
@@ -4184,7 +4184,7 @@
     "range": 100
   },
   "spell:skin-like-rock": {
-    "description": "Hardens the skin of your target, increasing their hit points and armor class for 27.0 mins.",
+    "description": "Hardens the skin of your target, increasing their hit points and armor class for 27 min.",
     "mana": 60,
     "skill": "Abjuration",
     "castTime": 5,
@@ -4197,7 +4197,7 @@
     "range": 100
   },
   "spell:skin-like-wood": {
-    "description": "Hardens the skin of your target, increasing their hit points and armor class.  Effectively a heal;  see Healing Spell Lines to compare with other heals.",
+    "description": "Hardens the skin of your target, increasing their hit points and armor class for 27 min.",
     "mana": 10,
     "skill": "Abjuration",
     "castTime": 3,
@@ -4210,7 +4210,7 @@
     "range": 100
   },
   "spell:see-invisible": {
-    "description": "Places a magical enchantment upon your target's eyes, allowing them to see otherwise invisible creatures for 27.0 mins.",
+    "description": "Places a magical enchantment upon your target's eyes, allowing them to see otherwise invisible creatures for 27 min.",
     "mana": 25,
     "skill": "Divination",
     "castTime": 2,
@@ -4223,7 +4223,7 @@
     "range": 100
   },
   "spell:banish-undead": {
-    "description": "A burst of holy power that inflicts 585 damage to an undead target (2.6 DPM).",
+    "description": "A burst of holy power that inflicts 468 damage to an undead target.",
     "mana": 118,
     "skill": "Evocation",
     "castTime": 3.5,
@@ -4236,7 +4236,7 @@
     "range": 200
   },
   "spell:celestial-healing": {
-    "description": "Fills your target's body with celestial power, healing 180 hit points every 6 seconds for 24 secs (4 ticks). 3.2 HPM. This spell has the potential to tick a 5th time.\n\nSee Healing Spell Lines to compare with other heals.",
+    "description": "Fills your target's body with celestial power, healing 180 hit points every 6 seconds for 24s.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 4,
@@ -4262,7 +4262,7 @@
     "range": 30
   },
   "spell:resolution": {
-    "description": "Provides your target with a sense of resolution, increasing their hit points and armor class for 1 hour(s) 3.0 mins.",
+    "description": "Provides your target with a sense of resolution, increasing their hit points and armor class for 63 min.",
     "mana": 110,
     "skill": "Abjuration",
     "castTime": 3.5,
@@ -4275,7 +4275,7 @@
     "range": 100
   },
   "spell:retribution": {
-    "description": "Calls upon the retribution of the gods to strike your target, causing between 496 and 516 damage with a ''very'' slight knockback effect. 2.067-2.15 DPM",
+    "description": "Calls upon the retribution of the gods to strike your target, causing 390 damage.",
     "mana": 144,
     "skill": "Evocation",
     "castTime": 4,
@@ -4288,7 +4288,7 @@
     "range": 200
   },
   "spell:symbol-of-naltron": {
-    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 54.0 mins. Requires a peridot to cast.",
+    "description": "Covers your target in a shimmer of holy runes, increasing their hit points for 54 min.",
     "mana": 315,
     "skill": "Abjuration",
     "castTime": 5,
@@ -4301,7 +4301,7 @@
     "range": 100
   },
   "spell:yaulp-iii": {
-    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class for 24 secs (4 ticks). It does not stack with Speed of the Shissar or Armor of Protection.",
+    "description": "Focuses your spiritual energy into a great battle cry, increasing your strength and armor class.",
     "mana": 1,
     "skill": "Abjuration",
     "castTime": 0.5,
@@ -4326,7 +4326,7 @@
     "range": 100
   },
   "spell:expel-summoned": {
-    "description": "A burst of holy power that inflicts between 243 and 273 damage to a summoned target (2.1 DPM).",
+    "description": "A burst of holy power that inflicts between 309 and 385 damage to a summoned target.",
     "mana": 108,
     "skill": "Evocation",
     "castTime": 3.5,
@@ -4339,7 +4339,7 @@
     "range": 200
   },
   "spell:shield-of-words": {
-    "description": "Covers your target in a holy guard, increasing their armor class for 1 hour(s) 12.0 mins.",
+    "description": "Covers your target in a holy guard, increasing their armor class for 72 min.",
     "mana": 300,
     "skill": "Abjuration",
     "castTime": 8,
@@ -4364,7 +4364,7 @@
     "resist": "Magic (0)"
   },
   "spell:word-of-healing": {
-    "description": "Mends the wounds of everyone in your group, Increase Hitpoints by 393 (L49) to 400 (L50).",
+    "description": "Mends the wounds of everyone in your group, healing between 708 and 758 hit points.",
     "mana": 425,
     "skill": "Alteration",
     "castTime": 4,
@@ -4377,7 +4377,7 @@
     "range": 100
   },
   "spell:sound-of-force": {
-    "description": "Strikes an enemy with holy might, briefly stunning them and causing 220 hit points of damage. This spell works on creatures up to level @1.",
+    "description": "Strikes an enemy with holy might, briefly stunning them and causing 220 hit points of damage. This spell works on creatures up to level 55.",
     "mana": 120,
     "skill": "Evocation",
     "castTime": 3,
@@ -4390,7 +4390,7 @@
     "range": 200
   },
   "spell:flame-lick": {
-    "description": "Surrounds your target in flickering flames, lowering their armor class, and damaging them.  Must have a {{:Fire Beetle Eye",
+    "description": "Surrounds your target in flickering flames, lowering their armor class, and doing 17 damage every 6 seconds for 36s. Requires, but does not consume, a fire beetle eye when cast.",
     "mana": 12,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -4403,7 +4403,7 @@
     "range": 200
   },
   "spell:lull-animal": {
-    "description": "Lulls the ferocity of many animals, making them less likely to attack.  This spell works on creatures up to level @1.",
+    "description": "Lulls the ferocity of many animals, making them less likely to attack. This spell works on creatures up to level 30.",
     "mana": 10,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -4429,7 +4429,7 @@
     "range": 200
   },
   "spell:snare": {
-    "description": "Entangles your target's feet with magical roots, slowing their movement speed.\n\nThis spell, and spells like it which reduce movement speed, are informally referred to as \"Snare\" spells. They include Ensnare, the necromancer/SK Engulfing Darkness line of spells, the wizard Bonds of Force and the druid Bonds of Tunare targeted AE snares, the bard Largo's Absonant Binding PBAE snare, and rogue poisons.\n\nSnare spells are essential to common kiting strategies, allowing casters ample time to cast their nukes and reliably keeping them safe for the duration of the fight.",
+    "description": "Entangles your target's feet with magical roots, slowing their movement speed for up to 3 min 54s.",
     "mana": 15,
     "skill": "Alteration",
     "castTime": 2,
@@ -4442,7 +4442,7 @@
     "range": 200
   },
   "spell:harmony": {
-    "description": "Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack.  This spell only works outdoors.\n\nThis spell can not be resisted by almost any NPC - however, it does not reduce the aggro/reaction radius as much as other lull spells so one must take into account how closely grouped your targets are. Despite that weaker reduction, this spell is much preferred over every other lull that comes with the risk of a critical resist and aggro. The power of an unresistable lull gives Druids/Rangers great utility to either pull themselves or aid monks/shadowknights in splitting pulls. A druid or ranger targeting a hidden/sneaking rogue can do some amazing work in areas like Plane of Hate's second floor where pulling tends to be uncontrolled at best; the rogue can position themselves in a specific spot where the harmony cast *on them* will only hit specific mobs in a room (like the Evangelist room) or area in order to allow pullers to more easily thin out larger packs of enemies.\n\nSpecial considerations: This spell will aggro Venril Sathir's Remains.",
+    "description": "Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack. This spell works on creatures up to level 40, and only works outdoors.",
     "mana": 25,
     "skill": "Abjuration",
     "castTime": 3,
@@ -4455,7 +4455,7 @@
     "range": 200
   },
   "spell:whirling-wind": {
-    "description": "Summons a whirling wind to stun your target, also doing between 22 and 25 damage. Reputed to be only usable in outdoor zones.",
+    "description": "Summons a whirling wind to stun your target, also doing 13 damage. This spell can only stun targets up to level 55 for 55 seconds.",
     "mana": 7,
     "skill": "Conjuration",
     "castTime": 1.5,
@@ -4468,19 +4468,19 @@
     "range": 200
   },
   "spell:firefist": {
-    "description": "Fills your hands with the force of flame, increasing your attack rating for 12.0 mins.\n\nDoesn't stack with some other ATK buffs such as Grim Aura, Strength of Nature, Yaulp spells, and Celestial Tranquility.",
+    "description": "Fills your hands with the force of flame, increasing your attack rating.",
     "mana": 30,
     "skill": "Evocation",
     "castTime": 3.5,
     "recastTime": 7,
     "fizzleTime": 2.25,
-    "duration": "12 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
   },
   "spell:ignite": {
-    "description": "Ignites your target's skin, doing between 32 and 37 damage. 1.23 DPM",
+    "description": "Ignites your target's skin, doing 46 damage.",
     "mana": 21,
     "skill": "Evocation",
     "castTime": 2,
@@ -4493,7 +4493,7 @@
     "range": 200
   },
   "spell:shield-of-thistles": {
-    "description": "Surrounds your target in a shield of thistles that cause damage to anything that strikes them for up to 1.3 mins @L9 to 6.5 mins @L65.",
+    "description": "Surrounds your target in a shield of thistles that cause damage to anything that strikes them for up to 15 min.",
     "mana": 40,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -4506,7 +4506,7 @@
     "range": 100
   },
   "spell:starshine": {
-    "description": "Creates a stone that glows with the light of the heavens.",
+    "description": "Creates a stone that glows with the light of the heavens. This spell can only be cast outdoors.",
     "mana": 50,
     "skill": "Conjuration",
     "castTime": 5,
@@ -4518,7 +4518,7 @@
     "resist": "Unresistable"
   },
   "spell:strength-of-earth": {
-    "description": "Fills your target with the power of the earth, increasing their strength for 21.0 mins @L7 to 27.0 mins @L9.",
+    "description": "Fills your target with the power of the earth, increasing their strength for 27 min.",
     "mana": 40,
     "skill": "Alteration",
     "castTime": 5,
@@ -4531,7 +4531,7 @@
     "range": 100
   },
   "spell:treeform": {
-    "description": "Transforms you into a stout tree, preventing movement, but increasing your regeneration. This spell also grants you improved night vision (Infravision). You can only cast this spell in the outdoors.",
+    "description": "Transforms you into a stout tree, preventing movement, but increasing your regeneration. This spell can only be cast outdoors.",
     "mana": 30,
     "skill": "Alteration",
     "castTime": 4,
@@ -4556,7 +4556,7 @@
     "range": 150
   },
   "spell:resurrection": {
-    "description": "Revives a slain ally, restoring 90 percent of their lost experience.  It takes some time for the recently revived to fully recover.",
+    "description": "Revives a slain ally, restoring 90% of their lost experience. It takes some time for the recently revived to fully recover.",
     "mana": 700,
     "skill": "Alteration",
     "castTime": 3,
@@ -4569,7 +4569,7 @@
     "range": 200
   },
   "spell:stinging-swarm": {
-    "description": "Commands a swarm of insects to attack your target relentlessly, causing 8 (moving) or 13 (root, fear or engaged) damage every six seconds for 30 secs (5 ticks @L10 to 9 ticks @L18). Max total damage at L18 and on is 117 (1.8 DPM).",
+    "description": "Commands a swarm of insects to attack your target relentlessly, causing 42 damage every six seconds for 54s.",
     "mana": 71,
     "skill": "Conjuration",
     "castTime": 3,
@@ -4582,7 +4582,7 @@
     "range": 250
   },
   "spell:immobilize": {
-    "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1 min. <br> This fast-casting root is replaced by Fetter.",
+    "description": "Causes the earth to adhere to your target's feet, preventing them from moving for up to 1 min.",
     "mana": 80,
     "skill": "Alteration",
     "castTime": 1.75,
@@ -4595,7 +4595,7 @@
     "range": 200
   },
   "spell:burst-of-fire": {
-    "description": "Creates a ball of fire that burns your target.",
+    "description": "Creates a ball of fire that burns your target, doing 14 damage.",
     "mana": 7,
     "skill": "Evocation",
     "castTime": 1.5,
@@ -4608,7 +4608,7 @@
     "range": 200
   },
   "spell:camouflage": {
-    "description": "Covers your body in a mystic shield, allowing you to blend in with your outdoor surroundings. This spell only works outdoors.",
+    "description": "Covers your body in a mystic shield, allowing you to blend in with your outdoor surroundings.",
     "mana": 15,
     "skill": "Divination",
     "castTime": 5,
@@ -4621,7 +4621,7 @@
     "range": 100
   },
   "spell:dance-of-the-fireflies": {
-    "description": "Summons a swarm of mystic fireflies to your hands, providing light in dark areas. Summoned: Firefly Globe, a light source. Can only be cast between 7pm and 4 am, outdoors.",
+    "description": "Summons a swarm of mystic fireflies to your hands, providing light in dark areas.",
     "mana": 10,
     "skill": "Conjuration",
     "castTime": 3,
@@ -4633,7 +4633,7 @@
     "resist": "Unresistable"
   },
   "spell:grasping-roots": {
-    "description": "Commands roots to take hold of your target, doing damage and preventing their movement.",
+    "description": "Commands roots to take hold of your target, doing 10 damage and preventing their movement for 48s.",
     "mana": 35,
     "skill": "Alteration",
     "castTime": 2,
@@ -4665,13 +4665,13 @@
     "castTime": 2,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "27 minutes @L9 to 3 hours 15 minutes @L60",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Magic (0)"
   },
   "spell:protection-of-wood": {
-    "description": "Hardens the skin of your group, increasing their hit points and armor class for 27 minutes.",
+    "description": "Hardens the skin of your group, increasing their hit points and armor class for 27 min.",
     "mana": 25,
     "skill": "Abjuration",
     "castTime": 4.5,
@@ -4697,7 +4697,7 @@
     "range": 200
   },
   "spell:tangling-weeds": {
-    "description": "Entangles your target's feet with magical roots, slowing their movement speed for up to 18 seconds.",
+    "description": "Entangles your target's feet with magical roots, slowing their movement speed for up to 18s.",
     "mana": 15,
     "skill": "Alteration",
     "castTime": 0.5,
@@ -4722,7 +4722,7 @@
     "resist": "Unresistable"
   },
   "spell:sacred-echo": {
-    "description": "Fills your target's body with a sacred echo, immediately healing between 640 and 640 hit points, then healing twice more for between 260 and 260 hit points every 6 seconds for 0:00:06.\n\nSpell Line: Echo of Health",
+    "description": "Fills your target's body with a sacred echo, immediately healing 640 hit points, then healing twice more for 260 hit points every 6 seconds for 6s.",
     "mana": 300,
     "skill": "Alteration",
     "castTime": 1.5,
@@ -4735,7 +4735,7 @@
     "range": 100
   },
   "spell:budding-heal": {
-    "description": "Seeds your target with healing energy, healing for 11 every 6 seconds for 0:00:24 and then healing for 18.<br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 11 every 6 seconds for 24s and then healing for 18.",
     "mana": 20,
     "skill": "Alteration",
     "castTime": 2,
@@ -4748,7 +4748,7 @@
     "range": 100
   },
   "spell:sprouting-heal": {
-    "description": "Seeds your target with healing energy, healing for 30 every 6 seconds for 0:00:24 and then healing for 100. <br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 30 every 6 seconds for 24s and then healing for 100.",
     "mana": 70,
     "skill": "Alteration",
     "castTime": 2,
@@ -4785,7 +4785,7 @@
     "range": 100
   },
   "spell:healing-light": {
-    "description": "Mends your target's wounds, healing between 620 and 801 hit points.",
+    "description": "Mends your target's wounds, healing 801 hit points.",
     "mana": 238,
     "skill": "Alteration",
     "castTime": 3.75,
@@ -4821,7 +4821,7 @@
     "range": 100
   },
   "spell:skin-like-steel": {
-    "description": "Hardens the skin of your target, increasing their hit points and armor class for 36.0 mins.",
+    "description": "Hardens the skin of your target, increasing their hit points and armor class for 36 min.",
     "mana": 100,
     "skill": "Abjuration",
     "castTime": 6,
@@ -4840,13 +4840,13 @@
     "castTime": 2,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "57 minutes @L19 to 3 hours @L60",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Magic (0)"
   },
   "spell:calm-animal": {
-    "description": "Calms the ferocity of many animals, making them less likely to attack. Noticeably larger aggro radius than Calm.",
+    "description": "Calms the ferocity of many animals, making them less likely to attack. This spell works on creatures up to level 50.",
     "mana": 45,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -4859,7 +4859,7 @@
     "range": 200
   },
   "spell:careless-lightning": {
-    "description": "Calls down lightning from the sky, causing between 94 and 99 damage to your target. Max 1.4 DPM.",
+    "description": "Calls down lightning from the sky, causing 105 damage to your target.",
     "mana": 37,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -4872,7 +4872,7 @@
     "range": 200
   },
   "spell:dizzying-wind": {
-    "description": "Summons a whirling wind to stun your target, also doing between 110 and 122 damage. Max 1.53 DPM. Can only be cast outdoors.",
+    "description": "Summons a whirling wind to stun your target while also doing 95 damage. This spell can only stun targets up to level 55 for 55 seconds.",
     "mana": 50,
     "skill": "Conjuration",
     "castTime": 2,
@@ -4934,7 +4934,7 @@
     "resist": "Unresistable"
   },
   "spell:shield-of-barbs": {
-    "description": "Surrounds your target in a shield of barbs that causes damage to anything that strikes them.",
+    "description": "Surrounds your target in a shield of barbs that causes damage to anything that strikes them for 15 min.",
     "mana": 60,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -4947,7 +4947,7 @@
     "range": 100
   },
   "spell:superior-camouflage": {
-    "description": "Covers your target's body in a mystic cloak, allowing them to blend in with their surroundings. Unlike Camouflage this spell works both outdoors and indoors. <br> The effect of this spell is the same as that of Invisibility.",
+    "description": "Covers your target's body in a mystic cloak, allowing them to blend in with their surroundings.",
     "mana": 40,
     "skill": "Divination",
     "castTime": 5,
@@ -4960,7 +4960,7 @@
     "range": 100
   },
   "spell:terrorize-animal": {
-    "description": "Incites fear in an animal target, causing them to flee.\n\nThis spell has a longer duration and better mana efficiency cost than the level 51 spell Repulse Animal, but a slightly worse resist modifier.",
+    "description": "Incites fear in an animal target, causing them to flee.",
     "mana": 30,
     "skill": "Alteration",
     "castTime": 1.75,
@@ -4973,7 +4973,7 @@
     "range": 200
   },
   "spell:creeping-crud": {
-    "description": "Covers your target in oozing filth, causing 21 damage every 6 seconds for 66 secs (11 ticks). Max 2.31 DPM.",
+    "description": "Covers your target in oozing filth, causing 85 damage every 6 seconds for 48s.",
     "mana": 167,
     "skill": "Conjuration",
     "castTime": 3,
@@ -4986,7 +4986,7 @@
     "range": 250
   },
   "spell:ensnaring-roots": {
-    "description": "Commands roots to take hold of your target, doing between 34 and 60 damage, and preventing their movement for 1.4 mins @L24 to 1.6 mins @L27.",
+    "description": "Commands roots to take hold of your target, doing 60 damage, and preventing their movement for 1 min 36s.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -5049,7 +5049,7 @@
     "range": 200
   },
   "spell:wolf-form": {
-    "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf for 1 hour @L20 to 1 hour(s) 12.0 mins @L24, increasing your movement speed, and attack rating. Can only cast this spell outdoors. This spell also grants you improved night vision (Infravision).\n\n\nWolf Form affects faction and will make you indifferent to races that are otherwise KoS:\n*The Drachnids in the Dreadlands\n*The Undead in Unrest\n\nWolf Form makes you KoS in Firiona Vie and Halas. In Everfrost Peaks, Tundra Jack and Iceberg and all other Barbarian guards will attack you. Also KOS to Pirates of Iceclad (including Frankel the Pirate at the dock in North Ro).",
+    "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf, increasing your movement speed, and attack rating.",
     "mana": 60,
     "skill": "Alteration",
     "castTime": 4,
@@ -5080,7 +5080,7 @@
     "castTime": 2,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "1 hour 27 minutes @L29 to 3 hours 15 minutes @L65",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Magic (0)"
@@ -5122,7 +5122,7 @@
     "resist": "Unresistable"
   },
   "spell:combust": {
-    "description": "Ignites your target's skin, doing between 171 and 182 damage. Max 1.66 DPM.",
+    "description": "Ignites your target's skin, doing 182 damage.",
     "mana": 85,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -5135,7 +5135,7 @@
     "range": 200
   },
   "spell:ensnare": {
-    "description": "Entangles your target's feet with magical roots, slowing their movement speed.",
+    "description": "Entangles your target's feet with magical roots, slowing their movement speed for up to 14 min.",
     "mana": 35,
     "skill": "Alteration",
     "castTime": 1.75,
@@ -5148,7 +5148,7 @@
     "range": 200
   },
   "spell:immolate": {
-    "description": "Inflicts burns on your target, causing 24 damage every 6 seconds for 66 secs (11 ticks). Requires a {{:Fire Beetle Eye",
+    "description": "Inflicts burns on your target, causing between 67 and 72 damage every 6 seconds for 48s. Requires a fire beetle eye to cast.",
     "mana": 72,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -5161,7 +5161,7 @@
     "range": 200
   },
   "spell:shield-of-brambles": {
-    "description": "Surrounds your target in a shield of brambles that cause damage to anything that strikes them.",
+    "description": "Surrounds your target in a shield of brambles that cause damage to anything that strikes them for 15 min.",
     "mana": 80,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -5222,7 +5222,7 @@
     "resist": "Unresistable"
   },
   "spell:greater-wolf-form": {
-    "description": "Fills you with the spirit of the wild, allowing you to take the form a wolf for 1 hour(s) 30.0 mins @L30 to 1 hour(s) 50.0 mins @L37, increasing your movement rate, and attack rating. Only castable outdoors.",
+    "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf, increasing your movement speed, and attack rating.",
     "mana": 90,
     "skill": "Alteration",
     "castTime": 5,
@@ -5247,7 +5247,7 @@
     "range": 200
   },
   "spell:fury-of-air": {
-    "description": "Summons a whirling wind to stun your target, also doing 250 damage. Works indoors.",
+    "description": "Summons a whirling wind 170 damage and stuns the target up to level 55 for 55 seconds.",
     "mana": 85,
     "skill": "Evocation",
     "castTime": 2.5,
@@ -5260,7 +5260,7 @@
     "range": 200
   },
   "spell:ring-of-surefall-glade": {
-    "description": "Opens a mystical portal that transports you to the Surefall Glade.",
+    "description": "Opens a mystical portal that transports you to Surefall Glade.",
     "mana": 150,
     "skill": "Alteration",
     "castTime": 7,
@@ -5320,7 +5320,7 @@
     "resist": "Unresistable"
   },
   "spell:circle-of-butcherblock": {
-    "description": "Opens a mystical portal that transports your group to Butcherblock Mountains.",
+    "description": "Opens a mystical portal that transports your group to the Butcherblock Mountains.",
     "mana": 300,
     "skill": "Alteration",
     "castTime": 16,
@@ -5372,7 +5372,7 @@
     "range": 100
   },
   "spell:protection-of-rock": {
-    "description": "Hardens the skin of your group, increasing their hit points and armor class for 27.0 mins.",
+    "description": "Hardens the skin of your group, increasing their hit points and armor class for 27 min.",
     "mana": 150,
     "skill": "Abjuration",
     "castTime": 6.5,
@@ -5398,7 +5398,7 @@
     "range": 100
   },
   "spell:protection-of-steel": {
-    "description": "Hardens the skin of your group, increasing their hit points and armor class for 36.0 mins.",
+    "description": "Hardens the skin of your group, increasing their hit points and armor class for 36 min.",
     "mana": 250,
     "skill": "Abjuration",
     "castTime": 7,
@@ -5411,7 +5411,7 @@
     "range": 100
   },
   "spell:harmony-of-nature": {
-    "description": "Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack.  This spell works on creatures up to level 65.",
+    "description": "Calms the savage spirit of almost any creature, making them less likely to attack. This spell works on creatures up to level 65.",
     "mana": 100,
     "skill": "Abjuration",
     "castTime": 2.5,
@@ -5424,7 +5424,7 @@
     "range": 200
   },
   "spell:flowering-heal": {
-    "description": "Seeds your target with healing energy, healing for 60 every 6 seconds for 0:00:24 and then healing for 197. <br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 60 every 6 seconds for 24s and then healing for 197.",
     "mana": 130,
     "skill": "Alteration",
     "castTime": 2,
@@ -5437,7 +5437,7 @@
     "range": 100
   },
   "spell:blooming-heal": {
-    "description": "Seeds your target with healing energy, healing for 90 every 6 seconds for 0:00:24 and then healing for 200. <br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 90 every 6 seconds for 24s and then healing for 200.",
     "mana": 195,
     "skill": "Alteration",
     "castTime": 2,
@@ -5450,7 +5450,7 @@
     "range": 100
   },
   "spell:skin-like-diamond": {
-    "description": "Hardens the skin of your target, increasing their hit points and armor class for 54.0 mins.",
+    "description": "Hardens the skin of your target, increasing their hit points and armor class for 54 min.",
     "mana": 200,
     "skill": "Abjuration",
     "castTime": 6,
@@ -5463,7 +5463,7 @@
     "range": 100
   },
   "spell:skin-like-nature": {
-    "description": "Hardens the skin of your target, increasing their hit points and armor class for 1 hour(s) 12.0 mins.",
+    "description": "Hardens the skin of your target, increasing their hit points and armor class for 72 min.",
     "mana": 300,
     "skill": "Abjuration",
     "castTime": 6,
@@ -5476,7 +5476,7 @@
     "range": 100
   },
   "spell:banish-summoned": {
-    "description": "A burst of holy power that inflicts 585 damage to a summoned target (2.6 DPM)",
+    "description": "A burst of holy power that inflicts 540 damage to a summoned target.",
     "mana": 136,
     "skill": "Evocation",
     "castTime": 4,
@@ -5489,7 +5489,7 @@
     "range": 200
   },
   "spell:drones-of-doom": {
-    "description": "Commands a swarm of insects to attack your target relentlessly, causing 34 damage every six seconds for 60 secs (10 ticks). 2.41 damage per mana.",
+    "description": "Commands a swarm of insects to attack your target relentlessly, causing 156 damage every six seconds for 48s.",
     "mana": 287,
     "skill": "Conjuration",
     "castTime": 3,
@@ -5502,7 +5502,7 @@
     "range": 250
   },
   "spell:strength-of-stone": {
-    "description": "Fills your target with the power of the stone, increasing their strength for 36.0 mins.",
+    "description": "Fills your target with the power of the stone, increasing their strength for 36 min.",
     "mana": 65,
     "skill": "Alteration",
     "castTime": 5,
@@ -5528,7 +5528,7 @@
     "range": 150
   },
   "spell:enveloping-roots": {
-    "description": "Commands roots to take hold of your target, doing from 88 to 110 damage and preventing their movement for 1 min.",
+    "description": "Commands roots to take hold of your target, doing 110 damage and preventing their movement for 1 min.",
     "mana": 80,
     "skill": "Alteration",
     "castTime": 1.75,
@@ -5541,7 +5541,7 @@
     "range": 200
   },
   "spell:firestrike": {
-    "description": "Ignites your target's skin, doing between 282 and 302 damage. 1.95 damage per mana.",
+    "description": "Ignites your target's skin, doing 422 damage.",
     "mana": 138,
     "skill": "Evocation",
     "castTime": 4,
@@ -5554,7 +5554,7 @@
     "range": 200
   },
   "spell:pack-regeneration": {
-    "description": "Hastens your groups natural healing, allowing them to recover hit points faster.",
+    "description": "Hastens your group's natural healing, regenerating up to 9 hit points every 6 seconds for 14 min.",
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
@@ -5567,7 +5567,7 @@
     "range": 100
   },
   "spell:pack-spirit": {
-    "description": "Imbues your group with the spirit of the wolf, increasing their movement speed for 36.0 mins.",
+    "description": "Imbues your group with the spirit of the wolf, increasing their movement speed for 36 min.",
     "mana": 120,
     "skill": "Alteration",
     "castTime": 6.5,
@@ -5580,7 +5580,7 @@
     "range": 100
   },
   "spell:share-wolf-form": {
-    "description": "Fills your group with the spirit of the wild, allowing them to take the form of a wolf for 36.0 mins. Note: the range is 0, you need to have everyone stand right next to you for it to take effect. This spell can only be cast outdoors.",
+    "description": "Fills your group with the spirit of the wild, allowing them to take the form of a wolf for 36 min.",
     "mana": 120,
     "skill": "Alteration",
     "castTime": 6,
@@ -5592,7 +5592,7 @@
     "resist": "Unresistable"
   },
   "spell:shield-of-spikes": {
-    "description": "Surrounds your target in a shield of spikes that cause damage to anything that strikes them.",
+    "description": "Surrounds your target in a shield of spikes that cause damage to anything that strikes them for 15 min.",
     "mana": 100,
     "skill": "Abjuration",
     "castTime": 3,
@@ -5605,13 +5605,13 @@
     "range": 100
   },
   "spell:spikecoat": {
-    "description": "Surrounds your body in a coat of spikes that increases your armor class, as well as harming those that strike you for 1 hour(s) 57.0 mins @L39 to 3 hour(s) 15.0 mins @L65. Overwrites Armor of Protection for clerics with the belt.",
+    "description": "Surrounds your body in a coat of spikes that increases your armor class, as well as harming those that strike you.",
     "mana": 110,
     "skill": "Abjuration",
     "castTime": 2,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "1 hour 57 minutes @L39 to 3 hours 15 minutes @L65",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Magic (0)"
@@ -5630,7 +5630,7 @@
     "range": 200
   },
   "spell:drifting-death": {
-    "description": "Commands a swarm of insects to attack your target relentlessly, causing 65 damage every 6 seconds for 60 secs (10 ticks). 3.25 damage per mana.",
+    "description": "Commands a swarm of insects to attack your target relentlessly, causing between 195 and 198 damage every 6 seconds for 54s.",
     "mana": 370,
     "skill": "Conjuration",
     "castTime": 3,
@@ -5643,7 +5643,7 @@
     "range": 250
   },
   "spell:fixation-of-ro": {
-    "description": "Surrounds your target in dancing flames, lowering their attack and armor class. Does not stack with Breath of Ro.",
+    "description": "Surrounds your target in dancing flames, lowering their attack and armor class.",
     "mana": 100,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -5656,7 +5656,7 @@
     "range": 150
   },
   "spell:form-of-the-great-wolf": {
-    "description": "Fills you with the spirit of the wild, allowing you to take the form a wolf for 2 hours @L40 to 2 hour(s) 24.0 mins @L48.",
+    "description": "Fills you with the spirit of the wild, allowing you to take the form a wolf and granting *100%N.",
     "mana": 135,
     "skill": "Alteration",
     "castTime": 6,
@@ -5681,7 +5681,7 @@
     "range": 100
   },
   "spell:storm-strength": {
-    "description": "Fills your target with the power of the storm, increasing their strength for 54 minutes.",
+    "description": "Fills your target with the power of the storm, increasing their strength for 54 min.",
     "mana": 85,
     "skill": "Alteration",
     "castTime": 5,
@@ -5700,7 +5700,7 @@
     "castTime": 2,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "2 hours 27 minutes @L49 to 3 hours 15 minutes @L65",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Magic (0)"
@@ -5731,7 +5731,7 @@
     "resist": "Unresistable"
   },
   "spell:engulfing-roots": {
-    "description": "Commands roots to take hold of your target, doing between 157 and 160 damage, and preventing their movement for 3.0 mins.",
+    "description": "Commands roots to take hold of your target, doing 160 damage, and preventing their movement for 3 min.",
     "mana": 100,
     "skill": "Alteration",
     "castTime": 2.5,
@@ -5757,7 +5757,7 @@
     "range": 200
   },
   "spell:ice": {
-    "description": "Covers your target in glistening ice, causing 612 damage, and lowering their fire resistance for 18 seconds. 2.44 DPM",
+    "description": "Covers your target in glistening ice, causing between 520 and 538 damage, and lowering their fire resistance.",
     "mana": 142,
     "skill": "Evocation",
     "castTime": 5,
@@ -5783,7 +5783,7 @@
     "range": 200
   },
   "spell:pack-chloroplast": {
-    "description": "Hastens your groups natural healing, allowing them to recover hit points faster.",
+    "description": "Hastens your group's natural healing, regenerating up to 19 hit points every 6 seconds for 14 min.",
     "mana": 400,
     "skill": "Alteration",
     "castTime": 9,
@@ -5796,7 +5796,7 @@
     "range": 100
   },
   "spell:shield-of-thorns": {
-    "description": "Surrounds your target in a shield of thorns that cause damage to anything that strikes them.",
+    "description": "Surrounds your target in a shield of thorns that cause damage to anything that strikes them for 15 min.",
     "mana": 120,
     "skill": "Abjuration",
     "castTime": 3,
@@ -5874,7 +5874,7 @@
     "range": 100
   },
   "spell:nature-s-renewal": {
-    "description": "Mends your target's wounds, healing between 434 and 447 hit points.",
+    "description": "Mends your target's wounds, healing 447 hit points.",
     "mana": 173,
     "skill": "Alteration",
     "castTime": 3.5,
@@ -5887,7 +5887,7 @@
     "range": 100
   },
   "spell:protection-of-diamond": {
-    "description": "Hardens the skin of your group, increasing their hit points and armor class for 54.0 mins.",
+    "description": "Hardens the skin of your group, increasing their hit points and armor class for 54 min.",
     "mana": 450,
     "skill": "Abjuration",
     "castTime": 8,
@@ -5900,7 +5900,7 @@
     "range": 100
   },
   "spell:zephyr-toxxulia": {
-    "description": "Opens a mystical portal that teleports your target to the Toxxulia Forest.",
+    "description": "Opens a mystical portal that teleports your target to Toxxulia Forest.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -5952,7 +5952,7 @@
     "range": 100
   },
   "spell:zephyr-surefall-glade": {
-    "description": "Opens a mystical portal that teleports your target to the Surefall Glade.",
+    "description": "Opens a mystical portal that teleports your target to Surefall Glade.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -5965,7 +5965,7 @@
     "range": 100
   },
   "spell:zephyr-west-commons": {
-    "description": "Opens a mystical portal that teleports your target to the Western Commonlands.",
+    "description": "Opens a mystical portal that teleports your target to the Commonlands.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -5978,7 +5978,7 @@
     "range": 100
   },
   "spell:zephyr-feerrott": {
-    "description": "Opens a mystical portal that teleports your target to the Feerrott Jungle.",
+    "description": "Opens a mystical portal that teleports your target to the Feerrott.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -5991,7 +5991,7 @@
     "range": 100
   },
   "spell:zephyr-steamfont": {
-    "description": "Opens a mystical portal that teleports your target to the Steamfont Mountains.",
+    "description": "Opens a mystical portal that teleports your target to Steamfont Mountains.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -6004,7 +6004,7 @@
     "range": 100
   },
   "spell:zephyr-south-ro": {
-    "description": "Opens a mystical portal that teleports your target to The Southern Desert of Ro.",
+    "description": "Opens a mystical portal that teleports your target to the South Desert of Ro.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -6017,7 +6017,7 @@
     "range": 100
   },
   "spell:zephyr-misty-thicket": {
-    "description": "Opens a mystical portal that teleports your target to the Misty Thicket.",
+    "description": "Opens a mystical portal that teleports your target to Misty Thicket.",
     "mana": 225,
     "skill": "Alteration",
     "castTime": 10,
@@ -6055,7 +6055,7 @@
     "resist": "Unresistable"
   },
   "spell:share-form-of-the-great-wolf": {
-    "description": "Fills your group with the spirit of the wild, allowing them to take the form of a wolf for 6:00:00 and granting Illusion Benefit Dena.",
+    "description": "Fills your group with the spirit of the wild, allowing them to take the form a wolf for 360 min and granting *100%N.",
     "mana": 350,
     "skill": "Alteration",
     "castTime": 6,
@@ -6067,7 +6067,7 @@
     "resist": "Unresistable"
   },
   "spell:blossoming-heal": {
-    "description": "Seeds your target with healing energy, healing for 120 every 6 seconds for 0:00:24 and then healing for 390. <br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 120 every 6 seconds for 24s and then healing for 390.",
     "mana": 250,
     "skill": "Alteration",
     "castTime": 2,
@@ -6080,7 +6080,7 @@
     "range": 100
   },
   "spell:efflorescing-heal": {
-    "description": "Seeds your target with healing energy, healing for 150 every 6 seconds for 0:00:24 and then healing for 450. <br>\n\nSpell Line: Budding Heal",
+    "description": "Seeds your target with healing energy, healing for 150 every 6 seconds for 24s and then healing for 450.",
     "mana": 255,
     "skill": "Alteration",
     "castTime": 2,
@@ -6111,7 +6111,7 @@
     "castTime": 2.5,
     "recastTime": 1.5,
     "fizzleTime": 1.5,
-    "duration": "Infinite",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -6338,7 +6338,7 @@
     "castTime": 4,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "24 minutes @L8 to 27 minutes @L9",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -6531,7 +6531,7 @@
     "resist": "Magic (0)"
   },
   "spell:improved-superior-camouflage": {
-    "description": "Covers your body in a mystic cloak, allowing you to blend in with your surroundings. This spell works both outdoors and indoors. Unlike Superior Camouflage, this effect does not randomly break early and will always last the full duration.<br><span style=\"color:red;\">The name of the scroll for this spell is... Spell: Improved Superior Camo </span>",
+    "description": "Covers your body in a mystic cloak, allowing you to blend in with your surroundings.",
     "mana": 75,
     "skill": "Divination",
     "castTime": 5,
@@ -6543,7 +6543,7 @@
     "resist": "Unresistable"
   },
   "spell:legacy-of-spike": {
-    "description": "Surrounds your group in a shield of spikes that causes damage to anything that strikes them.",
+    "description": "Surrounds your group in a shield of spikes that causes damage to anything that strikes them for 15 min.",
     "mana": 300,
     "skill": "Abjuration",
     "castTime": 3,
@@ -6555,7 +6555,7 @@
     "resist": "Magic (0)"
   },
   "spell:levitation": {
-    "description": "Lifts your body on a cushion of air, allowing you to levitate a short distance off the ground.",
+    "description": "Forms a cloud of dense air around your feet, allowing you to float slightly off the ground for 20 min 30s.",
     "mana": 60,
     "skill": "| mana = 60",
     "castTime": 3,
@@ -6567,7 +6567,7 @@
     "resist": "Unresistable"
   },
   "spell:everlasting-breath": {
-    "description": "Fills your lungs with magical breath, removing your necessity for air for 27.0 mins.",
+    "description": "Fills your lungs with magical breath, removing your necessity for air for 27 min.",
     "mana": 55,
     "skill": "Alteration",
     "castTime": 4,
@@ -6593,7 +6593,7 @@
     "range": 200
   },
   "spell:starfire": {
-    "description": "Ignites your target's skin, doing 612 damage. 2.44 damage per mana.",
+    "description": "Ignites your target's skin, doing 634 damage.",
     "mana": 186,
     "skill": "Evocation",
     "castTime": 5,
@@ -6681,7 +6681,7 @@
     "range": 100
   },
   "spell:protection-of-nature": {
-    "description": "Hardens the skin of your group, increasing their hit points and armor class for 1:12:00.",
+    "description": "Hardens the skin of your group, increasing their hit points and armor class for 72 min.",
     "mana": 700,
     "skill": "Abjuration",
     "castTime": 9,
@@ -6694,7 +6694,7 @@
     "range": 100
   },
   "spell:forest-s-renewal": {
-    "description": "Mends your target's wounds, healing between 490 and 671 hit points.",
+    "description": "Mends your target's wounds, healing 671 hit points.",
     "mana": 233,
     "skill": "Alteration",
     "castTime": 3.75,
@@ -6707,7 +6707,7 @@
     "range": 100
   },
   "spell:vengeance-of-the-wild": {
-    "description": "Inflicts the vengeance of the wild on your target, causing between 121 and 131 damage every six seconds for 0:00:30.",
+    "description": "Inflicts the vengeance of the wild on your target, causing between 122 and 131 damage every six seconds for 30s.",
     "mana": 180,
     "skill": "Conjuration",
     "castTime": 3,
@@ -6887,7 +6887,7 @@
     "castTime": 5,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "36 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -7086,7 +7086,7 @@
     "castTime": 5,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "45 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -7478,7 +7478,7 @@
     "castTime": 6,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "54 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -7642,7 +7642,7 @@
     "castTime": 12,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "1 hour 12 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -9858,13 +9858,13 @@
     "castTime": 3,
     "recastTime": 1.5,
     "fizzleTime": 1.5,
-    "duration": "12 minutes @L4 to 27 minutes @L9",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
   },
   "spell:leering-corpse": {
-    "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast.  The level 3 pet max-hits for 8, the level 4 pet max-hits for 10 and the level 5 pet max-hits for 12.",
+    "description": "Animates an undead servant from the remnants of the fallen.  Consumes one bone chips when cast.",
     "mana": 40,
     "skill": "Conjuration",
     "castTime": 6,
@@ -9915,7 +9915,7 @@
     "range": 200
   },
   "spell:bone-walk": {
-    "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast. The level 6-7 pet max-hits for 10, the level 8 pet max-hits for 12 and the level 9 pet max-hits for 14. Attacks are non-magical.",
+    "description": "Animates an undead servant from the remnants of the fallen.",
     "mana": 80,
     "skill": "Conjuration",
     "castTime": 7,
@@ -9946,7 +9946,7 @@
     "castTime": 3,
     "recastTime": 6,
     "fizzleTime": 2.25,
-    "duration": "1.8 minutes @L8 to 7 minutes @L60",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -9958,7 +9958,7 @@
     "castTime": 3,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "24 minutes @L8 to 27 minutes @L9",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -10020,13 +10020,13 @@
     "castTime": 3,
     "recastTime": 6,
     "fizzleTime": 2.25,
-    "duration": "1.8 minutes @L8 to 7 minutes @L60",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
   },
   "spell:convoke-shadow": {
-    "description": "Animates an undead servant from the remnants of the fallen.  Consumes two bone chips when cast.\n\nLevel to Max Hit Chart \n* level 8 = 10 damage\n* level 9 = 12 Damage\n* level 10 = 14 Damage\n* level 11 = 16 Damage",
+    "description": "Animates an undead servant from the remnants of the fallen.",
     "mana": 120,
     "skill": "Conjuration",
     "castTime": 8,
@@ -10152,7 +10152,7 @@
     "range": 200
   },
   "spell:restless-bones": {
-    "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast. Max hit range 13-20.",
+    "description": "Animates an undead servant from the remnants of the fallen.",
     "mana": 160,
     "skill": "Conjuration",
     "castTime": 9,
@@ -10182,7 +10182,7 @@
     "castTime": 3,
     "recastTime": 6,
     "fizzleTime": 2.25,
-    "duration": "5 minutes @L20 to 13 minutes @L60",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -10308,7 +10308,7 @@
     "castTime": 3,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
-    "duration": "27 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -10839,7 +10839,7 @@
     "castTime": 3,
     "recastTime": 6,
     "fizzleTime": 2.25,
-    "duration": "11:12 + 18sec per level above 34",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
     "resist": "Unresistable"
@@ -11260,7 +11260,7 @@
     "castTime": 2,
     "recastTime": 30,
     "fizzleTime": 1.5,
-    "duration": "20 minutes",
+    "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
     "resist": "Unresistable"
