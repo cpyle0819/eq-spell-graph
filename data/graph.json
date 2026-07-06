@@ -40852,6 +40852,511 @@
         ],
         "category": "class"
       }
+    },
+    {
+      "data": {
+        "id": "ability:blood-siphon-strike",
+        "label": "Blood Siphon Strike",
+        "type": "ability",
+        "description": "Drains the life from your target, doing 56 damage every six seconds for 00:00:36, and healing your wounds for the same amount, effect Duration: 6 seconds.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 1
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "combat"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:asp-venom-strike",
+        "label": "Asp Venom Strike",
+        "type": "ability",
+        "description": "Deals 62 points of poison damage to your target.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 2
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "combat"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:weakening-strike",
+        "label": "Weakening Strike",
+        "type": "ability",
+        "description": "Weakens your targets limbs, slowing their attack rate for 0:03:30, effect duration 24 seconds.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 4
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:hobbling-strike",
+        "label": "Hobbling Strike",
+        "type": "ability",
+        "description": "Snare. Cut's circulation to your target's legs, slowing their movement speed for up to 0:03:00, effect duration 48 seconds.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 5
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:concussive-strike",
+        "label": "Concussive Strike",
+        "type": "ability",
+        "description": "Causes your opponent to twitch violently, interrupting spell casting 75% of the time, pushback 2.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 7
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:befuddling-strike",
+        "label": "Befuddling Strike",
+        "type": "ability",
+        "description": "Causes your opponent to clutch their head, draining their mana by 110.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 9
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:grounding-strike",
+        "label": "Grounding Strike",
+        "type": "ability",
+        "description": "Blocks the nerves to your opponent's legs, rooting them for up to 0:01:00.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 11
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:stunning-strike",
+        "label": "Stunning Strike",
+        "type": "ability",
+        "description": "Injects a paralytic agent, stunning your opponent. This effect works on creatures up to level 50. Pushback 1.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 15
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "combat"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:banishing-poison",
+        "label": "Banishing Poison",
+        "type": "ability",
+        "description": "Dispel. Only one utility poison can be active at a time.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 20
+          }
+        ],
+        "duration": "Permanent",
+        "reuseTime": "5 Sec",
+        "category": "utility"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:lay-hands",
+        "label": "Lay Hands",
+        "type": "ability",
+        "description": "An instant heal equal to roughly 32x the paladin's level to a single target (1,728 HP at level 60).",
+        "class_levels": [
+          {
+            "class": "paladin",
+            "level": 1
+          }
+        ],
+        "duration": "Instant",
+        "reuseTime": "72 Min",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:harm-touch",
+        "label": "Harm Touch",
+        "type": "ability",
+        "description": "Deals a large amount of damage to a single target, scaling from 11 at level 1 to 1,001 at level 60.",
+        "class_levels": [
+          {
+            "class": "shadow knight",
+            "level": 1
+          }
+        ],
+        "duration": "Instant",
+        "reuseTime": "20 Min",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:backstab",
+        "label": "Backstab",
+        "type": "ability",
+        "description": "Massive damage with a piercing weapon in the main hand, if the target's back (or side, within 180°) is exposed; otherwise lands as a normal hit. Damage scales with skill and the equipped dagger.",
+        "class_levels": [
+          {
+            "class": "rogue"
+          }
+        ],
+        "reuseTime": "10 Sec",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:mend",
+        "label": "Mend",
+        "type": "ability",
+        "description": "Heals the user for 25% of their total health. Below 100 skill, a failed attempt can damage instead of heal.",
+        "class_levels": [
+          {
+            "class": "monk"
+          }
+        ],
+        "reuseTime": "6 Min",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:bash",
+        "label": "Bash",
+        "type": "ability",
+        "description": "Uses an equipped shield to bash the current target for a chance to stun; the shield's AC affects damage. Shares a cooldown with Slam.",
+        "class_levels": [
+          {
+            "class": "cleric"
+          },
+          {
+            "class": "paladin"
+          },
+          {
+            "class": "shadow knight"
+          },
+          {
+            "class": "warrior"
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:kick",
+        "label": "Kick",
+        "type": "ability",
+        "description": "A leg strike dealing direct damage. Shares a cooldown with Bash, Slam, and the Monk kick-family specials (Round Kick, Tiger Claw, Eagle Strike, Dragon Punch/Tail Rake).",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 1
+          },
+          {
+            "class": "warrior",
+            "level": 1
+          },
+          {
+            "class": "ranger",
+            "level": 5
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:taunt",
+        "label": "Taunt",
+        "type": "ability",
+        "description": "A small chance to move the user to the top of the target's aggro list. Has no effect on a target already attacking the user.",
+        "class_levels": [
+          {
+            "class": "warrior"
+          },
+          {
+            "class": "shadow knight"
+          },
+          {
+            "class": "paladin"
+          },
+          {
+            "class": "ranger"
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:hide",
+        "label": "Hide",
+        "type": "ability",
+        "description": "Grants an Invisibility-like effect as long as the user doesn't move; higher skill increases success chance. (Also granted to Dark Elves/Wood Elves/Halflings by race, capped at 50 — not shown here since the Class Browser is organized by class.)",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 3
+          },
+          {
+            "class": "ranger",
+            "level": 25
+          },
+          {
+            "class": "bard",
+            "level": 25
+          },
+          {
+            "class": "shadow knight",
+            "level": 35
+          }
+        ],
+        "reuseTime": "10 Sec",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:sneak",
+        "label": "Sneak",
+        "type": "ability",
+        "description": "Moves silently and appears Indifferent to any NPC not facing the user. (Also granted to Halflings by race, capped at 50 — not shown here since the Class Browser is organized by class.)",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 1
+          },
+          {
+            "class": "monk",
+            "level": 8
+          },
+          {
+            "class": "ranger",
+            "level": 10
+          },
+          {
+            "class": "bard",
+            "level": 17
+          }
+        ],
+        "reuseTime": "10 Sec",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:disarm",
+        "label": "Disarm",
+        "type": "ability",
+        "description": "Dislodges the target's wielded weapon, forcing it to fight hand-to-hand. Against NPCs the weapon becomes lootable rather than dropping to the ground.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 27
+          },
+          {
+            "class": "rogue",
+            "level": 27
+          },
+          {
+            "class": "warrior",
+            "level": 35
+          },
+          {
+            "class": "ranger",
+            "level": 35
+          },
+          {
+            "class": "paladin",
+            "level": 40
+          },
+          {
+            "class": "shadow knight",
+            "level": 40
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:pick-lock",
+        "label": "Pick Lock",
+        "type": "ability",
+        "description": "Unlocks doors that normally require a key, for as long as the door stays open. Always succeeds if skill meets the door's minimum, always fails (no skill-up chance) if it doesn't.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 6
+          },
+          {
+            "class": "bard",
+            "level": 40
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:pick-pocket",
+        "label": "Pick Pocket",
+        "type": "ability",
+        "description": "Attempts to steal an item or coin from a humanoid enemy. Cannot be used while auto-attacking, and can't target magic or wielded items.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 7
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:disarm-traps",
+        "label": "Disarm Traps",
+        "type": "ability",
+        "description": "Disables environmental traps so a group can pass safely.",
+        "class_levels": [
+          {
+            "class": "rogue"
+          },
+          {
+            "class": "bard"
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:round-kick",
+        "label": "Round Kick",
+        "type": "ability",
+        "description": "A Monk special attack, superseded by Tiger Claw at level 10.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 5
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:tiger-claw",
+        "label": "Tiger Claw",
+        "type": "ability",
+        "description": "A Monk special attack replacing Round Kick, superseded by Eagle Strike at level 20.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 10
+          }
+        ],
+        "reuseTime": "6 Sec",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:eagle-strike",
+        "label": "Eagle Strike",
+        "type": "ability",
+        "description": "A Monk special attack replacing Tiger Claw, superseded by Dragon Punch/Tail Rake at level 25. Max damage at level 20 is 16.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 20
+          }
+        ],
+        "reuseTime": "6 Sec",
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:dragon-punch",
+        "label": "Dragon Punch",
+        "type": "ability",
+        "description": "A Monk special attack replacing Eagle Strike, for Human Monks (Iksar Monks get Tail Rake instead). Superseded by Flying Kick at level 30.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 25
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:tail-rake",
+        "label": "Tail Rake",
+        "type": "ability",
+        "description": "A Monk special attack replacing Eagle Strike, for Iksar Monks (Human Monks get Dragon Punch instead). Superseded by Flying Kick at level 30.",
+        "class_levels": [
+          {
+            "class": "monk",
+            "level": 25
+          }
+        ],
+        "category": "special"
+      }
     }
   ],
   "edges": [

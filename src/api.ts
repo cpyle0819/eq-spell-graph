@@ -101,16 +101,19 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: [...classes].sort() };
   }
 
-  // GET /api/classes/abilities — list classes that have stance/invocation/AA
-  // data. A separate roster from /api/classes: it includes classes with no
-  // purchasable spells (e.g. berserker) — see DECISIONS.md. Powers the Class
-  // Browser page's class pickers.
+  // GET /api/classes/abilities — list classes that have stance/invocation/AA/
+  // ability data. A separate roster from /api/classes: it includes classes
+  // with no purchasable spells (e.g. berserker) — see DECISIONS.md. Powers
+  // the Class Browser page's class pickers.
   if (pathname === "/api/classes/abilities") {
     const graph = getGraph();
     const classes = new Set<string>();
     for (const n of graph.nodes) {
       if ((n.data.type === "stance" || n.data.type === "invocation" || n.data.type === "aa") && n.data.classes) {
         for (const cls of n.data.classes as string[]) classes.add(cls);
+      }
+      if (n.data.type === "ability" && n.data.class_levels) {
+        for (const cl of n.data.class_levels as { class: string }[]) classes.add(cl.class);
       }
     }
     return { status: 200, body: [...classes].sort() };
@@ -160,6 +163,48 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const body: Record<string, unknown> = {};
     for (const category of categories) body[category] = matches(category);
     return { status: 200, body };
+  }
+
+  // GET /api/abilities?class=rogue,paladin — class-defining special combat
+  // actions that aren't spells/stances/invocations/AAs (Rogue poison
+  // disciplines, Backstab, Kick, Taunt, etc. — see migration 018 and
+  // DECISIONS.md). Uses class_levels like spells (not a flat classes
+  // array) since several of these are granted to multiple classes at
+  // different levels each.
+  //
+  // Sorted by whether the ability has a visible poison-type tag at all
+  // (Combat/Utility), then by that category, then by name. "special" (i.e.
+  // no Combat/Utility badge rendered — see renderAbilityCard in
+  // class-browser.js) counts as zero categories and sorts first — Backstab,
+  // Kick, Disarm, etc. come before any Rogue poison. Category is still the
+  // tie-breaker within that, so poisons sharing a category (Combat vs.
+  // Utility) end up adjacent without a dedicated section header for it —
+  // generic on purpose, groups by whatever `category` values happen to
+  // exist rather than special-casing poison names.
+  if (pathname === "/api/abilities") {
+    const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
+    const graph = getGraph();
+    const hasPoisonTag = (category: unknown) => category === "combat" || category === "utility" ? 1 : 0;
+    return {
+      status: 200,
+      body: graph.nodes
+        .filter((n) => n.data.type === "ability" && n.data.class_levels &&
+          (classNames.length === 0 || (n.data.class_levels as { class: string }[]).some((cl) => classNames.includes(cl.class))))
+        .map((n) => ({
+          id: n.data.id,
+          name: n.data.label,
+          description: n.data.description,
+          class_levels: n.data.class_levels,
+          duration: n.data.duration,
+          reuseTime: n.data.reuseTime,
+          category: n.data.category,
+        }))
+        .sort((a, b) =>
+          hasPoisonTag(a.category) - hasPoisonTag(b.category) ||
+          ((a.category as string) || "").localeCompare((b.category as string) || "") ||
+          a.name.localeCompare(b.name)
+        ),
+    };
   }
 
   // GET /api/zones — list all zone nodes

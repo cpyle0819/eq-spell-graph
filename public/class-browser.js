@@ -102,13 +102,14 @@ async function fetchAbilities() {
   const level = document.getElementById("level-select").value;
   if (level !== "all") spellParams.set("levels", level);
 
-  const [{ stances, invocations }, aa, spells] = await Promise.all([
+  const [{ stances, invocations }, aa, spells, abilities] = await Promise.all([
     fetch(`api/stances-invocations?${params}`).then((r) => r.json()),
     fetch(`api/aa?${params}`).then((r) => r.json()),
     fetch(`api/spells?${spellParams}`).then((r) => r.json()),
+    fetch(`api/abilities?${params}`).then((r) => r.json()),
   ]);
   if (token !== fetchToken) return; // a newer filter change superseded this request
-  renderResults(stances, invocations, aa, spells, classes);
+  renderResults(stances, invocations, aa, spells, abilities, classes);
 }
 
 // Class + (for spells) per-class level badges — badged with only the
@@ -151,6 +152,36 @@ function renderAA(aa, selected) {
     <div class="spell-scroll">
       <div class="spell-badges">${badges}</div>
       <p class="spell-desc">${aa.description}</p>
+    </div>
+  `;
+  return card;
+}
+
+// Rogue poison disciplines, Backstab, Kick, Taunt, etc. — class-defining
+// special combat actions that aren't spells/stances/invocations/AAs (see
+// migration 018). class_levels shape/lookup mirrors renderSpellCard's,
+// since several of these grant to multiple classes at different levels.
+function renderAbilityCard(ability, selected) {
+  const card = document.createElement("div");
+  card.className = "spell-detail";
+  const levelLookup = (c) => ability.class_levels.find((cl) => cl.class === c)?.level;
+  // "Combat"/"Utility" is a poison-specific classification (Rogue
+  // disciplines only) — labeled "X Poison" rather than a bare "Combat"/
+  // "Utility" so it doesn't read as a general ability taxonomy that only
+  // some entries happen to have. "special" (everything else hand-curated)
+  // gets no badge at all; there's nothing informative to say.
+  const badges = [
+    ability.category && ability.category !== "special" ? `<span class="spell-badge type-badge">${ability.category.charAt(0).toUpperCase() + ability.category.slice(1)} Poison</span>` : "",
+    ability.reuseTime ? `<span class="spell-badge mana-badge">${ability.reuseTime} reuse</span>` : "",
+    classBadges(ability.class_levels.map((cl) => cl.class), selected, levelLookup),
+  ].join("");
+  const duration = fmtDuration(ability.duration);
+  card.innerHTML = `
+    <div class="spell-header"><h3>${ability.name}</h3></div>
+    <div class="spell-scroll">
+      <div class="spell-badges">${badges}</div>
+      <p class="spell-desc">${ability.description}</p>
+      ${duration ? `<div class="spell-stats"><span class="stat-tag">Duration: ${duration}</span></div>` : ""}
     </div>
   `;
   return card;
@@ -256,6 +287,7 @@ let rawStances = [];
 let rawInvocations = [];
 let rawAA = { general: [], archetype: [], class: [], special: [] };
 let rawSpells = [];
+let rawAbilities = [];
 let rawClasses = [];
 
 // Tab state persists across filter changes (so switching classes doesn't
@@ -263,18 +295,25 @@ let rawClasses = [];
 // section if the active one has no items for the new selection.
 let activeTab = null;
 
+// allItems reflects the current class selection only (never the search
+// box) — that's what decides whether a tab exists at all. items applies the
+// search on top and can legitimately be empty; a tab whose category has data
+// for this class selection should stay put and show "0" while searching,
+// not disappear (only truly inapplicable categories, e.g. a caster's
+// Disciplines, get hidden entirely).
 function buildSections(searchQuery) {
   const q = searchQuery.trim().toLowerCase();
   const matches = (name) => !q || name.toLowerCase().includes(q);
   return [
-    { key: "spells", title: "Spells", items: rawSpells.filter((s) => matches(s.label)), renderFn: renderSpellCard },
-    { key: "stances", title: "Stances", items: rawStances.filter((s) => matches(s.name)), renderFn: renderAbility },
-    { key: "invocations", title: "Invocations", items: rawInvocations.filter((s) => matches(s.name)), renderFn: renderAbility },
-    { key: "general", title: "General AAs", items: rawAA.general.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "archetype", title: "Archetype AAs", items: rawAA.archetype.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "class", title: "Class AAs", items: rawAA.class.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "special", title: "Special AAs", items: rawAA.special.filter((s) => matches(s.name)), renderFn: renderAA },
-  ].filter((section) => section.items.length);
+    { key: "spells", title: "Spells", allItems: rawSpells, items: rawSpells.filter((s) => matches(s.label)), renderFn: renderSpellCard },
+    { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name)), renderFn: renderAbilityCard },
+    { key: "stances", title: "Stances", allItems: rawStances, items: rawStances.filter((s) => matches(s.name)), renderFn: renderAbility },
+    { key: "invocations", title: "Invocations", allItems: rawInvocations, items: rawInvocations.filter((s) => matches(s.name)), renderFn: renderAbility },
+    { key: "general", title: "General AAs", allItems: rawAA.general, items: rawAA.general.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "archetype", title: "Archetype AAs", allItems: rawAA.archetype, items: rawAA.archetype.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "class", title: "Class AAs", allItems: rawAA.class, items: rawAA.class.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "special", title: "Special AAs", allItems: rawAA.special, items: rawAA.special.filter((s) => matches(s.name)), renderFn: renderAA },
+  ].filter((section) => section.allItems.length);
 }
 
 function render() {
@@ -317,14 +356,19 @@ function render() {
 
   const active = sections.find((section) => section.key === activeTab);
   resultsEl.innerHTML = "";
+  if (!active.items.length) {
+    resultsEl.innerHTML = `<div class="no-results">No ${active.title.toLowerCase()} match your search.</div>`;
+    return;
+  }
   for (const item of active.items) resultsEl.appendChild(active.renderFn(item, rawClasses));
 }
 
-function renderResults(stances, invocations, aa, spells, classes) {
+function renderResults(stances, invocations, aa, spells, abilities, classes) {
   rawStances = stances;
   rawInvocations = invocations;
   rawAA = aa;
   rawSpells = spells;
+  rawAbilities = abilities;
   rawClasses = classes;
   render();
 }
