@@ -244,12 +244,18 @@ export interface SpellVendorInfo extends SpellDetails {
   vendors: string[];
 }
 
+export interface FactionReason {
+  dimension: "race" | "class" | "deity";
+  value: string;
+}
+
 export interface ZoneRanking {
   zoneId: string;
   zoneName: string;
   hops: number | null;
   route: RouteStep[];
   faction: FactionStanding;
+  factionReasons?: FactionReason[];
   raceIgnored?: boolean;
   deityIgnored?: boolean;
   spells: SpellVendorInfo[];
@@ -371,12 +377,23 @@ export function rankZones(
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
+    // Which dimension(s) are actually responsible for a bad result — only
+    // populated for wont_sell/kos, so the UI can explain *why* a zone is
+    // dubious/KOS instead of just that it is. A dimension only counts as a
+    // reason if it matches the overall (worst) standing; e.g. a wont_sell
+    // result with class="safe" and deity="wont_sell" cites deity, not class.
+    const factionReasons: FactionReason[] = [];
     if (zoneNode?.faction) {
       const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
       const raceStanding: FactionStanding = raceIgnored ? "safe" : (race && zf.race?.[race]) || "neutral";
       const classStanding: FactionStanding = (primaryClass && zf.class?.[primaryClass]) || "safe";
       const deityStanding: FactionStanding = deityIgnored ? "safe" : (deity && zf.deity?.[deity]) || "neutral";
       faction = worstStanding(raceStanding, classStanding, deityStanding);
+      if (faction === "wont_sell" || faction === "kos") {
+        if (race && raceStanding === faction) factionReasons.push({ dimension: "race", value: race });
+        if (primaryClass && classStanding === faction) factionReasons.push({ dimension: "class", value: primaryClass });
+        if (deity && deityStanding === faction) factionReasons.push({ dimension: "deity", value: deity });
+      }
     }
 
     let score: number;
@@ -397,6 +414,7 @@ export function rankZones(
       hops,
       route,
       faction,
+      ...(factionReasons.length ? { factionReasons } : {}),
       ...(raceIgnored ? { raceIgnored: true } : {}),
       ...(deityIgnored ? { deityIgnored: true } : {}),
       spells: spells.sort((a, b) => Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level))),

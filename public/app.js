@@ -747,6 +747,21 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     wont_sell: "Looks upon you dubiously — merchants won't sell to you",
     kos: "Scowls at you, ready to attack — kill on sight",
   };
+  const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+  const DIMENSION_LABELS = { race: "race", class: "class", deity: "deity" };
+  // Same text for the badge and the LED dot (zone-name's ::before — a
+  // pseudo-element can't carry its own title, so zone-name's covers it) —
+  // one tooltip, two hover targets. Appends *why* only for wont_sell/kos,
+  // naming whichever dimension(s) actually caused it (factionReasons is
+  // empty for safe/neutral, since nothing there needs explaining).
+  function factionTooltip(r) {
+    const base = FACTION_TITLES[r.faction] || "";
+    if (!r.factionReasons?.length) return base;
+    const reasons = r.factionReasons
+      .map((fr) => `your ${titleCase(fr.value)} ${DIMENSION_LABELS[fr.dimension]}`)
+      .join(" and ");
+    return `${base} (${reasons} ${r.factionReasons.length > 1 ? "are" : "is"} disliked here)`;
+  }
 
   let renderedZones = 0;
   for (const r of rankings) {
@@ -786,10 +801,11 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     const ownedHere = r.spells.length - visibleSpells.length;
     const spellBadge = spellCount + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
 
+    const tooltip = factionTooltip(r);
     card.innerHTML = `
       <div class="zone-card-header">
-        <span class="zone-name">${r.zoneName}</span>
-        ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${FACTION_TITLES[r.faction] || ""}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
+        <span class="zone-name" title="${tooltip}">${r.zoneName}</span>
+        ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
         <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>
       </div>
