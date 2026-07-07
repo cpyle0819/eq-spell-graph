@@ -51,9 +51,9 @@
       flex-shrink: 0; overflow: hidden;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
       border: 4px solid;
-      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
       border-radius: 3px;
-      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
+      box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
     }
     /* .planner-controls layout is shared (theme.css) — see the "Sidebar
        filter panel" rule there. */
@@ -98,7 +98,7 @@
     }
     .range-picker input[type="range"]::-webkit-slider-thumb {
       -webkit-appearance: none; width: 16px; height: 16px;
-      background: radial-gradient(circle at 35% 30%, #ffd97a, #c98f1f 60%, #8a5f10);
+      background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 60%, #8a5f10);
       border-radius: 50%; cursor: pointer;
     }
     .range-picker input[type="range"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
@@ -118,30 +118,32 @@
       margin: 0; padding: 14px 20px;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
       border: 4px solid;
-      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
       border-radius: 3px;
-      box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45);
+      box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
     }
     .zone-card + .zone-card { margin-top: -4px; }
     /* Faction is the LED dot's job now, not the box color — neutralize
        theme.css's colored border-top/background-tint per faction so the
        card's own bevel stays a plain stone plate on every row. */
     .zone-card.safe, .zone-card.neutral, .zone-card.wont_sell, .zone-card.kos {
-      border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
     }
     .zone-card-header { margin-bottom: 12px; }
     .zone-name { position: relative; padding-left: 17px; }
+    /* LED dot's specular highlight biased top-right, matching the app's
+       light source (same reasoning as the spell gem in theme.css). */
     .zone-name::before {
       content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
       width: 9px; height: 9px; border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #b8b4c8, #6e6885 65%, #4a4658);
+      background: radial-gradient(circle at 65% 30%, #b8b4c8, #6e6885 65%, #4a4658);
       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
     }
-    .zone-card.safe      .zone-name::before { background: radial-gradient(circle at 35% 30%, #7dffb0, #22c55e 60%, #157a3c); box-shadow: 0 0 6px rgba(34, 197, 94, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 35% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 35% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.safe      .zone-name::before { background: radial-gradient(circle at 65% 30%, #7dffb0, #22c55e 60%, #157a3c); box-shadow: 0 0 6px rgba(34, 197, 94, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
+    .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 65% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
     /* Route: plain stone text, not the parchment scroll treatment —
        .spell-scroll below is this page's focus content, the route is
        wayfinding detail. Route-label/-steps/-zone/-sep/-boat-sep/

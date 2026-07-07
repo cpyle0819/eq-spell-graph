@@ -7,9 +7,10 @@
    marble stone (not gray, not brown) with large blotchy mottling, warm
    parchment inserts with dark ink (the chat scroll), bone/ivory button
    plates with dark serif caps sunk in a black groove (WHO/INVITE/CAMP),
-   and real two-tone bevels — light edge top/left, dark edge bottom/
-   right, inverted on sunken wells. Gold is trim, warm-vs-cool is the
-   charm.
+   and real two-tone bevels — light edge top/right, dark edge bottom/
+   left (light source top-right, consistent everywhere: MacroButton/
+   MacroSocket, panels, sunken wells, the small gem/bead highlights),
+   inverted on sunken wells. Gold is trim, warm-vs-cool is the charm.
 
    Contrast: --ink-muted clears WCAG AA (4.5:1) against --stone-1, the
    lightest dark surface text sits on — recheck it if you lighten the
@@ -26,8 +27,8 @@
   --panel: #464254;           /* flat stone (dropdown rows) */
   --panel-deep: #0d0c12;      /* sunken wells: inputs, chips, badges */
 
-  --edge-hi: #7d7794;         /* bevel light edge (top/left of raised) */
-  --edge-lo: #14121b;         /* bevel dark edge (bottom/right of raised) */
+  --edge-hi: #7d7794;         /* bevel light edge (top/right of raised) */
+  --edge-lo: #14121b;         /* bevel dark edge (bottom/left of raised) */
   --line: #575163;            /* hairline rules inside panels */
   --line-strong: #6e6885;
 
@@ -152,10 +153,11 @@ header h1 {
    cavity carved into the panel, holding a raised button/link. Used by
    every non-text button on every page (nav links, Show all/Show
    remaining/Clear owned). .text-action is the separate plain-text idiom
-   and doesn't use this. Light source is top-right: the raised button
-   catches light top+right and shadows bottom+left; the recessed socket
-   is the inverse — dark top+right, lit bottom+left. Size fits the label
-   by default; .square fixes it to 90x90 regardless of label length. */
+   and doesn't use this. Light source is top-right, same as every other
+   raised/inset surface in the app: the raised button catches light
+   top+right and shadows bottom+left; the recessed socket is the inverse —
+   dark top+right, lit bottom+left. Size fits the label by default; .square
+   fixes it to 90x90 regardless of label length. */
 .macro-socket {
   display: inline-flex;
   align-items: center;
@@ -328,13 +330,14 @@ header h1 {
 .tag-dropdown {
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
-  border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+  border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
   border-radius: 3px;
   /* a modest outer shadow, not the old large diffuse one — panels read as
      mounted plates in a console, not cards floating above a page. See
      DECISIONS.md for how this was worked out on the Spell Finder page
-     before propagating here. */
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
+     before propagating here. Light top-right/dark bottom-left, matching
+     the border-color above and every other raised surface in the app. */
+  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 /* gold inlay hairline on the primary control surfaces */
 .controls-panel, .finder-bar, .route-card {
@@ -342,7 +345,9 @@ header h1 {
   outline-offset: -5px;
 }
 
-/* ── Fields: sunken wells (bevel inverted) ── */
+/* ── Fields: sunken wells (bevel inverted — dark top-right, light
+   bottom-left, opposite of a raised panel's light top-right/dark
+   bottom-left) ── */
 .field label {
   font-size: 11px; color: var(--ink-muted); white-space: nowrap;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -355,7 +360,7 @@ header h1 {
      than a thin groove. Worked out on the Spell Finder page; propagated
      here for consistency across all three pages. */
   border: 4px solid;
-  border-color: var(--edge-lo) #615b72 #615b72 var(--edge-lo);
+  border-color: var(--edge-lo) var(--edge-lo) #615b72 #615b72;
   color: var(--parchment);
   border-radius: 3px;
   font-size: 13px;
@@ -364,7 +369,7 @@ header h1 {
   transition: border-color 150ms, box-shadow 150ms;
 }
 .field select, .field input { padding: 6px 12px; }
-.field select:hover, .field input:hover, .tag-wrap:hover { border-color: var(--edge-lo) #837c9d #837c9d var(--edge-lo); }
+.field select:hover, .field input:hover, .tag-wrap:hover { border-color: var(--edge-lo) var(--edge-lo) #837c9d #837c9d; }
 .field select:focus, .field input:focus, .tag-wrap:focus-within {
   border-color: var(--gold);
   box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(232, 168, 42, 0.18);
@@ -374,12 +379,12 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 
 /* ── Buttons: bone plates with dark serif caps, sunk in a black groove
    (WHO / INVITE / DISBAND). One visual family — .secondary only sizes
-   down. The domed face: lit top edge, warm shadow at the bottom. ── */
+   down. The domed face: lit top-right edge, warm shadow bottom-left. ── */
 button {
   padding: 8px 22px;
   background: var(--parch-tex), linear-gradient(180deg, var(--bone-1) 0%, #d9cead 55%, var(--bone-2) 100%);
   border: 2px solid;
-  border-color: var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo) var(--bone-edge-hi);
+  border-color: var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo);
   color: var(--bone-ink); border-radius: 2px; cursor: pointer;
   font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
   font-family: var(--font-body);
@@ -389,7 +394,7 @@ button {
 }
 button:hover { filter: brightness(1.05); }
 button:active {
-  border-color: var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo);
+  border-color: var(--bone-edge-lo) var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi);
   filter: brightness(0.96);
 }
 button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
@@ -494,14 +499,14 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    transition, flashing a thick double seam. box-shadow paints in the
    normal flow, so the seam stays put. */
 .zone-card:hover {
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
+  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }
 .zone-card-header, .route-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
 .zone-badge, .hops-badge {
   font-size: 12px; padding: 3px 10px; border-radius: 3px;
   background: var(--panel-deep);
-  border: 1px solid; border-color: var(--edge-lo) #5a5570 #5a5570 var(--edge-lo);
+  border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
   color: var(--ink-muted);
   font-variant-numeric: tabular-nums;
@@ -613,10 +618,12 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   white-space: nowrap; text-decoration: none;
   display: inline-flex; align-items: center;
 }
-/* spell gem */
+/* spell gem — specular highlight biased top-right, matching the app's
+   light source (a sphere lit from top-right shows its highlight up and to
+   the right of center, not dead-center-left). */
 .spell-chip::before {
   content: ""; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; flex-shrink: 0;
-  background: radial-gradient(circle at 35% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
 }
 @media (pointer: coarse) { .spell-chip { cursor: pointer; } }
@@ -646,7 +653,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   position: relative;
   display: inline-block; width: 150px; height: 15px; flex-shrink: 0;
   background: #0b0a12;
-  border: 2px solid; border-color: var(--edge-lo) #615b72 #615b72 var(--edge-lo);
+  border: 2px solid; border-color: var(--edge-lo) var(--edge-lo) #615b72 #615b72;
   border-radius: 7px / 6px;
   overflow: hidden;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
@@ -657,7 +664,12 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   transition: width 300ms ease-out;
 }
 /* glasswork overlay: end knobs, five beaded segments with bright seams,
-   per-bead specular, overall glass shading */
+   per-bead specular, overall glass shading. The per-bead specular below is
+   top-left, not top-right — a deliberate exception to this app's own
+   light-source convention, not an oversight: it's reverse-engineered
+   pixel-for-pixel from a zoomed capture of the real client's vitals bar
+   (see DECISIONS.md), so it stays exactly as observed rather than being
+   adjusted to match our own bevel language. */
 .mana-bar::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:
@@ -690,14 +702,14 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   padding: 14px 20px;
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
-  border-color: var(--edge-hi) var(--edge-lo) var(--edge-lo) var(--edge-hi);
+  border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
   border-radius: 3px;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45);
+  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
 }
 /* box-shadow, not filter — see the .zone-card:hover comment above; same
    negative-margin seam-sharing trick, same desync risk. */
 .spell-detail:hover {
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
+  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }
 .spell-detail h3 {
   font-family: var(--font-display); color: var(--parchment); font-size: 16px; font-weight: 700;
@@ -766,7 +778,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   content: "";
   position: absolute; top: 34px; left: 50%; margin-left: -7px;
   width: 14px; height: 14px; border-radius: 3px;
-  background: radial-gradient(circle at 35% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 10px rgba(232, 168, 42, 0.5);
   animation: gem-spin 1.6s linear infinite;
 }
