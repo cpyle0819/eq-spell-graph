@@ -766,6 +766,16 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   font-size: 8px; color: #9a7f3e; line-height: 1;
 }
 
+/* ── Group label (controls panel) — marks a run of fields as a distinct
+   sub-group without a full .field row of its own, e.g. Spell Finder's
+   Race/Primary Class/Deity trio, which only drive faction standing and
+   don't filter the spell results below them. Quieter than .field label
+   (smaller, lower opacity) since it's labeling a group, not one control. ── */
+.field-group-label {
+  font-size: 10px; color: var(--ink-muted); letter-spacing: 0.14em;
+  text-transform: uppercase; opacity: 0.75; cursor: help;
+}
+
 /* ── Footer ── */
 footer {
   padding: 10px 28px; border-top: 1px solid #26232e; flex-shrink: 0;

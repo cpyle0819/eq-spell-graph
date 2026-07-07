@@ -285,6 +285,11 @@ Went one step further than CSS sharing: `public/components.js` gained a `Sidebar
 ### Class Browser's category picker needed `classBadges()` to handle an empty selection
 `classBadges(entryClasses, selected, levelLookup)` filters `entryClasses` down to just the ones in `selected` — correct when the tag box's whole purpose is showing per-class detail for a chosen class. But once "no classes selected" became the normal *browsing-everything* state (see "No classes selected means all classes" above), `selected` is legitimately `[]`, and `.filter(c => selected.includes(c))` on an empty array always returns nothing — so every spell/ability card silently lost its class badge entirely while browsing unfiltered. Fixed: when `selected.length === 0`, show every one of the entry's classes instead of filtering to none, matching the same "no filter = show everything" convention used everywhere else in this app.
 
+### Spell Finder sidebar is grouped into four labeled sections: Faction, Spells, Level, Location
+`.field-group-label` (theme.css) marks each group with a small caption above its first field, each group closed off by a `.control-sep` divider — the same ornamental divider that used to just sit once between the Race/Primary Class/Deity trio and everything else. Order was deliberately picked as Faction → Spells → Level → Location, moving the Levels range picker up from last position to its own group between Spells and Location, rather than leaving it trailing after Current Zone where it read as an afterthought.
+
+Only the Faction group's label carries a `title` tooltip ("Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below") — that's the one dimension genuinely confusable with a spell filter (a plausible first guess is "picking a race narrows which spells I see"), so it needed an explanation, not just a name. Spells/Level/Location are self-explanatory groupings and don't need one.
+
 - **TypeScript** — graph module and server
 - **Cytoscape.js** — graph visualization (CDN, not bundled)
 - **No framework** — vanilla HTML/JS frontend

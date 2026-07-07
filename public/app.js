@@ -99,6 +99,7 @@ const OWNED_KEY = "eq-planner-owned";
 function renderSidebar() {
   const html = SidebarPanel({
     fields: [
+      { raw: `<div class="field-group-label" title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.">Faction</div>` },
       { label: "Race", html: `<select id="race-select">
         <option value="barbarian">Barbarian</option>
         <option value="dark elf">Dark Elf</option>
@@ -153,16 +154,22 @@ function renderSidebar() {
         <option value="any">Any (ignore faction)</option>
       </select>` },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
+      { raw: `<div class="field-group-label">Spells</div>` },
       { label: "Spell Class", html: tagWrapHtml("class") },
       { label: "Spell Line", html: tagWrapHtml("spellline") },
       { label: "Specific Spells", html: tagWrapHtml("spell") },
-      { label: "Specific Zones", html: tagWrapHtml("zone") },
-      { label: "Current Zone", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
+      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
+      { raw: `<div class="field-group-label">Level</div>` },
       { label: "Levels", html: `<div class="range-picker">
         <input type="range" id="level-min" min="1" max="50" value="1">
         <span class="range-display" id="range-display">1 – 10</span>
         <input type="range" id="level-max" min="1" max="50" value="10">
       </div>` },
+      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
+      { raw: `<div class="field-group-label">Location</div>` },
+      { label: "Specific Zones", html: tagWrapHtml("zone") },
+      { label: "Current Zone", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
+      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
     ],
     actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
   });
