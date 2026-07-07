@@ -113,7 +113,7 @@ function renderSidebar() {
         <option value="ogre">Ogre</option>
         <option value="troll">Troll</option>
         <option value="wood elf">Wood Elf</option>
-        <option value="any">Any (ignore faction)</option>
+        <option value="any" selected>Any (ignore faction)</option>
       </select>` },
       { label: "Primary Class", html: `<select id="primary-class-select">
         <option value="bard">Bard</option>
@@ -128,9 +128,10 @@ function renderSidebar() {
         <option value="ranger">Ranger</option>
         <option value="rogue">Rogue</option>
         <option value="shadow knight">Shadow Knight</option>
-        <option value="shaman" selected>Shaman</option>
+        <option value="shaman">Shaman</option>
         <option value="warrior">Warrior</option>
         <option value="wizard">Wizard</option>
+        <option value="any" selected>Any (ignore faction)</option>
       </select>` },
       { label: "Deity", html: `<select id="deity-select">
         <option value="agnostic">Agnostic</option>
@@ -147,10 +148,10 @@ function renderSidebar() {
         <option value="rallos zek">Rallos Zek</option>
         <option value="rodcet nife">Rodcet Nife</option>
         <option value="solusek ro">Solusek Ro</option>
-        <option value="the tribunal" selected>The Tribunal</option>
+        <option value="the tribunal">The Tribunal</option>
         <option value="tunare">Tunare</option>
         <option value="veeshan">Veeshan</option>
-        <option value="any">Any (ignore faction)</option>
+        <option value="any" selected>Any (ignore faction)</option>
       </select>` },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
       { raw: `<div class="field-group-label">Spells</div>` },
@@ -203,14 +204,14 @@ async function init() {
 }
 
 // Restores every filter to its out-of-the-box default (same values the HTML
-// selects/inputs ship with) rather than just blanking them — "Barbarian /
-// Shaman / The Tribunal / levels 1-10" is a real usable starting point, an
-// empty form isn't. Doesn't touch owned-spell marks; that's a separate
-// concern with its own "Clear owned" action in the status panel.
+// selects/inputs ship with) rather than just blanking them — "Any/Any/Any
+// faction, levels 1-10" is a real usable starting point, an empty form
+// isn't. Doesn't touch owned-spell marks; that's a separate concern with
+// its own "Clear owned" action in the status panel.
 function resetFilters() {
-  document.getElementById("race-select").value = "barbarian";
-  document.getElementById("primary-class-select").value = "shaman";
-  document.getElementById("deity-select").value = "the tribunal";
+  document.getElementById("race-select").value = "any";
+  document.getElementById("primary-class-select").value = "any";
+  document.getElementById("deity-select").value = "any";
   document.getElementById("level-min").value = 1;
   document.getElementById("level-max").value = 10;
   specificSpells = [];
@@ -815,6 +816,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   // rendering below needs no special-casing at all. This is purely an
   // informational aside about which dimension(s) aren't being checked.
   const raceIgnored = rankings[0]?.raceIgnored === true;
+  const classIgnored = rankings[0]?.classIgnored === true;
   const deityIgnored = rankings[0]?.deityIgnored === true;
   const accessible = rankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = rankings.filter((r) => r.faction === "wont_sell");
@@ -824,8 +826,11 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
 
   const warnings = [];
-  if (raceIgnored || deityIgnored) {
-    const ignoredLabel = raceIgnored && deityIgnored ? "race & deity" : raceIgnored ? "race" : "deity";
+  const ignoredDims = [raceIgnored && "race", classIgnored && "class", deityIgnored && "deity"].filter(Boolean);
+  if (ignoredDims.length) {
+    const ignoredLabel = ignoredDims.length > 1
+      ? `${ignoredDims.slice(0, -1).join(", ")} & ${ignoredDims[ignoredDims.length - 1]}`
+      : ignoredDims[0];
     warnings.push(`<span style="color:var(--ink-muted);">${ignoredLabel} ignored</span>`);
   }
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
