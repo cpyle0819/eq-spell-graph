@@ -87,7 +87,6 @@ function setupTooltip() {
 }
 
 const STATE_KEY = "eq-planner-state";
-const OWNED_KEY = "eq-planner-owned";
 
 // --- Init ---
 
@@ -335,22 +334,6 @@ function setupAutoSave() {
     el?.addEventListener("change", saveState);
     el?.addEventListener("input", saveState);
   }
-}
-
-// --- Owned Spells ---
-function getOwnedSpells() {
-  try { return new Set(JSON.parse(localStorage.getItem(OWNED_KEY) || "[]")); }
-  catch { return new Set(); }
-}
-
-function setSpellOwned(spellId, owned) {
-  const set = getOwnedSpells();
-  owned ? set.add(spellId) : set.delete(spellId);
-  localStorage.setItem(OWNED_KEY, JSON.stringify([...set]));
-}
-
-function clearOwnedSpells() {
-  localStorage.removeItem(OWNED_KEY);
 }
 
 // --- Populate ---

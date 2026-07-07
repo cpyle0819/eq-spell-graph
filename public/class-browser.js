@@ -295,9 +295,16 @@ function renderSpellCard(spell, selected) {
   if (spell.spellLine) stats.push(`<span class="stat-tag">Line: ${spell.spellLine}</span>`);
 
   const pinUrl = buildPinUrl(spell, selected);
+  // Shares the exact same localStorage-backed owned set as the Spell
+  // Finder (components.js) — marking a spell owned here shows up there
+  // and vice versa. No filtering/counting on it here, just the checkbox.
+  const isOwned = getOwnedSpells().has(spell.id);
 
   card.innerHTML = `
-    <div class="spell-header"><h3>${spell.label}</h3></div>
+    <div class="spell-header">
+      <h3>${spell.label}</h3>
+      <label class="spell-check spell-check-labeled"><input type="checkbox" data-spell-id="${spell.id}"${isOwned ? " checked" : ""}> Owned</label>
+    </div>
     <div class="spell-scroll">
       <div class="spell-badges">${badges.join("")}</div>
       ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
@@ -309,8 +316,13 @@ function renderSpellCard(spell, selected) {
     </div>
   `;
 
+  card.querySelector(".spell-check input").addEventListener("change", (e) => {
+    setSpellOwned(spell.id, e.target.checked);
+  });
+
   card.addEventListener("click", async (e) => {
     if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
+    if (e.target.closest(".spell-check")) return; // checkbox has its own handler, not a vendor-toggle click
     const scroll = card.querySelector(".spell-scroll");
     const existing = scroll.querySelector(".vendor-list");
     if (existing) {
