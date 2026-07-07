@@ -32,7 +32,7 @@ function renderSidebar() {
       { label: "Category", html: `<select id="category-select"></select>`, id: "category-field", hidden: true },
       { label: "Spell Line", html: tagWrapHtml("spellline"), id: "spellline-field", hidden: true },
       { label: "Level", html: `<select id="level-select"><option value="all">All Levels</option></select>`, id: "level-field", hidden: true },
-      { label: "Search", html: `<input type="text" id="browser-search" placeholder="name...">` },
+      { label: "Search", html: `<input type="text" id="browser-search" placeholder="Name...">` },
     ],
     actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
   });
