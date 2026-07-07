@@ -6,7 +6,7 @@ Three tools for EverQuest Legends players, sharing one faction-aware zone/spell/
 - **Route Finder** — shortest path between any two zones, boat/translocator hops flagged.
 - **Class Browser** — everything a class has access to (spells, class-defining abilities, stances, invocations, and Alternate Advancements), filterable by up to three classes at once.
 
-![Norraph screenshot](docs/screenshot.png)
+<img width="1712" height="897" alt="Screenshot 2026-07-07 at 3 45 13 PM" src="https://github.com/user-attachments/assets/6d48a309-24ca-401a-8861-b27249d7bb5b" />
 
 ## Usage
 
