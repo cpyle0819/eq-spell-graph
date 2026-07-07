@@ -88,6 +88,10 @@ const OWNED_KEY = "eq-planner-owned";
 
 // --- Init ---
 async function init() {
+  document.getElementById("nav-links").innerHTML = [
+    MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
+    MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
+  ].join("");
   [zones, availableClasses] = await Promise.all([
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
@@ -714,13 +718,14 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
-  // Status panel: all results metadata now lives here, not in #results —
-  // counts/warnings, the progress bar + owned count, and the show/clear
-  // actions, echoing the reference client's right-side vitals-bar-plus-
-  // action-buttons column instead of a header/divider sitting above the
-  // zone list.
-  const toggleBtn = `<button class="text-action toggle-owned-btn">${showAllSpells ? "Show remaining" : "Show all"}</button>`;
-  const clearBtn = ownedCount > 0 ? `<button class="text-action" id="clear-owned-btn">Clear owned</button>` : "";
+  // Status panel: results metadata (counts/warnings, progress bar + owned
+  // count, show/clear actions) — the empty-results "Show all" fallback
+  // (renderRankings below) stays a plain .text-action link instead of a
+  // MacroButton, since it sits inline in body text, not a dedicated
+  // action row.
+  const toggleLabel = showAllSpells ? "Show remaining" : "Show all";
+  const toggleBtn = MacroButton({ label: toggleLabel, className: "toggle-owned-btn", square: true });
+  const clearBtn = ownedCount > 0 ? MacroButton({ label: "Clear owned", id: "clear-owned-btn", square: true }) : "";
   const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
   statusEl.innerHTML = `
     <div class="status-meta">

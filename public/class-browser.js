@@ -6,6 +6,10 @@ const MAX_SPELL_LEVEL = 50;
 let availableClasses = [];
 
 async function init() {
+  document.getElementById("nav-links").innerHTML = [
+    MacroButton({ label: "Spell Finder", tag: "a", href: "index.html" }),
+    MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
+  ].join("");
   availableClasses = await fetch("api/classes/abilities").then((r) => r.json());
   populateClassSelects();
   populateLevelSelect();

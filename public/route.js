@@ -1,6 +1,10 @@
 const STATE_KEY = "eq-route-state";
 
 async function init() {
+  document.getElementById("nav-links").innerHTML = [
+    MacroButton({ label: "Spell Finder", tag: "a", href: "index.html" }),
+    MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
+  ].join("");
   const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
   restoreState();
