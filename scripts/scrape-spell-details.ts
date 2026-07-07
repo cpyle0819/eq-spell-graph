@@ -1,17 +1,56 @@
 /**
- * Fetches spell detail data from the EQL wiki MediaWiki API in batches.
- * Outputs data/spell-details.json for migration 011.
+ * Builds spell detail data for migration 011, sourcing what it reliably can
+ * from the locally installed EverQuest Legends client's spells_us.txt
+ * instead of the wiki, and falling back to the EQL wiki MediaWiki API for
+ * everything else. Outputs data/spell-details.json.
  *
- * Usage: bun run scripts/scrape-spell-details.ts
+ * Field split (see DECISIONS.md's "Spell details sourced from the local
+ * client where verified" entry for how each local mapping was verified):
+ *   - mana, castTime, recastTime: read directly from spells_us.txt numeric
+ *     fields — verified as exact matches across many spells.
+ *   - range: field 4 (range), falling back to field 5 (aoerange) when range
+ *     is 0 — a plain "prefer field 4" rule undercounted self/AE spells
+ *     whose meaningful distance is their AE radius, not their (zero) target
+ *     range. Together these two fields explain 99.1% of wiki range values.
+ *   - skill: read via a lookup table built from a statistically-verified
+ *     field/category correlation (99.4% accuracy, and cross-checked against
+ *     EQ's real canonical skill ID table). Diffing against the prior
+ *     wiki-only data showed this mostly *fixing* wiki-scraper parsing bugs
+ *     (garbled multi-field bleed, leftover "†" footnote markers), not
+ *     introducing regressions.
+ *   - targetType: tried the same approach (90.5% "accuracy"), but that
+ *     metric only measures "most common category wins" — diffing the
+ *     output found it silently collapsing real distinctions the wiki
+ *     preserves (e.g. "PB AE" → "Single", which is a materially wrong
+ *     answer, not a simplification: point-blank-AE hits everyone around the
+ *     caster, nothing like a single target). Reverted to wiki-only.
+ *   - description, spellType, resist, fizzleTime, duration: still wiki-only.
+ *     No reliable local source was found for these — resist's numeric
+ *     modifier, spellType's fine-grained categories (Heal/Cure/DoT/etc, as
+ *     opposed to just beneficial/detrimental), fizzleTime, and duration's
+ *     exact text all depend on the client's effect-slot fields
+ *     (effectid/base/base2/max[12]), which statistical correlation couldn't
+ *     locate reliably (see DECISIONS.md).
+ *
+ * Usage: bun run scripts/scrape-spell-details.ts <path-to-EQ-install-dir>
+ * (or set EQ_INSTALL_DIR — no default path is hardcoded, since this repo is
+ * public and an install path can vary by machine/user).
  */
 
 import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
+import { loadClientSpells, buildNameIndex, bestMatch, type ClientSpell } from "./lib/client-spells";
 
 const API = "https://eqlwiki.com/api.php";
 const BATCH_SIZE = 50;
 const DELAY_MS = 300;
 
+const EQ_DIR = process.argv[2] ?? process.env.EQ_INSTALL_DIR;
+if (!EQ_DIR) {
+  console.error("Usage: bun run scripts/scrape-spell-details.ts <path-to-EQ-install-dir>");
+  console.error("(or set the EQ_INSTALL_DIR environment variable)");
+  process.exit(1);
+}
 const DATA_PATH = resolve(import.meta.dir, "../data/graph.json");
 const OUT_PATH = resolve(import.meta.dir, "../data/spell-details.json");
 
@@ -27,6 +66,35 @@ export interface SpellDetail {
   spellType?: string;
   resist?: string;
   range?: number;
+}
+
+// Field offsets verified empirically (see scripts/lib/client-spells.ts and
+// DECISIONS.md) — this file's layout is an older two-file client format
+// that doesn't match modern EQEmu documentation 1:1.
+const FIELD = { range: 4, aoerange: 5, castTime: 8, recastTime: 10, mana: 14, skill: 32 };
+
+const SKILL_BY_ID: Record<number, string> = {
+  4: "Abjuration", 5: "Alteration", 12: "Brass", 14: "Conjuration",
+  18: "Divination", 24: "Evocation", 41: "Singing", 49: "Stringed",
+  54: "Wind", 70: "Percussion",
+};
+
+function localDetail(match: ClientSpell): Partial<SpellDetail> {
+  const d: Partial<SpellDetail> = {};
+  const mana = Number(match.fields[FIELD.mana]);
+  if (!Number.isNaN(mana)) d.mana = mana;
+  const castTime = Number(match.fields[FIELD.castTime]);
+  if (!Number.isNaN(castTime)) d.castTime = castTime / 1000;
+  const recastTime = Number(match.fields[FIELD.recastTime]);
+  if (!Number.isNaN(recastTime)) d.recastTime = recastTime / 1000;
+  const range = Number(match.fields[FIELD.range]);
+  const aoerange = Number(match.fields[FIELD.aoerange]);
+  if (range) d.range = range;
+  else if (aoerange) d.range = aoerange;
+  else if (!Number.isNaN(range)) d.range = range;
+  const skillId = Number(match.fields[FIELD.skill]);
+  if (SKILL_BY_ID[skillId]) d.skill = SKILL_BY_ID[skillId];
+  return d;
 }
 
 async function sleep(ms: number) {
@@ -94,27 +162,44 @@ function parseWikitext(wikitext: string): SpellDetail {
 }
 
 const graph = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
-const spells: { id: string; label: string }[] = graph.nodes
+const spells: { id: string; label: string; classLevels: { class: string; level?: number }[] }[] = graph.nodes
   .filter((n: { data: { type: string } }) => n.data.type === "spell")
-  .map((n: { data: { id: string; label: string } }) => ({ id: n.data.id, label: n.data.label }));
+  .map((n: { data: { id: string; label: string; class_levels: { class: string; level?: number }[] } }) => ({
+    id: n.data.id,
+    label: n.data.label,
+    classLevels: n.data.class_levels,
+  }));
 
-console.log(`Fetching details for ${spells.length} spells in batches of ${BATCH_SIZE}...`);
+// --- Local pass: mana/castTime/recastTime/range/skill/targetType from spells_us.txt ---
+const clientSpells = loadClientSpells(EQ_DIR);
+const byNameLower = buildNameIndex(clientSpells);
+const localDetails: Record<string, Partial<SpellDetail>> = {};
+let localMatched = 0;
+for (const s of spells) {
+  const candidates = byNameLower.get(s.label.toLowerCase()) ?? [];
+  const match = bestMatch(s.classLevels, candidates);
+  if (!match) continue;
+  localDetails[s.id] = localDetail(match);
+  localMatched++;
+}
+console.log(`Local pass: ${localMatched}/${spells.length} spells matched to client data.`);
 
-// Load existing output so we can resume if interrupted
+// --- Wiki pass: description/spellType/resist/fizzleTime/duration, and a
+// fallback for skill/targetType/mana/castTime/recastTime/range when the
+// local pass didn't find a confident value ---
+console.log(`Fetching wiki details for ${spells.length} spells in batches of ${BATCH_SIZE}...`);
+
 let existing: Record<string, SpellDetail> = {};
 try {
   existing = JSON.parse(readFileSync(OUT_PATH, "utf-8"));
-  const done = Object.keys(existing).length;
-  console.log(`Resuming from existing file (${done} already fetched)`);
+  console.log(`Resuming from existing file (${Object.keys(existing).length} already fetched)`);
 } catch {
   // no existing file
 }
 
 const results: Record<string, SpellDetail> = { ...existing };
-
-// Filter out already-fetched spells
 const todo = spells.filter((s) => !results[s.id]);
-console.log(`${todo.length} remaining to fetch`);
+console.log(`${todo.length} remaining to fetch from wiki`);
 
 const batches: typeof spells[] = [];
 for (let i = 0; i < todo.length; i += BATCH_SIZE) {
@@ -136,15 +221,15 @@ for (const batch of batches) {
       const wikitext = page.revisions?.[0]?.slots?.main?.["*"];
       if (!wikitext) continue;
 
-      // Find the corresponding spell ID by matching the title back to a spell
       const matchingSpell = batch.find(
         (s) => s.label.replace(/ /g, "_") === page.title.replace(/ /g, "_")
       );
       if (!matchingSpell) continue;
 
-      const detail = parseWikitext(wikitext);
-      if (Object.keys(detail).length > 0) {
-        results[matchingSpell.id] = detail;
+      const wikiDetail = parseWikitext(wikitext);
+      const merged: SpellDetail = { ...wikiDetail, ...localDetails[matchingSpell.id] };
+      if (Object.keys(merged).length > 0) {
+        results[matchingSpell.id] = merged;
       }
     }
 
@@ -159,6 +244,18 @@ for (const batch of batches) {
 
   if (batches.indexOf(batch) < batches.length - 1) await sleep(DELAY_MS);
 }
+
+// Apply local overrides to *every* spell, not just ones fetched this run —
+// otherwise entries already cached from a previous (wiki-only) run would
+// never pick up the newer local-sourced fields.
+let localApplied = 0;
+for (const s of spells) {
+  const local = localDetails[s.id];
+  if (!local || !results[s.id]) continue;
+  results[s.id] = { ...results[s.id], ...local };
+  localApplied++;
+}
+console.log(`Applied local overrides to ${localApplied} spells.`);
 
 writeFileSync(OUT_PATH, JSON.stringify(results, null, 2));
 console.log(`\nDone — ${Object.keys(results).length} spells with data → data/spell-details.json`);

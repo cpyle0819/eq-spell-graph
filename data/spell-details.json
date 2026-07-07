@@ -22,7 +22,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:gate": {
     "description": "Opens a magical portal that returns you to your bind point.",
@@ -34,7 +35,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:root": {
     "description": "Causes the earth to adhere to your target's feet, preventing them from moving.",
@@ -176,7 +178,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Summon Item",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:endure-fire": {
     "description": "Surrounds your target with an aura of protection, warding away fire for 27 min.",
@@ -214,7 +217,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Summon Item",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:endure-cold": {
     "description": "Surrounds your target with an aura of protection, warding away cold for 27 min.",
@@ -395,7 +399,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spirit-of-bear": {
     "description": "Fills your target with the spirit of the bear, increasing their stamina for 36 min.",
@@ -576,7 +581,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:talisman-of-the-beast": {
     "description": "Fills your group with the strength of the beast, increasing their strength",
@@ -808,7 +814,8 @@
     "duration": "8 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:scale-of-wolf": {
     "description": "Imbues your target with the spirit of a scaled wolf, increasing their movement speed for 45 min. Any attack, or spell cast by your target will break the enchantment.",
@@ -923,7 +930,9 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "range": 0
   },
   "spell:creeping-vision": {
     "description": "Improves your visual range, allowing you to see farther for  1 min.",
@@ -935,7 +944,8 @@
     "duration": "1 minute",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:envenomed-breath": {
     "description": "Fills your target's blood with poison, causing 21 damage initially and 90 damage every six seconds for 42s.",
@@ -1077,7 +1087,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-diamond": {
     "description": "Focuses the power of Mithaniel Marr into a diamond. Consumes a diamond when cast.",
@@ -1089,7 +1100,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-sapphire": {
     "description": "Focuses the power of Innoruuk into a sapphire. Consumes a sapphire when cast.",
@@ -1101,7 +1113,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-amber": {
     "description": "Focuses the power of Cazic-Thule into amber. Consumes an amber when cast.",
@@ -1113,7 +1126,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-ivory": {
     "description": "Focuses the power of The Tribunal into a piece of Ivory.  Consumes an ivory when cast. Creates an Imbued Ivory.",
@@ -1125,7 +1139,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-jade": {
     "description": "Focuses the power of Rallos Zek into a piece of jade.  Consumes a jade when cast. Creates an Imbued Jade.",
@@ -1137,7 +1152,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:remove-lesser-curse": {
     "description": "Cleanses your target's soul, removing lesser curses.",
@@ -1155,7 +1171,7 @@
   "spell:form-of-the-bear": {
     "description": "Illusion: Old Bear,  Increase Current Hit Points by 1 per Tick,   \tIncrease Wisdom by 5|classes=* Shaman - Level 25|slots=|skill=Alteration|mana=100|range=100|casting_time=4.00|fizzle_time=1.5|recast_time=12|duration=2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
     "mana": 100,
-    "skill": "Alteration|mana=100|range=100|casting_time=4.00|fizzle_time=1.5|recast_time=12|duration=2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+    "skill": "Alteration",
     "castTime": 4,
     "recastTime": 12,
     "fizzleTime": 1.5,
@@ -1163,7 +1179,7 @@
     "targetType": "Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
     "spellType": "Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
     "resist": "|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
-    "range": 100
+    "range": 0
   },
   "spell:mass-imbue-amber": {
     "description": "Focuses the power of Cazic-Thule into five pieces of amber. Consumes five ambers when cast.",
@@ -1175,7 +1191,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-diamond": {
     "description": "Focuses the power of Mithaniel Marr into five diamonds. Consumes five diamonds when cast.",
@@ -1187,7 +1204,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-ivory": {
     "description": "Focuses the power of Tribunal into Ivory. Consumes an Ivory x5 when cast. Creates an Imbued Ivory x5.",
@@ -1199,7 +1217,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-jade": {
     "description": "Focuses the power of Rallos Zek into Jade. Consumes an Jade x5 when cast. Creates an Imbued Jade x5.",
@@ -1211,19 +1230,21 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-sapphire": {
     "description": "Focuses the power of Innoruuk  into Sapphire. Consumes an Sapphire x5 when cast. Creates an Imbued Sapphire x5.|classes=* Cleric - Level 29 * Shaman - Level 29\n* Shaman - Level 29|slots={{SpellSlotRow | 1 | Summon Item: Imbued Sapphire",
     "mana": 600,
-    "skill": "Alteration|mana=600|range=|casting_time=10.00|fizzle_time=1.5|recast_time=1.5|duration=Instant|target_type=Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' Jade|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | East Cabilis | Vessel Grymm | Temple of Terror (First Floor) | (1018,-163)",
+    "skill": "Alteration",
     "castTime": 10,
     "recastTime": 1.5,
     "fizzleTime": 1.5,
     "duration": "Instant|target_type=Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
     "targetType": "Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
     "spellType": "Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
-    "resist": "Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)"
+    "resist": "Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
+    "range": 0
   },
   "spell:spirit-of-the-shrew": {
     "description": "Infuses your target with the spirit of the shrew, granting greatly improved night vision and increased movement speed for 36 min. This spell also functions indoors.",
@@ -1311,7 +1332,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Utility Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:blinding-luminance": {
     "description": "Creates a bright flash of light, temporarily blinding your target.",
@@ -1427,7 +1449,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:health": {
     "description": "Fills your target with superior health, increasing their stamina for 54 min.",
@@ -1529,7 +1552,9 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "range": 0
   },
   "spell:deftness": {
     "description": "Fills your target with a sense of deftness, increasing their dexterity for 54 min.",
@@ -1632,7 +1657,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:agility": {
     "description": "Fills your target with a sense of nimbleness, increasing their agility for 63 min.",
@@ -1683,7 +1709,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:stamina": {
     "description": "Fills your target with pure endurance, increasing their stamina for 63 min.",
@@ -1741,12 +1768,14 @@
     "description": "Channels your body's energy to refresh your mind, trading hit points for mana. '''0.486(L54) to 0.513(L60) Mana per Hp'''",
     "skill": "Alteration",
     "castTime": 1.25,
-    "recastTime": 2.25,
+    "recastTime": 1.5,
     "fizzleTime": 2.5,
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "range": 0
   },
   "spell:resist-magic": {
     "description": "Surrounds your target with an aura of protection, warding away magic for 36 min.",
@@ -1834,7 +1863,7 @@
     "duration": "30 seconds",
     "targetType": "Single",
     "spellType": "Curse",
-    "range": 100
+    "range": 200
   },
   "spell:remove-curse": {
     "description": "Cleanses your target's soul, removing minor curses.",
@@ -1872,14 +1901,15 @@
     "duration": "36 minutes",
     "targetType": "Single in Group",
     "spellType": "Resist Buff",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 60
   },
   "spell:bane-of-nife": {
     "description": "Fills your target's blood with poison, causing 150 damage initially and 214 damage every six seconds for 42 secs (7 ticks). Total (1648) & 3.88 dpm.",
-    "mana": 425,
+    "mana": 860,
     "skill": "Conjuration",
-    "castTime": 5,
-    "recastTime": 2.25,
+    "castTime": 3,
+    "recastTime": 1.5,
     "fizzleTime": 2.5,
     "duration": "7 ticks",
     "targetType": "Single",
@@ -1889,10 +1919,10 @@
   },
   "spell:pox-of-bertoxxulous": {
     "description": "Sickens your target with a fever, causing 90 damage initially and 111 damage every six seconds for 1.8 minutes, total of 2088 damage & 4.86dpm.",
-    "mana": 430,
+    "mana": 579,
     "skill": "Conjuration",
-    "castTime": 5,
-    "recastTime": 2.25,
+    "castTime": 3,
+    "recastTime": 1.5,
     "fizzleTime": 2.5,
     "duration": "1.8 minutes",
     "targetType": "Single",
@@ -1918,7 +1948,7 @@
     "mana": 200,
     "skill": "Alteration",
     "castTime": 6,
-    "recastTime": 2.25,
+    "recastTime": 1.5,
     "fizzleTime": 2.5,
     "duration": "4-5 ticks",
     "targetType": "Single",
@@ -1931,7 +1961,7 @@
     "mana": 500,
     "skill": "Alteration",
     "castTime": 13,
-    "recastTime": 2.25,
+    "recastTime": 1.5,
     "fizzleTime": 3,
     "duration": "1 hour 40 minutes",
     "targetType": "Single",
@@ -1947,7 +1977,9 @@
     "targetType": "Single",
     "spellType": "Beneficial",
     "resist": "Magic (0)",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:brusco-s-boastful-bellow": {
     "description": "A great bellow that causes 26 damage to your opponent.",
@@ -1958,7 +1990,8 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 100
+    "range": 100,
+    "mana": 0
   },
   "spell:purifying-rhythms": {
     "description": "A mystic tune that offers your group protection from poison, disease, and magic.",
@@ -1967,7 +2000,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:kelin-s-lucid-lullaby": {
     "description": "A quiet lullaby that causes your target to fall into an enchanted sleep. Affects creatures up to level 30.",
@@ -1977,7 +2013,9 @@
     "targetType": "PB AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 30
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:tarew-s-aquatic-ayre": {
     "description": "A song that surrounds your head with a cloud of air bubbles, allowing you to breathe underwater indefinitely.",
@@ -1986,7 +2024,10 @@
     "duration": "4 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 125
   },
   "spell:guardian-rhythms": {
     "description": "A mystic tune that offers your group protection from magic  and increases their armor class.",
@@ -1995,7 +2036,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:denon-s-disruptive-discord": {
     "description": "A screeching dissonance that causes damage over time to all nearby creatures and lowers their armor class.",
@@ -2005,17 +2049,21 @@
     "targetType": "PB AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 35
+    "range": 35,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:shauri-s-sonorous-clouding": {
     "description": "This sonnet surrounds your body with a light fog, allowing you to slip by many creatures undetected.  This song also allows you to see invisible creatures.",
-    "skill": "Wind †",
+    "skill": "Wind",
     "castTime": 3,
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 45
+    "range": 45,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:largo-s-melodic-binding": {
     "description": "This melody encompasses all nearby creatures in magical bonds, slowing their attack speed.",
@@ -2025,7 +2073,9 @@
     "targetType": "PB AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 30
+    "range": 30,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:cassindra-s-chant-of-clarity": {
     "description": "A light melody that restores the mana of your group.",
@@ -2034,7 +2084,10 @@
     "duration": "Instant",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 30
   },
   "spell:melanie-s-mellifluous-motion": {
     "description": "A chaotic chorus that causes your group to randomly teleport short distances.",
@@ -2044,16 +2097,21 @@
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 600
+    "range": 600,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:alenia-s-disenchanting-melody": {
     "description": "A melody that strips the magical effects from everyone in your group.",
-    "skill": "Stringed †",
+    "skill": "Stringed",
     "castTime": 3,
     "duration": "Instant",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 25
   },
   "spell:selo-s-consonant-chain": {
     "description": "This song engulfs your target in magical bonds, slowing their movement and attack speed.",
@@ -2063,7 +2121,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 150
+    "range": 150,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:lyssa-s-veracious-concord": {
     "description": "This song grants your group the ability to see invisible beings, as well as greatly enhancing night vision.",
@@ -2072,7 +2132,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 80
   },
   "spell:psalm-of-warmth": {
     "description": "This psalm surrounds your group in an aura of fire, granting them protection from cold, as well as harming anything that attacks them.",
@@ -2081,7 +2144,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Fire (0)"
+    "resist": "Fire (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:angstlich-s-appalling-screech": {
     "description": "A terrifying screech that causes nearby enemies to run in terror.",
@@ -2090,7 +2156,10 @@
     "duration": "3 ticks",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 25
   },
   "spell:solon-s-song-of-the-sirens": {
     "description": "An enticing melody that charms the target, allowing you to command it.",
@@ -2100,7 +2169,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:crission-s-pixie-strike": {
     "description": "A quiet lullaby that causes your target to fall into a magical sleep. Affects creatures up to level 45.",
@@ -2110,7 +2181,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:psalm-of-vitality": {
     "description": "This psalm surrounds your group in an aura of vitality, affording them protection from disease, as well as harming anything that attacks them.",
@@ -2119,7 +2192,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Disease (0)"
+    "resist": "Disease (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:fufil-s-curtailing-chant": {
     "description": "A magical chant that causes damage to an enemy and makes them more vulnerable to magic.",
@@ -2129,17 +2205,21 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:agilmente-s-aria-of-eagles": {
     "description": "An aria that allows your group to levitate for a short time.",
-    "skill": "Wind †",
+    "skill": "Wind",
     "castTime": 3,
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 80
+    "range": 80,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:cassindra-s-chorus-of-clarity": {
     "description": "A quiet chorus that clears the minds of your group, allowing them to regenerate their mana faster.",
@@ -2148,7 +2228,10 @@
     "duration": "Instant",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 30
   },
   "spell:psalm-of-cooling": {
     "description": "This psalm surrounds your group in an aura of cold, affording them protection from fire, as well as harming anything that attacks them.",
@@ -2157,16 +2240,22 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Cold (0)"
+    "resist": "Cold (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:cantata-of-soothing": {
     "description": "A light cantata that regenerates the health, mana, and endurance of your entire group.",
-    "skill": "Stringed †",
+    "skill": "Stringed",
     "castTime": 3,
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 60
   },
   "spell:lyssa-s-solidarity-of-vision": {
     "description": "This song weaves a magical mesh around your eyes, allowing you to see what your target sees.",
@@ -2176,7 +2265,9 @@
     "targetType": "Single",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 10000
+    "range": 10000,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:denon-s-dissension": {
     "description": "A harsh dissonance that assails the minds of all nearby creatures, draining their mana.",
@@ -2185,7 +2276,10 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 30
   },
   "spell:vilia-s-verses-of-celerity": {
     "description": "An energetic verse which hastens the attack speed of your group.",
@@ -2194,7 +2288,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:psalm-of-purity": {
     "description": "This psalm surrounds your group in an aura of purity, affording them protection from poison, as well as harming anything that attacks them.",
@@ -2203,7 +2300,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Poison (0)"
+    "resist": "Poison (0)",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:tuyen-s-chant-of-flame": {
     "description": "A fiery chant that causes between 26 and 40 damage to your target every 6 seconds and makes them more vulnerable to fire.",
@@ -2213,7 +2313,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Fire (0)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:avatar": {
     "description": "Infuses your target with the power of an avatar, increasing their strength, dexterity, agility, and attack rating for 6.0 mins.  \n\nConsumes an Emerald when cast (Emerald costs around 13p).\n\nThis spell stacks with all other buffs except Primal Essence and Aura of Battle.\n\n''Patch change 20 Feb, 2012: Kanras: Updated Avatar to give 100 AGI.''",
@@ -2236,7 +2338,9 @@
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 50
+    "range": 50,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:chords-of-dissonance": {
     "description": "Clashing notes that cause damage over time.",
@@ -2246,7 +2350,9 @@
     "targetType": "PB AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 30
+    "range": 30,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:elemental-rhythms": {
     "description": "A mystic tune that offers your group protection from fire, ice, and magic.",
@@ -2255,7 +2361,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:hymn-of-restoration": {
     "description": "A gentle melody that encourages your group's wounds to heal faster.",
@@ -2265,7 +2374,9 @@
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 30
+    "range": 30,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:jaxan-s-jig-o-vigor": {
     "description": "Fills your group with an invigorating rhythm that increases endurance regeneration.",
@@ -2285,7 +2396,9 @@
     "targetType": "Single",
     "spellType": "Beneficial",
     "resist": "Magic (0)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:selo-s-accelerando": {
     "description": "The quick pace of this song fills your feet with speed, increasing the movement rate of your group.",
@@ -2295,7 +2408,9 @@
     "targetType": "Party",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 150
+    "range": 150,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:jonthan-s-whistling-warsong": {
     "description": "An ancient war song that speeds your attacks and raises your armor class and strength.",
@@ -2304,7 +2419,10 @@
     "duration": "2 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 0
   },
   "spell:cannibalize-iv": {
     "description": "Channels your body's energy to refresh your mind, trading hit points for mana. '''0.547(L58) to 0.554(L60) Mana per Hp'''",
@@ -2315,7 +2433,9 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "range": 0
   },
   "spell:amplification": {
     "description": "Focuses the power of your voice, causing all songs that use the singing skill to increase in power by 10%.",
@@ -2324,7 +2444,10 @@
     "duration": "0:30",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 0
   },
   "spell:katta-s-song-of-sword-dancing": {
     "description": "Katta's song increases the dexterity of your group, and gives your group members a chance to lower the dexterity of their opponent.",
@@ -2334,7 +2457,9 @@
     "targetType": "Group",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 150,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:song-of-sustenance": {
     "description": "An energetic song that fills your group with energy, eliminating their need for food and water.",
@@ -2344,7 +2469,9 @@
     "targetType": "Group",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:magical-monologue": {
     "description": "A simple tune that adds a magical quality to your group's weapons, allowing them to harm creatures that would otherwise be invulnerable.",
@@ -2353,7 +2480,10 @@
     "duration": "18 Sec",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 0
   },
   "spell:lull": {
     "description": "Lulls the mind of your target, lowering its aggressiveness for 2 min. Affects creatures up to level 30.",
@@ -2378,7 +2508,8 @@
     "duration": "3-4 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:holy-armor": {
     "description": "Covers your target in holy armor, increasing their armor class for 27 min.",
@@ -2414,7 +2545,9 @@
     "targetType": "Single",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:psalm-of-mystic-shielding": {
     "description": "A mystic psalm enfolds your group, protecting them from magic as well as regenerating their health.",
@@ -2423,7 +2556,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:denon-s-desperate-dirge": {
     "description": "A dark dirge that causes between 311 and 405 damage to up to 4 enemies",
@@ -2434,7 +2570,8 @@
     "targetType": "Targeted AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 150
+    "range": 150,
+    "recastTime": 0
   },
   "spell:cassindra-s-elegy": {
     "description": "A quiet elegy that bolsters the intelligence and wisdom of your group.",
@@ -2443,7 +2580,10 @@
     "duration": "2 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 100
   },
   "spell:jonthan-s-provocation": {
     "description": "An ancient war song that increases your attack speed, strength, and attack rating.",
@@ -2452,7 +2592,10 @@
     "duration": "3 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 150
   },
   "spell:tuyen-s-chant-of-frost": {
     "description": "A frozen chant that causes between 26 and 40 damage to an enemy and makes them more vulnerable to cold.",
@@ -2462,7 +2605,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Cold (0)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:niv-s-melody-of-preservation": {
     "description": "A melody that offers your group protection from spell damage  as well as increasing their strength and health regeneration.",
@@ -2471,7 +2616,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 45
   },
   "spell:selo-s-chords-of-cessation": {
     "description": "A collection of chords that binds nearby enemies in magical cords, slowing their attacks and causing them damage. This song does not stack with lv54 Selo's Assonant Strane.",
@@ -2481,7 +2629,9 @@
     "targetType": "PB AE",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 30
+    "range": 30,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:verses-of-victory": {
     "description": "A victorious verse that fills the arms of your group with energy, increasing their attack rate, strength, and agility.",
@@ -2490,16 +2640,22 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 50
   },
   "spell:melody-of-ervaj": {
     "description": "An archaic song that increases the attack speed of your group. This increase is cumulative with most other effects that increase attack speed.",
-    "skill": "Brass †",
+    "skill": "Brass",
     "castTime": 3,
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 150
   },
   "spell:mcvaxius-berserker-crescendo": {
     "description": "A crescendo that increases your group's attack speed, as well as increasing their strength and armor class.",
@@ -2508,7 +2664,10 @@
     "duration": "3 ticks",
     "targetType": "Party",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "mana": 0,
+    "recastTime": 0,
+    "range": 45
   },
   "spell:solon-s-bewitching-bravura": {
     "description": "A bewitching melody that charms the target, allowing you to command it.",
@@ -2519,7 +2678,8 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 200
+    "range": 200,
+    "recastTime": 0
   },
   "spell:spirit-of-sharik": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2531,7 +2691,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sharik-s-replenishing": {
     "description": "Restores your warder's health, healing 55 hit points, as well as curing them of diseases, poisons, and curses.",
@@ -2595,7 +2756,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spirit-of-the-blizzard": {
     "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Blizzard Strike",
@@ -2620,7 +2782,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:tame-spirit": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2632,7 +2795,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spiritual-brawn": {
     "description": "Fills your target with spiritual brawn, increasing their hit points and attack rating for 72 min.",
@@ -2655,7 +2819,9 @@
     "targetType": "Single Friendly (or Self)",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:rizlona-s-embers": {
     "description": "Increases the damage of your companions' direct damage spells by up to 1%. This bonus will decay on spells over level 52.",
@@ -2665,7 +2831,9 @@
     "targetType": "Group",
     "spellType": "Beneficial",
     "resist": "| other =",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:selo-s-accelerating-chorus": {
     "description": "The rapid pace of this song fills your feet with speed, increasing the movement rate of your group for 2 min 30s.",
@@ -2675,7 +2843,9 @@
     "targetType": "Group",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 150
+    "range": 150,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:sionachie-s-dreams": {
     "description": "A quiet lullaby that causes your target to fall into an enchanted sleep.  Affects creatures up to level 53.",
@@ -2685,7 +2855,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Magic (0)",
-    "range": 100
+    "range": 100,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:tuyen-s-chant-of-disease": {
     "description": "A diseased chant that causes between 26 and 40 damage every six seconds to an enemy and makes them more vulnerable to disease.",
@@ -2695,7 +2867,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Disease (-30)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:tuyen-s-chant-of-poison": {
     "description": "A poisoned chant that causes between 26 and 40 damage every six seconds to an enemy and makes them more vulnerable to poison.",
@@ -2705,7 +2879,9 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Poison (-30)",
-    "range": 200
+    "range": 200,
+    "mana": 0,
+    "recastTime": 0
   },
   "spell:herikol-s-soothing": {
     "description": "Restores your warder's health, healing 298 hit points, as well as curing them of diseases, poisons, and curses.",
@@ -2769,7 +2945,8 @@
     "targetType": "Single",
     "spellType": "Damage Over Time",
     "resist": "Disease (0)",
-    "range": 200
+    "range": 200,
+    "castTime": 0
   },
   "spell:spirit-of-keshuval": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2781,7 +2958,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spirit-of-herikol": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2793,7 +2971,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spirit-of-yekan": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2805,7 +2984,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:spirit-of-kashek": {
     "description": "Summons a feral warder to aid you in battle.",
@@ -2817,7 +2997,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Pet",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:yekan-s-quickening": {
     "description": "Fills your warder with the quickening of Yekan, increasing their attack speed, strength, armor class, and attack rating.",
@@ -3024,7 +3205,8 @@
     "duration": "4 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:furor": {
     "description": "Calls upon the furor of the gods to strike your target, causing 33 damage.",
@@ -3101,7 +3283,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sense-the-dead": {
     "description": "Provides you with a mystical undead awareness, pointing you towards the nearest undead creature.",
@@ -3113,7 +3296,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 240
   },
   "spell:word-of-pain": {
     "description": "A forbidden word that causes between 24 and 29 damage to all nearby enemies.",
@@ -3125,7 +3309,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:expulse-undead": {
     "description": "A burst of holy power that inflicts 106 damage to an undead target.",
@@ -3150,7 +3335,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sense-summoned": {
     "description": "Provides you with a mystical awareness, pointing you towards the nearest summoned creature.",
@@ -3162,13 +3348,14 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 240
   },
   "spell:smite": {
     "description": "Calls upon the power of the gods to smite your target, causing 88 damage.",
     "mana": 43,
     "skill": "Evocation",
-    "castTime": 2.45,
+    "castTime": 2.5,
     "recastTime": 1.5,
     "fizzleTime": 2.5,
     "duration": "Instant",
@@ -3239,7 +3426,8 @@
     "duration": "4 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:holy-might": {
     "description": "Strikes an enemy with holy might, briefly stunning them and causing 60 damage. This spell works on creatures up to level 55.",
@@ -3290,7 +3478,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:inspire-fear": {
     "description": "A booming voice fills your target's ears, causing them to flee in terror.",
@@ -3328,7 +3517,8 @@
     "duration": "3 ticks",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 15
   },
   "spell:expulse-summoned": {
     "description": "A burst of holy light that inflicts 122 damage to a summoned target.",
@@ -3392,7 +3582,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:word-of-shadow": {
     "description": "A forbidden word that causes between 52 and 58 damage to all nearby enemies.",
@@ -3404,7 +3595,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:renewing-echo": {
     "description": "Fills your target's body with a renewing echo, immediately healing between 265 and 280 hit points, then healing twice more for 110 hit points every 6 seconds for 6s.",
@@ -3605,7 +3797,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:divine-barrier": {
     "description": "Encases the caster in a divine aura, rendering them invulnerable to all attacks for 18s and healing 1 hit points.",
@@ -3617,7 +3810,8 @@
     "duration": "3 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:wrath": {
     "description": "Calls upon the wrath of the gods to strike your target, inflicting 176 damage.",
@@ -3642,7 +3836,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:armor-of-protection": {
     "description": "Places mystic armor of protection around you, increasing your hit points and armor class.",
@@ -3654,7 +3849,8 @@
     "duration": "1 hour 42 minutes @L34 to 2 hours 24 minutes @L48",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:atone": {
     "description": "Calls upon the judgment of the gods, allowing a chance for the target to forget those that have harmed them.",
@@ -3771,7 +3967,7 @@
     "targetType": "Group v2",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 50
   },
   "spell:armor-of-faith": {
     "description": "Covers your target in the armor of faith, increasing their armor class for 63 min.",
@@ -3835,7 +4031,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:hammer-of-requital": {
     "description": "Summons a magical hammer that is particularly adept at smiting undead.",
@@ -3847,7 +4044,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-black-pearl": {
     "description": "Focuses the power of Prexus into a black pearl. Consumes a black pearl when cast.",
@@ -3859,7 +4057,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-black-sapphire": {
     "description": "Focuses the power of Bertoxxulous into a black sapphire. Consumes a black sapphire when cast.",
@@ -3871,7 +4070,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-emerald": {
     "description": "Focuses the power of Tunare into an emerald. Consumes an emerald when cast.",
@@ -3883,7 +4083,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-opal": {
     "description": "Focuses the power of Rodcet Nife into an opal. Consumes an opal when cast.",
@@ -3895,7 +4096,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-peridot": {
     "description": "Focuses the power of Bristlebane into a peridot.  Consumes a peridot when cast.",
@@ -3907,7 +4109,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-plains-pebble": {
     "description": "Focuses the power of Karana into a plains pebble. Consumes a plains pebble when cast.",
@@ -3919,7 +4122,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-rose-quartz": {
     "description": "Focuses the power of Erollisi Marr into a star rose quartz. Consumes a star rose quartz when cast.",
@@ -3931,7 +4135,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-ruby": {
     "description": "Focuses the power of Brell Serilis into a ruby. Consumes a ruby when cast.",
@@ -3943,7 +4148,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:imbue-topaz": {
     "description": "Focuses the power of Quellious into a topaz. Consumes a topaz when cast.",
@@ -3955,7 +4161,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:invoke-fear": {
     "description": "A booming voice fills your target's ears, causing them to flee in terror.",
@@ -3980,7 +4187,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-emerald": {
     "description": "Focuses the power of Tunare into five emeralds. Consumes five emeralds when cast.",
@@ -3992,7 +4200,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:blessing-of-the-knight": {
     "description": "Covers your targets hands in a glowing aura that causes their strikes against enemies to heal them for 4.",
@@ -4067,7 +4276,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-black-sapphire": {
     "description": "Focuses the power of Bertoxxulous into five black sapphires. Consumes five black sapphires when cast.",
@@ -4078,7 +4288,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-opal": {
     "description": "Focuses the power of Rodcet Nife into five opals. Consumes five opals when cast.",
@@ -4089,7 +4300,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-peridot": {
     "description": "Focuses the power of Bristlebane into five peridots. Consumes five peridots when cast.",
@@ -4100,7 +4312,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-rose-quartz": {
     "description": "Focuses the power of Erollisi Marr into five pieces of star rose quartz. Consumes five star rose quartz when cast.",
@@ -4111,7 +4324,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-ruby": {
     "description": "Focuses the power of Brell Serilis into five rubies. Consumes five rubies when cast.",
@@ -4122,7 +4336,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-imbue-topaz": {
     "description": "Focuses the power of Quellious into five topaz. Consumes five topaz when cast.",
@@ -4133,7 +4348,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:renewal": {
     "description": "Revives a slain ally, restoring 50% of their lost experience. It takes some time for the recently revived to fully recover.",
@@ -4310,7 +4526,8 @@
     "duration": "4 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:abolish-poison": {
     "description": "Removes toxin from your target's system, curing them of major poisons.",
@@ -4361,7 +4578,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:word-of-healing": {
     "description": "Mends the wounds of everyone in your group, healing between 708 and 758 hit points.",
@@ -4374,7 +4592,7 @@
     "targetType": "Group v2",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 50
   },
   "spell:sound-of-force": {
     "description": "Strikes an enemy with holy might, briefly stunning them and causing 220 hit points of damage. This spell works on creatures up to level 55.",
@@ -4477,7 +4695,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ignite": {
     "description": "Ignites your target's skin, doing 46 damage.",
@@ -4515,7 +4734,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:strength-of-earth": {
     "description": "Fills your target with the power of the earth, increasing their strength for 27 min.",
@@ -4540,7 +4760,8 @@
     "duration": "27 minutes @L9 to 36 minutes @L12",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:cascade-of-hail": {
     "description": "Calls down a hailstorm from the sky, causing three waves of 27 damage, up to a maximum of 4 targets hit. (0.435DPM per hit)\n\n\n*Note: Rain nukes are limited to 4 hits total. Either you can hit the same mobs 3 times, you can hit 2 mobs twice each, or you can hit 4 mobs once each.\n*You, the caster, are exempt from this. You will get hit with all 3 waves regardless of how many mobs you hit if you cast it on top of yourself",
@@ -4630,7 +4851,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:grasping-roots": {
     "description": "Commands roots to take hold of your target, doing 10 damage and preventing their movement for 48s.",
@@ -4668,7 +4890,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 0
   },
   "spell:protection-of-wood": {
     "description": "Hardens the skin of your group, increasing their hit points and armor class for 27 min.",
@@ -4719,7 +4942,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:sacred-echo": {
     "description": "Fills your target's body with a sacred echo, immediately healing 640 hit points, then healing twice more for 260 hit points every 6 seconds for 6s.",
@@ -4843,7 +5067,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 0
   },
   "spell:calm-animal": {
     "description": "Calms the ferocity of many animals, making them less likely to attack. This spell works on creatures up to level 50.",
@@ -4907,7 +5132,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-north-karana": {
     "description": "Opens a mystical portal that transports you to the Northern Plains of Karana.",
@@ -4919,7 +5145,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-toxxulia": {
     "description": "Opens a mystical portal that transports you to the Toxxulia Forest.",
@@ -4931,7 +5158,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shield-of-barbs": {
     "description": "Surrounds your target in a shield of barbs that causes damage to anything that strikes them for 15 min.",
@@ -5021,7 +5249,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-lavastorm": {
     "description": "Opens a mystical portal that transports you to the Lavastorm Mountains.",
@@ -5033,7 +5262,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sunbeam": {
     "description": "Calls down an intense sunbeam that blinds any creature near your target. Only usable outdoors.",
@@ -5058,7 +5288,8 @@
     "duration": "1 hour 12 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:beguile-plants": {
     "description": "Beckons to the plants of the wild, allowing you to control them.\n\n<!--'''NOTE:''' There are very few plant mobs of level 25 or below in the game.  Man Eating Vines in Swamp of No Hope  (level 25 exactly) are one of the best targets for this spell. -->",
@@ -5083,7 +5314,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 0
   },
   "spell:circle-of-north-karana": {
     "description": "Opens a mystical portal that transports your group to the Northern Plains of Karana.",
@@ -5095,7 +5327,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:circle-of-surefall-glade": {
     "description": "Opens a mystical portal that transports your group to Surefall Glade.",
@@ -5107,7 +5340,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:circle-of-toxxulia": {
     "description": "Opens a mystical portal that transports your group to the Toxxulia Forest.",
@@ -5119,7 +5353,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:combust": {
     "description": "Ignites your target's skin, doing 182 damage.",
@@ -5183,7 +5418,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:circle-of-feerrott": {
     "description": "Opens a mystical portal that transports your group to the Feerrott Jungle.",
@@ -5195,7 +5431,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:circle-of-lavastorm": {
     "description": "Opens a mystical portal that transports your group to the Lavastorm Mountains.",
@@ -5207,7 +5444,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:circle-of-steamfont": {
     "description": "Opens a mystical portal that transports your group to the Steamfont Mountains.",
@@ -5219,7 +5457,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:greater-wolf-form": {
     "description": "Fills you with the spirit of the wild, allowing you to take the form of a wolf, increasing your movement speed, and attack rating.",
@@ -5231,7 +5470,8 @@
     "duration": "1 hour 42 minutes @L34 to 1 hour 50 minutes @L37",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lightning-strike": {
     "description": "Calls down lightning from the sky, causing between 163 and 184 damage and up to 3 others nearby. (1.23 DPM) This spell can hit at most 4 targets; the caster can be one of those targets. Only castable outdoors.",
@@ -5269,7 +5509,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-west-commons": {
     "description": "Opens a mystical portal that transports you to the Western Commonlands.",
@@ -5281,7 +5522,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-south-ro": {
     "description": "Opens a mystical portal that transports you to The Southern Desert of Ro.",
@@ -5293,7 +5535,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-stonebrunt": {
     "description": "Opens a mystical portal that transports you to The Stonebrunt Mountains.",
@@ -5305,7 +5548,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ring-of-misty-thicket": {
     "description": "Opens a mystical portal that transports you to the Misty Thicket.",
@@ -5317,7 +5561,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:circle-of-butcherblock": {
     "description": "Opens a mystical portal that transports your group to the Butcherblock Mountains.",
@@ -5589,7 +5834,8 @@
     "duration": "36 minutes",
     "targetType": "Group v2",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 20
   },
   "spell:shield-of-spikes": {
     "description": "Surrounds your target in a shield of spikes that cause damage to anything that strikes them for 15 min.",
@@ -5614,7 +5860,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 0
   },
   "spell:allure-of-the-wild": {
     "description": "Beckons to the animals of the wild, allowing you to control them.",
@@ -5665,7 +5912,8 @@
     "duration": "2 hours 12 minutes @L44 to 2 hours 24 minutes @L48",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:savage-spirit": {
     "description": "Fills your pet with a savage spirit, increasing their attack speed, strength, and armor class.",
@@ -5703,7 +5951,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 0
   },
   "spell:beguile-animals": {
     "description": "Beckons to the animals of the wild, allowing you to control them.",
@@ -5728,7 +5977,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:engulfing-roots": {
     "description": "Commands roots to take hold of your target, doing 160 damage, and preventing their movement for 3 min.",
@@ -6052,7 +6302,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:share-form-of-the-great-wolf": {
     "description": "Fills your group with the spirit of the wild, allowing them to take the form a wolf for 360 min and granting *100%N.",
@@ -6064,7 +6315,8 @@
     "duration": "6:00:00",
     "targetType": "Group",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 40
   },
   "spell:blossoming-heal": {
     "description": "Seeds your target with healing energy, healing for 120 every 6 seconds for 24s and then healing for 390.",
@@ -6102,7 +6354,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-shielding": {
     "description": "Surrounds your body in a magical shield, increasing your hit points and armor class.",
@@ -6114,7 +6367,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:pendril-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes a Tiny Dagger when cast.",
@@ -6126,7 +6380,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-half-elf": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Half-Elf. Improves night-vision.",
@@ -6138,7 +6393,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shallow-breath": {
     "description": "Constricts your target's throat, causing between 3 and 5 damage, as well as lowering their strength and agility for 18 secs (3 ticks).",
@@ -6215,7 +6471,8 @@
     "duration": "12 minutes @L4 to 36 minutes 6 seconds @L12",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:juli-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes a Tiny Dagger when cast.",
@@ -6227,7 +6484,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mesmerize": {
     "description": "Causes your opponent to fall into an enchanted sleep for up to 24 secs (2 ticks @L2 to 4 ticks @L4).  This spell works on creatures up to level 55. (0.83 mana per second)",
@@ -6317,7 +6575,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-wood-elf": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Wood Elf.",
@@ -6329,7 +6588,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-shielding": {
     "description": "Surrounds your body in a magical shield, increasing your hit points, armor class, and magic resistance.",
@@ -6341,7 +6601,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mircyl-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes a tiny dagger when cast.",
@@ -6353,7 +6614,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sentinel": {
     "description": "Creates a watchful aura that will alert you when penetrated.",
@@ -6365,7 +6627,8 @@
     "duration": "6 minutes",
     "targetType": "Targeted AE",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:enchant-silver": {
     "description": "Enchants a bar of silver with magical energy.  Consumes a bar of silver when cast.",
@@ -6377,7 +6640,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:enchant-clay": {
     "description": "Enchants a large block of clay with magical energy. Consumes a large block of clay when cast.",
@@ -6389,7 +6653,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:charm": {
     "description": "Dominates your target's mind, allowing you to control them for a short time. This spell works on creatures up to level 25.\n\nAs of 2020, Vendor NPCs can '''not''' be charmed.[https://www.project1999.com/forums/showthread.php?t=370884]",
@@ -6440,7 +6705,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-high-elf": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a High Elf.",
@@ -6452,7 +6718,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:kilan-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes 1 tiny dagger when cast. Innate magic weapon (can hit Wisps)",
@@ -6464,7 +6731,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:languid-pace": {
     "description": "Constricts your target's muscles, causing their attack speed to slow for 30 secs (6 ticks @L12 to 3.2 mins @L65).",
@@ -6528,7 +6796,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 35
   },
   "spell:improved-superior-camouflage": {
     "description": "Covers your body in a mystic cloak, allowing you to blend in with your surroundings.",
@@ -6540,7 +6809,8 @@
     "duration": "10 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:legacy-of-spike": {
     "description": "Surrounds your group in a shield of spikes that causes damage to anything that strikes them for 15 min.",
@@ -6552,19 +6822,21 @@
     "duration": "5.1 minutes @L51 to 6.5 minutes @L65",
     "targetType": "Group v2",
     "spellType": "Beneficial",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 60
   },
   "spell:levitation": {
     "description": "Forms a cloud of dense air around your feet, allowing you to float slightly off the ground for 20 min 30s.",
     "mana": 60,
-    "skill": "| mana = 60",
+    "skill": "Alteration",
     "castTime": 3,
     "recastTime": 1.5,
     "fizzleTime": 2.25,
     "duration": "3 minutes @L1 to 12 minutes @L4",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:everlasting-breath": {
     "description": "Fills your lungs with magical breath, removing your necessity for air for 27 min.",
@@ -6641,7 +6913,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-enchant-clay": {
     "description": "Enchants five large blocks of clay with magical energy. Consumes five large blocks of clay when cast.",
@@ -6653,7 +6926,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-thicken-mana": {
     "description": "Thickens mana into a physical form, creating five vials of viscous mana. Consumes five poison vials and five pearls when cast.",
@@ -6665,7 +6939,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:intellectual-advancement": {
     "description": "Focuses your target's mental faculties, reducing their fizzle rate.",
@@ -6729,7 +7004,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-halfling": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Halfling.",
@@ -6741,7 +7017,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:thicken-mana": {
     "description": "Thickens mana into a physical form.  Consumes a poison vial and a pearl when cast.",
@@ -6753,7 +7030,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:chase-the-moon": {
     "description": "Fills your enemies' mind with confusion, causing them to flee.",
@@ -6778,7 +7056,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:enthrall": {
     "description": "Causes your opponent to fall into an enchanted sleep for up to 48 secs (8 ticks).  This spell works on creatures up to level 55. (1.04 mana per second)",
@@ -6803,7 +7082,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-dwarf": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Dwarf.",
@@ -6815,7 +7095,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-tree": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Tree.",
@@ -6827,7 +7108,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mesmerization": {
     "description": "Cause enemies in a small area around your target to fall into an enchanted sleep for up to 24 secs (4 ticks).  This spell works on creatures up to level 55. (2.91 mana per second)",
@@ -6878,7 +7160,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shielding": {
     "description": "Surrounds your body in a magical shield, increasing your hit points, armor class, and magic resistance.",
@@ -6890,7 +7173,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:benevolence": {
     "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.\n\nOnly one faction can be boosted at a time.",
@@ -6928,7 +7212,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-iksar": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be an Iksar. This spell also increases your regeneration rate slightly.",
@@ -6940,7 +7225,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-ogre": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be an Ogre. This spell also grants you greatly improved night vision, and gives the ability Slam.\n\nDoes '''not''' give ogre racial front stun immunity.",
@@ -6952,7 +7238,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-troll": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Troll.  This spell also increases your regeneration rate slightly and gives the ability to Slam.",
@@ -6964,7 +7251,8 @@
     "duration": "36 minutes 6 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shifting-sight": {
     "description": "Shifts your vision to your target's eyes, increasing vision range, as well as vastly improving night vision.",
@@ -6989,7 +7277,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sympathetic-aura": {
     "description": "Cloaks your target in a sympathetic aura, increasing their charisma.",
@@ -7053,7 +7342,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-earth-elemental": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be an Earth Elemental.  This spell also grants you increased strength. Increases faction with Minions of Underfoot",
@@ -7065,7 +7355,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-skeleton": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Skeleton.",
@@ -7077,7 +7368,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:major-shielding": {
     "description": "Surrounds your body in a magical shield, increasing your hit points, armor class, and magic resistance.",
@@ -7089,7 +7381,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:rune-ii": {
     "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a {{:bloodstone",
@@ -7114,7 +7407,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:augmentation": {
     "description": "Fills your target with energy, increasing their attack speed, agility, and stamina regeneration.",
@@ -7139,7 +7433,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:curse-of-the-simple-mind": {
     "description": "Weakens your opponents mind, lowering their intelligence and wisdom.",
@@ -7294,7 +7589,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-enchant-gold": {
     "description": "Enchants five bars of gold with magical energy. Consumes five bars of gold when cast.",
@@ -7306,7 +7602,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:intellectual-superiority": {
     "description": "Focuses your target's mental faculties, reducing their fizzle rate.",
@@ -7331,7 +7628,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:haunting-visage": {
     "description": "Cloaks your target in a haunting visage, drawing more attention to any action they take.",
@@ -7369,7 +7667,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-water-elemental": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Water Elemental, This spell also grants you magical breathing.",
@@ -7381,7 +7680,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:uleen-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes a tiny dagger when cast.",
@@ -7393,7 +7693,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:anarchy": {
     "description": "Strikes your target with a chaotic burst of mental energy, causing between 264 and 288 damage. (1.8 DPM)",
@@ -7418,7 +7719,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:cast-sight": {
     "description": "Allows you to see through your target's eyes with greatly increased night vision.",
@@ -7443,7 +7745,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:entrance": {
     "description": "Causes your opponent to fall into an enchanted sleep for up to 1.2 mins (72 seconds).  This spell works on creatures up to level 55. (1.18 mana per second)",
@@ -7481,7 +7784,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-fire-elemental": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Fire Elemental.  This spell also provides you with a shield of flame that harms those who attack you.",
@@ -7493,7 +7797,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Fire (0)"
+    "resist": "Fire (0)",
+    "range": 0
   },
   "spell:radiant-visage": {
     "description": "Cloaks you in a radiant visage, increasing your charisma.",
@@ -7544,7 +7849,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-dry-bone": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Drybone Skeleton.  This spell also grants increased fire resistance.",
@@ -7556,7 +7862,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-spirit-wolf": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be a Spirit Wolf. Only usable outdoors.",
@@ -7568,7 +7875,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:insight": {
     "description": "Expands your target's mind, increasing their wisdom.",
@@ -7645,7 +7953,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:boon-of-the-garou": {
     "description": "Transforms your target into a feral werewolf, increasing their attack rating, dexterity, and allowing a chance to perform a life draining attack.\n<br>\n\n Lifetap Proc Damage(Based on level of the person it is cast on):<br>\n  5 HP @ level 1<br>\n  30 HP @ level 50<br>\n  35 HP @ level 60 <br>\n<br>\n\nThis spell stacks with shaman dexterity buffs such as Mortal Deftness. It does not stack with other illusions.",
@@ -7683,7 +7992,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:rune-iv": {
     "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a peridot when cast. (Absorbs 1.66 HP per mana)",
@@ -7734,7 +8044,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:yegoreff-s-animation": {
     "description": "Animates a weapon and shield to attack your enemies.  Consumes a tiny dagger when cast.",
@@ -7746,7 +8057,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:boon-of-the-clear-mind": {
     "description": "Calms your group's thoughts, allowing them to regenerate mana more quickly. ([http://www.project1999.org/forums/showthread.php?t=34660 level 52]) <br> A group-targeted mana regeneration spell. It gives 1 point more per tic than Clarity.",
@@ -7758,7 +8070,8 @@
     "duration": "27 minutes",
     "targetType": "Group v2",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 60
   },
   "spell:color-skew": {
     "description": "Creates a wave of intense color around you that assaults your opponent's senses, briefly stunning all nearby creatures. Works on mobs up to level 55.",
@@ -7861,7 +8174,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:bounce": {
     "description": "Surrounds your body in a reflective aura, providing a chance for all incoming spells to rebound back against the caster.",
@@ -7873,7 +8187,8 @@
     "duration": "12 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:calming-visage": {
     "description": "Cloaks your target in a calming visage, diverting attention from any action they take.",
@@ -7897,7 +8212,9 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "recastTime": 0,
+    "range": 100
   },
   "spell:mass-clarify-mana": {
     "description": "Crystallizes mana into a physical form, creating five vials of clear mana. Consumes five poison vials and five emeralds when cast",
@@ -7909,7 +8226,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:mass-distill-mana": {
     "description": "Distills mana into a physical form, creating five vials of distilled mana. Consumes five poison vials and ten sapphires when cast",
@@ -7921,7 +8239,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:entrancing-lights": {
     "description": "Cause up to 8 nearby creatures to fall into an enchanted sleep for up to 6 seconds (1 tick).  This spell works on creatures up to level 55.",
@@ -7933,7 +8252,8 @@
     "duration": "6 seconds",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 30
   },
   "spell:guard-of-alendar": {
     "description": "Places the Guard of Alendar on your target, absorbing a portion of incoming spell damage. This spell absorbs a set amount of damage before dissipating. Consumes a jasper when cast.",
@@ -7971,7 +8291,8 @@
     "duration": "30 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:swift-like-the-wind": {
     "description": "Grants your target quickened movement, increasing their attack speed for 15.1 mins @L47 to 16.0 mins @L50.",
@@ -8048,7 +8369,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:purify-mana": {
     "description": "Distills mana into a physical form.  Consumes a poison vial and four rubies when cast.",
@@ -8060,7 +8382,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shadow": {
     "description": "Causes your target's image to blur, making it harder for your opponents to hit you by increasing your armor class. Prevents Talisman of Kragg and Riotous Health from sticking.",
@@ -8111,7 +8434,8 @@
     "duration": "10 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:collaboration": {
     "description": "Cloaks you in an amiable aura, causing creatures of your target's faction to view you more favorably.\n\nOnly one faction can be boosted at a time.",
@@ -8162,7 +8486,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:burn": {
     "description": "Burns your target's skin with fire, causing between 13 and 14 damage.",
@@ -8187,7 +8512,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Fire (0)"
+    "resist": "Fire (0)",
+    "range": 20
   },
   "spell:summon-bandages": {
     "description": "Focuses mana into the form of a several bandages.",
@@ -8199,7 +8525,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-wisp": {
     "description": "Focuses mana into the form of a wisp stone.",
@@ -8211,7 +8538,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:eye-of-zomm": {
     "description": "Conjures a magical eye that allows you to scout dangerous areas. <br> While under the effect of this spell, a new low level NPC is spawned that looks like a spinning eye. After a short delay, the camera switches to follow this eye and the caster can control it with most normal movement commands. The eye has the same faction as the player, and if the player is not under Feign Death, they will gain any aggro which the eye has. Thus, it is useful as a long-range pulling method. <br> Like other NPCs, players can attack the eye <s>and cannot buff it</s> ''(not sure if it's a case-by-case basis but I regularly cast Bedlam on my eyes without issue to get extra hits in)''. It's possible to summon the eye and hit it with weapons such as the Worker Sledgemallet just to gain a proc effect. It has good swimming speed but cannot jump and may have difficulty getting out of the water.\n<br>\n<br>\nCan not be cast in Plane of Sky or Kedge Keep.",
@@ -8223,7 +8551,8 @@
     "duration": "5 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 5
   },
   "spell:flame-bolt": {
     "description": "Burns your target's skin with a bolt of fire, causing between 45 and 55 damage (1.18 DPM).",
@@ -8287,7 +8616,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:burnout": {
     "description": "Infuses your elemental companion with energy, increasing their attack speed, armor class, and strength.",
@@ -8338,7 +8668,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementalkin-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -8350,7 +8681,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementalkin-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -8362,7 +8694,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementalkin-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -8374,7 +8707,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementalkin-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -8386,7 +8720,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementaling-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -8398,7 +8733,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementaling-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -8410,7 +8746,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementaling-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -8422,7 +8759,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elementaling-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -8434,7 +8772,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -8446,7 +8785,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -8458,7 +8798,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -8470,7 +8811,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -8482,7 +8824,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:blanket-of-forgetfulness": {
     "description": "Attacks the minds of all enemies in the vicinity of your target, providing a chance to forget those that have done them harm.",
@@ -8533,7 +8876,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:illusion-imp": {
     "description": "Cloaks you in a shimmering illusion that makes you appear to be an Air Elemental.  This spell also grants you levitation.",
@@ -8545,7 +8889,8 @@
     "duration": "30 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-brass-choker": {
     "description": "Focuses mana into the form of a brass choker that sometimes allows you to cast a spell without consuming any reagents. This item works on spells up to level 12.",
@@ -8556,7 +8901,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-linen-mantle": {
     "description": "Focuses mana into the form of a linen mantle that allows many of your beneficial spells to last a longer period of time. This item works on spells up to level sixteen.",
@@ -8567,7 +8913,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-tarnished-bauble": {
     "description": "Focuses mana into the form of a tarnished bauble that sometimes allows you to cast a spell for a reduced mana cost. This item works on spells up to level twenty-four.",
@@ -8578,7 +8925,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-elemental-defender": {
     "description": "Focuses mana into the form of an elemental defender.",
@@ -8589,7 +8937,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:phantom-leather": {
     "description": "Covers you in phantom leather armor, increasing your hit point regeneration and armor class. Consumes a cat's eye agate when cast.",
@@ -8601,7 +8950,8 @@
     "duration": "45 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shock-of-flame": {
     "description": "Burns your target's skin with flames, causing between 91 and 97 damage (1.39 DPM).",
@@ -8626,7 +8976,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-heatstone": {
     "description": "Focuses mana into the form of heatstone that provides improved night vision (Serpent Sight).",
@@ -8638,7 +8989,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-throwing-dagger": {
     "description": "Focuses mana into the form of a bundle of throwing daggers.",
@@ -8650,7 +9002,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:bolt-of-flame": {
     "description": "Burns your target's skin with a bolt of flame, causing between 146 and 156 damage (1.39-1.49 DPM).",
@@ -8675,7 +9028,8 @@
     "duration": "27 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:rain-of-fire": {
     "description": "Conjures a rain of fire that assaults all creatures in the vicinity of your target, causing three waves of of up to 56 damage each. DPM of .45/.89/1.34",
@@ -8726,7 +9080,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-arrows": {
     "description": "Focuses mana into the form of a bundle of 3 DMG arrows.",
@@ -8738,7 +9093,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-waterstone": {
     "description": "Focuses mana into the form of a waterstone, allowing the user to breathe underwater for extended periods of time.",
@@ -8750,7 +9106,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:flame-flux": {
     "description": "Creates a circle of fire around you, causing between 89 and 96 damage to all nearby creatures.",
@@ -8762,7 +9119,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Fire (0)"
+    "resist": "Fire (0)",
+    "range": 20
   },
   "spell:shock-of-spikes": {
     "description": "Conjures a shock of spikes that assaults your target, causing between 158 and 176 damage (1.436DPM-1.6 DPM).",
@@ -8787,7 +9145,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:burnout-ii": {
     "description": "Infuses your elemental companion with energy, increasing their attack speed, armor class, and strength.",
@@ -8838,7 +9197,8 @@
     "duration": "55 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:rain-of-spikes": {
     "description": "Conjures a rain of spikes that assaults all creatures in the vicinity of your target, causing three waves of up to 91 damage each. DPM of .56/1.12/1.68",
@@ -8863,7 +9223,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:sword-of-runes": {
     "description": "Focuses mana into the form of a runed sword.   procs a 41 point DD on summoned.",
@@ -8875,7 +9236,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:dimensional-hole": {
     "description": "Conjures a dimensional pocket that allows you to carry heavy loads unhindered.  The pouch, and all of its contents, will be lost if you leave the world of Norrath for a significant period of time.",
@@ -8887,7 +9249,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:monster-summoning-i": {
     "description": "Conjures a pet in the form of a local monster to aid you in battle.",
@@ -8899,7 +9262,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-summoning-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -8911,7 +9275,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-summoning-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -8923,7 +9288,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-summoning-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -8935,7 +9301,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-summoning-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -8947,7 +9314,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-summoning-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -8959,7 +9327,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-summoning-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -8971,7 +9340,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-summoning-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -8983,7 +9353,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-summoning-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -8995,7 +9366,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summoning-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9007,7 +9379,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summoning-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9019,7 +9392,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summoning-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9031,7 +9405,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summoning-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9043,7 +9418,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-summoning-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9055,7 +9431,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-summoning-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9067,7 +9444,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-summoning-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9079,7 +9457,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-summoning-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9091,7 +9470,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:cornucopia": {
     "description": "Focuses mana into the form of loaves of bread suitable for eating. <br>Summons a stack of 20.",
@@ -9103,7 +9483,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:everfount": {
     "description": "Focuses mana into the form of watery globes suitable for drinking. <br>Summons a stack of 20.",
@@ -9115,7 +9496,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-tiny-ring": {
     "description": "Focuses mana into the form of a tiny ring that allows you to cast many spells faster. This item works on spells up to level twenty-four.",
@@ -9126,7 +9508,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-phantom-leather": {
     "description": "Focuses mana into the form of a pack of phantom leather armor.",
@@ -9137,7 +9520,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-jade-bracelet": {
     "description": "Focuses mana into the form of a jade bracelet that increases the damage of many spells. This item works on spells up to level thirty-four.",
@@ -9148,7 +9532,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-wooden-bracelet": {
     "description": "Focuses mana into the form of a wooden bracelet that increases the damage of many affliction spells. This item works on spells up to level twenty.",
@@ -9159,7 +9544,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-silver-choker": {
     "description": "Focuses mana into the form of a silver choker that sometimes allows you to cast a spell without consuming any reagents. This item works on spells up to level twenty-four.",
@@ -9170,7 +9556,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-phantom-chain": {
     "description": "Focuses mana into the form of a pack of phantom chain mail.",
@@ -9181,7 +9568,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-leather-mantle": {
     "description": "Focuses mana into the form of a leather mantle that allows many of your beneficial spells to last a longer period of time.",
@@ -9192,7 +9580,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:cavorting-bones": {
     "description": "Animates an undead servant from the remnants of the fallen.  Consumes one bone chip when cast. Cost 1 gold 2 silver at 60 Charisma",
@@ -9204,7 +9593,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:coldlight": {
     "description": "Conjures a magical coldstone that provides light in the immediate area. NO DROP, cannot be handed to another player.",
@@ -9216,7 +9606,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:disease-cloud": {
     "description": "Conjures a cloud of disease, causing 5 damage initially and 1 damage every 6 seconds for 6 min.",
@@ -9280,7 +9671,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-shard-of-the-core": {
     "description": "Focuses mana into the form of a shard of the core of Norrath.",
@@ -9292,7 +9684,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:barrier-of-combustion": {
     "description": "Surrounds your target in a barrier of combustion, damaging any creature that attacks them.",
@@ -9317,7 +9710,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:flame-arc": {
     "description": "Creates a circle of fire around you, causing between 171 and 181 damage to all nearby creatures.",
@@ -9329,7 +9723,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Fire (0)"
+    "resist": "Fire (0)",
+    "range": 20
   },
   "spell:rain-of-lava": {
     "description": "Conjures a rain of lava that assaults all creatures in the vicinity of your target, causing three waves of up to 172 damage each. DPM of .69/1.37/2.06",
@@ -9354,7 +9749,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-armor": {
     "description": "Covers your skin in elemental armor, protecting you from fire and cold.",
@@ -9366,7 +9762,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:elemental-maelstrom": {
     "description": "Surrounds your target in an elemental maelstrom, causing 250 damage initially, and 70 damage every six seconds for 36 secs (6 ticks).\n\nIf the spell lasts fully, it does 250 + 70 * 6 = 670 total damage.  Given its mana cost that works out to 670 / 240 = 2.79 Damage Per Mana (DPM).",
@@ -9404,7 +9801,8 @@
     "duration": "1 hour 12 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shock-of-swords": {
     "description": "Conjures a shock of swords that assaults your target, causing between 580 and 600 damage (2.4 DPM)",
@@ -9429,7 +9827,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:burnout-iii": {
     "description": "Infuses your elemental companion with energy, increasing their attack speed, armor class, and strength.",
@@ -9493,7 +9892,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-conjuration-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9505,7 +9905,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-conjuration-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9517,7 +9918,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-conjuration-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9529,7 +9931,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:minor-conjuration-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9541,7 +9944,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-conjuration-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9553,7 +9957,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-conjuration-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9565,7 +9970,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-conjuration-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9577,7 +9983,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-conjuration-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9589,7 +9996,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:conjuration-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9601,7 +10009,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:conjuration-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9613,7 +10022,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:conjuration-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9625,7 +10035,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-conjuration-air": {
     "description": "Summons an air elemental to aid you in battle.",
@@ -9637,7 +10048,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-conjuration-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9649,7 +10061,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-conjuration-water": {
     "description": "Summons a water elemental to aid you in battle.",
@@ -9661,7 +10074,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:conjuration-earth": {
     "description": "Summons an earth elemental to aid you in battle.",
@@ -9673,7 +10087,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-conjuration-fire": {
     "description": "Summons a fire elemental to aid you in battle.",
@@ -9685,7 +10100,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-shiny-bauble": {
     "description": "Focuses mana into the form of a shiny bauble that sometimes allows you to cast a spell for a reduced mana cost. This item works on spells up to level fifty.",
@@ -9696,7 +10112,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:refresh-summoning": {
     "description": "Renews the health of your elemental pet, healing 175 damage, and curing their diseases, poisons, and curses.",
@@ -9719,7 +10136,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-phantom-plate": {
     "description": "Focuses mana into the form of a pack of phantom plate armor.",
@@ -9730,7 +10148,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-opal-bracelet": {
     "description": "Focuses mana into the form of an opal bracelet that increases the damage of many spells. This item works on spells up to level 52.",
@@ -9741,7 +10160,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-orb-of-exploration": {
     "description": "Focuses mana into an orb of exploration which provides greatly improved night vision and the ability to see normally invisible creatures.",
@@ -9752,7 +10172,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:primal-remedy": {
     "description": "Renews the health of your elemental pet, healing 120 damage every 6 seconds for 30s.",
@@ -9775,7 +10196,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-elemental-blanket": {
     "description": "Focuses mana into the form of an elemental blanket.",
@@ -9786,7 +10208,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:summon-golden-choker": {
     "description": "Focuses mana into the form of a gold choker that sometimes allows you to cast a spell without consuming any reagents. This item works on spells up to level sixty.",
@@ -9797,7 +10220,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:leech": {
     "description": "Drains the life from your target, healing you for 8 hit points every 6 seconds for 36 secs (6 ticks @L9 to 9 ticks @L15). 1 damage per mana, 1 healing per mana.",
@@ -9841,7 +10265,7 @@
   "spell:clinging-darkness": {
     "description": "Summons a clinging darkness that binds your target's feet, decreasing their movement rate, and does 5 damage every 6 seconds for 12 secs (2 ticks @L4 to 8 ticks @L16). <br> Though cheaper in mana, this spell should generally be replaced by the superior Engulfing Darkness.",
     "mana": 20,
-    "skill": "Alteration",
+    "skill": "Conjuration",
     "castTime": 1.75,
     "recastTime": 1.5,
     "fizzleTime": 2.5,
@@ -9861,7 +10285,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:leering-corpse": {
     "description": "Animates an undead servant from the remnants of the fallen.  Consumes one bone chips when cast.",
@@ -9873,7 +10298,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lifespike": {
     "description": "Drains your target of life energy, siphoning between 8 and 12 hit points. 0.6 health per 1 point of mana.",
@@ -9924,7 +10350,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:dark-empathy": {
     "description": "Creates a dark pact that transfers 30 of your hit points to your target.",
@@ -9949,7 +10376,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:deadeye": {
     "description": "Allows your eyes the vision of the dead, providing night vision and the ability to see invisible creatures for 15.0 mins @L5 to 27.0 mins @L9. This is similar to See Invisible and Serpent Sight except it is self-only.",
@@ -9961,7 +10389,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:gather-shadows": {
     "description": "Calls shadows to conceal your body, allowing you to move undetected by many creatures for up to 20.0 mins.",
@@ -9973,7 +10402,8 @@
     "duration": "20 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:impart-strength": {
     "description": "Imparts your target with a portion of your strength for 6.0 mins.",
@@ -10011,7 +10441,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 900
   },
   "spell:vampiric-embrace": {
     "description": "Gives your attacks a vampiric property, allowing a chance to steal life from your target.",
@@ -10023,7 +10454,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:convoke-shadow": {
     "description": "Animates an undead servant from the remnants of the fallen.",
@@ -10035,7 +10467,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:engulfing-darkness": {
     "description": "Summons an engulfing darkness that binds your target's feet decreasing their movement rate, and dealing 11 damage per tick for 11 ticks @L22 (1.83 DPS; 2.02 DPM).<br><br>This is an excellent general purpose snare, with sufficient efficacy and duration for controlling runners in most contexts. Upgraded versions of this spell do more damage, but additional movement speed reduction is generally unnecessary.",
@@ -10112,7 +10545,8 @@
     "duration": "2.2 minutes @L12 to 4 minutes @L30",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 30
   },
   "spell:banshee-aura": {
     "description": "Surrounds your body with an aura of vengeful spirits,  causing damage to anyone who strikes you for 4.0 mins @L15 to 9 mins @L35. Requires, but does not consume, a pearl when cast.\n\n'''Era info:''' Starts off doing a static 8 damage, before increasing to 9 and beginning to scale up with level in April 2000 era: https://www.project1999.com/forums/showthread.php?t=360588\n\n''Note: Updated Banshee Aura: buffdurationformula 7 -> 9, buffduration 30 -> 90, effect_base_value1 -8 -> -6, max1 0 -> 12, formula1 100 -> 110 (17 Feb, 2013 Patch, who knows what it means).''",
@@ -10124,7 +10558,8 @@
     "duration": "4.2 minutes @L16 to 9 minutes @L40",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Cold (0)"
+    "resist": "Cold (0)",
+    "range": 100
   },
   "spell:feign-death": {
     "description": "Causes you to stop breathing and appear dead to most creatures.\nThis is the spell used by necromancers and shadowknights. Monks have a similar combat ability with the same name.",
@@ -10136,7 +10571,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:heart-flutter": {
     "description": "Causes your target's heart beat to become irregular, lowering their strength, armor class, and doing 12 damage every 6 seconds for between  48 to 72 seconds (8-12 ticks, dependent on caster level). Necro: 96 total damage at 16 for 1.2 damage per mana, 144 total damage at 24 for 1.8 damage per mana.",
@@ -10161,7 +10597,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shieldskin": {
     "description": "Surrounds your skin in a protective aura that absorbs between 9 and 55 damage. Consumes a Cats Eye Agate when cast.",
@@ -10173,7 +10610,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:allure-of-death": {
     "description": "Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana. \n\n'''2nd''' of the \"Lich\" spell line\n\nDoes '''not''' stack with any clarity spells.\n\n'''Does''' stack with bard mana songs.",
@@ -10185,7 +10623,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:animate-dead": {
     "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.",
@@ -10197,7 +10636,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:dominate-undead": {
     "description": "Commands an undead creature to do your bidding, temporarily bending them to your will.",
@@ -10222,7 +10662,8 @@
     "duration": "3 ticks",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shadow-compact": {
     "description": "Transfers your own health to your target at a rate of 20 hit points every six seconds for 24 secs (4 ticks).",
@@ -10273,7 +10714,8 @@
     "duration": "54 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:scent-of-shadow": {
     "description": "Surrounds your target in the scent of shadow, causing them to be more susceptible to fire, poison, and disease.",
@@ -10311,7 +10753,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:shock-of-poison": {
     "description": "Strikes your target with a jet of poison, causing between 146 to 160 damage.",
@@ -10349,7 +10792,8 @@
     "duration": "27 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:hungry-earth": {
     "description": "Roots an undead creature to the ground, preventing them from moving for up to 8 ticks (48 seconds).",
@@ -10435,7 +10879,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:intensify-death": {
     "description": "Intensifies the power of your undead servant, increasing their strength, armor class, and attack speed.",
@@ -10525,7 +10970,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:beguile-undead": {
     "description": "Commands an undead creature to do your bidding, temporarily bending them to your will.",
@@ -10550,7 +10996,8 @@
     "duration": "1 hour 12 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:surge-of-enfeeblement": {
     "description": "Drains the strength of all nearby creatures for 6.0 mins.",
@@ -10562,7 +11009,8 @@
     "duration": "6 minutes",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 30
   },
   "spell:augment-death": {
     "description": "Fills your pet with rage, giving it increased attack speed, armor class, and strength for up to 15 minutes.",
@@ -10613,7 +11061,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:scent-of-darkness": {
     "description": "Surrounds your target in the scent of darkness, causing them to be more susceptible to fire, poison, and disease.",
@@ -10638,7 +11087,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:covetous-subversion": {
     "description": "Restores your target's mana at the expense of your own.",
@@ -10741,7 +11191,8 @@
     "duration": "1 hour 12 minutes",
     "targetType": "Group v2",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:drain-soul": {
     "description": "Drains your target of life energy, siphoning between 332 and 338 hit points.",
@@ -10779,7 +11230,8 @@
     "duration": "15.7 minutes @L49 to 17.9 minutes @L56 to 20.5 minutes @L65",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:torbas-acid-blast": {
     "description": "Strikes your target with a jet of poison, causing between 207 and 220 damage (1.59 - 1.69 DPM).",
@@ -10817,7 +11269,8 @@
     "duration": "1 hour 30 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:envenomed-bolt": {
     "description": "Fills your target's blood with poison, causing 110 damage initially and 146 damage every tick for 8 ticks for a total of 1278 damage. 3.994 DPM.",
@@ -10842,7 +11295,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:vampiric-curse": {
     "description": "Drains 21 of your target's life energy and transfers it to you every 6 seconds for 54 secs (9 ticks) for a total of 189 health. 1.3 health per point of mana.",
@@ -10880,7 +11334,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:invoke-shadow": {
     "description": "Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast. Highest damage (32).",
@@ -10892,7 +11347,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:asystole": {
     "description": "Causes your target's heart beat to become irregular, lowering their strength, armor class, and doing 69 damage every 6 seconds for 60 secs (10 ticks). -690hp & 3.28 dpm.",
@@ -11037,7 +11493,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:divine-vigor": {
     "description": "Fills your target with divine vigor, increasing their hit points for 50 min.",
@@ -11061,7 +11518,8 @@
     "duration": "15 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:divine-might": {
     "description": "Bestows divine might upon you, providing a chance to channel the will of the gods through your weapon when attacking.",
@@ -11073,7 +11531,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:flame-of-light": {
     "description": "Strikes your target with a burning flame of light, causing 125 damage.",
@@ -11098,7 +11557,8 @@
     "duration": "13 seconds",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:eyes-of-the-cat": {
     "description": "Infuses your eyes with the vision of a cat, allowing you to see more clearly in the dark for 27.0 mins. This is similar to Serpent Sight except being self-only.",
@@ -11110,7 +11570,8 @@
     "duration": "27 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:call-of-sky": {
     "description": "Imparts your weapons with the power of sky for 10.0 mins, allowing them a chance to strike with the fury of the storm causing 35 damage and briefly stunning your target.",
@@ -11122,7 +11583,8 @@
     "duration": "10 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Magic?"
+    "resist": "Magic?",
+    "range": 0
   },
   "spell:call-of-flame": {
     "description": "Hurls a magically burning arrow at your target, causing 206 damage. 1.65 Damage Per Mana.",
@@ -11251,7 +11713,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:rage": {
     "description": "Fills your body with rage, increasing your strength, dexterity, and armor class.",
@@ -11263,7 +11726,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Statistic Buff",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:strength": {
     "description": "Fills your target's body with pure power, increasing their strength for 63 min.",
@@ -11313,7 +11777,8 @@
     "duration": "Permanent",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:snails-healing": {
     "description": "Imbues your target with healing of a snail spirit, healing 60 hit points every 6 seconds for 24 seconds, but vastly decreasing their movement rate.",
@@ -11410,7 +11875,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:searing-arrow": {
     "description": "Hurls a magically burning arrow at your target, causing 58 damage initially and 29 damage every six seconds for 6s.",
@@ -11469,7 +11935,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:swarm-of-pain": {
     "description": "Commands a swarm of insects to attack your target relentlessly, causing 56 every 6 seconds for 1 min.",
@@ -11552,7 +12019,8 @@
     "duration": "60 Min",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:terror-of-darkness": {
     "description": "Fills your target's mind with dark terror, inciting hatred.",
@@ -11563,7 +12031,8 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Unresistable",
-    "range": 200
+    "range": 200,
+    "castTime": 0
   },
   "spell:spear-of-disease": {
     "description": "Hurls a spear of disease at your target, doing 251 damage.",
@@ -11586,7 +12055,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:voice-of-darkness": {
     "description": "Imbues your target's voice with the power of darkness, causing creatures to take more notice of their attacks for 10 min.",
@@ -11621,7 +12091,8 @@
     "targetType": "Single",
     "spellType": "Detrimental",
     "resist": "Unresistable",
-    "range": 200
+    "range": 200,
+    "castTime": 0
   },
   "spell:voice-of-shadows": {
     "description": "Imbues your target's voice with the power of shadows, causing creatures to take more notice of their attacks for 10 min.",
@@ -11734,7 +12205,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Cold (0)"
+    "resist": "Cold (0)",
+    "range": 25
   },
   "spell:sphere-of-light": {
     "description": "Conjures a sphere of energy that provides light in dark areas.",
@@ -11746,7 +12218,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:fade": {
     "description": "Teleports you a short distance away in a random direction.",
@@ -11758,7 +12231,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 350
   },
   "spell:icestrike": {
     "description": "Calls down a cascade of sleet that falls in three waves, causing 16 damage to all creatures in the vicinity of your target for each wave. Has a potential maximum of 48 cold damage.",
@@ -11874,7 +12348,8 @@
     "duration": "6 ticks @L12 to 3.2 minutes @L65",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:resistant-skin": {
     "description": "Covers you in resistant skin that protects you from poison and disease.",
@@ -11886,7 +12361,8 @@
     "duration": "27 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:shock-of-lightning": {
     "description": "Strikes your target with a bolt of lightning, causing between 74 and 82 damage and causing a small pushback(2). This spell becomes useful again at high level for generating a lot of push quickly, while accumulating little aggro, against mobs which are immune to stun.",
@@ -11924,7 +12400,8 @@
     "duration": "27 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lightning-bolt": {
     "description": "Hurls a bolt of lightning at your target, causing between 117 and 125 damage (1.42 Damage per Mana)",
@@ -11962,7 +12439,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 25
   },
   "spell:sight": {
     "description": "Strengthens your vision, allowing you to see much farther.",
@@ -11974,7 +12452,8 @@
     "duration": "1 minute @L20 to 3.2 minutes @L65",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:tishan-s-clash": {
     "description": "Strikes your target with energy, stunning them briefly and causing between 29 and 50 damage. Superseded by Markar's Clash.\n\nMana efficiency is .44 / .77 DPM.",
@@ -12038,7 +12517,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 20
   },
   "spell:fire-spiral-of-al-kabor": {
     "description": "Creates a fire spiral that causes between 69 and 76 damage to all creatures in the vicinity of your target.",
@@ -12102,7 +12582,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:nektulos-gate": {
     "description": "Opens an arcane portal that teleports you to the Nektulos Forest.",
@@ -12114,7 +12595,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:greater-faydark-gate": {
     "description": "Opens an arcane portal that teleports you to the Greater Faydark.",
@@ -12126,7 +12608,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:north-karana-portal": {
     "description": "Opens an arcane portal that teleports your entire group to the Northern Plains of Karana.",
@@ -12151,7 +12634,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:north-ro-gate": {
     "description": "Opens an arcane portal that teleports you to the Northern Desert of Ro.",
@@ -12163,7 +12647,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:toxxulia-gate": {
     "description": "Opens an arcane portal that teleports you to the Toxxulia Forest.",
@@ -12175,7 +12660,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:west-commons-gate": {
     "description": "Opens an arcane portal that teleports you to the West Commonlands.",
@@ -12187,7 +12673,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:west-karana-gate": {
     "description": "Opens an arcane portal that teleports you to the Western Plains of Karana.",
@@ -12199,7 +12686,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:lesser-evacuate": {
     "description": "Teleports your group to a relatively safe place in the current zone, but also drains significant mana from everyone in the group.",
@@ -12224,7 +12712,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:garrison-s-mighty-mana-shock": {
     "description": "Strikes your target with pure energy, causing between 272 and 333 damage.",
@@ -12262,7 +12751,8 @@
     "duration": "6:00:00",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:o-keil-s-embers": {
     "description": "Surrounds your target in flaming embers that damages any creature that strikes them.",
@@ -12299,7 +12789,8 @@
     "duration": "36 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:bonds-of-force": {
     "description": "Surrounds your target's feet in arcane shackles, slowing their movement speed. Superseded at level 51 by Atol's Spectral Shackles.",
@@ -12337,7 +12828,8 @@
     "duration": "1.4 minutes @L29 to 3.2 minutes @L65",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:shock-spiral-of-al-kabor": {
     "description": "Creates an energy spiral that causes between 111 and 118 damage to all creatures in the vicinity of your target. \nNote that this spell is significantly less mana-efficient than Column of Lightning, but faster.",
@@ -12375,7 +12867,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 1500
   },
   "spell:circle-of-force": {
     "description": "Creates a circle of force, causing between 193 and 216 damage to several creatures in the vicinity of your target. Single target mana efficiency of 1.15 to 1.23. <br>Targeted AoE / Rain Type spell without waves. Hits up to 4 creatures max.\n<br>\n<br>\nThis is a '''recommended''' quad-kiting spell for Wizards, replacing Column of Lightning and being replaced by Pillar of Frost.",
@@ -12400,7 +12893,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ice-shock": {
     "description": "Covers your target in a thick layer of ice, causing between 306 and 320 damage.",
@@ -12438,7 +12932,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Magic (0)"
+    "resist": "Magic (0)",
+    "range": 30
   },
   "spell:force-spiral-of-al-kabor": {
     "description": "Creates an energy spiral that causes between 162 and 172 damage to all creatures in the vicinity of your target.",
@@ -12476,7 +12971,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:tishan-s-relocation": {
     "description": "Opens an arcane portal that teleports your entire group to the Skyfire Mountains. This spell no longer has a Kunark dungeon requirement; it can currently be cast from anywhere in the world.\n\n'''Warning: The port in location for this spell is very dangerous.''' If you port in while visible, you will most likely die when alone or porting another. There are swarms of dispelling mobs at the zone in area. However, while invis, this port in location is nearly 100% safe. No mobs see invis and the only threat is the possibility of it breaking early. You can enter the zone invisibly by getting a friendly person to invis prime you. To perform this, join a group, and have that person begin to invis you. Before their cast finishes, begin your cast of Tishan's Relocation. Once their invis hits you, disband or have them disband before you finish the cast. You will port over to skyfire while remaining invis, as finishing casts does not break invisibility. With a primed invis, the port in at skyfire is much safer, and a very useful tool to Wizards.",
@@ -12488,7 +12984,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:enticement-of-flame": {
     "description": "Covers your target in blistering flames, causing 360 damage.  This damage is more difficult to resist than most spells.  This would be considered the first \"Lure\" type spell for wizards, even though it doesn't have Lure in its name.",
@@ -12552,7 +13049,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:concussion": {
     "description": "Attacks the mind of your target, causing them to forget some of the damage you have done to them.",
@@ -12577,7 +13075,8 @@
     "duration": "5 minutes",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:energy-storm": {
     "description": "Calls down an energy storm that falls in three waves, causing 96 damage to all creatures in the vicinity of your target.\nAoE range: 25",
@@ -12797,7 +13296,8 @@
     "targetType": "Single Friendly (or Self)",
     "spellType": "Beneficial",
     "resist": "Unresistable",
-    "range": 100
+    "range": 100,
+    "recastTime": 0
   },
   "spell:mass-imbue-fire-opal": {
     "description": "Focuses the power of Solusek Ro into five fire opals. Consumes five fire opals when cast.",
@@ -12808,7 +13308,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:translocate-north-karana": {
     "description": "Opens an arcane portal that teleports your target to the Northern Plains of Karana.",
@@ -12891,7 +13392,8 @@
     "duration": "Instant",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:translocate-west-karana": {
     "description": "Opens an arcane portal that teleports your target to the Western Plains of Karana.",
@@ -12927,7 +13429,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:alter-plane-sky": {
     "description": "Opens an arcane portal that teleports your entire group to the Plane of Sky.  Consumes a Cloudy Stone of Veeshan when cast.",
@@ -12939,7 +13442,8 @@
     "duration": "Instant",
     "targetType": "Group v1",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 100
   },
   "spell:ice-comet": {
     "description": "Summons a giant comet of ice from the sky. Mana efficiency of 2.8 and 176 DPS. <br><b>WARNING:</b> Due to the high damage it causes it creates a high amount of agro. So be sure the puller or tank is prepared.",
@@ -12990,7 +13494,8 @@
     "duration": "Instant",
     "targetType": "PB AE",
     "spellType": "Detrimental",
-    "resist": "Fire (-10)"
+    "resist": "Fire (-10)",
+    "range": 35
   },
   "spell:wrath-of-al-kabor": {
     "description": "Creates a freezing ice storm that causes 448 damage to several creatures in the vicinity of your target. <br> Single target mana efficiency of 0.9. <br> This spell in its scroll form reads '''Wrath of Ap'Sagor'''. It scribes as '''Wrath of Al'Kabor'''.",
@@ -13041,7 +13546,8 @@
     "duration": "6:00:00",
     "targetType": "Self",
     "spellType": "Beneficial",
-    "resist": "Unresistable"
+    "resist": "Unresistable",
+    "range": 0
   },
   "spell:ward-of-calrena": {
     "description": "Places the Ward of Calrena on your target, absorbing a portion of incoming spell damage. This spell absorbs a set amount of damage before dissipating. Consumes a jasper when cast.",
