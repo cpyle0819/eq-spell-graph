@@ -417,7 +417,10 @@ export function rankZones(
       ...(factionReasons.length ? { factionReasons } : {}),
       ...(raceIgnored ? { raceIgnored: true } : {}),
       ...(deityIgnored ? { deityIgnored: true } : {}),
-      spells: spells.sort((a, b) => Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level))),
+      spells: spells.sort((a, b) =>
+        Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level)) ||
+        a.name.localeCompare(b.name)
+      ),
       score,
     });
   }
