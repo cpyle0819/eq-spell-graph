@@ -77,6 +77,7 @@ interface GraphIndex {
   nodeById: Map<string, NodeData>;
   sellsByTarget: Map<string, EdgeData[]>;
   locatedInBySource: Map<string, EdgeData>;
+  lineBySpell: Map<string, { id: string; label: string }>;
 }
 
 let cachedIndex: GraphIndex | null = null;
@@ -90,6 +91,7 @@ function getIndex(): GraphIndex {
   const nodeById = new Map<string, NodeData>();
   const sellsByTarget = new Map<string, EdgeData[]>();
   const locatedInBySource = new Map<string, EdgeData>();
+  const lineBySpell = new Map<string, { id: string; label: string }>();
   for (const n of graph.nodes) nodeById.set(n.data.id, n.data);
   for (const e of graph.edges) {
     if (e.data.type === "sells") {
@@ -97,10 +99,30 @@ function getIndex(): GraphIndex {
       sellsByTarget.get(e.data.target)!.push(e.data);
     } else if (e.data.type === "located_in") {
       locatedInBySource.set(e.data.source, e.data);
+    } else if (e.data.type === "member_of") {
+      const lineNode = nodeById.get(e.data.target);
+      if (lineNode) lineBySpell.set(e.data.source, { id: lineNode.id, label: lineNode.label });
     }
   }
-  cachedIndex = { nodeById, sellsByTarget, locatedInBySource };
+  cachedIndex = { nodeById, sellsByTarget, locatedInBySource, lineBySpell };
   return cachedIndex;
+}
+
+// Spells returned from the graph don't carry their spell_line membership
+// directly (it's a separate node + member_of edge, not a node field) — this
+// attaches it as a plain `spellLine` label for API consumers, without
+// mutating the cached graph node itself (spread into a new object).
+function withSpellLine(data: NodeData, index: GraphIndex): NodeData {
+  const line = index.lineBySpell.get(data.id);
+  return line ? { ...data, spellLine: line.label, spellLineId: line.id } : data;
+}
+
+export function getSpellLines(): { id: string; label: string }[] {
+  const graph = load();
+  return graph.nodes
+    .filter((n) => n.data.type === "spell_line")
+    .map((n) => ({ id: n.data.id, label: n.data.label }))
+    .sort((a, b) => a.label.localeCompare(b.label));
 }
 
 function save(graph: GraphData): void {
@@ -136,6 +158,7 @@ export function findNodes(filter: Record<string, unknown>): NodeData[] {
 
 export function getSpellsForClass(className: string, levels?: number[]): NodeData[] {
   const graph = load();
+  const index = getIndex();
   return graph.nodes
     .filter((n) => {
       if (n.data.type !== "spell" || !n.data.class_levels) return false;
@@ -143,18 +166,19 @@ export function getSpellsForClass(className: string, levels?: number[]): NodeDat
         (cl) => cl.class === className && (!levels || levels.includes(cl.level))
       );
     })
-    .map((n) => n.data);
+    .map((n) => withSpellLine(n.data, index));
 }
 
 // No class filter — every purchasable spell, still narrowed by level if given.
 export function getAllSpells(levels?: number[]): NodeData[] {
   const graph = load();
+  const index = getIndex();
   return graph.nodes
     .filter((n) => {
       if (n.data.type !== "spell" || !n.data.class_levels) return false;
       return !levels || n.data.class_levels.some((cl) => levels.includes(cl.level));
     })
-    .map((n) => n.data);
+    .map((n) => withSpellLine(n.data, index));
 }
 
 export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: NodeData | undefined }[] {
@@ -242,6 +266,7 @@ export interface SpellVendorInfo extends SpellDetails {
   name: string;
   classes: { cls: string; level: number }[];
   vendors: string[];
+  spellLine?: string;
 }
 
 export interface FactionReason {
@@ -270,7 +295,8 @@ export function rankZones(
   primaryClass?: string,
   deity?: string,
   specificSpellIds?: string[],
-  specificZoneIds?: string[]
+  specificZoneIds?: string[],
+  spellLineIds?: string[]
 ): ZoneRanking[] {
   const graph = load();
   const index = getIndex();
@@ -298,13 +324,30 @@ export function rankZones(
   // classes still shows up as-is rather than being filtered out twice.
   const pinnedIds = new Set(specificSpellIds || []);
 
-  // Step 2 — narrow to specific spells (if any pinned), else by class
+  // Spell Line is an additional narrowing facet, same idea as class: start
+  // from whatever's already been narrowed down, keep only spells whose line
+  // is in the selected set. Multiple selected lines are additive with each
+  // other (union within this facet — a spell only belongs to one line, so
+  // "AND across lines" would always be empty), same as multi-class Shopping
+  // For. Bypassed for pinned spells, same reasoning as the class bypass
+  // below: Specific Spells is an exclusive "show me only these" override.
+  const lineFilterIds = new Set(spellLineIds || []);
+
+  // Step 2 — narrow to specific spells (if any pinned), else by class and/or spell line
   if (pinnedIds.size > 0) {
     candidates = candidates.filter((n) => pinnedIds.has(n.data.id));
-  } else if (classNames.length > 0) {
-    candidates = candidates.filter((n) =>
-      n.data.class_levels!.some((cl) => classNames.includes(cl.class))
-    );
+  } else {
+    if (classNames.length > 0) {
+      candidates = candidates.filter((n) =>
+        n.data.class_levels!.some((cl) => classNames.includes(cl.class))
+      );
+    }
+    if (lineFilterIds.size > 0) {
+      candidates = candidates.filter((n) => {
+        const line = index.lineBySpell.get(n.data.id);
+        return line !== undefined && lineFilterIds.has(line.id);
+      });
+    }
   }
 
   const zoneSpells = new Map<string, SpellVendorInfo[]>();
@@ -328,7 +371,8 @@ export function rankZones(
         for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
           if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
         }
-        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.label], ...details });
+        const line = index.lineBySpell.get(d.id);
+        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.label], ...(line ? { spellLine: line.label } : {}), ...details });
       }
     }
   }

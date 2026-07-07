@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -76,7 +76,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const fromId = `zone:${slugify(from)}`;
     const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
     const specificZoneIds = (searchParams.get("zones") || "").split(",").filter(Boolean);
-    return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds) };
+    const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
+    return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds) };
   }
 
   // GET /api/route?from=Halas&to=Kelethin
@@ -205,6 +206,12 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
           a.name.localeCompare(b.name)
         ),
     };
+  }
+
+  // GET /api/spell-lines — list all spell_line nodes (id+label), for the
+  // Spell Finder's Spell Line tag filter's suggestions.
+  if (pathname === "/api/spell-lines") {
+    return { status: 200, body: getSpellLines() };
   }
 
   // GET /api/zones — list all zone nodes

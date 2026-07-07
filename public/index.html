@@ -55,7 +55,8 @@
       border-radius: 3px;
       box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
     }
-    .planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
+    /* .planner-controls layout is shared (theme.css) — see the "Sidebar
+       filter panel" rule there. */
 
     /* Status panel: the vitals-bar-plus-action-buttons cluster, its own
        console module echoing the reference client's right-side column
@@ -80,11 +81,9 @@
       padding: 12px 20px 16px; border-top: 2px solid var(--edge-lo);
     }
 
-    .field { display: flex; align-items: center; gap: 10px; }
-    .field label { min-width: 100px; }
-    .field select, .field input { flex: 1; min-width: 0; }
+    /* .field/.field label/.field select,input/.panel-actions layout are
+       shared (theme.css) — this page only adds its own range-picker field. */
     .field .range-picker { flex: 1; min-width: 0; }
-    .panel-actions { display: flex; justify-content: flex-end; }
 
     /* The deeper input bevel (border-width 4px, heavier inset shadow) now
        lives directly in theme.css's shared .field select/.field input/
@@ -173,13 +172,9 @@
        than floating with a margin on both sides within the console. */
     @media (min-width: 1100px) {
       #planner { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
-      .controls-panel {
-        width: 300px; min-width: 300px; flex-shrink: 0;
-        position: sticky; top: 0;
-        order: 0;
-      }
-      .field label { min-width: 0; width: 100%; }
-      .field { flex-direction: column; align-items: stretch; gap: 4px; }
+      /* width/position/sticky and the .field column-flip are shared
+         (theme.css) — this page only needs its own 3-column `order`. */
+      .controls-panel { order: 0; }
 
       #results { overflow-y: auto; order: 1; }
 
@@ -223,116 +218,13 @@
   </header>
 
   <div id="planner">
-    <div class="controls-panel">
-    <div class="planner-controls">
-      <div class="field">
-        <label>Race</label>
-        <select id="race-select">
-          <option value="barbarian">Barbarian</option>
-          <option value="dark elf">Dark Elf</option>
-          <option value="dwarf">Dwarf</option>
-          <option value="erudite">Erudite</option>
-          <option value="gnome">Gnome</option>
-          <option value="half elf">Half Elf</option>
-          <option value="halfling">Halfling</option>
-          <option value="high elf">High Elf</option>
-          <option value="human">Human</option>
-          <option value="iksar">Iksar</option>
-          <option value="ogre">Ogre</option>
-          <option value="troll">Troll</option>
-          <option value="wood elf">Wood Elf</option>
-          <option value="any">Any (ignore faction)</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Primary Class</label>
-        <select id="primary-class-select">
-          <option value="bard">Bard</option>
-          <option value="beastlord">Beastlord</option>
-          <option value="cleric">Cleric</option>
-          <option value="druid">Druid</option>
-          <option value="enchanter">Enchanter</option>
-          <option value="magician">Magician</option>
-          <option value="monk">Monk</option>
-          <option value="necromancer">Necromancer</option>
-          <option value="paladin">Paladin</option>
-          <option value="ranger">Ranger</option>
-          <option value="rogue">Rogue</option>
-          <option value="shadow knight">Shadow Knight</option>
-          <option value="shaman" selected>Shaman</option>
-          <option value="warrior">Warrior</option>
-          <option value="wizard">Wizard</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Deity</label>
-        <select id="deity-select">
-          <option value="agnostic">Agnostic</option>
-          <option value="bertoxxulous">Bertoxxulous</option>
-          <option value="brell serilis">Brell Serilis</option>
-          <option value="bristlebane">Bristlebane</option>
-          <option value="cazic-thule">Cazic-Thule</option>
-          <option value="erollisi marr">Erollisi Marr</option>
-          <option value="innoruuk">Innoruuk</option>
-          <option value="karana">Karana</option>
-          <option value="mithaniel marr">Mithaniel Marr</option>
-          <option value="prexus">Prexus</option>
-          <option value="quellious">Quellious</option>
-          <option value="rallos zek">Rallos Zek</option>
-          <option value="rodcet nife">Rodcet Nife</option>
-          <option value="solusek ro">Solusek Ro</option>
-          <option value="the tribunal" selected>The Tribunal</option>
-          <option value="tunare">Tunare</option>
-          <option value="veeshan">Veeshan</option>
-          <option value="any">Any (ignore faction)</option>
-        </select>
-      </div>
-      <div class="control-sep" aria-hidden="true"></div>
-      <div class="field">
-        <label>Spell Class</label>
-        <div class="tag-wrap" id="class-tag-wrap">
-          <div class="tag-list" id="class-tags"></div>
-          <input type="text" id="class-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
-        </div>
-      </div>
-      <div class="field">
-        <label>Specific Spells</label>
-        <div class="tag-wrap" id="spell-tag-wrap">
-          <div class="tag-list" id="spell-tags"></div>
-          <input type="text" id="spell-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
-        </div>
-      </div>
-      <div class="field">
-        <label>Specific Zones</label>
-        <div class="tag-wrap" id="zone-tag-wrap">
-          <div class="tag-list" id="zone-tags"></div>
-          <input type="text" id="zone-search-input" class="tag-search-input" placeholder="Search to add..." autocomplete="off" spellcheck="false">
-        </div>
-      </div>
-      <div class="field">
-        <label>Current Zone</label>
-        <select id="zone-input">
-          <option value="">-- Select Zone --</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Levels</label>
-        <div class="range-picker">
-          <input type="range" id="level-min" min="1" max="50" value="1">
-          <span class="range-display" id="range-display">1 – 10</span>
-          <input type="range" id="level-max" min="1" max="50" value="10">
-        </div>
-      </div>
-      <div class="panel-actions">
-        <button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
-      </div>
-    </div>
-    </div><!-- .controls-panel -->
+    <div id="controls-panel-slot"></div>
     <div id="status-panel" class="status-panel"></div>
     <div id="results"></div>
   </div>
 
   <div id="class-suggestions" class="tag-dropdown" role="listbox" aria-label="Class suggestions"></div>
+  <div id="spellline-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell line suggestions"></div>
   <div id="spell-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell suggestions"></div>
   <div id="zone-suggestions" class="tag-dropdown" role="listbox" aria-label="Zone suggestions"></div>
   <div id="spell-tooltip" role="tooltip" aria-hidden="true"></div>

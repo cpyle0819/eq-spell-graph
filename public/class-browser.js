@@ -1,37 +1,100 @@
-const SELECT_IDS = ["class-select-1", "class-select-2", "class-select-3"];
 // Matches the planner's level-range slider bound (public/index.html
 // #level-max max="50") — the actual data tops out at level 50 (see
 // DECISIONS.md).
 const MAX_SPELL_LEVEL = 50;
 let availableClasses = [];
 
+// Same tag-box idiom as the Spell Finder's Spell Class filter — no fixed
+// cap on how many classes you can pick. An empty selection means "all
+// classes," matching /api/*'s existing "no class filter = everything"
+// convention (see DECISIONS.md); deliberately not pre-selecting a default
+// class, since "no tags" and "any class" should be the same state, not two
+// different starting points that happen to look similar.
+let classTagInput;
+let selectedClassNames = [];
+
+// Spell Line filter — same additive (union, not intersection) behavior as
+// the Spell Finder's: a spell only belongs to one line, so picking two
+// lines broadens which spells show rather than narrowing to an impossible
+// "both at once." Only meaningful for the Spells tab (no other category has
+// a spell-line concept), so its field is hidden except when that tab is
+// active, same as #level-field.
+let spellLineTagInput;
+let selectedSpellLineIds = []; // { id, label }[]
+let availableSpellLines = [];
+
+// Builds the sidebar via the shared SidebarPanel component (components.js) —
+// see app.js's renderSidebar() for the same pattern on the Spell Finder.
+function renderSidebar() {
+  const html = SidebarPanel({
+    fields: [
+      { label: "Classes", html: tagWrapHtml("class") },
+      { label: "Category", html: `<select id="category-select"></select>`, id: "category-field", hidden: true },
+      { label: "Spell Line", html: tagWrapHtml("spellline"), id: "spellline-field", hidden: true },
+      { label: "Level", html: `<select id="level-select"><option value="all">All Levels</option></select>`, id: "level-field", hidden: true },
+      { label: "Search", html: `<input type="text" id="browser-search" placeholder="name...">` },
+    ],
+    actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
+  });
+  document.getElementById("controls-panel-slot").outerHTML = html;
+}
+
 async function init() {
   document.getElementById("nav-links").innerHTML = [
     MacroButton({ label: "Spell Finder", tag: "a", href: "index.html" }),
     MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
   ].join("");
-  availableClasses = await fetch("api/classes/abilities").then((r) => r.json());
-  populateClassSelects();
+  renderSidebar();
+  [availableClasses, availableSpellLines] = await Promise.all([
+    fetch("api/classes/abilities").then((r) => r.json()),
+    fetch("api/spell-lines").then((r) => r.json()),
+  ]);
+  setupClassTagInput();
+  setupSpellLineTagInput();
   populateLevelSelect();
   setupFilters();
   fetchAbilities();
 }
 
-function populateClassSelects() {
-  for (const id of SELECT_IDS) {
-    const select = document.getElementById(id);
-    const none = document.createElement("option");
-    none.value = "";
-    none.textContent = "— None —";
-    select.appendChild(none);
-    for (const cls of availableClasses) {
-      const opt = document.createElement("option");
-      opt.value = cls;
-      opt.textContent = cls.charAt(0).toUpperCase() + cls.slice(1);
-      select.appendChild(opt);
-    }
-  }
-  document.getElementById("class-select-1").value = availableClasses[0] || "";
+function setupClassTagInput() {
+  classTagInput = setupTagInput({
+    wrapId: "class-tag-wrap",
+    tagsId: "class-tags",
+    inputId: "class-search-input",
+    dropdownId: "class-suggestions",
+    getSelected: () => selectedClassNames,
+    addItem: (cls) => selectedClassNames.push(cls),
+    removeItem: (cls) => { selectedClassNames = selectedClassNames.filter((c) => c !== cls); },
+    getMatches: (q) => {
+      const lower = q.toLowerCase();
+      return availableClasses.filter((c) => !selectedClassNames.includes(c) && c.includes(lower));
+    },
+    itemId: (c) => c,
+    itemLabel: (c) => c.charAt(0).toUpperCase() + c.slice(1),
+    emptyMessage: "No matching classes",
+    onChange: fetchAbilities,
+  });
+}
+
+function setupSpellLineTagInput() {
+  spellLineTagInput = setupTagInput({
+    wrapId: "spellline-tag-wrap",
+    tagsId: "spellline-tags",
+    inputId: "spellline-search-input",
+    dropdownId: "spellline-suggestions",
+    getSelected: () => selectedSpellLineIds,
+    addItem: (item) => selectedSpellLineIds.push(item),
+    removeItem: (id) => { selectedSpellLineIds = selectedSpellLineIds.filter((l) => l.id !== id); },
+    getMatches: (q) => {
+      const lower = q.toLowerCase();
+      const selectedIds = new Set(selectedSpellLineIds.map((l) => l.id));
+      return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
+    },
+    itemId: (l) => l.id,
+    itemLabel: (l) => l.label,
+    emptyMessage: "No matching spell lines",
+    onChange: render, // client-side filter over already-fetched rawSpells, no refetch needed
+  });
 }
 
 function populateLevelSelect() {
@@ -44,27 +107,12 @@ function populateLevelSelect() {
   }
 }
 
-// Keep the three pickers from selecting the same class twice — disable any
-// value already chosen by a sibling select.
-function syncSelectOptions() {
-  const selects = SELECT_IDS.map((id) => document.getElementById(id));
-  const chosen = selects.map((s) => s.value).filter(Boolean);
-  for (const select of selects) {
-    for (const opt of select.options) {
-      if (!opt.value) continue;
-      opt.disabled = chosen.includes(opt.value) && select.value !== opt.value;
-    }
-  }
-}
-
 function setupFilters() {
-  for (const id of SELECT_IDS) {
-    document.getElementById(id).addEventListener("change", () => {
-      syncSelectOptions();
-      fetchAbilities();
-    });
-  }
   document.getElementById("level-select").addEventListener("change", fetchAbilities);
+  document.getElementById("category-select").addEventListener("change", (e) => {
+    activeTab = e.target.value;
+    render();
+  });
 
   let searchDebounce;
   document.getElementById("browser-search").addEventListener("input", () => {
@@ -76,17 +124,14 @@ function setupFilters() {
 }
 
 function resetFilters() {
-  for (const id of SELECT_IDS) document.getElementById(id).value = "";
-  document.getElementById("class-select-1").value = availableClasses[0] || "";
+  selectedClassNames = [];
+  classTagInput.renderTags();
+  selectedSpellLineIds = [];
+  spellLineTagInput.renderTags();
   document.getElementById("level-select").value = "all";
   document.getElementById("browser-search").value = "";
-  syncSelectOptions();
-  activeTab = null; // back to the first available tab, not wherever the user was
+  activeTab = null; // back to the first available category, not wherever the user was
   fetchAbilities();
-}
-
-function selectedClasses() {
-  return SELECT_IDS.map((id) => document.getElementById(id).value).filter(Boolean);
 }
 
 // Bumped on every filter change so a slower, now-stale request can't
@@ -95,7 +140,7 @@ let fetchToken = 0;
 
 async function fetchAbilities() {
   const token = ++fetchToken;
-  const classes = selectedClasses();
+  const classes = selectedClassNames;
   const resultsEl = document.getElementById("browser-results");
 
   resultsEl.innerHTML = '<div class="loading">Loading, please wait...</div>';
@@ -117,9 +162,11 @@ async function fetchAbilities() {
 
 // Class + (for spells) per-class level badges — badged with only the
 // *selected* classes, not an entry's full class list, so overlap between
-// selections is visible at a glance.
+// selections is visible at a glance. An empty selection means "browsing
+// every class" (see DECISIONS.md), so it shows every class the entry
+// actually has rather than filtering down to nothing.
 function classBadges(entryClasses, selected, levelLookup) {
-  const granting = entryClasses.filter((c) => selected.includes(c));
+  const granting = selected.length ? entryClasses.filter((c) => selected.includes(c)) : entryClasses;
   return granting
     .map((c) => {
       const label = c.charAt(0).toUpperCase() + c.slice(1);
@@ -245,6 +292,7 @@ function renderSpellCard(spell, selected) {
   const cast = fmtCast(spell.castTime);
   if (cast) stats.push(`<span class="stat-tag">${cast}</span>`);
   if (spell.resist && !/unresist/i.test(spell.resist)) stats.push(`<span class="stat-tag">Resist: ${spell.resist}</span>`);
+  if (spell.spellLine) stats.push(`<span class="stat-tag">Line: ${spell.spellLine}</span>`);
 
   const pinUrl = buildPinUrl(spell, selected);
 
@@ -293,8 +341,9 @@ let rawSpells = [];
 let rawAbilities = [];
 let rawClasses = [];
 
-// Tab state persists across filter changes (so switching classes doesn't
-// bounce you back to the first tab) but resets to the first available
+// Category selection (driven by #category-select, right after Classes in
+// the sidebar) persists across filter changes (so switching classes doesn't
+// bounce you back to the first category) but resets to the first available
 // section if the active one has no items for the new selection.
 let activeTab = null;
 
@@ -307,8 +356,22 @@ let activeTab = null;
 function buildSections(searchQuery) {
   const q = searchQuery.trim().toLowerCase();
   const matches = (name) => !q || name.toLowerCase().includes(q);
+  // Spells alone also match on their spell line (e.g. searching "heal" finds
+  // Superior Healing via the "Minor Healing line" it belongs to, not just
+  // spells with "heal" literally in the name) — no other category has a
+  // spell-line concept, so this stays spells-only rather than a shared rule.
+  const matchesSpell = (s) => !q || matches(s.label) || (s.spellLine && matches(s.spellLine));
+  // Spell Line is a real narrowing filter (like the class selection), not
+  // just a search-box match — it affects allItems (so the tab's count badge
+  // reflects it), not just items. Multiple selected lines are additive
+  // (union) with each other, same as Spell Finder: a spell belongs to only
+  // one line, so "must match every selected line" would always be empty.
+  const lineIds = new Set(selectedSpellLineIds.map((l) => l.id));
+  const spellsInSelectedLines = lineIds.size === 0
+    ? rawSpells
+    : rawSpells.filter((s) => s.spellLineId && lineIds.has(s.spellLineId));
   return [
-    { key: "spells", title: "Spells", allItems: rawSpells, items: rawSpells.filter((s) => matches(s.label)), renderFn: renderSpellCard },
+    { key: "spells", title: "Spells", allItems: spellsInSelectedLines, items: spellsInSelectedLines.filter(matchesSpell), renderFn: renderSpellCard },
     { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name)), renderFn: renderAbilityCard },
     { key: "stances", title: "Stances", allItems: rawStances, items: rawStances.filter((s) => matches(s.name)), renderFn: renderAbility },
     { key: "invocations", title: "Invocations", allItems: rawInvocations, items: rawInvocations.filter((s) => matches(s.name)), renderFn: renderAbility },
@@ -320,16 +383,18 @@ function buildSections(searchQuery) {
 }
 
 function render() {
-  const tabBar = document.getElementById("browser-tabs");
+  const categoryField = document.getElementById("category-field");
+  const categorySelect = document.getElementById("category-select");
   const resultsEl = document.getElementById("browser-results");
   const levelField = document.getElementById("level-field");
+  const spelllineField = document.getElementById("spellline-field");
   const searchQuery = document.getElementById("browser-search").value;
   const sections = buildSections(searchQuery);
 
   if (!sections.length) {
-    tabBar.hidden = true;
-    tabBar.innerHTML = "";
+    categoryField.hidden = true;
     levelField.hidden = true;
+    spelllineField.hidden = true;
     resultsEl.innerHTML = '<div class="no-results">No results found.</div>';
     return;
   }
@@ -338,24 +403,19 @@ function render() {
     activeTab = sections[0].key;
   }
   levelField.hidden = activeTab !== "spells";
+  // Also hidden when the current class selection's spells (rawSpells, not
+  // the already-line-filtered set — checking that would be self-referential
+  // once a line is picked) have no spell-line data at all, same spirit as
+  // the category disappearing entirely when it has zero items: no point
+  // showing a filter with nothing it could ever narrow.
+  spelllineField.hidden = activeTab !== "spells" || !rawSpells.some((s) => s.spellLineId);
 
-  // A lone section needs no tab to switch away from.
-  tabBar.hidden = sections.length <= 1;
-  tabBar.innerHTML = "";
-  tabBar.setAttribute("role", "tablist");
-  for (const section of sections) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "tab-button";
-    btn.setAttribute("role", "tab");
-    btn.setAttribute("aria-selected", String(section.key === activeTab));
-    btn.innerHTML = `${section.title}<span class="tab-count">${section.items.length}</span>`;
-    btn.addEventListener("click", () => {
-      activeTab = section.key;
-      render();
-    });
-    tabBar.appendChild(btn);
-  }
+  // A lone section needs no picker to switch away from.
+  categoryField.hidden = sections.length <= 1;
+  categorySelect.innerHTML = sections
+    .map((section) => `<option value="${section.key}">${section.title} (${section.items.length})</option>`)
+    .join("");
+  categorySelect.value = activeTab;
 
   const active = sections.find((section) => section.key === activeTab);
   resultsEl.innerHTML = "";

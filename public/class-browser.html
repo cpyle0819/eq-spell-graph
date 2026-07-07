@@ -13,26 +13,30 @@
     body { height: 100vh; display: flex; flex-direction: column; }
 
     /* #class-browser-page is the console frame — flush against the header
-       and viewport edges, matching the Spell Finder's #planner. .filter-bar
-       keeps its own pronounced bevel border (shared theme.css panel rule)
-       for framing instead of the frame adding outer padding around it; a
-       small gap (not zero) separates it from the tab bar/results below,
-       same distinct-panels-get-a-gap reasoning as Route Finder's
-       finder-bar/result split. */
+       and viewport edges, matching the Spell Finder's #planner. Filters
+       live in a left sidebar (.controls-panel, shared bevel/layout with
+       the Spell Finder) rather than a horizontal bar — a tag-wrap field
+       that grows wider as chips are added would otherwise shift every
+       field to its right; a sidebar's fields stack full-width instead, so
+       adding a chip only grows a field downward within its own row. */
     #class-browser-page {
-      flex: 1; min-height: 0;
-      display: flex; flex-direction: column;
-      overflow: hidden;
+      display: flex; flex-direction: column; overflow: hidden; flex: 1;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-      padding: 0 0 14px; gap: 14px;
+      padding: 0 14px 14px; gap: 14px;
     }
+    #browser-content { flex: 1; min-height: 0; overflow-y: auto; }
 
-    .filter-bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding: 14px 20px; flex-shrink: 0; }
-    .field select { min-width: 160px; }
-    .field input[type="text"] { width: 220px; }
-    #reset-filters-btn { margin-left: auto; }
+    .controls-panel { flex-shrink: 0; overflow: hidden; }
+    .planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
+    .field { display: flex; align-items: center; gap: 10px; }
+    .field label { min-width: 100px; }
+    .field select, .field input, .field .tag-wrap { flex: 1; min-width: 0; }
+    .panel-actions { display: flex; justify-content: flex-end; }
 
-    #browser-results { flex: 1; min-height: 0; overflow-y: auto; padding-bottom: 24px; }
+    /* No top padding — the first result's own border sits right up against
+       the top of the console frame, same as the Spell Finder's first
+       zone-card. */
+    #browser-results { padding: 0 0 24px; }
 
     /* Packed edge-to-edge with a shared seam, same technique as the Spell
        Finder's zone-card list — a proper stone panel per row, not a gap
@@ -41,11 +45,29 @@
     .spell-detail + .spell-detail { margin-top: -4px; }
     .class-badge { background: rgba(90, 60, 20, 0.08); color: #5a3c14; border: 1px solid rgba(90, 60, 20, 0.3); }
 
+    @media (min-width: 1100px) {
+      #class-browser-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
+      .controls-panel {
+        width: 300px; min-width: 300px; flex-shrink: 0;
+        position: sticky; top: 0;
+      }
+      .field label { min-width: 0; width: 100%; }
+      .field { flex-direction: column; align-items: stretch; gap: 4px; }
+      /* No left padding — the sidebar's own right border is the seam
+         shared with the first result's left border (console look), same
+         as the Spell Finder's .controls-panel/#results split. */
+      #browser-content { overflow-y: auto; }
+    }
+
+    @media (max-width: 1099.98px) {
+      body { height: auto; min-height: 100vh; }
+      #class-browser-page { flex: none; overflow: visible; }
+      #browser-content { flex: none; overflow-y: visible; min-height: 0; }
+    }
+
     @media (max-width: 700px) {
-      #class-browser-page { padding: 0 0 10px; gap: 10px; }
-      .filter-bar { gap: 12px; padding: 12px 16px; }
-      .field select { min-width: 0; flex: 1; }
-      .tab-bar { padding-left: 16px; padding-right: 16px; }
+      #class-browser-page { padding: 0 10px 10px; gap: 10px; }
+      .planner-controls { gap: 12px; padding: 14px 16px; }
     }
   </style>
 </head>
@@ -59,34 +81,14 @@
   </header>
 
   <div id="class-browser-page">
-    <div class="filter-bar">
-      <div class="field">
-        <label>Class 1</label>
-        <select id="class-select-1"></select>
-      </div>
-      <div class="field">
-        <label>Class 2</label>
-        <select id="class-select-2"></select>
-      </div>
-      <div class="field">
-        <label>Class 3</label>
-        <select id="class-select-3"></select>
-      </div>
-      <div class="field" id="level-field" hidden>
-        <label>Level</label>
-        <select id="level-select">
-          <option value="all">All Levels</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Search</label>
-        <input type="text" id="browser-search" placeholder="name...">
-      </div>
-      <button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
+    <div id="controls-panel-slot"></div>
+    <div id="browser-content">
+      <div id="browser-results"></div>
     </div>
-    <div id="browser-tabs" class="tab-bar" hidden></div>
-    <div id="browser-results"></div>
   </div>
+
+  <div id="class-suggestions" class="tag-dropdown" role="listbox" aria-label="Class suggestions"></div>
+  <div id="spellline-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell line suggestions"></div>
 
   <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
   <script src="components.js"></script>

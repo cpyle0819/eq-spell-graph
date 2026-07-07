@@ -1,10 +1,12 @@
 // --- State ---
 let zones = [];
 let availableClasses = [];
+let availableSpellLines = []; // { id, label }[]
 let lastRankings = null;
 let lastLevelRange = { min: 1, max: 1 };
 let showAllSpells = false;
 let selectedClasses = []; // string[]
+let selectedSpellLines = []; // { id, label }[]
 let specificSpells = []; // { id, name }
 let specificZones = []; // { id, label }
 
@@ -30,6 +32,7 @@ function showTooltip(spell, anchorEl) {
   if (spell.castTime != null) stats.push({ text: `${spell.castTime.toFixed(1)}s cast` });
   if (spell.resist && !/unresist/i.test(spell.resist)) stats.push({ text: `${spell.resist} resist` });
   if (spell.skill) stats.push({ text: spell.skill });
+  if (spell.spellLine) stats.push({ text: spell.spellLine });
 
   tooltip.innerHTML = `
     <div class="tt-name">${spell.name}</div>
@@ -87,19 +90,101 @@ const STATE_KEY = "eq-planner-state";
 const OWNED_KEY = "eq-planner-owned";
 
 // --- Init ---
+
+// Builds the sidebar via the shared SidebarPanel component (components.js),
+// which both this page and Class Browser use for their filter sidebar. Each
+// field's own control markup (selects, tag-wraps, the range-picker) is
+// still built here as raw HTML — every other function in this file that
+// does document.getElementById(...) for these ids depends on them.
+function renderSidebar() {
+  const html = SidebarPanel({
+    fields: [
+      { label: "Race", html: `<select id="race-select">
+        <option value="barbarian">Barbarian</option>
+        <option value="dark elf">Dark Elf</option>
+        <option value="dwarf">Dwarf</option>
+        <option value="erudite">Erudite</option>
+        <option value="gnome">Gnome</option>
+        <option value="half elf">Half Elf</option>
+        <option value="halfling">Halfling</option>
+        <option value="high elf">High Elf</option>
+        <option value="human">Human</option>
+        <option value="iksar">Iksar</option>
+        <option value="ogre">Ogre</option>
+        <option value="troll">Troll</option>
+        <option value="wood elf">Wood Elf</option>
+        <option value="any">Any (ignore faction)</option>
+      </select>` },
+      { label: "Primary Class", html: `<select id="primary-class-select">
+        <option value="bard">Bard</option>
+        <option value="beastlord">Beastlord</option>
+        <option value="cleric">Cleric</option>
+        <option value="druid">Druid</option>
+        <option value="enchanter">Enchanter</option>
+        <option value="magician">Magician</option>
+        <option value="monk">Monk</option>
+        <option value="necromancer">Necromancer</option>
+        <option value="paladin">Paladin</option>
+        <option value="ranger">Ranger</option>
+        <option value="rogue">Rogue</option>
+        <option value="shadow knight">Shadow Knight</option>
+        <option value="shaman" selected>Shaman</option>
+        <option value="warrior">Warrior</option>
+        <option value="wizard">Wizard</option>
+      </select>` },
+      { label: "Deity", html: `<select id="deity-select">
+        <option value="agnostic">Agnostic</option>
+        <option value="bertoxxulous">Bertoxxulous</option>
+        <option value="brell serilis">Brell Serilis</option>
+        <option value="bristlebane">Bristlebane</option>
+        <option value="cazic-thule">Cazic-Thule</option>
+        <option value="erollisi marr">Erollisi Marr</option>
+        <option value="innoruuk">Innoruuk</option>
+        <option value="karana">Karana</option>
+        <option value="mithaniel marr">Mithaniel Marr</option>
+        <option value="prexus">Prexus</option>
+        <option value="quellious">Quellious</option>
+        <option value="rallos zek">Rallos Zek</option>
+        <option value="rodcet nife">Rodcet Nife</option>
+        <option value="solusek ro">Solusek Ro</option>
+        <option value="the tribunal" selected>The Tribunal</option>
+        <option value="tunare">Tunare</option>
+        <option value="veeshan">Veeshan</option>
+        <option value="any">Any (ignore faction)</option>
+      </select>` },
+      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
+      { label: "Spell Class", html: tagWrapHtml("class") },
+      { label: "Spell Line", html: tagWrapHtml("spellline") },
+      { label: "Specific Spells", html: tagWrapHtml("spell") },
+      { label: "Specific Zones", html: tagWrapHtml("zone") },
+      { label: "Current Zone", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
+      { label: "Levels", html: `<div class="range-picker">
+        <input type="range" id="level-min" min="1" max="50" value="1">
+        <span class="range-display" id="range-display">1 – 10</span>
+        <input type="range" id="level-max" min="1" max="50" value="10">
+      </div>` },
+    ],
+    actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
+  });
+  document.getElementById("controls-panel-slot").outerHTML = html;
+}
+
 async function init() {
   document.getElementById("nav-links").innerHTML = [
     MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
     MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
   ].join("");
-  [zones, availableClasses] = await Promise.all([
+  renderSidebar();
+  [zones, availableClasses, availableSpellLines] = await Promise.all([
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
+    fetch("api/spell-lines").then((r) => r.json()),
   ]);
   populateZoneList();
   setupLevelRange();
   setupPlanner();
   setupClassSearch();
+  setupSpellLineSearch();
   setupSpellSearch();
   setupZoneSearch();
   const hadState = restoreState();
@@ -124,9 +209,11 @@ function resetFilters() {
   document.getElementById("level-max").value = 10;
   specificSpells = [];
   specificZones = [];
+  selectedSpellLines = [];
   applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
   renderSpellTags();
   renderZoneTags();
+  renderSpellLineTags();
   saveState();
   runPlan();
 }
@@ -138,6 +225,7 @@ function getState() {
     primaryClass: document.getElementById("primary-class-select").value,
     deity: document.getElementById("deity-select").value,
     classes: selectedClasses,
+    spellLines: selectedSpellLines,
     zone: document.getElementById("zone-input").value,
     levelMin: document.getElementById("level-min").value,
     levelMax: document.getElementById("level-max").value,
@@ -159,6 +247,10 @@ function restoreState() {
     if (s.deity) document.getElementById("deity-select").value = s.deity;
     const classes = s.classes || (s.cls ? [s.cls] : []);
     if (classes.length) { selectedClasses = classes; renderClassTags(); }
+    if (Array.isArray(s.spellLines) && s.spellLines.length) {
+      selectedSpellLines = s.spellLines;
+      renderSpellLineTags();
+    }
     if (s.zone) document.getElementById("zone-input").value = s.zone;
     if (s.levelMin) document.getElementById("level-min").value = s.levelMin;
     if (s.levelMax) {
@@ -373,6 +465,36 @@ function setupClassSearch() {
   });
 
   window.addEventListener("resize", () => { if (dropdown.classList.contains("open")) positionDropdown(); });
+}
+
+// --- Spell Line filter ---
+// Uses the shared setupTagInput helper (components.js) for the
+// add/remove/dropdown wiring, rather than duplicating it inline.
+let spellLineTagInput;
+
+function renderSpellLineTags() {
+  spellLineTagInput?.renderTags();
+}
+
+function setupSpellLineSearch() {
+  spellLineTagInput = setupTagInput({
+    wrapId: "spellline-tag-wrap",
+    tagsId: "spellline-tags",
+    inputId: "spellline-search-input",
+    dropdownId: "spellline-suggestions",
+    getSelected: () => selectedSpellLines,
+    addItem: (item) => selectedSpellLines.push(item),
+    removeItem: (id) => { selectedSpellLines = selectedSpellLines.filter((l) => l.id !== id); },
+    getMatches: (q) => {
+      const lower = q.toLowerCase();
+      const selectedIds = new Set(selectedSpellLines.map((l) => l.id));
+      return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
+    },
+    itemId: (l) => l.id,
+    itemLabel: (l) => l.label,
+    emptyMessage: "No matching spell lines",
+    onChange: () => { saveState(); replan(300); },
+  });
 }
 
 // --- Level range ---
@@ -675,6 +797,7 @@ async function runPlan() {
   const params = new URLSearchParams({ class: classes.join(","), levelMin: String(levelMin), levelMax: String(levelMax), from, race, primaryClass, deity });
   if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
+  if (selectedSpellLines.length) params.set("lines", selectedSpellLines.map((l) => l.id).join(","));
   const rankings = await fetch(`api/plan?${params}`).then((r) => r.json());
 
   if (rankings.error) {

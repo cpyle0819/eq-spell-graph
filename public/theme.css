@@ -277,11 +277,44 @@ header h1 {
 }
 .macro-btn.long-label { font-size: 8.5px; }
 .macro-btn:hover { filter: brightness(1.05); }
+/* Pressed: swap which corner catches light. .macro-btn's actual "border" is
+   the ::before (top+right, lightened)/::after (bottom+left, darkened)
+   pseudo-element pair, not a real CSS border (border-width is 0 above). To
+   read as physically depressed, top+right needs to go dark and bottom+left
+   needs to go light: the exact opposite of the raised state. Rather than
+   fixed override colors, this swaps each pseudo-element to the *other
+   one's* normal background-image/blend-mode, keeping its own clip-path (so
+   square vs. non-square each still gets its own inset/miter unchanged) —
+   literally trading which shape gets which treatment. */
 .macro-btn:active {
-  border-image-source: linear-gradient(225deg, var(--bone-edge-lo), var(--bone-edge-hi));
-  border-image-slice: 1;
   box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
   filter: brightness(0.96);
+}
+.macro-btn:active::before {
+  background-image:
+    var(--bone-tex),
+    linear-gradient(to top, black, transparent 5px),
+    linear-gradient(to right, black, transparent 5px);
+  mix-blend-mode: darken;
+}
+.macro-btn:active::after {
+  background-image:
+    var(--bone-tex),
+    linear-gradient(to bottom, white, transparent 5px),
+    linear-gradient(to left, white, transparent 5px);
+  mix-blend-mode: lighten;
+}
+.macro-btn.square:active::before {
+  background-image:
+    var(--bone-tex),
+    linear-gradient(to top, black, transparent 6px),
+    linear-gradient(to right, black, transparent 6px);
+}
+.macro-btn.square:active::after {
+  background-image:
+    var(--bone-tex),
+    linear-gradient(to bottom, white, transparent 6px),
+    linear-gradient(to left, white, transparent 6px);
 }
 .macro-btn:focus-visible {
   outline-width: 2px;
@@ -379,20 +412,28 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .text-action:active { filter: none; }
 .text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* ── Tab bar: switch between result categories without scrolling past them ── */
-.tab-bar { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 20px 14px; border-bottom: 2px solid var(--edge-lo); flex-shrink: 0; }
-/* Author `display: flex` above wins the cascade over the UA [hidden] rule
-   (author beats UA at equal specificity) — without this, setting the
-   `hidden` property on #browser-tabs leaves it visibly displayed. */
-.tab-bar[hidden] { display: none; }
-.tab-button { padding: 6px 16px; font-size: 12px; }
-.tab-button .tab-count { margin-left: 6px; color: var(--parch-accent); }
-.tab-button[aria-selected="true"] {
-  border-color: var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo);
-  background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-  box-shadow: 0 0 0 2px var(--bone-frame), 0 0 8px rgba(232, 168, 42, 0.5);
+/* ── Sidebar filter panel: a sticky, fixed-width column of stacked filter
+   fields. Shared by the Spell Finder's .controls-panel and the Class
+   Browser's — both need "adding a tag chip grows its own field downward,
+   never reflows a neighboring field," which a horizontal bar can't give.
+   Route Finder's .finder-bar is a deliberately different, horizontal
+   layout and doesn't use this. Each page keeps only what's genuinely its
+   own on top of this (page-specific fields like Spell Finder's
+   range-picker, and the
+   3-vs-2-column `order` values each page's sidebar/results/status split
+   needs). ── */
+.controls-panel { flex-shrink: 0; overflow: hidden; }
+.planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
+.field { display: flex; align-items: center; gap: 10px; }
+.field label { min-width: 100px; }
+.field select, .field input { flex: 1; min-width: 0; }
+.panel-actions { display: flex; justify-content: flex-end; }
+
+@media (min-width: 1100px) {
+  .controls-panel { width: 300px; min-width: 300px; position: sticky; top: 0; }
+  .field { flex-direction: column; align-items: stretch; gap: 4px; }
+  .field label { min-width: 0; width: 100%; }
 }
-.tab-button[aria-selected="true"] .tab-count { color: var(--bone-frame); opacity: 0.75; }
 
 /* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ── */
 .tag-wrap {
@@ -739,6 +780,4 @@ footer a:hover { text-decoration: underline; color: var(--gold-bright); }
   button { min-height: 44px; }
   button.secondary { min-height: 40px; }
   .tag-item-remove { min-height: 0; }
-  .tab-bar { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 10px; }
-  .tab-button { flex-shrink: 0; min-height: 40px; }
 }
