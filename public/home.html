@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norraph</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Page layout only — component styling lives in theme.css */
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Same marble backdrop as the other pages' console frame, but centered
+       single-column content instead of a sidebar/results split — this page
+       has nothing to filter, just a scroll to read and three doors to pick. */
+    main {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 24px;
+      padding: 36px 20px 44px;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+    }
+
+    .welcome-scroll { max-width: 640px; width: 100%; padding: 20px 28px; }
+    .welcome-scroll p { font-size: 14px; line-height: 1.7; }
+    .welcome-scroll p + p { margin-top: 10px; }
+
+    .tool-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      max-width: 900px; width: 100%;
+    }
+    /* .spell-detail gives the stone-card bevel/hover for free; this page
+       only adds the flex layout to push each card's Open button to a
+       consistent baseline regardless of description length. */
+    .tool-card { display: flex; flex-direction: column; gap: 10px; cursor: default; }
+    .tool-card p { font-size: 12.5px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
+    /* .macro-socket is width:auto by default, but a column flex container's
+       default align-items:stretch would still pull it to the card's full
+       width — pin it back to its content size instead. */
+    .tool-card .macro-socket { align-self: flex-start; }
+
+    @media (max-width: 760px) {
+      .tool-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>Norraph</h1>
+      <p class="header-sub">Welcome</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="route-path welcome-scroll">
+      <p>Norraph plans out spell-buying trips in EverQuest Legends. Tell it which classes and level range you're shopping for and where you're starting from, and it finds every vendor that sells something you need, how to get there, and whether your faction standing will actually let you buy anything once you arrive.</p>
+      <p>It's graph-based and faction-aware: routes account for real zone connections — including boats and translocators — and every result is checked against your race, class, and deity standing with that vendor, so a technically-closer zone that would leave you kill-on-sight never outranks a longer trip that actually works.</p>
+    </div>
+
+    <div class="tool-grid">
+      <div class="spell-detail tool-card">
+        <h3>Spell Finder</h3>
+        <p>Pick your classes, level range, and current zone — get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
+        <div class="macro-socket"><a class="macro-btn" href="index.html">Open</a></div>
+      </div>
+      <div class="spell-detail tool-card">
+        <h3>Route Finder</h3>
+        <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
+        <div class="macro-socket"><a class="macro-btn" href="route.html">Open</a></div>
+      </div>
+      <div class="spell-detail tool-card">
+        <h3>Class Browser</h3>
+        <p>Browse everything a class can learn — spells, AAs, stances, invocations, and class-defining abilities — with no shopping logistics involved.</p>
+        <div class="macro-socket"><a class="macro-btn" href="class-browser.html">Open</a></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
+</body>
+</html>

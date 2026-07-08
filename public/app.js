@@ -87,6 +87,11 @@ function setupTooltip() {
 }
 
 const STATE_KEY = "eq-planner-state";
+// Separate from STATE_KEY (filter values) — this is purely "has this
+// browser ever landed here before," so a first-time visitor who never
+// touches a filter still counts as visited on their next load instead of
+// being bounced to home.html forever.
+const VISITED_KEY = "eq-visited";
 
 // --- Init ---
 
@@ -208,7 +213,22 @@ function setupCollapsibleSections() {
   });
 }
 
+// A completely fresh visitor lands on home.html instead of the planner —
+// marked visited immediately (not "once they click through") so this is a
+// one-shot redirect, not a loop if they come straight back. Skipped when
+// the URL already carries query params (e.g. Class Browser's "Find in
+// Spell Finder" pinSpell link, see consumePinnedSpellFromUrl()) — that's a
+// deliberate, purposeful arrival with context to preserve, not a curious
+// first-time visit to the bare root.
+function redirectFirstTimeVisitor() {
+  if (localStorage.getItem(VISITED_KEY) || location.search) return false;
+  localStorage.setItem(VISITED_KEY, "1");
+  location.replace("home.html");
+  return true;
+}
+
 async function init() {
+  if (redirectFirstTimeVisitor()) return;
   document.getElementById("nav-links").innerHTML = [
     MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
     MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
