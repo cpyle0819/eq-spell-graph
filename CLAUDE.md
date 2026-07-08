@@ -2,7 +2,7 @@
 
 ## Project
 
-EverQuest spell shopping route planner. Graph-based, faction-aware. Bun + TypeScript backend, vanilla JS frontend.
+Spell shopping route planner for **EverQuest Legends** (EQL) — a separate, newer game from Daybreak, not classic EverQuest/Project 1999. Zone connectivity, NPCs, and content can diverge from classic EQ; verify against eqlwiki.com, not classic-EQ sources (see DECISIONS.md). Graph-based, faction-aware. Bun + TypeScript backend, vanilla JS frontend.
 
 ## Commands
 
