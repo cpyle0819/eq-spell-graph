@@ -123,10 +123,8 @@ body::before {
   border: 4px solid;
   border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
   border-radius: 3px;
-  /* a modest outer shadow, not the old large diffuse one — panels read as
-     mounted plates in a console, not cards floating above a page. See
-     DECISIONS.md for how this was worked out on the Spell Finder page
-     before propagating here. Light top-right/dark bottom-left, matching
+  /* modest outer shadow — panels read as mounted plates in a console, not
+     cards floating above a page. Light top-right/dark bottom-left, matching
      the border-color above and every other raised surface in the app. */
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -211,13 +209,11 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .text-action:active { filter: none; }
 .text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* ── .field: Route Finder's own From/To fields (route.html has no sidebar
-   and doesn't use sidebar-panel/field-row -- see below). The Spell
-   Finder's and Class Browser's sidebar fields are now the sidebar-panel/
-   field-row/collapsible-section/range-picker components
-   (public/components/), which each own an equivalent rule directly, since
-   a plain outer .controls-panel/.planner-controls/.field-group-label
-   class selector can no longer reach into their shadow roots. ── */
+/* ── .field: Route Finder's own From/To fields (route.html has no sidebar).
+   Spell Finder and Class Browser sidebar fields live in sidebar-panel/
+   field-row/collapsible-section/range-picker components (public/components/),
+   each owning their own rules directly since outer selectors can't reach
+   into shadow roots. ── */
 .field { display: flex; align-items: center; gap: 10px; }
 .field[hidden] { display: none; }
 .field label { min-width: 100px; }
@@ -229,10 +225,9 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 }
 
 /* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ──
-   The chip list + search box are now the tag-input component's own :host
-   content (public/components/tag-input.js); the suggestion dropdown below
-   stays a plain light-DOM element (body-appended by that same component)
-   and keeps using these rules unchanged. ── */
+   The tag-input component (public/components/tag-input.js) owns the chip
+   list + search box in its shadow root. The suggestion dropdown below stays
+   a plain light-DOM element (body-appended) and uses theme.css rules. ── */
 .tag-dropdown {
   position: fixed; z-index: 300;
   max-height: 240px; overflow-y: auto;
@@ -301,21 +296,16 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
 /* ── Parchment scroll insert: directions/spell text inked on a parchment
    scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. Route Finder's route-path and the spell tooltip
-   are their own components now (public/components/route-path.js,
-   spell-tooltip.js), each owning an equivalent rule in their own shadow
-   stylesheet. `.route-path` stays here too, as a plain class, for
-   home.html's welcome-scroll (`.route-path.welcome-scroll`), which wants
-   the same parchment-box look for arbitrary paragraph text rather than the
-   route-path component's step-rendering content model; `.spell-scroll`
-   (Class Browser cards, Spell Finder zone-cards) is the other light-DOM
-   consumer. ── */
+   the reference client. route-path and spell-tooltip components
+   (public/components/) own their own shadow stylesheets. `.route-path` here
+   is a plain class for home.html's welcome-scroll; `.spell-scroll` is used
+   by Class Browser cards and Spell Finder zone-cards (light-DOM consumers). ── */
 .route-path, .spell-scroll {
   position: relative;
   padding: 12px 20px; border-radius: 2px;
   background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
   border: 1px solid var(--parch-line);
-  /* aged edges: warm inner vignette instead of a bevel — paper, not stone */
+  /* aged edges: warm inner vignette for parchment surfaces */
   box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
   color: var(--parch-ink);
 }
@@ -334,12 +324,9 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .route-path::after,  .spell-scroll::after  { right: -11px; }
 
 /* ── Spell chips (planner results) ──
-   Ink on parchment, not sunken stone wells — .spell-chip/.vendor-tag only
-   ever render inside .spell-scroll now (see DECISIONS.md's zone-card
-   scroll swap), so they follow the same tinted-background/dark-ink
-   convention as Class Browser's .type-badge/.mana-badge/.class-badge
-   rather than the dark "carved into stone" chip these used to be when
-   the spell list sat directly on the marble panel. */
+   Ink on parchment: .spell-chip and .vendor-tag render inside .spell-scroll,
+   following the tinted-background/dark-ink convention of Class Browser's
+   .type-badge/.mana-badge/.class-badge (see DECISIONS.md). */
 .spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .spell-check { display: flex; align-items: center; }
 .spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
@@ -501,7 +488,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 }
 .spell-finder-link:hover { text-decoration: underline; }
 
-/* Spell tooltip styling now lives in public/components/spell-tooltip.js. */
+/* Spell tooltip styling lives in public/components/spell-tooltip.js. */
 
 /* ── Empty / loading states ── */
 .no-results { color: var(--ink-muted); font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
