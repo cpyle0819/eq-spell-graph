@@ -820,6 +820,26 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    explanation) get the help cursor — nothing to reveal on the others. */
 .field-group-label[title] { cursor: help; }
 
+/* Collapsible section headers (Spell Finder sidebar) — role="button" divs,
+   not real <button>s, specifically to dodge this app's global bone-plate
+   button styling (theme.css's `button { ... }`) rather than fight it with
+   overrides. Same specificity as `.field-group-label[title]` above but
+   declared later, so cursor:pointer wins here even on Faction's header
+   (which also carries a title/help tooltip) — being a toggle takes
+   precedence over the tooltip affordance. The chevron is a ::before, not
+   JS-written text, so toggling is just one attribute flip
+   (aria-expanded) with no risk of the icon and expanded state drifting
+   apart. */
+.field-group-label.collapsible {
+  display: flex; align-items: center; gap: 6px; cursor: pointer;
+}
+.field-group-label.collapsible::before {
+  content: "▾"; display: inline-block; font-size: 9px; flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+.field-group-label.collapsible[aria-expanded="false"]::before { transform: rotate(-90deg); }
+.field-group-label.collapsible:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
 /* ── Footer ── */
 footer {
   padding: 10px 28px; border-top: 1px solid #26232e; flex-shrink: 0;

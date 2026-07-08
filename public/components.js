@@ -61,21 +61,40 @@ function MacroButton({ label, tag = "button", href, id, className = "", square =
 // component only builds the repeated wrapper/label/actions shell so that
 // structure lives in one place instead of being hand-copied per page.
 //
-// A field entry is either { label, html, id?, hidden? } (label + control,
-// wrapped in a .field div) or { raw } (arbitrary markup with no label/field
-// wrapper at all, e.g. Spell Finder's .control-sep divider).
+// A field entry is either { label, html, id?, hidden?, section? } (label +
+// control, wrapped in a .field div) or { raw } (arbitrary markup with no
+// label/field wrapper at all, e.g. Spell Finder's .control-sep divider).
+// `section`, when given, tags the wrapper with data-section so a collapsible
+// section header (see sectionHeader() in app.js) can hide/show every field
+// belonging to it by matching that attribute — the header itself is just
+// another `raw` entry, SidebarPanel doesn't need to know sections exist.
 function SidebarPanel({ fields, actions = [] }) {
   const fieldsHtml = fields.map((f) => {
     if (f.raw !== undefined) return f.raw;
     const idAttr = f.id ? ` id="${f.id}"` : "";
     const hiddenAttr = f.hidden ? " hidden" : "";
-    return `<div class="field"${idAttr}${hiddenAttr}>
+    const sectionAttr = f.section ? ` data-section="${f.section}"` : "";
+    return `<div class="field"${idAttr}${sectionAttr}${hiddenAttr}>
       <label>${f.label}</label>
       ${f.html}
     </div>`;
   }).join("");
   const actionsHtml = actions.length ? `<div class="panel-actions">${actions.join("")}</div>` : "";
   return `<div class="controls-panel"><div class="planner-controls">${fieldsHtml}${actionsHtml}</div></div>`;
+}
+
+// A `raw` SidebarPanel entry: a `.field-group-label` that's also a
+// collapse/expand toggle for every `.field[data-section]` that follows it,
+// up to the next section. role="button"/tabindex over a real <button> to
+// avoid fighting this app's global bone-plate button styling (theme.css) —
+// see DECISIONS.md's collapsible-sections entry. Starts expanded
+// (aria-expanded="true"); callers collapse specific sections after render
+// (setSectionCollapsed in app.js) rather than baking a default in here,
+// since the right default (first-time visitor vs. restored localStorage
+// state) is caller-specific.
+function sectionHeader(label, section, title) {
+  const titleAttr = title ? ` title="${title}"` : "";
+  return `<div class="field-group-label collapsible" data-section="${section}" role="button" tabindex="0" aria-expanded="true"${titleAttr}>${label}</div>`;
 }
 
 // The tag-wrap markup every setupTagInput() instance needs (chip list +

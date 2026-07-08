@@ -98,8 +98,8 @@ const STATE_KEY = "eq-planner-state";
 function renderSidebar() {
   const html = SidebarPanel({
     fields: [
-      { raw: `<div class="field-group-label" title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.">Faction</div>` },
-      { label: "Race", html: `<select id="race-select">
+      { raw: sectionHeader("Faction", "faction", "Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.") },
+      { label: "Race", section: "faction", html: `<select id="race-select">
         <option value="barbarian">Barbarian</option>
         <option value="dark elf">Dark Elf</option>
         <option value="dwarf">Dwarf</option>
@@ -115,7 +115,7 @@ function renderSidebar() {
         <option value="wood elf">Wood Elf</option>
         <option value="any" selected>Any (ignore faction)</option>
       </select>` },
-      { label: "Primary Class", html: `<select id="primary-class-select">
+      { label: "Primary Class", section: "faction", html: `<select id="primary-class-select">
         <option value="bard">Bard</option>
         <option value="beastlord">Beastlord</option>
         <option value="cleric">Cleric</option>
@@ -133,7 +133,7 @@ function renderSidebar() {
         <option value="wizard">Wizard</option>
         <option value="any" selected>Any (ignore faction)</option>
       </select>` },
-      { label: "Deity", html: `<select id="deity-select">
+      { label: "Deity", section: "faction", html: `<select id="deity-select">
         <option value="agnostic">Agnostic</option>
         <option value="bertoxxulous">Bertoxxulous</option>
         <option value="brell serilis">Brell Serilis</option>
@@ -154,26 +154,59 @@ function renderSidebar() {
         <option value="any" selected>Any (ignore faction)</option>
       </select>` },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: `<div class="field-group-label">Spells</div>` },
-      { label: "Spell Class", html: tagWrapHtml("class") },
-      { label: "Spell Line", html: tagWrapHtml("spellline") },
-      { label: "Specific Spells", html: tagWrapHtml("spell") },
+      { raw: sectionHeader("Spells", "spells") },
+      { label: "Spell Class", section: "spells", html: tagWrapHtml("class") },
+      { label: "Spell Line", section: "spells", html: tagWrapHtml("spellline") },
+      { label: "Specific Spells", section: "spells", html: tagWrapHtml("spell") },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: `<div class="field-group-label">Level</div>` },
-      { label: "Levels", html: `<div class="range-picker">
+      { raw: sectionHeader("Level", "level") },
+      { label: "Levels", section: "level", html: `<div class="range-picker">
         <input type="range" id="level-min" min="1" max="50" value="1">
         <span class="range-display" id="range-display">1 – 10</span>
         <input type="range" id="level-max" min="1" max="50" value="10">
       </div>` },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: `<div class="field-group-label">Location</div>` },
-      { label: "Specific Zones", html: tagWrapHtml("zone") },
-      { label: "Current Zone", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
+      { raw: sectionHeader("Location", "location") },
+      { label: "Specific Zones", section: "location", html: tagWrapHtml("zone") },
+      { label: "Current Zone", section: "location", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
       { raw: '<div class="control-sep" aria-hidden="true"></div>' },
     ],
     actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
   });
   document.getElementById("controls-panel-slot").outerHTML = html;
+}
+
+// Faction (now defaults to Any/Any/Any — see DECISIONS.md, only matters if
+// you're chasing a specific vendor's standing) and Location (usually set
+// once and rarely revisited) start collapsed; Spells/Level stay open since
+// narrowing results is the page's main job. Applied by applyDefaults() —
+// for a first-time visitor that's every section's only assignment; for
+// Reset filters (which also calls applyDefaults()) it's what makes the
+// collapse state, not just the filter values, fully reset too, rather
+// than leaving whatever the user had toggled untouched.
+const ALL_SECTIONS = ["faction", "spells", "level", "location"];
+const DEFAULT_COLLAPSED_SECTIONS = ["faction", "location"];
+
+function setSectionCollapsed(section, collapsed) {
+  const header = document.querySelector(`.field-group-label[data-section="${section}"]`);
+  if (!header) return;
+  header.setAttribute("aria-expanded", String(!collapsed));
+  document.querySelectorAll(`.field[data-section="${section}"]`).forEach((el) => { el.hidden = collapsed; });
+}
+
+function toggleSection(section) {
+  const header = document.querySelector(`.field-group-label[data-section="${section}"]`);
+  setSectionCollapsed(section, header?.getAttribute("aria-expanded") === "true");
+  saveState();
+}
+
+function setupCollapsibleSections() {
+  document.querySelectorAll(".field-group-label.collapsible").forEach((header) => {
+    header.addEventListener("click", () => toggleSection(header.dataset.section));
+    header.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSection(header.dataset.section); }
+    });
+  });
 }
 
 async function init() {
@@ -182,6 +215,7 @@ async function init() {
     MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
   ].join("");
   renderSidebar();
+  setupCollapsibleSections();
   [zones, availableClasses, availableSpellLines] = await Promise.all([
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
@@ -238,6 +272,9 @@ function getState() {
     levelMax: document.getElementById("level-max").value,
     specificSpells,
     specificZones,
+    collapsedSections: [...document.querySelectorAll(".field-group-label.collapsible")]
+      .filter((h) => h.getAttribute("aria-expanded") === "false")
+      .map((h) => h.dataset.section),
   };
 }
 
@@ -271,6 +308,9 @@ function restoreState() {
     if (Array.isArray(s.specificZones) && s.specificZones.length) {
       specificZones = s.specificZones;
       renderZoneTags();
+    }
+    if (Array.isArray(s.collapsedSections)) {
+      s.collapsedSections.forEach((section) => setSectionCollapsed(section, true));
     }
     return true;
   } catch { return false; }
@@ -327,6 +367,7 @@ function applyDefaults() {
   if (qeynos) zoneSelect.value = qeynos.value;
   else if (zoneSelect.options.length > 1) zoneSelect.selectedIndex = 1;
   updateLevelRangeDisplay();
+  ALL_SECTIONS.forEach((section) => setSectionCollapsed(section, DEFAULT_COLLAPSED_SECTIONS.includes(section)));
 }
 
 function setupAutoSave() {
