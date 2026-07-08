@@ -32,14 +32,16 @@
       max-width: 900px; width: 100%;
     }
     /* .spell-detail gives the stone-card bevel/hover for free; this page
-       only adds the flex layout to push each card's Open button to a
-       consistent baseline regardless of description length. */
+       only adds the flex layout to push each card's button to a consistent
+       baseline regardless of description length. The button doubles as the
+       card's title (no separate heading), so it's centered on the card's
+       width rather than left-aligned like a trailing action would be. */
     .tool-card { display: flex; flex-direction: column; gap: 10px; cursor: default; }
     .tool-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
     /* .macro-socket is width:auto by default, but a column flex container's
        default align-items:stretch would still pull it to the card's full
-       width — pin it back to its content size instead. */
-    .tool-card .macro-socket { align-self: flex-start; }
+       width — pin it back to its content size, centered, instead. */
+    .tool-card .macro-socket { align-self: center; }
 
     @media (max-width: 760px) {
       .tool-grid { grid-template-columns: 1fr; }
@@ -62,17 +64,14 @@
 
     <div class="tool-grid">
       <div class="spell-detail tool-card">
-        <h3>Spell Finder</h3>
         <p>Pick your classes, level range, and current zone — get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
         <div id="spell-finder-open"></div>
       </div>
       <div class="spell-detail tool-card">
-        <h3>Route Finder</h3>
         <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
         <div id="route-finder-open"></div>
       </div>
       <div class="spell-detail tool-card">
-        <h3>Class Browser</h3>
         <p>The complete class reference — every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
         <div id="class-browser-open"></div>
       </div>
