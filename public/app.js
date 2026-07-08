@@ -22,40 +22,17 @@ let planDebounce;
 function replan(delay = 300) { clearTimeout(planDebounce); planDebounce = setTimeout(runPlan, delay); }
 
 // --- Spell tooltip ---
-const tooltip = document.getElementById("spell-tooltip");
-let tooltipTimer;
-
-function showTooltip(spell, anchorEl) {
-  clearTimeout(tooltipTimer);
-  tooltip.show(spell, anchorEl);
-}
-
+// zone-card (public/components/zone-card.js) owns hover-to-show and
+// click-suppress directly, scoped to its own shadow root -- a delegated
+// listener here can't reliably read e.target/e.relatedTarget for elements
+// retargeted across a shadow boundary. Scroll-to-hide has no such
+// dependency, so it stays here.
 function hideTooltip() {
-  tooltip.hide();
+  document.getElementById("spell-tooltip").hide();
 }
 
 function setupTooltip() {
-  const isMouseDevice = window.matchMedia("(pointer: fine)").matches;
-  const results = document.getElementById("results");
-
-  if (!isMouseDevice) return; // touch devices: tap navigates to wiki, no hover needed
-
-  // Desktop: show hover card, suppress link navigation on click
-  results.addEventListener("mouseover", (e) => {
-    const chip = e.target.closest(".spell-chip[data-spell-id]");
-    if (!chip) return;
-    const id = chip.dataset.spellId;
-    const spell = lastRankings?.flatMap(r => r.spells).find(s => s.id === id);
-    if (spell) showTooltip(spell, chip);
-  });
-  results.addEventListener("mouseout", (e) => {
-    if (!e.relatedTarget?.closest(".spell-chip[data-spell-id]")) hideTooltip();
-  });
-  results.addEventListener("scroll", hideTooltip, { passive: true });
-  results.addEventListener("click", (e) => {
-    const chip = e.target.closest(".spell-chip[data-spell-id]");
-    if (chip) e.preventDefault(); // hover is sufficient on desktop
-  });
+  document.getElementById("results").addEventListener("scroll", hideTooltip, { passive: true });
 }
 
 const STATE_KEY = "eq-planner-state";
@@ -468,23 +445,36 @@ function setupPlanner() {
   document.getElementById("level-range").addEventListener("input", () => replan(1000));
 
   const results = document.getElementById("results");
-  results.addEventListener("change", (e) => {
-    const cb = e.target.closest("input[data-spell-id]");
-    if (!cb) return;
-    setSpellOwned(cb.dataset.spellId, cb.checked);
+  // zone-card (public/components/zone-card.js) owns its checkboxes inside
+  // its own shadow root and dispatches this composed event -- a delegated
+  // "change" listener here can't class/attribute-match e.target once it's
+  // retargeted to the zone-card host.
+  results.addEventListener("spell-owned-change", (e) => {
+    setSpellOwned(e.detail.spellId, e.detail.checked);
     renderRankings(lastRankings, lastLevelRange);
   });
+
+  const planner = document.getElementById("planner");
   // Delegated from #planner, not #results — the toggle/clear actions live
   // in #status-panel, a sibling of #results, not a descendant of it.
-  document.getElementById("planner").addEventListener("click", (e) => {
+  // status-panel's own toggle/clear buttons live in its shadow root and
+  // dispatch composed toggle-owned/clear-owned events (handled below);
+  // this class-based listener only matches the empty-results fallback's
+  // plain "Show all" button (renderRankings), a plain element outside any
+  // shadow root that fires a real click.
+  planner.addEventListener("click", (e) => {
     if (e.target.matches(".toggle-owned-btn")) {
       showAllSpells = !showAllSpells;
       renderRankings(lastRankings, lastLevelRange);
     }
-    if (e.target.matches("#clear-owned-btn")) {
-      clearOwnedSpells();
-      renderRankings(lastRankings, lastLevelRange);
-    }
+  });
+  planner.addEventListener("toggle-owned", () => {
+    showAllSpells = !showAllSpells;
+    renderRankings(lastRankings, lastLevelRange);
+  });
+  planner.addEventListener("clear-owned", () => {
+    clearOwnedSpells();
+    renderRankings(lastRankings, lastLevelRange);
   });
 }
 
@@ -499,7 +489,7 @@ async function runPlan() {
   if (!from) {
     document.getElementById("results").innerHTML =
       '<div class="no-results">Select your current zone.</div>';
-    document.getElementById("status-panel").innerHTML = "";
+    document.getElementById("status-panel").data = null;
     return;
   }
 
@@ -526,7 +516,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const statusEl = document.getElementById("status-panel");
   if (!rankings.length) {
     el.innerHTML = '<div class="no-results">No vendors found for those levels.</div>';
-    statusEl.innerHTML = "";
+    statusEl.data = null;
     return;
   }
 
@@ -556,55 +546,14 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
 
-  // Status panel: results metadata (counts/warnings, progress bar + owned
-  // count, show/clear actions) — the empty-results "Show all" fallback
-  // (renderRankings below) stays a plain .text-action link instead of a
-  // MacroButton, since it sits inline in body text, not a dedicated
-  // action row.
-  const toggleLabel = showAllSpells ? "Show remaining" : "Show all";
-  const toggleBtn = `<macro-button square class="toggle-owned-btn">${toggleLabel}</macro-button>`;
-  const clearBtn = ownedCount > 0 ? `<macro-button square id="clear-owned-btn">Clear owned</macro-button>` : "";
-  const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
-  statusEl.innerHTML = `
-    <div class="status-meta">
-      ${totalSpells} spell(s) across ${accessible.length} zone(s) for ${levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`}
-      ${warnings.length ? `<div class="status-warnings">${warnings.join(" · ")}</div>` : ""}
-    </div>
-    <div class="status-summary">
-      <span class="mana-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${totalSpells}" aria-valuenow="${ownedCount}" aria-label="Spells owned: ${ownedCount} of ${totalSpells}" title="Spells owned: ${ownedCount} of ${totalSpells}"><span class="mana-fill" style="width:${pct}%"></span></span>
-      <span class="status-owned-count">${ownedCount} / ${totalSpells} owned</span>
-    </div>
-    <div class="status-actions">
-      ${toggleBtn}
-      ${clearBtn}
-    </div>
-  `;
+  // status-panel (public/components/status-panel.js) owns the meta text,
+  // warnings, progress bar, and toggle/clear buttons' own markup -- this
+  // just hands it the numbers. The empty-results "Show all" fallback
+  // (below) stays a plain .text-action link instead of a MacroButton,
+  // since it sits inline in body text, not a dedicated action row.
+  statusEl.data = { totalSpells, accessibleCount: accessible.length, levelMin, levelMax, warnings, ownedCount, showAllSpells };
 
   el.innerHTML = "";
-
-  // EQ /consider verbiage; the title attribute carries the practical meaning
-  const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
-  const FACTION_TITLES = {
-    safe: "Regards you as an ally — sells at normal prices",
-    neutral: "Regards you indifferently — sells at normal prices",
-    wont_sell: "Looks upon you dubiously — merchants won't sell to you",
-    kos: "Scowls at you, ready to attack — kill on sight",
-  };
-  const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
-  const DIMENSION_LABELS = { race: "race", class: "class", deity: "deity" };
-  // Same text for the badge and the LED dot (zone-name's ::before — a
-  // pseudo-element can't carry its own title, so zone-name's covers it) —
-  // one tooltip, two hover targets. Appends *why* only for wont_sell/kos,
-  // naming whichever dimension(s) actually caused it (factionReasons is
-  // empty for safe/neutral, since nothing there needs explaining).
-  function factionTooltip(r) {
-    const base = FACTION_TITLES[r.faction] || "";
-    if (!r.factionReasons?.length) return base;
-    const reasons = r.factionReasons
-      .map((fr) => `your ${titleCase(fr.value)} ${DIMENSION_LABELS[fr.dimension]}`)
-      .join(" and ");
-    return `${base} (${reasons} ${r.factionReasons.length > 1 ? "are" : "is"} disliked here)`;
-  }
 
   let renderedZones = 0;
   for (const r of rankings) {
@@ -612,46 +561,8 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     if (!showAllSpells && visibleSpells.length === 0) continue;
     renderedZones++;
 
-    const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
-    const card = document.createElement("div");
-    card.className = `zone-card ${r.faction}`;
-
-    const spellRows = r.spells.map((s) => {
-      const isOwned = owned.has(s.id);
-      if (!showAllSpells && isOwned) return "";
-      return `
-        <div class="spell-row${isOwned ? " spell-owned" : ""}">
-          <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
-          <a class="spell-chip" data-spell-id="${s.id}" href="https://eqlwiki.com/${encodeURIComponent(s.name.replace(/ /g, "_"))}" target="_blank" rel="noopener">${s.name}${s.classes.map((c) => `<span class="lvl">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}</a>
-          <span class="vendor-names">${s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ","))).map((v) => `<span class="vendor-tag">${v}</span>`).join("")}</span>
-        </div>
-      `;
-    }).join("");
-
-    // Plain stone text, not a parchment scroll — the spell list is this
-    // page's focus content (see .spell-scroll below), so the route is
-    // wayfinding detail, not the thing to read closely.
-    const hasRoute = r.route && r.route.length > 1;
-    const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";
-
-    const spellCount = visibleSpells.length;
-    const ownedHere = r.spells.length - visibleSpells.length;
-    const spellBadge = spellCount + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
-
-    const tooltip = factionTooltip(r);
-    card.innerHTML = `
-      <div class="zone-card-header">
-        <span class="zone-name" title="${tooltip}">${r.zoneName}</span>
-        ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
-        <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
-        <span class="zone-badge hops">${hopsText}</span>
-      </div>
-      ${routeHtml}
-      <div class="spell-scroll">
-        <div class="spell-vendor-list">${spellRows}</div>
-      </div>
-    `;
-    if (hasRoute) card.querySelector("route-path").steps = r.route;
+    const card = document.createElement("zone-card");
+    card.setData(r, owned, showAllSpells);
     el.appendChild(card);
   }
 

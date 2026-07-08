@@ -23,7 +23,7 @@
        as its own beveled block. .controls-panel and the zone-card list
        follow that split: panel-level gap between the two clusters, zero
        gap + shared borders between repeated items inside each. Scoped to
-       index.html only — .controls-panel/.zone-card aren't used elsewhere,
+       index.html only — .controls-panel/zone-card aren't used elsewhere,
        and the shared theme.css floating-panel treatment is still correct
        for route.html/class-browser.html's .filter-bar etc. */
     /* #planner's marble is the page-level backdrop, not a card's own
@@ -35,8 +35,8 @@
        the marble-tex layer (not the lit-top/shaded-bottom gradient after
        it) — the gradient still tracks #planner's own box, since that's
        meant to shade this one panel's actual top/bottom edges, not repeat
-       every viewport height. Cards (.zone-card, .controls-panel,
-       .status-panel) keep their own default-attachment backgrounds — each
+       every viewport height. Cards (zone-card, .controls-panel,
+       status-panel) keep their own default-attachment backgrounds — each
        is a physical object that should carry its surface with it as it
        moves, unlike the backdrop behind/between them. */
     #planner {
@@ -47,38 +47,12 @@
     }
     #results { flex: 1; min-height: 0; overflow-y: auto; }
 
-    .status-panel {
-      flex-shrink: 0; overflow: hidden;
-      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-      border: 4px solid;
-      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
-      border-radius: 3px;
-      box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-    /* sidebar-panel/field-row/collapsible-section/range-picker
-       (public/components/) own their own layout. */
-
-    /* Status panel: the vitals-bar-plus-action-buttons cluster, its own
-       console module echoing the reference client's right-side column
-       (portrait/bars up top, WHO/INVITE/etc. buttons below). Empty
-       (innerHTML = "") between plans, so it collapses to nothing rather
-       than showing an empty bevel box. */
-    .status-panel:empty { display: none; }
-    /* Results metadata (counts, level range, faction warnings) lives in the
-       status-panel; #results holds only the zone-card list. */
-    .status-meta {
-      padding: 14px 20px; text-align: center; font-size: 12px; color: var(--ink-muted);
-      line-height: 1.5; border-bottom: 2px solid var(--edge-lo);
-    }
-    .status-warnings { margin-top: 4px; font-size: 11px; }
-    .status-summary { padding: 16px 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .status-summary .mana-bar { width: 100%; }
-    .status-owned-count { font-size: 12px; color: var(--ink-muted); letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
-    /* .macro-socket/.macro-btn component styling lives in theme.css. */
-    .status-actions {
-      display: flex; justify-content: center;
-      padding: 12px 20px 16px; border-top: 2px solid var(--edge-lo);
-    }
+    /* sidebar-panel/field-row/collapsible-section/range-picker/
+       status-panel/mana-bar/zone-card (public/components/) own their own
+       layout and look, including (for status-panel) its :host([hidden])
+       collapse when empty -- a CSS `:empty` rule can't do that job here,
+       since these components render only into their own shadow roots and
+       never get light-DOM children. */
 
     /* range-picker styling lives in public/components/range-picker.js. */
 
@@ -90,41 +64,12 @@
        neighbors — a negative margin overlaps each row's top border onto
        the previous row's bottom border, one shared seam instead of two
        stacked ones, the same way adjacent macro buttons in the reference
-       share an edge without a gap between them. */
-    .zone-card {
-      position: relative;
-      margin: 0; padding: 14px 20px;
-      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-      border: 4px solid;
-      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
-      border-radius: 3px;
-      box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
-    }
-    .zone-card + .zone-card { margin-top: -4px; }
-    /* Faction displays as an LED dot (zone-name::before), not as box color.
-       Neutralize theme.css's colored border-top/background-tint. */
-    .zone-card.safe, .zone-card.neutral, .zone-card.wont_sell, .zone-card.kos {
-      border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
-      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-    }
-    .zone-card-header { margin-bottom: 12px; }
-    .zone-name { position: relative; padding-left: 17px; }
-    /* LED dot's specular highlight biased top-right, matching the app's
-       light source (same reasoning as the spell gem in theme.css). */
-    .zone-name::before {
-      content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
-      width: 9px; height: 9px; border-radius: 50%;
-      background: radial-gradient(circle at 65% 30%, #b8b4c8, #6e6885 65%, #4a4658);
-      box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
-    }
-    .zone-card.safe      .zone-name::before { background: radial-gradient(circle at 65% 30%, #7dffb0, #22c55e 60%, #157a3c); box-shadow: 0 0 6px rgba(34, 197, 94, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 65% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    /* route-path component (variant="stone") handles dark-stone styling;
-       see public/components/route-path.js. */
-    .spell-scroll { margin-top: 12px; }
-    .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
+       share an edge without a gap between them. zone-card
+       (public/components/zone-card.js) owns its own look (panel/border/
+       faction LED dot/opacity) and margin:0 (from theme.css's universal
+       reset reaching the host from outside, same as before) — this page
+       only needs the adjacency trick between instances. */
+    zone-card + zone-card { margin-top: -4px; }
 
     /* Wide layout: sidebar. The sidebar column fills its full allocated
        width — left bevel flush against the screen edge (no padding
@@ -142,16 +87,11 @@
 
       /* Status panel sits to the right of results on desktop (DOM order
          puts it right after sidebar-panel, for mobile's stacking —
-         `order` reflows it to last here without duplicating markup). Fills
-         its column the same way the sidebar does: left bevel shares the
-         results seam (no gap, gap:0 on #planner), right bevel shares the
-         screen's own edge (no padding outside it, #planner's right padding
-         removed above). */
-      .status-panel {
-        width: 220px; min-width: 220px; flex-shrink: 0;
-        position: sticky; top: 0;
-        order: 2;
-      }
+         `order` reflows it to last here without duplicating markup).
+         width/position/sticky are owned by status-panel itself
+         (public/components/status-panel.js) — this page only needs its
+         own 3-column `order`. */
+      status-panel { order: 2; }
     }
 
     /* Below the sidebar breakpoint: one page-level scroll area instead of a
@@ -176,7 +116,7 @@
 
   <div id="planner">
     <div id="controls-panel-slot"></div>
-    <div id="status-panel" class="status-panel"></div>
+    <status-panel id="status-panel"></status-panel>
     <div id="results"></div>
   </div>
 

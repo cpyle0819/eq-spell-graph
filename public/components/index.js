@@ -12,3 +12,6 @@ import "./field-row.js";
 import "./collapsible-section.js";
 import "./range-picker.js";
 import "./sidebar-panel.js";
+import "./mana-bar.js";
+import "./status-panel.js";
+import "./zone-card.js";

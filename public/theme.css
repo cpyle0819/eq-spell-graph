@@ -117,7 +117,7 @@ body::before {
 *::-webkit-scrollbar-thumb:hover { background: #8b849f; }
 
 /* ── Panels: raised marble blocks with a real bevel ── */
-.filter-bar, .finder-bar, .zone-card,
+.filter-bar, .finder-bar,
 .tag-dropdown {
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
@@ -243,63 +243,19 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .suggestion-item:hover, .suggestion-item.active { background: rgba(232, 168, 42, 0.12); color: #f0d492; }
 .suggestion-empty { padding: 10px 14px; font-size: 12px; color: var(--ink-muted); font-style: italic; }
 
-/* ── Cards ── */
-.zone-name {
-  font-family: var(--font-display);
-  font-size: 19px; font-weight: 700; color: var(--parchment);
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-.zone-card { transition: box-shadow 150ms; } /* faction color rides the 4px top bevel edge */
-/* Brighten via box-shadow, not filter: filter forces its own compositing
-   layer, and these cards share a seam with their neighbor via a
-   negative-margin overlap (see .zone-card + .zone-card below) — that
-   layer promotion visibly desyncs the shared border during the hover
-   transition, flashing a thick double seam. box-shadow paints in the
-   normal flow, so the seam stays put. */
-.zone-card:hover {
-  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
-}
-.zone-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-
-.zone-badge {
-  font-size: 12px; padding: 3px 10px; border-radius: 3px;
-  background: var(--panel-deep);
-  border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  color: var(--ink-muted);
-  font-variant-numeric: tabular-nums;
-}
-.zone-badge.hops { color: #c9a25e; }
-
-/* Faction tint over the marble + colored top accent. Dimmed cards are
-   deliberate de-emphasis (inactive content), kept legible enough to read. */
-.zone-card.safe      { border-top-color: #22c55e; }
-.zone-card.neutral   { border-top-color: #f59e0b; }
-.zone-card.wont_sell { opacity: 0.6; border-top-color: #f97316; }
-.zone-card.kos       { opacity: 0.35; border-top-color: #ef4444; }
-.zone-card.safe    { background: linear-gradient(180deg, rgba(34, 197, 94, 0.07), transparent 70px), var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2)); }
-.zone-card.neutral { background: linear-gradient(180deg, rgba(245, 158, 11, 0.07), transparent 70px), var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2)); }
-
-/* Faction badges — worded like EQ /consider results (see app.js) */
-.faction-badge {
-  font-size: 11px; padding: 3px 9px; border-radius: 3px;
-  text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;
-  cursor: help;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-}
-/* dark backing under the tint keeps badge text ≥4.5:1 on the light stone */
-.faction-badge.safe      { background: linear-gradient(rgba(34, 197, 94, 0.16), rgba(34, 197, 94, 0.16)), rgba(10, 9, 15, 0.6);  color: #43dd81; border: 1px solid rgba(34, 197, 94, 0.4); }
-.faction-badge.neutral   { background: linear-gradient(rgba(245, 158, 11, 0.16), rgba(245, 158, 11, 0.16)), rgba(10, 9, 15, 0.6); color: #fbaf1e; border: 1px solid rgba(245, 158, 11, 0.4); }
-.faction-badge.wont_sell { background: linear-gradient(rgba(249, 115, 22, 0.16), rgba(249, 115, 22, 0.16)), rgba(10, 9, 15, 0.6); color: #fb8534; border: 1px solid rgba(249, 115, 22, 0.4); }
-.faction-badge.kos       { background: linear-gradient(rgba(239, 68, 68, 0.16), rgba(239, 68, 68, 0.16)), rgba(10, 9, 15, 0.6);  color: #ff6b6b; border: 1px solid rgba(239, 68, 68, 0.4); }
+/* ── Cards ──
+   zone-card, its faction LED dot/badge, .zone-badge, and its hover
+   treatment live entirely in zone-card's own shadow stylesheet
+   (public/components/zone-card.js), Spell Finder's only consumer. */
 
 /* ── Parchment scroll insert: directions/spell text inked on a parchment
    scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. route-path and spell-tooltip components
-   (public/components/) own their own shadow stylesheets. `.route-path` here
-   is a plain class for home.html's welcome-scroll; `.spell-scroll` is used
-   by Class Browser cards and Spell Finder zone-cards (light-DOM consumers). ── */
+   the reference client. route-path, spell-tooltip, and zone-card
+   components (public/components/) own their own shadow stylesheets.
+   `.route-path` here is a plain class for home.html's welcome-scroll;
+   `.spell-scroll` is used by Class Browser cards (light-DOM consumer) —
+   zone-card duplicates it internally for the same reason tag-input
+   duplicates the sunken-well look (see above). ── */
 .route-path, .spell-scroll {
   position: relative;
   padding: 12px 20px; border-radius: 2px;
@@ -323,11 +279,11 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .route-path::before, .spell-scroll::before { left: -11px; }
 .route-path::after,  .spell-scroll::after  { right: -11px; }
 
-/* ── Spell chips (planner results) ──
-   Ink on parchment: .spell-chip and .vendor-tag render inside .spell-scroll,
-   following the tinted-background/dark-ink convention of Class Browser's
-   .type-badge/.mana-badge/.class-badge (see DECISIONS.md). */
-.spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+/* .spell-row/.spell-owned/.spell-chip/.vendor-names/.vendor-tag (planner
+   results ink-on-parchment styling) live in zone-card's own shadow
+   stylesheet (public/components/zone-card.js), Spell Finder's only
+   consumer. .spell-check below stays here: Class Browser's own cards use
+   it too (combined with .spell-check-labeled). */
 .spell-check { display: flex; align-items: center; }
 .spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
 
@@ -350,35 +306,6 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .spell-check-labeled:hover { color: var(--gold); }
 .spell-check-labeled:has(input:checked) { color: var(--gold); }
 .spell-check-labeled:has(input:checked) input { accent-color: var(--gold); }
-.spell-owned { opacity: 0.4; }
-.spell-owned .spell-chip { text-decoration: line-through; }
-.spell-owned .spell-chip::before { filter: grayscale(1) brightness(0.6); }
-
-.spell-chip {
-  font-size: 13px; padding: 3px 10px 3px 7px; border-radius: 3px;
-  background: rgba(122, 77, 5, 0.1);
-  border: 1px solid rgba(122, 77, 5, 0.35);
-  color: #5a3c14;
-  white-space: nowrap; text-decoration: none;
-  display: inline-flex; align-items: center;
-}
-/* spell gem — specular highlight biased top-right, matching the app's
-   light source (a sphere lit from top-right shows its highlight up and to
-   the right of center, not dead-center-left). */
-.spell-chip::before {
-  content: ""; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; flex-shrink: 0;
-  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
-}
-@media (pointer: coarse) { .spell-chip { cursor: pointer; } }
-.spell-chip .lvl { color: var(--parch-ink-soft); margin-left: 6px; font-size: 11px; }
-
-.vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
-.vendor-tag {
-  font-size: 12px; padding: 3px 8px; border-radius: 3px;
-  background: rgba(30, 64, 175, 0.08); border: 1px solid rgba(30, 64, 175, 0.3); color: #1e40af;
-}
-
 /* ── Results header (planner) ── */
 .results-header {
   font-size: 13px; color: var(--ink-muted);
@@ -386,55 +313,9 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 }
 .results-actions { display: flex; gap: 6px; margin-left: auto; }
 
-/* EQ status bar (spells-owned progress), mana-blue (the reference client's
-   own vitals bars are HP-red/mana-blue/stamina-yellow; blue is kept here as
-   a deliberate "spells owned" reinterpretation — see DECISIONS.md). Modeled
-   on the character vitals bars (top-right, under the name), not the group
-   member list — those two look different in the reference: vitals bars are
-   a chain of five distinct beads with a bright seam between each; the group
-   list bars are one smooth tube. This one needs the beads. */
-.mana-bar {
-  position: relative;
-  display: inline-block; width: 150px; height: 15px; flex-shrink: 0;
-  background: #0b0a12;
-  border: 2px solid; border-color: var(--edge-lo) var(--edge-lo) #615b72 #615b72;
-  border-radius: 7px / 6px;
-  overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.7);
-}
-.mana-fill {
-  display: block; height: 100%;
-  background: linear-gradient(180deg, #8fb3ff, #3054d8 40%, #14267c);
-  transition: width 300ms ease-out;
-}
-/* glasswork overlay: end knobs, five beaded segments with bright seams,
-   per-bead specular, overall glass shading. The per-bead specular below is
-   top-left, not top-right — a deliberate exception to this app's own
-   light-source convention, not an oversight: it's reverse-engineered
-   pixel-for-pixel from a zoomed capture of the real client's vitals bar
-   (see DECISIONS.md), so it stays exactly as observed rather than being
-   adjusted to match our own bevel language. */
-.mana-bar::after {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    /* end knobs (black bead + metal sliver) */
-    linear-gradient(90deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0, 0, 0, 0) 3px),
-    linear-gradient(270deg, #05050a 0, #05050a 2px, #8e8ba1 2px, #8e8ba1 3px, rgba(0, 0, 0, 0) 3px),
-    /* bright ridge at each bead-to-bead seam, with a sliver of shadow on
-       either side of it — not a dark pinch, a lit ridge (confirmed against
-       a zoomed-in capture of the actual vitals bar) */
-    linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0 1px, rgba(255, 255, 255, 0.65) 1px 2px, rgba(0, 0, 0, 0.22) 2px 3px, transparent 3px),
-    /* per-bead specular streak, top-left of each */
-    radial-gradient(45% 55% at 36% 22%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 60%),
-    /* glass shading: lit top edge, shadowed bottom */
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0 10%, rgba(0, 0, 0, 0) 30% 55%, rgba(0, 0, 0, 0.5) 90% 100%);
-  background-size:
-    100% 100%, 100% 100%,
-    20% 100%,
-    20% 100%,
-    100% 100%;
-  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, no-repeat;
-}
+/* mana-bar (spells-owned progress, EQ vitals-bar styling) lives entirely
+   in its own shadow stylesheet (public/components/mana-bar.js),
+   status-panel's only consumer. */
 
 /* ── Class Browser cards: a stone console row (name on stone, like a
    zone-card) wrapping a parchment scroll insert (badges/description/
@@ -450,8 +331,9 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   border-radius: 3px;
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
 }
-/* box-shadow, not filter — see the .zone-card:hover comment above; same
-   negative-margin seam-sharing trick, same desync risk. */
+/* box-shadow, not filter — see zone-card's own :host(:hover) comment
+   (public/components/zone-card.js) for why; same negative-margin
+   seam-sharing trick, same desync risk. */
 .spell-detail:hover {
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }
