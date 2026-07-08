@@ -35,7 +35,7 @@
        only adds the flex layout to push each card's Open button to a
        consistent baseline regardless of description length. */
     .tool-card { display: flex; flex-direction: column; gap: 10px; cursor: default; }
-    .tool-card p { font-size: 12.5px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
+    .tool-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
     /* .macro-socket is width:auto by default, but a column flex container's
        default align-items:stretch would still pull it to the card's full
        width — pin it back to its content size instead. */
@@ -56,29 +56,31 @@
 
   <main>
     <div class="route-path welcome-scroll">
-      <p>Norraph plans out spell-buying trips in EverQuest Legends. Tell it which classes and level range you're shopping for and where you're starting from, and it finds every vendor that sells something you need, how to get there, and whether your faction standing will actually let you buy anything once you arrive.</p>
-      <p>It's graph-based and faction-aware: routes account for real zone connections — including boats and translocators — and every result is checked against your race, class, and deity standing with that vendor, so a technically-closer zone that would leave you kill-on-sight never outranks a longer trip that actually works.</p>
+      <p>Norraph is a companion for EverQuest Legends spellcasters, built around two things: planning spell-buying trips, and knowing what's out there to shop for in the first place. The Spell Finder and Route Finder handle the trip — tell them which classes and level range you're shopping for and where you're starting from, and they find every vendor that sells something you need, how to get there, and whether your faction standing will actually let you buy anything once you arrive.</p>
+      <p>The Class Browser is the other half: a complete reference for what every class can learn — spells, AAs, stances, invocations, and signature abilities — browsable on its own, with no shopping logistics attached. It's graph-based and faction-aware throughout: routes account for real zone connections, including boats and translocators, and results are checked against your race, class, and deity standing so a technically-closer zone that would leave you kill-on-sight never outranks a longer trip that actually works.</p>
     </div>
 
     <div class="tool-grid">
       <div class="spell-detail tool-card">
         <h3>Spell Finder</h3>
         <p>Pick your classes, level range, and current zone — get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
-        <div class="macro-socket"><a class="macro-btn" href="index.html">Open</a></div>
+        <div id="spell-finder-open"></div>
       </div>
       <div class="spell-detail tool-card">
         <h3>Route Finder</h3>
         <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
-        <div class="macro-socket"><a class="macro-btn" href="route.html">Open</a></div>
+        <div id="route-finder-open"></div>
       </div>
       <div class="spell-detail tool-card">
         <h3>Class Browser</h3>
-        <p>Browse everything a class can learn — spells, AAs, stances, invocations, and class-defining abilities — with no shopping logistics involved.</p>
-        <div class="macro-socket"><a class="macro-btn" href="class-browser.html">Open</a></div>
+        <p>The complete class reference — every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
+        <div id="class-browser-open"></div>
       </div>
     </div>
   </main>
 
   <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
+  <script src="components.js"></script>
+  <script src="home.js"></script>
 </body>
 </html>
