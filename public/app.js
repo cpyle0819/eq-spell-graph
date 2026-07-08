@@ -1,3 +1,11 @@
+// A module import fully executes before this module's own top-level code
+// runs, guaranteeing every custom element below is registered before this
+// file sets properties on one -- a property set on a not-yet-upgraded
+// element becomes an instance property that silently shadows the class's
+// own accessor once it *is* defined, so registration order here is load
+// bearing, not just tidiness.
+import "./components/index.js";
+
 // --- State ---
 let zones = [];
 let availableClasses = [];
@@ -19,47 +27,11 @@ let tooltipTimer;
 
 function showTooltip(spell, anchorEl) {
   clearTimeout(tooltipTimer);
-
-  const dur = spell.duration
-    ? spell.duration.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s").replace(/instant/i, "Instant")
-    : null;
-
-  const stats = [];
-  if (spell.spellType) stats.push({ text: spell.spellType, hi: true });
-  if (spell.mana != null) stats.push({ text: `${spell.mana} mana` });
-  if (spell.targetType) stats.push({ text: spell.targetType });
-  if (dur) stats.push({ text: dur });
-  if (spell.castTime != null) stats.push({ text: `${spell.castTime.toFixed(1)}s cast` });
-  if (spell.resist && !/unresist/i.test(spell.resist)) stats.push({ text: `${spell.resist} resist` });
-  if (spell.skill) stats.push({ text: spell.skill });
-  if (spell.spellLine) stats.push({ text: spell.spellLine });
-
-  tooltip.innerHTML = `
-    <div class="tt-name">${spell.name}</div>
-    ${spell.description ? `<div class="tt-desc">${spell.description}</div>` : ""}
-    ${stats.length ? `<div class="tt-stats">${stats.map(s => `<span class="tt-stat${s.hi ? " highlight" : ""}">${s.text}</span>`).join("")}</div>` : ""}
-  `;
-
-  positionTooltip(anchorEl);
-  tooltip.setAttribute("aria-hidden", "false");
-  tooltip.classList.add("visible");
-}
-
-function positionTooltip(el) {
-  const r = el.getBoundingClientRect();
-  const tw = 320, th = tooltip.offsetHeight || 120;
-  const vw = window.innerWidth, vh = window.innerHeight;
-  let left = r.left;
-  let top = r.bottom + 8;
-  if (left + tw > vw - 12) left = vw - tw - 12;
-  if (top + th > vh - 12) top = r.top - th - 8;
-  tooltip.style.left = `${Math.max(8, left)}px`;
-  tooltip.style.top = `${Math.max(8, top)}px`;
+  tooltip.show(spell, anchorEl);
 }
 
 function hideTooltip() {
-  tooltip.classList.remove("visible");
-  tooltip.setAttribute("aria-hidden", "true");
+  tooltip.hide();
 }
 
 function setupTooltip() {
@@ -95,89 +67,84 @@ const VISITED_KEY = "eq-visited";
 
 // --- Init ---
 
-// Builds the sidebar via the shared SidebarPanel component (components.js),
-// which both this page and Class Browser use for their filter sidebar. Each
-// field's own control markup (selects, tag-wraps, the range-picker) is
-// still built here as raw HTML — every other function in this file that
-// does document.getElementById(...) for these ids depends on them.
 function renderSidebar() {
-  const html = SidebarPanel({
-    fields: [
-      { raw: sectionHeader("Faction", "faction", "Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.") },
-      { label: "Race", section: "faction", html: `<select id="race-select">
-        <option value="barbarian">Barbarian</option>
-        <option value="dark elf">Dark Elf</option>
-        <option value="dwarf">Dwarf</option>
-        <option value="erudite">Erudite</option>
-        <option value="gnome">Gnome</option>
-        <option value="half elf">Half Elf</option>
-        <option value="halfling">Halfling</option>
-        <option value="high elf">High Elf</option>
-        <option value="human">Human</option>
-        <option value="iksar">Iksar</option>
-        <option value="ogre">Ogre</option>
-        <option value="troll">Troll</option>
-        <option value="wood elf">Wood Elf</option>
-        <option value="any" selected>Any (ignore faction)</option>
-      </select>` },
-      { label: "Primary Class", section: "faction", html: `<select id="primary-class-select">
-        <option value="bard">Bard</option>
-        <option value="beastlord">Beastlord</option>
-        <option value="cleric">Cleric</option>
-        <option value="druid">Druid</option>
-        <option value="enchanter">Enchanter</option>
-        <option value="magician">Magician</option>
-        <option value="monk">Monk</option>
-        <option value="necromancer">Necromancer</option>
-        <option value="paladin">Paladin</option>
-        <option value="ranger">Ranger</option>
-        <option value="rogue">Rogue</option>
-        <option value="shadow knight">Shadow Knight</option>
-        <option value="shaman">Shaman</option>
-        <option value="warrior">Warrior</option>
-        <option value="wizard">Wizard</option>
-        <option value="any" selected>Any (ignore faction)</option>
-      </select>` },
-      { label: "Deity", section: "faction", html: `<select id="deity-select">
-        <option value="agnostic">Agnostic</option>
-        <option value="bertoxxulous">Bertoxxulous</option>
-        <option value="brell serilis">Brell Serilis</option>
-        <option value="bristlebane">Bristlebane</option>
-        <option value="cazic-thule">Cazic-Thule</option>
-        <option value="erollisi marr">Erollisi Marr</option>
-        <option value="innoruuk">Innoruuk</option>
-        <option value="karana">Karana</option>
-        <option value="mithaniel marr">Mithaniel Marr</option>
-        <option value="prexus">Prexus</option>
-        <option value="quellious">Quellious</option>
-        <option value="rallos zek">Rallos Zek</option>
-        <option value="rodcet nife">Rodcet Nife</option>
-        <option value="solusek ro">Solusek Ro</option>
-        <option value="the tribunal">The Tribunal</option>
-        <option value="tunare">Tunare</option>
-        <option value="veeshan">Veeshan</option>
-        <option value="any" selected>Any (ignore faction)</option>
-      </select>` },
-      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: sectionHeader("Spells", "spells") },
-      { label: "Spell Class", section: "spells", html: tagWrapHtml("class") },
-      { label: "Spell Line", section: "spells", html: tagWrapHtml("spellline") },
-      { label: "Specific Spells", section: "spells", html: tagWrapHtml("spell") },
-      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: sectionHeader("Level", "level") },
-      { label: "Levels", section: "level", html: `<div class="range-picker">
-        <input type="range" id="level-min" min="1" max="50" value="1">
-        <span class="range-display" id="range-display">1 – 10</span>
-        <input type="range" id="level-max" min="1" max="50" value="10">
-      </div>` },
-      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-      { raw: sectionHeader("Location", "location") },
-      { label: "Specific Zones", section: "location", html: tagWrapHtml("zone") },
-      { label: "Current Zone", section: "location", html: `<select id="zone-input"><option value="">-- Select Zone --</option></select>` },
-      { raw: '<div class="control-sep" aria-hidden="true"></div>' },
-    ],
-    actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
-  });
+  const html = `
+    <sidebar-panel>
+      <collapsible-section label="Faction" section="faction" section-title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.">
+        <field-row label="Race"><select id="race-select">
+          <option value="barbarian">Barbarian</option>
+          <option value="dark elf">Dark Elf</option>
+          <option value="dwarf">Dwarf</option>
+          <option value="erudite">Erudite</option>
+          <option value="gnome">Gnome</option>
+          <option value="half elf">Half Elf</option>
+          <option value="halfling">Halfling</option>
+          <option value="high elf">High Elf</option>
+          <option value="human">Human</option>
+          <option value="iksar">Iksar</option>
+          <option value="ogre">Ogre</option>
+          <option value="troll">Troll</option>
+          <option value="wood elf">Wood Elf</option>
+          <option value="any" selected>Any (ignore faction)</option>
+        </select></field-row>
+        <field-row label="Primary Class"><select id="primary-class-select">
+          <option value="bard">Bard</option>
+          <option value="beastlord">Beastlord</option>
+          <option value="cleric">Cleric</option>
+          <option value="druid">Druid</option>
+          <option value="enchanter">Enchanter</option>
+          <option value="magician">Magician</option>
+          <option value="monk">Monk</option>
+          <option value="necromancer">Necromancer</option>
+          <option value="paladin">Paladin</option>
+          <option value="ranger">Ranger</option>
+          <option value="rogue">Rogue</option>
+          <option value="shadow knight">Shadow Knight</option>
+          <option value="shaman">Shaman</option>
+          <option value="warrior">Warrior</option>
+          <option value="wizard">Wizard</option>
+          <option value="any" selected>Any (ignore faction)</option>
+        </select></field-row>
+        <field-row label="Deity"><select id="deity-select">
+          <option value="agnostic">Agnostic</option>
+          <option value="bertoxxulous">Bertoxxulous</option>
+          <option value="brell serilis">Brell Serilis</option>
+          <option value="bristlebane">Bristlebane</option>
+          <option value="cazic-thule">Cazic-Thule</option>
+          <option value="erollisi marr">Erollisi Marr</option>
+          <option value="innoruuk">Innoruuk</option>
+          <option value="karana">Karana</option>
+          <option value="mithaniel marr">Mithaniel Marr</option>
+          <option value="prexus">Prexus</option>
+          <option value="quellious">Quellious</option>
+          <option value="rallos zek">Rallos Zek</option>
+          <option value="rodcet nife">Rodcet Nife</option>
+          <option value="solusek ro">Solusek Ro</option>
+          <option value="the tribunal">The Tribunal</option>
+          <option value="tunare">Tunare</option>
+          <option value="veeshan">Veeshan</option>
+          <option value="any" selected>Any (ignore faction)</option>
+        </select></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Spells" section="spells">
+        <field-row label="Spell Class"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
+        <field-row label="Spell Line"><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
+        <field-row label="Specific Spells"><tag-input id="spell-tag-input" aria-label="Spell suggestions"></tag-input></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Level" section="level">
+        <field-row label="Levels"><range-picker id="level-range" min="1" max="50" value-min="1" value-max="10"></range-picker></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Location" section="location">
+        <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
+        <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
+    </sidebar-panel>
+  `;
   document.getElementById("controls-panel-slot").outerHTML = html;
 }
 
@@ -191,26 +158,8 @@ function renderSidebar() {
 const ALL_SECTIONS = ["faction", "spells", "level", "location"];
 const DEFAULT_COLLAPSED_SECTIONS = ["faction", "level", "location"];
 
-function setSectionCollapsed(section, collapsed) {
-  const header = document.querySelector(`.field-group-label[data-section="${section}"]`);
-  if (!header) return;
-  header.setAttribute("aria-expanded", String(!collapsed));
-  document.querySelectorAll(`.field[data-section="${section}"]`).forEach((el) => { el.hidden = collapsed; });
-}
-
-function toggleSection(section) {
-  const header = document.querySelector(`.field-group-label[data-section="${section}"]`);
-  setSectionCollapsed(section, header?.getAttribute("aria-expanded") === "true");
-  saveState();
-}
-
-function setupCollapsibleSections() {
-  document.querySelectorAll(".field-group-label.collapsible").forEach((header) => {
-    header.addEventListener("click", () => toggleSection(header.dataset.section));
-    header.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSection(header.dataset.section); }
-    });
-  });
+function getSectionEl(section) {
+  return document.querySelector(`collapsible-section[section="${section}"]`);
 }
 
 // A completely fresh visitor lands on home.html instead of the planner —
@@ -229,19 +178,14 @@ function redirectFirstTimeVisitor() {
 
 async function init() {
   if (redirectFirstTimeVisitor()) return;
-  document.getElementById("nav-links").innerHTML = [
-    MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
-    MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
-  ].join("");
   renderSidebar();
-  setupCollapsibleSections();
+  document.addEventListener("toggle", (e) => { if (e.target.tagName === "COLLAPSIBLE-SECTION") saveState(); });
   [zones, availableClasses, availableSpellLines] = await Promise.all([
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
     fetch("api/spell-lines").then((r) => r.json()),
   ]);
   populateZoneList();
-  setupLevelRange();
   setupPlanner();
   setupClassSearch();
   setupSpellLineSearch();
@@ -265,8 +209,8 @@ function resetFilters() {
   document.getElementById("race-select").value = "any";
   document.getElementById("primary-class-select").value = "any";
   document.getElementById("deity-select").value = "any";
-  document.getElementById("level-min").value = 1;
-  document.getElementById("level-max").value = 10;
+  document.getElementById("level-range").valueMin = 1;
+  document.getElementById("level-range").valueMax = 10;
   specificSpells = [];
   specificZones = [];
   selectedSpellLines = [];
@@ -280,6 +224,7 @@ function resetFilters() {
 
 // --- Persisted state ---
 function getState() {
+  const levelRange = document.getElementById("level-range");
   return {
     race: document.getElementById("race-select").value,
     primaryClass: document.getElementById("primary-class-select").value,
@@ -287,13 +232,13 @@ function getState() {
     classes: selectedClasses,
     spellLines: selectedSpellLines,
     zone: document.getElementById("zone-input").value,
-    levelMin: document.getElementById("level-min").value,
-    levelMax: document.getElementById("level-max").value,
+    levelMin: levelRange.valueMin,
+    levelMax: levelRange.valueMax,
     specificSpells,
     specificZones,
-    collapsedSections: [...document.querySelectorAll(".field-group-label.collapsible")]
-      .filter((h) => h.getAttribute("aria-expanded") === "false")
-      .map((h) => h.dataset.section),
+    collapsedSections: [...document.querySelectorAll("collapsible-section")]
+      .filter((s) => s.collapsed)
+      .map((s) => s.getAttribute("section")),
   };
 }
 
@@ -315,11 +260,9 @@ function restoreState() {
       renderSpellLineTags();
     }
     if (s.zone) document.getElementById("zone-input").value = s.zone;
-    if (s.levelMin) document.getElementById("level-min").value = s.levelMin;
-    if (s.levelMax) {
-      document.getElementById("level-max").value = s.levelMax;
-      updateLevelRangeDisplay();
-    }
+    const levelRange = document.getElementById("level-range");
+    if (s.levelMin) levelRange.valueMin = s.levelMin;
+    if (s.levelMax) levelRange.valueMax = s.levelMax;
     if (Array.isArray(s.specificSpells) && s.specificSpells.length) {
       specificSpells = s.specificSpells;
       renderSpellTags();
@@ -329,7 +272,7 @@ function restoreState() {
       renderZoneTags();
     }
     if (Array.isArray(s.collapsedSections)) {
-      s.collapsedSections.forEach((section) => setSectionCollapsed(section, true));
+      s.collapsedSections.forEach((section) => { const el = getSectionEl(section); if (el) el.collapsed = true; });
     }
     return true;
   } catch { return false; }
@@ -358,9 +301,9 @@ function consumePinnedSpellFromUrl() {
 
   const levelMin = params.get("levelMin");
   const levelMax = params.get("levelMax");
-  if (levelMin) document.getElementById("level-min").value = levelMin;
-  if (levelMax) document.getElementById("level-max").value = levelMax;
-  if (levelMin || levelMax) updateLevelRangeDisplay();
+  const levelRange = document.getElementById("level-range");
+  if (levelMin) levelRange.valueMin = levelMin;
+  if (levelMax) levelRange.valueMax = levelMax;
 
   const classes = params.get("classes");
   if (classes) {
@@ -385,12 +328,11 @@ function applyDefaults() {
   const qeynos = [...zoneSelect.options].find((o) => o.value === "South Qeynos" || o.value === "North Qeynos" || o.value === "Qeynos");
   if (qeynos) zoneSelect.value = qeynos.value;
   else if (zoneSelect.options.length > 1) zoneSelect.selectedIndex = 1;
-  updateLevelRangeDisplay();
-  ALL_SECTIONS.forEach((section) => setSectionCollapsed(section, DEFAULT_COLLAPSED_SECTIONS.includes(section)));
+  ALL_SECTIONS.forEach((section) => { const el = getSectionEl(section); if (el) el.collapsed = DEFAULT_COLLAPSED_SECTIONS.includes(section); });
 }
 
 function setupAutoSave() {
-  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "level-min", "level-max"]) {
+  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "level-range"]) {
     const el = document.getElementById(id);
     el?.addEventListener("change", saveState);
     el?.addEventListener("input", saveState);
@@ -408,395 +350,114 @@ function populateZoneList() {
   });
 }
 
+let classTagInput;
+
 function renderClassTags() {
-  document.getElementById("class-tags").innerHTML = selectedClasses.map((c) =>
-    `<span class="tag-item" data-id="${c}">
-      <span class="tag-item-name">${c.charAt(0).toUpperCase() + c.slice(1)}</span>
-      <button class="tag-item-remove" data-id="${c}" aria-label="Remove ${c}">&times;</button>
-    </span>`
-  ).join("");
+  classTagInput.selected = selectedClasses;
 }
 
 function setupClassSearch() {
-  const input = document.getElementById("class-search-input");
-  const dropdown = document.getElementById("class-suggestions");
-  let activeIndex = -1;
-
-  function positionDropdown() {
-    const wrap = document.getElementById("class-tag-wrap").getBoundingClientRect();
-    dropdown.style.left = `${wrap.left}px`;
-    dropdown.style.width = `${wrap.width}px`;
-    dropdown.style.top = `${wrap.bottom + 4}px`;
-  }
-
-  function openDropdown(items) {
-    activeIndex = -1;
-    if (!items.length) {
-      dropdown.innerHTML = '<div class="suggestion-empty">No matching classes</div>';
-    } else {
-      dropdown.innerHTML = items
-        .map((c) => `<div class="suggestion-item" role="option" data-id="${c}">${c.charAt(0).toUpperCase() + c.slice(1)}</div>`)
-        .join("");
-    }
-    positionDropdown();
-    dropdown.classList.add("open");
-  }
-
-  function closeDropdown() {
-    dropdown.classList.remove("open");
-    activeIndex = -1;
-  }
-
-  function addClass(cls) {
-    if (selectedClasses.includes(cls)) return;
-    selectedClasses.push(cls);
-    renderClassTags();
-    saveState();
-    replan(300);
-    input.value = "";
-    closeDropdown();
-    input.focus();
-  }
-
-  function removeClass(cls) {
-    selectedClasses = selectedClasses.filter((c) => c !== cls);
-    renderClassTags();
-    saveState();
-    replan(300);
-  }
-
-  function getMatches(q) {
+  classTagInput = document.getElementById("class-tag-input");
+  classTagInput.itemId = (c) => c;
+  classTagInput.itemLabel = (c) => c.charAt(0).toUpperCase() + c.slice(1);
+  classTagInput.emptyMessage = "No matching classes";
+  classTagInput.getMatches = (q) => {
     const lower = q.toLowerCase();
     return availableClasses.filter((c) => !selectedClasses.includes(c) && c.includes(lower));
-  }
-
-  input.addEventListener("input", () => {
-    const q = input.value.trim();
-    openDropdown(getMatches(q));
+  };
+  classTagInput.addEventListener("change", (e) => {
+    selectedClasses = e.detail.selected;
+    saveState();
+    replan(300);
   });
-
-  input.addEventListener("focus", () => {
-    openDropdown(getMatches(input.value.trim()));
-  });
-
-  input.addEventListener("keydown", (e) => {
-    if (!dropdown.classList.contains("open")) return;
-    const items = dropdown.querySelectorAll(".suggestion-item");
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      activeIndex = Math.min(activeIndex + 1, items.length - 1);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      activeIndex = Math.max(activeIndex - 1, 0);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "Enter" && activeIndex >= 0) {
-      e.preventDefault();
-      const item = items[activeIndex];
-      if (item) addClass(item.dataset.id);
-    } else if (e.key === "Escape") {
-      closeDropdown();
-    }
-  });
-
-  input.addEventListener("blur", () => { setTimeout(closeDropdown, 150); });
-
-  dropdown.addEventListener("mousedown", (e) => {
-    const item = e.target.closest(".suggestion-item");
-    if (item) { e.preventDefault(); addClass(item.dataset.id); }
-  });
-
-  document.getElementById("class-tags").addEventListener("click", (e) => {
-    const btn = e.target.closest(".tag-item-remove");
-    if (btn) removeClass(btn.dataset.id);
-  });
-
-  document.getElementById("class-tag-wrap").addEventListener("click", (e) => {
-    if (!e.target.closest(".tag-item-remove")) input.focus();
-  });
-
-  window.addEventListener("resize", () => { if (dropdown.classList.contains("open")) positionDropdown(); });
 }
 
 // --- Spell Line filter ---
-// Uses the shared setupTagInput helper (components.js) for the
-// add/remove/dropdown wiring, rather than duplicating it inline.
 let spellLineTagInput;
 
 function renderSpellLineTags() {
-  spellLineTagInput?.renderTags();
+  spellLineTagInput.selected = selectedSpellLines;
 }
 
 function setupSpellLineSearch() {
-  spellLineTagInput = setupTagInput({
-    wrapId: "spellline-tag-wrap",
-    tagsId: "spellline-tags",
-    inputId: "spellline-search-input",
-    dropdownId: "spellline-suggestions",
-    getSelected: () => selectedSpellLines,
-    addItem: (item) => selectedSpellLines.push(item),
-    removeItem: (id) => { selectedSpellLines = selectedSpellLines.filter((l) => l.id !== id); },
-    getMatches: (q) => {
-      const lower = q.toLowerCase();
-      const selectedIds = new Set(selectedSpellLines.map((l) => l.id));
-      return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
-    },
-    itemId: (l) => l.id,
-    itemLabel: (l) => l.label,
-    emptyMessage: "No matching spell lines",
-    onChange: () => { saveState(); replan(300); },
+  spellLineTagInput = document.getElementById("spellline-tag-input");
+  spellLineTagInput.itemId = (l) => l.id;
+  spellLineTagInput.itemLabel = (l) => l.label;
+  spellLineTagInput.emptyMessage = "No matching spell lines";
+  spellLineTagInput.getMatches = (q) => {
+    const lower = q.toLowerCase();
+    const selectedIds = new Set(selectedSpellLines.map((l) => l.id));
+    return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
+  };
+  spellLineTagInput.addEventListener("change", (e) => {
+    selectedSpellLines = e.detail.selected;
+    saveState();
+    replan(300);
   });
 }
 
 // --- Level range ---
-let updateLevelRangeDisplay = () => {};
-
-function setupLevelRange() {
-  const minSlider = document.getElementById("level-min");
-  const maxSlider = document.getElementById("level-max");
-  const display = document.getElementById("range-display");
-
-  function updateDisplay() {
-    const min = parseInt(minSlider.value);
-    const max = parseInt(maxSlider.value);
-    display.textContent = min === max ? `Level ${min}` : `${min} – ${max}`;
-  }
-
-  minSlider.addEventListener("input", () => {
-    if (parseInt(minSlider.value) > parseInt(maxSlider.value)) minSlider.value = maxSlider.value;
-    updateDisplay();
-  });
-
-  maxSlider.addEventListener("input", () => {
-    if (parseInt(maxSlider.value) < parseInt(minSlider.value)) maxSlider.value = minSlider.value;
-    updateDisplay();
-  });
-
-  updateDisplay();
-  updateLevelRangeDisplay = updateDisplay;
-}
-
 function getSelectedLevelRange() {
-  const min = parseInt(document.getElementById("level-min").value);
-  const max = parseInt(document.getElementById("level-max").value);
+  const levelRange = document.getElementById("level-range");
+  const min = parseInt(levelRange.valueMin);
+  const max = parseInt(levelRange.valueMax);
   return { min: Math.min(min, max), max: Math.max(min, max) };
 }
 
 // --- Specific spell search ---
-function renderSpellTags() {
-  document.getElementById("spell-tags").innerHTML = specificSpells.map((s) =>
-    `<span class="tag-item" data-id="${s.id}">
-      <span class="tag-item-name">${s.name}</span>
-      <button class="tag-item-remove" data-id="${s.id}" aria-label="Remove ${s.name}">&times;</button>
-    </span>`
-  ).join("");
-}
+let spellTagInput;
 
-function renderZoneTags() {
-  document.getElementById("zone-tags").innerHTML = specificZones.map((z) =>
-    `<span class="tag-item" data-id="${z.id}">
-      <span class="tag-item-name">${z.label}</span>
-      <button class="tag-item-remove" data-id="${z.id}" aria-label="Remove ${z.label}">&times;</button>
-    </span>`
-  ).join("");
+function renderSpellTags() {
+  spellTagInput.selected = specificSpells;
 }
 
 function setupSpellSearch() {
-  const input = document.getElementById("spell-search-input");
-  const dropdown = document.getElementById("spell-suggestions");
-  let activeIndex = -1;
-  let searchDebounce;
-
-  function positionDropdown() {
-    const r = input.getBoundingClientRect();
-    const wrap = document.getElementById("spell-tag-wrap").getBoundingClientRect();
-    dropdown.style.left = `${wrap.left}px`;
-    dropdown.style.width = `${wrap.width}px`;
-    dropdown.style.top = `${wrap.bottom + 4}px`;
-  }
-
-  function openDropdown(items) {
-    activeIndex = -1;
-    if (!items.length) {
-      dropdown.innerHTML = '<div class="suggestion-empty">No matching spells</div>';
-    } else {
-      dropdown.innerHTML = items
-        .map((s) => `<div class="suggestion-item" role="option" data-id="${s.id}" data-name="${s.label}">${s.label}</div>`)
-        .join("");
-    }
-    positionDropdown();
-    dropdown.classList.add("open");
-  }
-
-  function closeDropdown() {
-    dropdown.classList.remove("open");
-    activeIndex = -1;
-  }
-
-  function addSpell(id, name) {
-    if (specificSpells.some((s) => s.id === id)) return;
-    specificSpells.push({ id, name });
-    renderSpellTags();
+  spellTagInput = document.getElementById("spell-tag-input");
+  spellTagInput.itemId = (s) => s.id;
+  spellTagInput.itemLabel = (s) => s.name;
+  spellTagInput.emptyMessage = "No matching spells";
+  spellTagInput.minQueryLength = 2;
+  spellTagInput.debounceMs = 200;
+  spellTagInput.reopenOnFocus = false;
+  spellTagInput.closeOnScroll = true;
+  // api/spells/search returns {id, label}; specificSpells is persisted/held
+  // as {id, name} (see restoreState/consumePinnedSpellFromUrl) -- normalize
+  // here so itemLabel works uniformly over both already-selected and
+  // freshly-fetched items.
+  spellTagInput.getMatches = async (q) => {
+    const results = await fetch(`api/spells/search?q=${encodeURIComponent(q)}`).then((r) => r.json());
+    return results.map((r) => ({ id: r.id, name: r.label }));
+  };
+  spellTagInput.addEventListener("change", (e) => {
+    specificSpells = e.detail.selected;
     saveState();
     replan(300);
-    input.value = "";
-    closeDropdown();
-    input.focus();
-  }
-
-  function removeSpell(id) {
-    specificSpells = specificSpells.filter((s) => s.id !== id);
-    renderSpellTags();
-    saveState();
-    replan(300);
-  }
-
-  input.addEventListener("input", () => {
-    const q = input.value.trim();
-    if (q.length < 2) { closeDropdown(); return; }
-    clearTimeout(searchDebounce);
-    searchDebounce = setTimeout(async () => {
-      const results = await fetch(`api/spells/search?q=${encodeURIComponent(q)}`).then((r) => r.json());
-      openDropdown(results);
-    }, 200);
   });
-
-  input.addEventListener("keydown", (e) => {
-    if (!dropdown.classList.contains("open")) return;
-    const items = dropdown.querySelectorAll(".suggestion-item");
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      activeIndex = Math.min(activeIndex + 1, items.length - 1);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      activeIndex = Math.max(activeIndex - 1, 0);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "Enter" && activeIndex >= 0) {
-      e.preventDefault();
-      const item = items[activeIndex];
-      if (item) addSpell(item.dataset.id, item.dataset.name);
-    } else if (e.key === "Escape") {
-      closeDropdown();
-    }
-  });
-
-  input.addEventListener("blur", () => { setTimeout(closeDropdown, 150); });
-  input.addEventListener("focus", () => { if (input.value.trim().length >= 2) positionDropdown(); });
-
-  dropdown.addEventListener("mousedown", (e) => {
-    const item = e.target.closest(".suggestion-item");
-    if (item) { e.preventDefault(); addSpell(item.dataset.id, item.dataset.name); }
-  });
-
-  document.getElementById("spell-tags").addEventListener("click", (e) => {
-    const btn = e.target.closest(".tag-item-remove");
-    if (btn) removeSpell(btn.dataset.id);
-  });
-
-  // Clicking the wrapper focuses the input
-  document.getElementById("spell-tag-wrap").addEventListener("click", (e) => {
-    if (!e.target.closest(".tag-item-remove")) input.focus();
-  });
-
-  window.addEventListener("resize", () => { if (dropdown.classList.contains("open")) positionDropdown(); });
-  window.addEventListener("scroll", closeDropdown, { passive: true });
 }
 
 // --- Zone search ---
+let zoneTagInput;
+
+function renderZoneTags() {
+  zoneTagInput.selected = specificZones;
+}
+
 function setupZoneSearch() {
-  const input = document.getElementById("zone-search-input");
-  const dropdown = document.getElementById("zone-suggestions");
-  let activeIndex = -1;
-
-  function positionDropdown() {
-    const wrap = document.getElementById("zone-tag-wrap").getBoundingClientRect();
-    dropdown.style.left = `${wrap.left}px`;
-    dropdown.style.width = `${wrap.width}px`;
-    dropdown.style.top = `${wrap.bottom + 4}px`;
-  }
-
-  function openDropdown(items) {
-    activeIndex = -1;
-    if (!items.length) {
-      dropdown.innerHTML = '<div class="suggestion-empty">No matching zones</div>';
-    } else {
-      dropdown.innerHTML = items
-        .map((z) => `<div class="suggestion-item" role="option" data-id="${z.id}" data-label="${z.label}">${z.label}</div>`)
-        .join("");
-    }
-    positionDropdown();
-    dropdown.classList.add("open");
-  }
-
-  function closeDropdown() {
-    dropdown.classList.remove("open");
-    activeIndex = -1;
-  }
-
-  function addZone(id, label) {
-    if (specificZones.some((z) => z.id === id)) return;
-    specificZones.push({ id, label });
-    renderZoneTags();
+  zoneTagInput = document.getElementById("zone-tag-input");
+  zoneTagInput.itemId = (z) => z.id;
+  zoneTagInput.itemLabel = (z) => z.label;
+  zoneTagInput.emptyMessage = "No matching zones";
+  zoneTagInput.minQueryLength = 1;
+  zoneTagInput.reopenOnFocus = false;
+  zoneTagInput.getMatches = (q) => {
+    const lower = q.toLowerCase();
+    return zones.filter((z) => z.label.toLowerCase().includes(lower)).slice(0, 12);
+  };
+  zoneTagInput.addEventListener("change", (e) => {
+    specificZones = e.detail.selected;
     saveState();
     replan(300);
-    input.value = "";
-    closeDropdown();
-    input.focus();
-  }
-
-  function removeZone(id) {
-    specificZones = specificZones.filter((z) => z.id !== id);
-    renderZoneTags();
-    saveState();
-    replan(300);
-  }
-
-  input.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
-    if (q.length < 1) { closeDropdown(); return; }
-    const matches = zones.filter((z) => z.label.toLowerCase().includes(q)).slice(0, 12);
-    openDropdown(matches);
   });
-
-  input.addEventListener("keydown", (e) => {
-    if (!dropdown.classList.contains("open")) return;
-    const items = dropdown.querySelectorAll(".suggestion-item");
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      activeIndex = Math.min(activeIndex + 1, items.length - 1);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      activeIndex = Math.max(activeIndex - 1, 0);
-      items.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
-    } else if (e.key === "Enter" && activeIndex >= 0) {
-      e.preventDefault();
-      const item = items[activeIndex];
-      if (item) addZone(item.dataset.id, item.dataset.label);
-    } else if (e.key === "Escape") {
-      closeDropdown();
-    }
-  });
-
-  input.addEventListener("blur", () => { setTimeout(closeDropdown, 150); });
-  input.addEventListener("focus", () => { if (input.value.trim().length >= 1) positionDropdown(); });
-
-  dropdown.addEventListener("mousedown", (e) => {
-    const item = e.target.closest(".suggestion-item");
-    if (item) { e.preventDefault(); addZone(item.dataset.id, item.dataset.label); }
-  });
-
-  document.getElementById("zone-tags").addEventListener("click", (e) => {
-    const btn = e.target.closest(".tag-item-remove");
-    if (btn) removeZone(btn.dataset.id);
-  });
-
-  document.getElementById("zone-tag-wrap").addEventListener("click", (e) => {
-    if (!e.target.closest(".tag-item-remove")) input.focus();
-  });
-
-  window.addEventListener("resize", () => { if (dropdown.classList.contains("open")) positionDropdown(); });
 }
 
 // --- Planner ---
@@ -804,8 +465,7 @@ function setupPlanner() {
   for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input"]) {
     document.getElementById(id).addEventListener("change", () => replan(300));
   }
-  document.getElementById("level-min").addEventListener("input", () => replan(1000));
-  document.getElementById("level-max").addEventListener("input", () => replan(1000));
+  document.getElementById("level-range").addEventListener("input", () => replan(1000));
 
   const results = document.getElementById("results");
   results.addEventListener("change", (e) => {
@@ -902,8 +562,8 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   // MacroButton, since it sits inline in body text, not a dedicated
   // action row.
   const toggleLabel = showAllSpells ? "Show remaining" : "Show all";
-  const toggleBtn = MacroButton({ label: toggleLabel, className: "toggle-owned-btn", square: true });
-  const clearBtn = ownedCount > 0 ? MacroButton({ label: "Clear owned", id: "clear-owned-btn", square: true }) : "";
+  const toggleBtn = `<macro-button square class="toggle-owned-btn">${toggleLabel}</macro-button>`;
+  const clearBtn = ownedCount > 0 ? `<macro-button square id="clear-owned-btn">Clear owned</macro-button>` : "";
   const pct = totalSpells ? Math.round((ownedCount / totalSpells) * 100) : 0;
   statusEl.innerHTML = `
     <div class="status-meta">
@@ -971,17 +631,8 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     // Plain stone text, not a parchment scroll — the spell list is this
     // page's focus content (see .spell-scroll below), so the route is
     // wayfinding detail, not the thing to read closely.
-    const routeHtml = r.route && r.route.length > 1
-      ? `<div class="zone-route">
-          <span class="route-label">Route</span>
-          <div class="route-steps">${r.route.map((step, i) => {
-            if (i === 0) return `<span class="route-zone">${step.name}</span>`;
-            if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span><span class="route-zone">${step.name}</span>`;
-            if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span><span class="route-zone">${step.name}</span>`;
-            return `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
-          }).join("")}</div>
-        </div>`
-      : "";
+    const hasRoute = r.route && r.route.length > 1;
+    const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";
 
     const spellCount = visibleSpells.length;
     const ownedHere = r.spells.length - visibleSpells.length;
@@ -1000,6 +651,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
         <div class="spell-vendor-list">${spellRows}</div>
       </div>
     `;
+    if (hasRoute) card.querySelector("route-path").steps = r.route;
     el.appendChild(card);
   }
 

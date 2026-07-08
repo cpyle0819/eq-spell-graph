@@ -116,226 +116,8 @@ body::before {
 *::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
 *::-webkit-scrollbar-thumb:hover { background: #8b849f; }
 
-/* ── Header: a stone title bar ── */
-header {
-  padding: 14px 28px;
-  background: var(--marble-tex), linear-gradient(180deg, #524e61, #363242);
-  border-bottom: 2px solid var(--edge-lo);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.09), inset 0 -1px 0 rgba(0, 0, 0, 0.5), 0 3px 12px rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  position: relative;
-}
-/* gold inlay fading at the edges, under the banner */
-header::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -2px; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(232, 168, 42, 0.55) 30%, rgba(232, 168, 42, 0.55) 70%, transparent);
-  pointer-events: none;
-}
-.header-title { display: flex; flex-direction: column; gap: 3px; }
-header h1 {
-  font-family: var(--font-display);
-  font-size: 25px;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: 0.06em;
-  /* engraved: dark cut above, lit edge below */
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 236, 180, 0.18), 0 0 22px rgba(232, 168, 42, 0.25);
-}
-.header-sub { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.22em; text-transform: uppercase; }
-
-/* Norraph title links back to the home page (index.html/route.html/
-   class-browser.html) — inherits header h1's gold engraved look rather
-   than default link blue/underline, only distinguishing itself on
-   hover/focus. home.html's own h1 is plain text, not a link (no reason
-   to link home to itself). */
-header h1 a { color: inherit; text-decoration: none; }
-header h1 a:hover { text-decoration: underline; }
-header h1 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-.nav-links { margin-left: auto; display: flex; gap: 8px; }
-
-/* MacroSocket + MacroButton component (public/components.js): a recessed
-   cavity carved into the panel, holding a raised button/link. Used by
-   every non-text button on every page (nav links, Show all/Show
-   remaining/Clear owned). .text-action is the separate plain-text idiom
-   and doesn't use this. Light source is top-right, same as every other
-   raised/inset surface in the app: the raised button catches light
-   top+right and shadows bottom+left; the recessed socket is the inverse —
-   dark top+right, lit bottom+left. Size fits the label by default; .square
-   fixes it to 90x90 regardless of label length. */
-.macro-socket {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-image: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-  border-width: 4px;
-  border-style: solid;
-  border-top-color: #362c5a;
-  border-right-color: #362c5a;
-  border-bottom-color: var(--edge-hi);
-  border-left-color: var(--edge-hi);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.12), inset 2px 2px 3px rgba(0, 0, 0, 0.55);
-}
-.macro-socket.square {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  width: 90px;
-  height: 90px;
-  border-width: 5px;
-}
-.macro-btn {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 13px;
-  padding-right: 23px;
-  padding-bottom: 13px;
-  padding-left: 23px;
-  overflow-wrap: break-word;
-  background-image: var(--bone-tex), var(--parch-tex), linear-gradient(180deg, var(--bone-1) 0%, #d9cead 55%, var(--bone-2) 100%);
-  border-width: 0;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  color: var(--bone-ink);
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-family: var(--font-body);
-  line-height: 1.3;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  box-shadow: none;
-  transition-property: filter;
-  transition-duration: 150ms;
-}
-/* Raised bevel, light source top-right: top+right edges lighten toward
-   white, bottom+left edges darken toward black, each fading back to the
-   button's own color over 5px (6px for .square) — not a flat two-tone
-   border. Built with mix-blend-mode (lighten/darken) rather than fixed
-   overlay colors, so it reads as brightening/dimming whatever's actually
-   underneath (the real parchment-tex + bone gradient) instead of painting
-   a color on top. The turbulence layer (--bone-tex again, same blend
-   mode) breaks up what would otherwise be a mathematically perfect
-   gradient, so the bevel itself looks faintly mottled rather than smooth.
-   clip-path confines each pseudo-element to an L-shaped region (its own
-   two edges) with a 45° miter at the corner where they meet — without it,
-   the two independent per-edge gradients overlap as a rectangle at that
-   corner instead of a clean diagonal seam, and at the *other* two corners
-   (top-left, bottom-right — where light meets dark) the two differently-
-   blended pseudo-elements would otherwise collide edge-on rather than
-   meeting along a miter. */
-.macro-btn::before, .macro-btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-.macro-btn::before {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to bottom, white, transparent 5px),
-    linear-gradient(to left, white, transparent 5px);
-  mix-blend-mode: lighten;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 5px) calc(100% - 5px), calc(100% - 5px) 5px, 5px 5px);
-}
-.macro-btn::after {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to top, black, transparent 5px),
-    linear-gradient(to right, black, transparent 5px);
-  mix-blend-mode: darken;
-  clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px), 5px 5px);
-}
-.macro-btn.square {
-  width: 100%;
-  height: 100%;
-  padding-top: 9px;
-  padding-right: 9px;
-  padding-bottom: 9px;
-  padding-left: 9px;
-  font-size: 10.5px;
-}
-.macro-btn.square::before {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to bottom, white, transparent 6px),
-    linear-gradient(to left, white, transparent 6px);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 6px) calc(100% - 6px), calc(100% - 6px) 6px, 6px 6px);
-}
-.macro-btn.square::after {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to top, black, transparent 6px),
-    linear-gradient(to right, black, transparent 6px);
-  clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 6px) calc(100% - 6px), 6px calc(100% - 6px), 6px 6px);
-}
-.macro-btn.long-label { font-size: 8.5px; }
-.macro-btn:hover { filter: brightness(1.05); }
-/* Pressed: swap which corner catches light. .macro-btn's actual "border" is
-   the ::before (top+right, lightened)/::after (bottom+left, darkened)
-   pseudo-element pair, not a real CSS border (border-width is 0 above). To
-   read as physically depressed, top+right needs to go dark and bottom+left
-   needs to go light: the exact opposite of the raised state. Rather than
-   fixed override colors, this swaps each pseudo-element to the *other
-   one's* normal background-image/blend-mode, keeping its own clip-path (so
-   square vs. non-square each still gets its own inset/miter unchanged) —
-   literally trading which shape gets which treatment. */
-.macro-btn:active {
-  box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
-  filter: brightness(0.96);
-}
-.macro-btn:active::before {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to top, black, transparent 5px),
-    linear-gradient(to right, black, transparent 5px);
-  mix-blend-mode: darken;
-}
-.macro-btn:active::after {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to bottom, white, transparent 5px),
-    linear-gradient(to left, white, transparent 5px);
-  mix-blend-mode: lighten;
-}
-.macro-btn.square:active::before {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to top, black, transparent 6px),
-    linear-gradient(to right, black, transparent 6px);
-}
-.macro-btn.square:active::after {
-  background-image:
-    var(--bone-tex),
-    linear-gradient(to bottom, white, transparent 6px),
-    linear-gradient(to left, white, transparent 6px);
-}
-.macro-btn:focus-visible {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: var(--gold);
-  outline-offset: 2px;
-}
-
 /* ── Panels: raised marble blocks with a real bevel ── */
-.controls-panel, .filter-bar, .finder-bar, .zone-card, .route-card,
+.filter-bar, .finder-bar, .zone-card,
 .tag-dropdown {
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
@@ -349,7 +131,7 @@ header h1 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px;
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 /* gold inlay hairline on the primary control surfaces */
-.controls-panel, .finder-bar, .route-card {
+.finder-bar {
   outline: 1px solid rgba(232, 168, 42, 0.22);
   outline-offset: -5px;
 }
@@ -362,7 +144,10 @@ header h1 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px;
   letter-spacing: 0.1em; text-transform: uppercase;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
 }
-.field select, .field input, .tag-wrap {
+/* the same sunken-well look is duplicated onto :host in
+   public/components/tag-input.js, since a plain outer .tag-wrap class
+   selector can no longer reach it */
+.field select, .field input {
   background: var(--panel-deep);
   /* deeper, more pronounced socket than the original 3px/lighter shadow —
      matches the reference client's carved-in button/field wells rather
@@ -376,10 +161,10 @@ header h1 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px;
   font-family: var(--font-body);
   box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
   transition: border-color 150ms, box-shadow 150ms;
+  padding: 6px 12px;
 }
-.field select, .field input { padding: 6px 12px; }
-.field select:hover, .field input:hover, .tag-wrap:hover { border-color: var(--edge-lo) var(--edge-lo) #837c9d #837c9d; }
-.field select:focus, .field input:focus, .tag-wrap:focus-within {
+.field select:hover, .field input:hover { border-color: var(--edge-lo) var(--edge-lo) #837c9d #837c9d; }
+.field select:focus, .field input:focus {
   border-color: var(--gold);
   box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0 0 3px rgba(232, 168, 42, 0.18);
   outline: none;
@@ -426,59 +211,28 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .text-action:active { filter: none; }
 .text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-/* ── Sidebar filter panel: a sticky, fixed-width column of stacked filter
-   fields. Shared by the Spell Finder's .controls-panel and the Class
-   Browser's — both need "adding a tag chip grows its own field downward,
-   never reflows a neighboring field," which a horizontal bar can't give.
-   Route Finder's .finder-bar is a deliberately different, horizontal
-   layout and doesn't use this. Each page keeps only what's genuinely its
-   own on top of this (page-specific fields like Spell Finder's
-   range-picker, and the
-   3-vs-2-column `order` values each page's sidebar/results/status split
-   needs). ── */
-.controls-panel { flex-shrink: 0; overflow: hidden; }
-.planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
+/* ── .field: Route Finder's own From/To fields (route.html has no sidebar
+   and doesn't use sidebar-panel/field-row -- see below). The Spell
+   Finder's and Class Browser's sidebar fields are now the sidebar-panel/
+   field-row/collapsible-section/range-picker components
+   (public/components/), which each own an equivalent rule directly, since
+   a plain outer .controls-panel/.planner-controls/.field-group-label
+   class selector can no longer reach into their shadow roots. ── */
 .field { display: flex; align-items: center; gap: 10px; }
 .field[hidden] { display: none; }
 .field label { min-width: 100px; }
 .field select, .field input { flex: 1; min-width: 0; }
-.panel-actions { display: flex; justify-content: flex-end; }
 
 @media (min-width: 1100px) {
-  .controls-panel { width: 300px; min-width: 300px; position: sticky; top: 0; }
   .field { flex-direction: column; align-items: stretch; gap: 4px; }
   .field label { min-width: 0; width: 100%; }
 }
 
-/* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ── */
-.tag-wrap {
-  position: relative; flex: 1; min-width: 0;
-  padding: 5px 8px; display: flex; flex-direction: column; gap: 4px; cursor: text;
-}
-.tag-list { display: flex; flex-wrap: wrap; gap: 4px; }
-.tag-list:empty { display: none; }
-.tag-item {
-  display: inline-flex; align-items: center; gap: 3px;
-  background: rgba(232, 168, 42, 0.14); border: 1px solid rgba(232, 168, 42, 0.35);
-  border-radius: 3px; padding: 2px 4px 2px 8px; font-size: 11px; color: #d4ad59;
-  white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis;
-}
-.tag-item-name { overflow: hidden; text-overflow: ellipsis; }
-.tag-item-remove {
-  flex-shrink: 0; width: 16px; height: 16px; border-radius: 3px;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; color: var(--ink-muted); font-size: 12px; line-height: 1;
-  background: transparent; border: none; padding: 0; font-weight: 400;
-  box-shadow: none; text-shadow: none; text-transform: none; letter-spacing: 0;
-  font-family: var(--font-body);
-}
-.tag-item-remove:hover { background: rgba(239, 68, 68, 0.18); color: #f26b6b; filter: none; }
-.tag-wrap input {
-  background: transparent; border: none; box-shadow: none; outline: none;
-  color: var(--parchment); font-size: 13px; font-family: var(--font-body);
-  width: 100%; padding: 1px 0; min-width: 80px; flex: unset;
-}
-
+/* ── Tag inputs (Spell Class / Specific Spells / Specific Zones) ──
+   The chip list + search box are now the tag-input component's own :host
+   content (public/components/tag-input.js); the suggestion dropdown below
+   stays a plain light-DOM element (body-appended by that same component)
+   and keeps using these rules unchanged. ── */
 .tag-dropdown {
   position: fixed; z-index: 300;
   max-height: 240px; overflow-y: auto;
@@ -495,7 +249,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .suggestion-empty { padding: 10px 14px; font-size: 12px; color: var(--ink-muted); font-style: italic; }
 
 /* ── Cards ── */
-.zone-name, .route-card-title {
+.zone-name {
   font-family: var(--font-display);
   font-size: 19px; font-weight: 700; color: var(--parchment);
   letter-spacing: 0.02em;
@@ -511,9 +265,9 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .zone-card:hover {
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }
-.zone-card-header, .route-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.zone-card-header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
-.zone-badge, .hops-badge {
+.zone-badge {
   font-size: 12px; padding: 3px 10px; border-radius: 3px;
   background: var(--panel-deep);
   border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
@@ -521,7 +275,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   color: var(--ink-muted);
   font-variant-numeric: tabular-nums;
 }
-.zone-badge.hops, .hops-badge { color: #c9a25e; }
+.zone-badge.hops { color: #c9a25e; }
 
 /* Faction tint over the marble + colored top accent. Dimmed cards are
    deliberate de-emphasis (inactive content), kept legible enough to read. */
@@ -547,10 +301,15 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
 /* ── Parchment scroll insert: directions/spell text inked on a parchment
    scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. Shared by Route Finder's `.route-path` and Class
-   Browser's `.spell-scroll` (see DECISIONS.md) — both are the same object
-   (a scroll insert nested in a stone panel), so they share one rule rather
-   than the dowels being a route-only ornament. ── */
+   the reference client. Route Finder's route-path and the spell tooltip
+   are their own components now (public/components/route-path.js,
+   spell-tooltip.js), each owning an equivalent rule in their own shadow
+   stylesheet. `.route-path` stays here too, as a plain class, for
+   home.html's welcome-scroll (`.route-path.welcome-scroll`), which wants
+   the same parchment-box look for arbitrary paragraph text rather than the
+   route-path component's step-rendering content model; `.spell-scroll`
+   (Class Browser cards, Spell Finder zone-cards) is the other light-DOM
+   consumer. ── */
 .route-path, .spell-scroll {
   position: relative;
   padding: 12px 20px; border-radius: 2px;
@@ -561,7 +320,6 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   color: var(--parch-ink);
 }
 .route-path::before, .route-path::after,
-#spell-tooltip::before, #spell-tooltip::after,
 .spell-scroll::before, .spell-scroll::after {
   content: "";
   position: absolute; top: -3px; bottom: -3px; width: 11px;
@@ -572,19 +330,8 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
     linear-gradient(90deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
 }
-.route-path::before, #spell-tooltip::before, .spell-scroll::before { left: -11px; }
-.route-path::after,  #spell-tooltip::after,  .spell-scroll::after  { right: -11px; }
-.route-label {
-  display: block; font-size: 10px; color: var(--parch-ink-soft);
-  letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px;
-  text-shadow: none;
-}
-.route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2.1; color: var(--parch-ink); }
-.route-zone { color: var(--parch-ink); font-weight: 700; }
-.route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
-.boat-sep, .translocator-sep { cursor: help; }
-.boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
-.translocator-sep { color: #6d28d9; margin: 0 7px; font-size: 15px; }
+.route-path::before, .spell-scroll::before { left: -11px; }
+.route-path::after,  .spell-scroll::after  { right: -11px; }
 
 /* ── Spell chips (planner results) ──
    Ink on parchment, not sunken stone wells — .spell-chip/.vendor-tag only
@@ -754,26 +501,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 }
 .spell-finder-link:hover { text-decoration: underline; }
 
-/* ── Spell tooltip: a page torn from the spellbook (parchment) ── */
-#spell-tooltip {
-  position: fixed; z-index: 1000;
-  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
-  border: 1px solid var(--parch-line);
-  border-radius: 2px; padding: 14px 18px;
-  max-width: 320px; min-width: 220px;
-  box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 10px 34px rgba(0, 0, 0, 0.75);
-  pointer-events: none;
-  opacity: 0; transition: opacity 100ms ease-out;
-}
-#spell-tooltip.visible { opacity: 1; }
-.tt-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--parch-accent); margin-bottom: 6px; }
-.tt-desc { font-size: 12px; color: var(--parch-ink); font-style: italic; line-height: 1.45; margin-bottom: 8px; }
-.tt-stats { display: flex; flex-wrap: wrap; gap: 4px; }
-.tt-stat {
-  font-size: 11px; padding: 2px 7px; border-radius: 3px;
-  background: rgba(0, 0, 0, 0.06); border: 1px solid #b5a77e; color: #4a4232;
-}
-.tt-stat.highlight { color: var(--parch-accent); border-color: var(--parch-accent); }
+/* Spell tooltip styling now lives in public/components/spell-tooltip.js. */
 
 /* ── Empty / loading states ── */
 .no-results { color: var(--ink-muted); font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
@@ -829,38 +557,10 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    explanation) get the help cursor — nothing to reveal on the others. */
 .field-group-label[title] { cursor: help; }
 
-/* Collapsible section headers (Spell Finder sidebar) — role="button" divs,
-   not real <button>s, specifically to dodge this app's global bone-plate
-   button styling (theme.css's `button { ... }`) rather than fight it with
-   overrides. Same specificity as `.field-group-label[title]` above but
-   declared later, so cursor:pointer wins here even on Faction's header
-   (which also carries a title/help tooltip) — being a toggle takes
-   precedence over the tooltip affordance. The chevron is a ::before, not
-   JS-written text, so toggling is just one attribute flip
-   (aria-expanded) with no risk of the icon and expanded state drifting
-   apart. */
-.field-group-label.collapsible {
-  display: flex; align-items: center; gap: 6px; cursor: pointer;
-}
-.field-group-label.collapsible::before {
-  content: "▾"; display: inline-block; font-size: 9px; flex-shrink: 0;
-  transition: transform 0.15s ease;
-}
-.field-group-label.collapsible[aria-expanded="false"]::before { transform: rotate(-90deg); }
-.field-group-label.collapsible:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-/* ── Footer ── */
-footer {
-  padding: 10px 28px; border-top: 1px solid #26232e; flex-shrink: 0;
-  font-size: 11px; color: var(--ink-muted); text-align: center; letter-spacing: 0.04em;
-}
-footer a { color: var(--gold-dim); text-decoration: none; }
-footer a:hover { text-decoration: underline; color: var(--gold-bright); }
+/* Collapsible section headers now live in public/components/collapsible-section.js. */
 
 /* ── Shared narrow-screen adjustments ── */
 @media (max-width: 700px) {
-  header { padding: 12px 16px; }
   button { min-height: 44px; }
   button.secondary { min-height: 40px; }
-  .tag-item-remove { min-height: 0; }
 }

@@ -38,10 +38,10 @@
        width rather than left-aligned like a trailing action would be. */
     .tool-card { display: flex; flex-direction: column; gap: 10px; cursor: default; }
     .tool-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
-    /* .macro-socket is width:auto by default, but a column flex container's
+    /* macro-button is width:auto by default, but a column flex container's
        default align-items:stretch would still pull it to the card's full
        width — pin it back to its content size, centered, instead. */
-    .tool-card .macro-socket { align-self: center; }
+    .tool-card macro-button { align-self: center; }
 
     @media (max-width: 760px) {
       .tool-grid { grid-template-columns: 1fr; }
@@ -49,12 +49,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <h1>Norraph</h1>
-      <p class="header-sub">Welcome</p>
-    </div>
-  </header>
+  <app-header subtitle="Welcome" home></app-header>
 
   <main>
     <div class="route-path welcome-scroll">
@@ -65,21 +60,20 @@
     <div class="tool-grid">
       <div class="spell-detail tool-card">
         <p>Pick your classes, level range, and current zone, and get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
-        <div id="spell-finder-open"></div>
+        <macro-button square href="index.html">Spell Finder</macro-button>
       </div>
       <div class="spell-detail tool-card">
         <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
-        <div id="route-finder-open"></div>
+        <macro-button square href="route.html">Route Finder</macro-button>
       </div>
       <div class="spell-detail tool-card">
         <p>The complete class reference: every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
-        <div id="class-browser-open"></div>
+        <macro-button square href="class-browser.html">Class Browser</macro-button>
       </div>
     </div>
   </main>
 
-  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
-  <script src="components.js"></script>
-  <script src="home.js"></script>
+  <app-footer></app-footer>
+  <script type="module" src="components/index.js"></script>
 </body>
 </html>

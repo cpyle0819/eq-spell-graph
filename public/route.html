@@ -41,10 +41,7 @@
     #reset-route-btn { margin-left: auto; padding-bottom: 8px; }
 
     #route-result { flex: 1; min-height: 0; overflow-y: auto; }
-
-    .route-card { border-top: 2px solid var(--gold); padding: 22px 26px; }
-    .route-card-header { margin-bottom: 18px; gap: 14px; }
-    .route-path { padding: 14px 18px; }
+    /* route-card owns its own layout now (public/components/route-card.js). */
 
     @media (max-width: 600px) {
       main { padding: 0 0 10px; gap: 10px; }
@@ -54,13 +51,9 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <h1><a href="home.html">Norraph</a></h1>
-      <p class="header-sub">Route Finder</p>
-    </div>
-    <nav class="nav-links" id="nav-links"></nav>
-  </header>
+  <app-header subtitle="Route Finder">
+    <nav-links slot="nav" current="route"></nav-links>
+  </app-header>
 
   <main>
     <div class="finder-bar">
@@ -78,8 +71,8 @@
     <div id="route-result"></div>
   </main>
 
-  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
+  <app-footer></app-footer>
   <script src="components.js"></script>
-  <script src="route.js"></script>
+  <script type="module" src="route.js"></script>
 </body>
 </html>

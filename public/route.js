@@ -1,10 +1,11 @@
+// Imported first so every custom element is registered before this file
+// creates or configures one -- see app.js's identical import for why order
+// here is load bearing, not just tidiness.
+import "./components/index.js";
+
 const STATE_KEY = "eq-route-state";
 
 async function init() {
-  document.getElementById("nav-links").innerHTML = [
-    MacroButton({ label: "Spell Finder", tag: "a", href: "index.html" }),
-    MacroButton({ label: "Class Browser", tag: "a", href: "class-browser.html" }),
-  ].join("");
   const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
   restoreState();
@@ -71,26 +72,10 @@ async function runRoute() {
     return;
   }
 
-  const hopsText = result.hops === 1 ? "1 hop" : `${result.hops} hops`;
-  const stepsHtml = result.route.map((step, i) => {
-    if (i === 0) return `<span class="route-zone">${step.name}</span>`;
-    if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span><span class="route-zone">${step.name}</span>`;
-    if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span><span class="route-zone">${step.name}</span>`;
-    return `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
-  }).join("");
-
-  el.innerHTML = `
-    <div class="route-card">
-      <div class="route-card-header">
-        <span class="route-card-title">${from} → ${to}</span>
-        <span class="hops-badge">${hopsText}</span>
-      </div>
-      <div class="route-path">
-        <span class="route-label">Route</span>
-        <div class="route-steps">${stepsHtml}</div>
-      </div>
-    </div>
-  `;
+  el.innerHTML = "";
+  const card = document.createElement("route-card");
+  card.route = { from, to, hops: result.hops, steps: result.route };
+  el.appendChild(card);
 }
 
 init();

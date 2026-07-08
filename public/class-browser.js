@@ -1,3 +1,8 @@
+// Imported first so every custom element is registered before this file
+// sets properties on one -- see app.js's identical import for why order
+// here is load bearing, not just tidiness.
+import "./components/index.js";
+
 // Matches the planner's level-range slider bound (public/index.html
 // #level-max max="50") — the actual data tops out at level 50 (see
 // DECISIONS.md).
@@ -23,27 +28,21 @@ let spellLineTagInput;
 let selectedSpellLineIds = []; // { id, label }[]
 let availableSpellLines = [];
 
-// Builds the sidebar via the shared SidebarPanel component (components.js) —
-// see app.js's renderSidebar() for the same pattern on the Spell Finder.
 function renderSidebar() {
-  const html = SidebarPanel({
-    fields: [
-      { label: "Classes", html: tagWrapHtml("class") },
-      { label: "Category", html: `<select id="category-select"></select>`, id: "category-field", hidden: true },
-      { label: "Spell Line", html: tagWrapHtml("spellline"), id: "spellline-field", hidden: true },
-      { label: "Level", html: `<select id="level-select"><option value="all">All Levels</option></select>`, id: "level-field", hidden: true },
-      { label: "Search", html: `<input type="text" id="browser-search" placeholder="Name...">` },
-    ],
-    actions: [`<button type="button" class="text-action" id="reset-filters-btn">Reset filters</button>`],
-  });
+  const html = `
+    <sidebar-panel>
+      <field-row label="Classes"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
+      <field-row id="category-field" label="Category" hidden><select id="category-select"></select></field-row>
+      <field-row id="spellline-field" label="Spell Line" hidden><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
+      <field-row id="level-field" label="Level" hidden><select id="level-select"><option value="all">All Levels</option></select></field-row>
+      <field-row label="Search"><input type="text" id="browser-search" placeholder="Name..."></field-row>
+      <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
+    </sidebar-panel>
+  `;
   document.getElementById("controls-panel-slot").outerHTML = html;
 }
 
 async function init() {
-  document.getElementById("nav-links").innerHTML = [
-    MacroButton({ label: "Spell Finder", tag: "a", href: "index.html" }),
-    MacroButton({ label: "Route Finder", tag: "a", href: "route.html" }),
-  ].join("");
   renderSidebar();
   [availableClasses, availableSpellLines] = await Promise.all([
     fetch("api/classes/abilities").then((r) => r.json()),
@@ -57,43 +56,34 @@ async function init() {
 }
 
 function setupClassTagInput() {
-  classTagInput = setupTagInput({
-    wrapId: "class-tag-wrap",
-    tagsId: "class-tags",
-    inputId: "class-search-input",
-    dropdownId: "class-suggestions",
-    getSelected: () => selectedClassNames,
-    addItem: (cls) => selectedClassNames.push(cls),
-    removeItem: (cls) => { selectedClassNames = selectedClassNames.filter((c) => c !== cls); },
-    getMatches: (q) => {
-      const lower = q.toLowerCase();
-      return availableClasses.filter((c) => !selectedClassNames.includes(c) && c.includes(lower));
-    },
-    itemId: (c) => c,
-    itemLabel: (c) => c.charAt(0).toUpperCase() + c.slice(1),
-    emptyMessage: "No matching classes",
-    onChange: fetchAbilities,
+  classTagInput = document.getElementById("class-tag-input");
+  classTagInput.itemId = (c) => c;
+  classTagInput.itemLabel = (c) => c.charAt(0).toUpperCase() + c.slice(1);
+  classTagInput.emptyMessage = "No matching classes";
+  classTagInput.getMatches = (q) => {
+    const lower = q.toLowerCase();
+    return availableClasses.filter((c) => !selectedClassNames.includes(c) && c.includes(lower));
+  };
+  classTagInput.addEventListener("change", (e) => {
+    selectedClassNames = e.detail.selected;
+    fetchAbilities();
   });
 }
 
 function setupSpellLineTagInput() {
-  spellLineTagInput = setupTagInput({
-    wrapId: "spellline-tag-wrap",
-    tagsId: "spellline-tags",
-    inputId: "spellline-search-input",
-    dropdownId: "spellline-suggestions",
-    getSelected: () => selectedSpellLineIds,
-    addItem: (item) => selectedSpellLineIds.push(item),
-    removeItem: (id) => { selectedSpellLineIds = selectedSpellLineIds.filter((l) => l.id !== id); },
-    getMatches: (q) => {
-      const lower = q.toLowerCase();
-      const selectedIds = new Set(selectedSpellLineIds.map((l) => l.id));
-      return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
-    },
-    itemId: (l) => l.id,
-    itemLabel: (l) => l.label,
-    emptyMessage: "No matching spell lines",
-    onChange: render, // client-side filter over already-fetched rawSpells, no refetch needed
+  spellLineTagInput = document.getElementById("spellline-tag-input");
+  spellLineTagInput.itemId = (l) => l.id;
+  spellLineTagInput.itemLabel = (l) => l.label;
+  spellLineTagInput.emptyMessage = "No matching spell lines";
+  spellLineTagInput.getMatches = (q) => {
+    const lower = q.toLowerCase();
+    const selectedIds = new Set(selectedSpellLineIds.map((l) => l.id));
+    return availableSpellLines.filter((l) => !selectedIds.has(l.id) && l.label.toLowerCase().includes(lower));
+  };
+  // client-side filter over already-fetched rawSpells, no refetch needed
+  spellLineTagInput.addEventListener("change", (e) => {
+    selectedSpellLineIds = e.detail.selected;
+    render();
   });
 }
 
@@ -125,9 +115,9 @@ function setupFilters() {
 
 function resetFilters() {
   selectedClassNames = [];
-  classTagInput.renderTags();
+  classTagInput.selected = selectedClassNames;
   selectedSpellLineIds = [];
-  spellLineTagInput.renderTags();
+  spellLineTagInput.selected = selectedSpellLineIds;
   document.getElementById("level-select").value = "all";
   document.getElementById("browser-search").value = "";
   activeTab = null; // back to the first available category, not wherever the user was

@@ -47,7 +47,7 @@
     }
     #results { flex: 1; min-height: 0; overflow-y: auto; }
 
-    .controls-panel, .status-panel {
+    .status-panel {
       flex-shrink: 0; overflow: hidden;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
       border: 4px solid;
@@ -55,8 +55,8 @@
       border-radius: 3px;
       box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
     }
-    /* .planner-controls layout is shared (theme.css) — see the "Sidebar
-       filter panel" rule there. */
+    /* sidebar-panel/field-row/collapsible-section/range-picker
+       (public/components/) own their own layout now. */
 
     /* Status panel: the vitals-bar-plus-action-buttons cluster, its own
        console module echoing the reference client's right-side column
@@ -81,28 +81,7 @@
       padding: 12px 20px 16px; border-top: 2px solid var(--edge-lo);
     }
 
-    /* .field/.field label/.field select,input/.panel-actions layout are
-       shared (theme.css) — this page only adds its own range-picker field. */
-    .field .range-picker { flex: 1; min-width: 0; }
-
-    /* The deeper input bevel (border-width 4px, heavier inset shadow) now
-       lives directly in theme.css's shared .field select/.field input/
-       .tag-wrap rule, propagated there after landing here first — no
-       page-specific override needed anymore. */
-
-    .range-picker { display: flex; align-items: center; gap: 10px; }
-    .range-picker input[type="range"] {
-      -webkit-appearance: none; appearance: none; width: 90px; height: 3px;
-      background: var(--line); border-radius: 2px; cursor: pointer;
-      border: none; box-shadow: none; padding: 0;
-    }
-    .range-picker input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; width: 16px; height: 16px;
-      background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 60%, #8a5f10);
-      border-radius: 50%; cursor: pointer;
-    }
-    .range-picker input[type="range"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-    .range-display { font-size: 14px; color: var(--gold); font-weight: 700; white-space: nowrap; min-width: 58px; text-align: center; font-variant-numeric: tabular-nums; }
+    /* range-picker styling now lives in public/components/range-picker.js. */
 
     /* .text-action (plain muted text links, e.g. Show all/Clear owned/Reset
        filters) now lives in theme.css — shared by all three pages. */
@@ -144,26 +123,8 @@
     .zone-card.neutral   .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #f59e0b 60%, #9a5f05); box-shadow: 0 0 6px rgba(245, 158, 11, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
     .zone-card.wont_sell .zone-name::before { background: radial-gradient(circle at 65% 30%, #ffb37a, #f97316 60%, #9a3f05); box-shadow: 0 0 6px rgba(249, 115, 22, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.4); }
     .zone-card.kos       .zone-name::before { background: radial-gradient(circle at 65% 30%, #ff8a8a, #ef4444 60%, #7a1515); box-shadow: 0 0 6px rgba(239, 68, 68, 0.9), inset 0 0 2px rgba(0, 0, 0, 0.4); }
-    /* Route: plain stone text, not the parchment scroll treatment —
-       .spell-scroll below is this page's focus content, the route is
-       wayfinding detail. Route-label/-steps/-zone/-sep/-boat-sep/
-       -translocator-sep are theme.css's parchment-tuned colors (dark ink
-       for a light background); overridden here for a dark stone one. */
-    /* Bold serif at small sizes reads cramped on this dark, busy marble
-       texture — bumped size back up to 13px (matching the parchment
-       version's own size rather than shrinking it further), added
-       letter-spacing and a wider flex gap so multi-word zone names
-       (e.g. "Steamfont Mountains") don't run into their own neighbors,
-       and dropped the weight from bold to 600 since true bold Georgia's
-       tight counters were most of the cramped feeling. */
-    .zone-route { margin-bottom: 12px; }
-    .zone-route .route-label { color: var(--ink-muted); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
-    .zone-route .route-steps { color: var(--parchment); font-size: 13px; line-height: 2; letter-spacing: 0.055em; gap: 6px; }
-    .zone-route .route-zone { color: var(--parchment); font-weight: 600; }
-    .zone-route .route-sep, .zone-route .boat-sep, .zone-route .translocator-sep { margin: 0; }
-    .zone-route .route-sep { color: var(--gold); }
-    .zone-route .boat-sep { color: #7ba7f5; }
-    .zone-route .translocator-sep { color: #c4a3f7; }
+    /* zone-route's dark-stone styling now lives in the route-path
+       component (variant="stone") — see public/components/route-path.js. */
     .spell-scroll { margin-top: 12px; }
     .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
 
@@ -174,14 +135,15 @@
        than floating with a margin on both sides within the console. */
     @media (min-width: 1100px) {
       #planner { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
-      /* width/position/sticky and the .field column-flip are shared
-         (theme.css) — this page only needs its own 3-column `order`. */
-      .controls-panel { order: 0; }
+      /* width/position/sticky are owned by sidebar-panel itself
+         (public/components/sidebar-panel.js) — this page only needs its
+         own 3-column `order`. */
+      sidebar-panel { order: 0; }
 
       #results { overflow-y: auto; order: 1; }
 
       /* Status panel sits to the right of results on desktop (DOM order
-         puts it right after .controls-panel, for mobile's stacking —
+         puts it right after sidebar-panel, for mobile's stacking —
          `order` reflows it to last here without duplicating markup). Fills
          its column the same way the sidebar does: left bevel shares the
          results seam (no gap, gap:0 on #planner), right bevel shares the
@@ -205,19 +167,14 @@
     /* Narrow: stack vertically */
     @media (max-width: 700px) {
       #planner { padding: 0 10px 10px; gap: 10px; }
-      .planner-controls { gap: 12px; padding: 14px 16px; }
       .control-sep { display: none; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <h1><a href="home.html">Norraph</a></h1>
-      <p class="header-sub">Spell Finder</p>
-    </div>
-    <nav class="nav-links" id="nav-links"></nav>
-  </header>
+  <app-header subtitle="Spell Finder">
+    <nav-links slot="nav" current="index"></nav-links>
+  </app-header>
 
   <div id="planner">
     <div id="controls-panel-slot"></div>
@@ -225,13 +182,9 @@
     <div id="results"></div>
   </div>
 
-  <div id="class-suggestions" class="tag-dropdown" role="listbox" aria-label="Class suggestions"></div>
-  <div id="spellline-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell line suggestions"></div>
-  <div id="spell-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell suggestions"></div>
-  <div id="zone-suggestions" class="tag-dropdown" role="listbox" aria-label="Zone suggestions"></div>
-  <div id="spell-tooltip" role="tooltip" aria-hidden="true"></div>
-  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
+  <spell-tooltip id="spell-tooltip" role="tooltip" aria-hidden="true"></spell-tooltip>
+  <app-footer></app-footer>
   <script src="components.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>

@@ -14,24 +14,18 @@
 
     /* #class-browser-page is the console frame — flush against the header
        and viewport edges, matching the Spell Finder's #planner. Filters
-       live in a left sidebar (.controls-panel, shared bevel/layout with
-       the Spell Finder) rather than a horizontal bar — a tag-wrap field
-       that grows wider as chips are added would otherwise shift every
-       field to its right; a sidebar's fields stack full-width instead, so
-       adding a chip only grows a field downward within its own row. */
+       live in a left sidebar (<sidebar-panel>, shared with the Spell
+       Finder — public/components/sidebar-panel.js) rather than a
+       horizontal bar — a tag-input field that grows wider as chips are
+       added would otherwise shift every field to its right; a sidebar's
+       fields stack full-width instead, so adding a chip only grows a
+       field downward within its own row. */
     #class-browser-page {
       display: flex; flex-direction: column; overflow: hidden; flex: 1;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
       padding: 0 14px 14px; gap: 14px;
     }
     #browser-content { flex: 1; min-height: 0; overflow-y: auto; }
-
-    .controls-panel { flex-shrink: 0; overflow: hidden; }
-    .planner-controls { display: flex; flex-direction: column; gap: 8px; padding: 16px 20px; }
-    .field { display: flex; align-items: center; gap: 10px; }
-    .field label { min-width: 100px; }
-    .field select, .field input, .field .tag-wrap { flex: 1; min-width: 0; }
-    .panel-actions { display: flex; justify-content: flex-end; }
 
     /* No top padding — the first result's own border sits right up against
        the top of the console frame, same as the Spell Finder's first
@@ -47,15 +41,9 @@
 
     @media (min-width: 1100px) {
       #class-browser-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
-      .controls-panel {
-        width: 300px; min-width: 300px; flex-shrink: 0;
-        position: sticky; top: 0;
-      }
-      .field label { min-width: 0; width: 100%; }
-      .field { flex-direction: column; align-items: stretch; gap: 4px; }
       /* No left padding — the sidebar's own right border is the seam
          shared with the first result's left border (console look), same
-         as the Spell Finder's .controls-panel/#results split. */
+         as the Spell Finder's sidebar-panel/#results split. */
       #browser-content { overflow-y: auto; }
     }
 
@@ -67,18 +55,13 @@
 
     @media (max-width: 700px) {
       #class-browser-page { padding: 0 10px 10px; gap: 10px; }
-      .planner-controls { gap: 12px; padding: 14px 16px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <h1><a href="home.html">Norraph</a></h1>
-      <p class="header-sub">Class Browser</p>
-    </div>
-    <nav class="nav-links" id="nav-links"></nav>
-  </header>
+  <app-header subtitle="Class Browser">
+    <nav-links slot="nav" current="class-browser"></nav-links>
+  </app-header>
 
   <div id="class-browser-page">
     <div id="controls-panel-slot"></div>
@@ -87,11 +70,8 @@
     </div>
   </div>
 
-  <div id="class-suggestions" class="tag-dropdown" role="listbox" aria-label="Class suggestions"></div>
-  <div id="spellline-suggestions" class="tag-dropdown" role="listbox" aria-label="Spell line suggestions"></div>
-
-  <footer>Unofficial fan-made tool. EverQuest® and EverQuest Legends™ are trademarks of Daybreak Game Company LLC. Not affiliated with or endorsed by Daybreak. · <a href="https://github.com/cpyle0819/eq-spell-graph" target="_blank" rel="noopener">Contribute on GitHub</a></footer>
+  <app-footer></app-footer>
   <script src="components.js"></script>
-  <script src="class-browser.js"></script>
+  <script type="module" src="class-browser.js"></script>
 </body>
 </html>
