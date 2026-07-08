@@ -176,16 +176,15 @@ function renderSidebar() {
   document.getElementById("controls-panel-slot").outerHTML = html;
 }
 
-// Faction (now defaults to Any/Any/Any — see DECISIONS.md, only matters if
-// you're chasing a specific vendor's standing) and Location (usually set
-// once and rarely revisited) start collapsed; Spells/Level stay open since
-// narrowing results is the page's main job. Applied by applyDefaults() —
-// for a first-time visitor that's every section's only assignment; for
-// Reset filters (which also calls applyDefaults()) it's what makes the
-// collapse state, not just the filter values, fully reset too, rather
-// than leaving whatever the user had toggled untouched.
+// Only Spells starts open — picking which spells to look for is the page's
+// main job, everything else (Faction, Level, Location) is a secondary
+// narrowing/config concern you dip into as needed. Applied by
+// applyDefaults() — for a first-time visitor that's every section's only
+// assignment; for Reset filters (which also calls applyDefaults()) it's
+// what makes the collapse state, not just the filter values, fully reset
+// too, rather than leaving whatever the user had toggled untouched.
 const ALL_SECTIONS = ["faction", "spells", "level", "location"];
-const DEFAULT_COLLAPSED_SECTIONS = ["faction", "location"];
+const DEFAULT_COLLAPSED_SECTIONS = ["faction", "level", "location"];
 
 function setSectionCollapsed(section, collapsed) {
   const header = document.querySelector(`.field-group-label[data-section="${section}"]`);
