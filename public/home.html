@@ -23,25 +23,12 @@
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
     }
 
-    .welcome-scroll { max-width: 640px; width: 100%; padding: 20px 28px; }
-    .welcome-scroll p { font-size: 14px; line-height: 1.7; }
-    .welcome-scroll p + p { margin-top: 10px; }
-
+    /* welcome-scroll/tool-card (public/components/) own their own look;
+       .tool-grid below is the only layout this page still owns directly. */
     .tool-grid {
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
       max-width: 900px; width: 100%;
     }
-    /* .spell-detail gives the stone-card bevel/hover for free; this page
-       only adds the flex layout to push each card's button to a consistent
-       baseline regardless of description length. The button doubles as the
-       card's title (no separate heading), so it's centered on the card's
-       width rather than left-aligned like a trailing action would be. */
-    .tool-card { display: flex; flex-direction: column; gap: 10px; cursor: default; }
-    .tool-card p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; flex: 1; }
-    /* macro-button is width:auto by default, but a column flex container's
-       default align-items:stretch would still pull it to the card's full
-       width — pin it back to its content size, centered, instead. */
-    .tool-card macro-button { align-self: center; }
 
     @media (max-width: 760px) {
       .tool-grid { grid-template-columns: 1fr; }
@@ -52,24 +39,24 @@
   <app-header subtitle="Welcome" home></app-header>
 
   <main>
-    <div class="route-path welcome-scroll">
+    <welcome-scroll>
       <p>Norraph is a companion for EverQuest Legends spellcasters. The Spell Finder and Route Finder plan out spell buying trips. Tell them which classes and level range you're shopping for and where you're starting from, and they find every vendor that sells something you need, how to get there, and whether your faction standing will actually let you buy anything once you arrive. Every route accounts for real zone connections, including boats and translocators, and is checked against your race, class, and deity standing with each vendor, so a technically closer zone that would leave you kill on sight never outranks a longer trip that actually works.</p>
       <p>The Class Browser is a separate tool: a complete reference for what every class can learn, covering spells, AAs, stances, invocations, and signature abilities. Browse it on its own, no shopping trip required.</p>
-    </div>
+    </welcome-scroll>
 
     <div class="tool-grid">
-      <div class="spell-detail tool-card">
+      <tool-card>
         <p>Pick your classes, level range, and current zone, and get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
         <macro-button square href="index.html">Spell Finder</macro-button>
-      </div>
-      <div class="spell-detail tool-card">
+      </tool-card>
+      <tool-card>
         <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
         <macro-button square href="route.html">Route Finder</macro-button>
-      </div>
-      <div class="spell-detail tool-card">
+      </tool-card>
+      <tool-card>
         <p>The complete class reference: every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
         <macro-button square href="class-browser.html">Class Browser</macro-button>
-      </div>
+      </tool-card>
     </div>
   </main>
 

@@ -1,11 +1,10 @@
 // Shared base class + CSS for the Class Browser's four card types
 // (spell-card/aa-card/ability-card/stance-card): the console-row-plus-
 // parchment-scroll shell (name on stone, like a zone-card, wrapping a
-// parchment insert for badges/description/stats). Duplicated from
-// theme.css's `.spell-detail` family the same way zone-card duplicates
-// `.spell-scroll`/`.spell-check` -- home.html's plain `.spell-detail
-// tool-card` divs are theme.css's other consumer of that base look, so
-// theme.css keeps its own copy.
+// parchment insert for badges/description/stats). home.html's tool-card
+// (public/components/tool-card.js) duplicates the same base panel look
+// independently rather than sharing this module, since it isn't part of
+// this card family and is never clickable itself.
 //
 // Each leaf class extends CardBase, implements `setData(...)` + `render()`,
 // and optionally a `wireEvents()` (called once, before the first render, if

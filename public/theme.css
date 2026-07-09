@@ -250,32 +250,10 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
 /* ── Parchment scroll insert: directions/spell text inked on a parchment
    scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. route-path, spell-tooltip, zone-card, and the
-   Class Browser card family (public/components/) each own their own
-   `.spell-scroll`-equivalent shadow stylesheet. `.route-path` here is a
-   plain class, home.html's welcome-scroll being its one remaining
-   light-DOM consumer. ── */
-.route-path {
-  position: relative;
-  padding: 12px 20px; border-radius: 2px;
-  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
-  border: 1px solid var(--parch-line);
-  /* aged edges: warm inner vignette for parchment surfaces */
-  box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
-  color: var(--parch-ink);
-}
-.route-path::before, .route-path::after {
-  content: "";
-  position: absolute; top: -3px; bottom: -3px; width: 11px;
-  border-radius: 5px;
-  background:
-    radial-gradient(3px 3px at 50% 7px, rgba(0, 0, 0, 0.6), transparent 70%),
-    radial-gradient(3px 3px at 50% calc(100% - 7px), rgba(0, 0, 0, 0.6), transparent 70%),
-    linear-gradient(90deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
-}
-.route-path::before { left: -11px; }
-.route-path::after  { right: -11px; }
+   the reference client. route-path, spell-tooltip, zone-card,
+   welcome-scroll, and the Class Browser card family (public/components/)
+   each own their own shadow stylesheet with this same look — no page
+   still uses `.route-path`/`.spell-scroll` as a light-DOM class. ── */
 
 /* .spell-row/.spell-owned/.spell-chip/.vendor-names/.vendor-tag (planner
    results ink-on-parchment styling) and .spell-check/.spell-check-labeled
@@ -294,31 +272,14 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    in its own shadow stylesheet (public/components/mana-bar.js),
    status-panel's only consumer. */
 
-/* ── Class Browser cards ──
-   spell-card/aa-card/ability-card/stance-card (public/components/) and
-   their shared card-base.js own the full stone-console-row-wrapping-a-
-   parchment-scroll look (badges/description/stats/actions) — the same
+/* ── Class Browser cards / Home page tool cards ──
+   spell-card/aa-card/ability-card/stance-card and their shared
+   card-base.js, plus home.html's tool-card, each own the full
+   stone-console-row look (padding/background/border/box-shadow/hover) in
+   their own shadow stylesheet (public/components/) — the same
    panel-plus-scroll composition Route Finder uses (.route-card +
-   .route-path), including the wood-dowel end caps (see DECISIONS.md).
-   `.spell-detail` below is only the base panel shell: home.html's plain
-   `.spell-detail.tool-card` divs are its one remaining light-DOM
-   consumer, so this stays (card-base.js duplicates it for its own shadow
-   roots, same as zone-card duplicates `.spell-scroll`). */
-.spell-detail {
-  cursor: pointer; transition: box-shadow 150ms;
-  padding: 14px 20px;
-  background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-  border: 4px solid;
-  border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo);
-  border-radius: 3px;
-  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
-}
-/* box-shadow, not filter — see zone-card's own :host(:hover) comment
-   (public/components/zone-card.js) for why; same negative-margin
-   seam-sharing trick, same desync risk. */
-.spell-detail:hover {
-  box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
-}
+   .route-path), including the wood-dowel end caps (see DECISIONS.md). No
+   page still uses `.spell-detail` as a light-DOM class. */
 
 /* Spell tooltip styling lives in public/components/spell-tooltip.js. */
 

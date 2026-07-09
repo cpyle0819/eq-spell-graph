@@ -19,3 +19,5 @@ import "./spell-card.js";
 import "./aa-card.js";
 import "./ability-card.js";
 import "./stance-card.js";
+import "./welcome-scroll.js";
+import "./tool-card.js";
