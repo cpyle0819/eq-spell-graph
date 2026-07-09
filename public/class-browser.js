@@ -150,94 +150,6 @@ async function fetchAbilities() {
   renderResults(stances, invocations, aa, spells, abilities, classes);
 }
 
-// Class + (for spells) per-class level badges — badged with only the
-// *selected* classes, not an entry's full class list, so overlap between
-// selections is visible at a glance. An empty selection means "browsing
-// every class" (see DECISIONS.md), so it shows every class the entry
-// actually has rather than filtering down to nothing.
-function classBadges(entryClasses, selected, levelLookup) {
-  const granting = selected.length ? entryClasses.filter((c) => selected.includes(c)) : entryClasses;
-  return granting
-    .map((c) => {
-      const label = c.charAt(0).toUpperCase() + c.slice(1);
-      const level = levelLookup ? levelLookup(c) : null;
-      return `<span class="spell-badge class-badge">${label}${level != null ? ` L${level}` : ""}</span>`;
-    })
-    .join("");
-}
-
-function renderAbility(ability, selected) {
-  const card = document.createElement("div");
-  card.className = "spell-detail";
-  card.innerHTML = `
-    <div class="spell-header"><h3>${ability.name}</h3></div>
-    <div class="spell-scroll">
-      <div class="spell-badges">${classBadges(ability.classes, selected)}</div>
-      <p class="spell-desc">${ability.description}</p>
-    </div>
-  `;
-  return card;
-}
-
-function renderAA(aa, selected) {
-  const card = document.createElement("div");
-  card.className = "spell-detail";
-  const badges = [
-    `<span class="spell-badge type-badge">${aa.ranks} rank${aa.ranks === 1 ? "" : "s"}</span>`,
-    `<span class="spell-badge mana-badge">${aa.cost} pts</span>`,
-    classBadges(aa.classes, selected),
-  ].join("");
-  card.innerHTML = `
-    <div class="spell-header"><h3>${aa.name}</h3></div>
-    <div class="spell-scroll">
-      <div class="spell-badges">${badges}</div>
-      <p class="spell-desc">${aa.description}</p>
-    </div>
-  `;
-  return card;
-}
-
-// Rogue poison disciplines, Backstab, Kick, Taunt, etc. — class-defining
-// special combat actions that aren't spells/stances/invocations/AAs (see
-// migration 018). class_levels shape/lookup mirrors renderSpellCard's,
-// since several of these grant to multiple classes at different levels.
-function renderAbilityCard(ability, selected) {
-  const card = document.createElement("div");
-  card.className = "spell-detail";
-  const levelLookup = (c) => ability.class_levels.find((cl) => cl.class === c)?.level;
-  // "Combat"/"Utility" is a poison-specific classification (Rogue
-  // disciplines only) — labeled "X Poison" rather than a bare "Combat"/
-  // "Utility" so it doesn't read as a general ability taxonomy that only
-  // some entries happen to have. "special" (everything else hand-curated)
-  // gets no badge at all; there's nothing informative to say.
-  const badges = [
-    ability.category && ability.category !== "special" ? `<span class="spell-badge type-badge">${ability.category.charAt(0).toUpperCase() + ability.category.slice(1)} Poison</span>` : "",
-    ability.reuseTime ? `<span class="spell-badge mana-badge">${ability.reuseTime} reuse</span>` : "",
-    classBadges(ability.class_levels.map((cl) => cl.class), selected, levelLookup),
-  ].join("");
-  const duration = fmtDuration(ability.duration);
-  card.innerHTML = `
-    <div class="spell-header"><h3>${ability.name}</h3></div>
-    <div class="spell-scroll">
-      <div class="spell-badges">${badges}</div>
-      <p class="spell-desc">${ability.description}</p>
-      ${duration ? `<div class="spell-stats"><span class="stat-tag">Duration: ${duration}</span></div>` : ""}
-    </div>
-  `;
-  return card;
-}
-
-function fmtDuration(d) {
-  if (!d) return null;
-  if (/instant/i.test(d)) return "Instant";
-  return d.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s");
-}
-
-function fmtCast(t) {
-  if (t == null) return null;
-  return t % 1 === 0 ? `${t}s cast` : `${t.toFixed(1)}s cast`;
-}
-
 // Builds the "Find in Spell Finder" link. The planner's rankZones() bypasses
 // its own class/level filters entirely for a pinned spell (see DECISIONS.md),
 // so these params aren't load-bearing for correctness — but without them the
@@ -264,75 +176,23 @@ function buildPinUrl(spell, selected) {
   return `index.html?${params}`;
 }
 
-function renderSpellCard(spell, selected) {
-  const card = document.createElement("div");
-  card.className = "spell-detail";
-
-  const levelLookup = (c) => spell.class_levels.find((cl) => cl.class === c)?.level;
-  const badges = [];
-  if (spell.spellType) badges.push(`<span class="spell-badge type-badge">${spell.spellType}</span>`);
-  if (spell.mana != null) badges.push(`<span class="spell-badge mana-badge">${spell.mana} mana</span>`);
-  if (spell.skill) badges.push(`<span class="spell-badge skill-badge">${spell.skill}</span>`);
-  badges.push(classBadges(spell.class_levels.map((cl) => cl.class), selected, levelLookup));
-
-  const stats = [];
-  if (spell.targetType) stats.push(`<span class="stat-tag">Target: ${spell.targetType}</span>`);
-  const dur = fmtDuration(spell.duration);
-  if (dur) stats.push(`<span class="stat-tag">Duration: ${dur}</span>`);
-  const cast = fmtCast(spell.castTime);
-  if (cast) stats.push(`<span class="stat-tag">${cast}</span>`);
-  if (spell.resist && !/unresist/i.test(spell.resist)) stats.push(`<span class="stat-tag">Resist: ${spell.resist}</span>`);
-  if (spell.spellLine) stats.push(`<span class="stat-tag">Line: ${spell.spellLine}</span>`);
-
-  const pinUrl = buildPinUrl(spell, selected);
-  // Shares the exact same localStorage-backed owned set as the Spell
-  // Finder (components.js) — marking a spell owned here shows up there
-  // and vice versa. No filtering/counting on it here, just the checkbox.
-  const isOwned = getOwnedSpells().has(spell.id);
-
-  card.innerHTML = `
-    <div class="spell-header">
-      <h3>${spell.label}</h3>
-      <label class="spell-check spell-check-labeled"><input type="checkbox" data-spell-id="${spell.id}"${isOwned ? " checked" : ""}> Owned</label>
-    </div>
-    <div class="spell-scroll">
-      <div class="spell-badges">${badges.join("")}</div>
-      ${spell.description ? `<p class="spell-desc">${spell.description}</p>` : ""}
-      ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
-      <div class="spell-card-actions">
-        <span class="vendor-hint">Click to show vendors</span>
-        <a class="spell-finder-link" href="${pinUrl}">Find in Spell Finder →</a>
-      </div>
-    </div>
-  `;
-
-  card.querySelector(".spell-check input").addEventListener("change", (e) => {
-    setSpellOwned(spell.id, e.target.checked);
-  });
-
-  card.addEventListener("click", async (e) => {
-    if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
-    if (e.target.closest(".spell-check")) return; // checkbox has its own handler, not a vendor-toggle click
-    const scroll = card.querySelector(".spell-scroll");
-    const existing = scroll.querySelector(".vendor-list");
-    if (existing) {
-      existing.remove();
-      card.querySelector(".vendor-hint").textContent = "Click to show vendors";
-      return;
-    }
-    card.querySelector(".vendor-hint").textContent = "Loading...";
-    const vendors = await fetch(`api/spell/${encodeURIComponent(spell.id)}/vendors`).then((r) => r.json());
-    card.querySelector(".vendor-hint").textContent = "Click to hide vendors";
-    const list = document.createElement("div");
-    list.className = "vendor-list";
-    list.innerHTML = vendors.length
-      ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span><span class="zone-tag">— ${v.zone?.label ?? "unknown zone"}</span></div>`).join("")
-      : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
-    scroll.appendChild(list);
-  });
-
-  return card;
+// Card element factories for buildSections()'s renderFn — each card type
+// (spell-card/aa-card/ability-card/stance-card, public/components/) owns
+// its own markup/badges/interactivity; this just creates the element and
+// hands it the data.
+function makeCard(tag, item, selected) {
+  const el = document.createElement(tag);
+  el.setData(item, selected);
+  return el;
 }
+function renderSpellCard(spell, selected) {
+  const el = document.createElement("spell-card");
+  el.setData(spell, selected, buildPinUrl(spell, selected));
+  return el;
+}
+const renderAA = (aa, selected) => makeCard("aa-card", aa, selected);
+const renderAbilityCard = (ability, selected) => makeCard("ability-card", ability, selected);
+const renderAbility = (item, selected) => makeCard("stance-card", item, selected);
 
 // Raw fetch results, kept so the search box can re-filter/re-render without
 // a network round trip.

@@ -15,3 +15,7 @@ import "./sidebar-panel.js";
 import "./mana-bar.js";
 import "./status-panel.js";
 import "./zone-card.js";
+import "./spell-card.js";
+import "./aa-card.js";
+import "./ability-card.js";
+import "./stance-card.js";

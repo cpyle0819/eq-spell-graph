@@ -34,10 +34,12 @@
 
     /* Packed edge-to-edge with a shared seam, same technique as the Spell
        Finder's zone-card list — a proper stone panel per row, not a gap
-       between floating cards. */
-    .spell-detail { margin: 0; }
-    .spell-detail + .spell-detail { margin-top: -4px; }
-    .class-badge { background: rgba(90, 60, 20, 0.08); color: #5a3c14; border: 1px solid rgba(90, 60, 20, 0.3); }
+       between floating cards. Each category renders one card tag at a
+       time (spell-card/aa-card/ability-card/stance-card,
+       public/components/), so the adjacency only ever needs to match
+       same-tag siblings, not a mixed list. */
+    spell-card + spell-card, aa-card + aa-card,
+    ability-card + ability-card, stance-card + stance-card { margin-top: -4px; }
 
     @media (min-width: 1100px) {
       #class-browser-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }

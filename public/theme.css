@@ -250,13 +250,12 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 
 /* ── Parchment scroll insert: directions/spell text inked on a parchment
    scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. route-path, spell-tooltip, and zone-card
-   components (public/components/) own their own shadow stylesheets.
-   `.route-path` here is a plain class for home.html's welcome-scroll;
-   `.spell-scroll` is used by Class Browser cards (light-DOM consumer) —
-   zone-card duplicates it internally for the same reason tag-input
-   duplicates the sunken-well look (see above). ── */
-.route-path, .spell-scroll {
+   the reference client. route-path, spell-tooltip, zone-card, and the
+   Class Browser card family (public/components/) each own their own
+   `.spell-scroll`-equivalent shadow stylesheet. `.route-path` here is a
+   plain class, home.html's welcome-scroll being its one remaining
+   light-DOM consumer. ── */
+.route-path {
   position: relative;
   padding: 12px 20px; border-radius: 2px;
   background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
@@ -265,8 +264,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
   color: var(--parch-ink);
 }
-.route-path::before, .route-path::after,
-.spell-scroll::before, .spell-scroll::after {
+.route-path::before, .route-path::after {
   content: "";
   position: absolute; top: -3px; bottom: -3px; width: 11px;
   border-radius: 5px;
@@ -276,36 +274,15 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
     linear-gradient(90deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
 }
-.route-path::before, .spell-scroll::before { left: -11px; }
-.route-path::after,  .spell-scroll::after  { right: -11px; }
+.route-path::before { left: -11px; }
+.route-path::after  { right: -11px; }
 
 /* .spell-row/.spell-owned/.spell-chip/.vendor-names/.vendor-tag (planner
-   results ink-on-parchment styling) live in zone-card's own shadow
-   stylesheet (public/components/zone-card.js), Spell Finder's only
-   consumer. .spell-check below stays here: Class Browser's own cards use
-   it too (combined with .spell-check-labeled). */
-.spell-check { display: flex; align-items: center; }
-.spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
+   results ink-on-parchment styling) and .spell-check/.spell-check-labeled
+   (owned checkboxes) all live in zone-card's and spell-card's own shadow
+   stylesheets (public/components/) — Spell Finder and Class Browser were
+   their only two light-DOM consumers. */
 
-/* Class Browser's per-card owned checkbox (spell-header, not spell-row) —
-   quieter than the Spell Finder's: a small muted text label, not just a
-   bare unlabeled checkbox, and pushed to the row's far edge so it reads as
-   a secondary control instead of competing with the spell name for
-   attention. Brightens on hover/checked the same way .text-action does,
-   rather than sitting at full gold-accent brightness unconditionally.
-   --ink-muted, not --parch-ink-soft: .spell-header sits on the dark stone
-   panel (same as the gold h3 above it), not the parchment scroll below —
-   --parch-ink-soft is calibrated for the light parchment background and
-   would be nearly unreadable here. */
-.spell-check-labeled {
-  margin-left: auto; gap: 6px; font-size: 11px; color: var(--ink-muted);
-  text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer;
-  flex-shrink: 0;
-}
-.spell-check-labeled input { width: 12px; height: 12px; accent-color: var(--ink-muted); }
-.spell-check-labeled:hover { color: var(--gold); }
-.spell-check-labeled:has(input:checked) { color: var(--gold); }
-.spell-check-labeled:has(input:checked) input { accent-color: var(--gold); }
 /* ── Results header (planner) ── */
 .results-header {
   font-size: 13px; color: var(--ink-muted);
@@ -317,11 +294,16 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
    in its own shadow stylesheet (public/components/mana-bar.js),
    status-panel's only consumer. */
 
-/* ── Class Browser cards: a stone console row (name on stone, like a
-   zone-card) wrapping a parchment scroll insert (badges/description/
-   stats/actions) — the same panel-plus-scroll composition Route Finder
-   uses (.route-card + .route-path), including the wood-dowel end caps
-   (see DECISIONS.md for the reasoning). */
+/* ── Class Browser cards ──
+   spell-card/aa-card/ability-card/stance-card (public/components/) and
+   their shared card-base.js own the full stone-console-row-wrapping-a-
+   parchment-scroll look (badges/description/stats/actions) — the same
+   panel-plus-scroll composition Route Finder uses (.route-card +
+   .route-path), including the wood-dowel end caps (see DECISIONS.md).
+   `.spell-detail` below is only the base panel shell: home.html's plain
+   `.spell-detail.tool-card` divs are its one remaining light-DOM
+   consumer, so this stays (card-base.js duplicates it for its own shadow
+   roots, same as zone-card duplicates `.spell-scroll`). */
 .spell-detail {
   cursor: pointer; transition: box-shadow 150ms;
   padding: 14px 20px;
@@ -337,38 +319,6 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .spell-detail:hover {
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }
-.spell-detail h3 {
-  font-family: var(--font-display); color: var(--parchment); font-size: 16px; font-weight: 700;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-.spell-level { font-size: 12px; color: var(--ink-muted); font-weight: 400; margin-left: 8px; font-family: var(--font-body); }
-.spell-header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
-.spell-header h3 { margin: 0; }
-.spell-badges { display: flex; gap: 5px; flex-wrap: wrap; }
-.spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
-.type-badge  { background: rgba(122, 77, 5, 0.1);   color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4); }
-.mana-badge  { background: rgba(30, 64, 175, 0.08); color: #1e40af; border: 1px solid rgba(30, 64, 175, 0.35); }
-.skill-badge { background: rgba(0, 0, 0, 0.05);     color: #4a4232; border: 1px solid var(--parch-line); }
-.spell-desc { font-size: 13px; color: #4a4232; margin: 5px 0 6px; line-height: 1.5; font-style: italic; }
-.spell-stats { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
-.stat-tag {
-  font-size: 11px; color: #4a4232; background: rgba(0, 0, 0, 0.05);
-  border: 1px solid #b5a77e;
-  padding: 2px 8px; border-radius: 3px;
-}
-.vendor-list { margin-top: 10px; border-top: 1px solid #b5a77e; padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
-.vendor-row { display: flex; gap: 8px; font-size: 13px; color: #4a4232; padding: 2px 0; }
-.zone-tag { color: var(--parch-accent); }
-.vendor-hint { font-size: 12px; color: var(--parch-ink-soft); margin-top: 6px; }
-
-/* ── Spell card footer: vendor toggle + jump to the planner ── */
-.spell-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
-.spell-card-actions .vendor-hint { margin-top: 0; }
-.spell-finder-link {
-  font-size: 12px; color: var(--parch-accent); text-decoration: none;
-  white-space: nowrap; flex-shrink: 0;
-}
-.spell-finder-link:hover { text-decoration: underline; }
 
 /* Spell tooltip styling lives in public/components/spell-tooltip.js. */
 
