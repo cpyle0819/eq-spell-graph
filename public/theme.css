@@ -117,7 +117,7 @@ body::before {
 *::-webkit-scrollbar-thumb:hover { background: #8b849f; }
 
 /* ── Panels: raised marble blocks with a real bevel ── */
-.filter-bar, .finder-bar,
+.finder-bar,
 .tag-dropdown {
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
@@ -169,29 +169,12 @@ body::before {
 }
 input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 
-/* ── Buttons: bone plates with dark serif caps, sunk in a black groove
-   (WHO / INVITE / DISBAND). One visual family — .secondary only sizes
-   down. The domed face: lit top-right edge, warm shadow bottom-left. ── */
-button {
-  padding: 8px 22px;
-  background: var(--parch-tex), linear-gradient(180deg, var(--bone-1) 0%, #d9cead 55%, var(--bone-2) 100%);
-  border: 2px solid;
-  border-color: var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo);
-  color: var(--bone-ink); border-radius: 2px; cursor: pointer;
-  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-  font-family: var(--font-body);
-  box-shadow: 0 0 0 2px var(--bone-frame), 0 2px 6px rgba(0, 0, 0, 0.5);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  transition: filter 150ms;
-}
-button:hover { filter: brightness(1.05); }
-button:active {
-  border-color: var(--bone-edge-lo) var(--bone-edge-lo) var(--bone-edge-hi) var(--bone-edge-hi);
-  filter: brightness(0.96);
-}
-button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-button.secondary { padding: 5px 14px; font-size: 11.5px; }
+/* The reference client's bone-plate button look (WHO / INVITE / DISBAND)
+   now lives entirely in macro-button.js's own shadow stylesheet — every
+   non-text button in the app renders through that component, and a plain
+   light-DOM `<button>` element only ever appears as a `.text-action`
+   (below), which fully overrides its own look rather than building on a
+   shared base. */
 
 /* Plain text actions (Show all / Clear owned / Reset filters), not bone
    plates — as full buttons these read as too busy for a secondary,
@@ -243,45 +226,21 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
 .suggestion-item:hover, .suggestion-item.active { background: rgba(232, 168, 42, 0.12); color: #f0d492; }
 .suggestion-empty { padding: 10px 14px; font-size: 12px; color: var(--ink-muted); font-style: italic; }
 
-/* ── Cards ──
-   zone-card, its faction LED dot/badge, .zone-badge, and its hover
-   treatment live entirely in zone-card's own shadow stylesheet
-   (public/components/zone-card.js), Spell Finder's only consumer. */
-
-/* ── Parchment scroll insert: directions/spell text inked on a parchment
-   scrap, unrolled between two wood dowels — the literal chat-scroll from
-   the reference client. route-path, spell-tooltip, zone-card,
-   welcome-scroll, and the Class Browser card family (public/components/)
-   each own their own shadow stylesheet with this same look — no page
-   still uses `.route-path`/`.spell-scroll` as a light-DOM class. ── */
-
-/* .spell-row/.spell-owned/.spell-chip/.vendor-names/.vendor-tag (planner
-   results ink-on-parchment styling) and .spell-check/.spell-check-labeled
-   (owned checkboxes) all live in zone-card's and spell-card's own shadow
-   stylesheets (public/components/) — Spell Finder and Class Browser were
-   their only two light-DOM consumers. */
-
-/* ── Results header (planner) ── */
-.results-header {
-  font-size: 13px; color: var(--ink-muted);
-  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-}
-.results-actions { display: flex; gap: 6px; margin-left: auto; }
-
-/* mana-bar (spells-owned progress, EQ vitals-bar styling) lives entirely
-   in its own shadow stylesheet (public/components/mana-bar.js),
-   status-panel's only consumer. */
-
-/* ── Class Browser cards / Home page tool cards ──
-   spell-card/aa-card/ability-card/stance-card and their shared
-   card-base.js, plus home.html's tool-card, each own the full
-   stone-console-row look (padding/background/border/box-shadow/hover) in
-   their own shadow stylesheet (public/components/) — the same
-   panel-plus-scroll composition Route Finder uses (.route-card +
-   .route-path), including the wood-dowel end caps (see DECISIONS.md). No
-   page still uses `.spell-detail` as a light-DOM class. */
-
-/* Spell tooltip styling lives in public/components/spell-tooltip.js. */
+/* ── Cards, scrolls, badges, and tooltips: all componentized ──
+   Every remaining page (index.html, class-browser.html, home.html) that
+   used to hand-roll the stone-console-row-plus-parchment-scroll look as
+   plain divs now uses a real Web Component instead, each owning its own
+   shadow stylesheet under public/components/: zone-card (Spell Finder
+   results, incl. its faction LED dot/badge, .zone-badge, spell-chip/
+   vendor-tag, and .spell-check owned-checkbox), status-panel + mana-bar
+   (Spell Finder's progress bar), spell-card/aa-card/ability-card/
+   stance-card + their shared card-base.js (Class Browser), welcome-scroll
+   + tool-card (home.html), route-path (both pages' route/directions
+   text), and spell-tooltip. No page still uses `.spell-detail`,
+   `.route-path`, `.spell-scroll`, `.spell-check`, `.spell-chip`,
+   `.vendor-tag`, `.zone-card`, `.mana-bar`, or `.status-panel` as a
+   light-DOM class — see DECISIONS.md's Web Components entries for why
+   each one moved and the cascade quirks that came with it. */
 
 /* ── Empty / loading states ── */
 .no-results { color: var(--ink-muted); font-style: italic; padding: 52px 0; text-align: center; font-size: 15px; }
@@ -316,31 +275,7 @@ button.secondary { padding: 5px 14px; font-size: 11.5px; }
   font-size: 8px; color: #9a7f3e; line-height: 1;
 }
 
-/* ── Group label (controls panel) — marks a run of fields as a distinct
-   sub-group without a full .field row of its own, e.g. Spell Finder's
-   Race/Primary Class/Deity trio, which only drive faction standing and
-   don't filter the spell results below them. Reads as the section's
-   heading, so it needs to be *more* prominent than the .field labels it
-   groups, not less: brighter (--parchment, 6.03:1 against the marble
-   panel — --gold/--gold-bright both measure under 4.5:1 here and would
-   fail this app's own WCAG AA bar for small text), bigger, and heavier
-   weight, plus the same text-shadow .field label uses to stay legible
-   against the marble turbulence texture. Extra top margin (beyond the
-   panel's own field-to-field gap) gives each new section a clear
-   breathing point after the previous one's divider. */
-.field-group-label {
-  font-size: 13px; color: var(--parchment); letter-spacing: 0.1em;
-  font-weight: 600; text-transform: uppercase; margin-top: 6px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-}
-/* Only labels that actually carry a title (e.g. Faction's standing-only
-   explanation) get the help cursor — nothing to reveal on the others. */
-.field-group-label[title] { cursor: help; }
-
-/* Collapsible section headers now live in public/components/collapsible-section.js. */
-
-/* ── Shared narrow-screen adjustments ── */
-@media (max-width: 700px) {
-  button { min-height: 44px; }
-  button.secondary { min-height: 40px; }
-}
+/* The sidebar's section-group headers (Faction/Spells/Level/Location) are
+   collapsible-section's own concern now (public/components/
+   collapsible-section.js) — .field-group-label's job before that
+   component existed. */

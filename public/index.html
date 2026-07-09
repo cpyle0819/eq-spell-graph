@@ -20,12 +20,12 @@
        beveled panel, inset from the console around them by a small honest
        gap. What's flush is *within* a cluster: individual buttons pack
        edge-to-edge, sharing a border instead of a gap, each still reading
-       as its own beveled block. .controls-panel and the zone-card list
+       as its own beveled block. sidebar-panel and the zone-card list
        follow that split: panel-level gap between the two clusters, zero
        gap + shared borders between repeated items inside each. Scoped to
-       index.html only — .controls-panel/zone-card aren't used elsewhere,
-       and the shared theme.css floating-panel treatment is still correct
-       for route.html/class-browser.html's .filter-bar etc. */
+       index.html only — zone-card isn't used elsewhere, and the shared
+       theme.css floating-panel treatment is still correct for
+       route.html's .finder-bar. */
     /* #planner's marble is the page-level backdrop, not a card's own
        surface — on wide layouts the *document* scrolls (not an inner
        #results container; #planner uses overflow:visible there so the
@@ -35,7 +35,7 @@
        the marble-tex layer (not the lit-top/shaded-bottom gradient after
        it) — the gradient still tracks #planner's own box, since that's
        meant to shade this one panel's actual top/bottom edges, not repeat
-       every viewport height. Cards (zone-card, .controls-panel,
+       every viewport height. Cards (zone-card, sidebar-panel,
        status-panel) keep their own default-attachment backgrounds — each
        is a physical object that should carry its surface with it as it
        moves, unlike the backdrop behind/between them. */
