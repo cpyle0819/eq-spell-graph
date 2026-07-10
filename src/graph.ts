@@ -483,6 +483,11 @@ export function rankZones(
 export interface ZoneVendorInfo {
   vendorCount: number;
   levelRange: { min: number; max: number } | null;
+  // Short guidebook-style blurb from the zone node's own `lore` field
+  // (migration 022, sourced from eqlwiki.com — see decisions/
+  // eql-vs-classic-eq-zone-connectivity.md). null for the small number of
+  // zones with no findable eqlwiki.com page — never fabricated.
+  lore: string | null;
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -517,9 +522,11 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
       if (cl.level > max) max = cl.level;
     }
   }
+  const zone = graph.nodes.find((n) => n.data.id === zoneId)?.data;
   return {
     vendorCount: vendorIds.size,
     levelRange: Number.isFinite(min) ? { min, max } : null,
+    lore: (zone?.lore as string | undefined) ?? null,
   };
 }
 

@@ -4,12 +4,14 @@
 // badge, and a nested <route-path> for the actual step-by-step directions.
 //
 // `destination` (from /api/route's `destination` field, see src/graph.ts's
-// getZoneVendorInfo) is `{vendorCount, levelRange}` describing spell
-// vendors actually present in the *destination* zone -- not a
-// faction/danger judgment, since Route Finder has no race/class/deity
-// context to resolve one (unlike Spell Finder's zone-card). Kept to a
-// single small badge alongside the hops badge, not a data dump -- the
-// hop-by-hop path stays the card's main content.
+// getZoneVendorInfo) is `{vendorCount, levelRange, lore}` describing the
+// *destination* zone -- vendorCount/levelRange are spell vendors actually
+// present there (not a faction/danger judgment, since Route Finder has no
+// race/class/deity context to resolve one, unlike Spell Finder's
+// zone-card), kept to a single small badge alongside the hops badge, not a
+// data dump. `lore` is a short eqlwiki.com guidebook-style blurb, passed
+// straight through to the nested <route-path>, which renders it on the
+// parchment scroll -- the hop-by-hop path stays the card's main content.
 import { RESET_CSS } from "./reset.js";
 
 function destinationBadgeText({ vendorCount, levelRange } = {}) {
@@ -109,7 +111,9 @@ class RouteCard extends HTMLElement {
     destBadge.textContent = destinationBadgeText(this.#destination);
     destBadge.title = destinationBadgeTitle(this.#to, this.#destination);
     destBadge.classList.toggle("is-empty", !this.#destination?.vendorCount);
-    this.shadowRoot.querySelector("route-path").steps = this.#steps;
+    const routePath = this.shadowRoot.querySelector("route-path");
+    routePath.steps = this.#steps;
+    routePath.lore = this.#destination?.lore || "";
   }
 }
 
