@@ -43277,6 +43277,66 @@
         "label": "Alter Plane: Hate line",
         "type": "spell_line"
       }
+    },
+    {
+      "data": {
+        "id": "zone:stonebrunt-mountains",
+        "label": "Stonebrunt Mountains",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        }
+      }
     }
   ],
   "edges": [
@@ -102478,6 +102538,22 @@
         "source": "spell:alter-plane-sky",
         "target": "spellline:alter-plane-hate",
         "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-conn-7398-mrfaygs7",
+        "source": "zone:stonebrunt-mountains",
+        "target": "zone:the-warrens",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-conn-7399-mrfaygs7",
+        "source": "zone:the-warrens",
+        "target": "zone:stonebrunt-mountains",
+        "type": "connects_to"
       }
     }
   ]

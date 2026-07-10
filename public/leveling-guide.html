@@ -134,6 +134,21 @@
     .trail-copy { font-size: 14px; line-height: 1.7; }
     .trail-copy strong { color: var(--parch-ink); font-weight: 700; }
 
+    /* Zone names link to Route Finder (?to=<zone label>, see route.js) --
+       styled as ink, not the accent color, since these are inline within
+       flowing prose rather than structural wayfinding like the trail
+       markers; an underline on hover is enough to read as "linked". */
+    .trail-copy a, .road-aside a, .ledger-item a {
+      color: inherit; text-decoration: none; border-bottom: 1px dotted var(--parch-accent);
+    }
+    .trail-copy a:hover, .road-aside a:hover, .ledger-item a:hover,
+    .trail-copy a:focus-visible, .road-aside a:focus-visible, .ledger-item a:focus-visible {
+      color: var(--parch-accent); border-bottom-style: solid;
+    }
+    .trail-copy a:focus-visible, .road-aside a:focus-visible, .ledger-item a:focus-visible {
+      outline: 2px solid var(--parch-accent); outline-offset: 2px; border-radius: 1px;
+    }
+
     /* ── Off the beaten path: situational, not sequential — set apart as
        a margin note rather than folded into the trail. ── */
     .road-aside {
@@ -208,30 +223,30 @@
           <div class="trail-stop">
             <div class="trail-range">Lv 15–25</div>
             <div class="trail-marker">◆</div>
-            <p class="trail-copy">The <strong>Estate of Unrest</strong> becomes the obvious anchor — a strong experience bonus, and camps that scale right alongside you. <strong>Solusek's Eye</strong> and <strong>Castle Mistmoore</strong> carry the rest of the climb through your low twenties, and <strong>High Keep's</strong> goblin basement is worth a look too for a change of scenery.</p>
+            <p class="trail-copy">The <a href="route.html?to=The%20Estate%20of%20Unrest"><strong>Estate of Unrest</strong></a> becomes the obvious anchor — a strong experience bonus, and camps that scale right alongside you. <a href="route.html?to=Solusek's%20Eye"><strong>Solusek's Eye</strong></a> and <a href="route.html?to=Mistmoore%20Castle"><strong>Mistmoore Castle</strong></a> carry the rest of the climb through your low twenties, and <a href="route.html?to=High%20Keep"><strong>High Keep's</strong></a> goblin basement is worth a look too for a change of scenery.</p>
           </div>
           <div class="trail-stop">
             <div class="trail-range">Lv 25–40</div>
             <div class="trail-marker">◆</div>
-            <p class="trail-copy"><strong>Ocean of Tears'</strong> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles. <strong>Lower Guk's</strong> Herbalist camp is worth lingering at from 40–44 — exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
+            <p class="trail-copy"><a href="route.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles. <a href="route.html?to=Lower%20Guk"><strong>Lower Guk's</strong></a> Herbalist camp is worth lingering at from 40–44 — exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
           </div>
           <div class="trail-stop">
             <div class="trail-range">Lv 40–48</div>
             <div class="trail-marker">◆</div>
-            <p class="trail-copy"><strong>The Hole's</strong> Docks or <strong>Sol B's</strong> Efreeti camp close out the climb before the Planes open their doors at 46.</p>
+            <p class="trail-copy"><a href="route.html?to=The%20Hole"><strong>The Hole's</strong></a> Docks or the Efreeti camp in <a href="route.html?to=Nagafen's%20Lair"><strong>Nagafen's Lair</strong></a> (Sol B, to anyone who's been around) close out the climb before the Planes open their doors at 46.</p>
           </div>
         </div>
         <div class="road-aside">
-          <strong>Off the beaten path —</strong> <strong>Najena</strong>, <strong>Permafrost Keep</strong>, <strong>Kedge Keep</strong>, and <strong>Stonebrunt Mountains</strong> all pull solid experience too, if you'd rather skip the well-known stops. Traveling solo? The game's built for it — the easiest difficulty lets you clear content made for a group at your own pace, and a private instance is always one option away.
+          <strong>Off the beaten path —</strong> <a href="route.html?to=Najena"><strong>Najena</strong></a>, <a href="route.html?to=Permafrost"><strong>Permafrost</strong></a>, <a href="route.html?to=Kedge%20Keep"><strong>Kedge Keep</strong></a>, and <a href="route.html?to=Stonebrunt%20Mountains"><strong>Stonebrunt Mountains</strong></a> all pull solid experience too, if you'd rather skip the well-known stops. Traveling solo? The game's built for it — the easiest difficulty lets you clear content made for a group at your own pace, and a private instance is always one option away.
         </div>
       </div>
 
       <div class="road-ledger">
         <h2>Notable Finds Along the Way</h2>
-        <p class="ledger-item"><strong>Soft Wicker armor</strong> <span>— The Warrens' own gear set, leather-equivalent with a look you won't see anywhere else, weapons included.</span></p>
-        <p class="ledger-item"><strong>Armor of Ro</strong> <span>— a Paladin quest line: a Mold of Ro from the Temple of Solusek Ro and the paladins camped in Rathe Mountains, combined with a crafted Bar of Ronium at a forge.</span></p>
-        <p class="ledger-item"><strong>Taskmaster's whip &amp; earring</strong> <span>— Crushbone's Taskmaster drops a 5/30 whip and his own brass earring.</span></p>
-        <p class="ledger-item"><strong>Mold of Ro Bracer</strong> <span>— turn two Deepwater Goblin Nets, dropped by Lake Rathe's goblin net masters, in to David.</span></p>
+        <p class="ledger-item"><strong>Soft Wicker armor</strong> <span>— <a href="route.html?to=The%20Warrens">The Warrens'</a> own gear set, leather-equivalent with a look you won't see anywhere else, weapons included.</span></p>
+        <p class="ledger-item"><strong>Armor of Ro</strong> <span>— a Paladin quest line: a Mold of Ro from the <a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a> and the paladins camped in <a href="route.html?to=Rathe%20Mountains">Rathe Mountains</a>, combined with a crafted Bar of Ronium at a forge.</span></p>
+        <p class="ledger-item"><strong>Taskmaster's whip &amp; earring</strong> <span>— <a href="route.html?to=Crushbone">Crushbone's</a> Taskmaster drops a 5/30 whip and his own brass earring.</span></p>
+        <p class="ledger-item"><strong>Mold of Ro Bracer</strong> <span>— turn two Deepwater Goblin Nets, dropped by <a href="route.html?to=Lake%20Rathetear">Lake Rathetear's</a> goblin net masters, in to David.</span></p>
         <p class="ledger-item"><strong>Research Aid</strong> <span>— a quest paying a percentage of experience per lightstone turned in, a fair detour if you're already passing through.</span></p>
       </div>
 

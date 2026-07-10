@@ -9,10 +9,26 @@ async function init() {
   const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
   restoreState();
+  applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
   runRoute();
+}
+
+// ?to=<zone label> deep-links here (e.g. from the Leveling Guide) preset the
+// destination, letting the visitor just pick where they're coming from.
+// Takes priority over restored localStorage state, but only for a "to" value
+// that actually matches a real zone option -- a stale/mistyped link falls
+// back to whatever was already restored rather than clearing the field.
+function applyQueryParams() {
+  const to = new URLSearchParams(location.search).get("to");
+  if (!to) return;
+  const select = document.getElementById("route-to");
+  if ([...select.options].some((o) => o.value === to)) {
+    select.value = to;
+    saveState();
+  }
 }
 
 function resetRoute() {
