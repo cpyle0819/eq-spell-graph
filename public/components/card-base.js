@@ -12,9 +12,55 @@
 // a few (spell-card's checkbox/vendor-list styling) are spell-card-only.
 import { RESET_CSS } from "./reset.js";
 
+// Shared with zone-card.js/route-card.js, which don't extend CardBase (and
+// so don't adopt BASE_SHEET below) but still want the exact same look —
+// spliced into their own stylesheets the same way RESET_CSS is. Styled for
+// the dark stone/marble header context (--ink-muted, --gold) every current
+// call site places it in (a card's name row), not the lighter parchment
+// scroll below it — see leveling-guide.html's `.ledger-item a` for the
+// parchment-appropriate sibling treatment (dotted underline on hover, same
+// idea, different palette for its lighter background).
+export const WIKI_LINK_CSS = `
+.wiki-link {
+  font-size: 11px; font-weight: 400; text-transform: none; letter-spacing: normal;
+  color: var(--ink-muted); text-decoration: none;
+  border-bottom: 1px dotted var(--ink-muted);
+  white-space: nowrap;
+}
+.wiki-link:hover, .wiki-link:focus-visible { color: var(--gold); border-bottom-color: var(--gold); border-bottom-style: solid; }
+`;
+
+const WIKI_BASE = "https://eqlwiki.com/";
+
+// eqlwiki.com URL for a page titled exactly `pageTitle` — the same
+// title-to-URL convention already validated at scale by
+// scripts/scrape-spell-details.ts (1,059/1,064 spells fetched this way)
+// and scripts/scrape-zone-lore.ts (all 89 zones): spaces become
+// underscores, then the whole thing is percent-encoded.
+export function wikiUrl(pageTitle) {
+  return WIKI_BASE + encodeURIComponent(pageTitle.replace(/ /g, "_"));
+}
+
+// A small, subtle external link to an eqlwiki.com page — metadata, not a
+// card's primary action, so it's a quiet dotted-underline text link, not a
+// button (see CLAUDE.md-referenced decisions/ on external-link styling).
+// `pageTitle` must be the *exact* wiki page title: for spells and
+// abilities that's the entry's own name (each has its own dedicated page —
+// see decisions/abilities-tab-class-defining-actions.md), but for
+// stances/invocations/AAs it's the one shared page title ("Stances &
+// Invocations" / "Alternate Advancement") every entry of that type lives
+// on, since those aren't individually paged (decisions/
+// stance-invocation-nodes-single-page-scrape.md, decisions/
+// aa-nodes-single-page-scrape-with-category.md) — a fabricated per-entity
+// URL there would likely 404.
+export function wikiLink(pageTitle) {
+  return `<a class="wiki-link" href="${wikiUrl(pageTitle)}" target="_blank" rel="noopener" title="View on eqlwiki.com">wiki ↗</a>`;
+}
+
 export const BASE_SHEET = new CSSStyleSheet();
 BASE_SHEET.replaceSync(`
 ${RESET_CSS}
+${WIKI_LINK_CSS}
 :host {
   display: block;
   cursor: pointer;

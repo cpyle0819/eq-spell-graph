@@ -5,6 +5,7 @@
 // own accessor once it *is* defined, so registration order here is load
 // bearing, not just tidiness.
 import "./components/index.js";
+import { wikiUrl } from "./components/card-base.js";
 
 // --- State ---
 let zones = [];
@@ -82,6 +83,7 @@ function renderSidebar() {
           <option value="wizard">Wizard</option>
           <option value="any" selected>Any (ignore faction)</option>
         </select></field-row>
+        <a id="primary-class-wiki-link" class="wiki-link" target="_blank" rel="noopener" hidden></a>
         <field-row label="Deity"><select id="deity-select">
           <option value="agnostic">Agnostic</option>
           <option value="bertoxxulous">Bertoxxulous</option>
@@ -174,6 +176,8 @@ async function init() {
   setupAutoSave();
   setupTooltip();
   document.getElementById("reset-filters-btn").addEventListener("click", resetFilters);
+  document.getElementById("primary-class-select").addEventListener("change", updatePrimaryClassWikiLink);
+  updatePrimaryClassWikiLink();
   runPlan();
 }
 
@@ -185,6 +189,7 @@ async function init() {
 function resetFilters() {
   document.getElementById("race-select").value = "any";
   document.getElementById("primary-class-select").value = "any";
+  updatePrimaryClassWikiLink();
   document.getElementById("deity-select").value = "any";
   document.getElementById("level-range").valueMin = 1;
   document.getElementById("level-range").valueMax = 10;
@@ -314,6 +319,27 @@ function setupAutoSave() {
     el?.addEventListener("change", saveState);
     el?.addEventListener("input", saveState);
   }
+}
+
+// Classes aren't their own node/card anywhere in the UI (see decisions/) —
+// Primary Class is the one place a *single* class is always unambiguously
+// in focus (unlike Spell Class, a multi-select tag-input), so the wiki link
+// lives here rather than cluttering every tag chip. Hidden entirely for
+// "any," which isn't a real class. Title-cases the select's lowercase
+// value ("shadow knight" -> "Shadow Knight") to match eqlwiki.com's page
+// title convention.
+function updatePrimaryClassWikiLink() {
+  const cls = document.getElementById("primary-class-select").value;
+  const link = document.getElementById("primary-class-wiki-link");
+  if (!link) return;
+  if (cls === "any") {
+    link.hidden = true;
+    return;
+  }
+  const label = cls.replace(/\b\w/g, (c) => c.toUpperCase());
+  link.href = wikiUrl(label);
+  link.textContent = `${label} on eqlwiki.com ↗`;
+  link.hidden = false;
 }
 
 // --- Populate ---

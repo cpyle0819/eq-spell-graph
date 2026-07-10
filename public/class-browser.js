@@ -2,6 +2,7 @@
 // sets properties on one -- see app.js's identical import for why order
 // here is load bearing, not just tidiness.
 import "./components/index.js";
+import { wikiUrl } from "./components/card-base.js";
 
 // Matches the planner's level-range slider bound (public/index.html
 // #level-max max="50") — the actual data tops out at level 50 (see
@@ -32,6 +33,7 @@ function renderSidebar() {
   const html = `
     <sidebar-panel>
       <field-row label="Classes"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
+      <a id="class-wiki-link" class="wiki-link" target="_blank" rel="noopener" hidden></a>
       <field-row id="category-field" label="Category" hidden><select id="category-select"></select></field-row>
       <field-row id="spellline-field" label="Spell Line" hidden><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
       <field-row id="level-field" label="Level" hidden><select id="level-select"><option value="all">All Levels</option></select></field-row>
@@ -66,8 +68,28 @@ function setupClassTagInput() {
   };
   classTagInput.addEventListener("change", (e) => {
     selectedClassNames = e.detail.selected;
+    updateClassWikiLink();
     fetchAbilities();
   });
+}
+
+// Classes aren't their own node/card anywhere in this UI (see decisions/)
+// — the Classes tag-input is a multi-select, so a wiki link only makes
+// sense once exactly one class is chosen (any other count is ambiguous:
+// zero means "browsing every class," two-plus has no single page to point
+// at). Title-cases the lowercase class name to match eqlwiki.com's page
+// title convention (e.g. "shadow knight" -> "Shadow Knight").
+function updateClassWikiLink() {
+  const link = document.getElementById("class-wiki-link");
+  if (!link) return;
+  if (selectedClassNames.length !== 1) {
+    link.hidden = true;
+    return;
+  }
+  const label = selectedClassNames[0].replace(/\b\w/g, (c) => c.toUpperCase());
+  link.href = wikiUrl(label);
+  link.textContent = `${label} on eqlwiki.com ↗`;
+  link.hidden = false;
 }
 
 function setupSpellLineTagInput() {
@@ -116,6 +138,7 @@ function setupFilters() {
 function resetFilters() {
   selectedClassNames = [];
   classTagInput.selected = selectedClassNames;
+  updateClassWikiLink();
   selectedSpellLineIds = [];
   spellLineTagInput.selected = selectedSpellLineIds;
   document.getElementById("level-select").value = "all";

@@ -277,6 +277,11 @@ export interface FactionReason {
 export interface ZoneRanking {
   zoneId: string;
   zoneName: string;
+  // Same resolved-page-title convention as ZoneVendorInfo.wikiTitle (see
+  // above) — a zone-card wiki link uses this instead of re-deriving a URL
+  // from zoneName, which would 404 for zones whose label differs from the
+  // eqlwiki.com page that actually covers them.
+  wikiTitle: string | null;
   hops: number | null;
   route: RouteStep[];
   faction: FactionStanding;
@@ -457,6 +462,7 @@ export function rankZones(
     rankings.push({
       zoneId,
       zoneName: zoneNode?.label || zoneId,
+      wikiTitle: (zoneNode?.wiki_title as string | undefined) ?? null,
       hops,
       route,
       faction,
@@ -488,6 +494,12 @@ export interface ZoneVendorInfo {
   // eql-vs-classic-eq-zone-connectivity.md). null for the small number of
   // zones with no findable eqlwiki.com page — never fabricated.
   lore: string | null;
+  // The exact eqlwiki.com page title this zone's lore/wiki link resolve
+  // to (migration 023's `wiki_title`) — not always the same as the zone's
+  // own `label` (e.g. "East Cabilis" -> "Cabilis"; see decisions/
+  // zone-naming-mismatches.md). null for the small number of zones with no
+  // findable eqlwiki.com page.
+  wikiTitle: string | null;
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -527,6 +539,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
     vendorCount: vendorIds.size,
     levelRange: Number.isFinite(min) ? { min, max } : null,
     lore: (zone?.lore as string | undefined) ?? null,
+    wikiTitle: (zone?.wiki_title as string | undefined) ?? null,
   };
 }
 

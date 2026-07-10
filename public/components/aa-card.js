@@ -2,7 +2,7 @@
 // Renders an Alternate Advancement entry: name, ranks/cost/class badges,
 // description. No interactive behavior — AA entries aren't clickable,
 // unlike spell-card's vendor-list toggle.
-import { CardBase, classBadges } from "./card-base.js";
+import { CardBase, classBadges, wikiLink } from "./card-base.js";
 
 class AaCard extends CardBase {
   #aa = null;
@@ -23,7 +23,7 @@ class AaCard extends CardBase {
       classBadges(aa.classes, this.#selected),
     ].join("");
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${aa.name}</h3></div>
+      <div class="spell-header"><h3>${aa.name}</h3>${wikiLink("Alternate Advancement")}</div>
       <div class="spell-scroll">
         <div class="spell-badges">${badges}</div>
         <p class="spell-desc">${aa.description}</p>

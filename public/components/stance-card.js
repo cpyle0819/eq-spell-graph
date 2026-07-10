@@ -2,7 +2,7 @@
 // call. Renders a Stances or Invocations entry (both tabs use the same
 // shape: name, class badges, description — neither carries level data,
 // since both are granted at level 1, unlike spell.class_levels).
-import { CardBase, classBadges } from "./card-base.js";
+import { CardBase, classBadges, wikiLink } from "./card-base.js";
 
 class StanceCard extends CardBase {
   #item = null;
@@ -18,7 +18,7 @@ class StanceCard extends CardBase {
     const item = this.#item;
     if (!item) return;
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${item.name}</h3></div>
+      <div class="spell-header"><h3>${item.name}</h3>${wikiLink("Stances & Invocations")}</div>
       <div class="spell-scroll">
         <div class="spell-badges">${classBadges(item.classes, this.#selected)}</div>
         <p class="spell-desc">${item.description}</p>

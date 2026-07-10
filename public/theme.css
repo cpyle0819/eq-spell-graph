@@ -184,6 +184,21 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 .text-action:active { filter: none; }
 .text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
+/* eqlwiki.com link for the sidebar's Primary Class (Spell Finder) / Classes
+   (Class Browser) field — only shown when exactly one class is in play
+   (see app.js/class-browser.js). Same quiet dotted-underline-on-hover
+   treatment as public/components/card-base.js's shadow-DOM `.wiki-link`
+   (used by the card types) and leveling-guide.html's `.ledger-item a` —
+   metadata, not a primary action, so it never reads as a button. Light-DOM
+   sibling of card-base.js's version since sidebar fields live in the page
+   document, not a shadow root. */
+.wiki-link {
+  font-size: 11px; color: var(--ink-muted); text-decoration: none;
+  border-bottom: 1px dotted var(--ink-muted); white-space: nowrap;
+}
+.wiki-link:hover, .wiki-link:focus-visible { color: var(--gold); border-bottom-color: var(--gold); border-bottom-style: solid; }
+.wiki-link[hidden] { display: none; }
+
 /* ── .field: Route Finder's own From/To fields (route.html has no sidebar).
    Spell Finder and Class Browser sidebar fields live in sidebar-panel/
    field-row/collapsible-section/range-picker components (public/components/),

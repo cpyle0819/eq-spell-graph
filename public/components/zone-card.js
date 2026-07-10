@@ -1,10 +1,17 @@
 // <zone-card faction="safe|neutral|wont_sell|kos">, with
 // `.setData(ranking, ownedSet, showAllSpells)` set as one atomic call (not
 // three separate setters) so a render never sees a partial mix of old and
-// new state. Renders the zone header (name + faction LED dot, faction
-// badge, spell-count badge, hops badge), an optional nested <route-path
-// variant="stone">, and the spell-scroll list of spell-rows (owned
-// checkbox + spell-chip + vendor-tags).
+// new state. Renders the zone header (name + wiki link + faction LED dot,
+// faction badge, spell-count badge, hops badge), an optional nested
+// <route-path variant="stone">, and the spell-scroll list of spell-rows
+// (owned checkbox + spell-chip + vendor-tags). The header's wiki link uses
+// `ranking.wikiTitle` (src/graph.ts's rankZones, from the zone node's
+// migration-023 `wiki_title` field) rather than deriving a URL from
+// `zoneName` — several zone labels don't match their eqlwiki.com page
+// title 1:1 (see decisions/zone-naming-mismatches.md), so a naive
+// label-to-URL guess would 404 for those. Each spell-chip already linked
+// to its own dedicated per-spell wiki page (card-base.js's `wikiUrl`, same
+// convention).
 //
 // Owns its own checkbox-change and hover-to-tooltip wiring rather than
 // delegating through app.js: once spell-chips/checkboxes live inside this
@@ -19,6 +26,7 @@
 // directly -- this component already has full spell data via `ranking`, so
 // it never needs to reach into app.js's own state.
 import { RESET_CSS } from "./reset.js";
+import { WIKI_LINK_CSS, wikiUrl, wikiLink } from "./card-base.js";
 
 const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
 // EQ /consider verbiage; the title attribute carries the practical meaning
@@ -46,6 +54,7 @@ function factionTooltip(faction, factionReasons) {
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
 ${RESET_CSS}
+${WIKI_LINK_CSS}
 :host {
   display: block;
   position: relative;
@@ -240,7 +249,7 @@ class ZoneCard extends HTMLElement {
       return `
         <div class="spell-row${isOwned ? " spell-owned" : ""}">
           <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
-          <a class="spell-chip" data-spell-id="${s.id}" href="https://eqlwiki.com/${encodeURIComponent(s.name.replace(/ /g, "_"))}" target="_blank" rel="noopener">${s.name}${s.classes.map((c) => `<span class="lvl">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}</a>
+          <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}${s.classes.map((c) => `<span class="lvl">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}</a>
           <span class="vendor-names">${s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ","))).map((v) => `<span class="vendor-tag">${v}</span>`).join("")}</span>
         </div>
       `;
@@ -257,6 +266,7 @@ class ZoneCard extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <div class="zone-card-header">
         <span class="zone-name" title="${tooltip}">${r.zoneName}</span>
+        ${r.wikiTitle ? wikiLink(r.wikiTitle) : ""}
         ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
         <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>

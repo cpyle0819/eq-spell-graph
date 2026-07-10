@@ -8,7 +8,7 @@
 // marking a spell owned here shows up there and vice versa. `pinUrl` is
 // built by class-browser.js (it depends on the page's own level-select),
 // not computed here.
-import { CardBase, classBadges, fmtDuration, fmtCast } from "./card-base.js";
+import { CardBase, classBadges, fmtDuration, fmtCast, wikiLink } from "./card-base.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`
@@ -71,6 +71,7 @@ class SpellCard extends CardBase {
 
     this.shadowRoot.addEventListener("click", async (e) => {
       if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
+      if (e.target.closest(".wiki-link")) return; // let the link navigate normally, not a vendor-toggle click
       if (e.target.closest(".spell-check")) return; // checkbox has its own handler, not a vendor-toggle click
       const scroll = this.shadowRoot.querySelector(".spell-scroll");
       const existing = scroll.querySelector(".vendor-list");
@@ -117,6 +118,7 @@ class SpellCard extends CardBase {
     this.shadowRoot.innerHTML = `
       <div class="spell-header">
         <h3>${spell.label}</h3>
+        ${wikiLink(spell.label)}
         <label class="spell-check spell-check-labeled"><input type="checkbox" data-spell-id="${spell.id}"${isOwned ? " checked" : ""}> Owned</label>
       </div>
       <div class="spell-scroll">

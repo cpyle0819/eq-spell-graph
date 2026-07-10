@@ -4,7 +4,7 @@
 // stances/invocations/AAs (see migration 018 in decisions/). The
 // class_levels shape/lookup mirrors spell-card's, since several of these
 // grant to multiple classes at different levels.
-import { CardBase, classBadges, fmtDuration } from "./card-base.js";
+import { CardBase, classBadges, fmtDuration, wikiLink } from "./card-base.js";
 
 class AbilityCard extends CardBase {
   #ability = null;
@@ -32,7 +32,7 @@ class AbilityCard extends CardBase {
     ].join("");
     const duration = fmtDuration(ability.duration);
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${ability.name}</h3></div>
+      <div class="spell-header"><h3>${ability.name}</h3>${wikiLink(ability.name)}</div>
       <div class="spell-scroll">
         <div class="spell-badges">${badges}</div>
         <p class="spell-desc">${ability.description}</p>

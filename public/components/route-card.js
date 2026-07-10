@@ -4,15 +4,22 @@
 // badge, and a nested <route-path> for the actual step-by-step directions.
 //
 // `destination` (from /api/route's `destination` field, see src/graph.ts's
-// getZoneVendorInfo) is `{vendorCount, levelRange, lore}` describing the
-// *destination* zone -- vendorCount/levelRange are spell vendors actually
-// present there (not a faction/danger judgment, since Route Finder has no
-// race/class/deity context to resolve one, unlike Spell Finder's
-// zone-card), kept to a single small badge alongside the hops badge, not a
-// data dump. `lore` is a short eqlwiki.com guidebook-style blurb, passed
-// straight through to the nested <route-path>, which renders it on the
-// parchment scroll -- the hop-by-hop path stays the card's main content.
+// getZoneVendorInfo) is `{vendorCount, levelRange, lore, wikiTitle}`
+// describing the *destination* zone -- vendorCount/levelRange are spell
+// vendors actually present there (not a faction/danger judgment, since
+// Route Finder has no race/class/deity context to resolve one, unlike
+// Spell Finder's zone-card), kept to a single small badge alongside the
+// hops badge, not a data dump. `lore` is a short eqlwiki.com
+// guidebook-style blurb, passed straight through to the nested
+// <route-path>, which renders it on the parchment scroll -- the hop-by-hop
+// path stays the card's main content. `wikiTitle` is the exact eqlwiki.com
+// page title `lore` was sourced from (migration 023's `wiki_title`, not
+// always the same string as `to` -- see decisions/
+// zone-naming-mismatches.md) -- reused here for the header's wiki link
+// instead of re-deriving a URL from `to`, which would 404 for zones with a
+// mismatched label.
 import { RESET_CSS } from "./reset.js";
+import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
 
 function destinationBadgeText({ vendorCount, levelRange } = {}) {
   if (!vendorCount) return "No vendors here";
@@ -30,6 +37,7 @@ function destinationBadgeTitle(to, { vendorCount, levelRange } = {}) {
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
 ${RESET_CSS}
+${WIKI_LINK_CSS}
 :host {
   display: block;
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
@@ -86,6 +94,7 @@ class RouteCard extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <div class="route-card-header">
           <span class="route-card-title"></span>
+          <span class="wiki-link-holder"></span>
           <span class="hops-badge"></span>
           <span class="dest-badge"></span>
         </div>
@@ -106,6 +115,7 @@ class RouteCard extends HTMLElement {
 
   render() {
     this.shadowRoot.querySelector(".route-card-title").textContent = `${this.#from} → ${this.#to}`;
+    this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = this.#destination?.wikiTitle ? wikiLink(this.#destination.wikiTitle) : "";
     this.shadowRoot.querySelector(".hops-badge").textContent = this.#hops === 1 ? "1 hop" : `${this.#hops} hops`;
     const destBadge = this.shadowRoot.querySelector(".dest-badge");
     destBadge.textContent = destinationBadgeText(this.#destination);
