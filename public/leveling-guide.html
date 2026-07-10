@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norraph — Leveling Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Page layout only — component styling lives in theme.css */
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Same centered single-column layout as home.html — this page is a
+       scroll to read, not a filter/results split. */
+    main {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 16px;
+      padding: 36px 20px 44px;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+    }
+
+    .guide-content {
+      display: flex; flex-direction: column; gap: 18px;
+      max-width: 720px; width: 100%;
+    }
+
+    .guide-content p, .guide-content li { font-size: 14px; line-height: 1.7; color: var(--ink-muted); }
+    .guide-content ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .guide-content strong { color: var(--parchment); font-weight: 600; }
+    .guide-content .caveat { font-size: 12px; font-style: italic; }
+
+    .sources { font-size: 11px; color: var(--ink-muted); opacity: 0.8; }
+    .sources a { color: inherit; }
+  </style>
+</head>
+<body>
+  <app-header subtitle="Leveling Guide">
+    <nav-links slot="nav" current="leveling-guide"></nav-links>
+  </app-header>
+
+  <main>
+    <welcome-scroll>
+      <p>New to EverQuest Legends and not sure where to go? This is a quick orientation — how leveling actually works, roughly where to hunt at each stage, and a few pieces of gear worth a detour along the way.</p>
+      <p class="caveat">The zone-by-level picks below come from the EQL player community, not eqlwiki.com's own zone tables (which are deliberately left unpublished to preserve some discovery) — treat them as a solid starting point, not gospel, and expect them to shift as the community keeps figuring the game out.</p>
+    </welcome-scroll>
+
+    <div class="guide-content">
+      <collapsible-section label="How Leveling Works" section="mechanics">
+        <ul>
+          <li>All 16 classes level together in the background until <strong>level 10</strong>, when you lock in your active loadout. After that, only your lowest-level active class(es) gain further experience, so a trio naturally levels in step.</li>
+          <li><strong>Auto-scribing</strong> is active through level 20, automatically granting your class's critical spells as you go.</li>
+          <li>Race affects leveling speed independent of faction: Dark Elf, Human, and Erudite carry no XP penalty; Ogre is -15%; Troll and Iksar are -20%.</li>
+          <li><strong>Level 46</strong> unlocks the Planes, EQL's endgame content tier.</li>
+        </ul>
+      </collapsible-section>
+
+      <collapsible-section label="Where To Go, Level By Level" section="zones">
+        <ul>
+          <li><strong>1–10:</strong> every class is leveling together, so any starting-city zone works. A Magician + Cleric duo (pet tanks, Cleric heals) is a popular fast-clear combo if you're partying.</li>
+          <li><strong>15–25:</strong> Estate of Unrest is the anchor zone — a strong XP modifier and camps that scale with you. Solusek's Eye and Castle Mistmoore carry you through the low-to-mid 20s; if those are full, High Keep's goblin basement is a solid overflow.</li>
+          <li><strong>25–40:</strong> Ocean of Tears' Elite Goblin Island (especially good with an Enchanter charming the reptiles) and Lower Guk (its Herbalist camp around 40–44) keep the pace up — the multiclass system means one trio can hold a camp that'd normally need a full group.</li>
+          <li><strong>40–48:</strong> The Hole's Docks or Sol B's Efreeti camp round out the stretch before the Planes unlock at 46.</li>
+          <li><strong>Anywhere crowded:</strong> Najena, Permafrost Keep, Kedge Keep, and Stonebrunt Mountains all offer solid XP with a lot less competition for camps.</li>
+          <li><strong>Playing solo?</strong> Personal instances (set to difficulty 0) let you avoid contention entirely and solo through content uncontested.</li>
+        </ul>
+      </collapsible-section>
+
+      <collapsible-section label="Unique Gear Along The Way" section="gear">
+        <ul>
+          <li>The Warrens has its own unique gear set — Soft Wicker armor (leather-equivalent) and matching weapons, both with a distinct look you won't see anywhere else.</li>
+          <li>Paladins can work toward the Armor of Ro: quest a Mold of Ro from the Temple of Solusek Ro and the paladins camped in Rathe Mountains, then combine it with a crafted Bar of Ronium at a forge.</li>
+          <li>Crushbone's Taskmaster drops a 5/30 whip and his own brass earring.</li>
+          <li>Lake Rathe's goblin net masters drop Deepwater Goblin Nets — turn two in to David for a Mold of Ro Bracer.</li>
+          <li>The Research Aid quest hands out a percentage of experience for every lightstone you turn in — a nice detour if you're passing through.</li>
+        </ul>
+      </collapsible-section>
+
+      <p class="sources">Sources: <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">eqlwiki.com New Player Guide</a>, <a href="https://eqlwiki.com/Armor_of_Ro_Quests" target="_blank" rel="noopener">eqlwiki.com Armor of Ro Quests</a>, <a href="https://eqlwiki.com/The_Warrens" target="_blank" rel="noopener">eqlwiki.com The Warrens</a>, community leveling routes from the EQL player wikis.</p>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+  <script type="module" src="components/index.js"></script>
+</body>
+</html>

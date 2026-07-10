@@ -7,6 +7,7 @@ const PAGES = [
   { key: "index", label: "Spell Finder", href: "index.html" },
   { key: "route", label: "Route Finder", href: "route.html" },
   { key: "class-browser", label: "Class Browser", href: "class-browser.html" },
+  { key: "leveling-guide", label: "Leveling Guide", href: "leveling-guide.html" },
 ];
 
 const sheet = new CSSStyleSheet();

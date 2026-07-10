@@ -26,7 +26,7 @@
     /* welcome-scroll/tool-card (public/components/) own their own look;
        .tool-grid below is the only layout this page still owns directly. */
     .tool-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
       max-width: 900px; width: 100%;
     }
 
@@ -56,6 +56,10 @@
       <tool-card>
         <p>The complete class reference: every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
         <macro-button square href="class-browser.html">Class Browser</macro-button>
+      </tool-card>
+      <tool-card>
+        <p>New to EQL? A quick orientation on how leveling works, roughly where to hunt at each stage, and unique gear worth a detour.</p>
+        <macro-button square href="leveling-guide.html">Leveling Guide</macro-button>
       </tool-card>
     </div>
   </main>
