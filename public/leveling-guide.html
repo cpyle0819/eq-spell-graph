@@ -9,31 +9,168 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
   <link rel="stylesheet" href="theme.css">
   <style>
-    /* Page layout only — component styling lives in theme.css */
+    /* Page layout only — component styling lives in theme.css.
+
+       Every other page in this app is a stone console: you operate
+       controls on marble. This page has no controls — it's read, not
+       operated — so the material hierarchy inverts. Stone frames the
+       page (header, footer, backdrop) but the content itself is one
+       continuous parchment sheet, the same "readable ink" surface the
+       rest of the app reserves for small inserts (tooltips, route
+       results), just given the whole stage here instead of a corner
+       of it. */
     body { min-height: 100vh; display: flex; flex-direction: column; }
 
-    /* Same centered single-column layout as home.html — this page is a
-       scroll to read, not a filter/results split. */
     main {
       flex: 1;
-      display: flex; flex-direction: column; align-items: center;
-      gap: 16px;
-      padding: 36px 20px 44px;
+      display: flex; justify-content: center;
+      padding: 52px 20px 64px;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
     }
 
-    .guide-content {
-      display: flex; flex-direction: column; gap: 18px;
-      max-width: 720px; width: 100%;
+    /* ── The page itself: a hung parchment sheet, wood dowels top and
+       bottom (rotated 90° from welcome-scroll's side dowels — this is a
+       long vertical read, not a short horizontal banner). ── */
+    .road-page {
+      position: relative;
+      max-width: 700px; width: 100%;
+      padding: 44px clamp(24px, 6vw, 64px) 40px;
+      background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+      border: 1px solid var(--parch-line);
+      border-radius: 2px;
+      box-shadow: inset 0 0 26px rgba(122, 96, 42, 0.28), 0 10px 34px rgba(0, 0, 0, 0.5);
+      color: var(--parch-ink);
+    }
+    .road-page::before, .road-page::after {
+      content: "";
+      position: absolute; left: -3px; right: -3px; height: 11px;
+      border-radius: 5px;
+      background:
+        radial-gradient(3px 3px at 9px 50%, rgba(0, 0, 0, 0.6), transparent 70%),
+        radial-gradient(3px 3px at calc(100% - 9px) 50%, rgba(0, 0, 0, 0.6), transparent 70%),
+        linear-gradient(180deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+    }
+    .road-page::before { top: -11px; }
+    .road-page::after { bottom: -11px; }
+
+    /* ── Title block ── */
+    .road-eyebrow {
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.28em; text-transform: uppercase; color: var(--parch-accent);
+    }
+    .road-title {
+      font-family: var(--font-display); font-size: clamp(26px, 4vw, 34px); font-weight: 700;
+      color: var(--parch-ink); letter-spacing: 0.02em; margin-top: 4px;
+    }
+    .road-rule {
+      width: 100%; height: 1px; margin: 16px 0; position: relative;
+      background: linear-gradient(90deg,
+        transparent, var(--parch-accent) 12%, var(--parch-accent) 45%, transparent 47%,
+        transparent 53%, var(--parch-accent) 55%, var(--parch-accent) 88%, transparent);
+      opacity: 0.55;
+    }
+    .road-rule::after {
+      content: "◆"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      font-size: 8px; color: var(--parch-accent);
+    }
+    .road-dek { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; }
+
+    /* ── Opening prose, illuminated first letter ── */
+    .road-intro { font-size: 14.5px; line-height: 1.75; margin-top: 22px; }
+    .road-intro::first-letter {
+      font-family: var(--font-display); font-weight: 700; font-size: 3.2em; line-height: 0.75;
+      float: left; padding: 0.04em 0.09em 0 0; color: var(--parch-accent);
     }
 
-    .guide-content p, .guide-content li { font-size: 14px; line-height: 1.7; color: var(--ink-muted); }
-    .guide-content ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
-    .guide-content strong { color: var(--parchment); font-weight: 600; }
-    .guide-content .caveat { font-size: 12px; font-style: italic; }
+    /* ── Field Notes: the mechanics, genuinely fact-shaped rather than a
+       narrative, so it stays a compact list rather than forced prose. ── */
+    .road-notes {
+      margin-top: 30px; padding: 16px 20px;
+      border: 1px solid var(--parch-line); border-radius: 2px;
+      background: rgba(122, 96, 42, 0.06);
+    }
+    .road-notes h2 {
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
+      margin-bottom: 10px;
+    }
+    .road-notes dl { display: flex; flex-direction: column; gap: 7px; }
+    .road-notes div { display: flex; gap: 10px; font-size: 13px; line-height: 1.6; }
+    .road-notes dt {
+      flex-shrink: 0; min-width: 92px; font-weight: 700; color: var(--parch-ink);
+      font-variant-caps: small-caps; letter-spacing: 0.03em;
+    }
+    .road-notes dd { color: var(--parch-ink-soft); }
 
-    .sources { font-size: 11px; color: var(--ink-muted); opacity: 0.8; }
-    .sources a { color: inherit; }
+    /* ── The Trail: a chronological path down the page, one waypoint per
+       level bracket. The line + diamond beads are the one place this
+       page borrows the console pages' ◆ motif — recolored for parchment
+       and put to a new job (marking real, ordered level ranges, not
+       decorating a divider). Deliberately NOT used for the overflow/solo
+       notes below, since those aren't sequential — a numbered waypoint
+       would claim an order that doesn't exist. ── */
+    .road-trail { margin-top: 34px; position: relative; }
+    .road-trail h2 {
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
+      margin-bottom: 6px;
+    }
+    .trail-path { position: relative; margin-top: 14px; }
+    .trail-path::before {
+      content: ""; position: absolute; top: 6px; bottom: 6px; left: 111px; width: 2px;
+      background-image: repeating-linear-gradient(to bottom, var(--parch-accent) 0 5px, transparent 5px 11px);
+      opacity: 0.6;
+    }
+    .trail-stop {
+      display: grid; grid-template-columns: 96px 30px 1fr; column-gap: 12px;
+      padding: 14px 0;
+    }
+    .trail-range {
+      font-family: var(--font-display); font-size: 12.5px; font-weight: 700;
+      color: var(--parch-accent); text-align: right; padding-top: 2px; white-space: nowrap;
+    }
+    .trail-marker { display: flex; justify-content: center; font-size: 15px; color: var(--parch-accent); line-height: 1.3; }
+    .trail-copy { font-size: 14px; line-height: 1.7; }
+    .trail-copy strong { color: var(--parch-ink); font-weight: 700; }
+
+    /* ── Off the beaten path: situational, not sequential — set apart as
+       a margin note rather than folded into the trail. ── */
+    .road-aside {
+      margin-top: 8px; padding: 14px 18px;
+      border-left: 2px dashed var(--parch-line);
+      font-size: 13px; line-height: 1.7; color: var(--parch-ink-soft);
+    }
+    .road-aside strong { color: var(--parch-ink); font-weight: 700; }
+
+    /* ── Notable finds: a quartermaster's ledger, not a journey — a tight
+       list, hairline-divided, set apart from the trail's flowing prose. ── */
+    .road-ledger { margin-top: 34px; }
+    .road-ledger h2 {
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
+      margin-bottom: 10px;
+    }
+    .ledger-item { padding: 10px 0; border-top: 1px solid var(--parch-line); font-size: 13px; line-height: 1.65; }
+    .ledger-item:first-of-type { border-top: none; }
+    .ledger-item strong { color: var(--parch-ink); font-weight: 700; }
+    .ledger-item span { color: var(--parch-ink-soft); }
+
+    .road-sources {
+      margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--parch-line);
+      font-size: 11px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.7;
+    }
+    .road-sources a { color: var(--parch-accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 40px 12px 48px; }
+      .road-page { padding: 36px 20px 32px; }
+      .trail-path::before { left: 15px; }
+      .trail-stop { grid-template-columns: 30px 1fr; row-gap: 4px; }
+      .trail-range { grid-column: 2; text-align: left; order: -1; }
+      .trail-marker { grid-row: 1; }
+      .trail-copy { grid-column: 2; }
+    }
   </style>
 </head>
 <body>
@@ -42,44 +179,64 @@
   </app-header>
 
   <main>
-    <welcome-scroll>
-      <p>New to EverQuest Legends and not sure where to go? This is a quick orientation — how leveling actually works, roughly where to hunt at each stage, and a few pieces of gear worth a detour along the way.</p>
-      <p class="caveat">The zone-by-level picks below come from the EQL player community, not eqlwiki.com's own zone tables (which are deliberately left unpublished to preserve some discovery) — treat them as a solid starting point, not gospel, and expect them to shift as the community keeps figuring the game out.</p>
-    </welcome-scroll>
+    <article class="road-page">
+      <p class="road-eyebrow">Norraph Field Guide</p>
+      <h1 class="road-title">The Road to Fifty</h1>
+      <div class="road-rule" aria-hidden="true"></div>
+      <p class="road-dek">Notes for a first character, kept for anyone walking the same road since.</p>
 
-    <div class="guide-content">
-      <collapsible-section label="How Leveling Works" section="mechanics">
-        <ul>
-          <li>All 16 classes level together in the background until <strong>level 10</strong>, when you lock in your active loadout. After that, only your lowest-level active class(es) gain further experience, so a trio naturally levels in step.</li>
-          <li><strong>Auto-scribing</strong> is active through level 20, automatically granting your class's critical spells as you go.</li>
-          <li>Race affects leveling speed independent of faction: Dark Elf, Human, and Erudite carry no XP penalty; Ogre is -15%; Troll and Iksar are -20%.</li>
-          <li><strong>Level 46</strong> unlocks the Planes, EQL's endgame content tier.</li>
-        </ul>
-      </collapsible-section>
+      <p class="road-intro">New to EverQuest Legends and not sure where to point your boots? This is a quick orientation — how leveling actually works, the road most people walk between one and fifty, and a few pieces of gear worth the detour. The zone picks ahead come from the EQL player community rather than eqlwiki.com's own zone tables, which are deliberately left unpublished to preserve some discovery — read them as a solid starting point, not gospel, and expect the road to shift a little as the community keeps finding its way.</p>
 
-      <collapsible-section label="Where To Go, Level By Level" section="zones">
-        <ul>
-          <li><strong>1–10:</strong> every class is leveling together, so any starting-city zone works. A Magician + Cleric duo (pet tanks, Cleric heals) is a popular fast-clear combo if you're partying.</li>
-          <li><strong>15–25:</strong> Estate of Unrest is the anchor zone — a strong XP modifier and camps that scale with you. Solusek's Eye and Castle Mistmoore carry you through the low-to-mid 20s; if those are full, High Keep's goblin basement is a solid overflow.</li>
-          <li><strong>25–40:</strong> Ocean of Tears' Elite Goblin Island (especially good with an Enchanter charming the reptiles) and Lower Guk (its Herbalist camp around 40–44) keep the pace up — the multiclass system means one trio can hold a camp that'd normally need a full group.</li>
-          <li><strong>40–48:</strong> The Hole's Docks or Sol B's Efreeti camp round out the stretch before the Planes unlock at 46.</li>
-          <li><strong>Anywhere crowded:</strong> Najena, Permafrost Keep, Kedge Keep, and Stonebrunt Mountains all offer solid XP with a lot less competition for camps.</li>
-          <li><strong>Playing solo?</strong> Personal instances (set to difficulty 0) let you avoid contention entirely and solo through content uncontested.</li>
-        </ul>
-      </collapsible-section>
+      <div class="road-notes">
+        <h2>Field Notes</h2>
+        <dl>
+          <div><dt>Level 10</dt><dd>your active loadout locks in — from here, only your lowest-level active class(es) keep gaining experience, so a trio levels in step.</dd></div>
+          <div><dt>Level 20</dt><dd>auto-scribing stops — it's been granting your class's critical spells automatically up to this point.</dd></div>
+          <div><dt>Level 46</dt><dd>the Planes open, EQL's endgame tier.</dd></div>
+          <div><dt>Race</dt><dd>Dark Elf, Human, and Erudite carry no XP penalty; Ogre is −15%; Troll and Iksar are −20%.</dd></div>
+        </dl>
+      </div>
 
-      <collapsible-section label="Unique Gear Along The Way" section="gear">
-        <ul>
-          <li>The Warrens has its own unique gear set — Soft Wicker armor (leather-equivalent) and matching weapons, both with a distinct look you won't see anywhere else.</li>
-          <li>Paladins can work toward the Armor of Ro: quest a Mold of Ro from the Temple of Solusek Ro and the paladins camped in Rathe Mountains, then combine it with a crafted Bar of Ronium at a forge.</li>
-          <li>Crushbone's Taskmaster drops a 5/30 whip and his own brass earring.</li>
-          <li>Lake Rathe's goblin net masters drop Deepwater Goblin Nets — turn two in to David for a Mold of Ro Bracer.</li>
-          <li>The Research Aid quest hands out a percentage of experience for every lightstone you turn in — a nice detour if you're passing through.</li>
-        </ul>
-      </collapsible-section>
+      <div class="road-trail">
+        <h2>The Trail</h2>
+        <div class="trail-path">
+          <div class="trail-stop">
+            <div class="trail-range">Lv 1–10</div>
+            <div class="trail-marker">◆</div>
+            <p class="trail-copy">Every class you own is leveling together while you find your footing — start anywhere near your home city. Partying up? A <strong>Magician</strong> and <strong>Cleric</strong> pair is fast and forgiving: the pet tanks, the Cleric keeps it upright.</p>
+          </div>
+          <div class="trail-stop">
+            <div class="trail-range">Lv 15–25</div>
+            <div class="trail-marker">◆</div>
+            <p class="trail-copy">The <strong>Estate of Unrest</strong> becomes the obvious anchor — a strong experience bonus, and camps that scale right alongside you. <strong>Solusek's Eye</strong> and <strong>Castle Mistmoore</strong> carry the rest of the climb through your low twenties; if both are packed, <strong>High Keep's</strong> goblin basement is a dependable overflow.</p>
+          </div>
+          <div class="trail-stop">
+            <div class="trail-range">Lv 25–40</div>
+            <div class="trail-marker">◆</div>
+            <p class="trail-copy"><strong>Ocean of Tears'</strong> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles. <strong>Lower Guk's</strong> Herbalist camp is worth lingering at from 40–44 — exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
+          </div>
+          <div class="trail-stop">
+            <div class="trail-range">Lv 40–48</div>
+            <div class="trail-marker">◆</div>
+            <p class="trail-copy"><strong>The Hole's</strong> Docks or <strong>Sol B's</strong> Efreeti camp close out the climb before the Planes open their doors at 46.</p>
+          </div>
+        </div>
+        <div class="road-aside">
+          <strong>Off the beaten path —</strong> when Unrest or Mistmoore are standing room only, <strong>Najena</strong>, <strong>Permafrost Keep</strong>, <strong>Kedge Keep</strong>, and <strong>Stonebrunt Mountains</strong> all pull solid experience with a fraction of the competition. Traveling alone, any stretch of the road? Set a personal instance to difficulty 0 and nothing stands between you and the kill.
+        </div>
+      </div>
 
-      <p class="sources">Sources: <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">eqlwiki.com New Player Guide</a>, <a href="https://eqlwiki.com/Armor_of_Ro_Quests" target="_blank" rel="noopener">eqlwiki.com Armor of Ro Quests</a>, <a href="https://eqlwiki.com/The_Warrens" target="_blank" rel="noopener">eqlwiki.com The Warrens</a>, community leveling routes from the EQL player wikis.</p>
-    </div>
+      <div class="road-ledger">
+        <h2>Notable Finds Along the Way</h2>
+        <p class="ledger-item"><strong>Soft Wicker armor</strong> <span>— The Warrens' own gear set, leather-equivalent with a look you won't see anywhere else, weapons included.</span></p>
+        <p class="ledger-item"><strong>Armor of Ro</strong> <span>— a Paladin quest line: a Mold of Ro from the Temple of Solusek Ro and the paladins camped in Rathe Mountains, combined with a crafted Bar of Ronium at a forge.</span></p>
+        <p class="ledger-item"><strong>Taskmaster's whip &amp; earring</strong> <span>— Crushbone's Taskmaster drops a 5/30 whip and his own brass earring.</span></p>
+        <p class="ledger-item"><strong>Mold of Ro Bracer</strong> <span>— turn two Deepwater Goblin Nets, dropped by Lake Rathe's goblin net masters, in to David.</span></p>
+        <p class="ledger-item"><strong>Research Aid</strong> <span>— a quest paying a percentage of experience per lightstone turned in, a fair detour if you're already passing through.</span></p>
+      </div>
+
+      <p class="road-sources">Field notes drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Armor_of_Ro_Quests" target="_blank" rel="noopener">Armor of Ro Quests</a>, and <a href="https://eqlwiki.com/The_Warrens" target="_blank" rel="noopener">The Warrens</a>, plus community leveling routes from the EQL player wikis.</p>
+    </article>
   </main>
 
   <app-footer></app-footer>
