@@ -104,7 +104,7 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
 
   // GET /api/classes/abilities — list classes that have stance/invocation/AA/
   // ability data. A separate roster from /api/classes: it includes classes
-  // with no purchasable spells (e.g. berserker) — see DECISIONS.md. Powers
+  // with no purchasable spells (e.g. berserker) — see decisions/. Powers
   // the Class Browser page's class pickers.
   if (pathname === "/api/classes/abilities") {
     const graph = getGraph();
@@ -169,7 +169,7 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // GET /api/abilities?class=rogue,paladin — class-defining special combat
   // actions that aren't spells/stances/invocations/AAs (Rogue poison
   // disciplines, Backstab, Kick, Taunt, etc. — see migration 018 and
-  // DECISIONS.md). Uses class_levels like spells (not a flat classes
+  // decisions/). Uses class_levels like spells (not a flat classes
   // array) since several of these are granted to multiple classes at
   // different levels each.
   //

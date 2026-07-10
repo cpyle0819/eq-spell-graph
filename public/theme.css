@@ -231,7 +231,7 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
    text), and spell-tooltip. No page still uses `.spell-detail`,
    `.route-path`, `.spell-scroll`, `.spell-check`, `.spell-chip`,
    `.vendor-tag`, `.zone-card`, `.mana-bar`, or `.status-panel` as a
-   light-DOM class — see DECISIONS.md's Web Components entries for why
+   light-DOM class — see decisions/real-web-components-shadow-dom.md for why
    each one moved and the cascade quirks that came with it. */
 
 /* ── Empty / loading states ── */

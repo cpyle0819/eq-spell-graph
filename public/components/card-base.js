@@ -96,7 +96,7 @@ export class CardBase extends HTMLElement {
 // Class + (for spells/abilities) per-class level badges — badged with only
 // the *selected* classes, not an entry's full class list, so overlap
 // between selections is visible at a glance. An empty selection means
-// "browsing every class" (see DECISIONS.md), so it shows every class the
+// "browsing every class" (see decisions/), so it shows every class the
 // entry actually has rather than filtering down to nothing.
 export function classBadges(entryClasses, selected, levelLookup) {
   const granting = selected.length ? entryClasses.filter((c) => selected.includes(c)) : entryClasses;

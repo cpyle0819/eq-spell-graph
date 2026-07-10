@@ -1,0 +1,4 @@
+# Class Browser search must not hide category tabs
+
+`buildSections()` used the *search-filtered* item count to decide whether a tab existed at all (`.filter((section) => section.items.length)`), so typing a query that matched nothing in, say, Stances made the Stances tab disappear entirely while searching — losing track of which categories exist at all mid-search. Split each section into `allItems` (class-selection-filtered only, never touched by the search box — decides whether the tab exists) and `items` (search-filtered on top — decides the tab's count badge and what renders). A tab now only disappears when the category has zero items for the *class* selection (e.g. a caster has no Disciplines tab at all); searching just drives the count to "0" and the results pane to a "No {category} match your search" message, without touching tab visibility.
+

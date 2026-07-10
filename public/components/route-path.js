@@ -8,7 +8,7 @@
 // used by the Route Finder's result. `variant="stone"` instead renders
 // plain dark-stone text with no box or dowels, matching the Spell Finder's
 // zone-card, where the route is wayfinding detail rather than the page's
-// focus content (see DECISIONS.md) — same label/steps markup and logic,
+// focus content (see decisions/) — same label/steps markup and logic,
 // just a different palette/box for a different surface.
 import { RESET_CSS } from "./reset.js";
 

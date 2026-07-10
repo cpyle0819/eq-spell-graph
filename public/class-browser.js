@@ -5,14 +5,14 @@ import "./components/index.js";
 
 // Matches the planner's level-range slider bound (public/index.html
 // #level-max max="50") — the actual data tops out at level 50 (see
-// DECISIONS.md).
+// decisions/).
 const MAX_SPELL_LEVEL = 50;
 let availableClasses = [];
 
 // Same tag-box idiom as the Spell Finder's Spell Class filter — no fixed
 // cap on how many classes you can pick. An empty selection means "all
 // classes," matching /api/*'s existing "no class filter = everything"
-// convention (see DECISIONS.md); deliberately not pre-selecting a default
+// convention (see decisions/); deliberately not pre-selecting a default
 // class, since "no tags" and "any class" should be the same state, not two
 // different starting points that happen to look similar.
 let classTagInput;
@@ -151,7 +151,7 @@ async function fetchAbilities() {
 }
 
 // Builds the "Find in Spell Finder" link. The planner's rankZones() bypasses
-// its own class/level filters entirely for a pinned spell (see DECISIONS.md),
+// its own class/level filters entirely for a pinned spell (see decisions/),
 // so these params aren't load-bearing for correctness — but without them the
 // planner would keep showing whatever level range / Shopping For classes /
 // race / deity were last saved there, which could be wildly unrelated to

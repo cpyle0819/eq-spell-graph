@@ -5,7 +5,7 @@
  * Catacombs, Upper Guk, High Keep, Gorge of King Xorbb) but was missing most
  * of the rest of the classic dungeon list. Connectivity sourced from
  * wiki.project1999.com per-zone pages (user OK'd using P1999/classic-EQ data
- * for this, unlike the eqlwiki.com-only rule in DECISIONS.md for overland
+ * for this, unlike the eqlwiki.com-only rule in decisions/ for overland
  * zones — this server is currently pre-Kunark, so no Kunark/Velious dungeons
  * are added here).
  *

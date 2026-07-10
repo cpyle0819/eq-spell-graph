@@ -43,7 +43,7 @@ Route Finder walks the same zone adjacency graph via BFS for a plain point-to-po
 
 ## Data
 
-1,064 spells across the 12 classes with purchasable spells, 88 zones (47 with vendors), full bidirectional zone connectivity, boat/translocator crossings flagged. Most spells also carry description/mana/cast-time/etc. detail. Class Browser adds 9 stances, 9 invocations, 131 Alternate Advancements, and 27 class-defining abilities (Rogue's poison disciplines, Backstab, Kick, Lay Hands, etc.) — this data covers 16 classes total, including 4 (Berserker, Monk, Rogue, Warrior) with no purchasable spells at all. See `DECISIONS.md` for why these are tracked as separate, independently-derived class rosters rather than one unified list.
+1,064 spells across the 12 classes with purchasable spells, 89 zones (47 with vendors), full bidirectional zone connectivity, boat/translocator crossings flagged. Most spells also carry description/mana/cast-time/etc. detail. Class Browser adds 9 stances, 9 invocations, 131 Alternate Advancements, and 27 class-defining abilities (Rogue's poison disciplines, Backstab, Kick, Lay Hands, etc.) — this data covers 16 classes total, including 4 (Berserker, Monk, Rogue, Warrior) with no purchasable spells at all. See `decisions/` for why these are tracked as separate, independently-derived class rosters rather than one unified list.
 
 **Updating the graph:** `data/graph.json` is never hand-edited or regenerated wholesale. Changes go through a numbered, run-once migration in `migrations/` (e.g. `bun run migrations/012-normalize-skill-names.ts`) that reads the current file, transforms it, and writes it back — see any existing migration for the pattern. `src/graph.ts` is the only code allowed to read/write it outside of migrations.
 
@@ -62,7 +62,7 @@ The `levelMin`/`levelMax` params take a range; `class`/`spells`/`zones` take com
 | `GET /api/spell/:id/vendors` | NPCs and zones selling a spell |
 | `GET /api/zones` | All zones |
 | `GET /api/classes` | Classes with purchasable spell data |
-| `GET /api/classes/abilities` | Classes with stance/invocation/AA/ability data (a separate, broader roster — see `DECISIONS.md`) |
+| `GET /api/classes/abilities` | Classes with stance/invocation/AA/ability data (a separate, broader roster — see `decisions/`) |
 | `GET /api/stances-invocations?class=warrior,paladin` | Stances and invocations for the given classes |
 | `GET /api/aa?class=warrior,paladin` | Alternate Advancements, grouped by category (general/archetype/class/special) |
 | `GET /api/abilities?class=rogue,paladin` | Class-defining special abilities (Rogue poison disciplines, Backstab, Kick, Lay Hands, etc.) |
@@ -80,7 +80,7 @@ The `levelMin`/`levelMax` params take a range; `class`/`spells`/`zones` take com
 | `POST /api/connects` | Link zone ↔ zone |
 | `DELETE /api/node/:id` | Remove a node and its edges |
 
-These have no auth and only exist in `src/server.ts` (the local Bun server) — see `DECISIONS.md` for why they're never bundled into the Lambda build.
+These have no auth and only exist in `src/server.ts` (the local Bun server) — see `decisions/` for why they're never bundled into the Lambda build.
 
 ## Deploying
 

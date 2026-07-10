@@ -1,0 +1,4 @@
+# Class Browser's category picker needed `classBadges()` to handle an empty selection
+
+`classBadges(entryClasses, selected, levelLookup)` filters `entryClasses` down to just the ones in `selected` — correct when the tag box's whole purpose is showing per-class detail for a chosen class. But once "no classes selected" became the normal *browsing-everything* state (see "No classes selected means all classes" above), `selected` is legitimately `[]`, and `.filter(c => selected.includes(c))` on an empty array always returns nothing — so every spell/ability card silently lost its class badge entirely while browsing unfiltered. Fixed: when `selected.length === 0`, show every one of the entry's classes instead of filtering to none, matching the same "no filter = show everything" convention used everywhere else in this app.
+

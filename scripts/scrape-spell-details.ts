@@ -4,7 +4,7 @@
  * instead of the wiki, and falling back to the EQL wiki MediaWiki API for
  * everything else. Outputs data/spell-details.json.
  *
- * Field split (see DECISIONS.md's "Spell details sourced from the local
+ * Field split (see decisions/'s "Spell details sourced from the local
  * client where verified" entry for how each local mapping was verified):
  *   - mana, castTime, recastTime: read directly from spells_us.txt numeric
  *     fields — verified as exact matches across many spells.
@@ -30,7 +30,7 @@
  *     opposed to just beneficial/detrimental), fizzleTime, and duration's
  *     exact text all depend on the client's effect-slot fields
  *     (effectid/base/base2/max[12]), which statistical correlation couldn't
- *     locate reliably (see DECISIONS.md).
+ *     locate reliably (see decisions/).
  *
  * Usage: bun run scripts/scrape-spell-details.ts <path-to-EQ-install-dir>
  * (or set EQ_INSTALL_DIR — no default path is hardcoded, since this repo is
@@ -69,7 +69,7 @@ export interface SpellDetail {
 }
 
 // Field offsets verified empirically (see scripts/lib/client-spells.ts and
-// DECISIONS.md) — this file's layout is an older two-file client format
+// decisions/) — this file's layout is an older two-file client format
 // that doesn't match modern EQEmu documentation 1:1.
 const FIELD = { range: 4, aoerange: 5, castTime: 8, recastTime: 10, mana: 14, skill: 32 };
 

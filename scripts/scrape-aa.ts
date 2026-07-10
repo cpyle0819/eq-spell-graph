@@ -138,7 +138,7 @@ async function main() {
   const classSubsections = splitClassSubsections(classSection);
   // The class roster is derived from the "Class AAs" subsection headings
   // themselves (16 classes, including Berserker/Monk/Warrior/Rogue, which
-  // have no purchasable spells — see DECISIONS.md) rather than hardcoded,
+  // have no purchasable spells — see decisions/) rather than hardcoded,
   // so General/Archetype/Special AAs (which apply to every class) stay in
   // sync with whatever classes the wiki actually documents.
   const allClasses = classSubsections.map((c) => c.className).sort();
@@ -148,7 +148,7 @@ async function main() {
   // says "every class ... has Archetype AAs, some classes have more than
   // others" but doesn't say which. There's no per-ability source to subset
   // by class, so (like General/Special) these are tagged all-classes; see
-  // DECISIONS.md for the approximation this makes.
+  // decisions/ for the approximation this makes.
   const archetypeTable = extractFirstTable(archetypeSection);
   const specialTable = extractFirstTable(specialSection);
   if (!generalTable) throw new Error("Could not locate General AAs table");

@@ -1,0 +1,4 @@
+# Spell detail enrichment
+
+Migration 011 enriches spell nodes with description, mana cost, cast/recast/fizzle time, duration, target type, spell type, resist, and range (`scripts/scrape-spell-details.ts`); migration 012 cleans up a leftover "Skill:" prefix on the `skill` field from wikitext parsing. 1,059 of 1,064 spells have detail data (a handful of wiki pages didn't parse). Powers the spell tooltip in the planner and the detail cards on the spell browser page — cosmetic/informational only, not used in ranking logic. The script fetches the EQL wiki's MediaWiki API directly via plain `fetch()`, not a headless browser — this line previously (inaccurately) said "via Playwright," which hasn't been true of this script for a while; see the "Spell details partially sourced from the local client" entry above for the current mana/castTime/recastTime/range/skill local-vs-wiki split.
+

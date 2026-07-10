@@ -2,7 +2,7 @@
 
 ## Project
 
-Spell shopping route planner for **EverQuest Legends** (EQL) — a separate, newer game from Daybreak, not classic EverQuest/Project 1999. Zone connectivity, NPCs, and content can diverge from classic EQ; verify against eqlwiki.com, not classic-EQ sources (see DECISIONS.md). Graph-based, faction-aware. Bun + TypeScript backend, vanilla JS frontend.
+Spell shopping route planner for **EverQuest Legends** (EQL) — a separate, newer game from Daybreak, not classic EverQuest/Project 1999. Zone connectivity, NPCs, and content can diverge from classic EQ; verify against eqlwiki.com, not classic-EQ sources (see `decisions/eql-vs-classic-eq-zone-connectivity.md`). Graph-based, faction-aware. Bun + TypeScript backend, vanilla JS frontend.
 
 ## Commands
 
@@ -36,11 +36,11 @@ After a feature in this repo is implemented and verified, the default is to comm
 
 ## Design Decisions
 
-Read `DECISIONS.md` before making changes. It contains architecture choices and EQ domain knowledge that shaped the code.
+`decisions/` holds architecture choices and EQ domain knowledge that shaped the code — one file per decision, grouped by category in `decisions/INDEX.md`. Read `decisions/INDEX.md` before making changes (it's short — one line per decision); open the specific file(s) relevant to what you're touching for the full rationale rather than reading the whole folder.
 
-When a proposed change conflicts with a decision in that file, surface the conflict to the user before proceeding. Decisions can be updated — but deliberately, not accidentally.
+When a proposed change conflicts with a decision, surface the conflict to the user before proceeding. Decisions can be updated — but deliberately, not accidentally.
 
-When a new non-obvious decision is made during development, add it to `DECISIONS.md`.
+When a new non-obvious decision is made during development, add a new file to `decisions/` (slugified title as the filename — see any existing file for the format) and a line to `decisions/INDEX.md` under the right category.
 
 ## Conventions
 

@@ -2,7 +2,7 @@
 // button or link inside it). Every non-text button across all pages
 // renders through this — nav links, Show all/Show remaining/Clear owned,
 // home page tool-card buttons; .text-action links are a separate plain-text
-// idiom and don't use this. See DECISIONS.md for the bevel rationale.
+// idiom and don't use this. See decisions/ for the bevel rationale.
 //
 // Usage: <macro-button href="index.html">Spell Finder</macro-button> or
 // <macro-button square>Clear owned</macro-button>. Size fits the label by

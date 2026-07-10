@@ -1,0 +1,12 @@
+# Home page: first-time visitors land there, everyone else lands on Spell Finder
+
+`public/home.html` — a static page (no `<script>` at all; nothing on it needs interactivity beyond plain links) explaining what Norraph does, plus a card per tool (Spell Finder/Route Finder/Class Browser) linking into it. `index.html` (served at `/`, per `src/server.ts`) is the only page that redirects: `app.js`'s `redirectFirstTimeVisitor()` runs first thing in `init()` and sends a visitor to `home.html` instead of loading the planner, if and only if a dedicated `eq-visited` `localStorage` key isn't set yet.
+
+**`eq-visited` is a separate key from `eq-planner-state` (`STATE_KEY`), not folded into it.** The planner state key is only written by `saveState()`, which doesn't fire on a bare first load — someone who visits, looks around, and leaves without touching a filter wouldn't have `STATE_KEY` set either, so gating the redirect on that would bounce them to Home on *every* visit, not just the first. `eq-visited` is written unconditionally the moment `redirectFirstTimeVisitor()` fires, independent of whether they ever interact with a filter.
+
+**Marked visited before redirecting, not after.** This makes it a one-shot: if it set the flag only once the visitor clicked through Home's "Open" button, then landing back on `index.html` via forward/back navigation without clicking through (or a crawler/bot hitting `/` and never following the redirect) would leave the flag unset and loop. Setting it immediately means the redirect can only ever fire once per browser, full stop.
+
+**Skipped when the URL has query params.** Class Browser's "Find in Spell Finder" link (`buildPinUrl()` in `class-browser.js`) sends a first-time visitor straight to `index.html?pinSpell=...` — redirecting that to Home would silently drop the pinned spell they clicked through for. A query string is treated as "this arrival has purposeful context," worth preserving over showing the splash. It also means `eq-visited` doesn't get set on that path, so a *later* bare visit to `/` still shows Home once — the deep link satisfies "don't interrupt this specific errand," not "this browser has now seen the tour."
+
+**The "Norraph" `<h1>` on the other three pages links back to Home** (`header h1 a` in `theme.css`, inheriting the gold engraved look rather than default link styling) — `home.html`'s own `<h1>` stays plain text, no reason to link home to itself.
+

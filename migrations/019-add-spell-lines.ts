@@ -10,7 +10,7 @@
  * field, verified empirically against known lines — see that script's
  * comments). Not from eqlwiki.com; the wiki has no equivalent concept.
  *
- * A new node type (per DECISIONS.md's "node types are generic and
+ * A new node type (per decisions/'s "node types are generic and
  * extensible" rule) rather than a flat field on spell, so a line's full
  * membership is a normal graph traversal rather than a manual scan over
  * every spell's raw group id.

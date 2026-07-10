@@ -45,7 +45,7 @@ ${RESET_CSS}
 
 /* !important: theme.css's page-level "* { margin: 0 }" reset targets these
    slotted <p> elements directly too (they're real light-DOM nodes) and, per
-   the same rule documented in DECISIONS.md for :host, wins over a shadow-
+   the same rule documented in decisions/ for :host, wins over a shadow-
    tree rule at normal priority regardless of specificity -- without
    !important here every paragraph just sat at margin-top: 0. */
 ::slotted(p) { font-size: 14px; line-height: 1.7; margin-top: 10px !important; }

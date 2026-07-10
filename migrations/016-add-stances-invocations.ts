@@ -1,7 +1,7 @@
 /**
  * Migration 016: Add stance and invocation nodes.
  *
- * New node types (per DECISIONS.md's "node types are generic and
+ * New node types (per decisions/'s "node types are generic and
  * extensible" rule): "stance" and "invocation". Each carries a `classes`
  * array of full lowercase class names — the same shape convention as
  * spell.class_levels' `class` field, but with no `level` since stances and
@@ -9,12 +9,12 @@
  *
  * Source: data/stances-invocations.json, produced by
  * scripts/scrape-stances.ts from a single eqlwiki.com page (unlike spell
- * data, which is scraped per-spell — see DECISIONS.md).
+ * data, which is scraped per-spell — see decisions/).
  *
  * Note: the class roster here includes "berserker", which has no spell
  * data and is absent from ALL_CLASSES in migration 007 / the spell-derived
  * /api/classes roster. Stances/invocations and spells are tracked
- * independently — see DECISIONS.md.
+ * independently — see decisions/.
  */
 
 import { readFileSync, writeFileSync } from "fs";

@@ -1,0 +1,4 @@
+# Reset filters: restore HTML defaults, don't blank the form
+
+Added a "Reset filters"/"Reset" `.text-action` link to all three pages (Spell Finder, Route Finder, Class Browser). It restores each field to the value already baked into the HTML (Any/Any/Any faction + levels 1-10 on Spell Finder — see "Primary Class also has an 'Any (ignore faction)' option" above for why this isn't Barbarian/Shaman/The Tribunal anymore, `— None —`/All Levels/empty search on Class Browser, `— Select Zone —` on Route Finder) rather than clearing everything to empty — a populated, sensible starting point is more useful than a blank form, and it's what `applyDefaults()` already did for first-time visitors. Deliberately scoped to filter/search inputs only: it does not touch owned-spell marks on Spell Finder, since that's a separate, already-solved concern with its own "Clear owned" action.
+

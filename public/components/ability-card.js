@@ -1,7 +1,7 @@
 // <ability-card>, with `.setData(ability, selectedClasses)` set as one
 // atomic call. Renders Rogue poison disciplines, Backstab, Kick, Taunt,
 // etc. — class-defining special combat actions that aren't spells/
-// stances/invocations/AAs (see migration 018 in DECISIONS.md). The
+// stances/invocations/AAs (see migration 018 in decisions/). The
 // class_levels shape/lookup mirrors spell-card's, since several of these
 // grant to multiple classes at different levels.
 import { CardBase, classBadges, fmtDuration } from "./card-base.js";

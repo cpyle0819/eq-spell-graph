@@ -1,5 +1,5 @@
 // <mana-bar>, with `.value`/`.max` set as properties. Renders the 5-bead
-// vitals-bar progress fill (see DECISIONS.md for the reference-client
+// vitals-bar progress fill (see decisions/ for the reference-client
 // bead styling) and sets role="progressbar" plus the aria-value*/
 // aria-label/title attributes on itself from value/max.
 //
@@ -35,7 +35,7 @@ ${RESET_CSS}
 /* glasswork overlay: end knobs, five beaded segments with bright seams,
    per-bead specular, overall glass shading -- reverse-engineered
    pixel-for-pixel from the reference client's vitals bar (see
-   DECISIONS.md), so it stays exactly as observed. */
+   decisions/), so it stays exactly as observed. */
 :host::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background-image:

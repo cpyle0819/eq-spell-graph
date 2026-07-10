@@ -1,7 +1,7 @@
 /**
  * Shared parsing/matching logic for the locally installed EverQuest Legends
  * client's spells_us.txt, used by both scripts/extract-spell-lines.ts and
- * scripts/scrape-spell-details.ts. See DECISIONS.md's "Spell lines sourced
+ * scripts/scrape-spell-details.ts. See decisions/'s "Spell lines sourced
  * from the locally installed client" entry for how these field offsets were
  * verified — this file's layout is an older two-file format (message text
  * lives separately in spells_us_str.txt) that doesn't match modern EQEmu

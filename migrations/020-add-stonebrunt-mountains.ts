@@ -4,7 +4,7 @@
  *
  * Surfaced while linking the Leveling Guide (public/leveling-guide.html) to
  * Route Finder — the guide named it as an overflow leveling zone but it had
- * no node here at all. This is an overland zone, so per DECISIONS.md its
+ * no node here at all. This is an overland zone, so per decisions/ its
  * connectivity is sourced from eqlwiki.com, not classic-EQ assumptions:
  * eqlwiki.com/Stonebrunt_Mountains states "The only way to get to Stonebrunt
  * Mountains is by travelling through Paineel and through the kobold-filled

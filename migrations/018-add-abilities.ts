@@ -2,7 +2,7 @@
  * Migration 018: Add "ability" nodes — class-defining special combat
  * actions that are neither spells, stances/invocations, nor AAs.
  *
- * New node type (per DECISIONS.md's "node types are generic and
+ * New node type (per decisions/'s "node types are generic and
  * extensible" rule): "ability". Shape:
  *   { label, description, class_levels: [{class, level}], duration?,
  *     reuseTime?, category?: "combat" | "utility" | "special" }

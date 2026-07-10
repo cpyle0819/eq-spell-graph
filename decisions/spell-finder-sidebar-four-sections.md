@@ -1,0 +1,6 @@
+# Spell Finder sidebar is grouped into four labeled sections: Faction, Spells, Level, Location
+
+`.field-group-label` (theme.css) marks each group with a small caption above its first field, each group closed off by a `.control-sep` divider — the same ornamental divider that used to just sit once between the Race/Primary Class/Deity trio and everything else. Order was deliberately picked as Faction → Spells → Level → Location, moving the Levels range picker up from last position to its own group between Spells and Location, rather than leaving it trailing after Current Zone where it read as an afterthought.
+
+Only the Faction group's label carries a `title` tooltip ("Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below") — that's the one dimension genuinely confusable with a spell filter (a plausible first guess is "picking a race narrows which spells I see"), so it needed an explanation, not just a name. Spells/Level/Location are self-explanatory groupings and don't need one. `.field-group-label[title]` is the only selector that gets `cursor: help`, so the other three don't visually promise an explanation they don't have.
+

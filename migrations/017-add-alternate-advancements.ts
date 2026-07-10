@@ -1,7 +1,7 @@
 /**
  * Migration 017: Add Alternate Advancement (AA) nodes.
  *
- * New node type (per DECISIONS.md's "node types are generic and extensible"
+ * New node type (per decisions/'s "node types are generic and extensible"
  * rule): "aa". Carries `label`, `description`, `ranks`, `cost` (a raw
  * "N/N/N"-per-rank string — some ranks are still "?" in the source wiki, so
  * this is kept as text rather than parsed into numbers), `classes: string[]`,
@@ -10,7 +10,7 @@
  *
  * Source: data/aa.json, produced by scripts/scrape-aa.ts from the single
  * eqlwiki.com "Alternate Advancement" page (same one-page-covers-everything
- * shape as stances/invocations — see DECISIONS.md).
+ * shape as stances/invocations — see decisions/).
  *
  * Node id is `aa:{slug(name)}`, except for "class" category entries, which
  * are `aa:{slug(class)}:{slug(name)}` — a handful of class-specific AA names

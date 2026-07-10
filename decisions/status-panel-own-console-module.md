@@ -1,0 +1,4 @@
+# Spell Finder's status panel is its own console module, not inline results text
+
+`#status-panel` (mana bar, owned count, Show all/Clear owned) is a dedicated panel sitting beside `.controls-panel` on desktop (below it on mobile), separate from `#results`. It mirrors the reference client's right-side column (portrait/vitals bars up top, WHO/INVITE/etc. buttons below) as its own module, rather than the metadata living inline at the top of the results list — inline read as an odd leftover once the rest of the page became distinct bordered panels (console frame + pronounced bevels), since a plain metadata line didn't match the "everything is its own panel" language the redesign established everywhere else. `.status-panel:empty { display: none; }` so it collapses to nothing between plans instead of showing a hollow bevel box.
+

@@ -1,0 +1,8 @@
+# Spell Browser retired; spells are a Class Browser tab
+
+`public/spells.html`/`spells.js` (a standalone page: one class, one level, free-text search, click-to-expand vendors) were deleted and folded into Class Browser as its first tab, once Class Browser already had a tab bar to put it in. The two pages' filter models don't actually match — Spell Browser is single-class + level-bound; Class Browser is up to three classes with no level filter, since stances/invocations/AAs are granted at level 1 and aren't leveled — so this isn't a straight merge:
+- The **Level** field (`#level-field`, a plain `<select>` like Spell Browser's, not the planner's dual-range slider) only appears when the Spells tab is active; it's meaningless for the other six tabs and stays hidden for them.
+- The **Search** field is generic and applies to whichever tab is currently active, filtering by name client-side — this works uniformly across all seven categories (Class AAs alone can run 30+ entries) rather than being a spells-only feature.
+- `/api/spells?class=` now accepts a comma-separated class list (previously single-class only, since Spell Browser never needed more) and unions results by spell id, matching how `/api/plan` already handled multi-class. `getSpellsForClass()` itself stays single-class; the route handler loops and merges.
+- Each spell card is badged per selected class with *that class's* level for the spell (e.g. "Shaman L9", "Druid L12") via an optional `levelLookup` callback on the shared `classBadges()` helper, rather than the old single `Level N` next to the spell name — necessary once a spell can be shown for more than one class at once.
+

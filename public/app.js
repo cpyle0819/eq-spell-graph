@@ -262,7 +262,7 @@ function restoreState() {
 // just get clobbered.
 //
 // rankZones() bypasses its own class/level filters entirely for a pinned
-// spell (see DECISIONS.md), so levelMin/levelMax/classes aren't load-bearing
+// spell (see decisions/), so levelMin/levelMax/classes aren't load-bearing
 // for the spell actually showing up — they're here so the planner's displayed
 // range and Shopping For chips make sense for what you just clicked, instead
 // of showing a leftover range/class from whatever you last had open here.
