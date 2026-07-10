@@ -43337,6 +43337,88 @@
           }
         }
       }
+    },
+    {
+      "data": {
+        "id": "ability:forage",
+        "label": "Forage",
+        "type": "ability",
+        "description": "Finds food and other useful items from the local environment on a timer. Druid's cap scales with level ((Level×5)+5); also granted to Iksar/Wood Elf by race, fixed at 50 — not shown here since the Class Browser is organized by class.",
+        "class_levels": [
+          {
+            "class": "bard",
+            "level": 12
+          },
+          {
+            "class": "druid",
+            "level": 5
+          },
+          {
+            "class": "ranger",
+            "level": 3
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:tracking",
+        "label": "Tracking",
+        "type": "ability",
+        "description": "Follows traces of other creatures over distance; higher skill and certain classes track farther (Ranger tracks best, then Druid, then Bard).",
+        "class_levels": [
+          {
+            "class": "ranger"
+          },
+          {
+            "class": "druid"
+          },
+          {
+            "class": "bard"
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:safe-fall",
+        "label": "Safe Fall",
+        "type": "ability",
+        "description": "Reduces or prevents damage from long falls.",
+        "class_levels": [
+          {
+            "class": "monk"
+          },
+          {
+            "class": "rogue"
+          },
+          {
+            "class": "bard"
+          }
+        ],
+        "category": "special"
+      }
+    },
+    {
+      "data": {
+        "id": "ability:sense-traps",
+        "label": "Sense Traps",
+        "type": "ability",
+        "description": "Detects traps on objects or in passageways before they trigger.",
+        "class_levels": [
+          {
+            "class": "rogue",
+            "level": 10
+          },
+          {
+            "class": "bard",
+            "level": 20
+          }
+        ],
+        "category": "special"
+      }
     }
   ],
   "edges": [
