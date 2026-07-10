@@ -12,26 +12,44 @@
     /* Page layout only — component styling lives in theme.css */
     body { min-height: 100vh; display: flex; flex-direction: column; }
 
-    /* Same marble backdrop as the other pages' console frame, but centered
-       single-column content instead of a sidebar/results split — this page
-       has nothing to filter, just a scroll to read and three doors to pick. */
+    /* Same marble backdrop as the other pages' console frame. Two objects
+       sit on it: the welcome-scroll and the tool-grid macro cluster, each
+       its own beveled thing with a real gap between them (console look —
+       see index.html's #planner comment for the same split) — but on wide
+       layouts they sit side by side, grid on the left, scroll on the
+       right, rather than stacked. DOM order is scroll-then-grid (so
+       narrow/stacked layouts read intro-first, buttons-second);
+       row-reverse on wide layouts flips that visually to grid-left,
+       scroll-right without duplicating markup or reordering elements. */
     main {
       flex: 1;
       display: flex; flex-direction: column; align-items: center;
-      gap: 24px;
+      gap: 28px;
       padding: 36px 20px 44px;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
     }
 
-    /* welcome-scroll/tool-card (public/components/) own their own look;
-       .tool-grid below is the only layout this page still owns directly. */
+    /* welcome-scroll (public/components/) owns its own look; .tool-grid
+       below is the only layout this page still owns directly. Each
+       macro-button is already a MacroSocket (public/components/
+       macro-button.js) — a full beveled cavity on its own :host — so
+       "sockets that touch" is the same shared-seam overlap technique as
+       zone-card/spell-card elsewhere (decisions/
+       packed-card-hover-box-shadow-not-filter.md): a negative margin equal
+       to the socket's own border width (5px) pulls each button flush
+       against its row/column neighbor so paint order leaves one shared
+       seam, not a doubled-up border. inline-grid (not grid) keeps the
+       cluster sized to its four 90x90 sockets instead of stretching to
+       fill the row. */
     .tool-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
-      max-width: 900px; width: 100%;
+      display: inline-grid;
+      grid-template-columns: repeat(2, 90px);
     }
+    .tool-grid macro-button:nth-child(2n) { margin-left: -5px; }
+    .tool-grid macro-button:nth-child(n+3) { margin-top: -5px; }
 
-    @media (max-width: 760px) {
-      .tool-grid { grid-template-columns: 1fr; }
+    @media (min-width: 761px) {
+      main { flex-direction: row-reverse; justify-content: center; }
     }
   </style>
 </head>
@@ -45,22 +63,10 @@
     </welcome-scroll>
 
     <div class="tool-grid">
-      <tool-card>
-        <p>Pick your classes, level range, and current zone, and get a ranked shopping list of nearby vendors, sorted by faction standing and travel distance.</p>
-        <macro-button square href="index.html">Spell Finder</macro-button>
-      </tool-card>
-      <tool-card>
-        <p>Just need directions? Pick a starting zone and a destination and get the shortest path between them, boats and translocators included.</p>
-        <macro-button square href="route.html">Route Finder</macro-button>
-      </tool-card>
-      <tool-card>
-        <p>The complete class reference: every spell, AA, stance, invocation, and signature ability a class can learn, browsable on its own.</p>
-        <macro-button square href="class-browser.html">Class Browser</macro-button>
-      </tool-card>
-      <tool-card>
-        <p>New to EQL? A quick orientation on how leveling works, roughly where to hunt at each stage, and unique gear worth a detour.</p>
-        <macro-button square href="leveling-guide.html">Leveling Guide</macro-button>
-      </tool-card>
+      <macro-button square href="index.html">Spell Finder</macro-button>
+      <macro-button square href="route.html">Route Finder</macro-button>
+      <macro-button square href="class-browser.html">Class Browser</macro-button>
+      <macro-button square href="leveling-guide.html">Leveling Guide</macro-button>
     </div>
   </main>
 

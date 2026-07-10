@@ -68,4 +68,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Whole-app light-source consistency pass: top-right everywhere](whole-app-light-source-top-right.md)
 - [Home page: first-time visitors land there, everyone else lands on Spell Finder](home-page-first-time-visitors.md)
 - [Real Web Components (Custom Elements + Shadow DOM), not string-template helpers](real-web-components-shadow-dom.md)
+- [Home page: tool buttons are a touching macro-socket grid, no per-tool description text, positioned left of the welcome scroll](home-page-macro-socket-grid.md)
 
