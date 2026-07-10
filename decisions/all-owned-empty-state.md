@@ -1,4 +1,0 @@
-# "All owned" needs its own empty state, distinct from "no results"
-
-`renderRankings()`'s zone loop silently `continue`s past any zone where every spell is already marked owned (when `showAllSpells` is off) — correct, since there's nothing left to show there. But nothing checked whether *every* zone got skipped that way: the results header (built from pre-filter counts) would still say "9 spell(s) across 20 zone(s)," and the area below it would just be empty, with no visible reason why. Tracked a `renderedZones` counter through the loop; if it's still zero afterward, append a `.no-results` message ("All matching spells are marked owned.") with a `Show all` button. That button reuses the header's own toggle rather than a one-off — `#toggle-owned-btn`'s unique id was changed to a `.toggle-owned-btn` class so the same delegated click handler (matched by class now, not id) fires from either location, since two elements can't share one id on the same page.
-

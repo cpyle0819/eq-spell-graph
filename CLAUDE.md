@@ -40,7 +40,7 @@ After a feature in this repo is implemented and verified, the default is to comm
 
 When a proposed change conflicts with a decision, surface the conflict to the user before proceeding. Decisions can be updated — but deliberately, not accidentally.
 
-When a new non-obvious decision is made during development, add a new file to `decisions/` (slugified title as the filename — see any existing file for the format) and a line to `decisions/INDEX.md` under the right category.
+**Bar for logging a new decision:** would this change how someone approaches a similar problem in the future — a reusable rule, a sourcing/scope boundary, a tradeoff someone could accidentally reverse, a footgun worth not re-hitting? If it's just "we found and fixed a bug" with no rule beyond the fix itself, it belongs in the commit message, not here — git history already has it permanently, and a working test/the code itself is the record that it's fixed. When something does clear that bar, add a new file to `decisions/` (slugified title as the filename — see any existing file for the format) and a line to `decisions/INDEX.md` under the right category.
 
 ## Conventions
 
