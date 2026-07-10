@@ -480,7 +480,50 @@ export function rankZones(
   });
 }
 
-export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[] } {
+export interface ZoneVendorInfo {
+  vendorCount: number;
+  levelRange: { min: number; max: number } | null;
+}
+
+// A "real" vendor is an NPC located_in the zone with at least one sells
+// edge (see decisions/three-dimensions-determine-vendor-access.md and
+// CLAUDE.md — vendor presence isn't a zone field, it's derived from
+// located_in + sells edges). levelRange spans every class_levels entry
+// across every spell those vendors carry, so it reflects the actual
+// spread of levels a shopper would find here, not just the zone's own
+// data (there is no such field on zone nodes, and none should be
+// invented — see the same CLAUDE.md note).
+export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
+  const graph = load();
+  const npcIds = new Set(
+    graph.edges
+      .filter((e) => e.data.type === "located_in" && e.data.target === zoneId)
+      .map((e) => e.data.source)
+  );
+  const vendorIds = new Set<string>();
+  const spellIds = new Set<string>();
+  for (const e of graph.edges) {
+    if (e.data.type === "sells" && npcIds.has(e.data.source)) {
+      vendorIds.add(e.data.source);
+      spellIds.add(e.data.target);
+    }
+  }
+  let min = Infinity;
+  let max = -Infinity;
+  for (const spellId of spellIds) {
+    const spell = graph.nodes.find((n) => n.data.id === spellId)?.data;
+    for (const cl of spell?.class_levels || []) {
+      if (cl.level < min) min = cl.level;
+      if (cl.level > max) max = cl.level;
+    }
+  }
+  return {
+    vendorCount: vendorIds.size,
+    levelRange: Number.isFinite(min) ? { min, max } : null,
+  };
+}
+
+export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
   const pathIds = shortestPath(fromZoneId, toZoneId);
   const hops = pathIds ? pathIds.length - 1 : null;
@@ -492,7 +535,7 @@ export function getRoute(fromZoneId: string, toZoneId: string): { hops: number |
         return entry;
       })
     : [];
-  return { hops, route };
+  return { hops, route, destination: getZoneVendorInfo(toZoneId) };
 }
 
 // --- Writes ---

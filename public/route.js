@@ -90,7 +90,7 @@ async function runRoute() {
 
   el.innerHTML = "";
   const card = document.createElement("route-card");
-  card.route = { from, to, hops: result.hops, steps: result.route };
+  card.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
   el.appendChild(card);
 }
 
