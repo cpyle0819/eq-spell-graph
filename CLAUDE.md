@@ -51,3 +51,5 @@ When a proposed change conflicts with a decision, surface the conflict to the us
 - "Shopping For" class (what spells to find) is independent of "Primary Class" (what drives faction)
 - API returns data; frontend renders. No server-side HTML.
 - No framework. No build step for the frontend.
+- Reusable/repeated UI (cards, badges, panels, anything rendered per-item from data) is a real Web Component (Custom Element + Shadow DOM) under `public/components/`, not a string-template helper or hand-rolled markup — see `decisions/real-web-components-shadow-dom.md`. This app's whole frontend was deliberately converted to this pattern (issue #15); don't introduce a new string-templated widget or reintroduce plain-div card markup outside it.
+- That doesn't mean componentize everything: one-off, page-specific editorial content (e.g. a single static page's own prose) stays plain HTML in that page's own layout. Componentize when something repeats across instances or pages and needs its own encapsulated look; a page's unique, non-repeating content doesn't need a custom element wrapper just to have one.
