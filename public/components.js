@@ -6,18 +6,18 @@
 // other.
 const OWNED_KEY = "eq-planner-owned";
 
-function getOwnedSpells() {
+export function getOwnedSpells() {
   try { return new Set(JSON.parse(localStorage.getItem(OWNED_KEY) || "[]")); }
   catch { return new Set(); }
 }
 
-function setSpellOwned(spellId, owned) {
+export function setSpellOwned(spellId, owned) {
   const set = getOwnedSpells();
   owned ? set.add(spellId) : set.delete(spellId);
   localStorage.setItem(OWNED_KEY, JSON.stringify([...set]));
 }
 
-function clearOwnedSpells() {
+export function clearOwnedSpells() {
   localStorage.removeItem(OWNED_KEY);
 }
 
@@ -49,7 +49,7 @@ function clearOwnedSpells() {
 // leak one observer per call.
 const LAZY_BATCH_SIZE = 25;
 
-function lazyRenderList(container, items, renderItem, batchSize = LAZY_BATCH_SIZE) {
+export function lazyRenderList(container, items, renderItem, batchSize = LAZY_BATCH_SIZE) {
   container._lazyObserver?.disconnect();
 
   let index = 0;

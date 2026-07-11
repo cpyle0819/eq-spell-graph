@@ -3,6 +3,7 @@
 // here is load bearing, not just tidiness.
 import "./components/index.js";
 import { wikiUrl } from "./components/card-base.js";
+import { lazyRenderList } from "./components.js";
 
 // Matches the planner's level-range slider bound (public/index.html
 // #level-max max="50") — the actual data tops out at level 50 (see
@@ -44,7 +45,7 @@ function renderSidebar() {
   document.getElementById("controls-panel-slot").outerHTML = html;
 }
 
-async function init() {
+export async function init() {
   renderSidebar();
   [availableClasses, availableSpellLines] = await Promise.all([
     fetch("api/classes/abilities").then((r) => r.json()),
@@ -320,5 +321,3 @@ function renderResults(stances, invocations, aa, spells, abilities, classes) {
   rawClasses = classes;
   render();
 }
-
-init();

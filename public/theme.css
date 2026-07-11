@@ -18,6 +18,16 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Every visual element in this app is a custom element (see decisions/
+   real-web-components-shadow-dom.md) — until public/components/index.js
+   finishes registering them, an unupgraded one renders as a blank inline
+   box holding its raw slotted text, unstyled and unlaid-out: the FOUC.
+   :defined matches built-in elements unconditionally and only starts
+   matching a custom element once customElements.define() has run for its
+   tag, so this hides exactly the not-yet-upgraded ones site-wide, no
+   per-tag list to maintain as new components are added. */
+*:not(:defined) { visibility: hidden; }
+
 :root {
   color-scheme: dark;
 
@@ -99,6 +109,9 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation: none !important; }
+  /* router.js's document.startViewTransition() crossfade (Chromium only) —
+     these pseudo-elements aren't matched by the `*` rule above. */
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
 
 /* Thin stone scrollbars, everywhere */

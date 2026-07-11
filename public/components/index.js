@@ -1,5 +1,8 @@
-// Barrel file — registers every custom element the app uses. Each page
-// loads this once via <script type="module" src="components/index.js">.
+// Barrel file — registers every custom element the app uses. router.js (the
+// single script every page loads) imports this first, before anything else
+// can set a property on a not-yet-registered element (see decisions/
+// real-web-components-shadow-dom.md's "module-import order is load
+// bearing").
 import "./macro-button.js";
 import "./nav-links.js";
 import "./app-header.js";

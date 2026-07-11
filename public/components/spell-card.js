@@ -4,11 +4,12 @@
 // toggle (fetches api/spell/{id}/vendors on first expand; collapsing and
 // re-expanding refetches, same as before) plus a "Find in Spell Finder"
 // link. Shares the same localStorage-backed owned set as the Spell Finder
-// (components.js, a classic script whose globals are readable here) —
+// (components.js) —
 // marking a spell owned here shows up there and vice versa. `pinUrl` is
 // built by class-browser.js (it depends on the page's own level-select),
 // not computed here.
 import { CardBase, classBadges, fmtDuration, fmtCast, wikiLink } from "./card-base.js";
+import { getOwnedSpells, setSpellOwned } from "../components.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`

@@ -5,7 +5,7 @@ import "./components/index.js";
 
 const STATE_KEY = "eq-route-state";
 
-async function init() {
+export async function init() {
   const zones = await fetch("api/zones").then((r) => r.json());
   populateZones(zones);
   restoreState();
@@ -93,5 +93,3 @@ async function runRoute() {
   card.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
   el.appendChild(card);
 }
-
-init();

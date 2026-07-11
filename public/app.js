@@ -6,6 +6,7 @@
 // bearing, not just tidiness.
 import "./components/index.js";
 import { wikiUrl } from "./components/card-base.js";
+import { getOwnedSpells, setSpellOwned, clearOwnedSpells, lazyRenderList } from "./components.js";
 
 // --- State ---
 let zones = [];
@@ -155,7 +156,7 @@ function redirectFirstTimeVisitor() {
   return true;
 }
 
-async function init() {
+export async function init() {
   if (redirectFirstTimeVisitor()) return;
   renderSidebar();
   document.addEventListener("toggle", (e) => { if (e.target.tagName === "COLLAPSIBLE-SECTION") saveState(); });
@@ -608,5 +609,3 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
     return card;
   });
 }
-
-init();

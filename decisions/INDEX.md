@@ -19,6 +19,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Read-only routes are shared; mutation routes are Bun-server-only](readonly-routes-shared-mutation-routes-bun-only.md)
 - [This repo has no opinion on where it's deployed](repo-has-no-opinion-on-deployment.md)
 - [Tech stack](tech-stack.md)
+- [Client-side shell router: app-header/app-footer persist across navigation](client-side-shell-router.md)
 
 ## Faction System (EQ Domain)
 
