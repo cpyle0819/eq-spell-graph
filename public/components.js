@@ -47,7 +47,7 @@ function clearOwnedSpells() {
 // innerHTML clear (it's a JS property on the node, not a child), so
 // without this a filter change / tab switch / re-render would otherwise
 // leak one observer per call.
-const LAZY_BATCH_SIZE = 40;
+const LAZY_BATCH_SIZE = 25;
 
 function lazyRenderList(container, items, renderItem, batchSize = LAZY_BATCH_SIZE) {
   container._lazyObserver?.disconnect();
