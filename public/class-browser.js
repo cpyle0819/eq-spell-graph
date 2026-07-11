@@ -308,7 +308,7 @@ function render() {
     resultsEl.innerHTML = `<div class="no-results">No ${active.title.toLowerCase()} match your search.</div>`;
     return;
   }
-  for (const item of active.items) resultsEl.appendChild(active.renderFn(item, rawClasses));
+  lazyRenderList(resultsEl, active.items, (item) => active.renderFn(item, rawClasses));
 }
 
 function renderResults(stances, invocations, aa, spells, abilities, classes) {

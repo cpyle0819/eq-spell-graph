@@ -581,28 +581,32 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
 
   el.innerHTML = "";
 
-  let renderedZones = 0;
-  for (const r of rankings) {
-    const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
-    if (!showAllSpells && visibleSpells.length === 0) continue;
-    renderedZones++;
-
-    const card = document.createElement("zone-card");
-    card.setData(r, owned, showAllSpells);
-    el.appendChild(card);
-  }
+  // Computed over the *entire* rankings array up front (not discovered
+  // incrementally as cards get lazily rendered) so the "all owned" empty
+  // state below is correct immediately, without needing to have scrolled
+  // through the whole lazy list first.
+  const renderableZones = rankings.filter(
+    (r) => showAllSpells || r.spells.some((s) => !owned.has(s.id))
+  );
 
   // Every zone had a real spell in it, but every one of those spells is
   // marked owned — the header above still says "N spell(s) across M
   // zone(s)," so without this the results area just goes blank with no clue
   // why. Only reachable when !showAllSpells, since showAllSpells never
-  // filters anything out of visibleSpells.
-  if (renderedZones === 0) {
+  // filters anything out of renderableZones.
+  if (renderableZones.length === 0) {
     const msg = document.createElement("div");
     msg.className = "no-results";
     msg.innerHTML = `All matching spells are marked owned. <button class="text-action toggle-owned-btn">Show all</button>`;
     el.appendChild(msg);
+    return;
   }
+
+  lazyRenderList(el, renderableZones, (r) => {
+    const card = document.createElement("zone-card");
+    card.setData(r, owned, showAllSpells);
+    return card;
+  });
 }
 
 init();
