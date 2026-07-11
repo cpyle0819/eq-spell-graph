@@ -67,6 +67,11 @@
       font-variant-caps: small-caps; letter-spacing: 0.03em;
     }
     .road-notes dd { color: var(--parch-ink-soft); }
+    .road-notes code {
+      font-family: 'Courier New', monospace; font-size: 12px;
+      background: rgba(0, 0, 0, 0.06); border: 1px solid var(--parch-line);
+      border-radius: 3px; padding: 1px 5px;
+    }
 
     /* ── The Trail: a chronological path down the page, one waypoint per
        level bracket. The dashed line + diamond markers are the one place
@@ -153,7 +158,15 @@
           <div><dt>Level 10</dt><dd>your active loadout locks in. From here, only your lowest-level active class(es) keep gaining experience, so a trio levels in step.</dd></div>
           <div><dt>Level 20</dt><dd>auto-scribing stops. It's been granting your class's critical spells automatically up to this point.</dd></div>
           <div><dt>Level 46</dt><dd>the Planes open, EQL's endgame tier.</dd></div>
-          <div><dt>Crowding</dt><dd>every zone offers a quieter or fully private instance on request, so a busy camp is never a hard stop.</dd></div>
+        </dl>
+      </div>
+
+      <div class="road-notes">
+        <h2>A Few Tricks</h2>
+        <dl>
+          <div><dt>Quick Buff</dt><dd>if any of your classes cast buffs, grab this AA early. One button applies every beneficial spell on your bar to the whole group at once, outside of combat.</dd></div>
+          <div><dt>Spell sets</dt><dd>save different spell loadouts from the spellbook window and swap between them anytime with <code>/memspellset</code>. Hotbars are just as flexible: open extra ones and set each up independently instead of rebuilding your whole bar for a different situation.</dd></div>
+          <div><dt>Autoskill</dt><dd>abilities like Backstab or Smite don't have to be clicked by hand. <code>/autoskill &lt;ability&gt; on</code> ties them to auto-attack, firing automatically the moment they're off cooldown.</dd></div>
         </dl>
       </div>
 
@@ -161,13 +174,13 @@
         <h2>The Trail</h2>
         <div class="trail-path">
           <trail-stop range="Lv 1–10">
-            <p>Every class you own is leveling together while you find your footing. Start anywhere near your home city. Partying up? A <strong>Magician</strong> and <strong>Cleric</strong> pair is fast and forgiving: the pet tanks, the Cleric keeps it upright. Trios built around a <strong>Paladin</strong> or <strong>Shadow Knight</strong> with a <strong>Cleric</strong> or <strong>Shaman</strong> alongside come up again and again in beta chatter too, self-sustaining enough to solo through the rough patches once you've got all three classes in your loadout.</p>
+            <p>Every class you own is leveling together while you find your footing. Start anywhere near your home city. Grouping up? A <strong>Magician</strong> and <strong>Cleric</strong> duo is fast and forgiving: the pet tanks, the Cleric keeps it upright. A loadout built around a <strong>Paladin</strong> or <strong>Shadow Knight</strong> with a <strong>Cleric</strong> or <strong>Shaman</strong> in the mix comes up again and again in beta chatter too, self-sustaining enough to solo through the rough patches once all three classes are unlocked.</p>
           </trail-stop>
           <trail-stop range="Lv 15–25">
             <p>The <a href="route.html?to=The%20Estate%20of%20Unrest"><strong>Estate of Unrest</strong></a> becomes the obvious anchor: once a dwarven noble's home, now one of the great undead havens on Norrath, with a strong experience bonus and camps that scale right alongside you. <a href="route.html?to=Solusek's%20Eye"><strong>Solusek's Eye</strong></a>, home to fire goblins and an intrepid gnome mining company chasing the mineral wealth underneath them, and <a href="route.html?to=Mistmoore%20Castle"><strong>Mistmoore Castle</strong></a>, vampire lord Mayong Mistmoore's mazelike stronghold, carry the rest of the climb through your low twenties. <a href="route.html?to=High%20Keep"><strong>High Keep</strong></a>, the crumbling seat of an empire that once ruled central Antonica before centuries of orc and gnoll raids reduced it to Highpass Hold, is worth a look too for a change of scenery.</p>
           </trail-stop>
           <trail-stop range="Lv 25–40">
-            <p><a href="route.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles; the ocean itself is the old boat route carrying travelers between Antonica and Faydwer. <a href="route.html?to=Lower%20Guk"><strong>Lower Guk</strong></a>, the tunnel-riddled Ruins of Ancient Guk that connect down to Innothule Swamp, is worth lingering at from 40–44: exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
+            <p><a href="route.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles, on the same waters the old Antonica-Faydwer boat crossing has worked for as long as anyone can remember. <a href="route.html?to=Lower%20Guk"><strong>Lower Guk</strong></a>, the tunnel-riddled Ruins of Ancient Guk that connect down to Innothule Swamp, is worth lingering at from 40–44: exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
           </trail-stop>
           <trail-stop range="Lv 40–48">
             <p><a href="route.html?to=The%20Hole"><strong>The Hole</strong></a>, officially the Ruins of Old Paineel (a hole the Heretics punched straight into Odus during their war with Erudin), or the Efreeti camp in <a href="route.html?to=Nagafen's%20Lair"><strong>Nagafen's Lair</strong></a>, Sol B to anyone who's been around, deep in the Lavastorm Mountains where the Fire Giants serve Lord Nagafen himself, close out the climb before the Planes open their doors at 46.</p>
@@ -189,6 +202,10 @@
           <span slot="detail"><a href="route.html?to=Rathe%20Mountains">Rathe Mountains</a> hides more than danger along its southern route between Freeport and Qeynos. Paladins camp there working toward a Mold of Ro from the <a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a>, combined with a crafted Bar of Ronium at a forge.</span>
         </ledger-item>
         <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Journeyman's_Boots_Quest" target="_blank" rel="noopener">Journeyman's Boots</a></span>
+          <span slot="detail">"JBoots" to anyone who's worn a pair: a speed buff usable anywhere, no reagent, no cast time. <a href="route.html?to=Rathe%20Mountains">Rathe Mountains'</a> Hasten Bootstrutter wants a Ring of the Ancients, a Shadowed Rapier, and 3,250 gold for the pair. The rapier's borrowed, not kept: it vanishes after 30 minutes logged off, so don't dawdle turning it in.</span>
+        </ledger-item>
+        <ledger-item>
           <span slot="label">Taskmaster's <a href="https://eqlwiki.com/Leather_Whip" target="_blank" rel="noopener">whip</a> &amp; <a href="https://eqlwiki.com/Brass_Earring" target="_blank" rel="noopener">earring</a></span>
           <span slot="detail"><a href="route.html?to=Crushbone">Crushbone</a>, the orc clan camp that's been a thorn in Faydwer's side for as long as anyone remembers. Its Taskmaster drops a 5/30 whip and his own brass earring.</span>
         </ledger-item>
@@ -199,6 +216,10 @@
         <ledger-item>
           <span slot="label"><a href="https://eqlwiki.com/Research_Aid" target="_blank" rel="noopener">Research Aid</a></span>
           <span slot="detail"><a href="route.html?to=Northern%20Karana">Northern Karana</a> sits at the crossroads of half the continent's bridge traffic, and its resident scholar Mrysila runs a repeatable turn-in: lightstones (a willowisp drop) buy spell research tomes, greater lightstones buy the Concordance of Research.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Item_Upgrade_System" target="_blank" rel="noopener">Item Upgrade System</a></span>
+          <span slot="detail">Norraph's newest trick, not a classic EQ holdover: merge a duplicate of any item, or a Mote of Potential, into its own copy to push its tier from 0 up to 10, each tier worth a cumulative 10% to its stats. Nothing you find early gets thrown away later, it just gets better.</span>
         </ledger-item>
       </div>
 
@@ -234,16 +255,20 @@
           <span slot="detail">Want to play something you didn't start as? Every race has its own list of factions to max out, and EQL is generous about how you get there: charm a faction's enemies, sneak past its guards, or swap your loadout for a class that faction likes better. A slow side project worth chipping away at while you level.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label"><a href="route.html?to=Southern%20Felwithe">Southern Felwithe</a></span>
-          <span slot="detail">The high elf capital rises out of Greater Faydark's permanent fog with walls that glow faintly gold on their own. Even players who never touch an elf tend to wander through once, just to see it.</span>
+          <span slot="label"><a href="route.html?to=North%20Qeynos">Fippy Darkpaw</a></span>
+          <span slot="detail">Every North Qeynos newcomer eventually runs into Fippy Darkpaw, or his stand-in Djerr Darkpaw, camped right outside the gates looking for a fight. A classic first kill, still.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label"><a href="route.html?to=Neriak">Neriak</a></span>
-          <span slot="detail">The dark elf answer to Felwithe: an entire city carved out of mountain rock that has never once seen natural sunlight, and the dark elves like it that way.</span>
+          <span slot="label"><a href="route.html?to=West%20Commonlands">Giants in the Commonlands</a></span>
+          <span slot="detail">West Commonlands hides hill giants in its southern reaches, big and somehow still easy to walk right past without noticing. A rite of passage the first time one notices you first.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Kithicor_Forest" target="_blank" rel="noopener">Kithicor Forest</a>, after dark</span>
+          <span slot="detail">From 8 PM to 6 AM game-time, <a href="route.html?to=Kithicor%20Forest">Kithicor Forest</a> empties of its usual orcs and fills instead with level 35+ undead, a holdover from the Plane of Hate's opening known as the Haunting of Kithicor. Not somewhere to wander into casually after dark, but worth seeing once.</span>
         </ledger-item>
       </div>
 
-      <p class="sources">Field notes and lore drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a>, <a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Skill Fishing</a>, <a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a>, <a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quest List</a>, and <a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race Unlock Guide</a> pages, each zone's own eqlwiki.com entry, plus community leveling routes and player-beta impressions from the EQL press and player wikis.</p>
+      <p class="sources">Field notes and lore drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Commands" target="_blank" rel="noopener">Commands</a>, <a href="https://eqlwiki.com/Alternate_Advancement" target="_blank" rel="noopener">Alternate Advancement</a>, <a href="https://eqlwiki.com/Item_Upgrade_System" target="_blank" rel="noopener">Item Upgrade System</a>, <a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a>, <a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Skill Fishing</a>, <a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a>, <a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quest List</a>, and <a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race Unlock Guide</a> pages, each zone's own eqlwiki.com entry, plus community leveling routes and player-beta impressions from the EQL press and player wikis.</p>
     </parchment-page>
   </main>
 
