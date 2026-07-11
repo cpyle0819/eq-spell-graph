@@ -20,3 +20,6 @@ import "./aa-card.js";
 import "./ability-card.js";
 import "./stance-card.js";
 import "./welcome-scroll.js";
+import "./parchment-page.js";
+import "./trail-stop.js";
+import "./ledger-item.js";

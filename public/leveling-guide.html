@@ -9,16 +9,18 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
   <link rel="stylesheet" href="theme.css">
   <style>
-    /* Page layout only — component styling lives in theme.css.
-
-       Every other page in this app is a stone console: you operate
-       controls on marble. This page has no controls — it's read, not
-       operated — so the material hierarchy inverts. Stone frames the
-       page (header, footer, backdrop) but the content itself is one
-       continuous parchment sheet, the same "readable ink" surface the
-       rest of the app reserves for small inserts (tooltips, route
-       results), just given the whole stage here instead of a corner
-       of it. */
+    /* Page layout only — component styling lives in public/components/.
+       This page's own material identity (the parchment-page shell,
+       trail-stop waypoints, ledger-item rows) is componentized like the
+       rest of the app now — see decisions/real-web-components-shadow-dom.md.
+       What's left here is genuine page-level work: the marble backdrop,
+       the field-notes/aside/section-heading boxes (single-instance,
+       non-repeating, same tier as e.g. route.html's plain .finder-bar),
+       the dashed connecting line between trail-stops (cross-instance
+       coordination is a page concern, the same split zone-card's
+       shared-seam margin uses), and styling for <strong>/<a> tags nested
+       inside slotted content, which shadow-scoped ::slotted() rules can't
+       reach past their own top-level slotted node. */
     body { min-height: 100vh; display: flex; flex-direction: column; }
 
     main {
@@ -28,57 +30,20 @@
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
     }
 
-    /* ── The page itself: a hung parchment sheet, wood dowels top and
-       bottom (rotated 90° from welcome-scroll's side dowels — this is a
-       long vertical read, not a short horizontal banner). ── */
-    .road-page {
+    /* ::first-letter is page-level, not shadow-scoped -- a slotted element
+       stays a real light-DOM child of <parchment-page>, so the document's
+       own stylesheet can reach it directly regardless of what the
+       component's own ::slotted() rules also do to it. */
+    /* Same reasoning as .intro::first-letter above -- ::after chained onto
+       ::slotted() isn't reliably supported, so this stays page-level too. */
+    .rule {
       position: relative;
-      max-width: 700px; width: 100%;
-      padding: 44px clamp(24px, 6vw, 64px) 40px;
-      background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
-      border: 1px solid var(--parch-line);
-      border-radius: 2px;
-      box-shadow: inset 0 0 26px rgba(122, 96, 42, 0.28), 0 10px 34px rgba(0, 0, 0, 0.5);
-      color: var(--parch-ink);
     }
-    .road-page::before, .road-page::after {
-      content: "";
-      position: absolute; left: -3px; right: -3px; height: 11px;
-      border-radius: 5px;
-      background:
-        radial-gradient(3px 3px at 9px 50%, rgba(0, 0, 0, 0.6), transparent 70%),
-        radial-gradient(3px 3px at calc(100% - 9px) 50%, rgba(0, 0, 0, 0.6), transparent 70%),
-        linear-gradient(180deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
-    }
-    .road-page::before { top: -11px; }
-    .road-page::after { bottom: -11px; }
-
-    /* ── Title block ── */
-    .road-eyebrow {
-      font-family: var(--font-display); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.28em; text-transform: uppercase; color: var(--parch-accent);
-    }
-    .road-title {
-      font-family: var(--font-display); font-size: clamp(26px, 4vw, 34px); font-weight: 700;
-      color: var(--parch-ink); letter-spacing: 0.02em; margin-top: 4px;
-    }
-    .road-rule {
-      width: 100%; height: 1px; margin: 16px 0; position: relative;
-      background: linear-gradient(90deg,
-        transparent, var(--parch-accent) 12%, var(--parch-accent) 45%, transparent 47%,
-        transparent 53%, var(--parch-accent) 55%, var(--parch-accent) 88%, transparent);
-      opacity: 0.55;
-    }
-    .road-rule::after {
+    .rule::after {
       content: "◆"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
       font-size: 8px; color: var(--parch-accent);
     }
-    .road-dek { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; }
-
-    /* ── Opening prose, illuminated first letter ── */
-    .road-intro { font-size: 14.5px; line-height: 1.75; margin-top: 22px; }
-    .road-intro::first-letter {
+    .intro::first-letter {
       font-family: var(--font-display); font-weight: 700; font-size: 3.2em; line-height: 0.75;
       float: left; padding: 0.04em 0.09em 0 0; color: var(--parch-accent);
     }
@@ -104,12 +69,15 @@
     .road-notes dd { color: var(--parch-ink-soft); }
 
     /* ── The Trail: a chronological path down the page, one waypoint per
-       level bracket. The line + diamond beads are the one place this
-       page borrows the console pages' ◆ motif — recolored for parchment
-       and put to a new job (marking real, ordered level ranges, not
-       decorating a divider). Deliberately NOT used for the overflow/solo
-       notes below, since those aren't sequential — a numbered waypoint
-       would claim an order that doesn't exist. ── */
+       level bracket. The dashed line + diamond markers are the one place
+       this page borrows the console pages' ◆ motif — recolored for
+       parchment and put to a new job (marking real, ordered level ranges,
+       not decorating a divider). Deliberately NOT used for the
+       overflow/solo note below, since that isn't sequential — a numbered
+       waypoint would claim an order that doesn't exist. Each <trail-stop>
+       owns its own range/marker/copy rendering; this page only owns how
+       the run of them relates (the connecting line, positioned to match
+       trail-stop's own internal marker column). ── */
     .road-trail { margin-top: 34px; position: relative; }
     .road-trail h2 {
       font-family: var(--font-display); font-size: 11px; font-weight: 600;
@@ -122,30 +90,20 @@
       background-image: repeating-linear-gradient(to bottom, var(--parch-accent) 0 5px, transparent 5px 11px);
       opacity: 0.6;
     }
-    .trail-stop {
-      display: grid; grid-template-columns: 96px 30px 1fr; column-gap: 12px;
-      padding: 14px 0;
-    }
-    .trail-range {
-      font-family: var(--font-display); font-size: 12.5px; font-weight: 700;
-      color: var(--parch-accent); text-align: right; padding-top: 2px; white-space: nowrap;
-    }
-    .trail-marker { display: flex; justify-content: center; font-size: 15px; color: var(--parch-accent); line-height: 1.3; }
-    .trail-copy { font-size: 14px; line-height: 1.7; }
-    .trail-copy strong { color: var(--parch-ink); font-weight: 700; }
 
-    /* Zone names link to Route Finder (?to=<zone label>, see route.js) --
-       styled as ink, not the accent color, since these are inline within
-       flowing prose rather than structural wayfinding like the trail
-       markers; an underline on hover is enough to read as "linked". */
-    .trail-copy a, .road-aside a, .ledger-item a {
+    /* <strong>/<a> nested inside a trail-stop's or the aside's slotted
+       content are light-DOM descendants a shadow ::slotted() rule can't
+       reach (single compound selector only) -- their styling lives here,
+       same as any other light-DOM content passed into a slot. */
+    trail-stop strong, .road-aside strong { color: var(--parch-ink); font-weight: 700; }
+    trail-stop a, .road-aside a, ledger-item a {
       color: inherit; text-decoration: none; border-bottom: 1px dotted var(--parch-accent);
     }
-    .trail-copy a:hover, .road-aside a:hover, .ledger-item a:hover,
-    .trail-copy a:focus-visible, .road-aside a:focus-visible, .ledger-item a:focus-visible {
+    trail-stop a:hover, .road-aside a:hover, ledger-item a:hover,
+    trail-stop a:focus-visible, .road-aside a:focus-visible, ledger-item a:focus-visible {
       color: var(--parch-accent); border-bottom-style: solid;
     }
-    .trail-copy a:focus-visible, .road-aside a:focus-visible, .ledger-item a:focus-visible {
+    trail-stop a:focus-visible, .road-aside a:focus-visible, ledger-item a:focus-visible {
       outline: 2px solid var(--parch-accent); outline-offset: 2px; border-radius: 1px;
     }
 
@@ -156,35 +114,22 @@
       border-left: 2px dashed var(--parch-line);
       font-size: 13px; line-height: 1.7; color: var(--parch-ink-soft);
     }
-    .road-aside strong { color: var(--parch-ink); font-weight: 700; }
 
-    /* ── Notable finds: a quartermaster's ledger, not a journey — a tight
-       list, hairline-divided, set apart from the trail's flowing prose. ── */
+    /* ── Ledgers (Notable Finds / Beyond the Kill Count): browsable lists
+       of distinct, unordered entries, not a journey — set apart from the
+       trail's flowing prose. Each <ledger-item> owns its own row look. ── */
     .road-ledger { margin-top: 34px; }
     .road-ledger h2 {
       font-family: var(--font-display); font-size: 11px; font-weight: 600;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
       margin-bottom: 10px;
     }
-    .ledger-item { padding: 10px 0; border-top: 1px solid var(--parch-line); font-size: 13px; line-height: 1.65; }
-    .ledger-item:first-of-type { border-top: none; }
-    .ledger-item strong { color: var(--parch-ink); font-weight: 700; }
-    .ledger-item span { color: var(--parch-ink-soft); }
-
-    .road-sources {
-      margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--parch-line);
-      font-size: 11px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.7;
-    }
-    .road-sources a { color: var(--parch-accent); }
+    .road-ledger-intro { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; margin-bottom: 6px; }
 
     @media (max-width: 600px) {
       main { padding: 40px 12px 48px; }
-      .road-page { padding: 36px 20px 32px; }
+      parchment-page { padding: 36px 20px 32px !important; }
       .trail-path::before { left: 15px; }
-      .trail-stop { grid-template-columns: 30px 1fr; row-gap: 4px; }
-      .trail-range { grid-column: 2; text-align: left; order: -1; }
-      .trail-marker { grid-row: 1; }
-      .trail-copy { grid-column: 2; }
     }
   </style>
 </head>
@@ -194,13 +139,13 @@
   </app-header>
 
   <main>
-    <article class="road-page">
-      <p class="road-eyebrow">Norraph Field Guide</p>
-      <h1 class="road-title">The Road to Fifty</h1>
-      <div class="road-rule" aria-hidden="true"></div>
-      <p class="road-dek">Notes for a first character, kept for anyone walking the same road since.</p>
+    <parchment-page>
+      <p class="eyebrow">Norraph Field Guide</p>
+      <h1 class="title">The Road to Fifty</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="dek">Notes for a first character, kept for anyone walking the same road since.</p>
 
-      <p class="road-intro">New to EverQuest Legends and not sure where to point your boots? This is a quick orientation: how leveling actually works, the road most people walk between one and fifty, and enough lore, gear, and side trips along the way that the climb doesn't feel like a spreadsheet. The zone picks come from the EQL player community, not eqlwiki.com's own zone tables (the wiki deliberately leaves those blank to preserve some discovery). Treat them as a solid starting point, not gospel. The road will shift a little as the community keeps finding its way, and that's half the fun.</p>
+      <p class="intro">New to EverQuest Legends and not sure where to point your boots? This is a quick orientation: how leveling actually works, the road most people walk between one and fifty, and enough lore, gear, and side trips along the way that the climb doesn't feel like a spreadsheet. The zone picks come from the EQL player community, not eqlwiki.com's own zone tables (the wiki deliberately leaves those blank to preserve some discovery). Treat them as a solid starting point, not gospel. The road will shift a little as the community keeps finding its way, and that's half the fun.</p>
 
       <div class="road-notes">
         <h2>Field Notes</h2>
@@ -215,26 +160,18 @@
       <div class="road-trail">
         <h2>The Trail</h2>
         <div class="trail-path">
-          <div class="trail-stop">
-            <div class="trail-range">Lv 1–10</div>
-            <div class="trail-marker">◆</div>
-            <p class="trail-copy">Every class you own is leveling together while you find your footing. Start anywhere near your home city. Partying up? A <strong>Magician</strong> and <strong>Cleric</strong> pair is fast and forgiving: the pet tanks, the Cleric keeps it upright. Trios built around a <strong>Paladin</strong> or <strong>Shadow Knight</strong> with a <strong>Cleric</strong> or <strong>Shaman</strong> alongside come up again and again in beta chatter too, self-sustaining enough to solo through the rough patches once you've got all three classes in your loadout.</p>
-          </div>
-          <div class="trail-stop">
-            <div class="trail-range">Lv 15–25</div>
-            <div class="trail-marker">◆</div>
-            <p class="trail-copy">The <a href="route.html?to=The%20Estate%20of%20Unrest"><strong>Estate of Unrest</strong></a> becomes the obvious anchor: once a dwarven noble's home, now one of the great undead havens on Norrath, with a strong experience bonus and camps that scale right alongside you. <a href="route.html?to=Solusek's%20Eye"><strong>Solusek's Eye</strong></a>, home to fire goblins and an intrepid gnome mining company chasing the mineral wealth underneath them, and <a href="route.html?to=Mistmoore%20Castle"><strong>Mistmoore Castle</strong></a>, vampire lord Mayong Mistmoore's mazelike stronghold, carry the rest of the climb through your low twenties. <a href="route.html?to=High%20Keep"><strong>High Keep</strong></a>, the crumbling seat of an empire that once ruled central Antonica before centuries of orc and gnoll raids reduced it to Highpass Hold, is worth a look too for a change of scenery.</p>
-          </div>
-          <div class="trail-stop">
-            <div class="trail-range">Lv 25–40</div>
-            <div class="trail-marker">◆</div>
-            <p class="trail-copy"><a href="route.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles; the ocean itself is the old boat route carrying travelers between Antonica and Faydwer. <a href="route.html?to=Lower%20Guk"><strong>Lower Guk</strong></a>, the tunnel-riddled Ruins of Ancient Guk that connect down to Innothule Swamp, is worth lingering at from 40–44: exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
-          </div>
-          <div class="trail-stop">
-            <div class="trail-range">Lv 40–48</div>
-            <div class="trail-marker">◆</div>
-            <p class="trail-copy"><a href="route.html?to=The%20Hole"><strong>The Hole</strong></a>, officially the Ruins of Old Paineel (a hole the Heretics punched straight into Odus during their war with Erudin), or the Efreeti camp in <a href="route.html?to=Nagafen's%20Lair"><strong>Nagafen's Lair</strong></a>, Sol B to anyone who's been around, deep in the Lavastorm Mountains where the Fire Giants serve Lord Nagafen himself, close out the climb before the Planes open their doors at 46.</p>
-          </div>
+          <trail-stop range="Lv 1–10">
+            <p>Every class you own is leveling together while you find your footing. Start anywhere near your home city. Partying up? A <strong>Magician</strong> and <strong>Cleric</strong> pair is fast and forgiving: the pet tanks, the Cleric keeps it upright. Trios built around a <strong>Paladin</strong> or <strong>Shadow Knight</strong> with a <strong>Cleric</strong> or <strong>Shaman</strong> alongside come up again and again in beta chatter too, self-sustaining enough to solo through the rough patches once you've got all three classes in your loadout.</p>
+          </trail-stop>
+          <trail-stop range="Lv 15–25">
+            <p>The <a href="route.html?to=The%20Estate%20of%20Unrest"><strong>Estate of Unrest</strong></a> becomes the obvious anchor: once a dwarven noble's home, now one of the great undead havens on Norrath, with a strong experience bonus and camps that scale right alongside you. <a href="route.html?to=Solusek's%20Eye"><strong>Solusek's Eye</strong></a>, home to fire goblins and an intrepid gnome mining company chasing the mineral wealth underneath them, and <a href="route.html?to=Mistmoore%20Castle"><strong>Mistmoore Castle</strong></a>, vampire lord Mayong Mistmoore's mazelike stronghold, carry the rest of the climb through your low twenties. <a href="route.html?to=High%20Keep"><strong>High Keep</strong></a>, the crumbling seat of an empire that once ruled central Antonica before centuries of orc and gnoll raids reduced it to Highpass Hold, is worth a look too for a change of scenery.</p>
+          </trail-stop>
+          <trail-stop range="Lv 25–40">
+            <p><a href="route.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles; the ocean itself is the old boat route carrying travelers between Antonica and Faydwer. <a href="route.html?to=Lower%20Guk"><strong>Lower Guk</strong></a>, the tunnel-riddled Ruins of Ancient Guk that connect down to Innothule Swamp, is worth lingering at from 40–44: exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
+          </trail-stop>
+          <trail-stop range="Lv 40–48">
+            <p><a href="route.html?to=The%20Hole"><strong>The Hole</strong></a>, officially the Ruins of Old Paineel (a hole the Heretics punched straight into Odus during their war with Erudin), or the Efreeti camp in <a href="route.html?to=Nagafen's%20Lair"><strong>Nagafen's Lair</strong></a>, Sol B to anyone who's been around, deep in the Lavastorm Mountains where the Fire Giants serve Lord Nagafen himself, close out the climb before the Planes open their doors at 46.</p>
+          </trail-stop>
         </div>
         <div class="road-aside">
           <strong>Off the beaten path:</strong> <a href="route.html?to=Najena"><strong>Najena</strong></a>, carved out by the dark elf magician of the same name as a den for her and her allies' experiments; <a href="route.html?to=Permafrost"><strong>Permafrost</strong></a>, a castle being slowly swallowed by glacial ice with goblins now denning in its ruins; <a href="route.html?to=Kedge%20Keep"><strong>Kedge Keep</strong></a>, the drowned fortress of an aquatic race that died out centuries ago; and <a href="route.html?to=Stonebrunt%20Mountains"><strong>Stonebrunt Mountains</strong></a>, spiritual home of the Kejekan people atop Mount Klaw, all pull solid experience if you'd rather skip the well-known stops. Traveling solo? The game's built for it. The easiest difficulty lets you clear content made for a group at your own pace, and a private instance is always one option away.
@@ -243,29 +180,71 @@
 
       <div class="road-ledger">
         <h2>Notable Finds Along the Way</h2>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Soft_Wicker_Armor" target="_blank" rel="noopener">Soft Wicker armor</a></strong> <span>— <a href="route.html?to=The%20Warrens">The Warrens</a>, a kobold warren Clan Kolbok dug into the heart of Odus, has its own gear set: Soft Wicker armor, leather-equivalent with a look you won't see anywhere else, weapons included.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Armor_of_Ro_Quests" target="_blank" rel="noopener">Armor of Ro</a></strong> <span>— <a href="route.html?to=Rathe%20Mountains">Rathe Mountains</a> hides more than danger along its southern route between Freeport and Qeynos. Paladins camp there working toward a Mold of Ro from the <a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a>, combined with a crafted Bar of Ronium at a forge.</span></p>
-        <p class="ledger-item"><strong>Taskmaster's <a href="https://eqlwiki.com/Leather_Whip" target="_blank" rel="noopener">whip</a> &amp; <a href="https://eqlwiki.com/Brass_Earring" target="_blank" rel="noopener">earring</a></strong> <span>— <a href="route.html?to=Crushbone">Crushbone</a>, the orc clan camp that's been a thorn in Faydwer's side for as long as anyone remembers. Its Taskmaster drops a 5/30 whip and his own brass earring.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Mold_of_Ro_Bracer" target="_blank" rel="noopener">Mold of Ro Bracer</a></strong> <span>— <a href="route.html?to=Lake%20Rathetear">Lake Rathetear</a>, a small inland sea in the wilds of Antonica: its goblin net masters drop Deepwater Goblin Nets. Turn two in to David, keeper of the Bracers of Ro at the Rathe Mountains paladin camp.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Research_Aid" target="_blank" rel="noopener">Research Aid</a></strong> <span>— <a href="route.html?to=Northern%20Karana">Northern Karana</a> sits at the crossroads of half the continent's bridge traffic, and its resident scholar Mrysila runs a repeatable turn-in: lightstones (a willowisp drop) buy spell research tomes, greater lightstones buy the Concordance of Research.</span></p>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Soft_Wicker_Armor" target="_blank" rel="noopener">Soft Wicker armor</a></span>
+          <span slot="detail"><a href="route.html?to=The%20Warrens">The Warrens</a>, a kobold warren Clan Kolbok dug into the heart of Odus, has its own gear set: Soft Wicker armor, leather-equivalent with a look you won't see anywhere else, weapons included.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Armor_of_Ro_Quests" target="_blank" rel="noopener">Armor of Ro</a></span>
+          <span slot="detail"><a href="route.html?to=Rathe%20Mountains">Rathe Mountains</a> hides more than danger along its southern route between Freeport and Qeynos. Paladins camp there working toward a Mold of Ro from the <a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a>, combined with a crafted Bar of Ronium at a forge.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label">Taskmaster's <a href="https://eqlwiki.com/Leather_Whip" target="_blank" rel="noopener">whip</a> &amp; <a href="https://eqlwiki.com/Brass_Earring" target="_blank" rel="noopener">earring</a></span>
+          <span slot="detail"><a href="route.html?to=Crushbone">Crushbone</a>, the orc clan camp that's been a thorn in Faydwer's side for as long as anyone remembers. Its Taskmaster drops a 5/30 whip and his own brass earring.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Mold_of_Ro_Bracer" target="_blank" rel="noopener">Mold of Ro Bracer</a></span>
+          <span slot="detail"><a href="route.html?to=Lake%20Rathetear">Lake Rathetear</a>, a small inland sea in the wilds of Antonica: its goblin net masters drop Deepwater Goblin Nets. Turn two in to David, keeper of the Bracers of Ro at the Rathe Mountains paladin camp.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Research_Aid" target="_blank" rel="noopener">Research Aid</a></span>
+          <span slot="detail"><a href="route.html?to=Northern%20Karana">Northern Karana</a> sits at the crossroads of half the continent's bridge traffic, and its resident scholar Mrysila runs a repeatable turn-in: lightstones (a willowisp drop) buy spell research tomes, greater lightstones buy the Concordance of Research.</span>
+        </ledger-item>
       </div>
 
       <div class="road-ledger">
         <h2>Beyond the Kill Count</h2>
-        <p class="ledger-item">None of this is about experience per hour. It's what's easy to miss if a leveling guide is the only lens you ever look through.</p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a></strong> <span>— eight trades to dabble in (Alchemy, Baking, Blacksmithing, Brewing, Fletching, Jewelcrafting, Pottery, Tailoring), and the game already nudges you toward one: Blacksmithing leans on Strength, Fletching on Dexterity. Push past 200 in one and the rest lock there until you buy the Crafting Mastery AA, so most crafters commit to a single trade instead of spreading thin.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Fishing</a></strong> <span>— a rod, bait, and any water will do. The smallest fishable puddle in the game sits, of all places, in the tunnel between <a href="route.html?to=West%20Freeport">West Freeport</a> and North Freeport's newbie areas. <a href="route.html?to=Ocean%20of%20Tears">Ocean of Tears</a> turns up real saltwater catches, and <a href="route.html?to=North%20Qeynos">North Qeynos</a> is home to the game's infamous koalindl, one of a handful of "fish" you wade out and kill rather than reel in.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a></strong> <span>— every race speaks its own tongue on top of Common, and the honest way to learn one is still the old way: sit in a group with a fluent friend and have them speak it at you (the /gs command) until it stops reading as "an unknown tongue." That happens around skill 25.</span></p>
-        <p class="ledger-item"><strong><a href="route.html?to=Ak'Anon">Ak'Anon</a></strong> <span>— worth the walk even empty-handed. A gnomish city built into the mountainside, half fortress and half laboratory, its clockwork machines still being tinkered with after generations of work.</span></p>
-        <p class="ledger-item"><strong><a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a></strong> <span>— not every zone is about killing something. This one isn't built for hunting or vendors at all, just for talking to the people who live there. A strange, quiet stop if you've only ever passed through Norrath's dungeons.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quests</a></strong> <span>— every class has one waiting eventually: long, group-driven questlines through the game's hardest dungeons for a genuinely unique weapon. Paladins chase the <a href="https://eqlwiki.com/Paladin_Epic_Quest" target="_blank" rel="noopener">Fiery Defender</a>, Clerics the <a href="https://eqlwiki.com/Cleric_Epic_Quest" target="_blank" rel="noopener">Water Sprinkler of Nem Ankh</a>. Worth building toward from level one, even if the actual grind is a long way off.</span></p>
-        <p class="ledger-item"><strong><a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race unlocks</a></strong> <span>— want to play something you didn't start as? Every race has its own list of factions to max out, and EQL is generous about how you get there: charm a faction's enemies, sneak past its guards, or swap your loadout for a class that faction likes better. A slow side project worth chipping away at while you level.</span></p>
-        <p class="ledger-item"><strong><a href="route.html?to=Southern%20Felwithe">Southern Felwithe</a></strong> <span>— the high elf capital rises out of Greater Faydark's permanent fog with walls that glow faintly gold on their own. Even players who never touch an elf tend to wander through once, just to see it.</span></p>
-        <p class="ledger-item"><strong><a href="route.html?to=Neriak">Neriak</a></strong> <span>— the dark elf answer to Felwithe: an entire city carved out of mountain rock that has never once seen natural sunlight, and the dark elves like it that way.</span></p>
+        <p class="road-ledger-intro">None of this is about experience per hour. It's what's easy to miss if a leveling guide is the only lens you ever look through.</p>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a></span>
+          <span slot="detail">Eight trades to dabble in (Alchemy, Baking, Blacksmithing, Brewing, Fletching, Jewelcrafting, Pottery, Tailoring), and the game already nudges you toward one: Blacksmithing leans on Strength, Fletching on Dexterity. Push past 200 in one and the rest lock there until you buy the Crafting Mastery AA, so most crafters commit to a single trade instead of spreading thin.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Fishing</a></span>
+          <span slot="detail">A rod, bait, and any water will do. The smallest fishable puddle in the game sits, of all places, in the tunnel between <a href="route.html?to=West%20Freeport">West Freeport</a> and North Freeport's newbie areas. <a href="route.html?to=Ocean%20of%20Tears">Ocean of Tears</a> turns up real saltwater catches, and <a href="route.html?to=North%20Qeynos">North Qeynos</a> is home to the game's infamous koalindl, one of a handful of "fish" you wade out and kill rather than reel in.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a></span>
+          <span slot="detail">Every race speaks its own tongue on top of Common, and the honest way to learn one is still the old way: sit in a group with a fluent friend and have them speak it at you (the /gs command) until it stops reading as "an unknown tongue." That happens around skill 25.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="route.html?to=Ak'Anon">Ak'Anon</a></span>
+          <span slot="detail">Worth the walk even empty-handed. A gnomish city built into the mountainside, half fortress and half laboratory, its clockwork machines still being tinkered with after generations of work.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="route.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a></span>
+          <span slot="detail">Not every zone is about killing something. This one isn't built for hunting or vendors at all, just for talking to the people who live there. A strange, quiet stop if you've only ever passed through Norrath's dungeons.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quests</a></span>
+          <span slot="detail">Every class has one waiting eventually: long, group-driven questlines through the game's hardest dungeons for a genuinely unique weapon. Paladins chase the <a href="https://eqlwiki.com/Paladin_Epic_Quest" target="_blank" rel="noopener">Fiery Defender</a>, Clerics the <a href="https://eqlwiki.com/Cleric_Epic_Quest" target="_blank" rel="noopener">Water Sprinkler of Nem Ankh</a>. Worth building toward from level one, even if the actual grind is a long way off.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race unlocks</a></span>
+          <span slot="detail">Want to play something you didn't start as? Every race has its own list of factions to max out, and EQL is generous about how you get there: charm a faction's enemies, sneak past its guards, or swap your loadout for a class that faction likes better. A slow side project worth chipping away at while you level.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="route.html?to=Southern%20Felwithe">Southern Felwithe</a></span>
+          <span slot="detail">The high elf capital rises out of Greater Faydark's permanent fog with walls that glow faintly gold on their own. Even players who never touch an elf tend to wander through once, just to see it.</span>
+        </ledger-item>
+        <ledger-item>
+          <span slot="label"><a href="route.html?to=Neriak">Neriak</a></span>
+          <span slot="detail">The dark elf answer to Felwithe: an entire city carved out of mountain rock that has never once seen natural sunlight, and the dark elves like it that way.</span>
+        </ledger-item>
       </div>
 
-      <p class="road-sources">Field notes and lore drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a>, <a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Skill Fishing</a>, <a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a>, <a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quest List</a>, and <a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race Unlock Guide</a> pages, each zone's own eqlwiki.com entry, plus community leveling routes and player-beta impressions from the EQL press and player wikis.</p>
-    </article>
+      <p class="sources">Field notes and lore drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a>, <a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Skill Fishing</a>, <a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a>, <a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quest List</a>, and <a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race Unlock Guide</a> pages, each zone's own eqlwiki.com entry, plus community leveling routes and player-beta impressions from the EQL press and player wikis.</p>
+    </parchment-page>
   </main>
 
   <app-footer></app-footer>
