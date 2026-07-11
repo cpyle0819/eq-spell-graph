@@ -10,6 +10,7 @@
 // not computed here.
 import { CardBase, classBadges, fmtDuration, fmtCast, wikiLink } from "./card-base.js";
 import { getOwnedSpells, setSpellOwned } from "../components.js";
+import { ICON_SHEET_MANIFEST, ICON_CELL_SIZE } from "./icon-sheet-manifest.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`
@@ -20,6 +21,42 @@ EXTRA_SHEET.replaceSync(`
    does. --ink-muted, not --parch-ink-soft: .spell-header sits on the dark
    stone panel (same as the gold h3 above it), not the parchment scroll
    below. */
+/* card-base.js's shared .spell-header is align-items: baseline (right for
+   text-only headers, the other three card types) -- overridden to center
+   here so the fixed-size icon sits level with the name instead of pinned to
+   its text baseline. */
+.spell-header { align-items: center; }
+
+/* Spell gem — real per-spell icon art cropped from eqlwiki.com (see
+   decisions/spell-icons-real-client-art-exception.md), packed into one
+   shared sheet (public/icons/spell-icons.png, built by
+   scripts/build-icon-sheet.ts) and positioned via background-position
+   rather than one <img> per icon. Falls back to the same decorative
+   radial-gradient square zone-card.js's spell-chip uses when a spell has
+   no icon key, or its key isn't in the sheet (shouldn't happen day-to-day,
+   but the sheet and the graph's icon field are built by separate script
+   runs, so a stale sheet is a real possibility, not just theoretical).
+   Native sheet-cell size (see icon-sheet-manifest.js's ICON_CELL_SIZE),
+   framed with the same two-tone bevel language as the rest of the app's
+   raised elements rather than floating unframed. */
+.spell-icon, .spell-icon-fallback {
+  width: ${ICON_CELL_SIZE}px; height: ${ICON_CELL_SIZE}px; flex-shrink: 0;
+  border-radius: 3px;
+}
+.spell-icon {
+  /* Resolved against the *document* that adopted this constructed
+     stylesheet, not this module's own file location -- every page lives
+     flat under public/ alongside icons/, so "icons/..." (no leading "../")
+     is correct here, same as the plain <img src="icons/..."> it replaced. */
+  background-image: url("icons/spell-icons.png");
+  background-repeat: no-repeat;
+  border: 2px solid; border-color: var(--bone-edge-hi) var(--bone-edge-hi) var(--bone-edge-lo) var(--bone-edge-lo);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.spell-icon-fallback {
+  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
+}
 .spell-check { display: flex; align-items: center; }
 .spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
 .spell-check-labeled {
@@ -120,8 +157,14 @@ class SpellCard extends CardBase {
 
     const isOwned = getOwnedSpells().has(spell.id);
 
+    const iconPos = spell.icon ? ICON_SHEET_MANIFEST[spell.icon] : null;
+    const iconHtml = iconPos
+      ? `<span class="spell-icon" style="background-position: -${iconPos.x}px -${iconPos.y}px;"></span>`
+      : `<span class="spell-icon-fallback"></span>`;
+
     this.shadowRoot.innerHTML = `
       <div class="spell-header">
+        ${iconHtml}
         <h3>${spell.label}</h3>
         ${wikiLink(spell.label)}
         <label class="spell-check spell-check-labeled"><input type="checkbox" data-spell-id="${spell.id}"${isOwned ? " checked" : ""}> Owned</label>

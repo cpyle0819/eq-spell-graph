@@ -71,4 +71,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Real Web Components (Custom Elements + Shadow DOM), not string-template helpers](real-web-components-shadow-dom.md)
 - [Home page: tool buttons are a touching macro-socket grid, no per-tool description text, positioned left of the welcome scroll](home-page-macro-socket-grid.md)
 - [Wiki links: per-entity page vs. shared-page link, by node type](wiki-links-per-entity-vs-shared-page.md)
+- [Spell icons: real client art, a deliberate exception to the derived-facts-only policy](spell-icons-real-client-art-exception.md)
 
