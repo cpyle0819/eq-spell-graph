@@ -44630,6 +44630,49 @@
         ],
         "category": "special"
       }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:grimbold-ironhand",
+        "label": "Grimbold Ironhand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:sturdy-ore-sack",
+        "label": "Sturdy Ore Sack",
+        "type": "item"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:steel-warriors-of-ak-anon",
+        "label": "Steel Warriors of Ak'Anon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ore-for-the-anvil",
+        "label": "Ore for the Anvil",
+        "type": "quest",
+        "description": "The town blacksmith needs ore hauled up from the mines below Ak'Anon.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 5,
+        "maxLevel": 15,
+        "steps": [
+          "Speak with Grimbold Ironhand in Ak'Anon",
+          "Collect 5 Raw Ore from the Ak'Anon mines",
+          "Return the ore to Grimbold Ironhand"
+        ],
+        "total_experience": 500
+      }
     }
   ],
   "edges": [
@@ -103847,6 +103890,46 @@
         "source": "zone:the-warrens",
         "target": "zone:stonebrunt-mountains",
         "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7401",
+        "source": "npc:ak-anon:grimbold-ironhand",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7402",
+        "source": "npc:ak-anon:grimbold-ironhand",
+        "target": "quest:ore-for-the-anvil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7403",
+        "source": "quest:ore-for-the-anvil",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7404",
+        "source": "quest:ore-for-the-anvil",
+        "target": "item:sturdy-ore-sack",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7405",
+        "source": "quest:ore-for-the-anvil",
+        "target": "faction:steel-warriors-of-ak-anon",
+        "type": "rewards"
       }
     }
   ]

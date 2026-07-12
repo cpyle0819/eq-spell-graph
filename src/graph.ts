@@ -1,8 +1,8 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone (extensible: quest, item, etc.)
- * Edge types: sells, located_in, connects_to (extensible: starts_at, rewards, requires)
+ * Node types: spell, npc, zone, quest, item, faction (extensible: more as needed)
+ * Edge types: sells, located_in, connects_to, starts, rewards (extensible: requires)
  */
 
 import { readFileSync, writeFileSync } from "fs";

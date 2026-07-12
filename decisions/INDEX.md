@@ -11,6 +11,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [AA nodes: same single-page-scrape shape as stances/invocations, but with a `category`](aa-nodes-single-page-scrape-with-category.md)
 - [Edge semantics](edge-semantics.md)
 - [Spell class/level model](spell-class-level-model.md)
+- [Quest structure and reward modeling](quest-reward-modeling.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)
