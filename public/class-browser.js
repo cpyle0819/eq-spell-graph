@@ -3,6 +3,7 @@
 // here is load bearing, not just tidiness.
 import "./components/index.js";
 import { wikiUrl } from "./components/card-base.js";
+import { buildQuestResultEntries } from "./components/quest-shared.js";
 import { lazyRenderList } from "./components.js";
 
 // Matches the planner's level-range slider bound (public/index.html
@@ -47,9 +48,17 @@ function renderSidebar() {
 
 export async function init() {
   renderSidebar();
-  [availableClasses, availableSpellLines] = await Promise.all([
+  // Quests/quest lines are fetched once, unfiltered -- unlike every other
+  // category here, the Quests tab's own class-narrowing rule differs from
+  // this page's (see questsForClassBrowser() below and decisions/
+  // class-browser-quests-category.md), so there's no server-side class
+  // filter to re-fetch on selection change; only the client-side narrowing
+  // in buildSections() changes per render().
+  [availableClasses, availableSpellLines, rawQuests, rawQuestLines] = await Promise.all([
     fetch("api/classes/abilities").then((r) => r.json()),
     fetch("api/spell-lines").then((r) => r.json()),
+    fetch("api/quests").then((r) => r.json()),
+    fetch("api/quest-lines").then((r) => r.json()),
   ]);
   setupClassTagInput();
   setupSpellLineTagInput();
@@ -217,6 +226,35 @@ function renderSpellCard(spell, selected) {
 const renderAA = (aa, selected) => makeCard("aa-card", aa, selected);
 const renderAbilityCard = (ability, selected) => makeCard("ability-card", ability, selected);
 const renderAbility = (item, selected) => makeCard("stance-card", item, selected);
+// entry is { label, tag, data } from buildQuestResultEntries() -- tag is
+// "quest-card" or "quest-line-card" depending on whether this entry is a
+// standalone quest or a whole questline (decisions/quest-line-card-ui.md);
+// unlike the other card types, quest-card/quest-line-card.setData() takes
+// no `selected` classes argument, so the second renderFn param is unused.
+function renderQuestResult(entry) {
+  const el = document.createElement(entry.tag);
+  el.setData(entry.data);
+  return el;
+}
+
+// The Classes page's Quests category deliberately does NOT follow this
+// file's usual "no classes selected = everyone" rule (decisions/
+// no-classes-selected-means-all-classes.md): with no class picked, it
+// shows every quest/line tied to *some* specific class, not literally
+// every quest -- classless "Any Class" quests don't fit "browsing by
+// class." Picking classes narrows to the union of just those classes,
+// same rule as everywhere else. See decisions/
+// class-browser-quests-category.md.
+function questsForClassBrowser() {
+  const matchesSelection = (entryClasses) =>
+    selectedClassNames.length > 0
+      ? entryClasses.some((c) => selectedClassNames.includes(c))
+      : entryClasses.length > 0;
+  return {
+    quests: rawQuests.filter((quest) => matchesSelection(quest.classes)),
+    questLines: rawQuestLines.filter((line) => matchesSelection(line.classes)),
+  };
+}
 
 // Raw fetch results, kept so the search box can re-filter/re-render without
 // a network round trip.
@@ -226,6 +264,8 @@ let rawAA = { general: [], archetype: [], class: [], special: [] };
 let rawSpells = [];
 let rawAbilities = [];
 let rawClasses = [];
+let rawQuests = [];
+let rawQuestLines = [];
 
 // Category selection (driven by #category-select, right after Classes in
 // the sidebar) persists across filter changes (so switching classes doesn't
@@ -256,6 +296,7 @@ function buildSections(searchQuery) {
   const spellsInSelectedLines = lineIds.size === 0
     ? rawSpells
     : rawSpells.filter((s) => s.spellLineId && lineIds.has(s.spellLineId));
+  const { quests: classQuests, questLines: classQuestLines } = questsForClassBrowser();
   return [
     { key: "spells", title: "Spells", allItems: spellsInSelectedLines, items: spellsInSelectedLines.filter(matchesSpell), renderFn: renderSpellCard },
     { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name)), renderFn: renderAbilityCard },
@@ -265,6 +306,7 @@ function buildSections(searchQuery) {
     { key: "archetype", title: "Archetype AAs", allItems: rawAA.archetype, items: rawAA.archetype.filter((s) => matches(s.name)), renderFn: renderAA },
     { key: "class", title: "Class AAs", allItems: rawAA.class, items: rawAA.class.filter((s) => matches(s.name)), renderFn: renderAA },
     { key: "special", title: "Special AAs", allItems: rawAA.special, items: rawAA.special.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "quests", title: "Quests", allItems: buildQuestResultEntries(classQuests, classQuestLines, ""), items: buildQuestResultEntries(classQuests, classQuestLines, searchQuery), renderFn: renderQuestResult },
   ].filter((section) => section.allItems.length);
 }
 

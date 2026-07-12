@@ -14,6 +14,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Quest structure and reward modeling](quest-reward-modeling.md)
 - [Item node schema](item-node-schema.md)
 - [Quest lines: a `quest_line` node, reusing the `member_of` edge](quest-line-node-type.md)
+- [Quest era flagging](quest-era-flagging.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)
@@ -78,4 +79,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Spell icons: real client art, a deliberate exception to the derived-facts-only policy](spell-icons-real-client-art-exception.md)
 - [Item hover uses the generic detail-tooltip, shaped per card type](item-hover-uses-generic-detail-tooltip.md)
 - [Quest-line card replaces its members in the results list](quest-line-card-ui.md)
+- [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
 

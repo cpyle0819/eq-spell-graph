@@ -3,6 +3,7 @@
 // here is load bearing, not just tidiness.
 import "./components/index.js";
 import { lazyRenderList } from "./components.js";
+import { buildQuestResultEntries } from "./components/quest-shared.js";
 
 // Matches class-browser.js's own MAX_SPELL_LEVEL bound -- the data tops out
 // at level 50 (see decisions/).
@@ -150,39 +151,10 @@ async function fetchQuests() {
   render();
 }
 
-// A questline matches search if its own name does, or any member's does --
-// searching "bracer" should still surface the Armor of Ro line, since its
-// quest-line-card is the only place that member's card renders (see
-// buildResultEntries()).
-function questLineMatches(line, q) {
-  if (!q) return true;
-  if (line.label.toLowerCase().includes(q)) return true;
-  return line.members.some((m) => m.label.toLowerCase().includes(q));
-}
-
-// One quest-line-card per line (never its members' individual quest-cards
-// -- that's the whole point of quest_line, see decisions/
-// quest-line-node-type.md) interleaved alphabetically with standalone
-// quest-cards (quests with no questLine). Sorting by label rather than
-// "lines first" reads as one unified list, not two stacked sections.
-function buildResultEntries(searchQuery) {
-  const q = searchQuery.trim().toLowerCase();
-  const lineIds = new Set(rawQuestLines.map((l) => l.id));
-  const entries = [
-    ...rawQuestLines.filter((line) => questLineMatches(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
-    ...rawQuests
-      .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
-      .filter((quest) => !q || quest.label.toLowerCase().includes(q))
-      .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),
-  ];
-  entries.sort((a, b) => a.label.localeCompare(b.label));
-  return entries;
-}
-
 function render() {
   const resultsEl = document.getElementById("quests-results");
   const searchQuery = document.getElementById("quest-search").value;
-  const entries = buildResultEntries(searchQuery);
+  const entries = buildQuestResultEntries(rawQuests, rawQuestLines, searchQuery);
 
   resultsEl.innerHTML = "";
   if (!entries.length) {

@@ -6,6 +6,12 @@
 // Kept separate from card-base.js (shared by every card type -- spell/aa/
 // ability/stance/quest/quest-line) since these are quest/item-domain
 // specific, not generic card-shell concerns.
+//
+// Also shared by the two *pages* that render quest results -- quests.js
+// (the standalone Quests tab) and class-browser.js (the Classes page's
+// Quests category, decisions/class-browser-quests-category.md) --
+// buildQuestResultEntries() below, which neither is a card nor belongs in
+// card-base.js, but both pages need identically.
 import { classBadges } from "./card-base.js";
 
 // Raw CSS text (not a constructed CSSStyleSheet), same convention as
@@ -67,6 +73,15 @@ export const QUEST_CARD_CSS = `
 .item-badge::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d); }
 .faction-badge-reward { background: rgba(94, 42, 122, 0.1); color: #5e2a7a; border: 1px solid rgba(94, 42, 122, 0.4); }
 .faction-badge-reward::before { background: radial-gradient(circle at 65% 30%, #d9a8ff, #9d5ec7 55%, #5e2a7a); }
+
+/* Warning, not metadata -- deliberately a different register from the
+   neutral class/level badges (dark red vs. their muted brown/tan), same
+   "danger" language as zone-card's kos/wont_sell faction badges, adapted
+   for this card's light parchment background rather than dark stone. */
+.out-of-era-badge {
+  background: rgba(156, 43, 43, 0.12); color: #9c2b2b; border: 1px solid rgba(156, 43, 43, 0.45);
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: help;
+}
 `;
 
 const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -93,6 +108,18 @@ export function headerBadges(classes, minLevel, maxLevel) {
     classes.length ? classBadges(classes, []) : `<span class="spell-badge class-badge">Any Class</span>`,
     levelLabel ? `<span class="spell-badge skill-badge">${levelLabel}</span>` : "",
   ].join("");
+}
+
+// entity.outOfEra is only ever present (and true) when the quest's era is
+// strictly later than the game's current era (src/graph.ts's isOutOfEra(),
+// see decisions/quest-era-flagging.md) -- same-era or earlier renders
+// nothing at all, not a reassuring badge, matching that spec's "do nothing"
+// case literally. Composed separately from headerBadges() (not folded in)
+// since this is a warning, not neutral metadata -- callers place it first.
+export function outOfEraBadge(entity) {
+  if (!entity.outOfEra) return "";
+  const title = entity.era ? `${entity.era} content isn't available in the current era yet` : "Not available in the current era yet";
+  return `<span class="spell-badge out-of-era-badge" title="${title}">Out of Era</span>`;
 }
 
 // Zone is the link target (per decisions/); giver is supporting detail in
@@ -179,4 +206,36 @@ export function wireItemTooltips(shadowRoot, findItem) {
       document.getElementById("detail-tooltip")?.hide();
     }
   });
+}
+
+// A questline matches search if its own name does, or any member's does --
+// searching "bracer" should still surface the Armor of Ro line, since its
+// quest-line-card is the only place that member's card renders.
+function questLineMatchesSearch(line, q) {
+  if (!q) return true;
+  if (line.label.toLowerCase().includes(q)) return true;
+  return line.members.some((m) => m.label.toLowerCase().includes(q));
+}
+
+// One quest-line-card per line (never its members' individual quest-cards
+// -- that's the whole point of quest_line, see decisions/
+// quest-line-node-type.md) interleaved alphabetically with standalone
+// quest-cards (quests with no questLine, or whose line isn't in the
+// `questLines` list passed in). Sorting by label rather than "lines first"
+// reads as one unified list, not two stacked sections. Callers decide which
+// quests/questLines to pass in (e.g. class-browser.js's own class-narrowing
+// rule, decisions/class-browser-quests-category.md) -- this function only
+// combines and sorts, it doesn't filter by class.
+export function buildQuestResultEntries(quests, questLines, searchQuery) {
+  const q = (searchQuery || "").trim().toLowerCase();
+  const lineIds = new Set(questLines.map((l) => l.id));
+  const entries = [
+    ...questLines.filter((line) => questLineMatchesSearch(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
+    ...quests
+      .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
+      .filter((quest) => !q || quest.label.toLowerCase().includes(q))
+      .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),
+  ];
+  entries.sort((a, b) => a.label.localeCompare(b.label));
+  return entries;
 }

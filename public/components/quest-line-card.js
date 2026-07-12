@@ -38,7 +38,7 @@
 // blank, so the *absence* of a number reads as a real structural signal,
 // not an inconsistency.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, startsInBody, stepsBody, rewardsBody, wireItemTooltips } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, wireItemTooltips } from "./quest-shared.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`
@@ -134,7 +134,7 @@ class QuestLineCard extends CardBase {
     this.shadowRoot.innerHTML = `
       <div class="spell-header"><h3>${line.label}</h3>${line.wikiTitle ? wikiLink(line.wikiTitle) : ""}</div>
       <div class="spell-scroll">
-        <div class="spell-badges">${headerBadges(line.classes, line.minLevel, line.maxLevel)}</div>
+        <div class="spell-badges">${outOfEraBadge(line)}${headerBadges(line.classes, line.minLevel, line.maxLevel)}</div>
         ${section("Description", line.description ? `<p class="spell-desc">${line.description}</p>` : "")}
         ${section("Starts In", startsInBody(line.zones, line.questGivers))}
         ${section(`Quests in This Line (${line.members.length})`, `<div class="line-roster">${roster}</div>`)}

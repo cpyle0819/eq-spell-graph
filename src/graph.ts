@@ -1,7 +1,7 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone, quest, quest_line, item, faction (extensible: more as needed)
+ * Node types: spell, npc, zone, quest, quest_line, item, faction, era (extensible: more as needed)
  * Edge types: sells, located_in, connects_to, starts, rewards, member_of (extensible: requires)
  */
 
@@ -274,6 +274,15 @@ export interface QuestSummary {
   // wiki-links-per-entity-vs-shared-page.md) -- undefined for quests with
   // no real source page (the migration-026 test quest).
   wikiTitle?: string;
+  // The quest's content era (a plain label like "Kunark", matched against
+  // the era nodes' own order -- decisions/quest-era-flagging.md). Present
+  // only when the source quest node actually states one; most imported
+  // quests don't yet.
+  era?: string;
+  // true only when era is strictly later than the current era. Absent
+  // (not false) when not out of era, matching this codebase's convention
+  // of omitting a flag field rather than asserting a negative.
+  outOfEra?: boolean;
 }
 
 // A quest_line's own zones/questGivers/classes/level fields describe the
@@ -292,20 +301,69 @@ export interface QuestLineSummary {
   questGivers: { id: string; label: string }[];
   members: QuestSummary[];
   wikiTitle?: string;
+  era?: string;
+  outOfEra?: boolean;
+}
+
+// `era` nodes (migration 032): `order` is the position in the game's real
+// content-release order (Classic=1, Kunark=2, Velious=3, ...), `current`
+// marks the one era the live game is actually in right now (see
+// decisions/quest-era-flagging.md). Exactly one node should have
+// current=true; nothing here enforces that -- it's set once by the seeding
+// migration and moved forward by a future one as EQL's own progression
+// advances, not by app code.
+export interface EraSummary {
+  id: string;
+  label: string;
+  order: number;
+  current: boolean;
+}
+
+export function getEras(): EraSummary[] {
+  const graph = load();
+  return graph.nodes
+    .filter((n) => n.data.type === "era")
+    .map((n) => ({ id: n.data.id, label: n.data.label, order: n.data.order as number, current: !!n.data.current }))
+    .sort((a, b) => a.order - b.order);
 }
 
 interface GraphIndexHelpers {
   nodeById: (id: string) => NodeData | undefined;
   edgesFrom: (id: string, type: string) => EdgeData[];
   edgesTo: (id: string, type: string) => EdgeData[];
+  // quest.era (a plain string, matching the class_levels.class precedent --
+  // see decisions/quest-era-flagging.md) is matched by label against the
+  // era nodes' own order, not stored as an edge.
+  eraOrderByLabel: Map<string, number>;
+  currentEraOrder: number | undefined;
 }
 
 function graphIndexHelpers(graph: GraphData): GraphIndexHelpers {
+  const eraOrderByLabel = new Map<string, number>();
+  let currentEraOrder: number | undefined;
+  for (const n of graph.nodes) {
+    if (n.data.type !== "era") continue;
+    eraOrderByLabel.set(n.data.label, n.data.order as number);
+    if (n.data.current) currentEraOrder = n.data.order as number;
+  }
   return {
     nodeById: (id) => graph.nodes.find((n) => n.data.id === id)?.data,
     edgesFrom: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.source === id).map((e) => e.data),
     edgesTo: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.target === id).map((e) => e.data),
+    eraOrderByLabel,
+    currentEraOrder,
   };
+}
+
+// A quest with no era, or an era not found among the known era nodes,
+// is never flagged -- "unknown" isn't the same as "confirmed later than
+// current," and guessing would produce false positives. Only a strictly
+// later order counts as out of era; same-or-earlier is the "do nothing"
+// case (decisions/quest-era-flagging.md).
+function isOutOfEra(era: string | undefined, helpers: GraphIndexHelpers): boolean {
+  if (!era || helpers.currentEraOrder === undefined) return false;
+  const order = helpers.eraOrderByLabel.get(era);
+  return order !== undefined && order > helpers.currentEraOrder;
 }
 
 // Shared by getQuests() and getQuestLines() (for each line's members) --
@@ -344,6 +402,8 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
     ...(questLineNode ? { questLine: { id: questLineNode.id, label: questLineNode.label } } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
+    ...(node.era ? { era: node.era as string } : {}),
+    ...(isOutOfEra(node.era as string | undefined, helpers) ? { outOfEra: true } : {}),
   };
 }
 
@@ -419,6 +479,8 @@ export function getQuestLines(classNames?: string[], zoneId?: string, level?: nu
         questGivers,
         members,
         ...(n.data.wiki_title ? { wikiTitle: n.data.wiki_title as string } : {}),
+        ...(n.data.era ? { era: n.data.era as string } : {}),
+        ...(isOutOfEra(n.data.era as string | undefined, helpers) ? { outOfEra: true } : {}),
       };
     });
 

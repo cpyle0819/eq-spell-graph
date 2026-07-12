@@ -24,7 +24,11 @@
     #quests-content { flex: 1; min-height: 0; overflow-y: auto; }
     #quests-results { padding: 0 0 24px; }
 
-    quest-card + quest-card { margin-top: -4px; }
+    /* Quests interleaves quest-card and quest-line-card alphabetically
+       (decisions/quest-line-card-ui.md), so every combination needs the
+       same packed-seam treatment, not just same-tag siblings. */
+    quest-card + quest-card, quest-card + quest-line-card,
+    quest-line-card + quest-card, quest-line-card + quest-line-card { margin-top: -4px; }
 
     @media (min-width: 1100px) {
       #quests-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }

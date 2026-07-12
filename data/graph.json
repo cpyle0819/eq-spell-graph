@@ -45322,6 +45322,141 @@
         "lore": true,
         "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Vambrace + Bar of Ronium"
       }
+    },
+    {
+      "data": {
+        "id": "era:classic",
+        "label": "Classic",
+        "order": 1,
+        "current": true,
+        "type": "era"
+      }
+    },
+    {
+      "data": {
+        "id": "era:kunark",
+        "label": "Kunark",
+        "order": 2,
+        "current": false,
+        "type": "era"
+      }
+    },
+    {
+      "data": {
+        "id": "era:velious",
+        "label": "Velious",
+        "order": 3,
+        "current": false,
+        "type": "era"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:sanfyrd-featherhead",
+        "label": "Sanfyrd Featherhead",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scrap-metal-quest",
+        "label": "Scrap Metal Quest",
+        "type": "quest",
+        "description": "Sanfyrd Featherhead buys scrap metal off Ak'Anon's adventurers four pieces at a time for experience, coin, and a chance at real gear -- a repeatable turn-in, not a one-time quest.",
+        "classes": [],
+        "minLevel": 5,
+        "steps": [
+          "Collect scrap metal, four pieces at a time (dropped by rogue clockworks in Steamfont Mountains)",
+          "Turn the scrap metal in to Sanfyrd Featherhead in Ak'Anon for experience, coin, and a chance at a named reward -- an Earring of Fire Reflection, a Gnome Glow Rod, a Small Scarab Helm, generic Rusty Weapons, or (rarely) a Tinmizer's Fabulous Compactor"
+        ],
+        "wiki_title": "Scrap Metal Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:earring-of-fire-reflection",
+        "label": "Earring of Fire Reflection",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "ac": 1,
+        "resists": {
+          "fire": 5
+        },
+        "weight": 0,
+        "size": "Tiny",
+        "source": "Scrap Metal Quest reward (Sanfyrd Featherhead, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gnome-glow-rod",
+        "label": "Gnome Glow Rod",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "weight": 0.3,
+        "size": "Tiny",
+        "lightSource": true,
+        "magic": true,
+        "source": "Scrap Metal Quest reward (Sanfyrd Featherhead, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-scarab-helm",
+        "label": "Small Scarab Helm",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 4,
+        "stats": {
+          "cha": -1
+        },
+        "weight": 1.5,
+        "size": "Small",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shaman",
+          "shadow knight",
+          "warrior"
+        ],
+        "source": "Scrap Metal Quest reward (Sanfyrd Featherhead, Ak'Anon); also a reward of the Scarab Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:king-akanon",
+        "label": "King AkAnon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-akanon",
+        "label": "Merchants of AkAnon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:gem-choppers",
+        "label": "Gem Choppers",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -105026,6 +105161,78 @@
         "id": "e-rewards-7467",
         "source": "quest:mold-of-ro-vambrace",
         "target": "item:vambraces-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7462",
+        "source": "npc:ak-anon:sanfyrd-featherhead",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7463",
+        "source": "npc:ak-anon:sanfyrd-featherhead",
+        "target": "quest:scrap-metal-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7464",
+        "source": "quest:scrap-metal-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7465",
+        "source": "quest:scrap-metal-quest",
+        "target": "item:earring-of-fire-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7466",
+        "source": "quest:scrap-metal-quest",
+        "target": "item:gnome-glow-rod",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7467",
+        "source": "quest:scrap-metal-quest",
+        "target": "item:small-scarab-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7468",
+        "source": "quest:scrap-metal-quest",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7469",
+        "source": "quest:scrap-metal-quest",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7470",
+        "source": "quest:scrap-metal-quest",
+        "target": "faction:gem-choppers",
         "type": "rewards"
       }
     }
