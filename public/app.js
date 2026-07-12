@@ -23,14 +23,14 @@ let specificZones = []; // { id, label }
 let planDebounce;
 function replan(delay = 300) { clearTimeout(planDebounce); planDebounce = setTimeout(runPlan, delay); }
 
-// --- Spell tooltip ---
+// --- Detail tooltip ---
 // zone-card (public/components/zone-card.js) owns hover-to-show and
 // click-suppress directly, scoped to its own shadow root -- a delegated
 // listener here can't reliably read e.target/e.relatedTarget for elements
 // retargeted across a shadow boundary. Scroll-to-hide has no such
 // dependency, so it stays here.
 function hideTooltip() {
-  document.getElementById("spell-tooltip").hide();
+  document.getElementById("detail-tooltip").hide();
 }
 
 function setupTooltip() {

@@ -1,10 +1,21 @@
-// <spell-tooltip role="tooltip" aria-hidden="true"></spell-tooltip> — a
-// page torn from the spellbook (parchment), shown on hover over a spell
-// chip in the Spell Finder's results. One instance per page (Spell Finder
-// only). Imperative API instead of attributes/properties since it's driven
-// by hover timing, not declarative state: `.show(spell, anchorEl)` renders
-// spell details and positions itself near anchorEl (flipping above if it
-// would overflow the viewport bottom); `.hide()` fades it out.
+// <detail-tooltip role="tooltip" aria-hidden="true"></detail-tooltip> — a
+// page torn from a parchment scroll, shown near any hovered chip that wants
+// to show more than fits inline. Generic on purpose: renders whatever
+// `{ name, description?, stats? }` shape it's given, with zero knowledge of
+// what kind of entity it's showing. Callers own deciding what counts as an
+// interesting "stat" for their own entity type and pre-build the `stats`
+// array themselves (zone-card.js's spellStats() for spells, e.g.) — this
+// component only lays out name/description/chips. Previously named
+// spell-tooltip and hardcoded spell-field extraction internally; renamed
+// and that extraction moved out to zone-card.js once quest-card.js also
+// needed it for item rewards, where "spell tooltip" was semantically wrong.
+//
+// One instance per page (each page that wants hover detail includes its
+// own <detail-tooltip id="detail-tooltip">). Imperative API instead of
+// attributes/properties since it's driven by hover timing, not declarative
+// state: `.show(entity, anchorEl)` renders and positions itself near
+// anchorEl (flipping above if it would overflow the viewport bottom);
+// `.hide()` fades it out.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -45,7 +56,7 @@ ${RESET_CSS}
 .tt-stat.highlight { color: var(--parch-accent); border-color: var(--parch-accent); }
 `);
 
-class SpellTooltip extends HTMLElement {
+class DetailTooltip extends HTMLElement {
   connectedCallback() {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
@@ -53,25 +64,16 @@ class SpellTooltip extends HTMLElement {
     }
   }
 
-  show(spell, anchorEl) {
-    const dur = spell.duration
-      ? spell.duration.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s").replace(/instant/i, "Instant")
-      : null;
-
-    const stats = [];
-    if (spell.spellType) stats.push({ text: spell.spellType, hi: true });
-    if (spell.mana != null) stats.push({ text: `${spell.mana} mana` });
-    if (spell.targetType) stats.push({ text: spell.targetType });
-    if (dur) stats.push({ text: dur });
-    if (spell.castTime != null) stats.push({ text: `${spell.castTime.toFixed(1)}s cast` });
-    if (spell.resist && !/unresist/i.test(spell.resist)) stats.push({ text: `${spell.resist} resist` });
-    if (spell.skill) stats.push({ text: spell.skill });
-    if (spell.spellLine) stats.push({ text: spell.spellLine });
-
+  // entity: { name: string, description?: string, stats?: { text, highlight? }[] }
+  // -- the caller has already shaped this from whatever domain object it
+  // actually holds (a spell, an item, ...); this method has no field-level
+  // knowledge of any entity type.
+  show(entity, anchorEl) {
+    const stats = entity.stats || [];
     this.shadowRoot.innerHTML = `
-      <div class="tt-name">${spell.name}</div>
-      ${spell.description ? `<div class="tt-desc">${spell.description}</div>` : ""}
-      ${stats.length ? `<div class="tt-stats">${stats.map((s) => `<span class="tt-stat${s.hi ? " highlight" : ""}">${s.text}</span>`).join("")}</div>` : ""}
+      <div class="tt-name">${entity.name}</div>
+      ${entity.description ? `<div class="tt-desc">${entity.description}</div>` : ""}
+      ${stats.length ? `<div class="tt-stats">${stats.map((s) => `<span class="tt-stat${s.highlight ? " highlight" : ""}">${s.text}</span>`).join("")}</div>` : ""}
     `;
 
     this.positionNear(anchorEl);
@@ -97,4 +99,4 @@ class SpellTooltip extends HTMLElement {
   }
 }
 
-customElements.define("spell-tooltip", SpellTooltip);
+customElements.define("detail-tooltip", DetailTooltip);

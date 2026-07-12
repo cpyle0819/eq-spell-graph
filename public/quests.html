@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norraph — Quests</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
+  <style id="page-style">
+    /* Page layout only — component styling lives in theme.css. Structure
+       mirrors class-browser.html's console-frame + left sidebar exactly
+       (see that file's own comment for why a sidebar over a horizontal
+       bar): filters live in <sidebar-panel>, results pack edge-to-edge in
+       a scrolling content column. */
+    body { height: 100vh; display: flex; flex-direction: column; }
+
+    #quests-page {
+      display: flex; flex-direction: column; overflow: hidden; flex: 1;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      padding: 0 14px 14px; gap: 14px;
+    }
+    #quests-content { flex: 1; min-height: 0; overflow-y: auto; }
+    #quests-results { padding: 0 0 24px; }
+
+    quest-card + quest-card { margin-top: -4px; }
+
+    @media (min-width: 1100px) {
+      #quests-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
+      #quests-content { overflow-y: auto; }
+    }
+
+    @media (max-width: 1099.98px) {
+      body { height: auto; min-height: 100vh; }
+      #quests-page { flex: none; overflow: visible; }
+      #quests-content { flex: none; overflow-y: visible; min-height: 0; }
+    }
+
+    @media (max-width: 700px) {
+      #quests-page { padding: 0 10px 10px; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <app-header subtitle="Quests">
+    <nav-links slot="nav" current="quests"></nav-links>
+  </app-header>
+
+  <div id="quests-page">
+    <div id="controls-panel-slot"></div>
+    <div id="quests-content">
+      <div id="quests-results"></div>
+    </div>
+  </div>
+
+  <detail-tooltip id="detail-tooltip" role="tooltip" aria-hidden="true"></detail-tooltip>
+  <app-footer></app-footer>
+  <script type="module" src="router.js"></script>
+</body>
+</html>

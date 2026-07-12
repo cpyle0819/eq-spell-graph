@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -212,6 +212,18 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // Spell Finder's Spell Line tag filter's suggestions.
   if (pathname === "/api/spell-lines") {
     return { status: 200, body: getSpellLines() };
+  }
+
+  // GET /api/quests?class=warrior,paladin&zone=zone:ak-anon&level=8 — class
+  // (if given) excludes classless "anyone" quests rather than unioning with
+  // them, zone narrows to quests located in that zone, level checks against
+  // each quest's minLevel/maxLevel range. See getQuests() in src/graph.ts.
+  if (pathname === "/api/quests") {
+    const classes = (searchParams.get("class") || "").split(",").filter(Boolean);
+    const zone = searchParams.get("zone") || undefined;
+    const levelParam = searchParams.get("level");
+    const level = levelParam ? Number(levelParam) : undefined;
+    return { status: 200, body: getQuests(classes, zone, level) };
   }
 
   // GET /api/zones — list all zone nodes

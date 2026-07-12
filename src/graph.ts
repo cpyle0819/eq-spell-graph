@@ -198,6 +198,86 @@ export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: Node
   });
 }
 
+export interface QuestSummary {
+  id: string;
+  label: string;
+  description?: string;
+  classes: string[];
+  minLevel?: number;
+  maxLevel?: number;
+  steps: string[];
+  total_experience?: number;
+  zones: { id: string; label: string }[];
+  questGivers: { id: string; label: string }[];
+  itemRewards: { id: string; label: string }[];
+  factionRewards: { id: string; label: string }[];
+}
+
+// classNames non-empty means "only quests restricted to (at least one of)
+// these classes" -- deliberately excludes classless "anyone" quests, not a
+// union with them, per decisions/quest-reward-modeling.md: picking a class
+// here is "show me what's for my class," not "show me everything my class
+// could also do." level, if given, is a single character level checked
+// against each quest's minLevel/maxLevel (either bound absent = unbounded
+// in that direction), not a class_levels-style per-class pairing -- see
+// decisions/quest-reward-modeling.md for why quest level range isn't
+// class-joined the way spell levels are. zoneId narrows to quests
+// --located_in--> that zone.
+export function getQuests(classNames?: string[], zoneId?: string, level?: number): QuestSummary[] {
+  const graph = load();
+  let quests = graph.nodes.filter((n) => n.data.type === "quest");
+
+  if (classNames && classNames.length > 0) {
+    quests = quests.filter((n) => {
+      const questClasses = (n.data.classes as string[] | undefined) || [];
+      return questClasses.length > 0 && questClasses.some((c) => classNames.includes(c));
+    });
+  }
+
+  if (level !== undefined) {
+    quests = quests.filter((n) => {
+      const min = n.data.minLevel as number | undefined;
+      const max = n.data.maxLevel as number | undefined;
+      return (min === undefined || level >= min) && (max === undefined || level <= max);
+    });
+  }
+
+  const nodeById = (id: string) => graph.nodes.find((n) => n.data.id === id)?.data;
+  const edgesFrom = (id: string, type: string) => graph.edges.filter((e) => e.data.type === type && e.data.source === id);
+  const edgesTo = (id: string, type: string) => graph.edges.filter((e) => e.data.type === type && e.data.target === id);
+
+  const results = quests.map((n): QuestSummary => {
+    const id = n.data.id;
+    const zones = edgesFrom(id, "located_in")
+      .map((e) => nodeById(e.data.target))
+      .filter((z): z is NodeData => !!z)
+      .map((z) => ({ id: z.id, label: z.label }));
+    const questGivers = edgesTo(id, "starts")
+      .map((e) => nodeById(e.data.source))
+      .filter((g): g is NodeData => !!g)
+      .map((g) => ({ id: g.id, label: g.label }));
+    const rewardTargets = edgesFrom(id, "rewards")
+      .map((e) => nodeById(e.data.target))
+      .filter((r): r is NodeData => !!r);
+    return {
+      id,
+      label: n.data.label,
+      description: n.data.description as string | undefined,
+      classes: (n.data.classes as string[] | undefined) || [],
+      minLevel: n.data.minLevel as number | undefined,
+      maxLevel: n.data.maxLevel as number | undefined,
+      steps: (n.data.steps as string[] | undefined) || [],
+      total_experience: n.data.total_experience as number | undefined,
+      zones,
+      questGivers,
+      itemRewards: rewardTargets.filter((r) => r.type === "item").map((r) => ({ id: r.id, label: r.label })),
+      factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
+    };
+  });
+
+  return zoneId ? results.filter((q) => q.zones.some((z) => z.id === zoneId)) : results;
+}
+
 interface AdjEntry { zoneId: string; transport?: Transport; }
 
 export function getZoneAdjacency(): Map<string, AdjEntry[]> {

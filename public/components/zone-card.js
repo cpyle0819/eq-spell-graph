@@ -22,9 +22,13 @@
 // single change can affect *other* cards' visibility when showAllSpells is
 // false, so app.js re-renders the whole list rather than this card
 // patching itself). Hover/click-suppress for the wiki-link tooltip is
-// handled entirely internally, calling #spell-tooltip's show()/hide() API
+// handled entirely internally, calling #detail-tooltip's show()/hide() API
 // directly -- this component already has full spell data via `ranking`, so
-// it never needs to reach into app.js's own state.
+// it never needs to reach into app.js's own state. spellStats() below
+// shapes a spell into <detail-tooltip>'s generic { name, description,
+// stats } contract -- that component itself has no spell-specific field
+// knowledge (see public/components/detail-tooltip.js), so this is the one
+// place spell fields become tooltip stat chips.
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiUrl, wikiLink } from "./card-base.js";
 
@@ -38,6 +42,25 @@ const FACTION_TITLES = {
 };
 const DIMENSION_LABELS = { race: "race", class: "class", deity: "deity" };
 const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+
+// Shapes a spell into <detail-tooltip>'s generic { text, highlight? }[]
+// stat-chip contract -- spellType is the one highlighted chip (matches the
+// old spell-tooltip's hardcoded behavior), everything else is plain.
+function spellStats(spell) {
+  const dur = spell.duration
+    ? spell.duration.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s").replace(/instant/i, "Instant")
+    : null;
+  const stats = [];
+  if (spell.spellType) stats.push({ text: spell.spellType, highlight: true });
+  if (spell.mana != null) stats.push({ text: `${spell.mana} mana` });
+  if (spell.targetType) stats.push({ text: spell.targetType });
+  if (dur) stats.push({ text: dur });
+  if (spell.castTime != null) stats.push({ text: `${spell.castTime.toFixed(1)}s cast` });
+  if (spell.resist && !/unresist/i.test(spell.resist)) stats.push({ text: `${spell.resist} resist` });
+  if (spell.skill) stats.push({ text: spell.skill });
+  if (spell.spellLine) stats.push({ text: spell.spellLine });
+  return stats;
+}
 
 // Same text for the badge and the LED dot (zone-name's ::before — a
 // pseudo-element can't carry its own title, so zone-name's covers it) —
@@ -221,11 +244,11 @@ class ZoneCard extends HTMLElement {
       const chip = e.target.closest(".spell-chip[data-spell-id]");
       if (!chip) return;
       const spell = this.#ranking?.spells.find((s) => s.id === chip.dataset.spellId);
-      if (spell) document.getElementById("spell-tooltip")?.show(spell, chip);
+      if (spell) document.getElementById("detail-tooltip")?.show({ name: spell.name, description: spell.description, stats: spellStats(spell) }, chip);
     });
     this.shadowRoot.addEventListener("mouseout", (e) => {
       if (!e.relatedTarget?.closest?.(".spell-chip[data-spell-id]")) {
-        document.getElementById("spell-tooltip")?.hide();
+        document.getElementById("detail-tooltip")?.hide();
       }
     });
     this.shadowRoot.addEventListener("click", (e) => {

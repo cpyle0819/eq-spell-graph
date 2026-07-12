@@ -22,6 +22,7 @@ const PAGE_SCRIPTS = {
   "index.html": () => import("./app.js"),
   "route.html": () => import("./route.js"),
   "class-browser.html": () => import("./class-browser.js"),
+  "quests.html": () => import("./quests.js"),
 };
 // home.html and leveling-guide.html are static content — no page script,
 // nothing for the router to call after swapping them in.

@@ -256,7 +256,7 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
    (Spell Finder's progress bar), spell-card/aa-card/ability-card/
    stance-card + their shared card-base.js (Class Browser), welcome-scroll
    (home.html), route-path (both pages' route/directions
-   text), and spell-tooltip. No page still uses `.spell-detail`,
+   text), and detail-tooltip. No page still uses `.spell-detail`,
    `.route-path`, `.spell-scroll`, `.spell-check`, `.spell-chip`,
    `.vendor-tag`, `.zone-card`, `.mana-bar`, or `.status-panel` as a
    light-DOM class — see decisions/real-web-components-shadow-dom.md for why
