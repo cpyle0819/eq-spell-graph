@@ -1,8 +1,8 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone, quest, item, faction (extensible: more as needed)
- * Edge types: sells, located_in, connects_to, starts, rewards (extensible: requires)
+ * Node types: spell, npc, zone, quest, quest_line, item, faction (extensible: more as needed)
+ * Edge types: sells, located_in, connects_to, starts, rewards, member_of (extensible: requires)
  */
 
 import { readFileSync, writeFileSync } from "fs";
@@ -49,6 +49,60 @@ export interface SpellDetails {
   spellType?: string;
   resist?: string;
   range?: number;
+}
+
+// Modeled on eqlwiki.com item pages (Small Scarab Helm, Abjurer's Earring,
+// Acid Etched War Sword, Gnome Glow Rod) -- see decisions/item-node-schema.md.
+// Everything is optional: a container has weight/size but no ac/damage, a
+// weapon has damage/delay/skill but usually no resists, etc. classes follows
+// the same "empty/absent = everyone" convention as quest.classes, resolved
+// to an explicit allow-list at authoring time rather than an "all except X"
+// exclusion list (the wiki's own Categories tag already states the resolved
+// list for armor, so there's nothing to compute).
+export interface ItemDetails {
+  slots?: string[];
+  classes?: string[];
+  ac?: number;
+  stats?: { str?: number; sta?: number; dex?: number; agi?: number; wis?: number; int?: number; cha?: number };
+  resists?: { fire?: number; cold?: number; disease?: number; poison?: number; magic?: number };
+  hp?: number;
+  mana?: number;
+  damage?: number;
+  delay?: number;
+  skill?: string;
+  effect?: string;
+  lightSource?: boolean;
+  weight?: number;
+  size?: string;
+  magic?: boolean;
+  lore?: boolean;
+  noTrade?: boolean;
+  value?: string;
+  source?: string;
+  // Tradeskill containers (e.g. Concordance of Research): how many items it
+  // holds and the largest item size it accepts -- distinct from the item's
+  // own `size` above (how big *this* item is to carry).
+  capacity?: number;
+  containerSize?: string;
+}
+
+export interface ItemSummary extends ItemDetails {
+  id: string;
+  label: string;
+}
+
+const ITEM_DETAIL_KEYS = [
+  "slots", "classes", "ac", "stats", "resists", "hp", "mana", "damage", "delay",
+  "skill", "effect", "lightSource", "weight", "size", "magic", "lore", "noTrade", "value", "source",
+  "capacity", "containerSize",
+] as const;
+
+function toItemSummary(node: NodeData): ItemSummary {
+  const summary: Record<string, unknown> = { id: node.id, label: node.label };
+  for (const key of ITEM_DETAIL_KEYS) {
+    if (node[key] !== undefined) summary[key] = node[key];
+  }
+  return summary as unknown as ItemSummary;
 }
 
 export interface GraphData {
@@ -209,8 +263,88 @@ export interface QuestSummary {
   total_experience?: number;
   zones: { id: string; label: string }[];
   questGivers: { id: string; label: string }[];
-  itemRewards: { id: string; label: string }[];
+  itemRewards: ItemSummary[];
   factionRewards: { id: string; label: string }[];
+  // Resolved from a quest --member_of--> quest_line edge (same edge type
+  // spell --member_of--> spell_line already uses for grouping -- see
+  // decisions/quest-line-node-type.md). undefined for a standalone quest.
+  questLine?: { id: string; label: string };
+  // The real eqlwiki.com page title (migration 030), same wiki_title ->
+  // wikiTitle convention as zone nodes (decisions/
+  // wiki-links-per-entity-vs-shared-page.md) -- undefined for quests with
+  // no real source page (the migration-026 test quest).
+  wikiTitle?: string;
+}
+
+// A quest_line's own zones/questGivers/classes/level fields describe the
+// line's *shared* frame (e.g. Lord Searfire, Temple of Solusek Ro, "Paladin
+// 30+" for every Armor of Ro piece) -- distinct from each member's own
+// giver/zone (each Mold of Ro sub-quest has its own NPC in Rathe Mountains).
+export interface QuestLineSummary {
+  id: string;
+  label: string;
+  description?: string;
+  classes: string[];
+  minLevel?: number;
+  maxLevel?: number;
+  steps: string[];
+  zones: { id: string; label: string }[];
+  questGivers: { id: string; label: string }[];
+  members: QuestSummary[];
+  wikiTitle?: string;
+}
+
+interface GraphIndexHelpers {
+  nodeById: (id: string) => NodeData | undefined;
+  edgesFrom: (id: string, type: string) => EdgeData[];
+  edgesTo: (id: string, type: string) => EdgeData[];
+}
+
+function graphIndexHelpers(graph: GraphData): GraphIndexHelpers {
+  return {
+    nodeById: (id) => graph.nodes.find((n) => n.data.id === id)?.data,
+    edgesFrom: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.source === id).map((e) => e.data),
+    edgesTo: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.target === id).map((e) => e.data),
+  };
+}
+
+// Shared by getQuests() and getQuestLines() (for each line's members) --
+// resolves one quest node's zones/giver/rewards/parent-line edges into the
+// shape the Quests UI actually consumes. Kept private: callers only ever
+// need the two exported entry points below.
+function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSummary {
+  const { nodeById, edgesFrom, edgesTo } = helpers;
+  const id = node.id;
+  const zones = edgesFrom(id, "located_in")
+    .map((e) => nodeById(e.target))
+    .filter((z): z is NodeData => !!z)
+    .map((z) => ({ id: z.id, label: z.label }));
+  const questGivers = edgesTo(id, "starts")
+    .map((e) => nodeById(e.source))
+    .filter((g): g is NodeData => !!g)
+    .map((g) => ({ id: g.id, label: g.label }));
+  const rewardTargets = edgesFrom(id, "rewards")
+    .map((e) => nodeById(e.target))
+    .filter((r): r is NodeData => !!r);
+  const questLineNode = edgesFrom(id, "member_of")
+    .map((e) => nodeById(e.target))
+    .find((n): n is NodeData => n?.type === "quest_line");
+  return {
+    id,
+    label: node.label,
+    description: node.description as string | undefined,
+    classes: (node.classes as string[] | undefined) || [],
+    minLevel: node.minLevel as number | undefined,
+    maxLevel: node.maxLevel as number | undefined,
+    steps: (node.steps as string[] | undefined) || [],
+    total_experience: node.total_experience as number | undefined,
+    zones,
+    questGivers,
+    itemRewards: rewardTargets.filter((r) => r.type === "item").map(toItemSummary),
+    factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
+    ...(questLineNode ? { questLine: { id: questLineNode.id, label: questLineNode.label } } : {}),
+    ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
+  };
 }
 
 // classNames non-empty means "only quests restricted to (at least one of)
@@ -223,57 +357,70 @@ export interface QuestSummary {
 // decisions/quest-reward-modeling.md for why quest level range isn't
 // class-joined the way spell levels are. zoneId narrows to quests
 // --located_in--> that zone.
+function matchesFilters(node: NodeData, classNames?: string[], level?: number): boolean {
+  if (classNames && classNames.length > 0) {
+    const nodeClasses = (node.classes as string[] | undefined) || [];
+    if (nodeClasses.length === 0 || !nodeClasses.some((c) => classNames.includes(c))) return false;
+  }
+  if (level !== undefined) {
+    const min = node.minLevel as number | undefined;
+    const max = node.maxLevel as number | undefined;
+    if (!(min === undefined || level >= min) || !(max === undefined || level <= max)) return false;
+  }
+  return true;
+}
+
 export function getQuests(classNames?: string[], zoneId?: string, level?: number): QuestSummary[] {
   const graph = load();
-  let quests = graph.nodes.filter((n) => n.data.type === "quest");
+  const helpers = graphIndexHelpers(graph);
+  const results = graph.nodes
+    .filter((n) => n.data.type === "quest" && matchesFilters(n.data, classNames, level))
+    .map((n) => buildQuestSummary(n.data, helpers));
 
-  if (classNames && classNames.length > 0) {
-    quests = quests.filter((n) => {
-      const questClasses = (n.data.classes as string[] | undefined) || [];
-      return questClasses.length > 0 && questClasses.some((c) => classNames.includes(c));
+  return zoneId ? results.filter((q) => q.zones.some((z) => z.id === zoneId)) : results;
+}
+
+// Same filter semantics as getQuests() (see its comment), applied to
+// quest_line nodes instead -- a line's own classes/minLevel/maxLevel
+// describe its shared frame (decisions/quest-line-node-type.md), which is
+// what's actually filterable; members are resolved unconditionally once
+// their line passes the filter; zoneId only checks the line's own zone
+// (e.g. Temple of Solusek Ro), not each member's individual zone.
+export function getQuestLines(classNames?: string[], zoneId?: string, level?: number): QuestLineSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const { nodeById, edgesFrom, edgesTo } = helpers;
+
+  const results = graph.nodes
+    .filter((n) => n.data.type === "quest_line" && matchesFilters(n.data, classNames, level))
+    .map((n): QuestLineSummary => {
+      const id = n.data.id;
+      const zones = edgesFrom(id, "located_in")
+        .map((e) => nodeById(e.target))
+        .filter((z): z is NodeData => !!z)
+        .map((z) => ({ id: z.id, label: z.label }));
+      const questGivers = edgesTo(id, "starts")
+        .map((e) => nodeById(e.source))
+        .filter((g): g is NodeData => !!g)
+        .map((g) => ({ id: g.id, label: g.label }));
+      const members = edgesTo(id, "member_of")
+        .map((e) => nodeById(e.source))
+        .filter((m): m is NodeData => m?.type === "quest")
+        .map((m) => buildQuestSummary(m, helpers));
+      return {
+        id,
+        label: n.data.label,
+        description: n.data.description as string | undefined,
+        classes: (n.data.classes as string[] | undefined) || [],
+        minLevel: n.data.minLevel as number | undefined,
+        maxLevel: n.data.maxLevel as number | undefined,
+        steps: (n.data.steps as string[] | undefined) || [],
+        zones,
+        questGivers,
+        members,
+        ...(n.data.wiki_title ? { wikiTitle: n.data.wiki_title as string } : {}),
+      };
     });
-  }
-
-  if (level !== undefined) {
-    quests = quests.filter((n) => {
-      const min = n.data.minLevel as number | undefined;
-      const max = n.data.maxLevel as number | undefined;
-      return (min === undefined || level >= min) && (max === undefined || level <= max);
-    });
-  }
-
-  const nodeById = (id: string) => graph.nodes.find((n) => n.data.id === id)?.data;
-  const edgesFrom = (id: string, type: string) => graph.edges.filter((e) => e.data.type === type && e.data.source === id);
-  const edgesTo = (id: string, type: string) => graph.edges.filter((e) => e.data.type === type && e.data.target === id);
-
-  const results = quests.map((n): QuestSummary => {
-    const id = n.data.id;
-    const zones = edgesFrom(id, "located_in")
-      .map((e) => nodeById(e.data.target))
-      .filter((z): z is NodeData => !!z)
-      .map((z) => ({ id: z.id, label: z.label }));
-    const questGivers = edgesTo(id, "starts")
-      .map((e) => nodeById(e.data.source))
-      .filter((g): g is NodeData => !!g)
-      .map((g) => ({ id: g.id, label: g.label }));
-    const rewardTargets = edgesFrom(id, "rewards")
-      .map((e) => nodeById(e.data.target))
-      .filter((r): r is NodeData => !!r);
-    return {
-      id,
-      label: n.data.label,
-      description: n.data.description as string | undefined,
-      classes: (n.data.classes as string[] | undefined) || [],
-      minLevel: n.data.minLevel as number | undefined,
-      maxLevel: n.data.maxLevel as number | undefined,
-      steps: (n.data.steps as string[] | undefined) || [],
-      total_experience: n.data.total_experience as number | undefined,
-      zones,
-      questGivers,
-      itemRewards: rewardTargets.filter((r) => r.type === "item").map((r) => ({ id: r.id, label: r.label })),
-      factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
-    };
-  });
 
   return zoneId ? results.filter((q) => q.zones.some((z) => z.id === zoneId)) : results;
 }

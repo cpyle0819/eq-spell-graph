@@ -21,6 +21,7 @@ let classTagInput;
 let selectedClassNames = [];
 
 let rawQuests = [];
+let rawQuestLines = [];
 
 function renderSidebar() {
   const html = `
@@ -45,7 +46,20 @@ export async function init() {
   populateZoneSelect();
   populateLevelSelect();
   setupFilters();
+  applyQueryParams();
   fetchQuests();
+}
+
+// ?search=<quest or questline name> deep-links here (e.g. from the Leveling
+// Guide) straight to one entry, reusing the existing search box rather than
+// a separate highlight/scroll mechanism -- buildResultEntries()'s search
+// already matches a questline by its own name or any member's, so a link
+// naming one Armor of Ro piece still lands on the Armor of Ro line card,
+// not a 404 for a member with no card of its own (decisions/
+// quest-line-card-ui.md).
+function applyQueryParams() {
+  const search = new URLSearchParams(location.search).get("search");
+  if (search) document.getElementById("quest-search").value = search;
 }
 
 function setupClassTagInput() {
@@ -123,25 +137,61 @@ async function fetchQuests() {
   const level = document.getElementById("quest-level-select").value;
   if (level !== "all") params.set("level", level);
 
-  const quests = await fetch(`api/quests?${params}`).then((r) => r.json());
+  // Same filter params against both endpoints -- a questline's own
+  // classes/minLevel mirror its members' (decisions/quest-line-node-type.md),
+  // so both respond to the same picker state.
+  const [quests, questLines] = await Promise.all([
+    fetch(`api/quests?${params}`).then((r) => r.json()),
+    fetch(`api/quest-lines?${params}`).then((r) => r.json()),
+  ]);
   if (token !== fetchToken) return; // a newer filter change superseded this request
   rawQuests = quests;
+  rawQuestLines = questLines;
   render();
+}
+
+// A questline matches search if its own name does, or any member's does --
+// searching "bracer" should still surface the Armor of Ro line, since its
+// quest-line-card is the only place that member's card renders (see
+// buildResultEntries()).
+function questLineMatches(line, q) {
+  if (!q) return true;
+  if (line.label.toLowerCase().includes(q)) return true;
+  return line.members.some((m) => m.label.toLowerCase().includes(q));
+}
+
+// One quest-line-card per line (never its members' individual quest-cards
+// -- that's the whole point of quest_line, see decisions/
+// quest-line-node-type.md) interleaved alphabetically with standalone
+// quest-cards (quests with no questLine). Sorting by label rather than
+// "lines first" reads as one unified list, not two stacked sections.
+function buildResultEntries(searchQuery) {
+  const q = searchQuery.trim().toLowerCase();
+  const lineIds = new Set(rawQuestLines.map((l) => l.id));
+  const entries = [
+    ...rawQuestLines.filter((line) => questLineMatches(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
+    ...rawQuests
+      .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
+      .filter((quest) => !q || quest.label.toLowerCase().includes(q))
+      .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),
+  ];
+  entries.sort((a, b) => a.label.localeCompare(b.label));
+  return entries;
 }
 
 function render() {
   const resultsEl = document.getElementById("quests-results");
-  const q = document.getElementById("quest-search").value.trim().toLowerCase();
-  const items = q ? rawQuests.filter((quest) => quest.label.toLowerCase().includes(q)) : rawQuests;
+  const searchQuery = document.getElementById("quest-search").value;
+  const entries = buildResultEntries(searchQuery);
 
   resultsEl.innerHTML = "";
-  if (!items.length) {
+  if (!entries.length) {
     resultsEl.innerHTML = '<div class="no-results">No quests match your filters.</div>';
     return;
   }
-  lazyRenderList(resultsEl, items, (quest) => {
-    const el = document.createElement("quest-card");
-    el.setData(quest);
+  lazyRenderList(resultsEl, entries, (entry) => {
+    const el = document.createElement(entry.tag);
+    el.setData(entry.data);
     return el;
   });
 }

@@ -1,0 +1,182 @@
+// Shared rendering helpers for quest-card.js and quest-line-card.js -- pure
+// functions producing the same section/badge/chip/tooltip markup both need
+// (a questline card's own overview uses the identical "Starts In"/"Steps"/
+// "Rewards" treatment a standalone quest-card does, and each member row
+// inside a questline card re-renders a full quest's Steps/Rewards too).
+// Kept separate from card-base.js (shared by every card type -- spell/aa/
+// ability/stance/quest/quest-line) since these are quest/item-domain
+// specific, not generic card-shell concerns.
+import { classBadges } from "./card-base.js";
+
+// Raw CSS text (not a constructed CSSStyleSheet), same convention as
+// reset.js's RESET_CSS / card-base.js's WIKI_LINK_CSS -- CardBase's
+// `static extraSheet` slot holds exactly one sheet per leaf, so a leaf that
+// needs shared rules spliced together with its own (quest-line-card.js
+// needs this text *plus* its own roster-specific rules) has to compose the
+// text itself, not adopt a second constructed sheet object.
+export const QUEST_CARD_CSS = `
+.quest-section { margin-top: 12px; }
+.quest-section:first-of-type { margin-top: 0; }
+.quest-section-label {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--parch-ink-soft); font-weight: 700;
+  padding-bottom: 3px; margin-bottom: 7px;
+  border-bottom: 1px solid var(--parch-line);
+}
+.quest-section-body { font-size: 13px; color: #4a4232; line-height: 1.5; }
+
+.quest-line-note { font-size: 11px; color: var(--ink-muted); font-style: italic; }
+
+.quest-starts-in { display: flex; align-items: center; gap: 8px; }
+.quest-waypoint {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
+}
+.quest-zone-link { color: var(--parch-accent); text-decoration: none; font-weight: 600; }
+.quest-zone-link:hover, .quest-zone-link:focus-visible { text-decoration: underline; }
+.quest-giver-note { color: var(--parch-ink-soft); }
+
+.quest-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; counter-reset: quest-step; }
+.quest-steps li {
+  counter-increment: quest-step;
+  position: relative; padding-left: 27px; min-height: 18px;
+  font-size: 13px; color: #4a4232; line-height: 1.5;
+}
+.quest-steps li::before {
+  content: counter(quest-step);
+  position: absolute; left: 0; top: 0;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 10px; font-weight: 700;
+  color: var(--parch-bg);
+  background: radial-gradient(circle at 65% 30%, var(--parch-accent), #4a3004 70%);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.spell-badge.xp-badge, .spell-badge.item-badge, .spell-badge.faction-badge-reward {
+  cursor: help; display: inline-flex; align-items: center; gap: 6px;
+}
+.spell-badge.xp-badge::before, .spell-badge.item-badge::before, .spell-badge.faction-badge-reward::before {
+  content: ""; width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.xp-badge   { background: rgba(16, 122, 46, 0.1);  color: #157a3c; border: 1px solid rgba(16, 122, 46, 0.35); }
+.xp-badge::before { background: radial-gradient(circle at 65% 30%, #7dffb0, #22c55e 60%, #157a3c); }
+.item-badge { background: rgba(122, 77, 5, 0.1);   color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4); }
+.item-badge::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d); }
+.faction-badge-reward { background: rgba(94, 42, 122, 0.1); color: #5e2a7a; border: 1px solid rgba(94, 42, 122, 0.4); }
+.faction-badge-reward::before { background: radial-gradient(circle at 65% 30%, #d9a8ff, #9d5ec7 55%, #5e2a7a); }
+`;
+
+const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+const STAT_LABELS = { str: "STR", sta: "STA", dex: "DEX", agi: "AGI", wis: "WIS", int: "INT", cha: "CHA" };
+const RESIST_LABELS = { fire: "Fire", cold: "Cold", disease: "Disease", poison: "Poison", magic: "Magic" };
+
+// "Level 5 – 15" / "Level 20+" / "Level ≤ 15" / "" (both bounds absent —
+// no badge at all rather than a misleading "All Levels" chip cluttering
+// every classless-and-levelless test quest).
+export function questLevelLabel(minLevel, maxLevel) {
+  if (minLevel == null && maxLevel == null) return "";
+  if (minLevel != null && maxLevel != null) return minLevel === maxLevel ? `Level ${minLevel}` : `Level ${minLevel} – ${maxLevel}`;
+  if (minLevel != null) return `Level ${minLevel}+`;
+  return `Level ≤ ${maxLevel}`;
+}
+
+export function section(label, bodyHtml) {
+  return bodyHtml ? `<div class="quest-section"><div class="quest-section-label">${label}</div>${bodyHtml}</div>` : "";
+}
+
+export function headerBadges(classes, minLevel, maxLevel) {
+  const levelLabel = questLevelLabel(minLevel, maxLevel);
+  return [
+    classes.length ? classBadges(classes, []) : `<span class="spell-badge class-badge">Any Class</span>`,
+    levelLabel ? `<span class="spell-badge skill-badge">${levelLabel}</span>` : "",
+  ].join("");
+}
+
+// Zone is the link target (per decisions/); giver is supporting detail in
+// parens, since "Starts In" is fundamentally a place, not a person.
+export function startsInBody(zones, questGivers) {
+  const zoneLinks = zones
+    .map((z) => `<a class="quest-zone-link" href="route.html?to=${encodeURIComponent(z.label)}">${z.label}</a>`)
+    .join(", ");
+  const giverNames = questGivers.map((g) => g.label).join(", ");
+  if (zoneLinks) {
+    return `<div class="quest-section-body quest-starts-in"><span class="quest-waypoint"></span><span>${zoneLinks}${giverNames ? ` <span class="quest-giver-note">(from ${giverNames})</span>` : ""}</span></div>`;
+  }
+  return giverNames ? `<div class="quest-section-body">${giverNames}</div>` : "";
+}
+
+export function stepsBody(steps) {
+  return steps.length ? `<ol class="quest-steps">${steps.map((s) => `<li>${s}</li>`).join("")}</ol>` : "";
+}
+
+// Shapes an ItemSummary (src/graph.ts's ItemDetails, see decisions/
+// item-node-schema.md) into <detail-tooltip>'s generic { text, highlight? }
+// stat-chip contract -- slots is the one highlighted chip (mirrors
+// zone-card's spellStats() highlighting spellType), everything else plain.
+// Every field is optional on the source data, so each line is independently
+// skippable -- a container has weight/size and nothing else, a weapon has
+// damage/delay/skill and usually no resists.
+export function itemStats(item) {
+  const stats = [];
+  if (item.slots?.length) stats.push({ text: item.slots.join("/"), highlight: true });
+  if (item.ac != null) stats.push({ text: `${item.ac} AC` });
+  if (item.damage != null) stats.push({ text: `${item.damage} dmg` });
+  if (item.delay != null) stats.push({ text: `${item.delay} delay` });
+  if (item.skill) stats.push({ text: item.skill });
+  for (const [key, label] of Object.entries(STAT_LABELS)) {
+    const v = item.stats?.[key];
+    if (v) stats.push({ text: `${v > 0 ? "+" : ""}${v} ${label}` });
+  }
+  if (item.hp != null) stats.push({ text: `+${item.hp} HP` });
+  if (item.mana != null) stats.push({ text: `+${item.mana} Mana` });
+  for (const [key, label] of Object.entries(RESIST_LABELS)) {
+    const v = item.resists?.[key];
+    if (v) stats.push({ text: `${v > 0 ? "+" : ""}${v} SV ${label}` });
+  }
+  if (item.effect) stats.push({ text: `Effect: ${item.effect}` });
+  if (item.lightSource) stats.push({ text: "Light Source" });
+  if (item.weight != null) stats.push({ text: `WT ${item.weight}` });
+  if (item.size) stats.push({ text: item.size });
+  if (item.capacity != null) stats.push({ text: `${item.capacity} slots${item.containerSize ? ` (${item.containerSize} max)` : ""}` });
+  if (item.classes?.length) stats.push({ text: item.classes.map(titleCase).join(", ") });
+  if (item.magic) stats.push({ text: "Magic" });
+  if (item.lore) stats.push({ text: "Lore" });
+  if (item.noTrade) stats.push({ text: "No Trade" });
+  if (item.value) stats.push({ text: item.value });
+  return stats;
+}
+
+export function rewardsBody(quest) {
+  const chips = [
+    quest.total_experience ? `<span class="spell-badge xp-badge" title="Experience reward">${quest.total_experience} XP</span>` : "",
+    ...quest.itemRewards.map((i) => `<span class="spell-badge item-badge" data-item-id="${i.id}">${i.label}</span>`),
+    ...quest.factionRewards.map((f) => `<span class="spell-badge faction-badge-reward" title="Faction reward: ${f.label}">${f.label}</span>`),
+  ].join("");
+  return chips ? `<div class="spell-badges">${chips}</div>` : "";
+}
+
+// Wires item-reward-chip hover -> <detail-tooltip>, shared by quest-card.js
+// (one quest's own itemRewards) and quest-line-card.js (the union of every
+// member's itemRewards) -- only the lookup scope differs, so findItem(id)
+// is supplied by the caller. Listening on shadowRoot itself (not `this`/
+// the host) sees the real internal e.target/e.relatedTarget directly --
+// event retargeting to the host only applies to listeners outside the
+// shadow tree (see tag-input.js / zone-card.js's identical comment).
+export function wireItemTooltips(shadowRoot, findItem) {
+  if (!window.matchMedia("(pointer: fine)").matches) return; // touch devices: no hover tooltip, same as zone-card's spell-chip
+
+  shadowRoot.addEventListener("mouseover", (e) => {
+    const chip = e.target.closest(".item-badge[data-item-id]");
+    if (!chip) return;
+    const item = findItem(chip.dataset.itemId);
+    if (item) document.getElementById("detail-tooltip")?.show({ name: item.label, description: item.source, stats: itemStats(item) }, chip);
+  });
+  shadowRoot.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget?.closest?.(".item-badge[data-item-id]")) {
+      document.getElementById("detail-tooltip")?.hide();
+    }
+  });
+}

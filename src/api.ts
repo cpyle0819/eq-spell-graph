@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestLines, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -224,6 +224,18 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const levelParam = searchParams.get("level");
     const level = levelParam ? Number(levelParam) : undefined;
     return { status: 200, body: getQuests(classes, zone, level) };
+  }
+
+  // GET /api/quest-lines?class=paladin&zone=...&level=... — same filter
+  // semantics as /api/quests, applied to quest_line nodes; each result
+  // carries its resolved `members` (full QuestSummary per sub-quest). See
+  // getQuestLines() in src/graph.ts and decisions/quest-line-node-type.md.
+  if (pathname === "/api/quest-lines") {
+    const classes = (searchParams.get("class") || "").split(",").filter(Boolean);
+    const zone = searchParams.get("zone") || undefined;
+    const levelParam = searchParams.get("level");
+    const level = levelParam ? Number(levelParam) : undefined;
+    return { status: 200, body: getQuestLines(classes, zone, level) };
   }
 
   // GET /api/zones — list all zone nodes

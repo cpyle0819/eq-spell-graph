@@ -44633,8 +44633,15 @@
     },
     {
       "data": {
-        "id": "npc:ak-anon:grimbold-ironhand",
-        "label": "Grimbold Ironhand",
+        "id": "zone:plane-of-fear",
+        "label": "Plane of Fear",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:lord-searfire",
+        "label": "Lord Searfire",
         "type": "npc",
         "roles": [
           "quest_giver"
@@ -44643,35 +44650,677 @@
     },
     {
       "data": {
-        "id": "item:sturdy-ore-sack",
-        "label": "Sturdy Ore Sack",
-        "type": "item"
-      }
-    },
-    {
-      "data": {
-        "id": "faction:steel-warriors-of-ak-anon",
-        "label": "Steel Warriors of Ak'Anon",
-        "type": "faction"
-      }
-    },
-    {
-      "data": {
-        "id": "quest:ore-for-the-anvil",
-        "label": "Ore for the Anvil",
-        "type": "quest",
-        "description": "The town blacksmith needs ore hauled up from the mines below Ak'Anon.",
+        "id": "item:breastplate-of-ro",
+        "type": "item",
+        "label": "Breastplate of Ro",
+        "slots": [
+          "Chest"
+        ],
         "classes": [
-          "warrior"
+          "paladin"
         ],
-        "minLevel": 5,
-        "maxLevel": 15,
+        "ac": 20,
+        "stats": {
+          "str": 4
+        },
+        "resists": {
+          "fire": 10
+        },
+        "weight": 5,
+        "size": "Large",
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:david",
+        "label": "David",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-bracer",
+        "label": "Mold of Ro Bracer",
+        "type": "quest",
+        "description": "David's share of the Armor of Ro questline, trading proof of Deepwater Knights standing for a mold that becomes the Bracer of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
         "steps": [
-          "Speak with Grimbold Ironhand in Ak'Anon",
-          "Collect 5 Raw Ore from the Ak'Anon mines",
-          "Return the ore to Grimbold Ironhand"
+          "Reach Amiable faction with the Deepwater Knights",
+          "Obtain 2x Deepwater Goblin Nets (from a goblin net master, Lake Rathetear)",
+          "Turn it in to David in Rathe Mountains for a Mold of Ro Bracer",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Bracer of Ro"
         ],
-        "total_experience": 500
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-bracer",
+        "type": "item",
+        "label": "Mold of Ro Bracer",
+        "classes": [],
+        "weight": 3,
+        "size": "Small",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in 2x Deepwater Goblin Nets to David (Rathe Mountains, Deepwater Knights faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:hasten-bootstrutter",
+        "label": "Hasten Bootstrutter",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:journeyman-s-boots",
+        "label": "Journeyman's Boots",
+        "type": "quest",
+        "description": "Hasten Bootstrutter, a gnome who never stops wandering Rathe Mountains, trades a permanent movement-speed clicky for a Ring of the Ancients, a borrowed Shadowed Rapier, and a small fortune in gold.",
+        "classes": [],
+        "minLevel": 30,
+        "steps": [
+          "Obtain a Ring of the Ancients",
+          "Kill an Ancient Cyclops (found in Ocean of Tears, Southern Desert of Ro, South Karana, or East Karana) for a Shadowed Rapier -- it vanishes 30 minutes after logging off, so don't dawdle turning it in",
+          "Gather 3,250 gold pieces (actual gold coin, not platinum)",
+          "Track down Hasten Bootstrutter in Rathe Mountains and turn in all three before he wanders off"
+        ],
+        "wiki_title": "Journeyman's Boots Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:journeyman-s-boots",
+        "type": "item",
+        "label": "Journeyman's Boots",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [],
+        "ac": 1,
+        "effect": "JourneymanBoots (movement speed, Instant cast, outdoor use only)",
+        "weight": 2.5,
+        "size": "Small",
+        "magic": true,
+        "noTrade": true,
+        "source": "Journeyman's Boots quest reward (Hasten Bootstrutter, Rathe Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-karana:mrysila",
+        "label": "Mrysila",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:research-aid",
+        "label": "Research Aid",
+        "type": "quest",
+        "description": "Mrysila, Northern Karana's resident scholar, trades lightstones for spell-research aids -- a repeatable turn-in, not a one-time quest.",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Reach at least Apprehensive faction with Mrysila (Dubious or worse consumes your items without reward)",
+          "Turn in a Lightstone (a common willowisp drop) for a Runes and Research tome",
+          "Turn in a Greater Lightstone for a Concordance of Research"
+        ],
+        "wiki_title": "Research Aid"
+      }
+    },
+    {
+      "data": {
+        "id": "item:concordance-of-research",
+        "type": "item",
+        "label": "Concordance of Research",
+        "classes": [],
+        "capacity": 6,
+        "containerSize": "Giant",
+        "weight": 0.2,
+        "source": "Tradeskill container for spell research; reward for turning in a Greater Lightstone to Mrysila (Research Aid quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-fear:irak-altil",
+        "label": "Irak Altil",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-epic-quest",
+        "label": "Paladin Epic Quest",
+        "type": "quest",
+        "description": "The long road to a Fiery Defender: purify three tainted darksteel pieces across three separate zone-spanning sub-quests, then combine them with a Fiery Avenger for Irak Altil in the Plane of Fear.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 46,
+        "steps": [
+          "Obtain the Tainted Darksteel Breastplate from Thought Destroyer in the Plane of Hate, then purify it via Jark and Nella Stonebraids in Kaladim for a Pure Crystal",
+          "Obtain the Tainted Darksteel Sword from the Keeper of the Tombs in The Hole, then purify it by helping a peasant woman and her brother Joshua in West Freeport for a Bucket of Pure Water",
+          "Obtain the Tainted Darksteel Shield from Kirak Vil in Nektulos Forest, then purify it through Elia the Pure in Felwithe",
+          "Return all three purified pieces to Reklon Gnallen in Erudin's Temple of Quellious for the Mark of Atonement",
+          "Complete the separate Fiery Avenger prerequisite quest",
+          "Turn in the Mark of Atonement and the Fiery Avenger to Irak Altil in the Plane of Fear"
+        ],
+        "wiki_title": "Paladin Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fiery-defender",
+        "type": "item",
+        "label": "Fiery Defender",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "ac": 15,
+        "stats": {
+          "str": 20,
+          "sta": 10,
+          "wis": 15
+        },
+        "resists": {
+          "fire": 10,
+          "disease": 10,
+          "cold": 10,
+          "magic": 10,
+          "poison": 10
+        },
+        "hp": 70,
+        "mana": 30,
+        "damage": 35,
+        "delay": 40,
+        "skill": "2H Slashing",
+        "effect": "Holy Shock at Level 50",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Paladin Epic Quest final reward (Irak Altil, Plane of Fear)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-rathetear:shmendrik-lavawalker",
+        "label": "Shmendrik Lavawalker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-epic-quest",
+        "label": "Cleric Epic Quest",
+        "type": "quest",
+        "description": "A three-orb odyssey across Norrath's oceans and volcanoes, ending with the Water Sprinkler of Nem Ankh from the Avatar of Water.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 46,
+        "steps": [
+          "Orb of Frozen Water: kill Lord Bergurgle and trade his crown to Shmendrik Lavawalker, defeat the Spirit of Flame, trade its Damaged Goblin Crown to Natasha Whitewater for an Ornate Sea Shell, give the shell to Omat Vastsea in Timorous Deep for a Coral Statue, present the statue to A Seeker in the Temple of Solusek Ro (it becomes A Plasmatic Priest -- defeat it), kill Lord Gimblox in Solusek's Eye, then return the Plasmatic Priest Robe to Omat",
+          "Orb of Clear Water: trade Lord Gimblox's Signet Ring to Natasha for a second Ornate Sea Shell, give it to Naxot Deepwater in Burning Woods to spawn Ixiblat Fer, kill it for a Sceptre, kill Overking Bathezid in Chardok for a Singed Scroll, then trade both to Omat",
+          "Orb of Vapor: give a Message to Natasha for a Shimmering Pearl, present it to Zordak Ragefire in Nagafen's Lair (it becomes Zordakalicus Ragefire), kill it and loot its Heart, then trade the heart to Omat",
+          "Give all three orbs to Jhassad Oceanson for the Orb of Triumvirate",
+          "Present the Orb of Triumvirate to the Avatar of Water"
+        ],
+        "wiki_title": "Cleric Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:water-sprinkler-of-nem-ankh",
+        "type": "item",
+        "label": "Water Sprinkler of Nem Ankh",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "stats": {
+          "sta": 10,
+          "cha": 15,
+          "wis": 25
+        },
+        "resists": {
+          "fire": 10,
+          "disease": 10,
+          "cold": 10,
+          "magic": 10,
+          "poison": 10
+        },
+        "mana": 100,
+        "damage": 20,
+        "delay": 32,
+        "skill": "1H Blunt",
+        "effect": "Reviviscence at Level 50 (Must Equip, 10.0s cast)",
+        "source": "Cleric Epic Quest final reward (the Avatar of Water)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest_line:armor-of-ro",
+        "label": "Armor of Ro",
+        "type": "quest_line",
+        "description": "A Paladin-only armor set. Each piece has its own independent faction-gated turn-in at the Rathe Mountains paladin camp for a Mold of Ro; combine any mold with a hand-crafted Bar of Ronium at a non-cultural forge for the finished piece. There's no need to do all seven.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with Lord Searfire in the Temple of Solusek Ro",
+          "Gather the five Bar of Ronium ingredients: 2x Enchanted Platinum Bar, Melatite (from clockworks in Solusek's Eye), Mistmoore Granite (from gargoyles in Mistmoore Castle), Sand of Ro (from sand giants in the Ro zones), and Soil of Underfoot (from Priestess Ghalea in Kaladim)",
+          "Combine the ingredients into a Bar of Ronium at a Sol Cauldron",
+          "Complete any of the seven Mold of Ro sub-quests at the Rathe Mountains paladin camp",
+          "Combine the mold and the Bar of Ronium at a non-cultural forge for the matching finished piece"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:nicholas",
+        "label": "Nicholas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-boots",
+        "label": "Mold of Ro Boots",
+        "type": "quest",
+        "description": "Nicholas's share of the Armor of Ro questline, trading proof of Clerics of Underfoot standing for a mold that becomes the Boots of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Clerics of Underfoot",
+          "Obtain Kilij Plans (from Sandgiant Husam, South Ro)",
+          "Turn it in to Nicholas in Rathe Mountains for a Mold of Ro Boots",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Boots of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-boots",
+        "label": "Mold of Ro Boots",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in Kilij Plans to Nicholas (Rathe Mountains, Clerics of Underfoot faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:boots-of-ro",
+        "label": "Boots of Ro",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 11,
+        "hp": 35,
+        "weight": 1.5,
+        "size": "Medium",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Boots + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracer-of-ro",
+        "label": "Bracer of Ro",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 9,
+        "resists": {
+          "magic": 5
+        },
+        "weight": 2,
+        "size": "Small",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Bracer + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:abigail",
+        "label": "Abigail",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-breastplate",
+        "label": "Mold of Ro Breastplate",
+        "type": "quest",
+        "description": "Abigail's share of the Armor of Ro questline, trading proof of Clerics of Tunare standing for a mold that becomes the Breastplate of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Clerics of Tunare",
+          "Obtain 2x Dark Cauldron (from an ancille cook, Mistmoore Castle)",
+          "Turn it in to Abigail in Rathe Mountains for a Mold of Ro Breastplate",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Breastplate of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-breastplate",
+        "label": "Mold of Ro Breastplate",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in 2x Dark Cauldron to Abigail (Rathe Mountains, Clerics of Tunare faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:sentry-joanna",
+        "label": "Sentry Joanna",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-gauntlets",
+        "label": "Mold of Ro Gauntlets",
+        "type": "quest",
+        "description": "Sentry Joanna's share of the Armor of Ro questline, trading proof of Priests of Marr standing for a mold that becomes the Gauntlets of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Priests of Marr",
+          "Obtain A Locket (from Sentry Alechin or a werewolf, Southern Karana -- killing the werewolf form avoids faction damage)",
+          "Turn it in to Sentry Joanna in Rathe Mountains for a Mold of Ro Gauntlets",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Gauntlets of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-gauntlets",
+        "label": "Mold of Ro Gauntlets",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in A Locket to Sentry Joanna (Rathe Mountains, Priests of Marr faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-ro",
+        "label": "Gauntlets of Ro",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 12,
+        "stats": {
+          "dex": 6
+        },
+        "resists": {
+          "poison": 10
+        },
+        "weight": 2.5,
+        "size": "Small",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Gauntlets + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:elisabeth",
+        "label": "Elisabeth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-greaves",
+        "label": "Mold of Ro Greaves",
+        "type": "quest",
+        "description": "Elisabeth's share of the Armor of Ro questline, trading proof of Knights of Truth standing for a mold that becomes the Greaves of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Knights of Truth",
+          "Obtain Nightfall Giant's Head (from a nightfall giant, West Commonlands)",
+          "Turn it in to Elisabeth in Rathe Mountains for a Mold of Ro Greaves",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Greaves of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-greaves",
+        "label": "Mold of Ro Greaves",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in Nightfall Giant's Head to Elisabeth (Rathe Mountains, Knights of Truth faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:greaves-of-ro",
+        "label": "Greaves of Ro",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 13,
+        "stats": {
+          "sta": 6
+        },
+        "resists": {
+          "cold": 10
+        },
+        "weight": 3.7,
+        "size": "Large",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Greaves + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:thomas",
+        "label": "Thomas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-helm",
+        "label": "Mold of Ro Helm",
+        "type": "quest",
+        "description": "Thomas's share of the Armor of Ro questline, trading proof of Knights of Thunder standing for a mold that becomes the Helm of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Knights of Thunder",
+          "Obtain 2x Cyclops Skull (from an undead cyclops, Southern Karana)",
+          "Turn it in to Thomas in Rathe Mountains for a Mold of Ro Helm",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Helm of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-helm",
+        "label": "Mold of Ro Helm",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in 2x Cyclops Skull to Thomas (Rathe Mountains, Knights of Thunder faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:helm-of-ro",
+        "label": "Helm of Ro",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 13,
+        "stats": {
+          "wis": 8
+        },
+        "weight": 3,
+        "size": "Small",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Helm + Bar of Ronium"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:marianna",
+        "label": "Marianna",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mold-of-ro-vambrace",
+        "label": "Mold of Ro Vambrace",
+        "type": "quest",
+        "description": "Marianna's share of the Armor of Ro questline, trading proof of Priests of Life standing for a mold that becomes the Vambraces of Ro.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Reach Amiable faction with the Priests of Life",
+          "Obtain 2x Rotten Shark Meat (from a plague shark, Erud's Crossing)",
+          "Turn it in to Marianna in Rathe Mountains for a Mold of Ro Vambrace",
+          "Combine the mold with a Bar of Ronium at a non-cultural forge for the finished Vambraces of Ro"
+        ],
+        "wiki_title": "Armor of Ro Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mold-of-ro-vambrace",
+        "label": "Mold of Ro Vambrace",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "source": "Reward for turning in 2x Rotten Shark Meat to Marianna (Rathe Mountains, Priests of Life faction)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vambraces-of-ro",
+        "label": "Vambraces of Ro",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "ac": 11,
+        "stats": {
+          "wis": 6
+        },
+        "resists": {
+          "disease": 10
+        },
+        "weight": 3.2,
+        "size": "Small",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Armor of Ro questline reward, combined at a forge from a Mold of Ro Vambrace + Bar of Ronium"
       }
     }
   ],
@@ -103894,41 +104543,489 @@
     },
     {
       "data": {
-        "id": "e-located_in-7401",
-        "source": "npc:ak-anon:grimbold-ironhand",
-        "target": "zone:ak-anon",
+        "id": "e-located_in-7407",
+        "source": "npc:temple-of-solusek-ro:lord-searfire",
+        "target": "zone:temple-of-solusek-ro",
         "type": "located_in"
       }
     },
     {
       "data": {
-        "id": "e-starts-7402",
-        "source": "npc:ak-anon:grimbold-ironhand",
-        "target": "quest:ore-for-the-anvil",
+        "id": "e-located_in-7412",
+        "source": "npc:rathe-mountains:david",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7413",
+        "source": "npc:rathe-mountains:david",
+        "target": "quest:mold-of-ro-bracer",
         "type": "starts"
       }
     },
     {
       "data": {
-        "id": "e-located_in-7403",
-        "source": "quest:ore-for-the-anvil",
-        "target": "zone:ak-anon",
+        "id": "e-located_in-7414",
+        "source": "quest:mold-of-ro-bracer",
+        "target": "zone:rathe-mountains",
         "type": "located_in"
       }
     },
     {
       "data": {
-        "id": "e-rewards-7404",
-        "source": "quest:ore-for-the-anvil",
-        "target": "item:sturdy-ore-sack",
+        "id": "e-rewards-7415",
+        "source": "quest:mold-of-ro-bracer",
+        "target": "item:mold-of-ro-bracer",
         "type": "rewards"
       }
     },
     {
       "data": {
-        "id": "e-rewards-7405",
-        "source": "quest:ore-for-the-anvil",
-        "target": "faction:steel-warriors-of-ak-anon",
+        "id": "e-located_in-7416",
+        "source": "npc:rathe-mountains:hasten-bootstrutter",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7417",
+        "source": "npc:rathe-mountains:hasten-bootstrutter",
+        "target": "quest:journeyman-s-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7418",
+        "source": "quest:journeyman-s-boots",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7419",
+        "source": "quest:journeyman-s-boots",
+        "target": "item:journeyman-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7420",
+        "source": "npc:northern-karana:mrysila",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7421",
+        "source": "npc:northern-karana:mrysila",
+        "target": "quest:research-aid",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7422",
+        "source": "quest:research-aid",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7423",
+        "source": "quest:research-aid",
+        "target": "item:concordance-of-research",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7424",
+        "source": "npc:plane-of-fear:irak-altil",
+        "target": "zone:plane-of-fear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7425",
+        "source": "npc:plane-of-fear:irak-altil",
+        "target": "quest:paladin-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7426",
+        "source": "quest:paladin-epic-quest",
+        "target": "zone:plane-of-fear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7427",
+        "source": "quest:paladin-epic-quest",
+        "target": "item:fiery-defender",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7428",
+        "source": "npc:lake-rathetear:shmendrik-lavawalker",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7429",
+        "source": "npc:lake-rathetear:shmendrik-lavawalker",
+        "target": "quest:cleric-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7430",
+        "source": "quest:cleric-epic-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7431",
+        "source": "quest:cleric-epic-quest",
+        "target": "item:water-sprinkler-of-nem-ankh",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7428",
+        "source": "npc:temple-of-solusek-ro:lord-searfire",
+        "target": "quest_line:armor-of-ro",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7429",
+        "source": "quest_line:armor-of-ro",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7430",
+        "source": "npc:rathe-mountains:nicholas",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7431",
+        "source": "npc:rathe-mountains:nicholas",
+        "target": "quest:mold-of-ro-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7432",
+        "source": "quest:mold-of-ro-boots",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7433",
+        "source": "quest:mold-of-ro-boots",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7434",
+        "source": "quest:mold-of-ro-boots",
+        "target": "item:mold-of-ro-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7435",
+        "source": "quest:mold-of-ro-boots",
+        "target": "item:boots-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7436",
+        "source": "quest:mold-of-ro-bracer",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7437",
+        "source": "quest:mold-of-ro-bracer",
+        "target": "item:bracer-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7438",
+        "source": "npc:rathe-mountains:abigail",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7439",
+        "source": "npc:rathe-mountains:abigail",
+        "target": "quest:mold-of-ro-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7440",
+        "source": "quest:mold-of-ro-breastplate",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7441",
+        "source": "quest:mold-of-ro-breastplate",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7442",
+        "source": "quest:mold-of-ro-breastplate",
+        "target": "item:mold-of-ro-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7443",
+        "source": "quest:mold-of-ro-breastplate",
+        "target": "item:breastplate-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7444",
+        "source": "npc:rathe-mountains:sentry-joanna",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7445",
+        "source": "npc:rathe-mountains:sentry-joanna",
+        "target": "quest:mold-of-ro-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7446",
+        "source": "quest:mold-of-ro-gauntlets",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7447",
+        "source": "quest:mold-of-ro-gauntlets",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7448",
+        "source": "quest:mold-of-ro-gauntlets",
+        "target": "item:mold-of-ro-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7449",
+        "source": "quest:mold-of-ro-gauntlets",
+        "target": "item:gauntlets-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7450",
+        "source": "npc:rathe-mountains:elisabeth",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7451",
+        "source": "npc:rathe-mountains:elisabeth",
+        "target": "quest:mold-of-ro-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7452",
+        "source": "quest:mold-of-ro-greaves",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7453",
+        "source": "quest:mold-of-ro-greaves",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7454",
+        "source": "quest:mold-of-ro-greaves",
+        "target": "item:mold-of-ro-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7455",
+        "source": "quest:mold-of-ro-greaves",
+        "target": "item:greaves-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7456",
+        "source": "npc:rathe-mountains:thomas",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7457",
+        "source": "npc:rathe-mountains:thomas",
+        "target": "quest:mold-of-ro-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7458",
+        "source": "quest:mold-of-ro-helm",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7459",
+        "source": "quest:mold-of-ro-helm",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7460",
+        "source": "quest:mold-of-ro-helm",
+        "target": "item:mold-of-ro-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7461",
+        "source": "quest:mold-of-ro-helm",
+        "target": "item:helm-of-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7462",
+        "source": "npc:rathe-mountains:marianna",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7463",
+        "source": "npc:rathe-mountains:marianna",
+        "target": "quest:mold-of-ro-vambrace",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7464",
+        "source": "quest:mold-of-ro-vambrace",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-7465",
+        "source": "quest:mold-of-ro-vambrace",
+        "target": "quest_line:armor-of-ro",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7466",
+        "source": "quest:mold-of-ro-vambrace",
+        "target": "item:mold-of-ro-vambrace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7467",
+        "source": "quest:mold-of-ro-vambrace",
+        "target": "item:vambraces-of-ro",
         "type": "rewards"
       }
     }

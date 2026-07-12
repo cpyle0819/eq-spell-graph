@@ -12,6 +12,8 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Edge semantics](edge-semantics.md)
 - [Spell class/level model](spell-class-level-model.md)
 - [Quest structure and reward modeling](quest-reward-modeling.md)
+- [Item node schema](item-node-schema.md)
+- [Quest lines: a `quest_line` node, reusing the `member_of` edge](quest-line-node-type.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)
@@ -39,6 +41,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Naming mismatches](zone-naming-mismatches.md)
 - [Spell details partially sourced from the local client, not just eqlwiki.com](spell-details-partially-from-local-client.md)
 - [Spell lines sourced from the locally installed client, not eqlwiki.com](spell-lines-from-local-client.md)
+- [How the leveling-guide quests were researched (and what a future scraper needs)](eqlwiki-quest-research-method.md)
 
 ## UI
 
@@ -73,4 +76,6 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Home page: tool buttons are a touching macro-socket grid, no per-tool description text, positioned left of the welcome scroll](home-page-macro-socket-grid.md)
 - [Wiki links: per-entity page vs. shared-page link, by node type](wiki-links-per-entity-vs-shared-page.md)
 - [Spell icons: real client art, a deliberate exception to the derived-facts-only policy](spell-icons-real-client-art-exception.md)
+- [Item hover uses the generic detail-tooltip, shaped per card type](item-hover-uses-generic-detail-tooltip.md)
+- [Quest-line card replaces its members in the results list](quest-line-card-ui.md)
 
