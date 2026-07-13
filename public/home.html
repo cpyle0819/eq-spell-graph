@@ -32,21 +32,16 @@
     /* welcome-scroll (public/components/) owns its own look; .tool-grid
        below is the only layout this page still owns directly. Each
        macro-button is already a MacroSocket (public/components/
-       macro-button.js) — a full beveled cavity on its own :host — so
-       "sockets that touch" is the same shared-seam overlap technique as
-       zone-card/spell-card elsewhere (decisions/
-       packed-card-hover-box-shadow-not-filter.md): a negative margin equal
-       to the socket's own border width (5px) pulls each button flush
-       against its row/column neighbor so paint order leaves one shared
-       seam, not a doubled-up border. inline-grid (not grid) keeps the
-       cluster sized to its four 90x90 sockets instead of stretching to
-       fill the row. */
+       macro-button.js) — a full beveled cavity on its own :host, sized to
+       exactly 90x90 (border included, via the sitewide box-sizing:
+       border-box reset). With no grid gap, adjacent sockets sit flush
+       against each other with zero space and zero overlap, each keeping
+       its own full bevel border. inline-grid (not grid) keeps the cluster
+       sized to its sockets instead of stretching to fill the row. */
     .tool-grid {
       display: inline-grid;
       grid-template-columns: repeat(2, 90px);
     }
-    .tool-grid macro-button:nth-child(2n) { margin-left: -5px; }
-    .tool-grid macro-button:nth-child(n+3) { margin-top: -5px; }
 
     @media (min-width: 761px) {
       main { flex-direction: row-reverse; justify-content: center; }
