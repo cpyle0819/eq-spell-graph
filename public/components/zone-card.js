@@ -170,9 +170,21 @@ ${WIKI_LINK_CSS}
 .spell-scroll::after { right: -11px; }
 
 .spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
-.spell-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.spell-check { display: flex; align-items: center; }
+/* Checkbox is a fixed grid column; the name chip + class pills + vendor
+   tags all live in the second column as one flex-wrap flow. A short entry
+   (one class, one vendor) sits entirely on a single line -- no line is
+   spent on structure the content doesn't need. A long one (many classes,
+   several vendors) wraps, and because everything is confined to column 2,
+   every wrapped line lands at the same left edge as the spell name for
+   free, reading as "belongs to this spell" without a manual indent hack.
+   This also fixes the original bug: the class/level list used to be
+   concatenated as unbreakable text inside the name's own nowrap chip, so a
+   spell with several classes ran straight off the card with no wrap point
+   at all -- each class is now its own wrappable pill instead. */
+.spell-row { display: grid; grid-template-columns: 15px 1fr; column-gap: 8px; row-gap: 4px; }
+.spell-check { padding-top: 3px; }
 .spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
+.spell-content { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; }
 .spell-owned { opacity: 0.4; }
 .spell-owned .spell-chip { text-decoration: line-through; }
 .spell-owned .spell-chip::before { filter: grayscale(1) brightness(0.6); }
@@ -182,8 +194,8 @@ ${WIKI_LINK_CSS}
   background: rgba(122, 77, 5, 0.1);
   border: 1px solid rgba(122, 77, 5, 0.35);
   color: #5a3c14;
-  white-space: nowrap; text-decoration: none;
-  display: inline-flex; align-items: center;
+  overflow-wrap: break-word; text-decoration: none;
+  display: inline-flex; align-items: center; min-width: 0;
 }
 /* spell gem — specular highlight biased top-right, matching the app's
    light source. */
@@ -193,12 +205,17 @@ ${WIKI_LINK_CSS}
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
 }
 @media (pointer: coarse) { .spell-chip { cursor: pointer; } }
-.spell-chip .lvl { color: var(--parch-ink-soft); margin-left: 6px; font-size: 11px; }
 
-.vendor-names { display: flex; flex-wrap: wrap; gap: 5px; }
+.class-pill {
+  font-size: 11px; padding: 2px 7px; border-radius: 3px;
+  background: rgba(90, 60, 20, 0.08); border: 1px solid rgba(90, 60, 20, 0.3); color: #5a3c14;
+  white-space: nowrap;
+}
+
 .vendor-tag {
   font-size: 12px; padding: 3px 8px; border-radius: 3px;
   background: rgba(30, 64, 175, 0.08); border: 1px solid rgba(30, 64, 175, 0.3); color: #1e40af;
+  white-space: nowrap;
 }
 `);
 
@@ -269,11 +286,15 @@ class ZoneCard extends HTMLElement {
     const spellRows = r.spells.map((s) => {
       const isOwned = owned.has(s.id);
       if (!showAllSpells && isOwned) return "";
+      const vendors = s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ",")));
       return `
         <div class="spell-row${isOwned ? " spell-owned" : ""}">
           <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
-          <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}${s.classes.map((c) => `<span class="lvl">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}</a>
-          <span class="vendor-names">${s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ","))).map((v) => `<span class="vendor-tag">${v}</span>`).join("")}</span>
+          <div class="spell-content">
+            <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}</a>
+            ${s.classes.map((c) => `<span class="class-pill">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}
+            ${vendors.map((v) => `<span class="vendor-tag">${v}</span>`).join("")}
+          </div>
         </div>
       `;
     }).join("");
