@@ -83,7 +83,7 @@ ${QUEST_CARD_CSS}
 // finished piece are both real rewards; nothing in the data marks one
 // primary -- see decisions/quest-line-node-type.md).
 function memberPreview(member) {
-  return [...member.itemRewards.map((i) => i.label), ...member.factionRewards.map((f) => f.label)].join(", ");
+  return [...member.itemRewards.map((i) => i.label), ...member.spellRewards.map((s) => s.label), ...member.factionRewards.map((f) => f.label)].join(", ");
 }
 
 function memberRow(member) {

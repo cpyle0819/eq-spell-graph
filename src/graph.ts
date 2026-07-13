@@ -265,6 +265,10 @@ export interface QuestSummary {
   questGivers: { id: string; label: string }[];
   itemRewards: ItemSummary[];
   factionRewards: { id: string; label: string }[];
+  // `rewards` edges to a `spell` node -- id/label only (no class_levels/etc.)
+  // since the Quests UI only ever uses these to deep-link into the Spell
+  // Finder, not to render a full spell stat block the way itemRewards does.
+  spellRewards: { id: string; label: string }[];
   // Resolved from a quest --member_of--> quest_line edge (same edge type
   // spell --member_of--> spell_line already uses for grouping -- see
   // decisions/quest-line-node-type.md). undefined for a standalone quest.
@@ -400,6 +404,7 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     questGivers,
     itemRewards: rewardTargets.filter((r) => r.type === "item").map(toItemSummary),
     factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
+    spellRewards: rewardTargets.filter((r) => r.type === "spell").map((r) => ({ id: r.id, label: r.label })),
     ...(questLineNode ? { questLine: { id: questLineNode.id, label: questLineNode.label } } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
     ...(node.era ? { era: node.era as string } : {}),

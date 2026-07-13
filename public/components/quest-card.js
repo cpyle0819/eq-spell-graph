@@ -38,7 +38,10 @@
 // item-hover-uses-generic-detail-tooltip.md for why that split, not a
 // tooltip subclass, is the pattern here). Faction/XP chips stay native-
 // `title` tooltips — they're not graph entities, so there's nothing more to
-// pop up.
+// pop up. Spell reward chips are real links instead of a tooltip target —
+// quest-shared.js's spellFinderPinUrl() sends them to the Spell Finder with
+// that spell pre-filled, the same "Find in Spells" deep link spell-card.js
+// already uses from the Class Browser.
 //
 // Design pass: reuses the app's existing hand-drawn "gem" motif (radial-
 // gradient swatch, specular highlight biased top-right — same construction

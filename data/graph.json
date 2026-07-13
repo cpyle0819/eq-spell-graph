@@ -45786,8 +45786,7 @@
           "Speak with Tonmerk Plorsin inside the Temple of Life in North Qeynos and agree to pick up a reagent",
           "Travel to the Temple of Marr in Freeport and give the flask to Serna Tasknon",
           "Gather three shark bones and pay Serna Tasknon ten gold pieces for Shark Powder",
-          "Return the Shark Powder to Tonmerk Plorsin in North Qeynos",
-          "Reward: the Smite spell (not modeled as a graph edge -- see migration header)"
+          "Return the Shark Powder to Tonmerk Plorsin in North Qeynos"
         ],
         "wiki_title": "Errand for Tonmerk"
       }
@@ -106432,6 +106431,14 @@
         "id": "e-rewards-7542",
         "source": "quest:note-for-rebby",
         "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7543",
+        "source": "quest:errand-for-tonmerk",
+        "target": "spell:smite",
         "type": "rewards"
       }
     }
