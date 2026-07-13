@@ -46079,6 +46079,1208 @@
         "label": "Coalition of Tradefolk Ill",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:behroe-dlexon",
+        "label": "Behroe Dlexon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:aenia-and-behroe",
+        "label": "Aenia and Behroe",
+        "type": "quest",
+        "description": "Behroe Dlexon in South Qeynos asks a bard to carry a ballad to Aenia Ghenson in North Qeynos and bring back her reply.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Behroe Dlexon in South Qeynos and receive the ballad 'The Thornless Rose'",
+          "Travel to North Qeynos and recite the ballad to Aenia Ghenson",
+          "Receive a Letter to Behroe and return it to Behroe Dlexon"
+        ],
+        "wiki_title": "Aenia and Behroe"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shawl-of-the-wind-spirit",
+        "label": "Shawl of the Wind Spirit",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 1,
+        "resists": {
+          "cold": 2
+        },
+        "weight": 0.4,
+        "size": "Small",
+        "classes": [
+          "bard"
+        ],
+        "source": "Aenia and Behroe reward (Behroe Dlexon, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:league-of-antonican-bards",
+        "label": "League of Antonican Bards",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:larkon-theardor",
+        "label": "Larkon Theardor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:air-tight-box-quest",
+        "label": "Air Tight Box Quest",
+        "type": "quest",
+        "description": "Larkon Theardor in Ak'Anon sends adventurers to Fodin Frugrin at the Steamfont Mountains observatory for an Air Tight Box, then to fill it with infected rat livers and bring it back.",
+        "classes": [],
+        "minLevel": 3,
+        "steps": [
+          "Hail Larkon Theardor in Ak'Anon and ask for the clean tasks",
+          "Travel to Steamfont Mountains and find Fodin Frugrin at the observatory",
+          "Receive an Air Tight Box and combine 10 Infected Rat Livers (looted from infected rats in Steamfont Mountains) inside it",
+          "Return the completed box to Larkon Theardor"
+        ],
+        "wiki_title": "Air Tight Box Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:eldritch-collective",
+        "label": "Eldritch Collective",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:bumle-reminjar",
+        "label": "Bumle Reminjar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:aviak-chicks",
+        "label": "Aviak Chicks",
+        "type": "quest",
+        "description": "Bumle Reminjar in North Kaladim's Paladin guild trades krag chick talons for a random piece of Small Patchwork armor.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 4,
+        "steps": [
+          "Hail Bumle Reminjar in the Paladin guild dining hall, North Kaladim, and agree to destroy the krag chicks",
+          "Collect 4 Aviak Chick Talons, looted from a Krag Chick or aviak chick in Butcherblock Mountains",
+          "Hand over the talons for a random reward"
+        ],
+        "wiki_title": "Aviak Chicks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-patchwork-boots",
+        "label": "Small Patchwork Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 3,
+        "weight": 1.9,
+        "size": "Small",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Aviak Chicks reward (Bumle Reminjar, North Kaladim); part of the Small Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-patchwork-cloak",
+        "label": "Small Patchwork Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 3,
+        "weight": 1.5,
+        "size": "Medium",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Aviak Chicks reward (Bumle Reminjar, North Kaladim); part of the Small Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-patchwork-pants",
+        "label": "Small Patchwork Pants",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 4,
+        "weight": 3,
+        "size": "Medium",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Aviak Chicks reward (Bumle Reminjar, North Kaladim); part of the Small Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-patchwork-sleeves",
+        "label": "Small Patchwork Sleeves",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "ac": 3,
+        "weight": 1.1,
+        "size": "Small",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Aviak Chicks reward (Bumle Reminjar, North Kaladim); part of the Small Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-patchwork-tunic",
+        "label": "Small Patchwork Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "ac": 6,
+        "weight": 2.6,
+        "size": "Medium",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Aviak Chicks reward (Bumle Reminjar, North Kaladim); part of the Small Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:clerics-of-underfoot",
+        "label": "Clerics of Underfoot",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kazon-stormhammer",
+        "label": "Kazon Stormhammer",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:miners-guild-249",
+        "label": "Miners Guild 249",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:aviak-talons",
+        "label": "Aviak Talons",
+        "type": "quest",
+        "description": "Bumle Reminjar in North Kaladim also buys krag elder talons off adventurers, for coin and faction rather than gear.",
+        "classes": [],
+        "minLevel": 8,
+        "steps": [
+          "Collect 4 Aviak Talons, looted from a krag elder in southern Butcherblock Mountains between Greater Faydark and Dagnor's Cauldron",
+          "Hand the talons to Bumle Reminjar in North Kaladim"
+        ],
+        "wiki_title": "Aviak Talons"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:chesgard-sydwen",
+        "label": "Chesgard Sydwen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bandit-sashes",
+        "label": "Bandit Sashes",
+        "type": "quest",
+        "description": "Chesgard Sydwen, in South Qeynos's house of thunder, rewards adventurers for thinning out the bandits, brigands, highwaymen, and raiders of the Karanas -- repeatable, one bronze weapon per sash.",
+        "classes": [],
+        "minLevel": 8,
+        "steps": [
+          "Kill bandits, brigands, highwaymen, or raiders in the Karanas and loot a Bandit Sash",
+          "Turn the sash in to Chesgard Sydwen in South Qeynos for a bronze weapon, coin, and faction (repeatable for more of each)"
+        ],
+        "wiki_title": "Bandit Sashes"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:gehna-solbenya",
+        "label": "Gehna Solbenya",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bandit-spectacles",
+        "label": "Bandit Spectacles",
+        "type": "quest",
+        "description": "Gehna Solbenya in South Qeynos sends adventurers to hunt bandit healers in the Plains of Karana for their spectacles, paying out coin and a choice of starter spell per hand-in.",
+        "classes": [],
+        "minLevel": 10,
+        "steps": [
+          "Hail Gehna Solbenya in South Qeynos and agree to hunt bandit binders",
+          "Travel to the Plains of Karana and collect spectacles from bandit healers",
+          "Return two spectacles to Gehna Solbenya for coin, faction, and a random spell scroll"
+        ],
+        "wiki_title": "Bandit Spectacles"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:weligon-steelherder",
+        "label": "Weligon Steelherder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:barnacle-breastplate-quest",
+        "label": "Barnacle Breastplate Quest",
+        "type": "quest",
+        "description": "Weligon Steelherder, in Erudin's Deepwater Knights guild, sends adventurers of at least Amiable faction to hunt a diseased shark and her young for a Barnacle Breastplate.",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Speak to Weligon Steelherder about ocean protection and agree to hunt the diseased shark",
+          "Receive an Empty Shark Bag, a 4-slot Small container",
+          "Collect the Heretic Shark Skin and three Baby Shark Remains, and combine them in the bag",
+          "Return the Bag of Shark Remains to Weligon Steelherder"
+        ],
+        "wiki_title": "Barnacle Breastplate Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:barnacle-breastplate",
+        "label": "Barnacle Breastplate",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "ac": 8,
+        "resists": {
+          "fire": 3,
+          "cold": 3
+        },
+        "weight": 5,
+        "size": "Large",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "lore": true,
+        "source": "Barnacle Breastplate Quest reward (Weligon Steelherder, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:deepwater-knights",
+        "label": "Deepwater Knights",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:high-council-of-erudin",
+        "label": "High Council of Erudin",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:basilisk-tongues",
+        "label": "Basilisk Tongues",
+        "type": "quest",
+        "description": "Larkon Theardor in Ak'Anon trades four basilisk tongues for a random starter caster spell.",
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "paladin",
+          "shaman",
+          "wizard"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Travel beyond Ak'Anon and hunt basilisks for their tongues",
+          "Return 4 Basilisk Tongues to Larkon Theardor for a random spell"
+        ],
+        "wiki_title": "Basilisk Tongues"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-felwithe:niola-impholder",
+        "label": "Niola Impholder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bat-wings",
+        "label": "Bat Wings",
+        "type": "quest",
+        "description": "Niola Impholder in the Felwithe Magician's Guild trades four bat wings for a starter spell.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Niola Impholder in the Felwithe Magician's Guild, Southern Felwithe",
+          "Collect 4 Bat Wings (unstacked) and hand them over for a spell"
+        ],
+        "wiki_title": "Bat Wings"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:keepers-of-the-art",
+        "label": "Keepers of the Art",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:king-tearis-thex",
+        "label": "King Tearis Thex",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:faydarks-champions",
+        "label": "Faydarks Champions",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:ged-twigborn",
+        "label": "Ged Twigborn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bearskin-gloves-quest",
+        "label": "Bearskin Gloves Quest",
+        "type": "quest",
+        "description": "Ged Twigborn in Kithicor Forest crafts Bearskin Gloves for 25 gold plus a High Quality Bear Skin.",
+        "classes": [],
+        "minLevel": 7,
+        "steps": [
+          "Collect a High Quality Bear Skin (from a brown bear, bear cub, black bear, or polar bear)",
+          "Pay Ged Twigborn 25 gold and hand over the bear skin for a pair of Bearskin Gloves"
+        ],
+        "wiki_title": "Bearskin Gloves Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bearskin-gloves",
+        "label": "Bearskin Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 5,
+        "weight": 2.1,
+        "size": "Small",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Bearskin Gloves Quest reward (Ged Twigborn, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-karana:brother-estle",
+        "label": "Brother Estle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blessed-oil-quest",
+        "label": "Blessed Oil Quest",
+        "type": "quest",
+        "description": "Brother Estle, on the road in Western Karana, sends clerics of at least Amiable faction on a relay through North Qeynos's Temple of Life and Splitpaw Lair for spells and a final Temple reward.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Find Brother Estle on the road in Western Karana and discuss the blessed oil",
+          "Travel to the Temple of Life in North Qeynos and speak with Priestess Jahnda, who directs you to Nomsoe Jusagta",
+          "Accept the Blessed Oil Flask from Nomsoe and deliver it to Brother Estle, receiving Prayer Beads in return",
+          "Deliver the beads to Priestess Jahnda and receive a Temple Summons",
+          "Carry the summons to Brother Hayle in Splitpaw Lair and receive a key",
+          "Trade the key with Tyokan Mekase at the Temple shop for a final random cleric spell"
+        ],
+        "wiki_title": "Blessed Oil Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:antonius-bayle",
+        "label": "Antonius Bayle",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:tabure-ahendle",
+        "label": "Tabure Ahendle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blurred-map-quest",
+        "label": "Blurred Map Quest",
+        "type": "quest",
+        "description": "Tabure Ahendle in South Qeynos's Steel Warriors Arena trades a blurred map, looted from a zombie sailor in Erud's Crossing, for coin and a random weapon -- requires at least Amiable faction.",
+        "classes": [],
+        "minLevel": 10,
+        "steps": [
+          "Loot a Blurred Map from a zombie sailor in Erud's Crossing",
+          "Hand the map to Tabure Ahendle in the South Qeynos Steel Warriors Arena"
+        ],
+        "wiki_title": "Blurred Map Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cast-iron-long-sword",
+        "label": "Cast-Iron Long Sword",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 32,
+        "weight": 7.5,
+        "size": "Medium",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "source": "Blurred Map Quest reward (Tabure Ahendle, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cast-iron-mace",
+        "label": "Cast-Iron Mace",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 38,
+        "weight": 19,
+        "size": "Medium",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "source": "Blurred Map Quest reward (Tabure Ahendle, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-cabilis:jondin",
+        "label": "Jondin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bone-granite-powder-quest",
+        "label": "Bone Granite Powder Quest",
+        "type": "quest",
+        "description": "Jondin in West Cabilis trades a forged Bone Granite Powder for the Kromdul Toothpick, a shaman piercing weapon.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 3,
+        "steps": [
+          "Hail Jondin in West Cabilis",
+          "Combine 1 Pile of Granite Pebbles, 2 Bone Chips, and 1 Forging Hammer in a Forge (Trivial: 21) to produce Bone Granite Powder",
+          "Give the Bone Granite Powder to Jondin"
+        ],
+        "wiki_title": "Bone Granite Powder Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kromdul-toothpick",
+        "label": "Kromdul Toothpick",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Primary"
+        ],
+        "skill": "Piercing",
+        "damage": 5,
+        "delay": 38,
+        "ac": 1,
+        "weight": 7,
+        "size": "Large",
+        "classes": [
+          "shaman"
+        ],
+        "source": "Bone Granite Powder Quest reward (Jondin, West Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:brood-of-kotiz",
+        "label": "Brood of Kotiz",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:legion-of-cabilis",
+        "label": "Legion of Cabilis",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:lokar-to-biath",
+        "label": "Lokar To`Biath",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bottle-of-red-wine",
+        "label": "Bottle of Red Wine",
+        "type": "quest",
+        "description": "Lokar To`Biath, in the library of Neriak's 3rd Gate, trades up to four bottles of Red Wine for coin-free faction -- no negative faction consequences.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Find Lokar To`Biath in the library of Neriak 3rd Gate",
+          "Hand her a Red Wine (up to 4, unstacked)"
+        ],
+        "wiki_title": "Bottle of Red Wine"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dreadguard-outer",
+        "label": "Dreadguard Outer",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dreadguard-inner",
+        "label": "Dreadguard Inner",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dark-bargainers",
+        "label": "Dark Bargainers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:book-of-turmoil-quest",
+        "label": "Book of Turmoil Quest",
+        "type": "quest",
+        "description": "Lokar To`Biath in Neriak's 3rd Gate library sends paladins on a dark chain through his own sister Rysva and the Oracle of K`Arnon at Ocean of Tears, culminating in slaying Lokar himself.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 40,
+        "steps": [
+          "Hand Lokar To`Biath 70 gold in the library of Neriak 3rd Gate",
+          "Give the note from her brother to Rysva To`Biath in the Blind Fish Tavern",
+          "Return to Lokar and slay him, then loot his Decapitated Head",
+          "Hand the head and note to Rysva",
+          "Travel to Ocean of Tears and give the Book of Turmoil to the Oracle of K`Arnon"
+        ],
+        "wiki_title": "Book of Turmoil Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:glowing-torch",
+        "label": "Glowing Torch",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "ac": 7,
+        "stats": {
+          "cha": 5
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "magic": true,
+        "lightSource": true,
+        "source": "Book of Turmoil Quest reward; also drops from Tisella in Lavastorm Mountains"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:oracle-of-karnon",
+        "label": "Oracle Of Karnon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bozinite-pestle-quest",
+        "label": "Bozinite Pestle Quest",
+        "type": "quest",
+        "description": "Larkon Theardor in Ak'Anon sends adventurers to Myre in North Kaladim for a Bozinite Pestle, taken off a mining-bridge mob, for coin and a random mage spell.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "monk",
+          "necromancer",
+          "paladin",
+          "shadow knight",
+          "shaman",
+          "warrior",
+          "wizard"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Speak with Larkon Theardor in Ak'Anon and agree to visit Myre in North Kaladim",
+          "Find Myre in North Kaladim and ask for the bozinite pestles",
+          "Kill Cleaner VII on the North Kaladim mining bridge to obtain the Bozinite Pestle",
+          "Return the pestle to Larkon Theardor"
+        ],
+        "wiki_title": "Bozinite Pestle Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ocean-of-tears:styria-fearnon",
+        "label": "Styria Fearnon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bracers-of-erollisi-quest",
+        "label": "Bracers of Erollisi Quest",
+        "type": "quest",
+        "description": "Styria Fearnon, on the hill above the Sisters of Erollisi dock in Ocean of Tears, sends adventurers two islands west to Capt Surestout on the Isle of the Seafoam Cyclops for the Bracers of Erollisi.",
+        "classes": [],
+        "minLevel": 20,
+        "steps": [
+          "Find Styria Fearnon on the hill next to the dock, Ocean of Tears",
+          "Travel two islands west to the Isle of the Seafoam Cyclops and obtain the Bracers of Erollisi from Capt Surestout",
+          "Return the bracers to Styria Fearnon for a random trinket reward"
+        ],
+        "wiki_title": "Bracers of Erollisi Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:clerics-of-tunare",
+        "label": "Clerics of Tunare",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:soldiers-of-tunare",
+        "label": "Soldiers of Tunare",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:cassius-messus",
+        "label": "Cassius Messus",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:broken-lute",
+        "label": "Broken Lute",
+        "type": "quest",
+        "description": "Cassius Messus, in South Qeynos's bard guild, sends bards to deliver the Lisera Lute to Vhalen Nostrolo in Southern Karana and carry his reply back for the Hymn of Restoration.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Take the Lisera Lute to Vhalen Nostrolo, composing in the Southern Karana plains near the well",
+          "Give him the lute and receive a note",
+          "Return the note to Cassius Messus in South Qeynos"
+        ],
+        "wiki_title": "Broken Lute"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:suuspa-clanim",
+        "label": "Suuspa Clanim",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:brother-trintle-quest",
+        "label": "Brother Trintle (Quest)",
+        "type": "quest",
+        "description": "Suuspa Clanim, in North Qeynos's Temple of Life, sends adventurers to hunt down Brother Trintle, a temple member gone bad, in West Karana.",
+        "classes": [],
+        "minLevel": 5,
+        "steps": [
+          "Tell Suuspa Clanim in the Temple of Life, North Qeynos, that Brother Trintle attacked Brother Estle",
+          "Kill Brother Trintle in West Karana and loot his Busted Prayer Beads",
+          "Return the beads to Suuspa Clanim"
+        ],
+        "wiki_title": "Brother Trintle (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:grype",
+        "label": "Grype",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cabilis-pale-ale-cabilis",
+        "label": "Cabilis Pale Ale (Cabilis)",
+        "type": "quest",
+        "description": "Grype, found at night in East Cabilis's Tink 'N Babble, trades four Cabilis Pale Ales for a copper piece and a burp -- no faction or experience.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Find Grype in the Tink 'N Babble at night, East Cabilis",
+          "Buy four Cabilis Pale Ales and give them to him"
+        ],
+        "wiki_title": "Cabilis Pale Ale (Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:lily-ashwood",
+        "label": "Lily Ashwood",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:call-of-flame-quest",
+        "label": "Call of Flame Quest",
+        "type": "quest",
+        "description": "Lily Ashwood in Greater Faydark sends high-level rangers on a long relay through Ganelorn Oast in East Karana, Kithicor Forest, North Kaladim, Nagafen's Lair, and Lower Guk, ending with the Call of Flame spell.",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Get a sealed Love Letter from Lily Ashwood in Greater Faydark",
+          "Give the letter to Ganelorn Oast in East Karana and receive Albino Rattlesnake Eggs",
+          "Take the eggs to Kithicor in Kithicor Forest and receive a Symbol of Achievement",
+          "Return the symbol to Ganelorn Oast and receive a Note of Credit",
+          "Take the note to Aanina Rockfinder in North Kaladim and receive a Gift",
+          "Collect a Burnt Sash from Nagafen's Lair, an Adamantite Band from Lower Guk, and an Electrum-Bladed Wakizashi",
+          "Give the sash, band, wakizashi, and gift to Ganelorn Oast",
+          "Kill Vance Bearstalker and loot his head",
+          "Give the head to Ganelorn Oast and receive the Call of Flame spell"
+        ],
+        "wiki_title": "Call of Flame Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:captain-nealith",
+        "label": "Captain Nealith",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:captain-nealiths-brother",
+        "label": "Captain Nealith's Brother",
+        "type": "quest",
+        "description": "Captain Nealith in Firiona Vie, first met during the Drolvarg Teeth quest, sends adventurers after a drolvarg scavenger for word of his missing siblings.",
+        "classes": [
+          "warrior",
+          "ranger",
+          "druid",
+          "rogue"
+        ],
+        "minLevel": 26,
+        "steps": [
+          "Clear the fixed drolvarg spawns at the twin tents until a drolvarg scavenger appears",
+          "Kill the scavenger and loot a Bloodsoaked Note",
+          "Give the note to Captain Nealith in Firiona Vie"
+        ],
+        "wiki_title": "Captain Nealith's Brother"
+      }
+    },
+    {
+      "data": {
+        "id": "item:glaive-of-marltek",
+        "label": "Glaive of Marltek",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 5,
+        "delay": 24,
+        "weight": 5,
+        "size": "Medium",
+        "classes": [
+          "warrior",
+          "ranger",
+          "druid",
+          "rogue"
+        ],
+        "magic": true,
+        "lore": true,
+        "effect": "Snare (Combat, Instant) at Level 15",
+        "source": "Captain Nealith's Brother reward (Captain Nealith, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:inhabitants-of-firiona-vie",
+        "label": "Inhabitants of Firiona Vie",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:emerald-warriors",
+        "label": "Emerald Warriors",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:storm-guard",
+        "label": "Storm Guard",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:vynon-estaliun",
+        "label": "Vynon Estaliun",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:catfish-tail",
+        "label": "Catfish Tail",
+        "type": "quest",
+        "description": "Vynon Estaliun in Erudin sends adventurers to Kerra Ridge in Toxxulia Forest to slay a catfisher for its tail.",
+        "classes": [],
+        "minLevel": 7,
+        "steps": [
+          "Hail Vynon Estaliun in Erudin and agree to face fear",
+          "Travel to Kerra Ridge in Toxxulia Forest and slay a catfisher",
+          "Loot a Fishy Cat Tail and hand it in to Vynon Estaliun"
+        ],
+        "wiki_title": "Catfish Tail"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brass-ring",
+        "label": "Brass Ring",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "stats": {
+          "cha": 1
+        },
+        "weight": 0,
+        "size": "Tiny",
+        "lore": true,
+        "noTrade": true,
+        "source": "Catfish Tail reward (Vynon Estaliun, Erudin); also a reward of Taxes and Wenbie's Muffins"
+      }
+    },
+    {
+      "data": {
+        "id": "item:torch",
+        "label": "Torch",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "weight": 0.5,
+        "size": "Small",
+        "lightSource": true,
+        "value": "1s",
+        "source": "Catfish Tail reward (Vynon Estaliun, Erudin); also sold by merchants across many zones"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:peace-keepers",
+        "label": "Peace Keepers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:marlyn-mcmerin",
+        "label": "Marlyn McMerin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cannibalize-ii-good",
+        "label": "Cannibalize II (Good)",
+        "type": "quest",
+        "description": "Marlyn McMerin in Firiona Vie sends high-level shamans across City of Mist, Timorous Deep, Trakanon's Teeth, and Karnor's Castle for four reagents that teach Cannibalize II.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 40,
+        "steps": [
+          "Obtain Strange Ochre Clay from an army behemoth in City of Mist",
+          "Obtain Crushed Diamonds, a ground spawn in Timorous Deep",
+          "Obtain Yun Shaman Powder from a froglok yun shaman in Trakanon's Teeth",
+          "Obtain Greyish Bone Chips from a skeletal warlord in Karnor's Castle",
+          "Give all four items to Marlyn McMerin in Firiona Vie"
+        ],
+        "wiki_title": "Cannibalize II (Good)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:firiona-vie",
+        "label": "Firiona Vie",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cheslins-illusion-cards",
+        "label": "Cheslin's Illusion Cards",
+        "type": "quest",
+        "description": "Chesgard Sydwen in South Qeynos sends adventurers to escort his son, Guard Cheslin, on patrol through Qeynos Hills and collect the illusion cards he drops along the way.",
+        "classes": [],
+        "minLevel": 5,
+        "steps": [
+          "Hail Chesgard Sydwen in South Qeynos and learn about his son Cheslin",
+          "Find Guard Cheslin in a tower in Qeynos Hills and escort him on patrol",
+          "Collect the four illusion cards he drops (Chrono Cyclone, Diamond Vale, Ebon Lotus, Library of Erudin) and return them to him",
+          "Deliver Cheslin's letter back to Chesgard Sydwen for a piece of Raw Hide armor"
+        ],
+        "wiki_title": "Cheslin's Illusion Cards"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-qeynos",
+        "label": "Merchants of Qeynos",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -106439,6 +107641,1326 @@
         "id": "e-rewards-7543",
         "source": "quest:errand-for-tonmerk",
         "target": "spell:smite",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7544",
+        "source": "npc:south-qeynos:behroe-dlexon",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7545",
+        "source": "npc:south-qeynos:behroe-dlexon",
+        "target": "quest:aenia-and-behroe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7546",
+        "source": "quest:aenia-and-behroe",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7547",
+        "source": "quest:aenia-and-behroe",
+        "target": "item:shawl-of-the-wind-spirit",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7548",
+        "source": "quest:aenia-and-behroe",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7549",
+        "source": "quest:aenia-and-behroe",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7550",
+        "source": "quest:aenia-and-behroe",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7551",
+        "source": "npc:ak-anon:larkon-theardor",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7552",
+        "source": "npc:ak-anon:larkon-theardor",
+        "target": "quest:air-tight-box-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7553",
+        "source": "quest:air-tight-box-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7554",
+        "source": "quest:air-tight-box-quest",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7555",
+        "source": "quest:air-tight-box-quest",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7556",
+        "source": "quest:air-tight-box-quest",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7557",
+        "source": "npc:north-kaladim:bumle-reminjar",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7558",
+        "source": "npc:north-kaladim:bumle-reminjar",
+        "target": "quest:aviak-chicks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7559",
+        "source": "quest:aviak-chicks",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7560",
+        "source": "quest:aviak-chicks",
+        "target": "item:small-patchwork-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7561",
+        "source": "quest:aviak-chicks",
+        "target": "item:small-patchwork-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7562",
+        "source": "quest:aviak-chicks",
+        "target": "item:small-patchwork-pants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7563",
+        "source": "quest:aviak-chicks",
+        "target": "item:small-patchwork-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7564",
+        "source": "quest:aviak-chicks",
+        "target": "item:small-patchwork-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7565",
+        "source": "quest:aviak-chicks",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7566",
+        "source": "quest:aviak-chicks",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7567",
+        "source": "quest:aviak-chicks",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7568",
+        "source": "npc:north-kaladim:bumle-reminjar",
+        "target": "quest:aviak-talons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7569",
+        "source": "quest:aviak-talons",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7570",
+        "source": "quest:aviak-talons",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7571",
+        "source": "quest:aviak-talons",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7572",
+        "source": "quest:aviak-talons",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7573",
+        "source": "npc:south-qeynos:chesgard-sydwen",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7574",
+        "source": "npc:south-qeynos:chesgard-sydwen",
+        "target": "quest:bandit-sashes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7575",
+        "source": "quest:bandit-sashes",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7576",
+        "source": "quest:bandit-sashes",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7577",
+        "source": "quest:bandit-sashes",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7578",
+        "source": "quest:bandit-sashes",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7579",
+        "source": "npc:south-qeynos:gehna-solbenya",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7580",
+        "source": "npc:south-qeynos:gehna-solbenya",
+        "target": "quest:bandit-spectacles",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7581",
+        "source": "quest:bandit-spectacles",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7582",
+        "source": "quest:bandit-spectacles",
+        "target": "spell:center",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7583",
+        "source": "quest:bandit-spectacles",
+        "target": "spell:endure-poison",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7584",
+        "source": "quest:bandit-spectacles",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7585",
+        "source": "quest:bandit-spectacles",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7586",
+        "source": "quest:bandit-spectacles",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7587",
+        "source": "npc:erudin:weligon-steelherder",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7588",
+        "source": "npc:erudin:weligon-steelherder",
+        "target": "quest:barnacle-breastplate-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7589",
+        "source": "quest:barnacle-breastplate-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7590",
+        "source": "quest:barnacle-breastplate-quest",
+        "target": "item:barnacle-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7591",
+        "source": "quest:barnacle-breastplate-quest",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7592",
+        "source": "quest:barnacle-breastplate-quest",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7593",
+        "source": "npc:ak-anon:larkon-theardor",
+        "target": "quest:basilisk-tongues",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7594",
+        "source": "quest:basilisk-tongues",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7595",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:burst-of-flame",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7596",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:elementaling-water",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7597",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:elementalkin-earth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7598",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:fire-flux",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7599",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:gate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7600",
+        "source": "quest:basilisk-tongues",
+        "target": "spell:true-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7601",
+        "source": "quest:basilisk-tongues",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7602",
+        "source": "quest:basilisk-tongues",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7603",
+        "source": "quest:basilisk-tongues",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7604",
+        "source": "npc:southern-felwithe:niola-impholder",
+        "target": "zone:southern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7605",
+        "source": "npc:southern-felwithe:niola-impholder",
+        "target": "quest:bat-wings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7606",
+        "source": "quest:bat-wings",
+        "target": "zone:southern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7607",
+        "source": "quest:bat-wings",
+        "target": "spell:flare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7608",
+        "source": "quest:bat-wings",
+        "target": "spell:shield-of-fire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7609",
+        "source": "quest:bat-wings",
+        "target": "faction:keepers-of-the-art",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7610",
+        "source": "quest:bat-wings",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7611",
+        "source": "quest:bat-wings",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7612",
+        "source": "npc:kithicor-forest:ged-twigborn",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7613",
+        "source": "npc:kithicor-forest:ged-twigborn",
+        "target": "quest:bearskin-gloves-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7614",
+        "source": "quest:bearskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7615",
+        "source": "quest:bearskin-gloves-quest",
+        "target": "item:bearskin-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7616",
+        "source": "npc:western-karana:brother-estle",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7617",
+        "source": "npc:western-karana:brother-estle",
+        "target": "quest:blessed-oil-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7618",
+        "source": "quest:blessed-oil-quest",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7619",
+        "source": "quest:blessed-oil-quest",
+        "target": "spell:inspire-fear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7620",
+        "source": "quest:blessed-oil-quest",
+        "target": "spell:ward-summoned",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7621",
+        "source": "quest:blessed-oil-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7622",
+        "source": "quest:blessed-oil-quest",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7623",
+        "source": "quest:blessed-oil-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7624",
+        "source": "quest:blessed-oil-quest",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7625",
+        "source": "npc:south-qeynos:tabure-ahendle",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7626",
+        "source": "npc:south-qeynos:tabure-ahendle",
+        "target": "quest:blurred-map-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7627",
+        "source": "quest:blurred-map-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7628",
+        "source": "quest:blurred-map-quest",
+        "target": "item:cast-iron-long-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7629",
+        "source": "quest:blurred-map-quest",
+        "target": "item:cast-iron-mace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7630",
+        "source": "quest:blurred-map-quest",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7631",
+        "source": "quest:blurred-map-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7632",
+        "source": "quest:blurred-map-quest",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7633",
+        "source": "npc:west-cabilis:jondin",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7634",
+        "source": "npc:west-cabilis:jondin",
+        "target": "quest:bone-granite-powder-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7635",
+        "source": "quest:bone-granite-powder-quest",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7636",
+        "source": "quest:bone-granite-powder-quest",
+        "target": "item:kromdul-toothpick",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7637",
+        "source": "quest:bone-granite-powder-quest",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7638",
+        "source": "quest:bone-granite-powder-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7639",
+        "source": "npc:neriak-3rd-gate:lokar-to-biath",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7640",
+        "source": "npc:neriak-3rd-gate:lokar-to-biath",
+        "target": "quest:bottle-of-red-wine",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7641",
+        "source": "quest:bottle-of-red-wine",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7642",
+        "source": "quest:bottle-of-red-wine",
+        "target": "faction:dreadguard-outer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7643",
+        "source": "quest:bottle-of-red-wine",
+        "target": "faction:dreadguard-inner",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7644",
+        "source": "quest:bottle-of-red-wine",
+        "target": "faction:dark-bargainers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7645",
+        "source": "npc:neriak-3rd-gate:lokar-to-biath",
+        "target": "quest:book-of-turmoil-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7646",
+        "source": "quest:book-of-turmoil-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7647",
+        "source": "quest:book-of-turmoil-quest",
+        "target": "item:glowing-torch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7648",
+        "source": "quest:book-of-turmoil-quest",
+        "target": "faction:oracle-of-karnon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7649",
+        "source": "npc:ak-anon:larkon-theardor",
+        "target": "quest:bozinite-pestle-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7650",
+        "source": "quest:bozinite-pestle-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7651",
+        "source": "quest:bozinite-pestle-quest",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7652",
+        "source": "quest:bozinite-pestle-quest",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7653",
+        "source": "quest:bozinite-pestle-quest",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7654",
+        "source": "npc:ocean-of-tears:styria-fearnon",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7655",
+        "source": "npc:ocean-of-tears:styria-fearnon",
+        "target": "quest:bracers-of-erollisi-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7656",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7657",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7658",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7659",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7660",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7661",
+        "source": "npc:south-qeynos:cassius-messus",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7662",
+        "source": "npc:south-qeynos:cassius-messus",
+        "target": "quest:broken-lute",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7663",
+        "source": "quest:broken-lute",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7664",
+        "source": "quest:broken-lute",
+        "target": "spell:hymn-of-restoration",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7665",
+        "source": "quest:broken-lute",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7666",
+        "source": "quest:broken-lute",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7667",
+        "source": "quest:broken-lute",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7668",
+        "source": "npc:north-qeynos:suuspa-clanim",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7669",
+        "source": "npc:north-qeynos:suuspa-clanim",
+        "target": "quest:brother-trintle-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7670",
+        "source": "quest:brother-trintle-quest",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7671",
+        "source": "quest:brother-trintle-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7672",
+        "source": "quest:brother-trintle-quest",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7673",
+        "source": "quest:brother-trintle-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7674",
+        "source": "quest:brother-trintle-quest",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7675",
+        "source": "npc:east-cabilis:grype",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7676",
+        "source": "npc:east-cabilis:grype",
+        "target": "quest:cabilis-pale-ale-cabilis",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7677",
+        "source": "quest:cabilis-pale-ale-cabilis",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7678",
+        "source": "npc:greater-faydark:lily-ashwood",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7679",
+        "source": "npc:greater-faydark:lily-ashwood",
+        "target": "quest:call-of-flame-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7680",
+        "source": "quest:call-of-flame-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7681",
+        "source": "quest:call-of-flame-quest",
+        "target": "spell:call-of-flame",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7682",
+        "source": "npc:firiona-vie:captain-nealith",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7683",
+        "source": "npc:firiona-vie:captain-nealith",
+        "target": "quest:captain-nealiths-brother",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7684",
+        "source": "quest:captain-nealiths-brother",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7685",
+        "source": "quest:captain-nealiths-brother",
+        "target": "item:glaive-of-marltek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7686",
+        "source": "quest:captain-nealiths-brother",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7687",
+        "source": "quest:captain-nealiths-brother",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7688",
+        "source": "quest:captain-nealiths-brother",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7689",
+        "source": "npc:erudin:vynon-estaliun",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7690",
+        "source": "npc:erudin:vynon-estaliun",
+        "target": "quest:catfish-tail",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7691",
+        "source": "quest:catfish-tail",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7692",
+        "source": "quest:catfish-tail",
+        "target": "item:brass-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7693",
+        "source": "quest:catfish-tail",
+        "target": "item:torch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7694",
+        "source": "quest:catfish-tail",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7695",
+        "source": "quest:catfish-tail",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7696",
+        "source": "npc:firiona-vie:marlyn-mcmerin",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7697",
+        "source": "npc:firiona-vie:marlyn-mcmerin",
+        "target": "quest:cannibalize-ii-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7698",
+        "source": "quest:cannibalize-ii-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7699",
+        "source": "quest:cannibalize-ii-good",
+        "target": "spell:cannibalize-ii",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7700",
+        "source": "quest:cannibalize-ii-good",
+        "target": "faction:firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7701",
+        "source": "quest:cannibalize-ii-good",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7702",
+        "source": "quest:cannibalize-ii-good",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7703",
+        "source": "npc:south-qeynos:chesgard-sydwen",
+        "target": "quest:cheslins-illusion-cards",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7704",
+        "source": "quest:cheslins-illusion-cards",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7705",
+        "source": "quest:cheslins-illusion-cards",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7706",
+        "source": "quest:cheslins-illusion-cards",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7707",
+        "source": "quest:cheslins-illusion-cards",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7708",
+        "source": "quest:cheslins-illusion-cards",
+        "target": "faction:knights-of-thunder",
         "type": "rewards"
       }
     }
