@@ -15629,7 +15629,8 @@
         "label": "Caleah Herblender",
         "type": "npc",
         "roles": [
-          "vendor"
+          "vendor",
+          "quest_giver"
         ]
       }
     },
@@ -47280,6 +47281,1160 @@
         "id": "faction:merchants-of-qeynos",
         "label": "Merchants of Qeynos",
         "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:vilissia",
+        "label": "Vilissia",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:acumen-mask-quest",
+        "label": "Acumen Mask Quest",
+        "type": "quest",
+        "description": "Vilissia in the Temple of Solusek Ro sends wizards after four cursed relics -- a Glowing Mask, a Patch of Shadow, a Darkbone Skull, and a Bonechipped Mask -- for the Acumen Mask.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 26,
+        "steps": [
+          "Obtain a Glowing Mask from a skeleton monk or A Froglok Scryer in Upper Guk",
+          "Obtain a Patch of Shadow from a shadowed man",
+          "Obtain a Darkbone Skull from a greater dark bone in The Estate of Unrest",
+          "Obtain a Bonechipped Mask from A Goblin Headmaster in Ocean of Tears",
+          "Return all four items to Vilissia"
+        ],
+        "wiki_title": "Acumen Mask Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:acumen-mask",
+        "label": "Acumen Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 4,
+        "stats": {
+          "wis": 2,
+          "int": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Gaze (Any Slot/Can Equip, Casting Time: Instant) at Level 20",
+        "source": "Acumen Mask Quest reward (Vilissia, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:temple-of-sol-ro",
+        "label": "Temple Of Sol Ro",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-karana:capt-linarius",
+        "label": "Capt Linarius",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:aegis-of-life-quest",
+        "label": "Aegis of Life Quest",
+        "type": "quest",
+        "description": "Capt Linarius, on the bridge to South Karana, sends clerics and paladins after Lord Grimrot -- requires Warmly faction with Camlend Serbold in Qeynos to complete the turn-in, or the quest items are lost.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 35,
+        "steps": [
+          "Speak with Capt Linarius on the bridge to South Karana and travel to Qeynos to tell Camlend Serbold of Lord Grimrot",
+          "Find Lord Grimrot in the Plains of Karana and defeat both his living and undead forms",
+          "Loot the Pestilence Scythe (living) and Decaying Heart (undead)",
+          "Return both items to Camlend Serbold in the Qeynos priest guild (requires Warmly faction)"
+        ],
+        "wiki_title": "Aegis of Life Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aegis-of-life",
+        "label": "Aegis of Life",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Secondary"
+        ],
+        "ac": 12,
+        "stats": {
+          "wis": 10
+        },
+        "resists": {
+          "disease": 25
+        },
+        "weight": 9.5,
+        "size": "Large",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Superior Healing (Instant) at Level 30",
+        "source": "Aegis of Life Quest reward (Capt Linarius / Camlend Serbold)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:xelha-nevagon",
+        "label": "Xelha Nevagon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:assist-the-great-xelha",
+        "label": "Assist the Great Xelha",
+        "type": "quest",
+        "description": "Xelha Nevagon in East Freeport trades bone chips, fire beetle eyes, and spiderling silk for starter necromancer spells and a trinket.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Collect 4 Bone Chips (unstacked), 4 Fire Beetle Eyes, and 4 Spiderling Silk",
+          "Hand all three turn-ins to Xelha Nevagon in East Freeport"
+        ],
+        "wiki_title": "Assist the Great Xelha"
+      }
+    },
+    {
+      "data": {
+        "id": "item:xelhas-sparkler",
+        "label": "Xelha's Sparkler",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "mana": 2,
+        "weight": 0.8,
+        "size": "Small",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Assist the Great Xelha reward (Xelha Nevagon, East Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dismal-rage",
+        "label": "Dismal Rage",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:opal-dark-briar",
+        "label": "Opal Dark Briar",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:ernax-the-scholar",
+        "label": "Ernax the Scholar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:azraxs-legacy",
+        "label": "Azraxs' Legacy",
+        "type": "quest",
+        "description": "Ernax the Scholar in Paineel sends high-level Erudite necromancers of at least Kindly faction with the Heretics on a three-relic hunt for the Mantle of Souls, ending at a Tormented Soul in Paineel.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Receive A Tattered Book from Ernax and return it for a Soul Trap, a 4-slot container",
+          "Obtain a Bloody Mantle from a Dark Assassin",
+          "Obtain the Heart of the Pure Druid from Alania Peaceheart",
+          "Obtain an Empty Crystal Sphere from Jalen Goldsinger (via the Crystal sub-quest: 500 gold to Gorth Bearsoul, then 1000 gold plus a Potion of Sorrow to Jalen Goldsinger)",
+          "Combine the Bloody Mantle, Heart of the Pure Druid, and Empty Crystal Sphere in the Soul Trap",
+          "Give the completed Soul Trap to a Tormented Soul in Paineel"
+        ],
+        "wiki_title": "Azraxs' Legacy"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mantle-of-souls",
+        "label": "Mantle of Souls",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 1,
+        "stats": {
+          "str": -5,
+          "sta": -5,
+          "int": 10
+        },
+        "mana": 75,
+        "classes": [
+          "necromancer"
+        ],
+        "source": "Azraxs' Legacy reward (Ernax the Scholar, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:azzar-habbib",
+        "label": "Azzar Habbib",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:azzars-dreadful-hat-quest",
+        "label": "Azzar's Dreadful Hat Quest",
+        "type": "quest",
+        "description": "Azzar Habbib, a Heretic overlooking Paineel's newbie grounds, sends adventurers of at least Indifferent faction to The Warrens for the Cave Bat Lord's dropped hat.",
+        "classes": [],
+        "minLevel": 20,
+        "steps": [
+          "Hail Azzar Habbib in Paineel",
+          "Travel to The Warrens and find the Cave Bat Lord past the King's Throne Room",
+          "Kill the Cave Bat Lord and loot Azzar's Dreadful Hat",
+          "Return the hat to Azzar Habbib"
+        ],
+        "wiki_title": "Azzar's Dreadful Hat Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-lace-sash",
+        "label": "Black Lace Sash",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 2,
+        "stats": {
+          "dex": 2,
+          "int": 2,
+          "agi": 2
+        },
+        "source": "Azzar's Dreadful Hat Quest reward (Azzar Habbib, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-felwithe:tynkale",
+        "label": "Tynkale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bandit-sisters",
+        "label": "Bandit Sisters",
+        "type": "quest",
+        "description": "Tynkale in Northern Felwithe sends adventurers to Kelethin, then the Nybright sisters' bandit camp in Lesser Faydark, for a random piece of leather or patchwork armor.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 12,
+        "steps": [
+          "Travel to Kelethin and speak with Tandan Nybright, who reeks of elven wine",
+          "Find the Nybright sisters' camp in Lesser Faydark, near the entrance to Mistmoore Castle",
+          "Kill Jayla, Kayla, Shayla, and Tayla Nybright for a chance at a Dull Pearl Necklace each",
+          "Return to Kelethin and hand a drunkard 4 Dull Pearl Necklaces for a random reward (Bearskin Gloves, Leather Belt, Leather Leggings, Leather Shoulderpads, Targ Shield, Small Leather Gorget, Small Leather Mask, or Small Leather Shoulderpads)"
+        ],
+        "wiki_title": "Bandit Sisters"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:anti-mage",
+        "label": "Anti-Mage",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:jusean-evanesque",
+        "label": "Jusean Evanesque",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-reports",
+        "label": "Bard Reports",
+        "type": "quest",
+        "description": "Jusean Evanesque in South Qeynos relays watch reports between the docks and North Qeynos's gate guards -- a simple two-leg courier errand.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Speak with Jusean Evanesque in South Qeynos and receive a Watch Report Request",
+          "Carry it to the requested guard (Behroe Dlexon or Anehan Treol at the docks, or Leanon Ruksey/Quinon Hulleaf at North Qeynos's gate) and receive their report",
+          "Return the report to Jusean Evanesque"
+        ],
+        "wiki_title": "Bard Reports"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bat-fur-quest",
+        "label": "Bat Fur Quest",
+        "type": "quest",
+        "description": "Caleah Herblender in South Qeynos's Herb Jar trades newbie-zone drops -- two Bat Fur, a Rat Whisker, and a Fire Beetle Eye, handed in that exact order -- for coin and faction.",
+        "classes": [],
+        "minLevel": 2,
+        "steps": [
+          "Collect two Bat Fur, a Rat Whisker, and a Fire Beetle Eye from the newbie mobs outside Qeynos's north gate",
+          "Hand the items to Caleah Herblender in South Qeynos's Herb Jar, in that order"
+        ],
+        "wiki_title": "Bat Fur Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:order-of-three",
+        "label": "Order of Three",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:chanda-miller",
+        "label": "Chanda Miller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bear-hide-armor",
+        "label": "Bear Hide Armor",
+        "type": "quest",
+        "description": "Chanda Miller, camped outside Surefall Glade, crafts bear-hide armor pieces for gold plus a matching-quality bear skin.",
+        "classes": [],
+        "minLevel": 8,
+        "steps": [
+          "Pay Chanda Miller 5 gold and a Low Quality Bear Skin for Bear-hide Boots",
+          "Pay 15 gold and a Medium Quality Bear Skin for Bear-hide Boots",
+          "Pay 21 gold and a High Quality Bear Skin for a Bear-hide Cape"
+        ],
+        "wiki_title": "Bear Hide Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bear-hide-belt",
+        "label": "Bear-hide Belt",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 4,
+        "weight": 1,
+        "size": "Small",
+        "source": "Bear Hide Armor reward (Chanda Miller, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bear-hide-boots",
+        "label": "Bear-hide Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 5,
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Bear Hide Armor reward (Chanda Miller, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bear-hide-cape",
+        "label": "Bear-hide Cape",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 6,
+        "weight": 2.5,
+        "size": "Medium",
+        "source": "Bear Hide Armor reward (Chanda Miller, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:karana-residents",
+        "label": "Karana Residents",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:shrub-marwood",
+        "label": "Shrub Marwood",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:beguile-plants-quest",
+        "label": "Beguile Plants Quest",
+        "type": "quest",
+        "description": "Shrub Marwood, in Firiona Vie's eastern outpost hideout, sends high-level druids across Lake of Ill Omen, Frontier Mountains, Firiona Vie, and the Sebilis-area zones for four reagents that teach Beguile Plants.",
+        "classes": [
+          "druid"
+        ],
+        "minLevel": 35,
+        "steps": [
+          "Obtain a Farsight Crystal from a Sarnak revealer at the Sarnak Fort, Lake of Ill Omen",
+          "Obtain a Pouch of Dust from a sarnak partisan in Frontier Mountains",
+          "Obtain Tsu Shaman Powder from a Froglok Tsu Shaman in Firiona Vie",
+          "Obtain Strathbone Silk from a strathbone spider in Kaesora, Droga, or Nurga",
+          "Turn all four items in to Shrub Marwood for a Fertile Crop and the Beguile Plants spell scroll"
+        ],
+        "wiki_title": "Beguile Plants Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:jemoz-lerkarson",
+        "label": "Jemoz Lerkarson",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:behead-the-freeport-militia",
+        "label": "Behead the Freeport Militia",
+        "type": "quest",
+        "description": "Jemoz Lerkarson, a cleric guildmaster in North Freeport's Temple of Marr, sends clerics to West Freeport to defeat the Militia's own Captain Hazran for a random cleric spell.",
+        "classes": [
+          "cleric"
+        ],
+        "steps": [
+          "Hand a Damaged Militia Helm to Jemoz Lerkarson in the Temple of Marr, North Freeport",
+          "Travel to West Freeport and defeat Captain Hazran, the Militia House's Warrior guildmaster",
+          "Loot his Human Head and return it to Jemoz Lerkarson"
+        ],
+        "wiki_title": "Behead the Freeport Militia"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-felwithe:tarker-blazetoss",
+        "label": "Tarker Blazetoss",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:black-wolf-skin-quest",
+        "label": "Black Wolf Skin Quest",
+        "type": "quest",
+        "description": "Tarker Blazetoss in Southern Felwithe's Wizard's Guild trades a single Black Wolf Skin for a random reward -- he eats any extras for nothing.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Hail Tarker Blazetoss in the Southern Felwithe Wizard's Guild and agree to perform a task",
+          "Hand him one Black Wolf Skin at a time for a random reward"
+        ],
+        "wiki_title": "Black Wolf Skin Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:copper-band",
+        "label": "Copper Band",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Black Wolf Skin Quest reward (Tarker Blazetoss, Southern Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rusty-dagger",
+        "label": "Rusty Dagger",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "Piercing",
+        "damage": 3,
+        "delay": 24,
+        "weight": 2.5,
+        "size": "Small",
+        "classes": [
+          "warrior",
+          "beastlord",
+          "berserker",
+          "necromancer",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "wizard",
+          "magician",
+          "enchanter",
+          "bard"
+        ],
+        "source": "Black Wolf Skin Quest reward (Tarker Blazetoss, Southern Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:worn-great-staff",
+        "label": "Worn Great Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 6,
+        "delay": 40,
+        "weight": 10,
+        "size": "Large",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "druid",
+          "monk",
+          "shadow knight",
+          "shaman",
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter",
+          "beastlord",
+          "berserker"
+        ],
+        "source": "Black Wolf Skin Quest reward (Tarker Blazetoss, Southern Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:larsk-juton",
+        "label": "Larsk Juton",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blackburrow-brewers",
+        "label": "Blackburrow Brewers",
+        "type": "quest",
+        "description": "Larsk Juton in Surefall Glade sends druids and rangers into Blackburrow's third level for three Blackburrow Casks -- a rare drop from gnoll brewers, guaranteed from the Master Brewer.",
+        "classes": [
+          "druid",
+          "ranger"
+        ],
+        "minLevel": 12,
+        "steps": [
+          "Collect 3 Blackburrow Casks from gnoll brewers on Blackburrow's third level (guaranteed from the Master Brewer)",
+          "Turn the casks in to Larsk Juton in Surefall Glade for a Cloak of Jaggedpine"
+        ],
+        "wiki_title": "Blackburrow Brewers"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cloak-of-jaggedpine",
+        "label": "Cloak of Jaggedpine",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 6,
+        "stats": {
+          "dex": 3
+        },
+        "weight": 1.5,
+        "size": "Medium",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Blackburrow Brewers reward (Larsk Juton, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:protectors-of-pine",
+        "label": "Protectors of Pine",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:jaggedpine-treefolk",
+        "label": "Jaggedpine Treefolk",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:kazlo-naedra",
+        "label": "Kazlo Naedra",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blank-scrolls",
+        "label": "Blank Scrolls",
+        "type": "quest",
+        "description": "Kazlo Naedra of the Order of Three, in South Qeynos, is short on blank scroll sheets and pays for a supply run to Sequea Erthinon in Surefall Glade.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Hail Kazlo Naedra in South Qeynos and learn of the blank scroll sheet shortage",
+          "Travel to Surefall Glade and buy sheets from Sequea Erthinon for 1 silver 5 copper",
+          "Return the sheets to Kazlo Naedra for reimbursement and faction"
+        ],
+        "wiki_title": "Blank Scrolls"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:vira",
+        "label": "Vira",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:broom-of-trilon-quest",
+        "label": "Broom Of Trilon Quest",
+        "type": "quest",
+        "description": "Vira, on the Temple of Solusek Ro's balcony, sends magicians after a star ruby, a griffon feather, a Najena magician's broom, and cyclops toes for the Broom of Trilon.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 33,
+        "steps": [
+          "Collect a star ruby, a feather from a griffon, a broom from a magician in Najena, and the toes of a cyclops",
+          "Return all four items to Vira on the Temple of Solusek Ro's balcony"
+        ],
+        "wiki_title": "Broom Of Trilon Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:broom-of-trilon",
+        "label": "Broom of Trilon",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "damage": 6,
+        "stats": {
+          "int": 2,
+          "agi": 3
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Reclaim Energy (Any Slot, Casting Time: Instant) at Level 20",
+        "source": "Broom Of Trilon Quest reward (Vira, Temple of Solusek Ro); Minion of Air focus effect"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:tergon-brenclog",
+        "label": "Tergon Brenclog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bugglegupp-quest",
+        "label": "Bugglegupp (Quest)",
+        "type": "quest",
+        "description": "Tergon Brenclog in Ak'Anon's Library Mechanamagica sends magicians to Steamfont Mountains to kill the troll Bugglegupp for its Iron Pellet, in exchange for a random starter caster spell.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Hail Tergon Brenclog in Ak'Anon and agree to help",
+          "Travel to Steamfont Mountains and kill the troll Bugglegupp",
+          "Loot the Iron Pellet and return it to Tergon Brenclog"
+        ],
+        "wiki_title": "Bugglegupp (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:gavel-the-temperant",
+        "label": "Gavel the Temperant",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:caduceus-of-sacrament-quest",
+        "label": "Caduceus of Sacrament Quest",
+        "type": "quest",
+        "description": "Gavel the Temperant in the Temple of Solusek Ro sends clerics after two Magnetized Platinum Bars, an Icon of Sacrament from Mistmoore Castle's jail, and an Ingot of Sacrament from Rathe Mountains for the Caduceus of Sacrament.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Obtain 2 Magnetized Platinum Bars",
+          "Obtain the Icon of Sacrament, a ground spawn in Mistmoore Castle's jail",
+          "Obtain the Ingot of Sacrament, dropped by a Giant Skeleton in the Rathe Mountains ruins",
+          "Turn in all three items to Gavel the Temperant in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Caduceus of Sacrament Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:caduceus-of-sacrament",
+        "label": "Caduceus of Sacrament",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 12,
+        "delay": 32,
+        "weight": 8,
+        "source": "Caduceus of Sacrament Quest reward (Gavel the Temperant, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-of-ill-omen:klok-foob",
+        "label": "Klok Foob",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:catfish-croak-sandwich-quest",
+        "label": "Catfish Croak Sandwich Quest",
+        "type": "quest",
+        "description": "Klok Foob in Lake of Ill Omen wants two Catfish Croak Sandwiches, each combined from a sewer catfish, thin sliced froglok, shrub lettuce, and honey mush bread.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Catch a Sewer Catfish (fishable in Cabilis and Firiona Vie)",
+          "Obtain thin sliced froglok from a lizard, Shrub Lettuce from Man Eating Shrubs in Swamp of No Hope, and Honey Mush Bread from Klok Bygle",
+          "Combine a sharpening stone with the ingredients in a forge (Trivial 26) to make a Sharp Cutting Disk, then combine all four into a Catfish Croak Sandwich",
+          "Give two sandwiches to Klok Foob"
+        ],
+        "wiki_title": "Catfish Croak Sandwich Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:foobscale-coif",
+        "label": "Foobscale Coif",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 7,
+        "stats": {
+          "str": 1,
+          "wis": 1,
+          "int": 1
+        },
+        "weight": 3,
+        "size": "Small",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "shaman"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Catfish Croak Sandwich Quest reward (Klok Foob, Lake of Ill Omen)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:cabilis-residents",
+        "label": "Cabilis Residents",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-warrens:aderius-rhenar",
+        "label": "Aderius Rhenar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:catman-alliance",
+        "label": "Catman Alliance",
+        "type": "quest",
+        "description": "Aderius Rhenar, in The Warrens' prison area, sends a message ahead of his return to Erudin -- deliver it to Leraena Shelyrak in the Temple of Divine Light.",
+        "classes": [],
+        "minLevel": 1,
+        "steps": [
+          "Hail Aderius Rhenar in The Warrens and agree to help him return to Erudin",
+          "Receive a Rolled Up Strip of Cloth",
+          "Deliver it to Leraena Shelyrak in Erudin's Temple of Divine Light"
+        ],
+        "wiki_title": "Catman Alliance"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:cindl",
+        "label": "Cindl",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cindls-polar-bear-collection",
+        "label": "Cindl's Polar Bear Collection",
+        "type": "quest",
+        "description": "Cindl, inside Mac's Kilts in Halas, trades a Polar Bear Skin for a random piece of used armor -- repeatable, and doable even at dubious faction.",
+        "classes": [],
+        "minLevel": 3,
+        "steps": [
+          "Collect a Polar Bear Skin from a glacier bear, polar bear, or polar bear cub in Everfrost Peaks",
+          "Hand the skin to Cindl inside Mac's Kilts, Halas, for a random piece of armor (Large Patchwork or Large Tattered armor set pieces, or Raw-hide Leggings) and a gold piece"
+        ],
+        "wiki_title": "Cindl's Polar Bear Collection"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-halas",
+        "label": "Merchants of Halas",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:wolves-of-the-north",
+        "label": "Wolves of the North",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:shamen-of-justice",
+        "label": "Shamen of Justice",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:joyce",
+        "label": "Joyce",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:clay-bracelet-quest",
+        "label": "Clay Bracelet Quest",
+        "type": "quest",
+        "description": "Joyce, guardian of the elementalist's relics in the Temple of Solusek Ro, sends magicians after four Runes of Clay -- three from gnomish necromancers in Rathe Mountains, one from a goblin headmaster in Ocean of Tears.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 25,
+        "steps": [
+          "Obtain the Top rune from Findlegrob in Rathe Mountains",
+          "Obtain the Right rune from Bindlegrob in Rathe Mountains",
+          "Obtain the Left rune from Sindlegrob in Rathe Mountains",
+          "Obtain the Bottom rune from a goblin headmaster in Ocean of Tears",
+          "Return all four Runes of Clay to Joyce for a Clay Bracelet"
+        ],
+        "wiki_title": "Clay Bracelet Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:clay-bracelet",
+        "label": "Clay Bracelet",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 4,
+        "resists": {
+          "magic": 5
+        },
+        "weight": 1,
+        "size": "Small",
+        "classes": [
+          "magician"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Eye of Zomm (Any Slot/Can Equip, Casting Time: Instant) at Level 20",
+        "source": "Clay Bracelet Quest reward (Joyce, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:laoni-reista",
+        "label": "Laoni Reista",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleanse-the-ocean",
+        "label": "Cleanse the Ocean",
+        "type": "quest",
+        "description": "Laoni Reista, on the Deepwater Knights' first floor in Erudin, sends adventurers into Erudin Bay to intercept Qeynosian smugglers for a random piece of Small Patchwork armor.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Kill smugglers in the waters near Erudin's harbor for a chance at A Nicked Coin",
+          "Hand the coin to Laoni Reista for coin, faction, and a random piece of Small Patchwork armor"
+        ],
+        "wiki_title": "Cleanse the Ocean"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:romar-sunto",
+        "label": "Romar Sunto",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:coin-of-tash-tashania",
+        "label": "Coin of Tash (Tashania)",
+        "type": "quest",
+        "description": "Romar Sunto in the Temple of Solusek Ro sends enchanters on a ten-city coin collection, three librarian hand-offs, and a final return for the Tashania spell.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 35,
+        "steps": [
+          "Get a Coin Pouch from Romar Sunto in the Temple of Solusek Ro",
+          "Collect An Old Silver Coin from each of ten cities: Ak'Anon, Erudin Palace, Northern Felwithe, West Freeport, Grobb, Halas, South Kaladim, Neriak Commons, Oggok, and North Qeynos",
+          "Combine the 10 coins in the coin pouch for a Coin of Tash",
+          "Give it to Tarn Visilin in High Keep's library for a Glowing Coin of Tash",
+          "Give that to Mizr N'Mar in Neriak 3rd Gate's library for a Gleaming Coin of Tash",
+          "Give that to Raine Beteria in Erudin's library for a Radiant Coin of Tash",
+          "Return to Romar Sunto for the Tashania spell"
+        ],
+        "wiki_title": "Coin of Tash (Tashania)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:royal-guard-sheltuin",
+        "label": "Royal Guard Sheltuin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cold-iron",
+        "label": "Cold Iron",
+        "type": "quest",
+        "description": "Royal Guard Sheltuin in Paineel sends shadow knights through The Warrens, Keletha Nightweaver, Qeynos Hills, and Everfrost's Eichvul for the Leggings of Ridossan.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Loot a Large Empty Crate from Smithy Rrarrgin in The Warrens and return it to Royal Guard Sheltuin",
+          "Take the sample to Keletha Nightweaver",
+          "Travel to Qeynos Hills and kill the erudite traveler by the lake for a Courier's Head, Crate full of Ore, and a Note from Eichvul",
+          "Find and kill Eichvul, a dark elf near Everfrost's Permafrost entrance, for a Supplier's Head and Sealed Letter",
+          "Return all four items to Royal Guard Sheltuin in Paineel"
+        ],
+        "wiki_title": "Cold Iron"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leggings-of-ridossan",
+        "label": "Leggings of Ridossan",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 9,
+        "stats": {
+          "agi": 2
+        },
+        "mana": 10,
+        "resists": {
+          "fire": 3,
+          "magic": 1
+        },
+        "weight": 4.2,
+        "size": "Medium",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Cold Iron reward (Royal Guard Sheltuin, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:mistmoore-castle:ssynthi",
+        "label": "Ssynthi",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:collect-drops-of-shadow",
+        "label": "Collect Drops of Shadow",
+        "type": "quest",
+        "description": "Ssynthi, in the graveyard behind Mistmoore Castle's mausoleum, sends adventurers to every shadowed-men camp across Norrath, then to Rathe Mountains' Ytyrs the Reborn, for a Penumbral Rod.",
+        "classes": [],
+        "minLevel": 35,
+        "steps": [
+          "Receive an 8-slot Cauldron of Shadow Essence from Ssynthi",
+          "Collect a vial from each shadowed men camp: Innothule Swamp, Nektulos Forest, Lavastorm Mountains, Lesser Faydark, South Karana, Commonlands, and Kithicor Forest",
+          "Find and kill Ytyrs the Reborn in Rathe Mountains",
+          "Combine all eight vials in the cauldron to craft a Concoction of Shadow",
+          "Give the Concoction to Ssynthi"
+        ],
+        "wiki_title": "Collect Drops of Shadow"
       }
     }
   ],
@@ -108962,6 +110117,1254 @@
         "source": "quest:cheslins-illusion-cards",
         "target": "faction:knights-of-thunder",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7709",
+        "source": "npc:temple-of-solusek-ro:vilissia",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7710",
+        "source": "npc:temple-of-solusek-ro:vilissia",
+        "target": "quest:acumen-mask-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7711",
+        "source": "quest:acumen-mask-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7712",
+        "source": "quest:acumen-mask-quest",
+        "target": "item:acumen-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7713",
+        "source": "quest:acumen-mask-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7714",
+        "source": "npc:northern-karana:capt-linarius",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7715",
+        "source": "npc:northern-karana:capt-linarius",
+        "target": "quest:aegis-of-life-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7716",
+        "source": "quest:aegis-of-life-quest",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7717",
+        "source": "quest:aegis-of-life-quest",
+        "target": "item:aegis-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7718",
+        "source": "quest:aegis-of-life-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7719",
+        "source": "quest:aegis-of-life-quest",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7720",
+        "source": "quest:aegis-of-life-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7721",
+        "source": "quest:aegis-of-life-quest",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7722",
+        "source": "npc:east-freeport:xelha-nevagon",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7723",
+        "source": "npc:east-freeport:xelha-nevagon",
+        "target": "quest:assist-the-great-xelha",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7724",
+        "source": "quest:assist-the-great-xelha",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7725",
+        "source": "quest:assist-the-great-xelha",
+        "target": "item:xelhas-sparkler",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7726",
+        "source": "quest:assist-the-great-xelha",
+        "target": "spell:cavorting-bones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7727",
+        "source": "quest:assist-the-great-xelha",
+        "target": "spell:reclaim-energy",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7728",
+        "source": "quest:assist-the-great-xelha",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7729",
+        "source": "quest:assist-the-great-xelha",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7730",
+        "source": "npc:paineel:ernax-the-scholar",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7731",
+        "source": "npc:paineel:ernax-the-scholar",
+        "target": "quest:azraxs-legacy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7732",
+        "source": "quest:azraxs-legacy",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7733",
+        "source": "quest:azraxs-legacy",
+        "target": "item:mantle-of-souls",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7734",
+        "source": "quest:azraxs-legacy",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7735",
+        "source": "npc:paineel:azzar-habbib",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7736",
+        "source": "npc:paineel:azzar-habbib",
+        "target": "quest:azzars-dreadful-hat-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7737",
+        "source": "quest:azzars-dreadful-hat-quest",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7738",
+        "source": "quest:azzars-dreadful-hat-quest",
+        "target": "item:black-lace-sash",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7739",
+        "source": "quest:azzars-dreadful-hat-quest",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7740",
+        "source": "npc:northern-felwithe:tynkale",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7741",
+        "source": "npc:northern-felwithe:tynkale",
+        "target": "quest:bandit-sisters",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7742",
+        "source": "quest:bandit-sisters",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7743",
+        "source": "quest:bandit-sisters",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7744",
+        "source": "quest:bandit-sisters",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7745",
+        "source": "quest:bandit-sisters",
+        "target": "faction:anti-mage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7746",
+        "source": "npc:south-qeynos:jusean-evanesque",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7747",
+        "source": "npc:south-qeynos:jusean-evanesque",
+        "target": "quest:bard-reports",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7748",
+        "source": "quest:bard-reports",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7749",
+        "source": "quest:bard-reports",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7750",
+        "source": "quest:bard-reports",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7751",
+        "source": "quest:bard-reports",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7752",
+        "source": "vendor:south-qeynos:caleah-herblender",
+        "target": "quest:bat-fur-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7753",
+        "source": "quest:bat-fur-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7754",
+        "source": "quest:bat-fur-quest",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7755",
+        "source": "quest:bat-fur-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7756",
+        "source": "npc:surefall-glade:chanda-miller",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7757",
+        "source": "npc:surefall-glade:chanda-miller",
+        "target": "quest:bear-hide-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7758",
+        "source": "quest:bear-hide-armor",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7759",
+        "source": "quest:bear-hide-armor",
+        "target": "item:bear-hide-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7760",
+        "source": "quest:bear-hide-armor",
+        "target": "item:bear-hide-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7761",
+        "source": "quest:bear-hide-armor",
+        "target": "item:bear-hide-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7762",
+        "source": "quest:bear-hide-armor",
+        "target": "faction:karana-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7763",
+        "source": "quest:bear-hide-armor",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7764",
+        "source": "quest:bear-hide-armor",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7765",
+        "source": "quest:bear-hide-armor",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7766",
+        "source": "npc:firiona-vie:shrub-marwood",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7767",
+        "source": "npc:firiona-vie:shrub-marwood",
+        "target": "quest:beguile-plants-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7768",
+        "source": "quest:beguile-plants-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7769",
+        "source": "quest:beguile-plants-quest",
+        "target": "spell:beguile-plants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7770",
+        "source": "quest:beguile-plants-quest",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7771",
+        "source": "quest:beguile-plants-quest",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7772",
+        "source": "quest:beguile-plants-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7773",
+        "source": "npc:north-freeport:jemoz-lerkarson",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7774",
+        "source": "npc:north-freeport:jemoz-lerkarson",
+        "target": "quest:behead-the-freeport-militia",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7775",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7776",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "spell:abundant-food",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7777",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "spell:atone",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7778",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "spell:word-of-health",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7779",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7780",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7781",
+        "source": "quest:behead-the-freeport-militia",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7782",
+        "source": "npc:southern-felwithe:tarker-blazetoss",
+        "target": "zone:southern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7783",
+        "source": "npc:southern-felwithe:tarker-blazetoss",
+        "target": "quest:black-wolf-skin-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7784",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "zone:southern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7785",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "item:copper-band",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7786",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "item:rusty-dagger",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7787",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "item:worn-great-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7788",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "spell:numbing-cold",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7789",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "faction:keepers-of-the-art",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7790",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7791",
+        "source": "quest:black-wolf-skin-quest",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7792",
+        "source": "npc:surefall-glade:larsk-juton",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7793",
+        "source": "npc:surefall-glade:larsk-juton",
+        "target": "quest:blackburrow-brewers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7794",
+        "source": "quest:blackburrow-brewers",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7795",
+        "source": "quest:blackburrow-brewers",
+        "target": "item:cloak-of-jaggedpine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7796",
+        "source": "quest:blackburrow-brewers",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7797",
+        "source": "quest:blackburrow-brewers",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7798",
+        "source": "quest:blackburrow-brewers",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7799",
+        "source": "npc:south-qeynos:kazlo-naedra",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7800",
+        "source": "npc:south-qeynos:kazlo-naedra",
+        "target": "quest:blank-scrolls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7801",
+        "source": "quest:blank-scrolls",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7802",
+        "source": "quest:blank-scrolls",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7803",
+        "source": "npc:temple-of-solusek-ro:vira",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7804",
+        "source": "npc:temple-of-solusek-ro:vira",
+        "target": "quest:broom-of-trilon-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7805",
+        "source": "quest:broom-of-trilon-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7806",
+        "source": "quest:broom-of-trilon-quest",
+        "target": "item:broom-of-trilon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7807",
+        "source": "quest:broom-of-trilon-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7808",
+        "source": "npc:ak-anon:tergon-brenclog",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7809",
+        "source": "npc:ak-anon:tergon-brenclog",
+        "target": "quest:bugglegupp-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7810",
+        "source": "quest:bugglegupp-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7811",
+        "source": "quest:bugglegupp-quest",
+        "target": "spell:elementalkin-air",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7812",
+        "source": "quest:bugglegupp-quest",
+        "target": "spell:elementalkin-earth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7813",
+        "source": "quest:bugglegupp-quest",
+        "target": "spell:elementaling-fire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7814",
+        "source": "quest:bugglegupp-quest",
+        "target": "spell:elementaling-water",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7815",
+        "source": "quest:bugglegupp-quest",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7816",
+        "source": "quest:bugglegupp-quest",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7817",
+        "source": "quest:bugglegupp-quest",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7818",
+        "source": "npc:temple-of-solusek-ro:gavel-the-temperant",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7819",
+        "source": "npc:temple-of-solusek-ro:gavel-the-temperant",
+        "target": "quest:caduceus-of-sacrament-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7820",
+        "source": "quest:caduceus-of-sacrament-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7821",
+        "source": "quest:caduceus-of-sacrament-quest",
+        "target": "item:caduceus-of-sacrament",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7822",
+        "source": "npc:lake-of-ill-omen:klok-foob",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7823",
+        "source": "npc:lake-of-ill-omen:klok-foob",
+        "target": "quest:catfish-croak-sandwich-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7824",
+        "source": "quest:catfish-croak-sandwich-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7825",
+        "source": "quest:catfish-croak-sandwich-quest",
+        "target": "item:foobscale-coif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7826",
+        "source": "quest:catfish-croak-sandwich-quest",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7827",
+        "source": "quest:catfish-croak-sandwich-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7828",
+        "source": "npc:the-warrens:aderius-rhenar",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7829",
+        "source": "npc:the-warrens:aderius-rhenar",
+        "target": "quest:catman-alliance",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7830",
+        "source": "quest:catman-alliance",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7831",
+        "source": "quest:catman-alliance",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7832",
+        "source": "quest:catman-alliance",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7833",
+        "source": "npc:halas:cindl",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7834",
+        "source": "npc:halas:cindl",
+        "target": "quest:cindls-polar-bear-collection",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7835",
+        "source": "quest:cindls-polar-bear-collection",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7836",
+        "source": "quest:cindls-polar-bear-collection",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7837",
+        "source": "quest:cindls-polar-bear-collection",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7838",
+        "source": "quest:cindls-polar-bear-collection",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7839",
+        "source": "npc:temple-of-solusek-ro:joyce",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7840",
+        "source": "npc:temple-of-solusek-ro:joyce",
+        "target": "quest:clay-bracelet-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7841",
+        "source": "quest:clay-bracelet-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7842",
+        "source": "quest:clay-bracelet-quest",
+        "target": "item:clay-bracelet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7843",
+        "source": "npc:erudin:laoni-reista",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7844",
+        "source": "npc:erudin:laoni-reista",
+        "target": "quest:cleanse-the-ocean",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7845",
+        "source": "quest:cleanse-the-ocean",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7846",
+        "source": "quest:cleanse-the-ocean",
+        "target": "item:small-patchwork-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7847",
+        "source": "quest:cleanse-the-ocean",
+        "target": "item:small-patchwork-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7848",
+        "source": "quest:cleanse-the-ocean",
+        "target": "item:small-patchwork-pants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7849",
+        "source": "quest:cleanse-the-ocean",
+        "target": "item:small-patchwork-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7850",
+        "source": "quest:cleanse-the-ocean",
+        "target": "item:small-patchwork-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7851",
+        "source": "quest:cleanse-the-ocean",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7852",
+        "source": "quest:cleanse-the-ocean",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7853",
+        "source": "npc:temple-of-solusek-ro:romar-sunto",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7854",
+        "source": "npc:temple-of-solusek-ro:romar-sunto",
+        "target": "quest:coin-of-tash-tashania",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7855",
+        "source": "quest:coin-of-tash-tashania",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7856",
+        "source": "quest:coin-of-tash-tashania",
+        "target": "spell:tashania",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7857",
+        "source": "npc:paineel:royal-guard-sheltuin",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7858",
+        "source": "npc:paineel:royal-guard-sheltuin",
+        "target": "quest:cold-iron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7859",
+        "source": "quest:cold-iron",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7860",
+        "source": "quest:cold-iron",
+        "target": "item:leggings-of-ridossan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-7861",
+        "source": "quest:cold-iron",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7862",
+        "source": "npc:mistmoore-castle:ssynthi",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7863",
+        "source": "npc:mistmoore-castle:ssynthi",
+        "target": "quest:collect-drops-of-shadow",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7864",
+        "source": "quest:collect-drops-of-shadow",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
       }
     }
   ]
