@@ -30,7 +30,7 @@ function renderSidebar() {
       <field-row label="Classes"><tag-input id="quest-class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
       <field-row label="Zone"><select id="quest-zone-select"><option value="">All Zones</option></select></field-row>
       <field-row label="Level"><select id="quest-level-select"><option value="all">All Levels</option></select></field-row>
-      <field-row label="Search"><input type="text" id="quest-search" placeholder="Name..."></field-row>
+      <field-row label="Search"><input type="text" id="quest-search" placeholder="Name, description, or step text..."></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-quest-filters-btn">Reset filters</button>
     </sidebar-panel>
   `;

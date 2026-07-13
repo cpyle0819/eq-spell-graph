@@ -39,7 +39,7 @@ function renderSidebar() {
       <field-row id="category-field" label="Category" hidden><select id="category-select"></select></field-row>
       <field-row id="spellline-field" label="Spell Line" hidden><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
       <field-row id="level-field" label="Level" hidden><select id="level-select"><option value="all">All Levels</option></select></field-row>
-      <field-row label="Search"><input type="text" id="browser-search" placeholder="Name..."></field-row>
+      <field-row label="Search"><input type="text" id="browser-search" placeholder="Name or description..."></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
     </sidebar-panel>
   `;
@@ -281,12 +281,17 @@ let activeTab = null;
 // Disciplines, get hidden entirely).
 function buildSections(searchQuery) {
   const q = searchQuery.trim().toLowerCase();
-  const matches = (name) => !q || name.toLowerCase().includes(q);
+  // Matches name/label OR description -- a spell/ability/AA whose name
+  // doesn't mention a stat/effect but whose description does (e.g. searching
+  // "dexterity" should find "Dexterous Aura") needs the description checked
+  // too, not just the title (decisions/ full-text search issue).
+  const matches = (name, description) =>
+    !q || name.toLowerCase().includes(q) || (description && description.toLowerCase().includes(q));
   // Spells alone also match on their spell line (e.g. searching "heal" finds
   // Superior Healing via the "Minor Healing line" it belongs to, not just
   // spells with "heal" literally in the name) — no other category has a
   // spell-line concept, so this stays spells-only rather than a shared rule.
-  const matchesSpell = (s) => !q || matches(s.label) || (s.spellLine && matches(s.spellLine));
+  const matchesSpell = (s) => !q || matches(s.label, s.description) || (s.spellLine && matches(s.spellLine));
   // Spell Line is a real narrowing filter (like the class selection), not
   // just a search-box match — it affects allItems (so the tab's count badge
   // reflects it), not just items. Multiple selected lines are additive
@@ -299,13 +304,13 @@ function buildSections(searchQuery) {
   const { quests: classQuests, questLines: classQuestLines } = questsForClassBrowser();
   return [
     { key: "spells", title: "Spells", allItems: spellsInSelectedLines, items: spellsInSelectedLines.filter(matchesSpell), renderFn: renderSpellCard },
-    { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name)), renderFn: renderAbilityCard },
-    { key: "stances", title: "Stances", allItems: rawStances, items: rawStances.filter((s) => matches(s.name)), renderFn: renderAbility },
-    { key: "invocations", title: "Invocations", allItems: rawInvocations, items: rawInvocations.filter((s) => matches(s.name)), renderFn: renderAbility },
-    { key: "general", title: "General AAs", allItems: rawAA.general, items: rawAA.general.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "archetype", title: "Archetype AAs", allItems: rawAA.archetype, items: rawAA.archetype.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "class", title: "Class AAs", allItems: rawAA.class, items: rawAA.class.filter((s) => matches(s.name)), renderFn: renderAA },
-    { key: "special", title: "Special AAs", allItems: rawAA.special, items: rawAA.special.filter((s) => matches(s.name)), renderFn: renderAA },
+    { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name, s.description)), renderFn: renderAbilityCard },
+    { key: "stances", title: "Stances", allItems: rawStances, items: rawStances.filter((s) => matches(s.name, s.description)), renderFn: renderAbility },
+    { key: "invocations", title: "Invocations", allItems: rawInvocations, items: rawInvocations.filter((s) => matches(s.name, s.description)), renderFn: renderAbility },
+    { key: "general", title: "General AAs", allItems: rawAA.general, items: rawAA.general.filter((s) => matches(s.name, s.description)), renderFn: renderAA },
+    { key: "archetype", title: "Archetype AAs", allItems: rawAA.archetype, items: rawAA.archetype.filter((s) => matches(s.name, s.description)), renderFn: renderAA },
+    { key: "class", title: "Class AAs", allItems: rawAA.class, items: rawAA.class.filter((s) => matches(s.name, s.description)), renderFn: renderAA },
+    { key: "special", title: "Special AAs", allItems: rawAA.special, items: rawAA.special.filter((s) => matches(s.name, s.description)), renderFn: renderAA },
     { key: "quests", title: "Quests", allItems: buildQuestResultEntries(classQuests, classQuestLines, ""), items: buildQuestResultEntries(classQuests, classQuestLines, searchQuery), renderFn: renderQuestResult },
   ].filter((section) => section.allItems.length);
 }

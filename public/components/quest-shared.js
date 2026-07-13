@@ -251,10 +251,22 @@ export function wireItemTooltips(shadowRoot, findItem) {
 // A questline matches search if its own name does, or any member's does --
 // searching "bracer" should still surface the Armor of Ro line, since its
 // quest-line-card is the only place that member's card renders.
+// Matches on more than just the title -- a quest's description/steps text is
+// often the only place a turn-in item is mentioned at all (e.g. "Fire Beetle
+// Eyes" isn't a rewards edge, just prose -- see decisions/
+// quest-reward-modeling.md), so title-only search could never find it.
+function questMatchesSearch(quest, q) {
+  if (!q) return true;
+  if (quest.label.toLowerCase().includes(q)) return true;
+  if (quest.description && quest.description.toLowerCase().includes(q)) return true;
+  return quest.steps.some((step) => step.toLowerCase().includes(q));
+}
+
 function questLineMatchesSearch(line, q) {
   if (!q) return true;
   if (line.label.toLowerCase().includes(q)) return true;
-  return line.members.some((m) => m.label.toLowerCase().includes(q));
+  if (line.description && line.description.toLowerCase().includes(q)) return true;
+  return line.members.some((m) => questMatchesSearch(m, q));
 }
 
 // One quest-line-card per line (never its members' individual quest-cards
@@ -273,7 +285,7 @@ export function buildQuestResultEntries(quests, questLines, searchQuery) {
     ...questLines.filter((line) => questLineMatchesSearch(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
     ...quests
       .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
-      .filter((quest) => !q || quest.label.toLowerCase().includes(q))
+      .filter((quest) => questMatchesSearch(quest, q))
       .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),
   ];
   entries.sort((a, b) => a.label.localeCompare(b.label));
