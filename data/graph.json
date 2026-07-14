@@ -49382,6 +49382,207 @@
         "mana": 15,
         "source": "Tunare Symbol Quests reward (Yeolarn Bronzeleaf, Northern Felwithe)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:vurgo",
+        "label": "Vurgo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:harvester-quest",
+        "label": "Harvester Quest",
+        "type": "quest",
+        "description": "Vurgo in the Temple of Solusek Ro sends necromancers after a Shadowed Scythe, then a Fungus Eye, a Shadowed Knife, and a Fire Opal, in exchange for the Harvester.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 25,
+        "steps": [
+          "Obtain a Shadowed Scythe from a shadowed man (found in West Commonlands, Lavastorm Mountains, Lesser Faydark, or Nektulos Forest) and give it to Vurgo",
+          "Collect a Fungus Eye from a Mortuary Fungus in The Estate of Unrest and a Shadowed Knife from a goblin headmaster in Ocean of Tears",
+          "Obtain a Fire Opal, either purchased for 550gp from Genni in the temple or as a drop in Oasis of Marr",
+          "Turn in Vurgo's note plus the Fungus Eye, Shadowed Knife, and Fire Opal simultaneously"
+        ],
+        "wiki_title": "The Harvester"
+      }
+    },
+    {
+      "data": {
+        "id": "item:harvester",
+        "label": "Harvester",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": 5,
+          "int": 5,
+          "cha": -5
+        },
+        "effect": "Deadeye (Worn)",
+        "weight": 8,
+        "size": "Large",
+        "classes": [
+          "necromancer"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Harvester Quest reward (Vurgo, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:sultin",
+        "label": "Sultin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:incandescent-armor-quests",
+        "label": "Incandescent Armor Quests",
+        "type": "quest",
+        "description": "Sultin in the Temple of Solusek Ro trades enchanters three separate item bundles for the Incandescent Mask, Incandescent Gloves, and Incandescent Wand.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 25,
+        "steps": [
+          "Mask: obtain a Glowing Mask (a skeleton monk or a froglok scryer, Upper Guk) and three Runes of Fortune (one from Enynti, two purchased for 50gp each from Mizr N'Mar and Madame Serena); turn in to Sultin, who requires good faction to complete this trade",
+          "Gloves: obtain Glowing Gloves (a shadowed man), Radiant Gloves (Radiant, in the Temple of Cazic Thule), Enchanted Gloves (50gp to Tizina), and Gleaming Gloves (a bloodstone to Tarn Visilin); turn all four in to Sultin",
+          "Wand: retrieve a Pouch of Silver Dust from a dusty werebat in The Estate of Unrest and a Silver Wand from a silvered guard in the Temple of Cazic Thule, have Ezmirella and Raine Beteria enchant it, then return both items to Sultin"
+        ],
+        "wiki_title": "Incandescent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:incandescent-mask",
+        "label": "Incandescent Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 3,
+        "stats": {
+          "int": 5,
+          "cha": 7
+        },
+        "effect": "Focus: Summoning Haste II",
+        "weight": 0.4,
+        "size": "Small",
+        "classes": [
+          "monk",
+          "enchanter"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Incandescent Armor Quests reward (Sultin, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:incandescent-gloves",
+        "label": "Incandescent Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 6,
+        "stats": {
+          "str": 3,
+          "cha": 3,
+          "agi": 3
+        },
+        "mana": 3,
+        "weight": 1.5,
+        "size": "Small",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Incandescent Armor Quests reward (Sultin, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:incandescent-wand",
+        "label": "Incandescent Wand",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 25,
+        "ac": 3,
+        "stats": {
+          "dex": 2
+        },
+        "resists": {
+          "magic": 5
+        },
+        "effect": "Color Shift (Combat) at Level 20",
+        "weight": 1,
+        "size": "Medium",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Incandescent Armor Quests reward (Sultin, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-rathetear:vrynn",
+        "label": "Vrynn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-rathetear:kyralynn",
+        "label": "Kyralynn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:totemic-armor-quests",
+        "label": "Totemic Armor Quests",
+        "type": "quest",
+        "description": "Vrynn and Kyralynn, Barbarian shamans at the Barbarian Village in Lake Rathetear, each trade four medium-sized banded armor pieces plus processed dufrenite and a rare creature drop for a piece of Totemic armor; the full 8-piece set gives +102 AC and +5 to every attribute plus elemental resistances.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 15,
+        "steps": [
+          "Vrynn: Totemic Boots (Banded Boots, Dufrenite, Terror Spines -- from a tentacle terror in either Najena or The Estate of Unrest -- and a Chief's Tongue from an orc chief in Lesser Faydark)",
+          "Vrynn: Totemic Gauntlets, Totemic Sleeves, Totemic Leggings",
+          "Kyralynn: Totemic Bracers, Totemic Breastplate, Totemic Helm, Totemic Cloak",
+          "Each piece needs its own medium-sized banded armor piece plus processed dufrenite and a rare drop -- wrong item size or type is refused at turn-in"
+        ],
+        "wiki_title": "Totemic Armor Quests"
+      }
     }
   ],
   "edges": [
@@ -113359,6 +113560,294 @@
         "source": "quest:tunare-symbol-quests",
         "target": "item:warden-symbol-of-tunare",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7996",
+        "source": "npc:temple-of-solusek-ro:vurgo",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-7997",
+        "source": "npc:temple-of-solusek-ro:vurgo",
+        "target": "quest:harvester-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-7998",
+        "source": "quest:harvester-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-7999",
+        "source": "quest:harvester-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8000",
+        "source": "quest:harvester-quest",
+        "target": "zone:the-estate-of-unrest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8001",
+        "source": "quest:harvester-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8002",
+        "source": "quest:harvester-quest",
+        "target": "item:harvester",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8003",
+        "source": "quest:harvester-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8004",
+        "source": "npc:temple-of-solusek-ro:sultin",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8005",
+        "source": "npc:temple-of-solusek-ro:sultin",
+        "target": "quest:incandescent-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8006",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8007",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8008",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8009",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8010",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:the-estate-of-unrest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8011",
+        "source": "quest:incandescent-armor-quests",
+        "target": "item:incandescent-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8012",
+        "source": "quest:incandescent-armor-quests",
+        "target": "item:incandescent-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8013",
+        "source": "quest:incandescent-armor-quests",
+        "target": "item:incandescent-wand",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8014",
+        "source": "npc:lake-rathetear:vrynn",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8015",
+        "source": "npc:lake-rathetear:kyralynn",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8016",
+        "source": "npc:lake-rathetear:vrynn",
+        "target": "quest:totemic-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8017",
+        "source": "npc:lake-rathetear:kyralynn",
+        "target": "quest:totemic-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8018",
+        "source": "quest:totemic-armor-quests",
+        "target": "zone:lake-rathetear",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8019",
+        "source": "quest:totemic-armor-quests",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8020",
+        "source": "quest:harvester-quest",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8021",
+        "source": "quest:harvester-quest",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8022",
+        "source": "quest:harvester-quest",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8023",
+        "source": "quest:harvester-quest",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8024",
+        "source": "quest:harvester-quest",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8025",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8026",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8027",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8028",
+        "source": "quest:incandescent-armor-quests",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8029",
+        "source": "quest:totemic-armor-quests",
+        "target": "zone:the-estate-of-unrest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8030",
+        "source": "quest:totemic-armor-quests",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8031",
+        "source": "quest:totemic-armor-quests",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
       }
     }
   ]

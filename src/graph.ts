@@ -2,7 +2,17 @@
  * Graph data access layer — Schema v2.
  *
  * Node types: spell, npc, zone, quest, quest_line, item, faction, era (extensible: more as needed)
- * Edge types: sells, located_in, connects_to, starts, rewards, member_of (extensible: requires)
+ * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of (extensible: requires)
+ *
+ * `located_in` means different things by source type: npc --located_in--> zone
+ * is "physically stands here" (unchanged). quest/quest_line --located_in--> zone
+ * is broader -- "this quest's steps involve this zone" (giver's zone plus any
+ * zone a required step sends the player to, e.g. a farmed reagent with no
+ * substitute) -- see decisions/quest-reward-modeling.md. quest --starts_in-->
+ * zone is the narrower "this is where the quest giver actually is," used for
+ * the Quests UI's "Starts In" card section; falls back to located_in for
+ * quests authored before this edge existed (no backfill, same precedent as
+ * era flagging).
  */
 
 import { readFileSync, writeFileSync } from "fs";
@@ -377,7 +387,8 @@ function isOutOfEra(era: string | undefined, helpers: GraphIndexHelpers): boolea
 function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSummary {
   const { nodeById, edgesFrom, edgesTo } = helpers;
   const id = node.id;
-  const zones = edgesFrom(id, "located_in")
+  const startsInEdges = edgesFrom(id, "starts_in");
+  const zones = (startsInEdges.length > 0 ? startsInEdges : edgesFrom(id, "located_in"))
     .map((e) => nodeById(e.target))
     .filter((z): z is NodeData => !!z)
     .map((z) => ({ id: z.id, label: z.label }));
@@ -435,14 +446,30 @@ function matchesFilters(node: NodeData, classNames?: string[], level?: number): 
   return true;
 }
 
+// A quest matches a zone if it starts there OR any step involves it there --
+// checked against raw edges (not the resolved QuestSummary.zones, which only
+// ever shows the *starting* zone) so a farmed-reagent zone like Estate of
+// Unrest still surfaces the quest on that zone's own Quests tab.
+function touchesZone(id: string, zoneId: string, helpers: GraphIndexHelpers): boolean {
+  return (
+    helpers.edgesFrom(id, "located_in").some((e) => e.target === zoneId) ||
+    helpers.edgesFrom(id, "starts_in").some((e) => e.target === zoneId)
+  );
+}
+
 export function getQuests(classNames?: string[], zoneId?: string, level?: number): QuestSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const results = graph.nodes
-    .filter((n) => n.data.type === "quest" && matchesFilters(n.data, classNames, level))
+    .filter(
+      (n) =>
+        n.data.type === "quest" &&
+        matchesFilters(n.data, classNames, level) &&
+        (!zoneId || touchesZone(n.data.id, zoneId, helpers))
+    )
     .map((n) => buildQuestSummary(n.data, helpers));
 
-  return zoneId ? results.filter((q) => q.zones.some((z) => z.id === zoneId)) : results;
+  return results;
 }
 
 // Same filter semantics as getQuests() (see its comment), applied to
