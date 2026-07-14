@@ -18,6 +18,12 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Reserve the vertical scrollbar's width always, so switching to a page
+   whose content crosses the overflow threshold doesn't shift everything
+   else horizontally (surfaced by issue #31: the nav row jumped as its
+   button count changed across pages). */
+html { scrollbar-gutter: stable; }
+
 /* Every visual element in this app is a custom element (see decisions/
    real-web-components-shadow-dom.md) — until public/components/index.js
    finishes registering them, an unupgraded one renders as a blank inline
