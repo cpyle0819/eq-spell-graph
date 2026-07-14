@@ -140,6 +140,13 @@ document.addEventListener("click", (e) => {
   const url = new URL(a.href, location.href);
   if (url.href === location.href) return;
   e.preventDefault();
+  // Bridges the gap between mouseup (which ends the native :active state)
+  // and the swap actually landing below -- without this, the button
+  // springs back to its "up" look for the fetch/transition's duration
+  // before settling into the pressed look nav-links gives the new current
+  // page, a visible flash. .pressed is macro-button's permanent depressed
+  // state (same look as :active) so this reads as one continuous press.
+  if (a.classList.contains("btn")) a.classList.add("pressed");
   navigate(url);
 });
 
