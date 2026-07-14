@@ -4135,7 +4135,6 @@
         "targetType": "Caster Group",
         "spellType": "Beneficial",
         "range": 100,
-        "resist": "| other =",
         "icon": "R"
       }
     },
@@ -4247,7 +4246,6 @@
         "targetType": "Single",
         "spellType": "Remove Curse",
         "range": 100,
-        "resist": "| other =",
         "icon": "C"
       }
     },
@@ -6206,7 +6204,6 @@
         "targetType": "Single",
         "spellType": "Remove Curse",
         "range": 100,
-        "resist": "| other =",
         "icon": "C"
       }
     },
@@ -6463,17 +6460,16 @@
             "level": 25
           }
         ],
-        "description": "Illusion: Old Bear,  Increase Current Hit Points by 1 per Tick,   \tIncrease Wisdom by 5|classes=* Shaman - Level 25|slots=|skill=Alteration|mana=100|range=100|casting_time=4.00|fizzle_time=1.5|recast_time=12|duration=2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+        "description": "Illusion: Old Bear,  Increase Current Hit Points by 1 per Tick,   \tIncrease Wisdom by 5",
         "mana": 100,
         "skill": "Alteration",
         "castTime": 4,
         "recastTime": 12,
         "fizzleTime": 1.5,
-        "duration": "2h 24m|target_type=Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
-        "targetType": "Self|spell_type=Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
-        "spellType": "Beneficial|resist=|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
+        "duration": "2h 24m",
+        "targetType": "Self",
+        "spellType": "Beneficial",
         "range": 0,
-        "resist": "|msg_cast_on_you=The spirit of the bear blesses you.|msg_cast_on_other=Target turns into a bear.|msg_wears_off=You are no longer a bear.|where_to_obtain=",
         "icon": "163"
       }
     },
@@ -7362,16 +7358,16 @@
             "level": 29
           }
         ],
-        "description": "Focuses the power of Innoruuk  into Sapphire. Consumes an Sapphire x5 when cast. Creates an Imbued Sapphire x5.|classes=* Cleric - Level 29 * Shaman - Level 29\n* Shaman - Level 29|slots={{SpellSlotRow | 1 | Summon Item: Imbued Sapphire",
+        "description": "Focuses the power of Innoruuk  into Sapphire. Consumes an Sapphire x5 when cast. Creates an Imbued Sapphire x5.",
         "mana": 600,
         "skill": "Alteration",
         "castTime": 10,
         "recastTime": 1.5,
         "fizzleTime": 1.5,
-        "duration": "Instant|target_type=Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
-        "targetType": "Self|spell_type=Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
-        "spellType": "Beneficial|resist=Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
-        "resist": "Unresistable|other=* '''Reagent:''' [[Jade]]|msg_cast_on_you=|msg_cast_on_other=|msg_wears_off=|where_to_obtain={{SpellWhereTable|\n{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163)",
+        "duration": "Instant",
+        "targetType": "Self",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
         "range": 0,
         "icon": "U"
       }
@@ -13051,7 +13047,6 @@
         "targetType": "Group",
         "spellType": "Beneficial",
         "range": 100,
-        "resist": "| other =",
         "mana": 0,
         "recastTime": 0,
         "icon": "C"
@@ -14111,7 +14106,7 @@
             "level": 13
           }
         ],
-        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Lightning Strike",
+        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Lightning Strike, a {44}1 attack.",
         "mana": 50,
         "skill": "Alteration",
         "castTime": 3,
@@ -14516,7 +14511,7 @@
             "level": 18
           }
         ],
-        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Blizzard Strike",
+        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Blizzard Strike, a {44}3 attack.",
         "mana": 60,
         "skill": "Alteration",
         "castTime": 3,
@@ -14776,7 +14771,7 @@
             "level": 28
           }
         ],
-        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Inferno Strike",
+        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Inferno Strike, a {44}2 attack.",
         "mana": 70,
         "skill": "Alteration",
         "castTime": 3,
@@ -15121,7 +15116,7 @@
             "level": 38
           }
         ],
-        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Scorpion Strike",
+        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Scorpion Strike, a {44}4 attack.",
         "mana": 80,
         "skill": "Alteration",
         "castTime": 3,
@@ -15361,7 +15356,7 @@
             "level": 46
           }
         ],
-        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform {{SpellHoverLink|Spirit of Vermin Strike",
+        "description": "Fills your warder with the power of a great spirit, increasing their dexterity by 75 and giving them a chance to perform Spirit of Vermin Strike, a {44}5 attack.",
         "mana": 90,
         "skill": "Alteration",
         "castTime": 3,
@@ -24597,7 +24592,7 @@
             "level": 13
           }
         ],
-        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a {{:Cat's Eye Agate",
+        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a Cat's Eye Agate when cast.",
         "mana": 41,
         "skill": "Abjuration",
         "castTime": 3.5,
@@ -25373,7 +25368,7 @@
             "level": 22
           }
         ],
-        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a {{:bloodstone",
+        "description": "Covers your target in a shimmer of runes that absorb damage.  Consumes a Bloodstone when cast.",
         "mana": 83,
         "skill": "Abjuration",
         "castTime": 4,
@@ -35021,7 +35016,6 @@
         "targetType": "Single",
         "spellType": "DD",
         "range": 200,
-        "resist": "| msg_cast_on_you = Your body is wracked by shocks of venom.",
         "icon": "42"
       }
     },
@@ -35140,7 +35134,6 @@
         "targetType": "Single",
         "spellType": "Heal",
         "range": 100,
-        "resist": "| msg_cast_on_you = Your wounds heal.",
         "icon": "99"
       }
     },
@@ -35540,7 +35533,6 @@
         "targetType": "Single Friendly (or Self)",
         "spellType": "Beneficial",
         "range": 100,
-        "resist": "| msg_cast_on_you = You begin to radiate.",
         "icon": "O"
       }
     },
@@ -36315,7 +36307,6 @@
         "targetType": "Self",
         "spellType": "Beneficial",
         "range": 100,
-        "resist": "| msg_cast_on_you = You rise on a gust of hot air.",
         "icon": "M"
       }
     },
@@ -36714,7 +36705,6 @@
         "targetType": "Single Friendly (or Self)",
         "spellType": "Beneficial",
         "range": 100,
-        "resist": "| msg_cast_on_you = You begin to radiate.",
         "icon": "O"
       }
     },
