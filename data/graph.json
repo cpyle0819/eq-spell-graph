@@ -50568,6 +50568,1023 @@
         },
         "source": "Rat Pelts reward (Beno Targnarle, South Kaladim)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:hogunk-ventille",
+        "label": "Hogunk Ventille",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blyle-bundins-head",
+        "label": "Blyle Bundin's Head",
+        "type": "quest",
+        "description": "Hogunk Ventille, in the spectator stands of the Kaladim Warrior's Guild arena in South Kaladim, sends anyone claiming to be a warrior of the Stormguard after Blyle Bundin, who patrols four spots in Butcherblock Mountains.",
+        "minLevel": 7,
+        "steps": [
+          "Hail Hogunk Ventille and claim to be a warrior of the Stormguard",
+          "Travel to Butcherblock Mountains and defeat Blyle Bundin, who patrols four locations",
+          "Loot Blyle Bundin's Head and his rusty 'Stormguard' axe from his corpse",
+          "Return both items to Hogunk Ventille"
+        ],
+        "wiki_title": "Blyle Bundin's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:reivaj-the-battlerager",
+        "label": "Reivaj the Battlerager",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blizzents-fang-quest",
+        "label": "Blizzent's Fang Quest",
+        "type": "quest",
+        "description": "Reivaj the Battlerager, in the Iceshard house in Kael Drakkal, sends anyone he's Amiable or better toward the wurm Blizzent in southern Great Divide. Open to all classes despite favoring warrior/paladin/shadow knight.",
+        "minLevel": 46,
+        "steps": [
+          "Speak with Reivaj the Battlerager about Rallos Zek and Blizzent",
+          "Travel to the southern Great Divide, near the young shard wurms, and defeat Blizzent",
+          "Loot Blizzent's Fang",
+          "Return the fang to Reivaj the Battlerager"
+        ],
+        "wiki_title": "Blizzent's Fang Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vehement-sword-of-reivaj",
+        "label": "Vehement Sword of Reivaj",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "damage": 27,
+        "stats": {
+          "str": 6,
+          "int": 6
+        },
+        "source": "Blizzent's Fang Quest reward (Reivaj the Battlerager, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:runethar-hamest",
+        "label": "Runethar Hamest",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bonethunder-staff-quest",
+        "label": "Bonethunder Staff Quest",
+        "type": "quest",
+        "description": "Runethar Hamest, at the Temple of Thunder in South Qeynos, sends followers of Karana to help Lord Bayle by combining a farmed Thunder Staff with a Bayle List II obtained in Surefall Glade.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Speak with Runethar Hamest at the Temple of Thunder in South Qeynos and agree to help Lord Bayle",
+          "Travel to Surefall Glade and find Frenway Marthank",
+          "Slay the bear Mammoth, or give it a Regurgitonic, to obtain the Bayle List II",
+          "Complete Drosco the Zombie (good) in the Qeynos Catacombs to obtain a Thunder Staff",
+          "Return the Thunder Staff and Bayle List II to Runethar Hamest"
+        ],
+        "wiki_title": "Bonethunder Staff Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bonethunder-staff",
+        "label": "Bonethunder Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 9,
+        "stats": {
+          "wis": 3
+        },
+        "effect": "Ward Undead",
+        "source": "Bonethunder Staff Quest reward (Runethar Hamest, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:nilham-the-chef",
+        "label": "Nilham the Chef",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:captain-nalots-triple-strength-rum",
+        "label": "Captain Nalot's Triple Strength Rum",
+        "type": "quest",
+        "description": "Nilham the Chef in Iceclad Ocean sends players on a long fetch-and-craft chain across the frozen north, trading components up through several NPCs to finally deliver rum to Captain Nalot and get a reward from Nelet Durzit at the docks. Requires Amiable or better with Thurgadin residents for one step.",
+        "minLevel": 40,
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ],
+        "steps": [
+          "Collect two Barracuda Livers from coldwater barracudas in Cobalt Scar; trade to Qarrgy Scallopgobbler for a Bladder of Acidic Ooze",
+          "Forage Fresh Tree Sap in The Wakening Land",
+          "Give the sap and bladder to Pythic Urson in Thurgadin for Dissolving Liquid",
+          "Give the dissolving liquid to a gnomish deserter in Great Divide for a Locked Rum Box",
+          "Collect four Fresh Chunks of Wooly Rhino from Eastern Wastes; trade to Mist Panther in The Wakening Land for a Golden Broken Key",
+          "Obtain a High Quality Dire Wolf Fur; trade to Errgriz in Iceclad Ocean for Wolf Fur Earcovers",
+          "Give the earcovers to Sojan the Sleepless for a Fine Gold Chain",
+          "Give the chain and key to Sojan the Sleepless for a Rum Box Key",
+          "Give the key and locked box to Captain Nalot for Capt. Nalot's Triple Strength Rum",
+          "Give the rum to Nelet Durzit at the docks for the final reward"
+        ],
+        "wiki_title": "Captain Nalot's Triple Strength Rum"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rough-silver-chain",
+        "label": "Rough Silver Chain",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 5,
+        "hp": 30,
+        "mana": 30,
+        "resists": {
+          "fire": 5,
+          "cold": 5,
+          "disease": 5,
+          "poison": 5,
+          "magic": 5
+        },
+        "lore": true,
+        "noTrade": true,
+        "source": "Captain Nalot's Triple Strength Rum reward (Nelet Durzit, Iceclad Ocean docks)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:butcherblock-mountains:dru-razbind",
+        "label": "Dru Razbind",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:chalice-of-conquest-quest",
+        "label": "Chalice of Conquest Quest",
+        "type": "quest",
+        "description": "Dru Razbind in Butcherblock Mountains sends paladins Amiable or better with the Paladins of Underfoot through a long chain: assemble and combine candlestick pieces into a Candle of Bravery, resurrect Captain Klunga to obtain the Chalice of Conquest, then trade up through two more NPCs for the final reward.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 35,
+        "steps": [
+          "Obtain the Stem and Foot of Candlestick from Nicholas and the Unkempt Druids in Rathe Mountains",
+          "Collect an Abandoned Orc Shovel from Lake Rathetear and acquire Klunga's Bracelet from Nicholas",
+          "Obtain Soil of Underfoot via a sub-quest with Priestess Ghalea, and a Honeycomb",
+          "Combine the candlestick pieces with the Soil of Underfoot and Honeycomb at Dok in Halas for a Candle of Bravery",
+          "Loot a Blood Stained Note from an Exiled Legionnaire in Dagnor's Cauldron",
+          "Trade the note, Klunga's Bracelet, and 100 gold to Ghilanbiddle Nylwadil to resurrect Captain Klunga",
+          "Give the Abandoned Orc Shovel to Captain Klunga, follow him, and defeat him for the Chalice of Conquest",
+          "Combine the Chalice of Conquest with the Candle of Bravery in a Chalice Case",
+          "Turn in the Chalice Case to Datur Nightseer for a Cape of Underfoot",
+          "Return the cape to Dru Razbind for the final reward"
+        ],
+        "wiki_title": "Chalice of Conquest Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:holy-partisan-of-underfoot",
+        "label": "Holy Partisan of Underfoot",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "damage": 14,
+        "delay": 46,
+        "hp": 25,
+        "resists": {
+          "magic": 5
+        },
+        "source": "Chalice of Conquest Quest reward (Dru Razbind, Butcherblock Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cindls-wristband-collection",
+        "label": "Cindl's Wristband Collection",
+        "type": "quest",
+        "description": "Cindl, inside Mac's Kilts in Halas, trades 2 Wrath Orc Wristbands from Everfrost Peaks snow orcs for a choice of starter armor.",
+        "minLevel": 7,
+        "steps": [
+          "Speak with Cindl about her second job",
+          "Collect 2 Wrath Orc Wristbands from snow orc troopers and shamans in Everfrost Peaks",
+          "Return the wristbands to Cindl for a choice of reward"
+        ],
+        "wiki_title": "Cindl's Wristband Collection"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-gloves-cindl",
+        "label": "Leather Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 4,
+        "source": "Cindl's Wristband Collection reward choice (Cindl, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:raw-hide-leggings",
+        "label": "Raw-hide Leggings",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 5,
+        "source": "Cindl's Wristband Collection reward choice (Cindl, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:raw-hide-tunic",
+        "label": "Raw-hide Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "ac": 8,
+        "source": "Cindl's Wristband Collection reward choice (Cindl, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:circlet-of-mist-quest",
+        "label": "Circlet of Mist Quest",
+        "type": "quest",
+        "description": "Joyce, on a balcony in the upper Temple of Solusek Ro, trades three farmed reagents plus a purchased Sapphire for a magician headpiece.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Obtain a Globe of Mist from a festering hag in The Estate of Unrest",
+          "Obtain a Water Ring from a Tidal Lord in Dagnor's Cauldron",
+          "Obtain a Ring of Evoluoy from an alligator in Temple of Cazic Thule",
+          "Purchase a Sapphire from a jewelry merchant (roughly 105 platinum)",
+          "Return all items to Joyce"
+        ],
+        "wiki_title": "Circlet of Mist Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:circlet-of-mist",
+        "label": "Circlet of Mist",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 5,
+        "stats": {
+          "wis": 3,
+          "int": 3,
+          "agi": 3
+        },
+        "source": "Circlet of Mist Quest reward (Joyce, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:drosco-the-zombie-good",
+        "label": "Drosco the Zombie (good)",
+        "type": "quest",
+        "description": "Wolten Grafe in South Qeynos sends good-aligned players after Drosco in room 7 of the Qeynos Catacombs for a rare Thunder Staff drop; feeds into the Bonethunder Staff Quest.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 8,
+        "steps": [
+          "Receive a Tattered Note from Wolten Grafe",
+          "Find and defeat Drosco in room 7 of the Qeynos Catacombs",
+          "Loot A Sealed Letter (occasional drop) and return it to Wolten Grafe",
+          "Loot Drosco's rare Order of Thunder drop and return it to Wolten Grafe for the final reward"
+        ],
+        "wiki_title": "Drosco the Zombie (good)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:thunder-staff",
+        "label": "Thunder Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 5,
+        "stats": {
+          "wis": 3
+        },
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "source": "Drosco the Zombie (good) reward (Wolten Grafe, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:kurne-rextula",
+        "label": "Kurne Rextula",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:drosco-the-zombie-evil",
+        "label": "Drosco the Zombie (evil)",
+        "type": "quest",
+        "description": "Kurne Rextula, in the Bloodsabers Guild inside the Qeynos Catacombs, sends players after Drosco (or his placeholder, A Gelatinous Cube) for a Sealed Letter turn-in.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Kurne Rextula in the Bloodsabers Guild and ask about Drosco",
+          "Locate and defeat Drosco, or his placeholder A Gelatinous Cube, roaming west from spawn",
+          "Loot A Sealed Letter from the corpse",
+          "Return the letter to Kurne Rextula"
+        ],
+        "wiki_title": "Drosco the Zombie (evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:bloodsabers",
+        "label": "Bloodsabers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:clurg",
+        "label": "Clurg",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:clurgs-new-creation",
+        "label": "Clurg's New Creation",
+        "type": "quest",
+        "description": "Clurg, the Oggok bartender, trades 2 Lizard Tails from lizardmen for faction and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Collect 2 Lizard Tails from lizardmen in Temple of Cazic Thule, The Feerrott, or Rathe Mountains",
+          "Return the tails to Clurg"
+        ],
+        "wiki_title": "Clurg's New Creation"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:green-blood-knights",
+        "label": "Green Blood Knights",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:craknek-warriors",
+        "label": "Craknek Warriors",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:a-frost-giant-wolf-tamer",
+        "label": "a frost giant wolf tamer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:coldain-military-wristguard-quest",
+        "label": "Coldain Military Wristguard Quest",
+        "type": "quest",
+        "description": "A frost giant wolf tamer under the bridge to King Tormax's throne room in Kael Drakkal trades up a chain of gems and harnesses, ending with a kill in Great Divide's Coldain mining caves. Requires at least Dubious faction with both the Coldain and the Kromrif/Kromzek.",
+        "minLevel": 50,
+        "steps": [
+          "Obtain a Bottle of Karsin Acid from orcs or geonids in Crystal Caverns",
+          "Deliver the acid to Erdarf Restil in Thurgadin for a Gem of Persuasion",
+          "Trade the gem to the frost giant wolf tamer for a Giant's Gem of Persuasion",
+          "Trade the Giant's Gem back for a Giants Harness of Control",
+          "Give the harness to the Shardwurm Broodmother in Great Divide's wurm caves",
+          "Locate and kill Korf Brokenhammer at the Coldain mining caves in southeast Great Divide"
+        ],
+        "wiki_title": "Coldain Military Wristguard Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:coldain-military-wristguard",
+        "label": "Coldain Military Wristguard",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 5,
+          "wis": 6
+        },
+        "lore": true,
+        "noTrade": true,
+        "source": "Coldain Military Wristguard Quest reward (a frost giant wolf tamer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:corrupt-guards",
+        "label": "Corrupt Guards",
+        "type": "quest",
+        "description": "Capt Linarius in Northern Karana sends players after corrupt guards McCluskey and Donlan in West Karana; requires better than Dubious faction to turn in.",
+        "minLevel": 15,
+        "steps": [
+          "Hail Capt Linarius and inquire about corrupt guards",
+          "Locate Guard McCluskey or Guard Donlan in West Karana",
+          "Defeat them to obtain a Corrupt Guard Bracelet",
+          "Return the bracelet to Capt Linarius"
+        ],
+        "wiki_title": "Corrupt Guards"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cougarskin-boots-quest",
+        "label": "Cougarskin Boots Quest",
+        "type": "quest",
+        "description": "Ergrez Shortpaw in Iceclad Ocean trades a Medium Quality Cougarskin and 2 Cutting Shells for a pair of boots. No faction hits.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Collect a Medium Quality Cougarskin from snow cougars in Eastern Wastes or Iceclad Ocean",
+          "Collect 2 Cutting Shells, a ground spawn in the water in Cobalt Scar",
+          "Turn both in to Ergrez Shortpaw"
+        ],
+        "wiki_title": "Cougarskin Boots Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cougarskin-boots",
+        "label": "Cougarskin Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": 3,
+          "sta": 4
+        },
+        "source": "Cougarskin Boots Quest reward (Ergrez Shortpaw, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cougarskin-mask-quest",
+        "label": "Cougarskin Mask Quest",
+        "type": "quest",
+        "description": "Ergrez Shortpaw in Iceclad Ocean trades a High Quality Cougarskin and 2 Mammoth Meat for a face mask.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 33,
+        "steps": [
+          "Collect a High Quality Cougarskin from snow cougars in Eastern Wastes",
+          "Collect 2 Mammoth Meat",
+          "Deliver both to Ergrez Shortpaw"
+        ],
+        "wiki_title": "Cougarskin Mask Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cougarskin-mask",
+        "label": "Cougarskin Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 6,
+        "stats": {
+          "dex": 2,
+          "agi": 2
+        },
+        "hp": 10,
+        "magic": true,
+        "noTrade": true,
+        "source": "Cougarskin Mask Quest reward (Ergrez Shortpaw, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cougarskin-sleeves-quest",
+        "label": "Cougarskin Sleeves Quest",
+        "type": "quest",
+        "description": "Ergrez Shortpaw in Iceclad Ocean trades a Low Quality Cougarskin and Fatty Walrus Meat for arm armor.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Collect a Low Quality Cougarskin from snow cougars in Eastern Wastes or Iceclad Ocean",
+          "Collect Fatty Walrus Meat from walrus or Ulthork in Eastern Wastes, Cobalt Scar, or Siren's Grotto",
+          "Hand both to Ergrez Shortpaw"
+        ],
+        "wiki_title": "Cougarskin Sleeves Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cougarskin-sleeves",
+        "label": "Cougarskin Sleeves",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 6,
+        "stats": {
+          "dex": 3,
+          "sta": 3,
+          "wis": 3
+        },
+        "magic": true,
+        "noTrade": true,
+        "source": "Cougarskin Sleeves Quest reward (Ergrez Shortpaw, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:lork",
+        "label": "Lork",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crude-stein-quest",
+        "label": "Crude Stein Quest",
+        "type": "quest",
+        "description": "Lork, at the Oggok warrior guild, sends players through a multi-zone fetch-and-kill chain ending in two Ambassador kills for a rare weapon or drinkware reward.",
+        "minLevel": 26,
+        "steps": [
+          "Kill a fat alligator in Innothule Swamp, loot an Ogre Arm, and return it to Lork",
+          "Bring A Cracked Stein to Uglan in Neriak Foreign Quarter",
+          "Intercept and kill an orc runner in Nektulos Forest for a Sealed Letter",
+          "Return the letter to Lork in Oggok",
+          "Kill Ambassador K'Ryn in Oggok's shaman guild tunnels and loot his heart",
+          "Kill Ambassador DVinn (Lord Crushbone) in Crushbone and loot his Black Heart",
+          "Return both hearts to Lork"
+        ],
+        "wiki_title": "Crude Stein Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:a-crude-stein",
+        "label": "A Crude Stein",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "stats": {
+          "sta": 10,
+          "cha": 15
+        },
+        "effect": "Minor Healing",
+        "source": "Crude Stein Quest rare reward (Lork, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gatorsmash-maul",
+        "label": "Gatorsmash Maul",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 30,
+        "source": "Crude Stein Quest rare reward (Lork, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crush-the-undead",
+        "label": "Crush the Undead",
+        "type": "quest",
+        "description": "Wolten Grafe in South Qeynos hands out a Box For Bones and trades a completed Box of Bones (6 normal Bone Chips) for a snack and faction. Doesn't work at Indifferent faction.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Wolten Grafe and choose the 'crush the undead' mission",
+          "Receive a Box For Bones (6-slot container)",
+          "Collect 6 normal Bone Chips and combine them in the box",
+          "Return the Box of Bones to Wolten Grafe"
+        ],
+        "wiki_title": "Crush the Undead"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:canloe-nusback",
+        "label": "Canloe Nusback",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crushbone-belts",
+        "label": "Crushbone Belts",
+        "type": "quest",
+        "description": "Canloe Nusback in the South Kaladim Warrior's Guild trades a Crushbone Belt, looted from Orc Centurions around Faydwer, for coin, experience, and a choice of starter armor. Requires at least Dubious with Storm Guard.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 2,
+        "steps": [
+          "Hail Canloe Nusback and offer to serve Kaladim",
+          "Hand over a Crushbone Belt, randomly looted from Orc Centurions around Faydwer",
+          "Optionally turn in two Orc Legionnaire Shoulderpads for an additional reward"
+        ],
+        "wiki_title": "Crushbone Belts"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crushbone-shoulderpads-quest",
+        "label": "Crushbone Shoulderpads Quest",
+        "type": "quest",
+        "description": "Canloe Nusback in the South Kaladim Warrior's Guild trades 2 Crushbone Shoulderpads, looted from Orc Legionnaires around Faydwer, for coin and experience. Repeatable turn-in.",
+        "minLevel": 6,
+        "steps": [
+          "Speak with Canloe Nusback and accept the mission to destroy Crushbone orcs",
+          "Hand over 2 Crushbone Shoulderpads, randomly looted from Orc Legionnaires around Faydwer"
+        ],
+        "wiki_title": "Crushbone Shoulderpads Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:astaed-wemor",
+        "label": "Astaed Wemor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cure-for-lempeck-hargrin",
+        "label": "Cure for Lempeck Hargrin",
+        "type": "quest",
+        "description": "Astaed Wemor of the Paladins of the Temple of Life, in North Qeynos, sends players on a delivery chain through Rivervale (via the Honey Jum Quest) and West Karana. Requires Amiable faction or better.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Complete the Honey Jum Quest in Rivervale with Kizzie Mintopp to obtain Honey Jum",
+          "Return to North Qeynos and give Honey Jum to Astaed Wemor for a Prime Healer Potion",
+          "Travel to West Karana and deliver the potion to Lempeck Hargrin for a Rusty Scythe",
+          "Return the Rusty Scythe to Astaed Wemor for the final reward"
+        ],
+        "wiki_title": "Cure for Lempeck Hargrin"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-star-of-light",
+        "label": "Shining Star of Light",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 6,
+        "effect": "Cleanse",
+        "magic": true,
+        "source": "Cure for Lempeck Hargrin reward (Astaed Wemor, North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:drill-master-dal",
+        "label": "Drill Master Dal",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:curscale-shield",
+        "label": "Curscale Shield",
+        "type": "quest",
+        "description": "Drill Master Dal, at Fortress Talishan in East Cabilis, hands new recruits a Partisan Pack to fill with four farmed items and trade back for a shield.",
+        "classes": [
+          "warrior",
+          "shadow knight",
+          "monk",
+          "shaman"
+        ],
+        "minLevel": 5,
+        "steps": [
+          "Hail Drill Master Dal and indicate you're a new recruit",
+          "Receive a Partisan Pack",
+          "Collect Goblin Scout Beads, a sabertooth kitten canine, a giant blood sac from a giant leech, and three Bone Chips from skeletons",
+          "Combine the items in the pack to create a Full Partisan Pack",
+          "Return the completed pack to Drill Master Dal"
+        ],
+        "wiki_title": "Curscale Shield"
+      }
+    },
+    {
+      "data": {
+        "id": "item:curscale-buckler",
+        "label": "Curscale Buckler",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 4,
+        "resists": {
+          "fire": 1
+        },
+        "lore": true,
+        "source": "Curscale Shield reward (Drill Master Dal, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:klok-mugruk",
+        "label": "Klok Mugruk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:curscale-armor-quest",
+        "label": "Curscale Armor Quest",
+        "type": "quest",
+        "description": "Klok Mugruk, at the Haggle Baron in East Cabilis, hands out an Empty Curskin Bag to fill with scaled curskin from Field of Bone wolf pups and cubs; repeatable for additional armor pieces.",
+        "minLevel": 1,
+        "steps": [
+          "Receive an Empty Curskin Bag from Klok Mugruk",
+          "Hunt scaled wolf pups and cubs in Field of Bone and fill the bag with eight scaled curskin",
+          "Combine the skins into a Full Curskin Bag",
+          "Return the Full Curskin Bag to Klok Mugruk"
+        ],
+        "wiki_title": "Curscale Armor Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:hierophant-oxyn",
+        "label": "Hierophant Oxyn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cursed-wafers-quest",
+        "label": "Cursed Wafers Quest",
+        "type": "quest",
+        "description": "Hierophant Oxyn, at the Temple of Terror in East Cabilis, trades a Full Component Mortar (small mosquito wings, a bone chip, and foraged Lake of Ill Omen mud crabs) for a snack and faction.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Collect two Small Mosquito Wings and one Bone Chips",
+          "Forage one Mud Crabs in Lake of Ill Omen",
+          "Combine all four unstacked items in a Component Mortar to make a Full Component Mortar",
+          "Return the filled mortar to Hierophant Oxyn"
+        ],
+        "wiki_title": "Cursed Wafers Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-commonlands:guard-valon",
+        "label": "Guard Valon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cutthroat-rings",
+        "label": "Cutthroat Rings",
+        "type": "quest",
+        "description": "Guard Valon at the West Commonlands toll booth trades a filled Bag for Cutthroat Rings, farmed from dervish cutthroats, for a Militia Armory Token. Requires the Orc Picks quest first and at least Indifferent faction with the Freeport Militia.",
+        "minLevel": 10,
+        "steps": [
+          "Complete the Orc Picks quest (turn in 4 Orc Pawn Picks) first",
+          "Request to hunt dervish cutthroats from Guard Valon and receive an 8-slot Bag for Cutthroat Rings",
+          "Hunt dervish cutthroats in West Commonlands, Northern Desert of Ro, and Southern Desert of Ro for Cutthroat Insignia Rings",
+          "Combine the rings in the container and turn in the result to Guard Valon"
+        ],
+        "wiki_title": "Cutthroat Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:militia-armory-token",
+        "label": "Militia Armory Token",
+        "type": "item",
+        "source": "Cutthroat Rings reward (Guard Valon, West Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkwood-staff-quest",
+        "label": "Darkwood Staff Quest",
+        "type": "quest",
+        "description": "Romar Sunto, in a library room in Temple of Solusek Ro, trades a Lambent Stone (from a hill giant, sand giant, or griffin) for a wizard staff.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Hail Romar Sunto and ask about darkwood staves",
+          "Obtain a Lambent Stone from a hill giant, sand giant, or griffin",
+          "Return the Lambent Stone to Romar Sunto"
+        ],
+        "wiki_title": "Darkwood Staff Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkwood-staff",
+        "label": "Darkwood Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 28,
+        "source": "Darkwood Staff Quest reward (Romar Sunto, Temple of Solusek Ro)"
+      }
     }
   ],
   "edges": [
@@ -116744,6 +117761,1574 @@
         "id": "e-rewards-8270",
         "source": "quest:rat-pelts",
         "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8271",
+        "source": "npc:south-kaladim:hogunk-ventille",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8272",
+        "source": "npc:south-kaladim:hogunk-ventille",
+        "target": "quest:blyle-bundins-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8273",
+        "source": "quest:blyle-bundins-head",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8274",
+        "source": "quest:blyle-bundins-head",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8275",
+        "source": "quest:blyle-bundins-head",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8276",
+        "source": "quest:blyle-bundins-head",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8277",
+        "source": "quest:blyle-bundins-head",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8278",
+        "source": "quest:blyle-bundins-head",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8279",
+        "source": "quest:blyle-bundins-head",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8280",
+        "source": "npc:kael-drakkal:reivaj-the-battlerager",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8281",
+        "source": "npc:kael-drakkal:reivaj-the-battlerager",
+        "target": "quest:blizzents-fang-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8282",
+        "source": "quest:blizzents-fang-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8283",
+        "source": "quest:blizzents-fang-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8284",
+        "source": "quest:blizzents-fang-quest",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8285",
+        "source": "quest:blizzents-fang-quest",
+        "target": "item:vehement-sword-of-reivaj",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8286",
+        "source": "quest:blizzents-fang-quest",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8287",
+        "source": "quest:blizzents-fang-quest",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8288",
+        "source": "npc:south-qeynos:runethar-hamest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8289",
+        "source": "npc:south-qeynos:runethar-hamest",
+        "target": "quest:bonethunder-staff-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8290",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8291",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8292",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8293",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8294",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "item:bonethunder-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8295",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8296",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8297",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8298",
+        "source": "npc:iceclad-ocean:nilham-the-chef",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8299",
+        "source": "npc:iceclad-ocean:nilham-the-chef",
+        "target": "quest:captain-nalots-triple-strength-rum",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8300",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8301",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8302",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8303",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8304",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8305",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8306",
+        "source": "quest:captain-nalots-triple-strength-rum",
+        "target": "item:rough-silver-chain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8307",
+        "source": "npc:butcherblock-mountains:dru-razbind",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8308",
+        "source": "npc:butcherblock-mountains:dru-razbind",
+        "target": "quest:chalice-of-conquest-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8309",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:butcherblock-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8310",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8311",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8312",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8313",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8314",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8315",
+        "source": "quest:chalice-of-conquest-quest",
+        "target": "item:holy-partisan-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8316",
+        "source": "npc:halas:cindl",
+        "target": "quest:cindls-wristband-collection",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8317",
+        "source": "quest:cindls-wristband-collection",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8318",
+        "source": "quest:cindls-wristband-collection",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8319",
+        "source": "quest:cindls-wristband-collection",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8320",
+        "source": "quest:cindls-wristband-collection",
+        "target": "item:leather-gloves-cindl",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8321",
+        "source": "quest:cindls-wristband-collection",
+        "target": "item:raw-hide-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8322",
+        "source": "quest:cindls-wristband-collection",
+        "target": "item:raw-hide-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8323",
+        "source": "quest:cindls-wristband-collection",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8324",
+        "source": "quest:cindls-wristband-collection",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8325",
+        "source": "quest:cindls-wristband-collection",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8326",
+        "source": "npc:temple-of-solusek-ro:joyce",
+        "target": "quest:circlet-of-mist-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8327",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8328",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8329",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "zone:the-estate-of-unrest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8330",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8331",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8332",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "item:circlet-of-mist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8333",
+        "source": "quest:circlet-of-mist-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8334",
+        "source": "npc:south-qeynos:wolten-grafe",
+        "target": "quest:drosco-the-zombie-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8335",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8336",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8337",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8338",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "item:thunder-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8339",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8340",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8341",
+        "source": "quest:drosco-the-zombie-good",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8342",
+        "source": "npc:qeynos-catacombs:kurne-rextula",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8343",
+        "source": "npc:qeynos-catacombs:kurne-rextula",
+        "target": "quest:drosco-the-zombie-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8344",
+        "source": "quest:drosco-the-zombie-evil",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8345",
+        "source": "quest:drosco-the-zombie-evil",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8346",
+        "source": "quest:drosco-the-zombie-evil",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8347",
+        "source": "npc:oggok:clurg",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8348",
+        "source": "npc:oggok:clurg",
+        "target": "quest:clurgs-new-creation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8349",
+        "source": "quest:clurgs-new-creation",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8350",
+        "source": "quest:clurgs-new-creation",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8351",
+        "source": "quest:clurgs-new-creation",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8352",
+        "source": "quest:clurgs-new-creation",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8353",
+        "source": "quest:clurgs-new-creation",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8354",
+        "source": "quest:clurgs-new-creation",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8355",
+        "source": "quest:clurgs-new-creation",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8356",
+        "source": "quest:clurgs-new-creation",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8357",
+        "source": "quest:clurgs-new-creation",
+        "target": "faction:oggok-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8358",
+        "source": "npc:kael-drakkal:a-frost-giant-wolf-tamer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8359",
+        "source": "npc:kael-drakkal:a-frost-giant-wolf-tamer",
+        "target": "quest:coldain-military-wristguard-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8360",
+        "source": "quest:coldain-military-wristguard-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8361",
+        "source": "quest:coldain-military-wristguard-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8362",
+        "source": "quest:coldain-military-wristguard-quest",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8363",
+        "source": "quest:coldain-military-wristguard-quest",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8364",
+        "source": "quest:coldain-military-wristguard-quest",
+        "target": "item:coldain-military-wristguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8365",
+        "source": "npc:northern-karana:capt-linarius",
+        "target": "quest:corrupt-guards",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8366",
+        "source": "quest:corrupt-guards",
+        "target": "zone:northern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8367",
+        "source": "quest:corrupt-guards",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8368",
+        "source": "quest:corrupt-guards",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8369",
+        "source": "quest:corrupt-guards",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8370",
+        "source": "quest:corrupt-guards",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8371",
+        "source": "quest:corrupt-guards",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8372",
+        "source": "npc:iceclad-ocean:ergrez-shortpaw",
+        "target": "quest:cougarskin-boots-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8373",
+        "source": "quest:cougarskin-boots-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8374",
+        "source": "quest:cougarskin-boots-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8375",
+        "source": "quest:cougarskin-boots-quest",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8376",
+        "source": "quest:cougarskin-boots-quest",
+        "target": "item:cougarskin-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8377",
+        "source": "npc:iceclad-ocean:ergrez-shortpaw",
+        "target": "quest:cougarskin-mask-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8378",
+        "source": "quest:cougarskin-mask-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8379",
+        "source": "quest:cougarskin-mask-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8380",
+        "source": "quest:cougarskin-mask-quest",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8381",
+        "source": "quest:cougarskin-mask-quest",
+        "target": "item:cougarskin-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8382",
+        "source": "npc:iceclad-ocean:ergrez-shortpaw",
+        "target": "quest:cougarskin-sleeves-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8383",
+        "source": "quest:cougarskin-sleeves-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8384",
+        "source": "quest:cougarskin-sleeves-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8385",
+        "source": "quest:cougarskin-sleeves-quest",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8386",
+        "source": "quest:cougarskin-sleeves-quest",
+        "target": "item:cougarskin-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8387",
+        "source": "npc:oggok:lork",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8388",
+        "source": "npc:oggok:lork",
+        "target": "quest:crude-stein-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8389",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8390",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8391",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8392",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8393",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8394",
+        "source": "quest:crude-stein-quest",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8395",
+        "source": "quest:crude-stein-quest",
+        "target": "item:a-crude-stein",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8396",
+        "source": "quest:crude-stein-quest",
+        "target": "item:gatorsmash-maul",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8397",
+        "source": "npc:south-qeynos:wolten-grafe",
+        "target": "quest:crush-the-undead",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8398",
+        "source": "quest:crush-the-undead",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8399",
+        "source": "quest:crush-the-undead",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8400",
+        "source": "quest:crush-the-undead",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8401",
+        "source": "quest:crush-the-undead",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8402",
+        "source": "quest:crush-the-undead",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8403",
+        "source": "npc:south-kaladim:canloe-nusback",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8404",
+        "source": "npc:south-kaladim:canloe-nusback",
+        "target": "quest:crushbone-belts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8405",
+        "source": "quest:crushbone-belts",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8406",
+        "source": "quest:crushbone-belts",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8407",
+        "source": "quest:crushbone-belts",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8408",
+        "source": "quest:crushbone-belts",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8409",
+        "source": "quest:crushbone-belts",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8410",
+        "source": "quest:crushbone-belts",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8411",
+        "source": "npc:south-kaladim:canloe-nusback",
+        "target": "quest:crushbone-shoulderpads-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8412",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8413",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8414",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8415",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8416",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8417",
+        "source": "quest:crushbone-shoulderpads-quest",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8418",
+        "source": "npc:north-qeynos:astaed-wemor",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8419",
+        "source": "npc:north-qeynos:astaed-wemor",
+        "target": "quest:cure-for-lempeck-hargrin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8420",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8421",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8422",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8423",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8424",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "item:shining-star-of-light",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8425",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8426",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8427",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8428",
+        "source": "quest:cure-for-lempeck-hargrin",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8429",
+        "source": "npc:east-cabilis:drill-master-dal",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8430",
+        "source": "npc:east-cabilis:drill-master-dal",
+        "target": "quest:curscale-shield",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8431",
+        "source": "quest:curscale-shield",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8432",
+        "source": "quest:curscale-shield",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8433",
+        "source": "quest:curscale-shield",
+        "target": "item:curscale-buckler",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8434",
+        "source": "quest:curscale-shield",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8435",
+        "source": "quest:curscale-shield",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8436",
+        "source": "quest:curscale-shield",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8437",
+        "source": "quest:curscale-shield",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8438",
+        "source": "quest:curscale-shield",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8439",
+        "source": "npc:east-cabilis:klok-mugruk",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8440",
+        "source": "npc:east-cabilis:klok-mugruk",
+        "target": "quest:curscale-armor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8441",
+        "source": "quest:curscale-armor-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8442",
+        "source": "quest:curscale-armor-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8443",
+        "source": "quest:curscale-armor-quest",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8444",
+        "source": "quest:curscale-armor-quest",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8445",
+        "source": "quest:curscale-armor-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8446",
+        "source": "npc:east-cabilis:hierophant-oxyn",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8447",
+        "source": "npc:east-cabilis:hierophant-oxyn",
+        "target": "quest:cursed-wafers-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8448",
+        "source": "quest:cursed-wafers-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8449",
+        "source": "quest:cursed-wafers-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8450",
+        "source": "quest:cursed-wafers-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8451",
+        "source": "quest:cursed-wafers-quest",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8452",
+        "source": "quest:cursed-wafers-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8453",
+        "source": "npc:west-commonlands:guard-valon",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8454",
+        "source": "npc:west-commonlands:guard-valon",
+        "target": "quest:cutthroat-rings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8455",
+        "source": "quest:cutthroat-rings",
+        "target": "zone:west-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8456",
+        "source": "quest:cutthroat-rings",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8457",
+        "source": "quest:cutthroat-rings",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8458",
+        "source": "quest:cutthroat-rings",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8459",
+        "source": "quest:cutthroat-rings",
+        "target": "item:militia-armory-token",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8460",
+        "source": "quest:cutthroat-rings",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8461",
+        "source": "quest:cutthroat-rings",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8462",
+        "source": "npc:temple-of-solusek-ro:romar-sunto",
+        "target": "quest:darkwood-staff-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8463",
+        "source": "quest:darkwood-staff-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8464",
+        "source": "quest:darkwood-staff-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8465",
+        "source": "quest:darkwood-staff-quest",
+        "target": "item:darkwood-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8466",
+        "source": "quest:darkwood-staff-quest",
+        "target": "faction:temple-of-sol-ro",
         "type": "rewards"
       }
     }
