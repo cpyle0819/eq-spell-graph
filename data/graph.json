@@ -53851,6 +53851,934 @@
         "lore": "This plane is the domain of the god of mischief, Bristlebane Fizzlethrope. Full of invisible walls, one-sided doors, twisting halls, and plenty of peculiar inhabitants. The entrance is in the northern wing of the Temple of Veeshan.",
         "wiki_title": "Plane of Mischief"
       }
+    },
+    {
+      "data": {
+        "id": "npc:halas:shamus-felligan",
+        "label": "Shamus Felligan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:goblin-caster-necklace",
+        "label": "Goblin Caster Necklace",
+        "type": "quest",
+        "description": "Shamus Felligan, outside the Shaman's guild in Halas, requiring Amiable or better faction, trades Caster Beads from Ice Goblin Casters in Everfrost Peaks for a weapon.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 5,
+        "steps": [
+          "Tell Shamus Felligan \"I will hunt the goblin casters\"",
+          "Hunt Ice Goblin Casters in Everfrost Peaks for Caster Beads",
+          "Return the beads to Shamus"
+        ],
+        "wiki_title": "Goblin Caster Necklace"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gavel-of-justice",
+        "label": "Gavel of Justice",
+        "type": "item",
+        "slots": [
+          "Range",
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 34,
+        "mana": 5,
+        "weight": 7.5,
+        "magic": true,
+        "lore": true,
+        "source": "Goblin Caster Necklace reward (Shamus Felligan, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:goblin-raiders",
+        "label": "Goblin Raiders",
+        "type": "quest",
+        "description": "Captain Keatar, at the Ranger guild building in Firiona Vie, trades four Red Headbands from goblin raiders for minor rewards -- must be turned in all at once or he eats them. A prerequisite for Goblin Battlemasters.",
+        "minLevel": 25,
+        "steps": [
+          "Hunt goblin raiders for Red Headbands",
+          "Turn in all four Red Headbands to Captain Keatar at once"
+        ],
+        "wiki_title": "Goblin Raiders"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:lyra-lyrestringer",
+        "label": "Lyra Lyrestringer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:going-postal",
+        "label": "Going Postal",
+        "type": "quest",
+        "description": "Lyra Lyrestringer in Ak'Anon hands out a Bardic Letter (Kelethin) to deliver to Jakum Webdancer at the Kelethin Bard Guild hall.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Bardic Letter (Kelethin) from Lyra Lyrestringer",
+          "Deliver it to Jakum Webdancer in Kelethin"
+        ],
+        "wiki_title": "Going Postal"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-felwithe:tacar-tissleplay",
+        "label": "Tacar Tissleplay",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:going-postal-felwithe-to-kelethin",
+        "label": "Going Postal (Felwithe to Kelethin)",
+        "type": "quest",
+        "description": "Tacar Tissleplay, outside Faydark's Bane in Northern Felwithe, hands out a Bardic Letter (Kelethin) to deliver to Jakum Webdancer at the Kelethin Bard Guild hall.",
+        "minLevel": 1,
+        "era": "Kunark",
+        "steps": [
+          "Receive a Bardic Letter (Kelethin) from Tacar Tissleplay",
+          "Deliver it to Jakum Webdancer in Kelethin"
+        ],
+        "wiki_title": "Going Postal (Felwithe to Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:kilam-oresinger",
+        "label": "Kilam Oresinger",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:going-postal-kaladim-to-kelethin",
+        "label": "Going Postal (Kaladim to Kelethin)",
+        "type": "quest",
+        "description": "Kilam Oresinger, outside Pub Kal in South Kaladim, hands out a Bardic Letter (Kelethin) to deliver to Jakum Webdancer at the Kelethin Bard Guild hall.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Bardic Letter (Kelethin) from Kilam Oresinger",
+          "Deliver it to Jakum Webdancer in Kelethin"
+        ],
+        "wiki_title": "Going Postal (Kaladim to Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:the-toilmaster",
+        "label": "The Toilmaster",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:granite-pebbles",
+        "label": "Granite Pebbles",
+        "type": "quest",
+        "description": "The Toilmaster in East Cabilis trades 2 Busted Shackles, dropped by escaped frogloks in the Swamp of No Hope, for a curio.",
+        "minLevel": 3,
+        "steps": [
+          "Collect 2 Busted Shackles from escaped frogloks in the Swamp of No Hope",
+          "Hand them to The Toilmaster"
+        ],
+        "wiki_title": "Granite Pebbles"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pile-of-granite-pebbles",
+        "label": "Pile of Granite Pebbles",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Granite Pebbles reward (The Toilmaster, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:bonlarg",
+        "label": "Bonlarg",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:greenblood-shadowknight-tunic",
+        "label": "Greenblood Shadowknight Tunic",
+        "type": "quest",
+        "description": "Bonlarg, at the Greenblood Shadow Knight Guild in Oggok, requiring Amiable or better faction, trades 3 Lizardman Scout Fife (from Lizard Scouts in The Feerrott) and your original guild tunic for a Black Shadow Tunic. Multiquestable.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 3,
+        "steps": [
+          "Collect 3 Lizardman Scout Fife from Lizard Scouts in The Feerrott",
+          "Give them and your original guild tunic to Bonlarg"
+        ],
+        "wiki_title": "Greenblood Shadowknight Tunic"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-shadow-tunic",
+        "label": "Black Shadow Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "ac": 6,
+        "stats": {
+          "int": 1
+        },
+        "resists": {
+          "poison": 1
+        },
+        "weight": 9,
+        "size": "Medium",
+        "magic": true,
+        "source": "Greenblood Shadowknight Tunic reward (Bonlarg, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:greenblood-tunics",
+        "label": "Greenblood Tunics",
+        "type": "quest",
+        "description": "Treskar, in the Shadowknights Guild in Grobb, wants 3 Black Shadow Tunics -- each obtained by completing the Guild Summons - Murdunk's Palace quest on a different Ogre, then finishing Greenblood Shadowknight Tunic.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight",
+          "rogue",
+          "shaman",
+          "wizard",
+          "necromancer",
+          "magician",
+          "enchanter"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Complete the Guild Summons - Murdunk's Palace quest on 3 different Ogres",
+          "Complete Greenblood Shadowknight Tunic 3 times to obtain 3 Black Shadow Tunics",
+          "Deliver all 3 tunics to Treskar"
+        ],
+        "wiki_title": "Greenblood Tunics"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:grim-oakfist",
+        "label": "Grim Oakfist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:grims-tiger-revenge",
+        "label": "Grim's Tiger Revenge",
+        "type": "quest",
+        "description": "Grim Oakfist, at the first inn on the path into Kithicor Forest, requiring Amiable or better faction, trades three named tigers' pelts (from Eenot, Reggit, and Kobb) for a necklace.",
+        "classes": [
+          "monk"
+        ],
+        "minLevel": 25,
+        "steps": [
+          "Collect an Unusual Tiger Pelt from Eenot, a Peculiar Tiger Pelt from Reggit, and a Strange Tiger Pelt from Kobb",
+          "Return all three pelts to Grim Oakfist"
+        ],
+        "wiki_title": "Grim's Tiger Revenge"
+      }
+    },
+    {
+      "data": {
+        "id": "item:collar-of-neshika",
+        "label": "Collar of Neshika",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "ac": 4,
+        "stats": {
+          "sta": 9
+        },
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Grim's Tiger Revenge reward (Grim Oakfist, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:netuk-phenzon",
+        "label": "Netuk Phenzon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:groflah-steadirts-death",
+        "label": "Groflah Steadirt's Death",
+        "type": "quest",
+        "description": "Netuk Phenzon in East Freeport sends players after Groflah for a Tattered Flier, rewarding the Siphon Strength spell.",
+        "minLevel": 15,
+        "steps": [
+          "Kill Groflah and loot the Tattered Flier from his corpse",
+          "Return the flier to Netuk Phenzon in East Freeport"
+        ],
+        "wiki_title": "Groflah Steadirt's Death"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-karana:guard-shilster",
+        "label": "Guard Shilster",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guard-shilsters-stout",
+        "label": "Guard Shilster's Stout",
+        "type": "quest",
+        "description": "Guard Shilster, in the northeast corner of Northern Karana, trades 5 gold pieces for a stout.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Guard Shilster in northeast Northern Karana",
+          "Hand him 5 gold pieces"
+        ],
+        "wiki_title": "Guard Shilster's Stout"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-burrow-stout",
+        "label": "Black Burrow Stout",
+        "type": "item",
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Guard Shilster's Stout reward (Guard Shilster, Northern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kane-bayle",
+        "label": "Kane Bayle",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-emerald-warriors",
+        "label": "Guild Summons - Emerald Warriors",
+        "type": "quest",
+        "description": "A new Warrior of the Emerald Warriors Guild in Kelethin hands a Recruitment Letter to Regren for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Recruitment Letter",
+          "Hand the letter to Regren at the Emerald Warriors Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Emerald Warriors"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-green-tunic",
+        "label": "Old Green Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 1.5,
+        "source": "Guild Summons - Emerald Warriors reward (Regren, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:teanara",
+        "label": "Te`Anara",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-jaggedpine-treefolk",
+        "label": "Guild Summons - Jaggedpine Treefolk",
+        "type": "quest",
+        "description": "A new Druid of the Jaggedpine Treefolk Guild hands a tattered note to Te`Anara at the Guild Tree in Surefall Glade.",
+        "classes": [
+          "druid"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Te`Anara at the Jaggedpine Treefolk Guild Tree",
+          "Hand her a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Jaggedpine Treefolk"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dried-grass-tunic",
+        "label": "Dried Grass Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Jaggedpine Treefolk reward (Te`Anara, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:dun-mcdowell",
+        "label": "Dun McDowell",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-rogues-of-the-white-rose",
+        "label": "Guild Summons - Rogues of the White Rose",
+        "type": "quest",
+        "description": "A new Barbarian Rogue receives a tattered note directing them to Dun McDowell, behind Cappi's near the Halas docks.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Find Dun McDowell behind Cappi's near the docks",
+          "Hand him the tattered note"
+        ],
+        "wiki_title": "Guild Summons - Rogues of the White Rose"
+      }
+    },
+    {
+      "data": {
+        "id": "item:torn-white-tunic",
+        "label": "Torn White Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Medium",
+        "source": "Guild Summons - Rogues of the White Rose reward (Dun McDowell, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:kylan-odanos",
+        "label": "Kylan O'Danos",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-wolves-of-the-north",
+        "label": "Guild Summons - Wolves of the North",
+        "type": "quest",
+        "description": "A new Barbarian Warrior receives a tattered note directing them to Kylan O'Danos at the Pit of Doom in Halas.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Take the tattered note to Kylan O'Danos at the Pit of Doom",
+          "Hand him the note"
+        ],
+        "wiki_title": "Guild Summons - Wolves of the North"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patched-fur-tunic",
+        "label": "Patched Fur Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "source": "Guild Summons - Wolves of the North reward (Kylan O'Danos, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:margyn-mccann",
+        "label": "Margyn McCann",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shamen-of-justice",
+        "label": "Guild Summons - Shamen of Justice",
+        "type": "quest",
+        "description": "A new Barbarian Shaman receives a tattered note directing them to High Priestess Margyn McCann at the Church of the Tribunal in Halas.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Find High Priestess Margyn McCann at the Church of the Tribunal",
+          "Hand her the tattered note"
+        ],
+        "wiki_title": "Guild Summons - Shamen of Justice"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-blue-tunic",
+        "label": "Faded Blue Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Shamen of Justice reward (Margyn McCann, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:mandaril-dark-knife",
+        "label": "Mandaril Dark Knife",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-fell-blade",
+        "label": "Guild Summons - The Fell Blade",
+        "type": "quest",
+        "description": "A new Shadow Knight of The Fell Blade guild in Paineel receives a Fell Blade Guild Note, routed through Sern Adolia at the Tabernacle of Terror, to hand to Mandaril Dark Knife.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive the Fell Blade Guild Note",
+          "Take it to Sern Adolia at the Tabernacle of Terror",
+          "Hail and hand the note to Mandaril Dark Knife"
+        ],
+        "wiki_title": "Guild Summons - The Fell Blade"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-splattered-tunic",
+        "label": "Blood Splattered Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "lore": true,
+        "noTrade": true,
+        "source": "Guild Summons - The Fell Blade reward (Mandaril Dark Knife, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-gemchopper-hall",
+        "label": "Guild Summons - Gemchopper Hall",
+        "type": "quest",
+        "description": "A new good-aligned Gnome Warrior receives a Recruitment Summons to hand to Master Warrior Baxok Curhunter at Gemchopper Hall in Ak'Anon.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hand the Recruitment Summons to Baxok Curhunter at Gemchopper Hall"
+        ],
+        "wiki_title": "Guild Summons - Gemchopper Hall"
+      }
+    },
+    {
+      "data": {
+        "id": "item:torn-and-ripped-tunic",
+        "label": "Torn and Ripped Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "source": "Guild Summons - Gemchopper Hall reward (Baxok Curhunter, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-tunic",
+        "label": "Faded Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "lore": true,
+        "source": "Guild Summons - Temple of Life reward (North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:priestess-jahnda",
+        "label": "Priestess Jahnda",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-life-cleric",
+        "label": "Guild Summons - Temple of Life Cleric",
+        "type": "quest",
+        "description": "A new Cleric of the Temple of Life Guild Hall in North Qeynos hands a tattered note to Priestess Jahnda.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Priestess Jahnda at the Temple of Life Guild Hall",
+          "Hand her a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Temple of Life Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:camlend-serbold",
+        "label": "Camlend Serbold",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-life-paladin",
+        "label": "Guild Summons - Temple of Life Paladin",
+        "type": "quest",
+        "description": "A new Paladin of the Temple of Life Guild Hall in North Qeynos hands a tattered note to Camlend Serbold.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Camlend Serbold at the Temple of Life Guild Hall",
+          "Hand him a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Temple of Life Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-gray-tunic",
+        "label": "Old Gray Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "lore": true,
+        "source": "Guild Summons - Temple of Thunder reward (South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:renic-losaren",
+        "label": "Renic Losaren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-thunder-cleric",
+        "label": "Guild Summons - Temple of Thunder Cleric",
+        "type": "quest",
+        "description": "A new Cleric of the Temple of Thunder in South Qeynos hands a tattered note to Renic Losaren.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Renic Losaren at the Temple of Thunder",
+          "Hand him a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Temple of Thunder Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-thunder-paladin",
+        "label": "Guild Summons - Temple of Thunder Paladin",
+        "type": "quest",
+        "description": "A new Paladin of the Temple of Thunder in South Qeynos hands a tattered note to Runethar Hamest.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Runethar Hamest at the Temple of Thunder",
+          "Hand him a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Temple of Thunder Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:furtog-ogrebane",
+        "label": "Furtog Ogrebane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-stormguard",
+        "label": "Guild Summons - Stormguard",
+        "type": "quest",
+        "description": "A new Warrior receives a Recruitment Letter to hand to Furtog Ogrebane, in the skybox above the Kaladim Warrior's Guild arena.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Furtog Ogrebane above the Kaladim Warrior's Guild arena",
+          "Hand him the Recruitment Letter"
+        ],
+        "wiki_title": "Guild Summons - Stormguard"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirt-stained-tunic",
+        "label": "Dirt Stained Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 4,
+        "weight": 1.6,
+        "lore": true,
+        "source": "Guild Summons - Stormguard reward (Furtog Ogrebane, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-priests-of-innoruuk",
+        "label": "Guild Summons - Priests of Innoruuk",
+        "type": "quest",
+        "description": "A new Dark Elf Cleric receives a tattered note to hand to Perrir Zexus in Neriak Third Gate.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hand the tattered note to Perrir Zexus"
+        ],
+        "wiki_title": "Guild Summons - Priests of Innoruuk"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crimson-training-tunic",
+        "label": "Crimson Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Priests of Innoruuk reward (Perrir Zexus, Neriak Third Gate)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:priests-of-innoruuk",
+        "label": "Priests of Innoruuk",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:king-aythox-thex",
+        "label": "King Aythox Thex",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:sylia-windlehands",
+        "label": "Sylia Windlehands",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-songweavers",
+        "label": "Guild Summons - Songweavers",
+        "type": "quest",
+        "description": "A new Bard receives a tattered note to hand to Sylia Windlehands at the Songweavers Guild Hall in Kelethin.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Hail Sylia Windlehands at the Songweavers Guild Hall",
+          "Hand her a tattered note"
+        ],
+        "wiki_title": "Guild Summons - Songweavers"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-brown-tunic",
+        "label": "Faded Brown Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "bard"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Songweavers reward (Sylia Windlehands, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:songweavers",
+        "label": "Songweavers",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -124691,6 +125619,1398 @@
         "id": "e-rewards-8853",
         "source": "quest:goblin-battlemasters",
         "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8854",
+        "source": "npc:halas:shamus-felligan",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8855",
+        "source": "npc:halas:shamus-felligan",
+        "target": "quest:goblin-caster-necklace",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8856",
+        "source": "quest:goblin-caster-necklace",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8857",
+        "source": "quest:goblin-caster-necklace",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8858",
+        "source": "quest:goblin-caster-necklace",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8859",
+        "source": "quest:goblin-caster-necklace",
+        "target": "item:gavel-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8860",
+        "source": "quest:goblin-caster-necklace",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8861",
+        "source": "quest:goblin-caster-necklace",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8862",
+        "source": "npc:firiona-vie:captain-keatar",
+        "target": "quest:goblin-raiders",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8863",
+        "source": "quest:goblin-raiders",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8864",
+        "source": "quest:goblin-raiders",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8865",
+        "source": "quest:goblin-raiders",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8866",
+        "source": "quest:goblin-raiders",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8867",
+        "source": "quest:goblin-raiders",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8868",
+        "source": "npc:ak-anon:lyra-lyrestringer",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8869",
+        "source": "npc:ak-anon:lyra-lyrestringer",
+        "target": "quest:going-postal",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8870",
+        "source": "quest:going-postal",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8871",
+        "source": "quest:going-postal",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8872",
+        "source": "quest:going-postal",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8873",
+        "source": "quest:going-postal",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8874",
+        "source": "quest:going-postal",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8875",
+        "source": "quest:going-postal",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8876",
+        "source": "npc:northern-felwithe:tacar-tissleplay",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8877",
+        "source": "npc:northern-felwithe:tacar-tissleplay",
+        "target": "quest:going-postal-felwithe-to-kelethin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8878",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8879",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8880",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8881",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8882",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8883",
+        "source": "quest:going-postal-felwithe-to-kelethin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8884",
+        "source": "npc:south-kaladim:kilam-oresinger",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8885",
+        "source": "npc:south-kaladim:kilam-oresinger",
+        "target": "quest:going-postal-kaladim-to-kelethin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8886",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8887",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8888",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8889",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8890",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8891",
+        "source": "quest:going-postal-kaladim-to-kelethin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8892",
+        "source": "npc:east-cabilis:the-toilmaster",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8893",
+        "source": "npc:east-cabilis:the-toilmaster",
+        "target": "quest:granite-pebbles",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8894",
+        "source": "quest:granite-pebbles",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8895",
+        "source": "quest:granite-pebbles",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8896",
+        "source": "quest:granite-pebbles",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8897",
+        "source": "quest:granite-pebbles",
+        "target": "item:pile-of-granite-pebbles",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8898",
+        "source": "quest:granite-pebbles",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8899",
+        "source": "quest:granite-pebbles",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8900",
+        "source": "quest:granite-pebbles",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8901",
+        "source": "quest:granite-pebbles",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8902",
+        "source": "quest:granite-pebbles",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8903",
+        "source": "npc:oggok:bonlarg",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8904",
+        "source": "npc:oggok:bonlarg",
+        "target": "quest:greenblood-shadowknight-tunic",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8905",
+        "source": "quest:greenblood-shadowknight-tunic",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8906",
+        "source": "quest:greenblood-shadowknight-tunic",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8907",
+        "source": "quest:greenblood-shadowknight-tunic",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8908",
+        "source": "quest:greenblood-shadowknight-tunic",
+        "target": "item:black-shadow-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8909",
+        "source": "npc:grobb:treskar",
+        "target": "quest:greenblood-tunics",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8910",
+        "source": "quest:greenblood-tunics",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8911",
+        "source": "quest:greenblood-tunics",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8912",
+        "source": "quest:greenblood-tunics",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8913",
+        "source": "quest:greenblood-tunics",
+        "target": "faction:dabashers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8914",
+        "source": "npc:kithicor-forest:grim-oakfist",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8915",
+        "source": "npc:kithicor-forest:grim-oakfist",
+        "target": "quest:grims-tiger-revenge",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8916",
+        "source": "quest:grims-tiger-revenge",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8917",
+        "source": "quest:grims-tiger-revenge",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8918",
+        "source": "quest:grims-tiger-revenge",
+        "target": "item:collar-of-neshika",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8919",
+        "source": "npc:east-freeport:netuk-phenzon",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8920",
+        "source": "npc:east-freeport:netuk-phenzon",
+        "target": "quest:groflah-steadirts-death",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8921",
+        "source": "quest:groflah-steadirts-death",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8922",
+        "source": "quest:groflah-steadirts-death",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8923",
+        "source": "quest:groflah-steadirts-death",
+        "target": "spell:siphon-strength",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8924",
+        "source": "quest:groflah-steadirts-death",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8925",
+        "source": "quest:groflah-steadirts-death",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8926",
+        "source": "npc:northern-karana:guard-shilster",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8927",
+        "source": "npc:northern-karana:guard-shilster",
+        "target": "quest:guard-shilsters-stout",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8928",
+        "source": "quest:guard-shilsters-stout",
+        "target": "zone:northern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8929",
+        "source": "quest:guard-shilsters-stout",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8930",
+        "source": "quest:guard-shilsters-stout",
+        "target": "item:black-burrow-stout",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8931",
+        "source": "quest:guard-shilsters-stout",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8932",
+        "source": "quest:guard-shilsters-stout",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8933",
+        "source": "quest:guard-shilsters-stout",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8934",
+        "source": "quest:guard-shilsters-stout",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8935",
+        "source": "npc:greater-faydark:regren",
+        "target": "quest:guild-summons-emerald-warriors",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8936",
+        "source": "quest:guild-summons-emerald-warriors",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8937",
+        "source": "quest:guild-summons-emerald-warriors",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8938",
+        "source": "quest:guild-summons-emerald-warriors",
+        "target": "item:old-green-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8939",
+        "source": "quest:guild-summons-emerald-warriors",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8940",
+        "source": "npc:surefall-glade:teanara",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8941",
+        "source": "npc:surefall-glade:teanara",
+        "target": "quest:guild-summons-jaggedpine-treefolk",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8942",
+        "source": "quest:guild-summons-jaggedpine-treefolk",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8943",
+        "source": "quest:guild-summons-jaggedpine-treefolk",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8944",
+        "source": "quest:guild-summons-jaggedpine-treefolk",
+        "target": "item:dried-grass-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8945",
+        "source": "quest:guild-summons-jaggedpine-treefolk",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8946",
+        "source": "npc:halas:dun-mcdowell",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8947",
+        "source": "npc:halas:dun-mcdowell",
+        "target": "quest:guild-summons-rogues-of-the-white-rose",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8948",
+        "source": "quest:guild-summons-rogues-of-the-white-rose",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8949",
+        "source": "quest:guild-summons-rogues-of-the-white-rose",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8950",
+        "source": "quest:guild-summons-rogues-of-the-white-rose",
+        "target": "item:torn-white-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8951",
+        "source": "quest:guild-summons-rogues-of-the-white-rose",
+        "target": "faction:rogues-of-the-white-rose",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8952",
+        "source": "npc:halas:kylan-odanos",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8953",
+        "source": "npc:halas:kylan-odanos",
+        "target": "quest:guild-summons-wolves-of-the-north",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8954",
+        "source": "quest:guild-summons-wolves-of-the-north",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8955",
+        "source": "quest:guild-summons-wolves-of-the-north",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8956",
+        "source": "quest:guild-summons-wolves-of-the-north",
+        "target": "item:patched-fur-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8957",
+        "source": "npc:halas:margyn-mccann",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8958",
+        "source": "npc:halas:margyn-mccann",
+        "target": "quest:guild-summons-shamen-of-justice",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8959",
+        "source": "quest:guild-summons-shamen-of-justice",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8960",
+        "source": "quest:guild-summons-shamen-of-justice",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8961",
+        "source": "quest:guild-summons-shamen-of-justice",
+        "target": "item:faded-blue-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8962",
+        "source": "quest:guild-summons-shamen-of-justice",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8963",
+        "source": "npc:paineel:mandaril-dark-knife",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8964",
+        "source": "npc:paineel:mandaril-dark-knife",
+        "target": "quest:guild-summons-the-fell-blade",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8965",
+        "source": "quest:guild-summons-the-fell-blade",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8966",
+        "source": "quest:guild-summons-the-fell-blade",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8967",
+        "source": "quest:guild-summons-the-fell-blade",
+        "target": "item:blood-splattered-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8968",
+        "source": "npc:ak-anon:baxok-curhunter",
+        "target": "quest:guild-summons-gemchopper-hall",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8969",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8970",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8971",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "item:torn-and-ripped-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8972",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8973",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "faction:merchants-of-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8974",
+        "source": "quest:guild-summons-gemchopper-hall",
+        "target": "faction:king-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8975",
+        "source": "npc:north-qeynos:priestess-jahnda",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8976",
+        "source": "npc:north-qeynos:priestess-jahnda",
+        "target": "quest:guild-summons-temple-of-life-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8977",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8978",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8979",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "item:faded-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8980",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8981",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8982",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8983",
+        "source": "quest:guild-summons-temple-of-life-cleric",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8984",
+        "source": "npc:north-qeynos:camlend-serbold",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8985",
+        "source": "npc:north-qeynos:camlend-serbold",
+        "target": "quest:guild-summons-temple-of-life-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8986",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8987",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8988",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "item:faded-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8989",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8990",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8991",
+        "source": "quest:guild-summons-temple-of-life-paladin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8992",
+        "source": "npc:south-qeynos:renic-losaren",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8993",
+        "source": "npc:south-qeynos:renic-losaren",
+        "target": "quest:guild-summons-temple-of-thunder-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8994",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8995",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8996",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "item:old-gray-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8997",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8998",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8999",
+        "source": "quest:guild-summons-temple-of-thunder-cleric",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9000",
+        "source": "npc:south-qeynos:runethar-hamest",
+        "target": "quest:guild-summons-temple-of-thunder-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9001",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9002",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9003",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "item:old-gray-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9004",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9005",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9006",
+        "source": "quest:guild-summons-temple-of-thunder-paladin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9007",
+        "source": "npc:south-kaladim:furtog-ogrebane",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9008",
+        "source": "npc:south-kaladim:furtog-ogrebane",
+        "target": "quest:guild-summons-stormguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9009",
+        "source": "quest:guild-summons-stormguard",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9010",
+        "source": "quest:guild-summons-stormguard",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9011",
+        "source": "quest:guild-summons-stormguard",
+        "target": "item:dirt-stained-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9012",
+        "source": "quest:guild-summons-stormguard",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9013",
+        "source": "quest:guild-summons-stormguard",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9014",
+        "source": "quest:guild-summons-stormguard",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9015",
+        "source": "quest:guild-summons-stormguard",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9016",
+        "source": "npc:neriak-3rd-gate:perrir-zexus",
+        "target": "quest:guild-summons-priests-of-innoruuk",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9017",
+        "source": "quest:guild-summons-priests-of-innoruuk",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9018",
+        "source": "quest:guild-summons-priests-of-innoruuk",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9019",
+        "source": "quest:guild-summons-priests-of-innoruuk",
+        "target": "item:crimson-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9020",
+        "source": "quest:guild-summons-priests-of-innoruuk",
+        "target": "faction:priests-of-innoruuk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9021",
+        "source": "quest:guild-summons-priests-of-innoruuk",
+        "target": "faction:king-aythox-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9022",
+        "source": "npc:greater-faydark:sylia-windlehands",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9023",
+        "source": "npc:greater-faydark:sylia-windlehands",
+        "target": "quest:guild-summons-songweavers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9024",
+        "source": "quest:guild-summons-songweavers",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9025",
+        "source": "quest:guild-summons-songweavers",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9026",
+        "source": "quest:guild-summons-songweavers",
+        "target": "item:faded-brown-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9027",
+        "source": "quest:guild-summons-songweavers",
+        "target": "faction:songweavers",
         "type": "rewards"
       }
     }
