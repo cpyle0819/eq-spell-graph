@@ -281,17 +281,20 @@ let activeTab = null;
 // Disciplines, get hidden entirely).
 function buildSections(searchQuery) {
   const q = searchQuery.trim().toLowerCase();
-  // Matches name/label OR description -- a spell/ability/AA whose name
-  // doesn't mention a stat/effect but whose description does (e.g. searching
-  // "dexterity" should find "Dexterous Aura") needs the description checked
-  // too, not just the title (decisions/ full-text search issue).
-  const matches = (name, description) =>
-    !q || name.toLowerCase().includes(q) || (description && description.toLowerCase().includes(q));
+  // Matches name/label OR any of the given extra text fields (description,
+  // duration, etc.) -- a spell/ability whose name doesn't mention a
+  // stat/effect but whose description does (e.g. searching "dexterity"
+  // should find "Dexterous Aura"), or whose duration is what's being
+  // searched for (e.g. "instant" is a duration value, not description text),
+  // needs those fields checked too, not just the title (decisions/
+  // full-text search issue).
+  const matches = (name, ...extra) =>
+    !q || name.toLowerCase().includes(q) || extra.some((field) => field && field.toLowerCase().includes(q));
   // Spells alone also match on their spell line (e.g. searching "heal" finds
   // Superior Healing via the "Minor Healing line" it belongs to, not just
   // spells with "heal" literally in the name) — no other category has a
   // spell-line concept, so this stays spells-only rather than a shared rule.
-  const matchesSpell = (s) => !q || matches(s.label, s.description) || (s.spellLine && matches(s.spellLine));
+  const matchesSpell = (s) => !q || matches(s.label, s.description, s.duration) || (s.spellLine && matches(s.spellLine));
   // Spell Line is a real narrowing filter (like the class selection), not
   // just a search-box match — it affects allItems (so the tab's count badge
   // reflects it), not just items. Multiple selected lines are additive
@@ -304,7 +307,7 @@ function buildSections(searchQuery) {
   const { quests: classQuests, questLines: classQuestLines } = questsForClassBrowser();
   return [
     { key: "spells", title: "Spells", allItems: spellsInSelectedLines, items: spellsInSelectedLines.filter(matchesSpell), renderFn: renderSpellCard },
-    { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name, s.description)), renderFn: renderAbilityCard },
+    { key: "abilities", title: "Abilities", allItems: rawAbilities, items: rawAbilities.filter((s) => matches(s.name, s.description, s.duration)), renderFn: renderAbilityCard },
     { key: "stances", title: "Stances", allItems: rawStances, items: rawStances.filter((s) => matches(s.name, s.description)), renderFn: renderAbility },
     { key: "invocations", title: "Invocations", allItems: rawInvocations, items: rawInvocations.filter((s) => matches(s.name, s.description)), renderFn: renderAbility },
     { key: "general", title: "General AAs", allItems: rawAA.general, items: rawAA.general.filter((s) => matches(s.name, s.description)), renderFn: renderAA },
