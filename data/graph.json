@@ -52705,6 +52705,1036 @@
         "label": "Merchants of Felwithe",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "quest:fern-flower-collection",
+        "label": "Fern Flower Collection",
+        "type": "quest",
+        "description": "Jondin in West Cabilis hands out a Fern Flower Pouch to fill with 4 Fern Flowers.",
+        "minLevel": 8,
+        "steps": [
+          "Receive a Fern Flower Pouch from Jondin",
+          "Collect 4 Fern Flowers and combine them into a Full Fern Flower Pouch",
+          "Return the pouch to Jondin"
+        ],
+        "wiki_title": "Fern Flower Collection"
+      }
+    },
+    {
+      "data": {
+        "id": "item:frogskin-shield",
+        "label": "Frogskin Shield",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 3,
+        "weight": 3,
+        "size": "Small",
+        "source": "Fern Flower Collection reward (Jondin, West Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:noble-helssen",
+        "label": "Noble Helssen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:field-supplies-quest",
+        "label": "Field Supplies Quest",
+        "type": "quest",
+        "description": "Noble Helssen in Kael Drakkal hands out Field Supplies packages to deliver to any of six mercenary types wandering The Wakening Land or Kael Drakkal, then return for more -- a repeatable coin/faction turn-in.",
+        "minLevel": 50,
+        "steps": [
+          "Hail Noble Helssen and receive Field Supplies",
+          "Deliver the package to a wandering mercenary in The Wakening Land or Kael Drakkal",
+          "Return to Noble Helssen for another package"
+        ],
+        "wiki_title": "Field Supplies Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:zamel",
+        "label": "Zamel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:endric",
+        "label": "Endric",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:guard-elron",
+        "label": "Guard Elron",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:find-lucie-elron",
+        "label": "Find Lucie Elron",
+        "type": "quest",
+        "description": "Zamel or Endric in South Qeynos, or Guard Elron in North Qeynos, all trade a Small Tattered Dress (dropped by Cuburt in the Qeynos Aqueducts) for a reward -- Guard Elron gives a locket, Zamel/Endric a stud.",
+        "minLevel": 4,
+        "steps": [
+          "Obtain a Small Tattered Dress, dropped by Cuburt in the Qeynos Aqueducts",
+          "Return the dress to Zamel, Endric, or Guard Elron"
+        ],
+        "wiki_title": "Find Lucie Elron"
+      }
+    },
+    {
+      "data": {
+        "id": "item:golden-locket",
+        "label": "Golden Locket",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "charges": 5,
+        "effect": "Courage",
+        "source": "Find Lucie Elron reward from Guard Elron (North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:golden-ear-stud",
+        "label": "Golden Ear Stud",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "stats": {
+          "int": 3
+        },
+        "effect": "Burning Affliction I (focus)",
+        "source": "Find Lucie Elron rare reward from Zamel or Endric (South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:noxhil-v-sek",
+        "label": "Noxhil V`Sek",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fire-beetle-eyes",
+        "label": "Fire Beetle Eyes",
+        "type": "quest",
+        "description": "Noxhil V`Sek in Neriak Third Gate, requiring Amiable or better faction, hands out an Empty Box to fill with 10 Fire Beetle Eyes.",
+        "minLevel": 1,
+        "steps": [
+          "Receive an Empty Box from Noxhil V`Sek",
+          "Combine 10 Fire Beetle Eyes in the box to craft a Box of Beetle Eyes",
+          "Return the box to Noxhil V`Sek"
+        ],
+        "wiki_title": "Fire Beetle Eyes"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:the-dead",
+        "label": "The Dead",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:queen-cristanos-thex",
+        "label": "Queen Cristanos Thex",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:narex-t-vem",
+        "label": "Narex T`Vem",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fire-goblin-runner",
+        "label": "Fire Goblin Runner",
+        "type": "quest",
+        "description": "Narex T`Vem in Neriak Commons, requiring Amiable or better faction, sends evil-aligned players after a Goblin Runner in Lavastorm Mountains.",
+        "minLevel": 12,
+        "steps": [
+          "Travel to Lavastorm Mountains and kill a Goblin Runner",
+          "Loot its Goblin Supply Pouch",
+          "Return the pouch to Narex T`Vem"
+        ],
+        "wiki_title": "Fire Goblin Runner"
+      }
+    },
+    {
+      "data": {
+        "id": "item:featherweight-pouch",
+        "label": "Featherweight Pouch",
+        "type": "item",
+        "weight": 0.2,
+        "capacity": 6,
+        "lore": true,
+        "noTrade": true,
+        "source": "Fire Goblin Runner reward (Narex T`Vem, Neriak Commons)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:indigo-brotherhood",
+        "label": "Indigo Brotherhood",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:dleria-mausrel",
+        "label": "Dleria Mausrel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fisherman-convert",
+        "label": "Fisherman Convert",
+        "type": "quest",
+        "description": "Dleria Mausrel in Erudin sends Erudite paladins on a multi-zone chain to convert fishermen, through Marlin Bizmite in South Qeynos and Bait Masterson in Qeynos Catacombs.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Speak with Dleria Mausrel and agree to convert fishermen",
+          "Travel to South Qeynos and locate Marlin Bizmite",
+          "Visit Bait Masterson in Qeynos Catacombs",
+          "Give Bait Masterson an Old Blue Tunic (obtained by handing A Tattered Note to your Deepwater guildmaster)",
+          "Return to Dleria Mausrel and hand in the Snapped Pole"
+        ],
+        "wiki_title": "Fisherman Convert"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:priestess-caulria",
+        "label": "Priestess Caulria",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fleshy-orbs",
+        "label": "Fleshy Orbs",
+        "type": "quest",
+        "description": "Priestess Caulria in North Qeynos, requiring Amiable or better faction, sends players to deliver a Fleshy Orb to Lorme Tredore at the Academy of Arcane Science in West Freeport.",
+        "minLevel": 5,
+        "steps": [
+          "Obtain a Fleshy Orb from rabid wolves or bears in Qeynos Hills or West Karana",
+          "Return the orb to Priestess Caulria",
+          "Deliver it to Lorme Tredore at the Academy of Arcane Science in West Freeport"
+        ],
+        "wiki_title": "Fleshy Orbs"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:sentry-kale",
+        "label": "Sentry Kale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:friend-of-the-kin",
+        "label": "Friend of the Kin",
+        "type": "quest",
+        "description": "Sentry Kale in Skyshrine sends players to Wenglawks Kkeak in Kael Drakkal with a note and 100 platinum, then back to expose Sentry Rotiart as a Kromzek spy.",
+        "classes": [
+          "bard",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior"
+        ],
+        "minLevel": 53,
+        "steps": [
+          "Receive a note from Sentry Kale and 100 platinum",
+          "Deliver the note and platinum to Wenglawks Kkeak in Kael Drakkal for a Dispelling Device",
+          "Return to Skyshrine and give the device to Sentry Rotiart",
+          "Defeat Rotiart when he's revealed as a Kromzek spy",
+          "Loot the Spy Report and return it to Sentry Kale"
+        ],
+        "wiki_title": "Friend of the Kin"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dragon-tooth-choker",
+        "label": "Dragon Tooth Choker",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 8,
+        "stats": {
+          "str": 5
+        },
+        "hp": 30,
+        "resists": {
+          "fire": 10,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "source": "Friend of the Kin reward (Sentry Kale, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:shamus-aghllsews",
+        "label": "Shamus Aghllsews",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:friend-of-the-tunarean-court",
+        "label": "Friend of the Tunarean Court",
+        "type": "quest",
+        "description": "Shamus Aghllsews in The Wakening Land sends Ranger/Druid players to collect Kromrif Laborer picks and six crests from separate sub-quests (Wood Nymphs, Unicorn, Sifaye, Fauns, Drixie, Faerie Dragons -- each still its own open checklist item), combined into one case.",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Collect four picks used by the Kromrif Laborers",
+          "Complete the six crest sub-quests (Wood Nymphs, Unicorn, Sifaye, Fauns, Drixie, Faerie Dragons) and combine all crests in the empty case",
+          "Return the completed Case of Tunarean Crests to Shamus Aghllsews"
+        ],
+        "wiki_title": "Friend of the Tunarean Court"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tunarean-signet-ring",
+        "label": "Tunarean Signet Ring",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "ac": 2,
+        "stats": {
+          "cha": 10,
+          "wis": 10
+        },
+        "hp": 15,
+        "magic": true,
+        "noTrade": true,
+        "source": "Friend of the Tunarean Court reward (Shamus Aghllsews, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:froglock-tadpole-fleshies",
+        "label": "Froglock Tadpole Fleshies",
+        "type": "quest",
+        "description": "Zulort, the Oggok Shaman Master, requiring better than Indifferent faction, trades 4 Froglok Tadpole Flesh for the Burst of Flame spell.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Tell Zulort \"me Gonna Help!\"",
+          "Hand him 4 Froglok Tadpole Flesh (not stacked)"
+        ],
+        "wiki_title": "Froglock Tadpole Fleshies"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:treskar",
+        "label": "Treskar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:froglok-skin-mask-quest",
+        "label": "Froglok Skin Mask Quest",
+        "type": "quest",
+        "description": "Treskar, in the Shadowknights Guild in Grobb, sends players after the spore guardian in Innothule Swamp for its Huge Mushroom Head.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight",
+          "rogue",
+          "shaman",
+          "wizard",
+          "necromancer",
+          "magician",
+          "enchanter"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Speak with Treskar about Hukulk",
+          "Find the spore guardian in Innothule Swamp and defeat it",
+          "Hand in its Huge Mushroom Head"
+        ],
+        "wiki_title": "Froglok Skin Mask Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:froglok-skin-mask",
+        "label": "Froglok Skin Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 2,
+        "stats": {
+          "dex": 2,
+          "int": 2
+        },
+        "source": "Froglok Skin Mask Quest reward (Treskar, Grobb)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:shadowknights-of-night-keep",
+        "label": "Shadowknights of Night Keep",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:enic-ruklin",
+        "label": "Enic Ruklin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:frostbites-fish",
+        "label": "Frostbite's Fish",
+        "type": "quest",
+        "description": "Enic Ruklin, at the Temple of Life in North Qeynos, requiring Amiable or better faction, trades a Koalindl Fish corpse (from Frostbite in West Karana, a Koalindl fish directly, or via The Regurgitonic quest) for a reward.",
+        "minLevel": 3,
+        "steps": [
+          "Obtain a Koalindl Fish corpse",
+          "Return it to Enic Ruklin"
+        ],
+        "wiki_title": "Frostbite's Fish"
+      }
+    },
+    {
+      "data": {
+        "id": "item:band-of-rodcet-nife",
+        "label": "Band of Rodcet Nife",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "stats": {
+          "int": 3
+        },
+        "mana": 10,
+        "source": "Frostbite's Fish rare reward (Enic Ruklin, North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:eastern-wastes:garath-the-trader",
+        "label": "Garath the Trader",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:garaths-weapons-to-trade",
+        "label": "Garath's Weapons to Trade",
+        "type": "quest",
+        "description": "Garath the Trader in Eastern Wastes trades a Primal Velium Battlehammer (monks) or Primal Velium Warsword (paladins/shadow knights) for a matching class weapon.",
+        "classes": [
+          "monk",
+          "paladin",
+          "shadow knight"
+        ],
+        "minLevel": 55,
+        "steps": [
+          "Monks: trade a Primal Velium Battlehammer for Primal Velium Fist Wraps",
+          "Paladins/Shadow Knights: trade a Primal Velium Warsword for a Primal Velium Knight's Sword"
+        ],
+        "wiki_title": "Garath's Weapons to Trade"
+      }
+    },
+    {
+      "data": {
+        "id": "item:primal-velium-fist-wraps",
+        "label": "Primal Velium Fist Wraps",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "damage": 15,
+        "ac": 10,
+        "stats": {
+          "str": 5,
+          "sta": 5,
+          "dex": 5,
+          "agi": 5,
+          "wis": 5,
+          "int": 5,
+          "cha": 5
+        },
+        "hp": 50,
+        "mana": 50,
+        "effect": "Avatar",
+        "source": "Garath's Weapons to Trade reward for monks (Garath the Trader, Eastern Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:primal-velium-knights-sword",
+        "label": "Primal Velium Knight's Sword",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin",
+          "shadow knight"
+        ],
+        "damage": 20,
+        "ac": 10,
+        "stats": {
+          "str": 5,
+          "sta": 5,
+          "dex": 5,
+          "agi": 5,
+          "wis": 5,
+          "int": 5,
+          "cha": 5
+        },
+        "hp": 50,
+        "mana": 50,
+        "effect": "Avatar",
+        "source": "Garath's Weapons to Trade reward for paladins/shadow knights (Garath the Trader, Eastern Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-karana:henina-miller",
+        "label": "Henina Miller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gathering-grain",
+        "label": "Gathering Grain",
+        "type": "quest",
+        "description": "Henina Miller in West Karana, at Dubious faction or better, trades a Sack of Hay (from Cleet Miller or scarecrows) for coin, faction, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Henina Miller",
+          "Obtain a Sack of Hay from Cleet Miller or a scarecrow",
+          "Turn in the Sack of Hay"
+        ],
+        "wiki_title": "Gathering Grain"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:baxok-curhunter",
+        "label": "Baxok Curhunter",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gearheart-quest",
+        "label": "Gearheart (Quest)",
+        "type": "quest",
+        "description": "Baxok Curhunter in Ak'Anon sends players to Lesser Faydark to defeat Gearheart, a clockwork gnome, for proof of the kill.",
+        "minLevel": 25,
+        "steps": [
+          "Travel to Lesser Faydark and defeat Gearheart",
+          "Loot the Blackbox XIVD from its corpse",
+          "Return the Blackbox XIVD to Baxok Curhunter"
+        ],
+        "wiki_title": "Gearheart (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-leather-wristbands",
+        "label": "Small Leather Wristbands",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 0.8,
+        "source": "Gearheart (Quest) reward (Baxok Curhunter, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:umvera-dekash",
+        "label": "Umvera Dekash",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gem-inlaid-gauntlets-quest",
+        "label": "Gem Inlaid Gauntlets Quest",
+        "type": "quest",
+        "description": "Umvera Dekash, at Crow's Tavern in North Qeynos, runs a multi-zone delivery chain through Jheron Felkis in East Freeport and Durkis Battlemore in Butcherblock Mountains.",
+        "minLevel": 30,
+        "steps": [
+          "Collect four Tanned Split Paw Skin scrolls (Volumes 1-4) from Southern Karana",
+          "Return the scrolls to Umvera Dekash for a Tesch Val Compilation",
+          "Take the compilation to Jheron Felkis in East Freeport for a Pawbook",
+          "Return the Pawbook to Umvera Dekash for a note",
+          "Take the note to Durkis Battlemore in Butcherblock Mountains for the final reward"
+        ],
+        "wiki_title": "Gem Inlaid Gauntlets Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gem-inlaid-gauntlets",
+        "label": "Gem Inlaid Gauntlets",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 8,
+        "stats": {
+          "dex": 3,
+          "sta": 3
+        },
+        "weight": 1,
+        "size": "Small",
+        "source": "Gem Inlaid Gauntlets Quest reward (Durkis Battlemore, Butcherblock Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:drill-master-vygan",
+        "label": "Drill Master Vygan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:geozite-tool-quest",
+        "label": "Geozite Tool Quest",
+        "type": "quest",
+        "description": "Drill Master Vygan in East Cabilis sends Iksar warriors after scorpion pincers on the outer walls of Cabilis, then one of three warlord-specific sub-tasks (Hikyg's shackles, Zyzz's bone shards, or Vyzer's binder pages).",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 8,
+        "steps": [
+          "Fill a satchel with scorpion pincers from large scorpions on the outer walls of Cabilis",
+          "Receive a note directing you to Warlord Hikyg, Zyzz, or Vyzer",
+          "Complete that warlord's sub-task: fill the Slave Shackle Bag with 8 Busted Froglok Slave Shackles (Hikyg), fill and combine charred bone shards in a box (Zyzz), or combine four pages in a binder (Vyzer)",
+          "Return to Drill Master Vygan for the Geozite Tool"
+        ],
+        "wiki_title": "Geozite Tool Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:geozite-tool",
+        "label": "Geozite Tool",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "lore": true,
+        "noTrade": true,
+        "source": "Geozite Tool Quest reward (Drill Master Vygan, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:gharin",
+        "label": "Gharin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gharins-note-good",
+        "label": "Gharin's Note (good)",
+        "type": "quest",
+        "description": "Gharin in South Qeynos trades 4 Crows Special Brew for a sealed letter, delivered to Te'Anara in Surefall Glade.",
+        "minLevel": 1,
+        "steps": [
+          "Give Gharin 4 Crows Special Brew",
+          "Receive A Sealed Letter (Note To Jaggedpine)",
+          "Travel to Surefall Glade and give the letter to Te'Anara"
+        ],
+        "wiki_title": "Gharin's Note (good)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:qrg-protected-animals",
+        "label": "QRG Protected Animals",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-karana:gindlin-toxfodder",
+        "label": "Gindlin Toxfodder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gindlins-poison",
+        "label": "Gindlin's Poison",
+        "type": "quest",
+        "description": "Gindlin Toxfodder, in a hut in West Karana, trades 2 Spider Venom Sacs, a Crows Special Brew, and 20 gold for a poison.",
+        "minLevel": 8,
+        "steps": [
+          "Collect 2 Spider Venom Sacs from giant spiders",
+          "Purchase a Crows Special Brew from Crow in North Qeynos",
+          "Give both plus 20 gold to Gindlin Toxfodder"
+        ],
+        "wiki_title": "Gindlin's Poison"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:gleed-dragonhunter",
+        "label": "Gleed Dragonhunter",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gleeds-bow",
+        "label": "Gleed's Bow",
+        "type": "quest",
+        "description": "Gleed Dragonhunter in Kael Drakkal, requiring Indifferent or better faction, sends players after Vluudeen's Tail from the wurm Vluudeen in Great Divide.",
+        "minLevel": 50,
+        "steps": [
+          "Hail Gleed Dragonhunter and agree to hunt",
+          "Kill Vluudeen in Great Divide and loot Vluudeen's Tail",
+          "Return the tail to Gleed Dragonhunter"
+        ],
+        "wiki_title": "Gleed's Bow"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bow-of-the-huntsman",
+        "label": "Bow of the Huntsman",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "classes": [
+          "warrior",
+          "ranger"
+        ],
+        "skill": "Archery",
+        "damage": 20,
+        "delay": 30,
+        "effect": "Spirit Strike",
+        "weight": 2,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Gleed's Bow reward (Gleed Dragonhunter, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:captain-tillin",
+        "label": "Captain Tillin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gnashers-head",
+        "label": "Gnasher's Head",
+        "type": "quest",
+        "description": "Larsk Juton in Surefall Glade sends players after Gnasher Furgutt in Qeynos Hills; an optional note drop leads to a second reward from Captain Tillin at the South Qeynos Arena.",
+        "minLevel": 10,
+        "steps": [
+          "Kill Gnasher Furgutt in Qeynos Hills and loot his Gnoll Head",
+          "Optionally loot A Tattered Note if it drops",
+          "Turn in the Gnoll Head to Larsk Juton for a Raw-hide Tunic",
+          "If the note dropped, turn it in to Captain Tillin at the South Qeynos Arena for a Medal of Merit"
+        ],
+        "wiki_title": "Gnasher's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:medal-of-merit",
+        "label": "Medal of Merit",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "stats": {
+          "cha": 5
+        },
+        "weight": 0.1,
+        "source": "Gnasher's Head reward (Captain Tillin, South Qeynos Arena)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:ysanna-macgibbon",
+        "label": "Ysanna MacGibbon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gnoll-fur",
+        "label": "Gnoll Fur",
+        "type": "quest",
+        "description": "Ysanna MacGibbon in Halas, via Cappi McTarnigal at the Halas bank, requires Indifferent or better faction with White Rose and a Tailoring-crafted bundle of 64 Patches of Gnoll Fur from Everfrost Peaks or Blackburrow gnolls.",
+        "classes": [
+          "rogue",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Speak with Cappi McTarnigal on the second floor of the Halas bank",
+          "Collect 64 Patches of Gnoll Fur from gnolls in Everfrost Peaks or Blackburrow",
+          "Use Tailoring to combine 4 patches into a Gnoll Fur Patch, 4 patches into a Quarter, then 4 quarters into a Patched Gnoll Fur Bundle",
+          "Turn in the bundle to Ysanna MacGibbon"
+        ],
+        "wiki_title": "Gnoll Fur"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fang-of-the-wolf",
+        "label": "Fang of the Wolf",
+        "type": "item",
+        "slots": [
+          "Ear",
+          "Primary",
+          "Secondary"
+        ],
+        "damage": 5,
+        "magic": true,
+        "source": "Gnoll Fur reward (Ysanna MacGibbon, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:corun-finisc",
+        "label": "Corun Finisc",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gnoll-paws",
+        "label": "Gnoll Paws",
+        "type": "quest",
+        "description": "Corun Finisc in Surefall Glade trades the Gnoll Paw of the skulking gnoll in the Surefall Glade caves for coin, faction, and experience. Bren Treeclimber competes for the same kill.",
+        "minLevel": 10,
+        "steps": [
+          "Slay the skulking gnoll in the Surefall Glade caves before Bren Treeclimber does",
+          "Return its Gnoll Paw to Corun Finisc"
+        ],
+        "wiki_title": "Gnoll Paws"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:highpass-hold:captain-orben",
+        "label": "Captain Orben",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gnoll-scalp-collecting",
+        "label": "Gnoll Scalp Collecting",
+        "type": "quest",
+        "description": "Captain Orben, near the northern guard lookout in Highpass Hold, requiring Dubious or better faction, buys up to four Gnoll Scalps at a time.",
+        "minLevel": 11,
+        "steps": [
+          "Collect up to 4 Gnoll Scalps",
+          "Turn them in to Captain Orben"
+        ],
+        "wiki_title": "Gnoll Scalp Collecting"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:freeport-militia",
+        "label": "Freeport Militia",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:highpass-guards",
+        "label": "Highpass Guards",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-highpass",
+        "label": "Merchants of Highpass",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:captain-keatar",
+        "label": "Captain Keatar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:goblin-battlemasters",
+        "label": "Goblin Battlemasters",
+        "type": "quest",
+        "description": "Captain Keatar, at the Ranger guild building in Firiona Vie, requires completing the Goblin Raiders quest first, then trades 4 Goblin Bracers from goblin battlemasters for a random piece of Faydark Ringmail Armor.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Complete the Goblin Raiders quest first",
+          "Hunt goblin battlemasters for Goblin Bracers",
+          "Bring 4 Goblin Bracers to Captain Keatar"
+        ],
+        "wiki_title": "Goblin Battlemasters"
+      }
     }
   ],
   "edges": [
@@ -121993,6 +123023,1558 @@
         "id": "e-rewards-8659",
         "source": "quest:emerald-warriors-items",
         "target": "faction:merchants-of-felwithe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8660",
+        "source": "npc:west-cabilis:jondin",
+        "target": "quest:fern-flower-collection",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8661",
+        "source": "quest:fern-flower-collection",
+        "target": "zone:west-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8662",
+        "source": "quest:fern-flower-collection",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8663",
+        "source": "quest:fern-flower-collection",
+        "target": "item:frogskin-shield",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8664",
+        "source": "quest:fern-flower-collection",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8665",
+        "source": "quest:fern-flower-collection",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8666",
+        "source": "npc:kael-drakkal:noble-helssen",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8667",
+        "source": "npc:kael-drakkal:noble-helssen",
+        "target": "quest:field-supplies-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8668",
+        "source": "quest:field-supplies-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8669",
+        "source": "quest:field-supplies-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8670",
+        "source": "quest:field-supplies-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8671",
+        "source": "quest:field-supplies-quest",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8672",
+        "source": "quest:field-supplies-quest",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8673",
+        "source": "quest:field-supplies-quest",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8674",
+        "source": "npc:south-qeynos:zamel",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8675",
+        "source": "npc:south-qeynos:endric",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8676",
+        "source": "npc:north-qeynos:guard-elron",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8677",
+        "source": "npc:south-qeynos:zamel",
+        "target": "quest:find-lucie-elron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8678",
+        "source": "npc:south-qeynos:endric",
+        "target": "quest:find-lucie-elron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8679",
+        "source": "npc:north-qeynos:guard-elron",
+        "target": "quest:find-lucie-elron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8680",
+        "source": "quest:find-lucie-elron",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8681",
+        "source": "quest:find-lucie-elron",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8682",
+        "source": "quest:find-lucie-elron",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8683",
+        "source": "quest:find-lucie-elron",
+        "target": "item:golden-locket",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8684",
+        "source": "quest:find-lucie-elron",
+        "target": "item:golden-ear-stud",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8685",
+        "source": "quest:find-lucie-elron",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8686",
+        "source": "quest:find-lucie-elron",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8687",
+        "source": "quest:find-lucie-elron",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8688",
+        "source": "npc:neriak-3rd-gate:noxhil-v-sek",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8689",
+        "source": "npc:neriak-3rd-gate:noxhil-v-sek",
+        "target": "quest:fire-beetle-eyes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8690",
+        "source": "quest:fire-beetle-eyes",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8691",
+        "source": "quest:fire-beetle-eyes",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8692",
+        "source": "quest:fire-beetle-eyes",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8693",
+        "source": "quest:fire-beetle-eyes",
+        "target": "faction:queen-cristanos-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8694",
+        "source": "npc:neriak-commons:narex-t-vem",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8695",
+        "source": "npc:neriak-commons:narex-t-vem",
+        "target": "quest:fire-goblin-runner",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8696",
+        "source": "quest:fire-goblin-runner",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8697",
+        "source": "quest:fire-goblin-runner",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8698",
+        "source": "quest:fire-goblin-runner",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8699",
+        "source": "quest:fire-goblin-runner",
+        "target": "item:featherweight-pouch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8700",
+        "source": "quest:fire-goblin-runner",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8701",
+        "source": "npc:erudin:dleria-mausrel",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8702",
+        "source": "npc:erudin:dleria-mausrel",
+        "target": "quest:fisherman-convert",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8703",
+        "source": "quest:fisherman-convert",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8704",
+        "source": "quest:fisherman-convert",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8705",
+        "source": "quest:fisherman-convert",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8706",
+        "source": "quest:fisherman-convert",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8707",
+        "source": "quest:fisherman-convert",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8708",
+        "source": "quest:fisherman-convert",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8709",
+        "source": "npc:north-qeynos:priestess-caulria",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8710",
+        "source": "npc:north-qeynos:priestess-caulria",
+        "target": "quest:fleshy-orbs",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8711",
+        "source": "quest:fleshy-orbs",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8712",
+        "source": "quest:fleshy-orbs",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8713",
+        "source": "quest:fleshy-orbs",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8714",
+        "source": "quest:fleshy-orbs",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8715",
+        "source": "quest:fleshy-orbs",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8716",
+        "source": "quest:fleshy-orbs",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8717",
+        "source": "quest:fleshy-orbs",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8718",
+        "source": "quest:fleshy-orbs",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8719",
+        "source": "quest:fleshy-orbs",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8720",
+        "source": "npc:skyshrine:sentry-kale",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8721",
+        "source": "npc:skyshrine:sentry-kale",
+        "target": "quest:friend-of-the-kin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8722",
+        "source": "quest:friend-of-the-kin",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8723",
+        "source": "quest:friend-of-the-kin",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8724",
+        "source": "quest:friend-of-the-kin",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8725",
+        "source": "quest:friend-of-the-kin",
+        "target": "item:dragon-tooth-choker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8726",
+        "source": "quest:friend-of-the-kin",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8727",
+        "source": "quest:friend-of-the-kin",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8728",
+        "source": "npc:the-wakening-land:shamus-aghllsews",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8729",
+        "source": "npc:the-wakening-land:shamus-aghllsews",
+        "target": "quest:friend-of-the-tunarean-court",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8730",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8731",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8732",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "item:tunarean-signet-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8733",
+        "source": "npc:oggok:zulort",
+        "target": "quest:froglock-tadpole-fleshies",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8734",
+        "source": "quest:froglock-tadpole-fleshies",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8735",
+        "source": "quest:froglock-tadpole-fleshies",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8736",
+        "source": "quest:froglock-tadpole-fleshies",
+        "target": "spell:burst-of-flame",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8737",
+        "source": "quest:froglock-tadpole-fleshies",
+        "target": "faction:shamen-of-war",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8738",
+        "source": "npc:grobb:treskar",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8739",
+        "source": "npc:grobb:treskar",
+        "target": "quest:froglok-skin-mask-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8740",
+        "source": "quest:froglok-skin-mask-quest",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8741",
+        "source": "quest:froglok-skin-mask-quest",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8742",
+        "source": "quest:froglok-skin-mask-quest",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8743",
+        "source": "quest:froglok-skin-mask-quest",
+        "target": "item:froglok-skin-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8744",
+        "source": "quest:froglok-skin-mask-quest",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8745",
+        "source": "npc:north-qeynos:enic-ruklin",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8746",
+        "source": "npc:north-qeynos:enic-ruklin",
+        "target": "quest:frostbites-fish",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8747",
+        "source": "quest:frostbites-fish",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8748",
+        "source": "quest:frostbites-fish",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8749",
+        "source": "quest:frostbites-fish",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8750",
+        "source": "quest:frostbites-fish",
+        "target": "item:prayer-beads",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8751",
+        "source": "quest:frostbites-fish",
+        "target": "item:band-of-rodcet-nife",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8752",
+        "source": "quest:frostbites-fish",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8753",
+        "source": "quest:frostbites-fish",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8754",
+        "source": "quest:frostbites-fish",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8755",
+        "source": "quest:frostbites-fish",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8756",
+        "source": "npc:eastern-wastes:garath-the-trader",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8757",
+        "source": "npc:eastern-wastes:garath-the-trader",
+        "target": "quest:garaths-weapons-to-trade",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8758",
+        "source": "quest:garaths-weapons-to-trade",
+        "target": "zone:eastern-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8759",
+        "source": "quest:garaths-weapons-to-trade",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8760",
+        "source": "quest:garaths-weapons-to-trade",
+        "target": "item:primal-velium-fist-wraps",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8761",
+        "source": "quest:garaths-weapons-to-trade",
+        "target": "item:primal-velium-knights-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8762",
+        "source": "npc:west-karana:henina-miller",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8763",
+        "source": "npc:west-karana:henina-miller",
+        "target": "quest:gathering-grain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8764",
+        "source": "quest:gathering-grain",
+        "target": "zone:west-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8765",
+        "source": "quest:gathering-grain",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8766",
+        "source": "quest:gathering-grain",
+        "target": "faction:karana-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8767",
+        "source": "quest:gathering-grain",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8768",
+        "source": "quest:gathering-grain",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8769",
+        "source": "quest:gathering-grain",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8770",
+        "source": "npc:ak-anon:baxok-curhunter",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8771",
+        "source": "npc:ak-anon:baxok-curhunter",
+        "target": "quest:gearheart-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8772",
+        "source": "quest:gearheart-quest",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8773",
+        "source": "quest:gearheart-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8774",
+        "source": "quest:gearheart-quest",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8775",
+        "source": "quest:gearheart-quest",
+        "target": "item:small-leather-wristbands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8776",
+        "source": "npc:north-qeynos:umvera-dekash",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8777",
+        "source": "npc:north-qeynos:umvera-dekash",
+        "target": "quest:gem-inlaid-gauntlets-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8778",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8779",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8780",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8781",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8782",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8783",
+        "source": "quest:gem-inlaid-gauntlets-quest",
+        "target": "item:gem-inlaid-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8784",
+        "source": "npc:east-cabilis:drill-master-vygan",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8785",
+        "source": "npc:east-cabilis:drill-master-vygan",
+        "target": "quest:geozite-tool-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8786",
+        "source": "quest:geozite-tool-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8787",
+        "source": "quest:geozite-tool-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8788",
+        "source": "quest:geozite-tool-quest",
+        "target": "item:geozite-tool",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8789",
+        "source": "npc:south-qeynos:gharin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8790",
+        "source": "npc:south-qeynos:gharin",
+        "target": "quest:gharins-note-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8791",
+        "source": "quest:gharins-note-good",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8792",
+        "source": "quest:gharins-note-good",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8793",
+        "source": "quest:gharins-note-good",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8794",
+        "source": "quest:gharins-note-good",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8795",
+        "source": "quest:gharins-note-good",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8796",
+        "source": "quest:gharins-note-good",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8797",
+        "source": "quest:gharins-note-good",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8798",
+        "source": "quest:gharins-note-good",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8799",
+        "source": "quest:gharins-note-good",
+        "target": "faction:qrg-protected-animals",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8800",
+        "source": "npc:west-karana:gindlin-toxfodder",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8801",
+        "source": "npc:west-karana:gindlin-toxfodder",
+        "target": "quest:gindlins-poison",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8802",
+        "source": "quest:gindlins-poison",
+        "target": "zone:west-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8803",
+        "source": "quest:gindlins-poison",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8804",
+        "source": "quest:gindlins-poison",
+        "target": "item:spider-venom",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8805",
+        "source": "npc:kael-drakkal:gleed-dragonhunter",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8806",
+        "source": "npc:kael-drakkal:gleed-dragonhunter",
+        "target": "quest:gleeds-bow",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8807",
+        "source": "quest:gleeds-bow",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8808",
+        "source": "quest:gleeds-bow",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8809",
+        "source": "quest:gleeds-bow",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8810",
+        "source": "quest:gleeds-bow",
+        "target": "item:bow-of-the-huntsman",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8811",
+        "source": "quest:gleeds-bow",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8812",
+        "source": "quest:gleeds-bow",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8813",
+        "source": "npc:south-qeynos:captain-tillin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8814",
+        "source": "npc:surefall-glade:larsk-juton",
+        "target": "quest:gnashers-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8815",
+        "source": "npc:south-qeynos:captain-tillin",
+        "target": "quest:gnashers-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8816",
+        "source": "quest:gnashers-head",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8817",
+        "source": "quest:gnashers-head",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8818",
+        "source": "quest:gnashers-head",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8819",
+        "source": "quest:gnashers-head",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8820",
+        "source": "quest:gnashers-head",
+        "target": "item:raw-hide-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8821",
+        "source": "quest:gnashers-head",
+        "target": "item:medal-of-merit",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8822",
+        "source": "npc:halas:ysanna-macgibbon",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8823",
+        "source": "npc:halas:ysanna-macgibbon",
+        "target": "quest:gnoll-fur",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8824",
+        "source": "quest:gnoll-fur",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8825",
+        "source": "quest:gnoll-fur",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8826",
+        "source": "quest:gnoll-fur",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8827",
+        "source": "quest:gnoll-fur",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8828",
+        "source": "quest:gnoll-fur",
+        "target": "item:fang-of-the-wolf",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8829",
+        "source": "quest:gnoll-fur",
+        "target": "faction:rogues-of-the-white-rose",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8830",
+        "source": "npc:surefall-glade:corun-finisc",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8831",
+        "source": "npc:surefall-glade:corun-finisc",
+        "target": "quest:gnoll-paws",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8832",
+        "source": "quest:gnoll-paws",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8833",
+        "source": "quest:gnoll-paws",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8834",
+        "source": "quest:gnoll-paws",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8835",
+        "source": "quest:gnoll-paws",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8836",
+        "source": "quest:gnoll-paws",
+        "target": "faction:qrg-protected-animals",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8837",
+        "source": "quest:gnoll-paws",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8838",
+        "source": "npc:highpass-hold:captain-orben",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8839",
+        "source": "npc:highpass-hold:captain-orben",
+        "target": "quest:gnoll-scalp-collecting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8840",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "zone:highpass-hold",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8841",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8842",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8843",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "faction:freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8844",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "faction:highpass-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8845",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "faction:merchants-of-highpass",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8846",
+        "source": "quest:gnoll-scalp-collecting",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8847",
+        "source": "npc:firiona-vie:captain-keatar",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8848",
+        "source": "npc:firiona-vie:captain-keatar",
+        "target": "quest:goblin-battlemasters",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8849",
+        "source": "quest:goblin-battlemasters",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8850",
+        "source": "quest:goblin-battlemasters",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8851",
+        "source": "quest:goblin-battlemasters",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8852",
+        "source": "quest:goblin-battlemasters",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8853",
+        "source": "quest:goblin-battlemasters",
+        "target": "faction:storm-guard",
         "type": "rewards"
       }
     }
