@@ -51585,6 +51585,41 @@
         "delay": 28,
         "source": "Darkwood Staff Quest reward (Romar Sunto, Temple of Solusek Ro)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:rueppy-kutpurse",
+        "label": "Rueppy Kutpurse",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blackburrow-stout-quest",
+        "label": "Blackburrow Stout Quest",
+        "type": "quest",
+        "description": "Rueppy Kutpurse, in the back of Fool's Gold in Rivervale, sends players to fetch a Short Beer from Burtle Barrelbelly upstairs, then to Gunrich in the Misty Thicket ruins for a Case of Blackburrow Stout.",
+        "minLevel": 1,
+        "steps": [
+          "Speak with Rueppy Kutpurse and obtain a Short Beer from Burtle Barrelbelly upstairs",
+          "Give the Short Beer to Rueppy Kutpurse",
+          "Travel to the Misty Thicket ruins, north past the tunnel on the undead hill",
+          "Find Gunrich and say 'Dark Rivers Flow East'",
+          "Receive a Case of Blackburrow Stout from Gunrich",
+          "Return to Rueppy Kutpurse and give her the case"
+        ],
+        "wiki_title": "Blackburrow Stout Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:circle-of-unseen-hands",
+        "label": "Circle of Unseen Hands",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -119329,6 +119364,78 @@
         "id": "e-rewards-8466",
         "source": "quest:darkwood-staff-quest",
         "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8467",
+        "source": "npc:rivervale:rueppy-kutpurse",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8468",
+        "source": "npc:rivervale:rueppy-kutpurse",
+        "target": "quest:blackburrow-stout-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8469",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8470",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8471",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8472",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "faction:deeppockets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8473",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8474",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8475",
+        "source": "quest:blackburrow-stout-quest",
+        "target": "faction:carson-mccabe",
         "type": "rewards"
       }
     }
