@@ -278,12 +278,21 @@ function questLineMatchesSearch(line, q) {
 // quests/questLines to pass in (e.g. class-browser.js's own class-narrowing
 // rule, decisions/class-browser-quests-category.md) -- this function only
 // combines and sorts, it doesn't filter by class.
-export function buildQuestResultEntries(quests, questLines, searchQuery) {
+// includeOutOfEra defaults to false -- out-of-era content (Kunark/Velious
+// zones and anything located_in them, decisions/quest-era-flagging.md)
+// isn't actually reachable in the game's current era yet, so it's hidden
+// by default rather than cluttering results a player can't act on. A
+// quest_line is filtered on its own outOfEra (the shared frame's zone),
+// not each member's -- same "line's own fields describe the shared frame"
+// precedent as classes/minLevel (decisions/quest-line-node-type.md).
+export function buildQuestResultEntries(quests, questLines, searchQuery, includeOutOfEra = false) {
   const q = (searchQuery || "").trim().toLowerCase();
-  const lineIds = new Set(questLines.map((l) => l.id));
+  const visibleQuestLines = includeOutOfEra ? questLines : questLines.filter((line) => !line.outOfEra);
+  const visibleQuests = includeOutOfEra ? quests : quests.filter((quest) => !quest.outOfEra);
+  const lineIds = new Set(visibleQuestLines.map((l) => l.id));
   const entries = [
-    ...questLines.filter((line) => questLineMatchesSearch(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
-    ...quests
+    ...visibleQuestLines.filter((line) => questLineMatchesSearch(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
+    ...visibleQuests
       .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
       .filter((quest) => questMatchesSearch(quest, q))
       .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),

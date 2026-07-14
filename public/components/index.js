@@ -12,6 +12,7 @@ import "./route-card.js";
 import "./detail-tooltip.js";
 import "./tag-input.js";
 import "./field-row.js";
+import "./toggle-checkbox.js";
 import "./collapsible-section.js";
 import "./range-picker.js";
 import "./sidebar-panel.js";

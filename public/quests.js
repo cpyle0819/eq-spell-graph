@@ -24,6 +24,12 @@ let selectedClassNames = [];
 let rawQuests = [];
 let rawQuestLines = [];
 
+// Out-of-era content is hidden by default (decisions/quest-era-flagging.md
+// -- it isn't actually reachable in the game's current era yet), with this
+// checkbox as the opt-in override. Purely a display filter over data
+// already fetched, so toggling it just re-renders -- no refetch needed.
+let showOutOfEra = false;
+
 function renderSidebar() {
   const html = `
     <sidebar-panel>
@@ -31,6 +37,7 @@ function renderSidebar() {
       <field-row label="Zone"><select id="quest-zone-select"><option value="">All Zones</option></select></field-row>
       <field-row label="Level"><select id="quest-level-select"><option value="all">All Levels</option></select></field-row>
       <field-row label="Search"><input type="text" id="quest-search" placeholder="Name, description, or step text..."></field-row>
+      <field-row label="Era"><toggle-checkbox id="quest-show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-quest-filters-btn">Reset filters</button>
     </sidebar-panel>
   `;
@@ -108,6 +115,14 @@ function setupFilters() {
     searchDebounce = setTimeout(render, 150);
   });
 
+  // Purely a display filter over already-fetched data (era/outOfEra is
+  // already in every quest/questLine the API returns) -- render(), not
+  // fetchQuests(), same reasoning as the search box above.
+  document.getElementById("quest-show-out-of-era").addEventListener("change", (e) => {
+    showOutOfEra = e.target.checked;
+    render();
+  });
+
   document.getElementById("reset-quest-filters-btn").addEventListener("click", resetFilters);
 }
 
@@ -118,6 +133,8 @@ function resetFilters() {
   document.getElementById("quest-zone-select").value = "";
   document.getElementById("quest-level-select").value = "all";
   document.getElementById("quest-search").value = "";
+  showOutOfEra = false;
+  document.getElementById("quest-show-out-of-era").checked = false;
   fetchQuests();
 }
 
@@ -154,7 +171,7 @@ async function fetchQuests() {
 function render() {
   const resultsEl = document.getElementById("quests-results");
   const searchQuery = document.getElementById("quest-search").value;
-  const entries = buildQuestResultEntries(rawQuests, rawQuestLines, searchQuery);
+  const entries = buildQuestResultEntries(rawQuests, rawQuestLines, searchQuery, showOutOfEra);
 
   resultsEl.innerHTML = "";
   if (!entries.length) {
