@@ -21,18 +21,19 @@ bun run migrations/NNN-*.ts  # Run a specific migration
 - `scripts/build-lambda.ts` — packages `src/lambda.ts` + `data/graph.json` into `dist-lambda.zip`
 - `public/` — SPA (vanilla HTML/JS, no build step); all links/fetches are path-relative, not domain-root-absolute
 - `migrations/` — historical, numbered, run-once transformations
+- `.github/workflows/deploy.yml` — fires a `repository_dispatch` to `coreypyle-infra` on every push to `main`; carries no AWS/cloud specifics of its own (see "Updating the graph" below)
 
 ## Updating the graph
 
 Never hand-edit `data/graph.json` or regenerate it wholesale. Write a new numbered migration in `migrations/` following the pattern of any existing one (read the file, transform, write it back), run it once with `bun run migrations/NNN-*.ts`, and it stays applied.
 
-**If this app is deployed as a Lambda, the deployment holds its own bundled snapshot of `data/graph.json` from whenever `bun run build:lambda` last ran.** It does not read live from this repo or fetch data at runtime. Running a migration locally has zero effect on a live deployment until someone rebuilds and redeploys — this repo has no hook that does that automatically, and doesn't know how deployment is done for whatever's consuming its Lambda build (see `README.md`'s "Deploying" section, and note that's a deliberate boundary — this repo has no code, comments, or docs describing a specific domain, path, or cloud setup; that lives entirely in whichever separate infra repo does the deploying).
+**If this app is deployed as a Lambda, the deployment holds its own bundled snapshot of `data/graph.json` from whenever it was last rebuilt.** It does not read live from this repo or fetch data at runtime. Running a migration locally has zero effect until it's committed and pushed — a push to `main` now triggers an automatic redeploy (see below), so an uncommitted or unpushed migration is the only way local and live can drift. This repo still has no code, comments, or docs describing a specific domain, path, or cloud setup; that lives entirely in whichever separate infra repo does the deploying.
 
-The infra repo that actually owns deployment is **`coreypyle-infra`**, a sibling directory (`../coreypyle-infra`, i.e. both repos live directly under the same parent — see that repo's own README). It holds the Terraform for the S3/CloudFront/Lambda setup and documents the exact redeploy steps (`bun run build:lambda`, `terraform apply`, `aws s3 sync`, CloudFront invalidation). This repo deliberately stays ignorant of those details; look there, not here, for anything domain/path/cloud-specific.
+The infra repo that actually owns deployment is **`coreypyle-infra`**, a sibling directory (`../coreypyle-infra`, i.e. both repos live directly under the same parent — see that repo's own README). It holds the Terraform for the S3/CloudFront/Lambda setup and, as of the `norraph-github-actions-deploy` OIDC role, a GitHub Actions workflow that runs the full redeploy (rebuild the Lambda zip, `aws lambda update-function-code`, sync both S3 buckets, invalidate both CloudFront distributions) whenever this repo's `.github/workflows/deploy.yml` dispatches to it. This repo's own workflow carries no AWS account IDs, resource names, or region — it only sends a generic `repository_dispatch` event; every domain/path/cloud-specific detail, including the manual fallback steps, lives in `coreypyle-infra`, not here.
 
 ## Delivery workflow
 
-After a feature in this repo is implemented and verified, the default is to commit, push, and deploy (via `coreypyle-infra` — see above) as part of finishing the work, not as a separate follow-up step someone has to ask for. Ask first if a change seems risky to ship immediately (e.g. touches live data, is hard to reverse) — otherwise treat delivery as including deployment.
+After a feature in this repo is implemented and verified, the default is to commit and push to `main` as part of finishing the work, not as a separate follow-up step someone has to ask for — pushing to `main` **is** deploying now, since it automatically triggers `coreypyle-infra`'s deploy pipeline with no manual steps in between. Ask first if a change seems risky to ship immediately (e.g. touches live data, is hard to reverse) — otherwise treat a push as already including deployment, and don't propose a separate manual deploy step afterward.
 
 ## Design Decisions
 
