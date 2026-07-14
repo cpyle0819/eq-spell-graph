@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestLines, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestLines, getZones, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -240,12 +240,7 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
 
   // GET /api/zones — list all zone nodes
   if (pathname === "/api/zones") {
-    const graph = getGraph();
-    const zones = graph.nodes
-      .filter((n) => n.data.type === "zone")
-      .map((n) => ({ id: n.data.id, label: n.data.label }))
-      .sort((a, b) => a.label.localeCompare(b.label));
-    return { status: 200, body: zones };
+    return { status: 200, body: getZones() };
   }
 
   return null;

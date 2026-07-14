@@ -289,13 +289,16 @@ export interface QuestSummary {
   // no real source page (the migration-026 test quest).
   wikiTitle?: string;
   // The quest's content era (a plain label like "Kunark", matched against
-  // the era nodes' own order -- decisions/quest-era-flagging.md). Present
-  // only when the source quest node actually states one; most imported
-  // quests don't yet.
+  // the era nodes' own order -- decisions/quest-era-flagging.md). This is
+  // either the quest's own stated era, or -- if the quest doesn't state
+  // one -- inherited from a zone it touches that's confirmed out-of-era
+  // (resolveEra() in this file). Present only when one of those two
+  // sources actually supplies a value.
   era?: string;
-  // true only when era is strictly later than the current era. Absent
-  // (not false) when not out of era, matching this codebase's convention
-  // of omitting a flag field rather than asserting a negative.
+  // true only when era is strictly later than the current era, whether
+  // from the quest's own era or a touched zone's. Absent (not false) when
+  // not out of era, matching this codebase's convention of omitting a
+  // flag field rather than asserting a negative.
   outOfEra?: boolean;
 }
 
@@ -341,6 +344,28 @@ export function getEras(): EraSummary[] {
     .sort((a, b) => a.order - b.order);
 }
 
+export interface ZoneSummary {
+  id: string;
+  label: string;
+  // Same era/outOfEra convention as QuestSummary (see resolveEra() below) --
+  // present only when this zone node itself carries a confirmed era.
+  era?: string;
+  outOfEra?: boolean;
+}
+
+export function getZones(): ZoneSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  return graph.nodes
+    .filter((n) => n.data.type === "zone")
+    .map((n) => ({
+      id: n.data.id,
+      label: n.data.label,
+      ...resolveEra(n.data.era as string | undefined, [], helpers),
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
 interface GraphIndexHelpers {
   nodeById: (id: string) => NodeData | undefined;
   edgesFrom: (id: string, type: string) => EdgeData[];
@@ -380,6 +405,38 @@ function isOutOfEra(era: string | undefined, helpers: GraphIndexHelpers): boolea
   return order !== undefined && order > helpers.currentEraOrder;
 }
 
+// zone.era (migration 049) is the same plain-label convention as
+// quest.era, verified against each zone's own eqlwiki.com page rather than
+// guessed from classic-EQ expansion history (see CLAUDE.md and
+// decisions/quest-era-flagging.md). A quest/quest_line's outOfEra is the
+// worse of its own stated era and any zone it touches (located_in/
+// starts_in) being confirmed out-of-era -- a quest physically set in a
+// zone the wiki confirms is Kunark/Velious can't itself be earlier era
+// than that zone, even when the quest's own page never restates it. This
+// is deliberately *not* the same "never infer" rule quest-era-flagging.md
+// sets for a quest's own era value -- that rule is about not guessing an
+// era from nothing; this is reading a hard fact (the zone's confirmed era)
+// through an edge that already exists, not guessing anything.
+function resolveEra(
+  ownEra: string | undefined,
+  zoneIds: Iterable<string>,
+  helpers: GraphIndexHelpers
+): { era?: string; outOfEra?: boolean } {
+  let effectiveEra = ownEra;
+  let outOfEra = isOutOfEra(ownEra, helpers);
+  if (!outOfEra) {
+    for (const zid of zoneIds) {
+      const zoneEra = helpers.nodeById(zid)?.era as string | undefined;
+      if (zoneEra && isOutOfEra(zoneEra, helpers)) {
+        effectiveEra = zoneEra;
+        outOfEra = true;
+        break;
+      }
+    }
+  }
+  return { ...(effectiveEra ? { era: effectiveEra } : {}), ...(outOfEra ? { outOfEra: true } : {}) };
+}
+
 // Shared by getQuests() and getQuestLines() (for each line's members) --
 // resolves one quest node's zones/giver/rewards/parent-line edges into the
 // shape the Quests UI actually consumes. Kept private: callers only ever
@@ -402,6 +459,10 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
   const questLineNode = edgesFrom(id, "member_of")
     .map((e) => nodeById(e.target))
     .find((n): n is NodeData => n?.type === "quest_line");
+  const touchedZoneIds = new Set([
+    ...edgesFrom(id, "located_in").map((e) => e.target),
+    ...edgesFrom(id, "starts_in").map((e) => e.target),
+  ]);
   return {
     id,
     label: node.label,
@@ -418,8 +479,7 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     spellRewards: rewardTargets.filter((r) => r.type === "spell").map((r) => ({ id: r.id, label: r.label })),
     ...(questLineNode ? { questLine: { id: questLineNode.id, label: questLineNode.label } } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
-    ...(node.era ? { era: node.era as string } : {}),
-    ...(isOutOfEra(node.era as string | undefined, helpers) ? { outOfEra: true } : {}),
+    ...resolveEra(node.era as string | undefined, touchedZoneIds, helpers),
   };
 }
 
@@ -511,8 +571,7 @@ export function getQuestLines(classNames?: string[], zoneId?: string, level?: nu
         questGivers,
         members,
         ...(n.data.wiki_title ? { wikiTitle: n.data.wiki_title as string } : {}),
-        ...(n.data.era ? { era: n.data.era as string } : {}),
-        ...(isOutOfEra(n.data.era as string | undefined, helpers) ? { outOfEra: true } : {}),
+        ...resolveEra(n.data.era as string | undefined, zones.map((z) => z.id), helpers),
       };
     });
 

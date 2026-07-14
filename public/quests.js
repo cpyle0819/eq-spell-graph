@@ -83,7 +83,7 @@ function populateZoneSelect() {
   for (const z of availableZones) {
     const opt = document.createElement("option");
     opt.value = z.id;
-    opt.textContent = z.label;
+    opt.textContent = z.outOfEra ? `${z.label} (Out of Era)` : z.label;
     sel.appendChild(opt);
   }
 }
