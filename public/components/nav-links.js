@@ -79,9 +79,19 @@ ${RESET_CSS}
   color: #d8bd7c; text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
 }
-.nav-dropdown a:last-child { border-bottom: none; }
+.nav-dropdown a:last-child, .nav-dropdown span.current:last-child { border-bottom: none; }
 .nav-dropdown a:hover, .nav-dropdown a:focus-visible { background: rgba(232, 168, 42, 0.12); color: #f0d492; }
 .nav-dropdown a:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.nav-dropdown span.current {
+  padding: 12px 16px; min-height: 44px;
+  display: flex; align-items: center;
+  font-family: var(--font-body); font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #f0d492;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
 
 @media (max-width: ${BREAKPOINT}px) {
   .nav-row { display: none; }
@@ -129,17 +139,22 @@ class NavLinks extends HTMLElement {
 
   render() {
     const current = this.getAttribute("current");
-    const pages = PAGES.filter((p) => p.key !== current);
 
     this.shadowRoot.innerHTML = `
       <div class="nav-row">
-        ${pages.map((p) => `<macro-button href="${p.href}">${p.label}</macro-button>`).join("")}
+        ${PAGES.map((p) => (p.key === current
+          ? `<macro-button pressed>${p.label}</macro-button>`
+          : `<macro-button href="${p.href}">${p.label}</macro-button>`
+        )).join("")}
       </div>
       <button type="button" class="nav-toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="nav-dropdown">
         <span class="bar"></span><span class="bar"></span><span class="bar"></span>
       </button>
       <div class="nav-dropdown" id="nav-dropdown">
-        ${pages.map((p) => `<a href="${p.href}">${p.label}</a>`).join("")}
+        ${PAGES.map((p) => (p.key === current
+          ? `<span class="current" aria-current="page">${p.label}</span>`
+          : `<a href="${p.href}">${p.label}</a>`
+        )).join("")}
       </div>
     `;
 

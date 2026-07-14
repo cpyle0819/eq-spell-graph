@@ -106,10 +106,25 @@ ${RESET_CSS}
   background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 6px), linear-gradient(to left, white, transparent 6px);
 }
 .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+/* Permanently "depressed" look for e.g. the current-page nav button --
+   same treatment as .btn:active, but held rather than momentary. */
+.btn.pressed, .btn.pressed:hover {
+  cursor: default;
+  box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
+  filter: brightness(0.96);
+}
+.btn.pressed::before {
+  background-image: var(--bone-tex), linear-gradient(to top, black, transparent 5px), linear-gradient(to right, black, transparent 5px);
+  mix-blend-mode: darken;
+}
+.btn.pressed::after {
+  background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 5px), linear-gradient(to left, white, transparent 5px);
+  mix-blend-mode: lighten;
+}
 `);
 
 class MacroButton extends HTMLElement {
-  static get observedAttributes() { return ["href", "square"]; }
+  static get observedAttributes() { return ["href", "square", "pressed"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -126,14 +141,16 @@ class MacroButton extends HTMLElement {
   render() {
     const href = this.getAttribute("href");
     const square = this.hasAttribute("square");
+    const pressed = this.hasAttribute("pressed");
     this.classList.toggle("square", square);
 
     const label = this.textContent.trim();
     const isLong = square && label.length > 10;
 
-    const btn = document.createElement(href ? "a" : "button");
-    btn.className = ["btn", square ? "square" : "", isLong ? "long-label" : "", href ? "" : "as-button"].filter(Boolean).join(" ");
-    if (href) btn.setAttribute("href", href);
+    const btn = document.createElement(pressed ? "span" : href ? "a" : "button");
+    btn.className = ["btn", square ? "square" : "", isLong ? "long-label" : "", pressed ? "pressed" : href ? "" : "as-button"].filter(Boolean).join(" ");
+    if (pressed) btn.setAttribute("aria-current", "page");
+    else if (href) btn.setAttribute("href", href);
     else btn.setAttribute("type", "button");
     btn.appendChild(document.createElement("slot"));
 
