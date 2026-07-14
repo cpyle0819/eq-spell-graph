@@ -50326,6 +50326,248 @@
         "label": "Rogues of the White Rose",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "zone:south-kaladim",
+        "label": "South Kaladim",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "safe",
+            "dark elf": "kos",
+            "dwarf": "safe",
+            "erudite": "safe",
+            "gnome": "safe",
+            "half elf": "safe",
+            "halfling": "safe",
+            "high elf": "safe",
+            "human": "safe",
+            "iksar": "kos",
+            "ogre": "kos",
+            "troll": "kos",
+            "wood elf": "safe"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "wont_sell",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "wont_sell",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "safe",
+            "bertoxxulous": "wont_sell",
+            "brell serilis": "safe",
+            "bristlebane": "safe",
+            "cazic-thule": "wont_sell",
+            "erollisi marr": "safe",
+            "innoruuk": "wont_sell",
+            "karana": "safe",
+            "mithaniel marr": "safe",
+            "prexus": "safe",
+            "quellious": "safe",
+            "rallos zek": "neutral",
+            "rodcet nife": "safe",
+            "solusek ro": "safe",
+            "the tribunal": "safe",
+            "tunare": "safe",
+            "veeshan": "safe"
+          }
+        },
+        "lore": "Kaladim is the underground city of the Dwarves of Norrath. A huge carved statue of a dwarf marks the entrance of their city onto the rugged Butcherblock Mountains.",
+        "wiki_title": "Kaladim"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:bronlor-lightblade",
+        "label": "Bronlor Lightblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:brell-serilis-symbol-quests",
+        "label": "Brell Serilis Symbol Quests",
+        "type": "quest",
+        "description": "Bronlor Lightblade, in a back room of the Kaladim Warrior's Guild Hall in South Kaladim, promotes clerics of Brell Serilis through Initiate and Disciple Symbol tiers.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 14,
+        "steps": [
+          "Initiate Symbol: speak with Bronlor Lightblade about enraged goblins, travel to Butcherblock Mountains, slay them for four Enraged Goblin Beads, and return the beads to Bronlor Lightblade",
+          "Disciple Symbol: receive a Note to Taldrik, purchase Elven Wine, Dwarven Ale, and Freeport Stout in East Freeport, deliver them to Taldrik Stumpystout in Oasis of Marr, then gather Preserved Hops and a Battleworn Canteen (both The Estate of Unrest), Forest Barley (Kithicor Forest), and a Summoned Globe of Water",
+          "Combine the four Disciple components in a Holy Cask to craft a Keg of Brells Blessed Stout, then return to Taldrik Stumpystout with the keg, a Rat Sandwich, and the Initiate Symbol"
+        ],
+        "wiki_title": "Brell Serilis Symbol Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:initiate-symbol-of-brell-serilis",
+        "label": "Initiate Symbol of Brell Serilis",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 3,
+        "stats": {
+          "wis": 1
+        },
+        "mana": 3,
+        "source": "Brell Serilis Symbol Quests reward (Bronlor Lightblade, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:disciple-symbol-of-brell-serilis",
+        "label": "Disciple Symbol of Brell Serilis",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 5,
+        "stats": {
+          "sta": 1,
+          "wis": 2
+        },
+        "mana": 7,
+        "source": "Brell Serilis Symbol Quests reward (Bronlor Lightblade, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:byzar-bloodforge",
+        "label": "Byzar Bloodforge",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:runnyeye-warbeads-kaladim-warrior",
+        "label": "Runnyeye Warbeads (Kaladim Warrior)",
+        "type": "quest",
+        "description": "Byzar Bloodforge in South Kaladim trades four RunnyEye Warbeads, looted from goblins in Butcherblock Mountains or Misty Thicket, for a piece of small tattered armor.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 9,
+        "steps": [
+          "Collect four RunnyEye Warbeads from goblins in Butcherblock Mountains or Misty Thicket",
+          "Turn them in to Byzar Bloodforge for a piece of small tattered armor"
+        ],
+        "wiki_title": "Runnyeye Warbeads (Kaladim Warrior)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-kaladim",
+        "label": "Merchants of Kaladim",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:gretta-mottle",
+        "label": "Gretta Mottle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bread-shipment-kaladim",
+        "label": "The Bread Shipment (Kaladim)",
+        "type": "quest",
+        "description": "Gretta Mottle, at Irontoe's Eats in South Kaladim, trades a Bag of Bread Loaves, purchased from Jarlen Meadowgreen in Southern Karana for 2 gold, for experience, coin, and faction. Good-aligned characters only.",
+        "minLevel": 1,
+        "steps": [
+          "Purchase a Bag of Bread Loaves from Jarlen Meadowgreen in Southern Karana for 2 gold",
+          "Deliver the bread to Gretta Mottle"
+        ],
+        "wiki_title": "The Bread Shipment (Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fresh-baked-muffins-kaladim",
+        "label": "Fresh Baked Muffins (Kaladim)",
+        "type": "quest",
+        "description": "Gretta Mottle, at Irontoe's Eats in South Kaladim, trades a Full Muffin Crate (10 unstacked baked muffins combined in a Muffin Crate) for coin and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Combine 10 unstacked baked muffins in a Muffin Crate to make a Full Muffin Crate",
+          "Deliver it to Gretta Mottle"
+        ],
+        "wiki_title": "Fresh Baked Muffins (Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:beno-targnarle",
+        "label": "Beno Targnarle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-pelts",
+        "label": "Rat Pelts",
+        "type": "quest",
+        "description": "Beno Targnarle in South Kaladim trades four Giant Rat Pelts, from giant rats in the mines below North Kaladim, for a choice of Rat Pelt Cape, Small Lantern, Torch, or Malachite. Multiquestable; requires Amiable faction or better.",
+        "minLevel": 1,
+        "steps": [
+          "Collect four Giant Rat Pelts from giant rats in the mines below North Kaladim",
+          "Turn them in to Beno Targnarle for a choice of reward"
+        ],
+        "wiki_title": "Rat Pelts"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rat-pelt-cape",
+        "label": "Rat Pelt Cape",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 1,
+        "resists": {
+          "cold": 2
+        },
+        "source": "Rat Pelts reward (Beno Targnarle, South Kaladim)"
+      }
     }
   ],
   "edges": [
@@ -61918,22 +62160,6 @@
         "id": "e-connects-1449",
         "source": "zone:ak-anon",
         "target": "zone:steamfont-mountains",
-        "type": "connects_to"
-      }
-    },
-    {
-      "data": {
-        "id": "e-connects-1450",
-        "source": "zone:butcherblock-mountains",
-        "target": "zone:north-kaladim",
-        "type": "connects_to"
-      }
-    },
-    {
-      "data": {
-        "id": "e-connects-1451",
-        "source": "zone:north-kaladim",
-        "target": "zone:butcherblock-mountains",
         "type": "connects_to"
       }
     },
@@ -116086,6 +116312,438 @@
         "id": "e-rewards-8218",
         "source": "quest:gnoll-bounty",
         "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-8217",
+        "source": "zone:south-kaladim",
+        "target": "zone:butcherblock-mountains",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-8218",
+        "source": "zone:butcherblock-mountains",
+        "target": "zone:south-kaladim",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-8219",
+        "source": "zone:north-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-8220",
+        "source": "zone:south-kaladim",
+        "target": "zone:north-kaladim",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8221",
+        "source": "npc:south-kaladim:bronlor-lightblade",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8222",
+        "source": "npc:south-kaladim:bronlor-lightblade",
+        "target": "quest:brell-serilis-symbol-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8223",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8224",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8225",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8226",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8227",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8228",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:the-estate-of-unrest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8229",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8230",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "item:initiate-symbol-of-brell-serilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8231",
+        "source": "quest:brell-serilis-symbol-quests",
+        "target": "item:disciple-symbol-of-brell-serilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8232",
+        "source": "npc:south-kaladim:byzar-bloodforge",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8233",
+        "source": "npc:south-kaladim:byzar-bloodforge",
+        "target": "quest:runnyeye-warbeads-kaladim-warrior",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8234",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8235",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8236",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8237",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8238",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8239",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8240",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8241",
+        "source": "quest:runnyeye-warbeads-kaladim-warrior",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8242",
+        "source": "npc:south-kaladim:gretta-mottle",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8243",
+        "source": "npc:south-kaladim:gretta-mottle",
+        "target": "quest:the-bread-shipment-kaladim",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8244",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8245",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8246",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8247",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8248",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8249",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8250",
+        "source": "quest:the-bread-shipment-kaladim",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8251",
+        "source": "npc:south-kaladim:gretta-mottle",
+        "target": "quest:fresh-baked-muffins-kaladim",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8252",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8253",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8254",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8255",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8256",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8257",
+        "source": "quest:fresh-baked-muffins-kaladim",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8258",
+        "source": "npc:south-kaladim:beno-targnarle",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8259",
+        "source": "npc:south-kaladim:beno-targnarle",
+        "target": "quest:rat-pelts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8260",
+        "source": "quest:rat-pelts",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8261",
+        "source": "quest:rat-pelts",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8262",
+        "source": "quest:rat-pelts",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8263",
+        "source": "quest:rat-pelts",
+        "target": "item:rat-pelt-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8264",
+        "source": "quest:rat-pelts",
+        "target": "item:small-lantern",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8265",
+        "source": "quest:rat-pelts",
+        "target": "item:torch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8266",
+        "source": "quest:rat-pelts",
+        "target": "item:malachite",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8267",
+        "source": "quest:rat-pelts",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8268",
+        "source": "quest:rat-pelts",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8269",
+        "source": "quest:rat-pelts",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8270",
+        "source": "quest:rat-pelts",
+        "target": "faction:merchants-of-kaladim",
         "type": "rewards"
       }
     }
