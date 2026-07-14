@@ -51620,6 +51620,1091 @@
         "label": "Circle of Unseen Hands",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:tani-n-mar",
+        "label": "Tani N`Mar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:death-of-lyda-nasin",
+        "label": "Death of Lyda Nasin",
+        "type": "quest",
+        "description": "Tani N`Mar, in Neriak Third Gate, sends players Amiable or better to Freeport to help Giz Dinree deal with Lyda Nasin, hiding in the Seafarer's Roost near the docks.",
+        "classes": [
+          "bard",
+          "rogue",
+          "shadow knight"
+        ],
+        "minLevel": 4,
+        "steps": [
+          "Hail Tani N`Mar and agree to venture to Freeport",
+          "Travel to Freeport and find Giz Dinree near the docks",
+          "Tell her \"Tani sent me\" to receive the mission",
+          "Enter the Seafarer's Roost at 9pm (a high-level ogre roams during the day)",
+          "Kill Lyda Nasin on the second floor behind the bar",
+          "Loot the Human Head from her corpse and return it to Tani N`Mar in Neriak"
+        ],
+        "wiki_title": "Death of Lyda Nasin"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cinctured-whip",
+        "label": "Cinctured Whip",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary",
+          "Waist"
+        ],
+        "skill": "Piercing",
+        "delay": 30,
+        "weight": 5,
+        "lore": true,
+        "source": "Death of Lyda Nasin reward (Tani N`Mar, Neriak Third Gate)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:cain-darkmoore",
+        "label": "Cain Darkmoore",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:captain-hazran",
+        "label": "Captain Hazran",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:deathfist-slashed-belts",
+        "label": "Deathfist Slashed Belts",
+        "type": "quest",
+        "description": "West Freeport runs two parallel repeatable turn-ins for Deathfist Slashed Belts: Cain Darkmoore takes two at a time from Dubious-or-better good-aligned players, Captain Hazran takes one at a time for evil-aligned players. Reward is coin, faction, and experience only -- no item.",
+        "minLevel": 1,
+        "steps": [
+          "Good-aligned: hand Cain Darkmoore two Deathfist Slashed Belts at a time",
+          "Evil-aligned: hand Captain Hazran one Deathfist Slashed Belt at a time"
+        ],
+        "wiki_title": "Deathfist Slashed Belts"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:vorken-iceshard",
+        "label": "Vorken Iceshard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:demise-of-blizzent",
+        "label": "Demise of Blizzent",
+        "type": "quest",
+        "description": "Vorken Iceshard in Kael Drakkal sends players after the wurm Blizzent in Great Divide for a belt reward -- a parallel to Blizzent's Fang Quest with a different giver and reward.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Speak with Vorken Iceshard in Kael Drakkal",
+          "Slay Blizzent in Great Divide",
+          "Return Blizzent's Fang to Vorken Iceshard"
+        ],
+        "wiki_title": "Demise of Blizzent"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dragonhide-belt",
+        "label": "Dragonhide Belt",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 6,
+        "stats": {
+          "sta": 10
+        },
+        "source": "Demise of Blizzent reward (Vorken Iceshard, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:uner-gnarltrunk",
+        "label": "Uner Gnarltrunk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:deputy-tagils-debt",
+        "label": "Deputy Tagil's Debt",
+        "type": "quest",
+        "description": "Uner Gnarltrunk, at Tagglefoot's Farmstead in Rivervale, sends players Amiable or better with the Storm Reapers on a note-delivery errand to Deputy Tagil at Rivervale's entrance in Misty Thicket.",
+        "minLevel": 1,
+        "steps": [
+          "Receive A Note from Uner Gnarltrunk at Tagglefoot's Farmstead",
+          "Deliver the note to Deputy Tagil at Rivervale's entrance in Misty Thicket",
+          "Receive Deputy Tagil's Payment from Deputy Tagil",
+          "Return the payment to Uner Gnarltrunk"
+        ],
+        "wiki_title": "Deputy Tagil's Debt"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:storm-reapers",
+        "label": "Storm Reapers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dire-wolf-hide-cloak-quest",
+        "label": "Dire Wolf-Hide Cloak Quest",
+        "type": "quest",
+        "description": "Captain Bvellos in Kael Drakkal trades a Sealed Letter, dropped by the Shardwing Courier, for a cloak. Requires better than Amiable faction.",
+        "minLevel": 50,
+        "steps": [
+          "Obtain a Sealed Letter dropped by the Shardwing Courier",
+          "Hand the letter to Captain Bvellos"
+        ],
+        "wiki_title": "Dire Wolf-Hide Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dire-wolf-hide-cloak",
+        "label": "Dire Wolf-Hide Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 8,
+        "stats": {
+          "str": 6,
+          "sta": 6
+        },
+        "hp": 35,
+        "source": "Dire Wolf-Hide Cloak Quest reward (Captain Bvellos, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:direwolf-fur-cloak-quest",
+        "label": "Direwolf Fur Cloak Quest",
+        "type": "quest",
+        "description": "Ergrez Shortpaw in Iceclad Ocean trades a Medium Quality Dire Wolf Fur and 2 Skinning Rocks for a cloak. Does not respond to hails at Indifferent faction.",
+        "classes": [
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "ranger",
+          "monk",
+          "rogue"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Collect a Medium Quality Dire Wolf Fur",
+          "Collect 2 Skinning Rocks",
+          "Turn both in to Ergrez Shortpaw"
+        ],
+        "wiki_title": "Direwolf Fur Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:direwolf-fur-cloak",
+        "label": "Direwolf Fur Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "ranger",
+          "monk",
+          "rogue"
+        ],
+        "ac": 7,
+        "stats": {
+          "str": 5
+        },
+        "weight": 2.5,
+        "magic": true,
+        "noTrade": true,
+        "source": "Direwolf Fur Cloak Quest reward (Ergrez Shortpaw, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:direwolf-fur-hood-quest",
+        "label": "Direwolf Fur Hood Quest",
+        "type": "quest",
+        "description": "Ergrez Shortpaw in Iceclad Ocean trades a Low Quality Dire Wolf Fur and 2 Bark Bindings for a hood.",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Collect a Low Quality Dire Wolf Fur",
+          "Collect 2 Bark Bindings",
+          "Bring both to Ergrez Shortpaw"
+        ],
+        "wiki_title": "Direwolf Fur Hood Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:direwolf-fur-hood",
+        "label": "Direwolf Fur Hood",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 6,
+        "stats": {
+          "dex": 5
+        },
+        "hp": 20,
+        "weight": 1,
+        "magic": true,
+        "noTrade": true,
+        "source": "Direwolf Fur Hood Quest reward (Ergrez Shortpaw, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:waltor-felligan",
+        "label": "Waltor Felligan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:disease-cures",
+        "label": "Disease Cures",
+        "type": "quest",
+        "description": "Waltor Felligan in Halas casts Cure Disease on anyone who hands over 2 Wooly Fungus. A repeatable service, not a one-time quest -- no item or faction reward.",
+        "minLevel": 1,
+        "steps": [
+          "Hand Waltor Felligan 2 Wooly Fungus",
+          "Receive Cure Disease"
+        ],
+        "wiki_title": "Disease Cures"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:ulazia-w-selo",
+        "label": "Ulazia W`Selo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:divine-duty",
+        "label": "Divine Duty",
+        "type": "quest",
+        "description": "Ulazia W`Selo in Neriak Third Gate sells healing (10 gold), disease cures (6 gold), and poison cures (8 gold) for coin. A repeatable service -- no item or faction reward.",
+        "minLevel": 1,
+        "steps": [
+          "Pay Ulazia W`Selo for healing, disease cure, or poison cure"
+        ],
+        "wiki_title": "Divine Duty"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:dlammaz-stormslayer",
+        "label": "Dlammaz Stormslayer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dragon-heads",
+        "label": "Dragon Heads",
+        "type": "quest",
+        "description": "Dlammaz Stormslayer in Kael Drakkal, requiring Amiable faction with King Tormax, trades either of two dragon heads for a different reward.",
+        "minLevel": 50,
+        "steps": [
+          "Turn in a Greater Dragon's Head to Dlammaz Stormslayer for Frostbringer",
+          "Or turn in a Great Dragon's Head for Cloak of the Maelstrom"
+        ],
+        "wiki_title": "Dragon Heads"
+      }
+    },
+    {
+      "data": {
+        "id": "item:frostbringer",
+        "label": "Frostbringer",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 12,
+        "ac": 7,
+        "effect": "Frostbite",
+        "source": "Dragon Heads reward for a Greater Dragon's Head (Dlammaz Stormslayer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cloak-of-the-maelstrom",
+        "label": "Cloak of the Maelstrom",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 11,
+        "stats": {
+          "str": 3,
+          "dex": 10,
+          "sta": 6,
+          "int": 5
+        },
+        "hp": 55,
+        "source": "Dragon Heads reward for a Great Dragon's Head (Dlammaz Stormslayer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:drolvarg-teeth",
+        "label": "Drolvarg Teeth",
+        "type": "quest",
+        "description": "Captain Nealith in Firiona Vie sends good-race players after Drolvarg Teeth (dropped as \"A Canine\") from drolvargs in various zones, four at a time.",
+        "minLevel": 27,
+        "steps": [
+          "Hail Captain Nealith and agree to join the defense",
+          "Collect 4 Drolvarg Teeth from drolvargs",
+          "Hand in all four"
+        ],
+        "wiki_title": "Drolvarg Teeth"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:drekon-vebnebber",
+        "label": "Drekon Vebnebber",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:duster-models",
+        "label": "Duster Models",
+        "type": "quest",
+        "description": "Drekon Vebnebber, in the Gemchoppers Hall in Ak'Anon, hands out a Daily Log to hunt obsolete Duster models for scrap metal, turned in to Sanfyrd Featherhead at the scrapyard.",
+        "minLevel": 6,
+        "steps": [
+          "Receive a Daily Log from Drekon Vebnebber",
+          "Defeat Duster V and Duster X and loot Scrap Metal",
+          "Deliver the scrap to Sanfyrd Featherhead at the scrapyard west of the Mines of Malfunction"
+        ],
+        "wiki_title": "Duster Models"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bootstrutters-framed-pack",
+        "label": "Bootstrutter's Framed Pack",
+        "type": "item",
+        "weight": 2.5,
+        "capacity": 10,
+        "lore": true,
+        "noTrade": true,
+        "source": "Duster Models reward (Sanfyrd Featherhead, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:forging-hammer",
+        "label": "Forging Hammer",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "skill": "1H Blunt",
+        "damage": 4,
+        "delay": 38,
+        "source": "Duster Models reward (Sanfyrd Featherhead, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-ak-anon",
+        "label": "Merchants of Ak'Anon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:king-ak-anon",
+        "label": "King Ak'Anon",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:earthen-boots-quest",
+        "label": "Earthen Boots Quest",
+        "type": "quest",
+        "description": "Joyce in Temple of Solusek Ro trades four farmed/purchased reagents for a magician's boots.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 28,
+        "steps": [
+          "Obtain a Stone Marker from a glyphed guard in Castle Mistmoore",
+          "Obtain a Heart of Stone from the stone skeleton near Lake Rathetear",
+          "Obtain Soiled Boots from a froglok tonta knight in the caverns of Guk",
+          "Purchase a Cat's Eye Agate",
+          "Return all four to Joyce"
+        ],
+        "wiki_title": "Earthen Boots Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:earthen-boots",
+        "label": "Earthen Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 5,
+        "stats": {
+          "sta": 5
+        },
+        "hp": 15,
+        "weight": 2,
+        "size": "Small",
+        "effect": "Invisibility versus Animal",
+        "source": "Earthen Boots Quest reward (Joyce, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:sentry-emil",
+        "label": "Sentry Emil",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:emils-report",
+        "label": "Emil's Report",
+        "type": "quest",
+        "description": "Sentry Emil in Skyshrine, at Indifferent faction or better, sends players on a note-delivery errand to Eysa Florawhisper in The Wakening Land.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Note to Tunare's Court from Sentry Emil",
+          "Deliver it to Eysa Florawhisper in The Wakening Land",
+          "Return Eysa's Token to Sentry Emil"
+        ],
+        "wiki_title": "Emil's Report"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:claws-of-veeshan",
+        "label": "Claws of Veeshan",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:yelinak",
+        "label": "Yelinak",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:tunarean-court",
+        "label": "Tunarean Court",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:geoard-bluehawk",
+        "label": "Geoard BlueHawk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:eruds-tonic-quest",
+        "label": "Erud's Tonic Quest",
+        "type": "quest",
+        "description": "Geoard BlueHawk, at BlueHawk's in Erudin, sells an Innoruuk's Kiss of Death that Sinnkin Highbrow in the Erudin City Library trades for a tonic.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Geoard BlueHawk and ask about Erud's Tonic",
+          "Purchase an Innoruuk's Kiss of Death from Geoard",
+          "Give it to Sinnkin Highbrow in the Erudin City Library"
+        ],
+        "wiki_title": "Erud's Tonic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:eruds-tonic",
+        "label": "Erud's Tonic",
+        "type": "item",
+        "weight": 0.4,
+        "size": "Small",
+        "lore": true,
+        "noTrade": true,
+        "source": "Erud's Tonic Quest reward (Sinnkin Highbrow, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:erudite-citizen",
+        "label": "Erudite Citizen",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:cipse-tospyr",
+        "label": "Cipse Tospyr",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:erudin-cures",
+        "label": "Erudin Cures",
+        "type": "quest",
+        "description": "Cipse Tospyr, at the Temple of Divine Light in Erudin, sells bind wounds (4 gold), disease cure (2 gold), and poison cure (3 gold) for coin. A repeatable service -- no item or faction reward.",
+        "minLevel": 1,
+        "steps": [
+          "Pay Cipse Tospyr for bind wounds, disease cure, or poison cure"
+        ],
+        "wiki_title": "Erudin Cures"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-warrens:an-erudite-prisoner",
+        "label": "An Erudite Prisoner",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:erudite-prisoners",
+        "label": "Erudite Prisoners",
+        "type": "quest",
+        "description": "An Erudite Prisoner in The Warrens sends players after Jailer Mkrarrg's Bronze Shackle Key to free them.",
+        "minLevel": 10,
+        "steps": [
+          "Hail An Erudite Prisoner",
+          "Kill Jailer Mkrarrg and obtain the Bronze Shackle Key",
+          "Return the key to the prisoner"
+        ],
+        "wiki_title": "Erudite Prisoners"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-desert-of-ro:smith-tvysa",
+        "label": "Smith Tv`ysa",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:evil-research",
+        "label": "Evil Research",
+        "type": "quest",
+        "description": "Smith Tv`ysa in Southern Desert of Ro runs the evil-aligned counterpart to Research Aid's Lightstone/Greater Lightstone trade-up, for Indifferent-or-better faction.",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Turn in a Lightstone to Smith Tv`ysa for a Runes and Research Volume I",
+          "Turn in a Greater Lightstone for a Concordance of Research"
+        ],
+        "wiki_title": "Evil Research"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runes-and-research-volume-i",
+        "label": "Runes and Research Volume I",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Evil Research reward for a Lightstone (Smith Tv`ysa, Southern Desert of Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:exotic-drinks",
+        "label": "Exotic Drinks",
+        "type": "quest",
+        "description": "Clurg, the Oggok bartender, sends players to Gregor Nasin in East Freeport with four exotic ingredients (including Erud's Tonic and Honey Jum) for a Barkeep Compendium, traded back to Clurg for a stein. Nominally aimed at Enchanter/Rogue/Bard, but open to all.",
+        "minLevel": 4,
+        "steps": [
+          "Collect a Kiola Nut, Erud's Tonic, Honey Jum, and a Koalindl Fish",
+          "Deliver all four to Gregor Nasin in East Freeport for a Barkeep Compendium",
+          "Return the compendium to Clurg"
+        ],
+        "wiki_title": "Exotic Drinks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:stein-of-moggok",
+        "label": "Stein of Moggok",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "stats": {
+          "dex": 5,
+          "int": 10
+        },
+        "hp": 10,
+        "resists": {
+          "disease": 25
+        },
+        "effect": "Light Healing",
+        "magic": true,
+        "lore": true,
+        "source": "Exotic Drinks reward (Clurg, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:davorre-bloodthorn",
+        "label": "Davorre Bloodthorn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:experienced-courier",
+        "label": "Experienced Courier",
+        "type": "quest",
+        "description": "Davorre Bloodthorn, in the Fell Blade shadow knight guild in Paineel, sends players Amiable or better on a delivery chain to Veisha Fathomwalker in Toxxulia Forest that ends in her betrayal and death.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Deliver a Rolled up Note to Veisha Fathomwalker in Toxxulia Forest",
+          "Return Veisha's Engagement Ring to Davorre",
+          "Kill Phaeril Nightshire and loot Phaeril Nightshire's Head",
+          "Deliver A Locked Chest to Veisha, triggering combat",
+          "Kill Veisha and return Veisha Fathomwalker's Head to Davorre"
+        ],
+        "wiki_title": "Experienced Courier"
+      }
+    },
+    {
+      "data": {
+        "id": "item:battle-worn-halberd",
+        "label": "Battle Worn Halberd",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "skill": "2H Slashing",
+        "damage": 16,
+        "delay": 41,
+        "stats": {
+          "sta": 5,
+          "agi": 5
+        },
+        "resists": {
+          "disease": 5
+        },
+        "weight": 8,
+        "magic": true,
+        "noTrade": true,
+        "source": "Experienced Courier reward (Davorre Bloodthorn, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-of-ill-omen:trooper-vaurk",
+        "label": "Trooper Vaurk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:explorer-survival-knives",
+        "label": "Explorer Survival Knives",
+        "type": "quest",
+        "description": "Trooper Vaurk, near Lake of Ill Omen between Cabilis and the lake shore, sends players after four Explorer Survival Knives from trespassing explorers. No item reward, just faction and experience.",
+        "minLevel": 30,
+        "steps": [
+          "Hunt explorers near the lake for their stackable Explorer Survival Knife drops",
+          "Turn in four knives to Trooper Vaurk"
+        ],
+        "wiki_title": "Explorer Survival Knives"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:eye-of-stormhammer",
+        "label": "Eye of Stormhammer",
+        "type": "quest",
+        "description": "Beno Targnarle in South Kaladim, requiring Amiable warrior faction, sends players on a multi-zone chain trading up notes and gems into a combined Eye of Stormhammer.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Receive A Sealed Note from Beno and give it to Jail Clerk Maryl at High Keep",
+          "Obtain a Froglok Leg from Slaythe in Misty Thicket and trade it to Bronin Higginsbot",
+          "Receive H.K. 106, trade it to Bank Clerk Jaylin for an Emerald Shard",
+          "Obtain a second Emerald Shard from Faldor Hendrys in North Qeynos",
+          "Combine both shards to create the Eye of Stormhammer and return it to Beno"
+        ],
+        "wiki_title": "Eye of Stormhammer"
+      }
+    },
+    {
+      "data": {
+        "id": "item:avenger-battle-axe",
+        "label": "Avenger Battle Axe",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "2H Slashing",
+        "damage": 15,
+        "stats": {
+          "str": 3,
+          "sta": 3,
+          "agi": 3
+        },
+        "resists": {
+          "magic": 5
+        },
+        "magic": true,
+        "lore": true,
+        "source": "Eye of Stormhammer reward (Beno Targnarle, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:fabian",
+        "label": "Fabian",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fabians-strings",
+        "label": "Fabian's Strings",
+        "type": "quest",
+        "description": "Fabian, in the Grub 'n Grog Tavern in East Freeport, sends players on a multi-zone fetch chain for lute strings.",
+        "minLevel": 30,
+        "steps": [
+          "Give Fabian 2 gold pieces",
+          "Travel to Wind Spirit's Song in South Qeynos",
+          "Obtain a Bag of Troll Guts, dropped by Zahal the Vile in Northern Karana",
+          "Hand the troll guts to Sansa Nusk for Lute Strings",
+          "Return the Lute Strings to Fabian"
+        ],
+        "wiki_title": "Fabian's Strings"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:a-storm-giant-foreman",
+        "label": "a Storm Giant Foreman",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:faerie-dragon-wings",
+        "label": "Faerie Dragon Wings",
+        "type": "quest",
+        "description": "A Storm Giant Foreman in The Wakening Land trades the wings of Lord Gossimerwind and Lord Prismwing for a caster's mojo stick.",
+        "minLevel": 50,
+        "steps": [
+          "Kill Lord Gossimerwind and Lord Prismwing",
+          "Loot both dragons' wings",
+          "Turn in both wings to the Storm Giant Foreman"
+        ],
+        "wiki_title": "Faerie Dragon Wings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:holgresh-mojo-stick-air",
+        "label": "Holgresh Mojo Stick (Air)",
+        "type": "item",
+        "classes": [
+          "wizard",
+          "magician"
+        ],
+        "effect": "Cast Force",
+        "charges": 5,
+        "source": "Faerie Dragon Wings reward (a Storm Giant Foreman, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:guard-beren",
+        "label": "Guard Beren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:farens-tacklebox",
+        "label": "Faren's Tacklebox",
+        "type": "quest",
+        "description": "Guard Beren in South Qeynos sends players to help his brother Faren retrieve a tacklebox knocked into the water at the East Dock.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Guard Beren and learn about his brother Faren",
+          "Speak with Faren at the East Dock",
+          "Retrieve the tacklebox from the water after Trumpy knocks it in",
+          "Return the Wooden Fishing Tackle to Faren"
+        ],
+        "wiki_title": "Faren's Tacklebox"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hurrietas-tunic",
+        "label": "Hurrieta's Tunic",
+        "type": "item",
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "Faren's Tacklebox reward (Faren, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:chef-dooga",
+        "label": "Chef Dooga",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:feeding-dooga",
+        "label": "Feeding Dooga",
+        "type": "quest",
+        "description": "Chef Dooga, at the Meet and Drink Tew Bie tavern in Oggok, buys Human Flesh or High Elf Flesh (not the more common Parts variants) for coin, faction, and experience.",
+        "minLevel": 14,
+        "steps": [
+          "Collect Human Flesh or High Elf Flesh from named NPCs in Innothule Swamp or Rathe Mountains",
+          "Hand it to Chef Dooga"
+        ],
+        "wiki_title": "Feeding Dooga"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:regren",
+        "label": "Regren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:emerald-warriors-items",
+        "label": "Emerald Warriors' Items",
+        "type": "quest",
+        "description": "Regren, inside the Emerald Warriors Guild in Kelethin (Greater Faydark), trades one each of four common drops for a choice of Rusty/Tarnished starter weapon. Requires Amiable or better faction.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Collect one Ruined Wolf Pelt, one Bat Fur, one Bone Chips, and one Spiderling Eye",
+          "Turn all four in to Regren for a choice of starter weapon"
+        ],
+        "wiki_title": "Emerald Warriors' Items"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kelethin-merchants",
+        "label": "Kelethin Merchants",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:merchants-of-felwithe",
+        "label": "Merchants of Felwithe",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -119436,6 +120521,1478 @@
         "id": "e-rewards-8475",
         "source": "quest:blackburrow-stout-quest",
         "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8476",
+        "source": "npc:neriak-3rd-gate:tani-n-mar",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8477",
+        "source": "npc:neriak-3rd-gate:tani-n-mar",
+        "target": "quest:death-of-lyda-nasin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8478",
+        "source": "quest:death-of-lyda-nasin",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8479",
+        "source": "quest:death-of-lyda-nasin",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8480",
+        "source": "quest:death-of-lyda-nasin",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8481",
+        "source": "quest:death-of-lyda-nasin",
+        "target": "item:cinctured-whip",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8482",
+        "source": "npc:west-freeport:cain-darkmoore",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8483",
+        "source": "npc:west-freeport:captain-hazran",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8484",
+        "source": "npc:west-freeport:cain-darkmoore",
+        "target": "quest:deathfist-slashed-belts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8485",
+        "source": "npc:west-freeport:captain-hazran",
+        "target": "quest:deathfist-slashed-belts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8486",
+        "source": "quest:deathfist-slashed-belts",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8487",
+        "source": "quest:deathfist-slashed-belts",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8488",
+        "source": "npc:kael-drakkal:vorken-iceshard",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8489",
+        "source": "npc:kael-drakkal:vorken-iceshard",
+        "target": "quest:demise-of-blizzent",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8490",
+        "source": "quest:demise-of-blizzent",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8491",
+        "source": "quest:demise-of-blizzent",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8492",
+        "source": "quest:demise-of-blizzent",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8493",
+        "source": "quest:demise-of-blizzent",
+        "target": "item:dragonhide-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8494",
+        "source": "quest:demise-of-blizzent",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8495",
+        "source": "quest:demise-of-blizzent",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8496",
+        "source": "npc:rivervale:uner-gnarltrunk",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8497",
+        "source": "npc:rivervale:uner-gnarltrunk",
+        "target": "quest:deputy-tagils-debt",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8498",
+        "source": "quest:deputy-tagils-debt",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8499",
+        "source": "quest:deputy-tagils-debt",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8500",
+        "source": "quest:deputy-tagils-debt",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8501",
+        "source": "quest:deputy-tagils-debt",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8502",
+        "source": "quest:deputy-tagils-debt",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8503",
+        "source": "quest:deputy-tagils-debt",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8504",
+        "source": "npc:kael-drakkal:captain-bvellos",
+        "target": "quest:dire-wolf-hide-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8505",
+        "source": "quest:dire-wolf-hide-cloak-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8506",
+        "source": "quest:dire-wolf-hide-cloak-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8507",
+        "source": "quest:dire-wolf-hide-cloak-quest",
+        "target": "item:dire-wolf-hide-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8508",
+        "source": "quest:dire-wolf-hide-cloak-quest",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8509",
+        "source": "quest:dire-wolf-hide-cloak-quest",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8510",
+        "source": "npc:iceclad-ocean:ergrez-shortpaw",
+        "target": "quest:direwolf-fur-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8511",
+        "source": "quest:direwolf-fur-cloak-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8512",
+        "source": "quest:direwolf-fur-cloak-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8513",
+        "source": "quest:direwolf-fur-cloak-quest",
+        "target": "item:direwolf-fur-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8514",
+        "source": "npc:iceclad-ocean:ergrez-shortpaw",
+        "target": "quest:direwolf-fur-hood-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8515",
+        "source": "quest:direwolf-fur-hood-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8516",
+        "source": "quest:direwolf-fur-hood-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8517",
+        "source": "quest:direwolf-fur-hood-quest",
+        "target": "item:direwolf-fur-hood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8518",
+        "source": "npc:halas:waltor-felligan",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8519",
+        "source": "npc:halas:waltor-felligan",
+        "target": "quest:disease-cures",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8520",
+        "source": "quest:disease-cures",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8521",
+        "source": "quest:disease-cures",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8522",
+        "source": "npc:neriak-3rd-gate:ulazia-w-selo",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8523",
+        "source": "npc:neriak-3rd-gate:ulazia-w-selo",
+        "target": "quest:divine-duty",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8524",
+        "source": "quest:divine-duty",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8525",
+        "source": "quest:divine-duty",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8526",
+        "source": "npc:kael-drakkal:dlammaz-stormslayer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8527",
+        "source": "npc:kael-drakkal:dlammaz-stormslayer",
+        "target": "quest:dragon-heads",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8528",
+        "source": "quest:dragon-heads",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8529",
+        "source": "quest:dragon-heads",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8530",
+        "source": "quest:dragon-heads",
+        "target": "item:frostbringer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8531",
+        "source": "quest:dragon-heads",
+        "target": "item:cloak-of-the-maelstrom",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8532",
+        "source": "quest:dragon-heads",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8533",
+        "source": "quest:dragon-heads",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8534",
+        "source": "npc:firiona-vie:captain-nealith",
+        "target": "quest:drolvarg-teeth",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8535",
+        "source": "quest:drolvarg-teeth",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8536",
+        "source": "quest:drolvarg-teeth",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8537",
+        "source": "quest:drolvarg-teeth",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8538",
+        "source": "quest:drolvarg-teeth",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8539",
+        "source": "quest:drolvarg-teeth",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8540",
+        "source": "npc:ak-anon:drekon-vebnebber",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8541",
+        "source": "npc:ak-anon:drekon-vebnebber",
+        "target": "quest:duster-models",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8542",
+        "source": "quest:duster-models",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8543",
+        "source": "quest:duster-models",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8544",
+        "source": "quest:duster-models",
+        "target": "item:bootstrutters-framed-pack",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8545",
+        "source": "quest:duster-models",
+        "target": "item:forging-hammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8546",
+        "source": "quest:duster-models",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8547",
+        "source": "quest:duster-models",
+        "target": "faction:merchants-of-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8548",
+        "source": "quest:duster-models",
+        "target": "faction:king-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8549",
+        "source": "npc:temple-of-solusek-ro:joyce",
+        "target": "quest:earthen-boots-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8550",
+        "source": "quest:earthen-boots-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8551",
+        "source": "quest:earthen-boots-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8552",
+        "source": "quest:earthen-boots-quest",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8553",
+        "source": "quest:earthen-boots-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8554",
+        "source": "quest:earthen-boots-quest",
+        "target": "zone:lower-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8555",
+        "source": "quest:earthen-boots-quest",
+        "target": "item:earthen-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8556",
+        "source": "quest:earthen-boots-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8557",
+        "source": "npc:skyshrine:sentry-emil",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8558",
+        "source": "npc:skyshrine:sentry-emil",
+        "target": "quest:emils-report",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8559",
+        "source": "quest:emils-report",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8560",
+        "source": "quest:emils-report",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8561",
+        "source": "quest:emils-report",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8562",
+        "source": "quest:emils-report",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8563",
+        "source": "quest:emils-report",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8564",
+        "source": "quest:emils-report",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8565",
+        "source": "npc:erudin:geoard-bluehawk",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8566",
+        "source": "npc:erudin:geoard-bluehawk",
+        "target": "quest:eruds-tonic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8567",
+        "source": "quest:eruds-tonic-quest",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8568",
+        "source": "quest:eruds-tonic-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8569",
+        "source": "quest:eruds-tonic-quest",
+        "target": "item:eruds-tonic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8570",
+        "source": "quest:eruds-tonic-quest",
+        "target": "faction:erudite-citizen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8571",
+        "source": "npc:erudin:cipse-tospyr",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8572",
+        "source": "npc:erudin:cipse-tospyr",
+        "target": "quest:erudin-cures",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8573",
+        "source": "quest:erudin-cures",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8574",
+        "source": "quest:erudin-cures",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8575",
+        "source": "npc:the-warrens:an-erudite-prisoner",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8576",
+        "source": "npc:the-warrens:an-erudite-prisoner",
+        "target": "quest:erudite-prisoners",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8577",
+        "source": "quest:erudite-prisoners",
+        "target": "zone:the-warrens",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8578",
+        "source": "quest:erudite-prisoners",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8579",
+        "source": "quest:erudite-prisoners",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8580",
+        "source": "quest:erudite-prisoners",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8581",
+        "source": "npc:southern-desert-of-ro:smith-tvysa",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8582",
+        "source": "npc:southern-desert-of-ro:smith-tvysa",
+        "target": "quest:evil-research",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8583",
+        "source": "quest:evil-research",
+        "target": "zone:southern-desert-of-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8584",
+        "source": "quest:evil-research",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8585",
+        "source": "quest:evil-research",
+        "target": "item:runes-and-research-volume-i",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8586",
+        "source": "quest:evil-research",
+        "target": "item:concordance-of-research",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8587",
+        "source": "quest:evil-research",
+        "target": "faction:dark-bargainers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8588",
+        "source": "quest:evil-research",
+        "target": "faction:dreadguard-outer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8589",
+        "source": "quest:evil-research",
+        "target": "faction:dreadguard-inner",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8590",
+        "source": "npc:oggok:clurg",
+        "target": "quest:exotic-drinks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8591",
+        "source": "quest:exotic-drinks",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8592",
+        "source": "quest:exotic-drinks",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8593",
+        "source": "quest:exotic-drinks",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8594",
+        "source": "quest:exotic-drinks",
+        "target": "item:stein-of-moggok",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8595",
+        "source": "npc:paineel:davorre-bloodthorn",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8596",
+        "source": "npc:paineel:davorre-bloodthorn",
+        "target": "quest:experienced-courier",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8597",
+        "source": "quest:experienced-courier",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8598",
+        "source": "quest:experienced-courier",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8599",
+        "source": "quest:experienced-courier",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8600",
+        "source": "quest:experienced-courier",
+        "target": "item:battle-worn-halberd",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8601",
+        "source": "quest:experienced-courier",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8602",
+        "source": "npc:lake-of-ill-omen:trooper-vaurk",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8603",
+        "source": "npc:lake-of-ill-omen:trooper-vaurk",
+        "target": "quest:explorer-survival-knives",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8604",
+        "source": "quest:explorer-survival-knives",
+        "target": "zone:lake-of-ill-omen",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8605",
+        "source": "quest:explorer-survival-knives",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8606",
+        "source": "quest:explorer-survival-knives",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8607",
+        "source": "quest:explorer-survival-knives",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8608",
+        "source": "quest:explorer-survival-knives",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8609",
+        "source": "quest:explorer-survival-knives",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8610",
+        "source": "quest:explorer-survival-knives",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8611",
+        "source": "npc:south-kaladim:beno-targnarle",
+        "target": "quest:eye-of-stormhammer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8612",
+        "source": "quest:eye-of-stormhammer",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8613",
+        "source": "quest:eye-of-stormhammer",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8614",
+        "source": "quest:eye-of-stormhammer",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8615",
+        "source": "quest:eye-of-stormhammer",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8616",
+        "source": "quest:eye-of-stormhammer",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8617",
+        "source": "quest:eye-of-stormhammer",
+        "target": "item:avenger-battle-axe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8618",
+        "source": "npc:east-freeport:fabian",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8619",
+        "source": "npc:east-freeport:fabian",
+        "target": "quest:fabians-strings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8620",
+        "source": "quest:fabians-strings",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8621",
+        "source": "quest:fabians-strings",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8622",
+        "source": "quest:fabians-strings",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8623",
+        "source": "quest:fabians-strings",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8624",
+        "source": "quest:fabians-strings",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8625",
+        "source": "quest:fabians-strings",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8626",
+        "source": "quest:fabians-strings",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8627",
+        "source": "npc:the-wakening-land:a-storm-giant-foreman",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8628",
+        "source": "npc:the-wakening-land:a-storm-giant-foreman",
+        "target": "quest:faerie-dragon-wings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8629",
+        "source": "quest:faerie-dragon-wings",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8630",
+        "source": "quest:faerie-dragon-wings",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8631",
+        "source": "quest:faerie-dragon-wings",
+        "target": "item:holgresh-mojo-stick-air",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8632",
+        "source": "quest:faerie-dragon-wings",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8633",
+        "source": "quest:faerie-dragon-wings",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8634",
+        "source": "quest:faerie-dragon-wings",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8635",
+        "source": "npc:south-qeynos:guard-beren",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8636",
+        "source": "npc:south-qeynos:guard-beren",
+        "target": "quest:farens-tacklebox",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8637",
+        "source": "quest:farens-tacklebox",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8638",
+        "source": "quest:farens-tacklebox",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8639",
+        "source": "quest:farens-tacklebox",
+        "target": "item:hurrietas-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8640",
+        "source": "quest:farens-tacklebox",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8641",
+        "source": "quest:farens-tacklebox",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8642",
+        "source": "quest:farens-tacklebox",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8643",
+        "source": "npc:oggok:chef-dooga",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8644",
+        "source": "npc:oggok:chef-dooga",
+        "target": "quest:feeding-dooga",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8645",
+        "source": "quest:feeding-dooga",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8646",
+        "source": "quest:feeding-dooga",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8647",
+        "source": "quest:feeding-dooga",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8648",
+        "source": "quest:feeding-dooga",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8649",
+        "source": "quest:feeding-dooga",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8650",
+        "source": "quest:feeding-dooga",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8651",
+        "source": "quest:feeding-dooga",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8652",
+        "source": "quest:feeding-dooga",
+        "target": "faction:oggok-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8653",
+        "source": "npc:greater-faydark:regren",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-8654",
+        "source": "npc:greater-faydark:regren",
+        "target": "quest:emerald-warriors-items",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-8655",
+        "source": "quest:emerald-warriors-items",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-8656",
+        "source": "quest:emerald-warriors-items",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8657",
+        "source": "quest:emerald-warriors-items",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8658",
+        "source": "quest:emerald-warriors-items",
+        "target": "faction:kelethin-merchants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-8659",
+        "source": "quest:emerald-warriors-items",
+        "target": "faction:merchants-of-felwithe",
         "type": "rewards"
       }
     }
