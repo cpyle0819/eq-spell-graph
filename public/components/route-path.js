@@ -5,20 +5,11 @@
 // "Translocator (paid teleport)") depending on each step's `via`.
 //
 // Default look is the parchment scroll insert (with wood-dowel end caps)
-// used by the Route Finder's result. `variant="stone"` instead renders
+// used by Maps' result. `variant="stone"` instead renders
 // plain dark-stone text with no box or dowels, matching the Spell Finder's
 // zone-card, where the route is wayfinding detail rather than the page's
 // focus content (see decisions/) — same label/steps markup and logic,
 // just a different palette/box for a different surface.
-//
-// Optional `.lore` property (a short eqlwiki.com-sourced blurb about the
-// *destination* zone, from /api/route's `destination.lore` — see
-// src/graph.ts's getZoneVendorInfo) renders below the route steps as a
-// small italic line, only in the parchment (non-"stone") variant — this is
-// flavor text about arriving somewhere, which only makes sense on the
-// scroll Route Finder shows for an actual planned trip, not the Spell
-// Finder zone-card's wayfinding-detail stone variant. Omitted entirely
-// (no empty gap) when unset, e.g. for zones with no eqlwiki.com page.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -30,8 +21,8 @@ ${RESET_CSS}
 }
 :host(:not([variant="stone"])) {
   /* --route-path-padding is this component's customization point for
-     callers that need a different padding than the default (e.g. the
-     Route Finder's own inline style wants 14px 18px, tighter than the
+     callers that need a different padding than the default (e.g. Maps'
+     own inline style wants 14px 18px, tighter than the
      Class Browser/Spell Finder default) -- a plain outer "route-path {
      padding: ... }" rule can't win this fight (see reset.js for why a
      normal-priority outer rule always loses to this !important), but a
@@ -64,16 +55,6 @@ ${RESET_CSS}
 .boat-sep, .translocator-sep { cursor: help; }
 .boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
 .translocator-sep { color: #6d28d9; margin: 0 7px; font-size: 15px; }
-.route-lore {
-  display: block;
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--parch-line);
-  font-style: italic;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--parch-ink-soft);
-}
 
 /* Bold serif at small sizes reads cramped on the dark, busy marble texture
    behind a zone-card, so the stone variant bumps size back up to match the
@@ -93,7 +74,6 @@ ${RESET_CSS}
 
 class RoutePath extends HTMLElement {
   #steps = [];
-  #lore = "";
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -109,12 +89,6 @@ class RoutePath extends HTMLElement {
     if (this.shadowRoot) this.render();
   }
 
-  get lore() { return this.#lore; }
-  set lore(value) {
-    this.#lore = value || "";
-    if (this.shadowRoot) this.render();
-  }
-
   render() {
     const stepsHtml = this.#steps.map((step, i) => {
       if (i === 0) return `<span class="route-zone">${step.name}</span>`;
@@ -122,12 +96,7 @@ class RoutePath extends HTMLElement {
       if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span><span class="route-zone">${step.name}</span>`;
       return `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
     }).join("");
-    // Only rendered in the parchment (non-"stone") variant — see the
-    // header comment for why this is scroll-only flavor text.
-    const loreHtml = this.#lore && this.getAttribute("variant") !== "stone"
-      ? `<span class="route-lore">${this.#lore}</span>`
-      : "";
-    this.shadowRoot.innerHTML = `<span class="route-label">Route</span><div class="route-steps">${stepsHtml}</div>${loreHtml}`;
+    this.shadowRoot.innerHTML = `<span class="route-label">Route</span><div class="route-steps">${stepsHtml}</div>`;
   }
 }
 

@@ -371,6 +371,36 @@ export function getZones(): ZoneSummary[] {
     .sort((a, b) => a.label.localeCompare(b.label));
 }
 
+export interface MobSummary {
+  id: string;
+  label: string;
+  // Same optional-bound shape as QuestSummary's own minLevel/maxLevel --
+  // most eqlwiki.com creature entries are a level *range*, not one number;
+  // a single-level mob (a named/unique) just has minLevel === maxLevel
+  // rather than a separate scalar field, so callers check one shape either
+  // way. See decisions/mob-node-type.md.
+  minLevel?: number;
+  maxLevel?: number;
+}
+
+// zoneId is required, not optional like getQuests()'s -- there's no current
+// UI need for "every mob across every zone" the way Quests' own unfiltered
+// list is a real browsable tab, so this only supports the one query shape
+// Maps' zone dossier actually makes.
+export function getMobs(zoneId: string): MobSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  return graph.nodes
+    .filter((n) => n.data.type === "mob" && helpers.edgesFrom(n.data.id, "located_in").some((e) => e.target === zoneId))
+    .map((n) => ({
+      id: n.data.id,
+      label: n.data.label,
+      minLevel: n.data.minLevel as number | undefined,
+      maxLevel: n.data.maxLevel as number | undefined,
+    }))
+    .sort((a, b) => (a.minLevel ?? 0) - (b.minLevel ?? 0));
+}
+
 interface GraphIndexHelpers {
   nodeById: (id: string) => NodeData | undefined;
   edgesFrom: (id: string, type: string) => EdgeData[];
@@ -889,6 +919,20 @@ export interface ZoneVendorInfo {
   // zone-naming-mismatches.md). null for the small number of zones with no
   // findable eqlwiki.com page.
   wikiTitle: string | null;
+  // Filename under public/maps/ (the zone node's own `map_image` field,
+  // migration 061) — a self-hosted copy of eqlwiki.com's own zone map, not
+  // a URL to eqlwiki.com itself (decisions/mob-node-type.md's sibling note
+  // on map sourcing covers why). null for the many zones not sourced yet.
+  mapImage: string | null;
+  // The map's own numbered/lettered key, transcribed from eqlwiki.com's key
+  // list (migration 061's `map_legend`) — `key` is the literal string
+  // printed on the map (not assumed numeric; some zones' maps key with
+  // letters instead), since the marker's position is drawn into the image
+  // itself and isn't recoverable as a coordinate. Independent of mapImage:
+  // a zone could in principle have one without the other, though in
+  // practice a legend implies a map. Empty array, not null, when a zone has
+  // a map but no legend was found on its wiki page.
+  mapLegend: { key: string; label: string }[];
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -929,6 +973,8 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
     levelRange: Number.isFinite(min) ? { min, max } : null,
     lore: (zone?.lore as string | undefined) ?? null,
     wikiTitle: (zone?.wiki_title as string | undefined) ?? null,
+    mapImage: (zone?.map_image as string | undefined) ?? null,
+    mapLegend: (zone?.map_legend as { key: string; label: string }[] | undefined) ?? [],
   };
 }
 

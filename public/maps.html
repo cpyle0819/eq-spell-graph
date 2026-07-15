@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Norraph — Routes</title>
+  <title>Norraph — Maps</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
@@ -40,8 +40,27 @@
     .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
     #reset-route-btn { margin-left: auto; padding-bottom: 8px; }
 
-    #route-result { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; }
-    /* route-card component owns its layout (public/components/route-card.js). */
+    /* Once a destination is chosen, up to two beveled objects stack here —
+       route-card (the "how do I get there," only once a starting zone is
+       also picked) above zone-dossier (the "what's actually there," which
+       only needs a destination). Real gap between them, same "distinct
+       panels, not repeated list rows" reasoning as .finder-bar above. */
+    #route-result { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; display: flex; flex-direction: column; gap: 14px; }
+    /* route-card/zone-dossier each own their own layout (public/components/). */
+
+    /* The true "nothing picked yet" state is .no-results' only child here —
+       every other outcome (a route, a notice-plus-dossier) always ends with
+       a zone-dossier appended alongside it (see maps.js's runRoute()), so
+       :has(> .no-results:only-child) can't accidentally match those. Without
+       this, the single line of text sits pinned to the top of this whole
+       flex:1 area, which on a tall viewport reads as a mostly-empty page
+       rather than a deliberate landing message. */
+    #route-result:has(> .no-results:only-child) { justify-content: center; }
+
+    /* A short inline notice ("you're already there" / "no route found")
+       that still leaves room for zone-dossier below it — unlike the
+       centered, padded .no-results used when nothing is selected at all. */
+    .no-results.compact { padding: 4px 2px 0; text-align: left; }
 
     @media (max-width: 600px) {
       main { padding: 0 0 10px; gap: 10px; }
@@ -51,8 +70,8 @@
   </style>
 </head>
 <body>
-  <app-header subtitle="Routes">
-    <nav-links slot="nav" current="route"></nav-links>
+  <app-header subtitle="Maps">
+    <nav-links slot="nav" current="maps"></nav-links>
   </app-header>
 
   <main>

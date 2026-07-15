@@ -16,6 +16,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Quest groups: a `quest_group` node, reusing the `member_of` edge](quest-group-node-type.md)
 - [Quest prerequisites: a `requires` edge, and "questline" now means this](quest-prerequisite-requires-edge.md)
 - [Quest era flagging](quest-era-flagging.md)
+- [Mobs: a `mob` node type, reusing the `located_in` edge](mob-node-type.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)

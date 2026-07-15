@@ -20,7 +20,7 @@ import "./components/index.js";
 // or soft.
 const PAGE_SCRIPTS = {
   "index.html": () => import("./app.js"),
-  "route.html": () => import("./route.js"),
+  "maps.html": () => import("./maps.js"),
   "class-browser.html": () => import("./class-browser.js"),
   "quests.html": () => import("./quests.js"),
 };

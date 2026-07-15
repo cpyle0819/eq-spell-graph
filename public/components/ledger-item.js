@@ -6,11 +6,17 @@
 // activities) -- the Leveling Guide's "Notable Finds"/"Beyond the Kill
 // Count" ledgers. Two named slots rather than one: `label` renders bold as
 // the entry's own heading (often itself a link out to eqlwiki.com or a
-// route.html deep link), `detail` renders as the muted description
+// maps.html deep link), `detail` renders as the muted description
 // trailing it, separated by a shadow-rendered dash so callers don't have
 // to hand-author that punctuation themselves. Hairline divider between
 // instances (`:host + :host`, not a per-instance border) so a run of
 // ledger-items reads as one continuous list, not stacked boxes.
+//
+// `<ledger-item stacked>` puts detail on its own line below the label
+// instead of flowing inline after it -- opt-in, since the Leveling Guide's
+// own ledgers sit in a wide column where inline flow reads fine; Maps' zone
+// dossier uses it for its narrower Quests Here column, where a long detail
+// immediately after "Label — " had very little room left to wrap into.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -25,6 +31,8 @@ ${RESET_CSS}
 ::slotted([slot="label"]) { color: var(--parch-ink); font-weight: 700; }
 ::slotted([slot="detail"]) { color: var(--parch-ink-soft); }
 .sep { color: var(--parch-ink-soft); }
+:host([stacked]) .sep { display: none; }
+:host([stacked]) ::slotted([slot="detail"]) { display: block; margin-top: 3px; }
 `);
 
 class LedgerItem extends HTMLElement {

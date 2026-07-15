@@ -138,7 +138,7 @@ export function outOfEraBadge(entity) {
 // parens, since "Starts In" is fundamentally a place, not a person.
 export function startsInBody(zones, questGivers) {
   const zoneLinks = zones
-    .map((z) => `<a class="quest-zone-link" href="route.html?to=${encodeURIComponent(z.label)}">${z.label}</a>`)
+    .map((z) => `<a class="quest-zone-link" href="maps.html?to=${encodeURIComponent(z.label)}">${z.label}</a>`)
     .join(", ");
   const giverNames = questGivers.map((g) => g.label).join(", ");
   if (zoneLinks) {

@@ -2487,7 +2487,50 @@
           }
         },
         "lore": "The Oasis of Marr is a large desert area that lies in the middle of the Desert of Ro.",
-        "wiki_title": "Oasis of Marr"
+        "wiki_title": "Oasis of Marr",
+        "map_image": "oasis-of-marr.jpg",
+        "map_legend": [
+          {
+            "key": "1",
+            "label": "Ogre Temple surrounded by Orcs"
+          },
+          {
+            "key": "2",
+            "label": "Abandoned Hut and Dock with boats to Kunark"
+          },
+          {
+            "key": "3",
+            "label": "Gypsy Camp with Combine Weapons, Food and Goods, Shaman Spells, and other Supplies"
+          },
+          {
+            "key": "4",
+            "label": "Temple surrounded by Spectres; one-way connection to Plane of Hate"
+          },
+          {
+            "key": "5",
+            "label": "Fishing Village"
+          },
+          {
+            "key": "6",
+            "label": "Cutthroat Dervish Camp"
+          },
+          {
+            "key": "7",
+            "label": "Cutthroat Dervish Camp"
+          },
+          {
+            "key": "8",
+            "label": "Inn selling Goods"
+          },
+          {
+            "key": "9",
+            "label": "Orc Camp"
+          },
+          {
+            "key": "10",
+            "label": "Aqua Goblin Tower"
+          }
+        ]
       }
     },
     {
@@ -60526,6 +60569,186 @@
         "weight": 0.2,
         "size": "Small",
         "source": "Poison Sales reward (Conium Darkblade, Dagnor's Cauldron)"
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:cistern-asp",
+        "label": "Cistern Asp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:crypt-mummy",
+        "label": "Crypt Mummy",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:ghoul",
+        "label": "Ghoul",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:sand-giant",
+        "label": "Sand Giant",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:spectre",
+        "label": "Spectre",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:orc-priest",
+        "label": "Orc Priest",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:hatar",
+        "label": "Hatar",
+        "type": "mob",
+        "minLevel": 21,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:lockjaw",
+        "label": "Lockjaw",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:cazel",
+        "label": "Cazel",
+        "type": "mob",
+        "minLevel": 51,
+        "maxLevel": 51
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:asp",
+        "label": "Asp",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:puma",
+        "label": "Puma",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:young-ronin",
+        "label": "Young Ronin",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:caiman",
+        "label": "Caiman",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:crocodile",
+        "label": "Crocodile",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:deepwater-caiman",
+        "label": "Deepwater Caiman",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:deepwater-crocodile",
+        "label": "Deepwater Crocodile",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 22
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:deepwater-goblin",
+        "label": "Deepwater Goblin",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 36
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:hurgo-felcind",
+        "label": "Hurgo Felcind",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:mantrek-needlebender",
+        "label": "Mantrek Needlebender",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:ranzall-netcaster",
+        "label": "Ranzall Netcaster",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
       }
     }
   ],
@@ -140648,6 +140871,166 @@
         "source": "quest:cutthroat-rings",
         "target": "quest:orc-picks",
         "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10014",
+        "source": "mob:oasis-of-marr:cistern-asp",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10015",
+        "source": "mob:oasis-of-marr:crypt-mummy",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10016",
+        "source": "mob:oasis-of-marr:ghoul",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10017",
+        "source": "mob:oasis-of-marr:sand-giant",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10018",
+        "source": "mob:oasis-of-marr:spectre",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10019",
+        "source": "mob:oasis-of-marr:orc-priest",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10020",
+        "source": "mob:oasis-of-marr:hatar",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10021",
+        "source": "mob:oasis-of-marr:lockjaw",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10022",
+        "source": "mob:oasis-of-marr:cazel",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10023",
+        "source": "mob:oasis-of-marr:asp",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10024",
+        "source": "mob:oasis-of-marr:puma",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10025",
+        "source": "mob:oasis-of-marr:young-ronin",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10026",
+        "source": "mob:oasis-of-marr:caiman",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10027",
+        "source": "mob:oasis-of-marr:crocodile",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10028",
+        "source": "mob:oasis-of-marr:deepwater-caiman",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10029",
+        "source": "mob:oasis-of-marr:deepwater-crocodile",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10030",
+        "source": "mob:oasis-of-marr:deepwater-goblin",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10031",
+        "source": "mob:oasis-of-marr:hurgo-felcind",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10032",
+        "source": "mob:oasis-of-marr:mantrek-needlebender",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10033",
+        "source": "mob:oasis-of-marr:ranzall-netcaster",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
       }
     }
   ]

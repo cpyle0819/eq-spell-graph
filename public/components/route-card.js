@@ -7,17 +7,16 @@
 // getZoneVendorInfo) is `{vendorCount, levelRange, lore, wikiTitle}`
 // describing the *destination* zone -- vendorCount/levelRange are spell
 // vendors actually present there (not a faction/danger judgment, since
-// Route Finder has no race/class/deity context to resolve one, unlike
+// Maps has no race/class/deity context to resolve one, unlike
 // Spell Finder's zone-card), kept to a single small badge alongside the
-// hops badge, not a data dump. `lore` is a short eqlwiki.com
-// guidebook-style blurb, passed straight through to the nested
-// <route-path>, which renders it on the parchment scroll -- the hop-by-hop
-// path stays the card's main content. `wikiTitle` is the exact eqlwiki.com
-// page title `lore` was sourced from (migration 023's `wiki_title`, not
+// hops badge, not a data dump. `wikiTitle` is the exact eqlwiki.com page
+// title this zone was sourced from (migration 023's `wiki_title`, not
 // always the same string as `to` -- see decisions/
 // zone-naming-mismatches.md) -- reused here for the header's wiki link
 // instead of re-deriving a URL from `to`, which would 404 for zones with a
-// mismatched label.
+// mismatched label. `lore` itself isn't shown here -- <zone-dossier> is the
+// canonical place for it now (it renders unconditionally below this card),
+// so repeating it here read as a straight duplicate.
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
 
@@ -78,7 +77,7 @@ ${WIKI_LINK_CSS}
   cursor: help;
 }
 .dest-badge.is-empty { font-style: italic; opacity: 0.85; }
-/* route.html's own page-level route-path override can no longer reach this
+/* maps.html's own page-level route-path override can no longer reach this
    element now that it's nested inside this component's shadow root, so
    this component owns the override directly instead. */
 route-path { --route-path-padding: 14px 18px; }
@@ -121,9 +120,7 @@ class RouteCard extends HTMLElement {
     destBadge.textContent = destinationBadgeText(this.#destination);
     destBadge.title = destinationBadgeTitle(this.#to, this.#destination);
     destBadge.classList.toggle("is-empty", !this.#destination?.vendorCount);
-    const routePath = this.shadowRoot.querySelector("route-path");
-    routePath.steps = this.#steps;
-    routePath.lore = this.#destination?.lore || "";
+    this.shadowRoot.querySelector("route-path").steps = this.#steps;
   }
 }
 

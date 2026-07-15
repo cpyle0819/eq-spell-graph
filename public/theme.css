@@ -218,7 +218,7 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 .wiki-link:hover, .wiki-link:focus-visible { color: var(--gold); border-bottom-color: var(--gold); border-bottom-style: solid; }
 .wiki-link[hidden] { display: none; }
 
-/* ── .field: Route Finder's own From/To fields (route.html has no sidebar).
+/* ── .field: Maps' own From/To fields (maps.html has no sidebar).
    Spell Finder and Class Browser sidebar fields live in sidebar-panel/
    field-row/collapsible-section/range-picker components (public/components/),
    each owning their own rules directly since outer selectors can't reach

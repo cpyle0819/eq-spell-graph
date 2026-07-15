@@ -14,7 +14,7 @@ import { RESET_CSS } from "./reset.js";
 
 const PAGES = [
   { key: "index", label: "Spells", href: "index.html" },
-  { key: "route", label: "Routes", href: "route.html" },
+  { key: "maps", label: "Maps", href: "maps.html" },
   { key: "class-browser", label: "Classes", href: "class-browser.html" },
   { key: "quests", label: "Quests", href: "quests.html" },
   { key: "leveling-guide", label: "Leveling Guide", href: "leveling-guide.html" },

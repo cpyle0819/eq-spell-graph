@@ -112,7 +112,7 @@ class SpellCard extends CardBase {
       if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
       if (e.target.closest(".wiki-link")) return; // let the link navigate normally, not a vendor-toggle click
       if (e.target.closest(".spell-check")) return; // checkbox has its own handler, not a vendor-toggle click
-      if (e.target.closest(".zone-tag")) return; // let the Route Finder link navigate normally, same as the other two
+      if (e.target.closest(".zone-tag")) return; // let the Maps link navigate normally, same as the other two
       const scroll = this.shadowRoot.querySelector(".spell-scroll");
       const existing = scroll.querySelector(".vendor-list");
       if (existing) {
@@ -125,10 +125,10 @@ class SpellCard extends CardBase {
       this.shadowRoot.querySelector(".vendor-hint").textContent = "Click to hide vendors";
       const list = document.createElement("div");
       list.className = "vendor-list";
-      // ?to=<zone label> deep-links Route Finder (route.js's applyQueryParams)
+      // ?to=<zone label> deep-links Maps (route.js's applyQueryParams)
       // straight to that destination, letting you plan how to get there.
       list.innerHTML = vendors.length
-        ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span>${v.zone ? `<a class="zone-tag" href="route.html?to=${encodeURIComponent(v.zone.label)}">— ${v.zone.label}</a>` : `<span class="zone-tag">— unknown zone</span>`}</div>`).join("")
+        ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span>${v.zone ? `<a class="zone-tag" href="maps.html?to=${encodeURIComponent(v.zone.label)}">— ${v.zone.label}</a>` : `<span class="zone-tag">— unknown zone</span>`}</div>`).join("")
         : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
       scroll.appendChild(list);
     });

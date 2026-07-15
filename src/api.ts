@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getMobs, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -241,6 +241,15 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // GET /api/zones — list all zone nodes
   if (pathname === "/api/zones") {
     return { status: 200, body: getZones() };
+  }
+
+  // GET /api/mobs?zone=zone:oasis-of-marr — mob nodes located in that zone.
+  // zone is required (unlike /api/quests' optional one); see getMobs()'s own
+  // comment in src/graph.ts for why. Empty zone param -> empty result, not
+  // every mob in the graph.
+  if (pathname === "/api/mobs") {
+    const zone = searchParams.get("zone") || "";
+    return { status: 200, body: zone ? getMobs(zone) : [] };
   }
 
   return null;

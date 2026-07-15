@@ -2,7 +2,7 @@
 // quest entry as labeled sections (Description, Starts In, Steps, Rewards)
 // rather than one flat chip row -- a badge-per-fact layout got unreadable
 // once class/level/giver/zone/xp/item/faction all competed for the same
-// spot. Starts In links the starting zone to Route Finder (same ?to=
+// spot. Starts In links the starting zone to Maps (same ?to=
 // convention as spell-card's vendor zones); Rewards chips carry a `title`
 // for hover detail (same cursor:help + title idiom as zone-card's
 // faction-badge) -- item/faction nodes are label-only for now (see

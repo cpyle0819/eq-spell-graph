@@ -9,6 +9,8 @@ import "./app-header.js";
 import "./app-footer.js";
 import "./route-path.js";
 import "./route-card.js";
+import "./zone-map.js";
+import "./zone-dossier.js";
 import "./detail-tooltip.js";
 import "./tag-input.js";
 import "./field-row.js";
