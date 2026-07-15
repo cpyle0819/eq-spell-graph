@@ -59508,7 +59508,7 @@
         "id": "quest:orc-picks",
         "label": "Orc Picks",
         "type": "quest",
-        "description": "Guard Valon in West Commonlands trades Orc Pawn Picks -- four at a time -- for coin, faction, and experience. Dubious or better faction with Guard Valon is sufficient to start. All classes.",
+        "description": "Guard Valon in West Commonlands trades Orc Pawn Picks -- four at a time -- for coin, experience, and faction with Coalition of Tradefolk Underground and Freeport Militia (Knights of Truth and Priests of Marr both worsen). Dubious or better faction with Guard Valon is sufficient to start. Disambiguated on eqlwiki.com from Orc Pawn Picks (Indigo Brotherhood), a separate quest with the same turn-in item at a different NPC. All classes.",
         "minLevel": 1,
         "steps": [
           "Kill orc pawns in West Commonlands for Orc Pawn Picks",
@@ -140623,6 +140623,22 @@
         "id": "e-rewards-10010",
         "source": "quest:poison-sales",
         "target": "item:giant-wasp-venom",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10011",
+        "source": "quest:orc-picks",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10012",
+        "source": "quest:orc-picks",
+        "target": "faction:freeport-militia",
         "type": "rewards"
       }
     }
