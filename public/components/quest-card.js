@@ -17,20 +17,27 @@
 // no real page at all, so wikiTitle is simply absent for it -- no link
 // renders rather than a guessed, likely-404 URL.
 //
-// quest.questLine (set when the quest is a member of a quest_line node --
-// see decisions/quest-line-node-type.md) renders as a small muted caption
+// quest.questGroup (set when the quest is a member of a quest_group node --
+// see decisions/quest-group-node-type.md) renders as a small muted caption
 // next to the title, not its own section -- it's a fact about the quest's
 // identity, not content on the same footing as Description/Steps/Rewards.
 // A member quest also still renders as its own full quest-card when it
-// shows up standalone (e.g. filtered results); quest-line-card.js renders
+// shows up standalone (e.g. filtered results); quest-group-card.js renders
 // the *same* Steps/Rewards markup again per member row (via quest-shared.js)
 // rather than this component being reused/nested -- see that file's own
 // header comment for why.
 //
+// quest.requires (quest --requires--> quest edges, decisions/
+// quest-prerequisite-requires-edge.md -- the actual "questline" in the
+// ordered-chain sense, distinct from a quest_group's unordered siblings)
+// renders as its own small caption too, e.g. Cutthroat Rings' "Requires:
+// Orc Picks". Not a link -- the Quests tab has no cross-card navigation
+// mechanism yet, so this is a plain textual pointer for now.
+//
 // Item reward chips reuse the same <detail-tooltip> singleton the Spell
 // Finder uses (public/components/detail-tooltip.js, one instance per page
 // -- quests.html has its own) via quest-shared.js's wireItemTooltips(),
-// shared with quest-line-card.js. detail-tooltip itself has no field-level
+// shared with quest-group-card.js. detail-tooltip itself has no field-level
 // knowledge of any entity type -- quest-shared.js's itemStats() shapes an
 // ItemSummary (full stat block per decisions/item-node-schema.md) into its
 // generic { name, description?, stats? } contract, the same division of
@@ -52,7 +59,7 @@
 // touch is Steps: each is a wax-seal ink numeral instead of a browser list
 // marker — order there is real information (talk to the NPC before you can
 // turn in the ore), so it's marked, just in the scroll's own hand rather
-// than a generic "1.". quest-line-card.js deliberately does NOT reuse this
+// than a generic "1.". quest-group-card.js deliberately does NOT reuse this
 // numeral for its own member roster (the 7 Armor of Ro pieces have no
 // order between them) -- see that file for the plain-seal alternative.
 import { CardBase, wikiLink } from "./card-base.js";
@@ -79,10 +86,11 @@ class QuestCard extends CardBase {
     const quest = this.#quest;
     if (!quest) return;
 
-    const questLineNote = quest.questLine ? `<span class="quest-line-note">Part of the ${quest.questLine.label} questline</span>` : "";
+    const questGroupNote = quest.questGroup ? `<span class="quest-group-note">Part of the ${quest.questGroup.label} quest group</span>` : "";
+    const requiresNote = quest.requires?.length ? `<span class="quest-group-note">Requires: ${quest.requires.map((r) => r.label).join(", ")}</span>` : "";
 
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${quest.label}</h3>${quest.wikiTitle ? wikiLink(quest.wikiTitle) : ""}${questLineNote}</div>
+      <div class="spell-header"><h3>${quest.label}</h3>${quest.wikiTitle ? wikiLink(quest.wikiTitle) : ""}${questGroupNote}${requiresNote}</div>
       <div class="spell-scroll">
         <div class="spell-badges">${outOfEraBadge(quest)}${headerBadges(quest.classes, quest.minLevel, quest.maxLevel)}</div>
         ${section("Description", quest.description ? `<p class="spell-desc">${quest.description}</p>` : "")}

@@ -13,7 +13,8 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Spell class/level model](spell-class-level-model.md)
 - [Quest structure and reward modeling](quest-reward-modeling.md)
 - [Item node schema](item-node-schema.md)
-- [Quest lines: a `quest_line` node, reusing the `member_of` edge](quest-line-node-type.md)
+- [Quest groups: a `quest_group` node, reusing the `member_of` edge](quest-group-node-type.md)
+- [Quest prerequisites: a `requires` edge, and "questline" now means this](quest-prerequisite-requires-edge.md)
 - [Quest era flagging](quest-era-flagging.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
@@ -78,6 +79,6 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Wiki links: per-entity page vs. shared-page link, by node type](wiki-links-per-entity-vs-shared-page.md)
 - [Spell icons: real client art, a deliberate exception to the derived-facts-only policy](spell-icons-real-client-art-exception.md)
 - [Item hover uses the generic detail-tooltip, shaped per card type](item-hover-uses-generic-detail-tooltip.md)
-- [Quest-line card replaces its members in the results list](quest-line-card-ui.md)
+- [Quest-group card replaces its members in the results list](quest-group-card-ui.md)
 - [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
 

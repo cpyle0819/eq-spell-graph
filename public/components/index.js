@@ -24,7 +24,7 @@ import "./aa-card.js";
 import "./ability-card.js";
 import "./stance-card.js";
 import "./quest-card.js";
-import "./quest-line-card.js";
+import "./quest-group-card.js";
 import "./welcome-scroll.js";
 import "./parchment-page.js";
 import "./trail-stop.js";

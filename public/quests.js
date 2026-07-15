@@ -22,7 +22,7 @@ let classTagInput;
 let selectedClassNames = [];
 
 let rawQuests = [];
-let rawQuestLines = [];
+let rawQuestGroups = [];
 
 // Out-of-era content is hidden by default (decisions/quest-era-flagging.md
 // -- it isn't actually reachable in the game's current era yet), with this
@@ -58,13 +58,13 @@ export async function init() {
   fetchQuests();
 }
 
-// ?search=<quest or questline name> deep-links here (e.g. from the Leveling
+// ?search=<quest or quest group name> deep-links here (e.g. from the Leveling
 // Guide) straight to one entry, reusing the existing search box rather than
 // a separate highlight/scroll mechanism -- buildResultEntries()'s search
-// already matches a questline by its own name or any member's, so a link
-// naming one Armor of Ro piece still lands on the Armor of Ro line card,
+// already matches a quest group by its own name or any member's, so a link
+// naming one Armor of Ro piece still lands on the Armor of Ro group card,
 // not a 404 for a member with no card of its own (decisions/
-// quest-line-card-ui.md).
+// quest-group-card-ui.md).
 function applyQueryParams() {
   const search = new URLSearchParams(location.search).get("search");
   if (search) document.getElementById("quest-search").value = search;
@@ -116,7 +116,7 @@ function setupFilters() {
   });
 
   // Purely a display filter over already-fetched data (era/outOfEra is
-  // already in every quest/questLine the API returns) -- render(), not
+  // already in every quest/questGroup the API returns) -- render(), not
   // fetchQuests(), same reasoning as the search box above.
   document.getElementById("quest-show-out-of-era").addEventListener("change", (e) => {
     showOutOfEra = e.target.checked;
@@ -155,23 +155,23 @@ async function fetchQuests() {
   const level = document.getElementById("quest-level-select").value;
   if (level !== "all") params.set("level", level);
 
-  // Same filter params against both endpoints -- a questline's own
-  // classes/minLevel mirror its members' (decisions/quest-line-node-type.md),
+  // Same filter params against both endpoints -- a quest group's own
+  // classes/minLevel mirror its members' (decisions/quest-group-node-type.md),
   // so both respond to the same picker state.
-  const [quests, questLines] = await Promise.all([
+  const [quests, questGroups] = await Promise.all([
     fetch(`api/quests?${params}`).then((r) => r.json()),
-    fetch(`api/quest-lines?${params}`).then((r) => r.json()),
+    fetch(`api/quest-groups?${params}`).then((r) => r.json()),
   ]);
   if (token !== fetchToken) return; // a newer filter change superseded this request
   rawQuests = quests;
-  rawQuestLines = questLines;
+  rawQuestGroups = questGroups;
   render();
 }
 
 function render() {
   const resultsEl = document.getElementById("quests-results");
   const searchQuery = document.getElementById("quest-search").value;
-  const entries = buildQuestResultEntries(rawQuests, rawQuestLines, searchQuery, showOutOfEra);
+  const entries = buildQuestResultEntries(rawQuests, rawQuestGroups, searchQuery, showOutOfEra);
 
   resultsEl.innerHTML = "";
   if (!entries.length) {

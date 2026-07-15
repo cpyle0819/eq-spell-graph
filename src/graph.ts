@@ -1,11 +1,11 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone, quest, quest_line, item, faction, era (extensible: more as needed)
- * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of (extensible: requires)
+ * Node types: spell, npc, zone, quest, quest_group, item, faction, era (extensible: more as needed)
+ * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of, requires
  *
  * `located_in` means different things by source type: npc --located_in--> zone
- * is "physically stands here" (unchanged). quest/quest_line --located_in--> zone
+ * is "physically stands here" (unchanged). quest/quest_group --located_in--> zone
  * is broader -- "this quest's steps involve this zone" (giver's zone plus any
  * zone a required step sends the player to, e.g. a farmed reagent with no
  * substitute) -- see decisions/quest-reward-modeling.md. quest --starts_in-->
@@ -279,10 +279,15 @@ export interface QuestSummary {
   // since the Quests UI only ever uses these to deep-link into the Spell
   // Finder, not to render a full spell stat block the way itemRewards does.
   spellRewards: { id: string; label: string }[];
-  // Resolved from a quest --member_of--> quest_line edge (same edge type
+  // Resolved from a quest --member_of--> quest_group edge (same edge type
   // spell --member_of--> spell_line already uses for grouping -- see
-  // decisions/quest-line-node-type.md). undefined for a standalone quest.
-  questLine?: { id: string; label: string };
+  // decisions/quest-group-node-type.md). undefined for a standalone quest.
+  questGroup?: { id: string; label: string };
+  // Resolved from quest --requires--> quest edges: other quests that must be
+  // completed first (decisions/quest-prerequisite-requires-edge.md). This is
+  // the actual prerequisite-chain relationship -- distinct from quest_group,
+  // which groups independent siblings with no ordering between them.
+  requires?: { id: string; label: string }[];
   // The real eqlwiki.com page title (migration 030), same wiki_title ->
   // wikiTitle convention as zone nodes (decisions/
   // wiki-links-per-entity-vs-shared-page.md) -- undefined for quests with
@@ -302,11 +307,11 @@ export interface QuestSummary {
   outOfEra?: boolean;
 }
 
-// A quest_line's own zones/questGivers/classes/level fields describe the
-// line's *shared* frame (e.g. Lord Searfire, Temple of Solusek Ro, "Paladin
+// A quest_group's own zones/questGivers/classes/level fields describe the
+// group's *shared* frame (e.g. Lord Searfire, Temple of Solusek Ro, "Paladin
 // 30+" for every Armor of Ro piece) -- distinct from each member's own
 // giver/zone (each Mold of Ro sub-quest has its own NPC in Rathe Mountains).
-export interface QuestLineSummary {
+export interface QuestGroupSummary {
   id: string;
   label: string;
   description?: string;
@@ -408,7 +413,7 @@ function isOutOfEra(era: string | undefined, helpers: GraphIndexHelpers): boolea
 // zone.era (migration 049) is the same plain-label convention as
 // quest.era, verified against each zone's own eqlwiki.com page rather than
 // guessed from classic-EQ expansion history (see CLAUDE.md and
-// decisions/quest-era-flagging.md). A quest/quest_line's outOfEra is the
+// decisions/quest-era-flagging.md). A quest/quest_group's outOfEra is the
 // worse of its own stated era and any zone it touches (located_in/
 // starts_in) being confirmed out-of-era -- a quest physically set in a
 // zone the wiki confirms is Kunark/Velious can't itself be earlier era
@@ -437,8 +442,8 @@ function resolveEra(
   return { ...(effectiveEra ? { era: effectiveEra } : {}), ...(outOfEra ? { outOfEra: true } : {}) };
 }
 
-// Shared by getQuests() and getQuestLines() (for each line's members) --
-// resolves one quest node's zones/giver/rewards/parent-line edges into the
+// Shared by getQuests() and getQuestGroups() (for each group's members) --
+// resolves one quest node's zones/giver/rewards/parent-group edges into the
 // shape the Quests UI actually consumes. Kept private: callers only ever
 // need the two exported entry points below.
 function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSummary {
@@ -456,9 +461,12 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
   const rewardTargets = edgesFrom(id, "rewards")
     .map((e) => nodeById(e.target))
     .filter((r): r is NodeData => !!r);
-  const questLineNode = edgesFrom(id, "member_of")
+  const questGroupNode = edgesFrom(id, "member_of")
     .map((e) => nodeById(e.target))
-    .find((n): n is NodeData => n?.type === "quest_line");
+    .find((n): n is NodeData => n?.type === "quest_group");
+  const requiresNodes = edgesFrom(id, "requires")
+    .map((e) => nodeById(e.target))
+    .filter((n): n is NodeData => !!n);
   const touchedZoneIds = new Set([
     ...edgesFrom(id, "located_in").map((e) => e.target),
     ...edgesFrom(id, "starts_in").map((e) => e.target),
@@ -477,7 +485,8 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     itemRewards: rewardTargets.filter((r) => r.type === "item").map(toItemSummary),
     factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
     spellRewards: rewardTargets.filter((r) => r.type === "spell").map((r) => ({ id: r.id, label: r.label })),
-    ...(questLineNode ? { questLine: { id: questLineNode.id, label: questLineNode.label } } : {}),
+    ...(questGroupNode ? { questGroup: { id: questGroupNode.id, label: questGroupNode.label } } : {}),
+    ...(requiresNodes.length ? { requires: requiresNodes.map((n) => ({ id: n.id, label: n.label })) } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
     ...resolveEra(node.era as string | undefined, touchedZoneIds, helpers),
   };
@@ -533,19 +542,19 @@ export function getQuests(classNames?: string[], zoneId?: string, level?: number
 }
 
 // Same filter semantics as getQuests() (see its comment), applied to
-// quest_line nodes instead -- a line's own classes/minLevel/maxLevel
-// describe its shared frame (decisions/quest-line-node-type.md), which is
+// quest_group nodes instead -- a group's own classes/minLevel/maxLevel
+// describe its shared frame (decisions/quest-group-node-type.md), which is
 // what's actually filterable; members are resolved unconditionally once
-// their line passes the filter; zoneId only checks the line's own zone
+// their group passes the filter; zoneId only checks the group's own zone
 // (e.g. Temple of Solusek Ro), not each member's individual zone.
-export function getQuestLines(classNames?: string[], zoneId?: string, level?: number): QuestLineSummary[] {
+export function getQuestGroups(classNames?: string[], zoneId?: string, level?: number): QuestGroupSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const { nodeById, edgesFrom, edgesTo } = helpers;
 
   const results = graph.nodes
-    .filter((n) => n.data.type === "quest_line" && matchesFilters(n.data, classNames, level))
-    .map((n): QuestLineSummary => {
+    .filter((n) => n.data.type === "quest_group" && matchesFilters(n.data, classNames, level))
+    .map((n): QuestGroupSummary => {
       const id = n.data.id;
       const zones = edgesFrom(id, "located_in")
         .map((e) => nodeById(e.target))

@@ -1,10 +1,10 @@
-// Shared rendering helpers for quest-card.js and quest-line-card.js -- pure
+// Shared rendering helpers for quest-card.js and quest-group-card.js -- pure
 // functions producing the same section/badge/chip/tooltip markup both need
-// (a questline card's own overview uses the identical "Starts In"/"Steps"/
+// (a quest group card's own overview uses the identical "Starts In"/"Steps"/
 // "Rewards" treatment a standalone quest-card does, and each member row
-// inside a questline card re-renders a full quest's Steps/Rewards too).
+// inside a group card re-renders a full quest's Steps/Rewards too).
 // Kept separate from card-base.js (shared by every card type -- spell/aa/
-// ability/stance/quest/quest-line) since these are quest/item-domain
+// ability/stance/quest/quest-group) since these are quest/item-domain
 // specific, not generic card-shell concerns.
 //
 // Also shared by the two *pages* that render quest results -- quests.js
@@ -17,7 +17,7 @@ import { classBadges } from "./card-base.js";
 // Raw CSS text (not a constructed CSSStyleSheet), same convention as
 // reset.js's RESET_CSS / card-base.js's WIKI_LINK_CSS -- CardBase's
 // `static extraSheet` slot holds exactly one sheet per leaf, so a leaf that
-// needs shared rules spliced together with its own (quest-line-card.js
+// needs shared rules spliced together with its own (quest-group-card.js
 // needs this text *plus* its own roster-specific rules) has to compose the
 // text itself, not adopt a second constructed sheet object.
 export const QUEST_CARD_CSS = `
@@ -31,7 +31,7 @@ export const QUEST_CARD_CSS = `
 }
 .quest-section-body { font-size: 13px; color: #4a4232; line-height: 1.5; }
 
-.quest-line-note { font-size: 11px; color: var(--ink-muted); font-style: italic; }
+.quest-group-note { font-size: 11px; color: var(--ink-muted); font-style: italic; }
 
 .quest-starts-in { display: flex; align-items: center; gap: 8px; }
 .quest-waypoint {
@@ -226,7 +226,7 @@ export function rewardsBody(quest) {
 }
 
 // Wires item-reward-chip hover -> <detail-tooltip>, shared by quest-card.js
-// (one quest's own itemRewards) and quest-line-card.js (the union of every
+// (one quest's own itemRewards) and quest-group-card.js (the union of every
 // member's itemRewards) -- only the lookup scope differs, so findItem(id)
 // is supplied by the caller. Listening on shadowRoot itself (not `this`/
 // the host) sees the real internal e.target/e.relatedTarget directly --
@@ -248,9 +248,9 @@ export function wireItemTooltips(shadowRoot, findItem) {
   });
 }
 
-// A questline matches search if its own name does, or any member's does --
-// searching "bracer" should still surface the Armor of Ro line, since its
-// quest-line-card is the only place that member's card renders.
+// A quest group matches search if its own name does, or any member's does --
+// searching "bracer" should still surface the Armor of Ro group, since its
+// quest-group-card is the only place that member's card renders.
 // Matches on more than just the title -- a quest's description/steps text is
 // often the only place a turn-in item is mentioned at all (e.g. "Fire Beetle
 // Eyes" isn't a rewards edge, just prose -- see decisions/
@@ -262,38 +262,38 @@ function questMatchesSearch(quest, q) {
   return quest.steps.some((step) => step.toLowerCase().includes(q));
 }
 
-function questLineMatchesSearch(line, q) {
+function questGroupMatchesSearch(group, q) {
   if (!q) return true;
-  if (line.label.toLowerCase().includes(q)) return true;
-  if (line.description && line.description.toLowerCase().includes(q)) return true;
-  return line.members.some((m) => questMatchesSearch(m, q));
+  if (group.label.toLowerCase().includes(q)) return true;
+  if (group.description && group.description.toLowerCase().includes(q)) return true;
+  return group.members.some((m) => questMatchesSearch(m, q));
 }
 
-// One quest-line-card per line (never its members' individual quest-cards
-// -- that's the whole point of quest_line, see decisions/
-// quest-line-node-type.md) interleaved alphabetically with standalone
-// quest-cards (quests with no questLine, or whose line isn't in the
-// `questLines` list passed in). Sorting by label rather than "lines first"
+// One quest-group-card per group (never its members' individual quest-cards
+// -- that's the whole point of quest_group, see decisions/
+// quest-group-node-type.md) interleaved alphabetically with standalone
+// quest-cards (quests with no questGroup, or whose group isn't in the
+// `questGroups` list passed in). Sorting by label rather than "groups first"
 // reads as one unified list, not two stacked sections. Callers decide which
-// quests/questLines to pass in (e.g. class-browser.js's own class-narrowing
+// quests/questGroups to pass in (e.g. class-browser.js's own class-narrowing
 // rule, decisions/class-browser-quests-category.md) -- this function only
 // combines and sorts, it doesn't filter by class.
 // includeOutOfEra defaults to false -- out-of-era content (Kunark/Velious
 // zones and anything located_in them, decisions/quest-era-flagging.md)
 // isn't actually reachable in the game's current era yet, so it's hidden
 // by default rather than cluttering results a player can't act on. A
-// quest_line is filtered on its own outOfEra (the shared frame's zone),
-// not each member's -- same "line's own fields describe the shared frame"
-// precedent as classes/minLevel (decisions/quest-line-node-type.md).
-export function buildQuestResultEntries(quests, questLines, searchQuery, includeOutOfEra = false) {
+// quest_group is filtered on its own outOfEra (the shared frame's zone),
+// not each member's -- same "group's own fields describe the shared frame"
+// precedent as classes/minLevel (decisions/quest-group-node-type.md).
+export function buildQuestResultEntries(quests, questGroups, searchQuery, includeOutOfEra = false) {
   const q = (searchQuery || "").trim().toLowerCase();
-  const visibleQuestLines = includeOutOfEra ? questLines : questLines.filter((line) => !line.outOfEra);
+  const visibleQuestGroups = includeOutOfEra ? questGroups : questGroups.filter((group) => !group.outOfEra);
   const visibleQuests = includeOutOfEra ? quests : quests.filter((quest) => !quest.outOfEra);
-  const lineIds = new Set(visibleQuestLines.map((l) => l.id));
+  const groupIds = new Set(visibleQuestGroups.map((g) => g.id));
   const entries = [
-    ...visibleQuestLines.filter((line) => questLineMatchesSearch(line, q)).map((line) => ({ label: line.label, tag: "quest-line-card", data: line })),
+    ...visibleQuestGroups.filter((group) => questGroupMatchesSearch(group, q)).map((group) => ({ label: group.label, tag: "quest-group-card", data: group })),
     ...visibleQuests
-      .filter((quest) => !quest.questLine || !lineIds.has(quest.questLine.id))
+      .filter((quest) => !quest.questGroup || !groupIds.has(quest.questGroup.id))
       .filter((quest) => questMatchesSearch(quest, q))
       .map((quest) => ({ label: quest.label, tag: "quest-card", data: quest })),
   ];

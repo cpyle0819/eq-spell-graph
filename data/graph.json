@@ -44940,9 +44940,9 @@
     },
     {
       "data": {
-        "id": "quest_line:armor-of-ro",
+        "id": "quest_group:armor-of-ro",
         "label": "Armor of Ro",
-        "type": "quest_line",
+        "type": "quest_group",
         "description": "A Paladin-only armor set. Each piece has its own independent faction-gated turn-in at the Rathe Mountains paladin camp for a Mold of Ro; combine any mold with a hand-crafted Bar of Ronium at a non-cultural forge for the finished piece. There's no need to do all seven.",
         "classes": [
           "paladin"
@@ -119902,14 +119902,14 @@
       "data": {
         "id": "e-starts-7428",
         "source": "npc:temple-of-solusek-ro:lord-searfire",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "starts"
       }
     },
     {
       "data": {
         "id": "e-located_in-7429",
-        "source": "quest_line:armor-of-ro",
+        "source": "quest_group:armor-of-ro",
         "target": "zone:temple-of-solusek-ro",
         "type": "located_in"
       }
@@ -119942,7 +119942,7 @@
       "data": {
         "id": "e-member_of-7433",
         "source": "quest:mold-of-ro-boots",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -119966,7 +119966,7 @@
       "data": {
         "id": "e-member_of-7436",
         "source": "quest:mold-of-ro-bracer",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -120006,7 +120006,7 @@
       "data": {
         "id": "e-member_of-7441",
         "source": "quest:mold-of-ro-breastplate",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -120054,7 +120054,7 @@
       "data": {
         "id": "e-member_of-7447",
         "source": "quest:mold-of-ro-gauntlets",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -120102,7 +120102,7 @@
       "data": {
         "id": "e-member_of-7453",
         "source": "quest:mold-of-ro-greaves",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -120150,7 +120150,7 @@
       "data": {
         "id": "e-member_of-7459",
         "source": "quest:mold-of-ro-helm",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -120198,7 +120198,7 @@
       "data": {
         "id": "e-member_of-7465",
         "source": "quest:mold-of-ro-vambrace",
-        "target": "quest_line:armor-of-ro",
+        "target": "quest_group:armor-of-ro",
         "type": "member_of"
       }
     },
@@ -140640,6 +140640,14 @@
         "source": "quest:orc-picks",
         "target": "faction:freeport-militia",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10013",
+        "source": "quest:cutthroat-rings",
+        "target": "quest:orc-picks",
+        "type": "requires"
       }
     }
   ]
