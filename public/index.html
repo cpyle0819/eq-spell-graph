@@ -45,7 +45,15 @@
       background-attachment: fixed, scroll;
       padding: 0 14px 14px; gap: 14px;
     }
-    #results { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; }
+    /* scrollbar-gutter: stable (issue #31) always reserves the scrollbar's
+       width on the right, even when nothing overflows -- that reserved
+       strip sits between the cards and status-panel and reads as a stray
+       gap. --gutter-w (app.js, measured from the real offsetWidth/
+       clientWidth delta since scrollbar width isn't a CSS length) lets
+       each direct child bleed back into that reserved strip instead of
+       leaving it empty, without giving up the anti-jank reservation. */
+    #results { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; --gutter-w: 0px; }
+    #results > * { width: calc(100% + var(--gutter-w)); margin-right: calc(-1 * var(--gutter-w)); }
 
     /* sidebar-panel/field-row/collapsible-section/range-picker/
        status-panel/mana-bar/zone-card (public/components/) own their own

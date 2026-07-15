@@ -37,6 +37,18 @@ function setupTooltip() {
   document.getElementById("results").addEventListener("scroll", hideTooltip, { passive: true });
 }
 
+// scrollbar-gutter: stable (index.html, issue #31) reserves the scrollbar's
+// width unconditionally so cards don't jump when the list crosses the
+// overflow threshold -- but that width isn't expressible as a CSS length,
+// so index.html's #results > * rule reads it from this custom property to
+// bleed back into the reserved strip instead of leaving it as a gap next to
+// status-panel. Re-measured on resize since it tracks the real scrollbar
+// width (OS/zoom-dependent), not a fixed guess.
+function syncResultsGutterWidth() {
+  const el = document.getElementById("results");
+  el.style.setProperty("--gutter-w", `${el.offsetWidth - el.clientWidth}px`);
+}
+
 const STATE_KEY = "eq-planner-state";
 // Separate from STATE_KEY (filter values) — this is purely "has this
 // browser ever landed here before," so a first-time visitor who never
@@ -176,6 +188,8 @@ export async function init() {
   consumePinnedSpellFromUrl();
   setupAutoSave();
   setupTooltip();
+  syncResultsGutterWidth();
+  window.addEventListener("resize", syncResultsGutterWidth);
   document.getElementById("reset-filters-btn").addEventListener("click", resetFilters);
   document.getElementById("primary-class-select").addEventListener("change", updatePrimaryClassWikiLink);
   updatePrimaryClassWikiLink();
