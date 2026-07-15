@@ -55663,6 +55663,823 @@
         "label": "Kerra Isle",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:ton-firepride",
+        "label": "Ton Firepride",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hurrietas-tunic-quest",
+        "label": "Hurrieta's Tunic Quest",
+        "type": "quest",
+        "description": "Ton Firepride in South Qeynos trades Hurrieta's Tunic (received from completing Faren's Tacklebox) for Hurrieta's Bloody Dress, then Garuc Anehm in the Qeynos Aqueducts trades that dress for coin, experience, and a piece of Patchwork armor or a Rat Shaped Ring.",
+        "minLevel": 1,
+        "steps": [
+          "Complete Faren's Tacklebox to receive Hurrieta's Tunic",
+          "Give Hurrieta's Tunic to Ton Firepride in South Qeynos, receiving Hurrieta's Bloody Dress",
+          "Travel to the Qeynos Aqueducts and give the dress to Garuc Anehm"
+        ],
+        "wiki_title": "Hurrieta's Tunic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rat-shaped-ring",
+        "label": "Rat Shaped Ring",
+        "type": "item",
+        "resists": {
+          "disease": 10,
+          "poison": 10
+        },
+        "source": "Hurrieta's Tunic Quest reward (Garuc Anehm, Qeynos Aqueducts)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:josper-kenshed",
+        "label": "Josper Kenshed",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ice-goblin-beads",
+        "label": "Ice Goblin Beads",
+        "type": "quest",
+        "description": "Josper Kenshed, in the Tower of the Crimson Hands in Erudin Palace, requiring Amiable or better faction, trades a Bag of Ice Necklaces -- 6 Goblin Ice Necklaces combined in an Empty Bag he provides -- for a caster weapon and coin. Enchanter, Magician, Necromancer, and Wizard only.",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive an Empty Bag from Josper Kenshed",
+          "Collect 6 Goblin Ice Necklaces from ice goblins",
+          "Combine them into a Bag of Ice Necklaces and turn it in to Josper Kenshed"
+        ],
+        "wiki_title": "Ice Goblin Beads"
+      }
+    },
+    {
+      "data": {
+        "id": "item:servants-staff",
+        "label": "Servant's Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "skill": "1H Blunt",
+        "damage": 4,
+        "delay": 28,
+        "mana": 5,
+        "weight": 8.5,
+        "size": "Large",
+        "source": "Ice Goblin Beads reward (Josper Kenshed, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:everfrost-peaks:lysbith-mcnaff",
+        "label": "Lysbith McNaff",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ice-goblin-necklaces",
+        "label": "Ice Goblin Necklaces",
+        "type": "quest",
+        "description": "Lysbith McNaff, at the Pit of Doom in Everfrost Peaks, requiring Indifferent or better faction, trades a Goblin Ice Necklace -- looted from ice goblin whelps or scouts -- for a random minor supply item and coin.",
+        "minLevel": 2,
+        "steps": [
+          "Kill an ice goblin whelp or scout in Everfrost Peaks for a Goblin Ice Necklace",
+          "Turn it in to Lysbith McNaff"
+        ],
+        "wiki_title": "Ice Goblin Necklaces"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-karana:quartermaster-nellian",
+        "label": "Quartermaster Nellian",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:icestars-eve-snowdrift-feast",
+        "label": "Icestar's Eve Snowdrift Feast",
+        "type": "quest",
+        "description": "A seasonal 'Cracking of the Icestar' event quest -- Quartermaster Nellian in Northern Karana trades Mammoth Meat (from mammoths in Eastern Wastes or Everfrost Peaks), Snow Bunny Stew (baked), and Chilled Berries (from a tundra yeti in Dreadlands) for Aurillias' Winter Broth and a Holiday Gift.",
+        "minLevel": 1,
+        "steps": [
+          "Collect Mammoth Meat from a mammoth in Eastern Wastes or Everfrost Peaks",
+          "Bake Snow Bunny Stew",
+          "Collect Chilled Berries from a tundra yeti in Dreadlands",
+          "Turn all three in to Quartermaster Nellian"
+        ],
+        "wiki_title": "Icestar's Eve Snowdrift Feast"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aurillias-winter-broth",
+        "label": "Aurillias' Winter Broth",
+        "type": "item",
+        "source": "Icestar's Eve Snowdrift Feast reward (Quartermaster Nellian, Northern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ilanics-scroll",
+        "label": "Ilanic's Scroll",
+        "type": "quest",
+        "description": "Josper Kenshed, in Erudin Palace, requiring Amiable or better faction, trades Half of a Spell -- looted from A Kobold Caster, a rare spawn in Toxxulia Forest -- for the Wizard spell Column of Frost and coin.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 5,
+        "steps": [
+          "Kill A Kobold Caster in Toxxulia Forest for Half of a Spell",
+          "Turn it in to Josper Kenshed"
+        ],
+        "wiki_title": "Ilanic's Scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:tara-neklene",
+        "label": "Tara Neklene",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:illegible-cantrip-quest",
+        "label": "Illegible Cantrip Quest",
+        "type": "quest",
+        "description": "Tara Neklene, at the Academy of Arcane Sciences in West Freeport, trades an Illegible Cantrip (looted from an orc apprentice in East Commonlands) for a random Elementalkin spell, minor items, and coin. A second phase, requiring Amiable or better faction with the Arcane Scientists, trades an Illegible Scroll (from orc oracles) for another random Elementalkin spell.",
+        "minLevel": 5,
+        "steps": [
+          "Kill an orc apprentice in East Commonlands for an Illegible Cantrip",
+          "Turn it in to Tara Neklene",
+          "At Amiable or better faction, turn in an Illegible Scroll from an orc oracle for a second reward"
+        ],
+        "wiki_title": "Illegible Cantrip Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:high-keep:lozani",
+        "label": "Lozani",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:illegible-scrolls",
+        "label": "Illegible Scrolls",
+        "type": "quest",
+        "description": "Lozani, in High Keep (occasionally found in East Freeport instead), requiring Amiable or better faction, trades either an illegible scroll and 4 gold (from orc oracles) or two illegible cantrips (from orc apprentices) for a random low-level spell. Restricted to Casters and Priests.",
+        "minLevel": 5,
+        "steps": [
+          "Collect an illegible scroll from an orc oracle, or two illegible cantrips from orc apprentices",
+          "Turn them in to Lozani for a random spell"
+        ],
+        "wiki_title": "Illegible Scrolls"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-felwithe:general-jyleel",
+        "label": "General Jyleel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:illegible-scrolls-felwithe",
+        "label": "Illegible Scrolls (Felwithe)",
+        "type": "quest",
+        "description": "General Jyleel, downstairs in the Paladin Guild Hall in Northern Felwithe, trades an Illegible Scroll -- a random drop from an Orc Oracle in Crushbone -- for a random minor supply item.",
+        "minLevel": 9,
+        "steps": [
+          "Kill an Orc Oracle in Crushbone for an Illegible Scroll",
+          "Turn it in to General Jyleel"
+        ],
+        "wiki_title": "Illegible Scrolls (Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:luminare-pasinia",
+        "label": "Luminare Pasinia",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:illusion-iksar-quest",
+        "label": "Illusion: Iksar Quest",
+        "type": "quest",
+        "description": "Luminare Pasinia in Firiona Vie, requiring Enchanter, trades powder of Nok (froglok nok shaman, Firiona Vie), heart of ice (icebone skeletons, Lake of Ill Omen), a Ton warrior totem (frogloks, Swamp of No Hope), and a sabertooth tiger mane (Lake of Ill Omen) for the Visions of Sebilite scroll, which scribes as Illusion: Iksar.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 25,
+        "steps": [
+          "Collect powder of Nok from a froglok nok shaman in Firiona Vie",
+          "Collect a heart of ice from an icebone skeleton in Lake of Ill Omen",
+          "Collect a Ton warrior totem from a froglok in Swamp of No Hope",
+          "Collect a sabertooth tiger mane from a sabertooth tiger in Lake of Ill Omen",
+          "Turn in all four to Luminare Pasinia for the Visions of Sebilite scroll"
+        ],
+        "wiki_title": "Illusion: Iksar Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:war-historian-kobl",
+        "label": "War Historian Kobl",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:illweed-parchment-quest",
+        "label": "Illweed Parchment Quest",
+        "type": "quest",
+        "description": "War Historian Kobl, at the Warriors Guild in East Cabilis, trades four illweed reeds -- fished from Lake of Ill Omen -- for an Illweed Parchment and faction standing.",
+        "minLevel": 1,
+        "steps": [
+          "Fish 4 illweed reeds from Lake of Ill Omen",
+          "Turn them in to War Historian Kobl"
+        ],
+        "wiki_title": "Illweed Parchment Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illweed-parchment",
+        "label": "Illweed Parchment",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Illweed Parchment Quest reward (War Historian Kobl, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:indaria",
+        "label": "Indaria",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:indarias-doll",
+        "label": "Indaria's Doll",
+        "type": "quest",
+        "description": "Indaria, at the Office of the People behind the bank in South Qeynos, trades A Doll -- looted off a shark in the Qeynos Aqueducts, near the South Qeynos docks, in Erudin harbor, or near the Freeport Harbor -- for a Velvet Choker, coin, and experience.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ],
+        "minLevel": 15,
+        "steps": [
+          "Kill a shark for A Doll",
+          "Turn it in to Indaria in South Qeynos"
+        ],
+        "wiki_title": "Indaria's Doll"
+      }
+    },
+    {
+      "data": {
+        "id": "item:velvet-choker",
+        "label": "Velvet Choker",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 3,
+        "hp": 5,
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Indaria's Doll reward (Indaria, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:toresian-fhabel",
+        "label": "Toresian Fhabel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:inert-potion-quest",
+        "label": "Inert Potion Quest",
+        "type": "quest",
+        "description": "Toresian Fhabel, in Erudin Palace, requiring Amiable or better faction, hands out an Inert Potion to deliver to either Slansin or Slansin Denvin at the Vials of Vitality shop downstairs -- each choice adjusts a different set of Erudin factions.",
+        "minLevel": 1,
+        "steps": [
+          "Receive an Inert Potion from Toresian Fhabel",
+          "Deliver it to Slansin or Slansin Denvin at Vials of Vitality"
+        ],
+        "wiki_title": "Inert Potion Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:savarixsa-zexus",
+        "label": "Savarixsa Zexus",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:saxarivza-zaxun",
+        "label": "Saxarivza Zaxun",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:innoruuk-recommendation",
+        "label": "Innoruuk Recommendation",
+        "type": "quest",
+        "description": "Savarixsa Zexus in the Grobb Shaman guild (requiring Dubious or better faction), or Saxarivza Zaxun in the tunnels under East Freeport, hands out a note for Perrir Zexus in Neriak Third Gate. Perrir then trades a Leatherfoot Raider Skullcap, dropped by Leatherfoot halflings in Nektulos Forest, for minor coin and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Savarixsa Zexus (Grobb) or Saxarivza Zaxun (East Freeport) and say 'I am devoted to Innoruuk'",
+          "Deliver the note received to Perrir Zexus in Neriak Third Gate",
+          "Kill a Leatherfoot halfling in Nektulos Forest for a Leatherfoot Raider Skullcap",
+          "Turn the skullcap in to Perrir Zexus"
+        ],
+        "wiki_title": "Innoruuk Recommendation"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:renth-mclanis",
+        "label": "Renth McLanis",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivan-mcmannus-remains",
+        "label": "Ivan McMannus' Remains",
+        "type": "quest",
+        "description": "Renth McLanis, the Warrior Guildmaster at McDaniels Smokes & Spirits in Halas, trades a Box of Remains -- a Barbarian Femur, Jaw, Skull, and Rib, ground spawns found diving beneath the ice in an Everfrost Peaks river -- for a random minor item and coin.",
+        "minLevel": 10,
+        "steps": [
+          "Dive beneath the frozen river in Everfrost Peaks for a Barbarian Femur, Jaw, Skull, and Rib",
+          "Combine them into a Box of Remains",
+          "Turn it in to Renth McLanis"
+        ],
+        "wiki_title": "Ivan McMannus' Remains"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:jagged-pine-crook-staff",
+        "label": "Jagged Pine Crook Staff",
+        "type": "quest",
+        "description": "Corun Finisc in Surefall Glade, requiring Amiable or better faction, trades the Bottom and Top of a Broken Staff -- an extremely rare drop from a gnoll hunter wandering between Surefall Glade and Blackburrow -- for the Jaggedpine Crook. Druid and Ranger only.",
+        "classes": [
+          "druid",
+          "ranger"
+        ],
+        "minLevel": 5,
+        "steps": [
+          "Kill a gnoll hunter between Surefall Glade and Blackburrow for the Bottom and Top of Broken Staff",
+          "Turn both in to Corun Finisc"
+        ],
+        "wiki_title": "Jagged Pine Crook Staff"
+      }
+    },
+    {
+      "data": {
+        "id": "item:jaggedpine-crook",
+        "label": "Jaggedpine Crook",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "druid",
+          "ranger"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 31,
+        "stats": {
+          "str": 1
+        },
+        "hp": 5,
+        "resists": {
+          "fire": 5
+        },
+        "source": "Jagged Pine Crook Staff reward (Corun Finisc, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:blinza-toepopal",
+        "label": "Blinza Toepopal",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:jillins-stew",
+        "label": "Jillin's Stew",
+        "type": "quest",
+        "description": "Blinza Toepopal in Rivervale, after completing Reebo's Carrots, hands out Carrot Stew to deliver to Deputy Lowmot, also in Rivervale, for coin, experience, and faction. Repeatable.",
+        "minLevel": 1,
+        "steps": [
+          "Complete Reebo's Carrots",
+          "Receive Carrot Stew from Blinza Toepopal",
+          "Deliver it to Deputy Lowmot"
+        ],
+        "wiki_title": "Jillin's Stew"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:nusk-treton",
+        "label": "Nusk Treton",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:journal-strongbox",
+        "label": "Journal Strongbox",
+        "type": "quest",
+        "description": "Nusk Treton, at the Magic Users Guild in West Freeport, requiring Amiable or better faction, sends players to Lenka Stoutheart at the Seafarer's Roost in East Freeport for directions to a Journal Strongbox in the Ocean of Tears, tradeable for coin and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Speak with Lenka Stoutheart at the Seafarer's Roost in East Freeport",
+          "Retrieve the Journal Strongbox from the Ocean of Tears",
+          "Return it to Nusk Treton"
+        ],
+        "wiki_title": "Journal Strongbox"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:jinkus-felligan",
+        "label": "Jinkus Felligan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:karana-clovers",
+        "label": "Karana Clovers",
+        "type": "quest",
+        "description": "Jinkus Felligan, at the Temple of the Tribunal in Halas, requiring Amiable or better faction, runs a repeatable delivery chain -- a tattered note from Holana Oleary to Einhorst McMannus, then a Karana Clover Shipment from Einhorst back to Holana -- for coin plus a random low-level Shaman spell, a piece of leather gear, or possibly a Polar Bear Cloak.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note from Holana Oleary",
+          "Deliver it to Einhorst McMannus",
+          "Receive a Karana Clover Shipment from Einhorst",
+          "Return it to Holana Oleary"
+        ],
+        "wiki_title": "Karana Clovers"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:karanas-blessing",
+        "label": "Karana's Blessing",
+        "type": "quest",
+        "description": "Gehna Solbenya, in the Knights of Thunder building in South Qeynos, sends players to deliver a Full Chalice to Minda, a follower of Karana on a farm along the southern edge of the Western Plains of Karana, then return with the empty chalice for a random low-level spell. Repeatable.",
+        "minLevel": 1,
+        "steps": [
+          "Receive the Full Chalice from Gehna Solbenya",
+          "Deliver it to Minda in the Western Plains of Karana",
+          "Return the empty chalice to Gehna Solbenya"
+        ],
+        "wiki_title": "Karana's Blessing"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-cabilis:keeper-rott",
+        "label": "Keeper Rott",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:keeper-rotts-pages",
+        "label": "Keeper Rott's Pages",
+        "type": "quest",
+        "description": "Keeper Rott, in an alcove near the West Cabilis arena, requiring high Amiable faction with the Brood of Kotiz, trades 4 Illegible Notes (Notepages 1-4 of Rott, dropped by Goblin Soothsayers and Goblin Spirit Callers) for the spell Intensify Death. You don't have to be a Necromancer to complete it, though the reward favors that class.",
+        "minLevel": 18,
+        "steps": [
+          "Collect Notepages 1-4 of Rott from goblin soothsayers and spirit callers",
+          "Turn all 4 in to Keeper Rott"
+        ],
+        "wiki_title": "Keeper Rott's Pages"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:cobalt-scar:qarrgy-scallopgobbler",
+        "label": "Qarrgy Scallopgobbler",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:keloreks-scales",
+        "label": "Kelorek's Scales",
+        "type": "quest",
+        "description": "Qarrgy Scallopgobbler in Cobalt Scar trades an Ornately Runed Shell Necklace (a rare neriad-weaver drop from Siren's Grotto), Sea Dragon Scales (dropped by Kelorek`Dar), and a crafted Fine Plate Bracer for a Sea Dragonscale Bracer.",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Loot an Ornately Runed Shell Necklace from a neriad weaver in Siren's Grotto",
+          "Kill Kelorek`Dar for Sea Dragon Scales",
+          "Craft a Fine Plate Bracer",
+          "Turn all three in to Qarrgy Scallopgobbler in Cobalt Scar"
+        ],
+        "wiki_title": "Kelorek's Scales"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sea-dragonscale-bracer",
+        "label": "Sea Dragonscale Bracer",
+        "type": "item",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 10,
+        "mana": 20,
+        "resists": {
+          "fire": 10,
+          "cold": 10,
+          "magic": 5
+        },
+        "source": "Kelorek's Scales reward (Qarrgy Scallopgobbler, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:othmir",
+        "label": "Othmir",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:ace-slighthand",
+        "label": "Ace Slighthand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kevlin-diggs-debt",
+        "label": "Kevlin Diggs' Debt",
+        "type": "quest",
+        "description": "Ace Slighthand, in the Fools Gold casino above the rogues' guild in Rivervale, requiring better than Apprehensive faction, sends players to retrieve Kevlin's Debt -- guarded by an NPC named Mangler, not recommended to kill -- for coin and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Retrieve Kevlin's Debt",
+          "Return it to Ace Slighthand"
+        ],
+        "wiki_title": "Kevlin Diggs' Debt"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:swamp-of-no-hope:dugroz",
+        "label": "Dugroz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-charasis-quest",
+        "label": "Key to Charasis Quest",
+        "type": "quest",
+        "description": "Dugroz in the Swamp of No Hope trades a Xalgozian Fang (dropped by Xalgoz in Kaesora) and a Jade Chokidai Prod (dropped by the Chancellor of Di`Zok at the Sarnak fort by Lake of Ill Omen) for a soulbound Key to Charasis. Hand the items to Dugroz, not his nearby pet.",
+        "minLevel": 40,
+        "steps": [
+          "Kill Xalgoz in Kaesora for a Xalgozian Fang",
+          "Kill the Chancellor of Di`Zok at the Sarnak fort near Lake of Ill Omen for a Jade Chokidai Prod",
+          "Turn both in to Dugroz"
+        ],
+        "wiki_title": "Key to Charasis Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:key-to-charasis",
+        "label": "Key to Charasis",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "noTrade": true,
+        "source": "Key to Charasis Quest reward (Dugroz, Swamp of No Hope)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:ziglark-whisperwing",
+        "label": "Ziglark Whisperwing",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-cobalt-scar",
+        "label": "Key to Cobalt Scar",
+        "type": "quest",
+        "description": "Ziglark Whisperwing in Skyshrine hands out a Message to Wenglawks and requires 200 platinum to deliver to Wenglawks Kkeak in Kael Drakkel; returning with the Message to Herald he gives back earns a Shrine Key.",
+        "minLevel": 35,
+        "steps": [
+          "Receive the Message to Wenglawks from Ziglark Whisperwing",
+          "Deliver it with 200 platinum to Wenglawks Kkeak in Kael Drakkel",
+          "Receive the Message to Herald and return it to Ziglark Whisperwing"
+        ],
+        "wiki_title": "Key to Cobalt Scar"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shrine-key",
+        "label": "Shrine Key",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Key to Cobalt Scar reward (Ziglark Whisperwing, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:bilrio-surecut",
+        "label": "Bilrio Surecut",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kilijs-plans",
+        "label": "Kilij's Plans",
+        "type": "quest",
+        "description": "Bilrio Surecut, on the Kelethin platform shared with the Druid guild, trades Kilij Plans -- looted from Sandgiant Husam in Southern Desert of Ro -- and 3 Enchanted Gold Bars for a Brazen Brass Kilij. Bard, Rogue, and Warrior only.",
+        "classes": [
+          "bard",
+          "rogue",
+          "warrior"
+        ],
+        "minLevel": 26,
+        "steps": [
+          "Kill Sandgiant Husam in Southern Desert of Ro for Kilij Plans",
+          "Gather 3 Enchanted Gold Bars",
+          "Turn both in to Bilrio Surecut in Kelethin"
+        ],
+        "wiki_title": "Kilij's Plans"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brazen-brass-kilij",
+        "label": "Brazen Brass Kilij",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "rogue",
+          "warrior"
+        ],
+        "skill": "1H Slashing",
+        "damage": 10,
+        "delay": 35,
+        "magic": true,
+        "source": "Kilij's Plans reward (Bilrio Surecut, Kelethin/Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:faydark-s-champions",
+        "label": "Faydark's Champions",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -129151,6 +129968,1254 @@
         "id": "e-rewards-9184",
         "source": "quest:health-potion",
         "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9185",
+        "source": "npc:south-qeynos:ton-firepride",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9186",
+        "source": "npc:south-qeynos:ton-firepride",
+        "target": "quest:hurrietas-tunic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9187",
+        "source": "quest:hurrietas-tunic-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9188",
+        "source": "quest:hurrietas-tunic-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9189",
+        "source": "quest:hurrietas-tunic-quest",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9190",
+        "source": "quest:hurrietas-tunic-quest",
+        "target": "item:rat-shaped-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9191",
+        "source": "npc:erudin:josper-kenshed",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9192",
+        "source": "npc:erudin:josper-kenshed",
+        "target": "quest:ice-goblin-beads",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9193",
+        "source": "quest:ice-goblin-beads",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9194",
+        "source": "quest:ice-goblin-beads",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9195",
+        "source": "quest:ice-goblin-beads",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9196",
+        "source": "quest:ice-goblin-beads",
+        "target": "item:servants-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9197",
+        "source": "npc:everfrost-peaks:lysbith-mcnaff",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9198",
+        "source": "npc:everfrost-peaks:lysbith-mcnaff",
+        "target": "quest:ice-goblin-necklaces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9199",
+        "source": "quest:ice-goblin-necklaces",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9200",
+        "source": "quest:ice-goblin-necklaces",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9201",
+        "source": "npc:northern-karana:quartermaster-nellian",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9202",
+        "source": "npc:northern-karana:quartermaster-nellian",
+        "target": "quest:icestars-eve-snowdrift-feast",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9203",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "zone:northern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9204",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9205",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9206",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9207",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "item:aurillias-winter-broth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9208",
+        "source": "quest:icestars-eve-snowdrift-feast",
+        "target": "item:holiday-gift",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9209",
+        "source": "npc:erudin:josper-kenshed",
+        "target": "quest:ilanics-scroll",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9210",
+        "source": "quest:ilanics-scroll",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9211",
+        "source": "quest:ilanics-scroll",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9212",
+        "source": "quest:ilanics-scroll",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9213",
+        "source": "quest:ilanics-scroll",
+        "target": "spell:column-of-frost",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9214",
+        "source": "npc:west-freeport:tara-neklene",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9215",
+        "source": "npc:west-freeport:tara-neklene",
+        "target": "quest:illegible-cantrip-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9216",
+        "source": "quest:illegible-cantrip-quest",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9217",
+        "source": "quest:illegible-cantrip-quest",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9218",
+        "source": "quest:illegible-cantrip-quest",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9219",
+        "source": "npc:high-keep:lozani",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9220",
+        "source": "npc:high-keep:lozani",
+        "target": "quest:illegible-scrolls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9221",
+        "source": "quest:illegible-scrolls",
+        "target": "zone:high-keep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9222",
+        "source": "quest:illegible-scrolls",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9223",
+        "source": "quest:illegible-scrolls",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9224",
+        "source": "npc:northern-felwithe:general-jyleel",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9225",
+        "source": "npc:northern-felwithe:general-jyleel",
+        "target": "quest:illegible-scrolls-felwithe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9226",
+        "source": "quest:illegible-scrolls-felwithe",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9227",
+        "source": "quest:illegible-scrolls-felwithe",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9228",
+        "source": "quest:illegible-scrolls-felwithe",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9229",
+        "source": "npc:firiona-vie:luminare-pasinia",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9230",
+        "source": "npc:firiona-vie:luminare-pasinia",
+        "target": "quest:illusion-iksar-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9231",
+        "source": "quest:illusion-iksar-quest",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9232",
+        "source": "quest:illusion-iksar-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9233",
+        "source": "quest:illusion-iksar-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9234",
+        "source": "quest:illusion-iksar-quest",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9235",
+        "source": "quest:illusion-iksar-quest",
+        "target": "spell:illusion-iksar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9236",
+        "source": "quest:illusion-iksar-quest",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9237",
+        "source": "quest:illusion-iksar-quest",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9238",
+        "source": "quest:illusion-iksar-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9239",
+        "source": "npc:east-cabilis:war-historian-kobl",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9240",
+        "source": "npc:east-cabilis:war-historian-kobl",
+        "target": "quest:illweed-parchment-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9241",
+        "source": "quest:illweed-parchment-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9242",
+        "source": "quest:illweed-parchment-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9243",
+        "source": "quest:illweed-parchment-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9244",
+        "source": "quest:illweed-parchment-quest",
+        "target": "item:illweed-parchment",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9245",
+        "source": "quest:illweed-parchment-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9246",
+        "source": "quest:illweed-parchment-quest",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9247",
+        "source": "quest:illweed-parchment-quest",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9248",
+        "source": "quest:illweed-parchment-quest",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9249",
+        "source": "quest:illweed-parchment-quest",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9250",
+        "source": "npc:south-qeynos:indaria",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9251",
+        "source": "npc:south-qeynos:indaria",
+        "target": "quest:indarias-doll",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9252",
+        "source": "quest:indarias-doll",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9253",
+        "source": "quest:indarias-doll",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9254",
+        "source": "quest:indarias-doll",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9255",
+        "source": "quest:indarias-doll",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9256",
+        "source": "quest:indarias-doll",
+        "target": "item:velvet-choker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9257",
+        "source": "quest:indarias-doll",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9258",
+        "source": "quest:indarias-doll",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9259",
+        "source": "quest:indarias-doll",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9260",
+        "source": "npc:erudin:toresian-fhabel",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9261",
+        "source": "npc:erudin:toresian-fhabel",
+        "target": "quest:inert-potion-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9262",
+        "source": "quest:inert-potion-quest",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9263",
+        "source": "quest:inert-potion-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9264",
+        "source": "npc:grobb:savarixsa-zexus",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9265",
+        "source": "npc:east-freeport:saxarivza-zaxun",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9266",
+        "source": "npc:grobb:savarixsa-zexus",
+        "target": "quest:innoruuk-recommendation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9267",
+        "source": "npc:east-freeport:saxarivza-zaxun",
+        "target": "quest:innoruuk-recommendation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9268",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9269",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9270",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9271",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9272",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9273",
+        "source": "quest:innoruuk-recommendation",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9274",
+        "source": "npc:halas:renth-mclanis",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9275",
+        "source": "npc:halas:renth-mclanis",
+        "target": "quest:ivan-mcmannus-remains",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9276",
+        "source": "quest:ivan-mcmannus-remains",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9277",
+        "source": "quest:ivan-mcmannus-remains",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9278",
+        "source": "quest:ivan-mcmannus-remains",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9279",
+        "source": "npc:surefall-glade:corun-finisc",
+        "target": "quest:jagged-pine-crook-staff",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9280",
+        "source": "quest:jagged-pine-crook-staff",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9281",
+        "source": "quest:jagged-pine-crook-staff",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9282",
+        "source": "quest:jagged-pine-crook-staff",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9283",
+        "source": "quest:jagged-pine-crook-staff",
+        "target": "item:jaggedpine-crook",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9284",
+        "source": "npc:rivervale:blinza-toepopal",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9285",
+        "source": "npc:rivervale:blinza-toepopal",
+        "target": "quest:jillins-stew",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9286",
+        "source": "quest:jillins-stew",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9287",
+        "source": "quest:jillins-stew",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9288",
+        "source": "quest:jillins-stew",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9289",
+        "source": "quest:jillins-stew",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9290",
+        "source": "npc:west-freeport:nusk-treton",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9291",
+        "source": "npc:west-freeport:nusk-treton",
+        "target": "quest:journal-strongbox",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9292",
+        "source": "quest:journal-strongbox",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9293",
+        "source": "quest:journal-strongbox",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9294",
+        "source": "quest:journal-strongbox",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9295",
+        "source": "quest:journal-strongbox",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9296",
+        "source": "npc:halas:jinkus-felligan",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9297",
+        "source": "npc:halas:jinkus-felligan",
+        "target": "quest:karana-clovers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9298",
+        "source": "quest:karana-clovers",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9299",
+        "source": "quest:karana-clovers",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9300",
+        "source": "npc:south-qeynos:gehna-solbenya",
+        "target": "quest:karanas-blessing",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9301",
+        "source": "quest:karanas-blessing",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9302",
+        "source": "quest:karanas-blessing",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9303",
+        "source": "quest:karanas-blessing",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9304",
+        "source": "npc:west-cabilis:keeper-rott",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9305",
+        "source": "npc:west-cabilis:keeper-rott",
+        "target": "quest:keeper-rotts-pages",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9306",
+        "source": "quest:keeper-rotts-pages",
+        "target": "zone:west-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9307",
+        "source": "quest:keeper-rotts-pages",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9308",
+        "source": "quest:keeper-rotts-pages",
+        "target": "spell:intensify-death",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9309",
+        "source": "quest:keeper-rotts-pages",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9310",
+        "source": "npc:cobalt-scar:qarrgy-scallopgobbler",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9311",
+        "source": "npc:cobalt-scar:qarrgy-scallopgobbler",
+        "target": "quest:keloreks-scales",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9312",
+        "source": "quest:keloreks-scales",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9313",
+        "source": "quest:keloreks-scales",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9314",
+        "source": "quest:keloreks-scales",
+        "target": "item:sea-dragonscale-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9315",
+        "source": "quest:keloreks-scales",
+        "target": "faction:othmir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9316",
+        "source": "npc:rivervale:ace-slighthand",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9317",
+        "source": "npc:rivervale:ace-slighthand",
+        "target": "quest:kevlin-diggs-debt",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9318",
+        "source": "quest:kevlin-diggs-debt",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9319",
+        "source": "quest:kevlin-diggs-debt",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9320",
+        "source": "npc:swamp-of-no-hope:dugroz",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9321",
+        "source": "npc:swamp-of-no-hope:dugroz",
+        "target": "quest:key-to-charasis-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9322",
+        "source": "quest:key-to-charasis-quest",
+        "target": "zone:swamp-of-no-hope",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9323",
+        "source": "quest:key-to-charasis-quest",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9324",
+        "source": "quest:key-to-charasis-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9325",
+        "source": "quest:key-to-charasis-quest",
+        "target": "item:key-to-charasis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9326",
+        "source": "npc:skyshrine:ziglark-whisperwing",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9327",
+        "source": "npc:skyshrine:ziglark-whisperwing",
+        "target": "quest:key-to-cobalt-scar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9328",
+        "source": "quest:key-to-cobalt-scar",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9329",
+        "source": "quest:key-to-cobalt-scar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9330",
+        "source": "quest:key-to-cobalt-scar",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9331",
+        "source": "quest:key-to-cobalt-scar",
+        "target": "item:shrine-key",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9332",
+        "source": "npc:greater-faydark:bilrio-surecut",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9333",
+        "source": "npc:greater-faydark:bilrio-surecut",
+        "target": "quest:kilijs-plans",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9334",
+        "source": "quest:kilijs-plans",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9335",
+        "source": "quest:kilijs-plans",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9336",
+        "source": "quest:kilijs-plans",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9337",
+        "source": "quest:kilijs-plans",
+        "target": "item:brazen-brass-kilij",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9338",
+        "source": "quest:kilijs-plans",
+        "target": "faction:kelethin-merchants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9339",
+        "source": "quest:kilijs-plans",
+        "target": "faction:faydark-s-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9340",
+        "source": "quest:kilijs-plans",
+        "target": "faction:emerald-warriors",
         "type": "rewards"
       }
     }
