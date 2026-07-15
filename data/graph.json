@@ -57314,6 +57314,1111 @@
         "effect": "Underwater breathing",
         "source": "Lodizal Shell Shield Quest reward (Bungre Crawcrusher, Cobalt Scar) -- also carries unquantified fire, cold, and magic resistance"
       }
+    },
+    {
+      "data": {
+        "id": "zone:timorous-deep",
+        "label": "Timorous Deep",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "The Timorous Deep is the name of the ocean that lies between Kunark and the other continents of Norrath. The Deep is dotted with islands that stretch across it, and these islands contain a mixture of the modern powers on Norrath, those that have fallen out of their societies, natural predators, and ancient civilizations.",
+        "era": "Kunark",
+        "wiki_title": "Timorous Deep"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:burning-woods",
+        "label": "Burning Woods",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "The Burning Wood (normally called Burning Woods by players, or very rarely The Burned Woods) was once an ancient, beautiful forest. Now, however, its surface has been scarred by the fiery meteors that have stricken this area in the recent centuries, leaving its surface marred and aflame.",
+        "era": "Kunark",
+        "wiki_title": "Burning Woods"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:everfrost-peaks:karg-icebear",
+        "label": "Karg IceBear",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lupine-claw-gauntlets-quest",
+        "label": "Lupine Claw Gauntlets Quest",
+        "type": "quest",
+        "description": "Karg IceBear in Everfrost Peaks trades Werewolf Claws -- from a werewolf -- plus 75 platinum for the Lupine Claw Gauntlets.",
+        "minLevel": 25,
+        "steps": [
+          "Kill a werewolf in Everfrost Peaks for Werewolf Claws",
+          "Give the claws and 75 platinum to Karg IceBear"
+        ],
+        "wiki_title": "Lupine Claw Gauntlets Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lupine-claw-gauntlets",
+        "label": "Lupine Claw Gauntlets",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "dex": 3,
+          "agi": 3
+        },
+        "effect": "Improved Damage I (focus)",
+        "source": "Lupine Claw Gauntlets Quest reward (Karg IceBear, Everfrost Peaks)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:hemia-skemner",
+        "label": "Hemia Skemner",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lydl-mastat",
+        "label": "Lydl Mastat",
+        "type": "quest",
+        "description": "Hemia Skemner, on the top floor of the Academy of Arcane Science in West Freeport, requiring Amiable or better faction, trades a Locked Book -- looted from Lydl Mastat (Lydl the Great), a level 4 NPC invulnerable to non-magic weapons found near the gates of East Freeport -- for coin, experience, and faction.",
+        "minLevel": 5,
+        "steps": [
+          "Kill Lydl Mastat near the gates of East Freeport (requires magic damage) for a Locked Book",
+          "Turn it in to Hemia Skemner in West Freeport"
+        ],
+        "wiki_title": "Lydl Mastat"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:arcane-scientists",
+        "label": "Arcane Scientists",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:innothule-swamp:lynuga",
+        "label": "Lynuga",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lynugas-gem-collection",
+        "label": "Lynuga's Gem Collection",
+        "type": "quest",
+        "description": "Lynuga, near the entrance to Guk in Innothule Swamp, trades a Ruby -- purchasable from jewelry vendors for about 131 platinum -- for a random one of the Midnight Mallet (2H Blunt, CLR/SHM/BST/BER), the Brutechopper (2H Slashing, WAR/PAL/SHD/ROG), or Ivandyr's Hoop (ear, AC +6, WIS +6, INT +6, HP +6, Spirit Tap effect). All lore items -- don't turn in more than one Ruby at a time, or the duplicate reward is lost.",
+        "minLevel": 1,
+        "steps": [
+          "Buy a Ruby from a jewelry vendor",
+          "Turn it in to Lynuga near the entrance to Guk in Innothule Swamp"
+        ],
+        "wiki_title": "Lynuga's Gem Collection"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:madame-serena",
+        "label": "Madame Serena",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:madame-serena-quest",
+        "label": "Madame Serena Quest",
+        "type": "quest",
+        "description": "Madame Serena, by the docks in South Qeynos, responds to \"I follow [deity name]\" with a riddle-like clue for whichever of the 16 gods is named -- background/lore only, no confirmed tangible reward.",
+        "minLevel": 1,
+        "steps": [
+          "Say \"I follow [deity name]\" to Madame Serena in South Qeynos"
+        ],
+        "wiki_title": "Madame Serena Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:dargon-mcpherson",
+        "label": "Dargon McPherson",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magic-elixir-for-the-warriors",
+        "label": "Magic Elixir for the Warriors",
+        "type": "quest",
+        "description": "Dargon McPherson, in northeast Halas, requiring Apprehensive or better faction, sends players to deliver a Full Bottle of Elixir to each of four warriors in Everfrost Peaks (Talin O'Donal, Bryndin McMill, Arnis McLish, Megan O'Reilly), then return the Empty Bottle of Elixir to him for coin, experience, and a random one of several minor items (Copper Band, Lapis Lazuli, Tattered Cloth Sandal, Turquoise, Large Patchwork Pants, Leather Boots, or a Rusty Axe).",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Full Bottle of Elixir from Dargon McPherson in Halas",
+          "Deliver it to Talin O'Donal, Bryndin McMill, Arnis McLish, and Megan O'Reilly in Everfrost Peaks",
+          "Return the Empty Bottle of Elixir to Dargon McPherson"
+        ],
+        "wiki_title": "Magic Elixir for the Warriors"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:hiptal-frizzleboth",
+        "label": "Hiptal Frizzleboth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-spells-good",
+        "label": "Magician Spells (Good)",
+        "type": "quest",
+        "description": "Hiptal Frizzleboth in Firiona Vie trades any one of four spell scrolls (Bristlebane's Bundle, Gift of Xev, Quiver of Marr, Scars of Sigil) for a random one of four rarer spells (Boon of Immolation, Scintillation, Vocarate: Air, Vocarate: Fire). Magician only.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 51,
+        "steps": [
+          "Bring one of the four common scrolls to Hiptal Frizzleboth in Firiona Vie"
+        ],
+        "wiki_title": "Magician Spells (Good)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:slicia-jsinge",
+        "label": "Slicia J`Singe",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-spells-evil",
+        "label": "Magician Spells (Evil)",
+        "type": "quest",
+        "description": "Slicia J`Singe, at the caster circle in The Overthere, trades any one of four spell scrolls (Bristlebane's Bundle, Gift of Xev, Quiver of Marr, Scars of Sigil) for a random one of four rarer spells (Boon of Immolation, Scintillation, Vocarate: Air, Vocarate: Fire). Magician only. Also listed on the wiki under the duplicate title \"Magician Spells (Evil Version)\".",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 51,
+        "steps": [
+          "Bring one of the four common scrolls to Slicia J`Singe in The Overthere"
+        ],
+        "wiki_title": "Magician Spells (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:kaglari",
+        "label": "Kaglari",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:majik-power",
+        "label": "Majik Power",
+        "type": "quest",
+        "description": "Kaglari in Grobb, requiring Amiable or better faction, trades two Froglok Tadpole Flesh (from a froglok tad) and two Bone Chips (from a decaying skeleton), both in Innothule Swamp, for the spell Burst of Flame, coin, and experience. Ogres normally cannot complete it (or the follow-on Orc Belt quest); Dark Elves usually can.",
+        "minLevel": 1,
+        "steps": [
+          "Kill a froglok tad in Innothule Swamp for 2 Froglok Tadpole Flesh",
+          "Kill a decaying skeleton in Innothule Swamp for 2 Bone Chips",
+          "Turn both in to Kaglari in Grobb"
+        ],
+        "wiki_title": "Majik Power"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dark-ones",
+        "label": "Dark Ones",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:cappi-mctarnigal",
+        "label": "Cappi McTarnigal",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mammoth-calf-hides",
+        "label": "Mammoth Calf Hides",
+        "type": "quest",
+        "description": "Cappi McTarnigal in Halas trades 4 Mammoth Calf Hides -- from a wooly mammoth calf in Everfrost Peaks -- for a full 12-piece set of Black Wolf armor, coin, and experience. Rogue only, requires White Rose faction membership.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Kill wooly mammoth calves in Everfrost Peaks for 4 Mammoth Calf Hides",
+          "Turn them in to Cappi McTarnigal in Halas"
+        ],
+        "wiki_title": "Mammoth Calf Hides"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-armplates",
+        "label": "Black Wolf Armplates",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 6,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-boots",
+        "label": "Black Wolf Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-bracers",
+        "label": "Black Wolf Bracers",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-cape",
+        "label": "Black Wolf Cape",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 6,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-collar",
+        "label": "Black Wolf Collar",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-crown",
+        "label": "Black Wolf Crown",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-gloves",
+        "label": "Black Wolf Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 6,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-legplates",
+        "label": "Black Wolf Legplates",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 7,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-mail",
+        "label": "Black Wolf Mail",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 12,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-mask",
+        "label": "Black Wolf Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 3,
+        "stats": {
+          "dex": 7,
+          "cha": -9
+        },
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-pauldrons",
+        "label": "Black Wolf Pauldrons",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-wolf-waistband",
+        "label": "Black Wolf Waistband",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 5,
+        "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:noxhil-vsek",
+        "label": "Noxhil V`Sek",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mammoth-tusks-quest",
+        "label": "Mammoth Tusks Quest",
+        "type": "quest",
+        "description": "Noxhil V`Sek in Neriak 3rd Gate, after completing the Fire Beetle Eyes quest, gives an Empty Chest to fill with Kerra Isle Beetle eyes; that Beetle Eye Chest plus a Mammoth Tusk (from a wooly mammoth in Everfrost Peaks) trades for the spell Engulfing Darkness. Necromancer or Shadow Knight only.",
+        "classes": [
+          "necromancer",
+          "shadow knight"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Complete the Fire Beetle Eyes quest and receive an Empty Chest from Noxhil V`Sek",
+          "Fill the chest with Kerra Isle Beetle eyes",
+          "Kill a wooly mammoth in Everfrost Peaks for a Mammoth Tusk",
+          "Turn both in to Noxhil V`Sek in Neriak 3rd Gate"
+        ],
+        "wiki_title": "Mammoth Tusks Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:marauder-armor",
+        "label": "Marauder Armor",
+        "type": "quest",
+        "description": "Drill Master Dal in East Cabilis trades 4 Marauder Snout Ring 'MM' -- proof of slaying Marrtail's Marauders, iksar marauders found in the zones surrounding Cabilis including Field of Bone -- for a random piece of Leech Husk armor, coin, and experience.",
+        "minLevel": 14,
+        "steps": [
+          "Kill 4 iksar marauders (Marrtail's Marauders) around Cabilis, including Field of Bone, for a Marauder Snout Ring 'MM' each",
+          "Turn them in to Drill Master Dal in East Cabilis"
+        ],
+        "wiki_title": "Marauder Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:marda",
+        "label": "Marda",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mardas-secret-mission",
+        "label": "Marda's Secret Mission",
+        "type": "quest",
+        "description": "Marda in Oggok, after completing The Emissary, sends players to a prisoner in Grobb; an Intestine Necklace (from Basher guards in Grobb or Innothule Swamp) proves legitimacy, earning an Empty Vial to trade Forager Grikk for Ochre Liquid, which the prisoner exchanges for a note. Killing Zimbittle in Innothule Swamp and delivering her pouch to Marda grants a low-level spell (one of Drowsy, Endure Disease, Spirit of Bear, or Summon Drink per the wiki, exact selection unclear), coin, and experience.",
+        "minLevel": 9,
+        "steps": [
+          "Complete The Emissary",
+          "Visit the prisoner in Grobb and show an Intestine Necklace as proof",
+          "Trade the Empty Vial to Forager Grikk for Ochre Liquid",
+          "Return to the prisoner for a note",
+          "Kill Zimbittle in Innothule Swamp for Zimbittle's Pouch",
+          "Deliver the pouch to Marda in Oggok"
+        ],
+        "wiki_title": "Marda's Secret Mission"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:oggok-citizens",
+        "label": "Oggok Citizens",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:palon-deskeb",
+        "label": "Palon Deskeb",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:marr-minnows-for-palon",
+        "label": "Marr Minnows for Palon",
+        "type": "quest",
+        "description": "Palon Deskeb, on the 2nd floor of the Academy of Arcane Sciences in West Freeport, hands out a Jar of Liquid to offer to a minnow in the river near the Hall of Truth in North Freeport; a resulting Fish in a Jar trades for a Ration, coin, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Jar of Liquid from Palon Deskeb in West Freeport",
+          "Offer it to a minnow near the Hall of Truth in North Freeport for a Fish in a Jar",
+          "Return the Fish in a Jar to Palon Deskeb"
+        ],
+        "wiki_title": "Marr Minnows for Palon"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ration",
+        "label": "Ration",
+        "type": "item",
+        "weight": 1,
+        "size": "Small",
+        "source": "Marr Minnows for Palon reward (Palon Deskeb, West Freeport) -- a meal"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mask-of-war-quest",
+        "label": "Mask of War Quest",
+        "type": "quest",
+        "description": "Captain Bvellos in Kael Drakkal, requiring better than Indifferent faction, trades a Wurmscale Scroll -- proof of Wenglawk's treachery, dropped by a Chetari Courier in Dragon Necropolis -- for the Mask of War.",
+        "minLevel": 45,
+        "steps": [
+          "Say \"I am looking for work\" to Captain Bvellos in Kael Drakkal",
+          "Kill a Chetari Courier in Dragon Necropolis for a Wurmscale Scroll",
+          "Return the scroll to Captain Bvellos"
+        ],
+        "wiki_title": "Mask of War Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mask-of-war",
+        "label": "Mask of War",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 2,
+          "sta": 5,
+          "wis": 9
+        },
+        "effect": "Yaulp II (Combat) at Level 35",
+        "source": "Mask of War Quest reward (Captain Bvellos, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:wenglawks-kkeak",
+        "label": "Wenglawks Kkeak",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mechanical-net-delivery",
+        "label": "Mechanical Net Delivery",
+        "type": "quest",
+        "description": "Wenglawks Kkeak, in a back room of Kael Drakkal, trades a Voucher for Mechanical Net (from Kellek Felhammer) delivered to an outcast siren in Cobalt Scar, then 3 Excellent Siren Scales (from sirens in Cobalt Scar) traded to that same outcast siren for a Giant Siren Scale Cloak, returned to Wenglawks for Wenglawks Manly Purse.",
+        "minLevel": 50,
+        "steps": [
+          "Say \"You can trust me\" to Wenglawks Kkeak in Kael Drakkal",
+          "Trade the resulting voucher to Kellek Felhammer for a Mechanical Net",
+          "Give the net to an outcast siren in Cobalt Scar",
+          "Kill sirens in Cobalt Scar for 3 Excellent Siren Scales",
+          "Return the scales to the outcast siren for a Giant Siren Scale Cloak",
+          "Return the cloak to Wenglawks Kkeak"
+        ],
+        "wiki_title": "Mechanical Net Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wenglawks-manly-purse",
+        "label": "Wenglawks Manly Purse",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "capacity": 8,
+        "containerSize": "Giant",
+        "source": "Mechanical Net Delivery reward (Wenglawks Kkeak, Kael Drakkal) -- 70% weight reduction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:timorous-deep:xiblin-fizzlebik",
+        "label": "Xiblin Fizzlebik",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:medallion-of-the-jarsath-quest",
+        "label": "Medallion of the Jarsath Quest",
+        "type": "quest",
+        "description": "Xiblin Fizzlebik, on the chessboard island in Timorous Deep, assembles an Upper Portion (found in Swamp of No Hope), a Middle Portion (from an ancient Jarsath, an Iksar monk skeleton in Firiona Vie), and a Bottom Portion (from a bloodgill marauder guarding the Sunken Temple of Veksar in Lake of Ill Omen) into the Medallion of the Jarsath -- cursed, and one of three medallions needed for the Rune of Scale Quest to access Veeshan's Peak.",
+        "minLevel": 51,
+        "steps": [
+          "Find the Upper Portion in Swamp of No Hope",
+          "Kill an ancient Jarsath in Firiona Vie for the Middle Portion",
+          "Kill a bloodgill marauder guarding the Sunken Temple of Veksar in Lake of Ill Omen for the Bottom Portion",
+          "Give all three to Xiblin Fizzlebik in Timorous Deep"
+        ],
+        "wiki_title": "Medallion of the Jarsath Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:medallion-of-the-jarsath",
+        "label": "Medallion of the Jarsath",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Medallion of the Jarsath Quest reward (Xiblin Fizzlebik, Timorous Deep)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-of-ill-omen:professor-akabao",
+        "label": "Professor Akabao",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:medallion-of-the-kylong-quest",
+        "label": "Medallion of the Kylong Quest",
+        "type": "quest",
+        "description": "Professor Akabao, in a tower southeast of Lake of Ill Omen, assembles an Upper Portion (from the Niblek's Gems quest in Chardok), a Middle Portion (from Verix Kyloxs Remains in the Karnor's Castle sewers), and a Bottom Portion (on the floor of the library in Kaesora) into the Medallion of the Kylong. One of three medallions needed for the Rune of Scale Quest to access Veeshan's Peak.",
+        "minLevel": 51,
+        "steps": [
+          "Complete the Niblek's Gems quest in Chardok for the Upper Portion",
+          "Kill Verix Kyloxs Remains in the Karnor's Castle sewers for the Middle Portion",
+          "Find the Bottom Portion on the library floor in Kaesora",
+          "Give all three to Professor Akabao in Lake of Ill Omen"
+        ],
+        "wiki_title": "Medallion of the Kylong Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:medallion-of-the-kylong",
+        "label": "Medallion of the Kylong",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "source": "Medallion of the Kylong Quest reward (Professor Akabao, Lake of Ill Omen)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:burning-woods:slixin-klex",
+        "label": "Slixin Klex",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:medallion-of-the-obulus-quest",
+        "label": "Medallion of the Obulus Quest",
+        "type": "quest",
+        "description": "Slixin Klex in Burning Woods assembles an Upper Portion (given by Ssolet Dnaas on the island in Warsliks Woods), a Middle Portion (from a rotting skeleton in Dreadlands), and a Bottom Portion (from a Pained Soul in Trakanon's Teeth near the Old Sebilis entrance) into the Medallion of the Obulus. One of three medallions needed for the Rune of Scale Quest to access Veeshan's Peak.",
+        "minLevel": 51,
+        "steps": [
+          "Receive the Upper Portion from Ssolet Dnaas on the island in Warsliks Woods",
+          "Kill a rotting skeleton in Dreadlands for the Middle Portion",
+          "Kill a Pained Soul near the Old Sebilis entrance in Trakanon's Teeth for the Bottom Portion",
+          "Give all three to Slixin Klex in Burning Woods"
+        ],
+        "wiki_title": "Medallion of the Obulus Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:medallion-of-the-obulus",
+        "label": "Medallion of the Obulus",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Medallion of the Obulus Quest reward (Slixin Klex, Burning Woods)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mercenary-assignments-quest",
+        "label": "Mercenary Assignments Quest",
+        "type": "quest",
+        "description": "Sentry Kcor in Skyshrine, working even at Dubious faction, trades 1-4 Mercenary Assignments at a time for coin and Claws of Veeshan / Yelinak faction; roughly 14 hand-ins and 6 mercenary kills moves faction from Indifferent to Amiable. Repeatable.",
+        "steps": [
+          "Turn in 1-4 Mercenary Assignments to Sentry Kcor in Skyshrine"
+        ],
+        "wiki_title": "Mercenary Assignments Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:merona-castekin",
+        "label": "Merona Castekin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:meronas-brother",
+        "label": "Merona's Brother",
+        "type": "quest",
+        "description": "Merona Castekin in Surefall Glade sends players to North Qeynos to question Sneed Galliway about her missing brother Ronn, who directs them to the Qeynos Catacombs; Ronn has become an undead Bloodsaber there, and his corpse carries a Torn Parchment. Returning it to Merona rewards a random one of the Band of Tunare (wrist, AC +1, WIS +1, MANA +2), Ring of Pine (finger, AC +1, STA +1), or assorted newbie supplies (bandages, rations, bread, water, mead).",
+        "minLevel": 4,
+        "steps": [
+          "Speak with Merona Castekin in Surefall Glade",
+          "Question Sneed Galliway in North Qeynos about Ronn's whereabouts",
+          "Kill Ronn Castekin (an undead Bloodsaber) in the Qeynos Catacombs for a Torn Parchment",
+          "Return the parchment to Merona Castekin"
+        ],
+        "wiki_title": "Merona's Brother"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:raltur-caliskon",
+        "label": "Raltur Caliskon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:message-intercept",
+        "label": "Message Intercept",
+        "type": "quest",
+        "description": "Raltur Caliskon in East Freeport, for players willing to serve Innoruuk, sends players to Sir Lucan D'Lere and on to kill the messenger Mojax Hikspin in West Commonlands for an intercepted note; returning it to Sir Lucan or Raltur pays coin, experience, and faction that varies by which recipient is chosen. Evil-aligned classes only.",
+        "minLevel": 5,
+        "steps": [
+          "Speak with Raltur Caliskon in East Freeport and agree to serve Innoruuk",
+          "Report to Sir Lucan D'Lere",
+          "Kill the messenger Mojax Hikspin in West Commonlands for the intercepted note",
+          "Return the note to Sir Lucan D'Lere or Raltur Caliskon"
+        ],
+        "wiki_title": "Message Intercept"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:messages-for-neriak",
+        "label": "Messages For Neriak",
+        "type": "quest",
+        "description": "Noxhil V`Sek, on the top floor of the Lodge of the Dead in Neriak 3rd Gate, requiring Amiable or better faction, sends players to retrieve A Sealed Letter from expedition agent Kizdean Gix in West Commonlands (and, per the wiki, a second agent, Cytodl Krish, in Highpass Hold) for delivery to Loveal S`Nez back in Neriak 3rd Gate, for 2 Bandages, 2 Iron Rations, a Torch, coin, experience, and faction.",
+        "minLevel": 15,
+        "steps": [
+          "Receive A Sealed List from Noxhil V`Sek in Neriak 3rd Gate",
+          "Retrieve A Sealed Letter from Kizdean Gix in West Commonlands",
+          "Visit Cytodl Krish in Highpass Hold",
+          "Return the letter(s) to Loveal S`Nez in Neriak 3rd Gate"
+        ],
+        "wiki_title": "Messages For Neriak"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bandages",
+        "label": "Bandages",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Messages For Neriak reward (Noxhil V`Sek, Neriak 3rd Gate) -- used in Bind Wound skill"
+      }
+    },
+    {
+      "data": {
+        "id": "item:iron-ration",
+        "label": "Iron Ration",
+        "type": "item",
+        "weight": 0.6,
+        "size": "Small",
+        "source": "Messages For Neriak reward (Noxhil V`Sek, Neriak 3rd Gate) -- a hearty meal"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:jeet",
+        "label": "Jeet",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:miners-cap",
+        "label": "Miner's Cap",
+        "type": "quest",
+        "description": "Jeet, outside the Ratsbone Treasury & Assay Office in North Kaladim, requiring Indifferent or better faction, trades Scrap Metal -- from Cleaner VII, one of three Giant Rats in the mines beneath the North Kaladim bank -- for the Miners Cap 628. Rogue, Dwarf only.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 4,
+        "steps": [
+          "Kill Cleaner VII in the mines beneath the North Kaladim bank for Scrap Metal",
+          "Turn it in to Jeet in North Kaladim"
+        ],
+        "wiki_title": "Miner's Cap"
+      }
+    },
+    {
+      "data": {
+        "id": "item:miners-cap-628",
+        "label": "Miners Cap 628",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 3,
+        "stats": {
+          "cha": 2
+        },
+        "weight": 3,
+        "size": "Small",
+        "source": "Miner's Cap reward (Jeet, North Kaladim) -- Dwarf race only"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:miners-guild-628",
+        "label": "Miners Guild 628",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:mater",
+        "label": "Mater",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:miners-pick",
+        "label": "Miners Pick",
+        "type": "quest",
+        "description": "Mater, just outside the Kaladim bank (referred by Diggins, North Kaladim's quest giver of record), trades an Ogre Head -- from Boog Mudtoe on Ancient Cyclops Island in Ocean of Tears, not his brother Goob -- plus 300 gold for the Mining Pick 628. Rogue, Dwarf only.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 18,
+        "steps": [
+          "Find Mater outside the Kaladim bank in North Kaladim",
+          "Kill Boog Mudtoe on Ancient Cyclops Island in Ocean of Tears for an Ogre Head",
+          "Return it with 300 gold to Mater"
+        ],
+        "wiki_title": "Miners Pick"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mining-pick-628",
+        "label": "Mining Pick 628",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "skill": "Piercing",
+        "damage": 7,
+        "delay": 31,
+        "weight": 6.5,
+        "size": "Medium",
+        "source": "Miners Pick reward (Mater, North Kaladim) -- Dwarf race only; also carries a +7 backstab bonus"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:toxxulia-forest:skeleton-miner",
+        "label": "a skeleton (miner)",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mining-caps",
+        "label": "Mining Caps",
+        "type": "quest",
+        "description": "A skeleton (miner) at the Paineel zone line in southern Toxxulia Forest trades a Useless Cloth Cap -- from kobold scouts -- for experience and a random low-level gem. Talrigar Eklorin (2 caps, seeking necromancers) and a right-hand skeleton offer separate random rewards for the same item.",
+        "minLevel": 2,
+        "steps": [
+          "Kill kobold scouts in Toxxulia Forest for a Useless Cloth Cap",
+          "Turn it in to a skeleton (miner) near the Paineel zone line"
+        ],
+        "wiki_title": "Mining Caps"
+      }
     }
   ],
   "edges": [
@@ -133563,6 +134668,1334 @@
         "source": "quest:lodizal-shell-shield-quest",
         "target": "faction:othmir",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9530",
+        "source": "zone:timorous-deep",
+        "target": "zone:firiona-vie",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9531",
+        "source": "zone:firiona-vie",
+        "target": "zone:timorous-deep",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9532",
+        "source": "zone:burning-woods",
+        "target": "zone:chardok",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9533",
+        "source": "zone:chardok",
+        "target": "zone:burning-woods",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9534",
+        "source": "npc:everfrost-peaks:karg-icebear",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9535",
+        "source": "npc:everfrost-peaks:karg-icebear",
+        "target": "quest:lupine-claw-gauntlets-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9536",
+        "source": "quest:lupine-claw-gauntlets-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9537",
+        "source": "quest:lupine-claw-gauntlets-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9538",
+        "source": "quest:lupine-claw-gauntlets-quest",
+        "target": "item:lupine-claw-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9539",
+        "source": "npc:west-freeport:hemia-skemner",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9540",
+        "source": "npc:west-freeport:hemia-skemner",
+        "target": "quest:lydl-mastat",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9541",
+        "source": "quest:lydl-mastat",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9542",
+        "source": "quest:lydl-mastat",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9543",
+        "source": "quest:lydl-mastat",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9544",
+        "source": "quest:lydl-mastat",
+        "target": "faction:arcane-scientists",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9545",
+        "source": "quest:lydl-mastat",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9546",
+        "source": "npc:innothule-swamp:lynuga",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9547",
+        "source": "npc:innothule-swamp:lynuga",
+        "target": "quest:lynugas-gem-collection",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9548",
+        "source": "quest:lynugas-gem-collection",
+        "target": "zone:innothule-swamp",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9549",
+        "source": "quest:lynugas-gem-collection",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9550",
+        "source": "npc:south-qeynos:madame-serena",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9551",
+        "source": "npc:south-qeynos:madame-serena",
+        "target": "quest:madame-serena-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9552",
+        "source": "quest:madame-serena-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9553",
+        "source": "quest:madame-serena-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9554",
+        "source": "npc:halas:dargon-mcpherson",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9555",
+        "source": "npc:halas:dargon-mcpherson",
+        "target": "quest:magic-elixir-for-the-warriors",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9556",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9557",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9558",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9559",
+        "source": "npc:firiona-vie:hiptal-frizzleboth",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9560",
+        "source": "npc:firiona-vie:hiptal-frizzleboth",
+        "target": "quest:magician-spells-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9561",
+        "source": "quest:magician-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9562",
+        "source": "quest:magician-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9563",
+        "source": "npc:the-overthere:slicia-jsinge",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9564",
+        "source": "npc:the-overthere:slicia-jsinge",
+        "target": "quest:magician-spells-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9565",
+        "source": "quest:magician-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9566",
+        "source": "quest:magician-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9567",
+        "source": "npc:grobb:kaglari",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9568",
+        "source": "npc:grobb:kaglari",
+        "target": "quest:majik-power",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9569",
+        "source": "quest:majik-power",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9570",
+        "source": "quest:majik-power",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9571",
+        "source": "quest:majik-power",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9572",
+        "source": "quest:majik-power",
+        "target": "spell:burst-of-flame",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9573",
+        "source": "quest:majik-power",
+        "target": "faction:dark-ones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9574",
+        "source": "quest:majik-power",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9575",
+        "source": "npc:halas:cappi-mctarnigal",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9576",
+        "source": "npc:halas:cappi-mctarnigal",
+        "target": "quest:mammoth-calf-hides",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9577",
+        "source": "quest:mammoth-calf-hides",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9578",
+        "source": "quest:mammoth-calf-hides",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9579",
+        "source": "quest:mammoth-calf-hides",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9580",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-armplates",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9581",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9582",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9583",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9584",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-collar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9585",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9586",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9587",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-legplates",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9588",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-mail",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9589",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9590",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-pauldrons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9591",
+        "source": "quest:mammoth-calf-hides",
+        "target": "item:black-wolf-waistband",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9592",
+        "source": "quest:mammoth-calf-hides",
+        "target": "faction:rogues-of-the-white-rose",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9593",
+        "source": "npc:neriak-3rd-gate:noxhil-vsek",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9594",
+        "source": "npc:neriak-3rd-gate:noxhil-vsek",
+        "target": "quest:mammoth-tusks-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9595",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9596",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9597",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9598",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "spell:engulfing-darkness",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9599",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9600",
+        "source": "quest:mammoth-tusks-quest",
+        "target": "faction:queen-cristanos-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9601",
+        "source": "npc:east-cabilis:drill-master-dal",
+        "target": "quest:marauder-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9602",
+        "source": "quest:marauder-armor",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9603",
+        "source": "quest:marauder-armor",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9604",
+        "source": "quest:marauder-armor",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9605",
+        "source": "quest:marauder-armor",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9606",
+        "source": "quest:marauder-armor",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9607",
+        "source": "quest:marauder-armor",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9608",
+        "source": "quest:marauder-armor",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9609",
+        "source": "quest:marauder-armor",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9610",
+        "source": "npc:oggok:marda",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9611",
+        "source": "npc:oggok:marda",
+        "target": "quest:mardas-secret-mission",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9612",
+        "source": "quest:mardas-secret-mission",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9613",
+        "source": "quest:mardas-secret-mission",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9614",
+        "source": "quest:mardas-secret-mission",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9615",
+        "source": "quest:mardas-secret-mission",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9616",
+        "source": "quest:mardas-secret-mission",
+        "target": "faction:oggok-citizens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9617",
+        "source": "quest:mardas-secret-mission",
+        "target": "faction:shamen-of-war",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9618",
+        "source": "npc:west-freeport:palon-deskeb",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9619",
+        "source": "npc:west-freeport:palon-deskeb",
+        "target": "quest:marr-minnows-for-palon",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9620",
+        "source": "quest:marr-minnows-for-palon",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9621",
+        "source": "quest:marr-minnows-for-palon",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9622",
+        "source": "quest:marr-minnows-for-palon",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9623",
+        "source": "quest:marr-minnows-for-palon",
+        "target": "item:ration",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9624",
+        "source": "npc:kael-drakkal:captain-bvellos",
+        "target": "quest:mask-of-war-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9625",
+        "source": "quest:mask-of-war-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9626",
+        "source": "quest:mask-of-war-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9627",
+        "source": "quest:mask-of-war-quest",
+        "target": "item:mask-of-war",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9628",
+        "source": "npc:kael-drakkal:wenglawks-kkeak",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9629",
+        "source": "npc:kael-drakkal:wenglawks-kkeak",
+        "target": "quest:mechanical-net-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9630",
+        "source": "quest:mechanical-net-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9631",
+        "source": "quest:mechanical-net-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9632",
+        "source": "quest:mechanical-net-delivery",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9633",
+        "source": "quest:mechanical-net-delivery",
+        "target": "item:wenglawks-manly-purse",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9634",
+        "source": "npc:timorous-deep:xiblin-fizzlebik",
+        "target": "zone:timorous-deep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9635",
+        "source": "npc:timorous-deep:xiblin-fizzlebik",
+        "target": "quest:medallion-of-the-jarsath-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9636",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "zone:timorous-deep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9637",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "zone:timorous-deep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9638",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9639",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9640",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9641",
+        "source": "quest:medallion-of-the-jarsath-quest",
+        "target": "item:medallion-of-the-jarsath",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9642",
+        "source": "npc:lake-of-ill-omen:professor-akabao",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9643",
+        "source": "npc:lake-of-ill-omen:professor-akabao",
+        "target": "quest:medallion-of-the-kylong-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9644",
+        "source": "quest:medallion-of-the-kylong-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9645",
+        "source": "quest:medallion-of-the-kylong-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9646",
+        "source": "quest:medallion-of-the-kylong-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9647",
+        "source": "quest:medallion-of-the-kylong-quest",
+        "target": "item:medallion-of-the-kylong",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9648",
+        "source": "npc:burning-woods:slixin-klex",
+        "target": "zone:burning-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9649",
+        "source": "npc:burning-woods:slixin-klex",
+        "target": "quest:medallion-of-the-obulus-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9650",
+        "source": "quest:medallion-of-the-obulus-quest",
+        "target": "zone:burning-woods",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9651",
+        "source": "quest:medallion-of-the-obulus-quest",
+        "target": "zone:burning-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9652",
+        "source": "quest:medallion-of-the-obulus-quest",
+        "target": "item:medallion-of-the-obulus",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9653",
+        "source": "npc:skyshrine:sentry-kcor",
+        "target": "quest:mercenary-assignments-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9654",
+        "source": "quest:mercenary-assignments-quest",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9655",
+        "source": "quest:mercenary-assignments-quest",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9656",
+        "source": "quest:mercenary-assignments-quest",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9657",
+        "source": "quest:mercenary-assignments-quest",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9658",
+        "source": "npc:surefall-glade:merona-castekin",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9659",
+        "source": "npc:surefall-glade:merona-castekin",
+        "target": "quest:meronas-brother",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9660",
+        "source": "quest:meronas-brother",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9661",
+        "source": "quest:meronas-brother",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9662",
+        "source": "quest:meronas-brother",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9663",
+        "source": "quest:meronas-brother",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9664",
+        "source": "npc:east-freeport:raltur-caliskon",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9665",
+        "source": "npc:east-freeport:raltur-caliskon",
+        "target": "quest:message-intercept",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9666",
+        "source": "quest:message-intercept",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9667",
+        "source": "quest:message-intercept",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9668",
+        "source": "quest:message-intercept",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9669",
+        "source": "npc:neriak-3rd-gate:noxhil-vsek",
+        "target": "quest:messages-for-neriak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9670",
+        "source": "quest:messages-for-neriak",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9671",
+        "source": "quest:messages-for-neriak",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9672",
+        "source": "quest:messages-for-neriak",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9673",
+        "source": "quest:messages-for-neriak",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9674",
+        "source": "quest:messages-for-neriak",
+        "target": "item:bandages",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9675",
+        "source": "quest:messages-for-neriak",
+        "target": "item:iron-ration",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9676",
+        "source": "quest:messages-for-neriak",
+        "target": "item:torch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9677",
+        "source": "quest:messages-for-neriak",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9678",
+        "source": "quest:messages-for-neriak",
+        "target": "faction:queen-cristanos-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9679",
+        "source": "npc:north-kaladim:jeet",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9680",
+        "source": "npc:north-kaladim:jeet",
+        "target": "quest:miners-cap",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9681",
+        "source": "quest:miners-cap",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9682",
+        "source": "quest:miners-cap",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9683",
+        "source": "quest:miners-cap",
+        "target": "item:miners-cap-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9684",
+        "source": "quest:miners-cap",
+        "target": "faction:miners-guild-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9685",
+        "source": "quest:miners-cap",
+        "target": "faction:deeppockets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9686",
+        "source": "npc:north-kaladim:mater",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9687",
+        "source": "npc:north-kaladim:mater",
+        "target": "quest:miners-pick",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9688",
+        "source": "quest:miners-pick",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9689",
+        "source": "quest:miners-pick",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9690",
+        "source": "quest:miners-pick",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9691",
+        "source": "quest:miners-pick",
+        "target": "item:mining-pick-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9692",
+        "source": "npc:toxxulia-forest:skeleton-miner",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9693",
+        "source": "npc:toxxulia-forest:skeleton-miner",
+        "target": "quest:mining-caps",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9694",
+        "source": "quest:mining-caps",
+        "target": "zone:toxxulia-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9695",
+        "source": "quest:mining-caps",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
       }
     }
   ]
