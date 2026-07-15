@@ -56480,6 +56480,840 @@
         "label": "Faydark's Champions",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "quest:knight-card-quest",
+        "label": "Knight Card Quest",
+        "type": "quest",
+        "description": "Beno Targnarle, in the north turret of the Kaladim Warrior's Guild in South Kaladim, requiring Amiable or better faction, hands out a Knight Card to deliver to Doran Vargnus, camped on the west side of the Island of the Sisters of Erollisi in the Ocean of Tears, for a choice of Blackened Iron, Bronze, Cloth, or Ringmail armor. Multiquestable.",
+        "minLevel": 4,
+        "steps": [
+          "Ask Beno Targnarle where Doran Vargnus can be found",
+          "Travel to the Island of the Sisters of Erollisi in the Ocean of Tears",
+          "Hand the Knight Card to Doran Vargnus for a reward"
+        ],
+        "wiki_title": "Knight Card Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kobold-killing",
+        "label": "Kobold Killing",
+        "type": "quest",
+        "description": "Tabure Ahendle, at the Steel Warriors Arena in South Qeynos, requiring Amiable faction, trades 4 Kobold Hides -- from kobolds in Toxxulia Forest -- for a random piece of Medium Raw-hide Armor, coin, and experience. Completing it opens access to the Blurred Map Quest.",
+        "minLevel": 4,
+        "steps": [
+          "Kill kobolds in Toxxulia Forest for 4 Kobold Hides",
+          "Turn them in to Tabure Ahendle"
+        ],
+        "wiki_title": "Kobold Killing"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:royal-guard-lilkus",
+        "label": "Royal Guard Lilkus",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kobold-molars-evil",
+        "label": "Kobold Molars (Evil)",
+        "type": "quest",
+        "description": "Royal Guard Lilkus, in Paineel Palace, requiring Indifferent or better faction with the Heretics, trades Kobold Molars -- from kobolds in The Warrens -- for coin, experience, a small chance of a random ringmail armor piece, and Heretics faction. Repeatable.",
+        "minLevel": 6,
+        "steps": [
+          "Kill kobolds in The Warrens for Kobold Molars",
+          "Turn them in to Royal Guard Lilkus"
+        ],
+        "wiki_title": "Kobold Molars (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:breya-nostulia",
+        "label": "Breya Nostulia",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kobold-shaman-artifacts",
+        "label": "Kobold Shaman Artifacts",
+        "type": "quest",
+        "description": "After completing Kobold Molars (Good) and speaking with Tiam Khonsir in Erudin, Breya Nostulia on the second floor of the Temple of Deepwater Knights trades a Kobold Shaman's Pouch (from a greater shaman) and a Diviner's Bowl (from Krode the Diviner), both in The Warrens, for Midnight Sea Mail Leggings. Cleric or Paladin, Erudite race only.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 14,
+        "steps": [
+          "Complete Kobold Molars (Good) and speak with Tiam Khonsir in Erudin",
+          "Kill a greater shaman in The Warrens for a Kobold Shaman's Pouch",
+          "Kill Krode the Diviner in The Warrens for a Diviner's Bowl",
+          "Turn both in to Breya Nostulia in the Temple of Deepwater Knights"
+        ],
+        "wiki_title": "Kobold Shaman Artifacts"
+      }
+    },
+    {
+      "data": {
+        "id": "item:midnight-sea-mail-leggings",
+        "label": "Midnight Sea Mail Leggings",
+        "type": "item",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 9,
+        "stats": {
+          "str": 1,
+          "wis": 1,
+          "agi": 3
+        },
+        "source": "Kobold Shaman Artifacts reward (Breya Nostulia, Erudin) -- also carries unquantified cold resistance"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kobold-shaman-paws",
+        "label": "Kobold Shaman Paws",
+        "type": "quest",
+        "description": "Leraena Shelyrak, at the Temple of Light in Erudin, requiring Amiable or better faction, trades 3 Odd Kobold Paws -- from kobold shamans in Toxxulia Forest -- for the spells Cure Disease and Holy Armor, coin, and experience.",
+        "minLevel": 5,
+        "steps": [
+          "Kill kobold shamans in Toxxulia Forest for 3 Odd Kobold Paws",
+          "Turn them in to Leraena Shelyrak"
+        ],
+        "wiki_title": "Kobold Shaman Paws"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:kwinn-the-outlander",
+        "label": "Kwinn the Outlander",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kwinns-quest",
+        "label": "Kwinn's Quest",
+        "type": "quest",
+        "description": "Kwinn the Outlander in Firiona Vie trades a pack combining a Sabertooth Tiger Mane, a pair of Intact Pygmy Brute Choppers, a Stoneglint Lime Plume, and a Skeleton Fist -- dropped by sabertooth tigers and war boned skeletons (Lake of Ill Omen), pygmy skulking brutes (The Overthere), and stoneglint cockatrices (Warsliks Woods) -- for a Mechanical Iksar Tail.",
+        "minLevel": 25,
+        "steps": [
+          "Collect a Sabertooth Tiger Mane and Skeleton Fist in Lake of Ill Omen",
+          "Collect a pair of Intact Pygmy Brute Choppers in The Overthere",
+          "Collect a Stoneglint Lime Plume from a stoneglint cockatrice in Warsliks Woods",
+          "Combine all four into the pack Kwinn provides and turn it in to him"
+        ],
+        "wiki_title": "Kwinn's Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mechanical-iksar-tail",
+        "label": "Mechanical Iksar Tail",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "weight": 2,
+        "size": "Medium",
+        "source": "Kwinn's Quest reward (Kwinn the Outlander, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:guard-kwint",
+        "label": "Guard Kwint",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:kwints-kwest",
+        "label": "Kwint's Kwest",
+        "type": "quest",
+        "description": "Guard Kwint in South Qeynos sends players to Earron Huntlan at the Lion's Mane Tavern for a voucher good for one free ale, which is returned to Kwint for coin, experience, and faction. Keeping the voucher or giving it to a bartender instead incurs a faction penalty.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Guard Kwint in South Qeynos",
+          "Find Earron Huntlan at the Lion's Mane Tavern and mention Kwint sent you",
+          "Return the voucher to Guard Kwint"
+        ],
+        "wiki_title": "Kwint's Kwest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:langseax-quest",
+        "label": "Langseax Quest",
+        "type": "quest",
+        "description": "Renth McLanis in Halas, requiring Kindly or better faction with the Wolves of the North, sends Warriors who've completed the Lion Meat Shipment Quest to trade its Lion Delight reward to Iceberg for a Sweaty Shirt, deliver that to Frostbite at the McMannus fishing village in Western Karana, then kill Paglan or Basil and return their head for a Langseax (Basil) or the superior Langseax of the Wolves (Paglan). Warrior only.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Complete the Lion Meat Shipment Quest for Lion Delight",
+          "Trade Lion Delight to Iceberg for a Sweaty Shirt",
+          "Give the Sweaty Shirt to Frostbite at the McMannus fishing village in Western Karana",
+          "Kill Paglan or Basil and return their head to Renth McLanis"
+        ],
+        "wiki_title": "Langseax Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:langseax",
+        "label": "Langseax",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "source": "Langseax Quest reward for Basil's head (Renth McLanis, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:langseax-of-the-wolves",
+        "label": "Langseax of the Wolves",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "2H Slashing",
+        "damage": 19,
+        "stats": {
+          "str": 5,
+          "dex": 5
+        },
+        "source": "Langseax Quest reward for Paglan's head (Renth McLanis, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:errgriz",
+        "label": "Errgriz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "label": "Learn the Ways of Skinning and Tailoring",
+        "type": "quest",
+        "description": "Errgriz, near the Tower of Frozen Shadow in Iceclad Ocean, trades a High Quality Dire Wolf Fur -- from dire wolves in Eastern Wastes or Great Divide -- for Wolf Fur Earcovers, admitting he wasn't actually able to craft anything with the fur himself. Part of the Captain Nalot's Triple Strength Rum questline.",
+        "minLevel": 1,
+        "steps": [
+          "Kill a dire wolf in Eastern Wastes or Great Divide for a High Quality Dire Wolf Fur",
+          "Give it to Errgriz near the Tower of Frozen Shadow in Iceclad Ocean"
+        ],
+        "wiki_title": "Learn the Ways of Skinning and Tailoring"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-fur-earcovers",
+        "label": "Wolf Fur Earcovers",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Learn the Ways of Skinning and Tailoring reward (Errgriz, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:marshal-anrey",
+        "label": "Marshal Anrey",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:leatherfoot-raiders",
+        "label": "Leatherfoot Raiders",
+        "type": "quest",
+        "description": "Marshal Anrey, on the second floor of the Rivervale bank, requiring Amiable or better faction, trades a Shark Skin (Ocean of Tears, East Freeport, Qeynos Catacombs, or Erudin harbor), a Grizzly Bear Skin (Northern Karana), a Polar Bear Skin (Everfrost Peaks), and an Alligator Skin (Innothule Swamp) for a Leatherfoot Skullcap; that skullcap plus a Dragoon Dirk (Crushbone's Ambassador DVinn, Northern Desert of Ro's Dorn B'Dynn, or other dragoon variants) upgrades to the Leatherfoot Raider Skullcap. All classes except Necromancer, Wizard, Magician, and Enchanter for the first reward.",
+        "minLevel": 1,
+        "steps": [
+          "Collect a Shark Skin, Grizzly Bear Skin, Polar Bear Skin, and Alligator Skin",
+          "Turn all four in to Marshal Anrey for the Leatherfoot Skullcap",
+          "Kill a dragoon (e.g. Ambassador DVinn in Crushbone or Dorn B'Dynn in Northern Desert of Ro) for a Dragoon Dirk",
+          "Return the Leatherfoot Skullcap and Dragoon Dirk to Marshal Anrey for the upgraded Leatherfoot Raider Skullcap"
+        ],
+        "wiki_title": "Leatherfoot Raiders"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leatherfoot-skullcap",
+        "label": "Leatherfoot Skullcap",
+        "type": "item",
+        "ac": 4,
+        "stats": {
+          "cha": 10
+        },
+        "source": "Leatherfoot Raiders reward (Marshal Anrey, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leatherfoot-raider-skullcap",
+        "label": "Leatherfoot Raider Skullcap",
+        "type": "item",
+        "ac": 7,
+        "stats": {
+          "str": 5,
+          "cha": 10,
+          "agi": 5
+        },
+        "effect": "Instant Gate",
+        "source": "Leatherfoot Raiders reward, upgraded from Leatherfoot Skullcap (Marshal Anrey, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:high-keep:captain-bosec",
+        "label": "Captain Bosec",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:left-goblin-ears",
+        "label": "Left Goblin Ears",
+        "type": "quest",
+        "description": "Captain Bosec, near the cellars/bank entrance in High Keep, trades up to four Left Goblin Ears per turn-in -- from Pickclaw clan goblins infesting High Keep's tunnels -- for coin, experience, and faction.",
+        "minLevel": 9,
+        "steps": [
+          "Kill Pickclaw clan goblins in High Keep for Left Goblin Ears",
+          "Turn in up to four at a time to Captain Bosec"
+        ],
+        "wiki_title": "Left Goblin Ears"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:toala-nehron",
+        "label": "Toala Nehron",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lenkas-pouch",
+        "label": "Lenka's Pouch",
+        "type": "quest",
+        "description": "Toala Nehron in West Freeport sends players to Lenka Stoutheart and Bronto Thudfoot at the Seafarer's Roost in East Freeport (daytime only), and on to Brunar Rankin under the docks, to recover the L.S. Pouch -- a groundspawn in a hidden underground guild area behind the Seafarer's Roost's basement crates -- for experience and a choice of the Snapped Pole or Moggok's Right Eye. A Snapped Pole can be handed to Olunea Miltin for a Fishing Pole.",
+        "minLevel": 1,
+        "steps": [
+          "Speak with Toala Nehron in West Freeport",
+          "Find Lenka Stoutheart and Bronto Thudfoot at the Seafarer's Roost in East Freeport",
+          "Question Brunar Rankin under the docks",
+          "Retrieve the L.S. Pouch from the hidden basement area behind the Seafarer's Roost",
+          "Return the pouch to Lenka Stoutheart"
+        ],
+        "wiki_title": "Lenka's Pouch"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-commonlands:wallin-slyfoot",
+        "label": "Wallin Slyfoot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:letter-to-master-whoopal",
+        "label": "Letter to Master Whoopal",
+        "type": "quest",
+        "description": "Wallin Slyfoot in West Commonlands hands out the Leatherfoot Raider Orders to deliver to Master Whoopal in Nektulos Forest, for coin, experience, and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Receive the Leatherfoot Raider Orders from Wallin Slyfoot",
+          "Deliver it to Master Whoopal in Nektulos Forest"
+        ],
+        "wiki_title": "Letter to Master Whoopal"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:commander-leuz",
+        "label": "Commander Leuz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:leuzs-task",
+        "label": "Leuz's Task",
+        "type": "quest",
+        "description": "Commander Leuz in Skyshrine, requiring Warmly or better faction with the Claws of Veeshan, hands out Scout Tools to deliver to Scout Charisa south of Sirens Grotto in Western Wastes; delivering them spawns a Kromzek Captain who drops a Broken Disk, tradeable back to Charisa for a Robe, Bracer, or Talisman of Benevolence depending on class, with further optional exchanges available.",
+        "minLevel": 46,
+        "steps": [
+          "Receive Scout Tools from Commander Leuz in Skyshrine",
+          "Deliver them to Scout Charisa south of Sirens Grotto in Western Wastes",
+          "Kill the Kromzek Captain that spawns for a Broken Disk",
+          "Return the Broken Disk to Scout Charisa for a class-appropriate reward"
+        ],
+        "wiki_title": "Leuz's Task"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:rarnan-lapice",
+        "label": "Rarnan Lapice",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:library-book",
+        "label": "Library Book",
+        "type": "quest",
+        "description": "Rarnan Lapice, outside the Temple of Divine Light in Erudin, requiring a cleric of Quellious above Indifferent faction, sends players via Illithi Nollith and Tol Nicelot to Moodoro Finharn in North Qeynos for an incomplete Testament of Vanear, then to Dyllin Starsine in Highpass Hold for Page 30 and back to Moodoro for Page 34 (won in a card game), for the completed Testament of Vanear and the spell Languid Pace.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 16,
+        "steps": [
+          "Speak with Illithi Nollith at the Erudin library, then Tol Nicelot",
+          "Purchase the incomplete Testament of Vanear from Moodoro Finharn in North Qeynos",
+          "Kill Dyllin Starsine in Highpass Hold for Page 30",
+          "Win Page 34 from Moodoro Finharn in a card game",
+          "Combine all pages in the Testament container and return it to Rarnan Lapice"
+        ],
+        "wiki_title": "Library Book"
+      }
+    },
+    {
+      "data": {
+        "id": "item:testament-of-vanear",
+        "label": "Testament of Vanear",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "stats": {
+          "wis": 10
+        },
+        "mana": 10,
+        "effect": "Mana Preservation I (focus)",
+        "source": "Library Book reward (Rarnan Lapice, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:teria-odanos",
+        "label": "Teria O`Danos",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lion-meat-shipment-quest",
+        "label": "Lion Meat Shipment Quest",
+        "type": "quest",
+        "description": "Teria O`Danos in Halas sends players to the McMannus fishing village in Western Karana -- Einhorst McMannus, then Misla McMannus -- to retrieve a Lion Meat Shipment, returned to Teria for Lion Delight, coin, experience, and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Teria O`Danos in Halas",
+          "Travel to the McMannus fishing village in Western Karana",
+          "Speak with Einhorst McMannus, then Misla McMannus, to receive the Lion Meat Shipment",
+          "Return it to Teria O`Danos"
+        ],
+        "wiki_title": "Lion Meat Shipment Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lion-delight",
+        "label": "Lion Delight",
+        "type": "item",
+        "source": "Lion Meat Shipment Quest reward (Teria O`Danos, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lionskin-gloves-quest",
+        "label": "Lionskin Gloves Quest",
+        "type": "quest",
+        "description": "Ged Twigborn in Kithicor Forest, requiring high faction (raised by killing Shralok Orcs in the forest), trades 96 gold plus a high quality lion skin -- from Highland Lions in Eastern Karana, or occasionally a tiger in Kithicor Forest's southwestern corner -- for Lionskin Gloves. All classes except Necromancer, Wizard, Magician, and Enchanter.",
+        "minLevel": 14,
+        "steps": [
+          "Kill Shralok Orcs in Kithicor Forest to raise faction with Ged Twigborn",
+          "Kill a Highland Lion in Eastern Karana (or a tiger in Kithicor Forest) for a high quality lion skin",
+          "Turn in the skin and 96 gold to Ged Twigborn"
+        ],
+        "wiki_title": "Lionskin Gloves Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lionskin-gloves",
+        "label": "Lionskin Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 5,
+        "resists": {
+          "cold": 2
+        },
+        "weight": 1.1,
+        "source": "Lionskin Gloves Quest reward (Ged Twigborn, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:kyenka",
+        "label": "Kyenka",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:living-dragons",
+        "label": "Living Dragons",
+        "type": "quest",
+        "description": "Kyenka, in Tormax's throne room in Kael Drakkal, requiring Warmly or better faction with Kromzek, trades a Greater Dragon's Head for Barbed Dragonscale Pauldrons, or a Great Dragon's Head for Barbed Dragonscale Boots -- both dropped by elder dragons in Western Wastes.",
+        "minLevel": 50,
+        "steps": [
+          "Kill an elder dragon in Western Wastes for a Greater or Great Dragon's Head",
+          "Turn it in to Kyenka in Kael Drakkal"
+        ],
+        "wiki_title": "Living Dragons"
+      }
+    },
+    {
+      "data": {
+        "id": "item:barbed-dragonscale-pauldrons",
+        "label": "Barbed Dragonscale Pauldrons",
+        "type": "item",
+        "ac": 9,
+        "stats": {
+          "str": 5,
+          "sta": 10,
+          "agi": 9
+        },
+        "source": "Living Dragons reward for a Greater Dragon's Head (Kyenka, Kael Drakkal) -- also carries unquantified poison resistance"
+      }
+    },
+    {
+      "data": {
+        "id": "item:barbed-dragonscale-boots",
+        "label": "Barbed Dragonscale Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 19,
+        "stats": {
+          "sta": 9
+        },
+        "hp": 30,
+        "source": "Living Dragons reward for a Great Dragon's Head (Kyenka, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:storm-giant-architect",
+        "label": "a storm giant architect",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:living-granite",
+        "label": "Living Granite",
+        "type": "quest",
+        "description": "A storm giant architect in The Wakening Land, requiring only dubious faction, trades four Blocks of Living Granite -- from geonid shamans in the geonid caverns -- for A Gigantic Kromzek Pick. Warrior, Paladin, Ranger, or Shadow Knight only.",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "minLevel": 45,
+        "steps": [
+          "Kill geonid shamans in the geonid caverns for 4 Blocks of Living Granite",
+          "Turn them in to the storm giant architect"
+        ],
+        "wiki_title": "Living Granite"
+      }
+    },
+    {
+      "data": {
+        "id": "item:a-gigantic-kromzek-pick",
+        "label": "A Gigantic Kromzek Pick",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "skill": "2H Slashing",
+        "damage": 21,
+        "delay": 41,
+        "source": "Living Granite reward (storm giant architect, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:grevak",
+        "label": "Grevak",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lizard-dolls",
+        "label": "Lizard Dolls",
+        "type": "quest",
+        "description": "Grevak, at the Greenblood guild in Oggok, trades two Mystic Dolls for a Backpack, a choice of the spells Disease Cloud, Invisibility versus Undead, or Leering Corpse, coin, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Bring two Mystic Dolls to Grevak at the Greenblood guild in Oggok"
+        ],
+        "wiki_title": "Lizard Dolls"
+      }
+    },
+    {
+      "data": {
+        "id": "item:backpack",
+        "label": "Backpack",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "capacity": 8,
+        "source": "Lizard Dolls reward (Grevak, Oggok) -- 8-slot container, 0% weight reduction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:soonog",
+        "label": "Soonog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lizard-meat-no-2",
+        "label": "Lizard Meat No 2",
+        "type": "quest",
+        "description": "Soonog, at the Greenblood guild in Oggok, requiring Ogre race, trades 4 lizard meat -- from lizardmen in The Feerrott -- for a Rusty Two Handed Sword, coin, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Kill lizardmen in The Feerrott for 4 lizard meat",
+          "Turn them in to Soonog at the Greenblood guild in Oggok"
+        ],
+        "wiki_title": "Lizard Meat No 2"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:kogna",
+        "label": "Kogna",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lizard-meat-quest",
+        "label": "Lizard Meat Quest",
+        "type": "quest",
+        "description": "Kogna in Oggok, requiring Ogre race and Amiable or better faction, trades 4 pieces of lizard meat -- handed over unstacked, not one at a time, from lizardmen in The Feerrott -- for a Rusty Two Handed Battle Axe and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Kill lizardmen in The Feerrott for 4 unstacked pieces of lizard meat",
+          "Turn them in to Kogna in Oggok"
+        ],
+        "wiki_title": "Lizard Meat Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rusty-two-handed-battle-axe",
+        "label": "Rusty Two Handed Battle Axe",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "source": "Lizard Meat Quest reward (Kogna, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:horgus",
+        "label": "Horgus",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lizard-tails",
+        "label": "Lizard Tails",
+        "type": "quest",
+        "description": "Horgus in Oggok, requiring Ogre race, trades four tails from newbie lizards in The Feerrott for a random piece of Raw-Hide Armor, coin, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Kill newbie lizards in The Feerrott for 4 tails",
+          "Turn them in to Horgus in Oggok"
+        ],
+        "wiki_title": "Lizard Tails"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lizard-tails-no-2",
+        "label": "Lizard Tails No 2",
+        "type": "quest",
+        "description": "Grevak, at the Greenblood guild in Oggok, trades four lizard tails -- from lizardmen in The Feerrott -- for a random piece of Tattered armor, coin, and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Kill lizardmen in The Feerrott for 4 lizard tails",
+          "Turn them in to Grevak at the Greenblood guild in Oggok"
+        ],
+        "wiki_title": "Lizard Tails No 2"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:cobalt-scar:bungre-crawcrusher",
+        "label": "Bungre Crawcrusher",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lodizal-shell-shield-quest",
+        "label": "Lodizal Shell Shield Quest",
+        "type": "quest",
+        "description": "Bungre Crawcrusher, an Othmir in Cobalt Scar near the Skyshrine zone line, requiring Apprehensive or better faction with the Othmir, crafts a Section of Lodizal's Shell -- dropped by the giant sea turtle Lodizal in Iceclad Ocean -- plus 10,000 gold into a Lodizal Shell Shield. Bard, Cleric, Druid, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior only.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Kill Lodizal in Iceclad Ocean for a Section of Lodizal's Shell",
+          "Turn it in with 10,000 gold to Bungre Crawcrusher in Cobalt Scar"
+        ],
+        "wiki_title": "Lodizal Shell Shield Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lodizal-shell-shield",
+        "label": "Lodizal Shell Shield",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "ac": 23,
+        "stats": {
+          "str": 10,
+          "cha": 5,
+          "wis": 10
+        },
+        "effect": "Underwater breathing",
+        "source": "Lodizal Shell Shield Quest reward (Bungre Crawcrusher, Cobalt Scar) -- also carries unquantified fire, cold, and magic resistance"
+      }
     }
   ],
   "edges": [
@@ -131216,6 +132050,1518 @@
         "id": "e-rewards-9340",
         "source": "quest:kilijs-plans",
         "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9341",
+        "source": "npc:south-kaladim:beno-targnarle",
+        "target": "quest:knight-card-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9342",
+        "source": "quest:knight-card-quest",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9343",
+        "source": "quest:knight-card-quest",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9344",
+        "source": "quest:knight-card-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9345",
+        "source": "quest:knight-card-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9346",
+        "source": "quest:knight-card-quest",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9347",
+        "source": "quest:knight-card-quest",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9348",
+        "source": "quest:knight-card-quest",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9349",
+        "source": "npc:south-qeynos:tabure-ahendle",
+        "target": "quest:kobold-killing",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9350",
+        "source": "quest:kobold-killing",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9351",
+        "source": "quest:kobold-killing",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9352",
+        "source": "quest:kobold-killing",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9353",
+        "source": "quest:kobold-killing",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9354",
+        "source": "quest:kobold-killing",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9355",
+        "source": "quest:kobold-killing",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9356",
+        "source": "npc:paineel:royal-guard-lilkus",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9357",
+        "source": "npc:paineel:royal-guard-lilkus",
+        "target": "quest:kobold-molars-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9358",
+        "source": "quest:kobold-molars-evil",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9359",
+        "source": "quest:kobold-molars-evil",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9360",
+        "source": "quest:kobold-molars-evil",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9361",
+        "source": "quest:kobold-molars-evil",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9362",
+        "source": "npc:erudin:breya-nostulia",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9363",
+        "source": "npc:erudin:breya-nostulia",
+        "target": "quest:kobold-shaman-artifacts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9364",
+        "source": "quest:kobold-shaman-artifacts",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9365",
+        "source": "quest:kobold-shaman-artifacts",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9366",
+        "source": "quest:kobold-shaman-artifacts",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9367",
+        "source": "quest:kobold-shaman-artifacts",
+        "target": "item:midnight-sea-mail-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9368",
+        "source": "npc:erudin:leraena-shelyrak",
+        "target": "quest:kobold-shaman-paws",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9369",
+        "source": "quest:kobold-shaman-paws",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9370",
+        "source": "quest:kobold-shaman-paws",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9371",
+        "source": "quest:kobold-shaman-paws",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9372",
+        "source": "quest:kobold-shaman-paws",
+        "target": "spell:cure-disease",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9373",
+        "source": "quest:kobold-shaman-paws",
+        "target": "spell:holy-armor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9374",
+        "source": "quest:kobold-shaman-paws",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9375",
+        "source": "quest:kobold-shaman-paws",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9376",
+        "source": "npc:firiona-vie:kwinn-the-outlander",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9377",
+        "source": "npc:firiona-vie:kwinn-the-outlander",
+        "target": "quest:kwinns-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9378",
+        "source": "quest:kwinns-quest",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9379",
+        "source": "quest:kwinns-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9380",
+        "source": "quest:kwinns-quest",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9381",
+        "source": "quest:kwinns-quest",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9382",
+        "source": "quest:kwinns-quest",
+        "target": "item:mechanical-iksar-tail",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9383",
+        "source": "npc:south-qeynos:guard-kwint",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9384",
+        "source": "npc:south-qeynos:guard-kwint",
+        "target": "quest:kwints-kwest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9385",
+        "source": "quest:kwints-kwest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9386",
+        "source": "quest:kwints-kwest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9387",
+        "source": "quest:kwints-kwest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9388",
+        "source": "quest:kwints-kwest",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9389",
+        "source": "quest:kwints-kwest",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9390",
+        "source": "npc:halas:renth-mclanis",
+        "target": "quest:langseax-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9391",
+        "source": "quest:langseax-quest",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9392",
+        "source": "quest:langseax-quest",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9393",
+        "source": "quest:langseax-quest",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9394",
+        "source": "quest:langseax-quest",
+        "target": "item:langseax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9395",
+        "source": "quest:langseax-quest",
+        "target": "item:langseax-of-the-wolves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9396",
+        "source": "npc:iceclad-ocean:errgriz",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9397",
+        "source": "npc:iceclad-ocean:errgriz",
+        "target": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9398",
+        "source": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9399",
+        "source": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9400",
+        "source": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9401",
+        "source": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9402",
+        "source": "quest:learn-the-ways-of-skinning-and-tailoring",
+        "target": "item:wolf-fur-earcovers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9403",
+        "source": "npc:rivervale:marshal-anrey",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9404",
+        "source": "npc:rivervale:marshal-anrey",
+        "target": "quest:leatherfoot-raiders",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9405",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9406",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9407",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9408",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9409",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9410",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9411",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9412",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9413",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9414",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9415",
+        "source": "quest:leatherfoot-raiders",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9416",
+        "source": "quest:leatherfoot-raiders",
+        "target": "item:leatherfoot-skullcap",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9417",
+        "source": "quest:leatherfoot-raiders",
+        "target": "item:leatherfoot-raider-skullcap",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9418",
+        "source": "npc:high-keep:captain-bosec",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9419",
+        "source": "npc:high-keep:captain-bosec",
+        "target": "quest:left-goblin-ears",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9420",
+        "source": "quest:left-goblin-ears",
+        "target": "zone:high-keep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9421",
+        "source": "quest:left-goblin-ears",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9422",
+        "source": "quest:left-goblin-ears",
+        "target": "faction:highpass-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9423",
+        "source": "quest:left-goblin-ears",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9424",
+        "source": "quest:left-goblin-ears",
+        "target": "faction:merchants-of-highpass",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9425",
+        "source": "quest:left-goblin-ears",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9426",
+        "source": "quest:left-goblin-ears",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9427",
+        "source": "npc:west-freeport:toala-nehron",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9428",
+        "source": "npc:west-freeport:toala-nehron",
+        "target": "quest:lenkas-pouch",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9429",
+        "source": "quest:lenkas-pouch",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9430",
+        "source": "quest:lenkas-pouch",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9431",
+        "source": "quest:lenkas-pouch",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9432",
+        "source": "quest:lenkas-pouch",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9433",
+        "source": "npc:west-commonlands:wallin-slyfoot",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9434",
+        "source": "npc:west-commonlands:wallin-slyfoot",
+        "target": "quest:letter-to-master-whoopal",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9435",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "zone:west-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9436",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9437",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9438",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9439",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9440",
+        "source": "quest:letter-to-master-whoopal",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9441",
+        "source": "npc:skyshrine:commander-leuz",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9442",
+        "source": "npc:skyshrine:commander-leuz",
+        "target": "quest:leuzs-task",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9443",
+        "source": "quest:leuzs-task",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9444",
+        "source": "quest:leuzs-task",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9445",
+        "source": "quest:leuzs-task",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9446",
+        "source": "npc:erudin:rarnan-lapice",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9447",
+        "source": "npc:erudin:rarnan-lapice",
+        "target": "quest:library-book",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9448",
+        "source": "quest:library-book",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9449",
+        "source": "quest:library-book",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9450",
+        "source": "quest:library-book",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9451",
+        "source": "quest:library-book",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9452",
+        "source": "quest:library-book",
+        "target": "spell:languid-pace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9453",
+        "source": "quest:library-book",
+        "target": "item:testament-of-vanear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9454",
+        "source": "npc:halas:teria-odanos",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9455",
+        "source": "npc:halas:teria-odanos",
+        "target": "quest:lion-meat-shipment-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9456",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9457",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9458",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9459",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "item:lion-delight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9460",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9461",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9462",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9463",
+        "source": "quest:lion-meat-shipment-quest",
+        "target": "faction:rogues-of-the-white-rose",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9464",
+        "source": "npc:kithicor-forest:ged-twigborn",
+        "target": "quest:lionskin-gloves-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9465",
+        "source": "quest:lionskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9466",
+        "source": "quest:lionskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9467",
+        "source": "quest:lionskin-gloves-quest",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9468",
+        "source": "quest:lionskin-gloves-quest",
+        "target": "item:lionskin-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9469",
+        "source": "npc:kael-drakkal:kyenka",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9470",
+        "source": "npc:kael-drakkal:kyenka",
+        "target": "quest:living-dragons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9471",
+        "source": "quest:living-dragons",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9472",
+        "source": "quest:living-dragons",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9473",
+        "source": "quest:living-dragons",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9474",
+        "source": "quest:living-dragons",
+        "target": "item:barbed-dragonscale-pauldrons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9475",
+        "source": "quest:living-dragons",
+        "target": "item:barbed-dragonscale-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9476",
+        "source": "quest:living-dragons",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9477",
+        "source": "quest:living-dragons",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9478",
+        "source": "quest:living-dragons",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9479",
+        "source": "npc:the-wakening-land:storm-giant-architect",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9480",
+        "source": "npc:the-wakening-land:storm-giant-architect",
+        "target": "quest:living-granite",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9481",
+        "source": "quest:living-granite",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9482",
+        "source": "quest:living-granite",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9483",
+        "source": "quest:living-granite",
+        "target": "item:a-gigantic-kromzek-pick",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9484",
+        "source": "quest:living-granite",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9485",
+        "source": "quest:living-granite",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9486",
+        "source": "quest:living-granite",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9487",
+        "source": "npc:oggok:grevak",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9488",
+        "source": "npc:oggok:grevak",
+        "target": "quest:lizard-dolls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9489",
+        "source": "quest:lizard-dolls",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9490",
+        "source": "quest:lizard-dolls",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9491",
+        "source": "quest:lizard-dolls",
+        "target": "item:backpack",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9492",
+        "source": "quest:lizard-dolls",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9493",
+        "source": "quest:lizard-dolls",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9494",
+        "source": "npc:oggok:soonog",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9495",
+        "source": "npc:oggok:soonog",
+        "target": "quest:lizard-meat-no-2",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9496",
+        "source": "quest:lizard-meat-no-2",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9497",
+        "source": "quest:lizard-meat-no-2",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9498",
+        "source": "quest:lizard-meat-no-2",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9499",
+        "source": "quest:lizard-meat-no-2",
+        "target": "item:rusty-two-handed-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9500",
+        "source": "quest:lizard-meat-no-2",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9501",
+        "source": "quest:lizard-meat-no-2",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9502",
+        "source": "npc:oggok:kogna",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9503",
+        "source": "npc:oggok:kogna",
+        "target": "quest:lizard-meat-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9504",
+        "source": "quest:lizard-meat-quest",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9505",
+        "source": "quest:lizard-meat-quest",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9506",
+        "source": "quest:lizard-meat-quest",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9507",
+        "source": "quest:lizard-meat-quest",
+        "target": "item:rusty-two-handed-battle-axe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9508",
+        "source": "quest:lizard-meat-quest",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9509",
+        "source": "quest:lizard-meat-quest",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9510",
+        "source": "npc:oggok:horgus",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9511",
+        "source": "npc:oggok:horgus",
+        "target": "quest:lizard-tails",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9512",
+        "source": "quest:lizard-tails",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9513",
+        "source": "quest:lizard-tails",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9514",
+        "source": "quest:lizard-tails",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9515",
+        "source": "quest:lizard-tails",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9516",
+        "source": "quest:lizard-tails",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9517",
+        "source": "npc:oggok:grevak",
+        "target": "quest:lizard-tails-no-2",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9518",
+        "source": "quest:lizard-tails-no-2",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9519",
+        "source": "quest:lizard-tails-no-2",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9520",
+        "source": "quest:lizard-tails-no-2",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9521",
+        "source": "quest:lizard-tails-no-2",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9522",
+        "source": "quest:lizard-tails-no-2",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9523",
+        "source": "npc:cobalt-scar:bungre-crawcrusher",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9524",
+        "source": "npc:cobalt-scar:bungre-crawcrusher",
+        "target": "quest:lodizal-shell-shield-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9525",
+        "source": "quest:lodizal-shell-shield-quest",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9526",
+        "source": "quest:lodizal-shell-shield-quest",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9527",
+        "source": "quest:lodizal-shell-shield-quest",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9528",
+        "source": "quest:lodizal-shell-shield-quest",
+        "target": "item:lodizal-shell-shield",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9529",
+        "source": "quest:lodizal-shell-shield-quest",
+        "target": "faction:othmir",
         "type": "rewards"
       }
     }
