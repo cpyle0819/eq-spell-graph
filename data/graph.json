@@ -59449,6 +59449,1084 @@
         "size": "Medium",
         "source": "Orc Hatchets reward (Dill Fireshine, Greater Faydark)"
       }
+    },
+    {
+      "data": {
+        "id": "zone:qeynos-aqueducts",
+        "label": "Qeynos Aqueducts",
+        "type": "zone",
+        "lore": "The vast ancient water supply to the city of Qeynos. The area was long ago walled off when it was no longer used, but then became the haven of the seedier elements of area, including the beggars and thieves, smugglers and thugs, and up to the members who worship the Plague Bringer himself.",
+        "wiki_title": "Qeynos Aqueducts"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:trizam-ntan",
+        "label": "Trizam N`Tan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-pawn-picks",
+        "label": "Orc Pawn Picks",
+        "type": "quest",
+        "description": "Trizam N`Tan in Neriak Commons trades 4 Orc Pawn Picks for faction, coin, 2 Neriak Nectar, a Rotgrub Rye, and experience. All classes.",
+        "minLevel": 5,
+        "steps": [
+          "Kill orc pawns in Neriak Commons for 4 Orc Pawn Picks",
+          "Turn them in to Trizam N`Tan in Neriak Commons"
+        ],
+        "wiki_title": "Orc Pawn Picks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:neriak-nectar",
+        "label": "Neriak Nectar",
+        "type": "item",
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Orc Pawn Picks reward (Trizam N`Tan, Neriak Commons) -- a drink"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rotgrub-rye",
+        "label": "Rotgrub Rye",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Orc Pawn Picks reward (Trizam N`Tan, Neriak Commons) -- a snack"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-picks",
+        "label": "Orc Picks",
+        "type": "quest",
+        "description": "Guard Valon in West Commonlands trades Orc Pawn Picks -- four at a time -- for coin, faction, and experience. Dubious or better faction with Guard Valon is sufficient to start. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Kill orc pawns in West Commonlands for Orc Pawn Picks",
+          "Turn in up to 4 at a time to Guard Valon in West Commonlands"
+        ],
+        "wiki_title": "Orc Picks"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-runner-felwithe",
+        "label": "Orc Runner (Felwithe)",
+        "type": "quest",
+        "description": "General Jyleel, at the Paladin Guild Hall in Northern Felwithe, requiring Amiable faction, sends a Runner Pouch and A Sealed Letter recovered from a slain orc runner back and forth, rewarding Bandages, an Iron Ration, a Ration, a Water Flask, coin (paid out twice), and experience. All classes.",
+        "minLevel": 8,
+        "steps": [
+          "Kill an orc runner for a Runner Pouch and A Sealed Letter",
+          "Deliver them per General Jyleel's instructions in Northern Felwithe"
+        ],
+        "wiki_title": "Orc Runner (Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-runner-kelethin",
+        "label": "Orc Runner (Kelethin)",
+        "type": "quest",
+        "description": "Dill Fireshine, at the Ranger Guild Hall in Kelethin (Greater Faydark), trades a Runner Pouch and A Sealed Letter recovered from a slain orc runner for coin, experience, and a choice of weapon (Longbow, Rusty Short Sword, Rusty Spear, Rusty Two Handed Sword, or Tarnished Bastard Sword). Bard, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior.",
+        "classes": [
+          "bard",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 8,
+        "steps": [
+          "Kill an orc runner for a Runner Pouch and A Sealed Letter",
+          "Turn them in to Dill Fireshine in Kelethin"
+        ],
+        "wiki_title": "Orc Runner (Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:longbow",
+        "label": "Longbow",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "rogue"
+        ],
+        "skill": "Archery",
+        "damage": 8,
+        "delay": 51,
+        "weight": 5,
+        "size": "Large",
+        "source": "Orc Runner (Kelethin) reward (Dill Fireshine, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:highpass-hold:captain-ashlan",
+        "label": "Captain Ashlan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-scalp-collecting",
+        "label": "Orc Scalp Collecting",
+        "type": "quest",
+        "description": "Captain Ashlan in Highpass Hold trades an Orc Scalp -- up to four at once -- for faction, coin, and experience. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Kill orcs in Highpass Hold for Orc Scalps",
+          "Turn in up to 4 at once to Captain Ashlan in Highpass Hold"
+        ],
+        "wiki_title": "Orc Scalp Collecting"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:linadian",
+        "label": "Linadian",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-vest",
+        "label": "Orc Vest",
+        "type": "quest",
+        "description": "Linadian, in Kelethin (Greater Faydark) or West Freeport, requiring Indifferent or better faction with Kelethin Merchants, trades either two legionnaire pads from Clan Crushbone plus a Crushbone Belt plus 10 gold, or two legionnaire pads from Clan Deathfist plus a Deathfist Slashed Belt plus 10 gold, for a Banded Orc Vest. Bard, Cleric, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior; Wood Elf, High Elf, Dark Elf, or Half-Elf only.",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 12,
+        "steps": [
+          "Gather two Clan Crushbone legionnaire pads and a Crushbone Belt, or two Clan Deathfist legionnaire pads and a Deathfist Slashed Belt, plus 10 gold",
+          "Turn them in to Linadian in Kelethin or West Freeport"
+        ],
+        "wiki_title": "Orc Vest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:banded-orc-vest",
+        "label": "Banded Orc Vest",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "cha": -3
+        },
+        "effect": "SV Disease +3",
+        "weight": 5.5,
+        "size": "Medium",
+        "source": "Orc Vest reward (Linadian, Kelethin or West Freeport) -- Wood Elf, High Elf, Dark Elf, Half-Elf only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:garuc-anehm",
+        "label": "Garuc Anehm",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-hunting",
+        "label": "Paladin Hunting",
+        "type": "quest",
+        "description": "Garuc Anehm in Qeynos Aqueducts, requiring Indifferent or better faction, trades an Order of Thunder (dropped by Knights of Thunder paladins, or looted from the zombie Drosco) or a Prayer Beads (from Priests of Life clerics) for a rusty weapon, a Wrist Pouch, and experience. Turning in Brother Trintle's busted prayer beads instead -- he is a mole within the Priests of Life -- triggers severe faction loss and combat with Garuc. All classes.",
+        "minLevel": 5,
+        "steps": [
+          "Kill a Knights of Thunder paladin for an Order of Thunder, or a Priests of Life cleric for Prayer Beads, in Qeynos Aqueducts",
+          "Turn it in to Garuc Anehm in Qeynos Aqueducts"
+        ],
+        "wiki_title": "Paladin Hunting"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wrist-pouch",
+        "label": "Wrist Pouch",
+        "type": "item",
+        "capacity": 4,
+        "weight": 0.4,
+        "size": "Tiny",
+        "source": "Paladin Hunting reward (Garuc Anehm, Qeynos Aqueducts) -- holds tiny items only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-desert-of-ro:ortallius",
+        "label": "Ortallius",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ortallius-cutthroat-rings",
+        "label": "Ortallius' Cutthroat Rings",
+        "type": "quest",
+        "description": "Ortallius in Southern Desert of Ro trades 3 Cutthroat Insignia Rings -- from dervish cutthroats -- for coin, experience, and faction with the Temple Of Sol Ro. All classes.",
+        "minLevel": 7,
+        "steps": [
+          "Kill dervish cutthroats in Southern Desert of Ro for 3 Cutthroat Insignia Rings",
+          "Turn them in to Ortallius in Southern Desert of Ro"
+        ],
+        "wiki_title": "Ortallius' Cutthroat Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:oven-mittens",
+        "label": "Oven Mittens",
+        "type": "quest",
+        "description": "Carver Cagrek in Grobb trades three unstacked Froglok Meat plus 10 gold for Grobb Oven Mittens, faction with Da Bashers, and experience. All classes except Necromancer, Wizard, Magician, Enchanter; Barbarian, Troll, Ogre, or Iksar only.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Gather 3 unstacked Froglok Meat",
+          "Turn them in with 10 gold to Carver Cagrek in Grobb"
+        ],
+        "wiki_title": "Oven Mittens"
+      }
+    },
+    {
+      "data": {
+        "id": "item:grobb-oven-mittens",
+        "label": "Grobb Oven Mittens",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 4,
+        "effect": "SV Fire +5",
+        "weight": 3,
+        "size": "Small",
+        "source": "Oven Mittens reward (Carver Cagrek, Grobb) -- Barbarian, Troll, Ogre, Iksar only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:renux-herkanor",
+        "label": "Renux Herkanor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:package-from-lomarc",
+        "label": "Package from Lomarc",
+        "type": "quest",
+        "description": "Renux Herkanor, in the Qeynos rogue guild in North Qeynos, sends players to kill Lomarc (a night-only spawn behind the Mermaid's Lure in South Qeynos) for a Kerran Doll, then return it for experience. Faction impact is mixed and step-dependent -- the wiki's own account of the kill-Lomarc step and the turn-in-to-Renux step disagrees about which of Circle of Unseen Hands, Merchants of Qeynos, Corrupt Qeynos Guards, Guards of Qeynos, and Kane Bayle rise vs. fall. All classes.",
+        "minLevel": 2,
+        "steps": [
+          "Accept the quest from Renux Herkanor in North Qeynos",
+          "Kill Lomarc behind the Mermaid's Lure in South Qeynos (night only) for a Kerran Doll",
+          "Return the doll to Renux Herkanor in North Qeynos"
+        ],
+        "wiki_title": "Package from Lomarc"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:theron-rolius",
+        "label": "Theron Rolius",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-message",
+        "label": "Paladin Message",
+        "type": "quest",
+        "description": "Theron Rolius in North Freeport sends a Note To Hall Of Truth to Eestyana Naestra on the third floor of the Hall of Truth. The note is stolen by Duggin Scumber after Mojax Hikspin rests, requiring combat or crowd control to recover it. Reward is the spell Courage, a Wrist Pouch, a Buckler, a Potion of Disease Warding, Marr's Sustenance, and coin. Amiable or better standing with Knights of Truth appears to be required, though the exact threshold isn't stated. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Receive the Note To Hall Of Truth from Theron Rolius in North Freeport",
+          "Recover it from Duggin Scumber if he steals it from Mojax Hikspin",
+          "Deliver it to Eestyana Naestra on the third floor of the Hall of Truth, North Freeport"
+        ],
+        "wiki_title": "Paladin Message"
+      }
+    },
+    {
+      "data": {
+        "id": "item:marrs-sustenance",
+        "label": "Marr's Sustenance",
+        "type": "item",
+        "magic": true,
+        "charges": 1,
+        "effect": "Regeneration (Any Slot) at Level 15",
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Paladin Message reward (Theron Rolius, North Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:buckler",
+        "label": "Buckler",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 4,
+        "weight": 3,
+        "size": "Small",
+        "source": "Paladin Message reward (Theron Rolius, North Freeport) -- all races except Dwarf, Halfling, Gnome"
+      }
+    },
+    {
+      "data": {
+        "id": "item:potion-of-disease-warding",
+        "label": "Potion of Disease Warding",
+        "type": "item",
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Paladin Message reward (Theron Rolius, North Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:parrying-pick-quest",
+        "label": "Parrying Pick Quest",
+        "type": "quest",
+        "description": "Diggins in North Kaladim, requiring Friendly faction with the Miners Guild 628, trades four bandit tongues (Barma's Tongue, Crytil's Tongue, Keldyn's Tongue, and Rondo's Tongue) for a Parrying Pick 628. Rogue; Dwarf only.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 13,
+        "steps": [
+          "Kill Barma, Crytil, Keldyn, and Rondo for their tongues",
+          "Turn them in to Diggins in North Kaladim"
+        ],
+        "wiki_title": "Parrying Pick Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:parrying-pick-628",
+        "label": "Parrying Pick 628",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 7,
+        "weight": 4,
+        "size": "Medium",
+        "source": "Parrying Pick Quest reward (Diggins, North Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:vin-moltor",
+        "label": "Vin Moltor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paw-of-opolla-quest",
+        "label": "Paw of Opolla Quest",
+        "type": "quest",
+        "description": "Vin Moltor in Qeynos Catacombs gives a Severed Paw for a Rat Ear Pie, or drops it (25% chance) when killed. Killing Vin Moltor costs faction with Antonius Bayle, Coalition of Tradefolk, Guards of Qeynos, and Merchants of Qeynos. Gynok Moltor in Befallen drops a Platinum Ring, Gold Ring, and Copper Ring; a Silver Ring is found at the bottom of the pond in Runnyeye. Combining all four in the Severed Paw yields the Paw of Opolla. Cleric, Druid, or Shaman; Solo level 29, Duo level 24.",
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman"
+        ],
+        "minLevel": 24,
+        "steps": [
+          "Get a Severed Paw from Vin Moltor in Qeynos Catacombs (bake him a Rat Ear Pie, or kill him for a chance at one)",
+          "Kill Gynok Moltor in Befallen for a Platinum Ring, Gold Ring, and Copper Ring",
+          "Retrieve a Silver Ring from the bottom of the pond in Runnyeye",
+          "Combine all four rings into the Severed Paw"
+        ],
+        "wiki_title": "Paw of Opolla Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:paw-of-opolla",
+        "label": "Paw of Opolla",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 9,
+        "stats": {
+          "sta": 5,
+          "cha": -5,
+          "wis": 9,
+          "agi": 9,
+          "mana": 5
+        },
+        "effect": "SV Disease -5",
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Paw of Opolla Quest reward (Vin Moltor, Qeynos Catacombs)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:peacekeeper-staff-quest",
+        "label": "Peacekeeper Staff Quest",
+        "type": "quest",
+        "description": "Lumi Stergnon, at the Temple of Divine Light in Erudin, requiring High Amiable faction with the Peacekeepers, sends a Sealed Letter to Emil Parsini, then combines Treant Resin and a Pearl of Odus in a Peacekeeper Staff container; turning the finished staff back in to Lumi Stergnon yields the Peacekeeper Staff, coin, experience, and a random Patchwork Armor piece. Cleric or Paladin.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 10,
+        "steps": [
+          "Deliver a Sealed Letter from Lumi Stergnon to Emil Parsini",
+          "Combine Treant Resin and a Pearl of Odus in a Peacekeeper Staff container",
+          "Turn in the finished staff to Lumi Stergnon in Erudin"
+        ],
+        "wiki_title": "Peacekeeper Staff Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:peacekeeper-staff",
+        "label": "Peacekeeper Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "lore": true,
+        "skill": "1H Blunt",
+        "damage": 4,
+        "delay": 30,
+        "weight": 6.5,
+        "size": "Large",
+        "source": "Peacekeeper Staff Quest reward (Lumi Stergnon, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:pickled-frogloks",
+        "label": "Pickled Frogloks",
+        "type": "quest",
+        "description": "Chef Dooga in Oggok trades 3 Pickled Froglok plus 10 gold (or 1 platinum) for an Ogre Butcher Apron, faction with Clurg, Green Blood Knights, Craknek Warriors, and Oggok Guards, and experience. All classes except Necromancer, Wizard, Magician, Enchanter; Barbarian, Troll, Ogre, or Iksar only.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "minLevel": 2,
+        "steps": [
+          "Gather 3 Pickled Froglok",
+          "Turn them in with 10 gold (or 1 platinum) to Chef Dooga in Oggok"
+        ],
+        "wiki_title": "Pickled Frogloks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ogre-butcher-apron",
+        "label": "Ogre Butcher Apron",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "lore": true,
+        "ac": 5,
+        "effect": "SV Fire +5",
+        "weight": 6.6,
+        "size": "Medium",
+        "source": "Pickled Frogloks reward (Chef Dooga, Oggok) -- Barbarian, Troll, Ogre, Iksar only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:celsar-vestagon",
+        "label": "Celsar Vestagon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:piranha-hunting",
+        "label": "Piranha Hunting",
+        "type": "quest",
+        "description": "Celsar Vestagon, at the Temple of Marr in North Freeport, trades a Sack of Piranha -- 4 Fresh Piranha combined in an Empty Fish Sack -- for coin, experience, faction with Knights of Truth, Priests of Marr, and Steel Warriors, and occasionally a cleric spell or potion. All classes (good alignment).",
+        "minLevel": 2,
+        "steps": [
+          "Gather 4 Fresh Piranha and combine them in an Empty Fish Sack",
+          "Turn in the Sack of Piranha to Celsar Vestagon in North Freeport"
+        ],
+        "wiki_title": "Piranha Hunting"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:pirate-earrings",
+        "label": "Pirate Earrings",
+        "type": "quest",
+        "description": "Styria Fearnon, on Erollisi Isle in Ocean of Tears, trades Pirate's Earrings -- looted from pirates on Seafury Island -- for one random item (an Aviak Feather, Fishing Spear, Kiola Nut, or Conch Shell), faction with Faydark's Champions, King Tearis Thex, Clerics of Tunare, and Soldiers of Tunare, and experience. All classes.",
+        "minLevel": 20,
+        "steps": [
+          "Kill pirates on Seafury Island in Ocean of Tears for Pirate's Earrings",
+          "Turn them in to Styria Fearnon on Erollisi Isle"
+        ],
+        "wiki_title": "Pirate Earrings"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:ran-sunfire",
+        "label": "Ran Sunfire",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:pixie-dust-kelethin-ranger",
+        "label": "Pixie Dust (Kelethin Ranger)",
+        "type": "quest",
+        "description": "Ran Sunfire, at the Ranger Guild Hall in Kelethin (Greater Faydark), trades a pouch of 6 unstacked Pixie Dusts for one of five armor pieces (Patchwork Boots, Patchwork Cloak, Patchwork Pants, Patchwork Sleeves, or Leather Skullcap), faction with Faydark's Champions, King Tearis Thex, Clerics of Tunare, and Soldiers of Tunare, coin, and experience. Bard, Cleric, Druid, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Kill pixie tricksters in Greater Faydark for 6 unstacked Pixie Dusts",
+          "Combine them into a pouch and turn it in to Ran Sunfire in Kelethin"
+        ],
+        "wiki_title": "Pixie Dust (Kelethin Ranger)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patchwork-boots",
+        "label": "Patchwork Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 3,
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Pixie Dust (Kelethin Ranger) reward (Ran Sunfire, Kelethin); player-craftable via Tailoring -- part of the Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patchwork-cloak",
+        "label": "Patchwork Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 3,
+        "weight": 2,
+        "size": "Medium",
+        "source": "Pixie Dust (Kelethin Ranger) reward (Ran Sunfire, Kelethin); player-craftable via Tailoring -- part of the Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patchwork-pants",
+        "label": "Patchwork Pants",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 4,
+        "weight": 4,
+        "size": "Medium",
+        "source": "Pixie Dust (Kelethin Ranger) reward (Ran Sunfire, Kelethin); player-craftable via Tailoring -- part of the Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patchwork-sleeves",
+        "label": "Patchwork Sleeves",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 3,
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Pixie Dust (Kelethin Ranger) reward (Ran Sunfire, Kelethin); player-craftable via Tailoring -- part of the Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-skullcap",
+        "label": "Leather Skullcap",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 4,
+        "weight": 0.6,
+        "size": "Small",
+        "source": "Pixie Dust (Kelethin Ranger) reward (Ran Sunfire, Kelethin); part of the Leather Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:expin",
+        "label": "Expin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:pixie-dust-kelethin-rogue",
+        "label": "Pixie Dust (Kelethin Rogue)",
+        "type": "quest",
+        "description": "Expin in Kelethin (Greater Faydark) trades a Pouch of Pixie Dust -- 6 unstacked Pixie Dusts, looted from pixie tricksters -- for a Patchwork Tunic, faction with Tunare's Scouts, coin, and experience. Bard, Cleric, Druid, Monk, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior.",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Kill pixie tricksters in Greater Faydark for 6 unstacked Pixie Dusts",
+          "Combine them into a pouch and turn it in to Expin in Kelethin"
+        ],
+        "wiki_title": "Pixie Dust (Kelethin Rogue)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:tunare-s-scouts",
+        "label": "Tunare's Scouts",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:patchwork-tunic",
+        "label": "Patchwork Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "ac": 6,
+        "weight": 3.5,
+        "size": "Medium",
+        "source": "Pixie Dust (Kelethin Rogue) reward (Expin, Kelethin); player-craftable via Tailoring -- part of the Patchwork Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:roesager-thusten",
+        "label": "Roesager Thusten",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plaguebringer-proof",
+        "label": "Plaguebringer Proof",
+        "type": "quest",
+        "description": "Roesager Thusten in North Qeynos trades a sealed letter from Tovax Vmar (\"A Letter to Opal\"), evidence of Plaguebringer activity, for a Potion of Light Healing, coin, and experience on the good path (an evil path pays different faction and coin, not clearly detailed). All classes.",
+        "minLevel": 10,
+        "steps": [
+          "Receive A Letter to Opal from Tovax Vmar",
+          "Turn it in to Roesager Thusten in North Qeynos"
+        ],
+        "wiki_title": "Plaguebringer Proof"
+      }
+    },
+    {
+      "data": {
+        "id": "item:potion-of-light-healing",
+        "label": "Potion of Light Healing",
+        "type": "item",
+        "magic": true,
+        "charges": 1,
+        "effect": "Light Healing (Any Slot) at Level 15",
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Plaguebringer Proof reward (Roesager Thusten, North Qeynos) -- good path"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-mischief:bob-the-painter",
+        "label": "Bob the Painter",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-mischief-armor-quest",
+        "label": "Plane of Mischief Armor Quest",
+        "type": "quest",
+        "description": "Bob the Painter in the Plane of Mischief trades Words of Wealth for an Empty Pot of Gold container. Combining an Armor of Distraction piece with a Plane of Mischief Doll inside it produces the corresponding armor piece from one of eight class-specific sets (Cleric, Druid, Bard, Enchanter, Monk, Necromancer, Shaman, or Wizard), depending on which doll is used. All classes.",
+        "minLevel": 55,
+        "steps": [
+          "Trade Words of Wealth to Bob the Painter in the Plane of Mischief for an Empty Pot of Gold",
+          "Combine an Armor of Distraction piece and a Plane of Mischief Doll inside it"
+        ],
+        "wiki_title": "Plane of Mischief Armor Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-mischief:debbis-the-fish",
+        "label": "Debbis the Fish",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-mischief:vinny-v-dvicci",
+        "label": "Vinny V. D'vicci",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-mischief-faction-quest",
+        "label": "Plane of Mischief Faction Quest",
+        "type": "quest",
+        "description": "Debbis the Fish, in the Plane of Mischief, trades a Rabbit Foot; Vinny V. D'vicci, also in the Plane of Mischief, trades a Lucky Skunk Foot. Both pay faction with Denizens of Mischief and experience. All classes.",
+        "minLevel": 55,
+        "steps": [
+          "Give a Rabbit Foot to Debbis the Fish in the Plane of Mischief",
+          "Give a Lucky Skunk Foot to Vinny V. D'vicci in the Plane of Mischief"
+        ],
+        "wiki_title": "Plane of Mischief Faction Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:denizens-of-mischief",
+        "label": "Denizens of Mischief",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:poacher-leader",
+        "label": "Poacher Leader",
+        "type": "quest",
+        "description": "Jras Solsier, outside the Temple of Divine Light in Erudin, trades a Poacher Head, then a Barbarian Head (dropped by Talym Shoontar), for a random low-level spell and experience, plus faction with Peace Keepers and High Council of Erudin. Cleric or Paladin.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 15,
+        "steps": [
+          "Turn in a Poacher Head to Jras Solsier in Erudin",
+          "Kill Talym Shoontar for a Barbarian Head and turn it in to Jras Solsier"
+        ],
+        "wiki_title": "Poacher Leader"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:poison-cures",
+        "label": "Poison Cures",
+        "type": "quest",
+        "description": "Waltor Felligan in Halas trades Mammoth Steaks for the Cure Poison spell, cast on the player. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Gather Mammoth Steaks",
+          "Turn them in to Waltor Felligan in Halas"
+        ],
+        "wiki_title": "Poison Cures"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dagnor-s-cauldron:conium-darkblade",
+        "label": "Conium Darkblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:poison-sales",
+        "label": "Poison Sales",
+        "type": "quest",
+        "description": "Conium Darkblade in Dagnor's Cauldron trades 3 Giant Wasp Venom Sacs plus 30 gold for a Giant Wasp Venom. Rogue only.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 8,
+        "steps": [
+          "Gather 3 Giant Wasp Venom Sacs",
+          "Turn them in with 30 gold to Conium Darkblade in Dagnor's Cauldron"
+        ],
+        "wiki_title": "Poison Sales"
+      }
+    },
+    {
+      "data": {
+        "id": "item:giant-wasp-venom",
+        "label": "Giant Wasp Venom",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "charges": 1,
+        "effect": "Contact Poison I (Combat) at Level 5",
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Poison Sales reward (Conium Darkblade, Dagnor's Cauldron)"
+      }
     }
   ],
   "edges": [
@@ -138265,6 +139343,1286 @@
         "id": "e-rewards-9850",
         "source": "quest:orc-hatchets",
         "target": "item:tarnished-scimitar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9851",
+        "source": "zone:qeynos-aqueducts",
+        "target": "zone:north-qeynos",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9852",
+        "source": "zone:north-qeynos",
+        "target": "zone:qeynos-aqueducts",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9853",
+        "source": "zone:qeynos-aqueducts",
+        "target": "zone:south-qeynos",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9854",
+        "source": "zone:south-qeynos",
+        "target": "zone:qeynos-aqueducts",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9855",
+        "source": "npc:neriak-commons:trizam-ntan",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9856",
+        "source": "npc:neriak-commons:trizam-ntan",
+        "target": "quest:orc-pawn-picks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9857",
+        "source": "quest:orc-pawn-picks",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9858",
+        "source": "quest:orc-pawn-picks",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9859",
+        "source": "quest:orc-pawn-picks",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9860",
+        "source": "quest:orc-pawn-picks",
+        "target": "item:neriak-nectar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9861",
+        "source": "quest:orc-pawn-picks",
+        "target": "item:rotgrub-rye",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9862",
+        "source": "npc:west-commonlands:guard-valon",
+        "target": "quest:orc-picks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9863",
+        "source": "quest:orc-picks",
+        "target": "zone:west-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9864",
+        "source": "quest:orc-picks",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9865",
+        "source": "npc:northern-felwithe:general-jyleel",
+        "target": "quest:orc-runner-felwithe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9866",
+        "source": "quest:orc-runner-felwithe",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9867",
+        "source": "quest:orc-runner-felwithe",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9868",
+        "source": "quest:orc-runner-felwithe",
+        "target": "item:bandages",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9869",
+        "source": "quest:orc-runner-felwithe",
+        "target": "item:iron-ration",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9870",
+        "source": "quest:orc-runner-felwithe",
+        "target": "item:ration",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9871",
+        "source": "quest:orc-runner-felwithe",
+        "target": "item:water-flask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9872",
+        "source": "npc:greater-faydark:dill-fireshine",
+        "target": "quest:orc-runner-kelethin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9873",
+        "source": "quest:orc-runner-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9874",
+        "source": "quest:orc-runner-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9875",
+        "source": "quest:orc-runner-kelethin",
+        "target": "item:rusty-short-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9876",
+        "source": "quest:orc-runner-kelethin",
+        "target": "item:rusty-spear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9877",
+        "source": "quest:orc-runner-kelethin",
+        "target": "item:rusty-two-handed-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9878",
+        "source": "quest:orc-runner-kelethin",
+        "target": "item:tarnished-bastard-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9879",
+        "source": "quest:orc-runner-kelethin",
+        "target": "item:longbow",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9880",
+        "source": "npc:highpass-hold:captain-ashlan",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9881",
+        "source": "npc:highpass-hold:captain-ashlan",
+        "target": "quest:orc-scalp-collecting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9882",
+        "source": "quest:orc-scalp-collecting",
+        "target": "zone:highpass-hold",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9883",
+        "source": "quest:orc-scalp-collecting",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9884",
+        "source": "quest:orc-scalp-collecting",
+        "target": "faction:highpass-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9885",
+        "source": "quest:orc-scalp-collecting",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9886",
+        "source": "quest:orc-scalp-collecting",
+        "target": "faction:merchants-of-highpass",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9887",
+        "source": "quest:orc-scalp-collecting",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9888",
+        "source": "quest:orc-scalp-collecting",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9889",
+        "source": "npc:greater-faydark:linadian",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9890",
+        "source": "npc:greater-faydark:linadian",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9891",
+        "source": "npc:greater-faydark:linadian",
+        "target": "quest:orc-vest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9892",
+        "source": "quest:orc-vest",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9893",
+        "source": "quest:orc-vest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9894",
+        "source": "quest:orc-vest",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9895",
+        "source": "quest:orc-vest",
+        "target": "item:banded-orc-vest",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9896",
+        "source": "npc:qeynos-aqueducts:garuc-anehm",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9897",
+        "source": "npc:qeynos-aqueducts:garuc-anehm",
+        "target": "quest:paladin-hunting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9898",
+        "source": "quest:paladin-hunting",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9899",
+        "source": "quest:paladin-hunting",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9900",
+        "source": "quest:paladin-hunting",
+        "target": "item:wrist-pouch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9901",
+        "source": "npc:southern-desert-of-ro:ortallius",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9902",
+        "source": "npc:southern-desert-of-ro:ortallius",
+        "target": "quest:ortallius-cutthroat-rings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9903",
+        "source": "quest:ortallius-cutthroat-rings",
+        "target": "zone:southern-desert-of-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9904",
+        "source": "quest:ortallius-cutthroat-rings",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9905",
+        "source": "quest:ortallius-cutthroat-rings",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9906",
+        "source": "npc:grobb:carver-cagrek",
+        "target": "quest:oven-mittens",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9907",
+        "source": "quest:oven-mittens",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9908",
+        "source": "quest:oven-mittens",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9909",
+        "source": "quest:oven-mittens",
+        "target": "faction:da-bashers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9910",
+        "source": "quest:oven-mittens",
+        "target": "item:grobb-oven-mittens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9911",
+        "source": "npc:north-qeynos:renux-herkanor",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9912",
+        "source": "npc:north-qeynos:renux-herkanor",
+        "target": "quest:package-from-lomarc",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9913",
+        "source": "quest:package-from-lomarc",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9914",
+        "source": "quest:package-from-lomarc",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9915",
+        "source": "quest:package-from-lomarc",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9916",
+        "source": "npc:north-freeport:theron-rolius",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9917",
+        "source": "npc:north-freeport:theron-rolius",
+        "target": "quest:paladin-message",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9918",
+        "source": "quest:paladin-message",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9919",
+        "source": "quest:paladin-message",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9920",
+        "source": "quest:paladin-message",
+        "target": "spell:courage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9921",
+        "source": "quest:paladin-message",
+        "target": "item:wrist-pouch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9922",
+        "source": "quest:paladin-message",
+        "target": "item:marrs-sustenance",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9923",
+        "source": "quest:paladin-message",
+        "target": "item:buckler",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9924",
+        "source": "quest:paladin-message",
+        "target": "item:potion-of-disease-warding",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9925",
+        "source": "npc:north-kaladim:diggins",
+        "target": "quest:parrying-pick-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9926",
+        "source": "quest:parrying-pick-quest",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9927",
+        "source": "quest:parrying-pick-quest",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9928",
+        "source": "quest:parrying-pick-quest",
+        "target": "item:parrying-pick-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9929",
+        "source": "npc:qeynos-catacombs:vin-moltor",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9930",
+        "source": "npc:qeynos-catacombs:vin-moltor",
+        "target": "quest:paw-of-opolla-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9931",
+        "source": "quest:paw-of-opolla-quest",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9932",
+        "source": "quest:paw-of-opolla-quest",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9933",
+        "source": "quest:paw-of-opolla-quest",
+        "target": "zone:befallen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9934",
+        "source": "quest:paw-of-opolla-quest",
+        "target": "zone:runnyeye-citadel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9935",
+        "source": "quest:paw-of-opolla-quest",
+        "target": "item:paw-of-opolla",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9936",
+        "source": "npc:erudin:lumi-stergnon",
+        "target": "quest:peacekeeper-staff-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9937",
+        "source": "quest:peacekeeper-staff-quest",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9938",
+        "source": "quest:peacekeeper-staff-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9939",
+        "source": "quest:peacekeeper-staff-quest",
+        "target": "item:peacekeeper-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9940",
+        "source": "npc:oggok:chef-dooga",
+        "target": "quest:pickled-frogloks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9941",
+        "source": "quest:pickled-frogloks",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9942",
+        "source": "quest:pickled-frogloks",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9943",
+        "source": "quest:pickled-frogloks",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9944",
+        "source": "quest:pickled-frogloks",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9945",
+        "source": "quest:pickled-frogloks",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9946",
+        "source": "quest:pickled-frogloks",
+        "target": "faction:oggok-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9947",
+        "source": "quest:pickled-frogloks",
+        "target": "item:ogre-butcher-apron",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9948",
+        "source": "npc:north-freeport:celsar-vestagon",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9949",
+        "source": "npc:north-freeport:celsar-vestagon",
+        "target": "quest:piranha-hunting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9950",
+        "source": "quest:piranha-hunting",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9951",
+        "source": "quest:piranha-hunting",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9952",
+        "source": "quest:piranha-hunting",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9953",
+        "source": "quest:piranha-hunting",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9954",
+        "source": "quest:piranha-hunting",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9955",
+        "source": "npc:ocean-of-tears:styria-fearnon",
+        "target": "quest:pirate-earrings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9956",
+        "source": "quest:pirate-earrings",
+        "target": "zone:ocean-of-tears",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9957",
+        "source": "quest:pirate-earrings",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9958",
+        "source": "quest:pirate-earrings",
+        "target": "faction:faydark-s-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9959",
+        "source": "quest:pirate-earrings",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9960",
+        "source": "quest:pirate-earrings",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9961",
+        "source": "quest:pirate-earrings",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9962",
+        "source": "npc:greater-faydark:ran-sunfire",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9963",
+        "source": "npc:greater-faydark:ran-sunfire",
+        "target": "quest:pixie-dust-kelethin-ranger",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9964",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9965",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9966",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "faction:faydark-s-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9967",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9968",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9969",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9970",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "item:patchwork-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9971",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "item:patchwork-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9972",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "item:patchwork-pants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9973",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "item:patchwork-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9974",
+        "source": "quest:pixie-dust-kelethin-ranger",
+        "target": "item:leather-skullcap",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9975",
+        "source": "npc:greater-faydark:expin",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9976",
+        "source": "npc:greater-faydark:expin",
+        "target": "quest:pixie-dust-kelethin-rogue",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9977",
+        "source": "quest:pixie-dust-kelethin-rogue",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9978",
+        "source": "quest:pixie-dust-kelethin-rogue",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9979",
+        "source": "quest:pixie-dust-kelethin-rogue",
+        "target": "faction:tunare-s-scouts",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9980",
+        "source": "quest:pixie-dust-kelethin-rogue",
+        "target": "item:patchwork-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9981",
+        "source": "npc:north-qeynos:roesager-thusten",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9982",
+        "source": "npc:north-qeynos:roesager-thusten",
+        "target": "quest:plaguebringer-proof",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9983",
+        "source": "quest:plaguebringer-proof",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9984",
+        "source": "quest:plaguebringer-proof",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9985",
+        "source": "quest:plaguebringer-proof",
+        "target": "item:potion-of-light-healing",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9986",
+        "source": "npc:plane-of-mischief:bob-the-painter",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9987",
+        "source": "npc:plane-of-mischief:bob-the-painter",
+        "target": "quest:plane-of-mischief-armor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9988",
+        "source": "quest:plane-of-mischief-armor-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9989",
+        "source": "quest:plane-of-mischief-armor-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9990",
+        "source": "npc:plane-of-mischief:debbis-the-fish",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9991",
+        "source": "npc:plane-of-mischief:vinny-v-dvicci",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9992",
+        "source": "npc:plane-of-mischief:debbis-the-fish",
+        "target": "quest:plane-of-mischief-faction-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9993",
+        "source": "npc:plane-of-mischief:vinny-v-dvicci",
+        "target": "quest:plane-of-mischief-faction-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9994",
+        "source": "quest:plane-of-mischief-faction-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9995",
+        "source": "quest:plane-of-mischief-faction-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9996",
+        "source": "quest:plane-of-mischief-faction-quest",
+        "target": "faction:denizens-of-mischief",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9997",
+        "source": "npc:erudin:jras-solsier",
+        "target": "quest:poacher-leader",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9998",
+        "source": "quest:poacher-leader",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9999",
+        "source": "quest:poacher-leader",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10000",
+        "source": "quest:poacher-leader",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10001",
+        "source": "quest:poacher-leader",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10002",
+        "source": "npc:halas:waltor-felligan",
+        "target": "quest:poison-cures",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10003",
+        "source": "quest:poison-cures",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10004",
+        "source": "quest:poison-cures",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10005",
+        "source": "quest:poison-cures",
+        "target": "spell:cure-poison",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10006",
+        "source": "npc:dagnor-s-cauldron:conium-darkblade",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10007",
+        "source": "npc:dagnor-s-cauldron:conium-darkblade",
+        "target": "quest:poison-sales",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10008",
+        "source": "quest:poison-sales",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10009",
+        "source": "quest:poison-sales",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10010",
+        "source": "quest:poison-sales",
+        "target": "item:giant-wasp-venom",
         "type": "rewards"
       }
     }
