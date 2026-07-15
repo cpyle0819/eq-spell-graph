@@ -55547,6 +55547,122 @@
         ],
         "wiki_title": "Hungry Deputy"
       }
+    },
+    {
+      "data": {
+        "id": "zone:kerra-island",
+        "label": "Kerra Island",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "Kerra Isle or Kerra Ridge is a small island that lies just off the west coast of Odus. This island's main inhabitants are the Kerrans, a race of catlike people who are peaceful until you make enemies of them.",
+        "wiki_title": "Kerra Island"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:errrak-thickshank",
+        "label": "Errrak Thickshank",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:health-potion",
+        "label": "Health Potion",
+        "type": "quest",
+        "description": "Errrak Thickshank on Kerra Island trades a Giant Snake Fang, an Aviak Charm (aviaks in Southern Karana), and a Tiger Skin (tigers in Emerald Jungle) for a Bone Talisman.",
+        "minLevel": 20,
+        "steps": [
+          "Collect a Giant Snake Fang from a giant snake",
+          "Collect an Aviak Charm from an aviak in Southern Karana",
+          "Collect a Tiger Skin from a tiger in Emerald Jungle or the fighting pit on the heretic island",
+          "Return all three to Errrak Thickshank on Kerra Island"
+        ],
+        "wiki_title": "Health Potion"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bone-talisman",
+        "label": "Bone Talisman",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "stats": {
+          "wis": 4
+        },
+        "resists": {
+          "magic": 10
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "magic": true,
+        "lore": true,
+        "source": "Health Potion reward (Errrak Thickshank, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kerra-isle",
+        "label": "Kerra Isle",
+        "type": "faction"
+      }
     }
   ],
   "edges": [
@@ -128956,6 +129072,86 @@
         "source": "quest:hungry-deputy",
         "target": "zone:misty-thicket",
         "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9175",
+        "source": "zone:kerra-island",
+        "target": "zone:toxxulia-forest",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9176",
+        "source": "zone:toxxulia-forest",
+        "target": "zone:kerra-island",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9177",
+        "source": "npc:kerra-island:errrak-thickshank",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9178",
+        "source": "npc:kerra-island:errrak-thickshank",
+        "target": "quest:health-potion",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9179",
+        "source": "quest:health-potion",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9180",
+        "source": "quest:health-potion",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9181",
+        "source": "quest:health-potion",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9182",
+        "source": "quest:health-potion",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9183",
+        "source": "quest:health-potion",
+        "target": "item:bone-talisman",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9184",
+        "source": "quest:health-potion",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
       }
     }
   ]
