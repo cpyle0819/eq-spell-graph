@@ -50,7 +50,8 @@
       /* No left padding — the sidebar's own right border is the seam
          shared with the first result's left border (console look), same
          as the Spell Finder's sidebar-panel/#results split. */
-      #browser-content { overflow-y: auto; }
+      /* Same ultrawide readability cap as quests.html's #quests-content. */
+      #browser-content { overflow-y: auto; max-width: 1000px; }
     }
 
     @media (max-width: 1099.98px) {
