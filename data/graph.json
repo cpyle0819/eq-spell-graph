@@ -54779,6 +54779,774 @@
         "label": "Songweavers",
         "type": "faction"
       }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:narex-tvem",
+        "label": "Narex T`Vem",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:halfling-raider-helms",
+        "label": "Halfling Raider Helms",
+        "type": "quest",
+        "description": "Narex T`Vem in Neriak Commons, requiring Indifferent or better faction, trades four Leatherfoot Raider Skullcaps -- an occasional drop from Leatherfoot halflings in Nektulos Forest -- for experience and coin.",
+        "minLevel": 2,
+        "steps": [
+          "Hunt Leatherfoot halflings in Nektulos Forest for 4 Leatherfoot Raider Skullcaps",
+          "Return the skullcaps to Narex T`Vem"
+        ],
+        "wiki_title": "Halfling Raider Helms"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:handy-shillelagh",
+        "label": "Handy Shillelagh",
+        "type": "quest",
+        "description": "Shrub Marwood, at the eastern hideout of the Firiona Vie outpost, trades a Kromdul Stump (forest giants, Burning Woods or Firiona Vie), a Kromdek Stump (forest giants, Frontier Mountains), and a Mantrap Root (erollisi mantrap in Emerald Jungle or weeping mantrap in Swamp of No Hope) for a druid weapon.",
+        "classes": [
+          "druid"
+        ],
+        "minLevel": 30,
+        "era": "Kunark",
+        "steps": [
+          "Collect a Kromdul Stump from a forest giant in Burning Woods or Firiona Vie",
+          "Collect a Kromdek Stump from a forest giant in Frontier Mountains",
+          "Collect a Mantrap Root from an erollisi mantrap in Emerald Jungle or a weeping mantrap in Swamp of No Hope",
+          "Return all three to Shrub Marwood"
+        ],
+        "wiki_title": "Handy Shillelagh"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-oak-shillelagh",
+        "label": "Dark Oak Shillelagh",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "skill": "2H Blunt",
+        "effect": "Beguile Plants (3 charges)",
+        "magic": true,
+        "source": "Handy Shillelagh reward (Shrub Marwood, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:head-of-granin-ogill",
+        "label": "Head of Granin O'Gill",
+        "type": "quest",
+        "description": "Margyn McCann at the Shaman Guild in Halas sends young shamans to kill Granin O'Gill in eastern Everfrost Peaks and return his head, for a spell.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 5,
+        "steps": [
+          "Kill Granin O'Gill in eastern Everfrost Peaks and loot his Barbarian Head",
+          "Return the head to Margyn McCann"
+        ],
+        "wiki_title": "Head of Granin O'Gill"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:heal-yourself",
+        "label": "Heal Yourself",
+        "type": "quest",
+        "description": "Tonmerk Plorsin at the Temple of Life in North Qeynos casts a healing spell (65 HP) on anyone who pays him 5 gold.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Tonmerk Plorsin at the Temple of Life",
+          "Pay him 5 gold pieces to have a healing spell cast on you"
+        ],
+        "wiki_title": "Heal Yourself"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:vesagar-nekio",
+        "label": "Vesagar Nekio",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:healing-dismal-rage",
+        "label": "Healing (Dismal Rage)",
+        "type": "quest",
+        "description": "Vesagar Nekio in East Freeport, requiring Indifferent or better faction with Dismal Rage, casts a light healing spell on anyone who pays him 10 gold.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Vesagar Nekio in East Freeport",
+          "Pay him 10 gold pieces to have a healing spell cast on you"
+        ],
+        "wiki_title": "Healing (Dismal Rage)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:nultal-malfoot",
+        "label": "Nultal Malfoot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:healing-quest",
+        "label": "Healing Quest",
+        "type": "quest",
+        "description": "Nultal Malfoot at the Cleric Guild in North Kaladim casts the Healing spell (65 HP) on anyone who pays him 3 gold.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Nultal Malfoot at the Cleric Guild",
+          "Pay him 3 gold pieces to have the Healing spell cast on you"
+        ],
+        "wiki_title": "Healing Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:hendi-mrubble",
+        "label": "Hendi Mrubble",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:healing-spells-from-hendi",
+        "label": "Healing Spells from Hendi",
+        "type": "quest",
+        "description": "Hendi Mrubble in Rivervale casts one of three spells on request: Healing (for a Rivervale piranha tooth), Cure Poison (for three bixie stingers), or Cure Disease (for 10 gold).",
+        "minLevel": 1,
+        "steps": [
+          "Hand Hendi Mrubble a Rivervale piranha tooth for Healing, three bixie stingers for Cure Poison, or 10 gold for Cure Disease"
+        ],
+        "wiki_title": "Healing Spells from Hendi"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:carver-cagrek",
+        "label": "Carver Cagrek",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hehe-meat-quest",
+        "label": "HEHE Meat Quest",
+        "type": "quest",
+        "description": "Carver Cagrek in Grobb trades 3 HEHE Meat (purchased from Chef Dooga in Oggok) and a Tattered Recipe -- obtained through a trading chain with Chef Dooga and The Gobbler in Neriak Foreign Quarter, ending in a drop from Nerbilik in Ocean of Tears -- for a weapon and coin.",
+        "classes": [
+          "warrior",
+          "shadow knight"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Buy 3 HEHE Meat from Chef Dooga in Oggok",
+          "Trade with Chef Dooga and The Gobbler in Neriak Foreign Quarter to work toward a Tattered Recipe",
+          "Kill Nerbilik in Ocean of Tears and loot the Tattered Recipe",
+          "Hand the meat and recipe to Carver Cagrek"
+        ],
+        "wiki_title": "HEHE Meat Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:grobb-cleaver",
+        "label": "Grobb Cleaver",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "damage": 15,
+        "delay": 45,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "int": 3
+        },
+        "magic": true,
+        "source": "HEHE Meat Quest reward (Carver Cagrek, Grobb)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-growth:tunarean-earthmelder",
+        "label": "Tunarean Earthmelder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:helm-of-the-tracker-quest",
+        "label": "Helm of the Tracker Quest",
+        "type": "quest",
+        "description": "Tunarean Earthmelder in the Plane of Growth, requiring Ranger, Tunare deity, and Indifferent or better faction, trades a Frostgiant Overseer's Head (Frostgiant Overseer, Wakening Land), Kallis' Head (Kallis Stormcaller), and a Smashed and Bloody Protector of Zek's Head (two Protectors of Zek) for a head-slot item.",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 46,
+        "era": "Velious",
+        "steps": [
+          "Kill the Frostgiant Overseer in the Wakening Land and loot its head",
+          "Kill Kallis Stormcaller and loot her head",
+          "Kill two Protectors of Zek and loot a Smashed and a Bloody head",
+          "Return all four heads to Tunarean Earthmelder"
+        ],
+        "wiki_title": "Helm of the Tracker Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:helm-of-the-tracker",
+        "label": "Helm of the Tracker",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "ac": 20,
+        "stats": {
+          "str": 12,
+          "sta": 12
+        },
+        "resists": {
+          "fire": 1,
+          "cold": 1
+        },
+        "effect": "Truesight",
+        "magic": true,
+        "source": "Helm of the Tracker Quest reward (Tunarean Earthmelder, Plane of Growth)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:sentry-kcor",
+        "label": "Sentry Kcor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:helms-of-giant-warriors",
+        "label": "Helms of Giant Warriors",
+        "type": "quest",
+        "description": "Sentry Kcor in Skyshrine, accepted at Dubious or better faction, trades Giant Warrior Helmets looted from giants in Kael Drakkel (one or four at a time) for faction standing.",
+        "minLevel": 45,
+        "era": "Velious",
+        "steps": [
+          "Collect Giant Warrior Helmets from giants in Kael Drakkel",
+          "Turn them in to Sentry Kcor in Skyshrine"
+        ],
+        "wiki_title": "Helms of Giant Warriors"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:hergor",
+        "label": "Hergor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:help-hergor-get-fatter",
+        "label": "Help Hergor Get Fatter",
+        "type": "quest",
+        "description": "Hergor in Grobb wants a Fungus Dung Pie -- made by Carver Cagrek from 4 Spore Mushrooms collected in Innothule Swamp -- for a random piece of armor and coin. Warrior only.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Collect 4 Spore Mushrooms in Innothule Swamp",
+          "Trade them to Carver Cagrek for a Fungus Dung Pie",
+          "Hand the pie to Hergor"
+        ],
+        "wiki_title": "Help Hergor Get Fatter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:yvonne-ani",
+        "label": "Yvonne Ani",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:herb-shop",
+        "label": "Herb Shop",
+        "type": "quest",
+        "description": "Yvonne Ani in Paineel talks about her herb shop and the Seekers of Dark Truth necromancer guild -- a lore-only conversation with no turn-in or reward.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Yvonne Ani in Paineel and ask about her herb shop"
+        ],
+        "wiki_title": "Herb Shop"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:grahan-rothkar",
+        "label": "Grahan Rothkar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hero-bracers-quest",
+        "label": "Hero Bracers Quest",
+        "type": "quest",
+        "description": "Grahan Rothkar, in the basement of the South Qeynos arena, requiring Amiable or better faction, sends players to kill Nomala on Wisp Isle for a Pen Key, then the Minotaur Hero in Steamfont Mountains for Minotaur Hero Shackles, for a wrist item. Lore item -- turning in shackles while already holding Hero Bracers loses the shackles with no second reward.",
+        "classes": [
+          "warrior",
+          "rogue",
+          "monk",
+          "paladin",
+          "shadow knight",
+          "cleric",
+          "ranger",
+          "bard"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Kill Nomala on Wisp Isle and return the Pen Key to Grahan Rothkar",
+          "Kill the Minotaur Hero in Steamfont Mountains and return the Minotaur Hero Shackles to Grahan Rothkar"
+        ],
+        "wiki_title": "Hero Bracers Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hero-bracers",
+        "label": "Hero Bracers",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 9,
+        "stats": {
+          "str": 10
+        },
+        "resists": {
+          "disease": 5,
+          "poison": 5
+        },
+        "magic": true,
+        "lore": true,
+        "source": "Hero Bracers Quest reward (Grahan Rothkar, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:plagus-ladeson",
+        "label": "Plagus Ladeson",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hogcallers-inn",
+        "label": "Hogcaller's Inn",
+        "type": "quest",
+        "description": "Plagus Ladeson, at the Steel Warriors' Guild in West Freeport, requiring Amiable or better faction, sends players through a multi-stage delivery chain (White Wine to Lady Shae, a Hog Key to Swin Blackeye, a Sealed Letter and a combined Box with Two Heads to Toala Nehron) for coin and faction.",
+        "minLevel": 14,
+        "steps": [
+          "Buy White Wine from Swin Blackeye and deliver it to Lady Shae",
+          "Loot a Hog Key No 2 from Shintl Lowbrew and deliver it to Swin Blackeye",
+          "Take the Sealed Letter from Shintl Lowbrew to Toala Nehron",
+          "Combine Shintl Lowbrew's and Hollish Tnoops's heads into a Box with Two Heads and return it to Toala Nehron"
+        ],
+        "wiki_title": "Hogcaller's Inn"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-karana:yiz-pon",
+        "label": "Yiz Pon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hollow-skull-quest",
+        "label": "Hollow Skull Quest",
+        "type": "quest",
+        "description": "Yiz Pon, on a hillside about halfway across Western Karana, trades a Hollow Skull (from a Splitpaw assassin), a Large Ruby (Lynuga, Innothule Swamp), and a Ruby Pendant (Kurrpok Splitpaw, Splitpaw Lair) -- the rubies combined inside the skull -- for a held item. Restricted to Enchanter, Magician, Necromancer, and Wizard.",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "minLevel": 30,
+        "steps": [
+          "Kill a Splitpaw assassin for a Hollow Skull",
+          "Kill Lynuga in Innothule Swamp for a Large Ruby",
+          "Kill Kurrpok Splitpaw in Splitpaw Lair for a Ruby Pendant",
+          "Combine both rubies inside the Hollow Skull and turn it in to Yiz Pon"
+        ],
+        "wiki_title": "Hollow Skull Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:jeweled-skull",
+        "label": "Jeweled Skull",
+        "type": "item",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "stats": {
+          "int": 5
+        },
+        "hp": 20,
+        "mana": 20,
+        "magic": true,
+        "source": "Hollow Skull Quest reward (Yiz Pon, Western Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:daedet-losaren",
+        "label": "Daedet Losaren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:holy-armor-buff-quest",
+        "label": "Holy Armor Buff Quest",
+        "type": "quest",
+        "description": "Daedet Losaren, at the Temple of Thunder in South Qeynos, requiring good faction with the Knights of Thunder, casts Holy Armor on anyone who pays him 10 gold.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Daedet Losaren at the Temple of Thunder",
+          "Pay him 10 gold pieces to have Holy Armor cast on you"
+        ],
+        "wiki_title": "Holy Armor Buff Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:holy-armor-scroll",
+        "label": "Holy Armor Scroll",
+        "type": "quest",
+        "description": "Daedet Losaren, at the Temple of Thunder in South Qeynos, requiring Indifferent or better faction, trades an 8-slot Beetle Eye Chest of 4 Fire Beetle Eyes and 4 Kerra Isle Beetle eyes for the Holy Armor spell. Cleric and Paladin only.",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 2,
+        "steps": [
+          "Combine 4 Fire Beetle Eyes and 4 Kerra Isle Beetle eyes into an 8-slot Beetle Eye Chest",
+          "Turn the chest in to Daedet Losaren"
+        ],
+        "wiki_title": "Holy Armor Scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:kizzie-mintopp",
+        "label": "Kizzie Mintopp",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:honey-jum-quest",
+        "label": "Honey Jum Quest",
+        "type": "quest",
+        "description": "Kizzie Mintopp in Rivervale, after Joogl Honeybugger in Misty Thicket is given a bandage, trades three honeycombs (looted from bixies in Misty Thicket or Kithicor Forest) and coin for a Honey Jum.",
+        "minLevel": 1,
+        "steps": [
+          "Give Joogl Honeybugger a bandage in Misty Thicket",
+          "Collect 3 honeycombs from bixies in Misty Thicket or Kithicor Forest",
+          "Turn the honeycombs and coin in to Kizzie Mintopp in Rivervale"
+        ],
+        "wiki_title": "Honey Jum Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:honey-jum",
+        "label": "Honey Jum",
+        "type": "item",
+        "weight": 0.2,
+        "lore": true,
+        "source": "Honey Jum Quest reward (Kizzie Mintopp, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:trumpy-irontoe",
+        "label": "Trumpy Irontoe",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:honey-mead-for-trumpy",
+        "label": "Honey Mead for Trumpy",
+        "type": "quest",
+        "description": "Trumpy Irontoe, at Fish's Ale in South Qeynos, trades 4 Honey Mead handed in all at once (not multiquestable) for faction standing.",
+        "minLevel": 1,
+        "steps": [
+          "Collect 4 Honey Mead",
+          "Hand all 4 to Trumpy Irontoe at once"
+        ],
+        "wiki_title": "Honey Mead for Trumpy"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:pazin-punox",
+        "label": "Pazin Punox",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:honeybugger-assassin",
+        "label": "Honeybugger Assassin",
+        "type": "quest",
+        "description": "Pazin Punox, in the Rogue Guild at Neriak Third Gate, requiring Amiable or better faction, sends Rogues to kill Lil Honeybugger in Misty Thicket and return her head -- the promised 'king's contract' reward turns out to be a joke.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 15,
+        "steps": [
+          "Kill Lil Honeybugger in Misty Thicket and loot her Halfling Head",
+          "Return the head to Pazin Punox"
+        ],
+        "wiki_title": "Honeybugger Assassin"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hopeless-love-part-1",
+        "label": "Hopeless Love, Part 1",
+        "type": "quest",
+        "description": "Plagus Ladeson, in the courtyard behind the Steel Warriors' building in West Freeport, hands out a Sealed Note to deliver to Milea Clothspinner in Eastern Karana, rewarding a cloak.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Sealed Note from Plagus Ladeson",
+          "Deliver it to Milea Clothspinner in Eastern Karana"
+        ],
+        "wiki_title": "Hopeless Love, Part 1"
+      }
+    },
+    {
+      "data": {
+        "id": "item:grizzly-hide-cloak",
+        "label": "Grizzly Hide Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "source": "Hopeless Love, Part 1 reward (Milea Clothspinner, Eastern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-commonlands:merry-snowgleam",
+        "label": "Merry Snowgleam",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:how-the-goblins-stole-frostmas",
+        "label": "How the Goblins Stole Frostmas",
+        "type": "quest",
+        "description": "Merry Snowgleam in East Commonlands trades three Frostmas Baubles, looted from goblins in Runnyeye Citadel, for a holiday cookie and gift.",
+        "minLevel": 1,
+        "steps": [
+          "Collect 3 Frostmas Baubles from goblins in Runnyeye Citadel",
+          "Return them to Merry Snowgleam"
+        ],
+        "wiki_title": "How the Goblins Stole Frostmas"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gnome-shaped-cookie",
+        "label": "Gnome Shaped Cookie",
+        "type": "item",
+        "source": "How the Goblins Stole Frostmas reward (Merry Snowgleam, East Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:holiday-gift",
+        "label": "Holiday Gift",
+        "type": "item",
+        "source": "How the Goblins Stole Frostmas reward (Merry Snowgleam, East Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:lawyla",
+        "label": "Lawyla",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hsagras-wrath-quest",
+        "label": "Hsagra's Wrath Quest",
+        "type": "quest",
+        "description": "Lawyla, atop Skyshrine near Yelinak, requiring Amiable or better faction, trades a Kromzek Spy's Head (Skyshrine's icy path), a Scale of Hsagra (Noble Helssen, Kael Drakkel), and Teachings of Relinar (combined from four runes in the Lexicon of Relinar) for the level 60 Wizard spell Hsagra's Wrath.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 60,
+        "era": "Velious",
+        "steps": [
+          "Kill a Kromzek Spy on Skyshrine's icy path for its head",
+          "Kill Noble Helssen in Kael Drakkel for a Scale of Hsagra",
+          "Combine four Lexicon of Relinar runes into Teachings of Relinar",
+          "Return all three items to Lawyla for Hsagra's Wrath"
+        ],
+        "wiki_title": "Hsagra's Wrath Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hukulks-love",
+        "label": "Hukulk's Love",
+        "type": "quest",
+        "description": "Hukulk, of the Shadowknights of Night Keep in Grobb, requiring Amiable or better faction, trades Guard Lumpin's Troll Head (Guard Lumpin, Neriak Foreign Quarter) and Happy Love Bracers (Ratraz, Neriak Third Gate) for a helm. Warrior, Cleric, Paladin, and Shadow Knight only.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight"
+        ],
+        "minLevel": 20,
+        "steps": [
+          "Kill Guard Lumpin in Neriak Foreign Quarter and loot his troll head",
+          "Kill Ratraz in Neriak Third Gate and loot the Happy Love Bracers",
+          "Return both to Hukulk"
+        ],
+        "wiki_title": "Hukulk's Love"
+      }
+    },
+    {
+      "data": {
+        "id": "item:helm-of-hukulk",
+        "label": "Helm of Hukulk",
+        "type": "item",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 3,
+          "agi": 3
+        },
+        "magic": true,
+        "source": "Hukulk's Love reward (Hukulk, Grobb)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:daleen-leafsway",
+        "label": "Daleen Leafsway",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:hungry-deputy",
+        "label": "Hungry Deputy",
+        "type": "quest",
+        "description": "Daleen Leafsway, in the garden outside the Druid Guild in Rivervale, requiring Amiable or better faction, hands out a Sack of Turnips to deliver to Deputy Eigon in Misty Thicket, for coin and experience.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Sack of Turnips from Daleen Leafsway",
+          "Deliver it to Deputy Eigon in Misty Thicket"
+        ],
+        "wiki_title": "Hungry Deputy"
+      }
     }
   ],
   "edges": [
@@ -127012,6 +127780,1182 @@
         "source": "quest:guild-summons-songweavers",
         "target": "faction:songweavers",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9028",
+        "source": "npc:neriak-commons:narex-tvem",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9029",
+        "source": "npc:neriak-commons:narex-tvem",
+        "target": "quest:halfling-raider-helms",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9030",
+        "source": "quest:halfling-raider-helms",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9031",
+        "source": "quest:halfling-raider-helms",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9032",
+        "source": "quest:halfling-raider-helms",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9033",
+        "source": "quest:halfling-raider-helms",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9034",
+        "source": "npc:firiona-vie:shrub-marwood",
+        "target": "quest:handy-shillelagh",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9035",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9036",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9037",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:burning-wood",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9038",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:frontier-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9039",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9040",
+        "source": "quest:handy-shillelagh",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9041",
+        "source": "quest:handy-shillelagh",
+        "target": "item:dark-oak-shillelagh",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9042",
+        "source": "quest:handy-shillelagh",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9043",
+        "source": "quest:handy-shillelagh",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9044",
+        "source": "quest:handy-shillelagh",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9045",
+        "source": "npc:halas:margyn-mccann",
+        "target": "quest:head-of-granin-ogill",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9046",
+        "source": "quest:head-of-granin-ogill",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9047",
+        "source": "quest:head-of-granin-ogill",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9048",
+        "source": "quest:head-of-granin-ogill",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9049",
+        "source": "quest:head-of-granin-ogill",
+        "target": "spell:spirit-of-bear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9050",
+        "source": "quest:head-of-granin-ogill",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9051",
+        "source": "quest:head-of-granin-ogill",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9052",
+        "source": "npc:north-qeynos:tonmerk-plorsin",
+        "target": "quest:heal-yourself",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9053",
+        "source": "quest:heal-yourself",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9054",
+        "source": "quest:heal-yourself",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9055",
+        "source": "npc:east-freeport:vesagar-nekio",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9056",
+        "source": "npc:east-freeport:vesagar-nekio",
+        "target": "quest:healing-dismal-rage",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9057",
+        "source": "quest:healing-dismal-rage",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9058",
+        "source": "quest:healing-dismal-rage",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9059",
+        "source": "npc:north-kaladim:nultal-malfoot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9060",
+        "source": "npc:north-kaladim:nultal-malfoot",
+        "target": "quest:healing-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9061",
+        "source": "quest:healing-quest",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9062",
+        "source": "quest:healing-quest",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9063",
+        "source": "npc:rivervale:hendi-mrubble",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9064",
+        "source": "npc:rivervale:hendi-mrubble",
+        "target": "quest:healing-spells-from-hendi",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9065",
+        "source": "quest:healing-spells-from-hendi",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9066",
+        "source": "quest:healing-spells-from-hendi",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9067",
+        "source": "npc:grobb:carver-cagrek",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9068",
+        "source": "npc:grobb:carver-cagrek",
+        "target": "quest:hehe-meat-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9069",
+        "source": "quest:hehe-meat-quest",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9070",
+        "source": "quest:hehe-meat-quest",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9071",
+        "source": "quest:hehe-meat-quest",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9072",
+        "source": "quest:hehe-meat-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9073",
+        "source": "quest:hehe-meat-quest",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9074",
+        "source": "quest:hehe-meat-quest",
+        "target": "item:grobb-cleaver",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9075",
+        "source": "npc:plane-of-growth:tunarean-earthmelder",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9076",
+        "source": "npc:plane-of-growth:tunarean-earthmelder",
+        "target": "quest:helm-of-the-tracker-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9077",
+        "source": "quest:helm-of-the-tracker-quest",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9078",
+        "source": "quest:helm-of-the-tracker-quest",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9079",
+        "source": "quest:helm-of-the-tracker-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9080",
+        "source": "quest:helm-of-the-tracker-quest",
+        "target": "item:helm-of-the-tracker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9081",
+        "source": "npc:skyshrine:sentry-kcor",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9082",
+        "source": "npc:skyshrine:sentry-kcor",
+        "target": "quest:helms-of-giant-warriors",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9083",
+        "source": "quest:helms-of-giant-warriors",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9084",
+        "source": "quest:helms-of-giant-warriors",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9085",
+        "source": "quest:helms-of-giant-warriors",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9086",
+        "source": "quest:helms-of-giant-warriors",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9087",
+        "source": "quest:helms-of-giant-warriors",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9088",
+        "source": "npc:grobb:hergor",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9089",
+        "source": "npc:grobb:hergor",
+        "target": "quest:help-hergor-get-fatter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9090",
+        "source": "quest:help-hergor-get-fatter",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9091",
+        "source": "quest:help-hergor-get-fatter",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9092",
+        "source": "quest:help-hergor-get-fatter",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9093",
+        "source": "quest:help-hergor-get-fatter",
+        "target": "faction:dabashers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9094",
+        "source": "npc:paineel:yvonne-ani",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9095",
+        "source": "npc:paineel:yvonne-ani",
+        "target": "quest:herb-shop",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9096",
+        "source": "quest:herb-shop",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9097",
+        "source": "quest:herb-shop",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9098",
+        "source": "npc:south-qeynos:grahan-rothkar",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9099",
+        "source": "npc:south-qeynos:grahan-rothkar",
+        "target": "quest:hero-bracers-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9100",
+        "source": "quest:hero-bracers-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9101",
+        "source": "quest:hero-bracers-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9102",
+        "source": "quest:hero-bracers-quest",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9103",
+        "source": "quest:hero-bracers-quest",
+        "target": "item:hero-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9104",
+        "source": "npc:west-freeport:plagus-ladeson",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9105",
+        "source": "npc:west-freeport:plagus-ladeson",
+        "target": "quest:hogcallers-inn",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9106",
+        "source": "quest:hogcallers-inn",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9107",
+        "source": "quest:hogcallers-inn",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9108",
+        "source": "quest:hogcallers-inn",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9109",
+        "source": "npc:western-karana:yiz-pon",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9110",
+        "source": "npc:western-karana:yiz-pon",
+        "target": "quest:hollow-skull-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9111",
+        "source": "quest:hollow-skull-quest",
+        "target": "zone:western-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9112",
+        "source": "quest:hollow-skull-quest",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9113",
+        "source": "quest:hollow-skull-quest",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9114",
+        "source": "quest:hollow-skull-quest",
+        "target": "zone:splitpaw",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9115",
+        "source": "quest:hollow-skull-quest",
+        "target": "item:jeweled-skull",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9116",
+        "source": "npc:south-qeynos:daedet-losaren",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9117",
+        "source": "npc:south-qeynos:daedet-losaren",
+        "target": "quest:holy-armor-buff-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9118",
+        "source": "quest:holy-armor-buff-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9119",
+        "source": "quest:holy-armor-buff-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9120",
+        "source": "npc:south-qeynos:daedet-losaren",
+        "target": "quest:holy-armor-scroll",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9121",
+        "source": "quest:holy-armor-scroll",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9122",
+        "source": "quest:holy-armor-scroll",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9123",
+        "source": "quest:holy-armor-scroll",
+        "target": "spell:holy-armor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9124",
+        "source": "quest:holy-armor-scroll",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9125",
+        "source": "quest:holy-armor-scroll",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9126",
+        "source": "quest:holy-armor-scroll",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9127",
+        "source": "npc:rivervale:kizzie-mintopp",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9128",
+        "source": "npc:rivervale:kizzie-mintopp",
+        "target": "quest:honey-jum-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9129",
+        "source": "quest:honey-jum-quest",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9130",
+        "source": "quest:honey-jum-quest",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9131",
+        "source": "quest:honey-jum-quest",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9132",
+        "source": "quest:honey-jum-quest",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9133",
+        "source": "quest:honey-jum-quest",
+        "target": "item:honey-jum",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9134",
+        "source": "npc:south-qeynos:trumpy-irontoe",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9135",
+        "source": "npc:south-qeynos:trumpy-irontoe",
+        "target": "quest:honey-mead-for-trumpy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9136",
+        "source": "quest:honey-mead-for-trumpy",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9137",
+        "source": "quest:honey-mead-for-trumpy",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9138",
+        "source": "quest:honey-mead-for-trumpy",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9139",
+        "source": "quest:honey-mead-for-trumpy",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9140",
+        "source": "quest:honey-mead-for-trumpy",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9141",
+        "source": "npc:neriak-3rd-gate:pazin-punox",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9142",
+        "source": "npc:neriak-3rd-gate:pazin-punox",
+        "target": "quest:honeybugger-assassin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9143",
+        "source": "quest:honeybugger-assassin",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9144",
+        "source": "quest:honeybugger-assassin",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9145",
+        "source": "quest:honeybugger-assassin",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9146",
+        "source": "npc:west-freeport:plagus-ladeson",
+        "target": "quest:hopeless-love-part-1",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9147",
+        "source": "quest:hopeless-love-part-1",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9148",
+        "source": "quest:hopeless-love-part-1",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9149",
+        "source": "quest:hopeless-love-part-1",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9150",
+        "source": "quest:hopeless-love-part-1",
+        "target": "item:grizzly-hide-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9151",
+        "source": "npc:east-commonlands:merry-snowgleam",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9152",
+        "source": "npc:east-commonlands:merry-snowgleam",
+        "target": "quest:how-the-goblins-stole-frostmas",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9153",
+        "source": "quest:how-the-goblins-stole-frostmas",
+        "target": "zone:east-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9154",
+        "source": "quest:how-the-goblins-stole-frostmas",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9155",
+        "source": "quest:how-the-goblins-stole-frostmas",
+        "target": "zone:runnyeye-citadel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9156",
+        "source": "quest:how-the-goblins-stole-frostmas",
+        "target": "item:gnome-shaped-cookie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9157",
+        "source": "quest:how-the-goblins-stole-frostmas",
+        "target": "item:holiday-gift",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9158",
+        "source": "npc:skyshrine:lawyla",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9159",
+        "source": "npc:skyshrine:lawyla",
+        "target": "quest:hsagras-wrath-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9160",
+        "source": "quest:hsagras-wrath-quest",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9161",
+        "source": "quest:hsagras-wrath-quest",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9162",
+        "source": "quest:hsagras-wrath-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9163",
+        "source": "npc:grobb:hukulk",
+        "target": "quest:hukulks-love",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9164",
+        "source": "quest:hukulks-love",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9165",
+        "source": "quest:hukulks-love",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9166",
+        "source": "quest:hukulks-love",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9167",
+        "source": "quest:hukulks-love",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9168",
+        "source": "quest:hukulks-love",
+        "target": "item:helm-of-hukulk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9169",
+        "source": "quest:hukulks-love",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9170",
+        "source": "npc:rivervale:daleen-leafsway",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9171",
+        "source": "npc:rivervale:daleen-leafsway",
+        "target": "quest:hungry-deputy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9172",
+        "source": "quest:hungry-deputy",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9173",
+        "source": "quest:hungry-deputy",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9174",
+        "source": "quest:hungry-deputy",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
       }
     }
   ]
