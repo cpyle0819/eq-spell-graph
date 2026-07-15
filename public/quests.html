@@ -32,12 +32,7 @@
 
     @media (min-width: 1100px) {
       #quests-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
-      /* Capped so a quest-card's description/steps text doesn't stretch
-         into unreadably long lines on ultrawide monitors -- the sidebar
-         stays flush left, the extra width is just left as breathing room
-         rather than centering the column (matches this app's existing
-         "console + scroll" framing, not a magazine-style centered layout). */
-      #quests-content { overflow-y: auto; max-width: 1000px; }
+      #quests-content { overflow-y: auto; }
     }
 
     @media (max-width: 1099.98px) {
