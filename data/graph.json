@@ -58419,6 +58419,1036 @@
         ],
         "wiki_title": "Mining Caps"
       }
+    },
+    {
+      "data": {
+        "id": "zone:kurns-tower",
+        "label": "Kurn's Tower",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "The history of Kurn's Tower is a convoluted one. The tower is named after Kurn Machta, a warlord of the Sebilisian empire during Rile's reign.",
+        "era": "Kunark",
+        "wiki_title": "Kurn's Tower"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:great-divide:relik",
+        "label": "Relik",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mining-picks",
+        "label": "Mining Picks",
+        "type": "quest",
+        "description": "Relik in Great Divide trades 4 Shardwurm Claws -- from shardwurms -- for the Coldain Velium-Pick. Warrior, Paladin, Ranger, Shadow Knight, Bard, or Rogue; Elf, Half-Elf, Dark Elf, Dwarf, Halfling, or Gnome only.",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "minLevel": 35,
+        "steps": [
+          "Kill shardwurms in Great Divide for 4 Shardwurm Claws",
+          "Turn them in to Relik in Great Divide"
+        ],
+        "wiki_title": "Mining Picks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:coldain-velium-pick",
+        "label": "Coldain Velium-Pick",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "1H Slashing",
+        "damage": 12,
+        "delay": 29,
+        "stats": {
+          "sta": 7
+        },
+        "effect": "Velium Shards (Combat) at Level 30",
+        "weight": 10,
+        "size": "Medium",
+        "source": "Mining Picks reward (Relik, Great Divide)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:minotaur-horns",
+        "label": "Minotaur Horns",
+        "type": "quest",
+        "description": "Larkon Theardor in Ak'Anon, requiring Indifferent or better faction, trades 2 Minotaur Horns for coin, experience, and faction. All classes.",
+        "minLevel": 10,
+        "steps": [
+          "Kill minotaurs for 2 Minotaur Horns",
+          "Turn them in to Larkon Theardor in Ak'Anon"
+        ],
+        "wiki_title": "Minotaur Horns"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:miranda",
+        "label": "Miranda",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mirandas-chocolate",
+        "label": "Miranda's Chocolate",
+        "type": "quest",
+        "description": "Miranda, at the Kejekan camp in Stonebrunt Mountains, trades one Chocolate Marr Cherry -- crafted from 3 Marr Cherries and 1 Winter Chocolate -- for a Pouch of Kejek Catnip and faction. Turn in only one at a time -- she eats the rest without paying out.",
+        "minLevel": 1,
+        "steps": [
+          "Craft a Chocolate Marr Cherry from 3 Marr Cherries and 1 Winter Chocolate",
+          "Give one at a time to Miranda in Stonebrunt Mountains"
+        ],
+        "wiki_title": "Miranda's Chocolate"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pouch-of-kejek-catnip",
+        "label": "Pouch of Kejek Catnip",
+        "type": "item",
+        "stats": {
+          "sta": -1,
+          "wis": 5
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Miranda's Chocolate reward (Miranda, Stonebrunt Mountains) -- a meal"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kejek-village",
+        "label": "Kejek Village",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mirandas-dice",
+        "label": "Miranda's Dice",
+        "type": "quest",
+        "description": "Miranda, in Kejek (Stonebrunt Mountains), trades a Tiny Pouch of Bone Dice -- from Prince Bragnar in The Warrens -- for a Ball of Burlap Yarn and faction.",
+        "minLevel": 18,
+        "steps": [
+          "Kill Prince Bragnar in The Warrens for a Tiny Pouch of Bone Dice",
+          "Turn it in to Miranda in Stonebrunt Mountains"
+        ],
+        "wiki_title": "Miranda's Dice"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ball-of-burlap-yarn",
+        "label": "Ball of Burlap Yarn",
+        "type": "item",
+        "noTrade": true,
+        "charges": 4,
+        "effect": "Snare (Any Slot) at Level 5",
+        "weight": 0,
+        "size": "Tiny",
+        "source": "Miranda's Dice reward (Miranda, Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kurns-tower:a-skeletal-cook",
+        "label": "a skeletal cook",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:mirgon-dowers-head",
+        "label": "Mirgon Dower's Head",
+        "type": "quest",
+        "description": "A skeletal cook in Kurn's Tower trades a Glowing Skull for the Skull of Torture. No faction hits. All classes; all races except Elf, High Elf, Dwarf, and Halfling.",
+        "minLevel": 20,
+        "steps": [
+          "Find a Glowing Skull in Kurn's Tower",
+          "Turn it in to a skeletal cook in Kurn's Tower"
+        ],
+        "wiki_title": "Mirgon Dower's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:skull-of-torture",
+        "label": "Skull of Torture",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 2,
+        "stats": {
+          "int": 5,
+          "hp": 10,
+          "mana": 10
+        },
+        "source": "Mirgon Dower's Head reward (a skeletal cook, Kurn's Tower)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:mcneal-jocub",
+        "label": "McNeal Jocub",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:moonstones-quest",
+        "label": "Moonstones Quest",
+        "type": "quest",
+        "description": "McNeal Jocub in South Qeynos accepts Moonstones -- traded from Captain Tillin for Gnoll Fangs -- for experience, faction, coin, and optionally Black Burrow Stout.",
+        "minLevel": 4,
+        "steps": [
+          "Kill gnolls for Gnoll Fangs",
+          "Trade the fangs to Captain Tillin for Moonstones",
+          "Give the Moonstones to McNeal Jocub in South Qeynos"
+        ],
+        "wiki_title": "Moonstones Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:more-help-for-innoruuk",
+        "label": "More Help for Innoruuk",
+        "type": "quest",
+        "description": "Kaglari in Grobb, requiring Apprehensive or better Innoruuk faction (Ogres typically cannot complete it; Agnostic and Innoruuk-worshipping Dark Elves can), trades a Deathfist Slashed Belt for the spell Spirit Pouch and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Turn in a Deathfist Slashed Belt to Kaglari in Grobb"
+        ],
+        "wiki_title": "More Help for Innoruuk"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:morin-shadowbane",
+        "label": "Morin Shadowbane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:morins-sword",
+        "label": "Morin's Sword",
+        "type": "quest",
+        "description": "Morin Shadowbane in Kithicor Forest trades either a Strategic Map of Kithicor (from a ghoul messenger) or an Ebony Bladed Sword (from a minotaur patriarch) for the Short Sword of Morin. Ranger only.",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 28,
+        "steps": [
+          "Kill a ghoul messenger for a Strategic Map of Kithicor, or a minotaur patriarch for an Ebony Bladed Sword, in Kithicor Forest",
+          "Turn it in to Morin Shadowbane in Kithicor Forest"
+        ],
+        "wiki_title": "Morin's Sword"
+      }
+    },
+    {
+      "data": {
+        "id": "item:short-sword-of-morin",
+        "label": "Short Sword of Morin",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 22,
+        "stats": {
+          "str": 3,
+          "agi": 3
+        },
+        "weight": 3,
+        "size": "Medium",
+        "source": "Morin's Sword reward (Morin Shadowbane, Kithicor Forest) -- Human, Elf, Half-Elf, Halfling only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:hekzin-gzule",
+        "label": "Hekzin G`Zule",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:moss-snakes",
+        "label": "Moss Snakes",
+        "type": "quest",
+        "description": "Hekzin G`Zule, in the rogue guild at Neriak 3rd Gate, trades a Bag of Snake Parts -- 3 snake scales and 3 snake fangs combined in an empty bag -- for the Dark Shield of Ebon and faction. Warrior, Cleric, Shadow Knight, or Rogue; Dark Elf only.",
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight",
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Kill snakes for 3 snake scales and 3 snake fangs",
+          "Combine them in an empty bag for a Bag of Snake Parts",
+          "Turn it in to Hekzin G`Zule in Neriak 3rd Gate"
+        ],
+        "wiki_title": "Moss Snakes"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-shield-of-ebon",
+        "label": "Dark Shield of Ebon",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight",
+          "rogue"
+        ],
+        "lore": true,
+        "ac": 3,
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Moss Snakes reward (Hekzin G`Zule, Neriak 3rd Gate) -- earned via a Dark Elf-only quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:ebon-mask",
+        "label": "Ebon Mask",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:pandos-flintside",
+        "label": "Pandos Flintside",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:muffin-for-pandos",
+        "label": "Muffin for Pandos",
+        "type": "quest",
+        "description": "Pandos Flintside in West Freeport takes up to 4 Muffins at a time for experience and +5 faction per muffin with Faydark's Champions, King Tearis Thex, Clerics of Tunare, and Soldiers of Tunare. Repeatable -- roughly 660 muffins to go from Apprehensive to Kindly.",
+        "minLevel": 1,
+        "steps": [
+          "Turn in up to 4 Muffins at a time to Pandos Flintside in West Freeport"
+        ],
+        "wiki_title": "Muffin for Pandos"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-growth:guardian-of-takish",
+        "label": "Guardian of Takish",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:natures-defender-quest",
+        "label": "Nature's Defender Quest",
+        "type": "quest",
+        "description": "Guardian of Takish in the Plane of Growth assembles a Fleshless Skull (from the Corrupter of Life in Plane of Hate), a Corrupted Faun's Skin, a Corrupted Panther Skin, and a Corrupted Unicorn Skin (all from corrupted animals in the Wakening Lands) into Nature's Defender. No faction hits (confirmed 08/20/2021). Paladin only; High Elf or Human only.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 46,
+        "steps": [
+          "Kill the Corrupter of Life in Plane of Hate for a Fleshless Skull",
+          "Kill corrupted fauns, panthers, and unicorns in the Wakening Lands for their skins",
+          "Give all four to Guardian of Takish in the Plane of Growth"
+        ],
+        "wiki_title": "Natures Defender Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:natures-defender",
+        "label": "Nature's Defender",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "2H Slashing",
+        "stats": {
+          "str": 10,
+          "dex": 10,
+          "wis": 10,
+          "hp": 25,
+          "mana": 25
+        },
+        "effect": "disease and poison resistance, plus a special combat effect",
+        "source": "Nature's Defender Quest reward (Guardian of Takish, Plane of Growth) -- High Elf or Human only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-cabilis:keeper-bile",
+        "label": "Keeper Bile",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:necro-spells",
+        "label": "Necro Spells",
+        "type": "quest",
+        "description": "Keeper Bile in West Cabilis trades a large scorpion pincer, a sabertooth cub canine, and 2 brittle skulls for coin and a random low-level Necromancer spell. Necromancer only.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 6,
+        "steps": [
+          "Gather a large scorpion pincer, a sabertooth cub canine, and 2 brittle skulls",
+          "Turn them in to Keeper Bile in West Cabilis"
+        ],
+        "wiki_title": "Necro Spells"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:vaean-the-night",
+        "label": "Vaean the Night",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:necromancer-spells",
+        "label": "Necromancer Spells",
+        "type": "quest",
+        "description": "Vaean the Night in The Overthere trades any one of four spell scrolls (Convergence, Defoliation, Splurt, Thrall of Bones) for a random one of four rarer spell scrolls (Minion of Shadows, Sacrifice, Scent of Terris, Shadowbond). Necromancer only. Distinct from the Necromancer Spells (Cabilis) quest.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 51,
+        "steps": [
+          "Bring one of the four common scrolls to Vaean the Night in The Overthere"
+        ],
+        "wiki_title": "Necromancer Spells"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-cabilis:izarod-fristan",
+        "label": "Izarod Fristan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:necromancer-spells-cabilis",
+        "label": "Necromancer Spells (Cabilis)",
+        "type": "quest",
+        "description": "Izarod Fristan, in the necromancer guild tower in West Cabilis, trades any one of four spell scrolls (Convergence, Defoliation, Splurt, Thrall of Bones) for a random one of four rarer spell scrolls (Minion of Shadows, Sacrifice, Scent of Terris, Shadowbond). Necromancer only.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Bring one of the four common scrolls to Izarod Fristan in West Cabilis"
+        ],
+        "wiki_title": "Necromancer Spells (Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:neonate-cowardice",
+        "label": "Neonate Cowardice",
+        "type": "quest",
+        "description": "Davorre Bloodthorn, at the Fell Blade shadow knight guild in Paineel, trades a Small Sealed Bag (a Bat Wing, Rat Ears, a Snake Egg, and a Fire Beetle Eye) for experience and coin. Kindly or better faction. All classes.",
+        "minLevel": 2,
+        "steps": [
+          "Gather a Bat Wing, Rat Ears, a Snake Egg, and a Fire Beetle Eye into a Small Sealed Bag",
+          "Turn it in to Davorre Bloodthorn in Paineel"
+        ],
+        "wiki_title": "Neonate Cowardice"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:vesteri-nomanoi",
+        "label": "Vesteri Nomanoi",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:nesiffs-statue",
+        "label": "Nesiff's Statue",
+        "type": "quest",
+        "description": "Vesteri Nomanoi in Surefall Glade sends players to deliver Vesteri's Claim Check to Nesiff Tallaherd in South Qeynos for a Wooden Statue of Tunare, returned to Vesteri for coin, experience, and faction.",
+        "minLevel": 1,
+        "steps": [
+          "Receive Vesteri's Claim Check from Vesteri Nomanoi in Surefall Glade",
+          "Give it to Nesiff Tallaherd in South Qeynos for a Wooden Statue of Tunare",
+          "Return the statue to Vesteri Nomanoi in Surefall Glade"
+        ],
+        "wiki_title": "Nesiff's Statue"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:chardok:niblek",
+        "label": "Niblek",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:nibleks-gems",
+        "label": "Niblek's Gems",
+        "type": "quest",
+        "description": "Niblek, in the slave area of Chardok, trades a Black Sapphire and a Ruby for experience and the Top Shard of the Kylong Medallion -- one of the three pieces needed for the (already-modeled) Medallion of the Kylong Quest.",
+        "minLevel": 39,
+        "steps": [
+          "Gather a Black Sapphire and a Ruby",
+          "Turn them in to Niblek in Chardok"
+        ],
+        "wiki_title": "Niblek's Gems"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:reebo-leafsway",
+        "label": "Reebo Leafsway",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:nillipuss-the-brownie",
+        "label": "Nillipuss the Brownie",
+        "type": "quest",
+        "description": "Reebo Leafsway in Rivervale trades 4 Nillipus' Jumjum Stalks -- from repeatedly killing Nillipuss, a brownie -- for coin, experience, and a random magic item (earrings, amulets, pouches, wands, rings, and others).",
+        "minLevel": 17,
+        "steps": [
+          "Kill Nillipuss (a brownie) in Rivervale, repeatedly, for 4 Jumjum Stalks",
+          "Turn them in to Reebo Leafsway in Rivervale"
+        ],
+        "wiki_title": "Nillipuss the Brownie"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:guntrik",
+        "label": "Guntrik",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:noble-hunters",
+        "label": "Noble Hunters",
+        "type": "quest",
+        "description": "Guntrik in Oggok, requiring Amiable or better faction, runs two turn-ins: a Noble's Crest (from noble hunters) for a large bronze weapon (exact piece unclear), and 2 Human Scalps (from Sven and Philicia Drinn) for an Ogre War Maul. Both pay coin, experience, and faction.",
+        "minLevel": 14,
+        "steps": [
+          "Kill noble hunters for a Noble's Crest, or kill Sven and Philicia Drinn for 2 Human Scalps",
+          "Turn them in to Guntrik in Oggok"
+        ],
+        "wiki_title": "Noble Hunters"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ogre-war-maul",
+        "label": "Ogre War Maul",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "cleric",
+          "druid",
+          "monk",
+          "ranger",
+          "shaman",
+          "beastlord"
+        ],
+        "skill": "2H Blunt",
+        "damage": 17,
+        "delay": 50,
+        "weight": 13,
+        "size": "Large",
+        "source": "Noble Hunters reward (Guntrik, Oggok) -- excludes Bard, Rogue, Necromancer, Wizard, Magician, Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:daenor-casthopur",
+        "label": "Daenor Casthopur",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:note-to-neclo-quest",
+        "label": "Note to Neclo Quest",
+        "type": "quest",
+        "description": "Daenor Casthopur in South Qeynos sends a note to Neclo Rheslar in Qeynos Hills; delivering it pays experience, faction, and a low-level spell (the wiki lists Gate or Minor Shielding without clarifying which).",
+        "minLevel": 1,
+        "steps": [
+          "Receive a note from Daenor Casthopur in South Qeynos",
+          "Deliver it to Neclo Rheslar in Qeynos Hills"
+        ],
+        "wiki_title": "Note to Neclo Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:odus-pearls",
+        "label": "Odus Pearls",
+        "type": "quest",
+        "description": "Weligon Steelherder in Erudin, requiring Amiable or better faction, trades a Full Bag of Pearls -- 4 Pearl of Odus ground spawns from Erudin's harbor -- for coin, experience, and a random armor piece (Patchwork Sleeves, Small Bag, Tattered Skullcap, or Worn Great Staff).",
+        "minLevel": 10,
+        "steps": [
+          "Gather 4 Pearl of Odus from Erudin's harbor into a Full Bag of Pearls",
+          "Turn it in to Weligon Steelherder in Erudin"
+        ],
+        "wiki_title": "Odus Pearls"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ogre-heads",
+        "label": "Ogre Heads",
+        "type": "quest",
+        "description": "Byzar Bloodforge in South Kaladim trades Ogre Heads -- looted from Corflunk and Zarchoomi -- for the Bloodforge armor set. Cleric, Paladin, or Warrior; Dwarf only.",
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "minLevel": 7,
+        "steps": [
+          "Kill Corflunk and Zarchoomi for Ogre Heads",
+          "Turn them in to Byzar Bloodforge in South Kaladim"
+        ],
+        "wiki_title": "Ogre Heads"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-armplates",
+        "label": "Bloodforge Armplates",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 6,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-boots",
+        "label": "Bloodforge Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 5,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-bracers",
+        "label": "Bloodforge Bracers",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 5,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-gauntlets",
+        "label": "Bloodforge Gauntlets",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 6,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-helm",
+        "label": "Bloodforge Helm",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 5
+        },
+        "effect": "SV Fire +5, SV Disease +5, SV Cold +5, SV Magic +5, SV Poison +5",
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-legplates",
+        "label": "Bloodforge Legplates",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 7,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-mail",
+        "label": "Bloodforge Mail",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin",
+          "warrior"
+        ],
+        "ac": 12,
+        "source": "Ogre Heads reward (Byzar Bloodforge, South Kaladim) -- Dwarf only"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:eastern-wastes:dreamspeaker-lyssiara",
+        "label": "Dreamspeaker Lyssiara",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:old-dreams",
+        "label": "Old Dreams",
+        "type": "quest",
+        "description": "Dreamspeaker Lyssiara in Eastern Wastes trades a Goblin Ice Necklace (from Everfrost Peaks goblins), a Fire Goblin Skin (from Solusek's Eye goblins), and an unopened Holiday Gift for Chapter VI, The First Frost and a Holiday Gift. Seasonal (Frostmas).",
+        "minLevel": 1,
+        "steps": [
+          "Kill goblins in Everfrost Peaks for a Goblin Ice Necklace",
+          "Kill goblins in Solusek's Eye for a Fire Goblin Skin",
+          "Bring both plus an unopened Holiday Gift to Dreamspeaker Lyssiara in Eastern Wastes"
+        ],
+        "wiki_title": "Old Dreams"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:misty-thicket:deputy-budo",
+        "label": "Deputy Budo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-belts",
+        "label": "Orc Belts",
+        "type": "quest",
+        "description": "Deputy Budo in Misty Thicket trades a Deathfist Slashed Belt for coin, experience, faction, and a Tagglefoot Tingle Drink.",
+        "minLevel": 2,
+        "steps": [
+          "Turn in a Deathfist Slashed Belt to Deputy Budo in Misty Thicket"
+        ],
+        "wiki_title": "Orc Belts"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:dill-fireshine",
+        "label": "Dill Fireshine",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:orc-hatchets",
+        "label": "Orc Hatchets",
+        "type": "quest",
+        "description": "Dill Fireshine in Kelethin (Greater Faydark), requiring Amiable faction, trades 2 Orc Hatchets -- from orc hatchetmen and orc pawns -- for coin, experience, and a choice of weapon (Rusty Short Sword, Rusty Spear, Rusty Two Handed Sword, Tarnished Bastard Sword, or Tarnished Scimitar). Bard, Druid, Paladin, Ranger, Rogue, Shadow Knight, Shaman, or Warrior.",
+        "classes": [
+          "bard",
+          "druid",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 2,
+        "steps": [
+          "Kill orc hatchetmen and orc pawns in Greater Faydark for 2 Orc Hatchets",
+          "Turn them in to Dill Fireshine in Kelethin"
+        ],
+        "wiki_title": "Orc Hatchets"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rusty-short-sword",
+        "label": "Rusty Short Sword",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "skill": "1H Slashing",
+        "damage": 4,
+        "delay": 28,
+        "weight": 5,
+        "size": "Medium",
+        "source": "Orc Hatchets reward (Dill Fireshine, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tarnished-bastard-sword",
+        "label": "Tarnished Bastard Sword",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 40,
+        "weight": 9,
+        "size": "Medium",
+        "source": "Orc Hatchets reward (Dill Fireshine, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tarnished-scimitar",
+        "label": "Tarnished Scimitar",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue"
+        ],
+        "skill": "1H Slashing",
+        "damage": 5,
+        "delay": 33,
+        "weight": 7.5,
+        "size": "Medium",
+        "source": "Orc Hatchets reward (Dill Fireshine, Greater Faydark)"
+      }
     }
   ],
   "edges": [
@@ -135996,6 +137026,1246 @@
         "source": "quest:mining-caps",
         "target": "zone:toxxulia-forest",
         "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9696",
+        "source": "zone:kurns-tower",
+        "target": "zone:field-of-bone",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-9697",
+        "source": "zone:field-of-bone",
+        "target": "zone:kurns-tower",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9698",
+        "source": "npc:great-divide:relik",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9699",
+        "source": "npc:great-divide:relik",
+        "target": "quest:mining-picks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9700",
+        "source": "quest:mining-picks",
+        "target": "zone:great-divide",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9701",
+        "source": "quest:mining-picks",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9702",
+        "source": "quest:mining-picks",
+        "target": "item:coldain-velium-pick",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9703",
+        "source": "npc:ak-anon:larkon-theardor",
+        "target": "quest:minotaur-horns",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9704",
+        "source": "quest:minotaur-horns",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9705",
+        "source": "quest:minotaur-horns",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9706",
+        "source": "quest:minotaur-horns",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9707",
+        "source": "quest:minotaur-horns",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9708",
+        "source": "quest:minotaur-horns",
+        "target": "faction:king-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9709",
+        "source": "npc:stonebrunt-mountains:miranda",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9710",
+        "source": "npc:stonebrunt-mountains:miranda",
+        "target": "quest:mirandas-chocolate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9711",
+        "source": "quest:mirandas-chocolate",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9712",
+        "source": "quest:mirandas-chocolate",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9713",
+        "source": "quest:mirandas-chocolate",
+        "target": "item:pouch-of-kejek-catnip",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9714",
+        "source": "quest:mirandas-chocolate",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9715",
+        "source": "quest:mirandas-chocolate",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9716",
+        "source": "npc:stonebrunt-mountains:miranda",
+        "target": "quest:mirandas-dice",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9717",
+        "source": "quest:mirandas-dice",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9718",
+        "source": "quest:mirandas-dice",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9719",
+        "source": "quest:mirandas-dice",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9720",
+        "source": "quest:mirandas-dice",
+        "target": "item:ball-of-burlap-yarn",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9721",
+        "source": "quest:mirandas-dice",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9722",
+        "source": "quest:mirandas-dice",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9723",
+        "source": "npc:kurns-tower:a-skeletal-cook",
+        "target": "zone:kurns-tower",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9724",
+        "source": "npc:kurns-tower:a-skeletal-cook",
+        "target": "quest:mirgon-dowers-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9725",
+        "source": "quest:mirgon-dowers-head",
+        "target": "zone:kurns-tower",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9726",
+        "source": "quest:mirgon-dowers-head",
+        "target": "zone:kurns-tower",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9727",
+        "source": "quest:mirgon-dowers-head",
+        "target": "item:skull-of-torture",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9728",
+        "source": "npc:south-qeynos:mcneal-jocub",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9729",
+        "source": "npc:south-qeynos:mcneal-jocub",
+        "target": "quest:moonstones-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9730",
+        "source": "quest:moonstones-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9731",
+        "source": "quest:moonstones-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9732",
+        "source": "npc:grobb:kaglari",
+        "target": "quest:more-help-for-innoruuk",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9733",
+        "source": "quest:more-help-for-innoruuk",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9734",
+        "source": "quest:more-help-for-innoruuk",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9735",
+        "source": "quest:more-help-for-innoruuk",
+        "target": "spell:spirit-pouch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9736",
+        "source": "quest:more-help-for-innoruuk",
+        "target": "faction:dark-ones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9737",
+        "source": "quest:more-help-for-innoruuk",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9738",
+        "source": "npc:kithicor-forest:morin-shadowbane",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9739",
+        "source": "npc:kithicor-forest:morin-shadowbane",
+        "target": "quest:morins-sword",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9740",
+        "source": "quest:morins-sword",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9741",
+        "source": "quest:morins-sword",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9742",
+        "source": "quest:morins-sword",
+        "target": "item:short-sword-of-morin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9743",
+        "source": "npc:neriak-3rd-gate:hekzin-gzule",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9744",
+        "source": "npc:neriak-3rd-gate:hekzin-gzule",
+        "target": "quest:moss-snakes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9745",
+        "source": "quest:moss-snakes",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9746",
+        "source": "quest:moss-snakes",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9747",
+        "source": "quest:moss-snakes",
+        "target": "item:dark-shield-of-ebon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9748",
+        "source": "quest:moss-snakes",
+        "target": "faction:ebon-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9749",
+        "source": "npc:west-freeport:pandos-flintside",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9750",
+        "source": "npc:west-freeport:pandos-flintside",
+        "target": "quest:muffin-for-pandos",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9751",
+        "source": "quest:muffin-for-pandos",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9752",
+        "source": "quest:muffin-for-pandos",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9753",
+        "source": "quest:muffin-for-pandos",
+        "target": "faction:faydark-s-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9754",
+        "source": "quest:muffin-for-pandos",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9755",
+        "source": "quest:muffin-for-pandos",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9756",
+        "source": "quest:muffin-for-pandos",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9757",
+        "source": "npc:plane-of-growth:guardian-of-takish",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9758",
+        "source": "npc:plane-of-growth:guardian-of-takish",
+        "target": "quest:natures-defender-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9759",
+        "source": "quest:natures-defender-quest",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9760",
+        "source": "quest:natures-defender-quest",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9761",
+        "source": "quest:natures-defender-quest",
+        "target": "item:natures-defender",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9762",
+        "source": "npc:west-cabilis:keeper-bile",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9763",
+        "source": "npc:west-cabilis:keeper-bile",
+        "target": "quest:necro-spells",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9764",
+        "source": "quest:necro-spells",
+        "target": "zone:west-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9765",
+        "source": "quest:necro-spells",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9766",
+        "source": "quest:necro-spells",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9767",
+        "source": "quest:necro-spells",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9768",
+        "source": "npc:the-overthere:vaean-the-night",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9769",
+        "source": "npc:the-overthere:vaean-the-night",
+        "target": "quest:necromancer-spells",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9770",
+        "source": "quest:necromancer-spells",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9771",
+        "source": "quest:necromancer-spells",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9772",
+        "source": "npc:west-cabilis:izarod-fristan",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9773",
+        "source": "npc:west-cabilis:izarod-fristan",
+        "target": "quest:necromancer-spells-cabilis",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9774",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "zone:west-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9775",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9776",
+        "source": "npc:paineel:davorre-bloodthorn",
+        "target": "quest:neonate-cowardice",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9777",
+        "source": "quest:neonate-cowardice",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9778",
+        "source": "quest:neonate-cowardice",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9779",
+        "source": "npc:surefall-glade:vesteri-nomanoi",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9780",
+        "source": "npc:surefall-glade:vesteri-nomanoi",
+        "target": "quest:nesiffs-statue",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9781",
+        "source": "quest:nesiffs-statue",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9782",
+        "source": "quest:nesiffs-statue",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9783",
+        "source": "quest:nesiffs-statue",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9784",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9785",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9786",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9787",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9788",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9789",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9790",
+        "source": "quest:nesiffs-statue",
+        "target": "faction:qrg-protected-animals",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9791",
+        "source": "npc:chardok:niblek",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9792",
+        "source": "npc:chardok:niblek",
+        "target": "quest:nibleks-gems",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9793",
+        "source": "quest:nibleks-gems",
+        "target": "zone:chardok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9794",
+        "source": "quest:nibleks-gems",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9795",
+        "source": "npc:rivervale:reebo-leafsway",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9796",
+        "source": "npc:rivervale:reebo-leafsway",
+        "target": "quest:nillipuss-the-brownie",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9797",
+        "source": "quest:nillipuss-the-brownie",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9798",
+        "source": "quest:nillipuss-the-brownie",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9799",
+        "source": "quest:nillipuss-the-brownie",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9800",
+        "source": "quest:nillipuss-the-brownie",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9801",
+        "source": "quest:nillipuss-the-brownie",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9802",
+        "source": "npc:oggok:guntrik",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9803",
+        "source": "npc:oggok:guntrik",
+        "target": "quest:noble-hunters",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9804",
+        "source": "quest:noble-hunters",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9805",
+        "source": "quest:noble-hunters",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9806",
+        "source": "quest:noble-hunters",
+        "target": "item:ogre-war-maul",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9807",
+        "source": "quest:noble-hunters",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9808",
+        "source": "quest:noble-hunters",
+        "target": "faction:clurg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9809",
+        "source": "npc:south-qeynos:daenor-casthopur",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9810",
+        "source": "npc:south-qeynos:daenor-casthopur",
+        "target": "quest:note-to-neclo-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9811",
+        "source": "quest:note-to-neclo-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9812",
+        "source": "quest:note-to-neclo-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9813",
+        "source": "quest:note-to-neclo-quest",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9814",
+        "source": "quest:note-to-neclo-quest",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9815",
+        "source": "quest:note-to-neclo-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9816",
+        "source": "npc:erudin:weligon-steelherder",
+        "target": "quest:odus-pearls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9817",
+        "source": "quest:odus-pearls",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9818",
+        "source": "quest:odus-pearls",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9819",
+        "source": "npc:south-kaladim:byzar-bloodforge",
+        "target": "quest:ogre-heads",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9820",
+        "source": "quest:ogre-heads",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9821",
+        "source": "quest:ogre-heads",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9822",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-armplates",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9823",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9824",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9825",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9826",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9827",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-legplates",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9828",
+        "source": "quest:ogre-heads",
+        "target": "item:bloodforge-mail",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9829",
+        "source": "npc:eastern-wastes:dreamspeaker-lyssiara",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9830",
+        "source": "npc:eastern-wastes:dreamspeaker-lyssiara",
+        "target": "quest:old-dreams",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9831",
+        "source": "quest:old-dreams",
+        "target": "zone:eastern-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9832",
+        "source": "quest:old-dreams",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9833",
+        "source": "npc:misty-thicket:deputy-budo",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9834",
+        "source": "npc:misty-thicket:deputy-budo",
+        "target": "quest:orc-belts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9835",
+        "source": "quest:orc-belts",
+        "target": "zone:misty-thicket",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9836",
+        "source": "quest:orc-belts",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9837",
+        "source": "quest:orc-belts",
+        "target": "item:tagglefoot-tingle-drink",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9838",
+        "source": "quest:orc-belts",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9839",
+        "source": "quest:orc-belts",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9840",
+        "source": "quest:orc-belts",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9841",
+        "source": "quest:orc-belts",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9842",
+        "source": "npc:greater-faydark:dill-fireshine",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-9843",
+        "source": "npc:greater-faydark:dill-fireshine",
+        "target": "quest:orc-hatchets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-9844",
+        "source": "quest:orc-hatchets",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-9845",
+        "source": "quest:orc-hatchets",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9846",
+        "source": "quest:orc-hatchets",
+        "target": "item:rusty-short-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9847",
+        "source": "quest:orc-hatchets",
+        "target": "item:rusty-spear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9848",
+        "source": "quest:orc-hatchets",
+        "target": "item:rusty-two-handed-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9849",
+        "source": "quest:orc-hatchets",
+        "target": "item:tarnished-bastard-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-9850",
+        "source": "quest:orc-hatchets",
+        "target": "item:tarnished-scimitar",
+        "type": "rewards"
       }
     }
   ]
