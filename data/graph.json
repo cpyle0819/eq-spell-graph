@@ -60750,6 +60750,1483 @@
         "minLevel": 9,
         "maxLevel": 9
       }
+    },
+    {
+      "data": {
+        "id": "zone:dreadlands",
+        "label": "Dreadlands",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:dragon-necropolis",
+        "label": "Dragon Necropolis",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:trakanons-teeth",
+        "label": "Trakanon's Teeth",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:city-of-mist",
+        "label": "City of Mist",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:karnors-castle",
+        "label": "Karnor's Castle",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:warsliks-woods",
+        "label": "Warsliks Woods",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:brain-bite",
+        "label": "Brain Bite",
+        "type": "spell",
+        "class_levels": {
+          "wizard": 37
+        },
+        "wiki_title": "Brain Bite"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:dain-frostreaver-iv",
+        "label": "Dain Frostreaver IV",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:10th-coldain-ring-quest",
+        "label": "10th Coldain Ring Quest",
+        "type": "quest",
+        "description": "The final stage of the Coldain Ring War progression. Dain Frostreaver IV trades a Dirk of the Dain for a Declaration of War; combined with Ring 9 (Coldain Hero's Insignia Ring) it's handed to Sentry Badain, then Orders of Engagement trigger a three-round war against waves of giants ending in Narandi the Wretched. Ring 9 plus Narandi's head, turned in to Seneschal Aldikar, produces Ring 10; giving Ring 10 back to Dain Frostreaver IV (Ally faction required) yields the final blessing.",
+        "steps": [
+          "Hand a Dirk of the Dain to Dain Frostreaver IV in Thurgadin, receive a Declaration of War",
+          "Give the Declaration plus Ring 9 (Coldain Hero's Insignia Ring) to Sentry Badain at the tower",
+          "Give Orders of Engagement to Zrelik the Scout to trigger the war",
+          "Defeat three rounds of giant waves, then kill Narandi the Wretched",
+          "Turn Ring 9 plus Narandi's head in to Seneschal Aldikar for Ring 10",
+          "Turn a Shorn Head of Narandi in to each dwarf commander for additional rewards",
+          "Give Ring 10 to Dain Frostreaver IV (Ally faction required) for the final blessing and Ring of Dain Frostreaver IV"
+        ],
+        "wiki_title": "10th Coldain Ring Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ring-of-dain-frostreaver-iv",
+        "label": "Ring of Dain Frostreaver IV",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crown-of-narandi",
+        "label": "Crown of Narandi",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:eye-of-narandi",
+        "label": "Eye of Narandi",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:earring-of-the-frozen-skull",
+        "label": "Earring of the Frozen Skull",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faceguard-of-bentos-the-hero",
+        "label": "Faceguard of Bentos the Hero",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:choker-of-the-wretched",
+        "label": "Choker of the Wretched",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:protection-of-the-dain",
+        "label": "Protection of the Dain",
+        "type": "item",
+        "source": "10th Coldain Ring Quest reward (Dain Frostreaver IV / Seneschal Aldikar / dwarf commanders, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-wastes:harla-dar",
+        "label": "Harla Dar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:aid-the-dar-brood",
+        "label": "Aid the Dar Brood",
+        "type": "quest",
+        "description": "Harla Dar, wandering northeastern Western Wastes, asks for help with her missing whelp. Slaying Zlandicar in Dragon Necropolis and returning his Frakadar's Talisman to her yields the Shroud of the Dar Brood, faction with Claws of Veeshan and Yelinak, and experience. All classes.",
+        "minLevel": 60,
+        "steps": [
+          "Find Harla Dar wandering northeastern Western Wastes and speak with her about her missing whelp",
+          "Travel to Dragon Necropolis and slay Zlandicar for Frakadar's Talisman",
+          "Return the talisman to Harla Dar"
+        ],
+        "wiki_title": "Aid the Dar Brood"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shroud-of-the-dar-brood",
+        "label": "Shroud of the Dar Brood",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 14,
+        "effect": "Haste +34%",
+        "source": "Aid the Dar Brood reward (Harla Dar, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:evreth-menesez",
+        "label": "Evreth Menesez",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ancient-dragon-tome",
+        "label": "Ancient Dragon Tome",
+        "type": "quest",
+        "description": "Evreth Menesez gives a binding to collect four tome sections: one from a Kromzek sorcerer in Kael Drakkal, one from Fergul Frostsky or Gralk Dwarfkiller in Great Divide, one from a shadow beast necromancer or VhalSera in the Tower of Frozen Shadow, and one from a Haunted Seachest in Cobalt Scar. The eqlwiki.com page itself flags the exact hand-in dialogue and faction hits as missing/incomplete. Class unspecified. Reward: an Orb of Draconic Energy.",
+        "minLevel": 45,
+        "steps": [
+          "Receive a binding from Evreth Menesez",
+          "Recover a tome section from a Kromzek sorcerer in Kael Drakkal",
+          "Recover a tome section from Fergul Frostsky or Gralk Dwarfkiller in Great Divide",
+          "Recover a tome section from a shadow beast necromancer or VhalSera in the Tower of Frozen Shadow",
+          "Recover a tome section from a Haunted Seachest in Cobalt Scar",
+          "Return the four sections to Evreth Menesez"
+        ],
+        "wiki_title": "Ancient Dragon Tome"
+      }
+    },
+    {
+      "data": {
+        "id": "item:orb-of-draconic-energy",
+        "label": "Orb of Draconic Energy",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "magic": true,
+        "ac": 15,
+        "stats": {
+          "mana": 50
+        },
+        "effect": "SV Fire +10, SV Cold +10",
+        "source": "Ancient Dragon Tome reward (Evreth Menesez, Kael Drakkal) -- all classes except Warrior, Monk, Rogue"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-commonlands:timtok-tonsmith",
+        "label": "Timtok Tonsmith",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-commonlands:ranvigoz-tonsmith",
+        "label": "Ranvigoz Tonsmith",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:armor-size",
+        "label": "Armor Size",
+        "type": "quest",
+        "description": "Timtok Tonsmith or Ranvigoz Tonsmith, at the inn next to Befallen in West Commonlands, resize crafted plate armor (gauntlets, vambraces, bracers, helm, pauldrons, breastplate, greaves, or plate boots) down to a smaller size -- Amiable faction or better is required; at Indifferent they respond to hails but won't complete the resize. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Bring a crafted armor piece to Timtok Tonsmith or Ranvigoz Tonsmith in West Commonlands",
+          "Receive the piece back resized"
+        ],
+        "wiki_title": "Armor Size"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dreadlands:baldric-slezaf",
+        "label": "Baldric Slezaf",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-epic-quest",
+        "label": "Bard Epic Quest",
+        "type": "quest",
+        "description": "Baldric Slezaf, inside a pyramid in the Dreadlands, sends Bards after four pieces of the Maestro's Symphony and a Mystical Lute: Page 24 Top (a relay torch race through four zones), Page 24 Bottom (a chain involving a mechanical doll and Maligar's Enraged Doppleganger), Page 25 (three creature guts from specific dragons/wurms), and the Mystical Lute from Forpar Fizfla (dragon scales and defeating Trakanon). Turning everything in yields the Singing Short Sword. Bard only.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 46,
+        "steps": [
+          "Obtain Maestro's Symphony Page 24 Top via a relay torch race through four zones",
+          "Obtain Maestro's Symphony Page 24 Bottom via the mechanical doll chain and defeating Maligar's Enraged Doppleganger",
+          "Obtain Maestro's Symphony Page 25 by collecting three creature guts from specific dragons/wurms",
+          "Obtain a Mystical Lute from Forpar Fizfla by gathering rare dragon-scale components and defeating Trakanon",
+          "Turn everything in to Baldric Slezaf in the Dreadlands"
+        ],
+        "wiki_title": "Bard Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:singing-short-sword",
+        "label": "Singing Short Sword",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "bard"
+        ],
+        "magic": true,
+        "lore": true,
+        "skill": "1H Slashing",
+        "stats": {
+          "str": 15,
+          "cha": 20,
+          "hp": 100
+        },
+        "effect": "All elemental resistances; party haste 55%, song amplification 80%",
+        "source": "Bard Epic Quest reward (Baldric Slezaf, Dreadlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:bygloirn-omorden",
+        "label": "Bygloirn Omorden",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:bard-kael-armor-quests",
+        "label": "Bard Kael Armor Quests",
+        "type": "quest_group",
+        "description": "Bygloirn Omorden in Kael Drakkal trades an Ancient Tarnished armor piece plus 3 matching gems for its corresponding piece of Bard armor. Seven independent sub-quests, no ordering between them. Ally faction with Kromzek, Kromrif, and King Tormax required.",
+        "classes": [
+          "bard"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-helm",
+        "label": "Bard Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Helmet plus 3 Crushed Coral to Bygloirn Omorden in Kael Drakkal for the Kael Bard Helm.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-helm",
+        "label": "Kael Bard Helm",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Helm reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-breastplate",
+        "label": "Bard Kael Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Breastplate plus 3 Flawless Diamonds to Bygloirn Omorden in Kael Drakkal for the Kael Bard Breastplate.",
+        "steps": [
+          "Gather a Ancient Tarnished Breastplate and 3 Flawless Diamonds",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-breastplate",
+        "label": "Kael Bard Breastplate",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Breastplate reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-armplates",
+        "label": "Bard Kael Armor Quests: Armplates",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Vambraces plus 3 Flawed Emeralds to Bygloirn Omorden in Kael Drakkal for the Kael Bard Vambraces.",
+        "steps": [
+          "Gather a Ancient Tarnished Vambraces and 3 Flawed Emeralds",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-vambraces",
+        "label": "Kael Bard Vambraces",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Armplates reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-bracer",
+        "label": "Bard Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Bracelet plus 3 Crushed Flame Emeralds to Bygloirn Omorden in Kael Drakkal for the Kael Bard Bracer.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Bracelet and 3 Crushed Flame Emeralds",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-bracer",
+        "label": "Kael Bard Bracer",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Bracer reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-gauntlets",
+        "label": "Bard Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Gauntlets plus 3 Crushed Topaz to Bygloirn Omorden in Kael Drakkal for the Kael Bard Gauntlets.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-gauntlets",
+        "label": "Kael Bard Gauntlets",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Gauntlets reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-greaves",
+        "label": "Bard Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Greaves plus 3 Flawed Sea Sapphires to Bygloirn Omorden in Kael Drakkal for the Kael Bard Greaves.",
+        "steps": [
+          "Gather a Ancient Tarnished Greaves and 3 Flawed Sea Sapphires",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-greaves",
+        "label": "Kael Bard Greaves",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Greaves reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-kael-armor-boots",
+        "label": "Bard Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Boots plus 3 Crushed Black Marble to Bygloirn Omorden in Kael Drakkal for the Kael Bard Boots.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Bygloirn Omorden in Kael Drakkal"
+        ],
+        "wiki_title": "Bard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kael-bard-boots",
+        "label": "Kael Bard Boots",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Kael Armor Quests: Boots reward (Bygloirn Omorden, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:ostorm",
+        "label": "Ostorm",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:genni",
+        "label": "Genni",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:gardern",
+        "label": "Gardern",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-lambent-gems",
+        "label": "Bard Lambent Gems",
+        "type": "quest",
+        "description": "Ostorm, Genni, Gardern, and Vilissia, in the Temple of Solusek Ro, each trade two matching gems plus a Lambent Stone (dropped by Antonican hill, ice, or sand giants) for a lambent version of that gem: Ostorm for fire opals, Genni for Star Rubies, Gardern for sapphires, Vilissia for rubies. Genni also sells a Fire Opal for 550 gold. Bard only.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 33,
+        "steps": [
+          "Kill Antonican hill, ice, or sand giants for Lambent Stones",
+          "Give two fire opals plus a Lambent Stone to Ostorm for a Lambent Fire Opal",
+          "Give two Star Rubies plus a Lambent Stone to Genni for a Lambent Star Ruby",
+          "Give two sapphires plus a Lambent Stone to Gardern for a Lambent Sapphire",
+          "Give two rubies plus a Lambent Stone to Vilissia for a Lambent Ruby"
+        ],
+        "wiki_title": "Bard Lambent Gems"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-fire-opal",
+        "label": "Lambent Fire Opal",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Bard Lambent Gems reward (Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-star-ruby",
+        "label": "Lambent Star Ruby",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Bard Lambent Gems reward (Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-sapphire",
+        "label": "Lambent Sapphire",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Bard Lambent Gems reward (Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-ruby",
+        "label": "Lambent Ruby",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Bard Lambent Gems reward (Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:tascar-tissleplay",
+        "label": "Tascar Tissleplay",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-mail",
+        "label": "Bard Mail",
+        "type": "quest",
+        "description": "Tascar Tissleplay in Felwithe (Greater Faydark) hands over a letter to be delivered to Jakum Webdancer at Kelethin's Bard's Guildhall; returning to Tascar afterward starts another loop. Repeatable, roughly 7.5 minutes per loop (4.5 with Summon of Speed). Rewards 1-16 gold, experience, and faction with League of Antonican Bards. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Tascar Tissleplay and agree to deliver to Kelethin",
+          "Travel to Kelethin's Bard's Guildhall and hand the letter to Jakum Webdancer",
+          "Return to Tascar Tissleplay for the next delivery"
+        ],
+        "wiki_title": "Bard Mail"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:umykith-fedhar",
+        "label": "Umykith Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:bard-skyshrine-armor-quests",
+        "label": "Bard Skyshrine Armor Quests",
+        "type": "quest_group",
+        "description": "Umykith Fe`Dhar, at Skyshrine's Tower Top, trades an Unadorned Plate armor piece plus 3 matching gems for its corresponding piece of Twilight armor. Seven independent sub-quests, no ordering between them. Ally faction required for all Skyshrine armor quests.",
+        "classes": [
+          "bard"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-helm",
+        "label": "Bard Skyshrine Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Helmet plus 3 Crushed Coral to Umykith Fe`Dhar at Skyshrine's Tower Top for the Helm of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:helm-of-twilight",
+        "label": "Helm of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Helm reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-breastplate",
+        "label": "Bard Skyshrine Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Breastplate plus 3 Flawless Diamond to Umykith Fe`Dhar at Skyshrine's Tower Top for the Breastplate of Twilight.",
+        "steps": [
+          "Gather an Unadorned Breastplate and 3 Flawless Diamond",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:breastplate-of-twilight",
+        "label": "Breastplate of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Breastplate reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-armplates",
+        "label": "Bard Skyshrine Armor Quests: Armplates",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Vambraces plus 3 Flawed Emerald to Umykith Fe`Dhar at Skyshrine's Tower Top for the Vambraces of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vambraces-of-twilight",
+        "label": "Vambraces of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Armplates reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-bracer",
+        "label": "Bard Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Bracer plus 3 Crushed Flame Emerald to Umykith Fe`Dhar at Skyshrine's Tower Top for the Bracer of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracer-of-twilight",
+        "label": "Bracer of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Bracer reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-gauntlets",
+        "label": "Bard Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Gauntlets plus 3 Crushed Topaz to Umykith Fe`Dhar at Skyshrine's Tower Top for the Gauntlets of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-twilight",
+        "label": "Gauntlets of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Gauntlets reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-greaves",
+        "label": "Bard Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Greaves plus 3 Flawed Sea Sapphire to Umykith Fe`Dhar at Skyshrine's Tower Top for the Greaves of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:greaves-of-twilight",
+        "label": "Greaves of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Greaves reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-skyshrine-armor-boots",
+        "label": "Bard Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade an Unadorned Plate Boots plus 3 Crushed Black Marble to Umykith Fe`Dhar at Skyshrine's Tower Top for the Boots of Twilight.",
+        "steps": [
+          "Gather an Unadorned Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Umykith Fe`Dhar at Skyshrine's Tower Top"
+        ],
+        "wiki_title": "Bard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:boots-of-twilight",
+        "label": "Boots of Twilight",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Skyshrine Armor Quests: Boots reward (Umykith Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:leifur",
+        "label": "Leifur",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:bard-thurgadin-armor-quests",
+        "label": "Bard Thurgadin Armor Quests",
+        "type": "quest_group",
+        "description": "Leifur in Thurgadin trades a Corroded Plate armor piece plus 3 matching gems for its corresponding piece of Resonant armor. Seven independent sub-quests, no ordering between them.",
+        "classes": [
+          "bard"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:coldain",
+        "label": "Coldain",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dain-frostreaver-iv",
+        "label": "Dain Frostreaver IV",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-helm",
+        "label": "Bard Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Helmet plus 3 Crushed Coral to Leifur in Thurgadin for the Resonant Helm.",
+        "steps": [
+          "Gather a Corroded Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-helm",
+        "label": "Resonant Helm",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Helm reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-breastplate",
+        "label": "Bard Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Breastplate plus 3 Flawless Diamond to Leifur in Thurgadin for the Resonant Breastplate.",
+        "steps": [
+          "Gather a Corroded Breastplate and 3 Flawless Diamond",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-breastplate",
+        "label": "Resonant Breastplate",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Breastplate reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-vambraces",
+        "label": "Bard Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Vambraces plus 3 Flawed Emerald to Leifur in Thurgadin for the Resonant Vambraces.",
+        "steps": [
+          "Gather a Corroded Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-vambraces",
+        "label": "Resonant Vambraces",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Vambraces reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-bracer",
+        "label": "Bard Thurgadin Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Bracer plus 3 Crushed Flame Emerald to Leifur in Thurgadin for the Resonant Bracer.",
+        "steps": [
+          "Gather a Corroded Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-bracer",
+        "label": "Resonant Bracer",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Bracer reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-gauntlets",
+        "label": "Bard Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Gauntlets plus 3 Crushed Topaz to Leifur in Thurgadin for the Resonant Gauntlets.",
+        "steps": [
+          "Gather a Corroded Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-gauntlets",
+        "label": "Resonant Gauntlets",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Gauntlets reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-greaves",
+        "label": "Bard Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Greaves plus 3 Flawed Sea Sapphire to Leifur in Thurgadin for the Resonant Greaves.",
+        "steps": [
+          "Gather a Corroded Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-greaves",
+        "label": "Resonant Greaves",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Greaves reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bard-thurgadin-armor-boots",
+        "label": "Bard Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "description": "Trade a Corroded Plate Boots plus 3 Crushed Black Marble to Leifur in Thurgadin for the Resonant Boots.",
+        "steps": [
+          "Gather a Corroded Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Leifur in Thurgadin"
+        ],
+        "wiki_title": "Bard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:resonant-boots",
+        "label": "Resonant Boots",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "source": "Bard Thurgadin Armor Quests: Boots reward (Leifur, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:priest-of-discord",
+        "label": "Priest of Discord",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:become-pvp-kaladim",
+        "label": "Become PvP (Kaladim)",
+        "type": "quest",
+        "description": "The Priest of Discord, outside South Kaladim's gate, trades a Tome of Order and Discord for PvP flagging -- the player's name renders red instead of blue and becomes vulnerable to other PvP players; beneficial spells from non-PvP players no longer apply. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Hail the Priest of Discord outside South Kaladim",
+          "Hand over a Tome of Order and Discord"
+        ],
+        "wiki_title": "Become PvP (Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:mizr-nmar",
+        "label": "Mizr N`Mar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:beta-neutral",
+        "label": "Beta Neutral",
+        "type": "quest",
+        "description": "Mizr N`Mar in Neriak Third Gate sells a Rune of Fortune for 50 gold, or Tarn Visilin accepts a cheaper Bloodstone, either way granting a Beta Neutral faction boost. Part of the Incandescent Mask quest chain. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Buy a Rune of Fortune from Mizr N`Mar for 50 gold, or buy a Bloodstone near Merchant Edina and give it to Tarn Visilin"
+        ],
+        "wiki_title": "Beta Neutral"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:beta-neutral",
+        "label": "Beta Neutral",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:commander-kane",
+        "label": "Commander Kane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:highpass-hold:barn-bloodstone",
+        "label": "Barn Bloodstone",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blackburrow-stout-delivery",
+        "label": "Blackburrow Stout Delivery",
+        "type": "quest",
+        "description": "Commander Kane, at the Shrine of Bertoxxulus in Qeynos Aqueducts, sends a Blackburrow Stout to Barn Bloodstone outside the Golden Rooster in Highpass Hold. Warmly faction with Barn Bloodstone is required (raisable via the Note for Janam and Note for Rebby quests); at lower standing he consumes the stout without paying out. Reward: Bayle List I. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Blackburrow Stout from Commander Kane in Qeynos Aqueducts",
+          "Deliver it to Barn Bloodstone outside the Golden Rooster in Highpass Hold"
+        ],
+        "wiki_title": "Blackburrow Stout Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bayle-list-i",
+        "label": "Bayle List I",
+        "type": "item",
+        "lore": true,
+        "weight": 0,
+        "size": "Tiny",
+        "source": "Blackburrow Stout Delivery reward (Barn Bloodstone, Highpass Hold)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blackburrow-stout-shipment",
+        "label": "Blackburrow Stout Shipment",
+        "type": "quest",
+        "description": "McNeal Jocub, at Fish's Ale in South Qeynos, sends a tattered note to Gnasher Furgutt, a night-only gnoll spawn in Qeynos Hills; trading it for a Case of Blackburrow Stout and returning that to McNeal yields coin, double experience, a Black Burrow Stout, and faction with Circle of Unseen Hands, Corrupt Qeynos Guards, Kane Bayle, Karana Residents, Guards of Qeynos, Priests of Life, and Knights of Thunder. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Speak with McNeal Jocub at Fish's Ale in South Qeynos",
+          "Find Gnasher Furgutt in Qeynos Hills at night and present the tattered note",
+          "Receive a Case of Blackburrow Stout",
+          "Return the case to McNeal Jocub"
+        ],
+        "wiki_title": "Blackburrow Stout Shipment"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:heartwood-master",
+        "label": "The Heartwood Master",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bladed-weapons",
+        "label": "Bladed Weapons",
+        "type": "quest",
+        "description": "The Heartwood Master in Kelethin (Greater Faydark), requiring Amiable faction or better, trades a Rusty Short Sword, Rusty Long Sword, Rusty Broad Sword, and Rusty Bastard Sword for a choice of a Tarnished Scimitar or a Worn Great Staff, 6 gold, faction with Soldiers of Tunare, King Tearis Thex, and Faydark's Champions, and experience. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Gather a Rusty Short Sword, Rusty Long Sword, Rusty Broad Sword, and Rusty Bastard Sword",
+          "Hand them to The Heartwood Master in Kelethin"
+        ],
+        "wiki_title": "Bladed Weapons"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:blood-ink",
+        "label": "Blood Ink",
+        "type": "quest",
+        "description": "War Historian Kobl, at the East Cabilis Warrior guild, asks for four blood globules -- from carnivorous plants, leeches, mosquitoes, and blood pit creatures in the Tower of Death -- to make Blood Ink. Faction gains with Legion of Cabilis, Cabilis Residents, Scaled Mystics, Crusaders of Greenmist, and Swift Tails are reported, but the exact reward remains unresolved/unsolved on eqlwiki.com as of the source page.",
+        "minLevel": 8,
+        "steps": [
+          "Hail War Historian Kobl and ask about unique writing materials, then request Blood Ink",
+          "Collect four blood globules from carnivorous plants, leeches, mosquitoes, and blood pit creatures in the Tower of Death",
+          "Return the globules to War Historian Kobl"
+        ],
+        "wiki_title": "Blood Ink"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lesser-faydark:talisyn-stormwing",
+        "label": "Talisyn Stormwing",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bloodboil-quest",
+        "label": "Bloodboil Quest",
+        "type": "quest",
+        "description": "Talisyn Stormwing in Lesser Faydark asks the player to pledge assistance, then bring proof of defeating Bloodboil, an undead sprite leader spawning in the mushroom area, for the Emerald Cloak of the Faydark. All classes.",
+        "minLevel": 20,
+        "steps": [
+          "Speak with Talisyn Stormwing in Lesser Faydark and pledge assistance",
+          "Kill Bloodboil in the mushroom area for his wing",
+          "Return the wing to Talisyn Stormwing"
+        ],
+        "wiki_title": "Bloodboil Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:emerald-cloak-of-the-faydark",
+        "label": "Emerald Cloak of the Faydark",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 5,
+        "stats": {
+          "cha": 10,
+          "hp": 25,
+          "mana": 25
+        },
+        "effect": "SV Disease, SV Poison; Fay Gate",
+        "source": "Bloodboil Quest reward (Talisyn Stormwing, Lesser Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bone-chips-quests",
+        "label": "Bone Chips Quests",
+        "type": "quest",
+        "description": "A repeatable city/guard faction turn-in offered by multiple NPCs across many cities -- Cabilis, Erudin, Felwithe, Freeport, Grobb, Kaladim, Qeynos, and Neriak Commons -- each accepting four unstacked Bone Chips (Lashun Novashine in Qeynos accepts two; some use container-based systems) for faction, experience, and occasionally coin or a rusty weapon. eqlwiki.com presents this as one shared mechanic across nine NPC variants rather than nine independently detailed quest pages. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Kill for Bone Chips",
+          "Turn in four unstacked Bone Chips (two for Lashun Novashine in Qeynos) to a city's Bone Chips NPC for faction and experience"
+        ],
+        "wiki_title": "Bone Chips Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:boysenberry-pie-quest",
+        "label": "Boysenberry Pie Quest",
+        "type": "quest",
+        "description": "Sentry Emil in Skyshrine asks the player to prove their intentions by retrieving a boysenberry pie from Grudash the Baker (or Ruru the Cook) in the galley and returning it. eqlwiki.com states this quest was confirmed by the developers as never fully implemented -- no reward exists. All classes.",
+        "minLevel": 0,
+        "steps": [
+          "Hail Sentry Emil in Skyshrine and offer to prove your intentions",
+          "Visit Grudash the Baker in the galley and request a boysenberry pie",
+          "Return the pie to Sentry Emil"
+        ],
+        "wiki_title": "Boysenberry Pie Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:dyth-xteria",
+        "label": "Dyth X`Teria",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:brain-bite-evil",
+        "label": "Brain Bite (Evil)",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Dyth X`Teria, at the OT outpost's northern building in The Overthere, trades a Peridot, Onyx, and Star Rose Quartz for three ornate bottles (Hampton, Mardon, Ryla); each is delivered to a skeleton at a specific location -- Hampton's to Trakanon's Teeth, Mardon's to a reaver tower in City of Mist, Ryla's to a jail cell in Karnor's Castle. Returning three Bottles of Swirling Smoke yields the Scroll of Brain Bite and faction with Venril Sathir. Wizard only.",
+        "minLevel": 37,
+        "steps": [
+          "Give a Peridot, Onyx, and Star Rose Quartz to Dyth X`Teria for three ornate bottles",
+          "Deliver Hampton's bottle to a skeleton in Trakanon's Teeth",
+          "Deliver Mardon's bottle to a skeleton in the City of Mist reaver tower",
+          "Deliver Ryla's bottle to a skeleton in Karnor's Castle's jail cell",
+          "Return three Bottles of Swirling Smoke to Dyth X`Teria"
+        ],
+        "wiki_title": "Brain Bite (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:venril-sathir",
+        "label": "Venril Sathir",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:despondo",
+        "label": "Despondo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:brain-bite-good",
+        "label": "Brain Bite (Good)",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Despondo in Firiona Vie trades a Peridot, Onyx, and Star Rose Quartz for three bottles of entrapment, each delivered to a skeletal NPC across Kunark -- Hampton's to Trakanon's Teeth, Ryla's to Karnor's Castle's jail cell, Mardon's to City of Mist (both requiring a charm). Returning three soul bottles yields the Scroll of Brain Bite, faction with Inhabitants of Firiona Vie, Emerald Warriors, and Storm Guard. Wizard only.",
+        "minLevel": 37,
+        "steps": [
+          "Give a Peridot, Onyx, and Star Rose Quartz to Despondo for three bottles of entrapment",
+          "Deliver Hampton's bottle to Trakanon's Teeth",
+          "Deliver Ryla's bottle to Karnor's Castle's jail cell (requires a charm)",
+          "Deliver Mardon's bottle to City of Mist (requires a charm)",
+          "Return three soul bottles to Despondo"
+        ],
+        "wiki_title": "Brain Bite (Good)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bread-shipment-quests",
+        "label": "Bread Shipment Quests",
+        "type": "quest",
+        "description": "A repeatable Velious-era faction turn-in: kill sporalis inside Runnyeye Citadel for a Bag of Bread Loaves, then hand it to an Innkeeper or Merchant in the city you're building faction with -- Karn Tassen in Qeynos, Sal Drana in Neriak, Innkeep Morpa in Oggok, and similar NPCs in the Feerrott, North/West Karana, Halas, Kaladim, Kelethin, and Erudin -- for experience, faction, and a small amount of coin. eqlwiki.com presents this as one shared mechanic across roughly ten city variants rather than independently detailed quest pages. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Kill sporalis in Runnyeye Citadel for a Bag of Bread Loaves",
+          "Hand the bag to that city's Innkeeper or Merchant for faction and experience"
+        ],
+        "wiki_title": "Bread Shipment Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:cobalt-scar:chief-kalan",
+        "label": "Chief Kalan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:bulthar-trunks",
+        "label": "Bulthar Trunks",
+        "type": "quest",
+        "description": "Chief Kalan in Cobalt Scar asks for help defending Othmir territory against the Bulthar. Two regular Bulthar Trunks trade for a random rare gem or vendor jewelry; a rare Bulthar Herdleader Trunk trades for the Runed Othmir Spear. Indifferent faction or better is required -- at Apprehensive he consumes the trunks without paying out. Ranger, Shadow Knight, Shaman, or Warrior.",
+        "classes": [
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "minLevel": 50,
+        "steps": [
+          "Hail Chief Kalan and agree to aid the Othmir warriors against the Bulthar",
+          "Kill Bulthar for regular Bulthar Trunks, or the herd leader for a Bulthar Herdleader Trunk",
+          "Turn the trunks in to Chief Kalan"
+        ],
+        "wiki_title": "Bulthar Trunks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-othmir-spear",
+        "label": "Runed Othmir Spear",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "magic": true,
+        "skill": "2H Piercing",
+        "stats": {
+          "int": 5,
+          "mana": 10
+        },
+        "source": "Bulthar Trunks reward (Chief Kalan, Cobalt Scar) -- for a Bulthar Herdleader Trunk"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:warsliks-woods:ssolet-dnaas",
+        "label": "Ssolet Dnaas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:burnished-wooden-staff-quest",
+        "label": "Burnished Wooden Staff Quest",
+        "type": "quest",
+        "description": "Ssolet Dnaas, on a small island in Warsliks Woods, is searching for a burnished wooden staff dropped by sarnak reanimated mobs in Chardok. Trading him the Burnished Wooden Stave yields the Top Shard of the Obulus Medallion. Apprehensive faction or better works; Ssolet is aggro to non-Iksar races. All classes.",
+        "minLevel": 45,
+        "steps": [
+          "Hail Ssolet Dnaas in Warsliks Woods and discuss his search for the burnished wooden staff",
+          "Kill sarnak reanimated mobs in Chardok for a Burnished Wooden Stave",
+          "Trade the stave to Ssolet Dnaas"
+        ],
+        "wiki_title": "Burnished Wooden Staff Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:top-shard-of-the-obulus-medallion",
+        "label": "Top Shard of the Obulus Medallion",
+        "type": "item",
+        "lore": true,
+        "source": "Burnished Wooden Staff Quest reward (Ssolet Dnaas, Warsliks Woods)"
+      }
     }
   ],
   "edges": [
@@ -141031,6 +142508,2246 @@
         "source": "mob:oasis-of-marr:ranzall-netcaster",
         "target": "zone:oasis-of-marr",
         "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-10034",
+        "source": "zone:dragon-necropolis",
+        "target": "zone:western-wastes",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-10035",
+        "source": "zone:western-wastes",
+        "target": "zone:dragon-necropolis",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10036",
+        "source": "npc:thurgadin:dain-frostreaver-iv",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10037",
+        "source": "npc:thurgadin:dain-frostreaver-iv",
+        "target": "quest:10th-coldain-ring-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10038",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10039",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10040",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10041",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:ring-of-dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10042",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:crown-of-narandi",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10043",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:eye-of-narandi",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10044",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:earring-of-the-frozen-skull",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10045",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:faceguard-of-bentos-the-hero",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10046",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:choker-of-the-wretched",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10047",
+        "source": "quest:10th-coldain-ring-quest",
+        "target": "item:protection-of-the-dain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10048",
+        "source": "npc:western-wastes:harla-dar",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10049",
+        "source": "npc:western-wastes:harla-dar",
+        "target": "quest:aid-the-dar-brood",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10050",
+        "source": "quest:aid-the-dar-brood",
+        "target": "zone:western-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10051",
+        "source": "quest:aid-the-dar-brood",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10052",
+        "source": "quest:aid-the-dar-brood",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10053",
+        "source": "quest:aid-the-dar-brood",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10054",
+        "source": "quest:aid-the-dar-brood",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10055",
+        "source": "quest:aid-the-dar-brood",
+        "target": "item:shroud-of-the-dar-brood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10056",
+        "source": "npc:kael-drakkal:evreth-menesez",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10057",
+        "source": "npc:kael-drakkal:evreth-menesez",
+        "target": "quest:ancient-dragon-tome",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10058",
+        "source": "quest:ancient-dragon-tome",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10059",
+        "source": "quest:ancient-dragon-tome",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10060",
+        "source": "quest:ancient-dragon-tome",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10061",
+        "source": "quest:ancient-dragon-tome",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10062",
+        "source": "quest:ancient-dragon-tome",
+        "target": "item:orb-of-draconic-energy",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10063",
+        "source": "npc:west-commonlands:timtok-tonsmith",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10064",
+        "source": "npc:west-commonlands:ranvigoz-tonsmith",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10065",
+        "source": "npc:west-commonlands:timtok-tonsmith",
+        "target": "quest:armor-size",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10066",
+        "source": "npc:west-commonlands:ranvigoz-tonsmith",
+        "target": "quest:armor-size",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10067",
+        "source": "quest:armor-size",
+        "target": "zone:west-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10068",
+        "source": "quest:armor-size",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10069",
+        "source": "npc:dreadlands:baldric-slezaf",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10070",
+        "source": "npc:dreadlands:baldric-slezaf",
+        "target": "quest:bard-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10071",
+        "source": "quest:bard-epic-quest",
+        "target": "zone:dreadlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10072",
+        "source": "quest:bard-epic-quest",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10073",
+        "source": "quest:bard-epic-quest",
+        "target": "item:singing-short-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10074",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10075",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10076",
+        "source": "quest_group:bard-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10077",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10078",
+        "source": "quest:bard-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10079",
+        "source": "quest:bard-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10080",
+        "source": "quest:bard-kael-armor-helm",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10081",
+        "source": "quest:bard-kael-armor-helm",
+        "target": "item:kael-bard-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10082",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10083",
+        "source": "quest:bard-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10084",
+        "source": "quest:bard-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10085",
+        "source": "quest:bard-kael-armor-breastplate",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10086",
+        "source": "quest:bard-kael-armor-breastplate",
+        "target": "item:kael-bard-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10087",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-armplates",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10088",
+        "source": "quest:bard-kael-armor-armplates",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10089",
+        "source": "quest:bard-kael-armor-armplates",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10090",
+        "source": "quest:bard-kael-armor-armplates",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10091",
+        "source": "quest:bard-kael-armor-armplates",
+        "target": "item:kael-bard-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10092",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10093",
+        "source": "quest:bard-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10094",
+        "source": "quest:bard-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10095",
+        "source": "quest:bard-kael-armor-bracer",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10096",
+        "source": "quest:bard-kael-armor-bracer",
+        "target": "item:kael-bard-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10097",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10098",
+        "source": "quest:bard-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10099",
+        "source": "quest:bard-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10100",
+        "source": "quest:bard-kael-armor-gauntlets",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10101",
+        "source": "quest:bard-kael-armor-gauntlets",
+        "target": "item:kael-bard-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10102",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10103",
+        "source": "quest:bard-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10104",
+        "source": "quest:bard-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10105",
+        "source": "quest:bard-kael-armor-greaves",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10106",
+        "source": "quest:bard-kael-armor-greaves",
+        "target": "item:kael-bard-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10107",
+        "source": "npc:kael-drakkal:bygloirn-omorden",
+        "target": "quest:bard-kael-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10108",
+        "source": "quest:bard-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10109",
+        "source": "quest:bard-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10110",
+        "source": "quest:bard-kael-armor-boots",
+        "target": "quest_group:bard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10111",
+        "source": "quest:bard-kael-armor-boots",
+        "target": "item:kael-bard-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10112",
+        "source": "npc:temple-of-solusek-ro:ostorm",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10113",
+        "source": "npc:temple-of-solusek-ro:genni",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10114",
+        "source": "npc:temple-of-solusek-ro:gardern",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10115",
+        "source": "npc:temple-of-solusek-ro:ostorm",
+        "target": "quest:bard-lambent-gems",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10116",
+        "source": "npc:temple-of-solusek-ro:genni",
+        "target": "quest:bard-lambent-gems",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10117",
+        "source": "npc:temple-of-solusek-ro:gardern",
+        "target": "quest:bard-lambent-gems",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10118",
+        "source": "npc:temple-of-solusek-ro:vilissia",
+        "target": "quest:bard-lambent-gems",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10119",
+        "source": "quest:bard-lambent-gems",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10120",
+        "source": "quest:bard-lambent-gems",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10121",
+        "source": "quest:bard-lambent-gems",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10122",
+        "source": "quest:bard-lambent-gems",
+        "target": "item:lambent-fire-opal",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10123",
+        "source": "quest:bard-lambent-gems",
+        "target": "item:lambent-star-ruby",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10124",
+        "source": "quest:bard-lambent-gems",
+        "target": "item:lambent-sapphire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10125",
+        "source": "quest:bard-lambent-gems",
+        "target": "item:lambent-ruby",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10126",
+        "source": "npc:greater-faydark:tascar-tissleplay",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10127",
+        "source": "npc:greater-faydark:tascar-tissleplay",
+        "target": "quest:bard-mail",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10128",
+        "source": "quest:bard-mail",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10129",
+        "source": "quest:bard-mail",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10130",
+        "source": "quest:bard-mail",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10131",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10132",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10133",
+        "source": "quest_group:bard-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10134",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10135",
+        "source": "quest:bard-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10136",
+        "source": "quest:bard-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10137",
+        "source": "quest:bard-skyshrine-armor-helm",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10138",
+        "source": "quest:bard-skyshrine-armor-helm",
+        "target": "item:helm-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10139",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10140",
+        "source": "quest:bard-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10141",
+        "source": "quest:bard-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10142",
+        "source": "quest:bard-skyshrine-armor-breastplate",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10143",
+        "source": "quest:bard-skyshrine-armor-breastplate",
+        "target": "item:breastplate-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10144",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-armplates",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10145",
+        "source": "quest:bard-skyshrine-armor-armplates",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10146",
+        "source": "quest:bard-skyshrine-armor-armplates",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10147",
+        "source": "quest:bard-skyshrine-armor-armplates",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10148",
+        "source": "quest:bard-skyshrine-armor-armplates",
+        "target": "item:vambraces-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10149",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10150",
+        "source": "quest:bard-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10151",
+        "source": "quest:bard-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10152",
+        "source": "quest:bard-skyshrine-armor-bracer",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10153",
+        "source": "quest:bard-skyshrine-armor-bracer",
+        "target": "item:bracer-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10154",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10155",
+        "source": "quest:bard-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10156",
+        "source": "quest:bard-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10157",
+        "source": "quest:bard-skyshrine-armor-gauntlets",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10158",
+        "source": "quest:bard-skyshrine-armor-gauntlets",
+        "target": "item:gauntlets-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10159",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10160",
+        "source": "quest:bard-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10161",
+        "source": "quest:bard-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10162",
+        "source": "quest:bard-skyshrine-armor-greaves",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10163",
+        "source": "quest:bard-skyshrine-armor-greaves",
+        "target": "item:greaves-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10164",
+        "source": "npc:skyshrine:umykith-fedhar",
+        "target": "quest:bard-skyshrine-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10165",
+        "source": "quest:bard-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10166",
+        "source": "quest:bard-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10167",
+        "source": "quest:bard-skyshrine-armor-boots",
+        "target": "quest_group:bard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10168",
+        "source": "quest:bard-skyshrine-armor-boots",
+        "target": "item:boots-of-twilight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10169",
+        "source": "quest_group:bard-skyshrine-armor-quests",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10170",
+        "source": "quest_group:bard-skyshrine-armor-quests",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10171",
+        "source": "npc:thurgadin:leifur",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10172",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10173",
+        "source": "quest_group:bard-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10174",
+        "source": "quest_group:bard-thurgadin-armor-quests",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10175",
+        "source": "quest_group:bard-thurgadin-armor-quests",
+        "target": "faction:dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10176",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10177",
+        "source": "quest:bard-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10178",
+        "source": "quest:bard-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10179",
+        "source": "quest:bard-thurgadin-armor-helm",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10180",
+        "source": "quest:bard-thurgadin-armor-helm",
+        "target": "item:resonant-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10181",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10182",
+        "source": "quest:bard-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10183",
+        "source": "quest:bard-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10184",
+        "source": "quest:bard-thurgadin-armor-breastplate",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10185",
+        "source": "quest:bard-thurgadin-armor-breastplate",
+        "target": "item:resonant-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10186",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10187",
+        "source": "quest:bard-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10188",
+        "source": "quest:bard-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10189",
+        "source": "quest:bard-thurgadin-armor-vambraces",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10190",
+        "source": "quest:bard-thurgadin-armor-vambraces",
+        "target": "item:resonant-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10191",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10192",
+        "source": "quest:bard-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10193",
+        "source": "quest:bard-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10194",
+        "source": "quest:bard-thurgadin-armor-bracer",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10195",
+        "source": "quest:bard-thurgadin-armor-bracer",
+        "target": "item:resonant-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10196",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10197",
+        "source": "quest:bard-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10198",
+        "source": "quest:bard-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10199",
+        "source": "quest:bard-thurgadin-armor-gauntlets",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10200",
+        "source": "quest:bard-thurgadin-armor-gauntlets",
+        "target": "item:resonant-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10201",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10202",
+        "source": "quest:bard-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10203",
+        "source": "quest:bard-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10204",
+        "source": "quest:bard-thurgadin-armor-greaves",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10205",
+        "source": "quest:bard-thurgadin-armor-greaves",
+        "target": "item:resonant-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10206",
+        "source": "npc:thurgadin:leifur",
+        "target": "quest:bard-thurgadin-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10207",
+        "source": "quest:bard-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10208",
+        "source": "quest:bard-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10209",
+        "source": "quest:bard-thurgadin-armor-boots",
+        "target": "quest_group:bard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10210",
+        "source": "quest:bard-thurgadin-armor-boots",
+        "target": "item:resonant-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10211",
+        "source": "npc:south-kaladim:priest-of-discord",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10212",
+        "source": "npc:south-kaladim:priest-of-discord",
+        "target": "quest:become-pvp-kaladim",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10213",
+        "source": "quest:become-pvp-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10214",
+        "source": "quest:become-pvp-kaladim",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10215",
+        "source": "quest:become-pvp-kaladim",
+        "target": "item:tome-of-order-and-discord",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10216",
+        "source": "npc:neriak-3rd-gate:mizr-nmar",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10217",
+        "source": "npc:neriak-3rd-gate:mizr-nmar",
+        "target": "quest:beta-neutral",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10218",
+        "source": "quest:beta-neutral",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10219",
+        "source": "quest:beta-neutral",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10220",
+        "source": "quest:beta-neutral",
+        "target": "faction:beta-neutral",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10221",
+        "source": "npc:qeynos-aqueducts:commander-kane",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10222",
+        "source": "npc:highpass-hold:barn-bloodstone",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10223",
+        "source": "npc:qeynos-aqueducts:commander-kane",
+        "target": "quest:blackburrow-stout-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10224",
+        "source": "quest:blackburrow-stout-delivery",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10225",
+        "source": "quest:blackburrow-stout-delivery",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10226",
+        "source": "quest:blackburrow-stout-delivery",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10227",
+        "source": "quest:blackburrow-stout-delivery",
+        "target": "item:bayle-list-i",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10228",
+        "source": "npc:south-qeynos:mcneal-jocub",
+        "target": "quest:blackburrow-stout-shipment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10229",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10230",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10231",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10232",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10233",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10234",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10235",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:karana-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10236",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10237",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10238",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10239",
+        "source": "quest:blackburrow-stout-shipment",
+        "target": "item:black-burrow-stout",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10240",
+        "source": "npc:greater-faydark:heartwood-master",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10241",
+        "source": "npc:greater-faydark:heartwood-master",
+        "target": "quest:bladed-weapons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10242",
+        "source": "quest:bladed-weapons",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10243",
+        "source": "quest:bladed-weapons",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10244",
+        "source": "quest:bladed-weapons",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10245",
+        "source": "quest:bladed-weapons",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10246",
+        "source": "quest:bladed-weapons",
+        "target": "faction:faydark-s-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10247",
+        "source": "quest:bladed-weapons",
+        "target": "item:rusty-short-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10248",
+        "source": "quest:bladed-weapons",
+        "target": "item:tarnished-scimitar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10249",
+        "source": "quest:bladed-weapons",
+        "target": "item:worn-great-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10250",
+        "source": "npc:east-cabilis:war-historian-kobl",
+        "target": "quest:blood-ink",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10251",
+        "source": "quest:blood-ink",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10252",
+        "source": "quest:blood-ink",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10253",
+        "source": "quest:blood-ink",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10254",
+        "source": "quest:blood-ink",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10255",
+        "source": "quest:blood-ink",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10256",
+        "source": "quest:blood-ink",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10257",
+        "source": "quest:blood-ink",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10258",
+        "source": "quest:blood-ink",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10259",
+        "source": "npc:lesser-faydark:talisyn-stormwing",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10260",
+        "source": "npc:lesser-faydark:talisyn-stormwing",
+        "target": "quest:bloodboil-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10261",
+        "source": "quest:bloodboil-quest",
+        "target": "zone:lesser-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10262",
+        "source": "quest:bloodboil-quest",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10263",
+        "source": "quest:bloodboil-quest",
+        "target": "item:emerald-cloak-of-the-faydark",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10264",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10265",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10266",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10267",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10268",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10269",
+        "source": "quest:bone-chips-quests",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10270",
+        "source": "npc:skyshrine:sentry-emil",
+        "target": "quest:boysenberry-pie-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10271",
+        "source": "quest:boysenberry-pie-quest",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10272",
+        "source": "quest:boysenberry-pie-quest",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10273",
+        "source": "npc:the-overthere:dyth-xteria",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10274",
+        "source": "npc:the-overthere:dyth-xteria",
+        "target": "quest:brain-bite-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10275",
+        "source": "quest:brain-bite-evil",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10276",
+        "source": "quest:brain-bite-evil",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10277",
+        "source": "quest:brain-bite-evil",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10278",
+        "source": "quest:brain-bite-evil",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10279",
+        "source": "quest:brain-bite-evil",
+        "target": "zone:karnors-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10280",
+        "source": "quest:brain-bite-evil",
+        "target": "faction:venril-sathir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10281",
+        "source": "quest:brain-bite-evil",
+        "target": "spell:brain-bite",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10282",
+        "source": "npc:firiona-vie:despondo",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10283",
+        "source": "npc:firiona-vie:despondo",
+        "target": "quest:brain-bite-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10284",
+        "source": "quest:brain-bite-good",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10285",
+        "source": "quest:brain-bite-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10286",
+        "source": "quest:brain-bite-good",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10287",
+        "source": "quest:brain-bite-good",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10288",
+        "source": "quest:brain-bite-good",
+        "target": "zone:karnors-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10289",
+        "source": "quest:brain-bite-good",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10290",
+        "source": "quest:brain-bite-good",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10291",
+        "source": "quest:brain-bite-good",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10292",
+        "source": "quest:brain-bite-good",
+        "target": "spell:brain-bite",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10293",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:runnyeye-citadel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10294",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10295",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10296",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10297",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10298",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10299",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10300",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10301",
+        "source": "quest:bread-shipment-quests",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10302",
+        "source": "npc:cobalt-scar:chief-kalan",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10303",
+        "source": "npc:cobalt-scar:chief-kalan",
+        "target": "quest:bulthar-trunks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10304",
+        "source": "quest:bulthar-trunks",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10305",
+        "source": "quest:bulthar-trunks",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10306",
+        "source": "quest:bulthar-trunks",
+        "target": "faction:othmir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10307",
+        "source": "quest:bulthar-trunks",
+        "target": "item:runed-othmir-spear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10308",
+        "source": "npc:warsliks-woods:ssolet-dnaas",
+        "target": "zone:warsliks-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10309",
+        "source": "npc:warsliks-woods:ssolet-dnaas",
+        "target": "quest:burnished-wooden-staff-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10310",
+        "source": "quest:burnished-wooden-staff-quest",
+        "target": "zone:warsliks-woods",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10311",
+        "source": "quest:burnished-wooden-staff-quest",
+        "target": "zone:warsliks-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10312",
+        "source": "quest:burnished-wooden-staff-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10313",
+        "source": "quest:burnished-wooden-staff-quest",
+        "target": "item:top-shard-of-the-obulus-medallion",
+        "type": "rewards"
       }
     }
   ]
