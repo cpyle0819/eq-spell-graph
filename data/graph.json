@@ -62227,6 +62227,1546 @@
         "lore": true,
         "source": "Burnished Wooden Staff Quest reward (Ssolet Dnaas, Warsliks Woods)"
       }
+    },
+    {
+      "data": {
+        "id": "zone:plane-of-sky",
+        "label": "Plane of Sky",
+        "type": "zone"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:lenka-stoutheart",
+        "label": "Lenka Stoutheart",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cabilis-pale-ale-firiona-vie",
+        "label": "Cabilis Pale Ale (Firiona Vie)",
+        "type": "quest",
+        "description": "Lenka Stoutheart in Firiona Vie discusses Cabilis Pale Ale (purchasable from vendors in Field of Bones, Cabilis, and Neriak) with Bronto Thudfoot, but giving the ale to either NPC yields no confirmed reward -- the wiki flags this quest's reward as unknown and marks it out of era.",
+        "minLevel": 1,
+        "steps": [
+          "Buy a Cabilis Pale Ale from a vendor in Field of Bones, Cabilis, or Neriak",
+          "Speak with Lenka Stoutheart and Bronto Thudfoot in Firiona Vie about the ale"
+        ],
+        "wiki_title": "Cabilis Pale Ale (Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:timorous-deep:the-great-oowomp",
+        "label": "The Great Oowomp",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cannibalize-ii-evil",
+        "label": "Cannibalize II (Evil)",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "The Great Oowomp in Timorous Deep trades four items for a McMerin's Feast spell scroll: Strange Ochre Clay (army behemoth, City of Mist), Crushed Diamonds (ground spawn in Timorous Deep, or via a gem cutter skeleton trade), Yun Shaman Powder (froglok yun shaman, Trakanon's Teeth), and Greyish Bone Chips (skeletal warlord, Karnor's Castle). Shaman only.",
+        "minLevel": 40,
+        "steps": [
+          "Obtain Strange Ochre Clay from an army behemoth in City of Mist",
+          "Obtain Crushed Diamonds as a ground spawn in Timorous Deep, or via a gem cutter skeleton trade",
+          "Obtain Yun Shaman Powder from a froglok yun shaman in Trakanon's Teeth",
+          "Obtain Greyish Bone Chips from a skeletal warlord in Karnor's Castle",
+          "Return all 4 items to The Great Oowomp for the spell scroll"
+        ],
+        "wiki_title": "Cannibalize II (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:mcmerins-feast",
+        "label": "McMerin's Feast",
+        "type": "spell",
+        "class_levels": {
+          "shaman": 40
+        },
+        "wiki_title": "McMerin's Feast"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleaner-clockwork",
+        "label": "Cleaner Clockwork",
+        "type": "quest",
+        "description": "Beno Targnarle, in the north turret of the Kaladim Warrior's Guild in South Kaladim, sends the player after Scrap Metal from Cleaner VII, a clockwork rat spawning in the mines beneath North Kaladim's bank. Amiable faction or better required. All classes.",
+        "minLevel": 4,
+        "steps": [
+          "Speak with Beno Targnarle in the north turret of the Kaladim Warrior's Guild",
+          "Defeat Cleaner VII, a clockwork rat in the mines beneath North Kaladim's bank, for Scrap Metal",
+          "Return the Scrap Metal to Beno Targnarle"
+        ],
+        "wiki_title": "Cleaner Clockwork"
+      }
+    },
+    {
+      "data": {
+        "id": "item:knight-card",
+        "label": "Knight Card",
+        "type": "item",
+        "magic": true,
+        "weight": 0.1,
+        "size": "Medium",
+        "source": "Cleaner Clockwork reward (Beno Targnarle, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:agryn-moonfield",
+        "label": "Agryn Moonfield",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:clear-water-quest",
+        "label": "Clear Water Quest",
+        "type": "quest",
+        "description": "Agryn Moonfield, at the Bank of Erudin, sends the player to Leraena Shelyrak at the Temple of Divine Light in Erudin for a Peacekeeper Token; returning it to Agryn Moonfield yields Clear Water. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Agryn Moonfield at the Bank of Erudin",
+          "Visit Leraena Shelyrak at the Temple of Divine Light in Erudin for a Peacekeeper Token",
+          "Return the Peacekeeper Token to Agryn Moonfield"
+        ],
+        "wiki_title": "Clear Water Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:clear-water",
+        "label": "Clear Water",
+        "type": "item",
+        "source": "Clear Water Quest reward (Agryn Moonfield, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:vylleam-vyaeltor",
+        "label": "Vylleam Vyaeltor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:cleric-kael-armor-quests",
+        "label": "Cleric Kael Armor Quests",
+        "type": "quest_group",
+        "description": "Vylleam Vyaeltor, in the room behind King Tormax's throne room in Kael Drakkal, trades an Ancient Tarnished armor piece plus 3 matching gems for its corresponding piece of Templar armor. Seven independent sub-quests, no ordering between them. Ally faction required for all Kael armor quests.",
+        "classes": [
+          "cleric"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-helm",
+        "label": "Cleric Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Helmet plus 3 Crushed Onyx Sapphires to Vylleam Vyaeltor in Kael Drakkal for the Templar's Crown.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Helmet and 3 Crushed Onyx Sapphires",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-crown",
+        "label": "Templar's Crown",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Helm reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-chestplate",
+        "label": "Cleric Kael Armor Quests: Chestplate",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Breastplate plus 3 Black Marbles to Vylleam Vyaeltor in Kael Drakkal for the Templar's Chestplate.",
+        "steps": [
+          "Gather a Ancient Tarnished Breastplate and 3 Black Marbles",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-chestplate",
+        "label": "Templar's Chestplate",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Chestplate reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-vambraces",
+        "label": "Cleric Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Vambraces plus 3 Jaundice Gems to Vylleam Vyaeltor in Kael Drakkal for the Templar's Vambraces.",
+        "steps": [
+          "Gather a Ancient Tarnished Vambraces and 3 Jaundice Gems",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-vambraces",
+        "label": "Templar's Vambraces",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Vambraces reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-bracer",
+        "label": "Cleric Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Bracelet plus 3 Crushed Opals to Vylleam Vyaeltor in Kael Drakkal for the Templar's Bracer.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Bracelet and 3 Crushed Opals",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-bracer",
+        "label": "Templar's Bracer",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Bracer reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-gauntlets",
+        "label": "Cleric Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Gauntlets plus 3 Crushed Lava Rubies to Vylleam Vyaeltor in Kael Drakkal for the Templar's Gauntlets.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Gauntlets and 3 Crushed Lava Rubies",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-gauntlets",
+        "label": "Templar's Gauntlets",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Gauntlets reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-greaves",
+        "label": "Cleric Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Greaves plus 3 Chipped Onyx Sapphires to Vylleam Vyaeltor in Kael Drakkal for the Templar's Leggings.",
+        "steps": [
+          "Gather a Ancient Tarnished Greaves and 3 Chipped Onyx Sapphires",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-leggings",
+        "label": "Templar's Leggings",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Greaves reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-kael-armor-boots",
+        "label": "Cleric Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Boots plus 3 Crushed Flame Emeralds to Vylleam Vyaeltor in Kael Drakkal for the Templar's Boots.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Boots and 3 Crushed Flame Emeralds",
+          "Turn them in to Vylleam Vyaeltor in Kael Drakkal"
+        ],
+        "wiki_title": "Cleric Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:templar-s-boots",
+        "label": "Templar's Boots",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Kael Armor Quests: Boots reward (Vylleam Vyaeltor, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:alan-harten",
+        "label": "Alan Harten",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:deric-lennox",
+        "label": "Deric Lennox",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:cleric-plane-of-sky-tests",
+        "label": "Cleric Plane of Sky Tests",
+        "type": "quest_group",
+        "description": "Six independent Cleric tests in the Plane of Sky, three offered by Alan Harten and three by Deric Lennox, each trading a specific set of turn-in items for its own named reward. No ordering between them.",
+        "classes": [
+          "cleric"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-courage",
+        "label": "Cleric Plane of Sky Tests: Test of Courage",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring an ochre tessera, a sky emerald, and a silver hoop to Alan Harten in the Plane of Sky for the Truewind Earring.",
+        "steps": [
+          "Gather an ochre tessera, a sky emerald, and a silver hoop",
+          "Turn them in to Alan Harten in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:truewind-earring",
+        "label": "Truewind Earring",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of Courage reward (Alan Harten, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-skill",
+        "label": "Cleric Plane of Sky Tests: Test of Skill",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring a golden disc, a piece of dark wood, and a small shield to Alan Harten in the Plane of Sky for the Aegis of the Wind.",
+        "steps": [
+          "Gather a golden disc, a piece of dark wood, and a small shield",
+          "Turn them in to Alan Harten in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aegis-of-the-wind",
+        "label": "Aegis of the Wind",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of Skill reward (Alan Harten, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-protection",
+        "label": "Cleric Plane of Sky Tests: Test of Protection",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring an adumbrate globe, a glowing diamond, and some shiny pauldrons to Alan Harten in the Plane of Sky for the Pauldrons of Piety.",
+        "steps": [
+          "Gather an adumbrate globe, a glowing diamond, and some shiny pauldrons",
+          "Turn them in to Alan Harten in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pauldrons-of-piety",
+        "label": "Pauldrons of Piety",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of Protection reward (Alan Harten, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-resolution",
+        "label": "Cleric Plane of Sky Tests: Test of Resolution",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring a spiroc statuette, a spiroc healing totem, and a silvered spiroc necklace to Deric Lennox in the Plane of Sky for the Necklace of Resolution.",
+        "steps": [
+          "Gather a spiroc statuette, a spiroc healing totem, and a silvered spiroc necklace",
+          "Turn them in to Deric Lennox in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:necklace-of-resolution",
+        "label": "Necklace of Resolution",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of Resolution reward (Deric Lennox, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "label": "Cleric Plane of Sky Tests: Test of Theurgy",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring an efreeti mace, a saffron spiroc feather, a glowing sapphire, and djinni aura to Deric Lennox in the Plane of Sky for the Theurgist's Star.",
+        "steps": [
+          "Gather an efreeti mace, a saffron spiroc feather, a glowing sapphire, and djinni aura",
+          "Turn them in to Deric Lennox in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:theurgist-s-star",
+        "label": "Theurgist's Star",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of Theurgy reward (Deric Lennox, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "label": "Cleric Plane of Sky Tests: Test of The Weak",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Bring an efreeti standard, manna nectar, mithril bands, and a shimmering topaz to Deric Lennox in the Plane of Sky for the Truwian Baton.",
+        "steps": [
+          "Gather an efreeti standard, manna nectar, mithril bands, and a shimmering topaz",
+          "Turn them in to Deric Lennox in the Plane of Sky"
+        ],
+        "wiki_title": "Cleric Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:truwian-baton",
+        "label": "Truwian Baton",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Plane of Sky Tests: Test of The Weak reward (Deric Lennox, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:fardonad-fedhar",
+        "label": "Fardonad Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:cleric-skyshrine-armor-quests",
+        "label": "Cleric Skyshrine Armor Quests",
+        "type": "quest_group",
+        "description": "Fardonad Fe`Dhar in Skyshrine trades an unadorned plate armor piece plus 3 matching gems for its corresponding piece of Akkirus armor. Seven independent sub-quests, no ordering between them. Ally faction required for all Skyshrine armor quests.",
+        "classes": [
+          "cleric"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-helmet",
+        "label": "Cleric Skyshrine Armor Quests: Helmet",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate helmet plus 3 crushed onyx sapphires to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Crown of the Risen.",
+        "steps": [
+          "Gather an unadorned plate helmet and 3 crushed onyx sapphires",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-crown-of-the-risen",
+        "label": "Akkirus' Crown of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Helmet reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-chestplate",
+        "label": "Cleric Skyshrine Armor Quests: Chestplate",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned breastplate plus 3 black marble to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Chestplate of the Risen.",
+        "steps": [
+          "Gather an unadorned breastplate and 3 black marble",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-chestplate-of-the-risen",
+        "label": "Akkirus' Chestplate of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Chestplate reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-vambraces",
+        "label": "Cleric Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate vambraces plus 3 jaundice gems to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Vambraces of the Risen.",
+        "steps": [
+          "Gather an unadorned plate vambraces and 3 jaundice gems",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-vambraces-of-the-risen",
+        "label": "Akkirus' Vambraces of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Vambraces reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-bracers",
+        "label": "Cleric Skyshrine Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate bracer plus 3 crushed opals to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Bracelet of the Risen.",
+        "steps": [
+          "Gather an unadorned plate bracer and 3 crushed opals",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-bracelet-of-the-risen",
+        "label": "Akkirus' Bracelet of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Bracers reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-gauntlets",
+        "label": "Cleric Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate gauntlets plus 3 crushed lava rubies to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Gauntlets of the Risen.",
+        "steps": [
+          "Gather an unadorned plate gauntlets and 3 crushed lava rubies",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-gauntlets-of-the-risen",
+        "label": "Akkirus' Gauntlets of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Gauntlets reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-greaves",
+        "label": "Cleric Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate greaves plus 3 chipped onyx sapphires to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Greaves of the Risen.",
+        "steps": [
+          "Gather an unadorned plate greaves and 3 chipped onyx sapphires",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-greaves-of-the-risen",
+        "label": "Akkirus' Greaves of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Greaves reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-skyshrine-armor-boots",
+        "label": "Cleric Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade an unadorned plate boots plus 3 crushed flame emeralds to Fardonad Fe`Dhar in Skyshrine for the Akkirus' Boots of the Risen.",
+        "steps": [
+          "Gather an unadorned plate boots and 3 crushed flame emeralds",
+          "Turn them in to Fardonad Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Cleric Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:akkirus-boots-of-the-risen",
+        "label": "Akkirus' Boots of the Risen",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Skyshrine Armor Quests: Boots reward (Fardonad Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:brinaa-darkpact",
+        "label": "Brinaa Darkpact",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-spells-evil",
+        "label": "Cleric Spells (Evil)",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Brinaa Darkpact in The Overthere trades a duplicate spell scroll (Death Pact, Reckoning, Upheaval, or Yaulp IV) for a random spell scroll from Heroic Bond, Sunskin, Unswerving Hammer (of Faith), or Word of Vigor.",
+        "minLevel": 51,
+        "steps": [
+          "Locate Brinaa Darkpact in The Overthere",
+          "Hand over a duplicate scroll of Death Pact, Reckoning, Upheaval, or Yaulp IV",
+          "Receive a random scroll from Heroic Bond, Sunskin, Unswerving Hammer (of Faith), or Word of Vigor"
+        ],
+        "wiki_title": "Cleric Spells (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:heroic-bond",
+        "label": "Heroic Bond",
+        "type": "spell",
+        "class_levels": {
+          "cleric": 51
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "spell:sunskin",
+        "label": "Sunskin",
+        "type": "spell",
+        "class_levels": {
+          "cleric": 51
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "spell:unswerving-hammer-of-faith",
+        "label": "Unswerving Hammer (of Faith)",
+        "type": "spell",
+        "class_levels": {
+          "cleric": 51
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "spell:word-of-vigor",
+        "label": "Word of Vigor",
+        "type": "spell",
+        "class_levels": {
+          "cleric": 51
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:frist-furtun",
+        "label": "Frist Furtun",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-spells-good",
+        "label": "Cleric Spells (Good)",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Frist Furtun in Firiona Vie trades a duplicate spell scroll (Death Pact, Reckoning, Upheaval, or Yaulp IV) for a random spell scroll from Heroic Bond, Sunskin, Unswerving Hammer (of Faith), or Word of Vigor.",
+        "minLevel": 51,
+        "steps": [
+          "Locate Frist Furtun in Firiona Vie",
+          "Hand over a duplicate scroll of Death Pact, Reckoning, Upheaval, or Yaulp IV",
+          "Receive a random scroll from Heroic Bond, Sunskin, Unswerving Hammer (of Faith), or Word of Vigor"
+        ],
+        "wiki_title": "Cleric Spells (Good)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:beek-guinders",
+        "label": "Beek Guinders",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-supplies",
+        "label": "Cleric Supplies",
+        "type": "quest",
+        "description": "Beek Guinders in Rivervale trades 2 Ruined Wolf Pelts, 1 Black Wolf Skin, and Berries (from Misty Thicket's canyon area) for a random low-level cleric spell, coin, and faction. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Gather 2 Ruined Wolf Pelts, 1 Black Wolf Skin, and Berries from Misty Thicket's canyon area",
+          "Return them to Beek Guinders in Rivervale"
+        ],
+        "wiki_title": "Cleric Supplies"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:priests-of-mischief",
+        "label": "Priests of Mischief",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:loremaster-dorinan",
+        "label": "Loremaster Dorinan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:cleric-thurgadin-armor-quests",
+        "label": "Cleric Thurgadin Armor Quests",
+        "type": "quest_group",
+        "description": "Loremaster Dorinan in Thurgadin trades a Corroded Plate armor piece plus 3 matching gems for its corresponding piece of Forbidden Rites armor. Seven independent sub-quests, no ordering between them. Kindly faction required for all Thurgadin armor quests.",
+        "classes": [
+          "cleric"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-helm",
+        "label": "Cleric Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Helmet plus 3 Crushed Onyx Sapphire to Loremaster Dorinan in Thurgadin for the Crown of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Helmet and 3 Crushed Onyx Sapphire",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crown-of-forbidden-rites",
+        "label": "Crown of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Helm reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-breastplate",
+        "label": "Cleric Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Breastplate plus 3 Black Marble to Loremaster Dorinan in Thurgadin for the Breastplate of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Breastplate and 3 Black Marble",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:breastplate-of-forbidden-rites",
+        "label": "Breastplate of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Breastplate reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-vambraces",
+        "label": "Cleric Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Vambraces plus 3 Jaundice Gem to Loremaster Dorinan in Thurgadin for the Vambraces of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Vambraces and 3 Jaundice Gem",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vambraces-of-forbidden-rites",
+        "label": "Vambraces of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Vambraces reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-bracers",
+        "label": "Cleric Thurgadin Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Bracer plus 3 Crushed Opal to Loremaster Dorinan in Thurgadin for the Bracers of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Bracer and 3 Crushed Opal",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracers-of-forbidden-rites",
+        "label": "Bracers of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Bracers reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-gauntlets",
+        "label": "Cleric Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Gauntlets plus 3 Crushed Lava Ruby to Loremaster Dorinan in Thurgadin for the Gauntlets of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Gauntlets and 3 Crushed Lava Ruby",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-forbidden-rites",
+        "label": "Gauntlets of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Gauntlets reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-greaves",
+        "label": "Cleric Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Greaves plus 3 Chipped Onyx Sapphire to Loremaster Dorinan in Thurgadin for the Greaves of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Greaves and 3 Chipped Onyx Sapphire",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:greaves-of-forbidden-rites",
+        "label": "Greaves of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Greaves reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cleric-thurgadin-armor-boots",
+        "label": "Cleric Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Trade a Corroded Plate Boots plus 3 Crushed Flame Emerald to Loremaster Dorinan in Thurgadin for the Boots of Forbidden Rites.",
+        "steps": [
+          "Gather a Corroded Plate Boots and 3 Crushed Flame Emerald",
+          "Turn them in to Loremaster Dorinan in Thurgadin"
+        ],
+        "wiki_title": "Cleric Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:boots-of-forbidden-rites",
+        "label": "Boots of Forbidden Rites",
+        "type": "item",
+        "classes": [
+          "cleric"
+        ],
+        "source": "Cleric Thurgadin Armor Quests: Boots reward (Loremaster Dorinan, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:oggok:clurg-the-bartender",
+        "label": "Clurg the Bartender",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:clurgs-revenge",
+        "label": "Clurg's Revenge",
+        "type": "quest",
+        "description": "Clurg the Bartender in Oggok, after faction is raised with Craknek Warriors, Green Blood Knights, and Chef Dooga via prerequisite quests, sends the player to Neriak Foreign Quarter's PvP area to defeat Pungla at the bar. Returning her head yields a Crude Stein, Ogre War Maul, Pearl, or Warhammer. All classes.",
+        "minLevel": 14,
+        "steps": [
+          "Raise faction with Craknek Warriors, Green Blood Knights, and Chef Dooga via prerequisite quests",
+          "Travel to Neriak Foreign Quarter's PvP area and defeat Pungla at the bar",
+          "Return her head to Clurg the Bartender"
+        ],
+        "wiki_title": "Clurg's Revenge"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pearl",
+        "label": "Pearl",
+        "type": "item",
+        "source": "Clurg's Revenge reward (Clurg the Bartender, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warhammer",
+        "label": "Warhammer",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "source": "Clurg's Revenge reward (Clurg the Bartender, Oggok)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:gkrean-prophet-of-tallon",
+        "label": "Gkrean Prophet of Tallon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:coldain-books-of-tactics",
+        "label": "Coldain Books of Tactics",
+        "type": "quest",
+        "description": "Gkrean Prophet of Tallon in Kael Drakkal trades Coldain tactical books -- which drop randomly from Coldain enemies (known titles include Brell's Divine Strategy and War Tactics of the Frostreavers) -- for a fixed reward per book: Book of Tactics, Bracelet of Sacrifice, Circlet of Tallon, or Gauntlets of Iron Tactics. All classes.",
+        "minLevel": 50,
+        "steps": [
+          "Kill Coldain enemies for a random tactical book (Brell's Divine Strategy, War Tactics of the Frostreavers, or others)",
+          "Turn a book in to Gkrean Prophet of Tallon for its corresponding reward"
+        ],
+        "wiki_title": "Coldain Books of Tactics"
+      }
+    },
+    {
+      "data": {
+        "id": "item:book-of-tactics",
+        "label": "Book of Tactics",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "stats": {
+          "dex": 6,
+          "int": 6
+        },
+        "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracelet-of-sacrifice",
+        "label": "Bracelet of Sacrifice",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:circlet-of-tallon",
+        "label": "Circlet of Tallon",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "resists": {
+          "cold": 9,
+          "magic": 9,
+          "poison": 9
+        },
+        "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-iron-tactics",
+        "label": "Gauntlets of Iron Tactics",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman"
+        ],
+        "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:slaggak-the-trainer",
+        "label": "Slaggak the Trainer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:coldain-skulls",
+        "label": "Coldain Skulls",
+        "type": "quest",
+        "description": "Slaggak the Trainer in Kael Drakkal trades 4 Coldain Heads (slain throughout Eastern Wastes, Great Divide, and Thurgadin) for a random piece of Giant Scalemail Armor. All four heads must be turned in together -- individual heads yield no experience, faction, or items. All classes.",
+        "minLevel": 45,
+        "steps": [
+          "Slay Coldain throughout Eastern Wastes, Great Divide, and Thurgadin for 4 Coldain Heads",
+          "Turn all 4 heads in together to Slaggak the Trainer"
+        ],
+        "wiki_title": "Coldain Skulls"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:collier",
+        "label": "Collier",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:colliers-weapon-treatment",
+        "label": "Collier's Weapon Treatment",
+        "type": "quest",
+        "description": "Collier, on the top floor of the Vasty Deep Inn in Erudin, trades an Ancient Snake Fang and Ancient Venom Sack (Slyder the Ancient), a Venomous Spikefish Poison Sac (rare drop from venomous spikefish), and Necromancer Blood (Heretic Invaders) for a Thick Caustic Liquid -- applied to a standard forged weapon at a forge to produce a Bloodclaw variant (battle axe, dagger, long sword, mace, rapier, or scimitar, depending on the base weapon chosen). Circle of Unseen Hands faction required. All classes.",
+        "minLevel": 20,
+        "steps": [
+          "Obtain an Ancient Snake Fang and Ancient Venom Sack from Slyder the Ancient",
+          "Obtain a Venomous Spikefish Poison Sac (rare drop) from a venomous spikefish",
+          "Obtain Necromancer Blood from Heretic Invaders",
+          "Turn everything in to Collier in Erudin for a Thick Caustic Liquid",
+          "Apply the Thick Caustic Liquid to a standard forged weapon at a forge for its Bloodclaw variant"
+        ],
+        "wiki_title": "Collier's Weapon Treatment"
+      }
+    },
+    {
+      "data": {
+        "id": "item:thick-caustic-liquid",
+        "label": "Thick Caustic Liquid",
+        "type": "item",
+        "source": "Collier's Weapon Treatment reward (Collier, Erudin) -- combine with a forged weapon at a forge for a Bloodclaw variant"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:corrupt-guards-cleric",
+        "label": "Corrupt Guards (Cleric version)",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Jemoz Lerkarson in North Freeport sends Clerics after a Damaged Militia Helm from militia guards in West Freeport, in exchange for a random cleric spell scroll and a cast of minor healing.",
+        "minLevel": 10,
+        "steps": [
+          "Hail Jemoz Lerkarson and express devotion to truth",
+          "Defeat militia guards in West Freeport for a Damaged Militia Helm",
+          "Return the helm to Jemoz Lerkarson"
+        ],
+        "wiki_title": "Corrupt Guards (Cleric version)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:corrupt-guards-paladin",
+        "label": "Corrupt Guards (Paladin Version)",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Theron Rolius, at the Hall of Truth in North Freeport, sends the player on a crusade against the Freeport Militia -- defeat militia guards in East Freeport and return their Damaged Militia Helm drops one at a time for coin, experience, and faction.",
+        "minLevel": 15,
+        "steps": [
+          "Hail Theron Rolius at the Hall of Truth and accept the crusade against the Freeport Militia",
+          "Defeat militia guards in East Freeport for Damaged Militia Helm drops",
+          "Return the helmets one at a time to Theron Rolius"
+        ],
+        "wiki_title": "Corrupt Guards (Paladin Version)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:lord-prismwing",
+        "label": "Lord Prismwing",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-drixie-quest",
+        "label": "Crest of the Drixie Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Lord Prismwing in The Wakening Land sends the player to Cobalt Scar to defeat Yvolcarn and return with Drixie Remains, in exchange for a Crest of the Drixie.",
+        "minLevel": 50,
+        "steps": [
+          "Hail Lord Prismwing and agree to help locate his missing herald",
+          "Travel to Cobalt Scar and defeat Yvolcarn",
+          "Loot the Drixie Remains and return them to Lord Prismwing"
+        ],
+        "wiki_title": "Crest of the Drixie Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-drixie",
+        "label": "Crest of the Drixie",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "source": "Crest of the Drixie Quest reward (Lord Prismwing, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:lord-gossimerwind",
+        "label": "Lord Gossimerwind",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-faerie-dragons-quest",
+        "label": "Crest of the Faerie Dragons Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Lord Gossimerwind in The Wakening Land sends the player to defeat a Storm Giant Foreman and return his helm as proof, in exchange for a Crest of the Faerie Dragons.",
+        "minLevel": 50,
+        "steps": [
+          "Hail Lord Gossimerwind",
+          "Defeat a Storm Giant Foreman and loot his helm",
+          "Return the helm to Lord Gossimerwind"
+        ],
+        "wiki_title": "Crest of the Faerie Dragons Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-faerie-dragons",
+        "label": "Crest of the Faerie Dragons",
+        "type": "item",
+        "magic": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "source": "Crest of the Faerie Dragons Quest reward (Lord Gossimerwind, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-fauns-quest",
+        "label": "Crest of the Fauns Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Shamus Aghllsews in The Wakening Land, after the Friend of the Tunarean Court case is obtained, sends the player to kill a storm giant architect for kromzek architect blueprints, then fill a container with crystallized sulfur and combine it with a bag of crushed herbs, then trade both bags into a bag of building supplies at destroyed building platforms in Kael Drakkel (an explosion deals roughly 1000 fire damage), and return the resulting pile of rubble for a Crest of the Fauns.",
+        "minLevel": 50,
+        "steps": [
+          "Obtain the case from the Friend of the Tunarean Court prerequisite",
+          "Kill a storm giant architect and collect kromzek architect blueprints",
+          "Return the blueprints to Shamus for a container and a bag of crushed herbs",
+          "Fill the container with crystallized sulfur and combine it with the herb bag",
+          "Travel to Kael Drakkel's destroyed building platforms and trade both bags into a bag of building supplies (triggers an explosion, ~1000 fire damage)",
+          "Collect the resulting pile of rubble and return it to Shamus"
+        ],
+        "wiki_title": "Crest of the Fauns Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-fauns",
+        "label": "Crest of the Fauns",
+        "type": "item",
+        "magic": true,
+        "noTrade": true,
+        "source": "Crest of the Fauns Quest reward (Shamus Aghllsews, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:countess-silveana",
+        "label": "Countess Silveana",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-sifaye-quest",
+        "label": "Crest of the Sifaye Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Countess Silveana in The Wakening Land trades a Kromzek Surveyor Scope (looted from a storm giant surveyor) for a Crest of the Sifaye.",
+        "minLevel": 50,
+        "steps": [
+          "Kill a storm giant surveyor for a Kromzek Surveyor Scope",
+          "Hand the scope to Countess Silveana"
+        ],
+        "wiki_title": "Crest of the Sifaye Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-sifaye",
+        "label": "Crest of the Sifaye",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0,
+        "source": "Crest of the Sifaye Quest reward (Countess Silveana, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:lady-gelistial",
+        "label": "Lady Gelistial",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-unicorn-quest",
+        "label": "Crest of the Unicorn Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Lady Gelistial in The Wakening Land tells of the cursed black unicorn Lithiniath; Prince Thirneg at the bottom of Tunare's Tree in Plane of Growth gives instructions to kill Lithiniath in the Plane of Mischief. Looting his horn and giving it to a nearby white stallion yields the Crest of the Unicorn.",
+        "minLevel": 55,
+        "steps": [
+          "Speak with Lady Gelistial about the cursed black unicorn Lithiniath",
+          "Find Prince Thirneg at the bottom of Tunare's Tree in Plane of Growth",
+          "Travel to the Plane of Mischief and defeat Lithiniath, in a room off the dining hall's right side",
+          "Loot his horn and give it to a nearby white stallion"
+        ],
+        "wiki_title": "Crest of the Unicorn Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-unicorn",
+        "label": "Crest of the Unicorn",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Crest of the Unicorn Quest reward (Lady Gelistial, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-wakening-land:eysa-florawhisper",
+        "label": "Eysa Florawhisper",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crest-of-the-wood-nymphs-quest",
+        "label": "Crest of the Wood Nymphs Quest",
+        "type": "quest",
+        "classes": [
+          "ranger",
+          "druid"
+        ],
+        "description": "Eysa Florawhisper in The Wakening Land, after the Friend of the Tunarean Court quest, sends the player to collect eight seeds across the world -- Misty Acorn (Misty Thicket), Emerald Orange (Emerald Jungle), Bag of Caynar Nuts (Toxxulia Forest), Vineclinger Berries (Butcherblock Mountains), Ripened Heartfruit (Greater Faydark), Rathe Berries (Lake Rathetear), Marr Cherries (Ocean of Tears), Flarefire Seeds (Field of Bone) -- combined in a provided seed pack for the Crest of the Wood Nymphs.",
+        "minLevel": 45,
+        "steps": [
+          "Complete the Friend of the Tunarean Court quest first",
+          "Collect a Misty Acorn (Misty Thicket), Emerald Orange (Emerald Jungle), Bag of Caynar Nuts (Toxxulia Forest), Vineclinger Berries (Butcherblock Mountains), Ripened Heartfruit (Greater Faydark), Rathe Berries (Lake Rathetear), Marr Cherries (Ocean of Tears), and Flarefire Seeds (Field of Bone)",
+          "Combine all eight seeds in the provided seed pack and return it to Eysa Florawhisper"
+        ],
+        "wiki_title": "Crest of the Wood Nymphs Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crest-of-the-wood-nymphs",
+        "label": "Crest of the Wood Nymphs",
+        "type": "item",
+        "magic": true,
+        "noTrade": true,
+        "source": "Crest of the Wood Nymphs Quest reward (Eysa Florawhisper, The Wakening Land)"
+      }
     }
   ],
   "edges": [
@@ -144747,6 +146287,2406 @@
         "id": "e-rewards-10313",
         "source": "quest:burnished-wooden-staff-quest",
         "target": "item:top-shard-of-the-obulus-medallion",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10314",
+        "source": "npc:firiona-vie:lenka-stoutheart",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10315",
+        "source": "npc:firiona-vie:lenka-stoutheart",
+        "target": "quest:cabilis-pale-ale-firiona-vie",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10316",
+        "source": "quest:cabilis-pale-ale-firiona-vie",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10317",
+        "source": "quest:cabilis-pale-ale-firiona-vie",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10318",
+        "source": "npc:timorous-deep:the-great-oowomp",
+        "target": "zone:timorous-deep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10319",
+        "source": "npc:timorous-deep:the-great-oowomp",
+        "target": "quest:cannibalize-ii-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10320",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "zone:timorous-deep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10321",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "zone:timorous-deep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10322",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10323",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10324",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "zone:karnors-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10325",
+        "source": "quest:cannibalize-ii-evil",
+        "target": "spell:mcmerins-feast",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10326",
+        "source": "npc:south-kaladim:beno-targnarle",
+        "target": "quest:cleaner-clockwork",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10327",
+        "source": "quest:cleaner-clockwork",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10328",
+        "source": "quest:cleaner-clockwork",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10329",
+        "source": "quest:cleaner-clockwork",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10330",
+        "source": "quest:cleaner-clockwork",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10331",
+        "source": "quest:cleaner-clockwork",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10332",
+        "source": "quest:cleaner-clockwork",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10333",
+        "source": "quest:cleaner-clockwork",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10334",
+        "source": "quest:cleaner-clockwork",
+        "target": "item:knight-card",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10335",
+        "source": "npc:erudin:agryn-moonfield",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10336",
+        "source": "npc:erudin:agryn-moonfield",
+        "target": "quest:clear-water-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10337",
+        "source": "quest:clear-water-quest",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10338",
+        "source": "quest:clear-water-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10339",
+        "source": "quest:clear-water-quest",
+        "target": "item:clear-water",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10340",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10341",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10342",
+        "source": "quest_group:cleric-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10343",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10344",
+        "source": "quest:cleric-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10345",
+        "source": "quest:cleric-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10346",
+        "source": "quest:cleric-kael-armor-helm",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10347",
+        "source": "quest:cleric-kael-armor-helm",
+        "target": "item:templar-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10348",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-chestplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10349",
+        "source": "quest:cleric-kael-armor-chestplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10350",
+        "source": "quest:cleric-kael-armor-chestplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10351",
+        "source": "quest:cleric-kael-armor-chestplate",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10352",
+        "source": "quest:cleric-kael-armor-chestplate",
+        "target": "item:templar-s-chestplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10353",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10354",
+        "source": "quest:cleric-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10355",
+        "source": "quest:cleric-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10356",
+        "source": "quest:cleric-kael-armor-vambraces",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10357",
+        "source": "quest:cleric-kael-armor-vambraces",
+        "target": "item:templar-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10358",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10359",
+        "source": "quest:cleric-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10360",
+        "source": "quest:cleric-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10361",
+        "source": "quest:cleric-kael-armor-bracer",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10362",
+        "source": "quest:cleric-kael-armor-bracer",
+        "target": "item:templar-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10363",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10364",
+        "source": "quest:cleric-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10365",
+        "source": "quest:cleric-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10366",
+        "source": "quest:cleric-kael-armor-gauntlets",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10367",
+        "source": "quest:cleric-kael-armor-gauntlets",
+        "target": "item:templar-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10368",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10369",
+        "source": "quest:cleric-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10370",
+        "source": "quest:cleric-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10371",
+        "source": "quest:cleric-kael-armor-greaves",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10372",
+        "source": "quest:cleric-kael-armor-greaves",
+        "target": "item:templar-s-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10373",
+        "source": "npc:kael-drakkal:vylleam-vyaeltor",
+        "target": "quest:cleric-kael-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10374",
+        "source": "quest:cleric-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10375",
+        "source": "quest:cleric-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10376",
+        "source": "quest:cleric-kael-armor-boots",
+        "target": "quest_group:cleric-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10377",
+        "source": "quest:cleric-kael-armor-boots",
+        "target": "item:templar-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10378",
+        "source": "npc:plane-of-sky:alan-harten",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10379",
+        "source": "npc:plane-of-sky:deric-lennox",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10380",
+        "source": "npc:plane-of-sky:alan-harten",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10381",
+        "source": "npc:plane-of-sky:deric-lennox",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10382",
+        "source": "quest_group:cleric-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10383",
+        "source": "npc:plane-of-sky:alan-harten",
+        "target": "quest:cleric-plane-of-sky-test-of-courage",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10384",
+        "source": "quest:cleric-plane-of-sky-test-of-courage",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10385",
+        "source": "quest:cleric-plane-of-sky-test-of-courage",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10386",
+        "source": "quest:cleric-plane-of-sky-test-of-courage",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10387",
+        "source": "quest:cleric-plane-of-sky-test-of-courage",
+        "target": "item:truewind-earring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10388",
+        "source": "npc:plane-of-sky:alan-harten",
+        "target": "quest:cleric-plane-of-sky-test-of-skill",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10389",
+        "source": "quest:cleric-plane-of-sky-test-of-skill",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10390",
+        "source": "quest:cleric-plane-of-sky-test-of-skill",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10391",
+        "source": "quest:cleric-plane-of-sky-test-of-skill",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10392",
+        "source": "quest:cleric-plane-of-sky-test-of-skill",
+        "target": "item:aegis-of-the-wind",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10393",
+        "source": "npc:plane-of-sky:alan-harten",
+        "target": "quest:cleric-plane-of-sky-test-of-protection",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10394",
+        "source": "quest:cleric-plane-of-sky-test-of-protection",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10395",
+        "source": "quest:cleric-plane-of-sky-test-of-protection",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10396",
+        "source": "quest:cleric-plane-of-sky-test-of-protection",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10397",
+        "source": "quest:cleric-plane-of-sky-test-of-protection",
+        "target": "item:pauldrons-of-piety",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10398",
+        "source": "npc:plane-of-sky:deric-lennox",
+        "target": "quest:cleric-plane-of-sky-test-of-resolution",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10399",
+        "source": "quest:cleric-plane-of-sky-test-of-resolution",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10400",
+        "source": "quest:cleric-plane-of-sky-test-of-resolution",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10401",
+        "source": "quest:cleric-plane-of-sky-test-of-resolution",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10402",
+        "source": "quest:cleric-plane-of-sky-test-of-resolution",
+        "target": "item:necklace-of-resolution",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10403",
+        "source": "npc:plane-of-sky:deric-lennox",
+        "target": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10404",
+        "source": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10405",
+        "source": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10406",
+        "source": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10407",
+        "source": "quest:cleric-plane-of-sky-test-of-theurgy",
+        "target": "item:theurgist-s-star",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10408",
+        "source": "npc:plane-of-sky:deric-lennox",
+        "target": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10409",
+        "source": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10410",
+        "source": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10411",
+        "source": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "target": "quest_group:cleric-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10412",
+        "source": "quest:cleric-plane-of-sky-test-of-the-weak",
+        "target": "item:truwian-baton",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10413",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10414",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10415",
+        "source": "quest_group:cleric-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10416",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-helmet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10417",
+        "source": "quest:cleric-skyshrine-armor-helmet",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10418",
+        "source": "quest:cleric-skyshrine-armor-helmet",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10419",
+        "source": "quest:cleric-skyshrine-armor-helmet",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10420",
+        "source": "quest:cleric-skyshrine-armor-helmet",
+        "target": "item:akkirus-crown-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10421",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-chestplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10422",
+        "source": "quest:cleric-skyshrine-armor-chestplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10423",
+        "source": "quest:cleric-skyshrine-armor-chestplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10424",
+        "source": "quest:cleric-skyshrine-armor-chestplate",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10425",
+        "source": "quest:cleric-skyshrine-armor-chestplate",
+        "target": "item:akkirus-chestplate-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10426",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10427",
+        "source": "quest:cleric-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10428",
+        "source": "quest:cleric-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10429",
+        "source": "quest:cleric-skyshrine-armor-vambraces",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10430",
+        "source": "quest:cleric-skyshrine-armor-vambraces",
+        "target": "item:akkirus-vambraces-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10431",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10432",
+        "source": "quest:cleric-skyshrine-armor-bracers",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10433",
+        "source": "quest:cleric-skyshrine-armor-bracers",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10434",
+        "source": "quest:cleric-skyshrine-armor-bracers",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10435",
+        "source": "quest:cleric-skyshrine-armor-bracers",
+        "target": "item:akkirus-bracelet-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10436",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10437",
+        "source": "quest:cleric-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10438",
+        "source": "quest:cleric-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10439",
+        "source": "quest:cleric-skyshrine-armor-gauntlets",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10440",
+        "source": "quest:cleric-skyshrine-armor-gauntlets",
+        "target": "item:akkirus-gauntlets-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10441",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10442",
+        "source": "quest:cleric-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10443",
+        "source": "quest:cleric-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10444",
+        "source": "quest:cleric-skyshrine-armor-greaves",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10445",
+        "source": "quest:cleric-skyshrine-armor-greaves",
+        "target": "item:akkirus-greaves-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10446",
+        "source": "npc:skyshrine:fardonad-fedhar",
+        "target": "quest:cleric-skyshrine-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10447",
+        "source": "quest:cleric-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10448",
+        "source": "quest:cleric-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10449",
+        "source": "quest:cleric-skyshrine-armor-boots",
+        "target": "quest_group:cleric-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10450",
+        "source": "quest:cleric-skyshrine-armor-boots",
+        "target": "item:akkirus-boots-of-the-risen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10451",
+        "source": "npc:the-overthere:brinaa-darkpact",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10452",
+        "source": "npc:the-overthere:brinaa-darkpact",
+        "target": "quest:cleric-spells-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10453",
+        "source": "quest:cleric-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10454",
+        "source": "quest:cleric-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10455",
+        "source": "quest:cleric-spells-evil",
+        "target": "spell:heroic-bond",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10456",
+        "source": "quest:cleric-spells-evil",
+        "target": "spell:sunskin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10457",
+        "source": "quest:cleric-spells-evil",
+        "target": "spell:unswerving-hammer-of-faith",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10458",
+        "source": "quest:cleric-spells-evil",
+        "target": "spell:word-of-vigor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10459",
+        "source": "npc:firiona-vie:frist-furtun",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10460",
+        "source": "npc:firiona-vie:frist-furtun",
+        "target": "quest:cleric-spells-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10461",
+        "source": "quest:cleric-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10462",
+        "source": "quest:cleric-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10463",
+        "source": "quest:cleric-spells-good",
+        "target": "spell:heroic-bond",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10464",
+        "source": "quest:cleric-spells-good",
+        "target": "spell:sunskin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10465",
+        "source": "quest:cleric-spells-good",
+        "target": "spell:unswerving-hammer-of-faith",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10466",
+        "source": "quest:cleric-spells-good",
+        "target": "spell:word-of-vigor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10467",
+        "source": "npc:rivervale:beek-guinders",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10468",
+        "source": "npc:rivervale:beek-guinders",
+        "target": "quest:cleric-supplies",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10469",
+        "source": "quest:cleric-supplies",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10470",
+        "source": "quest:cleric-supplies",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10471",
+        "source": "quest:cleric-supplies",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10472",
+        "source": "quest:cleric-supplies",
+        "target": "faction:priests-of-mischief",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10473",
+        "source": "quest:cleric-supplies",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10474",
+        "source": "quest:cleric-supplies",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10475",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10476",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10477",
+        "source": "quest_group:cleric-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10478",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10479",
+        "source": "quest:cleric-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10480",
+        "source": "quest:cleric-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10481",
+        "source": "quest:cleric-thurgadin-armor-helm",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10482",
+        "source": "quest:cleric-thurgadin-armor-helm",
+        "target": "item:crown-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10483",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10484",
+        "source": "quest:cleric-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10485",
+        "source": "quest:cleric-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10486",
+        "source": "quest:cleric-thurgadin-armor-breastplate",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10487",
+        "source": "quest:cleric-thurgadin-armor-breastplate",
+        "target": "item:breastplate-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10488",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10489",
+        "source": "quest:cleric-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10490",
+        "source": "quest:cleric-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10491",
+        "source": "quest:cleric-thurgadin-armor-vambraces",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10492",
+        "source": "quest:cleric-thurgadin-armor-vambraces",
+        "target": "item:vambraces-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10493",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10494",
+        "source": "quest:cleric-thurgadin-armor-bracers",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10495",
+        "source": "quest:cleric-thurgadin-armor-bracers",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10496",
+        "source": "quest:cleric-thurgadin-armor-bracers",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10497",
+        "source": "quest:cleric-thurgadin-armor-bracers",
+        "target": "item:bracers-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10498",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10499",
+        "source": "quest:cleric-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10500",
+        "source": "quest:cleric-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10501",
+        "source": "quest:cleric-thurgadin-armor-gauntlets",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10502",
+        "source": "quest:cleric-thurgadin-armor-gauntlets",
+        "target": "item:gauntlets-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10503",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10504",
+        "source": "quest:cleric-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10505",
+        "source": "quest:cleric-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10506",
+        "source": "quest:cleric-thurgadin-armor-greaves",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10507",
+        "source": "quest:cleric-thurgadin-armor-greaves",
+        "target": "item:greaves-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10508",
+        "source": "npc:thurgadin:loremaster-dorinan",
+        "target": "quest:cleric-thurgadin-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10509",
+        "source": "quest:cleric-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10510",
+        "source": "quest:cleric-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-10511",
+        "source": "quest:cleric-thurgadin-armor-boots",
+        "target": "quest_group:cleric-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10512",
+        "source": "quest:cleric-thurgadin-armor-boots",
+        "target": "item:boots-of-forbidden-rites",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10513",
+        "source": "npc:oggok:clurg-the-bartender",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10514",
+        "source": "npc:oggok:clurg-the-bartender",
+        "target": "quest:clurgs-revenge",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10515",
+        "source": "quest:clurgs-revenge",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10516",
+        "source": "quest:clurgs-revenge",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10517",
+        "source": "quest:clurgs-revenge",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10518",
+        "source": "quest:clurgs-revenge",
+        "target": "item:a-crude-stein",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10519",
+        "source": "quest:clurgs-revenge",
+        "target": "item:ogre-war-maul",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10520",
+        "source": "quest:clurgs-revenge",
+        "target": "item:pearl",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10521",
+        "source": "quest:clurgs-revenge",
+        "target": "item:warhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10522",
+        "source": "npc:kael-drakkal:gkrean-prophet-of-tallon",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10523",
+        "source": "npc:kael-drakkal:gkrean-prophet-of-tallon",
+        "target": "quest:coldain-books-of-tactics",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10524",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10525",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10526",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10527",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10528",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10529",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "item:book-of-tactics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10530",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "item:bracelet-of-sacrifice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10531",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "item:circlet-of-tallon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10532",
+        "source": "quest:coldain-books-of-tactics",
+        "target": "item:gauntlets-of-iron-tactics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10533",
+        "source": "npc:kael-drakkal:slaggak-the-trainer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10534",
+        "source": "npc:kael-drakkal:slaggak-the-trainer",
+        "target": "quest:coldain-skulls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10535",
+        "source": "quest:coldain-skulls",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10536",
+        "source": "quest:coldain-skulls",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10537",
+        "source": "quest:coldain-skulls",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10538",
+        "source": "quest:coldain-skulls",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10539",
+        "source": "quest:coldain-skulls",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10540",
+        "source": "quest:coldain-skulls",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10541",
+        "source": "quest:coldain-skulls",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10542",
+        "source": "npc:erudin:collier",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10543",
+        "source": "npc:erudin:collier",
+        "target": "quest:colliers-weapon-treatment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10544",
+        "source": "quest:colliers-weapon-treatment",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10545",
+        "source": "quest:colliers-weapon-treatment",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10546",
+        "source": "quest:colliers-weapon-treatment",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10547",
+        "source": "quest:colliers-weapon-treatment",
+        "target": "item:thick-caustic-liquid",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10548",
+        "source": "npc:north-freeport:jemoz-lerkarson",
+        "target": "quest:corrupt-guards-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10549",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10550",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10551",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10552",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10553",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10554",
+        "source": "quest:corrupt-guards-cleric",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10555",
+        "source": "npc:north-freeport:theron-rolius",
+        "target": "quest:corrupt-guards-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10556",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10557",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10558",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10559",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10560",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10561",
+        "source": "quest:corrupt-guards-paladin",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10562",
+        "source": "npc:the-wakening-land:lord-prismwing",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10563",
+        "source": "npc:the-wakening-land:lord-prismwing",
+        "target": "quest:crest-of-the-drixie-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10564",
+        "source": "quest:crest-of-the-drixie-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10565",
+        "source": "quest:crest-of-the-drixie-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10566",
+        "source": "quest:crest-of-the-drixie-quest",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10567",
+        "source": "quest:crest-of-the-drixie-quest",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10568",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-drixie-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10569",
+        "source": "quest:crest-of-the-drixie-quest",
+        "target": "item:crest-of-the-drixie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10570",
+        "source": "npc:the-wakening-land:lord-gossimerwind",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10571",
+        "source": "npc:the-wakening-land:lord-gossimerwind",
+        "target": "quest:crest-of-the-faerie-dragons-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10572",
+        "source": "quest:crest-of-the-faerie-dragons-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10573",
+        "source": "quest:crest-of-the-faerie-dragons-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10574",
+        "source": "quest:crest-of-the-faerie-dragons-quest",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10575",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-faerie-dragons-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10576",
+        "source": "quest:crest-of-the-faerie-dragons-quest",
+        "target": "item:crest-of-the-faerie-dragons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10577",
+        "source": "npc:the-wakening-land:shamus-aghllsews",
+        "target": "quest:crest-of-the-fauns-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10578",
+        "source": "quest:crest-of-the-fauns-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10579",
+        "source": "quest:crest-of-the-fauns-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10580",
+        "source": "quest:crest-of-the-fauns-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10581",
+        "source": "quest:crest-of-the-fauns-quest",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10582",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-fauns-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10583",
+        "source": "quest:crest-of-the-fauns-quest",
+        "target": "item:crest-of-the-fauns",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10584",
+        "source": "npc:the-wakening-land:countess-silveana",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10585",
+        "source": "npc:the-wakening-land:countess-silveana",
+        "target": "quest:crest-of-the-sifaye-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10586",
+        "source": "quest:crest-of-the-sifaye-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10587",
+        "source": "quest:crest-of-the-sifaye-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10588",
+        "source": "quest:crest-of-the-sifaye-quest",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10589",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-sifaye-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10590",
+        "source": "quest:crest-of-the-sifaye-quest",
+        "target": "item:crest-of-the-sifaye",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10591",
+        "source": "npc:the-wakening-land:lady-gelistial",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10592",
+        "source": "npc:the-wakening-land:lady-gelistial",
+        "target": "quest:crest-of-the-unicorn-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10593",
+        "source": "quest:crest-of-the-unicorn-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10594",
+        "source": "quest:crest-of-the-unicorn-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10595",
+        "source": "quest:crest-of-the-unicorn-quest",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10596",
+        "source": "quest:crest-of-the-unicorn-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10597",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-unicorn-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10598",
+        "source": "quest:crest-of-the-unicorn-quest",
+        "target": "item:crest-of-the-unicorn",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10599",
+        "source": "npc:the-wakening-land:eysa-florawhisper",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10600",
+        "source": "npc:the-wakening-land:eysa-florawhisper",
+        "target": "quest:crest-of-the-wood-nymphs-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10601",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:the-wakening-land",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10602",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10603",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10604",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10605",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10606",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10607",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10608",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10609",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10610",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10611",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "faction:tunarean-court",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10612",
+        "source": "quest:friend-of-the-tunarean-court",
+        "target": "quest:crest-of-the-wood-nymphs-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10613",
+        "source": "quest:crest-of-the-wood-nymphs-quest",
+        "target": "item:crest-of-the-wood-nymphs",
         "type": "rewards"
       }
     }
