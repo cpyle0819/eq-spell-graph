@@ -53801,8 +53801,61 @@
         "label": "Burning Wood",
         "type": "zone",
         "era": "Kunark",
-        "lore": "The Burning Wood was once an ancient, beautiful forest. Now, however, its surface has been scarred by the fiery meteors that have stricken this area in the recent centuries, leaving its surface marred and aflame.",
-        "wiki_title": "Burning Wood"
+        "lore": "The Burning Wood (normally called Burning Woods by players, or very rarely The Burned Woods) was once an ancient, beautiful forest. Now, however, its surface has been scarred by the fiery meteors that have stricken this area in the recent centuries, leaving its surface marred and aflame.",
+        "wiki_title": "Burning Wood",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        }
       }
     },
     {
@@ -57423,69 +57476,6 @@
     },
     {
       "data": {
-        "id": "zone:burning-woods",
-        "label": "Burning Woods",
-        "type": "zone",
-        "faction": {
-          "race": {
-            "barbarian": "neutral",
-            "dark elf": "neutral",
-            "dwarf": "neutral",
-            "erudite": "neutral",
-            "gnome": "neutral",
-            "half elf": "neutral",
-            "halfling": "neutral",
-            "high elf": "neutral",
-            "human": "neutral",
-            "iksar": "neutral",
-            "ogre": "neutral",
-            "troll": "neutral",
-            "wood elf": "neutral"
-          },
-          "class": {
-            "bard": "safe",
-            "beastlord": "safe",
-            "cleric": "safe",
-            "druid": "safe",
-            "enchanter": "safe",
-            "magician": "safe",
-            "monk": "safe",
-            "necromancer": "safe",
-            "paladin": "safe",
-            "ranger": "safe",
-            "rogue": "safe",
-            "shadow knight": "safe",
-            "shaman": "safe",
-            "warrior": "safe",
-            "wizard": "safe"
-          },
-          "deity": {
-            "agnostic": "neutral",
-            "bertoxxulous": "neutral",
-            "brell serilis": "neutral",
-            "bristlebane": "neutral",
-            "cazic-thule": "neutral",
-            "erollisi marr": "neutral",
-            "innoruuk": "neutral",
-            "karana": "neutral",
-            "mithaniel marr": "neutral",
-            "prexus": "neutral",
-            "quellious": "neutral",
-            "rallos zek": "neutral",
-            "rodcet nife": "neutral",
-            "solusek ro": "neutral",
-            "the tribunal": "neutral",
-            "tunare": "neutral",
-            "veeshan": "neutral"
-          }
-        },
-        "lore": "The Burning Wood (normally called Burning Woods by players, or very rarely The Burned Woods) was once an ancient, beautiful forest. Now, however, its surface has been scarred by the fiery meteors that have stricken this area in the recent centuries, leaving its surface marred and aflame.",
-        "era": "Kunark",
-        "wiki_title": "Burning Woods"
-      }
-    },
-    {
-      "data": {
         "id": "npc:everfrost-peaks:karg-icebear",
         "label": "Karg IceBear",
         "type": "npc",
@@ -58196,7 +58186,7 @@
     },
     {
       "data": {
-        "id": "npc:burning-woods:slixin-klex",
+        "id": "npc:burning-wood:slixin-klex",
         "label": "Slixin Klex",
         "type": "npc",
         "roles": [
@@ -64277,7 +64267,7 @@
     },
     {
       "data": {
-        "id": "npc:burning-woods:entalon",
+        "id": "npc:burning-wood:entalon",
         "label": "Entalon",
         "type": "npc",
         "roles": [
@@ -140987,7 +140977,7 @@
     {
       "data": {
         "id": "e-connects_to-9532",
-        "source": "zone:burning-woods",
+        "source": "zone:burning-wood",
         "target": "zone:chardok",
         "type": "connects_to"
       }
@@ -140996,7 +140986,7 @@
       "data": {
         "id": "e-connects_to-9533",
         "source": "zone:chardok",
-        "target": "zone:burning-woods",
+        "target": "zone:burning-wood",
         "type": "connects_to"
       }
     },
@@ -141915,15 +141905,15 @@
     {
       "data": {
         "id": "e-located_in-9648",
-        "source": "npc:burning-woods:slixin-klex",
-        "target": "zone:burning-woods",
+        "source": "npc:burning-wood:slixin-klex",
+        "target": "zone:burning-wood",
         "type": "located_in"
       }
     },
     {
       "data": {
         "id": "e-starts-9649",
-        "source": "npc:burning-woods:slixin-klex",
+        "source": "npc:burning-wood:slixin-klex",
         "target": "quest:medallion-of-the-obulus-quest",
         "type": "starts"
       }
@@ -141932,7 +141922,7 @@
       "data": {
         "id": "e-starts_in-9650",
         "source": "quest:medallion-of-the-obulus-quest",
-        "target": "zone:burning-woods",
+        "target": "zone:burning-wood",
         "type": "starts_in"
       }
     },
@@ -141940,7 +141930,7 @@
       "data": {
         "id": "e-located_in-9651",
         "source": "quest:medallion-of-the-obulus-quest",
-        "target": "zone:burning-woods",
+        "target": "zone:burning-wood",
         "type": "located_in"
       }
     },
@@ -150347,15 +150337,15 @@
     {
       "data": {
         "id": "e-located_in-10702",
-        "source": "npc:burning-woods:entalon",
-        "target": "zone:burning-woods",
+        "source": "npc:burning-wood:entalon",
+        "target": "zone:burning-wood",
         "type": "located_in"
       }
     },
     {
       "data": {
         "id": "e-starts-10703",
-        "source": "npc:burning-woods:entalon",
+        "source": "npc:burning-wood:entalon",
         "target": "quest:entalons-quest",
         "type": "starts"
       }
@@ -150364,7 +150354,7 @@
       "data": {
         "id": "e-starts_in-10704",
         "source": "quest:entalons-quest",
-        "target": "zone:burning-woods",
+        "target": "zone:burning-wood",
         "type": "starts_in"
       }
     },
@@ -150372,7 +150362,7 @@
       "data": {
         "id": "e-located_in-10705",
         "source": "quest:entalons-quest",
-        "target": "zone:burning-woods",
+        "target": "zone:burning-wood",
         "type": "located_in"
       }
     },
