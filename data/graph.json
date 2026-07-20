@@ -77391,6 +77391,1391 @@
         ],
         "wiki_title": "Shaman Spells (Good)"
       }
+    },
+    {
+      "data": {
+        "id": "quest:shark-hunting",
+        "label": "Shark Hunting",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "description": "Theron Rolius in North Freeport trades a Sack of Sharkskins (two Shark Skin, from any shark, combined in a sack) for the Sharkskin Shield. No experience or coin reward.",
+        "minLevel": 5,
+        "steps": [
+          "Kill sharks for two Shark Skin",
+          "Combine both in a sack for a Sack of Sharkskins",
+          "Turn in the sack to Theron Rolius in North Freeport"
+        ],
+        "wiki_title": "Shark Hunting"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sharkskin-shield",
+        "label": "Sharkskin Shield",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "erudite",
+          "half elf",
+          "high elf",
+          "human",
+          "iksar",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "magic": true,
+        "ac": 3,
+        "weight": 3,
+        "size": "Small",
+        "source": "Shark Hunting reward (Theron Rolius, North Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:gallin-woodwind",
+        "label": "Gallin Woodwind",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shark-meat-quest",
+        "label": "Shark Meat Quest",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior"
+        ],
+        "description": "Gallin Woodwind in Kelethin trades 4 Shark Meat (from sharks in Ocean of Tears, combined in a provided pack) for the Cast-Iron Rapier, coin, and experience.",
+        "minLevel": 5,
+        "steps": [
+          "Kill sharks in Ocean of Tears for 4 Shark Meat",
+          "Combine the meat in the provided pack",
+          "Turn in the pack to Gallin Woodwind in Kelethin"
+        ],
+        "wiki_title": "Shark Meat Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cast-iron-rapier",
+        "label": "Cast-Iron Rapier",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "skill": "Piercing",
+        "damage": 4,
+        "delay": 23,
+        "weight": 5,
+        "size": "Medium",
+        "source": "Shark Meat Quest reward (Gallin Woodwind, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:trooper-shestar",
+        "label": "Trooper Shestar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shestars-scaled-coif-quest",
+        "label": "Shestar's Scaled Coif Quest",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "description": "Trooper Shestar in East Cabilis trades 3 Loose Scales plus 5 gold for an unfinished coif, which is then combined with 3 more Loose Scales at a forge (Blacksmithing) to complete Shestar's Scaled Coif.",
+        "minLevel": 8,
+        "steps": [
+          "Gather 3 Loose Scales and trade them plus 5 gold to Trooper Shestar for an unfinished coif",
+          "Combine the unfinished coif with 3 more Loose Scales at a forge to complete Shestar's Scaled Coif"
+        ],
+        "wiki_title": "Shestar's Scaled Coif Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shestars-scaled-coif",
+        "label": "Shestar's Scaled Coif",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 4,
+        "weight": 0.8,
+        "size": "Small",
+        "source": "Shestar's Scaled Coif Quest reward (Trooper Shestar, East Cabilis, via Blacksmithing)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shield-of-the-devout-quest",
+        "label": "Shield of the Devout Quest",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "description": "Gavel the Temperant in the Temple of Solusek Ro trades an Icon of the Devout (from a Minotaur Sentry in Steamfont Mountains), an Ingot of the Devout (from a Glacier Bear in Everfrost Peaks), and 2 Vulcanized Platinum Bars (from Vilissia) for the Shield of the Devout. Multiquestable.",
+        "minLevel": 30,
+        "steps": [
+          "Kill a Minotaur Sentry in Steamfont Mountains for an Icon of the Devout",
+          "Kill a Glacier Bear in Everfrost Peaks for an Ingot of the Devout",
+          "Trade enchanted platinum to Vilissia for 2 Vulcanized Platinum Bars",
+          "Turn in all three items to Gavel the Temperant in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Shield of the Devout Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shield-of-the-devout",
+        "label": "Shield of the Devout",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "magic": true,
+        "ac": 15,
+        "stats": {
+          "str": 5
+        },
+        "hp": 25,
+        "mana": 25,
+        "source": "Shield of the Devout Quest reward (Gavel the Temperant, Temple of Solusek Ro) -- race restricted (\"ALL except BAR ELF TRL OGR IKS\") but the specific elf subtype excluded isn't disambiguated on eqlwiki.com, so `race` is left unset here rather than guessed"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:melixis",
+        "label": "Melixis",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shiny-rings",
+        "label": "Shiny Rings",
+        "type": "quest_group",
+        "description": "Melixis on Kerra Island trades three different Fungus Mutant drops (Upper Guk) for three different named rings -- Guk Bracket Mildew for the Copper Ring, Faerix Spores for the Silver Ring, Degenerated Guk Weed for the Gold Ring. Each turn-in gives a specific, predetermined reward; three independent sub-quests, no ordering between them.",
+        "minLevel": 25,
+        "wiki_title": "Shiny Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shiny-rings-copper-ring",
+        "label": "Shiny Rings: Copper Ring",
+        "type": "quest",
+        "minLevel": 25,
+        "description": "Turn in Guk Bracket Mildew (drops from a Fungus Mutant in Upper Guk) to Melixis on Kerra Island for the Copper Ring (Ring of Opolla).",
+        "steps": [
+          "Kill a Fungus Mutant in Upper Guk for Guk Bracket Mildew",
+          "Turn it in to Melixis on Kerra Island"
+        ],
+        "wiki_title": "Shiny Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:copper-ring-ring-of-opolla",
+        "label": "Copper Ring (Ring of Opolla)",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "stats": {
+          "sta": 1,
+          "cha": -1
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Shiny Rings: Copper Ring reward (Melixis, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shiny-rings-silver-ring",
+        "label": "Shiny Rings: Silver Ring",
+        "type": "quest",
+        "minLevel": 25,
+        "description": "Turn in Faerix Spores (drops from a Fungus Mutant in Upper Guk) to Melixis on Kerra Island for the Silver Ring (Ring of Opolla).",
+        "steps": [
+          "Kill a Fungus Mutant in Upper Guk for Faerix Spores",
+          "Turn it in to Melixis on Kerra Island"
+        ],
+        "wiki_title": "Shiny Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silver-ring-ring-of-opolla",
+        "label": "Silver Ring (Ring of Opolla)",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "stats": {
+          "wis": 1,
+          "cha": -1
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Shiny Rings: Silver Ring reward (Melixis, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shiny-rings-gold-ring",
+        "label": "Shiny Rings: Gold Ring",
+        "type": "quest",
+        "minLevel": 25,
+        "description": "Turn in Degenerated Guk Weed (drops from a Fungus Mutant in Upper Guk) to Melixis on Kerra Island for the Gold Ring (Ring of Opolla).",
+        "steps": [
+          "Kill a Fungus Mutant in Upper Guk for Degenerated Guk Weed",
+          "Turn it in to Melixis on Kerra Island"
+        ],
+        "wiki_title": "Shiny Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gold-ring-ring-of-opolla",
+        "label": "Gold Ring (Ring of Opolla)",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "stats": {
+          "dex": 1,
+          "cha": -1
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Shiny Rings: Gold Ring reward (Melixis, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-hole:kejar-the-mighty",
+        "label": "Kejar the Mighty",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shiny-robe-of-the-underfoot-quest",
+        "label": "Shiny Robe of the Underfoot Quest",
+        "type": "quest",
+        "minLevel": 45,
+        "description": "Kejar the Mighty in The Hole (must be charmed to turn in) trades a Shining Metallic Robe (rare drop from a ghoul arch magi in Lower Guk's dead side) for a random reward: the common Shiny Hunk of Metal, or the rare Shiny Robe of the Underfoot.",
+        "steps": [
+          "Kill a ghoul arch magi in Lower Guk's dead side for a Shining Metallic Robe",
+          "Charm Kejar the Mighty in The Hole and turn in the robe for a random reward"
+        ],
+        "wiki_title": "Shiny Robe of the Underfoot Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shiny-hunk-of-metal",
+        "label": "Shiny Hunk of Metal",
+        "type": "item",
+        "weight": 2,
+        "size": "Small",
+        "source": "Shiny Robe of the Underfoot Quest common random reward (Kejar the Mighty, The Hole) -- no combat stats, wiki notes it as \"completely useless\""
+      }
+    },
+    {
+      "data": {
+        "id": "item:shiny-robe-of-the-underfoot",
+        "label": "Shiny Robe of the Underfoot",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "str": 3,
+          "int": 7
+        },
+        "mana": 30,
+        "resists": {
+          "fire": 10,
+          "cold": 10,
+          "magic": 10
+        },
+        "weight": 3.5,
+        "size": "Medium",
+        "effect": "Focus: Spell Haste II",
+        "source": "Shiny Robe of the Underfoot Quest rare random reward (Kejar the Mighty, The Hole)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin-palace:shondo-billin",
+        "label": "Shondo Billin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shondo-and-the-tonic",
+        "label": "Shondo and the Tonic",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Shondo Billin in Erudin Palace asks for a Vasty Deep Ale; giving him one grants faction and experience.",
+        "steps": [
+          "Obtain a Vasty Deep Ale",
+          "Give it to Shondo Billin in Erudin Palace"
+        ],
+        "wiki_title": "Shondo and the Tonic"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shovel-of-ponz-quest",
+        "label": "Shovel Of Ponz Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Vira in the Temple of Solusek Ro trades a Ruby (bought from a jewelry merchant), a Gargoyle Eye (drops from gargoyles), a Shovel (drops from magicians in Najena or alligators in Temple of Cazic Thule), and Hill Giant Toes (drop from hill giants) for the Shovel of Ponz.",
+        "minLevel": 33,
+        "steps": [
+          "Buy a Ruby from a jewelry merchant",
+          "Kill a gargoyle for a Gargoyle Eye",
+          "Kill a magician in Najena, or an alligator in Temple of Cazic Thule, for a Shovel",
+          "Kill a hill giant for Hill Giant Toes",
+          "Turn in all four items to Vira in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Shovel Of Ponz Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shovel-of-ponz",
+        "label": "Shovel of Ponz",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "dark elf",
+          "gnome"
+        ],
+        "skill": "1H Blunt",
+        "damage": 6,
+        "delay": 25,
+        "magic": true,
+        "stats": {
+          "str": 3,
+          "int": 2
+        },
+        "weight": 3.5,
+        "size": "Large",
+        "effect": "Focus: Minion of Earth; Reclaim Energy (instant cast) at Level 20",
+        "source": "Shovel Of Ponz Quest reward (Vira, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:nojas-blackfist",
+        "label": "Nojas Blackfist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sifaye-abominations",
+        "label": "Sifaye Abominations",
+        "type": "quest",
+        "minLevel": 50,
+        "description": "Nojas Blackfist in Kael Drakkel trades a Wing of a Sifaye Knight (rare drop, not the common \"A Sifaye Wing\") plus three heads from Sifaye Thanes and Troubadours for the Silver Dragon Tattoo.",
+        "steps": [
+          "Kill a Sifaye Knight for a rare Wing of a Sifaye Knight (not the common wing drop)",
+          "Kill three Sifaye Thanes or Troubadours for their heads",
+          "Turn in the wing and three heads to Nojas Blackfist in Kael Drakkel"
+        ],
+        "wiki_title": "Sifaye Abominations"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silver-dragon-tattoo",
+        "label": "Silver Dragon Tattoo",
+        "type": "item",
+        "slots": [
+          "Face",
+          "Shoulders",
+          "Arms",
+          "Wrist"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 2,
+        "stats": {
+          "str": 4,
+          "wis": 4
+        },
+        "weight": 0.1,
+        "size": "Small",
+        "source": "Sifaye Abominations reward (Nojas Blackfist, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:loveal-snez",
+        "label": "Loveal S`Nez",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sir-lindeals-testimony",
+        "label": "Sir Lindeal's Testimony",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "shadow knight",
+          "necromancer"
+        ],
+        "description": "Loveal S`Nez in Neriak 3rd Gate sends players to slay Sir Lindeal in Lavastorm Mountains and retrieve his Testimony, for the Cloak of the Undead Eye. Requires at least dubious faction with Loveal S`Nez -- indifferent or worse fails the turn-in.",
+        "minLevel": 15,
+        "steps": [
+          "Speak with Loveal S`Nez in Neriak 3rd Gate",
+          "Slay Sir Lindeal in Lavastorm Mountains",
+          "Loot his Testimony and return it to Loveal S`Nez"
+        ],
+        "wiki_title": "Sir Lindeal's Testimony"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cloak-of-the-undead-eye",
+        "label": "Cloak of the Undead Eye",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "cleric",
+          "shadow knight",
+          "necromancer"
+        ],
+        "race": [
+          "dark elf"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 4,
+        "weight": 3.5,
+        "size": "Medium",
+        "effect": "Invisibility versus Undead (2 charges, instant cast)",
+        "source": "Sir Lindeal's Testimony reward (Loveal S`Nez, Neriak 3rd Gate)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:eastern-karana:sir-morgan",
+        "label": "Sir Morgan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sir-morgans-armor",
+        "label": "Sir Morgan's Armor",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Sir Morgan in the Eastern Plains of Karana trades 5 gold for a random piece of patchwork or tattered gear he says he \"found lying on the highway to Highkeep Hold.\" eqlwiki.com lists the pool as: Patchwork Cloak, Patchwork Boots, Rusty Weapons, Silver Earring, Bloodstone, Halfling Knife, a 1st level spell scroll, Bronze Dagger, Belt Pouch, Damask Cap, Mountain Lion Cape, Highkeep Flask, Snakeskin Mask, and Drom's Champagne -- several of those (\"Rusty Weapons\", \"a 1st level spell scroll\") are generic categories rather than single named items, so no individual `rewards` edges are modeled for this pool.",
+        "steps": [
+          "Give Sir Morgan 5 gold",
+          "Receive a random piece of patchwork/tattered gear"
+        ],
+        "wiki_title": "Sir Morgan's Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:skunk-hunting",
+        "label": "Skunk Hunting",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "shaman",
+          "wizard"
+        ],
+        "description": "Nultal Malfoot in North Kaladim trades 4 Skunk Scent Glands (from a large skunk in Butcherblock Mountains) for a random spell scroll (Cure Poison, Divine Aura, Fear, Flash of Light, Furor, Gate, Holy Armor, Lull, or Stun), faction, coin, and experience. Requires Amiable faction with Clerics of Underfoot.",
+        "minLevel": 2,
+        "steps": [
+          "Kill a large skunk in Butcherblock Mountains for 4 Skunk Scent Glands",
+          "Turn them in to Nultal Malfoot in North Kaladim"
+        ],
+        "wiki_title": "Skunk Hunting"
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:slaggaks-bounty",
+        "label": "Slaggak's Bounty",
+        "type": "quest_group",
+        "description": "Slaggak the Trainer in Kael Drakkel runs two independent turn-in tracks: \"For every four shard wurm fang you bring me, I am authorized to reward you with a pair of cerulean greaves\" and \"Every fourth ice wyvern stinger will grant you a pair of vambraces.\" Two independent sub-quests, no ordering between them. Velious-era content (Out of Era).",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "minLevel": 40,
+        "wiki_title": "Slaggak's Bounty"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:slaggaks-bounty-cerulean-greaves",
+        "label": "Slaggak's Bounty: Cerulean Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "minLevel": 40,
+        "description": "Turn in 4x Shard Wurm Fang (Cobalt Scar/Great Divide) to Slaggak the Trainer in Kael Drakkel for a pair of Cerulean Greaves.",
+        "steps": [
+          "Kill shard wurms in Cobalt Scar or Great Divide for 4 Shard Wurm Fang",
+          "Turn them in to Slaggak the Trainer"
+        ],
+        "wiki_title": "Slaggak's Bounty"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cerulean-greaves",
+        "label": "Cerulean Greaves",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "dex": 1,
+          "agi": 1
+        },
+        "source": "Slaggak's Bounty: Cerulean Greaves reward (Slaggak the Trainer, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:slaggaks-bounty-cerulean-vambraces",
+        "label": "Slaggak's Bounty: Cerulean Vambraces",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "minLevel": 40,
+        "description": "Turn in 4x Ice Wyvern Stinger (Cobalt Scar/Great Divide) to Slaggak the Trainer in Kael Drakkel for a pair of Cerulean Vambraces.",
+        "steps": [
+          "Kill ice wyverns in Cobalt Scar or Great Divide for 4 Ice Wyvern Stinger",
+          "Turn them in to Slaggak the Trainer"
+        ],
+        "wiki_title": "Slaggak's Bounty"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cerulean-vambraces",
+        "label": "Cerulean Vambraces",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "str": 2
+        },
+        "source": "Slaggak's Bounty: Cerulean Vambraces reward (Slaggak the Trainer, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:crushbone:retlon-brenclog",
+        "label": "Retlon Brenclog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:slave-keys",
+        "label": "Slave Keys",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Retlon Brenclog and the enslaved dwarves/elves in Crushbone trade Shackle Keys 15-21 (looted from Orc Slavers) for coin and experience. Must be at least dubious faction to receive rewards.",
+        "steps": [
+          "Kill Orc Slavers in Crushbone for Shackle Keys 15-21",
+          "Turn each key in to the matching enslaved NPC"
+        ],
+        "wiki_title": "Slave Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:snake-fang-necklace-quest",
+        "label": "Snake Fang Necklace Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Menkes Tabolet in South Qeynos trades 3 snake fangs and 2 gold for the Snake Fang Necklace.",
+        "steps": [
+          "Gather 3 snake fangs",
+          "Give them plus 2 gold to Menkes Tabolet in South Qeynos"
+        ],
+        "wiki_title": "Snake Fang Necklace Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:snake-fang-necklace",
+        "label": "Snake Fang Necklace",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "resists": {
+          "poison": 2
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Snake Fang Necklace Quest reward (Menkes Tabolet, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:sneed-galliway",
+        "label": "Sneed Galliway",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sneeds-rat-infestation",
+        "label": "Sneed's Rat Infestation",
+        "type": "quest",
+        "minLevel": 2,
+        "description": "Sneed Galliway in North Qeynos sends players to kill a mangy rat and bring back its head, for a random minor item (Dagger, Water Flask, or Torch), faction, coin, and experience.",
+        "steps": [
+          "Kill a mangy rat",
+          "Bring its head to Sneed Galliway in North Qeynos"
+        ],
+        "wiki_title": "Sneed's Rat Infestation"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dagger",
+        "label": "Dagger",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior",
+          "wizard"
+        ],
+        "skill": "Piercing",
+        "damage": 3,
+        "delay": 20,
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Sneed's Rat Infestation random reward (Sneed Galliway, North Qeynos); also sold by merchants across many zones"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:soil-of-underfoot",
+        "label": "Soil of Underfoot",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 35,
+        "description": "Priestess Ghalea in North Kaladim trades four portions of Fairy Dust (from faeries in Greater/Lesser Faydark) for a pouch of Soil of Underfoot, plus faction, gold, and platinum. Requires high amiable faction with Clerics of Underfoot (confirmed at 453, failed at 403).",
+        "steps": [
+          "Gather 4 unstacked Fairy Dust from faeries in Greater or Lesser Faydark",
+          "Turn them in to Priestess Ghalea in North Kaladim"
+        ],
+        "wiki_title": "Soil of Underfoot"
+      }
+    },
+    {
+      "data": {
+        "id": "item:soil-of-underfoot",
+        "label": "Soil of Underfoot",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Tiny",
+        "source": "Soil of Underfoot reward (Priestess Ghalea, North Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:soluseks-flower",
+        "label": "Solusek's Flower",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Ssynthi in Mistmoore Castle trades a flower (ground spawn atop a coffin inside a tomb, 1-minute respawn) for the Scepter of Sorrow. Avoid stepping to either side of the coffin -- pit traps drop you into Mistmoore's basement.",
+        "steps": [
+          "Pick the flower spawn atop the coffin in the tomb",
+          "Turn it in to Ssynthi in Mistmoore Castle"
+        ],
+        "wiki_title": "Solusek's Flower"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scepter-of-sorrow",
+        "label": "Scepter of Sorrow",
+        "type": "item",
+        "classes": [
+          "necromancer"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "dark elf",
+          "gnome",
+          "iksar"
+        ],
+        "weight": 0.1,
+        "size": "Small",
+        "source": "Solusek's Flower reward (Ssynthi, Mistmoore Castle)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:solvedi-aldeberan",
+        "label": "Solvedi Aldeberan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:solvedi-scimitar-quest",
+        "label": "Solvedi Scimitar Quest",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Solvedi Aldeberan in Rathe Mountains trades a Giant Laceless Sandal (from Timbur the Tiny, Northern Karana) and a Lionhide Backpack (from Groi Gutblade, Southern Karana) for the Solvedi Scimitar. Must hail him and follow the full dialogue before turning in items, or they're lost with no reward.",
+        "minLevel": 25,
+        "steps": [
+          "Kill Timbur the Tiny in Northern Karana for a Giant Laceless Sandal",
+          "Kill Groi Gutblade in Southern Karana for a Lionhide Backpack",
+          "Hail Solvedi Aldeberan in Rathe Mountains and follow his dialogue before turning in both items"
+        ],
+        "wiki_title": "Solvedi Scimitar Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:solvedi-scimitar",
+        "label": "Solvedi Scimitar",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "race": [
+          "human",
+          "wood elf",
+          "half elf",
+          "halfling"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 22,
+        "magic": true,
+        "weight": 3,
+        "size": "Medium",
+        "source": "Solvedi Scimitar Quest reward (Solvedi Aldeberan, Rathe Mountains) -- wiki's infobox race line reads \"HUM ELF HEF HFL\"; resolved to Wood Elf since it's the only elf subtype eligible for Druid"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:master-bain",
+        "label": "Master Bain",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sparring-armor",
+        "label": "Sparring Armor",
+        "type": "quest",
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "minLevel": 4,
+        "description": "Master Bain in East Cabilis fills a Monk Training Bag with 4 Leech Husks (from swamp leeches in the Swamp of No Hope) and 3 Piles of Granite Pebbles (from completing the Granite Pebbles quest three times), then trades the filled bag for a random piece of Sparring Armor (one of 10 named pieces) plus faction and 1 gold. Can be done at indifferent faction via sneak. Most pieces are Iksar-only; the Sparring Headgear is also usable by Humans.",
+        "steps": [
+          "Gather 4 Leech Husks from swamp leeches in the Swamp of No Hope",
+          "Complete the Granite Pebbles quest three times for 3 Piles of Granite Pebbles",
+          "Fill a Monk Training Bag with both and hand it to Master Bain for a random Sparring Armor piece"
+        ],
+        "wiki_title": "Sparring Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-arm-guards",
+        "label": "Sparring Arm Guards",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 3,
+        "stats": {
+          "sta": 2
+        },
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-clogs",
+        "label": "Sparring Clogs",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 3,
+        "stats": {
+          "agi": 2
+        },
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-collar",
+        "label": "Sparring Collar",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 2,
+        "resists": {
+          "cold": 2
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-facemask",
+        "label": "Sparring Facemask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 2,
+        "resists": {
+          "disease": 3
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-grappler-gloves",
+        "label": "Sparring Grappler Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 3,
+        "resists": {
+          "poison": 3
+        },
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-harness",
+        "label": "Sparring Harness",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 5,
+        "hp": 2,
+        "resists": {
+          "fire": 3
+        },
+        "weight": 1,
+        "size": "Medium",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-headgear",
+        "label": "Sparring Headgear",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "human",
+          "iksar"
+        ],
+        "ac": 3,
+        "stats": {
+          "agi": 1
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-rib-pad",
+        "label": "Sparring Rib Pad",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": 1
+        },
+        "hp": 5,
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-shin-guards",
+        "label": "Sparring Shin Guards",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 4,
+        "stats": {
+          "cha": 2
+        },
+        "resists": {
+          "cold": 2
+        },
+        "weight": 0.7,
+        "size": "Medium",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sparring-shoulder-pads",
+        "label": "Sparring Shoulder Pads",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 2,
+        "stats": {
+          "dex": 1
+        },
+        "hp": 2,
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Sparring Armor random reward (Master Bain, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:toolset-delivery",
+        "label": "Toolset Delivery",
+        "type": "quest",
+        "minLevel": 50,
+        "description": "Wenglawks Kkeak in Kael Drakkel trades a Coldain Toolset (from Kellek Felhammer) delivered to Sojan the Sleepless in Iceclad Ocean for the Engraved Bone Pauldrons. First of three optional, independently-startable quests (Spear Delivery, Mechanical Net Delivery); the wiki notes each can be skipped and any of the three started on its own.",
+        "steps": [
+          "Trade a voucher to Kellek Felhammer for a Coldain Toolset",
+          "Deliver the toolset to Sojan the Sleepless in Iceclad Ocean"
+        ],
+        "wiki_title": "Toolset Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "item:engraved-bone-pauldrons",
+        "label": "Engraved Bone Pauldrons",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "dex": 3,
+          "agi": 5,
+          "cha": -20
+        },
+        "source": "Toolset Delivery reward (Wenglawks Kkeak, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:spear-delivery",
+        "label": "Spear Delivery",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 45,
+        "description": "Wenglawks Kkeak in Kael Drakkel trades a Hunting Spear (from Kellek Felhammer) and a Giant Shard Wurm Tooth (from an angry shardwurm, Cobalt Scar/Great Divide) for the Bracer of Midnight. Second of three optional, independently-startable quests (Toolset Delivery, Mechanical Net Delivery).",
+        "steps": [
+          "Trade a voucher to Kellek Felhammer for a Hunting Spear",
+          "Kill an angry shardwurm for a Giant Shard Wurm Tooth",
+          "Turn in both items to Wenglawks Kkeak in Kael Drakkel"
+        ],
+        "wiki_title": "Spear Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracer-of-midnight",
+        "label": "Bracer of Midnight",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 5,
+          "agi": 5
+        },
+        "hp": 10,
+        "weight": 0.5,
+        "size": "Medium",
+        "source": "Spear Delivery reward (Wenglawks Kkeak, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:spider-legs-quest",
+        "label": "Spider Legs Quest",
+        "type": "quest",
+        "minLevel": 45,
+        "description": "Sentry Kale in Skyshrine trades 4 Velium Spider Legs (from invisible crystal spiders) for a reward of 0-4 platinum plus, not always, the Ring of the Chameleon.",
+        "steps": [
+          "Kill four invisible crystal spiders in Skyshrine for 4 Velium Spider Legs",
+          "Turn them in to Sentry Kale"
+        ],
+        "wiki_title": "Spider Legs Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ring-of-the-chameleon",
+        "label": "Ring of the Chameleon",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "magic": true,
+        "ac": 3,
+        "stats": {
+          "dex": 4,
+          "wis": 4,
+          "int": 4
+        },
+        "weight": 0,
+        "size": "Tiny",
+        "source": "Spider Legs Quest reward (Sentry Kale, Skyshrine) -- not a guaranteed drop each completion"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:spiderling-silks",
+        "label": "Spiderling Silks",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "description": "Sylia Windlehands at the Songweavers Guild Hall in Kelethin trades 4 unstacked Spiderling Silks (from a widow hatchling in Greater Faydark) for a Hand Drum, faction, and 1 gold. Requires Amiable or better faction with Songweavers.",
+        "steps": [
+          "Kill a widow hatchling in Greater Faydark for 4 unstacked Spiderling Silks",
+          "Turn them in to Sylia Windlehands in Kelethin"
+        ],
+        "wiki_title": "Spiderling Silks"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hand-drum",
+        "label": "Hand Drum",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "bard"
+        ],
+        "weight": 0.5,
+        "size": "Small",
+        "effect": "Percussion Resonance: 8",
+        "source": "Spiderling Silks reward (Sylia Windlehands, Kelethin)"
+      }
     }
   ],
   "edges": [
@@ -177704,6 +179089,1622 @@
         "target": "spell:torrent-of-poison",
         "type": "rewards",
         "randomGroup": "shaman-spells-good-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12498",
+        "source": "npc:north-freeport:theron-rolius",
+        "target": "quest:shark-hunting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12499",
+        "source": "quest:shark-hunting",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12500",
+        "source": "quest:shark-hunting",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12501",
+        "source": "quest:shark-hunting",
+        "target": "item:sharkskin-shield",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12502",
+        "source": "npc:greater-faydark:gallin-woodwind",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12503",
+        "source": "npc:greater-faydark:gallin-woodwind",
+        "target": "quest:shark-meat-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12504",
+        "source": "quest:shark-meat-quest",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12505",
+        "source": "quest:shark-meat-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12506",
+        "source": "quest:shark-meat-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12507",
+        "source": "quest:shark-meat-quest",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12508",
+        "source": "quest:shark-meat-quest",
+        "target": "faction:merchants-of-felwithe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12509",
+        "source": "quest:shark-meat-quest",
+        "target": "faction:kelethin-merchants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12510",
+        "source": "quest:shark-meat-quest",
+        "target": "item:cast-iron-rapier",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12511",
+        "source": "npc:east-cabilis:trooper-shestar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12512",
+        "source": "npc:east-cabilis:trooper-shestar",
+        "target": "quest:shestars-scaled-coif-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12513",
+        "source": "quest:shestars-scaled-coif-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12514",
+        "source": "quest:shestars-scaled-coif-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12515",
+        "source": "quest:shestars-scaled-coif-quest",
+        "target": "item:shestars-scaled-coif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12516",
+        "source": "npc:temple-of-solusek-ro:gavel-the-temperant",
+        "target": "quest:shield-of-the-devout-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12517",
+        "source": "quest:shield-of-the-devout-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12518",
+        "source": "quest:shield-of-the-devout-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12519",
+        "source": "quest:shield-of-the-devout-quest",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12520",
+        "source": "quest:shield-of-the-devout-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12521",
+        "source": "quest:shield-of-the-devout-quest",
+        "target": "item:shield-of-the-devout",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12522",
+        "source": "npc:kerra-island:melixis",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12523",
+        "source": "npc:kerra-island:melixis",
+        "target": "quest_group:shiny-rings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12524",
+        "source": "quest_group:shiny-rings",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12525",
+        "source": "quest_group:shiny-rings",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12526",
+        "source": "npc:kerra-island:melixis",
+        "target": "quest:shiny-rings-copper-ring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12527",
+        "source": "quest:shiny-rings-copper-ring",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12528",
+        "source": "quest:shiny-rings-copper-ring",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12529",
+        "source": "quest:shiny-rings-copper-ring",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12530",
+        "source": "quest:shiny-rings-copper-ring",
+        "target": "quest_group:shiny-rings",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12531",
+        "source": "quest:shiny-rings-copper-ring",
+        "target": "item:copper-ring-ring-of-opolla",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12532",
+        "source": "npc:kerra-island:melixis",
+        "target": "quest:shiny-rings-silver-ring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12533",
+        "source": "quest:shiny-rings-silver-ring",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12534",
+        "source": "quest:shiny-rings-silver-ring",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12535",
+        "source": "quest:shiny-rings-silver-ring",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12536",
+        "source": "quest:shiny-rings-silver-ring",
+        "target": "quest_group:shiny-rings",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12537",
+        "source": "quest:shiny-rings-silver-ring",
+        "target": "item:silver-ring-ring-of-opolla",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12538",
+        "source": "npc:kerra-island:melixis",
+        "target": "quest:shiny-rings-gold-ring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12539",
+        "source": "quest:shiny-rings-gold-ring",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12540",
+        "source": "quest:shiny-rings-gold-ring",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12541",
+        "source": "quest:shiny-rings-gold-ring",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12542",
+        "source": "quest:shiny-rings-gold-ring",
+        "target": "quest_group:shiny-rings",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12543",
+        "source": "quest:shiny-rings-gold-ring",
+        "target": "item:gold-ring-ring-of-opolla",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12544",
+        "source": "npc:the-hole:kejar-the-mighty",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12545",
+        "source": "npc:the-hole:kejar-the-mighty",
+        "target": "quest:shiny-robe-of-the-underfoot-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12546",
+        "source": "quest:shiny-robe-of-the-underfoot-quest",
+        "target": "zone:the-hole",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12547",
+        "source": "quest:shiny-robe-of-the-underfoot-quest",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12548",
+        "source": "quest:shiny-robe-of-the-underfoot-quest",
+        "target": "zone:lower-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12549",
+        "source": "quest:shiny-robe-of-the-underfoot-quest",
+        "target": "item:shiny-hunk-of-metal",
+        "type": "rewards",
+        "randomGroup": "shiny-robe-of-the-underfoot-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12550",
+        "source": "quest:shiny-robe-of-the-underfoot-quest",
+        "target": "item:shiny-robe-of-the-underfoot",
+        "type": "rewards",
+        "randomGroup": "shiny-robe-of-the-underfoot-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12551",
+        "source": "npc:erudin-palace:shondo-billin",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12552",
+        "source": "npc:erudin-palace:shondo-billin",
+        "target": "quest:shondo-and-the-tonic",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12553",
+        "source": "quest:shondo-and-the-tonic",
+        "target": "zone:erudin-palace",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12554",
+        "source": "quest:shondo-and-the-tonic",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12555",
+        "source": "quest:shondo-and-the-tonic",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12556",
+        "source": "quest:shondo-and-the-tonic",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12557",
+        "source": "quest:shondo-and-the-tonic",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12558",
+        "source": "npc:temple-of-solusek-ro:vira",
+        "target": "quest:shovel-of-ponz-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12559",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12560",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12561",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12562",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12563",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12564",
+        "source": "quest:shovel-of-ponz-quest",
+        "target": "item:shovel-of-ponz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12565",
+        "source": "npc:kael-drakkal:nojas-blackfist",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12566",
+        "source": "npc:kael-drakkal:nojas-blackfist",
+        "target": "quest:sifaye-abominations",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12567",
+        "source": "quest:sifaye-abominations",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12568",
+        "source": "quest:sifaye-abominations",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12569",
+        "source": "quest:sifaye-abominations",
+        "target": "item:silver-dragon-tattoo",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12570",
+        "source": "npc:neriak-3rd-gate:loveal-snez",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12571",
+        "source": "npc:neriak-3rd-gate:loveal-snez",
+        "target": "quest:sir-lindeals-testimony",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12572",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12573",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12574",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12575",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12576",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12577",
+        "source": "quest:sir-lindeals-testimony",
+        "target": "item:cloak-of-the-undead-eye",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12578",
+        "source": "npc:eastern-karana:sir-morgan",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12579",
+        "source": "npc:eastern-karana:sir-morgan",
+        "target": "quest:sir-morgans-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12580",
+        "source": "quest:sir-morgans-armor",
+        "target": "zone:eastern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12581",
+        "source": "quest:sir-morgans-armor",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12582",
+        "source": "npc:north-kaladim:nultal-malfoot",
+        "target": "quest:skunk-hunting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12583",
+        "source": "quest:skunk-hunting",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12584",
+        "source": "quest:skunk-hunting",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12585",
+        "source": "quest:skunk-hunting",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12586",
+        "source": "quest:skunk-hunting",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12587",
+        "source": "quest:skunk-hunting",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12588",
+        "source": "quest:skunk-hunting",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12589",
+        "source": "quest:skunk-hunting",
+        "target": "spell:cure-poison",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12590",
+        "source": "quest:skunk-hunting",
+        "target": "spell:divine-aura",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12591",
+        "source": "quest:skunk-hunting",
+        "target": "spell:fear",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12592",
+        "source": "quest:skunk-hunting",
+        "target": "spell:flash-of-light",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12593",
+        "source": "quest:skunk-hunting",
+        "target": "spell:furor",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12594",
+        "source": "quest:skunk-hunting",
+        "target": "spell:gate",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12595",
+        "source": "quest:skunk-hunting",
+        "target": "spell:holy-armor",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12596",
+        "source": "quest:skunk-hunting",
+        "target": "spell:lull",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12597",
+        "source": "quest:skunk-hunting",
+        "target": "spell:stun",
+        "type": "rewards",
+        "randomGroup": "skunk-hunting-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12598",
+        "source": "npc:kael-drakkal:slaggak-the-trainer",
+        "target": "quest_group:slaggaks-bounty",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12599",
+        "source": "quest_group:slaggaks-bounty",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12600",
+        "source": "quest_group:slaggaks-bounty",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12601",
+        "source": "quest_group:slaggaks-bounty",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12602",
+        "source": "npc:kael-drakkal:slaggak-the-trainer",
+        "target": "quest:slaggaks-bounty-cerulean-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12603",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12604",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12605",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12606",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12607",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "quest_group:slaggaks-bounty",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12608",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12609",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12610",
+        "source": "quest:slaggaks-bounty-cerulean-greaves",
+        "target": "item:cerulean-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12611",
+        "source": "npc:kael-drakkal:slaggak-the-trainer",
+        "target": "quest:slaggaks-bounty-cerulean-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12612",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12613",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12614",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12615",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12616",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "quest_group:slaggaks-bounty",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12617",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12618",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12619",
+        "source": "quest:slaggaks-bounty-cerulean-vambraces",
+        "target": "item:cerulean-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12620",
+        "source": "npc:crushbone:retlon-brenclog",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12621",
+        "source": "npc:crushbone:retlon-brenclog",
+        "target": "quest:slave-keys",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12622",
+        "source": "quest:slave-keys",
+        "target": "zone:crushbone",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12623",
+        "source": "quest:slave-keys",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12624",
+        "source": "npc:south-qeynos:menkes-tabolet",
+        "target": "quest:snake-fang-necklace-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12625",
+        "source": "quest:snake-fang-necklace-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12626",
+        "source": "quest:snake-fang-necklace-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12627",
+        "source": "quest:snake-fang-necklace-quest",
+        "target": "item:snake-fang-necklace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12628",
+        "source": "npc:north-qeynos:sneed-galliway",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12629",
+        "source": "npc:north-qeynos:sneed-galliway",
+        "target": "quest:sneeds-rat-infestation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12630",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12631",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12632",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12633",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12634",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12635",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12636",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "item:dagger",
+        "type": "rewards",
+        "randomGroup": "sneeds-rat-infestation-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12637",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "item:water-flask",
+        "type": "rewards",
+        "randomGroup": "sneeds-rat-infestation-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12638",
+        "source": "quest:sneeds-rat-infestation",
+        "target": "item:torch",
+        "type": "rewards",
+        "randomGroup": "sneeds-rat-infestation-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12639",
+        "source": "npc:north-kaladim:priestess-ghalea",
+        "target": "quest:soil-of-underfoot",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12640",
+        "source": "quest:soil-of-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12641",
+        "source": "quest:soil-of-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12642",
+        "source": "quest:soil-of-underfoot",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12643",
+        "source": "quest:soil-of-underfoot",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12644",
+        "source": "quest:soil-of-underfoot",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12645",
+        "source": "quest:soil-of-underfoot",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12646",
+        "source": "quest:soil-of-underfoot",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12647",
+        "source": "quest:soil-of-underfoot",
+        "target": "item:soil-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12648",
+        "source": "npc:mistmoore-castle:ssynthi",
+        "target": "quest:soluseks-flower",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12649",
+        "source": "quest:soluseks-flower",
+        "target": "zone:mistmoore-castle",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12650",
+        "source": "quest:soluseks-flower",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12651",
+        "source": "quest:soluseks-flower",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12652",
+        "source": "quest:soluseks-flower",
+        "target": "item:scepter-of-sorrow",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12653",
+        "source": "npc:rathe-mountains:solvedi-aldeberan",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12654",
+        "source": "npc:rathe-mountains:solvedi-aldeberan",
+        "target": "quest:solvedi-scimitar-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12655",
+        "source": "quest:solvedi-scimitar-quest",
+        "target": "zone:rathe-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12656",
+        "source": "quest:solvedi-scimitar-quest",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12657",
+        "source": "quest:solvedi-scimitar-quest",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12658",
+        "source": "quest:solvedi-scimitar-quest",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12659",
+        "source": "quest:solvedi-scimitar-quest",
+        "target": "item:solvedi-scimitar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12660",
+        "source": "npc:east-cabilis:master-bain",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12661",
+        "source": "npc:east-cabilis:master-bain",
+        "target": "quest:sparring-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12662",
+        "source": "quest:sparring-armor",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12663",
+        "source": "quest:sparring-armor",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12664",
+        "source": "quest:sparring-armor",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12665",
+        "source": "quest:sparring-armor",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12666",
+        "source": "quest:sparring-armor",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12667",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-arm-guards",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12668",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-clogs",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12669",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-collar",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12670",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-facemask",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12671",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-grappler-gloves",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12672",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-harness",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12673",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-headgear",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12674",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-rib-pad",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12675",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-shin-guards",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12676",
+        "source": "quest:sparring-armor",
+        "target": "item:sparring-shoulder-pads",
+        "type": "rewards",
+        "randomGroup": "sparring-armor-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12677",
+        "source": "npc:kael-drakkal:wenglawks-kkeak",
+        "target": "quest:toolset-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12678",
+        "source": "quest:toolset-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12679",
+        "source": "quest:toolset-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12680",
+        "source": "quest:toolset-delivery",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12681",
+        "source": "quest:toolset-delivery",
+        "target": "item:engraved-bone-pauldrons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12682",
+        "source": "npc:kael-drakkal:wenglawks-kkeak",
+        "target": "quest:spear-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12683",
+        "source": "quest:spear-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12684",
+        "source": "quest:spear-delivery",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12685",
+        "source": "quest:spear-delivery",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12686",
+        "source": "quest:spear-delivery",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12687",
+        "source": "quest:spear-delivery",
+        "target": "item:bracer-of-midnight",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12688",
+        "source": "npc:skyshrine:sentry-kale",
+        "target": "quest:spider-legs-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12689",
+        "source": "quest:spider-legs-quest",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12690",
+        "source": "quest:spider-legs-quest",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12691",
+        "source": "quest:spider-legs-quest",
+        "target": "item:ring-of-the-chameleon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12692",
+        "source": "npc:greater-faydark:sylia-windlehands",
+        "target": "quest:spiderling-silks",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12693",
+        "source": "quest:spiderling-silks",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12694",
+        "source": "quest:spiderling-silks",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12695",
+        "source": "quest:spiderling-silks",
+        "target": "faction:songweavers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12696",
+        "source": "quest:spiderling-silks",
+        "target": "item:hand-drum",
+        "type": "rewards"
       }
     }
   ]
