@@ -31,9 +31,9 @@ export function loadGraph(migrationDir: string) {
     );
   }
 
-  function addEdge(source: string, target: string, type: string) {
+  function addEdge(source: string, target: string, type: string, attrs?: Record<string, unknown>) {
     if (hasEdge(source, target, type)) return;
-    graph.edges.push({ data: { id: `e-${type}-${graph.edges.length + 1}`, source, target, type } });
+    graph.edges.push({ data: { id: `e-${type}-${graph.edges.length + 1}`, source, target, type, ...attrs } });
   }
 
   function slug(label: string): string {

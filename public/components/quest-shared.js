@@ -33,6 +33,22 @@ export const QUEST_CARD_CSS = `
 
 .quest-group-note { font-size: 11px; color: var(--ink-muted); font-style: italic; }
 
+/* Rewards' own four sub-sections (Items/Currency/Experience/Faction,
+   decisions/quest-reward-modeling.md) -- a lighter, unbordered echo of
+   .quest-section-label one level down, since these live inside a section
+   that already has the bordered heading. */
+.quest-reward-subsection { margin-top: 10px; }
+.quest-reward-subsection:first-child { margin-top: 0; }
+.quest-reward-subsection-label {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--parch-ink-soft); font-weight: 700; margin-bottom: 5px;
+}
+/* A random-choice pool (randomGroup) reads as a distinct callout, not just
+   another badge row -- the italic caption is the only thing telling the
+   player "pick one of these" instead of "you get all of these". */
+.quest-reward-random-group { margin-top: 8px; }
+.quest-reward-random-caption { font-size: 11px; font-style: italic; color: var(--parch-ink-soft); margin-bottom: 5px; }
+
 .quest-starts-in { display: flex; align-items: center; gap: 8px; }
 .quest-waypoint {
   width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
@@ -258,14 +274,73 @@ export function spellFinderPinUrl(spell, quest) {
   return `index.html?${params}`;
 }
 
+function itemChip(item) {
+  return `<span class="spell-badge item-badge" data-item-id="${item.id}">${item.label}</span>`;
+}
+
+function spellChip(spell, quest) {
+  return `<a class="spell-badge spell-badge-reward" href="${spellFinderPinUrl(spell, quest)}">${spell.label}</a>`;
+}
+
+// A reward subsection (Items/Spells/Currency/Experience/Faction, decisions/
+// quest-reward-modeling.md) renders nothing when it has no content, same
+// "no new empty visual element" contract as section() itself -- most quests
+// have zero of at least one bucket (there's no coin data modeled at all yet,
+// see that decision doc, and most quests reward no spell at all), so this
+// keeps a Rewards block from growing five empty labeled slots.
+function rewardSubsection(label, bodyHtml) {
+  return bodyHtml ? `<div class="quest-reward-subsection"><div class="quest-reward-subsection-label">${label}</div>${bodyHtml}</div>` : "";
+}
+
+// Shared by the Items and Spells subsections: guaranteed rewards (no
+// randomGroup) render as one flat chip row; each distinct randomGroup value
+// (decisions/quest-reward-modeling.md) gets its own "one randomly chosen...
+// from below" block instead of being flattened into the guaranteed row --
+// that distinction is the whole point of the attribute, since a random pool
+// isn't "you get all of these." Preserves first-seen group order. Items and
+// Spells are rendered as two independent subsections (not folded into one),
+// so a random pool is assumed to be all-item or all-spell in practice --
+// the one real quest with a mixed pool hasn't come up yet; if it does, the
+// group's item members and spell members would render as two same-captioned
+// blocks in their respective subsections rather than one combined block.
+// The random-group caption names no specific kind ("reward", not "item" or
+// "spell") since the same wording is shared by both subsections below --
+// only the chips underneath say what the reward actually is.
+const RANDOM_GROUP_CAPTION = "One randomly chosen reward from below:";
+
+function rewardBucketBody(rewards, toChip) {
+  const guaranteed = rewards.filter((r) => !r.randomGroup);
+  const randomGroups = new Map();
+  for (const r of rewards) {
+    if (!r.randomGroup) continue;
+    if (!randomGroups.has(r.randomGroup)) randomGroups.set(r.randomGroup, []);
+    randomGroups.get(r.randomGroup).push(r);
+  }
+
+  const guaranteedRow = guaranteed.length ? `<div class="spell-badges">${guaranteed.map(toChip).join("")}</div>` : "";
+  const randomBlocks = [...randomGroups.values()]
+    .map((group) => `<div class="quest-reward-random-group"><div class="quest-reward-random-caption">${RANDOM_GROUP_CAPTION}</div><div class="spell-badges">${group.map(toChip).join("")}</div></div>`)
+    .join("");
+
+  return guaranteedRow + randomBlocks;
+}
+
 export function rewardsBody(quest) {
-  const chips = [
-    quest.total_experience ? `<span class="spell-badge xp-badge" title="Experience reward">${quest.total_experience} XP</span>` : "",
-    ...quest.itemRewards.map((i) => `<span class="spell-badge item-badge" data-item-id="${i.id}">${i.label}</span>`),
-    ...quest.spellRewards.map((s) => `<a class="spell-badge spell-badge-reward" href="${spellFinderPinUrl(s, quest)}">${s.label}</a>`),
-    ...quest.factionRewards.map((f) => `<span class="spell-badge faction-badge-reward" title="Faction reward: ${f.label}">${f.label}</span>`),
+  const itemsBody = rewardBucketBody(quest.itemRewards, itemChip);
+  const spellsBody = rewardBucketBody(quest.spellRewards, (s) => spellChip(s, quest));
+  const currencyBody = ""; // no coin data modeled yet -- decisions/quest-reward-modeling.md
+  const experienceBody = quest.total_experience ? `<div class="spell-badges"><span class="spell-badge xp-badge" title="Experience reward">${quest.total_experience} XP</span></div>` : "";
+  const factionBody = quest.factionRewards.length
+    ? `<div class="spell-badges">${quest.factionRewards.map((f) => `<span class="spell-badge faction-badge-reward" title="Faction reward: ${f.label}">${f.label}</span>`).join("")}</div>`
+    : "";
+
+  return [
+    rewardSubsection("Items", itemsBody),
+    rewardSubsection("Spells", spellsBody),
+    rewardSubsection("Currency", currencyBody),
+    rewardSubsection("Experience", experienceBody),
+    rewardSubsection("Faction", factionBody),
   ].join("");
-  return chips ? `<div class="spell-badges">${chips}</div>` : "";
 }
 
 // Wires item-reward-chip hover -> <detail-tooltip>, shared by quest-card.js

@@ -68529,7 +68529,7 @@
         "id": "quest:rathmanas-traveling-offer",
         "label": "Rathmana's Traveling Offer",
         "type": "quest",
-        "description": "Rathmana Allin in the Southern Desert of Ro offers a magical gamble: pay 30 gold and receive one random spell scroll from a rotating pool (options seen include Quickness, Lightning Bolt, Lifedraw, Charm, and Column of Fire) or, failing that, a Rotted Illegible Scroll -- no exchanges. Improves Temple Of Sol Ro faction. The specific spell is a random draw, not a guaranteed reward, so it isn't modeled as a graph reward edge.",
+        "description": "Rathmana Allin in the Southern Desert of Ro offers a magical gamble: pay 30 gold for one random spell scroll, or, failing that, a Rotted Illegible Scroll -- no exchanges. Confirmed spells in the pool include Quickness, Lightning Bolt, Lifedraw, Charm, and Column of Fire, though the wiki notes there are several others not individually confirmed. Improves Temple Of Sol Ro faction.",
         "steps": [
           "Hail Rathmana Allin and indicate you are traveling",
           "Pay 30 gold for a random spell scroll"
@@ -128434,7 +128434,8 @@
         "id": "e-rewards-7474",
         "source": "quest:a-job-for-nanrum",
         "target": "item:brass-earring",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
       }
     },
     {
@@ -128442,7 +128443,8 @@
         "id": "e-rewards-7475",
         "source": "quest:a-job-for-nanrum",
         "target": "item:silver-earring",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
       }
     },
     {
@@ -128570,7 +128572,8 @@
         "id": "e-rewards-7491",
         "source": "quest:bug-collection",
         "target": "item:bracelet-of-beetlekind",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bug-collection-drop"
       }
     },
     {
@@ -128578,7 +128581,8 @@
         "id": "e-rewards-7492",
         "source": "quest:bug-collection",
         "target": "item:potion-of-poison-warding",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bug-collection-drop"
       }
     },
     {
@@ -128586,7 +128590,8 @@
         "id": "e-rewards-7493",
         "source": "quest:bug-collection",
         "target": "item:silver-bracelet",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bug-collection-drop"
       }
     },
     {
@@ -128594,7 +128599,8 @@
         "id": "e-rewards-7494",
         "source": "quest:bug-collection",
         "target": "item:spider-venom",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bug-collection-drop"
       }
     },
     {
@@ -128602,7 +128608,8 @@
         "id": "e-rewards-7495",
         "source": "quest:bug-collection",
         "target": "item:stalking-probe",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bug-collection-drop"
       }
     },
     {
@@ -129122,7 +129129,8 @@
         "id": "e-rewards-7560",
         "source": "quest:aviak-chicks",
         "target": "item:small-patchwork-boots",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "aviak-chicks-drop"
       }
     },
     {
@@ -129130,7 +129138,8 @@
         "id": "e-rewards-7561",
         "source": "quest:aviak-chicks",
         "target": "item:small-patchwork-cloak",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "aviak-chicks-drop"
       }
     },
     {
@@ -129138,7 +129147,8 @@
         "id": "e-rewards-7562",
         "source": "quest:aviak-chicks",
         "target": "item:small-patchwork-pants",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "aviak-chicks-drop"
       }
     },
     {
@@ -129146,7 +129156,8 @@
         "id": "e-rewards-7563",
         "source": "quest:aviak-chicks",
         "target": "item:small-patchwork-sleeves",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "aviak-chicks-drop"
       }
     },
     {
@@ -129154,7 +129165,8 @@
         "id": "e-rewards-7564",
         "source": "quest:aviak-chicks",
         "target": "item:small-patchwork-tunic",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "aviak-chicks-drop"
       }
     },
     {
@@ -129298,7 +129310,8 @@
         "id": "e-rewards-7582",
         "source": "quest:bandit-spectacles",
         "target": "spell:center",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bandit-spectacles-drop"
       }
     },
     {
@@ -129306,7 +129319,8 @@
         "id": "e-rewards-7583",
         "source": "quest:bandit-spectacles",
         "target": "spell:endure-poison",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bandit-spectacles-drop"
       }
     },
     {
@@ -129402,7 +129416,8 @@
         "id": "e-rewards-7595",
         "source": "quest:basilisk-tongues",
         "target": "spell:burst-of-flame",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129410,7 +129425,8 @@
         "id": "e-rewards-7596",
         "source": "quest:basilisk-tongues",
         "target": "spell:elementaling-water",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129418,7 +129434,8 @@
         "id": "e-rewards-7597",
         "source": "quest:basilisk-tongues",
         "target": "spell:elementalkin-earth",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129426,7 +129443,8 @@
         "id": "e-rewards-7598",
         "source": "quest:basilisk-tongues",
         "target": "spell:fire-flux",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129434,7 +129452,8 @@
         "id": "e-rewards-7599",
         "source": "quest:basilisk-tongues",
         "target": "spell:gate",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129442,7 +129461,8 @@
         "id": "e-rewards-7600",
         "source": "quest:basilisk-tongues",
         "target": "spell:true-north",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "basilisk-tongues-drop"
       }
     },
     {
@@ -129594,7 +129614,8 @@
         "id": "e-rewards-7619",
         "source": "quest:blessed-oil-quest",
         "target": "spell:inspire-fear",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "blessed-oil-quest-drop"
       }
     },
     {
@@ -129602,7 +129623,8 @@
         "id": "e-rewards-7620",
         "source": "quest:blessed-oil-quest",
         "target": "spell:ward-summoned",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "blessed-oil-quest-drop"
       }
     },
     {
@@ -129666,7 +129688,8 @@
         "id": "e-rewards-7628",
         "source": "quest:blurred-map-quest",
         "target": "item:cast-iron-long-sword",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "blurred-map-quest-drop"
       }
     },
     {
@@ -129674,7 +129697,8 @@
         "id": "e-rewards-7629",
         "source": "quest:blurred-map-quest",
         "target": "item:cast-iron-mace",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "blurred-map-quest-drop"
       }
     },
     {
@@ -130850,7 +130874,8 @@
         "id": "e-rewards-7776",
         "source": "quest:behead-the-freeport-militia",
         "target": "spell:abundant-food",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "behead-the-freeport-militia-drop"
       }
     },
     {
@@ -130858,7 +130883,8 @@
         "id": "e-rewards-7777",
         "source": "quest:behead-the-freeport-militia",
         "target": "spell:atone",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "behead-the-freeport-militia-drop"
       }
     },
     {
@@ -130866,7 +130892,8 @@
         "id": "e-rewards-7778",
         "source": "quest:behead-the-freeport-militia",
         "target": "spell:word-of-health",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "behead-the-freeport-militia-drop"
       }
     },
     {
@@ -130922,7 +130949,8 @@
         "id": "e-rewards-7785",
         "source": "quest:black-wolf-skin-quest",
         "target": "item:copper-band",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "black-wolf-skin-quest-drop"
       }
     },
     {
@@ -130930,7 +130958,8 @@
         "id": "e-rewards-7786",
         "source": "quest:black-wolf-skin-quest",
         "target": "item:rusty-dagger",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "black-wolf-skin-quest-drop"
       }
     },
     {
@@ -130938,7 +130967,8 @@
         "id": "e-rewards-7787",
         "source": "quest:black-wolf-skin-quest",
         "target": "item:worn-great-staff",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "black-wolf-skin-quest-drop"
       }
     },
     {
@@ -130946,7 +130976,8 @@
         "id": "e-rewards-7788",
         "source": "quest:black-wolf-skin-quest",
         "target": "spell:numbing-cold",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "black-wolf-skin-quest-drop"
       }
     },
     {
@@ -131130,7 +131161,8 @@
         "id": "e-rewards-7811",
         "source": "quest:bugglegupp-quest",
         "target": "spell:elementalkin-air",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bugglegupp-starter-spell"
       }
     },
     {
@@ -131138,7 +131170,8 @@
         "id": "e-rewards-7812",
         "source": "quest:bugglegupp-quest",
         "target": "spell:elementalkin-earth",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bugglegupp-starter-spell"
       }
     },
     {
@@ -131146,7 +131179,8 @@
         "id": "e-rewards-7813",
         "source": "quest:bugglegupp-quest",
         "target": "spell:elementaling-fire",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bugglegupp-starter-spell"
       }
     },
     {
@@ -131154,7 +131188,8 @@
         "id": "e-rewards-7814",
         "source": "quest:bugglegupp-quest",
         "target": "spell:elementaling-water",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "bugglegupp-starter-spell"
       }
     },
     {
@@ -131410,7 +131445,8 @@
         "id": "e-rewards-7846",
         "source": "quest:cleanse-the-ocean",
         "target": "item:small-patchwork-boots",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleanse-the-ocean-drop"
       }
     },
     {
@@ -131418,7 +131454,8 @@
         "id": "e-rewards-7847",
         "source": "quest:cleanse-the-ocean",
         "target": "item:small-patchwork-cloak",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleanse-the-ocean-drop"
       }
     },
     {
@@ -131426,7 +131463,8 @@
         "id": "e-rewards-7848",
         "source": "quest:cleanse-the-ocean",
         "target": "item:small-patchwork-pants",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleanse-the-ocean-drop"
       }
     },
     {
@@ -131434,7 +131472,8 @@
         "id": "e-rewards-7849",
         "source": "quest:cleanse-the-ocean",
         "target": "item:small-patchwork-sleeves",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleanse-the-ocean-drop"
       }
     },
     {
@@ -131442,7 +131481,8 @@
         "id": "e-rewards-7850",
         "source": "quest:cleanse-the-ocean",
         "target": "item:small-patchwork-tunic",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleanse-the-ocean-drop"
       }
     },
     {
@@ -152298,7 +152338,8 @@
         "id": "e-rewards-10455",
         "source": "quest:cleric-spells-evil",
         "target": "spell:heroic-bond",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-evil-drop"
       }
     },
     {
@@ -152306,7 +152347,8 @@
         "id": "e-rewards-10456",
         "source": "quest:cleric-spells-evil",
         "target": "spell:sunskin",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-evil-drop"
       }
     },
     {
@@ -152314,7 +152356,8 @@
         "id": "e-rewards-10457",
         "source": "quest:cleric-spells-evil",
         "target": "spell:unswerving-hammer-of-faith",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-evil-drop"
       }
     },
     {
@@ -152322,7 +152365,8 @@
         "id": "e-rewards-10458",
         "source": "quest:cleric-spells-evil",
         "target": "spell:word-of-vigor",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-evil-drop"
       }
     },
     {
@@ -152362,7 +152406,8 @@
         "id": "e-rewards-10463",
         "source": "quest:cleric-spells-good",
         "target": "spell:heroic-bond",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-good-drop"
       }
     },
     {
@@ -152370,7 +152415,8 @@
         "id": "e-rewards-10464",
         "source": "quest:cleric-spells-good",
         "target": "spell:sunskin",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-good-drop"
       }
     },
     {
@@ -152378,7 +152424,8 @@
         "id": "e-rewards-10465",
         "source": "quest:cleric-spells-good",
         "target": "spell:unswerving-hammer-of-faith",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-good-drop"
       }
     },
     {
@@ -152386,7 +152433,8 @@
         "id": "e-rewards-10466",
         "source": "quest:cleric-spells-good",
         "target": "spell:word-of-vigor",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "cleric-spells-good-drop"
       }
     },
     {
@@ -158574,7 +158622,8 @@
         "id": "e-rewards-11239",
         "source": "quest:heretic-heads",
         "target": "item:kejekan-tribal-headband",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "heretic-heads-drop"
       }
     },
     {
@@ -158582,7 +158631,8 @@
         "id": "e-rewards-11240",
         "source": "quest:heretic-heads",
         "target": "item:swiftclaw-sash",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "heretic-heads-drop"
       }
     },
     {
@@ -159038,7 +159088,8 @@
         "id": "e-rewards-11297",
         "source": "quest:putrid-skeletons",
         "target": "item:potion-of-light-healing",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "putrid-skeletons-drop"
       }
     },
     {
@@ -159046,7 +159097,8 @@
         "id": "e-rewards-11298",
         "source": "quest:putrid-skeletons",
         "target": "item:potion-of-disease-warding",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "putrid-skeletons-drop"
       }
     },
     {
@@ -159054,7 +159106,8 @@
         "id": "e-rewards-11299",
         "source": "quest:putrid-skeletons",
         "target": "item:shield-of-nife",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "putrid-skeletons-drop"
       }
     },
     {
@@ -159062,7 +159115,8 @@
         "id": "e-rewards-11300",
         "source": "quest:putrid-skeletons",
         "target": "item:skullcap-of-rodcet-nife",
-        "type": "rewards"
+        "type": "rewards",
+        "randomGroup": "putrid-skeletons-drop"
       }
     },
     {
@@ -160023,6 +160077,51 @@
         "source": "quest:recharge-prayer-beads",
         "target": "item:prayer-beads",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11421",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "spell:quickness",
+        "type": "rewards",
+        "randomGroup": "rathmanas-traveling-offer-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11422",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "spell:lightning-bolt",
+        "type": "rewards",
+        "randomGroup": "rathmanas-traveling-offer-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11423",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "spell:lifedraw",
+        "type": "rewards",
+        "randomGroup": "rathmanas-traveling-offer-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11424",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "spell:charm",
+        "type": "rewards",
+        "randomGroup": "rathmanas-traveling-offer-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11425",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "spell:column-of-fire",
+        "type": "rewards",
+        "randomGroup": "rathmanas-traveling-offer-drop"
       }
     }
   ]

@@ -45,6 +45,14 @@ export interface EdgeData {
   target: string;
   type: string;
   transport?: Transport;
+  // quest --rewards--> item or spell (decisions/quest-reward-modeling.md).
+  // Every reward edge sharing the same randomGroup value on the same quest
+  // is one slot in a random-choice table -- the player gets one of them,
+  // not all -- as opposed to two ordinary reward edges, which are both
+  // guaranteed. A group can mix item and spell targets (a quest's random
+  // pool isn't guaranteed to be all one kind). Absent (the default) means
+  // guaranteed, same "no flag = normal case" convention as outOfEra.
+  randomGroup?: string;
 }
 
 export interface SpellDetails {
@@ -273,12 +281,17 @@ export interface QuestSummary {
   total_experience?: number;
   zones: { id: string; label: string }[];
   questGivers: { id: string; label: string }[];
-  itemRewards: ItemSummary[];
+  // randomGroup (see EdgeData) is folded onto the summary here, not left as
+  // a separate lookup, since the Quests UI renders items and their
+  // random-choice grouping in the same pass.
+  itemRewards: (ItemSummary & { randomGroup?: string })[];
   factionRewards: { id: string; label: string }[];
   // `rewards` edges to a `spell` node -- id/label only (no class_levels/etc.)
   // since the Quests UI only ever uses these to deep-link into the Spell
   // Finder, not to render a full spell stat block the way itemRewards does.
-  spellRewards: { id: string; label: string }[];
+  // randomGroup carried through the same way as itemRewards' -- a random
+  // pool can mix item and spell targets, so both arrays need it.
+  spellRewards: { id: string; label: string; randomGroup?: string }[];
   // Resolved from a quest --member_of--> quest_group edge (same edge type
   // spell --member_of--> spell_line already uses for grouping -- see
   // decisions/quest-group-node-type.md). undefined for a standalone quest.
@@ -488,9 +501,10 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     .map((e) => nodeById(e.source))
     .filter((g): g is NodeData => !!g)
     .map((g) => ({ id: g.id, label: g.label }));
-  const rewardTargets = edgesFrom(id, "rewards")
-    .map((e) => nodeById(e.target))
-    .filter((r): r is NodeData => !!r);
+  const rewardEdges = edgesFrom(id, "rewards")
+    .map((e) => ({ edge: e, node: nodeById(e.target) }))
+    .filter((r): r is { edge: EdgeData; node: NodeData } => !!r.node);
+  const rewardTargets = rewardEdges.map((r) => r.node);
   const questGroupNode = edgesFrom(id, "member_of")
     .map((e) => nodeById(e.target))
     .find((n): n is NodeData => n?.type === "quest_group");
@@ -512,9 +526,13 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     total_experience: node.total_experience as number | undefined,
     zones,
     questGivers,
-    itemRewards: rewardTargets.filter((r) => r.type === "item").map(toItemSummary),
+    itemRewards: rewardEdges
+      .filter((r) => r.node.type === "item")
+      .map((r) => ({ ...toItemSummary(r.node), ...(r.edge.randomGroup ? { randomGroup: r.edge.randomGroup } : {}) })),
     factionRewards: rewardTargets.filter((r) => r.type === "faction").map((r) => ({ id: r.id, label: r.label })),
-    spellRewards: rewardTargets.filter((r) => r.type === "spell").map((r) => ({ id: r.id, label: r.label })),
+    spellRewards: rewardEdges
+      .filter((r) => r.node.type === "spell")
+      .map((r) => ({ id: r.node.id, label: r.node.label, ...(r.edge.randomGroup ? { randomGroup: r.edge.randomGroup } : {}) })),
     ...(questGroupNode ? { questGroup: { id: questGroupNode.id, label: questGroupNode.label } } : {}),
     ...(requiresNodes.length ? { requires: requiresNodes.map((n) => ({ id: n.id, label: n.label })) } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
