@@ -64707,6 +64707,967 @@
         "effect": "Shield of Thorns",
         "source": "Gloves of Earthcrafting Quest reward (Tunarean Earthmelder, Plane of Growth) -- bound to Druids of Human, Elf, or Half-Elf race who worship Tunare"
       }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:kerran-tseq",
+        "label": "Kerran tseq",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gnomish-toy",
+        "label": "Gnomish Toy",
+        "type": "quest",
+        "description": "Kerran tseq on Kerra Island sends the player to Steamfont Mountains to defeat Nilit's contraption (summoned by Nilit Druzlit) for a Gnome Tinkered Toy, traded back for a Kerran Toy. All classes.",
+        "minLevel": 21,
+        "steps": [
+          "Speak with Kerran tseq on Kerra Island",
+          "Travel to Steamfont Mountains and defeat Nilit's contraption for a Gnome Tinkered Toy",
+          "Return the toy to Kerran tseq"
+        ],
+        "wiki_title": "Gnomish Toy"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kerran-toy",
+        "label": "Kerran Toy",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "ac": 3,
+        "stats": {
+          "agi": 2
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Gnomish Toy reward (Kerran tseq, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:gearin-gaxx",
+        "label": "Gearin Gaxx",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guard-of-ik-quest",
+        "label": "Guard of Ik Quest",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "description": "Gearin Gaxx in Firiona Vie sends the player to defeat the Captain of the Guard in City of Mist twice for two Trooper Shields, and to obtain a Scribbled Note from A Pirate Cartographer in Firiona Vie, in exchange for the Guard of Ik shield.",
+        "minLevel": 36,
+        "steps": [
+          "Defeat the Captain of the Guard in City of Mist twice for two Trooper Shields",
+          "Obtain a Scribbled Note from A Pirate Cartographer in Firiona Vie",
+          "Deliver both Trooper Shields and the Scribbled Note to Gearin Gaxx"
+        ],
+        "wiki_title": "Guard of Ik Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:guard-of-ik",
+        "label": "Guard of Ik",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 10,
+        "resists": {
+          "magic": 5
+        },
+        "weight": 10,
+        "source": "Guard of Ik Quest reward (Gearin Gaxx, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-cathedral-of-fortitude",
+        "label": "Guild Summons - Cathedral of Fortitude",
+        "type": "quest",
+        "description": "A new High Elf or Half-Elf Paladin of the Cathedral of Fortitude Guild receives a note directing them to Tynkale in Northern Felwithe, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Tynkale in the Cathedral of Fortitude"
+        ],
+        "wiki_title": "Guild Summons - Cathedral of Fortitude"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:cathedral-of-fortitude",
+        "label": "Cathedral of Fortitude",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:used-gold-training-tunic",
+        "label": "Used Gold Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Cathedral of Fortitude reward (Tynkale, Northern Felwithe) -- restricted to Paladins of High Elf or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:seloxia-punox",
+        "label": "Seloxia Punox",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-cauldron-of-hate",
+        "label": "Guild Summons - Cauldron of Hate",
+        "type": "quest",
+        "description": "A new Dark Elf Warrior of the Cauldron of Hate Guild receives a note directing them to Seloxia Punox in Neriak Commons, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Seloxia Punox at the Cauldron of Hate"
+        ],
+        "wiki_title": "Guild Summons - Cauldron of Hate"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:cauldron-of-hate",
+        "label": "Cauldron of Hate",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-training-tunic",
+        "label": "Old Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Cauldron of Hate reward (Seloxia Punox, Neriak Commons) -- restricted to Warriors of Dark Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:priestess-ghalea",
+        "label": "Priestess Ghalea",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-church-of-underfoot",
+        "label": "Guild Summons - Church of Underfoot",
+        "type": "quest",
+        "description": "A new Dwarf Cleric of the Church of Underfoot Guild receives a note directing them to Priestess Ghalea in North Kaladim, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Priestess Ghalea at the Church of Underfoot"
+        ],
+        "wiki_title": "Guild Summons - Church of Underfoot"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:church-of-underfoot",
+        "label": "Church of Underfoot",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dusty-tunic",
+        "label": "Dusty Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "lore": true,
+        "source": "Guild Summons - Church of Underfoot reward (Priestess Ghalea, North Kaladim) -- restricted to Clerics of Dwarf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:hanns-krieghor",
+        "label": "Hanns Krieghor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-circle-of-unseen-hands",
+        "label": "Guild Summons - Circle of Unseen Hands",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Rogue of the Circle of Unseen Hands Guild receives a note directing them to Hanns Krieghor in North Qeynos, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Hanns Krieghor at the Circle of Unseen Hands"
+        ],
+        "wiki_title": "Guild Summons - Circle of Unseen Hands"
+      }
+    },
+    {
+      "data": {
+        "id": "item:second-hand-tunic",
+        "label": "Second Hand Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "lore": true,
+        "source": "Guild Summons - Circle of Unseen Hands reward (Hanns Krieghor, North Qeynos) -- restricted to Rogues of Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:elisi-nasin",
+        "label": "Elisi Nasin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "label": "Guild Summons - Coalition of Tradefolk Underground",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Rogue of the Coalition of Tradefolk Underground Guild receives a note directing them to Elisi Nasin, beneath the docks in East Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Elisi Nasin beneath the East Freeport docks"
+        ],
+        "wiki_title": "Guild Summons - Coalition of Tradefolk Underground"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brown-faded-tunic",
+        "label": "Brown Faded Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "lore": true,
+        "source": "Guild Summons - Coalition of Tradefolk Underground reward (Elisi Nasin, East Freeport) -- restricted to Rogues of Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:lanken-rjarn",
+        "label": "Lanken Rjarn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-craft-keepers",
+        "label": "Guild Summons - Craft Keepers",
+        "type": "quest",
+        "description": "A new Erudite Enchanter of the Craft Keepers Guild receives a note directing them to Lanken Rjarn in Erudin Palace, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Lanken Rjarn at the Craft Keepers guild hall"
+        ],
+        "wiki_title": "Guild Summons - Craft Keepers"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:craft-keepers",
+        "label": "Craft Keepers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-patched-robe",
+        "label": "Old Patched Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Craft Keepers reward (Lanken Rjarn, Erudin) -- restricted to Enchanters of Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:ghanlin-skyphire",
+        "label": "Ghanlin Skyphire",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-crimson-hands",
+        "label": "Guild Summons - Crimson Hands",
+        "type": "quest",
+        "description": "A new Erudite Wizard of the Crimson Hands Guild receives a note directing them to Ghanlin Skyphire, Master Wizard of the Crimson Hands, in the Erudin Palace guild tower, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Ghanlin Skyphire at the Tower of the Crimson Hands"
+        ],
+        "wiki_title": "Guild Summons - Crimson Hands"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:crimson-hands",
+        "label": "Crimson Hands",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-used-robe",
+        "label": "Old Used Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "wizard"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "Guild Summons - Crimson Hands reward (Ghanlin Skyphire, Erudin) -- restricted to Wizards of Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-da-bashers",
+        "label": "Guild Summons - Da Bashers",
+        "type": "quest",
+        "description": "A new Troll Warrior of the Da Bashers Guild receives a note directing them to Ranjor in Grobb, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Ranjor at the Da Bashers guild hall"
+        ],
+        "wiki_title": "Guild Summons - Da Bashers"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-ones",
+        "label": "Guild Summons - Dark Ones",
+        "type": "quest",
+        "description": "A new Troll Shaman of the Dark Ones Guild receives a note directing them to Kaglari in Grobb, who trades it for a guild tunic.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Kaglari at the Dark Ones guild hall"
+        ],
+        "wiki_title": "Guild Summons - Dark Ones"
+      }
+    },
+    {
+      "data": {
+        "id": "item:muck-stained-tunic",
+        "label": "Muck Stained Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "ac": 2,
+        "weight": 1.2,
+        "lore": true,
+        "source": "Guild Summons - Dark Ones reward (Kaglari, Grobb) -- restricted to Shamans of Troll race"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tin-patched-tunic",
+        "label": "Tin Patched Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "rogue",
+          "warrior"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Small",
+        "lore": true,
+        "source": "Guild Summons - Dark Reflection Cleric/Rogue/Warrior reward (Ak'Anon) -- restricted to Gnomes of Bertoxxulous"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-cleric",
+        "label": "Guild Summons - Dark Reflection Cleric",
+        "type": "quest",
+        "description": "A new Gnome Cleric of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Evah Xokez in Ak'Anon, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Evah Xokez in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:rilgor-plegnog",
+        "label": "Rilgor Plegnog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-gold-felt-robe",
+        "label": "Dark Gold Felt Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Small",
+        "lore": true,
+        "source": "Guild Summons - Dark Reflection Enchanter/Magician/Necromancer/Wizard reward (Ak'Anon) -- restricted to Gnomes of Bertoxxulous"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-enchanter",
+        "label": "Guild Summons - Dark Reflection Enchanter",
+        "type": "quest",
+        "description": "A new Gnome Enchanter of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Rilgor Plegnog in the Mines of Malfunction beneath Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Rilgor Plegnog in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:vaenor-husga",
+        "label": "Vaenor Husga",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-magician",
+        "label": "Guild Summons - Dark Reflection Magician",
+        "type": "quest",
+        "description": "A new Gnome Magician of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Vaenor Husga in the Mines of Malfunction beneath Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Vaenor Husga in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:eonis-mournunder",
+        "label": "Eonis Mournunder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-necromancer",
+        "label": "Guild Summons - Dark Reflection Necromancer",
+        "type": "quest",
+        "description": "A new Gnome Necromancer of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Eonis Mournunder in Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Eonis Mournunder in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Necromancer"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:kaxon-frennor",
+        "label": "Kaxon Frennor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-rogue",
+        "label": "Guild Summons - Dark Reflection Rogue",
+        "type": "quest",
+        "description": "A new Gnome Rogue of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Kaxon Frennor in the Mines of Malfunction beneath Ak'Anon, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Kaxon Frennor in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Rogue"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:naygog-mitope",
+        "label": "Naygog Mitope",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-warrior",
+        "label": "Guild Summons - Dark Reflection Warrior",
+        "type": "quest",
+        "description": "A new Gnome Warrior of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Naygog Mitope in the Mines of Malfunction beneath Ak'Anon, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Naygog Mitope in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Warrior"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:velena-corgtec",
+        "label": "Velena Corgtec",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dark-reflection-wizard",
+        "label": "Guild Summons - Dark Reflection Wizard",
+        "type": "quest",
+        "description": "A new Gnome Wizard of Bertoxxulous, in the Dark Reflection Guild, receives a note directing them to Velena Corgtec in Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Velena Corgtec in the Mines of Malfunction beneath Ak'Anon"
+        ],
+        "wiki_title": "Guild Summons - Dark Reflection Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:gans-paust",
+        "label": "Gans Paust",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-blue-tunic",
+        "label": "Old Blue Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Deepwater Cleric/Paladin reward (Erudin) -- restricted to Clerics/Paladins of Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-deepwater-cleric",
+        "label": "Guild Summons - Deepwater Cleric",
+        "type": "quest",
+        "description": "A new Erudite Cleric of the Deepwater Knights Guild receives a note directing them to Gans Paust in the Deepwater Knights guild hall in Erudin, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Gans Paust at the Deepwater Knights guild hall"
+        ],
+        "wiki_title": "Guild Summons - Deepwater Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-deepwater-paladin",
+        "label": "Guild Summons - Deepwater Paladin",
+        "type": "quest",
+        "description": "A new Erudite Paladin of the Deepwater Knights Guild receives a note directing them to Weligon Steelherder in Erudin, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Weligon Steelherder at the Deepwater Knights guild hall"
+        ],
+        "wiki_title": "Guild Summons - Deepwater Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:venox-tarkog",
+        "label": "Venox Tarkog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-crimson-tunic",
+        "label": "Faded Crimson Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "lore": true,
+        "source": "Guild Summons - Dismal Rage Cleric/Shadowknight reward (East Freeport) -- restricted to Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-cleric",
+        "label": "Guild Summons - Dismal Rage Cleric",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Cleric of the Dismal Rage Guild receives a note directing them to Venox Tarkog in the Sewers of East Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Venox Tarkog in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:konious-eranon",
+        "label": "Konious Eranon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-stained-robe",
+        "label": "Old Stained Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Dismal Rage Enchanter/Magician reward (East Freeport) -- restricted to Human race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-enchanter",
+        "label": "Guild Summons - Dismal Rage Enchanter",
+        "type": "quest",
+        "description": "A new Human Enchanter of the Dismal Rage Guild receives a note directing them to Konious Eranon in the Sewers of East Freeport, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Konious Eranon in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:heneva-jexsped",
+        "label": "Heneva Jexsped",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-magician",
+        "label": "Guild Summons - Dismal Rage Magician",
+        "type": "quest",
+        "description": "A new Human Magician of the Dismal Rage Guild receives a note directing them to Heneva Jexsped in the Sewers of East Freeport, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Heneva Jexsped in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:opal-darkbriar",
+        "label": "Opal Darkbriar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-necromancer",
+        "label": "Guild Summons - Dismal Rage Necromancer",
+        "type": "quest",
+        "description": "A new Human Necromancer of the Dismal Rage Guild receives a note directing them to Opal Darkbriar in the Sewers of East Freeport, who trades it for a guild robe.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Opal Darkbriar in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Necromancer"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-stained-robe",
+        "label": "Dark Stained Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Dismal Rage Necromancer reward (Opal Darkbriar, East Freeport) -- restricted to Human race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:pietro-zarn",
+        "label": "Pietro Zarn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-shadowknight",
+        "label": "Guild Summons - Dismal Rage Shadowknight",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Shadow Knight of the Dismal Rage Guild receives a note directing them to Pietro Zarn in the Sewers of East Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Pietro Zarn in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Shadowknight"
+      }
     }
   ],
   "edges": [
@@ -151016,6 +151977,1198 @@
         "target": "zone:ocean-of-tears",
         "type": "connects_to",
         "transport": "translocator"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10787",
+        "source": "npc:kerra-island:kerran-tseq",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10788",
+        "source": "npc:kerra-island:kerran-tseq",
+        "target": "quest:gnomish-toy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10789",
+        "source": "quest:gnomish-toy",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10790",
+        "source": "quest:gnomish-toy",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10791",
+        "source": "quest:gnomish-toy",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10792",
+        "source": "quest:gnomish-toy",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10793",
+        "source": "quest:gnomish-toy",
+        "target": "item:kerran-toy",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10794",
+        "source": "npc:firiona-vie:gearin-gaxx",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10795",
+        "source": "npc:firiona-vie:gearin-gaxx",
+        "target": "quest:guard-of-ik-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10796",
+        "source": "quest:guard-of-ik-quest",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10797",
+        "source": "quest:guard-of-ik-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10798",
+        "source": "quest:guard-of-ik-quest",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10799",
+        "source": "quest:guard-of-ik-quest",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10800",
+        "source": "quest:guard-of-ik-quest",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10801",
+        "source": "quest:guard-of-ik-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10802",
+        "source": "quest:guard-of-ik-quest",
+        "target": "item:guard-of-ik",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10803",
+        "source": "npc:northern-felwithe:tynkale",
+        "target": "quest:guild-summons-cathedral-of-fortitude",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10804",
+        "source": "quest:guild-summons-cathedral-of-fortitude",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10805",
+        "source": "quest:guild-summons-cathedral-of-fortitude",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10806",
+        "source": "quest:guild-summons-cathedral-of-fortitude",
+        "target": "faction:cathedral-of-fortitude",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10807",
+        "source": "quest:guild-summons-cathedral-of-fortitude",
+        "target": "item:used-gold-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10808",
+        "source": "npc:neriak-commons:seloxia-punox",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10809",
+        "source": "npc:neriak-commons:seloxia-punox",
+        "target": "quest:guild-summons-cauldron-of-hate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10810",
+        "source": "quest:guild-summons-cauldron-of-hate",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10811",
+        "source": "quest:guild-summons-cauldron-of-hate",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10812",
+        "source": "quest:guild-summons-cauldron-of-hate",
+        "target": "faction:cauldron-of-hate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10813",
+        "source": "quest:guild-summons-cauldron-of-hate",
+        "target": "item:old-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10814",
+        "source": "npc:north-kaladim:priestess-ghalea",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10815",
+        "source": "npc:north-kaladim:priestess-ghalea",
+        "target": "quest:guild-summons-church-of-underfoot",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10816",
+        "source": "quest:guild-summons-church-of-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10817",
+        "source": "quest:guild-summons-church-of-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10818",
+        "source": "quest:guild-summons-church-of-underfoot",
+        "target": "faction:church-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10819",
+        "source": "quest:guild-summons-church-of-underfoot",
+        "target": "item:dusty-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10820",
+        "source": "npc:north-qeynos:hanns-krieghor",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10821",
+        "source": "npc:north-qeynos:hanns-krieghor",
+        "target": "quest:guild-summons-circle-of-unseen-hands",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10822",
+        "source": "quest:guild-summons-circle-of-unseen-hands",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10823",
+        "source": "quest:guild-summons-circle-of-unseen-hands",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10824",
+        "source": "quest:guild-summons-circle-of-unseen-hands",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10825",
+        "source": "quest:guild-summons-circle-of-unseen-hands",
+        "target": "item:second-hand-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10826",
+        "source": "npc:east-freeport:elisi-nasin",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10827",
+        "source": "npc:east-freeport:elisi-nasin",
+        "target": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10828",
+        "source": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10829",
+        "source": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10830",
+        "source": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10831",
+        "source": "quest:guild-summons-coalition-of-tradefolk-underground",
+        "target": "item:brown-faded-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10832",
+        "source": "npc:erudin:lanken-rjarn",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10833",
+        "source": "npc:erudin:lanken-rjarn",
+        "target": "quest:guild-summons-craft-keepers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10834",
+        "source": "quest:guild-summons-craft-keepers",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10835",
+        "source": "quest:guild-summons-craft-keepers",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10836",
+        "source": "quest:guild-summons-craft-keepers",
+        "target": "faction:craft-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10837",
+        "source": "quest:guild-summons-craft-keepers",
+        "target": "item:old-patched-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10838",
+        "source": "npc:erudin:ghanlin-skyphire",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10839",
+        "source": "npc:erudin:ghanlin-skyphire",
+        "target": "quest:guild-summons-crimson-hands",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10840",
+        "source": "quest:guild-summons-crimson-hands",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10841",
+        "source": "quest:guild-summons-crimson-hands",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10842",
+        "source": "quest:guild-summons-crimson-hands",
+        "target": "faction:crimson-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10843",
+        "source": "quest:guild-summons-crimson-hands",
+        "target": "item:old-used-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10844",
+        "source": "npc:grobb:ranjor",
+        "target": "quest:guild-summons-da-bashers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10845",
+        "source": "quest:guild-summons-da-bashers",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10846",
+        "source": "quest:guild-summons-da-bashers",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10847",
+        "source": "quest:guild-summons-da-bashers",
+        "target": "faction:da-bashers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10848",
+        "source": "quest:guild-summons-da-bashers",
+        "target": "item:mud-covered-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10849",
+        "source": "npc:grobb:kaglari",
+        "target": "quest:guild-summons-dark-ones",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10850",
+        "source": "quest:guild-summons-dark-ones",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10851",
+        "source": "quest:guild-summons-dark-ones",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10852",
+        "source": "quest:guild-summons-dark-ones",
+        "target": "faction:dark-ones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10853",
+        "source": "quest:guild-summons-dark-ones",
+        "target": "item:muck-stained-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10854",
+        "source": "npc:ak-anon:evah-xokez",
+        "target": "quest:guild-summons-dark-reflection-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10855",
+        "source": "quest:guild-summons-dark-reflection-cleric",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10856",
+        "source": "quest:guild-summons-dark-reflection-cleric",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10857",
+        "source": "quest:guild-summons-dark-reflection-cleric",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10858",
+        "source": "quest:guild-summons-dark-reflection-cleric",
+        "target": "item:tin-patched-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10859",
+        "source": "npc:ak-anon:rilgor-plegnog",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10860",
+        "source": "npc:ak-anon:rilgor-plegnog",
+        "target": "quest:guild-summons-dark-reflection-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10861",
+        "source": "quest:guild-summons-dark-reflection-enchanter",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10862",
+        "source": "quest:guild-summons-dark-reflection-enchanter",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10863",
+        "source": "quest:guild-summons-dark-reflection-enchanter",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10864",
+        "source": "quest:guild-summons-dark-reflection-enchanter",
+        "target": "item:dark-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10865",
+        "source": "npc:ak-anon:vaenor-husga",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10866",
+        "source": "npc:ak-anon:vaenor-husga",
+        "target": "quest:guild-summons-dark-reflection-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10867",
+        "source": "quest:guild-summons-dark-reflection-magician",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10868",
+        "source": "quest:guild-summons-dark-reflection-magician",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10869",
+        "source": "quest:guild-summons-dark-reflection-magician",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10870",
+        "source": "quest:guild-summons-dark-reflection-magician",
+        "target": "item:dark-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10871",
+        "source": "npc:ak-anon:eonis-mournunder",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10872",
+        "source": "npc:ak-anon:eonis-mournunder",
+        "target": "quest:guild-summons-dark-reflection-necromancer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10873",
+        "source": "quest:guild-summons-dark-reflection-necromancer",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10874",
+        "source": "quest:guild-summons-dark-reflection-necromancer",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10875",
+        "source": "quest:guild-summons-dark-reflection-necromancer",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10876",
+        "source": "quest:guild-summons-dark-reflection-necromancer",
+        "target": "item:dark-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10877",
+        "source": "npc:ak-anon:kaxon-frennor",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10878",
+        "source": "npc:ak-anon:kaxon-frennor",
+        "target": "quest:guild-summons-dark-reflection-rogue",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10879",
+        "source": "quest:guild-summons-dark-reflection-rogue",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10880",
+        "source": "quest:guild-summons-dark-reflection-rogue",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10881",
+        "source": "quest:guild-summons-dark-reflection-rogue",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10882",
+        "source": "quest:guild-summons-dark-reflection-rogue",
+        "target": "item:tin-patched-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10883",
+        "source": "npc:ak-anon:naygog-mitope",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10884",
+        "source": "npc:ak-anon:naygog-mitope",
+        "target": "quest:guild-summons-dark-reflection-warrior",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10885",
+        "source": "quest:guild-summons-dark-reflection-warrior",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10886",
+        "source": "quest:guild-summons-dark-reflection-warrior",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10887",
+        "source": "quest:guild-summons-dark-reflection-warrior",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10888",
+        "source": "quest:guild-summons-dark-reflection-warrior",
+        "target": "item:tin-patched-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10889",
+        "source": "npc:ak-anon:velena-corgtec",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10890",
+        "source": "npc:ak-anon:velena-corgtec",
+        "target": "quest:guild-summons-dark-reflection-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10891",
+        "source": "quest:guild-summons-dark-reflection-wizard",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10892",
+        "source": "quest:guild-summons-dark-reflection-wizard",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10893",
+        "source": "quest:guild-summons-dark-reflection-wizard",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10894",
+        "source": "quest:guild-summons-dark-reflection-wizard",
+        "target": "item:dark-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10895",
+        "source": "npc:erudin:gans-paust",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10896",
+        "source": "npc:erudin:gans-paust",
+        "target": "quest:guild-summons-deepwater-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10897",
+        "source": "quest:guild-summons-deepwater-cleric",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10898",
+        "source": "quest:guild-summons-deepwater-cleric",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10899",
+        "source": "quest:guild-summons-deepwater-cleric",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10900",
+        "source": "quest:guild-summons-deepwater-cleric",
+        "target": "item:old-blue-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10901",
+        "source": "npc:erudin:weligon-steelherder",
+        "target": "quest:guild-summons-deepwater-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10902",
+        "source": "quest:guild-summons-deepwater-paladin",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10903",
+        "source": "quest:guild-summons-deepwater-paladin",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10904",
+        "source": "quest:guild-summons-deepwater-paladin",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10905",
+        "source": "quest:guild-summons-deepwater-paladin",
+        "target": "item:old-blue-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10906",
+        "source": "npc:east-freeport:venox-tarkog",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10907",
+        "source": "npc:east-freeport:venox-tarkog",
+        "target": "quest:guild-summons-dismal-rage-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10908",
+        "source": "quest:guild-summons-dismal-rage-cleric",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10909",
+        "source": "quest:guild-summons-dismal-rage-cleric",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10910",
+        "source": "quest:guild-summons-dismal-rage-cleric",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10911",
+        "source": "quest:guild-summons-dismal-rage-cleric",
+        "target": "item:faded-crimson-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10912",
+        "source": "npc:east-freeport:konious-eranon",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10913",
+        "source": "npc:east-freeport:konious-eranon",
+        "target": "quest:guild-summons-dismal-rage-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10914",
+        "source": "quest:guild-summons-dismal-rage-enchanter",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10915",
+        "source": "quest:guild-summons-dismal-rage-enchanter",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10916",
+        "source": "quest:guild-summons-dismal-rage-enchanter",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10917",
+        "source": "quest:guild-summons-dismal-rage-enchanter",
+        "target": "item:old-stained-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10918",
+        "source": "npc:east-freeport:heneva-jexsped",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10919",
+        "source": "npc:east-freeport:heneva-jexsped",
+        "target": "quest:guild-summons-dismal-rage-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10920",
+        "source": "quest:guild-summons-dismal-rage-magician",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10921",
+        "source": "quest:guild-summons-dismal-rage-magician",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10922",
+        "source": "quest:guild-summons-dismal-rage-magician",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10923",
+        "source": "quest:guild-summons-dismal-rage-magician",
+        "target": "item:old-stained-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10924",
+        "source": "npc:east-freeport:opal-darkbriar",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10925",
+        "source": "npc:east-freeport:opal-darkbriar",
+        "target": "quest:guild-summons-dismal-rage-necromancer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10926",
+        "source": "quest:guild-summons-dismal-rage-necromancer",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10927",
+        "source": "quest:guild-summons-dismal-rage-necromancer",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10928",
+        "source": "quest:guild-summons-dismal-rage-necromancer",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10929",
+        "source": "quest:guild-summons-dismal-rage-necromancer",
+        "target": "item:dark-stained-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10930",
+        "source": "npc:east-freeport:pietro-zarn",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10931",
+        "source": "npc:east-freeport:pietro-zarn",
+        "target": "quest:guild-summons-dismal-rage-shadowknight",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10932",
+        "source": "quest:guild-summons-dismal-rage-shadowknight",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10933",
+        "source": "quest:guild-summons-dismal-rage-shadowknight",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10934",
+        "source": "quest:guild-summons-dismal-rage-shadowknight",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10935",
+        "source": "quest:guild-summons-dismal-rage-shadowknight",
+        "target": "item:faded-crimson-tunic",
+        "type": "rewards"
       }
     }
   ]
