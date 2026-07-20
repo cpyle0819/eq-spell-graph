@@ -64938,12 +64938,13 @@
           "Chest"
         ],
         "classes": [
-          "cleric"
+          "cleric",
+          "paladin"
         ],
         "ac": 2,
         "weight": 0.8,
         "lore": true,
-        "source": "Guild Summons - Church of Underfoot reward (Priestess Ghalea, North Kaladim) -- restricted to Clerics of Dwarf race"
+        "source": "Guild Summons - Church of Underfoot/Paladins of the Underfoot reward (North Kaladim) -- restricted to Clerics/Paladins of Dwarf race"
       }
     },
     {
@@ -65667,6 +65668,961 @@
           "Hand the note to Pietro Zarn in the Sewers of East Freeport"
         ],
         "wiki_title": "Guild Summons - Dismal Rage Shadowknight"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:brutol-rhaksen",
+        "label": "Brutol Rhaksen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-warrior",
+        "label": "Guild Summons - Dismal Rage Warrior",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Warrior of Innoruuk, in the Dismal Rage Guild, receives a tattered note directing them to Brutol Rhaksen in East Freeport's basement slums, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Brutol Rhaksen in East Freeport's basement slums"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Warrior"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:nexvok-thirod",
+        "label": "Nexvok Thirod",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-dismal-rage-wizard",
+        "label": "Guild Summons - Dismal Rage Wizard",
+        "type": "quest",
+        "description": "A new Human Wizard of the Dismal Rage Guild receives a tattered note directing them to Nexvok Thirod in the Sewers of East Freeport, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Nexvok Thirod in the Sewers of East Freeport"
+        ],
+        "wiki_title": "Guild Summons - Dismal Rage Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:maesyn-trueshot",
+        "label": "Maesyn Trueshot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-faydarks-champions",
+        "label": "Guild Summons - Faydark's Champions",
+        "type": "quest",
+        "description": "A new Elf or Half-Elf Ranger of the Faydark's Champions Guild receives a tattered note directing them to Maesyn Trueshot at the guild hall in Kelethin, who trades it for a guild tunic.",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Maesyn Trueshot at the Faydark's Champions guild hall in Kelethin"
+        ],
+        "wiki_title": "Guild Summons - Faydark's Champions"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirty-green-tunic",
+        "label": "Dirty Green Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Faydark's Champions reward (Maesyn Trueshot, Kelethin) -- restricted to Rangers of Elf or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-fortress-craknek",
+        "label": "Guild Summons - Fortress Craknek",
+        "type": "quest",
+        "description": "A new Ogre Warrior of the Craknek Warriors Guild receives a tattered note directing them to Guntrik in Oggok, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Guntrik in Oggok"
+        ],
+        "wiki_title": "Guild Summons - Fortress Craknek"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mud-stained-skin-tunic",
+        "label": "Mud Stained Skin Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 4,
+        "weight": 1.6,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Fortress Craknek reward (Guntrik, Oggok) -- restricted to Warriors of Ogre race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:markus-jaevins",
+        "label": "Markus Jaevins",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-gate-callers",
+        "label": "Guild Summons - Gate Callers",
+        "type": "quest",
+        "description": "A new Erudite Magician of the Gate Callers Guild receives a tattered note directing them to Markus Jaevins at the guild tower in Erudin Palace, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Markus Jaevins at the Gate Callers guild tower in Erudin Palace"
+        ],
+        "wiki_title": "Guild Summons - Gate Callers"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-torn-robe",
+        "label": "Old Torn Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "Guild Summons - Gate Callers reward (Markus Jaevins, Erudin) -- restricted to Magicians of Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-greenblood-rock",
+        "label": "Guild Summons - Greenblood Rock",
+        "type": "quest",
+        "description": "A new Ogre Shaman receives a tattered note directing them to Zulort in Oggok, who trades it for a guild tunic.",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Zulort in Oggok"
+        ],
+        "wiki_title": "Guild Summons - Greenblood Rock"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirty-patched-fur-tunic",
+        "label": "Dirty Patched Fur Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "ac": 2,
+        "weight": 1.2,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Greenblood Rock reward (Zulort, Oggok) -- restricted to Shamans of Ogre race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:mespha-tevalian",
+        "label": "Mespha Tevalian",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:blue-training-robe",
+        "label": "Blue Training Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Hall of Sorcery Enchanter/Magician/Wizard reward (South Qeynos) -- restricted to Human, High Elf, or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "label": "Guild Summons - Hall of Sorcery Enchanter",
+        "type": "quest",
+        "description": "A new Human, High Elf, or Half-Elf Enchanter of the Order of Three Guild receives a tattered note directing them to Mespha Tevalian at the Hall of Sorcery in South Qeynos, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Mespha Tevalian at the Hall of Sorcery"
+        ],
+        "wiki_title": "Guild Summons - Hall of Sorcery Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:kinloc-flamepaw",
+        "label": "Kinloc Flamepaw",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-sorcery-magician",
+        "label": "Guild Summons - Hall of Sorcery Magician",
+        "type": "quest",
+        "description": "A new Human, High Elf, or Half-Elf Magician of the Order of Three Guild receives a tattered note directing them to Kinloc Flamepaw at the Hall of Sorcery in South Qeynos, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Kinloc Flamepaw at the Hall of Sorcery"
+        ],
+        "wiki_title": "Guild Summons - Hall of Sorcery Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:gahlith-wrannstad",
+        "label": "Gahlith Wrannstad",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-sorcery-wizard",
+        "label": "Guild Summons - Hall of Sorcery Wizard",
+        "type": "quest",
+        "description": "A new Human, High Elf, or Half-Elf Wizard of the Order of Three Guild receives a tattered note directing them to Gahlith Wrannstad at the Hall of Sorcery in South Qeynos, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Gahlith Wrannstad at the Hall of Sorcery"
+        ],
+        "wiki_title": "Guild Summons - Hall of Sorcery Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:ebon-strongbear",
+        "label": "Ebon Strongbear",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-steel",
+        "label": "Guild Summons - Hall of Steel",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Warrior of the Steel Warriors Guild receives a recruitment flyer directing them to Ebon Strongbear at the Hall of Steel in South Qeynos, who trades it for a guild tunic.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Recruitment Flyer",
+          "Hand the flyer to Ebon Strongbear at the Hall of Steel"
+        ],
+        "wiki_title": "Guild Summons - Hall of Steel"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirty-training-tunic",
+        "label": "Dirty Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Hall of Steel reward (Ebon Strongbear, South Qeynos) -- restricted to Warriors of Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:eolorn-jaxx",
+        "label": "Eolorn J`Axx",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-the-ebon-mask",
+        "label": "Guild Summons - Hall of the Ebon Mask",
+        "type": "quest",
+        "description": "A new Dark Elf Rogue receives a tattered note directing them to Eolorn J`Axx at the Hall of the Ebon Mask in Neriak Third Gate, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Eolorn J`Axx at the Hall of the Ebon Mask"
+        ],
+        "wiki_title": "Guild Summons - Hall of the Ebon Mask"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:hall-of-the-ebon-mask",
+        "label": "Hall of the Ebon Mask",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-black-tunic",
+        "label": "Old Black Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Hall of the Ebon Mask reward (Eolorn J`Axx, Neriak Third Gate) -- restricted to Rogues of Dark Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:eestyana-naestra",
+        "label": "Eestyana Naestra",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-purple-tunic",
+        "label": "Faded Purple Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Hall of Truth Cleric/Paladin reward (North Freeport) -- restricted to Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-truth-cleric",
+        "label": "Guild Summons - Hall of Truth Cleric",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Cleric of the Knights of Truth Guild receives a tattered note directing them to Eestyana Naestra at the Hall of Truth in North Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Cross the river in North Freeport to the Hall of Truth",
+          "Hand the note to Eestyana Naestra"
+        ],
+        "wiki_title": "Guild Summons - Hall of Truth Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:valeron-dushire",
+        "label": "Valeron Dushire",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-hall-of-truth-paladin",
+        "label": "Guild Summons - Hall of Truth Paladin",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Paladin of the Knights of Truth Guild receives a tattered note directing them to Valeron Dushire at the Hall of Truth in North Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Cross the river in North Freeport to the Hall of Truth",
+          "Hand the note to Valeron Dushire"
+        ],
+        "wiki_title": "Guild Summons - Hall of Truth Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:juline-urncaller",
+        "label": "Juline Urncaller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirty-gold-felt-robe",
+        "label": "Dirty Gold Felt Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Small",
+        "lore": true,
+        "source": "Guild Summons - Library Mechanimagica Enchanter/Magician/Wizard reward (Ak'Anon) -- restricted to Gnomes not following Bertoxxulous"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "label": "Guild Summons - Libary Mechanimagica Enchanter",
+        "type": "quest",
+        "description": "A new Gnome Enchanter of the Eldritch Collective Guild, not following Bertoxxulous, receives a Registration Letter directing them to Juline Urncaller at the Library Mechanimagica in Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Registration Letter",
+          "Hand the letter to Juline Urncaller at the Library Mechanimagica"
+        ],
+        "wiki_title": "Guild Summons - Libary Mechanimagica Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:wuggan-azusphere",
+        "label": "Wuggan Azusphere",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-libary-mechanimagica-magician",
+        "label": "Guild Summons - Libary Mechanimagica Magician",
+        "type": "quest",
+        "description": "A new Gnome Magician of the Eldritch Collective Guild, not following Bertoxxulous, receives a Registration Letter directing them to Wuggan Azusphere at the Library Mechanimagica in Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Registration Letter",
+          "Hand the letter to Wuggan Azusphere at the Library Mechanimagica"
+        ],
+        "wiki_title": "Guild Summons - Libary Mechanimagica Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:tobon-starpyre",
+        "label": "Tobon Starpyre",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-libary-mechanimagica-wizard",
+        "label": "Guild Summons - Libary Mechanimagica Wizard",
+        "type": "quest",
+        "description": "A new Gnome Wizard of the Eldritch Collective Guild, not following Bertoxxulous, receives a Registration Letter directing them to Tobon Starpyre at the Library Mechanimagica in Ak'Anon, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Registration Letter",
+          "Hand the letter to Tobon Starpyre at the Library Mechanimagica"
+        ],
+        "wiki_title": "Guild Summons - Libary Mechanimagica Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:caskin-marsheart",
+        "label": "Caskin Marsheart",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-marshearts-chords",
+        "label": "Guild Summons - Marsheart's Chords",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Bard of the League of Antonican Bards receives a tattered note directing them to Caskin Marsheart at Marsheart's Chords guild hall in North Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Caskin Marsheart at Marsheart's Chords"
+        ],
+        "wiki_title": "Guild Summons - Marsheart's Chords"
+      }
+    },
+    {
+      "data": {
+        "id": "item:colorfully-patched-tunic",
+        "label": "Colorfully Patched Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "bard"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Marsheart's Chords reward (Caskin Marsheart, North Freeport) -- restricted to Bards of Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-miners-guild-628",
+        "label": "Guild Summons - Miners Guild 628",
+        "type": "quest",
+        "description": "A new Dwarf Rogue receives a Small, Folded Note directing them to Mater outside the Ratsbone Treasury & Assay Office in North Kaladim, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Small, Folded Note",
+          "Hand the note to Mater outside the Ratsbone Treasury & Assay Office"
+        ],
+        "wiki_title": "Guild Summons - Miners Guild 628"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ruined-miners-tunic",
+        "label": "Ruined Miner's Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Miners Guild 628 reward (Mater, North Kaladim) -- restricted to Rogues of Dwarf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-murdunks-palace",
+        "label": "Guild Summons - Murdunk's Palace",
+        "type": "quest",
+        "description": "A new Ogre Shadow Knight of the Green Blood Knights Guild receives a tattered note directing them to Soonog in Oggok, who trades it for a guild tunic. This tunic is later required as a turn-in for the Greenblood Shadowknight Tunic quest.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Soonog in Oggok"
+        ],
+        "wiki_title": "Guild Summons - Murdunk's Palace"
+      }
+    },
+    {
+      "data": {
+        "id": "item:green-stained-skin-tunic",
+        "label": "Green Stained Skin Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1.4,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Murdunk's Palace reward (Soonog, Oggok) -- restricted to Shadow Knights of Ogre race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-night-keep",
+        "label": "Guild Summons - Night Keep",
+        "type": "quest",
+        "description": "A new Troll Shadow Knight of the Shadowknights of Night Keep Guild receives a tattered note directing them to Hukulk in Grobb, who trades it for a guild tunic.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Hukulk in Grobb"
+        ],
+        "wiki_title": "Guild Summons - Night Keep"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-and-green-tunic",
+        "label": "Black and Green Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1.4,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Night Keep reward (Hukulk, Grobb) -- restricted to Shadow Knights of Troll race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:lusun",
+        "label": "LuSun",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-order-of-the-silent-fist",
+        "label": "Guild Summons - Order of the Silent Fist",
+        "type": "quest",
+        "description": "A new Human or Iksar Monk of the Silent Fist Clan Guild receives a Note with Fist Insignia directing them to LuSun at the guild hall in North Qeynos, who trades it for a guild tunic.",
+        "classes": [
+          "monk"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Note with Fist Insignia",
+          "Hand the note to LuSun at the Order of the Silent Fist guild hall"
+        ],
+        "wiki_title": "Guild Summons - Order of the Silent Fist"
+      }
+    },
+    {
+      "data": {
+        "id": "item:torn-cloth-tunic",
+        "label": "Torn Cloth Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "ac": 2,
+        "weight": 0.4,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Order of the Silent Fist reward (LuSun, North Qeynos) -- restricted to Monks of Human or Iksar race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:datur-nightseer",
+        "label": "Datur Nightseer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-paladins-of-the-underfoot",
+        "label": "Guild Summons - Paladins of the Underfoot",
+        "type": "quest",
+        "description": "A new Dwarf Paladin receives a Folded Parchment directing them to Datur Nightseer, leader of the Paladins of the Underfoot, in North Kaladim, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Folded Parchment",
+          "Hand the parchment to Datur Nightseer in North Kaladim"
+        ],
+        "wiki_title": "Guild Summons - Paladins of the Underfoot"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:hager-sureshot",
+        "label": "Hager Sureshot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-protectors-of-the-pine",
+        "label": "Guild Summons - Protectors of the Pine",
+        "type": "quest",
+        "description": "A new Human, Elf, or Half-Elf Ranger of the Protectors of the Pine Guild receives a tattered note directing them to Hager Sureshot at the guild's shooting range in Surefall Glade, who trades it for a guild tunic.",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Hager Sureshot at the Protectors of the Pine shooting range"
+        ],
+        "wiki_title": "Guild Summons - Protectors of the Pine"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:protectors-of-the-pine",
+        "label": "Protectors of the Pine",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mud-stained-tunic",
+        "label": "Mud Stained Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Protectors of the Pine reward (Hager Sureshot, Surefall Glade) -- restricted to Rangers of Human, Elf, or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:tylfon",
+        "label": "Tylfon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-scouts-of-tunare",
+        "label": "Guild Summons - Scouts of Tunare",
+        "type": "quest",
+        "description": "A new Elf or Half-Elf Rogue of the Tunare's Scouts Guild receives a tattered note directing them to Tylfon at the guild hall in Kelethin, who trades it for a guild tunic.",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Tylfon at the Scouts of Tunare guild hall in Kelethin"
+        ],
+        "wiki_title": "Guild Summons - Scouts of Tunare"
+      }
+    },
+    {
+      "data": {
+        "id": "item:old-worn-gray-tunic",
+        "label": "Old Worn Gray Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Scouts of Tunare reward (Tylfon, Kelethin) -- restricted to Rogues of Elf or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:reania-jukle",
+        "label": "Reania Jukle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "label": "Guild Summons - Shrine of Bertoxxulous Enchanter",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Enchanter of the Bloodsabers Guild receives a tattered note directing them to Reania Jukle at the Shrine of Bertoxxulous guild hall in the Qeynos Catacombs, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Reania Jukle at the Shrine of Bertoxxulous guild hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirty-purple-robe",
+        "label": "Dirty Purple Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "enchanter",
+          "magician",
+          "wizard"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Shrine of Bertoxxulous Enchanter reward (Reania Jukle, Qeynos Catacombs) -- restricted to Human or Half-Elf race"
       }
     }
   ],
@@ -153168,6 +154124,1190 @@
         "id": "e-rewards-10935",
         "source": "quest:guild-summons-dismal-rage-shadowknight",
         "target": "item:faded-crimson-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10936",
+        "source": "npc:east-freeport:brutol-rhaksen",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10937",
+        "source": "npc:east-freeport:brutol-rhaksen",
+        "target": "quest:guild-summons-dismal-rage-warrior",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10938",
+        "source": "quest:guild-summons-dismal-rage-warrior",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10939",
+        "source": "quest:guild-summons-dismal-rage-warrior",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10940",
+        "source": "quest:guild-summons-dismal-rage-warrior",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10941",
+        "source": "quest:guild-summons-dismal-rage-warrior",
+        "target": "item:faded-crimson-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10942",
+        "source": "npc:east-freeport:nexvok-thirod",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10943",
+        "source": "npc:east-freeport:nexvok-thirod",
+        "target": "quest:guild-summons-dismal-rage-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10944",
+        "source": "quest:guild-summons-dismal-rage-wizard",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10945",
+        "source": "quest:guild-summons-dismal-rage-wizard",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10946",
+        "source": "quest:guild-summons-dismal-rage-wizard",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10947",
+        "source": "quest:guild-summons-dismal-rage-wizard",
+        "target": "item:dark-stained-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10948",
+        "source": "npc:greater-faydark:maesyn-trueshot",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10949",
+        "source": "npc:greater-faydark:maesyn-trueshot",
+        "target": "quest:guild-summons-faydarks-champions",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10950",
+        "source": "quest:guild-summons-faydarks-champions",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10951",
+        "source": "quest:guild-summons-faydarks-champions",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10952",
+        "source": "quest:guild-summons-faydarks-champions",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10953",
+        "source": "quest:guild-summons-faydarks-champions",
+        "target": "item:dirty-green-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10954",
+        "source": "npc:oggok:guntrik",
+        "target": "quest:guild-summons-fortress-craknek",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10955",
+        "source": "quest:guild-summons-fortress-craknek",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10956",
+        "source": "quest:guild-summons-fortress-craknek",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10957",
+        "source": "quest:guild-summons-fortress-craknek",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10958",
+        "source": "quest:guild-summons-fortress-craknek",
+        "target": "item:mud-stained-skin-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10959",
+        "source": "npc:erudin:markus-jaevins",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10960",
+        "source": "npc:erudin:markus-jaevins",
+        "target": "quest:guild-summons-gate-callers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10961",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10962",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10963",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "faction:craft-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10964",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10965",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10966",
+        "source": "quest:guild-summons-gate-callers",
+        "target": "item:old-torn-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10967",
+        "source": "npc:oggok:zulort",
+        "target": "quest:guild-summons-greenblood-rock",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10968",
+        "source": "quest:guild-summons-greenblood-rock",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10969",
+        "source": "quest:guild-summons-greenblood-rock",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10970",
+        "source": "quest:guild-summons-greenblood-rock",
+        "target": "faction:shamen-of-war",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10971",
+        "source": "quest:guild-summons-greenblood-rock",
+        "target": "item:dirty-patched-fur-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10972",
+        "source": "npc:south-qeynos:mespha-tevalian",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10973",
+        "source": "npc:south-qeynos:mespha-tevalian",
+        "target": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10974",
+        "source": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10975",
+        "source": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10976",
+        "source": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10977",
+        "source": "quest:guild-summons-hall-of-sorcery-enchanter",
+        "target": "item:blue-training-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10978",
+        "source": "npc:south-qeynos:kinloc-flamepaw",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10979",
+        "source": "npc:south-qeynos:kinloc-flamepaw",
+        "target": "quest:guild-summons-hall-of-sorcery-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10980",
+        "source": "quest:guild-summons-hall-of-sorcery-magician",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10981",
+        "source": "quest:guild-summons-hall-of-sorcery-magician",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10982",
+        "source": "quest:guild-summons-hall-of-sorcery-magician",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10983",
+        "source": "quest:guild-summons-hall-of-sorcery-magician",
+        "target": "item:blue-training-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10984",
+        "source": "npc:south-qeynos:gahlith-wrannstad",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10985",
+        "source": "npc:south-qeynos:gahlith-wrannstad",
+        "target": "quest:guild-summons-hall-of-sorcery-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10986",
+        "source": "quest:guild-summons-hall-of-sorcery-wizard",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10987",
+        "source": "quest:guild-summons-hall-of-sorcery-wizard",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10988",
+        "source": "quest:guild-summons-hall-of-sorcery-wizard",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10989",
+        "source": "quest:guild-summons-hall-of-sorcery-wizard",
+        "target": "item:blue-training-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10990",
+        "source": "npc:south-qeynos:ebon-strongbear",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10991",
+        "source": "npc:south-qeynos:ebon-strongbear",
+        "target": "quest:guild-summons-hall-of-steel",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10992",
+        "source": "quest:guild-summons-hall-of-steel",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10993",
+        "source": "quest:guild-summons-hall-of-steel",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10994",
+        "source": "quest:guild-summons-hall-of-steel",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10995",
+        "source": "quest:guild-summons-hall-of-steel",
+        "target": "item:dirty-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10996",
+        "source": "npc:neriak-3rd-gate:eolorn-jaxx",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10997",
+        "source": "npc:neriak-3rd-gate:eolorn-jaxx",
+        "target": "quest:guild-summons-hall-of-the-ebon-mask",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10998",
+        "source": "quest:guild-summons-hall-of-the-ebon-mask",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10999",
+        "source": "quest:guild-summons-hall-of-the-ebon-mask",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11000",
+        "source": "quest:guild-summons-hall-of-the-ebon-mask",
+        "target": "faction:hall-of-the-ebon-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11001",
+        "source": "quest:guild-summons-hall-of-the-ebon-mask",
+        "target": "item:old-black-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11002",
+        "source": "npc:north-freeport:eestyana-naestra",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11003",
+        "source": "npc:north-freeport:eestyana-naestra",
+        "target": "quest:guild-summons-hall-of-truth-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11004",
+        "source": "quest:guild-summons-hall-of-truth-cleric",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11005",
+        "source": "quest:guild-summons-hall-of-truth-cleric",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11006",
+        "source": "quest:guild-summons-hall-of-truth-cleric",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11007",
+        "source": "quest:guild-summons-hall-of-truth-cleric",
+        "target": "item:faded-purple-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11008",
+        "source": "npc:north-freeport:valeron-dushire",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11009",
+        "source": "npc:north-freeport:valeron-dushire",
+        "target": "quest:guild-summons-hall-of-truth-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11010",
+        "source": "quest:guild-summons-hall-of-truth-paladin",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11011",
+        "source": "quest:guild-summons-hall-of-truth-paladin",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11012",
+        "source": "quest:guild-summons-hall-of-truth-paladin",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11013",
+        "source": "quest:guild-summons-hall-of-truth-paladin",
+        "target": "item:faded-purple-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11014",
+        "source": "npc:ak-anon:juline-urncaller",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11015",
+        "source": "npc:ak-anon:juline-urncaller",
+        "target": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11016",
+        "source": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11017",
+        "source": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11018",
+        "source": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11019",
+        "source": "quest:guild-summons-libary-mechanimagica-enchanter",
+        "target": "item:dirty-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11020",
+        "source": "npc:ak-anon:wuggan-azusphere",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11021",
+        "source": "npc:ak-anon:wuggan-azusphere",
+        "target": "quest:guild-summons-libary-mechanimagica-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11022",
+        "source": "quest:guild-summons-libary-mechanimagica-magician",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11023",
+        "source": "quest:guild-summons-libary-mechanimagica-magician",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11024",
+        "source": "quest:guild-summons-libary-mechanimagica-magician",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11025",
+        "source": "quest:guild-summons-libary-mechanimagica-magician",
+        "target": "item:dirty-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11026",
+        "source": "npc:ak-anon:tobon-starpyre",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11027",
+        "source": "npc:ak-anon:tobon-starpyre",
+        "target": "quest:guild-summons-libary-mechanimagica-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11028",
+        "source": "quest:guild-summons-libary-mechanimagica-wizard",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11029",
+        "source": "quest:guild-summons-libary-mechanimagica-wizard",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11030",
+        "source": "quest:guild-summons-libary-mechanimagica-wizard",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11031",
+        "source": "quest:guild-summons-libary-mechanimagica-wizard",
+        "target": "item:dirty-gold-felt-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11032",
+        "source": "npc:north-freeport:caskin-marsheart",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11033",
+        "source": "npc:north-freeport:caskin-marsheart",
+        "target": "quest:guild-summons-marshearts-chords",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11034",
+        "source": "quest:guild-summons-marshearts-chords",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11035",
+        "source": "quest:guild-summons-marshearts-chords",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11036",
+        "source": "quest:guild-summons-marshearts-chords",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11037",
+        "source": "quest:guild-summons-marshearts-chords",
+        "target": "item:colorfully-patched-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11038",
+        "source": "npc:north-kaladim:mater",
+        "target": "quest:guild-summons-miners-guild-628",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11039",
+        "source": "quest:guild-summons-miners-guild-628",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11040",
+        "source": "quest:guild-summons-miners-guild-628",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11041",
+        "source": "quest:guild-summons-miners-guild-628",
+        "target": "faction:miners-guild-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11042",
+        "source": "quest:guild-summons-miners-guild-628",
+        "target": "item:ruined-miners-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11043",
+        "source": "npc:oggok:soonog",
+        "target": "quest:guild-summons-murdunks-palace",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11044",
+        "source": "quest:guild-summons-murdunks-palace",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11045",
+        "source": "quest:guild-summons-murdunks-palace",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11046",
+        "source": "quest:guild-summons-murdunks-palace",
+        "target": "faction:green-blood-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11047",
+        "source": "quest:guild-summons-murdunks-palace",
+        "target": "item:green-stained-skin-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-11048",
+        "source": "quest:greenblood-shadowknight-tunic",
+        "target": "quest:guild-summons-murdunks-palace",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11049",
+        "source": "npc:grobb:hukulk",
+        "target": "quest:guild-summons-night-keep",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11050",
+        "source": "quest:guild-summons-night-keep",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11051",
+        "source": "quest:guild-summons-night-keep",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11052",
+        "source": "quest:guild-summons-night-keep",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11053",
+        "source": "quest:guild-summons-night-keep",
+        "target": "item:black-and-green-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11054",
+        "source": "npc:north-qeynos:lusun",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11055",
+        "source": "npc:north-qeynos:lusun",
+        "target": "quest:guild-summons-order-of-the-silent-fist",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11056",
+        "source": "quest:guild-summons-order-of-the-silent-fist",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11057",
+        "source": "quest:guild-summons-order-of-the-silent-fist",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11058",
+        "source": "quest:guild-summons-order-of-the-silent-fist",
+        "target": "faction:silent-fist-clan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11059",
+        "source": "quest:guild-summons-order-of-the-silent-fist",
+        "target": "item:torn-cloth-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11060",
+        "source": "npc:north-kaladim:datur-nightseer",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11061",
+        "source": "npc:north-kaladim:datur-nightseer",
+        "target": "quest:guild-summons-paladins-of-the-underfoot",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11062",
+        "source": "quest:guild-summons-paladins-of-the-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11063",
+        "source": "quest:guild-summons-paladins-of-the-underfoot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11064",
+        "source": "quest:guild-summons-paladins-of-the-underfoot",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11065",
+        "source": "quest:guild-summons-paladins-of-the-underfoot",
+        "target": "item:dusty-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11066",
+        "source": "npc:surefall-glade:hager-sureshot",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11067",
+        "source": "npc:surefall-glade:hager-sureshot",
+        "target": "quest:guild-summons-protectors-of-the-pine",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11068",
+        "source": "quest:guild-summons-protectors-of-the-pine",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11069",
+        "source": "quest:guild-summons-protectors-of-the-pine",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11070",
+        "source": "quest:guild-summons-protectors-of-the-pine",
+        "target": "faction:protectors-of-the-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11071",
+        "source": "quest:guild-summons-protectors-of-the-pine",
+        "target": "item:mud-stained-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11072",
+        "source": "npc:greater-faydark:tylfon",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11073",
+        "source": "npc:greater-faydark:tylfon",
+        "target": "quest:guild-summons-scouts-of-tunare",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11074",
+        "source": "quest:guild-summons-scouts-of-tunare",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11075",
+        "source": "quest:guild-summons-scouts-of-tunare",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11076",
+        "source": "quest:guild-summons-scouts-of-tunare",
+        "target": "faction:tunare-s-scouts",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11077",
+        "source": "quest:guild-summons-scouts-of-tunare",
+        "target": "item:old-worn-gray-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11078",
+        "source": "npc:qeynos-catacombs:reania-jukle",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11079",
+        "source": "npc:qeynos-catacombs:reania-jukle",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11080",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11081",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11082",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11083",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
+        "target": "item:dirty-purple-robe",
         "type": "rewards"
       }
     }
