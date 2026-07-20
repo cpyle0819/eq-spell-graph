@@ -70647,6 +70647,129 @@
         ],
         "source": "Kobold Molars (Evil) reward (Royal Guard Lilkus, Paineel Palace)"
       }
+    },
+    {
+      "data": {
+        "id": "item:midnight-mallet",
+        "label": "Midnight Mallet",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "delay": 44,
+        "damage": 14,
+        "effect": "Walking Sleep",
+        "classes": [
+          "cleric",
+          "shaman",
+          "beastlord",
+          "berserker"
+        ],
+        "weight": 11,
+        "size": "Giant",
+        "magic": true,
+        "lore": true,
+        "source": "Lynuga's Gem Collection reward (Lynuga, near the Guk entrance, Innothule Swamp) -- rare pick"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brutechopper",
+        "label": "Brutechopper",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "delay": 50,
+        "damage": 16,
+        "classes": [
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "rogue"
+        ],
+        "weight": 11,
+        "size": "Giant",
+        "magic": true,
+        "lore": true,
+        "source": "Lynuga's Gem Collection reward (Lynuga, near the Guk entrance, Innothule Swamp) -- common pick"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivandyrs-hoop",
+        "label": "Ivandyr's Hoop",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "ac": 6,
+        "stats": {
+          "wis": 6,
+          "int": 6
+        },
+        "hp": 6,
+        "effect": "Spirit Tap",
+        "weight": 0.1,
+        "size": "Tiny",
+        "magic": true,
+        "lore": true,
+        "source": "Lynuga's Gem Collection reward (Lynuga, near the Guk entrance, Innothule Swamp) -- ultra-rare pick"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lapis-lazuli",
+        "label": "Lapis Lazuli",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Magic Elixir for the Warriors reward (Dargon McPherson, Halas); also a common tradeskill/jewelcrafting ingredient"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tattered-cloth-sandal",
+        "label": "Tattered Cloth Sandal",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 1,
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Magic Elixir for the Warriors reward (Dargon McPherson, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-boots",
+        "label": "Leather Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 4,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord",
+          "berserker"
+        ],
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Magic Elixir for the Warriors reward (Dargon McPherson, Halas); part of the Leather Armor Set"
+      }
     }
   ],
   "edges": [
@@ -163711,6 +163834,204 @@
         "target": "item:ringmail-visor",
         "type": "rewards",
         "randomGroup": "kobold-molars-evil-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11602",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-belt",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11603",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-boots",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11604",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-cloak",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11605",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-gloves",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11606",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-gorget",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11607",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-mask",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11608",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-shoulderpads",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11609",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-skullcap",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11610",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-sleeves",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11611",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-tunic",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11612",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-wristbands",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11613",
+        "source": "quest:lizard-tails",
+        "target": "item:raw-hide-leggings",
+        "type": "rewards",
+        "randomGroup": "lizard-tails-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11614",
+        "source": "quest:lynugas-gem-collection",
+        "target": "item:midnight-mallet",
+        "type": "rewards",
+        "randomGroup": "lynugas-gem-collection-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11615",
+        "source": "quest:lynugas-gem-collection",
+        "target": "item:brutechopper",
+        "type": "rewards",
+        "randomGroup": "lynugas-gem-collection-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11616",
+        "source": "quest:lynugas-gem-collection",
+        "target": "item:ivandyrs-hoop",
+        "type": "rewards",
+        "randomGroup": "lynugas-gem-collection-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11617",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:copper-band",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11618",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:lapis-lazuli",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11619",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:tattered-cloth-sandal",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11620",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:turquoise",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11621",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:large-patchwork-pants",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11622",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:leather-boots",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11623",
+        "source": "quest:magic-elixir-for-the-warriors",
+        "target": "item:rusty-axe",
+        "type": "rewards",
+        "randomGroup": "magic-elixir-for-the-warriors-drop"
       }
     }
   ]
