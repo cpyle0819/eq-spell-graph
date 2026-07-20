@@ -74088,6 +74088,3309 @@
         },
         "source": "Scaled Mystic Armor Quests: Vambraces reward (Zazlan Furscale, East Cabilis)"
       }
+    },
+    {
+      "data": {
+        "id": "zone:old-sebilis",
+        "label": "Old Sebilis",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "npc:crushbone:dwarven-smith",
+        "label": "Dwarven Smith",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:crushbone:elven-priest",
+        "label": "Elven Priest",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:screaming-mace-quest",
+        "label": "Screaming Mace Quest",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "description": "A dwarven smith in the slaver cabin at Crushbone trades a Brass Earring, Shiny Brass Shield, and Dwarven Ringmail Tunic (dropped by orc taskmasters, trainers, and Emperor Crush) in sequence for mold pieces and a Dwarven Mace. An elven priest in the same cabin trades Bracers of Battle (dropped by an orc warlord), or the password \"The king is dead,\" for a Prayer Cloth of Tunare. Handing the elven priest both the Dwarven Mace and Prayer Cloth of Tunare completes the quest for the Screaming Mace.",
+        "minLevel": 18,
+        "steps": [
+          "Kill an orc taskmaster in Crushbone for a Brass Earring and hand it to the dwarven smith for an Unfinished Blade Mold",
+          "Kill an orc trainer for a Shiny Brass Shield and hand it to the dwarven smith for an Unfinished Sledge Mold",
+          "Kill Emperor Crush for a Dwarven Ringmail Tunic and hand it to the dwarven smith for the Dwarven Mace",
+          "Kill an orc warlord for Bracers of Battle, or say \"The king is dead\" to the elven priest, for a Prayer Cloth of Tunare",
+          "Hand the elven priest both the Dwarven Mace and Prayer Cloth of Tunare for the Screaming Mace"
+        ],
+        "wiki_title": "Screaming Mace Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:screaming-mace",
+        "label": "Screaming Mace",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "skill": "1H Blunt",
+        "damage": 8,
+        "delay": 35,
+        "weight": 8,
+        "size": "Medium",
+        "magic": true,
+        "effect": "Screaming Mace (combat proc, instant cast) at Level 10",
+        "source": "Screaming Mace Quest reward (elven priest, Crushbone)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-growth:ancient-totem",
+        "label": "Ancient Totem",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scrolls-of-the-ancient-totem",
+        "label": "Scrolls of the Ancient Totem",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "The Ancient Totem in the Plane of Growth trades four scrolls (Scroll of Power, Scroll of Enlightenment, Scroll of Insight, Scroll of Knowledge), looted from level 60 named rats in Dragon Necropolis, for the Visage of Life.",
+        "minLevel": 55,
+        "steps": [
+          "Kill named level 60 rats in Dragon Necropolis for Scroll of Power, Scroll of Enlightenment, Scroll of Insight, and Scroll of Knowledge",
+          "Turn in all four scrolls to the Ancient Totem in the Plane of Growth"
+        ],
+        "wiki_title": "Scrolls of the Ancient Totem"
+      }
+    },
+    {
+      "data": {
+        "id": "item:visage-of-life",
+        "label": "Visage of Life",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "wizard"
+        ],
+        "race": [
+          "high elf"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 8,
+        "stats": {
+          "sta": 5,
+          "int": 10
+        },
+        "mana": 40,
+        "resists": {
+          "fire": 10,
+          "cold": 10,
+          "magic": 5
+        },
+        "weight": 2,
+        "size": "Small",
+        "source": "Scrolls of the Ancient Totem reward (Ancient Totem, Plane of Growth); also restricted to Tunare worshippers per eqlwiki.com's \"Deity: Tunare\" line"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:second-test-of-kejaar",
+        "label": "Second Test of Kejaar",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "description": "Shazda Asad on Kerra Island sends players to defeat Sentinel Creot, a level 30 Paladin who wanders the shore of Toxxulia Forest between the Wizard Hut and the Western Dock, for his head. Faction gains with Kerra Isle and Heretics.",
+        "minLevel": 30,
+        "steps": [
+          "Speak with Shazda Asad on Kerra Island",
+          "Defeat Sentinel Creot along the shore of Toxxulia Forest",
+          "Loot Sentinel Creot's Head and return it to Shazda Asad"
+        ],
+        "wiki_title": "Second Test of Kejaar"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sejah-ghulam-bracer",
+        "label": "Sejah Ghulam Bracer",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "lore": true,
+        "noTrade": true,
+        "ac": 5,
+        "stats": {
+          "dex": 5,
+          "sta": 3
+        },
+        "weight": 0.2,
+        "source": "Second Test of Kejaar reward (Shazda Asad, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:serna-tasknon",
+        "label": "Serna Tasknon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sentry-xyrin-quest",
+        "label": "Sentry Xyrin Quest",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Serna Tasknon at the Temple of Marr in North Freeport hands Paladins a Potion of Marr, delivered to eight sentries (Andlin through Warren) at the Temple in alphabetical order, then refilled and given to Sentry Xyrin on the undead island in Ocean of Tears for the Deepwater Harpoon. Faction gains with Priests of Marr and Knights of Truth per sentry.",
+        "minLevel": 40,
+        "steps": [
+          "Receive a Potion of Marr from Serna Tasknon at the Temple of Marr in North Freeport",
+          "Deliver the potion to all eight sentries (Andlin through Warren) at the Temple, in alphabetical order",
+          "Refill the potion and carry it to Sentry Xyrin on the undead island in Ocean of Tears"
+        ],
+        "wiki_title": "Sentry Xyrin Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deepwater-harpoon",
+        "label": "Deepwater Harpoon",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "skill": "2H Slashing",
+        "damage": 18,
+        "delay": 40,
+        "weight": 13,
+        "magic": true,
+        "stats": {
+          "sta": 5,
+          "wis": 5
+        },
+        "source": "Sentry Xyrin Quest reward (Sentry Xyrin, Ocean of Tears)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:series-c-black-boxes",
+        "label": "Series C Black Boxes",
+        "type": "quest",
+        "description": "Manik Compolten in the Gem Choppers hall in Ak'Anon (requires Amiable or better faction with King Ak'Anon) sends players to give a Shiny Card to four roaming clockwork spiders (Clockwork XIIC, XVIIC, XXVIC, XXVIIC) for their blackboxes, turned in together for experience, then relayed through Jogl Doobraugh and Drekon Vebnebber for a Daily Log and further experience. Faction gains with Gem Choppers, Merchants of AkAnon, and King AkAnon.",
+        "minLevel": 1,
+        "steps": [
+          "Give a Shiny Card to each of the four clockwork spiders (XIIC, XVIIC, XXVIC, XXVIIC) around Ak'Anon for their blackboxes",
+          "Turn in all four blackboxes to Manik Compolten",
+          "Give the returned blackbox to Jogl Doobraugh for a Daily Log",
+          "Give the Daily Log to Drekon Vebnebber"
+        ],
+        "wiki_title": "Series C Black Boxes"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:shakey-scarecrow",
+        "label": "Shakey Scarecrow",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shakeys-stuffing",
+        "label": "Shakey's Stuffing",
+        "type": "quest",
+        "description": "Shakey Scarecrow in Rivervale trades a Sack of Cursed Hay combined with Blessed Oil (a Sack of Hay from West Karana, turned cursed by Roror in The Feerrott for 66 gold, combined with a Blessed Oil Flask from Nomsoe Jusagta at the Temple of Life in North Qeynos) for a random reward: either the Wee Harvester or the Belt of the River. Faction gains with Storm Reapers, Mayor Gubbin, and Merchants of Rivervale.",
+        "minLevel": 1,
+        "steps": [
+          "Buy a Sack of Hay from Cleet Miller's farm in West Karana",
+          "Trade the Sack of Hay plus 66 gold to Roror in The Feerrott for a Sack of Cursed Hay",
+          "Get a Blessed Oil Flask from Nomsoe Jusagta at the Temple of Life in North Qeynos",
+          "Combine the cursed hay and blessed oil in any non-cultural forge",
+          "Turn in the combined item to Shakey Scarecrow in Rivervale for a random reward"
+        ],
+        "wiki_title": "Shakey's Stuffing"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wee-harvester",
+        "label": "Wee Harvester",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "race": [
+          "human",
+          "wood elf",
+          "half elf",
+          "halfling"
+        ],
+        "skill": "2H Blunt",
+        "damage": 10,
+        "magic": true,
+        "stats": {
+          "str": 1,
+          "sta": 1,
+          "wis": 3
+        },
+        "effect": "Summon Food",
+        "source": "Shakey's Stuffing random reward (Shakey Scarecrow, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:belt-of-the-river",
+        "label": "Belt of the River",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "druid",
+          "rogue"
+        ],
+        "race": [
+          "halfling"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "str": 5,
+          "sta": 5
+        },
+        "resists": {
+          "cold": -10
+        },
+        "effect": "Summon Drink",
+        "source": "Shakey's Stuffing random reward (Shakey Scarecrow, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:trakanons-teeth:emperor-ganak",
+        "label": "Emperor Ganak",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:sebilis-and-veeshans-peak-key-quest",
+        "label": "Sebilis and Veeshan's Peak Key Quest",
+        "type": "quest_group",
+        "description": "Emperor Ganak in Trakanon's Teeth silently accepts two independent medallion turn-ins for dungeon keys: a pair of froglok medallions for the Key to Old Sebilis, and three quest medallions plus Trakanon's Tooth for the Key to Veeshan's Peak.",
+        "wiki_title": "Sebilis and Veeshan's Peak Key Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-old-sebilis",
+        "label": "Sebilis and Veeshan's Peak Key Quest: Key to Old Sebilis",
+        "type": "quest",
+        "description": "Hand Emperor Ganak a Medallion of the Kunzar (dropped by a froglok forager in Trakanon's Teeth) and a Medallion of the Nathsar (dropped by a froglok hunter in Trakanon's Teeth) for the Trakanon Idol, which unlocks Old Sebilis.",
+        "steps": [
+          "Kill a froglok forager in Trakanon's Teeth for a Medallion of the Kunzar",
+          "Kill a froglok hunter in Trakanon's Teeth for a Medallion of the Nathsar",
+          "Turn in both medallions to Emperor Ganak"
+        ],
+        "wiki_title": "Sebilis and Veeshan's Peak Key Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trakanon-idol",
+        "label": "Trakanon Idol",
+        "type": "item",
+        "noTrade": true,
+        "weight": 1,
+        "size": "Small",
+        "source": "Key to Old Sebilis reward (Emperor Ganak, Trakanon's Teeth) -- unlocks Old Sebilis"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-veeshans-peak",
+        "label": "Sebilis and Veeshan's Peak Key Quest: Key to Veeshan's Peak",
+        "type": "quest",
+        "description": "Hand Emperor Ganak a Medallion of the Jarsath, Medallion of the Obulus, and Medallion of the Kylong (each earned from a separate quest) plus Trakanon's Tooth (dropped by Trakanon himself in Old Sebilis) for the Key of Veeshan, which unlocks Veeshan's Peak.",
+        "steps": [
+          "Earn a Medallion of the Jarsath, Medallion of the Obulus, and Medallion of the Kylong from their respective quests",
+          "Kill Trakanon in Old Sebilis for Trakanon's Tooth",
+          "Turn in all four items to Emperor Ganak"
+        ],
+        "wiki_title": "Sebilis and Veeshan's Peak Key Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:key-of-veeshan",
+        "label": "Key of Veeshan",
+        "type": "item",
+        "noTrade": true,
+        "weight": 1,
+        "size": "Small",
+        "source": "Key to Veeshan's Peak reward (Emperor Ganak, Trakanon's Teeth) -- unlocks Veeshan's Peak"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:sarkis-ebonblade",
+        "label": "Sarkis Ebonblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:gragrot",
+        "label": "Gragrot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:tynicon-dlin",
+        "label": "Tynicon DLin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shadow-knight-plane-of-sky-tests",
+        "label": "Shadow Knight Plane of Sky Tests",
+        "type": "quest_group",
+        "description": "Sarkis Ebonblade in the Plane of Sky directs Shadow Knights to choose between two apprentices, Gragrot or Tynicon DLin, each offering independent item-turn-in tests for a named reward. Seven independent sub-quests, no ordering between them.",
+        "classes": [
+          "shadow knight"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Bash",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring an Ebon Tessera, Sphinx Eye Opal, and Finely Crafted Amulet to Gragrot in the Plane of Sky for the Amulet of the Sphinx Eye.",
+        "steps": [
+          "Gather an Ebon Tessera, Sphinx Eye Opal, and Finely Crafted Amulet",
+          "Turn them in to Gragrot in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:amulet-of-the-sphinx-eye",
+        "label": "Amulet of the Sphinx Eye",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Neck"
+        ],
+        "ac": 15,
+        "stats": {
+          "str": 7,
+          "cha": 3,
+          "wis": 3,
+          "int": 14
+        },
+        "mana": 25,
+        "effect": "Ultravision",
+        "source": "Shadow Knight Plane of Sky Tests: Test of Bash reward (Gragrot, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Smash",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring a Copper Disc, Small Sapphire, and Silvery Ring to Gragrot in the Plane of Sky for the Crimson Ring of the Djinni.",
+        "steps": [
+          "Gather a Copper Disc, Small Sapphire, and Silvery Ring",
+          "Turn them in to Gragrot in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crimson-ring-of-the-djinni",
+        "label": "Crimson Ring of the Djinni",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Finger"
+        ],
+        "ac": 8,
+        "stats": {
+          "str": 7,
+          "dex": 7,
+          "int": 5
+        },
+        "resists": {
+          "magic": 5
+        },
+        "source": "Shadow Knight Plane of Sky Tests: Test of Smash reward (Gragrot, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Slash",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring a Diaphanous Globe, Dried Leather, and Finely Woven Cloth Belt to Gragrot in the Plane of Sky for the Pegasus-Hide Belt.",
+        "steps": [
+          "Gather a Diaphanous Globe, Dried Leather, and Finely Woven Cloth Belt",
+          "Turn them in to Gragrot in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pegasus-hide-belt",
+        "label": "Pegasus-Hide Belt",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Waist"
+        ],
+        "ac": 8,
+        "stats": {
+          "str": 6,
+          "int": 6,
+          "agi": 6
+        },
+        "effect": "Haste +41%",
+        "source": "Shadow Knight Plane of Sky Tests: Test of Slash reward (Gragrot, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Disempowerment",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring a Griffon Statuette, Blood Sky Emerald, and Rusted Pauldrons to Tynicon DLin in the Plane of Sky for the Blood Sky Face Plate.",
+        "steps": [
+          "Gather a Griffon Statuette, Blood Sky Emerald, and Rusted Pauldrons",
+          "Turn them in to Tynicon DLin in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-sky-face-plate",
+        "label": "Blood Sky Face Plate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Face"
+        ],
+        "ac": 9,
+        "stats": {
+          "str": 10,
+          "dex": 12
+        },
+        "mana": 60,
+        "resists": {
+          "disease": 10
+        },
+        "source": "Shadow Knight Plane of Sky Tests: Test of Disempowerment reward (Tynicon DLin, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Envenoming",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring a Dark Spiroc Feather, Obsidian Shard, and Efreeti War Shield to Tynicon DLin in the Plane of Sky for the Obtenebrate Mithril Guard.",
+        "steps": [
+          "Gather a Dark Spiroc Feather, Obsidian Shard, and Efreeti War Shield",
+          "Turn them in to Tynicon DLin in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:obtenebrate-mithril-guard",
+        "label": "Obtenebrate Mithril Guard",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 35,
+        "stats": {
+          "str": 15
+        },
+        "resists": {
+          "fire": 15
+        },
+        "source": "Shadow Knight Plane of Sky Tests: Test of Envenoming reward (Tynicon DLin, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Raising of the Dead",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring a Large Sky Pearl, Jar of Honey, Sphinxian Ring, and Fae Pauldrons to Tynicon DLin in the Plane of Sky for the Pearlescent Pauldrons.",
+        "steps": [
+          "Gather a Large Sky Pearl, Jar of Honey, Sphinxian Ring, and Fae Pauldrons",
+          "Turn them in to Tynicon DLin in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pearlescent-pauldrons",
+        "label": "Pearlescent Pauldrons",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 10,
+          "dex": 15,
+          "int": 15
+        },
+        "mana": 50,
+        "source": "Shadow Knight Plane of Sky Tests: Test of Raising of the Dead reward (Tynicon DLin, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "label": "Shadow Knight Plane of Sky Tests: Test of Necropotence",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Bring an Efreeti War Axe, Dulcet Nectar, Bloodstained Hilt, and Blood Sky Ruby to Tynicon DLin in the Plane of Sky for the Khyldorn the Blood Drinker.",
+        "steps": [
+          "Gather an Efreeti War Axe, Dulcet Nectar, Bloodstained Hilt, and Blood Sky Ruby",
+          "Turn them in to Tynicon DLin in the Plane of Sky"
+        ],
+        "wiki_title": "Shadow Knight Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:khyldorn-the-blood-drinker",
+        "label": "Khyldorn the Blood Drinker",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "damage": 36,
+        "delay": 43,
+        "stats": {
+          "str": 10,
+          "int": 7
+        },
+        "effect": "Siphon at Level 50",
+        "source": "Shadow Knight Plane of Sky Tests: Test of Necropotence reward (Tynicon DLin, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:syllina",
+        "label": "Syllina",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shadowbound-armor-quests",
+        "label": "ShadowBound Armor Quests",
+        "type": "quest_group",
+        "description": "Syllina in Temple of Solusek Ro trades sets of named reagents for ShadowBound armor pieces. Three independent sub-quests, no ordering between them.",
+        "classes": [
+          "necromancer"
+        ],
+        "wiki_title": "ShadowBound Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowbound-armor-boots",
+        "label": "ShadowBound Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "description": "Trade a Shadow Silk, Scepter of Sorrow, Eye of Shadow, and Skeletal Toe to Syllina in Temple of Solusek Ro for the ShadowBound Boots.",
+        "minLevel": 24,
+        "steps": [
+          "Gather a Shadow Silk, Scepter of Sorrow, Eye of Shadow, and Skeletal Toe",
+          "Turn them in to Syllina in Temple of Solusek Ro"
+        ],
+        "wiki_title": "ShadowBound Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadowbound-boots",
+        "label": "ShadowBound Boots",
+        "type": "item",
+        "classes": [
+          "necromancer"
+        ],
+        "magic": true,
+        "slots": [
+          "Feet"
+        ],
+        "ac": 5,
+        "mana": 15,
+        "hp": 15,
+        "weight": 1.2,
+        "source": "ShadowBound Armor Quests: Boots reward (Syllina, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowbound-armor-gloves",
+        "label": "ShadowBound Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "description": "Trade an Inky Shadow Silk, Scepter of Tears, Hand of Shadow, and Skeletal Finger to Syllina in Temple of Solusek Ro for the ShadowBound Gloves.",
+        "minLevel": 24,
+        "steps": [
+          "Gather an Inky Shadow Silk, Scepter of Tears, Hand of Shadow, and Skeletal Finger",
+          "Turn them in to Syllina in Temple of Solusek Ro"
+        ],
+        "wiki_title": "ShadowBound Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadowbound-gloves",
+        "label": "ShadowBound Gloves",
+        "type": "item",
+        "classes": [
+          "necromancer"
+        ],
+        "magic": true,
+        "slots": [
+          "Hands"
+        ],
+        "ac": 6,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "int": 3
+        },
+        "mana": 3,
+        "weight": 0.7,
+        "source": "ShadowBound Armor Quests: Gloves reward (Syllina, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowbound-armor-robe",
+        "label": "ShadowBound Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "description": "Trade a Large Shadow Silk, Werebat Wing, Mask of Shadow, and Globe of Shadow to Syllina in Temple of Solusek Ro for the Robe of Enshroudment.",
+        "minLevel": 24,
+        "steps": [
+          "Gather a Large Shadow Silk, Werebat Wing, Mask of Shadow, and Globe of Shadow",
+          "Turn them in to Syllina in Temple of Solusek Ro"
+        ],
+        "wiki_title": "ShadowBound Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:robe-of-enshroudment",
+        "label": "Robe of Enshroudment",
+        "type": "item",
+        "classes": [
+          "necromancer"
+        ],
+        "magic": true,
+        "slots": [
+          "Chest"
+        ],
+        "ac": 9,
+        "stats": {
+          "int": 4,
+          "agi": 4
+        },
+        "resists": {
+          "fire": 4,
+          "cold": 4
+        },
+        "weight": 3.5,
+        "effect": "Focus: Reanimation Haste II",
+        "source": "ShadowBound Armor Quests: Robe reward (Syllina, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:veldern-blackhammer",
+        "label": "Veldern Blackhammer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shadowknight-kael-armor-quests",
+        "label": "Shadowknight Kael Armor Quests",
+        "type": "quest_group",
+        "description": "Veldern Blackhammer in Kael Drakkel trades an Ancient Tarnished Plate armor piece plus 3 matching gems for its corresponding piece of Malevolent armor. Seven independent sub-quests, no ordering between them. Requires ALLY faction with Kromzek.",
+        "classes": [
+          "shadow knight"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-helm",
+        "label": "Shadowknight Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Helmet plus 3 Crushed Coral to Veldern Blackhammer in Kael Drakkel for the Malevolent Crown.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-crown",
+        "label": "Malevolent Crown",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 25,
+        "stats": {
+          "dex": 6,
+          "int": 6
+        },
+        "hp": 30,
+        "source": "Shadowknight Kael Armor Quests: Helm reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-breastplate",
+        "label": "Shadowknight Kael Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Breastplate plus 3 Flawless Diamond to Veldern Blackhammer in Kael Drakkel for the Malevolent Breastplate.",
+        "steps": [
+          "Gather a Ancient Tarnished Breastplate and 3 Flawless Diamond",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-breastplate",
+        "label": "Malevolent Breastplate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 54,
+        "stats": {
+          "str": 15
+        },
+        "hp": 40,
+        "mana": 60,
+        "effect": "Invigorate",
+        "source": "Shadowknight Kael Armor Quests: Breastplate reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-vambraces",
+        "label": "Shadowknight Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Vambraces plus 3 Flawed Emerald to Veldern Blackhammer in Kael Drakkel for the Malevolent Vambraces.",
+        "steps": [
+          "Gather a Ancient Tarnished Vambraces and 3 Flawed Emerald",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-vambraces",
+        "label": "Malevolent Vambraces",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 29,
+        "stats": {
+          "str": 4,
+          "int": 7
+        },
+        "mana": 30,
+        "source": "Shadowknight Kael Armor Quests: Vambraces reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-bracer",
+        "label": "Shadowknight Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Bracelet plus 3 Crushed Flame Emerald to Veldern Blackhammer in Kael Drakkel for the Malevolent Bracer.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Bracelet and 3 Crushed Flame Emerald",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-bracer",
+        "label": "Malevolent Bracer",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "dex": 3,
+          "int": 3
+        },
+        "hp": 10,
+        "mana": 10,
+        "source": "Shadowknight Kael Armor Quests: Bracer reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-gauntlets",
+        "label": "Shadowknight Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Gauntlets plus 3 Crushed Topaz to Veldern Blackhammer in Kael Drakkel for the Malevolent Gauntlets.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-gauntlets",
+        "label": "Malevolent Gauntlets",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 3,
+          "int": 3
+        },
+        "mana": 10,
+        "source": "Shadowknight Kael Armor Quests: Gauntlets reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-greaves",
+        "label": "Shadowknight Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Greaves plus 3 Flawed Sea Sapphire to Veldern Blackhammer in Kael Drakkel for the Malevolent Greaves.",
+        "steps": [
+          "Gather a Ancient Tarnished Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-greaves",
+        "label": "Malevolent Greaves",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 36,
+        "stats": {
+          "str": 10
+        },
+        "hp": 60,
+        "source": "Shadowknight Kael Armor Quests: Greaves reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-kael-armor-boots",
+        "label": "Shadowknight Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Ancient Tarnished Plate Boots plus 3 Crushed Black Marble to Veldern Blackhammer in Kael Drakkel for the Malevolent Boots.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Veldern Blackhammer in Kael Drakkel"
+        ],
+        "wiki_title": "Shadowknight Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:malevolent-boots",
+        "label": "Malevolent Boots",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 28,
+        "stats": {
+          "str": 5,
+          "int": 3
+        },
+        "source": "Shadowknight Kael Armor Quests: Boots reward (Veldern Blackhammer, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:onerind-fedhar",
+        "label": "Onerind Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shadowknight-skyshrine-armor-quests",
+        "label": "Shadowknight Skyshrine Armor Quests",
+        "type": "quest_group",
+        "description": "Onerind Fe`Dhar in Skyshrine trades an Unadorned Plate armor piece plus 3 matching gems for its corresponding piece of Blood Lord's armor. Seven independent sub-quests, no ordering between them. Requires ALLY faction with Claws of Veeshan.",
+        "classes": [
+          "shadow knight"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-helm",
+        "label": "Shadowknight Skyshrine Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Helmet plus 3 Crushed Coral to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Crown.",
+        "steps": [
+          "Gather an Unadorned Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-crown",
+        "label": "Blood Lord's Crown",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "str": 6,
+          "sta": 6,
+          "dex": 3
+        },
+        "mana": 40,
+        "resists": {
+          "magic": 4,
+          "fire": 4
+        },
+        "source": "Shadowknight Skyshrine Armor Quests: Helm reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-breastplate",
+        "label": "Shadowknight Skyshrine Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Breastplate plus 3 Flawless Diamond to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Breastplate.",
+        "steps": [
+          "Gather an Unadorned Breastplate and 3 Flawless Diamond",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-breastplate",
+        "label": "Blood Lord's Breastplate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 50,
+        "stats": {
+          "str": 9,
+          "dex": 9,
+          "int": 9,
+          "agi": 9,
+          "sta": 8
+        },
+        "hp": 70,
+        "mana": 70,
+        "effect": "Invigorate",
+        "source": "Shadowknight Skyshrine Armor Quests: Breastplate reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-vambraces",
+        "label": "Shadowknight Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Vambraces plus 3 Flawed Emerald to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Vambraces.",
+        "steps": [
+          "Gather an Unadorned Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-vambraces",
+        "label": "Blood Lord's Vambraces",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 25,
+        "stats": {
+          "dex": 10
+        },
+        "hp": 50,
+        "mana": 20,
+        "source": "Shadowknight Skyshrine Armor Quests: Vambraces reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-bracer",
+        "label": "Shadowknight Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Bracer plus 3 Crushed Flame Emerald to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Bracer.",
+        "steps": [
+          "Gather an Unadorned Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-bracer",
+        "label": "Blood Lord's Bracer",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "str": 4,
+          "int": 2
+        },
+        "hp": 20,
+        "mana": 10,
+        "source": "Shadowknight Skyshrine Armor Quests: Bracer reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "label": "Shadowknight Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Gauntlets plus 3 Crushed Topaz to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Gauntlets.",
+        "steps": [
+          "Gather an Unadorned Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-gauntlets",
+        "label": "Blood Lord's Gauntlets",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "str": 5,
+          "dex": 3,
+          "sta": 3,
+          "int": 3,
+          "agi": 3
+        },
+        "mana": 10,
+        "source": "Shadowknight Skyshrine Armor Quests: Gauntlets reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-greaves",
+        "label": "Shadowknight Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Greaves plus 3 Flawed Sea Sapphire to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Greaves.",
+        "steps": [
+          "Gather an Unadorned Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-greaves",
+        "label": "Blood Lord's Greaves",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 31,
+        "stats": {
+          "str": 6,
+          "sta": 9,
+          "int": 9
+        },
+        "hp": 70,
+        "mana": 30,
+        "resists": {
+          "fire": 3,
+          "cold": 3,
+          "disease": 3,
+          "poison": 3,
+          "magic": 3
+        },
+        "source": "Shadowknight Skyshrine Armor Quests: Greaves reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-skyshrine-armor-boots",
+        "label": "Shadowknight Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade an Unadorned Plate Boots plus 3 Crushed Black Marble to Onerind Fe`Dhar in Skyshrine for the Blood Lord's Boots.",
+        "steps": [
+          "Gather an Unadorned Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Onerind Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shadowknight Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blood-lord-s-boots",
+        "label": "Blood Lord's Boots",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 4,
+          "sta": 6,
+          "int": 3
+        },
+        "resists": {
+          "disease": 1,
+          "cold": 1,
+          "poison": 1
+        },
+        "source": "Shadowknight Skyshrine Armor Quests: Boots reward (Onerind Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:dalgrim-underbelly",
+        "label": "Dalgrim Underbelly",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shadowknight-thurgadin-armor-quests",
+        "label": "Shadowknight Thurgadin Armor Quests",
+        "type": "quest_group",
+        "description": "Dalgrim Underbelly in Thurgadin trades a Corroded Plate armor piece plus 3 matching gems for its corresponding piece of Dark Runed armor. Seven independent sub-quests, no ordering between them. Requires Kindly faction.",
+        "classes": [
+          "shadow knight"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-helm",
+        "label": "Shadowknight Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Helmet plus 3 Crushed Coral to Dalgrim Underbelly in Thurgadin for the Dark Runed Crown.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-crown",
+        "label": "Dark Runed Crown",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 19,
+        "source": "Shadowknight Thurgadin Armor Quests: Helm reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-breastplate",
+        "label": "Shadowknight Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Breastplate plus 3 Flawless Diamond to Dalgrim Underbelly in Thurgadin for the Dark Runed Breastplate.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Breastplate and 3 Flawless Diamond",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-breastplate",
+        "label": "Dark Runed Breastplate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 42,
+        "source": "Shadowknight Thurgadin Armor Quests: Breastplate reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-vambraces",
+        "label": "Shadowknight Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Vambraces plus 3 Flawed Emerald to Dalgrim Underbelly in Thurgadin for the Dark Runed Vambraces.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-vambraces",
+        "label": "Dark Runed Vambraces",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 19,
+        "source": "Shadowknight Thurgadin Armor Quests: Vambraces reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-bracer",
+        "label": "Shadowknight Thurgadin Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Bracer plus 3 Crushed Flame Emerald to Dalgrim Underbelly in Thurgadin for the Dark Runed Bracer.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-bracer",
+        "label": "Dark Runed Bracer",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 15,
+        "source": "Shadowknight Thurgadin Armor Quests: Bracer reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "label": "Shadowknight Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Gauntlets plus 3 Crushed Topaz to Dalgrim Underbelly in Thurgadin for the Dark Runed Gauntlets.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-gauntlets",
+        "label": "Dark Runed Gauntlets",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 15,
+        "source": "Shadowknight Thurgadin Armor Quests: Gauntlets reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-greaves",
+        "label": "Shadowknight Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Greaves plus 3 Flawed Sea Sapphire to Dalgrim Underbelly in Thurgadin for the Dark Runed Greaves.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-greaves",
+        "label": "Dark Runed Greaves",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 24,
+        "source": "Shadowknight Thurgadin Armor Quests: Greaves reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-thurgadin-armor-boots",
+        "label": "Shadowknight Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Trade a Corroded Plate Boots plus 3 Crushed Black Marble to Dalgrim Underbelly in Thurgadin for the Dark Runed Boots.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Dalgrim Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shadowknight Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-runed-boots",
+        "label": "Dark Runed Boots",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "magic": true,
+        "ac": 21,
+        "source": "Shadowknight Thurgadin Armor Quests: Boots reward (Dalgrim Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "label": "Yeeldan Spiritcaller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shaman-kael-armor-quests",
+        "label": "Shaman Kael Armor Quests",
+        "type": "quest_group",
+        "description": "Yeeldan Spiritcaller in Kael Drakkel trades an Ancient Tarnished Chain armor piece plus 3 matching gems for its corresponding piece of Spirit Caller's armor. Seven independent sub-quests, no ordering between them. Requires ALLY faction.",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-helm",
+        "label": "Shaman Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Coif plus 3 Crushed Onyx Sapphire to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Helm.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Coif and 3 Crushed Onyx Sapphire",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-helm",
+        "label": "Spirit Caller's Helm",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "wis": 6,
+          "agi": 6
+        },
+        "mana": 20,
+        "source": "Shaman Kael Armor Quests: Helm reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-breastplate",
+        "label": "Shaman Kael Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Tunic plus 3 Black Marble to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Breastplate.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Tunic and 3 Black Marble",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-breastplate",
+        "label": "Spirit Caller's Breastplate",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 48,
+        "stats": {
+          "wis": 15
+        },
+        "effect": "Riotous Health",
+        "source": "Shaman Kael Armor Quests: Breastplate reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-vambraces",
+        "label": "Shaman Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Sleeves plus 3 Jaundice Gem to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Vambraces.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Sleeves and 3 Jaundice Gem",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-vambraces",
+        "label": "Spirit Caller's Vambraces",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "wis": 3
+        },
+        "source": "Shaman Kael Armor Quests: Vambraces reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-bracer",
+        "label": "Shaman Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Bracer plus 3 Crushed Opal to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Bracer.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Bracer and 3 Crushed Opal",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-bracer",
+        "label": "Spirit Caller's Bracer",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 17,
+        "effect": "Ultravision",
+        "source": "Shaman Kael Armor Quests: Bracer reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-gauntlets",
+        "label": "Shaman Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Gauntlets plus 3 Crushed Lava Ruby to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Gauntlets.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Gauntlets and 3 Crushed Lava Ruby",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-gauntlets",
+        "label": "Spirit Caller's Gauntlets",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "wis": 3
+        },
+        "source": "Shaman Kael Armor Quests: Gauntlets reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-greaves",
+        "label": "Shaman Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Leggings plus 3 Chipped Onyx Sapphire to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Greaves.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Leggings and 3 Chipped Onyx Sapphire",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-greaves",
+        "label": "Spirit Caller's Greaves",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 32,
+        "effect": "Abolish Disease",
+        "source": "Shaman Kael Armor Quests: Greaves reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-kael-armor-boots",
+        "label": "Shaman Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Boots plus 3 Crushed Flame Emerald to Yeeldan Spiritcaller in Kael Drakkel for the Spirit Caller's Boots.",
+        "minLevel": 50,
+        "steps": [
+          "Gather a Ancient Tarnished Chain Boots and 3 Crushed Flame Emerald",
+          "Turn them in to Yeeldan Spiritcaller in Kael Drakkel"
+        ],
+        "wiki_title": "Shaman Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-caller-s-boots",
+        "label": "Spirit Caller's Boots",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 24,
+        "effect": "Extinguish Fatigue",
+        "source": "Shaman Kael Armor Quests: Boots reward (Yeeldan Spiritcaller, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:medicine-man-veetra",
+        "label": "Medicine Man Veetra",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:gina-macstargan",
+        "label": "Gina MacStargan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:ooga",
+        "label": "Ooga",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shaman-plane-of-sky-tests",
+        "label": "Shaman Plane of Sky Tests",
+        "type": "quest_group",
+        "description": "Medicine Man Veetra in the Plane of Sky directs Shamans to choose between two apprentices, Gina MacStargan or Ooga, each offering independent item-turn-in tests for a named reward. Six independent sub-quests, no ordering between them.",
+        "classes": [
+          "shaman"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-might",
+        "label": "Shaman Plane of Sky Tests: Test of Might",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring an Auburn Tessera, Drake Fang, and Leather Cord to Gina MacStargan in the Plane of Sky for the Amulet of the Fang.",
+        "steps": [
+          "Gather an Auburn Tessera, Drake Fang, and Leather Cord",
+          "Turn them in to Gina MacStargan in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:amulet-of-the-fang",
+        "label": "Amulet of the Fang",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Neck"
+        ],
+        "ac": 8,
+        "stats": {
+          "wis": 8
+        },
+        "mana": 10,
+        "effect": "SV FIRE +10",
+        "source": "Shaman Plane of Sky Tests: Test of Might reward (Gina MacStargan, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-health",
+        "label": "Shaman Plane of Sky Tests: Test of Health",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring a Platinum Disc, Ethereal Amber, Shimmering Amber, and Ceremonial Belt to Gina MacStargan in the Plane of Sky for the Bracelet of the Spirits.",
+        "steps": [
+          "Gather a Platinum Disc, Ethereal Amber, Shimmering Amber, and Ceremonial Belt",
+          "Turn them in to Gina MacStargan in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracelet-of-the-spirits",
+        "label": "Bracelet of the Spirits",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Wrist",
+          "Waist"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "wis": 5,
+          "agi": 5
+        },
+        "mana": 50,
+        "effect": "Alacrity",
+        "source": "Shaman Plane of Sky Tests: Test of Health reward (Gina MacStargan, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-sight",
+        "label": "Shaman Plane of Sky Tests: Test of Sight",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring a Phosphoric Globe, Sphinx Hide, and Light Damask Mantle to Gina MacStargan in the Plane of Sky for the Fairy-Hide Mantle.",
+        "steps": [
+          "Gather a Phosphoric Globe, Sphinx Hide, and Light Damask Mantle",
+          "Turn them in to Gina MacStargan in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fairy-hide-mantle",
+        "label": "Fairy-Hide Mantle",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 9,
+        "stats": {
+          "str": 5,
+          "wis": 12
+        },
+        "effect": "Guardian Spirit",
+        "source": "Shaman Plane of Sky Tests: Test of Sight reward (Gina MacStargan, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-shrink",
+        "label": "Shaman Plane of Sky Tests: Test of Shrink",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring an Efreeti War Club, Djinni Statuette, Corrosive Venom, and Wooden Bands to Ooga in the Plane of Sky for the Warhammer of the Wind.",
+        "steps": [
+          "Gather an Efreeti War Club, Djinni Statuette, Corrosive Venom, and Wooden Bands",
+          "Turn them in to Ooga in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warhammer-of-the-wind",
+        "label": "Warhammer of the Wind",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 12,
+        "stats": {
+          "wis": 14
+        },
+        "hp": 50,
+        "mana": 50,
+        "source": "Shaman Plane of Sky Tests: Test of Shrink reward (Ooga, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-snake",
+        "label": "Shaman Plane of Sky Tests: Test of Snake",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring an Emerald Spiroc Feather, Bixie Essence, and Spiritualist's Ring to Ooga in the Plane of Sky for the Vermilion Sky Ring.",
+        "steps": [
+          "Gather an Emerald Spiroc Feather, Bixie Essence, and Spiritualist's Ring",
+          "Turn them in to Ooga in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vermilion-sky-ring",
+        "label": "Vermilion Sky Ring",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Finger"
+        ],
+        "ac": 5,
+        "stats": {
+          "dex": 3,
+          "wis": 7
+        },
+        "effect": "Feign Death",
+        "source": "Shaman Plane of Sky Tests: Test of Snake reward (Ooga, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "label": "Shaman Plane of Sky Tests: Test of Witch Doctor",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bring an Efreeti War Maul, Thickened Nectar, Fire Sky Ruby, and Symbol of Veeshan to Ooga in the Plane of Sky for the Garduk.",
+        "steps": [
+          "Gather an Efreeti War Maul, Thickened Nectar, Fire Sky Ruby, and Symbol of Veeshan",
+          "Turn them in to Ooga in the Plane of Sky"
+        ],
+        "wiki_title": "Shaman Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:garduk",
+        "label": "Garduk",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "Piercing",
+        "damage": 23,
+        "stats": {
+          "wis": 15
+        },
+        "mana": 75,
+        "effect": "Tagar's Insects",
+        "source": "Shaman Plane of Sky Tests: Test of Witch Doctor reward (Ooga, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:asteinnon-fedhar",
+        "label": "Asteinnon Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shaman-skyshrine-armor-quests",
+        "label": "Shaman Skyshrine Armor Quests",
+        "type": "quest_group",
+        "description": "Asteinnon Fe`Dhar in Skyshrine trades an Unadorned Chain armor piece plus 3 matching gems for its corresponding piece of Wolf Caller's armor. Seven independent sub-quests, no ordering between them.",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-helm",
+        "label": "Shaman Skyshrine Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Coif plus 3 Crushed Onyx Sapphires to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Helm.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Coif and 3 Crushed Onyx Sapphires",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-helm",
+        "label": "Wolf Caller's Helm",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 6,
+          "wis": 7
+        },
+        "mana": 25,
+        "source": "Shaman Skyshrine Armor Quests: Helm reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-breastplate",
+        "label": "Shaman Skyshrine Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Tunic plus 3 Black Marble to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Breastplate.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Tunic and 3 Black Marble",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-breastplate",
+        "label": "Wolf Caller's Breastplate",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 43,
+        "stats": {
+          "str": 6,
+          "dex": 6,
+          "sta": 8,
+          "wis": 15
+        },
+        "hp": 45,
+        "mana": 90,
+        "effect": "Riotous Health",
+        "source": "Shaman Skyshrine Armor Quests: Breastplate reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-vambraces",
+        "label": "Shaman Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Sleeves plus 3 Jaundice Gems to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Vambraces.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Sleeves and 3 Jaundice Gems",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-vambraces",
+        "label": "Wolf Caller's Vambraces",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "sta": 3,
+          "wis": 3
+        },
+        "hp": 10,
+        "mana": 15,
+        "source": "Shaman Skyshrine Armor Quests: Vambraces reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-bracer",
+        "label": "Shaman Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Bracer plus 3 Crushed Opals to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Bracer.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Bracer and 3 Crushed Opals",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-bracer",
+        "label": "Wolf Caller's Bracer",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "wis": 7,
+          "dex": 2
+        },
+        "hp": 20,
+        "mana": 15,
+        "effect": "Ultravision",
+        "source": "Shaman Skyshrine Armor Quests: Bracer reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-gauntlets",
+        "label": "Shaman Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Gauntlets plus 3 Crushed Lava Rubies to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Gauntlets.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Gauntlets and 3 Crushed Lava Rubies",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-gauntlets",
+        "label": "Wolf Caller's Gauntlets",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 2,
+          "cha": 2,
+          "wis": 3
+        },
+        "mana": 20,
+        "source": "Shaman Skyshrine Armor Quests: Gauntlets reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-greaves",
+        "label": "Shaman Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Leggings plus 3 Chipped Onyx Sapphires to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Greaves.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Leggings and 3 Chipped Onyx Sapphires",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-greaves",
+        "label": "Wolf Caller's Greaves",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 26,
+        "stats": {
+          "dex": 5,
+          "agi": 5,
+          "wis": 12
+        },
+        "hp": 50,
+        "mana": 80,
+        "effect": "Abolish Disease",
+        "source": "Shaman Skyshrine Armor Quests: Greaves reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skyshrine-armor-boots",
+        "label": "Shaman Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade an Unadorned Chain Boots plus 3 Crushed Flame Emeralds to Asteinnon Fe`Dhar in Skyshrine for the Wolf Caller's Boots.",
+        "minLevel": 50,
+        "steps": [
+          "Gather an Unadorned Chain Boots and 3 Crushed Flame Emeralds",
+          "Turn them in to Asteinnon Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Shaman Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-caller-s-boots",
+        "label": "Wolf Caller's Boots",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "sta": 6,
+          "wis": 5
+        },
+        "hp": 20,
+        "mana": 25,
+        "effect": "Extinguish Fatigue",
+        "source": "Shaman Skyshrine Armor Quests: Boots reward (Asteinnon Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:terman-underbelly",
+        "label": "Terman Underbelly",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:shaman-thurgadin-armor-quests",
+        "label": "Shaman Thurgadin Armor Quests",
+        "type": "quest_group",
+        "description": "Terman Underbelly in Thurgadin trades a Corroded Chain armor piece plus 3 matching gems for its corresponding piece of Rune Crafter's armor. Seven independent sub-quests, no ordering between them. Requires Kindly faction with Coldain. The Vambraces sub-quest is also known on eqlwiki.com as \"Shaman's Velium Sleeves.\"",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-helm",
+        "label": "Shaman Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Coif plus 3 Crushed Onyx Sapphire to Terman Underbelly in Thurgadin for the Rune Crafter's Helm.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Coif and 3 Crushed Onyx Sapphire",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-helm",
+        "label": "Rune Crafter's Helm",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "sta": 5,
+          "wis": 5
+        },
+        "mana": 15,
+        "source": "Shaman Thurgadin Armor Quests: Helm reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-breastplate",
+        "label": "Shaman Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Tunic plus 3 Black Marble to Terman Underbelly in Thurgadin for the Rune Crafter's Breastplate.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Tunic and 3 Black Marble",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-breastplate",
+        "label": "Rune Crafter's Breastplate",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 37,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "sta": 6,
+          "wis": 14,
+          "agi": 3
+        },
+        "hp": 30,
+        "mana": 80,
+        "effect": "Riotous Health",
+        "source": "Shaman Thurgadin Armor Quests: Breastplate reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-vambraces",
+        "label": "Shaman Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Sleeves plus 3 Jaundice Gem to Terman Underbelly in Thurgadin for the Rune Crafter's Vambraces.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Sleeves and 3 Jaundice Gem",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests / Shaman's Velium Sleeves"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-vambraces",
+        "label": "Rune Crafter's Vambraces",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 1,
+          "dex": 1,
+          "sta": 1,
+          "wis": 3
+        },
+        "hp": 10,
+        "mana": 15,
+        "source": "Shaman Thurgadin Armor Quests: Vambraces reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-bracer",
+        "label": "Shaman Thurgadin Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Bracer plus 3 Crushed Opal to Terman Underbelly in Thurgadin for the Rune Crafter's Bracer.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Bracer and 3 Crushed Opal",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-bracer",
+        "label": "Rune Crafter's Bracer",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "str": 2,
+          "wis": 3
+        },
+        "mana": 15,
+        "effect": "Ultravision",
+        "source": "Shaman Thurgadin Armor Quests: Bracer reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-gauntlets",
+        "label": "Shaman Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Gauntlets plus 3 Crushed Lava Ruby to Terman Underbelly in Thurgadin for the Rune Crafter's Gauntlets.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Gauntlets and 3 Crushed Lava Ruby",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-gauntlets",
+        "label": "Rune Crafter's Gauntlets",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "str": 1,
+          "cha": 2,
+          "wis": 2
+        },
+        "mana": 10,
+        "source": "Shaman Thurgadin Armor Quests: Gauntlets reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-greaves",
+        "label": "Shaman Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Leggings plus 3 Chipped Onyx Sapphire to Terman Underbelly in Thurgadin for the Rune Crafter's Greaves.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Leggings and 3 Chipped Onyx Sapphire",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-greaves",
+        "label": "Rune Crafter's Greaves",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "sta": 5,
+          "wis": 10,
+          "agi": 3
+        },
+        "hp": 30,
+        "mana": 80,
+        "effect": "Abolish Disease",
+        "source": "Shaman Thurgadin Armor Quests: Greaves reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-thurgadin-armor-boots",
+        "label": "Shaman Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "description": "Trade a Corroded Chain Boots plus 3 Crushed Flame Emerald to Terman Underbelly in Thurgadin for the Rune Crafter's Boots.",
+        "minLevel": 45,
+        "steps": [
+          "Gather a Corroded Chain Boots and 3 Crushed Flame Emerald",
+          "Turn them in to Terman Underbelly in Thurgadin"
+        ],
+        "wiki_title": "Shaman Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rune-crafter-s-boots",
+        "label": "Rune Crafter's Boots",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "sta": 5,
+          "wis": 3
+        },
+        "effect": "Extinguish Fatigue",
+        "source": "Shaman Thurgadin Armor Quests: Boots reward (Terman Underbelly, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:cripple",
+        "label": "Cripple",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "shaman",
+            "level": 53
+          },
+          {
+            "class": "enchanter",
+            "level": 53
+          }
+        ],
+        "description": "Saps your target's power, decreasing their agility, dexterity, strength, and armor class for 6.3 mins @L53 to 7.0 mins @L60.",
+        "mana": 225,
+        "skill": "Alteration",
+        "castTime": 2.5,
+        "recastTime": 2.25,
+        "fizzleTime": 2.25,
+        "duration": "6.3 minutes @L53 to 7.0 minutes @L60",
+        "targetType": "Single",
+        "spellType": "Detrimental",
+        "resist": "Magic (0)",
+        "range": 200,
+        "icon": "I"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:insidious-decay",
+        "label": "Insidious Decay",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "shaman",
+            "level": 52
+          }
+        ],
+        "description": "Infects your target with a fever, causing them to become more susceptible to other diseases.",
+        "mana": 100,
+        "skill": "Conjuration",
+        "castTime": 1,
+        "recastTime": 5,
+        "fizzleTime": 2.5,
+        "duration": "11.4 minutes @L52 to 14 minutes @L60",
+        "targetType": "Single",
+        "spellType": "Detrimental",
+        "resist": "Unresistable",
+        "range": 200,
+        "icon": "E"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:shroud-of-the-spirits",
+        "label": "Shroud of the Spirits",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "shaman",
+            "level": 54
+          }
+        ],
+        "description": "Places a shroud of spirits on your target, increasing their armor class for 1 hour 12.0 minutes.",
+        "mana": 200,
+        "skill": "Abjuration",
+        "castTime": 6,
+        "recastTime": 12,
+        "fizzleTime": 2.25,
+        "duration": "1 hour 12 minutes",
+        "targetType": "Single",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "range": 100,
+        "icon": "K"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:spirit-of-scale",
+        "label": "Spirit of Scale",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "druid",
+            "level": 53
+          },
+          {
+            "class": "shaman",
+            "level": 52
+          }
+        ],
+        "description": "Imbues your group with the spirit of a scaled wolf, increasing their movement speed for 1 hour 12.0 minutes.",
+        "mana": 150,
+        "skill": "Alteration",
+        "castTime": 6.5,
+        "recastTime": 12,
+        "fizzleTime": 2.25,
+        "duration": "1 hour 12 minutes",
+        "targetType": "Group v2",
+        "spellType": "Beneficial",
+        "resist": "Magic (-10)",
+        "range": 100,
+        "icon": "A"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:talisman-of-shadoo",
+        "label": "Talisman of Shadoo",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "shaman",
+            "level": 53
+          }
+        ],
+        "description": "Protects your group with the talisman of Shadoo, shielding them from poison for 36.0 minutes.",
+        "mana": 150,
+        "skill": "Abjuration",
+        "castTime": 4.5,
+        "recastTime": 2.25,
+        "fizzleTime": 2.25,
+        "duration": "36 minutes",
+        "targetType": "Group v2",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "range": 0,
+        "icon": "N"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:torrent-of-poison",
+        "label": "Torrent of Poison",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "shaman",
+            "level": 55
+          }
+        ],
+        "description": "Creates a rain of poison, causing 1-3 waves of 540 damage to 1-4 creatures in a small radius around your target.",
+        "mana": 380,
+        "skill": "Evocation",
+        "castTime": 6,
+        "recastTime": 12,
+        "fizzleTime": 2.5,
+        "duration": "Instant",
+        "targetType": "Targeted AE",
+        "spellType": "Detrimental",
+        "resist": "Poison (0)",
+        "range": 150,
+        "icon": "N"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:himart-kichith",
+        "label": "Himart Kichith",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-spells-evil-iksar",
+        "label": "Shaman Spells (Evil - Iksar)",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Himart Kichith, in the catacombs beneath the Temple of Terror's eastern tower in East Cabilis, trades any one of Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth for a random spell scroll from Insidious Decay, Shroud of the Spirits, Talisman of Shadoo, or Torrent of Poison.",
+        "minLevel": 51,
+        "steps": [
+          "Find Himart Kichith in the catacombs beneath East Cabilis's Temple of Terror eastern tower",
+          "Hand over a Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth spell scroll",
+          "Receive a random spell scroll in return"
+        ],
+        "wiki_title": "Shaman Spells (Evil - Iksar)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:bukuku-wolffeetz",
+        "label": "Bukuku Wolffeetz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-spells-evil",
+        "label": "Shaman Spells (Evil)",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Bukuku Wolffeetz in The Overthere trades any one of Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth for a random spell scroll from Insidious Decay, Shroud of the Spirits, Talisman of Shadoo, or Torrent of Poison.",
+        "minLevel": 51,
+        "steps": [
+          "Find Bukuku Wolffeetz in The Overthere",
+          "Hand over a Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth spell scroll",
+          "Receive a random spell scroll in return"
+        ],
+        "wiki_title": "Shaman Spells (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:alex-mcdarnin",
+        "label": "Alex McDarnin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-spells-good",
+        "label": "Shaman Spells (Good)",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Alex McDarnin, on the docks in Firiona Vie, trades any one of Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth for a random spell scroll from Insidious Decay, Shroud of the Spirits, Talisman of Shadoo, or Torrent of Poison.",
+        "minLevel": 51,
+        "steps": [
+          "Find Alex McDarnin on the docks in Firiona Vie",
+          "Hand over a Cannibalize III, Cripple, Spirit of Scale, or Talisman of Jasinth spell scroll",
+          "Receive a random spell scroll in return"
+        ],
+        "wiki_title": "Shaman Spells (Good)"
+      }
     }
   ],
   "edges": [
@@ -171129,6 +174432,3278 @@
         "source": "quest:scaled-mystic-armor-vambraces",
         "target": "item:scaled-mystic-vambraces",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-12091",
+        "source": "zone:old-sebilis",
+        "target": "zone:trakanons-teeth",
+        "type": "connects_to",
+        "transport": "portal"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-12092",
+        "source": "zone:trakanons-teeth",
+        "target": "zone:old-sebilis",
+        "type": "connects_to",
+        "transport": "portal"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12093",
+        "source": "npc:crushbone:dwarven-smith",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12094",
+        "source": "npc:crushbone:elven-priest",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12095",
+        "source": "npc:crushbone:dwarven-smith",
+        "target": "quest:screaming-mace-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12096",
+        "source": "npc:crushbone:elven-priest",
+        "target": "quest:screaming-mace-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12097",
+        "source": "quest:screaming-mace-quest",
+        "target": "zone:crushbone",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12098",
+        "source": "quest:screaming-mace-quest",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12099",
+        "source": "quest:screaming-mace-quest",
+        "target": "item:screaming-mace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12100",
+        "source": "npc:plane-of-growth:ancient-totem",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12101",
+        "source": "npc:plane-of-growth:ancient-totem",
+        "target": "quest:scrolls-of-the-ancient-totem",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12102",
+        "source": "quest:scrolls-of-the-ancient-totem",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12103",
+        "source": "quest:scrolls-of-the-ancient-totem",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12104",
+        "source": "quest:scrolls-of-the-ancient-totem",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12105",
+        "source": "quest:scrolls-of-the-ancient-totem",
+        "target": "item:visage-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12106",
+        "source": "npc:kerra-island:shazda-asad",
+        "target": "quest:second-test-of-kejaar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12107",
+        "source": "quest:second-test-of-kejaar",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12108",
+        "source": "quest:second-test-of-kejaar",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12109",
+        "source": "quest:second-test-of-kejaar",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12110",
+        "source": "quest:second-test-of-kejaar",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12111",
+        "source": "quest:second-test-of-kejaar",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12112",
+        "source": "quest:second-test-of-kejaar",
+        "target": "item:sejah-ghulam-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12113",
+        "source": "npc:north-freeport:serna-tasknon",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12114",
+        "source": "npc:north-freeport:serna-tasknon",
+        "target": "quest:sentry-xyrin-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12115",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12116",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12117",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12118",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12119",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12120",
+        "source": "quest:sentry-xyrin-quest",
+        "target": "item:deepwater-harpoon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12121",
+        "source": "npc:ak-anon:manik-compolten",
+        "target": "quest:series-c-black-boxes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12122",
+        "source": "quest:series-c-black-boxes",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12123",
+        "source": "quest:series-c-black-boxes",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12124",
+        "source": "quest:series-c-black-boxes",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12125",
+        "source": "quest:series-c-black-boxes",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12126",
+        "source": "quest:series-c-black-boxes",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12127",
+        "source": "npc:rivervale:shakey-scarecrow",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12128",
+        "source": "npc:rivervale:shakey-scarecrow",
+        "target": "quest:shakeys-stuffing",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12129",
+        "source": "quest:shakeys-stuffing",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12130",
+        "source": "quest:shakeys-stuffing",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12131",
+        "source": "quest:shakeys-stuffing",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12132",
+        "source": "quest:shakeys-stuffing",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12133",
+        "source": "quest:shakeys-stuffing",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12134",
+        "source": "quest:shakeys-stuffing",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12135",
+        "source": "quest:shakeys-stuffing",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12136",
+        "source": "quest:shakeys-stuffing",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12137",
+        "source": "quest:shakeys-stuffing",
+        "target": "item:wee-harvester",
+        "type": "rewards",
+        "randomGroup": "shakeys-stuffing-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12138",
+        "source": "quest:shakeys-stuffing",
+        "target": "item:belt-of-the-river",
+        "type": "rewards",
+        "randomGroup": "shakeys-stuffing-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12139",
+        "source": "npc:trakanons-teeth:emperor-ganak",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12140",
+        "source": "npc:trakanons-teeth:emperor-ganak",
+        "target": "quest_group:sebilis-and-veeshans-peak-key-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12141",
+        "source": "quest_group:sebilis-and-veeshans-peak-key-quest",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12142",
+        "source": "npc:trakanons-teeth:emperor-ganak",
+        "target": "quest:key-to-old-sebilis",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12143",
+        "source": "quest:key-to-old-sebilis",
+        "target": "zone:trakanons-teeth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12144",
+        "source": "quest:key-to-old-sebilis",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12145",
+        "source": "quest:key-to-old-sebilis",
+        "target": "quest_group:sebilis-and-veeshans-peak-key-quest",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12146",
+        "source": "quest:key-to-old-sebilis",
+        "target": "item:trakanon-idol",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12147",
+        "source": "npc:trakanons-teeth:emperor-ganak",
+        "target": "quest:key-to-veeshans-peak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12148",
+        "source": "quest:key-to-veeshans-peak",
+        "target": "zone:trakanons-teeth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12149",
+        "source": "quest:key-to-veeshans-peak",
+        "target": "zone:trakanons-teeth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12150",
+        "source": "quest:key-to-veeshans-peak",
+        "target": "zone:old-sebilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12151",
+        "source": "quest:key-to-veeshans-peak",
+        "target": "quest_group:sebilis-and-veeshans-peak-key-quest",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12152",
+        "source": "quest:key-to-veeshans-peak",
+        "target": "item:key-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12153",
+        "source": "npc:plane-of-sky:sarkis-ebonblade",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12154",
+        "source": "npc:plane-of-sky:gragrot",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12155",
+        "source": "npc:plane-of-sky:tynicon-dlin",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12156",
+        "source": "npc:plane-of-sky:sarkis-ebonblade",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12157",
+        "source": "quest_group:shadow-knight-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12158",
+        "source": "npc:plane-of-sky:gragrot",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12159",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12160",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12161",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12162",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-bash",
+        "target": "item:amulet-of-the-sphinx-eye",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12163",
+        "source": "npc:plane-of-sky:gragrot",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12164",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12165",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12166",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12167",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-smash",
+        "target": "item:crimson-ring-of-the-djinni",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12168",
+        "source": "npc:plane-of-sky:gragrot",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12169",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12170",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12171",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12172",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-slash",
+        "target": "item:pegasus-hide-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12173",
+        "source": "npc:plane-of-sky:tynicon-dlin",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12174",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12175",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12176",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12177",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-disempowerment",
+        "target": "item:blood-sky-face-plate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12178",
+        "source": "npc:plane-of-sky:tynicon-dlin",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12179",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12180",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12181",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12182",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-envenoming",
+        "target": "item:obtenebrate-mithril-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12183",
+        "source": "npc:plane-of-sky:tynicon-dlin",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12184",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12185",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12186",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12187",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-raising-of-the-dead",
+        "target": "item:pearlescent-pauldrons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12188",
+        "source": "npc:plane-of-sky:tynicon-dlin",
+        "target": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12189",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12190",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12191",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "target": "quest_group:shadow-knight-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12192",
+        "source": "quest:shadow-knight-plane-of-sky-test-of-necropotence",
+        "target": "item:khyldorn-the-blood-drinker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12193",
+        "source": "npc:temple-of-solusek-ro:syllina",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12194",
+        "source": "npc:temple-of-solusek-ro:syllina",
+        "target": "quest_group:shadowbound-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12195",
+        "source": "quest_group:shadowbound-armor-quests",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12196",
+        "source": "npc:temple-of-solusek-ro:syllina",
+        "target": "quest:shadowbound-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12197",
+        "source": "quest:shadowbound-armor-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12198",
+        "source": "quest:shadowbound-armor-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12199",
+        "source": "quest:shadowbound-armor-boots",
+        "target": "quest_group:shadowbound-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12200",
+        "source": "quest:shadowbound-armor-boots",
+        "target": "item:shadowbound-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12201",
+        "source": "npc:temple-of-solusek-ro:syllina",
+        "target": "quest:shadowbound-armor-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12202",
+        "source": "quest:shadowbound-armor-gloves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12203",
+        "source": "quest:shadowbound-armor-gloves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12204",
+        "source": "quest:shadowbound-armor-gloves",
+        "target": "quest_group:shadowbound-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12205",
+        "source": "quest:shadowbound-armor-gloves",
+        "target": "item:shadowbound-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12206",
+        "source": "npc:temple-of-solusek-ro:syllina",
+        "target": "quest:shadowbound-armor-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12207",
+        "source": "quest:shadowbound-armor-robe",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12208",
+        "source": "quest:shadowbound-armor-robe",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12209",
+        "source": "quest:shadowbound-armor-robe",
+        "target": "quest_group:shadowbound-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12210",
+        "source": "quest:shadowbound-armor-robe",
+        "target": "item:robe-of-enshroudment",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12211",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12212",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12213",
+        "source": "quest_group:shadowknight-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12214",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12215",
+        "source": "quest:shadowknight-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12216",
+        "source": "quest:shadowknight-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12217",
+        "source": "quest:shadowknight-kael-armor-helm",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12218",
+        "source": "quest:shadowknight-kael-armor-helm",
+        "target": "item:malevolent-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12219",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12220",
+        "source": "quest:shadowknight-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12221",
+        "source": "quest:shadowknight-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12222",
+        "source": "quest:shadowknight-kael-armor-breastplate",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12223",
+        "source": "quest:shadowknight-kael-armor-breastplate",
+        "target": "item:malevolent-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12224",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12225",
+        "source": "quest:shadowknight-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12226",
+        "source": "quest:shadowknight-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12227",
+        "source": "quest:shadowknight-kael-armor-vambraces",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12228",
+        "source": "quest:shadowknight-kael-armor-vambraces",
+        "target": "item:malevolent-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12229",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12230",
+        "source": "quest:shadowknight-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12231",
+        "source": "quest:shadowknight-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12232",
+        "source": "quest:shadowknight-kael-armor-bracer",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12233",
+        "source": "quest:shadowknight-kael-armor-bracer",
+        "target": "item:malevolent-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12234",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12235",
+        "source": "quest:shadowknight-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12236",
+        "source": "quest:shadowknight-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12237",
+        "source": "quest:shadowknight-kael-armor-gauntlets",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12238",
+        "source": "quest:shadowknight-kael-armor-gauntlets",
+        "target": "item:malevolent-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12239",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12240",
+        "source": "quest:shadowknight-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12241",
+        "source": "quest:shadowknight-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12242",
+        "source": "quest:shadowknight-kael-armor-greaves",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12243",
+        "source": "quest:shadowknight-kael-armor-greaves",
+        "target": "item:malevolent-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12244",
+        "source": "npc:kael-drakkal:veldern-blackhammer",
+        "target": "quest:shadowknight-kael-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12245",
+        "source": "quest:shadowknight-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12246",
+        "source": "quest:shadowknight-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12247",
+        "source": "quest:shadowknight-kael-armor-boots",
+        "target": "quest_group:shadowknight-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12248",
+        "source": "quest:shadowknight-kael-armor-boots",
+        "target": "item:malevolent-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12249",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12250",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12251",
+        "source": "quest_group:shadowknight-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12252",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12253",
+        "source": "quest:shadowknight-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12254",
+        "source": "quest:shadowknight-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12255",
+        "source": "quest:shadowknight-skyshrine-armor-helm",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12256",
+        "source": "quest:shadowknight-skyshrine-armor-helm",
+        "target": "item:blood-lord-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12257",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12258",
+        "source": "quest:shadowknight-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12259",
+        "source": "quest:shadowknight-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12260",
+        "source": "quest:shadowknight-skyshrine-armor-breastplate",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12261",
+        "source": "quest:shadowknight-skyshrine-armor-breastplate",
+        "target": "item:blood-lord-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12262",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12263",
+        "source": "quest:shadowknight-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12264",
+        "source": "quest:shadowknight-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12265",
+        "source": "quest:shadowknight-skyshrine-armor-vambraces",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12266",
+        "source": "quest:shadowknight-skyshrine-armor-vambraces",
+        "target": "item:blood-lord-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12267",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12268",
+        "source": "quest:shadowknight-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12269",
+        "source": "quest:shadowknight-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12270",
+        "source": "quest:shadowknight-skyshrine-armor-bracer",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12271",
+        "source": "quest:shadowknight-skyshrine-armor-bracer",
+        "target": "item:blood-lord-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12272",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12273",
+        "source": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12274",
+        "source": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12275",
+        "source": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12276",
+        "source": "quest:shadowknight-skyshrine-armor-gauntlets",
+        "target": "item:blood-lord-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12277",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12278",
+        "source": "quest:shadowknight-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12279",
+        "source": "quest:shadowknight-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12280",
+        "source": "quest:shadowknight-skyshrine-armor-greaves",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12281",
+        "source": "quest:shadowknight-skyshrine-armor-greaves",
+        "target": "item:blood-lord-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12282",
+        "source": "npc:skyshrine:onerind-fedhar",
+        "target": "quest:shadowknight-skyshrine-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12283",
+        "source": "quest:shadowknight-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12284",
+        "source": "quest:shadowknight-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12285",
+        "source": "quest:shadowknight-skyshrine-armor-boots",
+        "target": "quest_group:shadowknight-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12286",
+        "source": "quest:shadowknight-skyshrine-armor-boots",
+        "target": "item:blood-lord-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12287",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12288",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12289",
+        "source": "quest_group:shadowknight-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12290",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12291",
+        "source": "quest:shadowknight-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12292",
+        "source": "quest:shadowknight-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12293",
+        "source": "quest:shadowknight-thurgadin-armor-helm",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12294",
+        "source": "quest:shadowknight-thurgadin-armor-helm",
+        "target": "item:dark-runed-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12295",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12296",
+        "source": "quest:shadowknight-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12297",
+        "source": "quest:shadowknight-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12298",
+        "source": "quest:shadowknight-thurgadin-armor-breastplate",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12299",
+        "source": "quest:shadowknight-thurgadin-armor-breastplate",
+        "target": "item:dark-runed-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12300",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12301",
+        "source": "quest:shadowknight-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12302",
+        "source": "quest:shadowknight-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12303",
+        "source": "quest:shadowknight-thurgadin-armor-vambraces",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12304",
+        "source": "quest:shadowknight-thurgadin-armor-vambraces",
+        "target": "item:dark-runed-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12305",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12306",
+        "source": "quest:shadowknight-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12307",
+        "source": "quest:shadowknight-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12308",
+        "source": "quest:shadowknight-thurgadin-armor-bracer",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12309",
+        "source": "quest:shadowknight-thurgadin-armor-bracer",
+        "target": "item:dark-runed-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12310",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12311",
+        "source": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12312",
+        "source": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12313",
+        "source": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12314",
+        "source": "quest:shadowknight-thurgadin-armor-gauntlets",
+        "target": "item:dark-runed-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12315",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12316",
+        "source": "quest:shadowknight-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12317",
+        "source": "quest:shadowknight-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12318",
+        "source": "quest:shadowknight-thurgadin-armor-greaves",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12319",
+        "source": "quest:shadowknight-thurgadin-armor-greaves",
+        "target": "item:dark-runed-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12320",
+        "source": "npc:thurgadin:dalgrim-underbelly",
+        "target": "quest:shadowknight-thurgadin-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12321",
+        "source": "quest:shadowknight-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12322",
+        "source": "quest:shadowknight-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12323",
+        "source": "quest:shadowknight-thurgadin-armor-boots",
+        "target": "quest_group:shadowknight-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12324",
+        "source": "quest:shadowknight-thurgadin-armor-boots",
+        "target": "item:dark-runed-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12325",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12326",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12327",
+        "source": "quest_group:shaman-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12328",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12329",
+        "source": "quest:shaman-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12330",
+        "source": "quest:shaman-kael-armor-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12331",
+        "source": "quest:shaman-kael-armor-helm",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12332",
+        "source": "quest:shaman-kael-armor-helm",
+        "target": "item:spirit-caller-s-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12333",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12334",
+        "source": "quest:shaman-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12335",
+        "source": "quest:shaman-kael-armor-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12336",
+        "source": "quest:shaman-kael-armor-breastplate",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12337",
+        "source": "quest:shaman-kael-armor-breastplate",
+        "target": "item:spirit-caller-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12338",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12339",
+        "source": "quest:shaman-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12340",
+        "source": "quest:shaman-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12341",
+        "source": "quest:shaman-kael-armor-vambraces",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12342",
+        "source": "quest:shaman-kael-armor-vambraces",
+        "target": "item:spirit-caller-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12343",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12344",
+        "source": "quest:shaman-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12345",
+        "source": "quest:shaman-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12346",
+        "source": "quest:shaman-kael-armor-bracer",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12347",
+        "source": "quest:shaman-kael-armor-bracer",
+        "target": "item:spirit-caller-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12348",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12349",
+        "source": "quest:shaman-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12350",
+        "source": "quest:shaman-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12351",
+        "source": "quest:shaman-kael-armor-gauntlets",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12352",
+        "source": "quest:shaman-kael-armor-gauntlets",
+        "target": "item:spirit-caller-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12353",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12354",
+        "source": "quest:shaman-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12355",
+        "source": "quest:shaman-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12356",
+        "source": "quest:shaman-kael-armor-greaves",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12357",
+        "source": "quest:shaman-kael-armor-greaves",
+        "target": "item:spirit-caller-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12358",
+        "source": "npc:kael-drakkal:yeeldan-spiritcaller",
+        "target": "quest:shaman-kael-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12359",
+        "source": "quest:shaman-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12360",
+        "source": "quest:shaman-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12361",
+        "source": "quest:shaman-kael-armor-boots",
+        "target": "quest_group:shaman-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12362",
+        "source": "quest:shaman-kael-armor-boots",
+        "target": "item:spirit-caller-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12363",
+        "source": "npc:plane-of-sky:medicine-man-veetra",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12364",
+        "source": "npc:plane-of-sky:gina-macstargan",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12365",
+        "source": "npc:plane-of-sky:ooga",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12366",
+        "source": "npc:plane-of-sky:medicine-man-veetra",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12367",
+        "source": "quest_group:shaman-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12368",
+        "source": "npc:plane-of-sky:gina-macstargan",
+        "target": "quest:shaman-plane-of-sky-test-of-might",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12369",
+        "source": "quest:shaman-plane-of-sky-test-of-might",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12370",
+        "source": "quest:shaman-plane-of-sky-test-of-might",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12371",
+        "source": "quest:shaman-plane-of-sky-test-of-might",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12372",
+        "source": "quest:shaman-plane-of-sky-test-of-might",
+        "target": "item:amulet-of-the-fang",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12373",
+        "source": "npc:plane-of-sky:gina-macstargan",
+        "target": "quest:shaman-plane-of-sky-test-of-health",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12374",
+        "source": "quest:shaman-plane-of-sky-test-of-health",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12375",
+        "source": "quest:shaman-plane-of-sky-test-of-health",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12376",
+        "source": "quest:shaman-plane-of-sky-test-of-health",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12377",
+        "source": "quest:shaman-plane-of-sky-test-of-health",
+        "target": "item:bracelet-of-the-spirits",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12378",
+        "source": "npc:plane-of-sky:gina-macstargan",
+        "target": "quest:shaman-plane-of-sky-test-of-sight",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12379",
+        "source": "quest:shaman-plane-of-sky-test-of-sight",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12380",
+        "source": "quest:shaman-plane-of-sky-test-of-sight",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12381",
+        "source": "quest:shaman-plane-of-sky-test-of-sight",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12382",
+        "source": "quest:shaman-plane-of-sky-test-of-sight",
+        "target": "item:fairy-hide-mantle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12383",
+        "source": "npc:plane-of-sky:ooga",
+        "target": "quest:shaman-plane-of-sky-test-of-shrink",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12384",
+        "source": "quest:shaman-plane-of-sky-test-of-shrink",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12385",
+        "source": "quest:shaman-plane-of-sky-test-of-shrink",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12386",
+        "source": "quest:shaman-plane-of-sky-test-of-shrink",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12387",
+        "source": "quest:shaman-plane-of-sky-test-of-shrink",
+        "target": "item:warhammer-of-the-wind",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12388",
+        "source": "npc:plane-of-sky:ooga",
+        "target": "quest:shaman-plane-of-sky-test-of-snake",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12389",
+        "source": "quest:shaman-plane-of-sky-test-of-snake",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12390",
+        "source": "quest:shaman-plane-of-sky-test-of-snake",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12391",
+        "source": "quest:shaman-plane-of-sky-test-of-snake",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12392",
+        "source": "quest:shaman-plane-of-sky-test-of-snake",
+        "target": "item:vermilion-sky-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12393",
+        "source": "npc:plane-of-sky:ooga",
+        "target": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12394",
+        "source": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12395",
+        "source": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12396",
+        "source": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "target": "quest_group:shaman-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12397",
+        "source": "quest:shaman-plane-of-sky-test-of-witch-doctor",
+        "target": "item:garduk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12398",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12399",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12400",
+        "source": "quest_group:shaman-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12401",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12402",
+        "source": "quest:shaman-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12403",
+        "source": "quest:shaman-skyshrine-armor-helm",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12404",
+        "source": "quest:shaman-skyshrine-armor-helm",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12405",
+        "source": "quest:shaman-skyshrine-armor-helm",
+        "target": "item:wolf-caller-s-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12406",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12407",
+        "source": "quest:shaman-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12408",
+        "source": "quest:shaman-skyshrine-armor-breastplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12409",
+        "source": "quest:shaman-skyshrine-armor-breastplate",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12410",
+        "source": "quest:shaman-skyshrine-armor-breastplate",
+        "target": "item:wolf-caller-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12411",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12412",
+        "source": "quest:shaman-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12413",
+        "source": "quest:shaman-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12414",
+        "source": "quest:shaman-skyshrine-armor-vambraces",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12415",
+        "source": "quest:shaman-skyshrine-armor-vambraces",
+        "target": "item:wolf-caller-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12416",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12417",
+        "source": "quest:shaman-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12418",
+        "source": "quest:shaman-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12419",
+        "source": "quest:shaman-skyshrine-armor-bracer",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12420",
+        "source": "quest:shaman-skyshrine-armor-bracer",
+        "target": "item:wolf-caller-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12421",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12422",
+        "source": "quest:shaman-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12423",
+        "source": "quest:shaman-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12424",
+        "source": "quest:shaman-skyshrine-armor-gauntlets",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12425",
+        "source": "quest:shaman-skyshrine-armor-gauntlets",
+        "target": "item:wolf-caller-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12426",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12427",
+        "source": "quest:shaman-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12428",
+        "source": "quest:shaman-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12429",
+        "source": "quest:shaman-skyshrine-armor-greaves",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12430",
+        "source": "quest:shaman-skyshrine-armor-greaves",
+        "target": "item:wolf-caller-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12431",
+        "source": "npc:skyshrine:asteinnon-fedhar",
+        "target": "quest:shaman-skyshrine-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12432",
+        "source": "quest:shaman-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12433",
+        "source": "quest:shaman-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12434",
+        "source": "quest:shaman-skyshrine-armor-boots",
+        "target": "quest_group:shaman-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12435",
+        "source": "quest:shaman-skyshrine-armor-boots",
+        "target": "item:wolf-caller-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12436",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12437",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12438",
+        "source": "quest_group:shaman-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12439",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12440",
+        "source": "quest:shaman-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12441",
+        "source": "quest:shaman-thurgadin-armor-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12442",
+        "source": "quest:shaman-thurgadin-armor-helm",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12443",
+        "source": "quest:shaman-thurgadin-armor-helm",
+        "target": "item:rune-crafter-s-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12444",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12445",
+        "source": "quest:shaman-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12446",
+        "source": "quest:shaman-thurgadin-armor-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12447",
+        "source": "quest:shaman-thurgadin-armor-breastplate",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12448",
+        "source": "quest:shaman-thurgadin-armor-breastplate",
+        "target": "item:rune-crafter-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12449",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12450",
+        "source": "quest:shaman-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12451",
+        "source": "quest:shaman-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12452",
+        "source": "quest:shaman-thurgadin-armor-vambraces",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12453",
+        "source": "quest:shaman-thurgadin-armor-vambraces",
+        "target": "item:rune-crafter-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12454",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12455",
+        "source": "quest:shaman-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12456",
+        "source": "quest:shaman-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12457",
+        "source": "quest:shaman-thurgadin-armor-bracer",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12458",
+        "source": "quest:shaman-thurgadin-armor-bracer",
+        "target": "item:rune-crafter-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12459",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12460",
+        "source": "quest:shaman-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12461",
+        "source": "quest:shaman-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12462",
+        "source": "quest:shaman-thurgadin-armor-gauntlets",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12463",
+        "source": "quest:shaman-thurgadin-armor-gauntlets",
+        "target": "item:rune-crafter-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12464",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12465",
+        "source": "quest:shaman-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12466",
+        "source": "quest:shaman-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12467",
+        "source": "quest:shaman-thurgadin-armor-greaves",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12468",
+        "source": "quest:shaman-thurgadin-armor-greaves",
+        "target": "item:rune-crafter-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12469",
+        "source": "npc:thurgadin:terman-underbelly",
+        "target": "quest:shaman-thurgadin-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12470",
+        "source": "quest:shaman-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12471",
+        "source": "quest:shaman-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12472",
+        "source": "quest:shaman-thurgadin-armor-boots",
+        "target": "quest_group:shaman-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12473",
+        "source": "quest:shaman-thurgadin-armor-boots",
+        "target": "item:rune-crafter-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12474",
+        "source": "npc:east-cabilis:himart-kichith",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12475",
+        "source": "npc:east-cabilis:himart-kichith",
+        "target": "quest:shaman-spells-evil-iksar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12476",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12477",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12478",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "spell:insidious-decay",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-iksar-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12479",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "spell:shroud-of-the-spirits",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-iksar-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12480",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "spell:talisman-of-shadoo",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-iksar-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12481",
+        "source": "quest:shaman-spells-evil-iksar",
+        "target": "spell:torrent-of-poison",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-iksar-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12482",
+        "source": "npc:the-overthere:bukuku-wolffeetz",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12483",
+        "source": "npc:the-overthere:bukuku-wolffeetz",
+        "target": "quest:shaman-spells-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12484",
+        "source": "quest:shaman-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12485",
+        "source": "quest:shaman-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12486",
+        "source": "quest:shaman-spells-evil",
+        "target": "spell:insidious-decay",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12487",
+        "source": "quest:shaman-spells-evil",
+        "target": "spell:shroud-of-the-spirits",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12488",
+        "source": "quest:shaman-spells-evil",
+        "target": "spell:talisman-of-shadoo",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12489",
+        "source": "quest:shaman-spells-evil",
+        "target": "spell:torrent-of-poison",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-evil-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12490",
+        "source": "npc:firiona-vie:alex-mcdarnin",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12491",
+        "source": "npc:firiona-vie:alex-mcdarnin",
+        "target": "quest:shaman-spells-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12492",
+        "source": "quest:shaman-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12493",
+        "source": "quest:shaman-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12494",
+        "source": "quest:shaman-spells-good",
+        "target": "spell:insidious-decay",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-good-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12495",
+        "source": "quest:shaman-spells-good",
+        "target": "spell:shroud-of-the-spirits",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-good-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12496",
+        "source": "quest:shaman-spells-good",
+        "target": "spell:talisman-of-shadoo",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-good-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12497",
+        "source": "quest:shaman-spells-good",
+        "target": "spell:torrent-of-poison",
+        "type": "rewards",
+        "randomGroup": "shaman-spells-good-drop"
       }
     }
   ]
