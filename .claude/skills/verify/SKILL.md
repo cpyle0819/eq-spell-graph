@@ -57,6 +57,32 @@ Playwright-launched instance — including the user's own open browser
 windows/tabs. If a stray debugging-port Chrome needs cleanup, kill it by
 PID (`taskkill /F /PID <pid>`), not by image name.
 
+## Gotcha: Quests page's "Show Out of Era" filter has no URL param
+
+`quests.html?search=<term>` is wired (`applyQueryParams()` reads `?search=`
+into the search box before the first fetch), but there's no equivalent
+`?showOutOfEra=1` — that checkbox only exists as in-page state
+(`showOutOfEra` module variable in `quests.js`), defaulting to `false`
+(`decisions/quest-era-flagging.md`: out-of-era content is hidden by
+default). A quest/quest_group whose zone is confirmed out-of-era (Kael
+Drakkal, Skyshrine, Thurgadin, East Cabilis, etc. all carry `era` — Kunark
+or Velious) will silently show a 0 `quest-card`/`quest-group-card` count on
+a `?search=` deep-link alone, which reads exactly like "this didn't save,"
+not "this saved fine but is filtered." Toggle the checkbox in-page instead
+of trusting a URL param:
+
+```js
+await page.evaluate(() => {
+  const el = document.getElementById("quest-show-out-of-era");
+  el.checked = true;
+  el.dispatchEvent(new Event("change", { bubbles: true }));
+});
+```
+
+(`toggle-checkbox` is a real Shadow DOM custom element — `.checked` is a
+real property getter/setter on the host, and it re-dispatches `change` on
+itself, so this works without reaching into its shadow root.)
+
 ## What's been verified this way
 
 - Spell Finder (`index.html`): tag inputs (Spell Class/Spell Line/Specific
@@ -65,3 +91,6 @@ PID (`taskkill /F /PID <pid>`), not by image name.
 - Class Browser (`class-browser.html`): tag input for classes, tab
   switching, spell card badges.
 - Nav button (`MacroButton`) rendering/font-size across all three pages.
+- Quests page (`quests.html`): `?search=` deep-link for both `quest-card`
+  and `quest-group-card` results, including out-of-era zones via the
+  checkbox toggle above.
