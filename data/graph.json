@@ -71377,6 +71377,572 @@
         "range": 100,
         "icon": "G"
       }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:karam-dragonforge",
+        "label": "Karam Dragonforge",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:red-dragonscale-armor-quest",
+        "label": "Red Dragonscale Armor Quest",
+        "type": "quest",
+        "description": "Karam Dragonforge in Rathe Mountains trades Red Dragon Scales (from Lord Nagafen or Talendor), a vendor-bought Vial of Swirling Smoke, and 1000 platinum for a piece of Red Dragonscale Armor. Multiquestable. Indifferent faction or better required. All classes.",
+        "minLevel": 45,
+        "steps": [
+          "Obtain Red Dragon Scales from Lord Nagafen or Talendor",
+          "Buy a Vial of Swirling Smoke from a vendor",
+          "Hand the scales, vial, and 1000 platinum to Karam Dragonforge in Rathe Mountains"
+        ],
+        "wiki_title": "Red Dragonscale Armor Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:red-dragonscale-armor",
+        "label": "Red Dragonscale Armor",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 20
+        },
+        "resists": {
+          "fire": 1,
+          "magic": 1
+        },
+        "source": "Red Dragonscale Armor Quest reward (Karam Dragonforge, Rathe Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:manik-compolten",
+        "label": "Manik Compolten",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:red-v-clockwork",
+        "label": "Red V Clockwork",
+        "type": "quest",
+        "description": "Manik Compolten in Ak'Anon sends players after Red V and obsolete clockwork models in the Mines of Malfunction for 4 blackbox fragments, assembled into a Rusted Blackbox and turned in for a random reward. Faction gains with King Ak'Anon, Merchants of Ak'Anon, and Gem Choppers. All classes.",
+        "minLevel": 8,
+        "steps": [
+          "Hunt Red V and obsolete clockwork models in the Mines of Malfunction for 4 blackbox fragments",
+          "Assemble the fragments into a Rusted Blackbox",
+          "Turn the Rusted Blackbox in to Manik Compolten in Ak'Anon"
+        ],
+        "wiki_title": "Red V Clockwork"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bull-smasher",
+        "label": "Bull Smasher",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ionys-absorber",
+        "label": "Iony's Absorber",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:lady-shae",
+        "label": "Lady Shae",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:red-wine-to-lady-shae",
+        "label": "Red Wine to Lady Shae",
+        "type": "quest",
+        "description": "Lady Shae in West Freeport takes four Red Wine, then a fifth turn-in of one White Wine, granting experience and faction with Emerald Warriors, Merchants of Felwithe, and Kelethin Merchants along the way. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Deliver four Red Wine to Lady Shae in West Freeport",
+          "Deliver one White Wine to Lady Shae"
+        ],
+        "wiki_title": "Red Wine to Lady Shae"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:reebos-carrots",
+        "label": "Reebo's Carrots",
+        "type": "quest",
+        "description": "Reebo Leafsway in Rivervale hands over a Crate of Rotten Carrots for delivery to Blinza Toepopal; Reebo then offers a lesson in critical thinking with fresh carrots, and the final Crate of Carrots or Crate of Fine Carrots delivered back determines the exact faction split among Deeppockets, Circle of Unseen Hands, Merchants of Rivervale, Coalition of Tradefolk Underground, and Carson McCabe. Also rewards experience and small coin. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Crate of Rotten Carrots from Reebo Leafsway in Rivervale",
+          "Deliver the crate to Blinza Toepopal",
+          "Receive fresh carrots back from Reebo and choose a Crate of Carrots or Crate of Fine Carrots",
+          "Deliver the chosen crate back to complete the quest"
+        ],
+        "wiki_title": "Reebo's Carrots"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:regal-band-of-bathezid-quest",
+        "label": "Regal Band of Bathezid Quest",
+        "type": "quest",
+        "description": "Herald Telcha in Chardok trades a Di'Zok Signet of Service ring plus a Head of Skargus for the Regal Band of Bathezid ring. Ally faction with Di'Zok is required for the final turn-in. Continues into Spirit Wracked Cord Quest. All classes.",
+        "minLevel": 51,
+        "steps": [
+          "Obtain a Di'Zok Signet of Service ring",
+          "Slay Skargus for his head",
+          "Turn both in to Herald Telcha in Chardok (Ally faction with Di'Zok required)"
+        ],
+        "wiki_title": "Regal Band of Bathezid Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:regal-band-of-bathezid",
+        "label": "Regal Band of Bathezid",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "magic": true,
+        "lore": true,
+        "stats": {
+          "hp": 85,
+          "mana": 50
+        },
+        "effect": "Damage shield, usable at level 49",
+        "source": "Regal Band of Bathezid Quest reward (Herald Telcha, Chardok)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:staff-sergeant-drioc",
+        "label": "Staff Sergeant Drioc",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:reinforcements-for-the-tunarean-regiment",
+        "label": "Reinforcements for The Tunarean Regiment",
+        "type": "quest",
+        "description": "Staff Sergeant Drioc in Kael Drakkal sends players through two phases -- first gathering an Arcanum of Rosh and Ancient Rusted Key around Wakening Land/Kael Drakkal for an Enchanted Velium Mask, then a second phase through Iceclad Ocean, Thurgadin, and the Tower of Frozen Shadow for an optional Velium Studded Cloak and a choice of Collar of the Storm, Girdle of Reflection, or Helssen's Prismatic Trinket. Faction gains with Kromrif, Kromzek, and King Tormax. All classes.",
+        "minLevel": 45,
+        "steps": [
+          "Gather an Arcanum of Rosh and Ancient Rusted Key around Wakening Land/Kael Drakkal",
+          "Turn them in to Staff Sergeant Drioc for an Enchanted Velium Mask",
+          "Complete the second phase through Iceclad Ocean, Thurgadin, and the Tower of Frozen Shadow, optionally earning a Velium Studded Cloak",
+          "Choose a final reward: Collar of the Storm, Girdle of Reflection, or Helssen's Prismatic Trinket"
+        ],
+        "wiki_title": "Reinforcements for The Tunarean Regiment"
+      }
+    },
+    {
+      "data": {
+        "id": "item:enchanted-velium-mask",
+        "label": "Enchanted Velium Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "source": "Reinforcements for The Tunarean Regiment intermediate reward (Staff Sergeant Drioc, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:velium-studded-cloak",
+        "label": "Velium Studded Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "source": "Reinforcements for The Tunarean Regiment optional reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:collar-of-the-storm",
+        "label": "Collar of the Storm",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "stats": {
+          "str": 6,
+          "sta": 7,
+          "hp": 15
+        },
+        "source": "Reinforcements for The Tunarean Regiment reward choice"
+      }
+    },
+    {
+      "data": {
+        "id": "item:girdle-of-reflection",
+        "label": "Girdle of Reflection",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "magic": true,
+        "stats": {
+          "wis": 6,
+          "hp": 35
+        },
+        "source": "Reinforcements for The Tunarean Regiment reward choice"
+      }
+    },
+    {
+      "data": {
+        "id": "item:helssens-prismatic-trinket",
+        "label": "Helssen's Prismatic Trinket",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "magic": true,
+        "stats": {
+          "cha": 8,
+          "mana": 55
+        },
+        "source": "Reinforcements for The Tunarean Regiment reward choice"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-cabilis:keeper-pain",
+        "label": "Keeper Pain",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:renew-bones-quest",
+        "label": "Renew Bones Quest",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "description": "Keeper Pain in West Cabilis sends Necromancers after four foraged items -- a Frost Crystal from the Dreadlands, a Plains Pebble from the Plains of Karana, a Cockatrice Egg from The Overthere, and a Giant Hornet Egg from Burning Wood -- to combine in a chest, plus a Wand of Pain retrieved from a coerced revenant in the Crypt of Dalnir. Reward: Spell: Renew Bones. Faction gains with Brood of Kotiz and Legion of Cabilis.",
+        "minLevel": 25,
+        "steps": [
+          "Gather a Frost Crystal (Dreadlands), Plains Pebble (Plains of Karana), Cockatrice Egg (The Overthere), and Giant Hornet Egg (Burning Wood)",
+          "Combine them in a chest",
+          "Retrieve the Wand of Pain from a coerced revenant in the Crypt of Dalnir",
+          "Return everything to Keeper Pain in West Cabilis"
+        ],
+        "wiki_title": "Renew Bones Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:armorer-dellin",
+        "label": "Armorer Dellin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:reserve-militia",
+        "label": "Reserve Militia",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "ranger",
+          "rogue",
+          "monk",
+          "bard"
+        ],
+        "description": "Armorer Dellin in West Freeport trades a Militia Armory Token (earned from a Guard Valon quest) for a Reserve Militia Tunic. Amiable faction or better with the Freeport Militia required. Faction gains with The Freeport Militia and Coalition of Tradefolk Underground.",
+        "minLevel": 10,
+        "steps": [
+          "Earn a Militia Armory Token from Guard Valon's quest",
+          "Turn the token in to Armorer Dellin in West Freeport"
+        ],
+        "wiki_title": "Reserve Militia"
+      }
+    },
+    {
+      "data": {
+        "id": "item:reserve-militia-tunic",
+        "label": "Reserve Militia Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "ac": 9,
+        "stats": {
+          "dex": 3
+        },
+        "source": "Reserve Militia reward (Armorer Dellin, West Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:a-spirit",
+        "label": "a spirit",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ridossans-spirit",
+        "label": "Ridossan's Spirit",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "A spirit in Stonebrunt Mountains sends Shadow Knights after a Grimy Lance (dropped by a lizard ritualist in Temple of Cazic Thule); returning it grants the spirit corporeal form, leading to defeating Disciple Okarote and trading an Idol of Fear for the Soulfiend Lance. Amiable faction or better required. Faction gain with Heretics.",
+        "minLevel": 25,
+        "steps": [
+          "Speak with the spirit in Stonebrunt Mountains",
+          "Slay a lizard ritualist in Temple of Cazic Thule for a Grimy Lance",
+          "Return the lance to the spirit to restore its corporeal form",
+          "Defeat Disciple Okarote",
+          "Trade the Idol of Fear for the Soulfiend Lance"
+        ],
+        "wiki_title": "Ridossan's Spirit"
+      }
+    },
+    {
+      "data": {
+        "id": "item:soulfiend-lance",
+        "label": "Soulfiend Lance",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "magic": true,
+        "skill": "2H Piercing",
+        "damage": 20,
+        "ac": 5,
+        "stats": {
+          "int": 3
+        },
+        "effect": "Leech",
+        "source": "Ridossan's Spirit reward (Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:robe-of-the-elements-quest",
+        "label": "Robe of the Elements Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Joyce in Temple of Solusek Ro trades a Fire Goblin Skin, Frost Goblin Skin, Twice-Woven Cloak, and Scroll of Elemental Armor for the Robe of the Elements. Faction gain with Temple Of Sol Ro.",
+        "minLevel": 25,
+        "steps": [
+          "Gather a Fire Goblin Skin, Frost Goblin Skin, Twice-Woven Cloak, and Scroll of Elemental Armor",
+          "Turn them in to Joyce in Temple of Solusek Ro"
+        ],
+        "wiki_title": "Robe of the Elements Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:robe-of-the-elements",
+        "label": "Robe of the Elements",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "int": 4
+        },
+        "resists": {
+          "fire": 1,
+          "cold": 1
+        },
+        "effect": "Summoning haste focus",
+        "source": "Robe of the Elements Quest reward (Joyce, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rod-of-insidious-glamour-quest",
+        "label": "Rod of Insidious Glamour Quest",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Sultin in Temple of Solusek Ro sends solo Enchanters after a Golden Rod (from a froglok priest in Upper Guk) and a Glowing Glamour Stone (obtained by trading through Cynthia and Tarn Visilin). Amiable faction with Temple Of Sol Ro is required before the final turn-in or both items are lost. Faction gain with Temple Of Sol Ro.",
+        "minLevel": 25,
+        "steps": [
+          "Obtain a Golden Rod from a froglok priest in Upper Guk",
+          "Trade through Cynthia and Tarn Visilin for a Glowing Glamour Stone",
+          "Turn both in to Sultin in Temple of Solusek Ro (Amiable faction required)"
+        ],
+        "wiki_title": "Rod of Insidious Glamour Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rod-of-insidious-glamour",
+        "label": "Rod of Insidious Glamour",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "stats": {
+          "cha": 12
+        },
+        "effect": "Alliance, usable at level 30",
+        "source": "Rod of Insidious Glamour Quest reward (Sultin, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rognarogs-head",
+        "label": "Rognarog's Head",
+        "type": "quest",
+        "description": "Shazda Kaekwon in Stonebrunt Mountains trades a Kobold Head, looted from Rognarog the Infuriated, for a choice of the Titan Blessed Bokken, Titan Blessed Tachi, or Titan Blessed Tanto. Faction gains with Kejek Village and Peace Keepers.",
+        "minLevel": 28,
+        "steps": [
+          "Slay Rognarog the Infuriated for a Kobold Head",
+          "Turn the head in to Shazda Kaekwon and choose a weapon reward"
+        ],
+        "wiki_title": "Rognarog's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:titan-blessed-bokken",
+        "label": "Titan Blessed Bokken",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:titan-blessed-tachi",
+        "label": "Titan Blessed Tachi",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Slashing",
+        "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:titan-blessed-tanto",
+        "label": "Titan Blessed Tanto",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Piercing",
+        "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:chardok:queen-velazul-dizok",
+        "label": "Queen Velazul Di`zok",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:spirit-wracked-cord-quest",
+        "label": "Spirit Wracked Cord Quest",
+        "type": "quest",
+        "description": "Queen Velazul Di`zok in Chardok trades an Undead Dragon Sinew, a Spirit Wracked Urn, and the finished Regal Band of Bathezid for the Spirit Wracked Cord (the ring is handed back). Ally faction required.",
+        "minLevel": 55,
+        "steps": [
+          "Complete Regal Band of Bathezid Quest",
+          "Gather an Undead Dragon Sinew and Spirit Wracked Urn",
+          "Turn in the sinew, urn, and Regal Band of Bathezid to Queen Velazul Di`zok in Chardok (Ally faction required)"
+        ],
+        "wiki_title": "Spirit Wracked Cord Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spirit-wracked-cord",
+        "label": "Spirit Wracked Cord",
+        "type": "item",
+        "slots": [
+          "Shoulders",
+          "Arms",
+          "Wrist"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "sta": 5,
+          "hp": 100
+        },
+        "resists": {
+          "cold": 1,
+          "magic": 1
+        },
+        "effect": "Aura of Battle",
+        "source": "Spirit Wracked Cord Quest reward (Queen Velazul Di`zok, Chardok)"
+      }
     }
   ],
   "edges": [
@@ -164990,6 +165556,800 @@
         "target": "spell:shadowbond",
         "type": "rewards",
         "randomGroup": "necromancer-spells-cabilis-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11663",
+        "source": "npc:rathe-mountains:karam-dragonforge",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11664",
+        "source": "npc:rathe-mountains:karam-dragonforge",
+        "target": "quest:red-dragonscale-armor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11665",
+        "source": "quest:red-dragonscale-armor-quest",
+        "target": "zone:rathe-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11666",
+        "source": "quest:red-dragonscale-armor-quest",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11667",
+        "source": "quest:red-dragonscale-armor-quest",
+        "target": "item:red-dragonscale-armor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11668",
+        "source": "npc:ak-anon:manik-compolten",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11669",
+        "source": "npc:ak-anon:manik-compolten",
+        "target": "quest:red-v-clockwork",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11670",
+        "source": "quest:red-v-clockwork",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11671",
+        "source": "quest:red-v-clockwork",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11672",
+        "source": "quest:red-v-clockwork",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11673",
+        "source": "quest:red-v-clockwork",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11674",
+        "source": "quest:red-v-clockwork",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11675",
+        "source": "quest:red-v-clockwork",
+        "target": "item:bull-smasher",
+        "type": "rewards",
+        "randomGroup": "red-v-clockwork-reward"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11676",
+        "source": "quest:red-v-clockwork",
+        "target": "item:ionys-absorber",
+        "type": "rewards",
+        "randomGroup": "red-v-clockwork-reward"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11677",
+        "source": "npc:west-freeport:lady-shae",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11678",
+        "source": "npc:west-freeport:lady-shae",
+        "target": "quest:red-wine-to-lady-shae",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11679",
+        "source": "quest:red-wine-to-lady-shae",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11680",
+        "source": "quest:red-wine-to-lady-shae",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11681",
+        "source": "quest:red-wine-to-lady-shae",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11682",
+        "source": "quest:red-wine-to-lady-shae",
+        "target": "faction:merchants-of-felwithe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11683",
+        "source": "quest:red-wine-to-lady-shae",
+        "target": "faction:kelethin-merchants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11684",
+        "source": "npc:rivervale:reebo-leafsway",
+        "target": "quest:reebos-carrots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11685",
+        "source": "quest:reebos-carrots",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11686",
+        "source": "quest:reebos-carrots",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11687",
+        "source": "quest:reebos-carrots",
+        "target": "faction:deeppockets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11688",
+        "source": "quest:reebos-carrots",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11689",
+        "source": "quest:reebos-carrots",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11690",
+        "source": "quest:reebos-carrots",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11691",
+        "source": "quest:reebos-carrots",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11692",
+        "source": "npc:chardok:herald-telcha",
+        "target": "quest:regal-band-of-bathezid-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11693",
+        "source": "quest:regal-band-of-bathezid-quest",
+        "target": "zone:chardok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11694",
+        "source": "quest:regal-band-of-bathezid-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11695",
+        "source": "quest:regal-band-of-bathezid-quest",
+        "target": "item:regal-band-of-bathezid",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11696",
+        "source": "npc:kael-drakkal:staff-sergeant-drioc",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11697",
+        "source": "npc:kael-drakkal:staff-sergeant-drioc",
+        "target": "quest:reinforcements-for-the-tunarean-regiment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11698",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11699",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11700",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11701",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11702",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11703",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11704",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11705",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11706",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "item:enchanted-velium-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11707",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "item:velium-studded-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11708",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "item:collar-of-the-storm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11709",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "item:girdle-of-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11710",
+        "source": "quest:reinforcements-for-the-tunarean-regiment",
+        "target": "item:helssens-prismatic-trinket",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11711",
+        "source": "npc:west-cabilis:keeper-pain",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11712",
+        "source": "npc:west-cabilis:keeper-pain",
+        "target": "quest:renew-bones-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11713",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:west-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11714",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11715",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11716",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11717",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:burning-wood",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11718",
+        "source": "quest:renew-bones-quest",
+        "target": "zone:dalnir",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11719",
+        "source": "quest:renew-bones-quest",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11720",
+        "source": "quest:renew-bones-quest",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11721",
+        "source": "quest:renew-bones-quest",
+        "target": "spell:renew-bones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11722",
+        "source": "npc:west-freeport:armorer-dellin",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11723",
+        "source": "npc:west-freeport:armorer-dellin",
+        "target": "quest:reserve-militia",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11724",
+        "source": "quest:reserve-militia",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11725",
+        "source": "quest:reserve-militia",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11726",
+        "source": "quest:reserve-militia",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11727",
+        "source": "quest:reserve-militia",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11728",
+        "source": "quest:reserve-militia",
+        "target": "item:reserve-militia-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11729",
+        "source": "npc:stonebrunt-mountains:a-spirit",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11730",
+        "source": "npc:stonebrunt-mountains:a-spirit",
+        "target": "quest:ridossans-spirit",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11731",
+        "source": "quest:ridossans-spirit",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11732",
+        "source": "quest:ridossans-spirit",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11733",
+        "source": "quest:ridossans-spirit",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11734",
+        "source": "quest:ridossans-spirit",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11735",
+        "source": "quest:ridossans-spirit",
+        "target": "item:soulfiend-lance",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11736",
+        "source": "npc:temple-of-solusek-ro:joyce",
+        "target": "quest:robe-of-the-elements-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11737",
+        "source": "quest:robe-of-the-elements-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11738",
+        "source": "quest:robe-of-the-elements-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11739",
+        "source": "quest:robe-of-the-elements-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11740",
+        "source": "quest:robe-of-the-elements-quest",
+        "target": "item:robe-of-the-elements",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11741",
+        "source": "npc:temple-of-solusek-ro:sultin",
+        "target": "quest:rod-of-insidious-glamour-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11742",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11743",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11744",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11745",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11746",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11747",
+        "source": "quest:rod-of-insidious-glamour-quest",
+        "target": "item:rod-of-insidious-glamour",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11748",
+        "source": "npc:stonebrunt-mountains:shazda-kaekwon",
+        "target": "quest:rognarogs-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11749",
+        "source": "quest:rognarogs-head",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11750",
+        "source": "quest:rognarogs-head",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11751",
+        "source": "quest:rognarogs-head",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11752",
+        "source": "quest:rognarogs-head",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11753",
+        "source": "quest:rognarogs-head",
+        "target": "item:titan-blessed-bokken",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11754",
+        "source": "quest:rognarogs-head",
+        "target": "item:titan-blessed-tachi",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11755",
+        "source": "quest:rognarogs-head",
+        "target": "item:titan-blessed-tanto",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11756",
+        "source": "npc:chardok:queen-velazul-dizok",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11757",
+        "source": "npc:chardok:queen-velazul-dizok",
+        "target": "quest:spirit-wracked-cord-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11758",
+        "source": "quest:spirit-wracked-cord-quest",
+        "target": "zone:chardok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11759",
+        "source": "quest:spirit-wracked-cord-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-11760",
+        "source": "quest:spirit-wracked-cord-quest",
+        "target": "quest:regal-band-of-bathezid-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11761",
+        "source": "quest:spirit-wracked-cord-quest",
+        "target": "item:spirit-wracked-cord",
+        "type": "rewards"
       }
     }
   ]
