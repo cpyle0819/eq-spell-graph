@@ -94,6 +94,35 @@ export const QUEST_CARD_CSS = `
   background: rgba(156, 43, 43, 0.12); color: #9c2b2b; border: 1px solid rgba(156, 43, 43, 0.45);
   font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: help;
 }
+
+/* A prerequisite is a real link to another quest-card, not a fact about
+   *this* quest the way class/level/reward badges are -- so it gets its own
+   iron-gray chain-link mark (two linked rings, same hand-drawn-icon
+   construction as the reward gems above, just outlined rings instead of a
+   filled dot -- a chain is made of links, not gems) rather than reusing any
+   existing reward hue. Slate/iron blue-gray is deliberately outside this
+   card's warm green/amber/violet/blue reward palette and its red warning
+   register -- this isn't a reward and isn't a danger, it's a dependency.
+   A real link (issue #33): quests.html has no in-page scroll-to-card
+   mechanism and results can be lazily rendered or filtered out entirely, so
+   "jump to the actual card" would silently fail depending on scroll
+   position; deep-linking through quests.html's own ?search= (the same
+   mechanism the Leveling Guide already uses to land here pre-filtered)
+   works unconditionally regardless of where -- or whether -- the target is
+   currently rendered. */
+.requires-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(71, 85, 105, 0.1); color: #3d4b5c; border: 1px solid rgba(71, 85, 105, 0.4);
+  text-decoration: none; cursor: pointer;
+}
+.requires-badge:hover, .requires-badge:focus-visible { text-decoration: underline; background: rgba(71, 85, 105, 0.18); }
+.chain-icon { position: relative; width: 15px; height: 9px; flex-shrink: 0; }
+.chain-icon::before, .chain-icon::after {
+  content: ""; position: absolute; top: 0; width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid currentColor; box-sizing: border-box;
+}
+.chain-icon::before { left: 0; }
+.chain-icon::after { left: 6px; }
 `;
 
 const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -145,6 +174,20 @@ export function startsInBody(zones, questGivers) {
     return `<div class="quest-section-body quest-starts-in"><span class="quest-waypoint"></span><span>${zoneLinks}${giverNames ? ` <span class="quest-giver-note">(from ${giverNames})</span>` : ""}</span></div>`;
   }
   return giverNames ? `<div class="quest-section-body">${giverNames}</div>` : "";
+}
+
+// One chip per prerequisite (not a single comma-joined caption) -- each is
+// its own real link to quests.html?search=<name>, the same deep-link
+// mechanism the Leveling Guide already uses (quests.js's applyQueryParams())
+// to land pre-filtered to one quest regardless of what's currently rendered
+// or scrolled to. Undefined/empty requires renders nothing, same "no new
+// empty visual element" contract as startsInBody's giver-less branch.
+export function requiresBody(requires) {
+  if (!requires?.length) return "";
+  const chips = requires
+    .map((r) => `<a class="spell-badge requires-badge" href="quests.html?search=${encodeURIComponent(r.label)}"><span class="chain-icon" aria-hidden="true"></span>${r.label}</a>`)
+    .join("");
+  return `<div class="quest-section-body">${chips}</div>`;
 }
 
 export function stepsBody(steps) {

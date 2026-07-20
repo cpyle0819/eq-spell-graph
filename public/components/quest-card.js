@@ -30,9 +30,11 @@
 // quest.requires (quest --requires--> quest edges, decisions/
 // quest-prerequisite-requires-edge.md -- the actual "questline" in the
 // ordered-chain sense, distinct from a quest_group's unordered siblings)
-// renders as its own small caption too, e.g. Cutthroat Rings' "Requires:
-// Orc Picks". Not a link -- the Quests tab has no cross-card navigation
-// mechanism yet, so this is a plain textual pointer for now.
+// gets its own "Requires" section (quest-shared.js's requiresBody(), issue
+// #33) rather than the plain-text header caption it used to be -- one
+// chain-link-badged real link per prerequisite, deep-linking to
+// quests.html?search=<name> rather than trying to scroll to/highlight the
+// actual card (which can be lazily unrendered or filtered out entirely).
 //
 // Item reward chips reuse the same <detail-tooltip> singleton the Spell
 // Finder uses (public/components/detail-tooltip.js, one instance per page
@@ -63,7 +65,7 @@
 // numeral for its own member roster (the 7 Armor of Ro pieces have no
 // order between them) -- see that file for the plain-seal alternative.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, wireItemTooltips } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, requiresBody, wireItemTooltips } from "./quest-shared.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(QUEST_CARD_CSS);
@@ -87,12 +89,12 @@ class QuestCard extends CardBase {
     if (!quest) return;
 
     const questGroupNote = quest.questGroup ? `<span class="quest-group-note">Part of the ${quest.questGroup.label} quest group</span>` : "";
-    const requiresNote = quest.requires?.length ? `<span class="quest-group-note">Requires: ${quest.requires.map((r) => r.label).join(", ")}</span>` : "";
 
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${quest.label}</h3>${quest.wikiTitle ? wikiLink(quest.wikiTitle) : ""}${questGroupNote}${requiresNote}</div>
+      <div class="spell-header"><h3>${quest.label}</h3>${quest.wikiTitle ? wikiLink(quest.wikiTitle) : ""}${questGroupNote}</div>
       <div class="spell-scroll">
         <div class="spell-badges">${outOfEraBadge(quest)}${headerBadges(quest.classes, quest.minLevel, quest.maxLevel)}</div>
+        ${section("Requires", requiresBody(quest.requires))}
         ${section("Description", quest.description ? `<p class="spell-desc">${quest.description}</p>` : "")}
         ${section("Starts In", startsInBody(quest.zones, quest.questGivers))}
         ${section("Steps", stepsBody(quest.steps))}
