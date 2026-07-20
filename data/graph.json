@@ -71278,6 +71278,105 @@
         "size": "Small",
         "source": "Odus Pearls reward (Weligon Steelherder, Erudin)"
       }
+    },
+    {
+      "data": {
+        "id": "spell:sacrifice",
+        "label": "Sacrifice",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "necromancer",
+            "level": 51
+          }
+        ],
+        "description": "Consumes a willing target's soul and binds it within an Essence Emerald. Players (Level 46-59) killed in this manner cannot be resurrected. Consumes an emerald when cast. You cannot sacrifice yourself.",
+        "mana": 100,
+        "skill": "Alteration",
+        "castTime": 5,
+        "recastTime": 0,
+        "fizzleTime": 2.25,
+        "duration": "Instant",
+        "targetType": "Single",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "range": 100,
+        "icon": "G"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:scent-of-terris",
+        "label": "Scent of Terris",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "necromancer",
+            "level": 52
+          }
+        ],
+        "description": "Surrounds your target in the scent of Terris, causing them to be more susceptible to fire, poison, and disease.",
+        "mana": 200,
+        "skill": "Alteration",
+        "castTime": 3,
+        "recastTime": 6,
+        "fizzleTime": 2.25,
+        "duration": "11.4 minutes @L52 to 13 minutes @L60",
+        "targetType": "Single",
+        "spellType": "Detrimental",
+        "resist": "Poison (0)",
+        "range": 200,
+        "icon": "G"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:minion-of-shadows",
+        "label": "Minion of Shadows",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "necromancer",
+            "level": 53
+          }
+        ],
+        "description": "Animates an undead servant from the remnants of the fallen. This pet is a rogue and will backstab but has less hit points than the level 49 pet which is a warrior. Consumes bone chips when cast.",
+        "mana": 525,
+        "skill": "Conjuration",
+        "castTime": 14,
+        "recastTime": 2.25,
+        "fizzleTime": 2.25,
+        "duration": "Instant",
+        "targetType": "Self",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "icon": "L"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:shadowbond",
+        "label": "Shadowbond",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "necromancer",
+            "level": 54
+          }
+        ],
+        "description": "Transfers your own health to your target at a rate of 125 hit points every six seconds for 24 secs (4 ticks).",
+        "mana": 10,
+        "skill": "Alteration",
+        "castTime": 2,
+        "recastTime": 21,
+        "fizzleTime": 2.5,
+        "duration": "4 ticks",
+        "targetType": "Single",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "range": 100,
+        "icon": "G"
+      }
     }
   ],
   "edges": [
@@ -164819,6 +164918,78 @@
         "target": "item:worn-great-staff",
         "type": "rewards",
         "randomGroup": "odus-pearls-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11655",
+        "source": "quest:necromancer-spells",
+        "target": "spell:minion-of-shadows",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11656",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "spell:minion-of-shadows",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-cabilis-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11657",
+        "source": "quest:necromancer-spells",
+        "target": "spell:sacrifice",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11658",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "spell:sacrifice",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-cabilis-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11659",
+        "source": "quest:necromancer-spells",
+        "target": "spell:scent-of-terris",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11660",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "spell:scent-of-terris",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-cabilis-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11661",
+        "source": "quest:necromancer-spells",
+        "target": "spell:shadowbond",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11662",
+        "source": "quest:necromancer-spells-cabilis",
+        "target": "spell:shadowbond",
+        "type": "rewards",
+        "randomGroup": "necromancer-spells-cabilis-drop"
       }
     }
   ]
