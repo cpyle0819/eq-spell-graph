@@ -710,6 +710,14 @@ export interface ZoneRanking {
   deityIgnored?: boolean;
   spells: SpellVendorInfo[];
   score: number;
+  // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
+  // resolveEra() below) -- present only when this zone is itself confirmed
+  // out-of-era. Spell Finder results include out-of-era zones (unlike
+  // Quests/Maps, this list isn't otherwise filterable to just what's
+  // reachable) so the UI needs this to warn rather than silently recommend
+  // a zone the player can't actually reach yet.
+  era?: string;
+  outOfEra?: boolean;
 }
 
 export function rankZones(
@@ -725,6 +733,7 @@ export function rankZones(
 ): ZoneRanking[] {
   const graph = load();
   const index = getIndex();
+  const eraHelpers = graphIndexHelpers(graph);
 
   // race="any"/primaryClass="any"/deity="any" each neutralize only their own
   // dimension in the worst-of computation below — contributing "safe" for
@@ -894,6 +903,7 @@ export function rankZones(
         a.name.localeCompare(b.name)
       ),
       score,
+      ...resolveEra(zoneNode?.era as string | undefined, [], eraHelpers),
     });
   }
 

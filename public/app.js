@@ -15,6 +15,12 @@ let availableSpellLines = []; // { id, label }[]
 let lastRankings = null;
 let lastLevelRange = { min: 1, max: 1 };
 let showAllSpells = false;
+// Out-of-era zones are hidden from results by default (decisions/
+// quest-era-flagging.md -- they aren't actually reachable in the game's
+// current era yet), same convention as quests.js's own showOutOfEra. Purely
+// a display filter over already-fetched data, so toggling it just
+// re-renders -- no replan needed.
+let showOutOfEra = false;
 let selectedClasses = []; // string[]
 let selectedSpellLines = []; // { id, label }[]
 let specificSpells = []; // { id, name }
@@ -132,6 +138,7 @@ function renderSidebar() {
       <collapsible-section label="Location" section="location">
         <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
         <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
+        <field-row label="Era"><toggle-checkbox id="show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
       </collapsible-section>
       <div class="control-sep" aria-hidden="true"></div>
       <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
@@ -211,6 +218,8 @@ function resetFilters() {
   specificSpells = [];
   specificZones = [];
   selectedSpellLines = [];
+  showOutOfEra = false;
+  document.getElementById("show-out-of-era").checked = false;
   applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
   renderSpellTags();
   renderZoneTags();
@@ -508,6 +517,11 @@ function setupPlanner() {
       showAllSpells = !showAllSpells;
       renderRankings(lastRankings, lastLevelRange);
     }
+    if (e.target.matches(".toggle-out-of-era-btn")) {
+      showOutOfEra = true;
+      document.getElementById("show-out-of-era").checked = true;
+      renderRankings(lastRankings, lastLevelRange);
+    }
   });
   planner.addEventListener("toggle-owned", () => {
     showAllSpells = !showAllSpells;
@@ -515,6 +529,14 @@ function setupPlanner() {
   });
   planner.addEventListener("clear-owned", () => {
     clearOwnedSpells();
+    renderRankings(lastRankings, lastLevelRange);
+  });
+
+  // Purely a display filter over already-fetched data (era/outOfEra is
+  // already on every ranking rankZones() returns) -- re-render, not replan,
+  // same reasoning as quests.js's identical toggle.
+  document.getElementById("show-out-of-era").addEventListener("change", (e) => {
+    showOutOfEra = e.target.checked;
     renderRankings(lastRankings, lastLevelRange);
   });
 }
@@ -569,9 +591,10 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const raceIgnored = rankings[0]?.raceIgnored === true;
   const classIgnored = rankings[0]?.classIgnored === true;
   const deityIgnored = rankings[0]?.deityIgnored === true;
-  const accessible = rankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
-  const wontSell = rankings.filter((r) => r.faction === "wont_sell");
-  const kos = rankings.filter((r) => r.faction === "kos");
+  const visibleRankings = showOutOfEra ? rankings : rankings.filter((r) => !r.outOfEra);
+  const accessible = visibleRankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
+  const wontSell = visibleRankings.filter((r) => r.faction === "wont_sell");
+  const kos = visibleRankings.filter((r) => r.faction === "kos");
   const allSpellIds = new Set(accessible.flatMap((r) => r.spells.map((s) => s.id)));
   const totalSpells = allSpellIds.size;
   const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
@@ -586,6 +609,8 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   }
   if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
   if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
+  const outOfEraCount = rankings.length - visibleRankings.length;
+  if (outOfEraCount > 0) warnings.push(`<span style="color:var(--ink-muted);">${outOfEraCount} out-of-era zone(s) hidden</span>`);
 
   // status-panel (public/components/status-panel.js) owns the meta text,
   // warnings, progress bar, and toggle/clear buttons' own markup -- this
@@ -600,7 +625,7 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   // incrementally as cards get lazily rendered) so the "all owned" empty
   // state below is correct immediately, without needing to have scrolled
   // through the whole lazy list first.
-  const renderableZones = rankings.filter(
+  const renderableZones = visibleRankings.filter(
     (r) => showAllSpells || r.spells.some((s) => !owned.has(s.id))
   );
 
@@ -612,7 +637,13 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   if (renderableZones.length === 0) {
     const msg = document.createElement("div");
     msg.className = "no-results";
-    msg.innerHTML = `All matching spells are marked owned. <button class="text-action toggle-owned-btn">Show all</button>`;
+    // visibleRankings (not rankings) is the relevant emptiness check here --
+    // every real result could be hidden entirely by the era filter with
+    // none of them owned at all, which is a different cause than the
+    // all-owned case below and needs its own way out.
+    msg.innerHTML = visibleRankings.length === 0
+      ? `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`
+      : `All matching spells are marked owned. <button class="text-action toggle-owned-btn">Show all</button>`;
     el.appendChild(msg);
     return;
   }

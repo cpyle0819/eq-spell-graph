@@ -143,6 +143,19 @@ ${WIKI_LINK_CSS}
 .faction-badge.wont_sell { background: linear-gradient(rgba(249, 115, 22, 0.16), rgba(249, 115, 22, 0.16)), rgba(10, 9, 15, 0.6); color: #fb8534; border: 1px solid rgba(249, 115, 22, 0.4); }
 .faction-badge.kos       { background: linear-gradient(rgba(239, 68, 68, 0.16), rgba(239, 68, 68, 0.16)), rgba(10, 9, 15, 0.6);  color: #ff6b6b; border: 1px solid rgba(239, 68, 68, 0.4); }
 
+/* Same dark-red "warning, not metadata" register as quest-card's own
+   out-of-era badge (decisions/quest-era-flagging.md), adapted to this
+   card's dark stone background the way the faction badges above already
+   are -- reuses the kos badge's exact palette since both mean "you can't
+   actually use this result right now." */
+.era-badge {
+  font-size: 11px; padding: 3px 9px; border-radius: 3px;
+  text-transform: uppercase; font-weight: 700; letter-spacing: 0.06em;
+  cursor: help; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(rgba(239, 68, 68, 0.16), rgba(239, 68, 68, 0.16)), rgba(10, 9, 15, 0.6);
+  color: #ff6b6b; border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
 /* route-path's own stone-variant margin-bottom (public/components/
    route-path.js) already supplies the gap above .spell-scroll when a
    route is present -- this margin-top covers the header-directly-to-
@@ -307,10 +320,12 @@ class ZoneCard extends HTMLElement {
     const spellBadge = spellCount + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
 
     const tooltip = factionTooltip(r.faction, r.factionReasons);
+    const eraTitle = r.era ? `${r.era} content isn't available in the current era yet` : "Not available in the current era yet";
     this.shadowRoot.innerHTML = `
       <div class="zone-card-header">
         <span class="zone-name" title="${tooltip}">${r.zoneName}</span>
         ${r.wikiTitle ? wikiLink(r.wikiTitle) : ""}
+        ${r.outOfEra ? `<span class="era-badge" title="${eraTitle}">Out of Era</span>` : ""}
         ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
         <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>
