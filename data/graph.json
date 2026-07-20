@@ -71943,6 +71943,2151 @@
         "effect": "Aura of Battle",
         "source": "Spirit Wracked Cord Quest reward (Queen Velazul Di`zok, Chardok)"
       }
+    },
+    {
+      "data": {
+        "id": "zone:erudin-palace",
+        "label": "Erudin Palace",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:knargon-lanenda",
+        "label": "Knargon Lanenda",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-errands",
+        "label": "Rogue Errands",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Knargon Lanenda in North Qeynos sends Rogues through a chain of deliveries and coded messages -- a Bent Playing Card to Jracol Brestiage outside the north gate, a note relayed through Hanns Krieghor and Zannsin Resdinet, a letter to Prak at the Golden Rooster in Highpass, and finally Guard Stald's badge -- for the Black Leather Cloak. Faction gains with Carson McCabe, Highpass Guards, and Circle of Unseen Hands.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Bent Playing Card from Knargon Lanenda in North Qeynos",
+          "Find Jracol Brestiage outside the north gate (spawns 8 PM-5 AM) and say \"Lovely night for a stroll\"",
+          "Hand him the card and receive a note back",
+          "Return the note to Knargon Lanenda",
+          "Deliver a message to Hanns Krieghor, then relay instructions to Zannsin Resdinet",
+          "Take a letter to Prak at the Golden Rooster in Highpass",
+          "Kill Guard Stald and retrieve his badge",
+          "Return the badge to Knargon Lanenda"
+        ],
+        "wiki_title": "Rogue Errands"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-leather-cloak",
+        "label": "Black Leather Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 1,
+        "stats": {
+          "dex": 2,
+          "agi": 2
+        },
+        "source": "Rogue Errands reward (Knargon Lanenda, North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:lon-the-redeemed",
+        "label": "Lon the Redeemed",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-redemption",
+        "label": "Rogue Redemption",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Lon the Redeemed in Temple of Solusek Ro sends a sealed note through Conium Darkblade in Dagnor's Cauldron and Bryan McGee in Highpass Hold, trading toward 10 different alcoholic beverages combined into a Case of Spirits for a Gem of Stamina, then a Gem Case and two tiny keys given to Ortallius in South Ro for the Burning Rapier. Faction gains with Coalition of Tradefolk Underground, Coalition of Tradefolk, Carson McCabe, Corrupt Qeynos Guards, The Freeport Militia, King Tearis Thex, and Temple Of Sol Ro; faction losses with Mayong Mistmoore and Shadowed Men.",
+        "minLevel": 30,
+        "steps": [
+          "Obtain a sealed note from Lon the Redeemed in Temple of Solusek Ro",
+          "Deliver the note to Conium Darkblade in Dagnor's Cauldron for an axe",
+          "Trade the axe to Bryan McGee in Highpass Hold for a Bottle Crate",
+          "Collect 10 different alcoholic beverages and combine them in the Bottle Crate for a Case of Spirits",
+          "Turn the Case of Spirits in to Bryan McGee for a Gem of Stamina",
+          "Obtain a Gem Case and two tiny keys through separate tasks",
+          "Give both gems to Ortallius in South Ro for the Burning Rapier"
+        ],
+        "wiki_title": "Rogue Redemption"
+      }
+    },
+    {
+      "data": {
+        "id": "item:burning-rapier",
+        "label": "Burning Rapier",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Piercing",
+        "magic": true,
+        "stats": {
+          "dex": 5,
+          "agi": 5
+        },
+        "effect": "Ignite, usable at level 30",
+        "source": "Rogue Redemption reward (Lon the Redeemed, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:captain-rohand",
+        "label": "Captain Rohand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rohands-brandy",
+        "label": "Rohand's Brandy",
+        "type": "quest",
+        "description": "Captain Rohand at the Mermaid's Lure tavern in South Qeynos takes Brandy (sold in many bars and taverns) for experience and faction with Merchants of Qeynos, Antonius Bayle, Coalition of Tradefolk, and Guards of Qeynos. Repeatable per bottle.",
+        "minLevel": 1,
+        "steps": [
+          "Buy Brandy from a tavern (e.g. the Lion's Mane Inn)",
+          "Hail Captain Rohand at the Mermaid's Lure in South Qeynos and give him the Brandy"
+        ],
+        "wiki_title": "Rohand's Brandy"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:runescale-cloak-quest",
+        "label": "Runescale Cloak Quest",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Vilissia in Temple of Solusek Ro trades a Lizardscale Cloak (from a Tae Ew Templar in Cazic Thule) plus three Runes of Scale (saltwater crocodile in Upper Guk, deepwater crocodile in Oasis of Marr, firescale crocodile in Lavastorm Mountains) for the Runescale Cloak. Faction gain with Temple Of Sol Ro, loss with Shadowed Men.",
+        "minLevel": 25,
+        "steps": [
+          "Obtain a Lizardscale Cloak from a Tae Ew Templar in Temple of Cazic Thule",
+          "Collect a Rune of Scale from a saltwater crocodile in Upper Guk",
+          "Collect a Rune of Scale from a deepwater crocodile in Oasis of Marr",
+          "Collect a Rune of Scale from a firescale crocodile in Lavastorm Mountains",
+          "Turn everything in to Vilissia in Temple of Solusek Ro"
+        ],
+        "wiki_title": "Runescale Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runescale-cloak",
+        "label": "Runescale Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "wizard"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "dark elf",
+          "gnome"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "int": 3,
+          "agi": 3
+        },
+        "resists": {
+          "disease": 1,
+          "poison": 1
+        },
+        "source": "Runescale Cloak Quest reward (Vilissia, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin-palace:vasile-jahnir",
+        "label": "Vasile Jahnir",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rungupp-quest",
+        "label": "Rungupp (Quest)",
+        "type": "quest",
+        "description": "Vasile Jahnir at the Tower of the Gate Callers in Erudin Palace sends players to Toxxulia Forest to slay Rungupp the troll and return with his head. Faction gains with Frogloks of Guk, Gate Callers, High Guard of Erudin, and High Council of Erudin; losses with Dark Ones, Shadowknights of Night Keep, and Heretics.",
+        "minLevel": 1,
+        "steps": [
+          "Receive the quest from Vasile Jahnir at the Tower of the Gate Callers in Erudin Palace",
+          "Travel to Toxxulia Forest and slay Rungupp",
+          "Loot the Troll Head from Rungupp's corpse",
+          "Return the head to Vasile Jahnir"
+        ],
+        "wiki_title": "Rungupp (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:frogloks-of-guk",
+        "label": "Frogloks of Guk",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rusted-black-boxes",
+        "label": "Rusted Black Boxes",
+        "type": "quest",
+        "description": "Manik Compolten at the Gem Choppers guild hall in Ak'Anon trades two rusted blackboxes, looted from rogue clockworks in Steamfont Mountains, for experience and faction with Gem Choppers, King Ak'Anon, and Merchants of Ak'Anon (loss with Clan Grikbar and Dark Reflection).",
+        "minLevel": 1,
+        "steps": [
+          "Kill rogue clockworks in Steamfont Mountains for two rusted blackboxes",
+          "Return them to Manik Compolten in Ak'Anon"
+        ],
+        "wiki_title": "Rusted Black Boxes"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-of-ill-omen:warlord-geot",
+        "label": "Warlord Geot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sarnak-hatchling-brains",
+        "label": "Sarnak Hatchling Brains",
+        "type": "quest",
+        "description": "Warlord Geot in Lake of Ill Omen trades four Sarnak Hatchling Brains, from sarnak hatchlings in the zone, for a Dried Froglok Leg and faction with Legion of Cabilis, Cabilis Residents, Scaled Mystics, Crusaders Of Greenmist, and Swift Tails. Repeatable.",
+        "minLevel": 4,
+        "steps": [
+          "Kill sarnak hatchlings in Lake of Ill Omen for Sarnak Hatchling Brains",
+          "Turn in four brains to Warlord Geot"
+        ],
+        "wiki_title": "Sarnak Hatchling Brains"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dried-froglok-leg",
+        "label": "Dried Froglok Leg",
+        "type": "item",
+        "source": "Sarnak Hatchling Brains reward (Warlord Geot, Lake of Ill Omen)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:cobalt-scar:bloogy-shellcracker",
+        "label": "Bloogy Shellcracker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:saucy-salted-seadragon-steak",
+        "label": "Saucy Salted Seadragon Steak",
+        "type": "quest",
+        "description": "Bloogy Shellcracker in Cobalt Scar trades Sea Dragon Meat (from Kelorek'dar, Faydedar, or Lord Koi'Doken), two Saltwater Seaweed (fished in Ocean of Tears, Timorous Deep, or Butcherblock Mountains), and Fish Eggs (combine a Thunder Salmon or Greengill Salmon with a Skinning Knife in a Tackle Box) for the Othmir Prexus Totem. Faction gain with Othmir, loss with Ulthork.",
+        "minLevel": 1,
+        "steps": [
+          "Obtain Sea Dragon Meat from Kelorek'dar, Faydedar, or Lord Koi'Doken",
+          "Fish two Saltwater Seaweed in Ocean of Tears, Timorous Deep, or Butcherblock Mountains",
+          "Combine a Thunder Salmon or Greengill Salmon with a Skinning Knife in a Tackle Box for Fish Eggs",
+          "Turn everything in to Bloogy Shellcracker in Cobalt Scar"
+        ],
+        "wiki_title": "Saucy Salted Seadragon Steak"
+      }
+    },
+    {
+      "data": {
+        "id": "item:othmir-prexus-totem",
+        "label": "Othmir Prexus Totem",
+        "type": "item",
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "sta": 20,
+          "wis": 18,
+          "cha": -8
+        },
+        "source": "Saucy Salted Seadragon Steak reward (Bloogy Shellcracker, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-commonlands:scholar-darnath",
+        "label": "Scholar Darnath",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scholar-darnaths-help",
+        "label": "Scholar Darnath's Help",
+        "type": "quest",
+        "description": "Scholar Darnath in East Commonlands sends players after six chapters from Snowdrift Elves across Norrath, three resonance crystals (Permafrost, Thurgadin, Dreadlands), four lost pages from the Tower of Frozen Shadows, and assorted ingredients (Frostbitten Hide, Emberberry Cluster, Dew of First Light, Goblin Ice Necklace, Fire Goblin Skin), combined with a sewing kit into the Whispers of the Icestar tome. Turning the completed tome in grants a Holiday Gift and a choice of the Zombie Flesh Bracer, Paebala Fetish, or Cloak of Confusion (level 46+).",
+        "minLevel": 46,
+        "steps": [
+          "Gather six chapters (I-VI) from Snowdrift Elves across Norrath",
+          "Gather three resonance crystals (Permafrost, Thurgadin, Dreadlands)",
+          "Gather four lost pages from the Tower of Frozen Shadows",
+          "Gather a Frostbitten Hide, Emberberry Cluster, Dew of First Light, Goblin Ice Necklace, and Fire Goblin Skin",
+          "Combine all chapters with a sewing kit into the Whispers of the Icestar",
+          "Turn the completed tome in to Scholar Darnath for a Holiday Gift and a choice of reward"
+        ],
+        "wiki_title": "Scholar Darnath's Help"
+      }
+    },
+    {
+      "data": {
+        "id": "item:zombie-flesh-bracer",
+        "label": "Zombie Flesh Bracer",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:paebala-fetish",
+        "label": "Paebala Fetish",
+        "type": "item",
+        "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cloak-of-confusion",
+        "label": "Cloak of Confusion",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:field-of-bone:warlord-zyzz",
+        "label": "Warlord Zyzz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scorpion-pincers",
+        "label": "Scorpion Pincers",
+        "type": "quest",
+        "description": "Warlord Zyzz in Field of Bone pays a bounty for four scorpion pincers, collected from small scorpions in the zone. Faction gains with Legion of Cabilis, Cabilis Residents, Scaled Mystics, Crusaders Of Greenmist, and Swift Tails. Repeatable.",
+        "minLevel": 1,
+        "steps": [
+          "Kill small scorpions in Field of Bone for scorpion pincers",
+          "Turn in four pincers to Warlord Zyzz"
+        ],
+        "wiki_title": "Scorpion Pincers"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:laren",
+        "label": "Laren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scout-blade",
+        "label": "Scout Blade",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf",
+          "half elf"
+        ],
+        "description": "Laren in Kelethin (Greater Faydark) sends elf/half-elf Rogues to High Keep -- a Useless Token relayed through Jail Clerk Maryl, Rodrick Marslett, and Fenn Kaedrick leads to slaying Xentil Herkanon and his bodyguards for a Half Elf Head -- traded back for the Scouts Blade. Faction gains with Merchants of Qeynos, Guards of Qeynos, and Tunare's Scouts; losses with Circle Of Unseen Hands, Corrupt Qeynos Guards, and Kane Bayle.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Useless Token from Laren in Kelethin",
+          "Find Jail Clerk Maryl in High Keep's basement",
+          "Speak with Rodrick Marslett in an adjacent cell",
+          "Travel to High Keep's roof and give the token to Fenn Kaedrick",
+          "Slay Xentil Herkanon and his two bodyguards on the main floor",
+          "Loot the Half Elf Head from Xentil Herkanon's corpse",
+          "Return the head to Laren"
+        ],
+        "wiki_title": "Scout Blade"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:tunares-scouts",
+        "label": "Tunares Scouts",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scouts-blade",
+        "label": "Scouts Blade",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Piercing",
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf",
+          "half elf"
+        ],
+        "magic": true,
+        "damage": 5,
+        "stats": {
+          "str": 2,
+          "int": 2
+        },
+        "effect": "Backstab +5",
+        "source": "Scout Blade reward (Laren, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:geeda",
+        "label": "Geeda",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scouts-cape-quest",
+        "label": "Scouts Cape Quest",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf"
+        ],
+        "description": "Geeda, behind the Scouts of Tunare Guild Hall in Kelethin (Greater Faydark), sends a Useless Token to Kelynn in the Crushbone slave mines for a Sealed Note, returned to Geeda for the Scouts Cape. Faction gain with Tunare's Scouts.",
+        "minLevel": 1,
+        "steps": [
+          "Receive a Useless Token from Geeda in Kelethin",
+          "Travel to the Crushbone slave mines and give the token to Kelynn",
+          "Receive a Sealed Note from Kelynn",
+          "Return the Sealed Note to Geeda"
+        ],
+        "wiki_title": "Scouts Cape Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scouts-cape",
+        "label": "Scouts Cape",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "dex": 2
+        },
+        "source": "Scouts Cape Quest reward (Geeda, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scouts-leggings",
+        "label": "Scouts Leggings",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf",
+          "half elf"
+        ],
+        "description": "Tylfon, guildmaster of the Scouts of Tunare in Kelethin's Rogues Guild (Greater Faydark), sends players to Elmion Hendrys in Dagnor's Cauldron, then to North Qeynos to defeat Faldor Hendrys for an Emerald Shard, traded for the Silvermesh Leggings.",
+        "minLevel": 1,
+        "steps": [
+          "Speak with Tylfon in the Rogues Guild at Kelethin",
+          "Talk to Elmion Hendrys in Dagnor's Cauldron to learn his brother's location",
+          "Travel to North Qeynos and find Faldor Hendrys",
+          "Defeat Faldor Hendrys and loot the Emerald Shard",
+          "Return the shard to Tylfon"
+        ],
+        "wiki_title": "Scouts Leggings"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silvermesh-leggings",
+        "label": "Silvermesh Leggings",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "wood elf",
+          "half elf"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "agi": 3
+        },
+        "resists": {
+          "magic": 5
+        },
+        "source": "Scouts Leggings reward (Tylfon, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:kelenek-bluadfeth",
+        "label": "Kelenek Bluadfeth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:rogue-kael-armor-quests",
+        "label": "Rogue Kael Armor Quests",
+        "type": "quest_group",
+        "description": "Kelenek Bluadfeth in Kael Drakkel trades an Ancient Tarnished Chain armor piece plus 3 matching gems for its corresponding piece of Deceiver's armor. Seven independent sub-quests, no ordering between them.",
+        "classes": [
+          "rogue"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-crown",
+        "label": "Rogue Kael Armor Quests: Crown",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Coif plus 3 Crushed Coral to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Crown.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Coif and 3 Crushed Coral",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-crown",
+        "label": "Deceiver's Crown",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "str": 3,
+          "dex": 5,
+          "sta": 5,
+          "hp": 15
+        },
+        "source": "Rogue Kael Armor Quests: Crown reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-chestguard",
+        "label": "Rogue Kael Armor Quests: Chestguard",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Tunic plus 3 Flawless Diamond to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Chestguard.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Tunic and 3 Flawless Diamond",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-chestguard",
+        "label": "Deceiver's Chestguard",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 48,
+        "stats": {
+          "str": 15,
+          "dex": 8,
+          "sta": 6,
+          "agi": 14,
+          "hp": 60
+        },
+        "source": "Rogue Kael Armor Quests: Chestguard reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-vambraces",
+        "label": "Rogue Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Sleeves plus 3 Flawed Emerald to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Vambraces.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Sleeves and 3 Flawed Emerald",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-vambraces",
+        "label": "Deceiver's Vambraces",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 2,
+          "agi": 7,
+          "hp": 50
+        },
+        "source": "Rogue Kael Armor Quests: Vambraces reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-bracer",
+        "label": "Rogue Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Bracer plus 3 Crushed Flame Emerald to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Bracer.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-bracer",
+        "label": "Deceiver's Bracer",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 17,
+        "stats": {
+          "str": 4,
+          "dex": 4,
+          "hp": 15
+        },
+        "source": "Rogue Kael Armor Quests: Bracer reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-gauntlets",
+        "label": "Rogue Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Gauntlets plus 3 Crushed Topaz to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Gauntlets.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-gauntlets",
+        "label": "Deceiver's Gauntlets",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 17,
+        "stats": {
+          "str": 3,
+          "dex": 1,
+          "sta": 1,
+          "agi": 5
+        },
+        "source": "Rogue Kael Armor Quests: Gauntlets reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-greaves",
+        "label": "Rogue Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Leggings plus 3 Flawed Sea Sapphire to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Greaves.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Leggings and 3 Flawed Sea Sapphire",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-greaves",
+        "label": "Deceiver's Greaves",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 32,
+        "stats": {
+          "str": 6,
+          "dex": 7,
+          "agi": 10,
+          "hp": 60
+        },
+        "source": "Rogue Kael Armor Quests: Greaves reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-kael-armor-boots",
+        "label": "Rogue Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Ancient Tarnished Chain Boots plus 3 Crushed Black Marble to Kelenek Bluadfeth in Kael Drakkel for the Deceiver's Boots.",
+        "steps": [
+          "Gather a Ancient Tarnished Chain Boots and 3 Crushed Black Marble",
+          "Turn them in to Kelenek Bluadfeth in Kael Drakkel"
+        ],
+        "wiki_title": "Rogue Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deceiver-s-boots",
+        "label": "Deceiver's Boots",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 2,
+          "sta": 5,
+          "agi": 4,
+          "hp": 20
+        },
+        "source": "Rogue Kael Armor Quests: Boots reward (Kelenek Bluadfeth, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:crendatha-fedhar",
+        "label": "Crendatha Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:rogue-skyshrine-armor-quests",
+        "label": "Rogue Skyshrine Armor Quests",
+        "type": "quest_group",
+        "description": "Crendatha Fe`Dhar in Skyshrine trades an Unadorned Chain armor piece plus 3 matching gems for its corresponding piece of Shadow armor. Seven independent sub-quests, no ordering between them.",
+        "classes": [
+          "rogue"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-crown",
+        "label": "Rogue Skyshrine Armor Quests: Crown",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Coif plus 3 Crushed Coral to Crendatha Fe`Dhar in Skyshrine for the Shadow Crown.",
+        "steps": [
+          "Gather an Unadorned Chain Coif and 3 Crushed Coral",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-crown",
+        "label": "Shadow Crown",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 6,
+          "dex": 6,
+          "agi": 6,
+          "hp": 20
+        },
+        "source": "Rogue Skyshrine Armor Quests: Crown reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-chestguard",
+        "label": "Rogue Skyshrine Armor Quests: Chestguard",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Tunic plus 3 Flawless Diamond to Crendatha Fe`Dhar in Skyshrine for the Shadow Chestguard.",
+        "steps": [
+          "Gather an Unadorned Chain Tunic and 3 Flawless Diamond",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-chestguard",
+        "label": "Shadow Chestguard",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 43,
+        "stats": {
+          "str": 12,
+          "dex": 12,
+          "sta": 8,
+          "agi": 16,
+          "hp": 90
+        },
+        "source": "Rogue Skyshrine Armor Quests: Chestguard reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-vambraces",
+        "label": "Rogue Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Sleeves plus 3 Flawed Emerald to Crendatha Fe`Dhar in Skyshrine for the Shadow Vambraces.",
+        "steps": [
+          "Gather an Unadorned Chain Sleeves and 3 Flawed Emerald",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-vambraces",
+        "label": "Shadow Vambraces",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "sta": 7,
+          "hp": 25
+        },
+        "source": "Rogue Skyshrine Armor Quests: Vambraces reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-bracer",
+        "label": "Rogue Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Bracer plus 3 Crushed Flame Emerald to Crendatha Fe`Dhar in Skyshrine for the Shadow Bracer.",
+        "steps": [
+          "Gather an Unadorned Chain Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-bracer",
+        "label": "Shadow Bracer",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 6,
+          "agi": 5,
+          "hp": 25
+        },
+        "source": "Rogue Skyshrine Armor Quests: Bracer reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-gauntlets",
+        "label": "Rogue Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Gauntlets plus 3 Crushed Topaz to Crendatha Fe`Dhar in Skyshrine for the Shadow Gauntlets.",
+        "steps": [
+          "Gather an Unadorned Chain Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-gauntlets",
+        "label": "Shadow Gauntlets",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 5,
+          "dex": 3,
+          "sta": 2,
+          "agi": 5
+        },
+        "source": "Rogue Skyshrine Armor Quests: Gauntlets reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-greaves",
+        "label": "Rogue Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Leggings plus 3 Flawed Sea Sapphire to Crendatha Fe`Dhar in Skyshrine for the Shadow Greaves.",
+        "steps": [
+          "Gather an Unadorned Chain Leggings and 3 Flawed Sea Sapphire",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-greaves",
+        "label": "Shadow Greaves",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 26,
+        "stats": {
+          "str": 5,
+          "dex": 10,
+          "sta": 5,
+          "hp": 60
+        },
+        "source": "Rogue Skyshrine Armor Quests: Greaves reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-skyshrine-armor-boots",
+        "label": "Rogue Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade an Unadorned Chain Boots plus 3 Crushed Black Marble to Crendatha Fe`Dhar in Skyshrine for the Shadow Boots.",
+        "steps": [
+          "Gather an Unadorned Chain Boots and 3 Crushed Black Marble",
+          "Turn them in to Crendatha Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Rogue Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shadow-boots",
+        "label": "Shadow Boots",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 3,
+          "sta": 6,
+          "agi": 4,
+          "hp": 20
+        },
+        "source": "Rogue Skyshrine Armor Quests: Boots reward (Crendatha Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:foreman-felspar",
+        "label": "Foreman Felspar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:rogue-thurgadin-armor-quests",
+        "label": "Rogue Thurgadin Armor Quests",
+        "type": "quest_group",
+        "description": "Foreman Felspar in Thurgadin trades a Corroded Chain armor piece plus 3 matching gems for its corresponding piece of Brigand's armor. Seven independent sub-quests (one piece, the Bracer, comes in two), no ordering between them.",
+        "classes": [
+          "rogue"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-circlet",
+        "label": "Rogue Thurgadin Armor Quests: Circlet",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Coif plus 3 Crushed Coral to Foreman Felspar in Thurgadin for the Brigand's Circlet.",
+        "steps": [
+          "Gather a Corroded Chain Coif and 3 Crushed Coral",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-circlet",
+        "label": "Brigand's Circlet",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 4,
+          "dex": 3,
+          "sta": 3,
+          "hp": 15
+        },
+        "source": "Rogue Thurgadin Armor Quests: Circlet reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-chestguard",
+        "label": "Rogue Thurgadin Armor Quests: Chestguard",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Tunic plus 3 Flawless Diamond to Foreman Felspar in Thurgadin for the Brigand's Chestguard.",
+        "steps": [
+          "Gather a Corroded Chain Tunic and 3 Flawless Diamond",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-chestguard",
+        "label": "Brigand's Chestguard",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 37,
+        "stats": {
+          "str": 6,
+          "dex": 12,
+          "sta": 6,
+          "agi": 14,
+          "hp": 60
+        },
+        "source": "Rogue Thurgadin Armor Quests: Chestguard reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-vambraces",
+        "label": "Rogue Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Sleeves plus 3 Flawed Emerald to Foreman Felspar in Thurgadin for the Brigand's Vambraces.",
+        "steps": [
+          "Gather a Corroded Chain Sleeves and 3 Flawed Emerald",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-vambraces",
+        "label": "Brigand's Vambraces",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 16,
+        "stats": {
+          "str": 7,
+          "hp": 25
+        },
+        "source": "Rogue Thurgadin Armor Quests: Vambraces reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-bracer",
+        "label": "Rogue Thurgadin Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Bracer plus 3 Crushed Flame Emerald to Foreman Felspar in Thurgadin for the Brigand's Bracer.",
+        "steps": [
+          "Gather a Corroded Chain Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-bracer",
+        "label": "Brigand's Bracer",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "sta": 2,
+          "agi": 4,
+          "hp": 15
+        },
+        "source": "Rogue Thurgadin Armor Quests: Bracer reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-gauntlets",
+        "label": "Rogue Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Gauntlets plus 3 Crushed Topaz to Foreman Felspar in Thurgadin for the Brigand's Gauntlets.",
+        "steps": [
+          "Gather a Corroded Chain Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-gauntlets",
+        "label": "Brigand's Gauntlets",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "str": 3,
+          "dex": 1,
+          "sta": 1,
+          "agi": 3
+        },
+        "source": "Rogue Thurgadin Armor Quests: Gauntlets reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-greaves",
+        "label": "Rogue Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Leggings plus 3 Flawed Sea Sapphire to Foreman Felspar in Thurgadin for the Brigand's Greaves.",
+        "steps": [
+          "Gather a Corroded Chain Leggings and 3 Flawed Sea Sapphire",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-greaves",
+        "label": "Brigand's Greaves",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "str": 4,
+          "dex": 4,
+          "sta": 10,
+          "hp": 60
+        },
+        "source": "Rogue Thurgadin Armor Quests: Greaves reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-thurgadin-armor-boots",
+        "label": "Rogue Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Trade a Corroded Chain Boots plus 3 Crushed Black Marble to Foreman Felspar in Thurgadin for the Brigand's Boots.",
+        "steps": [
+          "Gather a Corroded Chain Boots and 3 Crushed Black Marble",
+          "Turn them in to Foreman Felspar in Thurgadin"
+        ],
+        "wiki_title": "Rogue Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brigand-s-boots",
+        "label": "Brigand's Boots",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "sta": 5,
+          "agi": 3,
+          "hp": 20
+        },
+        "source": "Rogue Thurgadin Armor Quests: Boots reward (Foreman Felspar, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:thalik-silenthand",
+        "label": "Thalik Silenthand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:kendrick-the-great",
+        "label": "Kendrick the Great",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:rayne",
+        "label": "Rayne",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:rogue-plane-of-sky-tests",
+        "label": "Rogue Plane of Sky Tests",
+        "type": "quest_group",
+        "description": "Thalik Silenthand in the Plane of Sky directs Rogues to choose between two apprentices, Kendrick the Great or Rayne, each offering three independent item-turn-in tests for a named reward. Six independent sub-quests, no ordering between them.",
+        "classes": [
+          "rogue"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-thievery",
+        "label": "Rogue Plane of Sky Tests: Test of Thievery",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring an Ivory Tessera, Gem of Invigoration, and Inlaid Choker to Kendrick the Great in the Plane of Sky for the Wispy Choker of Vigor.",
+        "steps": [
+          "Gather an Ivory Tessera, Gem of Invigoration, and Inlaid Choker",
+          "Turn them in to Kendrick the Great in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wispy-choker-of-vigor",
+        "label": "Wispy Choker of Vigor",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "str": 9,
+          "dex": 9,
+          "agi": 3,
+          "hp": 20
+        },
+        "source": "Rogue Plane of Sky Tests: Test of Thievery reward (Kendrick the Great, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-silence",
+        "label": "Rogue Plane of Sky Tests: Test of Silence",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring a Spiroc Sky Totem, Pearlescent Globe, and Black Griffon Feather to Kendrick the Great in the Plane of Sky for the Griffon Wing Spauldors.",
+        "steps": [
+          "Gather a Spiroc Sky Totem, Pearlescent Globe, and Black Griffon Feather",
+          "Turn them in to Kendrick the Great in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:griffon-wing-spauldors",
+        "label": "Griffon Wing Spauldors",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 6,
+          "dex": 6,
+          "agi": 4,
+          "hp": 30
+        },
+        "effect": "Levitate",
+        "source": "Rogue Plane of Sky Tests: Test of Silence reward (Kendrick the Great, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-trickery",
+        "label": "Rogue Plane of Sky Tests: Test of Trickery",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring a Mottled Spiroc Feather, Cracked Leather Belt, and Sphinxian Circlet to Kendrick the Great in the Plane of Sky for the Renard's Belt of Quickness.",
+        "steps": [
+          "Gather a Mottled Spiroc Feather, Cracked Leather Belt, and Sphinxian Circlet",
+          "Turn them in to Kendrick the Great in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:renard-s-belt-of-quickness",
+        "label": "Renard's Belt of Quickness",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "str": 5,
+          "dex": 12,
+          "cha": 5,
+          "agi": 12
+        },
+        "effect": "Haste +41%",
+        "source": "Rogue Plane of Sky Tests: Test of Trickery reward (Kendrick the Great, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-cunning",
+        "label": "Rogue Plane of Sky Tests: Test of Cunning",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring a Bronze Disc, Red Face Paint, and Jester's Mask to Rayne in the Plane of Sky for the Crystal Mask.",
+        "steps": [
+          "Gather a Bronze Disc, Red Face Paint, and Jester's Mask",
+          "Turn them in to Rayne in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crystal-mask",
+        "label": "Crystal Mask",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "str": 6,
+          "dex": 8
+        },
+        "effect": "SV Magic +10, Gather Shadows",
+        "source": "Rogue Plane of Sky Tests: Test of Cunning reward (Rayne, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-stealth",
+        "label": "Rogue Plane of Sky Tests: Test of Stealth",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring a Pegasus Statuette, Prismatic Sphere, and Fine Wool Cloak to Rayne in the Plane of Sky for the Scintillating Bracer of Protection.",
+        "steps": [
+          "Gather a Pegasus Statuette, Prismatic Sphere, and Fine Wool Cloak",
+          "Turn them in to Rayne in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scintillating-bracer-of-protection",
+        "label": "Scintillating Bracer of Protection",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "wis": 2
+        },
+        "effect": "+8 all saving throws",
+        "source": "Rogue Plane of Sky Tests: Test of Stealth reward (Rayne, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-plane-of-sky-test-of-deception",
+        "label": "Rogue Plane of Sky Tests: Test of Deception",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "description": "Bring Honeyed Nectar, a Bixie Stinger, Lightning Rod, and Bloodsky Sapphire to Rayne in the Plane of Sky for the Thornstinger.",
+        "steps": [
+          "Gather Honeyed Nectar, a Bixie Stinger, Lightning Rod, and Bloodsky Sapphire",
+          "Turn them in to Rayne in the Plane of Sky"
+        ],
+        "wiki_title": "Rogue Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:thornstinger",
+        "label": "Thornstinger",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "magic": true,
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "agi": 5,
+          "hp": 50
+        },
+        "effect": "Rampage, DMG 12, Backstab 12",
+        "source": "Rogue Plane of Sky Tests: Test of Deception reward (Rayne, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-kaladim:vacto-molunel",
+        "label": "Vacto Molunel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:scarab-armor-quests",
+        "label": "Scarab Armor Quests",
+        "type": "quest_group",
+        "description": "Vacto Molunel in South Kaladim crafts three small-size Scarab armor pieces from giant scarab remains plus gold. Three independent sub-quests, no ordering between them. Faction gains with Storm Guard, Kazon Stormhammer, Miners Guild 249, and Merchants of Kaladim.",
+        "wiki_title": "Scarab Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scarab-armor-helm",
+        "label": "Scarab Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "description": "Trade 2 Scarab Carapaces and 5 gold to Vacto Molunel in South Kaladim for the Small Scarab Helm.",
+        "steps": [
+          "Gather 2 Scarab Carapaces and 5 gold",
+          "Turn them in to Vacto Molunel in South Kaladim"
+        ],
+        "wiki_title": "Scarab Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scarab-armor-breastplate",
+        "label": "Scarab Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "description": "Trade a pristine giant scarab carapace and 23 gold to Vacto Molunel in South Kaladim for the Small Scarab Breastplate.",
+        "steps": [
+          "Gather a pristine giant scarab carapace and 23 gold",
+          "Turn them in to Vacto Molunel in South Kaladim"
+        ],
+        "wiki_title": "Scarab Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-scarab-breastplate",
+        "label": "Small Scarab Breastplate",
+        "type": "item",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "size": "Small",
+        "ac": 14,
+        "stats": {
+          "str": 1,
+          "dex": -1,
+          "sta": 1,
+          "hp": 10
+        },
+        "resists": {
+          "disease": 2
+        },
+        "source": "Scarab Armor Quests: Breastplate reward (Vacto Molunel, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scarab-armor-boots",
+        "label": "Scarab Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "druid",
+          "rogue"
+        ],
+        "description": "Trade a cracked giant scarab shell, 2 scarab legs, and 17 gold to Vacto Molunel in South Kaladim for the Small Scarab Boots.",
+        "steps": [
+          "Gather a cracked giant scarab shell, 2 scarab legs, and 17 gold",
+          "Turn them in to Vacto Molunel in South Kaladim"
+        ],
+        "wiki_title": "Scarab Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-scarab-boots",
+        "label": "Small Scarab Boots",
+        "type": "item",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "druid",
+          "rogue"
+        ],
+        "size": "Small",
+        "ac": 4,
+        "source": "Scarab Armor Quests: Boots reward (Vacto Molunel, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:shezlie-furscale",
+        "label": "Shezlie Furscale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:zazlan-furscale",
+        "label": "Zazlan Furscale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:scaled-mystic-armor-quests",
+        "label": "Scaled Mystic Armor Quests",
+        "type": "quest_group",
+        "description": "Shezlie Furscale (Breastplate, Greaves, Gauntlets, Helm) and Zazlan Furscale (Cloak, Boots, Bracers, Vambraces) in East Cabilis each trade a banded armor piece plus assorted gems/quest items for a piece of Scaled Mystic armor, a quested set for Iksar Shamans. Eight independent sub-quests, no ordering between them.",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-breastplate",
+        "label": "Scaled Mystic Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade a Banded Mail, Star Ruby, Watchman's Spectacles, and Nectar of Isolation to Shezlie Furscale in East Cabilis for the Scaled Mystic Breastplate.",
+        "steps": [
+          "Gather a Banded Mail, Star Ruby, Watchman's Spectacles, and Nectar of Isolation",
+          "Turn them in to Shezlie Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-breastplate",
+        "label": "Scaled Mystic Breastplate",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 17,
+        "stats": {
+          "hp": 10,
+          "agi": 3
+        },
+        "source": "Scaled Mystic Armor Quests: Breastplate reward (Shezlie Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-greaves",
+        "label": "Scaled Mystic Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade Banded Leggings, a Fire Emerald, Sarnak Recruitment Letter, and Exiled Iksar Head to Shezlie Furscale in East Cabilis for the Scaled Mystic Greaves.",
+        "steps": [
+          "Gather Banded Leggings, a Fire Emerald, Sarnak Recruitment Letter, and Exiled Iksar Head",
+          "Turn them in to Shezlie Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-greaves",
+        "label": "Scaled Mystic Greaves",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "mana": 5,
+          "cha": 5
+        },
+        "source": "Scaled Mystic Armor Quests: Greaves reward (Shezlie Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-gauntlets",
+        "label": "Scaled Mystic Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade Banded Gauntlets, a Ruby, Venomous Parchment, and Warlord Drawing Pen to Shezlie Furscale in East Cabilis for the Scaled Mystic Gauntlets.",
+        "steps": [
+          "Gather Banded Gauntlets, a Ruby, Venomous Parchment, and Warlord Drawing Pen",
+          "Turn them in to Shezlie Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-gauntlets",
+        "label": "Scaled Mystic Gauntlets",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "hp": 20,
+          "int": 5
+        },
+        "source": "Scaled Mystic Armor Quests: Gauntlets reward (Shezlie Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-helm",
+        "label": "Scaled Mystic Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade a Banded Helm, Sapphire, Bargynn's Digger, and Sythrax Building Plans to Shezlie Furscale in East Cabilis for the Scaled Mystic Helm.",
+        "steps": [
+          "Gather a Banded Helm, Sapphire, Bargynn's Digger, and Sythrax Building Plans",
+          "Turn them in to Shezlie Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-helm",
+        "label": "Scaled Mystic Helm",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "wis": 5,
+          "mana": 5
+        },
+        "source": "Scaled Mystic Armor Quests: Helm reward (Shezlie Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-cloak",
+        "label": "Scaled Mystic Armor Quests: Cloak",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade a Banded Cloak, Star Ruby, Forest Giant Hammer, and Worn Charbone to Zazlan Furscale in East Cabilis for the Scaled Mystic Cloak.",
+        "steps": [
+          "Gather a Banded Cloak, Star Ruby, Forest Giant Hammer, and Worn Charbone",
+          "Turn them in to Zazlan Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-cloak",
+        "label": "Scaled Mystic Cloak",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "mana": 10,
+          "sta": 5
+        },
+        "source": "Scaled Mystic Armor Quests: Cloak reward (Zazlan Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-boots",
+        "label": "Scaled Mystic Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade Banded Boots, a Fire Emerald, Spirit Caller Beads, and Rhino Hoof to Zazlan Furscale in East Cabilis for the Scaled Mystic Boots.",
+        "steps": [
+          "Gather Banded Boots, a Fire Emerald, Spirit Caller Beads, and Rhino Hoof",
+          "Turn them in to Zazlan Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-boots",
+        "label": "Scaled Mystic Boots",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 5
+        },
+        "source": "Scaled Mystic Armor Quests: Boots reward (Zazlan Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-bracers",
+        "label": "Scaled Mystic Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade a Banded Bracer, Ruby, Coercion Implant, and Gooey Adhesive to Zazlan Furscale in East Cabilis for the Scaled Mystic Bracers.",
+        "steps": [
+          "Gather a Banded Bracer, Ruby, Coercion Implant, and Gooey Adhesive",
+          "Turn them in to Zazlan Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-bracers",
+        "label": "Scaled Mystic Bracers",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "str": 2,
+          "wis": 2
+        },
+        "source": "Scaled Mystic Armor Quests: Bracers reward (Zazlan Furscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:scaled-mystic-armor-vambraces",
+        "label": "Scaled Mystic Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "description": "Trade Banded Sleeves, a Sapphire, Frenzied Gnawer Tail, and Froglok Treated Planks to Zazlan Furscale in East Cabilis for the Scaled Mystic Vambraces.",
+        "steps": [
+          "Gather Banded Sleeves, a Sapphire, Frenzied Gnawer Tail, and Froglok Treated Planks",
+          "Turn them in to Zazlan Furscale in East Cabilis"
+        ],
+        "wiki_title": "Scaled Mystic Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-mystic-vambraces",
+        "label": "Scaled Mystic Vambraces",
+        "type": "item",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "sta": 5,
+          "agi": 5,
+          "wis": 2
+        },
+        "source": "Scaled Mystic Armor Quests: Vambraces reward (Zazlan Furscale, East Cabilis)"
+      }
     }
   ],
   "edges": [
@@ -166349,6 +168494,2640 @@
         "id": "e-rewards-11761",
         "source": "quest:spirit-wracked-cord-quest",
         "target": "item:spirit-wracked-cord",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-11762",
+        "source": "zone:erudin-palace",
+        "target": "zone:erudin",
+        "type": "connects_to",
+        "transport": "translocator"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-11763",
+        "source": "zone:erudin",
+        "target": "zone:erudin-palace",
+        "type": "connects_to",
+        "transport": "translocator"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11764",
+        "source": "npc:north-qeynos:knargon-lanenda",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11765",
+        "source": "npc:north-qeynos:knargon-lanenda",
+        "target": "quest:rogue-errands",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11766",
+        "source": "quest:rogue-errands",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11767",
+        "source": "quest:rogue-errands",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11768",
+        "source": "quest:rogue-errands",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11769",
+        "source": "quest:rogue-errands",
+        "target": "faction:highpass-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11770",
+        "source": "quest:rogue-errands",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11771",
+        "source": "quest:rogue-errands",
+        "target": "item:black-leather-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11772",
+        "source": "npc:temple-of-solusek-ro:lon-the-redeemed",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11773",
+        "source": "npc:temple-of-solusek-ro:lon-the-redeemed",
+        "target": "quest:rogue-redemption",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11774",
+        "source": "quest:rogue-redemption",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11775",
+        "source": "quest:rogue-redemption",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11776",
+        "source": "quest:rogue-redemption",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11777",
+        "source": "quest:rogue-redemption",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11778",
+        "source": "quest:rogue-redemption",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11779",
+        "source": "quest:rogue-redemption",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11780",
+        "source": "quest:rogue-redemption",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11781",
+        "source": "quest:rogue-redemption",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11782",
+        "source": "quest:rogue-redemption",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11783",
+        "source": "quest:rogue-redemption",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11784",
+        "source": "quest:rogue-redemption",
+        "target": "item:burning-rapier",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11785",
+        "source": "npc:south-qeynos:captain-rohand",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11786",
+        "source": "npc:south-qeynos:captain-rohand",
+        "target": "quest:rohands-brandy",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11787",
+        "source": "quest:rohands-brandy",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11788",
+        "source": "quest:rohands-brandy",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11789",
+        "source": "quest:rohands-brandy",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11790",
+        "source": "quest:rohands-brandy",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11791",
+        "source": "quest:rohands-brandy",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11792",
+        "source": "quest:rohands-brandy",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11793",
+        "source": "npc:temple-of-solusek-ro:vilissia",
+        "target": "quest:runescale-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11794",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11795",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11796",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11797",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11798",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11799",
+        "source": "quest:runescale-cloak-quest",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11800",
+        "source": "quest:runescale-cloak-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11801",
+        "source": "quest:runescale-cloak-quest",
+        "target": "item:runescale-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11802",
+        "source": "npc:erudin-palace:vasile-jahnir",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11803",
+        "source": "npc:erudin-palace:vasile-jahnir",
+        "target": "quest:rungupp-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11804",
+        "source": "quest:rungupp-quest",
+        "target": "zone:erudin-palace",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11805",
+        "source": "quest:rungupp-quest",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11806",
+        "source": "quest:rungupp-quest",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11807",
+        "source": "quest:rungupp-quest",
+        "target": "faction:frogloks-of-guk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11808",
+        "source": "quest:rungupp-quest",
+        "target": "faction:gate-callers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11809",
+        "source": "quest:rungupp-quest",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11810",
+        "source": "quest:rungupp-quest",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11811",
+        "source": "npc:ak-anon:manik-compolten",
+        "target": "quest:rusted-black-boxes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11812",
+        "source": "quest:rusted-black-boxes",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11813",
+        "source": "quest:rusted-black-boxes",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11814",
+        "source": "quest:rusted-black-boxes",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11815",
+        "source": "quest:rusted-black-boxes",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11816",
+        "source": "quest:rusted-black-boxes",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11817",
+        "source": "quest:rusted-black-boxes",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11818",
+        "source": "npc:lake-of-ill-omen:warlord-geot",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11819",
+        "source": "npc:lake-of-ill-omen:warlord-geot",
+        "target": "quest:sarnak-hatchling-brains",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11820",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "zone:lake-of-ill-omen",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11821",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11822",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11823",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11824",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11825",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11826",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11827",
+        "source": "quest:sarnak-hatchling-brains",
+        "target": "item:dried-froglok-leg",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11828",
+        "source": "npc:cobalt-scar:bloogy-shellcracker",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11829",
+        "source": "npc:cobalt-scar:bloogy-shellcracker",
+        "target": "quest:saucy-salted-seadragon-steak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11830",
+        "source": "quest:saucy-salted-seadragon-steak",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11831",
+        "source": "quest:saucy-salted-seadragon-steak",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11832",
+        "source": "quest:saucy-salted-seadragon-steak",
+        "target": "faction:othmir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11833",
+        "source": "quest:saucy-salted-seadragon-steak",
+        "target": "item:othmir-prexus-totem",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11834",
+        "source": "npc:east-commonlands:scholar-darnath",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11835",
+        "source": "npc:east-commonlands:scholar-darnath",
+        "target": "quest:scholar-darnaths-help",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11836",
+        "source": "quest:scholar-darnaths-help",
+        "target": "zone:east-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11837",
+        "source": "quest:scholar-darnaths-help",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11838",
+        "source": "quest:scholar-darnaths-help",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11839",
+        "source": "quest:scholar-darnaths-help",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11840",
+        "source": "quest:scholar-darnaths-help",
+        "target": "item:holiday-gift",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11841",
+        "source": "quest:scholar-darnaths-help",
+        "target": "item:zombie-flesh-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11842",
+        "source": "quest:scholar-darnaths-help",
+        "target": "item:paebala-fetish",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11843",
+        "source": "quest:scholar-darnaths-help",
+        "target": "item:cloak-of-confusion",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11844",
+        "source": "npc:field-of-bone:warlord-zyzz",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11845",
+        "source": "npc:field-of-bone:warlord-zyzz",
+        "target": "quest:scorpion-pincers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11846",
+        "source": "quest:scorpion-pincers",
+        "target": "zone:field-of-bone",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11847",
+        "source": "quest:scorpion-pincers",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11848",
+        "source": "quest:scorpion-pincers",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11849",
+        "source": "quest:scorpion-pincers",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11850",
+        "source": "quest:scorpion-pincers",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11851",
+        "source": "quest:scorpion-pincers",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11852",
+        "source": "quest:scorpion-pincers",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11853",
+        "source": "npc:greater-faydark:laren",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11854",
+        "source": "npc:greater-faydark:laren",
+        "target": "quest:scout-blade",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11855",
+        "source": "quest:scout-blade",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11856",
+        "source": "quest:scout-blade",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11857",
+        "source": "quest:scout-blade",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11858",
+        "source": "quest:scout-blade",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11859",
+        "source": "quest:scout-blade",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11860",
+        "source": "quest:scout-blade",
+        "target": "faction:tunares-scouts",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11861",
+        "source": "quest:scout-blade",
+        "target": "item:scouts-blade",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11862",
+        "source": "npc:greater-faydark:geeda",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11863",
+        "source": "npc:greater-faydark:geeda",
+        "target": "quest:scouts-cape-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11864",
+        "source": "quest:scouts-cape-quest",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11865",
+        "source": "quest:scouts-cape-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11866",
+        "source": "quest:scouts-cape-quest",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11867",
+        "source": "quest:scouts-cape-quest",
+        "target": "faction:tunares-scouts",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11868",
+        "source": "quest:scouts-cape-quest",
+        "target": "item:scouts-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11869",
+        "source": "npc:greater-faydark:tylfon",
+        "target": "quest:scouts-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11870",
+        "source": "quest:scouts-leggings",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11871",
+        "source": "quest:scouts-leggings",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11872",
+        "source": "quest:scouts-leggings",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11873",
+        "source": "quest:scouts-leggings",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11874",
+        "source": "quest:scouts-leggings",
+        "target": "item:silvermesh-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11875",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11876",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11877",
+        "source": "quest_group:rogue-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11878",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-crown",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11879",
+        "source": "quest:rogue-kael-armor-crown",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11880",
+        "source": "quest:rogue-kael-armor-crown",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11881",
+        "source": "quest:rogue-kael-armor-crown",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11882",
+        "source": "quest:rogue-kael-armor-crown",
+        "target": "item:deceiver-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11883",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-chestguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11884",
+        "source": "quest:rogue-kael-armor-chestguard",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11885",
+        "source": "quest:rogue-kael-armor-chestguard",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11886",
+        "source": "quest:rogue-kael-armor-chestguard",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11887",
+        "source": "quest:rogue-kael-armor-chestguard",
+        "target": "item:deceiver-s-chestguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11888",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11889",
+        "source": "quest:rogue-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11890",
+        "source": "quest:rogue-kael-armor-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11891",
+        "source": "quest:rogue-kael-armor-vambraces",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11892",
+        "source": "quest:rogue-kael-armor-vambraces",
+        "target": "item:deceiver-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11893",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11894",
+        "source": "quest:rogue-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11895",
+        "source": "quest:rogue-kael-armor-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11896",
+        "source": "quest:rogue-kael-armor-bracer",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11897",
+        "source": "quest:rogue-kael-armor-bracer",
+        "target": "item:deceiver-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11898",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11899",
+        "source": "quest:rogue-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11900",
+        "source": "quest:rogue-kael-armor-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11901",
+        "source": "quest:rogue-kael-armor-gauntlets",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11902",
+        "source": "quest:rogue-kael-armor-gauntlets",
+        "target": "item:deceiver-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11903",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11904",
+        "source": "quest:rogue-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11905",
+        "source": "quest:rogue-kael-armor-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11906",
+        "source": "quest:rogue-kael-armor-greaves",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11907",
+        "source": "quest:rogue-kael-armor-greaves",
+        "target": "item:deceiver-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11908",
+        "source": "npc:kael-drakkal:kelenek-bluadfeth",
+        "target": "quest:rogue-kael-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11909",
+        "source": "quest:rogue-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11910",
+        "source": "quest:rogue-kael-armor-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11911",
+        "source": "quest:rogue-kael-armor-boots",
+        "target": "quest_group:rogue-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11912",
+        "source": "quest:rogue-kael-armor-boots",
+        "target": "item:deceiver-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11913",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11914",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11915",
+        "source": "quest_group:rogue-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11916",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-crown",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11917",
+        "source": "quest:rogue-skyshrine-armor-crown",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11918",
+        "source": "quest:rogue-skyshrine-armor-crown",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11919",
+        "source": "quest:rogue-skyshrine-armor-crown",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11920",
+        "source": "quest:rogue-skyshrine-armor-crown",
+        "target": "item:shadow-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11921",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-chestguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11922",
+        "source": "quest:rogue-skyshrine-armor-chestguard",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11923",
+        "source": "quest:rogue-skyshrine-armor-chestguard",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11924",
+        "source": "quest:rogue-skyshrine-armor-chestguard",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11925",
+        "source": "quest:rogue-skyshrine-armor-chestguard",
+        "target": "item:shadow-chestguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11926",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11927",
+        "source": "quest:rogue-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11928",
+        "source": "quest:rogue-skyshrine-armor-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11929",
+        "source": "quest:rogue-skyshrine-armor-vambraces",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11930",
+        "source": "quest:rogue-skyshrine-armor-vambraces",
+        "target": "item:shadow-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11931",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11932",
+        "source": "quest:rogue-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11933",
+        "source": "quest:rogue-skyshrine-armor-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11934",
+        "source": "quest:rogue-skyshrine-armor-bracer",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11935",
+        "source": "quest:rogue-skyshrine-armor-bracer",
+        "target": "item:shadow-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11936",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11937",
+        "source": "quest:rogue-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11938",
+        "source": "quest:rogue-skyshrine-armor-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11939",
+        "source": "quest:rogue-skyshrine-armor-gauntlets",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11940",
+        "source": "quest:rogue-skyshrine-armor-gauntlets",
+        "target": "item:shadow-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11941",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11942",
+        "source": "quest:rogue-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11943",
+        "source": "quest:rogue-skyshrine-armor-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11944",
+        "source": "quest:rogue-skyshrine-armor-greaves",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11945",
+        "source": "quest:rogue-skyshrine-armor-greaves",
+        "target": "item:shadow-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11946",
+        "source": "npc:skyshrine:crendatha-fedhar",
+        "target": "quest:rogue-skyshrine-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11947",
+        "source": "quest:rogue-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11948",
+        "source": "quest:rogue-skyshrine-armor-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11949",
+        "source": "quest:rogue-skyshrine-armor-boots",
+        "target": "quest_group:rogue-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11950",
+        "source": "quest:rogue-skyshrine-armor-boots",
+        "target": "item:shadow-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11951",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11952",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11953",
+        "source": "quest_group:rogue-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11954",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-circlet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11955",
+        "source": "quest:rogue-thurgadin-armor-circlet",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11956",
+        "source": "quest:rogue-thurgadin-armor-circlet",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11957",
+        "source": "quest:rogue-thurgadin-armor-circlet",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11958",
+        "source": "quest:rogue-thurgadin-armor-circlet",
+        "target": "item:brigand-s-circlet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11959",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-chestguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11960",
+        "source": "quest:rogue-thurgadin-armor-chestguard",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11961",
+        "source": "quest:rogue-thurgadin-armor-chestguard",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11962",
+        "source": "quest:rogue-thurgadin-armor-chestguard",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11963",
+        "source": "quest:rogue-thurgadin-armor-chestguard",
+        "target": "item:brigand-s-chestguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11964",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11965",
+        "source": "quest:rogue-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11966",
+        "source": "quest:rogue-thurgadin-armor-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11967",
+        "source": "quest:rogue-thurgadin-armor-vambraces",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11968",
+        "source": "quest:rogue-thurgadin-armor-vambraces",
+        "target": "item:brigand-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11969",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11970",
+        "source": "quest:rogue-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11971",
+        "source": "quest:rogue-thurgadin-armor-bracer",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11972",
+        "source": "quest:rogue-thurgadin-armor-bracer",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11973",
+        "source": "quest:rogue-thurgadin-armor-bracer",
+        "target": "item:brigand-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11974",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11975",
+        "source": "quest:rogue-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11976",
+        "source": "quest:rogue-thurgadin-armor-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11977",
+        "source": "quest:rogue-thurgadin-armor-gauntlets",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11978",
+        "source": "quest:rogue-thurgadin-armor-gauntlets",
+        "target": "item:brigand-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11979",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11980",
+        "source": "quest:rogue-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11981",
+        "source": "quest:rogue-thurgadin-armor-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11982",
+        "source": "quest:rogue-thurgadin-armor-greaves",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11983",
+        "source": "quest:rogue-thurgadin-armor-greaves",
+        "target": "item:brigand-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11984",
+        "source": "npc:thurgadin:foreman-felspar",
+        "target": "quest:rogue-thurgadin-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11985",
+        "source": "quest:rogue-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11986",
+        "source": "quest:rogue-thurgadin-armor-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11987",
+        "source": "quest:rogue-thurgadin-armor-boots",
+        "target": "quest_group:rogue-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11988",
+        "source": "quest:rogue-thurgadin-armor-boots",
+        "target": "item:brigand-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11989",
+        "source": "npc:plane-of-sky:thalik-silenthand",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11990",
+        "source": "npc:plane-of-sky:kendrick-the-great",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11991",
+        "source": "npc:plane-of-sky:rayne",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11992",
+        "source": "npc:plane-of-sky:thalik-silenthand",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11993",
+        "source": "quest_group:rogue-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11994",
+        "source": "npc:plane-of-sky:kendrick-the-great",
+        "target": "quest:rogue-plane-of-sky-test-of-thievery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11995",
+        "source": "quest:rogue-plane-of-sky-test-of-thievery",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11996",
+        "source": "quest:rogue-plane-of-sky-test-of-thievery",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-11997",
+        "source": "quest:rogue-plane-of-sky-test-of-thievery",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11998",
+        "source": "quest:rogue-plane-of-sky-test-of-thievery",
+        "target": "item:wispy-choker-of-vigor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11999",
+        "source": "npc:plane-of-sky:kendrick-the-great",
+        "target": "quest:rogue-plane-of-sky-test-of-silence",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12000",
+        "source": "quest:rogue-plane-of-sky-test-of-silence",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12001",
+        "source": "quest:rogue-plane-of-sky-test-of-silence",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12002",
+        "source": "quest:rogue-plane-of-sky-test-of-silence",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12003",
+        "source": "quest:rogue-plane-of-sky-test-of-silence",
+        "target": "item:griffon-wing-spauldors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12004",
+        "source": "npc:plane-of-sky:kendrick-the-great",
+        "target": "quest:rogue-plane-of-sky-test-of-trickery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12005",
+        "source": "quest:rogue-plane-of-sky-test-of-trickery",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12006",
+        "source": "quest:rogue-plane-of-sky-test-of-trickery",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12007",
+        "source": "quest:rogue-plane-of-sky-test-of-trickery",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12008",
+        "source": "quest:rogue-plane-of-sky-test-of-trickery",
+        "target": "item:renard-s-belt-of-quickness",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12009",
+        "source": "npc:plane-of-sky:rayne",
+        "target": "quest:rogue-plane-of-sky-test-of-cunning",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12010",
+        "source": "quest:rogue-plane-of-sky-test-of-cunning",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12011",
+        "source": "quest:rogue-plane-of-sky-test-of-cunning",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12012",
+        "source": "quest:rogue-plane-of-sky-test-of-cunning",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12013",
+        "source": "quest:rogue-plane-of-sky-test-of-cunning",
+        "target": "item:crystal-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12014",
+        "source": "npc:plane-of-sky:rayne",
+        "target": "quest:rogue-plane-of-sky-test-of-stealth",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12015",
+        "source": "quest:rogue-plane-of-sky-test-of-stealth",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12016",
+        "source": "quest:rogue-plane-of-sky-test-of-stealth",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12017",
+        "source": "quest:rogue-plane-of-sky-test-of-stealth",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12018",
+        "source": "quest:rogue-plane-of-sky-test-of-stealth",
+        "target": "item:scintillating-bracer-of-protection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12019",
+        "source": "npc:plane-of-sky:rayne",
+        "target": "quest:rogue-plane-of-sky-test-of-deception",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12020",
+        "source": "quest:rogue-plane-of-sky-test-of-deception",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12021",
+        "source": "quest:rogue-plane-of-sky-test-of-deception",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12022",
+        "source": "quest:rogue-plane-of-sky-test-of-deception",
+        "target": "quest_group:rogue-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12023",
+        "source": "quest:rogue-plane-of-sky-test-of-deception",
+        "target": "item:thornstinger",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12024",
+        "source": "npc:south-kaladim:vacto-molunel",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12025",
+        "source": "npc:south-kaladim:vacto-molunel",
+        "target": "quest_group:scarab-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12026",
+        "source": "quest_group:scarab-armor-quests",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12027",
+        "source": "quest_group:scarab-armor-quests",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12028",
+        "source": "quest_group:scarab-armor-quests",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12029",
+        "source": "quest_group:scarab-armor-quests",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12030",
+        "source": "quest_group:scarab-armor-quests",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12031",
+        "source": "npc:south-kaladim:vacto-molunel",
+        "target": "quest:scarab-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12032",
+        "source": "quest:scarab-armor-helm",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12033",
+        "source": "quest:scarab-armor-helm",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12034",
+        "source": "quest:scarab-armor-helm",
+        "target": "quest_group:scarab-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12035",
+        "source": "quest:scarab-armor-helm",
+        "target": "item:small-scarab-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12036",
+        "source": "npc:south-kaladim:vacto-molunel",
+        "target": "quest:scarab-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12037",
+        "source": "quest:scarab-armor-breastplate",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12038",
+        "source": "quest:scarab-armor-breastplate",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12039",
+        "source": "quest:scarab-armor-breastplate",
+        "target": "quest_group:scarab-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12040",
+        "source": "quest:scarab-armor-breastplate",
+        "target": "item:small-scarab-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12041",
+        "source": "npc:south-kaladim:vacto-molunel",
+        "target": "quest:scarab-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12042",
+        "source": "quest:scarab-armor-boots",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12043",
+        "source": "quest:scarab-armor-boots",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12044",
+        "source": "quest:scarab-armor-boots",
+        "target": "quest_group:scarab-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12045",
+        "source": "quest:scarab-armor-boots",
+        "target": "item:small-scarab-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12046",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12047",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12048",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12049",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12050",
+        "source": "quest_group:scaled-mystic-armor-quests",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12051",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "quest:scaled-mystic-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12052",
+        "source": "quest:scaled-mystic-armor-breastplate",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12053",
+        "source": "quest:scaled-mystic-armor-breastplate",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12054",
+        "source": "quest:scaled-mystic-armor-breastplate",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12055",
+        "source": "quest:scaled-mystic-armor-breastplate",
+        "target": "item:scaled-mystic-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12056",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "quest:scaled-mystic-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12057",
+        "source": "quest:scaled-mystic-armor-greaves",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12058",
+        "source": "quest:scaled-mystic-armor-greaves",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12059",
+        "source": "quest:scaled-mystic-armor-greaves",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12060",
+        "source": "quest:scaled-mystic-armor-greaves",
+        "target": "item:scaled-mystic-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12061",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "quest:scaled-mystic-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12062",
+        "source": "quest:scaled-mystic-armor-gauntlets",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12063",
+        "source": "quest:scaled-mystic-armor-gauntlets",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12064",
+        "source": "quest:scaled-mystic-armor-gauntlets",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12065",
+        "source": "quest:scaled-mystic-armor-gauntlets",
+        "target": "item:scaled-mystic-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12066",
+        "source": "npc:east-cabilis:shezlie-furscale",
+        "target": "quest:scaled-mystic-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12067",
+        "source": "quest:scaled-mystic-armor-helm",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12068",
+        "source": "quest:scaled-mystic-armor-helm",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12069",
+        "source": "quest:scaled-mystic-armor-helm",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12070",
+        "source": "quest:scaled-mystic-armor-helm",
+        "target": "item:scaled-mystic-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12071",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "quest:scaled-mystic-armor-cloak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12072",
+        "source": "quest:scaled-mystic-armor-cloak",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12073",
+        "source": "quest:scaled-mystic-armor-cloak",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12074",
+        "source": "quest:scaled-mystic-armor-cloak",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12075",
+        "source": "quest:scaled-mystic-armor-cloak",
+        "target": "item:scaled-mystic-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12076",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "quest:scaled-mystic-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12077",
+        "source": "quest:scaled-mystic-armor-boots",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12078",
+        "source": "quest:scaled-mystic-armor-boots",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12079",
+        "source": "quest:scaled-mystic-armor-boots",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12080",
+        "source": "quest:scaled-mystic-armor-boots",
+        "target": "item:scaled-mystic-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12081",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "quest:scaled-mystic-armor-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12082",
+        "source": "quest:scaled-mystic-armor-bracers",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12083",
+        "source": "quest:scaled-mystic-armor-bracers",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12084",
+        "source": "quest:scaled-mystic-armor-bracers",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12085",
+        "source": "quest:scaled-mystic-armor-bracers",
+        "target": "item:scaled-mystic-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12086",
+        "source": "npc:east-cabilis:zazlan-furscale",
+        "target": "quest:scaled-mystic-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12087",
+        "source": "quest:scaled-mystic-armor-vambraces",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12088",
+        "source": "quest:scaled-mystic-armor-vambraces",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12089",
+        "source": "quest:scaled-mystic-armor-vambraces",
+        "target": "quest_group:scaled-mystic-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12090",
+        "source": "quest:scaled-mystic-armor-vambraces",
+        "target": "item:scaled-mystic-vambraces",
         "type": "rewards"
       }
     }
