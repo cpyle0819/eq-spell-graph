@@ -50059,7 +50059,20 @@
         "slots": [
           "Primary"
         ],
-        "source": "Poacher's Head Quest (Erudin) reward (Jras Solsier, Erudin)"
+        "source": "Poacher's Head Quest (Erudin) reward (Jras Solsier, Erudin)",
+        "skill": "Piercing",
+        "damage": 5,
+        "delay": 32,
+        "classes": [
+          "warrior",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "weight": 5,
+        "size": "Medium"
       }
     },
     {
@@ -68641,6 +68654,268 @@
           "Receive a fully charged set back"
         ],
         "wiki_title": "Recharge Prayer Beads"
+      }
+    },
+    {
+      "data": {
+        "id": "item:cat-s-eye-agate",
+        "label": "Cat's Eye Agate",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "A Job for Nanrum reward (Basher Nanrum, Grobb); also a common tradeskill/jewelcrafting ingredient"
+      }
+    },
+    {
+      "data": {
+        "id": "item:chunk-of-metal-ore",
+        "label": "Chunk of Metal Ore",
+        "type": "item",
+        "weight": 4,
+        "size": "Small",
+        "source": "A Job for Nanrum reward (Basher Nanrum, Grobb)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hematite",
+        "label": "Hematite",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "A Job for Nanrum reward (Basher Nanrum, Grobb); also a common tradeskill/jewelcrafting ingredient"
+      }
+    },
+    {
+      "data": {
+        "id": "item:turquoise",
+        "label": "Turquoise",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "A Job for Nanrum reward (Basher Nanrum, Grobb); also a common tradeskill/jewelcrafting ingredient"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-belt",
+        "label": "Leather Belt",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 3,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 1,
+        "size": "Small",
+        "source": "Bandit Sisters reward (drunkard, Kelethin); part of the Leather Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-leggings",
+        "label": "Leather Leggings",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 5,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 4,
+        "size": "Medium",
+        "source": "Bandit Sisters reward (drunkard, Kelethin); part of the Leather Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:leather-shoulderpads",
+        "label": "Leather Shoulderpads",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 3,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Bandit Sisters reward (drunkard, Kelethin); part of the Leather Armor Set"
+      }
+    },
+    {
+      "data": {
+        "id": "item:targ-shield",
+        "label": "Targ Shield",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 7,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "weight": 7.5,
+        "size": "Medium",
+        "source": "Bandit Sisters reward (drunkard, Kelethin); also craftable via Blacksmithing"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-leather-gorget",
+        "label": "Small Leather Gorget",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 3,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Bandit Sisters reward (drunkard, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-leather-mask",
+        "label": "Small Leather Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 2,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Bandit Sisters reward (drunkard, Kelethin); also drops from Whimsy Larktwitter in Lesser Faydark"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-leather-shoulderpads",
+        "label": "Small Leather Shoulderpads",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 3,
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "weight": 1.1,
+        "size": "Small",
+        "source": "Bandit Sisters reward (drunkard, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aviak-feather",
+        "label": "Aviak Feather",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Bracers of Erollisi Quest / Pirate Earrings reward (Styria Fearnon, Ocean of Tears); also a Minor Summoning: Air tradeskill ingredient"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kiola-nut",
+        "label": "Kiola Nut",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Bracers of Erollisi Quest / Pirate Earrings reward (Styria Fearnon, Ocean of Tears)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:conch-shell",
+        "label": "Conch Shell",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Tiny",
+        "source": "Bracers of Erollisi Quest / Pirate Earrings reward (Styria Fearnon, Ocean of Tears)"
       }
     }
   ],
@@ -160122,6 +160397,186 @@
         "target": "spell:column-of-fire",
         "type": "rewards",
         "randomGroup": "rathmanas-traveling-offer-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11426",
+        "source": "quest:a-job-for-nanrum",
+        "target": "item:cat-s-eye-agate",
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11427",
+        "source": "quest:a-job-for-nanrum",
+        "target": "item:chunk-of-metal-ore",
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11428",
+        "source": "quest:a-job-for-nanrum",
+        "target": "item:hematite",
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11429",
+        "source": "quest:a-job-for-nanrum",
+        "target": "item:turquoise",
+        "type": "rewards",
+        "randomGroup": "a-job-for-nanrum-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11430",
+        "source": "quest:bandit-sisters",
+        "target": "item:bearskin-gloves",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11431",
+        "source": "quest:bandit-sisters",
+        "target": "item:leather-belt",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11432",
+        "source": "quest:bandit-sisters",
+        "target": "item:leather-leggings",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11433",
+        "source": "quest:bandit-sisters",
+        "target": "item:leather-shoulderpads",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11434",
+        "source": "quest:bandit-sisters",
+        "target": "item:targ-shield",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11435",
+        "source": "quest:bandit-sisters",
+        "target": "item:small-leather-gorget",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11436",
+        "source": "quest:bandit-sisters",
+        "target": "item:small-leather-mask",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11437",
+        "source": "quest:bandit-sisters",
+        "target": "item:small-leather-shoulderpads",
+        "type": "rewards",
+        "randomGroup": "bandit-sisters-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11438",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "item:aviak-feather",
+        "type": "rewards",
+        "randomGroup": "bracers-of-erollisi-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11439",
+        "source": "quest:pirate-earrings",
+        "target": "item:aviak-feather",
+        "type": "rewards",
+        "randomGroup": "pirate-earrings-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11440",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "item:fishing-spear",
+        "type": "rewards",
+        "randomGroup": "bracers-of-erollisi-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11441",
+        "source": "quest:pirate-earrings",
+        "target": "item:fishing-spear",
+        "type": "rewards",
+        "randomGroup": "pirate-earrings-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11442",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "item:kiola-nut",
+        "type": "rewards",
+        "randomGroup": "bracers-of-erollisi-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11443",
+        "source": "quest:pirate-earrings",
+        "target": "item:kiola-nut",
+        "type": "rewards",
+        "randomGroup": "pirate-earrings-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11444",
+        "source": "quest:bracers-of-erollisi-quest",
+        "target": "item:conch-shell",
+        "type": "rewards",
+        "randomGroup": "bracers-of-erollisi-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11445",
+        "source": "quest:pirate-earrings",
+        "target": "item:conch-shell",
+        "type": "rewards",
+        "randomGroup": "pirate-earrings-drop"
       }
     }
   ]
