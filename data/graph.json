@@ -66028,7 +66028,7 @@
         "weight": 1,
         "size": "Medium",
         "lore": true,
-        "source": "Guild Summons - Hall of Steel reward (Ebon Strongbear, South Qeynos) -- restricted to Warriors of Human or Half-Elf race"
+        "source": "Guild Summons - Hall of Steel (South Qeynos) / Shrine of Bertoxxulous Warrior (Qeynos Catacombs) reward -- restricted to Warriors of Human or Half-Elf race"
       }
     },
     {
@@ -66623,6 +66623,1029 @@
         "size": "Medium",
         "lore": true,
         "source": "Guild Summons - Shrine of Bertoxxulous Enchanter reward (Reania Jukle, Qeynos Catacombs) -- restricted to Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:dalnir",
+        "label": "Dalnir",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:perkon-malok",
+        "label": "Perkon Malok",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "label": "Guild Summons - Shrine of Bertoxxulous Magician",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Magician of the Bloodsabers Guild receives a Blood Stained Note directing them to Perkon Malok at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild robe.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Blood Stained Note (Guild Summons)",
+          "Hand the note to Perkon Malok at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:lyris-moonbane",
+        "label": "Lyris Moonbane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-stained-purple-robe",
+        "label": "Dark Stained Purple Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Shrine of Bertoxxulous Necromancer reward (Lyris Moonbane, Qeynos Catacombs) -- restricted to Necromancers of Human race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "label": "Guild Summons - Shrine of Bertoxxulous Necromancer",
+        "type": "quest",
+        "description": "A new Human Necromancer of the Bloodsabers Guild receives a Blood Stained Note directing them to Lyris Moonbane at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild robe.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Blood Stained Note (Guild Summons)",
+          "Hand the note to Lyris Moonbane at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Necromancer"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:sragg-bloodheart",
+        "label": "Sragg Bloodheart",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:ruined-training-tunic",
+        "label": "Ruined Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Shrine of Bertoxxulous Shadowknight / Temple of Bertoxxulous Cleric reward (Qeynos Catacombs) -- restricted to Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "label": "Guild Summons - Shrine of Bertoxxulous Shadowknight",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Shadow Knight of the Bloodsabers Guild receives a Stained Cloth Note directing them to Sragg Bloodheart at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild tunic.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Stained Cloth Note",
+          "Hand the note to Sragg Bloodheart at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Shadowknight"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:rocthar-bekesna",
+        "label": "Rocthar Bekesna",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "label": "Guild Summons - Shrine of Bertoxxulous Warrior",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Warrior of the Bloodsabers Guild receives a Blood Stained Note directing them to Rocthar Bekesna at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild tunic. Faction standing with Guards of Qeynos and Priests of Life worsens.",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Blood Stained Note (Guild Summons)",
+          "Hand the note to Rocthar Bekesna at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Warrior"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:trenon-callust",
+        "label": "Trenon Callust",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "label": "Guild Summons - Shrine of Bertoxxulous Wizard",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Wizard of the Bloodsabers Guild receives a Blood Stained Note directing them to Trenon Callust at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Blood Stained Note (Guild Summons)",
+          "Hand the note to Trenon Callust at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Shrine of Bertoxxulous Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "item:green-and-tan-tunic",
+        "label": "Green and Tan Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Soldiers of Tunare reward (Heartwood Master, Kelethin) -- restricted to Druids of Elf or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-soldiers-of-tunare",
+        "label": "Guild Summons - Soldiers of Tunare",
+        "type": "quest",
+        "description": "A new Elf or Half-Elf Druid of the Soldiers of Tunare Guild receives a tattered note directing them to the Heartwood Master at the guild hall in Kelethin, who trades it for a guild tunic.",
+        "classes": [
+          "druid"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to the Heartwood Master at the Soldiers of Tunare guild hall in Kelethin"
+        ],
+        "wiki_title": "Guild Summons - Soldiers of Tunare"
+      }
+    },
+    {
+      "data": {
+        "id": "item:harbingers-of-fear-robe",
+        "label": "Harbingers of Fear Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Tabernacle of Terror reward (Sern Adolia, Paineel) -- restricted to Erudites"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-tabernacle-of-terror",
+        "label": "Guild Summons - Tabernacle of Terror",
+        "type": "quest",
+        "description": "A new Erudite Cleric or Shadow Knight of the Harbingers of Fear Guild receives a Harbingers of Fear Guild Note directing them to Sern Adolia in the Tabernacle of Terror in Paineel, who trades it for a guild robe. Faction standing with Deepwater Knights, Gate Callers, Craftkeepers, and Crimson Hands worsens.",
+        "classes": [
+          "cleric",
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Harbingers of Fear Guild Note",
+          "Hand the note to Sern Adolia in the Tabernacle of Terror"
+        ],
+        "wiki_title": "Guild Summons - Tabernacle of Terror"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-catacombs:xeture-demiagar",
+        "label": "Xeture Demiagar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "label": "Guild Summons - Temple of Bertoxxulous Cleric",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Cleric of the Bloodsabers Guild receives a tattered note directing them to Xeture Demiagar at the Shrine of Bertoxxulous Guild Hall in the Qeynos Catacombs, who trades it for a guild tunic. Faction standing with Guards of Qeynos, Priests of Life, and Knights of Thunder worsens.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Xeture Demiagar at the Shrine of Bertoxxulous Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Temple of Bertoxxulous Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-silver-tunic",
+        "label": "Faded Silver Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Temple of Divine Light Cleric/Paladin reward (Erudin) -- restricted to Erudites"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-divine-light-cleric",
+        "label": "Guild Summons - Temple of Divine Light Cleric",
+        "type": "quest",
+        "description": "A new Erudite Cleric of the Temple of Divine Light Guild receives a tattered note directing them to Leraena Shelyrak at the Temple of Light Guild Hall in Erudin, who trades it for a guild tunic. Faction standing with Heretics worsens.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Leraena Shelyrak at the Temple of Light Guild Hall"
+        ],
+        "wiki_title": "Guild Summons - Temple of Divine Light Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:depnar-bulrious",
+        "label": "Depnar Bulrious",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-divine-light-paladin",
+        "label": "Guild Summons - Temple of Divine Light Paladin",
+        "type": "quest",
+        "description": "A new Erudite Paladin of the Temple of Divine Light Guild receives a tattered note directing them to Depnar Bulrious at the Temple of Divine Light in Erudin, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Depnar Bulrious at the Temple of Divine Light"
+        ],
+        "wiki_title": "Guild Summons - Temple of Divine Light Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:tholius-quey",
+        "label": "Tholius Quey",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:white-and-blue-tunic",
+        "label": "White and Blue Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - Temple of Marr Cleric reward (Tholius Quey, North Freeport) -- restricted to Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-marr-cleric",
+        "label": "Guild Summons - Temple of Marr Cleric",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Cleric of the Temple of Marr Guild receives a tattered note directing them to Tholius Quey at the Temple of Marr in North Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Tholius Quey at the Temple of Marr"
+        ],
+        "wiki_title": "Guild Summons - Temple of Marr Cleric"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:gygus-remnara",
+        "label": "Gygus Remnara",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-temple-of-marr-paladin",
+        "label": "Guild Summons - Temple of Marr Paladin",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Paladin of the Temple of Marr Guild receives a tattered note directing them to Gygus Remnara at the Temple of Marr in North Freeport, who trades it for a guild tunic.",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Gygus Remnara at the Temple of Marr"
+        ],
+        "wiki_title": "Guild Summons - Temple of Marr Paladin"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dirt-soiled-robe",
+        "label": "Dirt Soiled Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Abbatoir reward (Coriante Verisue, Paineel) -- restricted to Necromancers of Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-abbatoir",
+        "label": "Guild Summons - The Abbatoir",
+        "type": "quest",
+        "description": "A new Erudite Necromancer of the Harbingers of Fear Guild receives a Dark Truth Guild Note directing them to Coriante Verisue at the Tabernacle of Terror in Paineel, who trades it for a guild robe.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a Dark Truth Guild Note",
+          "Hand the note to Coriante Verisue in the Tabernacle of Terror"
+        ],
+        "wiki_title": "Guild Summons - The Abbatoir"
+      }
+    },
+    {
+      "data": {
+        "id": "item:faded-blue-robe",
+        "label": "Faded Blue Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Amethyst Palace reward (Tarker Blazetoss, Southern Felwithe) -- restricted to Human, High Elf, or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-amethyst-palace",
+        "label": "Guild Summons - The Amethyst Palace",
+        "type": "quest",
+        "description": "A new Human, High Elf, or Half-Elf Wizard of the Amethyst Palace Guild receives an Enrollment Letter directing them to Tarker Blazetoss at the Amethyst Palace Wizard Guild Hall in Southern Felwithe, who trades it for a guild robe. Faction standing with The Dead worsens.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive an Enrollment Letter",
+          "Hand the letter to Tarker Blazetoss at the Amethyst Palace"
+        ],
+        "wiki_title": "Guild Summons - The Amethyst Palace"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:xon-quexill",
+        "label": "Xon Quexill",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-stained-training-robe",
+        "label": "Dark Stained Training Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Dead Necromancer reward (Xon Quexill, Neriak Third Gate) -- restricted to Necromancers of Dark Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-dead-necromancer",
+        "label": "Guild Summons - The Dead Necromancer",
+        "type": "quest",
+        "description": "A new Dark Elf Necromancer receives a tattered note directing them to Xon Quexill in Neriak Third Gate, who trades it for a guild robe.",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Xon Quexill in Neriak Third Gate"
+        ],
+        "wiki_title": "Guild Summons - The Dead Necromancer"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:nezzka-tolax",
+        "label": "Nezzka Tolax",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-training-tunic",
+        "label": "Black Training Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "ac": 3,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Dead Shadowknight reward (Nezzka Tolax, Neriak Third Gate) -- restricted to Shadow Knights of Dark Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-dead-shadowknight",
+        "label": "Guild Summons - The Dead Shadowknight",
+        "type": "quest",
+        "description": "A new Dark Elf Shadow Knight receives a tattered note directing them to Nezzka Tolax in Neriak Third Gate, who trades it for a guild tunic.",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Nezzka Tolax in Neriak Third Gate"
+        ],
+        "wiki_title": "Guild Summons - The Dead Shadowknight"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:camia-vretta",
+        "label": "Camia V'Retta",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:stained-red-robe",
+        "label": "Stained Red Robe",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "weight": 0.7,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Spurned Enchanter/Magician/Wizard reward (Neriak Commons) -- restricted to Dark Elves"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-spurned-enchanter",
+        "label": "Guild Summons - The Spurned Enchanter",
+        "type": "quest",
+        "description": "A new Dark Elf Enchanter receives a tattered note directing them to Camia V'Retta at the Tower of the Spurned in Neriak Commons, who trades it for a guild robe.",
+        "classes": [
+          "enchanter"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Camia V'Retta at the Tower of the Spurned"
+        ],
+        "wiki_title": "Guild Summons - The Spurned Enchanter"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:the-spurned",
+        "label": "The Spurned",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:jayna-dbious",
+        "label": "Jayna D'Bious",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-spurned-magician",
+        "label": "Guild Summons - The Spurned Magician",
+        "type": "quest",
+        "description": "A new Dark Elf Magician receives a tattered note directing them to seek out Jayna D'Bious, master magician of the Spurned, at the Tower of the Spurned in Neriak Commons, who trades it for a guild robe. Faction standing with The Dead worsens.",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Jayna D'Bious at the Tower of the Spurned"
+        ],
+        "wiki_title": "Guild Summons - The Spurned Magician"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:gath-nmare",
+        "label": "Gath N`Mare",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-spurned-wizard",
+        "label": "Guild Summons - The Spurned Wizard",
+        "type": "quest",
+        "description": "A new Dark Elf Wizard receives a tattered note directing them to Gath N`Mare at the Tower of the Spurned in Neriak Commons, who trades it for a guild robe.",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Gath N`Mare at the Tower of the Spurned"
+        ],
+        "wiki_title": "Guild Summons - The Spurned Wizard"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:belious-naliedin",
+        "label": "Belious Naliedin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:brown-tunic",
+        "label": "Brown Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "bard"
+        ],
+        "ac": 2,
+        "weight": 1,
+        "size": "Medium",
+        "lore": true,
+        "source": "Guild Summons - The Wind Spirit's Song reward (Belious Naliedin, South Qeynos) -- restricted to Bards of Human or Half-Elf race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:guild-summons-the-wind-spirits-song",
+        "label": "Guild Summons - The Wind Spirit's Song",
+        "type": "quest",
+        "description": "A new Human or Half-Elf Bard receives a tattered note directing them to Belious Naliedin at The Wind Spirit's Song Bard Guild Hall in South Qeynos, who trades it for a guild tunic.",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "steps": [
+          "Receive a tattered note",
+          "Hand the note to Belious Naliedin at The Wind Spirit's Song"
+        ],
+        "wiki_title": "Guild Summons - The Wind Spirit's Song"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:heretic-battle",
+        "label": "Heretic Battle",
+        "type": "quest",
+        "description": "Defeat Elial Brook in Toxxulia Forest and bring his Bones to Markus Jaevins atop the Tower of the Gate Callers in Erudin Palace. Faction standing with Heretics worsens.",
+        "minLevel": 6,
+        "steps": [
+          "Defeat Elial Brook in Toxxulia Forest for Bones",
+          "Hand the Bones to Markus Jaevins atop the Tower of the Gate Callers"
+        ],
+        "wiki_title": "Heretic Battle"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:gate-callers",
+        "label": "Gate Callers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:craftkeepers",
+        "label": "Craftkeepers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:shazda-kaekwon",
+        "label": "Shazda Kaekwon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:kejekan-tribal-headband",
+        "label": "Kejekan Tribal Headband",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 1,
+        "stats": {
+          "wis": 3,
+          "int": 3
+        },
+        "mana": 12,
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Heretic Heads reward (Shazda Kaekwon, Stonebrunt Mountains) -- common outcome, roughly 90% of the time"
+      }
+    },
+    {
+      "data": {
+        "id": "item:swiftclaw-sash",
+        "label": "Swiftclaw Sash",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 2,
+        "stats": {
+          "agi": 2
+        },
+        "weight": 0.1,
+        "size": "Small",
+        "magic": true,
+        "lore": true,
+        "source": "Heretic Heads reward (Shazda Kaekwon, Stonebrunt Mountains) -- rare outcome, roughly 10% of the time; also grants Haste +15%"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:heretic-heads",
+        "label": "Heretic Heads",
+        "type": "quest",
+        "description": "Collect four Heretic Heads (male or female) into a Burlap Satchel to make a Satchel of Heretic Heads, then hand it to Shazda Kaekwon in Stonebrunt Mountains for coin, experience, and a chance at one of two rewards: a Kejekan Tribal Headband (common) or a rare Swiftclaw Sash.",
+        "minLevel": 25,
+        "steps": [
+          "Collect 4 Heretic Heads and combine them in a Burlap Satchel",
+          "Hand the Satchel of Heretic Heads to Shazda Kaekwon"
+        ],
+        "wiki_title": "Heretic Heads"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:iksar-prisoner",
+        "label": "an Iksar prisoner",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:greenmist-icon",
+        "label": "Greenmist Icon",
+        "type": "item",
+        "stats": {
+          "cha": 5
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Iksar Prisoner Quest reward (East Cabilis / Dalnir) -- usable by any class or race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:iksar-prisoner-quest",
+        "label": "Iksar Prisoner Quest",
+        "type": "quest",
+        "description": "An Iksar prisoner in East Cabilis hands over Drixiv Arcut's note; giving it to Arch Duke Xog at the Shaman/Shadowknight Guild sends the player to find a captured Crusader (an Iksar prisoner) on the second floor of Dalnir. Killing coerced dwarves there for a rare Serrated Wire and freeing the prisoner earns a Greenmist Icon, which Xog reluctantly accepts back in East Cabilis -- worsening faction standing with the Crusaders of Greenmist and Legion of Cabilis.",
+        "minLevel": 25,
+        "steps": [
+          "Hail an Iksar prisoner in East Cabilis to receive Drixiv Arcut's note",
+          "Hand the note to Arch Duke Xog at the Shaman/Shadowknight Guild",
+          "Find and hail the captured prisoner on the second floor of Dalnir",
+          "Kill coerced dwarves in Dalnir for a rare Serrated Wire",
+          "Hand the Serrated Wire to the prisoner to free him and receive a Greenmist Icon",
+          "Return the Greenmist Icon to Arch Duke Xog"
+        ],
+        "wiki_title": "Iksar Prisoner Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dragon-necropolis:neb",
+        "label": "Neb",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:jaled-dars-tomb-key",
+        "label": "Jaled Dar's Tomb Key",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "lore": true,
+        "source": "Key to Jaled Dar's Lair reward, dropped by either Neb or Zlandicar in Dragon Necropolis -- opens the door to Jaled Dar's shade (a Rogue with 210+ lockpick skill can bypass it)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nebs-warbone",
+        "label": "Neb's Warbone",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "bard",
+          "beastlord",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "skill": "1H Blunt",
+        "delay": 23,
+        "damage": 15,
+        "stats": {
+          "str": 10
+        },
+        "resists": {
+          "fire": 15
+        },
+        "weight": 7,
+        "size": "Medium",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Key to Jaled Dar's Lair (Neb) reward (Dragon Necropolis) -- excludes Necromancers, Wizards, Magicians, and Enchanters; special ability triggers at level 50"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-jaled-dars-lair-neb",
+        "label": "Key to Jaled Dar's Lair (Neb)",
+        "type": "quest",
+        "description": "Turn in Vaniki's Heart (dropped by Vaniki in the Chetari tunnels) and Zlandicar's Heart (dropped by Zlandicar) to Neb in Dragon Necropolis for Jaled Dar's Tomb Key and Neb's Warbone. Requires dubious faction standing or better with the Paebala to start; worsens standing with Zlandicar and Chetari.",
+        "minLevel": 55,
+        "steps": [
+          "Obtain Vaniki's Heart from Vaniki in the Chetari tunnels",
+          "Obtain Zlandicar's Heart from Zlandicar",
+          "Turn in both hearts to Neb in Dragon Necropolis"
+        ],
+        "wiki_title": "Key to Jaled Dar's Lair (Neb)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:paebala",
+        "label": "Paebala",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dragon-necropolis:zlandicar",
+        "label": "Zlandicar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-jaled-dars-lair-zlandicar",
+        "label": "Key to Jaled Dar's Lair (Zlandicar)",
+        "type": "quest",
+        "description": "Turn in Neb's head to Zlandicar in Dragon Necropolis for Jaled Dar's Tomb Key. Requires apprehensive faction standing or better with Zlandicar to start; sneak turn-ins work.",
+        "minLevel": 55,
+        "steps": [
+          "Obtain Neb's head",
+          "Turn in Neb's head to Zlandicar in Dragon Necropolis"
+        ],
+        "wiki_title": "Key to Jaled Dar's Lair (Zlandicar)"
       }
     }
   ],
@@ -155308,6 +156331,1406 @@
         "id": "e-rewards-11083",
         "source": "quest:guild-summons-shrine-of-bertoxxulous-enchanter",
         "target": "item:dirty-purple-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-11084",
+        "source": "zone:dalnir",
+        "target": "zone:warsliks-woods",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-11085",
+        "source": "zone:warsliks-woods",
+        "target": "zone:dalnir",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11086",
+        "source": "npc:qeynos-catacombs:perkon-malok",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11087",
+        "source": "npc:qeynos-catacombs:perkon-malok",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11088",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11089",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11090",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11091",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11092",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11093",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-magician",
+        "target": "item:dirty-purple-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11094",
+        "source": "npc:qeynos-catacombs:lyris-moonbane",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11095",
+        "source": "npc:qeynos-catacombs:lyris-moonbane",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11096",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11097",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11098",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11099",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11100",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11101",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-necromancer",
+        "target": "item:dark-stained-purple-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11102",
+        "source": "npc:qeynos-catacombs:sragg-bloodheart",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11103",
+        "source": "npc:qeynos-catacombs:sragg-bloodheart",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11104",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11105",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11106",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11107",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11108",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11109",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-shadowknight",
+        "target": "item:ruined-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11110",
+        "source": "npc:qeynos-catacombs:rocthar-bekesna",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11111",
+        "source": "npc:qeynos-catacombs:rocthar-bekesna",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11112",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11113",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11114",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11115",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11116",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11117",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-warrior",
+        "target": "item:dirty-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11118",
+        "source": "npc:qeynos-catacombs:trenon-callust",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11119",
+        "source": "npc:qeynos-catacombs:trenon-callust",
+        "target": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11120",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11121",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11122",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11123",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11124",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11125",
+        "source": "quest:guild-summons-shrine-of-bertoxxulous-wizard",
+        "target": "item:dirty-purple-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11126",
+        "source": "npc:greater-faydark:heartwood-master",
+        "target": "quest:guild-summons-soldiers-of-tunare",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11127",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11128",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11129",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11130",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11131",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11132",
+        "source": "quest:guild-summons-soldiers-of-tunare",
+        "target": "item:green-and-tan-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11133",
+        "source": "npc:paineel:sern-adolia",
+        "target": "quest:guild-summons-tabernacle-of-terror",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11134",
+        "source": "quest:guild-summons-tabernacle-of-terror",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11135",
+        "source": "quest:guild-summons-tabernacle-of-terror",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11136",
+        "source": "quest:guild-summons-tabernacle-of-terror",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11137",
+        "source": "quest:guild-summons-tabernacle-of-terror",
+        "target": "item:harbingers-of-fear-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11138",
+        "source": "npc:qeynos-catacombs:xeture-demiagar",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11139",
+        "source": "npc:qeynos-catacombs:xeture-demiagar",
+        "target": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11140",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "zone:qeynos-catacombs",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11141",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "zone:qeynos-catacombs",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11142",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11143",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11144",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11145",
+        "source": "quest:guild-summons-temple-of-bertoxxulous-cleric",
+        "target": "item:ruined-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11146",
+        "source": "npc:erudin:leraena-shelyrak",
+        "target": "quest:guild-summons-temple-of-divine-light-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11147",
+        "source": "quest:guild-summons-temple-of-divine-light-cleric",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11148",
+        "source": "quest:guild-summons-temple-of-divine-light-cleric",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11149",
+        "source": "quest:guild-summons-temple-of-divine-light-cleric",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11150",
+        "source": "quest:guild-summons-temple-of-divine-light-cleric",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11151",
+        "source": "quest:guild-summons-temple-of-divine-light-cleric",
+        "target": "item:faded-silver-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11152",
+        "source": "npc:erudin:depnar-bulrious",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11153",
+        "source": "npc:erudin:depnar-bulrious",
+        "target": "quest:guild-summons-temple-of-divine-light-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11154",
+        "source": "quest:guild-summons-temple-of-divine-light-paladin",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11155",
+        "source": "quest:guild-summons-temple-of-divine-light-paladin",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11156",
+        "source": "quest:guild-summons-temple-of-divine-light-paladin",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11157",
+        "source": "quest:guild-summons-temple-of-divine-light-paladin",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11158",
+        "source": "quest:guild-summons-temple-of-divine-light-paladin",
+        "target": "item:faded-silver-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11159",
+        "source": "npc:north-freeport:tholius-quey",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11160",
+        "source": "npc:north-freeport:tholius-quey",
+        "target": "quest:guild-summons-temple-of-marr-cleric",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11161",
+        "source": "quest:guild-summons-temple-of-marr-cleric",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11162",
+        "source": "quest:guild-summons-temple-of-marr-cleric",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11163",
+        "source": "quest:guild-summons-temple-of-marr-cleric",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11164",
+        "source": "quest:guild-summons-temple-of-marr-cleric",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11165",
+        "source": "quest:guild-summons-temple-of-marr-cleric",
+        "target": "item:white-and-blue-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11166",
+        "source": "npc:north-freeport:gygus-remnara",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11167",
+        "source": "npc:north-freeport:gygus-remnara",
+        "target": "quest:guild-summons-temple-of-marr-paladin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11168",
+        "source": "quest:guild-summons-temple-of-marr-paladin",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11169",
+        "source": "quest:guild-summons-temple-of-marr-paladin",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11170",
+        "source": "quest:guild-summons-temple-of-marr-paladin",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11171",
+        "source": "quest:guild-summons-temple-of-marr-paladin",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11172",
+        "source": "quest:guild-summons-temple-of-marr-paladin",
+        "target": "item:faded-purple-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11173",
+        "source": "npc:paineel:coriante-verisue",
+        "target": "quest:guild-summons-the-abbatoir",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11174",
+        "source": "quest:guild-summons-the-abbatoir",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11175",
+        "source": "quest:guild-summons-the-abbatoir",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11176",
+        "source": "quest:guild-summons-the-abbatoir",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11177",
+        "source": "quest:guild-summons-the-abbatoir",
+        "target": "item:dirt-soiled-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11178",
+        "source": "npc:southern-felwithe:tarker-blazetoss",
+        "target": "quest:guild-summons-the-amethyst-palace",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11179",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "zone:southern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11180",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "zone:southern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11181",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "faction:keepers-of-the-art",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11182",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11183",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11184",
+        "source": "quest:guild-summons-the-amethyst-palace",
+        "target": "item:faded-blue-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11185",
+        "source": "npc:neriak-3rd-gate:xon-quexill",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11186",
+        "source": "npc:neriak-3rd-gate:xon-quexill",
+        "target": "quest:guild-summons-the-dead-necromancer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11187",
+        "source": "quest:guild-summons-the-dead-necromancer",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11188",
+        "source": "quest:guild-summons-the-dead-necromancer",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11189",
+        "source": "quest:guild-summons-the-dead-necromancer",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11190",
+        "source": "quest:guild-summons-the-dead-necromancer",
+        "target": "item:dark-stained-training-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11191",
+        "source": "npc:neriak-3rd-gate:nezzka-tolax",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11192",
+        "source": "npc:neriak-3rd-gate:nezzka-tolax",
+        "target": "quest:guild-summons-the-dead-shadowknight",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11193",
+        "source": "quest:guild-summons-the-dead-shadowknight",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11194",
+        "source": "quest:guild-summons-the-dead-shadowknight",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11195",
+        "source": "quest:guild-summons-the-dead-shadowknight",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11196",
+        "source": "quest:guild-summons-the-dead-shadowknight",
+        "target": "item:black-training-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11197",
+        "source": "npc:neriak-commons:camia-vretta",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11198",
+        "source": "npc:neriak-commons:camia-vretta",
+        "target": "quest:guild-summons-the-spurned-enchanter",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11199",
+        "source": "quest:guild-summons-the-spurned-enchanter",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11200",
+        "source": "quest:guild-summons-the-spurned-enchanter",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11201",
+        "source": "quest:guild-summons-the-spurned-enchanter",
+        "target": "faction:the-spurned",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11202",
+        "source": "quest:guild-summons-the-spurned-enchanter",
+        "target": "item:stained-red-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11203",
+        "source": "npc:neriak-commons:jayna-dbious",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11204",
+        "source": "npc:neriak-commons:jayna-dbious",
+        "target": "quest:guild-summons-the-spurned-magician",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11205",
+        "source": "quest:guild-summons-the-spurned-magician",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11206",
+        "source": "quest:guild-summons-the-spurned-magician",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11207",
+        "source": "quest:guild-summons-the-spurned-magician",
+        "target": "faction:the-spurned",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11208",
+        "source": "quest:guild-summons-the-spurned-magician",
+        "target": "item:stained-red-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11209",
+        "source": "npc:neriak-commons:gath-nmare",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11210",
+        "source": "npc:neriak-commons:gath-nmare",
+        "target": "quest:guild-summons-the-spurned-wizard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11211",
+        "source": "quest:guild-summons-the-spurned-wizard",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11212",
+        "source": "quest:guild-summons-the-spurned-wizard",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11213",
+        "source": "quest:guild-summons-the-spurned-wizard",
+        "target": "faction:the-spurned",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11214",
+        "source": "quest:guild-summons-the-spurned-wizard",
+        "target": "item:stained-red-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11215",
+        "source": "npc:south-qeynos:belious-naliedin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11216",
+        "source": "npc:south-qeynos:belious-naliedin",
+        "target": "quest:guild-summons-the-wind-spirits-song",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11217",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11218",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11219",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11220",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11221",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11222",
+        "source": "quest:guild-summons-the-wind-spirits-song",
+        "target": "item:brown-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11223",
+        "source": "npc:erudin:markus-jaevins",
+        "target": "quest:heretic-battle",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11224",
+        "source": "quest:heretic-battle",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11225",
+        "source": "quest:heretic-battle",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11226",
+        "source": "quest:heretic-battle",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11227",
+        "source": "quest:heretic-battle",
+        "target": "faction:gate-callers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11228",
+        "source": "quest:heretic-battle",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11229",
+        "source": "quest:heretic-battle",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11230",
+        "source": "quest:heretic-battle",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11231",
+        "source": "quest:heretic-battle",
+        "target": "faction:craftkeepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11232",
+        "source": "quest:heretic-battle",
+        "target": "faction:crimson-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11233",
+        "source": "npc:stonebrunt-mountains:shazda-kaekwon",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11234",
+        "source": "npc:stonebrunt-mountains:shazda-kaekwon",
+        "target": "quest:heretic-heads",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11235",
+        "source": "quest:heretic-heads",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11236",
+        "source": "quest:heretic-heads",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11237",
+        "source": "quest:heretic-heads",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11238",
+        "source": "quest:heretic-heads",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11239",
+        "source": "quest:heretic-heads",
+        "target": "item:kejekan-tribal-headband",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11240",
+        "source": "quest:heretic-heads",
+        "target": "item:swiftclaw-sash",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11241",
+        "source": "npc:east-cabilis:iksar-prisoner",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11242",
+        "source": "npc:east-cabilis:iksar-prisoner",
+        "target": "quest:iksar-prisoner-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11243",
+        "source": "quest:iksar-prisoner-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11244",
+        "source": "quest:iksar-prisoner-quest",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11245",
+        "source": "quest:iksar-prisoner-quest",
+        "target": "zone:dalnir",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11246",
+        "source": "quest:iksar-prisoner-quest",
+        "target": "item:greenmist-icon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11247",
+        "source": "npc:dragon-necropolis:neb",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11248",
+        "source": "npc:dragon-necropolis:neb",
+        "target": "quest:key-to-jaled-dars-lair-neb",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11249",
+        "source": "quest:key-to-jaled-dars-lair-neb",
+        "target": "zone:dragon-necropolis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11250",
+        "source": "quest:key-to-jaled-dars-lair-neb",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11251",
+        "source": "quest:key-to-jaled-dars-lair-neb",
+        "target": "faction:paebala",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11252",
+        "source": "quest:key-to-jaled-dars-lair-neb",
+        "target": "item:jaled-dars-tomb-key",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11253",
+        "source": "quest:key-to-jaled-dars-lair-neb",
+        "target": "item:nebs-warbone",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11254",
+        "source": "npc:dragon-necropolis:zlandicar",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11255",
+        "source": "npc:dragon-necropolis:zlandicar",
+        "target": "quest:key-to-jaled-dars-lair-zlandicar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11256",
+        "source": "quest:key-to-jaled-dars-lair-zlandicar",
+        "target": "zone:dragon-necropolis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11257",
+        "source": "quest:key-to-jaled-dars-lair-zlandicar",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11258",
+        "source": "quest:key-to-jaled-dars-lair-zlandicar",
+        "target": "item:jaled-dars-tomb-key",
         "type": "rewards"
       }
     }
