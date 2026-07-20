@@ -50625,7 +50625,7 @@
         "resists": {
           "cold": 2
         },
-        "source": "Rat Pelts reward (Beno Targnarle, South Kaladim)"
+        "source": "Rat Pelts reward (Beno Targnarle, South Kaladim) / Rat Pelt Cape Quest reward (Menkes Tabolet, South Qeynos)"
       }
     },
     {
@@ -57306,7 +57306,9 @@
           "Primary"
         ],
         "skill": "2H Slashing",
-        "source": "Lizard Meat Quest reward (Kogna, Oggok)"
+        "source": "Lizard Meat Quest reward (Kogna, Oggok) / Ranjor's Test reward (Ranjor, Grobb)",
+        "damage": 9,
+        "delay": 49
       }
     },
     {
@@ -67646,6 +67648,999 @@
           "Turn in Neb's head to Zlandicar in Dragon Necropolis"
         ],
         "wiki_title": "Key to Jaled Dar's Lair (Zlandicar)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dragon-necropolis:jaled-dars-shade",
+        "label": "Jaled Dar`s shade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:sleepers-key",
+        "label": "Sleeper's Key",
+        "type": "item",
+        "weight": 0,
+        "size": "Tiny",
+        "magic": true,
+        "noTrade": true,
+        "source": "Key to Sleeper's Tomb reward (Jaled Dar`s shade, Dragon Necropolis) -- opens the door at the dragon statue in Eastern Wastes"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:key-to-sleepers-tomb",
+        "label": "Key to Sleeper's Tomb",
+        "type": "quest",
+        "description": "Bring a talisman from any of the five First Brood dragons (Sontalak's, Lendiniara's, Klandicar's, Yelinak's, or Zlandicar's) to Jaled Dar`s shade in Dragon Necropolis, who trades it for a Sleeper's Key that opens the door at a great dragon statue in Eastern Wastes.",
+        "steps": [
+          "Obtain a talisman from Sontalak, Lendiniara, Klandicar, Yelinak, or Zlandicar",
+          "Deliver the talisman to Jaled Dar`s shade in Dragon Necropolis",
+          "Use the Sleeper's Key at the dragon statue in Eastern Wastes"
+        ],
+        "wiki_title": "Key to Sleeper's Tomb"
+      }
+    },
+    {
+      "data": {
+        "id": "item:polar-bear-cloak",
+        "label": "Polar Bear Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 5,
+        "resists": {
+          "cold": 15
+        },
+        "weight": 3.5,
+        "size": "Large",
+        "source": "Polar Bear Cloak Quest reward (Karg IceBear, Everfrost Peaks)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:polar-bear-cloak-quest",
+        "label": "Polar Bear Cloak Quest",
+        "type": "quest",
+        "description": "Karg IceBear wanders the tundra outside the Permafrost gates in Everfrost Peaks, trading a Polar Bear Skin and 5 platinum pieces for a cloak he makes from the pelts.",
+        "steps": [
+          "Locate Karg IceBear in Everfrost Peaks",
+          "Give him a Polar Bear Skin and 5 platinum"
+        ],
+        "wiki_title": "Polar Bear Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-wastes:the-dragon-sage",
+        "label": "The Dragon Sage",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:porlos-fury-quest",
+        "label": "Porlos' Fury Quest",
+        "type": "quest",
+        "description": "The Dragon Sage, a High Elf in Western Wastes, sends the player through a multi-step reagent chase -- Tomekeeper Bjordnessin in The Wakening Land, Dragonbane Herb from Siren's Grotto, Dragon Blood from Myga in Western Wastes -- culminating in Spell: Porlos' Fury (requiring two peridots to cast). Not modeled as a graph reward edge since this graph's spell corpus has no matching node.",
+        "steps": [
+          "Receive a Giant Loyalist Token from The Dragon Sage",
+          "Trade it to Tomekeeper Bjordnessin in The Wakening Land for a Giant Scalebound Tome",
+          "Return the tome to The Dragon Sage for an Ornate Reagent Box",
+          "Obtain Dragonbane Herb from Siren's Grotto and Dragon Blood from Myga in Western Wastes",
+          "Combine the herb and blood in the box to make a Sealed Reagent Box",
+          "Give the sealed box to The Dragon Sage for Spell: Porlos' Fury"
+        ],
+        "wiki_title": "Porlos' Fury Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ogre-butcher-gloves",
+        "label": "Ogre Butcher Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 1,
+        "resists": {
+          "disease": 25,
+          "poison": 25
+        },
+        "classes": [
+          "warrior",
+          "shadow knight",
+          "shaman"
+        ],
+        "weight": 1.9,
+        "size": "Small",
+        "source": "Preserved Meat Delivery rare reward (The Gobbler, Neriak Foreign Quarter) -- restricted to Troll or Ogre race; other possible outcomes are an Ogre Meat Cleaver, a Star Rose Quartz, or 1-5 gold"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-foreign-quarter:the-gobbler",
+        "label": "The Gobbler",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:preserved-meat-delivery",
+        "label": "Preserved Meat Delivery",
+        "type": "quest",
+        "description": "Chef Dooga in the Oggok tavern hands over a Preserved Leg to be delivered to The Gobbler in Neriak Foreign Quarter, who improves Neriak Ogre faction standing and gives a random reward -- most often coin, occasionally an Ogre Meat Cleaver or Star Rose Quartz, rarely the prized Ogre Butcher Gloves. Also completable as part of the broader HEHE Meat Quest line.",
+        "minLevel": 4,
+        "steps": [
+          "Receive a Preserved Leg from Chef Dooga in the Oggok tavern",
+          "Deliver it to The Gobbler in Neriak Foreign Quarter"
+        ],
+        "wiki_title": "Preserved Meat Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:neriak-ogre",
+        "label": "Neriak Ogre",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silent-watch-shield",
+        "label": "Silent Watch Shield",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Secondary"
+        ],
+        "ac": 10,
+        "stats": {
+          "wis": 10
+        },
+        "classes": [
+          "paladin"
+        ],
+        "weight": 9.5,
+        "size": "Large",
+        "magic": true,
+        "noTrade": true,
+        "source": "Princess Lenya (Quest) reward (Tynkale, Northern Felwithe) -- excludes Troll, Ogre, and Iksar race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:princess-lenya-quest",
+        "label": "Princess Lenya (Quest)",
+        "type": "quest",
+        "description": "A long chain starting with Tynkale in Northern Felwithe: retrieve a Very Large Pelt from Jojongua, meet Tolon Nurbyte at the Travelers Home Inn, defeat Tyrana Slil for a Fish Food Vial, trade a Silk Evening Tunic to Marlin Shirtov for a Brass Key, feed the prepared fish food to a royal fish in Lake Rathetear to transform Princess Lenya, give her the Brass Key and Tearon's Bracer, then return the Highkeep Royal Suite key and Royal Amulet of Thex to Tearon Bleanix for a Silent Watch Shield.",
+        "steps": [
+          "Obtain a Very Large Pelt from Jojongua and return it to Tynkale",
+          "Meet Tolon Nurbyte at the Travelers Home Inn",
+          "Defeat Tyrana Slil and collect the Fish Food Vial",
+          "Acquire a Silk Evening Tunic and trade it to Marlin Shirtov for the Brass Key",
+          "Feed prepared fish food to a royal fish in Lake Rathetear to transform Princess Lenya",
+          "Give the princess the Brass Key and Tearon's Bracer",
+          "Return the Highkeep Royal Suite key and Royal Amulet of Thex to Tearon Bleanix"
+        ],
+        "wiki_title": "Princess Lenya (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:captain-rottgrime",
+        "label": "Captain Rottgrime",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:guard-of-the-marines",
+        "label": "Guard of the Marines",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 8,
+        "resists": {
+          "magic": 10
+        },
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "weight": 10,
+        "size": "Large",
+        "source": "Protect the Shipyard reward (Captain Rottgrime, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:protect-the-shipyard",
+        "label": "Protect the Shipyard",
+        "type": "quest",
+        "description": "Collect four Sarnak War Braids from Sarnak berzerkers in The Overthere and Frontier Mountains and hand them to Captain Rottgrime for a Guard of the Marines shield and improved Venril Sathir faction. Any previously earned Guard of the Marines must be destroyed first, or the turn-in fails.",
+        "steps": [
+          "Collect 4 Sarnak War Braids from Sarnak berzerkers",
+          "Hand them to Captain Rottgrime in The Overthere"
+        ],
+        "wiki_title": "Protect the Shipyard"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shield-of-nife",
+        "label": "Shield of Nife",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 11,
+        "stats": {
+          "str": -1,
+          "sta": 1,
+          "wis": 1,
+          "cha": 1
+        },
+        "hp": 10,
+        "resists": {
+          "disease": 3,
+          "magic": 10,
+          "poison": 3
+        },
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "weight": 7.5,
+        "size": "Large",
+        "magic": true,
+        "source": "Putrid Skeletons rare reward (Priestess Jahnda, Temple of Life) -- restricted to Human or Half-Elf race, 2/24 odds"
+      }
+    },
+    {
+      "data": {
+        "id": "item:skullcap-of-rodcet-nife",
+        "label": "Skullcap of Rodcet Nife",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 1,
+        "hp": 4,
+        "resists": {
+          "disease": 4
+        },
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "weight": 0.2,
+        "size": "Small",
+        "lore": true,
+        "source": "Putrid Skeletons ultra-rare reward (Priestess Jahnda, Temple of Life) -- restricted to High Elf or Half-Elf race, 0/24 odds observed"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:putrid-skeletons",
+        "label": "Putrid Skeletons",
+        "type": "quest",
+        "description": "Roesager Thusten in North Qeynos sends a Note to Niclaus Ressinn in Qeynos Hills; killing a putrid skeleton for its Putrid Rib Bone and returning it to Niclaus earns a Pouch of Evidence, which Priestess Jahnda at the Temple of Life exchanges for one of four tiered rewards: a common Potion of Light Healing, a less common Potion of Disease Warding, a rare Shield of Nife, or an ultra-rare Skullcap of Rodcet Nife.",
+        "steps": [
+          "Receive a Note to Niclaus from Roesager Thusten",
+          "Deliver the note to Niclaus Ressinn in Qeynos Hills",
+          "Kill a putrid skeleton and loot a Putrid Rib Bone",
+          "Return the rib bone to Niclaus Ressinn for a Pouch of Evidence",
+          "Deliver the Pouch of Evidence to Priestess Jahnda in the Temple of Life"
+        ],
+        "wiki_title": "Putrid Skeletons"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:guard-lasen",
+        "label": "Guard Lasen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:quench-lasens-thirst",
+        "label": "Quench Lasen's Thirst",
+        "type": "quest",
+        "description": "Bring a Water Flask to Guard Lasen in South Qeynos for a few copper and a faction shift: standing improves with Merchants of Qeynos, Kane Bayle, and Guards of Qeynos, but worsens with Circle of Unseen Hands and Corrupt Qeynos Guards.",
+        "steps": [
+          "Bring a Water Flask to Guard Lasen"
+        ],
+        "wiki_title": "Quench Lasen's Thirst"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rabid-grizzlies",
+        "label": "Rabid Grizzlies",
+        "type": "quest",
+        "description": "Priestess Caulria at the Temple of Life in North Qeynos asks for help hunting rabid grizzlies in Qeynos Hills and Western Karana; return a Putrid Bear Hide for Spell: Endure Disease, a disease cure, coin, and improved standing with Antonius Bayle, Guards of Qeynos, Knights of Thunder, and Priests of Life.",
+        "steps": [
+          "Speak with Priestess Caulria in the Temple of Life",
+          "Hunt rabid grizzlies in Qeynos Hills or Western Karana for a Putrid Bear Hide",
+          "Return the hide to Priestess Caulria"
+        ],
+        "wiki_title": "Rabid Grizzlies"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rabid-wolves",
+        "label": "Rabid Wolves",
+        "type": "quest",
+        "description": "Priestess Caulria at the North Qeynos Temple of Life asks for help hunting rabid wolves in Qeynos Hills; return a Diseased Wolf Pelt for a free Cure Disease casting, coin, and improved standing with Priests of Life, Knights of Thunder, Guards of Qeynos, and Antonius Bayle, at the cost of Bloodsaber standing.",
+        "steps": [
+          "Speak with Priestess Caulria in the Temple of Life",
+          "Hunt rabid wolves in Qeynos Hills for a Diseased Wolf Pelt",
+          "Return the pelt to Priestess Caulria"
+        ],
+        "wiki_title": "Rabid Wolves"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rain-caller",
+        "label": "Rain Caller",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "skill": "Bow",
+        "damage": 20,
+        "delay": 45,
+        "stats": {
+          "str": 6,
+          "dex": 6
+        },
+        "effect": "Firestrike (Any Slot/Can Equip, Instant) at Level 40",
+        "weight": 3,
+        "size": "Large",
+        "classes": [
+          "ranger"
+        ],
+        "magic": true,
+        "lore": true,
+        "source": "Rain Caller Quest reward (Maesyn Trueshot, Greater Faydark) -- restricted to Human, Elf, or Half-Elf race; 5 charges, 610pp to recharge"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mane-attraction",
+        "label": "Mane Attraction",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 4,
+        "stats": {
+          "cha": 10
+        },
+        "effect": "Focus: Mana Preservation II",
+        "weight": 3.5,
+        "size": "Small",
+        "lore": true,
+        "noTrade": true,
+        "source": "Rain Caller Quest interim reward (Sanfyrd Featherhead, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rain-caller-quest",
+        "label": "Rain Caller Quest",
+        "type": "quest",
+        "description": "A long crafting chain starting with Maesyn Trueshot in Greater Faydark: fill a Crate for Tonics with 10 Fuzzlecutter Formula 5000 for Sanfyrd Featherhead, trade a wooden heart, hair, and other components through Ping Fuzzlecutter and Princess Joleena, then finally hand over the gathered ingredients plus a Trueshot Longbow and 3000 gold to Kinool Goldsinger for the Rain Caller bow. An intermediate turn-in to Sanfyrd Featherhead also grants the Mane Attraction helmet along the way.",
+        "classes": [
+          "ranger"
+        ],
+        "steps": [
+          "Fill a Crate for Tonics with 10x Fuzzlecutter Formula 5000 and combine it into a Crate of Tonic",
+          "Acquire a wooden heart from treants or Jyle Windshot",
+          "Turn in the tonic crate to Sanfyrd Featherhead for a Tattered Toupee",
+          "Collect 2x Clump of Gorilla Hair and 1x Lock of Hair",
+          "Trade the toupee and hair to Ping Fuzzlecutter for Mane Attraction",
+          "Return Mane Attraction to Sanfyrd Featherhead for a Glimmering Fairie Wing",
+          "Give the wing to Princess Joleena for a Pouch of Gold Dust",
+          "Deliver the gold dust, wooden heart, a Trueshot Longbow, and 3000 gold to Kinool Goldsinger"
+        ],
+        "wiki_title": "Rain Caller Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:ralgyn",
+        "label": "Ralgyn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:circlet-of-the-falinkan",
+        "label": "Circlet of the Falinkan",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 12,
+        "stats": {
+          "str": 7,
+          "dex": 5,
+          "wis": 5,
+          "int": 5
+        },
+        "hp": 50,
+        "mana": 75,
+        "resists": {
+          "fire": 5,
+          "cold": 5,
+          "magic": 5
+        },
+        "weight": 0.1,
+        "size": "Small",
+        "magic": true,
+        "noTrade": true,
+        "source": "Ralgyn's Promise reward (Ralgyn, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ralgyns-promise",
+        "label": "Ralgyn's Promise",
+        "type": "quest",
+        "description": "Ralgyn in Skyshrine sends the player after three items -- the Head of Staff Sergeant Drioc (Kael Drakkal bank), Teachings of Gkrean (Kael Drakkal arena), and a chipped fang from Vilefang (Dragon Necropolis) -- which Rolandal in The Wakening Land converts into Glanitar's Imbued Talisman; returning the talisman to Ralgyn earns the Circlet of the Falinkan.",
+        "steps": [
+          "Obtain the Head of Staff Sergeant Drioc from Staff Sergeant Drioc in the Kael Drakkal bank",
+          "Obtain Teachings of Gkrean from Gkrean Prophet of Tallon in the Kael Drakkal arena",
+          "Obtain a chipped fang from Vilefang in Dragon Necropolis",
+          "Give all three items to Rolandal in The Wakening Land for Glanitar's Imbued Talisman",
+          "Return the talisman to Ralgyn in Skyshrine"
+        ],
+        "wiki_title": "Ralgyn's Promise"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ranjors-test",
+        "label": "Ranjor's Test",
+        "type": "quest",
+        "description": "Bring Froglok Meat and two froglok tadpole fleshes to Ranjor in Grobb for a Rusty Two Handed Battle Axe and improved Da Bashers faction.",
+        "minLevel": 2,
+        "steps": [
+          "Obtain Froglok Meat and 2 froglok tadpole fleshes",
+          "Deliver them to Ranjor in Grobb"
+        ],
+        "wiki_title": "Ranjor's Test"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:assistant-buford",
+        "label": "Assistant Buford",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:nostrolo-tambourine",
+        "label": "Nostrolo Tambourine",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "stats": {
+          "int": 5
+        },
+        "effect": "Percussion Resonance 12",
+        "classes": [
+          "bard"
+        ],
+        "weight": 0.5,
+        "size": "Small",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Rare Coins reward (Assistant Buford, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rare-coins",
+        "label": "Rare Coins",
+        "type": "quest",
+        "description": "Buy a Star of Odus in Erudin and trade it to Assistant Buford in Firiona Vie for a Tin Box, then fill it with six Ancient Coins looted across Kunark and Velious: Torsis Ton (foraged in Emerald Jungle), Royal Crown of Dalnir (A Kly Imprecator, Crypt of Dalnir/Kaesora), Terraz Ton (Failed crypt raider, Kaesora), Veksar Gran (Bloodgill Goblins, Lake of Ill Omen), Danak Gran (scorpikis scrounger, The Overthere), and Ik Gran (Captain of the Guard, City of Mist). Combining and returning the filled box earns a Nostrolo Tambourine.",
+        "classes": [
+          "bard"
+        ],
+        "steps": [
+          "Buy a Star of Odus in Erudin and trade it to Assistant Buford for a Tin Box",
+          "Collect Torsis Ton, Royal Crown of Dalnir, Terraz Ton, Veksar Gran, Danak Gran, and Ik Gran",
+          "Combine all six coins into the Tin Box",
+          "Return the filled box to Assistant Buford"
+        ],
+        "wiki_title": "Rare Coins"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-hills:rephas",
+        "label": "Rephas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-ear-pie-quest",
+        "label": "Rat Ear Pie Quest",
+        "type": "quest",
+        "description": "Rephas in Qeynos Hills trades Rat Ears for Grilled Rat Ears, then Grilled Rat Ears for Fish Scales, then 3 Giant Rat Ears for the Rat Ear Pie recipe (Giant Rat Ear + Baking Spirits + Cup of Flour in a mixing bowl). Faction improves with Arcane Scientists and Knights of Truth, worsens with Opal Dark Briar and Freeport Militia.",
+        "steps": [
+          "Bring Rat Ears to Rephas for Grilled Rat Ears",
+          "Return Grilled Rat Ears for Fish Scales",
+          "Deliver 3 Giant Rat Ears for the Rat Ear Pie recipe"
+        ],
+        "wiki_title": "Rat Ear Pie Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:menkes-tabolet",
+        "label": "Menkes Tabolet",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:rat-fur-cap",
+        "label": "Rat Fur Cap",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 1,
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Rat Fur Cap Quest reward (Menkes Tabolet, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-fur-cap-quest",
+        "label": "Rat Fur Cap Quest",
+        "type": "quest",
+        "description": "Menkes Tabolet in South Qeynos trades 2 pieces of rat fur and 3 gold for a Rat Fur Cap.",
+        "steps": [
+          "Gather 2 pieces of rat fur",
+          "Give them and 3 gold to Menkes Tabolet"
+        ],
+        "wiki_title": "Rat Fur Cap Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:qeynos-citizens",
+        "label": "Qeynos Citizens",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-tattered-belt",
+        "label": "Small Tattered Belt",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 2,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "weight": 0.8,
+        "size": "Small",
+        "source": "Rat Patrol reward (Jeet, North Kaladim); also craftable via Tailoring (trivial 26)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-tattered-gloves",
+        "label": "Small Tattered Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 3,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "weight": 1.1,
+        "size": "Small",
+        "source": "Rat Patrol reward (Jeet, North Kaladim); also craftable via Tailoring (trivial 26), or a Bone Chips Kaladim reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-tattered-mask",
+        "label": "Small Tattered Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 2,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Rat Patrol reward (Jeet, North Kaladim); also craftable via Tailoring (trivial 26)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-tattered-skullcap",
+        "label": "Small Tattered Skullcap",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 3,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Rat Patrol reward (Jeet, North Kaladim); also craftable via Tailoring (trivial 26)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-tattered-wristbands",
+        "label": "Small Tattered Wristbands",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 2,
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "rogue",
+          "shaman",
+          "beastlord"
+        ],
+        "weight": 0.8,
+        "size": "Small",
+        "source": "Rat Patrol reward (Jeet, North Kaladim); also craftable via Tailoring (trivial 26)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-patrol",
+        "label": "Rat Patrol",
+        "type": "quest",
+        "description": "Jeet in North Kaladim trades four Rat Pelts, looted from Giant Rats in the mines, for a piece of the Small Tattered armor set. Improves Miners Guild 628 faction; worsens standing with other unnamed factions per the wiki.",
+        "steps": [
+          "Collect 4 Rat Pelts from Giant Rats in the North Kaladim mines",
+          "Return them to Jeet"
+        ],
+        "wiki_title": "Rat Patrol"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-pelt-cape-quest",
+        "label": "Rat Pelt Cape Quest",
+        "type": "quest",
+        "description": "Menkes Tabolet in South Qeynos trades three Giant Rat Pelts and 4 gold for a Rat Pelt Cape.",
+        "steps": [
+          "Gather 3 Giant Rat Pelts",
+          "Give them and 4 gold to Menkes Tabolet"
+        ],
+        "wiki_title": "Rat Pelt Cape Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-shaped-rings",
+        "label": "Rat Shaped Rings",
+        "type": "quest",
+        "description": "Suuspa Clanim at the North Qeynos Temple of Life buys Rat Shaped Rings looted from Bloodsaber members (such as Brother Trintle) -- rings from Hurrieta's Tunic Quest work too -- for coin and improved standing with Antonius Bayle, Guards of Qeynos, Priests of Life, and Knights of Thunder, at the cost of Bloodsaber standing.",
+        "steps": [
+          "Obtain a Rat Shaped Ring from a Bloodsaber member",
+          "Return it to Suuspa Clanim at the Temple of Life"
+        ],
+        "wiki_title": "Rat Shaped Rings"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:thalith-mamluk",
+        "label": "Thalith Mamluk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:fishbone-necklace",
+        "label": "Fishbone Necklace",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "ac": 3,
+        "stats": {
+          "agi": 2
+        },
+        "weight": 0.5,
+        "size": "Tiny",
+        "source": "Rat Teeth reward (Thalith Mamluk, Kerra Island) -- excludes Erudite race"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rat-teeth",
+        "label": "Rat Teeth",
+        "type": "quest",
+        "description": "Thalith Mamluk on Kerra Island, plagued by rats disrupting his fishing, trades a Sharp Tooth (dropped by Fang Tooth or the level 15 wharf rat) for a Fishbone Necklace.",
+        "steps": [
+          "Obtain a Sharp Tooth from Fang Tooth or the wharf rat",
+          "Return it to Thalith Mamluk"
+        ],
+        "wiki_title": "Rat Teeth"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rats-foot-necklace",
+        "label": "Rat's Foot Necklace",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "stats": {
+          "cha": -1
+        },
+        "hp": 2,
+        "weight": 0.1,
+        "size": "Tiny",
+        "magic": true,
+        "source": "Rat's Foot Necklace Quest reward (Menkes Tabolet, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rats-foot-necklace-quest",
+        "label": "Rat's Foot Necklace Quest",
+        "type": "quest",
+        "description": "Menkes Tabolet in South Qeynos trades a Rat Foot, Rat Whiskers, and a Honey Mead for a Rat's Foot Necklace.",
+        "steps": [
+          "Gather a Rat Foot, Rat Whiskers, and a Honey Mead",
+          "Give them to Menkes Tabolet"
+        ],
+        "wiki_title": "Rat's Foot Necklace Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-desert-of-ro:rathmana-allin",
+        "label": "Rathmana Allin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rathmanas-traveling-offer",
+        "label": "Rathmana's Traveling Offer",
+        "type": "quest",
+        "description": "Rathmana Allin in the Southern Desert of Ro offers a magical gamble: pay 30 gold and receive one random spell scroll from a rotating pool (options seen include Quickness, Lightning Bolt, Lifedraw, Charm, and Column of Fire) or, failing that, a Rotted Illegible Scroll -- no exchanges. Improves Temple Of Sol Ro faction. The specific spell is a random draw, not a guaranteed reward, so it isn't modeled as a graph reward edge.",
+        "steps": [
+          "Hail Rathmana Allin and indicate you are traveling",
+          "Pay 30 gold for a random spell scroll"
+        ],
+        "wiki_title": "Rathmana's Traveling Offer"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ratskin-gloves",
+        "label": "Ratskin Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 3,
+        "stats": {
+          "cha": -5
+        },
+        "weight": 2,
+        "size": "Small",
+        "source": "Ratskin Gloves Quest reward (Ged Twigborn, Kithicor Forest) -- excludes Necromancer, Wizard, Magician, and Enchanter classes"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ratskin-gloves-quest",
+        "label": "Ratskin Gloves Quest",
+        "type": "quest",
+        "description": "Ged Twigborn in Kithicor Forest trades a giant rat pelt and 6 gold for a pair of Ratskin Gloves. Improves Kithicor Residents, Protectors of Pine, and Jaggedpine Treefolk standing; worsens Unkempt Druids standing.",
+        "steps": [
+          "Obtain a giant rat pelt",
+          "Give it and 6 gold to Ged Twigborn"
+        ],
+        "wiki_title": "Ratskin Gloves Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:kithicor-residents",
+        "label": "Kithicor Residents",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:feren",
+        "label": "Feren",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "item:kerran-fishingpole",
+        "label": "Kerran Fishingpole",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 3,
+        "delay": 17,
+        "stats": {
+          "str": 2
+        },
+        "weight": 4,
+        "size": "Tiny",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Razortooth reward (Feren, Kerra Island) -- excludes Erudite and Dark Elf race; a weapon despite the name, not a working fishing pole"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:razortooth",
+        "label": "Razortooth",
+        "type": "quest",
+        "description": "Feren, on a boat in the Kerra Island wharf, asks the player to hunt down the rare-spawn Razortooth (Spikefish are placeholders) and bring back its remains for a Kerran Fishingpole.",
+        "steps": [
+          "Hail Feren and ask who Razortooth is",
+          "Hunt down and kill Razortooth",
+          "Return its remains to Feren"
+        ],
+        "wiki_title": "Razortooth"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:tyokan-mekase",
+        "label": "Tyokan Mekase",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:recharge-prayer-beads",
+        "label": "Recharge Prayer Beads",
+        "type": "quest",
+        "description": "Tyokan Mekase in North Qeynos recharges a depleted set of Prayer Beads for 100 gold. Repeatable.",
+        "steps": [
+          "Hand over a used set of Prayer Beads and 100 gold",
+          "Receive a fully charged set back"
+        ],
+        "wiki_title": "Recharge Prayer Beads"
       }
     }
   ],
@@ -157731,6 +158726,1302 @@
         "id": "e-rewards-11258",
         "source": "quest:key-to-jaled-dars-lair-zlandicar",
         "target": "item:jaled-dars-tomb-key",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11259",
+        "source": "npc:dragon-necropolis:jaled-dars-shade",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11260",
+        "source": "npc:dragon-necropolis:jaled-dars-shade",
+        "target": "quest:key-to-sleepers-tomb",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11261",
+        "source": "quest:key-to-sleepers-tomb",
+        "target": "zone:dragon-necropolis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11262",
+        "source": "quest:key-to-sleepers-tomb",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11263",
+        "source": "quest:key-to-sleepers-tomb",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11264",
+        "source": "quest:key-to-sleepers-tomb",
+        "target": "item:sleepers-key",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11265",
+        "source": "npc:everfrost-peaks:karg-icebear",
+        "target": "quest:polar-bear-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11266",
+        "source": "quest:polar-bear-cloak-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11267",
+        "source": "quest:polar-bear-cloak-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11268",
+        "source": "quest:polar-bear-cloak-quest",
+        "target": "item:polar-bear-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11269",
+        "source": "npc:western-wastes:the-dragon-sage",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11270",
+        "source": "npc:western-wastes:the-dragon-sage",
+        "target": "quest:porlos-fury-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11271",
+        "source": "quest:porlos-fury-quest",
+        "target": "zone:western-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11272",
+        "source": "quest:porlos-fury-quest",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11273",
+        "source": "quest:porlos-fury-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11274",
+        "source": "npc:neriak-foreign-quarter:the-gobbler",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11275",
+        "source": "npc:oggok:chef-dooga",
+        "target": "quest:preserved-meat-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11276",
+        "source": "quest:preserved-meat-delivery",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11277",
+        "source": "quest:preserved-meat-delivery",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11278",
+        "source": "quest:preserved-meat-delivery",
+        "target": "zone:neriak-foreign-quarter",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11279",
+        "source": "quest:preserved-meat-delivery",
+        "target": "faction:neriak-ogre",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11280",
+        "source": "quest:preserved-meat-delivery",
+        "target": "item:ogre-butcher-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11281",
+        "source": "npc:northern-felwithe:tynkale",
+        "target": "quest:princess-lenya-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11282",
+        "source": "quest:princess-lenya-quest",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11283",
+        "source": "quest:princess-lenya-quest",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11284",
+        "source": "quest:princess-lenya-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11285",
+        "source": "quest:princess-lenya-quest",
+        "target": "item:silent-watch-shield",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11286",
+        "source": "npc:the-overthere:captain-rottgrime",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11287",
+        "source": "npc:the-overthere:captain-rottgrime",
+        "target": "quest:protect-the-shipyard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11288",
+        "source": "quest:protect-the-shipyard",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11289",
+        "source": "quest:protect-the-shipyard",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11290",
+        "source": "quest:protect-the-shipyard",
+        "target": "zone:frontier-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11291",
+        "source": "quest:protect-the-shipyard",
+        "target": "faction:venril-sathir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11292",
+        "source": "quest:protect-the-shipyard",
+        "target": "item:guard-of-the-marines",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11293",
+        "source": "npc:north-qeynos:roesager-thusten",
+        "target": "quest:putrid-skeletons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11294",
+        "source": "quest:putrid-skeletons",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11295",
+        "source": "quest:putrid-skeletons",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11296",
+        "source": "quest:putrid-skeletons",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11297",
+        "source": "quest:putrid-skeletons",
+        "target": "item:potion-of-light-healing",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11298",
+        "source": "quest:putrid-skeletons",
+        "target": "item:potion-of-disease-warding",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11299",
+        "source": "quest:putrid-skeletons",
+        "target": "item:shield-of-nife",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11300",
+        "source": "quest:putrid-skeletons",
+        "target": "item:skullcap-of-rodcet-nife",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11301",
+        "source": "npc:south-qeynos:guard-lasen",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11302",
+        "source": "npc:south-qeynos:guard-lasen",
+        "target": "quest:quench-lasens-thirst",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11303",
+        "source": "quest:quench-lasens-thirst",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11304",
+        "source": "quest:quench-lasens-thirst",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11305",
+        "source": "quest:quench-lasens-thirst",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11306",
+        "source": "quest:quench-lasens-thirst",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11307",
+        "source": "quest:quench-lasens-thirst",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11308",
+        "source": "npc:north-qeynos:priestess-caulria",
+        "target": "quest:rabid-grizzlies",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11309",
+        "source": "quest:rabid-grizzlies",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11310",
+        "source": "quest:rabid-grizzlies",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11311",
+        "source": "quest:rabid-grizzlies",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11312",
+        "source": "quest:rabid-grizzlies",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11313",
+        "source": "quest:rabid-grizzlies",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11314",
+        "source": "quest:rabid-grizzlies",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11315",
+        "source": "quest:rabid-grizzlies",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11316",
+        "source": "quest:rabid-grizzlies",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11317",
+        "source": "quest:rabid-grizzlies",
+        "target": "spell:endure-disease",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11318",
+        "source": "npc:north-qeynos:priestess-caulria",
+        "target": "quest:rabid-wolves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11319",
+        "source": "quest:rabid-wolves",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11320",
+        "source": "quest:rabid-wolves",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11321",
+        "source": "quest:rabid-wolves",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11322",
+        "source": "quest:rabid-wolves",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11323",
+        "source": "quest:rabid-wolves",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11324",
+        "source": "quest:rabid-wolves",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11325",
+        "source": "quest:rabid-wolves",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11326",
+        "source": "quest:rabid-wolves",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11327",
+        "source": "npc:greater-faydark:maesyn-trueshot",
+        "target": "quest:rain-caller-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11328",
+        "source": "quest:rain-caller-quest",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11329",
+        "source": "quest:rain-caller-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11330",
+        "source": "quest:rain-caller-quest",
+        "target": "item:rain-caller",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11331",
+        "source": "quest:rain-caller-quest",
+        "target": "item:mane-attraction",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11332",
+        "source": "npc:skyshrine:ralgyn",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11333",
+        "source": "npc:skyshrine:ralgyn",
+        "target": "quest:ralgyns-promise",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11334",
+        "source": "quest:ralgyns-promise",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11335",
+        "source": "quest:ralgyns-promise",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11336",
+        "source": "quest:ralgyns-promise",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11337",
+        "source": "quest:ralgyns-promise",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11338",
+        "source": "quest:ralgyns-promise",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11339",
+        "source": "quest:ralgyns-promise",
+        "target": "item:circlet-of-the-falinkan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11340",
+        "source": "npc:grobb:ranjor",
+        "target": "quest:ranjors-test",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11341",
+        "source": "quest:ranjors-test",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11342",
+        "source": "quest:ranjors-test",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11343",
+        "source": "quest:ranjors-test",
+        "target": "faction:da-bashers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11344",
+        "source": "quest:ranjors-test",
+        "target": "item:rusty-two-handed-battle-axe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11345",
+        "source": "npc:firiona-vie:assistant-buford",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11346",
+        "source": "npc:firiona-vie:assistant-buford",
+        "target": "quest:rare-coins",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11347",
+        "source": "quest:rare-coins",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11348",
+        "source": "quest:rare-coins",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11349",
+        "source": "quest:rare-coins",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11350",
+        "source": "quest:rare-coins",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11351",
+        "source": "quest:rare-coins",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11352",
+        "source": "quest:rare-coins",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11353",
+        "source": "quest:rare-coins",
+        "target": "item:nostrolo-tambourine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11354",
+        "source": "npc:qeynos-hills:rephas",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11355",
+        "source": "npc:qeynos-hills:rephas",
+        "target": "quest:rat-ear-pie-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11356",
+        "source": "quest:rat-ear-pie-quest",
+        "target": "zone:qeynos-hills",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11357",
+        "source": "quest:rat-ear-pie-quest",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11358",
+        "source": "quest:rat-ear-pie-quest",
+        "target": "faction:arcane-scientists",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11359",
+        "source": "quest:rat-ear-pie-quest",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11360",
+        "source": "npc:south-qeynos:menkes-tabolet",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11361",
+        "source": "npc:south-qeynos:menkes-tabolet",
+        "target": "quest:rat-fur-cap-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11362",
+        "source": "quest:rat-fur-cap-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11363",
+        "source": "quest:rat-fur-cap-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11364",
+        "source": "quest:rat-fur-cap-quest",
+        "target": "faction:qeynos-citizens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11365",
+        "source": "quest:rat-fur-cap-quest",
+        "target": "item:rat-fur-cap",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11366",
+        "source": "npc:north-kaladim:jeet",
+        "target": "quest:rat-patrol",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11367",
+        "source": "quest:rat-patrol",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11368",
+        "source": "quest:rat-patrol",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11369",
+        "source": "quest:rat-patrol",
+        "target": "faction:miners-guild-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11370",
+        "source": "quest:rat-patrol",
+        "target": "item:small-tattered-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11371",
+        "source": "quest:rat-patrol",
+        "target": "item:small-tattered-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11372",
+        "source": "quest:rat-patrol",
+        "target": "item:small-tattered-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11373",
+        "source": "quest:rat-patrol",
+        "target": "item:small-tattered-skullcap",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11374",
+        "source": "quest:rat-patrol",
+        "target": "item:small-tattered-wristbands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11375",
+        "source": "npc:south-qeynos:menkes-tabolet",
+        "target": "quest:rat-pelt-cape-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11376",
+        "source": "quest:rat-pelt-cape-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11377",
+        "source": "quest:rat-pelt-cape-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11378",
+        "source": "quest:rat-pelt-cape-quest",
+        "target": "faction:qeynos-citizens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11379",
+        "source": "quest:rat-pelt-cape-quest",
+        "target": "item:rat-pelt-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11380",
+        "source": "npc:north-qeynos:suuspa-clanim",
+        "target": "quest:rat-shaped-rings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11381",
+        "source": "quest:rat-shaped-rings",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11382",
+        "source": "quest:rat-shaped-rings",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11383",
+        "source": "quest:rat-shaped-rings",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11384",
+        "source": "quest:rat-shaped-rings",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11385",
+        "source": "quest:rat-shaped-rings",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11386",
+        "source": "quest:rat-shaped-rings",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11387",
+        "source": "quest:rat-shaped-rings",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11388",
+        "source": "npc:kerra-island:thalith-mamluk",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11389",
+        "source": "npc:kerra-island:thalith-mamluk",
+        "target": "quest:rat-teeth",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11390",
+        "source": "quest:rat-teeth",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11391",
+        "source": "quest:rat-teeth",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11392",
+        "source": "quest:rat-teeth",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11393",
+        "source": "quest:rat-teeth",
+        "target": "item:fishbone-necklace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11394",
+        "source": "npc:south-qeynos:menkes-tabolet",
+        "target": "quest:rats-foot-necklace-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11395",
+        "source": "quest:rats-foot-necklace-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11396",
+        "source": "quest:rats-foot-necklace-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11397",
+        "source": "quest:rats-foot-necklace-quest",
+        "target": "item:rats-foot-necklace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11398",
+        "source": "npc:southern-desert-of-ro:rathmana-allin",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11399",
+        "source": "npc:southern-desert-of-ro:rathmana-allin",
+        "target": "quest:rathmanas-traveling-offer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11400",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "zone:southern-desert-of-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11401",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11402",
+        "source": "quest:rathmanas-traveling-offer",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11403",
+        "source": "npc:kithicor-forest:ged-twigborn",
+        "target": "quest:ratskin-gloves-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11404",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11405",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11406",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "faction:kithicor-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11407",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11408",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11409",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "faction:unkempt-druids",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11410",
+        "source": "quest:ratskin-gloves-quest",
+        "target": "item:ratskin-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11411",
+        "source": "npc:kerra-island:feren",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11412",
+        "source": "npc:kerra-island:feren",
+        "target": "quest:razortooth",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11413",
+        "source": "quest:razortooth",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11414",
+        "source": "quest:razortooth",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11415",
+        "source": "quest:razortooth",
+        "target": "item:kerran-fishingpole",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11416",
+        "source": "npc:north-qeynos:tyokan-mekase",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-11417",
+        "source": "npc:north-qeynos:tyokan-mekase",
+        "target": "quest:recharge-prayer-beads",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-11418",
+        "source": "quest:recharge-prayer-beads",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-11419",
+        "source": "quest:recharge-prayer-beads",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-11420",
+        "source": "quest:recharge-prayer-beads",
+        "target": "item:prayer-beads",
         "type": "rewards"
       }
     }
