@@ -63785,6 +63785,938 @@
         "noTrade": true,
         "source": "Crest of the Wood Nymphs Quest reward (Eysa Florawhisper, The Wakening Land)"
       }
+    },
+    {
+      "data": {
+        "id": "quest:cromils-remains",
+        "label": "Cromil's Remains",
+        "type": "quest",
+        "description": "Gunlok Jure in North Kaladim, after the Bone Chips (Kaladim) quest, sends the player after Dwarf Bones from a rare dwarf skeleton near Lord Grimrot's camp in Southern Karana. Returning the bones yields a Hammer of Wrath spell scroll (one unconfirmed account instead reports Spook the Dead). Amiable faction or better with the Clerics of Underfoot required.",
+        "minLevel": 7,
+        "steps": [
+          "Complete the Bone Chips (Kaladim) quest with Gunlok Jure",
+          "Defeat the rare dwarf skeleton near Lord Grimrot's camp in Southern Karana for Dwarf Bones",
+          "Return the Dwarf Bones to Gunlok Jure"
+        ],
+        "wiki_title": "Cromil's Remains"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crustacean-shell-armor-quest",
+        "label": "Crustacean Shell Armor Quest",
+        "type": "quest",
+        "description": "Qarrgy Scallopgobbler in Cobalt Scar explains the burning process for crustacean shell armor and trades 2 Barracuda Livers for a Bladder of Acidic Ooze.",
+        "minLevel": 50,
+        "steps": [
+          "Speak with Qarrgy Scallopgobbler about crustacean shell armor and the burning process",
+          "Gather 2 Barracuda Livers",
+          "Deliver them to Qarrgy Scallopgobbler"
+        ],
+        "wiki_title": "Crustacean Shell Armor Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bladder-of-acidic-ooze",
+        "label": "Bladder of Acidic Ooze",
+        "type": "item",
+        "magic": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Crustacean Shell Armor Quest reward (Qarrgy Scallopgobbler, Cobalt Scar) -- also used in the Captain Nalot's Triple Strength Rum quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:erdarf-restil",
+        "label": "Erdarf Restil",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crystal-cavernss-ancient-artifacts",
+        "label": "Crystal Caverns' Ancient Artifacts",
+        "type": "quest",
+        "description": "Erdarf Restil in Thurgadin trades a Sceptre of the Coldain Ancients (from Queen Dracnia) or Bottle of Karsin Acid (from Crystal Caverns creatures) for a Gem of Persuasion. Combined with a Blood Wolf Harness (Drakkel Blood Wolf, Great Divide), the gem is traded to Vores the Hunter in Great Divide for a Harness of Control, turned in to Shardwurm Broodmother to draw out Fergul Frostsky, who must then be defeated for Kromrif Military Leggings.",
+        "minLevel": 40,
+        "steps": [
+          "Obtain a Sceptre of the Coldain Ancients (Queen Dracnia) or Bottle of Karsin Acid (Crystal Caverns creatures)",
+          "Turn it in to Erdarf Restil in Thurgadin for a Gem of Persuasion",
+          "Obtain a Blood Wolf Harness from a Drakkel Blood Wolf in Great Divide",
+          "Give the harness and gem to Vores the Hunter in Great Divide for a Harness of Control",
+          "Turn in the Harness of Control to Shardwurm Broodmother",
+          "Defeat Fergul Frostsky once he engages Gralk Dwarfkiller"
+        ],
+        "wiki_title": "Crystal Caverns' Ancient Artifacts"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kromrif-military-leggings",
+        "label": "Kromrif Military Leggings",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 14,
+        "stats": {
+          "str": 6,
+          "wis": 5
+        },
+        "resists": {
+          "disease": 5,
+          "cold": 5
+        },
+        "source": "Crystal Caverns' Ancient Artifacts reward (Erdarf Restil, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:swamp-of-no-hope:mystic-dovan",
+        "label": "Mystic Dovan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:cures",
+        "label": "Cures",
+        "type": "quest",
+        "description": "Mystic Dovan in the Swamp of No Hope trades a Giant Blood Sac (cure disease), two Brittle Iksar Skulls (heal), or a Watcher Signal Torch (purge toxins) for experience and faction. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Gather a Giant Blood Sac, two Brittle Iksar Skulls, or a Watcher Signal Torch",
+          "Deliver it to Mystic Dovan in the Swamp of No Hope"
+        ],
+        "wiki_title": "Cures"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:grand-armsmith-korin",
+        "label": "Grand Armsmith Korin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:custom-plate-helms-kael-drakkel",
+        "label": "Custom Plate Helms - Kael Drakkel",
+        "type": "quest",
+        "description": "Grand Armsmith Korin in Kael Drakkel trades any of 7 plate helms (Malevolent Crown, Shining Helm, Troubadour's Helm, Crown of the Kromzek Kings, Frostweaver's Velium Crown, Cowl of Mortality, Warlord's Crown) for a Custom-appearance version with identical stats -- a cosmetic reskin only, no new stats. No faction hits or experience.",
+        "minLevel": 1,
+        "steps": [
+          "Bring one of the eligible plate helms to Grand Armsmith Korin in Kael Drakkel",
+          "Receive its Custom-appearance version back, same stats"
+        ],
+        "wiki_title": "Custom Plate Helms - Kael Drakkel"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:supreme-laochsmith-psorin",
+        "label": "Supreme Laochsmith Psorin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:custom-plate-helms-skyshrine",
+        "label": "Custom Plate Helms - Skyshrine",
+        "type": "quest",
+        "description": "Supreme Laochsmith Psorin in Skyshrine trades any of 8 plate helms (Blood Lord's Crown, Scaled Knight's Helm, Helm of Twilight, Akkirus' Crown of the Risen, Cowl of Mortality, Frostreaver's Velium Crown, Crown of the Kromzek Kings, Crown of the Myrmidon) for a Custom-appearance version with identical stats, styled for pre-Luclin character models. Ally faction with Claws of Veeshan required. No faction hits or experience.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Supreme Laochsmith Psorin in Skyshrine and ask about the special helm",
+          "Provide one of the eligible plate helms",
+          "Receive its Custom-appearance version back, same stats"
+        ],
+        "wiki_title": "Custom Plate Helms - Skyshrine"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:royal-armorer-slade",
+        "label": "Royal Armorer Slade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:custom-plate-helms-thurgadin",
+        "label": "Custom Plate Helms - Thurgadin",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "warrior",
+          "paladin",
+          "shadow knight",
+          "bard"
+        ],
+        "description": "Royal Armorer Slade, on the 3rd floor of Icewell Keep near Dain's spawn, trades any of 8 plate helms (Dark Runed Crown, Runed Protector's Helm, Resonant Helm, Crown of Forbidden Rites, Crown of the Kromzek Kings, Frostreaver's Velium Crown, Cowl of Mortality, Champions Crown) for a Custom-appearance version with identical stats, styled for pre-Luclin character models. Kindly faction with Coldain required.",
+        "minLevel": 1,
+        "steps": [
+          "Hail Royal Armorer Slade and ask what services are offered",
+          "Provide one of the eligible plate helms",
+          "Receive its Custom-appearance version back, same stats"
+        ],
+        "wiki_title": "Custom Plate Helms - Thurgadin"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:king-tormax",
+        "label": "King Tormax",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dains-head",
+        "label": "Dain's Head",
+        "type": "quest",
+        "description": "King Tormax in Kael Drakkel sends the player to slay Dain Frostreaver IV in Icewell Keep and return with his head, in exchange for a Belt of Dwarf Slaying. Indifferent faction or better required. All classes.",
+        "minLevel": 50,
+        "steps": [
+          "Hail King Tormax in Kael Drakkel",
+          "Travel to Icewell Keep and defeat Dain Frostreaver IV",
+          "Return Dain Frostreaver's Head to King Tormax"
+        ],
+        "wiki_title": "Dain's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:belt-of-dwarf-slaying",
+        "label": "Belt of Dwarf Slaying",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 20,
+        "stats": {
+          "str": 15,
+          "wis": 15,
+          "int": 15
+        },
+        "hp": 100,
+        "mana": 100,
+        "effect": "Aura of Battle",
+        "source": "Dain's Head reward (King Tormax, Kael Drakkel) -- also +5 to all resists"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-mischief:ferjeneror",
+        "label": "Ferjeneror",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:deck-of-spontaneous-generation-quest",
+        "label": "Deck of Spontaneous Generation Quest",
+        "type": "quest",
+        "description": "Ferjeneror in the Plane of Mischief's flower maze trades a King Cod Card (from the ogre Dinner in the Dining Room) or four colored cod cards fished from the castle moat for a Deck of Spontaneous Generation, a container that generates rewards (armor, flowers, weapons, accessories) when playing cards looted from the zone's mobs are combined inside it.",
+        "minLevel": 46,
+        "steps": [
+          "Obtain a King Cod Card from the ogre Dinner in the Dining Room, or fish Black/Blue/Red/White cod cards from the castle moat",
+          "Turn the card(s) in to Ferjeneror in the flower maze for a Deck of Spontaneous Generation",
+          "Collect playing cards dropped throughout the Plane of Mischief and combine them in the Deck for rewards"
+        ],
+        "wiki_title": "Deck of Spontaneous Generation Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deck-of-spontaneous-generation",
+        "label": "Deck of Spontaneous Generation",
+        "type": "item",
+        "noTrade": true,
+        "weight": 1,
+        "capacity": 4,
+        "containerSize": "Small",
+        "source": "Deck of Spontaneous Generation Quest reward (Ferjeneror, Plane of Mischief)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:chardok:herald-telcha",
+        "label": "Herald Telcha",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dizok-signet-of-service-quest",
+        "label": "Di'Zok Signet of Service Quest",
+        "type": "quest",
+        "description": "Herald Telcha in Chardok repeatedly trades a Green Goblin Skin or 2 Mt. Death Mineral Salts for faction; once Warmly faction with the Brood of Di'Zok is reached, saying 'I serve the sarnak' yields a Di'Zok Signet of Service ring.",
+        "minLevel": 51,
+        "steps": [
+          "Repeatedly trade Herald Telcha a Green Goblin Skin or 2 Mt. Death Mineral Salts until Warmly faction with the Brood of Di'Zok",
+          "Say 'I serve the sarnak' to Herald Telcha"
+        ],
+        "wiki_title": "Di'Zok Signet of Service Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:brood-of-di-zok",
+        "label": "Brood of Di'Zok",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:sarnak-collective",
+        "label": "Sarnak Collective",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dizok-signet-of-service",
+        "label": "Di'Zok Signet of Service",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "ac": 2,
+        "stats": {
+          "cha": 1,
+          "wis": 1,
+          "int": 1
+        },
+        "hp": 65,
+        "mana": 45,
+        "lore": true,
+        "noTrade": true,
+        "source": "Di'Zok Signet of Service Quest reward (Herald Telcha, Chardok)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:squire-fuzzmin",
+        "label": "Squire Fuzzmin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dragon-scales-quest",
+        "label": "Dragon Scales Quest",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "description": "Squire Fuzzmin in Firiona Vie sends the player to trade 2 Carnelians to Tektite (a gargoyle in The Overthere), then a Peridot plus that item to Lord Lyfyx of Burwood in the Temple of Solusek Ro for Dragon Scales, then slay Azdalin and Gylton in Burning Wood for their scales. All three scales together yield the Wurmslayer.",
+        "minLevel": 45,
+        "steps": [
+          "Obtain 2 Carnelians and trade them to Tektite in The Overthere",
+          "Obtain a Peridot and trade it with Tektite's item to Lord Lyfyx of Burwood in the Temple of Solusek Ro for Dragon Scales",
+          "Defeat Azdalin and Gylton in Burning Wood for their scales",
+          "Deliver all three scales to Squire Fuzzmin"
+        ],
+        "wiki_title": "Dragon Scales Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wurmslayer",
+        "label": "Wurmslayer",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 25,
+        "ac": 5,
+        "stats": {
+          "str": 5
+        },
+        "resists": {
+          "magic": 5
+        },
+        "source": "Dragon Scales Quest reward (Squire Fuzzmin, Firiona Vie)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dreadlands:frosti-bramblebrew",
+        "label": "Frosti Bramblebrew",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:emberfold-exchange",
+        "label": "Emberfold Exchange",
+        "type": "quest",
+        "description": "Frosti Bramblebrew in Dreadlands trades a Frostbitten Hide (mammoths, Everfrost Peaks), Emberberry Cluster (goblins, Solusek's Eye), and Dew of First Light (willowisps) for a seasonal holiday reward, 'Chapter IV, Of Flame and Frost' plus a Holiday Gift.",
+        "minLevel": 1,
+        "steps": [
+          "Obtain a Frostbitten Hide from mammoths in Everfrost Peaks",
+          "Obtain an Emberberry Cluster from goblins in Solusek's Eye",
+          "Obtain Dew of First Light from willowisps",
+          "Deliver all three to Frosti Bramblebrew in Dreadlands"
+        ],
+        "wiki_title": "Emberfold Exchange"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:emerald-dragonscale-quest",
+        "label": "Emerald Dragonscale Quest",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "cleric",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "description": "Qarrgy Scallopgobbler in Cobalt Scar trades Emerald Dragon Scales (from Wuoshi in The Wakening Land), Ulthork Tusks (ulthorks in Siren's Grotto and Eastern Wastes), and an unstained Fine Plate Breastplate for an Emerald Dragonscale Tunic.",
+        "minLevel": 50,
+        "steps": [
+          "Obtain Emerald Dragon Scales from Wuoshi in The Wakening Land",
+          "Obtain Ulthork Tusks from ulthorks in Siren's Grotto or Eastern Wastes",
+          "Obtain an unstained Fine Plate Breastplate",
+          "Deliver all three to Qarrgy Scallopgobbler in Cobalt Scar"
+        ],
+        "wiki_title": "Emerald Dragonscale Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:emerald-dragonscale-tunic",
+        "label": "Emerald Dragonscale Tunic",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "ac": 22,
+        "stats": {
+          "cha": 10,
+          "wis": 20
+        },
+        "resists": {
+          "disease": 10,
+          "magic": 10
+        },
+        "source": "Emerald Dragonscale Quest reward (Qarrgy Scallopgobbler, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:kasine-paegra",
+        "label": "Kasine Paegra",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchant-bonethunder",
+        "label": "Enchant Bonethunder",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "description": "After Runethar Hamest in South Qeynos points the way (a follow-up to the Bonethunder Staff Quest), Kasine Paegra will enchant an existing Bonethunder Staff in exchange for the staff itself plus 500 gold coins -- the wiki notes the item turned in and the reward it out are identical, making this quest functionally pointless as implemented.",
+        "minLevel": 20,
+        "steps": [
+          "Speak with Runethar Hamest after obtaining a Bonethunder Staff",
+          "Visit Kasine Paegra and ask her to enchant the staff",
+          "Hand over the Bonethunder Staff and 500 gold coins"
+        ],
+        "wiki_title": "Enchant Bonethunder"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:burning-woods:entalon",
+        "label": "Entalon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:entalons-quest",
+        "label": "Entalon's Quest",
+        "type": "quest",
+        "description": "Entalon in Burning Woods trades Sorcerer Scribblings (dropped by a rare wood elf pilgrim in Firiona Vie) and a Stoneleer Emerald Plume (dropped by a stoneleer cockatrice) for teleportation to meet Atheling Plague, plus experience. The wiki notes exact NPC locations, full dialogue, and faction changes for this quest are not yet documented. All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Obtain Sorcerer Scribblings from a rare wood elf pilgrim in Firiona Vie",
+          "Obtain a Stoneleer Emerald Plume from a stoneleer cockatrice",
+          "Deliver both to Entalon in Burning Woods"
+        ],
+        "wiki_title": "Entalon's Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-wastes:melalafen",
+        "label": "Melalafen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:essence-lens-quest",
+        "label": "Essence Lens Quest",
+        "type": "quest",
+        "description": "Melalafen in Western Wastes, available only after Kerafyrm has been awakened, trades a Prismatic Dragon Scale (rare drop, Sleeper's Tomb) and the Sleeper's Key for a choice of Essence Lens, Essence Blade, Essence Mace, Essence Pearl, or Essence Ring -- a trade cycle (Lens -> Mace -> Sword -> Earring -> Ring -> Lens) lets the reward be swapped later.",
+        "minLevel": 58,
+        "steps": [
+          "Obtain a Prismatic Dragon Scale (rare drop in Sleeper's Tomb) and the Sleeper's Key",
+          "Deliver both to Melalafen in Western Wastes",
+          "Choose Essence Lens, Essence Blade, Essence Mace, Essence Pearl, or Essence Ring"
+        ],
+        "wiki_title": "Essence Lens Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:disciples-of-kerafyrm",
+        "label": "Disciples of Kerafyrm",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:ring-of-scale",
+        "label": "Ring of Scale",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:essence-lens",
+        "label": "Essence Lens",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "ac": 15,
+        "hp": 75,
+        "mana": 75,
+        "resists": {
+          "fire": 15,
+          "cold": 15,
+          "disease": 15,
+          "poison": 15,
+          "magic": 15
+        },
+        "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:essence-blade",
+        "label": "Essence Blade",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin",
+          "shadow knight"
+        ],
+        "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:essence-mace",
+        "label": "Essence Mace",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "ranger",
+          "monk",
+          "bard",
+          "rogue"
+        ],
+        "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:essence-pearl",
+        "label": "Essence Pearl",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:essence-ring",
+        "label": "Essence Ring",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:feskr-drinkmaker",
+        "label": "Feskr Drinkmaker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:feskrs-supplies",
+        "label": "Feskr's Supplies",
+        "type": "quest",
+        "description": "Feskr Drinkmaker on Kerra Island trades a Bottle of Tunare's Finest (purchased from Wela Muselender), a Thunderhoof Mushroom (foraged, Southern Karana), Tea Leaves (foraged, Eastern Karana), and a Hand Made Backpack for a Rough Leather Sack.",
+        "minLevel": 1,
+        "steps": [
+          "Purchase a Bottle of Tunare's Finest from Wela Muselender",
+          "Forage a Thunderhoof Mushroom in Southern Karana",
+          "Forage Tea Leaves in Eastern Karana",
+          "Craft or obtain a Hand Made Backpack",
+          "Deliver all four items to Feskr Drinkmaker on Kerra Island"
+        ],
+        "wiki_title": "Feskr's Supplies"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rough-leather-sack",
+        "label": "Rough Leather Sack",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 3,
+        "capacity": 6,
+        "containerSize": "Medium",
+        "source": "Feskr's Supplies reward (Feskr Drinkmaker, Kerra Island) -- reduces contained weight by 25%"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:shazda-asad",
+        "label": "Shazda Asad",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:first-test-of-kejaar",
+        "label": "First Test of Kejaar",
+        "type": "quest",
+        "description": "Shazda Asad on Kerra Island sends the player to kill an Erudin Emissary in Toxxulia Forest for its head, then obtain the head of Sentinel Creot, in exchange for a 5-charge Kejaar Totem (Spirit of Cat effect).",
+        "minLevel": 20,
+        "steps": [
+          "Speak with Shazda Asad on Kerra Island",
+          "Defeat an Erudin Emissary in Toxxulia Forest and loot its head",
+          "Return the head to Shazda Asad",
+          "Obtain the head of Sentinel Creot"
+        ],
+        "wiki_title": "First Test of Kejaar"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kejaar-totem",
+        "label": "Kejaar Totem",
+        "type": "item",
+        "magic": true,
+        "effect": "Spirit of Cat (5 charges)",
+        "source": "First Test of Kejaar reward (Shazda Asad, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:roary-fishpouncer",
+        "label": "Roary Fishpouncer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fish-dinner",
+        "label": "Fish Dinner",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "description": "Roary Fishpouncer on Kerra Island trades a Raw Darkwater Piranha (rare spawn, Nektulos Forest River) for a Kerran Fishing Spear.",
+        "minLevel": 13,
+        "steps": [
+          "Defeat the rare darkwater piranha in the Nektulos Forest River for a Raw Darkwater Piranha",
+          "Return it to Roary Fishpouncer on Kerra Island"
+        ],
+        "wiki_title": "Fish Dinner"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kerran-fishing-spear",
+        "label": "Kerran Fishing Spear",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "Piercing",
+        "magic": true,
+        "lore": true,
+        "stats": {
+          "dex": 1,
+          "agi": 1
+        },
+        "effect": "Enduring Breath",
+        "source": "Fish Dinner reward (Roary Fishpouncer, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:swamp-of-no-hope:captain-nedar",
+        "label": "Captain Nedar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:froglok-tad-tongues",
+        "label": "Froglok Tad Tongues",
+        "type": "quest",
+        "description": "Captain Nedar, on a second-floor balcony near Cabilis in the Swamp of No Hope (daytime only), trades 4 froglok tad tongues for coin, experience, and faction. Iksar only.",
+        "minLevel": 1,
+        "steps": [
+          "Find Captain Nedar on a second-floor balcony near Cabilis, during the day",
+          "Hunt froglok tads for 4 froglok tad tongues",
+          "Return the tongues to Captain Nedar"
+        ],
+        "wiki_title": "Froglok Tad Tongues"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-wastes:makil-rargon",
+        "label": "Makil Rargon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:fusibility-research",
+        "label": "Fusibility Research",
+        "type": "quest",
+        "description": "Makil Rargon in Western Wastes hands out an Empty Fusible Ore Crate. Filling it with Fusible Coral Ore (Phinigel Autropos, Kedge Keep), Fusible Earthen Ore (Master Yael, The Hole), Fusible Igneous Ore (ground spawn, Skyfire Mountains), and Fusible Velium Ore (Guardian Kozzalym, Western Wastes) and returning it yields Strength of the Elements.",
+        "minLevel": 40,
+        "steps": [
+          "Receive an Empty Fusible Ore Crate from Makil Rargon",
+          "Obtain Fusible Coral Ore from Phinigel Autropos in Kedge Keep",
+          "Obtain Fusible Earthen Ore from Master Yael in The Hole",
+          "Obtain Fusible Igneous Ore as a ground spawn in Skyfire Mountains",
+          "Obtain Fusible Velium Ore from Guardian Kozzalym in Western Wastes",
+          "Combine all four ores in the crate and return the Full Crate of Fusible Ore to Makil Rargon"
+        ],
+        "wiki_title": "Fusibility Research"
+      }
+    },
+    {
+      "data": {
+        "id": "item:strength-of-the-elements",
+        "label": "Strength of the Elements",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 15,
+        "stats": {
+          "str": 15
+        },
+        "hp": 100,
+        "resists": {
+          "fire": 15,
+          "cold": 15
+        },
+        "source": "Fusibility Research reward (Makil Rargon, Western Wastes)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:nomaria-doseniar",
+        "label": "Nomaria Doseniar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gharins-note-evil",
+        "label": "Gharin's Note (evil)",
+        "type": "quest",
+        "description": "Nomaria Doseniar in the Qeynos Aqueducts sends the player to trade 4 Crows Special Brew to Gharin in South Qeynos for a Sealed Letter, which is returned to Nomaria Doseniar and forged before delivery to Te'Anara in Surefall Glade -- the evil-aligned counterpart to Gharin's Note (good). All classes.",
+        "minLevel": 1,
+        "steps": [
+          "Obtain 4 Crows Special Brew from Crow",
+          "Trade the brew to Gharin in South Qeynos for A Sealed Letter",
+          "Return the letter to Nomaria Doseniar in the Qeynos Aqueducts",
+          "Deliver the forged note to Te'Anara in Surefall Glade"
+        ],
+        "wiki_title": "Gharin's Note (evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:unkempt-druids",
+        "label": "Unkempt Druids",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:icewell-keep:chamberlain-krystorf",
+        "label": "Chamberlain Krystorf",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:giant-helmets",
+        "label": "Giant Helmets",
+        "type": "quest",
+        "description": "Chamberlain Krystorf in Icewell Keep repeatedly trades 4 Giant Warrior Helmets (dropped by giants in Kael Drakkel) at a time for platinum, experience, and faction with Dain Frostreaver IV and Coldain.",
+        "minLevel": 45,
+        "steps": [
+          "Defeat giants in Kael Drakkel for Giant Warrior Helmets",
+          "Turn in 4 helmets at a time to Chamberlain Krystorf in Icewell Keep"
+        ],
+        "wiki_title": "Giant Helmets"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:gloves-of-earthcrafting-quest",
+        "label": "Gloves of Earthcrafting Quest",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Tunarean Earthmelder in the Plane of Growth trades the heads of Priest Grenk, Priest Bjek, and Priest Delar (each wandering The Wakening Land, 24-hour respawn) plus Derakor the Vindicator (behind the ice wall near Kael's temple) for Gloves of Earthcrafting. Level 46+ Druids who worship Tunare only.",
+        "minLevel": 46,
+        "steps": [
+          "Defeat Priest Grenk, Priest Bjek, and Priest Delar in The Wakening Land for their heads",
+          "Defeat Derakor the Vindicator behind the ice wall near Kael's temple for his head",
+          "Return all four heads to Tunarean Earthmelder in the Plane of Growth"
+        ],
+        "wiki_title": "Gloves of Earthcrafting Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gloves-of-earthcrafting",
+        "label": "Gloves of Earthcrafting",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 5,
+          "wis": 12
+        },
+        "mana": 50,
+        "resists": {
+          "fire": 5,
+          "cold": 5,
+          "magic": 5
+        },
+        "effect": "Shield of Thorns",
+        "source": "Gloves of Earthcrafting Quest reward (Tunarean Earthmelder, Plane of Growth) -- bound to Druids of Human, Elf, or Half-Elf race who worship Tunare"
+      }
     }
   ],
   "edges": [
@@ -148705,6 +149637,1358 @@
         "id": "e-rewards-10613",
         "source": "quest:crest-of-the-wood-nymphs-quest",
         "target": "item:crest-of-the-wood-nymphs",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10614",
+        "source": "npc:north-kaladim:gunlok-jure",
+        "target": "quest:cromils-remains",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10615",
+        "source": "quest:cromils-remains",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10616",
+        "source": "quest:cromils-remains",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10617",
+        "source": "quest:cromils-remains",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10618",
+        "source": "quest:bone-chips-kaladim",
+        "target": "quest:cromils-remains",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10619",
+        "source": "quest:cromils-remains",
+        "target": "faction:clerics-of-underfoot",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10620",
+        "source": "quest:cromils-remains",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10621",
+        "source": "quest:cromils-remains",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10622",
+        "source": "quest:cromils-remains",
+        "target": "spell:hammer-of-wrath",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10623",
+        "source": "npc:cobalt-scar:qarrgy-scallopgobbler",
+        "target": "quest:crustacean-shell-armor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10624",
+        "source": "quest:crustacean-shell-armor-quest",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10625",
+        "source": "quest:crustacean-shell-armor-quest",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10626",
+        "source": "quest:crustacean-shell-armor-quest",
+        "target": "item:bladder-of-acidic-ooze",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10627",
+        "source": "npc:thurgadin:erdarf-restil",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10628",
+        "source": "npc:thurgadin:erdarf-restil",
+        "target": "quest:crystal-cavernss-ancient-artifacts",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10629",
+        "source": "quest:crystal-cavernss-ancient-artifacts",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10630",
+        "source": "quest:crystal-cavernss-ancient-artifacts",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10631",
+        "source": "quest:crystal-cavernss-ancient-artifacts",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10632",
+        "source": "quest:crystal-cavernss-ancient-artifacts",
+        "target": "item:kromrif-military-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10633",
+        "source": "npc:swamp-of-no-hope:mystic-dovan",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10634",
+        "source": "npc:swamp-of-no-hope:mystic-dovan",
+        "target": "quest:cures",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10635",
+        "source": "quest:cures",
+        "target": "zone:swamp-of-no-hope",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10636",
+        "source": "quest:cures",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10637",
+        "source": "quest:cures",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10638",
+        "source": "quest:cures",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10639",
+        "source": "npc:kael-drakkal:grand-armsmith-korin",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10640",
+        "source": "npc:kael-drakkal:grand-armsmith-korin",
+        "target": "quest:custom-plate-helms-kael-drakkel",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10641",
+        "source": "quest:custom-plate-helms-kael-drakkel",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10642",
+        "source": "quest:custom-plate-helms-kael-drakkel",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10643",
+        "source": "npc:skyshrine:supreme-laochsmith-psorin",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10644",
+        "source": "npc:skyshrine:supreme-laochsmith-psorin",
+        "target": "quest:custom-plate-helms-skyshrine",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10645",
+        "source": "quest:custom-plate-helms-skyshrine",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10646",
+        "source": "quest:custom-plate-helms-skyshrine",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10647",
+        "source": "npc:thurgadin:royal-armorer-slade",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10648",
+        "source": "npc:thurgadin:royal-armorer-slade",
+        "target": "quest:custom-plate-helms-thurgadin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10649",
+        "source": "quest:custom-plate-helms-thurgadin",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10650",
+        "source": "quest:custom-plate-helms-thurgadin",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10651",
+        "source": "quest:custom-plate-helms-thurgadin",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10652",
+        "source": "npc:kael-drakkal:king-tormax",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10653",
+        "source": "npc:kael-drakkal:king-tormax",
+        "target": "quest:dains-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10654",
+        "source": "quest:dains-head",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10655",
+        "source": "quest:dains-head",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10656",
+        "source": "quest:dains-head",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10657",
+        "source": "quest:dains-head",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10658",
+        "source": "quest:dains-head",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10659",
+        "source": "quest:dains-head",
+        "target": "item:belt-of-dwarf-slaying",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10660",
+        "source": "npc:plane-of-mischief:ferjeneror",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10661",
+        "source": "npc:plane-of-mischief:ferjeneror",
+        "target": "quest:deck-of-spontaneous-generation-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10662",
+        "source": "quest:deck-of-spontaneous-generation-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10663",
+        "source": "quest:deck-of-spontaneous-generation-quest",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10664",
+        "source": "quest:deck-of-spontaneous-generation-quest",
+        "target": "item:deck-of-spontaneous-generation",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10665",
+        "source": "npc:chardok:herald-telcha",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10666",
+        "source": "npc:chardok:herald-telcha",
+        "target": "quest:dizok-signet-of-service-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10667",
+        "source": "quest:dizok-signet-of-service-quest",
+        "target": "zone:chardok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10668",
+        "source": "quest:dizok-signet-of-service-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10669",
+        "source": "quest:dizok-signet-of-service-quest",
+        "target": "faction:brood-of-di-zok",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10670",
+        "source": "quest:dizok-signet-of-service-quest",
+        "target": "faction:sarnak-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10671",
+        "source": "quest:dizok-signet-of-service-quest",
+        "target": "item:dizok-signet-of-service",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10672",
+        "source": "npc:firiona-vie:squire-fuzzmin",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10673",
+        "source": "npc:firiona-vie:squire-fuzzmin",
+        "target": "quest:dragon-scales-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10674",
+        "source": "quest:dragon-scales-quest",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10675",
+        "source": "quest:dragon-scales-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10676",
+        "source": "quest:dragon-scales-quest",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10677",
+        "source": "quest:dragon-scales-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10678",
+        "source": "quest:dragon-scales-quest",
+        "target": "zone:burning-wood",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10679",
+        "source": "quest:dragon-scales-quest",
+        "target": "faction:inhabitants-of-firiona-vie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10680",
+        "source": "quest:dragon-scales-quest",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10681",
+        "source": "quest:dragon-scales-quest",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10682",
+        "source": "quest:dragon-scales-quest",
+        "target": "item:wurmslayer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10683",
+        "source": "npc:dreadlands:frosti-bramblebrew",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10684",
+        "source": "npc:dreadlands:frosti-bramblebrew",
+        "target": "quest:emberfold-exchange",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10685",
+        "source": "quest:emberfold-exchange",
+        "target": "zone:dreadlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10686",
+        "source": "quest:emberfold-exchange",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10687",
+        "source": "quest:emberfold-exchange",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10688",
+        "source": "quest:emberfold-exchange",
+        "target": "zone:solusek-s-eye",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10689",
+        "source": "npc:cobalt-scar:qarrgy-scallopgobbler",
+        "target": "quest:emerald-dragonscale-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10690",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10691",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10692",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10693",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10694",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "faction:othmir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10695",
+        "source": "quest:emerald-dragonscale-quest",
+        "target": "item:emerald-dragonscale-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10696",
+        "source": "npc:south-qeynos:kasine-paegra",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10697",
+        "source": "npc:south-qeynos:kasine-paegra",
+        "target": "quest:enchant-bonethunder",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10698",
+        "source": "quest:enchant-bonethunder",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10699",
+        "source": "quest:enchant-bonethunder",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-10700",
+        "source": "quest:bonethunder-staff-quest",
+        "target": "quest:enchant-bonethunder",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10701",
+        "source": "quest:enchant-bonethunder",
+        "target": "item:bonethunder-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10702",
+        "source": "npc:burning-woods:entalon",
+        "target": "zone:burning-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10703",
+        "source": "npc:burning-woods:entalon",
+        "target": "quest:entalons-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10704",
+        "source": "quest:entalons-quest",
+        "target": "zone:burning-woods",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10705",
+        "source": "quest:entalons-quest",
+        "target": "zone:burning-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10706",
+        "source": "quest:entalons-quest",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10707",
+        "source": "npc:western-wastes:melalafen",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10708",
+        "source": "npc:western-wastes:melalafen",
+        "target": "quest:essence-lens-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10709",
+        "source": "quest:essence-lens-quest",
+        "target": "zone:western-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10710",
+        "source": "quest:essence-lens-quest",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10711",
+        "source": "quest:essence-lens-quest",
+        "target": "zone:sleepers-tomb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10712",
+        "source": "quest:essence-lens-quest",
+        "target": "faction:disciples-of-kerafyrm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10713",
+        "source": "quest:essence-lens-quest",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10714",
+        "source": "quest:essence-lens-quest",
+        "target": "faction:ring-of-scale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10715",
+        "source": "quest:essence-lens-quest",
+        "target": "item:essence-lens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10716",
+        "source": "quest:essence-lens-quest",
+        "target": "item:essence-blade",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10717",
+        "source": "quest:essence-lens-quest",
+        "target": "item:essence-mace",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10718",
+        "source": "quest:essence-lens-quest",
+        "target": "item:essence-pearl",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10719",
+        "source": "quest:essence-lens-quest",
+        "target": "item:essence-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10720",
+        "source": "npc:kerra-island:feskr-drinkmaker",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10721",
+        "source": "npc:kerra-island:feskr-drinkmaker",
+        "target": "quest:feskrs-supplies",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10722",
+        "source": "quest:feskrs-supplies",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10723",
+        "source": "quest:feskrs-supplies",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10724",
+        "source": "quest:feskrs-supplies",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10725",
+        "source": "quest:feskrs-supplies",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10726",
+        "source": "quest:feskrs-supplies",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10727",
+        "source": "quest:feskrs-supplies",
+        "target": "item:rough-leather-sack",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10728",
+        "source": "npc:kerra-island:shazda-asad",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10729",
+        "source": "npc:kerra-island:shazda-asad",
+        "target": "quest:first-test-of-kejaar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10730",
+        "source": "quest:first-test-of-kejaar",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10731",
+        "source": "quest:first-test-of-kejaar",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10732",
+        "source": "quest:first-test-of-kejaar",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10733",
+        "source": "quest:first-test-of-kejaar",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10734",
+        "source": "quest:first-test-of-kejaar",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10735",
+        "source": "quest:first-test-of-kejaar",
+        "target": "item:kejaar-totem",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10736",
+        "source": "npc:kerra-island:roary-fishpouncer",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10737",
+        "source": "npc:kerra-island:roary-fishpouncer",
+        "target": "quest:fish-dinner",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10738",
+        "source": "quest:fish-dinner",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10739",
+        "source": "quest:fish-dinner",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10740",
+        "source": "quest:fish-dinner",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10741",
+        "source": "quest:fish-dinner",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10742",
+        "source": "quest:fish-dinner",
+        "target": "item:kerran-fishing-spear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10743",
+        "source": "npc:swamp-of-no-hope:captain-nedar",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10744",
+        "source": "npc:swamp-of-no-hope:captain-nedar",
+        "target": "quest:froglok-tad-tongues",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10745",
+        "source": "quest:froglok-tad-tongues",
+        "target": "zone:swamp-of-no-hope",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10746",
+        "source": "quest:froglok-tad-tongues",
+        "target": "zone:swamp-of-no-hope",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10747",
+        "source": "quest:froglok-tad-tongues",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10748",
+        "source": "quest:froglok-tad-tongues",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10749",
+        "source": "quest:froglok-tad-tongues",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10750",
+        "source": "quest:froglok-tad-tongues",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10751",
+        "source": "quest:froglok-tad-tongues",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10752",
+        "source": "npc:western-wastes:makil-rargon",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10753",
+        "source": "npc:western-wastes:makil-rargon",
+        "target": "quest:fusibility-research",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10754",
+        "source": "quest:fusibility-research",
+        "target": "zone:western-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10755",
+        "source": "quest:fusibility-research",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10756",
+        "source": "quest:fusibility-research",
+        "target": "zone:kedge-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10757",
+        "source": "quest:fusibility-research",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10758",
+        "source": "quest:fusibility-research",
+        "target": "zone:skyfire-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10759",
+        "source": "quest:fusibility-research",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10760",
+        "source": "quest:fusibility-research",
+        "target": "item:strength-of-the-elements",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10761",
+        "source": "npc:qeynos-aqueducts:nomaria-doseniar",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10762",
+        "source": "npc:qeynos-aqueducts:nomaria-doseniar",
+        "target": "quest:gharins-note-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10763",
+        "source": "quest:gharins-note-evil",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10764",
+        "source": "quest:gharins-note-evil",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10765",
+        "source": "quest:gharins-note-evil",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10766",
+        "source": "quest:gharins-note-evil",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10767",
+        "source": "quest:gharins-note-evil",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10768",
+        "source": "quest:gharins-note-evil",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10769",
+        "source": "quest:gharins-note-evil",
+        "target": "faction:unkempt-druids",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10770",
+        "source": "npc:icewell-keep:chamberlain-krystorf",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10771",
+        "source": "npc:icewell-keep:chamberlain-krystorf",
+        "target": "quest:giant-helmets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10772",
+        "source": "quest:giant-helmets",
+        "target": "zone:icewell-keep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10773",
+        "source": "quest:giant-helmets",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10774",
+        "source": "quest:giant-helmets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10775",
+        "source": "quest:giant-helmets",
+        "target": "faction:dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10776",
+        "source": "quest:giant-helmets",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-10777",
+        "source": "npc:plane-of-growth:tunarean-earthmelder",
+        "target": "quest:gloves-of-earthcrafting-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-10778",
+        "source": "quest:gloves-of-earthcrafting-quest",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10779",
+        "source": "quest:gloves-of-earthcrafting-quest",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10780",
+        "source": "quest:gloves-of-earthcrafting-quest",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-10781",
+        "source": "quest:gloves-of-earthcrafting-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-10782",
+        "source": "quest:gloves-of-earthcrafting-quest",
+        "target": "item:gloves-of-earthcrafting",
         "type": "rewards"
       }
     }
