@@ -51,6 +51,13 @@ ${RESET_CSS}
 .route-label { display: block; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; text-shadow: none; color: var(--parch-ink-soft); }
 .route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2.1; color: var(--parch-ink); }
 .route-zone { color: var(--parch-ink); font-weight: 700; }
+/* Same "warning, not metadata" dark red as quest-card's out-of-era badge
+   and zone-card's own .era-badge -- a route can pass through an out-of-era
+   zone as a mid-route waypoint even when neither endpoint is out of era
+   (issue #35), so this has to be readable on any step, not just the last
+   one. Dotted underline (not a separate badge chip) since a name inline in
+   flowing route text has no room for a boxed badge the way a card header does. */
+.route-zone.out-of-era { color: #9c2b2b; text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
 .route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
 .boat-sep, .translocator-sep { cursor: help; }
 .boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
@@ -70,6 +77,7 @@ ${RESET_CSS}
 :host([variant="stone"]) .route-sep { color: var(--gold); }
 :host([variant="stone"]) .boat-sep { color: #7ba7f5; }
 :host([variant="stone"]) .translocator-sep { color: #c4a3f7; }
+:host([variant="stone"]) .route-zone.out-of-era { color: #ff6b6b; }
 `);
 
 class RoutePath extends HTMLElement {
@@ -91,10 +99,13 @@ class RoutePath extends HTMLElement {
 
   render() {
     const stepsHtml = this.#steps.map((step, i) => {
-      if (i === 0) return `<span class="route-zone">${step.name}</span>`;
-      if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span><span class="route-zone">${step.name}</span>`;
-      if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span><span class="route-zone">${step.name}</span>`;
-      return `<span class="route-sep">›</span><span class="route-zone">${step.name}</span>`;
+      const zoneSpan = step.outOfEra
+        ? `<span class="route-zone out-of-era" title="Out of era — not available in the current era yet">${step.name}</span>`
+        : `<span class="route-zone">${step.name}</span>`;
+      if (i === 0) return zoneSpan;
+      if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span>${zoneSpan}`;
+      if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span>${zoneSpan}`;
+      return `<span class="route-sep">›</span>${zoneSpan}`;
     }).join("");
     this.shadowRoot.innerHTML = `<span class="route-label">Route</span><div class="route-steps">${stepsHtml}</div>`;
   }

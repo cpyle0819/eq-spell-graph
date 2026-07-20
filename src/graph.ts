@@ -641,7 +641,36 @@ export function getZoneAdjacency(): Map<string, AdjEntry[]> {
 
 interface PathStep { zoneId: string; via?: Transport; }
 
-export interface RouteStep { name: string; via?: Transport; }
+export interface RouteStep {
+  name: string;
+  via?: Transport;
+  // Same era/outOfEra convention as ZoneSummary (resolveEra() below) --
+  // present only when this *hop* (not necessarily the route's final
+  // destination) is itself a confirmed out-of-era zone. A route can pass
+  // through an out-of-era zone as a waypoint even when neither endpoint is
+  // out of era (issue #35 -- Firiona Vie showing up unflagged mid-route),
+  // so this has to be resolved per step, not just once for the destination.
+  outOfEra?: boolean;
+}
+
+// Shared by getRoute() and rankZones() -- both turn a shortestPath() result
+// into the same RouteStep[] shape that route-path.js renders (that
+// component is itself shared between Maps' route-card and Spell Finder's
+// zone-card), so the era badge only needs to be computed in one place for
+// both surfaces to pick it up.
+function buildRouteSteps(
+  pathIds: PathStep[],
+  nodeById: (id: string) => NodeData | undefined,
+  helpers: GraphIndexHelpers
+): RouteStep[] {
+  return pathIds.map((step) => {
+    const n = nodeById(step.zoneId);
+    const entry: RouteStep = { name: n?.label || step.zoneId };
+    if (step.via) entry.via = step.via;
+    if (isOutOfEra(n?.era as string | undefined, helpers)) entry.outOfEra = true;
+    return entry;
+  });
+}
 
 export function shortestPath(fromZoneId: string, toZoneId: string): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
@@ -845,14 +874,7 @@ export function rankZones(
     const zoneNode = index.nodeById.get(zoneId);
     const pathIds = shortestPath(currentZoneId, zoneId);
     const hops = pathIds ? pathIds.length - 1 : null;
-    const route: RouteStep[] = pathIds
-      ? pathIds.map((step) => {
-          const n = index.nodeById.get(step.zoneId);
-          const entry: RouteStep = { name: n?.label || step.zoneId };
-          if (step.via) entry.via = step.via;
-          return entry;
-        })
-      : [];
+    const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => index.nodeById.get(id), eraHelpers) : [];
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
@@ -990,15 +1012,11 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
 
 export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
+  const helpers = graphIndexHelpers(graph);
   const pathIds = shortestPath(fromZoneId, toZoneId);
   const hops = pathIds ? pathIds.length - 1 : null;
   const route: RouteStep[] = pathIds
-    ? pathIds.map((step) => {
-        const n = graph.nodes.find((n) => n.data.id === step.zoneId);
-        const entry: RouteStep = { name: n?.data.label || step.zoneId };
-        if (step.via) entry.via = step.via;
-        return entry;
-      })
+    ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.data.id === id)?.data, helpers)
     : [];
   return { hops, route, destination: getZoneVendorInfo(toZoneId) };
 }
