@@ -83170,6 +83170,1498 @@
         ],
         "wiki_title": "The Waylaid Courier"
       }
+    },
+    {
+      "data": {
+        "id": "quest:thex-mallet-quest",
+        "label": "Thex Mallet Quest",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "description": "Loveal S`Nez in Neriak Third Gate gives a password for Kizdean Gix in West Commonlands, who gives a note for Skeleton Lrodd in Befallen; giving the note spawns Commander Windstream (Mallet Stem) and an Elf Skeleton (Mallet Head, Mallet Hilt), combined into the Reaper of the Dead.",
+        "steps": [
+          "Receive a password from Loveal S`Nez in Neriak Third Gate",
+          "Deliver the password to Kizdean Gix in West Commonlands for a note",
+          "Give the note to Skeleton Lrodd in Befallen to spawn Commander Windstream",
+          "Defeat Commander Windstream for the Mallet Stem",
+          "Defeat An Elf Skeleton for the Mallet Head and Mallet Hilt",
+          "Combine the three pieces and return the mallet to Loveal S`Nez"
+        ],
+        "wiki_title": "Thex Mallet Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:reaper-of-the-dead",
+        "label": "Reaper of the Dead",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "dark elf",
+          "troll",
+          "ogre",
+          "gnome",
+          "iksar"
+        ],
+        "skill": "2H Slashing",
+        "damage": 12,
+        "delay": 40,
+        "stats": {
+          "str": 4
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 13,
+        "size": "Large",
+        "effect": "Promised Renewal (Any Slot, unlimited charges, 2.0 sec cast, 1200 sec cooldown) at Level 45",
+        "source": "Thex Mallet Quest reward (Loveal S`Nez, Neriak Third Gate)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:tibrinn-ember",
+        "label": "Tibrinn Ember",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tibrinns-quest",
+        "label": "Tibrinn's Quest",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "minLevel": 35,
+        "description": "Tibrinn Ember in Rathe Mountains trades a Mithril Plated Girth (Grazhak the Berzerker) and a Slime Crystal Staff (King Xorbb, Gorge of King Xorbb) for the Sap Sheen Staff.",
+        "steps": [
+          "Obtain a Mithril Plated Girth from Grazhak the Berzerker",
+          "Obtain a Slime Crystal Staff from King Xorbb in Gorge of King Xorbb",
+          "Deliver both items to Tibrinn Ember in Rathe Mountains"
+        ],
+        "wiki_title": "Tibrinn's Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sap-sheen-staff",
+        "label": "Sap Sheen Staff",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "druid"
+        ],
+        "race": [
+          "human",
+          "wood elf",
+          "half elf",
+          "halfling"
+        ],
+        "skill": "2H Blunt",
+        "damage": 10,
+        "delay": 34,
+        "magic": true,
+        "lore": true,
+        "weight": 7.5,
+        "size": "Large",
+        "effect": "Root (Combat, instant cast) at Level 18",
+        "source": "Tibrinn's Quest reward (Tibrinn Ember, Rathe Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:kozyn-gigglephizz",
+        "label": "Kozyn Gigglephizz",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tinmizers-fabulous-compactor-quest",
+        "label": "Tinmizer's Fabulous Compactor Quest",
+        "type": "quest",
+        "minLevel": 7,
+        "description": "Kozyn Gigglephizz at Ak'Anon's entrance takes the defective Tinmizer's Fabulous Compactor (sometimes awarded by the Scrap Metal Quest) off players' hands for a Lapis Lazuli.",
+        "steps": [
+          "Obtain a Tinmizer's Fabulous Compactor (a possible Scrap Metal Quest reward)",
+          "Deliver it to Kozyn Gigglephizz at Ak'Anon's entrance"
+        ],
+        "wiki_title": "Tinmizer's Fabulous Compactor (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:yetarr",
+        "label": "Yetarr",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tiny-savages",
+        "label": "Tiny Savages",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Yetarr in Kael Drakkal collects the Head of the Royal Scribe and the Head of the Huntsman from NPCs in Icewell Keep for a choice of Coldain Skin Gloves or Coldain Skin Boots.",
+        "steps": [
+          "Obtain the Head of the Royal Scribe and the Head of the Huntsman in Icewell Keep",
+          "Return both heads to Yetarr in Kael Drakkal"
+        ],
+        "wiki_title": "Tiny Savages",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "item:coldain-skin-gloves",
+        "label": "Coldain Skin Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 12,
+        "stats": {
+          "sta": 9,
+          "wis": 6,
+          "int": 6
+        },
+        "hp": 20,
+        "mana": 20,
+        "magic": true,
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Tiny Savages reward (Yetarr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:coldain-skin-boots",
+        "label": "Coldain Skin Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 3,
+        "stats": {
+          "wis": 8,
+          "int": 8
+        },
+        "mana": 35,
+        "magic": true,
+        "weight": 2.5,
+        "size": "Small",
+        "source": "Tiny Savages reward (Yetarr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:narron-jenork",
+        "label": "Narron Jenork",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tiny-skeletons",
+        "label": "Tiny Skeletons",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Watchman Dexlin, a rare spawn at the bridge tower in Northern Karana, gives a collection box for four Very Tiny Crumpled Skeleton drops (from a tiny skeleton), combined into a Box Full Of Tiny Bones and traded for a Box of Undead Brownie Bones; delivering it to Narron Jenork in Ak'Anon completes the quest.",
+        "steps": [
+          "Hail Watchman Dexlin at the bridge tower in Northern Karana for a collection box",
+          "Hunt four \"a tiny skeleton\" for their Very Tiny Crumpled Skeleton drops",
+          "Combine the four drops in the box for a Box Full Of Tiny Bones",
+          "Return the box to Watchman Dexlin for a Box of Undead Brownie Bones",
+          "Deliver the final box to Narron Jenork in Ak'Anon"
+        ],
+        "wiki_title": "Tiny Skeletons"
+      }
+    },
+    {
+      "data": {
+        "id": "item:watchman-boots",
+        "label": "Watchman Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "charges": 1,
+        "ac": 5,
+        "stats": {
+          "sta": 5
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 6.5,
+        "size": "Medium",
+        "effect": "Spirit of Wolf (Must Equip, instant cast) at Level 10",
+        "source": "Tiny Skeletons reward (Watchman Dexlin, Northern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tishans-kilt-quest",
+        "label": "Tishan's Kilt Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Vilissia in the Temple of Solusek Ro sends a shadowed ball (from Shadowed Men) to Trankia in Everfrost Mountains, a Barbarian Head (from a froglok shinta warrior, Upper Guk) also to Trankia, and finally requires Martar IceBear's warthread kilt and Trankia's two reminder notes, all returned for Tishan's Kilt.",
+        "steps": [
+          "Take a shadowed ball from Shadowed Men to Trankia in Everfrost Mountains",
+          "Obtain a Barbarian Head from a froglok shinta warrior in Upper Guk and return it to Trankia",
+          "Kill Martar IceBear for the warthread kilt and Trankia's two reminder notes",
+          "Return everything to Vilissia in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Tishan's Kilt Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tishans-kilt",
+        "label": "Tishan's Kilt",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 4,
+          "sta": 4
+        },
+        "hp": 20,
+        "magic": true,
+        "lore": true,
+        "source": "Tishan's Kilt Quest reward (Vilissia, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:sejako-mujan",
+        "label": "Sejako Mujan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:titan-samples-evil",
+        "label": "Titan Samples (evil)",
+        "type": "quest",
+        "classes": [
+          "shadow knight",
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "description": "Sejako Mujan in Paineel trades a Gigantic Gorilla Fang, Giant Leopard Fang, Giant Sabertooth Fang, and Ancient Snake Rattle for the Staff of the Moribund Spirits. No coin or faction change.",
+        "steps": [
+          "Collect a Gigantic Gorilla Fang, Giant Leopard Fang, Giant Sabertooth Fang, and Ancient Snake Rattle",
+          "Turn them in to Sejako Mujan in Paineel"
+        ],
+        "wiki_title": "Titan Samples (evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:staff-of-the-moribund-spirits",
+        "label": "Staff of the Moribund Spirits",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight",
+          "necromancer"
+        ],
+        "skill": "2H Blunt",
+        "damage": 10,
+        "delay": 22,
+        "magic": true,
+        "lore": true,
+        "weight": 4.6,
+        "size": "Large",
+        "source": "Titan Samples (evil) reward (Sejako Mujan, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:akbaq-salid",
+        "label": "Akbaq Salid",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:titan-samples-good",
+        "label": "Titan Samples (good)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Akbaq Salid in the Erudin Wizard guild (requires at least Indifferent faction) offers three independent turn-ins: a Giant White Sabertooth Hide and Giant Leopard Hide for the Astral Cloak of the Titans; a Gigantic Gorilla Hide and Gargantuan Panda Pelt for the Astral Leggings of the Titans; or the Ancient Snake Skin of Slyder the Ancient plus a piece of Platinum Thread for the Scaled Robe of the Elder Serpent.",
+        "steps": [
+          "Reach at least Indifferent faction with Akbaq Salid",
+          "Turn in a Giant White Sabertooth Hide and Giant Leopard Hide for the Astral Cloak of the Titans, OR",
+          "Turn in a Gigantic Gorilla Hide and Gargantuan Panda Pelt for the Astral Leggings of the Titans, OR",
+          "Turn in the Ancient Snake Skin of Slyder the Ancient and a piece of Platinum Thread for the Scaled Robe of the Elder Serpent"
+        ],
+        "wiki_title": "Titan Samples (good)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:astral-cloak-of-the-titans",
+        "label": "Astral Cloak of the Titans",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": -3,
+          "int": 9,
+          "agi": 6
+        },
+        "resists": {
+          "magic": -5
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 1.5,
+        "size": "Large",
+        "source": "Titan Samples (good) reward (Akbaq Salid, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:astral-leggings-of-the-titans",
+        "label": "Astral Leggings of the Titans",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 5,
+        "stats": {
+          "int": 10,
+          "agi": 8
+        },
+        "resists": {
+          "magic": -5
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 3,
+        "size": "Medium",
+        "source": "Titan Samples (good) reward (Akbaq Salid, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-robe-of-the-elder-serpent",
+        "label": "Scaled Robe of the Elder Serpent",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "dark elf",
+          "gnome",
+          "iksar"
+        ],
+        "ac": 8,
+        "stats": {
+          "str": 4,
+          "cha": 9,
+          "int": 3
+        },
+        "resists": {
+          "poison": 15
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 3.5,
+        "size": "Medium",
+        "source": "Titan Samples (good) reward (Akbaq Salid, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tokos-head",
+        "label": "Toko's Head",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Tergon Brenclog in Ak'Anon sends players to Seafury Island in the Ocean of Tears to defeat Toko Binlittle, a gnome magician defector, and retrieve his head for the Elemental Grimoire.",
+        "steps": [
+          "Travel to Seafury Island in the Ocean of Tears",
+          "Defeat Toko Binlittle and loot his head",
+          "Return the head to Tergon Brenclog in Ak'Anon"
+        ],
+        "wiki_title": "Toko's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:elemental-grimoire",
+        "label": "Elemental Grimoire",
+        "type": "item",
+        "weight": 0.4,
+        "capacity": 4,
+        "containerSize": "Large",
+        "source": "Toko's Head reward (Tergon Brenclog, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ocean-of-tears:oracle-of-karnon",
+        "label": "Oracle of K`Arnon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tome-of-ages",
+        "label": "Tome of Ages",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "The Oracle of K`Arnon in the Ocean of Tears trades a Book of Scale for Miragul's Phylactery.",
+        "steps": [
+          "Obtain a Book of Scale",
+          "Deliver it to the Oracle of K`Arnon in the Ocean of Tears"
+        ],
+        "wiki_title": "Tome of Ages"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:oracle-of-marud",
+        "label": "Oracle Of Marud",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:miraguls-phylactery",
+        "label": "Miragul's Phylactery",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Tiny",
+        "source": "Tome of Ages reward (Oracle of K`Arnon, Ocean of Tears)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:tomer-instogle",
+        "label": "Tomer Instogle",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tomers-rescue",
+        "label": "Tomer's Rescue",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Tomer Instogle, an injured monk outside Qeynos's western walls, gives players his Ruined Backpack and asks to be led to Seta Bakindo at the Silent Fist Clan guildhouse in North Qeynos; the backpack is returned to Tomer afterward. Not available at Indifferent faction or worse.",
+        "steps": [
+          "Speak to Tomer Instogle outside Qeynos's western walls and receive his Ruined Backpack",
+          "Lead Tomer to Seta Bakindo at the Silent Fist Clan guildhouse",
+          "Return the backpack to Tomer"
+        ],
+        "wiki_title": "Tomer's Rescue"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:groflah-steadirt",
+        "label": "Groflah Steadirt",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tonics-for-groflah",
+        "label": "Tonics for Groflah",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Groflah Steadirt appears at the Seafarers Roost bar in East Freeport between 9 PM and 9 AM game time and buys Tumpy Tonics (craftable via brewing) for coin.",
+        "steps": [
+          "Craft or obtain Tumpy Tonics",
+          "Find Groflah Steadirt at the Seafarers Roost bar (9 PM - 9 AM) in East Freeport",
+          "Deliver the tonics for 1-3 gold"
+        ],
+        "wiki_title": "Tonics for Groflah"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:torch-of-alna-quest",
+        "label": "Torch Of Alna Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "description": "Vira in the Temple of Solusek Ro collects a Fire Emerald (jewelry merchant), a Fire Drake Scale (fire drakes, Lavastorm Mountains or Solusek's Eye), A Torch (Najena magicians or other creatures), and Fire Giant Toes (fire giants) for the Torch of Alna.",
+        "steps": [
+          "Buy a Fire Emerald from a jewelry merchant",
+          "Obtain a Fire Drake Scale from fire drakes in Lavastorm Mountains or Solusek's Eye",
+          "Obtain A Torch from Najena magicians or other creatures",
+          "Obtain Fire Giant Toes from fire giants",
+          "Turn in all four items to Vira in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Torch Of Alna Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:shadowed-men",
+        "label": "Shadowed Men",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:torch-of-alna",
+        "label": "Torch of Alna",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "dark elf",
+          "gnome"
+        ],
+        "skill": "1H Blunt",
+        "damage": 6,
+        "delay": 25,
+        "stats": {
+          "int": 2
+        },
+        "resists": {
+          "fire": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 3.5,
+        "size": "Large",
+        "effect": "Reclaim Energy (Any Slot, instant cast) at Level 20; Focus: Minion of Fire",
+        "source": "Torch Of Alna Quest reward (Vira, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:lord-yelinak",
+        "label": "Lord Yelinak",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tormaxs-head-dragons",
+        "label": "Tormax's Head - Dragons",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Lord Yelinak in Skyshrine trades King Tormax's Head (Kael Drakkal), at Amiable or better faction, for a choice of the Clawed Griffin Sword, White Dragonscale Boots, or White Dragon Helm.",
+        "steps": [
+          "Reach at least Amiable faction with Lord Yelinak",
+          "Obtain King Tormax's Head from Kael Drakkal",
+          "Hand it to Lord Yelinak in Skyshrine for a choice of reward"
+        ],
+        "wiki_title": "Tormax's Head - Dragons"
+      }
+    },
+    {
+      "data": {
+        "id": "item:clawed-griffin-sword",
+        "label": "Clawed Griffin Sword",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "stats": {
+          "str": 10,
+          "dex": 15
+        },
+        "hp": 70,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 1.5,
+        "size": "Medium",
+        "source": "Tormax's Head - Dragons reward (Lord Yelinak, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:white-dragonscale-boots",
+        "label": "White Dragonscale Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman",
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "stats": {
+          "wis": 17,
+          "int": 17
+        },
+        "hp": 85,
+        "mana": 110,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Tormax's Head - Dragons reward (Lord Yelinak, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:white-dragon-helm",
+        "label": "White Dragon Helm",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "stats": {
+          "str": 10,
+          "dex": 15,
+          "sta": 12
+        },
+        "hp": 100,
+        "magic": true,
+        "lore": true,
+        "weight": 1.5,
+        "size": "Small",
+        "source": "Tormax's Head - Dragons reward (Lord Yelinak, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:icewell-keep:dain-frostreaver-iv",
+        "label": "Dain Frostreaver IV",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tormaxs-head-dwarves",
+        "label": "Tormax's Head - Dwarves",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Dain Frostreaver IV in Icewell Keep trades King Tormax's Head (Kael Drakkal), at Kindly or better faction, for the Tri-Plated Golden Hackle Hammer.",
+        "steps": [
+          "Reach at least Kindly faction with Dain Frostreaver IV",
+          "Obtain King Tormax's Head from Kael Drakkal",
+          "Hand it to Dain Frostreaver IV in Icewell Keep"
+        ],
+        "wiki_title": "Tormax's Head - Dwarves"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tri-plated-golden-hackle-hammer",
+        "label": "Tri-Plated Golden Hackle Hammer",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "bard",
+          "rogue",
+          "shaman",
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "skill": "1H Blunt",
+        "damage": 14,
+        "delay": 24,
+        "stats": {
+          "str": 10,
+          "wis": 13,
+          "int": 13
+        },
+        "mana": 25,
+        "resists": {
+          "fire": 5,
+          "disease": 5,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 2,
+        "size": "Tiny",
+        "effect": "Arch Shielding (Any Slot, 0.1 sec cast) at Level 50",
+        "source": "Tormax's Head - Dwarves reward (Dain Frostreaver IV, Icewell Keep)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:toxdil",
+        "label": "Toxdil",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:toxdils-poison",
+        "label": "Toxdil's Poison",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Toxdil, a Teir`Dal poison vendor in West Freeport, crafts two snake venom sacs (from giant snakes in the Commonlands) plus a 20 gold fee into Snake Venom. No faction hits.",
+        "steps": [
+          "Collect two snake venom sacs from giant snakes in the Commonlands",
+          "Give the sacs and 20 gold to Toxdil in West Freeport"
+        ],
+        "wiki_title": "Toxdil's Poison"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:vexia-dynth",
+        "label": "Vexia D`Ynth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:track-stalk-hunt",
+        "label": "Track, Stalk, Hunt",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Vexia D`Ynth in Neriak Commons collects four each of Garter Snake Tongue, Spider Venom Sac, Wolf Meat, Bone Chips, and Giant Bat Fur; individual turn-ins can be completed separately rather than all at once.",
+        "steps": [
+          "Collect four each of Garter Snake Tongue, Spider Venom Sac, Wolf Meat, Bone Chips, and Giant Bat Fur",
+          "Turn in each set to Vexia D`Ynth in Neriak Commons"
+        ],
+        "wiki_title": "Track, Stalk, Hunt"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:dread-slayers",
+        "label": "Dread Slayers",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tribunal-healing",
+        "label": "Tribunal Healing",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Waltor Felligan in Halas heals players for 10 gold coins on request; no faction change.",
+        "steps": [
+          "Pay Waltor Felligan 10 gold and ask to be healed"
+        ],
+        "wiki_title": "Tribunal Healing"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tribunal-initiate",
+        "label": "Tribunal Initiate",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian"
+        ],
+        "minLevel": 1,
+        "description": "Jinkus Felligan in Halas collects a Mammoth Hide Parchment (Cindl at Mac's Kilts) and Vial of Datura Ink (Greta Terrilon near McDaniels Smokes & Spirits), then a Wanted Poster delivered to Dun at the South Qeynos bank returns as a List of Qeynos Most Wanted, for the Initiate Symbol of the Tribunal.",
+        "steps": [
+          "Obtain a Mammoth Hide Parchment from Cindl at Mac's Kilts",
+          "Obtain a Vial of Datura Ink from Greta Terrilon near McDaniels Smokes & Spirits",
+          "Return both items to Jinkus Felligan",
+          "Deliver a Wanted Poster to Dun at the bank in South Qeynos",
+          "Return the List of Qeynos Most Wanted to Jinkus Felligan"
+        ],
+        "wiki_title": "Tribunal Initiate"
+      }
+    },
+    {
+      "data": {
+        "id": "item:initiate-symbol-of-the-tribunal",
+        "label": "Initiate Symbol of the Tribunal",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian"
+        ],
+        "deity": [
+          "The Tribunal"
+        ],
+        "ac": 3,
+        "stats": {
+          "wis": 1
+        },
+        "mana": 3,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "effect": "Hammer of Wrath (Must Equip, 6.0 sec cast)",
+        "source": "Tribunal Initiate reward (Jinkus Felligan, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:drixiv-arcut",
+        "label": "Drixiv Arcut",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:xlixinar-arcut",
+        "label": "Xlixinar Arcut",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:trooper-scale-armor",
+        "label": "Trooper Scale Armor",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Xlixinar Arcut and Drixiv Arcut, on Legion of Cabilis faction at the southeast tip of The Overthere's chasm, trade a Banded armor piece plus a helper NPC's recommendation letter (itself earned by delivering specific items/gemstones to that helper) for its Trooper Scale Armor counterpart. Eight independent sub-quests, no ordering between them; full set bonus 105 AC, +13 STA, +16 STR, +8 DEX, +8 AGI, +5 CHA, +5 WIS, +4 INT, +45 HP, +5 SV DISEASE, +5 SV POISON, +9 SV MAGIC, +2 SV COLD, +2 SV FIRE. Stated minimum level range 20-45.",
+        "minLevel": 20,
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-boots",
+        "label": "Trooper Scale Armor: Boots",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Master Rixiz (give him Snaorf's Medallion and 2 Fire Emeralds), then trade it with a Banded Boots to Drixiv Arcut at The Overthere for the Trooper Scale Boots.",
+        "steps": [
+          "Earn a recommendation from Master Rixiz (give him Snaorf's Medallion and 2 Fire Emeralds)",
+          "Turn in the recommendation and a Banded Boots to Drixiv Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-boots",
+        "label": "Trooper Scale Boots",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 11,
+        "stats": {
+          "cha": 5,
+          "agi": 5
+        },
+        "resists": {
+          "disease": 3,
+          "poison": 3
+        },
+        "weight": 4,
+        "source": "Trooper Scale Armor: Boots reward (Drixiv Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-bracers",
+        "label": "Trooper Scale Armor: Bracers",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Arch Duke Xog (give him Traitor's Heart and 2 Sapphires), then trade it with a Banded Bracer to Drixiv Arcut at The Overthere for the Trooper Scale Bracers.",
+        "steps": [
+          "Earn a recommendation from Arch Duke Xog (give him Traitor's Heart and 2 Sapphires)",
+          "Turn in the recommendation and a Banded Bracer to Drixiv Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-bracers",
+        "label": "Trooper Scale Bracers",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "lore": false,
+        "ac": 9,
+        "stats": {
+          "dex": 2,
+          "sta": 4,
+          "int": 2
+        },
+        "weight": 1.5,
+        "source": "Trooper Scale Armor: Bracers reward (Drixiv Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-gauntlets",
+        "label": "Trooper Scale Armor: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Arch Duke Xog (give him Head of Blackhand and 2 Star Rubies), then trade it with a Banded Gauntlets to Drixiv Arcut at The Overthere for the Trooper Scale Gauntlets.",
+        "steps": [
+          "Earn a recommendation from Arch Duke Xog (give him Head of Blackhand and 2 Star Rubies)",
+          "Turn in the recommendation and a Banded Gauntlets to Drixiv Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-gauntlets",
+        "label": "Trooper Scale Gauntlets",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 11,
+        "stats": {
+          "str": 5,
+          "dex": 2
+        },
+        "weight": 2.5,
+        "source": "Trooper Scale Armor: Gauntlets reward (Drixiv Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-greaves",
+        "label": "Trooper Scale Armor: Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Master Xydoz (give him Iron Bound Tome and 2 Star Rubies), then trade it with a Banded Leggings to Drixiv Arcut at The Overthere for the Trooper Scale Greaves.",
+        "steps": [
+          "Earn a recommendation from Master Xydoz (give him Iron Bound Tome and 2 Star Rubies)",
+          "Turn in the recommendation and a Banded Leggings to Drixiv Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-greaves",
+        "label": "Trooper Scale Greaves",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "str": 2,
+          "agi": 3
+        },
+        "resists": {
+          "fire": 2,
+          "cold": 2
+        },
+        "weight": 5,
+        "source": "Trooper Scale Armor: Greaves reward (Drixiv Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-breastplate",
+        "label": "Trooper Scale Armor: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Grik the Exile (give him Straeven's Head and 3 Rubies, after triggering Straeven's appearance via Vekis and Daelione's Implant), then trade it with a Banded Mail to Xlixinar Arcut at The Overthere for the Trooper Scale Breastplate.",
+        "steps": [
+          "Earn a recommendation from Grik the Exile (give him Straeven's Head and 3 Rubies, after triggering Straeven's appearance via Vekis and Daelione's Implant)",
+          "Turn in the recommendation and a Banded Mail to Xlixinar Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-breastplate",
+        "label": "Trooper Scale Breastplate",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 20,
+        "stats": {
+          "sta": 5
+        },
+        "hp": 25,
+        "resists": {
+          "magic": 5
+        },
+        "weight": 7,
+        "source": "Trooper Scale Armor: Breastplate reward (Xlixinar Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-helm",
+        "label": "Trooper Scale Armor: Helm",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Master Glox (give him a tiny collar and 2 Star Rubies), then trade it with a Banded Helm to Xlixinar Arcut at The Overthere for the Trooper Scale Helm.",
+        "steps": [
+          "Earn a recommendation from Master Glox (give him a tiny collar and 2 Star Rubies)",
+          "Turn in the recommendation and a Banded Helm to Xlixinar Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-helm",
+        "label": "Trooper Scale Helm",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "str": 5,
+          "wis": 5
+        },
+        "resists": {
+          "magic": 2
+        },
+        "weight": 3.5,
+        "source": "Trooper Scale Armor: Helm reward (Xlixinar Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-pauldron",
+        "label": "Trooper Scale Armor: Pauldron",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Prime Hierophant Vek (give him Froglok Goo and 2 Fire Emeralds), then trade it with a Banded Mantle to Xlixinar Arcut at The Overthere for the Trooper Scale Pauldron.",
+        "steps": [
+          "Earn a recommendation from Prime Hierophant Vek (give him Froglok Goo and 2 Fire Emeralds)",
+          "Turn in the recommendation and a Banded Mantle to Xlixinar Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-pauldron",
+        "label": "Trooper Scale Pauldron",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Shoulders"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 10,
+        "stats": {
+          "str": 2
+        },
+        "hp": 20,
+        "resists": {
+          "magic": 2
+        },
+        "weight": 3,
+        "source": "Trooper Scale Armor: Pauldron reward (Xlixinar Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trooper-scale-armor-vambraces",
+        "label": "Trooper Scale Armor: Vambraces",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 20,
+        "description": "Earn a recommendation from Prime Hierophant Vek (give him a Diseased Tongue, Sapphire, Opal, and Hierophant's Knife), then trade it with a Banded Sleeves to Xlixinar Arcut at The Overthere for the Trooper Scale Vambraces.",
+        "steps": [
+          "Earn a recommendation from Prime Hierophant Vek (give him a Diseased Tongue, Sapphire, Opal, and Hierophant's Knife)",
+          "Turn in the recommendation and a Banded Sleeves to Xlixinar Arcut"
+        ],
+        "wiki_title": "Trooper Scale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trooper-scale-vambraces",
+        "label": "Trooper Scale Vambraces",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 11,
+        "stats": {
+          "str": 2,
+          "dex": 2
+        },
+        "resists": {
+          "disease": 2,
+          "poison": 2
+        },
+        "weight": 3,
+        "source": "Trooper Scale Armor: Vambraces reward (Xlixinar Arcut, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trueshot-longbow-quest",
+        "label": "Trueshot Longbow Quest",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 8,
+        "description": "Maesyn Trueshot in Kelethin sends players to trade Tumpy Tonics to Trantor Everhot (North Kaladim) for Dwarven Wire, a Small Lantern to Jyle Windshot (West Freeport) for Treant Wood, Spiderling Silk from spiderlings, and Micro Servos from Rogue Clockworks (Steamfont Mountains); the gathered materials combine into a Material Pack, returned for a Pack of Materials, then fletched into the Trueshot Longbow.",
+        "steps": [
+          "Trade Tumpy Tonics to Trantor Everhot in North Kaladim for Dwarven Wire (repeat for a second wire)",
+          "Buy a Small Lantern and trade it to Jyle Windshot in West Freeport for Treant Wood",
+          "Collect Spiderling Silk from spiderlings",
+          "Collect Micro Servos from Rogue Clockworks in Steamfont Mountains",
+          "Combine the Dwarven Wire, Wooden Shards, Spiderling Silk, and Micro Servo in a Material Pack",
+          "Return the Pack of Materials to Maesyn Trueshot",
+          "Use a Fletching Kit to combine Treant Bow Staff, Micro Servo, Dwarven Wire, and Planing Tool"
+        ],
+        "wiki_title": "Trueshot Longbow Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:trueshot-longbow",
+        "label": "Trueshot Longbow",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "race": [
+          "human",
+          "wood elf",
+          "half elf",
+          "halfling"
+        ],
+        "skill": "Archery",
+        "damage": 20,
+        "delay": 45,
+        "lore": true,
+        "weight": 3,
+        "size": "Large",
+        "source": "Trueshot Longbow Quest reward (Maesyn Trueshot, Greater Faydark)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trumpy-irontoe",
+        "label": "Trumpy Irontoe",
+        "type": "quest",
+        "minLevel": 10,
+        "description": "Byzar Bloodforge in South Kaladim, at Amiable or better faction, sends players to South Qeynos to find Trumpy Irontoe at the Fish's Ale, provoke him with mention of Sragg, defeat him, and return his head for the Bloodforge Hammer.",
+        "steps": [
+          "Reach at least Amiable faction with Byzar Bloodforge",
+          "Travel to the Fish's Ale in South Qeynos and speak to Trumpy Irontoe about Sragg",
+          "Defeat Trumpy Irontoe",
+          "Return his head to Byzar Bloodforge in South Kaladim"
+        ],
+        "wiki_title": "Trumpy Irontoe"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:citizens-of-qeynos",
+        "label": "Citizens of Qeynos",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodforge-hammer",
+        "label": "Bloodforge Hammer",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "monk",
+          "shaman",
+          "beastlord",
+          "berserker"
+        ],
+        "skill": "2H Blunt",
+        "damage": 13,
+        "delay": 50,
+        "resists": {
+          "magic": 10
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 10,
+        "size": "Large",
+        "source": "Trumpy Irontoe reward (Byzar Bloodforge, South Kaladim)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:kurne-rextula",
+        "label": "Kurne Rextula",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:trumpys-head",
+        "label": "Trumpy's Head",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Kurne Rextula in Qeynos Aqueducts sends players to defeat Trumpy Irontoe (Fish's Ale, South Qeynos) and deliver his head to Lord Grimrot in Southern Karana for the resulting skull, coin, and an occasional nice item.",
+        "steps": [
+          "Defeat Trumpy Irontoe at the Fish's Ale in South Qeynos and loot his head",
+          "Deliver the head to Lord Grimrot in Southern Karana for a skull",
+          "Return the skull to Kurne Rextula in Qeynos Aqueducts"
+        ],
+        "wiki_title": "Trumpy's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:trantor-everhot",
+        "label": "Trantor Everhot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tumpy-tonics",
+        "label": "Tumpy Tonics",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Trantor Everhot in North Kaladim needs 2 Tumpy Tonics -- each made by trading a Kiola Nut (bought from Cleonae Kalen) and a Water Flask to Tumpy Irontoe -- for a piece of Dwarven Wire.",
+        "steps": [
+          "Buy a Kiola Nut from Cleonae Kalen",
+          "Trade the Kiola Nut and a Water Flask to Tumpy Irontoe for a Tumpy Tonic",
+          "Repeat to obtain 2 unstacked Tumpy Tonics",
+          "Hand both tonics to Trantor Everhot in North Kaladim"
+        ],
+        "wiki_title": "Tumpy Tonics"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dwarven-wire",
+        "label": "Dwarven Wire",
+        "type": "item",
+        "noTrade": true,
+        "weight": 1,
+        "size": "Tiny",
+        "source": "Tumpy Tonics reward (Trantor Everhot, North Kaladim)"
+      }
     }
   ],
   "edges": [
@@ -190930,6 +192422,1998 @@
         "id": "e-rewards-13421",
         "source": "quest:the-waylaid-courier",
         "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13422",
+        "source": "npc:neriak-3rd-gate:loveal-snez",
+        "target": "quest:thex-mallet-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13423",
+        "source": "quest:thex-mallet-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13424",
+        "source": "quest:thex-mallet-quest",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13425",
+        "source": "quest:thex-mallet-quest",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13426",
+        "source": "quest:thex-mallet-quest",
+        "target": "zone:befallen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13427",
+        "source": "quest:thex-mallet-quest",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13428",
+        "source": "quest:thex-mallet-quest",
+        "target": "faction:queen-cristanos-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13429",
+        "source": "quest:thex-mallet-quest",
+        "target": "item:reaper-of-the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13430",
+        "source": "npc:rathe-mountains:tibrinn-ember",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13431",
+        "source": "npc:rathe-mountains:tibrinn-ember",
+        "target": "quest:tibrinns-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13432",
+        "source": "quest:tibrinns-quest",
+        "target": "zone:rathe-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13433",
+        "source": "quest:tibrinns-quest",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13434",
+        "source": "quest:tibrinns-quest",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13435",
+        "source": "quest:tibrinns-quest",
+        "target": "item:sap-sheen-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13436",
+        "source": "npc:ak-anon:kozyn-gigglephizz",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13437",
+        "source": "npc:ak-anon:kozyn-gigglephizz",
+        "target": "quest:tinmizers-fabulous-compactor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13438",
+        "source": "quest:tinmizers-fabulous-compactor-quest",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13439",
+        "source": "quest:tinmizers-fabulous-compactor-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13440",
+        "source": "quest:tinmizers-fabulous-compactor-quest",
+        "target": "item:lapis-lazuli",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13441",
+        "source": "npc:kael-drakkal:yetarr",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13442",
+        "source": "npc:kael-drakkal:yetarr",
+        "target": "quest:tiny-savages",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13443",
+        "source": "quest:tiny-savages",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13444",
+        "source": "quest:tiny-savages",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13445",
+        "source": "quest:tiny-savages",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13446",
+        "source": "quest:tiny-savages",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13447",
+        "source": "quest:tiny-savages",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13448",
+        "source": "quest:tiny-savages",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13449",
+        "source": "quest:tiny-savages",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13450",
+        "source": "quest:tiny-savages",
+        "target": "item:coldain-skin-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13451",
+        "source": "quest:tiny-savages",
+        "target": "item:coldain-skin-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13452",
+        "source": "npc:ak-anon:narron-jenork",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13453",
+        "source": "npc:ak-anon:narron-jenork",
+        "target": "quest:tiny-skeletons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13454",
+        "source": "quest:tiny-skeletons",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13455",
+        "source": "quest:tiny-skeletons",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13456",
+        "source": "quest:tiny-skeletons",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13457",
+        "source": "quest:tiny-skeletons",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13458",
+        "source": "quest:tiny-skeletons",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13459",
+        "source": "quest:tiny-skeletons",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13460",
+        "source": "quest:tiny-skeletons",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13461",
+        "source": "quest:tiny-skeletons",
+        "target": "item:watchman-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13462",
+        "source": "npc:temple-of-solusek-ro:vilissia",
+        "target": "quest:tishans-kilt-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13463",
+        "source": "quest:tishans-kilt-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13464",
+        "source": "quest:tishans-kilt-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13465",
+        "source": "quest:tishans-kilt-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13466",
+        "source": "quest:tishans-kilt-quest",
+        "target": "zone:upper-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13467",
+        "source": "quest:tishans-kilt-quest",
+        "target": "item:tishans-kilt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13468",
+        "source": "npc:paineel:sejako-mujan",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13469",
+        "source": "npc:paineel:sejako-mujan",
+        "target": "quest:titan-samples-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13470",
+        "source": "quest:titan-samples-evil",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13471",
+        "source": "quest:titan-samples-evil",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13472",
+        "source": "quest:titan-samples-evil",
+        "target": "item:staff-of-the-moribund-spirits",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13473",
+        "source": "npc:erudin:akbaq-salid",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13474",
+        "source": "npc:erudin:akbaq-salid",
+        "target": "quest:titan-samples-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13475",
+        "source": "quest:titan-samples-good",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13476",
+        "source": "quest:titan-samples-good",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13477",
+        "source": "quest:titan-samples-good",
+        "target": "faction:crimson-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13478",
+        "source": "quest:titan-samples-good",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13479",
+        "source": "quest:titan-samples-good",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13480",
+        "source": "quest:titan-samples-good",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13481",
+        "source": "quest:titan-samples-good",
+        "target": "item:astral-cloak-of-the-titans",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13482",
+        "source": "quest:titan-samples-good",
+        "target": "item:astral-leggings-of-the-titans",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13483",
+        "source": "quest:titan-samples-good",
+        "target": "item:scaled-robe-of-the-elder-serpent",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13484",
+        "source": "npc:ak-anon:tergon-brenclog",
+        "target": "quest:tokos-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13485",
+        "source": "quest:tokos-head",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13486",
+        "source": "quest:tokos-head",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13487",
+        "source": "quest:tokos-head",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13488",
+        "source": "quest:tokos-head",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13489",
+        "source": "quest:tokos-head",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13490",
+        "source": "quest:tokos-head",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13491",
+        "source": "quest:tokos-head",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13492",
+        "source": "quest:tokos-head",
+        "target": "faction:the-dead",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13493",
+        "source": "quest:tokos-head",
+        "target": "item:elemental-grimoire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13494",
+        "source": "npc:ocean-of-tears:oracle-of-karnon",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13495",
+        "source": "npc:ocean-of-tears:oracle-of-karnon",
+        "target": "quest:tome-of-ages",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13496",
+        "source": "quest:tome-of-ages",
+        "target": "zone:ocean-of-tears",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13497",
+        "source": "quest:tome-of-ages",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13498",
+        "source": "quest:tome-of-ages",
+        "target": "faction:oracle-of-karnon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13499",
+        "source": "quest:tome-of-ages",
+        "target": "faction:oracle-of-marud",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13500",
+        "source": "quest:tome-of-ages",
+        "target": "item:miraguls-phylactery",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13501",
+        "source": "npc:north-qeynos:tomer-instogle",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13502",
+        "source": "npc:north-qeynos:tomer-instogle",
+        "target": "quest:tomers-rescue",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13503",
+        "source": "quest:tomers-rescue",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13504",
+        "source": "quest:tomers-rescue",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13505",
+        "source": "quest:tomers-rescue",
+        "target": "faction:silent-fist-clan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13506",
+        "source": "quest:tomers-rescue",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13507",
+        "source": "quest:tomers-rescue",
+        "target": "faction:ashen-order",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13508",
+        "source": "npc:east-freeport:groflah-steadirt",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13509",
+        "source": "npc:east-freeport:groflah-steadirt",
+        "target": "quest:tonics-for-groflah",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13510",
+        "source": "quest:tonics-for-groflah",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13511",
+        "source": "quest:tonics-for-groflah",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13512",
+        "source": "quest:tonics-for-groflah",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13513",
+        "source": "quest:tonics-for-groflah",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13514",
+        "source": "quest:tonics-for-groflah",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13515",
+        "source": "quest:tonics-for-groflah",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13516",
+        "source": "npc:temple-of-solusek-ro:vira",
+        "target": "quest:torch-of-alna-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13517",
+        "source": "quest:torch-of-alna-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13518",
+        "source": "quest:torch-of-alna-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13519",
+        "source": "quest:torch-of-alna-quest",
+        "target": "zone:lavastorm-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13520",
+        "source": "quest:torch-of-alna-quest",
+        "target": "zone:solusek-s-eye",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13521",
+        "source": "quest:torch-of-alna-quest",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13522",
+        "source": "quest:torch-of-alna-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13523",
+        "source": "quest:torch-of-alna-quest",
+        "target": "faction:shadowed-men",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13524",
+        "source": "quest:torch-of-alna-quest",
+        "target": "item:torch-of-alna",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13525",
+        "source": "npc:skyshrine:lord-yelinak",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13526",
+        "source": "npc:skyshrine:lord-yelinak",
+        "target": "quest:tormaxs-head-dragons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13527",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13528",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13529",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13530",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13531",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13532",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13533",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "item:clawed-griffin-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13534",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "item:white-dragonscale-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13535",
+        "source": "quest:tormaxs-head-dragons",
+        "target": "item:white-dragon-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13536",
+        "source": "npc:icewell-keep:dain-frostreaver-iv",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13537",
+        "source": "npc:icewell-keep:dain-frostreaver-iv",
+        "target": "quest:tormaxs-head-dwarves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13538",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "zone:icewell-keep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13539",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13540",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13541",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "faction:dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13542",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13543",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13544",
+        "source": "quest:tormaxs-head-dwarves",
+        "target": "item:tri-plated-golden-hackle-hammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13545",
+        "source": "npc:west-freeport:toxdil",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13546",
+        "source": "npc:west-freeport:toxdil",
+        "target": "quest:toxdils-poison",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13547",
+        "source": "quest:toxdils-poison",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13548",
+        "source": "quest:toxdils-poison",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13549",
+        "source": "quest:toxdils-poison",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13550",
+        "source": "npc:neriak-commons:vexia-dynth",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13551",
+        "source": "npc:neriak-commons:vexia-dynth",
+        "target": "quest:track-stalk-hunt",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13552",
+        "source": "quest:track-stalk-hunt",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13553",
+        "source": "quest:track-stalk-hunt",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13554",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:dread-slayers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13555",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13556",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:dreadguard-outer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13557",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:dreadguard-inner",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13558",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13559",
+        "source": "quest:track-stalk-hunt",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13560",
+        "source": "npc:halas:waltor-felligan",
+        "target": "quest:tribunal-healing",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13561",
+        "source": "quest:tribunal-healing",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13562",
+        "source": "quest:tribunal-healing",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13563",
+        "source": "npc:halas:jinkus-felligan",
+        "target": "quest:tribunal-initiate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13564",
+        "source": "quest:tribunal-initiate",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13565",
+        "source": "quest:tribunal-initiate",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13566",
+        "source": "quest:tribunal-initiate",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13567",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13568",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13569",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13570",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13571",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13572",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13573",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:ebon-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13574",
+        "source": "quest:tribunal-initiate",
+        "target": "faction:rogues-of-the-white-rose",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13575",
+        "source": "quest:tribunal-initiate",
+        "target": "item:initiate-symbol-of-the-tribunal",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13576",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13577",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13578",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13579",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13580",
+        "source": "quest_group:trooper-scale-armor",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13581",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "quest:trooper-scale-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13582",
+        "source": "quest:trooper-scale-armor-boots",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13583",
+        "source": "quest:trooper-scale-armor-boots",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13584",
+        "source": "quest:trooper-scale-armor-boots",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13585",
+        "source": "quest:trooper-scale-armor-boots",
+        "target": "item:trooper-scale-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13586",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "quest:trooper-scale-armor-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13587",
+        "source": "quest:trooper-scale-armor-bracers",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13588",
+        "source": "quest:trooper-scale-armor-bracers",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13589",
+        "source": "quest:trooper-scale-armor-bracers",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13590",
+        "source": "quest:trooper-scale-armor-bracers",
+        "target": "item:trooper-scale-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13591",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "quest:trooper-scale-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13592",
+        "source": "quest:trooper-scale-armor-gauntlets",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13593",
+        "source": "quest:trooper-scale-armor-gauntlets",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13594",
+        "source": "quest:trooper-scale-armor-gauntlets",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13595",
+        "source": "quest:trooper-scale-armor-gauntlets",
+        "target": "item:trooper-scale-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13596",
+        "source": "npc:the-overthere:drixiv-arcut",
+        "target": "quest:trooper-scale-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13597",
+        "source": "quest:trooper-scale-armor-greaves",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13598",
+        "source": "quest:trooper-scale-armor-greaves",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13599",
+        "source": "quest:trooper-scale-armor-greaves",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13600",
+        "source": "quest:trooper-scale-armor-greaves",
+        "target": "item:trooper-scale-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13601",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "quest:trooper-scale-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13602",
+        "source": "quest:trooper-scale-armor-breastplate",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13603",
+        "source": "quest:trooper-scale-armor-breastplate",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13604",
+        "source": "quest:trooper-scale-armor-breastplate",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13605",
+        "source": "quest:trooper-scale-armor-breastplate",
+        "target": "item:trooper-scale-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13606",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "quest:trooper-scale-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13607",
+        "source": "quest:trooper-scale-armor-helm",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13608",
+        "source": "quest:trooper-scale-armor-helm",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13609",
+        "source": "quest:trooper-scale-armor-helm",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13610",
+        "source": "quest:trooper-scale-armor-helm",
+        "target": "item:trooper-scale-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13611",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "quest:trooper-scale-armor-pauldron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13612",
+        "source": "quest:trooper-scale-armor-pauldron",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13613",
+        "source": "quest:trooper-scale-armor-pauldron",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13614",
+        "source": "quest:trooper-scale-armor-pauldron",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13615",
+        "source": "quest:trooper-scale-armor-pauldron",
+        "target": "item:trooper-scale-pauldron",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13616",
+        "source": "npc:the-overthere:xlixinar-arcut",
+        "target": "quest:trooper-scale-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13617",
+        "source": "quest:trooper-scale-armor-vambraces",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13618",
+        "source": "quest:trooper-scale-armor-vambraces",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13619",
+        "source": "quest:trooper-scale-armor-vambraces",
+        "target": "quest_group:trooper-scale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13620",
+        "source": "quest:trooper-scale-armor-vambraces",
+        "target": "item:trooper-scale-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13621",
+        "source": "npc:greater-faydark:maesyn-trueshot",
+        "target": "quest:trueshot-longbow-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13622",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13623",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13624",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13625",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13626",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13627",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13628",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13629",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13630",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "faction:soldiers-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13631",
+        "source": "quest:trueshot-longbow-quest",
+        "target": "item:trueshot-longbow",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13632",
+        "source": "npc:south-kaladim:byzar-bloodforge",
+        "target": "quest:trumpy-irontoe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13633",
+        "source": "quest:trumpy-irontoe",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13634",
+        "source": "quest:trumpy-irontoe",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13635",
+        "source": "quest:trumpy-irontoe",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13636",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:citizens-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13637",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13638",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13639",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13640",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13641",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13642",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13643",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13644",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13645",
+        "source": "quest:trumpy-irontoe",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13646",
+        "source": "quest:trumpy-irontoe",
+        "target": "item:bloodforge-hammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13647",
+        "source": "npc:qeynos-aqueducts:kurne-rextula",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13648",
+        "source": "npc:qeynos-aqueducts:kurne-rextula",
+        "target": "quest:trumpys-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13649",
+        "source": "quest:trumpys-head",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13650",
+        "source": "quest:trumpys-head",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13651",
+        "source": "quest:trumpys-head",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13652",
+        "source": "quest:trumpys-head",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13653",
+        "source": "quest:trumpys-head",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13654",
+        "source": "quest:trumpys-head",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13655",
+        "source": "quest:trumpys-head",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13656",
+        "source": "quest:trumpys-head",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13657",
+        "source": "quest:trumpys-head",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13658",
+        "source": "quest:trumpys-head",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13659",
+        "source": "quest:trumpys-head",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13660",
+        "source": "quest:trumpys-head",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13661",
+        "source": "npc:north-kaladim:trantor-everhot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13662",
+        "source": "npc:north-kaladim:trantor-everhot",
+        "target": "quest:tumpy-tonics",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13663",
+        "source": "quest:tumpy-tonics",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13664",
+        "source": "quest:tumpy-tonics",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13665",
+        "source": "quest:tumpy-tonics",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13666",
+        "source": "quest:tumpy-tonics",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13667",
+        "source": "quest:tumpy-tonics",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13668",
+        "source": "quest:tumpy-tonics",
+        "target": "faction:merchants-of-kaladim",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13669",
+        "source": "quest:tumpy-tonics",
+        "target": "faction:craknek-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13670",
+        "source": "quest:tumpy-tonics",
+        "target": "item:dwarven-wire",
         "type": "rewards"
       }
     }
