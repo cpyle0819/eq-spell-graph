@@ -80782,6 +80782,1245 @@
         "effect": "Lure of Frost (Must Equip, 12.0 sec cast)",
         "source": "The Gift Box occasional random reward (Peachy D`Vicci, Plane of Mischief)"
       }
+    },
+    {
+      "data": {
+        "id": "zone:splitpaw-lair",
+        "label": "Splitpaw Lair",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "Splitpaw Lair (formerly Infected Paw) used to be the home of the Splitpaw clan of gnolls. Now their tribal home has been overrun by another more powerful clan of gnolls.",
+        "wiki_title": "Splitpaw Lair"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-hills:marton-sayer",
+        "label": "Marton Sayer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-gnoll-slayer",
+        "label": "The Gnoll Slayer",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "warrior"
+        ],
+        "minLevel": 30,
+        "description": "Marton Sayer in Qeynos Hills sends players to kill Lord Elgnub in Blackburrow and retrieve Baby Joseph Sayer, rewarding an intermediate Gnoll Slayer weapon; a Gnoll's Eye and Journal of Greater Enchantment from Splitpaw Lair mobs (a one-eyed gnoll and a Lteth Val Scribe), turned in with the intermediate weapon, upgrade it into the final Gnoll Slayer.",
+        "steps": [
+          "Kill Lord Elgnub in Blackburrow and retrieve Baby Joseph Sayer",
+          "Return the baby to Marton Sayer for an intermediate Gnoll Slayer",
+          "Kill a one-eyed gnoll in Splitpaw Lair for a Gnoll's Eye",
+          "Kill a Lteth Val Scribe in Splitpaw Lair for a Journal of Greater Enchantment",
+          "Return both items plus the intermediate Gnoll Slayer to Marton Sayer for the final Gnoll Slayer"
+        ],
+        "wiki_title": "The Gnoll Slayer"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gnoll-slayer",
+        "label": "Gnoll Slayer",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "skill": "1H Slashing",
+        "damage": 15,
+        "delay": 40,
+        "resists": {
+          "disease": 25
+        },
+        "charges": 2,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 5,
+        "size": "Medium",
+        "effect": "Companion Spirit (Any Slot/Can Equip, instant cast) at Level 34",
+        "source": "The Gnoll Slayer final reward (Marton Sayer, Qeynos Hills); bane damage 10 vs gnolls"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-gnome-take",
+        "label": "The Gnome Take",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Jeet in North Kaladim hands over a key; giving it to the correct clockwork scrubber in Ak'Anon (identified by hailing and saying \"628\") yields the Gnome Take, returned to Jeet for an equal chance of one of 20 named jewelry/gem items.",
+        "steps": [
+          "Receive a key from Jeet in North Kaladim",
+          "Travel to Ak'Anon and hail clockwork scrubbers, saying \"628\" to find the correct one",
+          "Give the key to that scrubber to receive the Gnome Take",
+          "Return the Gnome Take to Jeet"
+        ],
+        "wiki_title": "The Gnome Take"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bead-necklace",
+        "label": "Bead Necklace",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bloodstone",
+        "label": "Bloodstone",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:engagement-ring",
+        "label": "Engagement Ring",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fire-beetle-eye",
+        "label": "Fire Beetle Eye",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:jasper",
+        "label": "Jasper",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:moonstone",
+        "label": "Moonstone",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:royal-jelly",
+        "label": "Royal Jelly",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silver-stud",
+        "label": "Silver Stud",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silver-ring",
+        "label": "Silver Ring",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:small-piece-of-ore",
+        "label": "Small Piece of Ore",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "The Gnome Take random reward (Jeet, North Kaladim / clockwork scrubber 628, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:ami",
+        "label": "Ami",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-grammar-manual",
+        "label": "The Grammar Manual",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard"
+        ],
+        "minLevel": 35,
+        "description": "Ami in Iceclad Ocean starts a chain requiring a Strong Wooden Branch (holgreshes) and Strong Raptor Gut (tigeraptors), given to a Snowfang fisher to spawn an enraged walrus; defeating it and hailing the agitated snowfang with \"I want the magic thing\" yields Chapter P, traded to Ami for the Pirate Grammar Manual, then given to Nilham the Chef for the Ice Forged Shackles.",
+        "steps": [
+          "Gather a Strong Wooden Branch (holgreshes) and Strong Raptor Gut (tigeraptors)",
+          "Give both to a Snowfang fisher to spawn an enraged walrus",
+          "Defeat the walrus",
+          "Hail the agitated snowfang and say \"I want the magic thing\" for Chapter P",
+          "Give Chapter P to Ami for the Pirate Grammar Manual",
+          "Give the manual to Nilham the Chef for the Ice Forged Shackles"
+        ],
+        "wiki_title": "The Grammar Manual"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ice-forged-shackles",
+        "label": "Ice Forged Shackles",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "race": [
+          "human",
+          "dark elf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "wood elf"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "agi": 5
+        },
+        "hp": 30,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Small",
+        "effect": "Velium Shards (Must Equip, 3.0 sec cast) at Level 35",
+        "source": "The Grammar Manual reward (Ami / Nilham the Chef, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:everfrost-peaks:watcher-aenwen",
+        "label": "Watcher Aenwen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-icestar-dims",
+        "label": "The Icestar Dims",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Watcher Aenwen in Everfrost Peaks collects three resonance crystals -- a Permafrost Resonance Crystal (King Thex'Ka IV spawn, Permafrost), a Thurgadin Resonance Crystal (a statue near the Icewell Keep entrance), and a Dreadlands Resonance Crystal (Yeti Caves Crossroads, Dreadlands) -- for Chapter I, The Shatter Sky, and a Holiday Gift. No stat infobox is documented for either reward.",
+        "steps": [
+          "Obtain the Permafrost Resonance Crystal from the King Thex'Ka IV spawn in Permafrost",
+          "Obtain the Thurgadin Resonance Crystal from the statue near the Icewell Keep entrance",
+          "Obtain the Dreadlands Resonance Crystal at Yeti Caves Crossroads in Dreadlands",
+          "Deliver all three crystals to Watcher Aenwen in Everfrost Peaks"
+        ],
+        "wiki_title": "The Icestar Dims"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:eastern-wastes:isolde-winterveil",
+        "label": "Isolde Winterveil",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-icestar-remembers",
+        "label": "The Icestar Remembers",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Isolde Winterveil in Eastern Wastes gives a Frosted Memory Shard, delivered to Guard Lammel in Qeynos Hills for a Frosted Broach; returning it to Isolde grants Chapter V, Ashes in the Margins, plus a Holiday Gift on first completion only (removed from repeats due to abuse). No stat infobox is documented for either reward.",
+        "steps": [
+          "Receive a Frosted Memory Shard from Isolde Winterveil",
+          "Give the shard to Guard Lammel in Qeynos Hills",
+          "Receive a Frosted Broach from Guard Lammel",
+          "Return the broach to Isolde Winterveil in Eastern Wastes"
+        ],
+        "wiki_title": "The Icestar Remembers"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin:weltria-ostriss",
+        "label": "Weltria Ostriss",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-lorekeepers-scrolls",
+        "label": "The Lorekeeper's Scrolls",
+        "type": "quest",
+        "minLevel": 22,
+        "description": "Weltria Ostriss on the top floor of the Erudin City Library collects seven unique Dusty Kobold Scrolls from Lorekeeper Roggik in The Warrens, combined in a Large Scroll Case into the Kobold History Collection, for 50 platinum plus faction.",
+        "steps": [
+          "Collect seven unique Dusty Kobold Scrolls from Lorekeeper Roggik in The Warrens",
+          "Combine them in the Large Scroll Case for the Kobold History Collection",
+          "Hand the collection to Weltria Ostriss in Erudin"
+        ],
+        "wiki_title": "The Lorekeeper's Scrolls"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:captain-nalot",
+        "label": "Captain Nalot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-lost-map",
+        "label": "The Lost Map",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Ami in Iceclad Ocean sends players after four map pieces -- from a dire wolf stalker, Stormfeather, Bloodmaw (via a Yakman Parts side step), and Lodizal -- combined in a Map Binding into Pieces of the Iceclad Map; given to a lost pirate for a Completed Map of Iceclad, handed to Captain Nalot for the Eyepatch of Plunder. A rabid snow cougar may spawn during the final exchange.",
+        "steps": [
+          "Collect four map pieces: dire wolf stalker, Stormfeather, Bloodmaw (via Yakman Parts), and Lodizal",
+          "Combine the pieces in a Map Binding for Pieces of the Iceclad Map",
+          "Give the combined map to the lost pirate for a Completed Map of Iceclad",
+          "Hand the Completed Map to Captain Nalot"
+        ],
+        "wiki_title": "The Lost Map"
+      }
+    },
+    {
+      "data": {
+        "id": "item:eyepatch-of-plunder",
+        "label": "Eyepatch of Plunder",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 10,
+          "dex": 10
+        },
+        "hp": 50,
+        "resists": {
+          "fire": 6,
+          "disease": 6,
+          "cold": 6,
+          "magic": 6,
+          "poison": 6
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Small",
+        "effect": "Captain Nalot's Quickening (Must Equip, 3.5 sec cast)",
+        "source": "The Lost Map reward (Captain Nalot, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:noclin-saah",
+        "label": "Noclin Saah",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-lost-pet",
+        "label": "The Lost Pet",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "description": "Noclin Saah in Paineel sends players to slay his own pet and return with the Rotting Femur, for Noclin's Femur. Requires Dubious or better faction -- his own page warns \"MUST BE ABOVE DUBIOUS OR HE WILL EAT THE TURN IN!\"",
+        "steps": [
+          "Slay Noclin's Pet",
+          "Loot the Rotting Femur",
+          "Return it to Noclin Saah in Paineel"
+        ],
+        "wiki_title": "The Lost Pet"
+      }
+    },
+    {
+      "data": {
+        "id": "item:noclins-femur",
+        "label": "Noclin's Femur",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "race": [
+          "erudite"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 24,
+        "mana": 10,
+        "stats": {
+          "cha": -5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Sicken (Combat, instant cast) at Level 10",
+        "source": "The Lost Pet reward (Noclin Saah, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-growth:a-mosscovered-treant",
+        "label": "a mosscovered treant",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-lost-tome",
+        "label": "The Lost Tome",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 55,
+        "description": "A mosscovered treant in the Plane of Growth trades four tomes -- Tome of Elemental Cognizance, Contemplation, Thought, and Understanding, dropped by named wurms (Jaelk, Lararith, Oglard, Ralgyn, Jualicn) in Skyshrine -- for the Chord of Vines.",
+        "steps": [
+          "Collect Tome of Elemental Cognizance, Contemplation, Thought, and Understanding from named wurms in Skyshrine",
+          "Turn in all four tomes to the mosscovered treant in the Plane of Growth"
+        ],
+        "wiki_title": "The Lost Tome"
+      }
+    },
+    {
+      "data": {
+        "id": "item:chord-of-vines",
+        "label": "Chord of Vines",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "race": [
+          "high elf"
+        ],
+        "deity": [
+          "Tunare"
+        ],
+        "ac": 8,
+        "stats": {
+          "sta": 5,
+          "int": 10
+        },
+        "mana": 40,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Lost Tome reward (a mosscovered treant, Plane of Growth)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:tohsan-hallard",
+        "label": "Tohsan Hallard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-lottery-ticket",
+        "label": "The Lottery Ticket",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Tohsan Hallard in East Freeport trades four Orc Pawn Picks at a time for coin, experience, and one of six lottery tickets (#14001, 14350, 15600, 15601, 15602, or 16568); some tickets earn extra rewards from Treasurer Lynn in High Keep, including experience and gold for #15600 and a Highkeep Royal Suite key for #16568.",
+        "steps": [
+          "Gather four Orc Pawn Picks",
+          "Turn them in to Tohsan Hallard in East Freeport for a lottery ticket",
+          "Redeem certain tickets with Treasurer Lynn in High Keep"
+        ],
+        "wiki_title": "The Lottery Ticket"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:balix-misteyes",
+        "label": "Balix Misteyes",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-mighty-garou",
+        "label": "The Mighty Garou",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "shadow knight",
+          "druid",
+          "shaman"
+        ],
+        "minLevel": 35,
+        "description": "Balix Misteyes in Iceclad Ocean trades the Skin of the Garou (a named spawn, Garou) and Bloody Cougar Bone (a named cougar, Midnight, near the Tower of Frozen Shadow) for the Garou Bone Club. Cannot be multi-quested -- turning the items in separately gets them eaten.",
+        "steps": [
+          "Kill Garou for the Skin of the Garou",
+          "Kill Midnight, near the Tower of Frozen Shadow, for the Bloody Cougar Bone",
+          "Turn in both items simultaneously to Balix Misteyes"
+        ],
+        "wiki_title": "The Mighty Garou"
+      }
+    },
+    {
+      "data": {
+        "id": "item:garou-bone-club",
+        "label": "Garou Bone Club",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "cleric",
+          "shadow knight",
+          "druid",
+          "shaman"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 25,
+        "stats": {
+          "wis": 7,
+          "int": 7
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 4,
+        "size": "Medium",
+        "effect": "Curse of the Garou (Combat, instant cast) at Level 32",
+        "source": "The Mighty Garou reward (Balix Misteyes, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:keref-spiritspear",
+        "label": "Keref Spiritspear",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-mighty-snowfang-hero",
+        "label": "The Mighty Snowfang Hero",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman"
+        ],
+        "minLevel": 35,
+        "description": "Keref Spiritspear in Iceclad Ocean assembles a Runed Totem Staff (gnolls), Whale Bone (sharks, Cobalt Scar), and a Tinkered Rope (traded from Ritap for a Frost Giant Scout Beard) into a Rune Shafted Harpoon via Grizlin Bloodfang, delivered to Keref for the Icy Totem of Protection.",
+        "steps": [
+          "Obtain a Runed Totem Staff from gnolls",
+          "Obtain a Whale Bone from sharks in Cobalt Scar",
+          "Give a Frost Giant Scout Beard to Ritap for a Tinkered Rope",
+          "Give the staff, bone, and rope to Grizlin Bloodfang for a Rune Shafted Harpoon",
+          "Deliver the harpoon to Keref Spiritspear"
+        ],
+        "wiki_title": "The Mighty Snowfang Hero"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:snowfanggnolls",
+        "label": "SnowfangGnolls",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:pirates-of-iceclad",
+        "label": "Pirates of Iceclad",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icy-totem-of-protection",
+        "label": "Icy Totem of Protection",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman"
+        ],
+        "ac": 8,
+        "stats": {
+          "wis": 5
+        },
+        "hp": 20,
+        "resists": {
+          "cold": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Small",
+        "source": "The Mighty Snowfang Hero reward (Keref Spiritspear, Iceclad Ocean)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-mudtoes",
+        "label": "The Mudtoes",
+        "type": "quest",
+        "minLevel": 20,
+        "description": "Furtog Ogrebane in South Kaladim sends players to Glorin Binfurr at the Butcherblock docks, then to Ocean of Tears to defeat Boog Mudtoe and Goob Mudtoe, returning their heads to Furtog for the Ogre War Maul.",
+        "steps": [
+          "Speak with Furtog Ogrebane about the Mudtoes",
+          "Find Glorin Binfurr at the Butcherblock docks",
+          "Defeat Boog Mudtoe and Goob Mudtoe in Ocean of Tears",
+          "Return their heads to Furtog Ogrebane in South Kaladim"
+        ],
+        "wiki_title": "The Mudtoes"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-felwithe:tolkar-parlone",
+        "label": "Tolkar Parlone",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-mystic-cloak",
+        "label": "The Mystic Cloak",
+        "type": "quest",
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "minLevel": 30,
+        "description": "Tolkar Parlone in Northern Felwithe sends players to defeat the Priest of Najena in Najena for a Tarnished Bronze Key, given to the imprisoned Linara Parlone for a Sealed Letter, delivered back to Tolkar for a Faded Cloak; the cloak is given to Trilani Parlone at Erudin's Enchanter Guild for the Mystic Cloak.",
+        "steps": [
+          "Kill the Priest of Najena in Najena for a Tarnished Bronze Key",
+          "Give the key to Linara Parlone (imprisoned in Najena) for a Sealed Letter",
+          "Deliver the letter to Tolkar Parlone in Northern Felwithe for a Faded Cloak",
+          "Give the Faded Cloak to Trilani Parlone at Erudin's Enchanter Guild"
+        ],
+        "wiki_title": "The Mystic Cloak"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mystic-cloak",
+        "label": "Mystic Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "classes": [
+          "enchanter",
+          "magician",
+          "necromancer",
+          "wizard"
+        ],
+        "ac": 8,
+        "stats": {
+          "int": 5
+        },
+        "resists": {
+          "magic": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "charges": 10,
+        "effect": "Steelskin",
+        "source": "The Mystic Cloak reward (Tolkar Parlone / Trilani Parlone, Northern Felwithe / Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:an-undead-foreman",
+        "label": "an undead foreman",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-new-worker",
+        "label": "The New Worker",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "An undead foreman in The Overthere trades a purchased Jade gem for the Worker Sledgemallet. Requires Amiable or better faction with Venril Sathir. The wiki's own page notes the quest itself grants \"no experience, faction hits, or coin.\"",
+        "steps": [
+          "Reach Amiable or better faction with Venril Sathir",
+          "Purchase a Jade gem",
+          "Give the Jade to the undead foreman in The Overthere"
+        ],
+        "wiki_title": "The New Worker"
+      }
+    },
+    {
+      "data": {
+        "id": "item:worker-sledgemallet",
+        "label": "Worker Sledgemallet",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 6,
+        "delay": 50,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 3.2,
+        "size": "Giant",
+        "effect": "Overthere (Combat, instant cast) at Level 50",
+        "source": "The New Worker reward (an undead foreman, The Overthere)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:gerael-woodone",
+        "label": "Gerael Woodone",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-nitrates-and-the-assassin",
+        "label": "The Nitrates and the Assassin",
+        "type": "quest",
+        "minLevel": 10,
+        "description": "Gerael Woodone in Surefall Glade sends a Flask of Nitrates to Linaya Sowlin in Western Karana; the assassin Draze Slashyn spawns and drops A Tattered Cloth Note, relayed through Captain Tillin in South Qeynos to warn Gash Flockwalker, then a second assassin, Raffel Minnmorn in North Qeynos, drops a Black Wood Chip returned to Gerael for faction, coin, and low-level Druid spell scrolls. Requires Amiable or better faction.",
+        "steps": [
+          "Deliver a Flask of Nitrates to Linaya Sowlin in Western Karana",
+          "Slay the assassin Draze Slashyn and loot A Tattered Cloth Note",
+          "Return the note to Gerael Woodone",
+          "Give the note to Captain Tillin in South Qeynos",
+          "Slay the assassin Raffel Minnmorn in North Qeynos and loot a Black Wood Chip",
+          "Return the chip to Gerael Woodone"
+        ],
+        "wiki_title": "The Nitrates and the Assassin"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-orc-impaler",
+        "label": "The Orc Impaler",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Morin Shadowbane in Kithicor Forest sends players to recover a Shadowed Code Book from the Shadowman Leader and deliver it to Bryn Fynndel; Bryn's note leads to Glidara Myllar and a Glidara's Ring, then a ghoul boss drops a Ghoul Boss' Log Book -- both returned to Glidara, sealed, and relayed through Morin and back to Bryn for the Orc Impaler.",
+        "steps": [
+          "Recover the Shadowed Code Book from the Shadowman Leader",
+          "Deliver it to Bryn Fynndel for a note and Glidara's Ring",
+          "Kill the ghoul boss for the Ghoul Boss' Log Book",
+          "Return the ring and log book to Glidara Myllar",
+          "Deliver the sealed Ghoul Boss' Log Book to Morin Shadowbane",
+          "Return the Orders for Bryn to Bryn Fynndel for the Orc Impaler"
+        ],
+        "wiki_title": "The Orc Impaler"
+      }
+    },
+    {
+      "data": {
+        "id": "item:orc-impaler",
+        "label": "Orc Impaler",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "ranger"
+        ],
+        "skill": "Piercing",
+        "damage": 7,
+        "stats": {
+          "str": 3,
+          "wis": 4
+        },
+        "hp": 10,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Orc Impaler reward (Morin Shadowbane / Bryn Fynndel, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:ghil-starn",
+        "label": "Ghil Starn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-package",
+        "label": "The Package",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 3,
+        "description": "Ghil Starn in North Qeynos sends a package to Den Magason at the docks or Mermaid's Lure; Den's note back to Ghil comes after collecting Snake Scales, a High Quality Bear Skin, a High Quality Wolf Skin, and Bat Fur, and turning them in for the Brown Leather Gloves. Requires Amiable or better faction.",
+        "steps": [
+          "Deliver the package to Den Magason",
+          "Collect Snake Scales, High Quality Bear Skin, High Quality Wolf Skin, and Bat Fur",
+          "Turn in the items to Den Magason",
+          "Return Den's note to Ghil Starn in North Qeynos"
+        ],
+        "wiki_title": "The Package"
+      }
+    },
+    {
+      "data": {
+        "id": "item:brown-leather-gloves",
+        "label": "Brown Leather Gloves",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 1,
+        "stats": {
+          "dex": 2
+        },
+        "weight": 0.5,
+        "size": "Small",
+        "source": "The Package reward (Ghil Starn, North Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:danaria-hollin",
+        "label": "Danaria Hollin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:palatos-kynarn",
+        "label": "Palatos Kynarn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:lenka-stoutheart",
+        "label": "Lenka Stoutheart",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-painting",
+        "label": "The Painting",
+        "type": "quest",
+        "minLevel": 10,
+        "description": "Danaria Hollin, roaming the South Qeynos docks, sends players for Capt. Orlin's Spiced Ale (4 drinks, Nesin Tapper) and a Beacon Mount (Palatos Kynarn), plus a Greater Lightstone, Metal Disk, and Copper Band, combined in a forge into a Boat Beacon. Turning the Boat Beacon in to Palatos Kynarn in East Freeport grants experience/platinum and Craftkeepers/High Council of Erudin/High Guard of Erudin faction; turning it in instead to Lenka Stoutheart (found occasionally at the Grub 'n Grog Tavern, East Freeport docks) grants experience/platinum, the Portrait of King Ak'Anon, and Wolves of the North/Shamen of Justice/Merchants of Halas/Steel Warriors faction.",
+        "steps": [
+          "Obtain 4 drinks of Capt. Orlin's Spiced Ale from Nesin Tapper",
+          "Receive a Beacon Mount from Palatos Kynarn",
+          "Gather a Greater Lightstone, Metal Disk, and Copper Band",
+          "Combine all items in a forge for a Boat Beacon",
+          "Turn in the Boat Beacon to either Palatos Kynarn or Lenka Stoutheart"
+        ],
+        "wiki_title": "The Painting"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:crusader-zixo",
+        "label": "Crusader Zixo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-penance",
+        "label": "The Penance",
+        "type": "quest",
+        "classes": [
+          "monk",
+          "necromancer",
+          "shaman",
+          "shadow knight",
+          "warrior"
+        ],
+        "minLevel": 1,
+        "description": "Crusader Zixo in East Cabilis directs players to their own class guild master for a Ragged Book, read and given to the Toilmaster for the Rites of Exoneration, a Hammer of Exoneration, and a Penance Bag; the hammer's proc collects Bone Fragments, combined 8-at-a-time into Powdered Bone (x7), then combined with a Flask of Bloodwater into a Filled Penance Bag, turned in with the Rites of Exoneration to the player's class quest giver for a class-specific reward -- Drape of the Brood (Necromancer), Shackle of Dust (Monk), Pawn's Khukri (Shadow Knight), Iron Cudgel of the Petitioner (Shaman), or Partisan's Pike (Warrior).",
+        "steps": [
+          "Receive a Ragged Book from your class guild master",
+          "Give the book to the Toilmaster for the Rites of Exoneration, Hammer of Exoneration, and Penance Bag",
+          "Proc the hammer 56 times to collect Bone Fragments",
+          "Combine 8 Bone Fragments in the Grotesque Mortar and Pestle for Powdered Bone (x7)",
+          "Combine 7 Powdered Bones and a Flask of Bloodwater in the Penance Bag for a Filled Penance Bag",
+          "Hand the Filled Penance Bag and Rites of Exoneration to your class quest giver"
+        ],
+        "wiki_title": "The Penance"
+      }
+    },
+    {
+      "data": {
+        "id": "item:drape-of-the-brood",
+        "label": "Drape of the Brood",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "ac": 4,
+        "weight": 0.7,
+        "size": "Medium",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Penance Necromancer reward (Crusader Zixo, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shackle-of-dust",
+        "label": "Shackle of Dust",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "human",
+          "iksar"
+        ],
+        "ac": 2,
+        "weight": 0.8,
+        "size": "Small",
+        "lore": true,
+        "noTrade": true,
+        "source": "The Penance Monk reward (Crusader Zixo, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pawns-khukri",
+        "label": "Pawn's Khukri",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "dark elf",
+          "troll",
+          "ogre",
+          "gnome",
+          "iksar"
+        ],
+        "skill": "1H Slashing",
+        "damage": 4,
+        "delay": 26,
+        "weight": 5.5,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "The Penance Shadow Knight reward (Crusader Zixo, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:iron-cudgel-of-the-petitioner",
+        "label": "Iron Cudgel of the Petitioner",
+        "type": "item",
+        "slots": [
+          "Range",
+          "Primary"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "troll",
+          "ogre",
+          "iksar"
+        ],
+        "skill": "1H Blunt",
+        "damage": 4,
+        "delay": 25,
+        "weight": 5,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "The Penance Shaman reward (Crusader Zixo, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:partisans-pike",
+        "label": "Partisan's Pike",
+        "type": "item",
+        "slots": [
+          "Back",
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "skill": "Piercing",
+        "damage": 8,
+        "delay": 46,
+        "ac": 1,
+        "weight": 13.5,
+        "size": "Giant",
+        "lore": true,
+        "noTrade": true,
+        "source": "The Penance Warrior reward (Crusader Zixo, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-power-of-the-gatecallers",
+        "label": "The Power of the Gatecallers",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 1,
+        "description": "Vasile Jahnir in Erudin Palace trades 2 Summoned: Dagger and 2 Summoned: Black Bread for the Gloves of the Gatecaller. Requires Amiable or better faction.",
+        "steps": [
+          "Summon 2 Summoned: Dagger and 2 Summoned: Black Bread",
+          "Turn them in to Vasile Jahnir in Erudin Palace"
+        ],
+        "wiki_title": "The Power of the Gatecallers"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gloves-of-the-gatecaller",
+        "label": "Gloves of the Gatecaller",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 3,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 5.5,
+        "size": "Small",
+        "source": "The Power of the Gatecallers reward (Vasile Jahnir, Erudin Palace)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-rat-king",
+        "label": "The Rat King",
+        "type": "quest",
+        "minLevel": 5,
+        "description": "Wolten Grafe in South Qeynos sends players to defeat Beggar Wyllin in the Qeynos Aqueducts and return with a Human Head, for coin, a piece of leather armor (unnamed on the wiki), and faction.",
+        "steps": [
+          "Locate Beggar Wyllin in the Qeynos Aqueducts",
+          "Defeat Beggar Wyllin and loot the Human Head",
+          "Return the head to Wolten Grafe in South Qeynos"
+        ],
+        "wiki_title": "The Rat King"
+      }
     }
   ],
   "edges": [
@@ -185691,6 +186930,1562 @@
         "target": "item:frostmaidens-idol",
         "type": "rewards",
         "randomGroup": "the-gift-box"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13068",
+        "source": "zone:splitpaw-lair",
+        "target": "zone:southern-karana",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13069",
+        "source": "zone:southern-karana",
+        "target": "zone:splitpaw-lair",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13070",
+        "source": "npc:qeynos-hills:marton-sayer",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13071",
+        "source": "npc:qeynos-hills:marton-sayer",
+        "target": "quest:the-gnoll-slayer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13072",
+        "source": "quest:the-gnoll-slayer",
+        "target": "zone:qeynos-hills",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13073",
+        "source": "quest:the-gnoll-slayer",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13074",
+        "source": "quest:the-gnoll-slayer",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13075",
+        "source": "quest:the-gnoll-slayer",
+        "target": "zone:splitpaw-lair",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13076",
+        "source": "quest:the-gnoll-slayer",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13077",
+        "source": "quest:the-gnoll-slayer",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13078",
+        "source": "quest:the-gnoll-slayer",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13079",
+        "source": "quest:the-gnoll-slayer",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13080",
+        "source": "quest:the-gnoll-slayer",
+        "target": "item:gnoll-slayer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13081",
+        "source": "npc:north-kaladim:jeet",
+        "target": "quest:the-gnome-take",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13082",
+        "source": "quest:the-gnome-take",
+        "target": "zone:north-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13083",
+        "source": "quest:the-gnome-take",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13084",
+        "source": "quest:the-gnome-take",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13085",
+        "source": "quest:the-gnome-take",
+        "target": "faction:miners-guild-628",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13086",
+        "source": "quest:the-gnome-take",
+        "target": "faction:deeppockets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13087",
+        "source": "quest:the-gnome-take",
+        "target": "item:copper-amulet",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13088",
+        "source": "quest:the-gnome-take",
+        "target": "item:copper-band",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13089",
+        "source": "quest:the-gnome-take",
+        "target": "item:golden-ear-stud",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13090",
+        "source": "quest:the-gnome-take",
+        "target": "item:hematite",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13091",
+        "source": "quest:the-gnome-take",
+        "target": "item:ionys-absorber",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13092",
+        "source": "quest:the-gnome-take",
+        "target": "item:lapis-lazuli",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13093",
+        "source": "quest:the-gnome-take",
+        "target": "item:malachite",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13094",
+        "source": "quest:the-gnome-take",
+        "target": "item:onyx",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13095",
+        "source": "quest:the-gnome-take",
+        "target": "item:silver-earring",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13096",
+        "source": "quest:the-gnome-take",
+        "target": "item:turquoise",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13097",
+        "source": "quest:the-gnome-take",
+        "target": "item:bead-necklace",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13098",
+        "source": "quest:the-gnome-take",
+        "target": "item:bloodstone",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13099",
+        "source": "quest:the-gnome-take",
+        "target": "item:engagement-ring",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13100",
+        "source": "quest:the-gnome-take",
+        "target": "item:fire-beetle-eye",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13101",
+        "source": "quest:the-gnome-take",
+        "target": "item:jasper",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13102",
+        "source": "quest:the-gnome-take",
+        "target": "item:moonstone",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13103",
+        "source": "quest:the-gnome-take",
+        "target": "item:royal-jelly",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13104",
+        "source": "quest:the-gnome-take",
+        "target": "item:silver-stud",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13105",
+        "source": "quest:the-gnome-take",
+        "target": "item:silver-ring",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13106",
+        "source": "quest:the-gnome-take",
+        "target": "item:small-piece-of-ore",
+        "type": "rewards",
+        "randomGroup": "the-gnome-take"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13107",
+        "source": "npc:iceclad-ocean:ami",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13108",
+        "source": "npc:iceclad-ocean:ami",
+        "target": "quest:the-grammar-manual",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13109",
+        "source": "quest:the-grammar-manual",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13110",
+        "source": "quest:the-grammar-manual",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13111",
+        "source": "quest:the-grammar-manual",
+        "target": "item:ice-forged-shackles",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13112",
+        "source": "npc:everfrost-peaks:watcher-aenwen",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13113",
+        "source": "npc:everfrost-peaks:watcher-aenwen",
+        "target": "quest:the-icestar-dims",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13114",
+        "source": "quest:the-icestar-dims",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13115",
+        "source": "quest:the-icestar-dims",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13116",
+        "source": "quest:the-icestar-dims",
+        "target": "zone:permafrost",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13117",
+        "source": "quest:the-icestar-dims",
+        "target": "zone:icewell-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13118",
+        "source": "quest:the-icestar-dims",
+        "target": "zone:dreadlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13119",
+        "source": "npc:eastern-wastes:isolde-winterveil",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13120",
+        "source": "npc:eastern-wastes:isolde-winterveil",
+        "target": "quest:the-icestar-remembers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13121",
+        "source": "quest:the-icestar-remembers",
+        "target": "zone:eastern-wastes",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13122",
+        "source": "quest:the-icestar-remembers",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13123",
+        "source": "quest:the-icestar-remembers",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13124",
+        "source": "npc:erudin:weltria-ostriss",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13125",
+        "source": "npc:erudin:weltria-ostriss",
+        "target": "quest:the-lorekeepers-scrolls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13126",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13127",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13128",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13129",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "faction:merchants-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13130",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13131",
+        "source": "quest:the-lorekeepers-scrolls",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13132",
+        "source": "npc:iceclad-ocean:captain-nalot",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13133",
+        "source": "npc:iceclad-ocean:ami",
+        "target": "quest:the-lost-map",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13134",
+        "source": "quest:the-lost-map",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13135",
+        "source": "quest:the-lost-map",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13136",
+        "source": "quest:the-lost-map",
+        "target": "item:eyepatch-of-plunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13137",
+        "source": "npc:paineel:noclin-saah",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13138",
+        "source": "npc:paineel:noclin-saah",
+        "target": "quest:the-lost-pet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13139",
+        "source": "quest:the-lost-pet",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13140",
+        "source": "quest:the-lost-pet",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13141",
+        "source": "quest:the-lost-pet",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13142",
+        "source": "quest:the-lost-pet",
+        "target": "item:noclins-femur",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13143",
+        "source": "npc:plane-of-growth:a-mosscovered-treant",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13144",
+        "source": "npc:plane-of-growth:a-mosscovered-treant",
+        "target": "quest:the-lost-tome",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13145",
+        "source": "quest:the-lost-tome",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13146",
+        "source": "quest:the-lost-tome",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13147",
+        "source": "quest:the-lost-tome",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13148",
+        "source": "quest:the-lost-tome",
+        "target": "item:chord-of-vines",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13149",
+        "source": "npc:east-freeport:tohsan-hallard",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13150",
+        "source": "npc:east-freeport:tohsan-hallard",
+        "target": "quest:the-lottery-ticket",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13151",
+        "source": "quest:the-lottery-ticket",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13152",
+        "source": "quest:the-lottery-ticket",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13153",
+        "source": "quest:the-lottery-ticket",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13154",
+        "source": "quest:the-lottery-ticket",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13155",
+        "source": "quest:the-lottery-ticket",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13156",
+        "source": "quest:the-lottery-ticket",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13157",
+        "source": "quest:the-lottery-ticket",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13158",
+        "source": "npc:iceclad-ocean:balix-misteyes",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13159",
+        "source": "npc:iceclad-ocean:balix-misteyes",
+        "target": "quest:the-mighty-garou",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13160",
+        "source": "quest:the-mighty-garou",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13161",
+        "source": "quest:the-mighty-garou",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13162",
+        "source": "quest:the-mighty-garou",
+        "target": "item:garou-bone-club",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13163",
+        "source": "npc:iceclad-ocean:keref-spiritspear",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13164",
+        "source": "npc:iceclad-ocean:keref-spiritspear",
+        "target": "quest:the-mighty-snowfang-hero",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13165",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13166",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13167",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13168",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "faction:snowfanggnolls",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13169",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "faction:pirates-of-iceclad",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13170",
+        "source": "quest:the-mighty-snowfang-hero",
+        "target": "item:icy-totem-of-protection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13171",
+        "source": "npc:south-kaladim:furtog-ogrebane",
+        "target": "quest:the-mudtoes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13172",
+        "source": "quest:the-mudtoes",
+        "target": "zone:south-kaladim",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13173",
+        "source": "quest:the-mudtoes",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13174",
+        "source": "quest:the-mudtoes",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13175",
+        "source": "quest:the-mudtoes",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13176",
+        "source": "quest:the-mudtoes",
+        "target": "faction:storm-guard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13177",
+        "source": "quest:the-mudtoes",
+        "target": "faction:kazon-stormhammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13178",
+        "source": "quest:the-mudtoes",
+        "target": "faction:miners-guild-249",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13179",
+        "source": "quest:the-mudtoes",
+        "target": "item:ogre-war-maul",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13180",
+        "source": "npc:northern-felwithe:tolkar-parlone",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13181",
+        "source": "npc:northern-felwithe:tolkar-parlone",
+        "target": "quest:the-mystic-cloak",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13182",
+        "source": "quest:the-mystic-cloak",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13183",
+        "source": "quest:the-mystic-cloak",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13184",
+        "source": "quest:the-mystic-cloak",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13185",
+        "source": "quest:the-mystic-cloak",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13186",
+        "source": "quest:the-mystic-cloak",
+        "target": "faction:keepers-of-the-art",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13187",
+        "source": "quest:the-mystic-cloak",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13188",
+        "source": "quest:the-mystic-cloak",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13189",
+        "source": "quest:the-mystic-cloak",
+        "target": "item:mystic-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13190",
+        "source": "npc:the-overthere:an-undead-foreman",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13191",
+        "source": "npc:the-overthere:an-undead-foreman",
+        "target": "quest:the-new-worker",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13192",
+        "source": "quest:the-new-worker",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13193",
+        "source": "quest:the-new-worker",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13194",
+        "source": "quest:the-new-worker",
+        "target": "item:worker-sledgemallet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13195",
+        "source": "npc:surefall-glade:gerael-woodone",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13196",
+        "source": "npc:surefall-glade:gerael-woodone",
+        "target": "quest:the-nitrates-and-the-assassin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13197",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13198",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13199",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13200",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13201",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13202",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13203",
+        "source": "quest:the-nitrates-and-the-assassin",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13204",
+        "source": "npc:kithicor-forest:morin-shadowbane",
+        "target": "quest:the-orc-impaler",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13205",
+        "source": "quest:the-orc-impaler",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13206",
+        "source": "quest:the-orc-impaler",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13207",
+        "source": "quest:the-orc-impaler",
+        "target": "item:orc-impaler",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13208",
+        "source": "npc:north-qeynos:ghil-starn",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13209",
+        "source": "npc:north-qeynos:ghil-starn",
+        "target": "quest:the-package",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13210",
+        "source": "quest:the-package",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13211",
+        "source": "quest:the-package",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13212",
+        "source": "quest:the-package",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13213",
+        "source": "quest:the-package",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13214",
+        "source": "quest:the-package",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13215",
+        "source": "quest:the-package",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13216",
+        "source": "quest:the-package",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13217",
+        "source": "quest:the-package",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13218",
+        "source": "quest:the-package",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13219",
+        "source": "quest:the-package",
+        "target": "item:brown-leather-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13220",
+        "source": "npc:south-qeynos:danaria-hollin",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13221",
+        "source": "npc:east-freeport:palatos-kynarn",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13222",
+        "source": "npc:east-freeport:lenka-stoutheart",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13223",
+        "source": "npc:south-qeynos:danaria-hollin",
+        "target": "quest:the-painting",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13224",
+        "source": "quest:the-painting",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13225",
+        "source": "quest:the-painting",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13226",
+        "source": "quest:the-painting",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13227",
+        "source": "quest:the-painting",
+        "target": "faction:craftkeepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13228",
+        "source": "quest:the-painting",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13229",
+        "source": "quest:the-painting",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13230",
+        "source": "quest:the-painting",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13231",
+        "source": "quest:the-painting",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13232",
+        "source": "quest:the-painting",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13233",
+        "source": "quest:the-painting",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13234",
+        "source": "npc:east-cabilis:crusader-zixo",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13235",
+        "source": "npc:east-cabilis:crusader-zixo",
+        "target": "quest:the-penance",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13236",
+        "source": "quest:the-penance",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13237",
+        "source": "quest:the-penance",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13238",
+        "source": "quest:the-penance",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13239",
+        "source": "quest:the-penance",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13240",
+        "source": "quest:the-penance",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13241",
+        "source": "quest:the-penance",
+        "target": "item:drape-of-the-brood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13242",
+        "source": "quest:the-penance",
+        "target": "item:shackle-of-dust",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13243",
+        "source": "quest:the-penance",
+        "target": "item:pawns-khukri",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13244",
+        "source": "quest:the-penance",
+        "target": "item:iron-cudgel-of-the-petitioner",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13245",
+        "source": "quest:the-penance",
+        "target": "item:partisans-pike",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13246",
+        "source": "npc:erudin-palace:vasile-jahnir",
+        "target": "quest:the-power-of-the-gatecallers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13247",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "zone:erudin-palace",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13248",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13249",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "faction:gate-callers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13250",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13251",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13252",
+        "source": "quest:the-power-of-the-gatecallers",
+        "target": "item:gloves-of-the-gatecaller",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13253",
+        "source": "npc:south-qeynos:wolten-grafe",
+        "target": "quest:the-rat-king",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13254",
+        "source": "quest:the-rat-king",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13255",
+        "source": "quest:the-rat-king",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13256",
+        "source": "quest:the-rat-king",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13257",
+        "source": "quest:the-rat-king",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13258",
+        "source": "quest:the-rat-king",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13259",
+        "source": "quest:the-rat-king",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
       }
     }
   ]
