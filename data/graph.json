@@ -79891,6 +79891,24 @@
         ],
         "wiki_title": "The Bones of Darak Lightforge"
       }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:orc-warrior-a",
+        "label": "Orc Warrior",
+        "type": "mob",
+        "minLevel": 19,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:oasis-of-marr:orc-warrior-an",
+        "label": "An Orc Warrior",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 16
+      }
     }
   ],
   "edges": [
@@ -183538,6 +183556,22 @@
         "source": "quest:the-bones-of-darak-lightforge",
         "target": "spell:divine-might",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12911",
+        "source": "mob:oasis-of-marr:orc-warrior-a",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12912",
+        "source": "mob:oasis-of-marr:orc-warrior-an",
+        "target": "zone:oasis-of-marr",
+        "type": "located_in"
       }
     }
   ]
