@@ -690,31 +690,57 @@ function buildRouteSteps(
   });
 }
 
-export function shortestPath(fromZoneId: string, toZoneId: string): PathStep[] | null {
-  if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
-  const adj = getZoneAdjacency();
+function bfsPath(
+  fromZoneId: string,
+  toZoneId: string,
+  adj: Map<string, AdjEntry[]>,
+  skip: (zoneId: string) => boolean
+): PathStep[] | null {
   const parent = new Map<string, { from: string; via?: Transport }>([[fromZoneId, { from: "" }]]);
   const queue = [fromZoneId];
   while (queue.length > 0) {
     const z = queue.shift()!;
     for (const { zoneId: neighbor, transport } of adj.get(z) || []) {
-      if (!parent.has(neighbor)) {
-        parent.set(neighbor, { from: z, via: transport });
-        if (neighbor === toZoneId) {
-          const path: PathStep[] = [];
-          let cur: string = neighbor;
-          while (cur !== "") {
-            const p = parent.get(cur)!;
-            path.unshift({ zoneId: cur, ...(p.via ? { via: p.via } : {}) });
-            cur = p.from;
-          }
-          return path;
+      if (parent.has(neighbor)) continue;
+      if (neighbor !== toZoneId && skip(neighbor)) continue;
+      parent.set(neighbor, { from: z, via: transport });
+      if (neighbor === toZoneId) {
+        const path: PathStep[] = [];
+        let cur: string = neighbor;
+        while (cur !== "") {
+          const p = parent.get(cur)!;
+          path.unshift({ zoneId: cur, ...(p.via ? { via: p.via } : {}) });
+          cur = p.from;
         }
-        queue.push(neighbor);
+        return path;
       }
+      queue.push(neighbor);
     }
   }
   return null;
+}
+
+// Out-of-era zones are disregarded as pure waypoints (issue #38) -- a route
+// that could reach its destination via an in-era detour shouldn't walk
+// straight through e.g. Firiona Vie just because that happens to be the
+// shortest hop count. This reverses the "flag it, don't reroute" call
+// documented for issue #35 in decisions/quest-era-flagging.md: that
+// decision predates this issue and is superseded by it for waypoints
+// specifically. The *destination* itself is still reachable even when it's
+// out of era (that's a valid, intentional target, same as
+// ZoneSummary/QuestSummary/ZoneRanking elsewhere), and `skip` never applies
+// to it. If avoiding out-of-era zones leaves no route at all, fall back to
+// the plain (era-blind) BFS rather than reporting the destination
+// unreachable -- buildRouteSteps() still flags whichever out-of-era hops
+// end up in that fallback route.
+export function shortestPath(fromZoneId: string, toZoneId: string, helpers?: GraphIndexHelpers): PathStep[] | null {
+  if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
+  const adj = getZoneAdjacency();
+  const h = helpers ?? graphIndexHelpers(load());
+  const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(h.nodeById(zoneId)?.era as string | undefined, h);
+  const avoidingOutOfEra = bfsPath(fromZoneId, toZoneId, adj, isWaypointOutOfEra);
+  if (avoidingOutOfEra) return avoidingOutOfEra;
+  return bfsPath(fromZoneId, toZoneId, adj, () => false);
 }
 
 export type FactionStanding = "safe" | "neutral" | "wont_sell" | "kos";
@@ -890,7 +916,7 @@ export function rankZones(
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
     const zoneNode = index.nodeById.get(zoneId);
-    const pathIds = shortestPath(currentZoneId, zoneId);
+    const pathIds = shortestPath(currentZoneId, zoneId, eraHelpers);
     const hops = pathIds ? pathIds.length - 1 : null;
     const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => index.nodeById.get(id), eraHelpers) : [];
 
@@ -1031,7 +1057,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
 export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
-  const pathIds = shortestPath(fromZoneId, toZoneId);
+  const pathIds = shortestPath(fromZoneId, toZoneId, helpers);
   const hops = pathIds ? pathIds.length - 1 : null;
   const route: RouteStep[] = pathIds
     ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.data.id === id)?.data, helpers)
