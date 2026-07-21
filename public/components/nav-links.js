@@ -13,7 +13,7 @@ import "./macro-button.js";
 import { RESET_CSS } from "./reset.js";
 
 const PAGES = [
-  { key: "index", label: "Spells", href: "index.html" },
+  { key: "index", label: "Spell Vendors", href: "index.html" },
   { key: "maps", label: "Maps", href: "maps.html" },
   { key: "class-browser", label: "Classes", href: "class-browser.html" },
   { key: "quests", label: "Quests", href: "quests.html" },
