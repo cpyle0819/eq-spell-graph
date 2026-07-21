@@ -79909,6 +79909,879 @@
         "minLevel": 13,
         "maxLevel": 16
       }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:innkeep-wuleran",
+        "label": "Innkeep Wuleran",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bread-shipment-kelethin",
+        "label": "The Bread Shipment (Kelethin)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Innkeep Wuleran in Greater Faydark trades a Bag of Bread Loaves, purchased from Jarlen Meadowgreen in Southern Karana for 2 gold, for experience, coin, and faction.",
+        "steps": [
+          "Purchase a Bag of Bread Loaves from Jarlen Meadowgreen in Southern Karana for 2 gold",
+          "Deliver the bread to Innkeep Wuleran"
+        ],
+        "wiki_title": "The Bread Shipment (Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bridge",
+        "label": "The Bridge",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 30,
+        "description": "Weligon Steelherder in Erudin sends players for a sealed list from Hansl Bigroon in South Qeynos, then to slay three architects -- Purchin Oddsbot (High Keep), Jogl Doobraugh (Steamfont Mountains), and Trantor Everhot (North Kaladim) -- for the Deep Six Cutlass. Better than Indifferent faction, likely Amiable, is needed for the final turn-in.",
+        "steps": [
+          "Get a sealed list from Hansl Bigroon in South Qeynos",
+          "Kill Purchin Oddsbot in High Keep",
+          "Kill Jogl Doobraugh in Steamfont Mountains",
+          "Kill Trantor Everhot in North Kaladim",
+          "Return to Weligon Steelherder in Erudin"
+        ],
+        "wiki_title": "The Bridge"
+      }
+    },
+    {
+      "data": {
+        "id": "item:deep-six-cutlass",
+        "label": "Deep Six Cutlass",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "half elf",
+          "dwarf",
+          "halfling",
+          "gnome"
+        ],
+        "skill": "1H Slashing",
+        "damage": 14,
+        "delay": 36,
+        "stats": {
+          "str": 5
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 12.5,
+        "size": "Giant",
+        "effect": "Enduring Breath (Any Slot, instant cast)",
+        "source": "The Bridge reward (Weligon Steelherder, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:dok",
+        "label": "Dok",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-cigar",
+        "label": "The Cigar",
+        "type": "quest",
+        "minLevel": 3,
+        "description": "Dok in Halas has players collect six honeycombs from bixies and combine them in an Empty Jar into a Full Honeycomb Jar, traded for the Everburn Candle.",
+        "steps": [
+          "Kill bixies for 6 honeycombs",
+          "Combine them in an Empty Jar for a Full Honeycomb Jar",
+          "Turn it in to Dok in Halas"
+        ],
+        "wiki_title": "The Cigar"
+      }
+    },
+    {
+      "data": {
+        "id": "item:everburn-candle",
+        "label": "Everburn Candle",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "resists": {
+          "cold": 5,
+          "poison": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Small",
+        "source": "The Cigar reward (Dok, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:rihtur-fullome",
+        "label": "Rihtur Fullome",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-clothspinner-sisters-evil",
+        "label": "The Clothspinner Sisters (evil)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Rihtur Fullome in the Qeynos Aqueducts sends players to kill Milea Clothspinner in Eastern Karana and return with a Monogrammed Cloth as proof, for a minor item -- Patchwork armor, Rusty weapons, or Cleric spells per the wiki, with a small chance of a Rat Shaped Ring -- plus faction. Requires Amiable faction or better.",
+        "steps": [
+          "Kill Milea Clothspinner in Eastern Karana for a Monogrammed Cloth",
+          "Return it to Rihtur Fullome in the Qeynos Aqueducts"
+        ],
+        "wiki_title": "The Clothspinner Sisters (evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-clothspinner-sisters-good",
+        "label": "The Clothspinner Sisters (good)",
+        "type": "quest",
+        "minLevel": 8,
+        "description": "Astaed Wemor at the Temple of Life in North Qeynos sends players with a Tattered Note from Nerissa Clothspinner to her sister Milea Clothspinner in an Eastern Karana cave; Milea's reply, a Monogrammed Cloth, is returned to Nerissa for a decent item (unnamed on the wiki) plus faction. Requires Amiable faction or better with Milea.",
+        "steps": [
+          "Receive a Tattered Note from Nerissa Clothspinner",
+          "Deliver it to Milea Clothspinner in an Eastern Karana cave",
+          "Return her reply, a Monogrammed Cloth, to Nerissa Clothspinner"
+        ],
+        "wiki_title": "The Clothspinner Sisters (good)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:guard-weleth",
+        "label": "Guard Weleth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-crate-evil",
+        "label": "The Crate (evil)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Guard Weleth in North Qeynos hands over a Crate of Defective Arrows to deliver to Nesiff Tallaherd in South Qeynos; the resulting invoice is returned to Lieutenant Dagarok in North Qeynos for coin, experience, and faction. Requires Amiable faction with Qeynos Guards.",
+        "steps": [
+          "Receive a Crate of Defective Arrows from Guard Weleth in North Qeynos",
+          "Deliver it to Nesiff Tallaherd in South Qeynos",
+          "Return the invoice to Lieutenant Dagarok in North Qeynos"
+        ],
+        "wiki_title": "The Crate (evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-crate-good",
+        "label": "The Crate (good)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Guard Weleth in North Qeynos hands over a Crate of Defective Arrows to deliver to Nesiff Tallaherd in South Qeynos; the resulting invoice is returned to Guard Weleth for coin, experience, and faction.",
+        "steps": [
+          "Receive a Crate of Defective Arrows from Guard Weleth in North Qeynos",
+          "Deliver it to Nesiff Tallaherd in South Qeynos",
+          "Return the invoice to Guard Weleth in North Qeynos"
+        ],
+        "wiki_title": "The Crate (good)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-donations",
+        "label": "The Donations",
+        "type": "quest",
+        "minLevel": 1,
+        "race": [
+          "barbarian",
+          "dwarf",
+          "erudite",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "wood elf"
+        ],
+        "description": "Daedet Losaren at the Temple of Thunder in South Qeynos collects six donations -- from Lanhern Firepride (who first needs four ogre swills), Hansl Bigroon, Kane Bayle, Enic Ruklin, Guard Leopold, and Guard Cheslin -- for usually a spell scroll, plus faction with Knights of Thunder and Priests of Life. Requires better than Indifferent faction. Good races only.",
+        "steps": [
+          "Collect one donation each from Lanhern Firepride, Hansl Bigroon, Kane Bayle, Enic Ruklin, Guard Leopold, and Guard Cheslin",
+          "Return all six to Daedet Losaren in South Qeynos"
+        ],
+        "wiki_title": "The Donations"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-emissary",
+        "label": "The Emissary",
+        "type": "quest",
+        "minLevel": 5,
+        "description": "Marda in Oggok directs players to Emissary Glib at the guard tower with the phrase \"The Greenblood Shaman sent me\"; hunting troll slayers in Innothule Swamp for Frog Eye Necklaces and turning them in to Glib grants 7 silver, experience, and Oggok Citizens faction per regular necklace, or 1 silver, more faction, and a random item -- one of Forager Bag, Hopper Spear, Rusty Halberd, or Short Sword -- for a captain's necklace.",
+        "steps": [
+          "Ask Marda in Oggok about her secret mission",
+          "Find Emissary Glib at the guard tower and say \"The Greenblood Shaman sent me\"",
+          "Hunt troll slayers in Innothule Swamp for Frog Eye Necklaces",
+          "Turn in necklaces to Emissary Glib"
+        ],
+        "wiki_title": "The Emissary"
+      }
+    },
+    {
+      "data": {
+        "id": "item:forager-bag",
+        "label": "Forager Bag",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 1,
+        "size": "Medium",
+        "source": "The Emissary captain's-necklace random reward (Emissary Glib, Innothule Swamp guard tower)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hopper-spear",
+        "label": "Hopper Spear",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "iksar",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "skill": "Piercing",
+        "damage": 5,
+        "delay": 31,
+        "stats": {
+          "str": 4
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 5,
+        "size": "Medium",
+        "source": "The Emissary captain's-necklace random reward (Emissary Glib, Innothule Swamp guard tower)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rusty-halberd",
+        "label": "Rusty Halberd",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "skill": "2H Slashing",
+        "damage": 10,
+        "delay": 56,
+        "weight": 14,
+        "size": "Giant",
+        "source": "The Emissary captain's-necklace random reward (Emissary Glib, Innothule Swamp guard tower)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:short-sword",
+        "label": "Short Sword",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 3,
+        "delay": 19,
+        "weight": 1.5,
+        "size": "Small",
+        "source": "The Emissary captain's-necklace random reward (Emissary Glib, Innothule Swamp guard tower)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rathe-mountains:kazzel-dleryt",
+        "label": "Kazzel D`Leryt",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-etched-stone",
+        "label": "The Etched Stone",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 46,
+        "description": "Kazzel D`Leryt in Rathe Mountains assembles a White Gold Necklace (froglok noble, Lower Guk), a Crystalline Orb (stone spider, Nagafen's Lair), a Bloodied Piece of Parchment (traded from a Prickly Pear to Xenyari Lisariel), and a Faceted Hyacinth (2,000pp to Kazzel plus 1,000pp to Darfumpel Zirubbel) into a Faceted Hyacinth Telesm, given to Xenyari Lisariel; her death transforms it into a Pulsating Hyacinth Telesm, which Kazzel then trades for Spell: Life Leech after players defeat the level 53 monstrous zombie it spawns and loot its Monstrous Zombie Heart. The Pulsating Hyacinth Telesm itself is also kept as a reward.",
+        "steps": [
+          "Gather a White Gold Necklace, Crystalline Orb, Bloodied Piece of Parchment, and Faceted Hyacinth",
+          "Turn in all four to Kazzel D`Leryt for a Faceted Hyacinth Telesm",
+          "Give it to Xenyari Lisariel, who dies and transforms it into a Pulsating Hyacinth Telesm",
+          "Return the Pulsating Hyacinth Telesm to Kazzel D`Leryt",
+          "Defeat the monstrous zombie that spawns and loot the Monstrous Zombie Heart",
+          "Turn in the heart to Kazzel D`Leryt for Spell: Life Leech"
+        ],
+        "wiki_title": "The Etched Stone"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pulsating-hyacinth-telesm",
+        "label": "Pulsating Hyacinth Telesm",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "classes": [
+          "shadow knight",
+          "necromancer"
+        ],
+        "stats": {
+          "int": 7,
+          "agi": 7
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.3,
+        "size": "Small",
+        "source": "The Etched Stone reward (Kazzel D`Leryt, Rathe Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-falchion",
+        "label": "The Falchion",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 22,
+        "description": "General Jyleel in Northern Felwithe trades the Black Heart of Ambassador Dvinn (Crushbone), a Blue Orc Head (Orc Prophet, Crushbone), and a Large Locked Crate (Brawn, Ocean of Tears) for the Falchion of the Koada'Vie. Requires Kindly faction or better.",
+        "steps": [
+          "Kill Ambassador Dvinn in Crushbone for the Black Heart of Ambassador Dvinn",
+          "Kill the Orc Prophet in Crushbone for a Blue Orc Head",
+          "Kill Brawn in Ocean of Tears for a Large Locked Crate",
+          "Turn in all three to General Jyleel in Northern Felwithe"
+        ],
+        "wiki_title": "The Falchion"
+      }
+    },
+    {
+      "data": {
+        "id": "item:falchion-of-the-koadavie",
+        "label": "Falchion of the Koada'Vie",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 24,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 3.5,
+        "size": "Medium",
+        "source": "The Falchion reward (General Jyleel, Northern Felwithe)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:bjoskhua-blackfist",
+        "label": "Bjoskhua Blackfist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-family-chest-straps",
+        "label": "The Family Chest Straps",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ],
+        "minLevel": 50,
+        "era": "Velious",
+        "description": "Bjoskhua Blackfist in Kael Drakkel trades the backbone of Phinigel Autropos (Kedge Keep) for the Flayed Coldain-Skin Leggings. Velious Era content, currently out of era.",
+        "steps": [
+          "Kill Phinigel Autropos in Kedge Keep for his backbone",
+          "Turn it in to Bjoskhua Blackfist in Kael Drakkel"
+        ],
+        "wiki_title": "The Family Chest Straps"
+      }
+    },
+    {
+      "data": {
+        "id": "item:flayed-coldain-skin-leggings",
+        "label": "Flayed Coldain-Skin Leggings",
+        "type": "item",
+        "slots": [
+          "Legs"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "enchanter",
+          "magician",
+          "necromancer",
+          "shaman",
+          "wizard"
+        ],
+        "ac": 5,
+        "stats": {
+          "int": 3,
+          "agi": -10
+        },
+        "hp": 15,
+        "magic": true,
+        "source": "The Family Chest Straps reward (Bjoskhua Blackfist, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:inte-akera",
+        "label": "Inte Akera",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-fiery-avenger",
+        "label": "The Fiery Avenger",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 46,
+        "description": "Inte Akera in the Plane of Sky trades SoulFire alone for the Blessing of Nobility, Ghoulbane alone for the Blessing of Sacrifice, then Miragul's Head and Miragul's Robe together with both blessings for the Fiery Avenger. Requires Warmly or higher Deepwater Knights faction.",
+        "steps": [
+          "Turn in SoulFire alone for the Blessing of Nobility",
+          "Turn in Ghoulbane alone for the Blessing of Sacrifice",
+          "Turn in Miragul's Head, Miragul's Robe, and both blessings together to Inte Akera"
+        ],
+        "wiki_title": "The Fiery Avenger"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fiery-avenger",
+        "label": "Fiery Avenger",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "skill": "2H Slashing",
+        "damage": 33,
+        "delay": 44,
+        "stats": {
+          "str": 15,
+          "cha": 10,
+          "wis": 15
+        },
+        "hp": 25,
+        "mana": 25,
+        "resists": {
+          "fire": 5,
+          "disease": 5,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Large",
+        "effect": "Flame Shock (Combat, instant cast) at Level 45",
+        "source": "The Fiery Avenger reward (Inte Akera, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-fisherman",
+        "label": "The Fisherman",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 8,
+        "description": "Antus Shelbra in Paineel sends players to slay Aglthin Dasmore in Toxxulia Forest and return his fishing pole as proof, for the Staff of the Abattoir Initiate.",
+        "steps": [
+          "Kill Aglthin Dasmore in Toxxulia Forest for his fishing pole",
+          "Turn it in to Antus Shelbra in Paineel"
+        ],
+        "wiki_title": "The Fisherman"
+      }
+    },
+    {
+      "data": {
+        "id": "item:staff-of-the-abattoir-initiate",
+        "label": "Staff of the Abattoir Initiate",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "necromancer"
+        ],
+        "race": [
+          "erudite"
+        ],
+        "skill": "2H Blunt",
+        "damage": 6,
+        "delay": 32,
+        "stats": {
+          "int": 1
+        },
+        "lore": true,
+        "noTrade": true,
+        "weight": 7,
+        "size": "Medium",
+        "source": "The Fisherman reward (Antus Shelbra, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:marshal-lanena",
+        "label": "Marshal Lanena",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-fishslayers",
+        "label": "The Fishslayers",
+        "type": "quest",
+        "classes": [
+          "druid",
+          "paladin",
+          "rogue",
+          "warrior"
+        ],
+        "minLevel": 4,
+        "description": "Marshal Lanena in Rivervale has players kill piranha in the lake for Piranha Teeth, combining 4 in a provided bag, for the Rantho Rapier.",
+        "steps": [
+          "Kill piranha in the Rivervale lake for Piranha Teeth",
+          "Combine 4 teeth in the provided bag",
+          "Turn it in to Marshal Lanena in Rivervale"
+        ],
+        "wiki_title": "The Fishslayers"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rantho-rapier",
+        "label": "Rantho Rapier",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "rogue"
+        ],
+        "race": [
+          "dwarf",
+          "halfling",
+          "gnome"
+        ],
+        "skill": "2H Slashing",
+        "damage": 4,
+        "delay": 24,
+        "weight": 4,
+        "size": "Medium",
+        "source": "The Fishslayers reward (Marshal Lanena, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:great-divide:windscribe-thaloria",
+        "label": "Windscribe Thaloria",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-four-fragments",
+        "label": "The Four Fragments",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Windscribe Thaloria in Great Divide sends players to kill mobs across the four floors of the Tower of Frozen Shadow (Iceclad Ocean) for four Forgotten Pages, traded for Chapter III, When Stars Forget Their Light and a Holiday Gift -- both unnamed lore rewards with no stats on the wiki.",
+        "steps": [
+          "Kill mobs on floors 1-4 of the Tower of Frozen Shadow for 4 Forgotten Pages",
+          "Turn them in to Windscribe Thaloria in Great Divide"
+        ],
+        "wiki_title": "The Four Fragments"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-four-idols",
+        "label": "The Four Idols",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 55,
+        "era": "Velious",
+        "description": "Guardian of Takish in the Plane of Growth trades an Idol of Corruption (Gkrean Prophet of Tallon), Idol of Decay (a cleric of Vallon/Tallon Zek), Idol of Disease (Semkak Prophet of Vallon), and Idol of Erosion (a priest of Tallon/Vallon Zek) -- all dropped by giants in the Kael Drakkel arena -- for the Symbol of Tunarian Worship. Velious Era content, currently out of era.",
+        "steps": [
+          "Kill giants in the Kael Drakkel arena for the Idol of Corruption, Idol of Decay, Idol of Disease, and Idol of Erosion",
+          "Turn in all four to Guardian of Takish in the Plane of Growth"
+        ],
+        "wiki_title": "The Four Idols"
+      }
+    },
+    {
+      "data": {
+        "id": "item:symbol-of-tunarian-worship",
+        "label": "Symbol of Tunarian Worship",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "race": [
+          "high elf"
+        ],
+        "deity": [
+          "Tunare"
+        ],
+        "ac": 15,
+        "stats": {
+          "str": 5,
+          "wis": 10
+        },
+        "mana": 50,
+        "resists": {
+          "disease": 10,
+          "magic": 10,
+          "poison": 10
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 3,
+        "size": "Small",
+        "source": "The Four Idols reward (Guardian of Takish, Plane of Growth)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:gren-frikniller",
+        "label": "Gren Frikniller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-frikniller-family",
+        "label": "The Frikniller Family",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Gren Frikniller in East Freeport sends a letter to his sister Falia in North Freeport, whose reply -- a Broken Heirloom Necklace -- is returned to Gren for coin, experience, and faction.",
+        "steps": [
+          "Deliver Gren's letter to Falia Frikniller in North Freeport",
+          "Return her reply, a Broken Heirloom Necklace, to Gren in East Freeport"
+        ],
+        "wiki_title": "The Frikniller Family"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-geologists-purloined-tools",
+        "label": "The Geologist's Purloined Tools",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "race": [
+          "erudite"
+        ],
+        "minLevel": 18,
+        "description": "Gans Paust in Erudin sends a note to Yelesom Paust in Erud's Crossing; recovering a Magnifying Glass, Geologist's Hammer, and Incomplete Tool Kit and combining them into Yelesom's Tools, then returning with Yelesom's Reports, earns the Midnight Sea Mail Sleeves.",
+        "steps": [
+          "Deliver Gans Paust's note to Yelesom Paust in Erud's Crossing",
+          "Recover a Magnifying Glass, Geologist's Hammer, and Incomplete Tool Kit",
+          "Combine them into Yelesom's Tools and return them",
+          "Bring Yelesom's Reports back to Gans Paust in Erudin"
+        ],
+        "wiki_title": "The Geologist's Purloined Tools"
+      }
+    },
+    {
+      "data": {
+        "id": "item:midnight-sea-mail-sleeves",
+        "label": "Midnight Sea Mail Sleeves",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "race": [
+          "erudite"
+        ],
+        "ac": 8,
+        "stats": {
+          "sta": 1
+        },
+        "mana": 20,
+        "resists": {
+          "cold": 3,
+          "magic": 3
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 3.4,
+        "size": "Tiny",
+        "source": "The Geologist's Purloined Tools reward (Gans Paust, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-mischief:peachy-dvicci",
+        "label": "Peachy D`Vicci",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-gift-box",
+        "label": "The Gift Box",
+        "type": "quest",
+        "minLevel": 55,
+        "description": "Peachy D`Vicci in the Plane of Mischief trades two unstacked Funny Money items (not multiquestable) for a colored Gift Box -- 5 charges, an \"Open [Color] Box\" effect that summons a class-specific doll -- or occasionally a Frostmaidens Idol.",
+        "steps": [
+          "Gather two Funny Money items, given unstacked",
+          "Turn them in to Peachy D`Vicci in the Plane of Mischief"
+        ],
+        "wiki_title": "The Gift Box"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gift-box",
+        "label": "Gift Box",
+        "type": "item",
+        "charges": 5,
+        "magic": true,
+        "effect": "Open [Color] Box (summons a class-specific doll) at Level 45",
+        "source": "The Gift Box reward (Peachy D`Vicci, Plane of Mischief); color is cosmetic, same item/effect across all 8 colors"
+      }
+    },
+    {
+      "data": {
+        "id": "item:frostmaidens-idol",
+        "label": "Frostmaidens Idol",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "wizard"
+        ],
+        "mana": 80,
+        "resists": {
+          "cold": 25
+        },
+        "magic": true,
+        "charges": 6,
+        "effect": "Lure of Frost (Must Equip, 12.0 sec cast)",
+        "source": "The Gift Box occasional random reward (Peachy D`Vicci, Plane of Mischief)"
+      }
     }
   ],
   "edges": [
@@ -183572,6 +184445,1252 @@
         "source": "mob:oasis-of-marr:orc-warrior-an",
         "target": "zone:oasis-of-marr",
         "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12913",
+        "source": "npc:greater-faydark:innkeep-wuleran",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12914",
+        "source": "npc:greater-faydark:innkeep-wuleran",
+        "target": "quest:the-bread-shipment-kelethin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12915",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12916",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12917",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12918",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "faction:kelethin-merchants",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12919",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "faction:faydarks-champions",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12920",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "faction:emerald-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12921",
+        "source": "quest:the-bread-shipment-kelethin",
+        "target": "faction:anti-mage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12922",
+        "source": "npc:erudin:weligon-steelherder",
+        "target": "quest:the-bridge",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12923",
+        "source": "quest:the-bridge",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12924",
+        "source": "quest:the-bridge",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12925",
+        "source": "quest:the-bridge",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12926",
+        "source": "quest:the-bridge",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12927",
+        "source": "quest:the-bridge",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12928",
+        "source": "quest:the-bridge",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12929",
+        "source": "quest:the-bridge",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12930",
+        "source": "quest:the-bridge",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12931",
+        "source": "quest:the-bridge",
+        "target": "item:deep-six-cutlass",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12932",
+        "source": "npc:halas:dok",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12933",
+        "source": "npc:halas:dok",
+        "target": "quest:the-cigar",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12934",
+        "source": "quest:the-cigar",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12935",
+        "source": "quest:the-cigar",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12936",
+        "source": "quest:the-cigar",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12937",
+        "source": "quest:the-cigar",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12938",
+        "source": "quest:the-cigar",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12939",
+        "source": "quest:the-cigar",
+        "target": "item:everburn-candle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12940",
+        "source": "npc:qeynos-aqueducts:rihtur-fullome",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12941",
+        "source": "npc:qeynos-aqueducts:rihtur-fullome",
+        "target": "quest:the-clothspinner-sisters-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12942",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12943",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12944",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12945",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12946",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12947",
+        "source": "quest:the-clothspinner-sisters-evil",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12948",
+        "source": "npc:north-qeynos:astaed-wemor",
+        "target": "quest:the-clothspinner-sisters-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12949",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12950",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12951",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12952",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12953",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12954",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12955",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12956",
+        "source": "quest:the-clothspinner-sisters-good",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12957",
+        "source": "npc:north-qeynos:guard-weleth",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12958",
+        "source": "npc:north-qeynos:guard-weleth",
+        "target": "quest:the-crate-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12959",
+        "source": "quest:the-crate-evil",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12960",
+        "source": "quest:the-crate-evil",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12961",
+        "source": "quest:the-crate-evil",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12962",
+        "source": "quest:the-crate-evil",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12963",
+        "source": "quest:the-crate-evil",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12964",
+        "source": "quest:the-crate-evil",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12965",
+        "source": "quest:the-crate-evil",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12966",
+        "source": "quest:the-crate-evil",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12967",
+        "source": "quest:the-crate-evil",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12968",
+        "source": "npc:north-qeynos:guard-weleth",
+        "target": "quest:the-crate-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12969",
+        "source": "quest:the-crate-good",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12970",
+        "source": "quest:the-crate-good",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12971",
+        "source": "quest:the-crate-good",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12972",
+        "source": "quest:the-crate-good",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12973",
+        "source": "quest:the-crate-good",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12974",
+        "source": "quest:the-crate-good",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12975",
+        "source": "quest:the-crate-good",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12976",
+        "source": "npc:south-qeynos:daedet-losaren",
+        "target": "quest:the-donations",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12977",
+        "source": "quest:the-donations",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12978",
+        "source": "quest:the-donations",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12979",
+        "source": "quest:the-donations",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12980",
+        "source": "quest:the-donations",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12981",
+        "source": "quest:the-donations",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12982",
+        "source": "npc:oggok:marda",
+        "target": "quest:the-emissary",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12983",
+        "source": "quest:the-emissary",
+        "target": "zone:oggok",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12984",
+        "source": "quest:the-emissary",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12985",
+        "source": "quest:the-emissary",
+        "target": "zone:innothule-swamp",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12986",
+        "source": "quest:the-emissary",
+        "target": "faction:oggok-citizens",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12987",
+        "source": "quest:the-emissary",
+        "target": "item:forager-bag",
+        "type": "rewards",
+        "randomGroup": "the-emissary-captains-necklace"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12988",
+        "source": "quest:the-emissary",
+        "target": "item:hopper-spear",
+        "type": "rewards",
+        "randomGroup": "the-emissary-captains-necklace"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12989",
+        "source": "quest:the-emissary",
+        "target": "item:rusty-halberd",
+        "type": "rewards",
+        "randomGroup": "the-emissary-captains-necklace"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12990",
+        "source": "quest:the-emissary",
+        "target": "item:short-sword",
+        "type": "rewards",
+        "randomGroup": "the-emissary-captains-necklace"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-12991",
+        "source": "quest:mardas-secret-mission",
+        "target": "quest:the-emissary",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12992",
+        "source": "npc:rathe-mountains:kazzel-dleryt",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12993",
+        "source": "npc:rathe-mountains:kazzel-dleryt",
+        "target": "quest:the-etched-stone",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12994",
+        "source": "quest:the-etched-stone",
+        "target": "zone:rathe-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12995",
+        "source": "quest:the-etched-stone",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12996",
+        "source": "quest:the-etched-stone",
+        "target": "zone:lower-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12997",
+        "source": "quest:the-etched-stone",
+        "target": "zone:nagafen-s-lair",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12998",
+        "source": "quest:the-etched-stone",
+        "target": "item:pulsating-hyacinth-telesm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12999",
+        "source": "quest:the-etched-stone",
+        "target": "spell:life-leech",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13000",
+        "source": "npc:northern-felwithe:general-jyleel",
+        "target": "quest:the-falchion",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13001",
+        "source": "quest:the-falchion",
+        "target": "zone:northern-felwithe",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13002",
+        "source": "quest:the-falchion",
+        "target": "zone:northern-felwithe",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13003",
+        "source": "quest:the-falchion",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13004",
+        "source": "quest:the-falchion",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13005",
+        "source": "quest:the-falchion",
+        "target": "faction:clerics-of-tunare",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13006",
+        "source": "quest:the-falchion",
+        "target": "faction:king-tearis-thex",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13007",
+        "source": "quest:the-falchion",
+        "target": "faction:anti-mage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13008",
+        "source": "quest:the-falchion",
+        "target": "item:falchion-of-the-koadavie",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13009",
+        "source": "npc:kael-drakkal:bjoskhua-blackfist",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13010",
+        "source": "npc:kael-drakkal:bjoskhua-blackfist",
+        "target": "quest:the-family-chest-straps",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13011",
+        "source": "quest:the-family-chest-straps",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13012",
+        "source": "quest:the-family-chest-straps",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13013",
+        "source": "quest:the-family-chest-straps",
+        "target": "zone:kedge-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13014",
+        "source": "quest:the-family-chest-straps",
+        "target": "item:flayed-coldain-skin-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13015",
+        "source": "npc:plane-of-sky:inte-akera",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13016",
+        "source": "npc:plane-of-sky:inte-akera",
+        "target": "quest:the-fiery-avenger",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13017",
+        "source": "quest:the-fiery-avenger",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13018",
+        "source": "quest:the-fiery-avenger",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13019",
+        "source": "quest:the-fiery-avenger",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13020",
+        "source": "quest:the-fiery-avenger",
+        "target": "item:fiery-avenger",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13021",
+        "source": "npc:paineel:antus-shelbra",
+        "target": "quest:the-fisherman",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13022",
+        "source": "quest:the-fisherman",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13023",
+        "source": "quest:the-fisherman",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13024",
+        "source": "quest:the-fisherman",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13025",
+        "source": "quest:the-fisherman",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13026",
+        "source": "quest:the-fisherman",
+        "target": "item:staff-of-the-abattoir-initiate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13027",
+        "source": "npc:rivervale:marshal-lanena",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13028",
+        "source": "npc:rivervale:marshal-lanena",
+        "target": "quest:the-fishslayers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13029",
+        "source": "quest:the-fishslayers",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13030",
+        "source": "quest:the-fishslayers",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13031",
+        "source": "quest:the-fishslayers",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13032",
+        "source": "quest:the-fishslayers",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13033",
+        "source": "quest:the-fishslayers",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13034",
+        "source": "quest:the-fishslayers",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13035",
+        "source": "quest:the-fishslayers",
+        "target": "item:rantho-rapier",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13036",
+        "source": "npc:great-divide:windscribe-thaloria",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13037",
+        "source": "npc:great-divide:windscribe-thaloria",
+        "target": "quest:the-four-fragments",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13038",
+        "source": "quest:the-four-fragments",
+        "target": "zone:great-divide",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13039",
+        "source": "quest:the-four-fragments",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13040",
+        "source": "quest:the-four-fragments",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13041",
+        "source": "npc:plane-of-growth:guardian-of-takish",
+        "target": "quest:the-four-idols",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13042",
+        "source": "quest:the-four-idols",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13043",
+        "source": "quest:the-four-idols",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13044",
+        "source": "quest:the-four-idols",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13045",
+        "source": "quest:the-four-idols",
+        "target": "item:symbol-of-tunarian-worship",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13046",
+        "source": "npc:east-freeport:gren-frikniller",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13047",
+        "source": "npc:east-freeport:gren-frikniller",
+        "target": "quest:the-frikniller-family",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13048",
+        "source": "quest:the-frikniller-family",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13049",
+        "source": "quest:the-frikniller-family",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13050",
+        "source": "quest:the-frikniller-family",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13051",
+        "source": "quest:the-frikniller-family",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13052",
+        "source": "quest:the-frikniller-family",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13053",
+        "source": "quest:the-frikniller-family",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13054",
+        "source": "quest:the-frikniller-family",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13055",
+        "source": "quest:the-frikniller-family",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13056",
+        "source": "npc:erudin:gans-paust",
+        "target": "quest:the-geologists-purloined-tools",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13057",
+        "source": "quest:the-geologists-purloined-tools",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13058",
+        "source": "quest:the-geologists-purloined-tools",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13059",
+        "source": "quest:the-geologists-purloined-tools",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13060",
+        "source": "quest:the-geologists-purloined-tools",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13061",
+        "source": "quest:the-geologists-purloined-tools",
+        "target": "item:midnight-sea-mail-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13062",
+        "source": "npc:plane-of-mischief:peachy-dvicci",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13063",
+        "source": "npc:plane-of-mischief:peachy-dvicci",
+        "target": "quest:the-gift-box",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13064",
+        "source": "quest:the-gift-box",
+        "target": "zone:plane-of-mischief",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13065",
+        "source": "quest:the-gift-box",
+        "target": "zone:plane-of-mischief",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13066",
+        "source": "quest:the-gift-box",
+        "target": "item:gift-box",
+        "type": "rewards",
+        "randomGroup": "the-gift-box"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13067",
+        "source": "quest:the-gift-box",
+        "target": "item:frostmaidens-idol",
+        "type": "rewards",
+        "randomGroup": "the-gift-box"
       }
     }
   ]
