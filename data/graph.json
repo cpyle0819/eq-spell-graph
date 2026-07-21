@@ -82021,6 +82021,1155 @@
         ],
         "wiki_title": "The Rat King"
       }
+    },
+    {
+      "data": {
+        "id": "npc:ak-anon:kimble-nogflop",
+        "label": "Kimble Nogflop",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-regurgitonic",
+        "label": "The Regurgitonic",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Kimble Nogflop in Ak'Anon's zoo trades a Flask of Nitrates (obtained from Te'Anara in Surefall Glade) for the Regurgitonic, a lore item used in a further step with Frostbite; there is a chance of receiving a non-functional \"bad\" version.",
+        "steps": [
+          "Obtain a Flask of Nitrates from Te'Anara in Surefall Glade",
+          "Deliver the flask to Kimble Nogflop in Ak'Anon's zoo"
+        ],
+        "wiki_title": "The Regurgitonic"
+      }
+    },
+    {
+      "data": {
+        "id": "item:regurgitonic",
+        "label": "Regurgitonic",
+        "type": "item",
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.4,
+        "size": "Small",
+        "source": "The Regurgitonic reward (Kimble Nogflop, Ak'Anon)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:clerk-doval",
+        "label": "Clerk Doval",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-restraining-order",
+        "label": "The Restraining Order",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Clerk Doval in East Cabilis sends players to collect ten troopers' signatures, in alphabetical order, on a Legion Order -- a Quill for Trooper Fryp, Legion Lager for Trooper Gummin, a Skipping Stone for Trooper Inkin, two Barracuda Teeth for Trooper Nishnish, two Sabertooth Kitten Canines for Trooper Ozlot, and Goblin Scout Beads for Trooper Roklon -- returned to Doval for coin, faction, and a random book from his library (documented so far: The Book of Knowledge, The Code of Combat, The History of Combat, The Tome of Combat; the wiki itself notes there are presumably more).",
+        "steps": [
+          "Collect a Quill, Legion Lager, Skipping Stone, two Barracuda Teeth, two Sabertooth Kitten Canines, and Goblin Scout Beads",
+          "Deliver each item to its named trooper in alphabetical order to sign the Legion Order",
+          "Return the completed Legion Order to Clerk Doval in East Cabilis"
+        ],
+        "wiki_title": "The Restraining Order"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-rogue-take",
+        "label": "The Rogue Take",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Eolorn J`Axx in Neriak Third Gate sends a Sealed Letter to Giz Dinree in East Freeport (spawns at night); Giz's reply leads to A Locked Chest at an offshore location, returned to Eolorn for coin and the Rat Pelt Cape.",
+        "steps": [
+          "Receive a Sealed Letter from Eolorn J`Axx",
+          "Deliver the letter to Giz Dinree in East Freeport (spawns at night)",
+          "Retrieve A Locked Chest from the offshore location (-406, -1150)",
+          "Return the chest to Eolorn J`Axx in Neriak Third Gate"
+        ],
+        "wiki_title": "The Rogue Take"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-seax",
+        "label": "The Seax",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "rogue"
+        ],
+        "minLevel": 1,
+        "description": "Lysbith McNaff in Halas trades four Wrath Orc Wristbands, looted from snow orc troopers, for the Seax.",
+        "steps": [
+          "Collect four Wrath Orc Wristbands from snow orc troopers",
+          "Turn them in to Lysbith McNaff in Halas"
+        ],
+        "wiki_title": "The Seax"
+      }
+    },
+    {
+      "data": {
+        "id": "item:seax",
+        "label": "Seax",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "rogue"
+        ],
+        "skill": "Piercing",
+        "damage": 3,
+        "delay": 21,
+        "backstab": 3,
+        "weight": 3,
+        "size": "Small",
+        "source": "The Seax reward (Lysbith McNaff, Halas)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:oglard",
+        "label": "Oglard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-spirit-of-garzicor",
+        "label": "The Spirit of Garzicor",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "cleric",
+          "druid",
+          "monk",
+          "shaman",
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "description": "Oglard in Skyshrine (via Loremaster Sarl in Thurgadin's Statue Room) requires Ally faction with Citizens of Froststone; players trade an Onyxbrand for a Dragon Crafted Urn, then bring a Finished Naginata Blade, Bronzewood Staff, and Finished Tsuba to Eldriaks Fe'Dhar; a Vial of Kromzek blood given to a Ghostly Presence spawns a raid encounter, and a Blackened and Gold Tinted diamond are combined with the Assembled Naginata in a final forge combine, turned in to Eldriaks Fe'Dhar for a class-dependent reward: the Ethereal Bladed Naginata (Warrior/Paladin/Ranger/Shadow Knight), Sanctum Guardian's Earring (Cleric/Druid/Monk/Shaman), or Pitted Iron Ring (Necromancer/Wizard/Magician/Enchanter).",
+        "steps": [
+          "Reach Ally faction with Citizens of Froststone",
+          "Trade an Onyxbrand to Oglard for a Dragon Crafted Urn",
+          "Bring a Finished Naginata Blade, Bronzewood Staff, and Finished Tsuba to Eldriaks Fe'Dhar",
+          "Give a Vial of Kromzek blood to a Ghostly Presence to spawn a raid encounter",
+          "Combine a Blackened Diamond, Gold Tinted Diamond, and Assembled Naginata in a final forge combine",
+          "Turn in the finished weapon to Eldriaks Fe'Dhar for a class-dependent reward"
+        ],
+        "wiki_title": "The Spirit of Garzicor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ethereal-bladed-naginata",
+        "label": "Ethereal Bladed Naginata",
+        "type": "item",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight"
+        ],
+        "damage": 37,
+        "ac": 15,
+        "stats": {
+          "str": 5,
+          "dex": 10,
+          "agi": 15
+        },
+        "hp": 50,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Spirit of Garzicor reward (Eldriaks Fe'Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sanctum-guardians-earring",
+        "label": "Sanctum Guardian's Earring",
+        "type": "item",
+        "classes": [
+          "cleric",
+          "druid",
+          "monk",
+          "shaman"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 10,
+          "sta": 10,
+          "cha": 10
+        },
+        "hp": 50,
+        "mana": 80,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Spirit of Garzicor reward (Eldriaks Fe'Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pitted-iron-ring",
+        "label": "Pitted Iron Ring",
+        "type": "item",
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 4,
+        "stats": {
+          "sta": 5,
+          "int": 10
+        },
+        "hp": 50,
+        "mana": 50,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "The Spirit of Garzicor reward (Eldriaks Fe'Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:nivold-predd",
+        "label": "Nivold Predd",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-summoning-of-dread",
+        "label": "The Summoning of Dread",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "description": "Nivold Predd in Paineel's Tabernacle of Terror collects a Brain of the Ishva Mal, Fire Beetle Eye, Griffon Eye, Ice Giant Toes, and Powder of Reanimation, exchanged for a Mundane Shield delivered to the Avatar of Dread for the Dread Forged Shield.",
+        "steps": [
+          "Collect a Brain of the Ishva Mal, Fire Beetle Eye, Griffon Eye, Ice Giant Toes, and Powder of Reanimation",
+          "Turn them in to Nivold Predd for a Mundane Shield",
+          "Deliver the Mundane Shield to the Avatar of Dread"
+        ],
+        "wiki_title": "The Summoning of Dread"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dread-forged-shield",
+        "label": "Dread Forged Shield",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "race": [
+          "human",
+          "erudite"
+        ],
+        "ac": 17,
+        "stats": {
+          "str": 5,
+          "cha": 10,
+          "wis": 5
+        },
+        "mana": 20,
+        "resists": {
+          "magic": 10
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "size": "Medium",
+        "source": "The Summoning of Dread reward (Avatar of Dread, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-summoning-of-fright",
+        "label": "The Summoning of Fright",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "description": "Sern Adolia in Paineel collects Zombie Skin (zombies), Embalming Dust (mummies/zombies, Southern Desert of Ro), Charred Bone Chips (a skeleton named Obretl, Southern Desert of Ro), and a Vial of Tunare's Breath (a druid named Kalayia Woodwhisper, Lesser Faydark), exchanged for a Mundane Helm delivered to the Avatar of Fright for the Fright Forged Helm.",
+        "steps": [
+          "Collect Zombie Skin, Embalming Dust, Charred Bone Chips, and a Vial of Tunare's Breath",
+          "Turn them in to Sern Adolia for a Mundane Helm",
+          "Deliver the Mundane Helm to the Avatar of Fright"
+        ],
+        "wiki_title": "The Summoning of Fright"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fright-forged-helm",
+        "label": "Fright Forged Helm",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "race": [
+          "human",
+          "erudite"
+        ],
+        "ac": 11,
+        "stats": {
+          "str": 2,
+          "cha": -5,
+          "wis": 4
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 5.5,
+        "size": "Small",
+        "effect": "Deadeye (Must Equip, instant cast) at Level 10",
+        "source": "The Summoning of Fright reward (Avatar of Fright, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:miadera-shadowfyre",
+        "label": "Miadera Shadowfyre",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-summoning-of-terror",
+        "label": "The Summoning of Terror",
+        "type": "quest",
+        "classes": [
+          "cleric"
+        ],
+        "minLevel": 1,
+        "description": "Miadera Shadowfyre in Paineel collects an Eye of Urd (an urd ghoul wizard, Lower Guk), Basalt Drake Scales (Rathe Mountains), Lens of Lord Soptyvr (Lord Soptyvr, Gorge of King Xorbb), and Widowmistress Hair (The Widowmistress, Najena), exchanged for a Mundane Mask delivered to the Avatar of Terror for the Terror Forged Mask.",
+        "steps": [
+          "Collect an Eye of Urd, Basalt Drake Scales, Lens of Lord Soptyvr, and Widowmistress Hair",
+          "Turn them in to Miadera Shadowfyre for a Mundane Mask",
+          "Deliver the Mundane Mask to the Avatar of Terror"
+        ],
+        "wiki_title": "The Summoning of Terror"
+      }
+    },
+    {
+      "data": {
+        "id": "item:terror-forged-mask",
+        "label": "Terror Forged Mask",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "cleric"
+        ],
+        "race": [
+          "human",
+          "erudite"
+        ],
+        "ac": 4,
+        "stats": {
+          "cha": -5,
+          "wis": 7
+        },
+        "resists": {
+          "magic": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 1.5,
+        "size": "Small",
+        "effect": "Fear (Any Slot/Can Equip, 6.0 sec cast) at Level 25",
+        "source": "The Summoning of Terror reward (Avatar of Terror, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:svekk-fangbinder",
+        "label": "Svekk Fangbinder",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-supply-run-eastern-wastes",
+        "label": "The Supply Run - Eastern Wastes",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Svekk Fangbinder in Kael Drakkal sells a Giant Sack of Supplies for 500 gold, delivered to Fjloaren at the Giant Fort in Eastern Wastes; Fjloaren's Velium Torque is returned to Svekk for roughly 100 gold and faction.",
+        "steps": [
+          "Buy a Giant Sack of Supplies from Svekk Fangbinder for 500 gold",
+          "Deliver the supplies to Fjloaren at the Giant Fort in Eastern Wastes",
+          "Return the Velium Torque received from Fjloaren to Svekk Fangbinder"
+        ],
+        "wiki_title": "The Supply Run - Eastern Wastes"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:crystal-caverns",
+        "label": "Crystal Caverns",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "The Crystal Caverns are the ancient home of the Coldain, named Froststone, long since overrun by giants and now orcs and other creatures.",
+        "wiki_title": "Crystal Caverns",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-supply-run-great-divide",
+        "label": "The Supply Run - Great Divide",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Svekk Fangbinder in Kael Drakkal sells a Giant Sack of Supplies for 50 platinum, delivered to Bekerak Coldbones at the Great Divide's Giant Fort; his note plus a Klezendian Crystal (orcs/geonids, Crystal Caverns) trade for a Large Supply Sack, delivered back to Bekerak for the Kromrif Battle Totem.",
+        "steps": [
+          "Buy a Giant Sack of Supplies from Svekk Fangbinder for 50 platinum",
+          "Deliver the supplies to Bekerak Coldbones at the Giant Fort in Great Divide",
+          "Return with Bekerak's note to Svekk Fangbinder",
+          "Obtain a Klezendian Crystal from orcs or geonids in Crystal Caverns",
+          "Give the note and crystal to Svekk Fangbinder for a Large Supply Sack",
+          "Deliver the Large Supply Sack to Bekerak Coldbones"
+        ],
+        "wiki_title": "The Supply Run - Great Divide"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kromrif-battle-totem",
+        "label": "Kromrif Battle Totem",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": 2,
+          "wis": 3,
+          "int": 3
+        },
+        "hp": 5,
+        "mana": 5,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 5,
+        "source": "The Supply Run - Great Divide reward (Bekerak Coldbones, Great Divide)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:western-karana:ryshon-hunsti",
+        "label": "Ryshon Hunsti",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-sword-of-nobility",
+        "label": "The Sword of Nobility",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 20,
+        "description": "Ryshon Hunsti in Western Karana relays a note through Kanthuk Ogrebane, Llara, and Ruathey, who provides a Nobleman's Bag; combining an Amstaf's Scroll, Blade of Nobility, Ghoul's Heart, and Hilt of the Nobleman in the bag yields Ghoulbane.",
+        "steps": [
+          "Trade Ryshon's note to Kanthuk Ogrebane for a Pendant",
+          "Give the Pendant to Llara for a note to Ruathey",
+          "Give the note to Ruathey for a Nobleman's Bag",
+          "Gather an Amstaf's Scroll, Blade of Nobility, Ghoul's Heart, and Hilt of the Nobleman",
+          "Combine all four items in the Nobleman's Bag for Ghoulbane"
+        ],
+        "wiki_title": "The Sword of Nobility"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ghoulbane",
+        "label": "Ghoulbane",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "half elf",
+          "dwarf",
+          "halfling",
+          "gnome"
+        ],
+        "skill": "1H Slashing",
+        "damage": 15,
+        "delay": 34,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 9.5,
+        "size": "Large",
+        "effect": "Dismiss Undead (Combat, instant cast) at Level 20",
+        "source": "The Sword of Nobility reward (Ryshon Hunsti, Western Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:raz-the-rat-misk",
+        "label": "Raz The Rat Misk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-tattered-pouch",
+        "label": "The Tattered Pouch",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Raz The Rat Misk in South Qeynos sells a tattered leather pouch for 8 gold total, delivered to Crow in North Qeynos for Crow's Special Brew and 3-5 gold.",
+        "steps": [
+          "Give Raz The Rat Misk 3 gold, then 5 more gold for a tattered leather pouch",
+          "Deliver the pouch to Crow in North Qeynos"
+        ],
+        "wiki_title": "The Tattered Pouch"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:steamfont-mountains:brona-frugrin",
+        "label": "Brona Frugrin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-telescope",
+        "label": "The Telescope",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Brona Frugrin in Steamfont Mountains trades an Evil Eye Lens, dropped by Borxx on the fourth floor of Clan Runnyeye, for the Staff of the Observers.",
+        "steps": [
+          "Kill Borxx on the fourth floor of Clan Runnyeye for an Evil Eye Lens",
+          "Deliver the lens to Brona Frugrin in Steamfont Mountains"
+        ],
+        "wiki_title": "The Telescope"
+      }
+    },
+    {
+      "data": {
+        "id": "item:staff-of-the-observers",
+        "label": "Staff of the Observers",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "cleric",
+          "druid",
+          "shaman",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "skill": "2H Blunt",
+        "damage": 12,
+        "delay": 35,
+        "stats": {
+          "wis": 5,
+          "int": 5
+        },
+        "mana": 30,
+        "magic": true,
+        "lore": true,
+        "charges": 20,
+        "weight": 10,
+        "size": "Large",
+        "effect": "Sentinel (Any Slot, instant cast)",
+        "source": "The Telescope reward (Brona Frugrin, Steamfont Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "zone:kaesora",
+        "label": "Kaesora",
+        "type": "zone",
+        "faction": {
+          "race": {
+            "barbarian": "neutral",
+            "dark elf": "neutral",
+            "dwarf": "neutral",
+            "erudite": "neutral",
+            "gnome": "neutral",
+            "half elf": "neutral",
+            "halfling": "neutral",
+            "high elf": "neutral",
+            "human": "neutral",
+            "iksar": "neutral",
+            "ogre": "neutral",
+            "troll": "neutral",
+            "wood elf": "neutral"
+          },
+          "class": {
+            "bard": "safe",
+            "beastlord": "safe",
+            "cleric": "safe",
+            "druid": "safe",
+            "enchanter": "safe",
+            "magician": "safe",
+            "monk": "safe",
+            "necromancer": "safe",
+            "paladin": "safe",
+            "ranger": "safe",
+            "rogue": "safe",
+            "shadow knight": "safe",
+            "shaman": "safe",
+            "warrior": "safe",
+            "wizard": "safe"
+          },
+          "deity": {
+            "agnostic": "neutral",
+            "bertoxxulous": "neutral",
+            "brell serilis": "neutral",
+            "bristlebane": "neutral",
+            "cazic-thule": "neutral",
+            "erollisi marr": "neutral",
+            "innoruuk": "neutral",
+            "karana": "neutral",
+            "mithaniel marr": "neutral",
+            "prexus": "neutral",
+            "quellious": "neutral",
+            "rallos zek": "neutral",
+            "rodcet nife": "neutral",
+            "solusek ro": "neutral",
+            "the tribunal": "neutral",
+            "tunare": "neutral",
+            "veeshan": "neutral"
+          }
+        },
+        "lore": "The history behind the ruins of Kaesora is lost, however most believe that the same cataclysm that struck down the wurm and permanently scoured the surface of the Field of Bone above it laid waste to Kaesora as well. Now only the dead walk these halls.",
+        "wiki_title": "Kaesora",
+        "era": "Kunark"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kaesora:tortured-librarian",
+        "label": "tortured librarian",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-tome-raider",
+        "label": "The Tome Raider",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "minLevel": 1,
+        "description": "The tortured librarian in Kaesora needs a book from an iksar tomb raider (a rare spawn in Emerald Jungle) and an Emerald traded to Dom K`Perl at The Overthere's Dark Elf outpost for a tradeable \"Before Green\" book; both books returned to the librarian yield the Large Tassel Bookmark, an ingredient of the Necromancer 8th Rank Skullcap Quest.",
+        "steps": [
+          "Obtain a book from an iksar tomb raider in Emerald Jungle",
+          "Trade an Emerald to Dom K`Perl at The Overthere's Dark Elf outpost for \"Before Green\"",
+          "Return both books to the tortured librarian in Kaesora"
+        ],
+        "wiki_title": "The Tome Raider"
+      }
+    },
+    {
+      "data": {
+        "id": "item:large-tassel-bookmark",
+        "label": "Large Tassel Bookmark",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue",
+          "shaman",
+          "monk",
+          "beastlord",
+          "druid"
+        ],
+        "race": [
+          "human",
+          "barbarian",
+          "erudite",
+          "wood elf",
+          "high elf",
+          "dark elf",
+          "iksar"
+        ],
+        "ac": 2,
+        "lore": true,
+        "noTrade": true,
+        "weight": 1,
+        "size": "Small",
+        "source": "The Tome Raider reward (tortured librarian, Kaesora)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:toelia-snuckery",
+        "label": "Toelia Snuckery",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-torn-pouch",
+        "label": "The Torn Pouch",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Toelia Snuckery in Rivervale sends players for a Torn Old Pouch (a lake-bottom spawn near 90, -356), then to slay Chomper for a Large Ruby, both delivered to Toelia for coin and faction.",
+        "steps": [
+          "Obtain a Torn Old Pouch from the lake bottom near (90, -356)",
+          "Deliver it to Toelia Snuckery",
+          "Slay Chomper and loot the Large Ruby",
+          "Return the ruby to Toelia Snuckery"
+        ],
+        "wiki_title": "The Torn Pouch"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:sir-lucan-dlere",
+        "label": "Sir Lucan D`Lere",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-traitor",
+        "label": "The Traitor",
+        "type": "quest",
+        "minLevel": 10,
+        "description": "Sir Lucan D`Lere in West Freeport sends players to obtain a Slashed Militia Tunic from Guard Alayle in the Freeport Militia House's backyard, returned for 7 gold and faction.",
+        "steps": [
+          "Obtain a Slashed Militia Tunic from Guard Alayle",
+          "Return it to Sir Lucan D`Lere in West Freeport"
+        ],
+        "wiki_title": "The Traitor"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:puab-closk",
+        "label": "Puab Closk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-treant-fists",
+        "label": "The Treant Fists",
+        "type": "quest",
+        "classes": [
+          "monk"
+        ],
+        "minLevel": 1,
+        "description": "Puab Closk, at the Ashen Order guild house in West Freeport, sends players to collect fallen comrade Thipt's remains -- a Humerus Handled Mace (Gorge of King Xorbb), Ribcage Chest Armor (Misty Thicket), Cat Skull Cap and Fractured Femur (Runnyeye Citadel) -- combined in a Box With Pawprints for A Box of Cat Bones, given to a banished kerran for a Tattered Parchment, delivered back to Puab Closk for the Treant Fists.",
+        "steps": [
+          "Collect a Humerus Handled Mace, Ribcage Chest Armor, Cat Skull Cap, and Fractured Femur",
+          "Combine them in the Box With Pawprints for A Box of Cat Bones",
+          "Give the box to the banished kerran for a Tattered Parchment",
+          "Deliver the parchment to Puab Closk in West Freeport"
+        ],
+        "wiki_title": "The Treant Fists"
+      }
+    },
+    {
+      "data": {
+        "id": "item:treant-fists",
+        "label": "Treant Fists",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "monk"
+        ],
+        "race": [
+          "human",
+          "barbarian",
+          "erudite",
+          "wood elf",
+          "high elf",
+          "dark elf",
+          "half elf",
+          "dwarf",
+          "troll",
+          "ogre",
+          "halfling",
+          "gnome"
+        ],
+        "ac": 8,
+        "stats": {
+          "dex": 3
+        },
+        "hp": 5,
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.7,
+        "size": "Small",
+        "source": "The Treant Fists reward (Puab Closk, West Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:archivist-tyriele",
+        "label": "Archivist Tyriele",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-unnamed-gift",
+        "label": "The Unnamed Gift",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Archivist Tyriele in Iceclad Ocean gives a Lost Gift Box, delivered to Kirvil Snowstring in Thurgadin's bar; the Discarded Packaging received in exchange, returned to Tyriele, grants Chapter II, Of Bards and Bitter Winters, plus a Holiday Gift. No stat infobox is documented for either reward.",
+        "steps": [
+          "Receive a Lost Gift Box from Archivist Tyriele",
+          "Deliver the box to Kirvil Snowstring in Thurgadin's bar",
+          "Return the Discarded Packaging received to Archivist Tyriele"
+        ],
+        "wiki_title": "The Unnamed Gift"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:normon-stonetooth",
+        "label": "Normon Stonetooth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-velium-focus",
+        "label": "The Velium Focus",
+        "type": "quest",
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "description": "Normon Stonetooth in Thurgadin starts a long forge/turn-in chain -- his axe and a Small Piece of Velium sharpened by Hakon Brightsteel into a Velium Focus, refined twice by Phenocryst (The Wakening Land) and a geonid (Crystal Caverns) into an Elbaite Focus, then three ground-spawn crystals plus three slain giants' Holy Symbol of Zek medals upgrade it through an Azurite Focus into the final Phenocryst's Focus.",
+        "steps": [
+          "Receive Normon's axe from Normon Stonetooth",
+          "Give the axe and a Small Piece of Velium to Hakon Brightsteel for a sharpened pick",
+          "Return the pick to Normon Stonetooth for a Velium Focus",
+          "Give the focus to Phenocryst in The Wakening Land for an altered focus",
+          "Give the focus to a geonid in Crystal Caverns for a modified focus",
+          "Return to Phenocryst for the Elbaite Focus",
+          "Collect a Bent Metallic, Heavy Metallic, and Reddish crystal",
+          "Turn in the crystals and Elbaite Focus to Phenocryst for the Azurite Focus",
+          "Defeat three spawned giants and loot their Holy Symbol of Zek medals",
+          "Submit the medals and Azurite Focus to Phenocryst for Phenocryst's Focus"
+        ],
+        "wiki_title": "The Velium Focus"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:geonid-collective",
+        "label": "Geonid Collective",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:phenocrysts-focus",
+        "label": "Phenocryst's Focus",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "dark elf",
+          "gnome",
+          "iksar"
+        ],
+        "ac": 5,
+        "stats": {
+          "dex": 3,
+          "cha": 3,
+          "int": 10
+        },
+        "mana": 40,
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 5,
+          "poison": 3
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.5,
+        "size": "Small",
+        "source": "The Velium Focus reward (Phenocryst, The Wakening Land)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:halas:thadres-thyme",
+        "label": "Thadres Thyme",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-vengeful-musicians",
+        "label": "The Vengeful Musicians",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Thadres Thyme in Halas collects three diary pages (74-76), looted from the vengeful soloist, vengeful composer, and vengeful lyricist in Everfrost Peaks and turned in simultaneously, for Garsen's Brewing List, a vendor-flavor item with no stat infobox. Killing Thadres instead worsens faction.",
+        "steps": [
+          "Defeat the vengeful soloist, vengeful composer, and vengeful lyricist in Everfrost Peaks",
+          "Loot diary pages 74, 75, and 76",
+          "Turn in all three pages simultaneously to Thadres Thyme in Halas"
+        ],
+        "wiki_title": "The Vengeful Musicians"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:najena:a-visiting-priestess",
+        "label": "A Visiting Priestess",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-visiting-priestess",
+        "label": "The Visiting Priestess",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "A Visiting Priestess in Najena collects an Ice Crystal Staff, Water Crystal Staff, Slime Crystal Staff, and Fire Crystal Staff; after she despawns, a Scroll of Flayed Goblin Skin is looted and given with a Star Ruby to Nallar Q'Tentu, then a Vial of Noble's Blood is given to Zanotix Ixtaz for the Blued Two-Handed Hammer.",
+        "steps": [
+          "Give the four crystal staves to A Visiting Priestess in Najena",
+          "Loot the Scroll of Flayed Goblin Skin after she despawns",
+          "Give the scroll and a Star Ruby to Nallar Q'Tentu",
+          "Give a Vial of Noble's Blood to Zanotix Ixtaz for the Blued Two-Handed Hammer"
+        ],
+        "wiki_title": "The Visiting Priestess"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blued-two-handed-hammer",
+        "label": "Blued Two-Handed Hammer",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "shaman",
+          "monk",
+          "beastlord"
+        ],
+        "skill": "2H Blunt",
+        "damage": 21,
+        "delay": 44,
+        "stats": {
+          "dex": 3,
+          "sta": 3
+        },
+        "mana": 30,
+        "resists": {
+          "fire": 10
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 11,
+        "size": "Large",
+        "effect": "Project Lightning (instant cast) at Level 30",
+        "source": "The Visiting Priestess reward (Zanotix Ixtaz, Najena)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:shevra-kollintar",
+        "label": "Shevra Kollintar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-waylaid-courier",
+        "label": "The Waylaid Courier",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Shevra Kollintar in Paineel sends players to kill Malik Zaren at the Golden Rooster Inn in Highpass Hold for a Sealed Letter, returned to Shevra for a piece of Blackened Iron Armor (the specific piece is not named on the wiki) and faction.",
+        "steps": [
+          "Kill Malik Zaren at the Golden Rooster Inn, Highpass Hold, for a Sealed Letter",
+          "Return the letter to Shevra Kollintar in Paineel"
+        ],
+        "wiki_title": "The Waylaid Courier"
+      }
     }
   ],
   "edges": [
@@ -188485,6 +189634,1302 @@
         "id": "e-rewards-13259",
         "source": "quest:the-rat-king",
         "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13260",
+        "source": "npc:ak-anon:kimble-nogflop",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13261",
+        "source": "npc:ak-anon:kimble-nogflop",
+        "target": "quest:the-regurgitonic",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13262",
+        "source": "quest:the-regurgitonic",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13263",
+        "source": "quest:the-regurgitonic",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13264",
+        "source": "quest:the-regurgitonic",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13265",
+        "source": "quest:the-regurgitonic",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13266",
+        "source": "quest:the-regurgitonic",
+        "target": "faction:merchants-of-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13267",
+        "source": "quest:the-regurgitonic",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13268",
+        "source": "quest:the-regurgitonic",
+        "target": "item:regurgitonic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13269",
+        "source": "npc:east-cabilis:clerk-doval",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13270",
+        "source": "npc:east-cabilis:clerk-doval",
+        "target": "quest:the-restraining-order",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13271",
+        "source": "quest:the-restraining-order",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13272",
+        "source": "quest:the-restraining-order",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13273",
+        "source": "quest:the-restraining-order",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13274",
+        "source": "quest:the-restraining-order",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13275",
+        "source": "quest:the-restraining-order",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13276",
+        "source": "quest:the-restraining-order",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13277",
+        "source": "quest:the-restraining-order",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13278",
+        "source": "npc:neriak-3rd-gate:eolorn-jaxx",
+        "target": "quest:the-rogue-take",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13279",
+        "source": "quest:the-rogue-take",
+        "target": "zone:neriak-3rd-gate",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13280",
+        "source": "quest:the-rogue-take",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13281",
+        "source": "quest:the-rogue-take",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13282",
+        "source": "quest:the-rogue-take",
+        "target": "faction:ebon-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13283",
+        "source": "quest:the-rogue-take",
+        "target": "item:rat-pelt-cape",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13284",
+        "source": "npc:halas:lysbith-mcnaff",
+        "target": "quest:the-seax",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13285",
+        "source": "quest:the-seax",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13286",
+        "source": "quest:the-seax",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13287",
+        "source": "quest:the-seax",
+        "target": "faction:wolves-of-the-north",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13288",
+        "source": "quest:the-seax",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13289",
+        "source": "quest:the-seax",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13290",
+        "source": "quest:the-seax",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13291",
+        "source": "quest:the-seax",
+        "target": "item:seax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13292",
+        "source": "npc:skyshrine:oglard",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13293",
+        "source": "npc:skyshrine:oglard",
+        "target": "quest:the-spirit-of-garzicor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13294",
+        "source": "quest:the-spirit-of-garzicor",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13295",
+        "source": "quest:the-spirit-of-garzicor",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13296",
+        "source": "quest:the-spirit-of-garzicor",
+        "target": "item:ethereal-bladed-naginata",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13297",
+        "source": "quest:the-spirit-of-garzicor",
+        "target": "item:sanctum-guardians-earring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13298",
+        "source": "quest:the-spirit-of-garzicor",
+        "target": "item:pitted-iron-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13299",
+        "source": "npc:paineel:nivold-predd",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13300",
+        "source": "npc:paineel:nivold-predd",
+        "target": "quest:the-summoning-of-dread",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13301",
+        "source": "quest:the-summoning-of-dread",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13302",
+        "source": "quest:the-summoning-of-dread",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13303",
+        "source": "quest:the-summoning-of-dread",
+        "target": "faction:dark-reflection",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13304",
+        "source": "quest:the-summoning-of-dread",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13305",
+        "source": "quest:the-summoning-of-dread",
+        "target": "item:dread-forged-shield",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13306",
+        "source": "npc:paineel:sern-adolia",
+        "target": "quest:the-summoning-of-fright",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13307",
+        "source": "quest:the-summoning-of-fright",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13308",
+        "source": "quest:the-summoning-of-fright",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13309",
+        "source": "quest:the-summoning-of-fright",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13310",
+        "source": "quest:the-summoning-of-fright",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13311",
+        "source": "quest:the-summoning-of-fright",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13312",
+        "source": "quest:the-summoning-of-fright",
+        "target": "item:fright-forged-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13313",
+        "source": "npc:paineel:miadera-shadowfyre",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13314",
+        "source": "npc:paineel:miadera-shadowfyre",
+        "target": "quest:the-summoning-of-terror",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13315",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13316",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13317",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:lower-guk",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13318",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13319",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13320",
+        "source": "quest:the-summoning-of-terror",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13321",
+        "source": "quest:the-summoning-of-terror",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13322",
+        "source": "quest:the-summoning-of-terror",
+        "target": "item:terror-forged-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13323",
+        "source": "npc:kael-drakkal:svekk-fangbinder",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13324",
+        "source": "npc:kael-drakkal:svekk-fangbinder",
+        "target": "quest:the-supply-run-eastern-wastes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13325",
+        "source": "quest:the-supply-run-eastern-wastes",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13326",
+        "source": "quest:the-supply-run-eastern-wastes",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13327",
+        "source": "quest:the-supply-run-eastern-wastes",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13328",
+        "source": "quest:the-supply-run-eastern-wastes",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13329",
+        "source": "quest:the-supply-run-eastern-wastes",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13330",
+        "source": "zone:crystal-caverns",
+        "target": "zone:eastern-wastes",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13331",
+        "source": "zone:eastern-wastes",
+        "target": "zone:crystal-caverns",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13332",
+        "source": "npc:kael-drakkal:svekk-fangbinder",
+        "target": "quest:the-supply-run-great-divide",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13333",
+        "source": "quest:the-supply-run-great-divide",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13334",
+        "source": "quest:the-supply-run-great-divide",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13335",
+        "source": "quest:the-supply-run-great-divide",
+        "target": "zone:great-divide",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13336",
+        "source": "quest:the-supply-run-great-divide",
+        "target": "zone:crystal-caverns",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13337",
+        "source": "quest:the-supply-run-great-divide",
+        "target": "item:kromrif-battle-totem",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13338",
+        "source": "npc:western-karana:ryshon-hunsti",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13339",
+        "source": "npc:western-karana:ryshon-hunsti",
+        "target": "quest:the-sword-of-nobility",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13340",
+        "source": "quest:the-sword-of-nobility",
+        "target": "zone:western-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13341",
+        "source": "quest:the-sword-of-nobility",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13342",
+        "source": "quest:the-sword-of-nobility",
+        "target": "item:ghoulbane",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13343",
+        "source": "npc:south-qeynos:raz-the-rat-misk",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13344",
+        "source": "npc:south-qeynos:raz-the-rat-misk",
+        "target": "quest:the-tattered-pouch",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13345",
+        "source": "quest:the-tattered-pouch",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13346",
+        "source": "quest:the-tattered-pouch",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13347",
+        "source": "quest:the-tattered-pouch",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13348",
+        "source": "quest:the-tattered-pouch",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13349",
+        "source": "quest:the-tattered-pouch",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13350",
+        "source": "quest:the-tattered-pouch",
+        "target": "faction:kane-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13351",
+        "source": "npc:steamfont-mountains:brona-frugrin",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13352",
+        "source": "npc:steamfont-mountains:brona-frugrin",
+        "target": "quest:the-telescope",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13353",
+        "source": "quest:the-telescope",
+        "target": "zone:steamfont-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13354",
+        "source": "quest:the-telescope",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13355",
+        "source": "quest:the-telescope",
+        "target": "zone:runnyeye-citadel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13356",
+        "source": "quest:the-telescope",
+        "target": "faction:king-akanon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13357",
+        "source": "quest:the-telescope",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13358",
+        "source": "quest:the-telescope",
+        "target": "item:staff-of-the-observers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13359",
+        "source": "zone:kaesora",
+        "target": "zone:field-of-bone",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13360",
+        "source": "zone:field-of-bone",
+        "target": "zone:kaesora",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13361",
+        "source": "npc:kaesora:tortured-librarian",
+        "target": "zone:kaesora",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13362",
+        "source": "npc:kaesora:tortured-librarian",
+        "target": "quest:the-tome-raider",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13363",
+        "source": "quest:the-tome-raider",
+        "target": "zone:kaesora",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13364",
+        "source": "quest:the-tome-raider",
+        "target": "zone:kaesora",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13365",
+        "source": "quest:the-tome-raider",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13366",
+        "source": "quest:the-tome-raider",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13367",
+        "source": "quest:the-tome-raider",
+        "target": "faction:brood-of-kotiz",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13368",
+        "source": "quest:the-tome-raider",
+        "target": "item:large-tassel-bookmark",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13369",
+        "source": "npc:rivervale:toelia-snuckery",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13370",
+        "source": "npc:rivervale:toelia-snuckery",
+        "target": "quest:the-torn-pouch",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13371",
+        "source": "quest:the-torn-pouch",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13372",
+        "source": "quest:the-torn-pouch",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13373",
+        "source": "quest:the-torn-pouch",
+        "target": "faction:deeppockets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13374",
+        "source": "quest:the-torn-pouch",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13375",
+        "source": "quest:the-torn-pouch",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13376",
+        "source": "quest:the-torn-pouch",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13377",
+        "source": "npc:west-freeport:sir-lucan-dlere",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13378",
+        "source": "npc:west-freeport:sir-lucan-dlere",
+        "target": "quest:the-traitor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13379",
+        "source": "quest:the-traitor",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13380",
+        "source": "quest:the-traitor",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13381",
+        "source": "quest:the-traitor",
+        "target": "faction:freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13382",
+        "source": "quest:the-traitor",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13383",
+        "source": "npc:west-freeport:puab-closk",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13384",
+        "source": "npc:west-freeport:puab-closk",
+        "target": "quest:the-treant-fists",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13385",
+        "source": "quest:the-treant-fists",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13386",
+        "source": "quest:the-treant-fists",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13387",
+        "source": "quest:the-treant-fists",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13388",
+        "source": "quest:the-treant-fists",
+        "target": "zone:misty-thicket",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13389",
+        "source": "quest:the-treant-fists",
+        "target": "zone:runnyeye-citadel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13390",
+        "source": "quest:the-treant-fists",
+        "target": "item:treant-fists",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13391",
+        "source": "npc:iceclad-ocean:archivist-tyriele",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13392",
+        "source": "npc:iceclad-ocean:archivist-tyriele",
+        "target": "quest:the-unnamed-gift",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13393",
+        "source": "quest:the-unnamed-gift",
+        "target": "zone:iceclad-ocean",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13394",
+        "source": "quest:the-unnamed-gift",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13395",
+        "source": "quest:the-unnamed-gift",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13396",
+        "source": "zone:the-wakening-land",
+        "target": "zone:plane-of-growth",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-connects_to-13397",
+        "source": "zone:plane-of-growth",
+        "target": "zone:the-wakening-land",
+        "type": "connects_to"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13398",
+        "source": "npc:thurgadin:normon-stonetooth",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13399",
+        "source": "npc:thurgadin:normon-stonetooth",
+        "target": "quest:the-velium-focus",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13400",
+        "source": "quest:the-velium-focus",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13401",
+        "source": "quest:the-velium-focus",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13402",
+        "source": "quest:the-velium-focus",
+        "target": "zone:the-wakening-land",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13403",
+        "source": "quest:the-velium-focus",
+        "target": "zone:crystal-caverns",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13404",
+        "source": "quest:the-velium-focus",
+        "target": "faction:geonid-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13405",
+        "source": "quest:the-velium-focus",
+        "target": "item:phenocrysts-focus",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13406",
+        "source": "npc:halas:thadres-thyme",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13407",
+        "source": "npc:halas:thadres-thyme",
+        "target": "quest:the-vengeful-musicians",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13408",
+        "source": "quest:the-vengeful-musicians",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13409",
+        "source": "quest:the-vengeful-musicians",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13410",
+        "source": "quest:the-vengeful-musicians",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13411",
+        "source": "npc:najena:a-visiting-priestess",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13412",
+        "source": "npc:najena:a-visiting-priestess",
+        "target": "quest:the-visiting-priestess",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13413",
+        "source": "quest:the-visiting-priestess",
+        "target": "zone:najena",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13414",
+        "source": "quest:the-visiting-priestess",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13415",
+        "source": "quest:the-visiting-priestess",
+        "target": "faction:dark-bargainers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13416",
+        "source": "quest:the-visiting-priestess",
+        "target": "item:blued-two-handed-hammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13417",
+        "source": "npc:paineel:shevra-kollintar",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13418",
+        "source": "npc:paineel:shevra-kollintar",
+        "target": "quest:the-waylaid-courier",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13419",
+        "source": "quest:the-waylaid-courier",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13420",
+        "source": "quest:the-waylaid-courier",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13421",
+        "source": "quest:the-waylaid-courier",
+        "target": "faction:heretics",
         "type": "rewards"
       }
     }
