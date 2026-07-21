@@ -84662,6 +84662,1850 @@
         "size": "Tiny",
         "source": "Tumpy Tonics reward (Trantor Everhot, North Kaladim)"
       }
+    },
+    {
+      "data": {
+        "id": "quest:tunare-scouts-dagger",
+        "label": "Tunare Scouts Dagger",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "description": "Tylfon at the Scouts of Tunare (Rogue) Guild Hall in Kelethin trades 2 gold and 2 Rusty Daggers for the Tarnished Dagger.",
+        "steps": [
+          "Collect 2 gold and 2 Rusty Daggers",
+          "Turn them in to Tylfon at the Scouts of Tunare Guild Hall in Kelethin"
+        ],
+        "wiki_title": "Tunare Scouts Dagger"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tarnished-dagger",
+        "label": "Tarnished Dagger",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "Piercing",
+        "damage": 3,
+        "delay": 22,
+        "weight": 2.5,
+        "size": "Small",
+        "effect": "Backstab: 3",
+        "source": "Tunare Scouts Dagger reward (Tylfon, Kelethin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:lyris-moonbane",
+        "label": "Lyris Moonbane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tunic-of-ridossan-quest",
+        "label": "Tunic of Ridossan Quest",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "description": "Royal Guard Sheltuin in Paineel sends a heavy locked chest to Lyris Moonbane in Qeynos Aqueducts; players gather vile substance (goblin janitor, x2), green river sludge (The Feerrott), and putrid substance (Driana Poxsbourne, via 3 reagent pouches), combine them in a thick glass jar, and trade the sealed jar to Lyris Moonbane for the Harbinger of Bertoxxulous. Pouring it into the river source in The Warrens and returning the empty jar to Royal Guard Sheltuin completes the quest for the Tunic of Ridossan.",
+        "steps": [
+          "Deliver the heavy locked chest to Lyris Moonbane in Qeynos Aqueducts",
+          "Collect 2 vile substance from a goblin janitor, green river sludge in The Feerrott, and putrid substance from Driana Poxsbourne (requires 3 reagent pouches)",
+          "Combine the substances in a thick glass jar",
+          "Trade the sealed jar to Lyris Moonbane for the Harbinger of Bertoxxulous",
+          "Pour the substance into the river source in The Warrens",
+          "Return the empty jar to Royal Guard Sheltuin in Paineel"
+        ],
+        "wiki_title": "Tunic of Ridossan Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:tunic-of-ridossan",
+        "label": "Tunic of Ridossan",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "race": [
+          "erudite"
+        ],
+        "ac": 15,
+        "stats": {
+          "dex": 2,
+          "sta": 2,
+          "int": 1
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 3
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Tunic of Ridossan Quest reward (Royal Guard Sheltuin, Paineel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ulthork-tusks-quest",
+        "label": "Ulthork Tusks Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Chief Kalan in Cobalt Scar barters for no less than four pairs of Ulthork tusks, in exchange for a random gem or piece of jewelry.",
+        "steps": [
+          "Collect four pairs of Ulthork tusks",
+          "Turn them in to Chief Kalan in Cobalt Scar"
+        ],
+        "wiki_title": "Ulthork Tusks Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:ulthork",
+        "label": "Ulthork",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-sapphire-ulthork",
+        "label": "Black Sapphire",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blue-diamond-ulthork",
+        "label": "Blue Diamond",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crystallized-sulfur-ulthork",
+        "label": "Crystallized Sulfur",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:diamond-ulthork",
+        "label": "Diamond",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fire-emerald-ulthork",
+        "label": "Fire Emerald",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fire-emerald-ring-ulthork",
+        "label": "Fire Emerald Ring",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:jacinth-ulthork",
+        "label": "Jacinth",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ruby-ulthork",
+        "label": "Ruby",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ruby-crown-ulthork",
+        "label": "Ruby Crown",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sapphire-ulthork",
+        "label": "Sapphire",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sapphire-necklace-ulthork",
+        "label": "Sapphire Necklace",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:star-ruby-ulthork",
+        "label": "Star Ruby",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:star-ruby-earring-ulthork",
+        "label": "Star Ruby Earring",
+        "type": "item",
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:unsar-koldhagon",
+        "label": "Unsar Koldhagon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:unsars-glory",
+        "label": "Unsar's Glory",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Unsar Koldhagon at the Hall of Sorcery in South Qeynos, available at Dubious or better Order of Three faction, trades Rat Whiskers, Snake Scales, and two Bat Wings -- common drops in the newbie yard outside the North Gate -- for experience and faction.",
+        "steps": [
+          "Reach at least Dubious faction with Order of Three",
+          "Collect Rat Whiskers, Snake Scales, and two Bat Wings",
+          "Turn them in to Unsar Koldhagon at the Hall of Sorcery in South Qeynos"
+        ],
+        "wiki_title": "Unsar's Glory"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:grobb:urako",
+        "label": "Urako",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:urakos-big-mistake",
+        "label": "Urako's Big Mistake",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Urako in Grobb collects four skeleton-building pieces: Grobb Oven Mittens (Carver Cagrek, for 3 Froglok Meat + 10 gold), Ogre Butcher Apron (Chef Dooga in Oggok, for 3 Pickled Froglok + 10 gold), Ship in a Bottle (Clurg in Oggok), and 4 Lizardman Scout Fifes (lizardman scouts, The Feerrott); trading them for the Kaglari Mana Doll.",
+        "steps": [
+          "Trade 3 Froglok Meat and 10 gold to Carver Cagrek for Grobb Oven Mittens",
+          "Trade 3 Pickled Froglok and 10 gold to Chef Dooga in Oggok for an Ogre Butcher Apron",
+          "Obtain a Ship in a Bottle from Clurg in Oggok",
+          "Collect 4 Lizardman Scout Fifes from lizardman scouts in The Feerrott",
+          "Turn in all four items to Urako in Grobb"
+        ],
+        "wiki_title": "Urako's Big Mistake"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kaglari-mana-doll",
+        "label": "Kaglari Mana Doll",
+        "type": "item",
+        "ac": 4,
+        "mana": 15,
+        "weight": 0.8,
+        "source": "Urako's Big Mistake reward (Urako, Grobb)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:vambraces-of-avoidance-quest",
+        "label": "Vambraces of Avoidance Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Vorken Iceshard, inside the plate house in Kael Drakkel, trades the Head of Ekelng Thunderstone (killed in the northeast corner of Eastern Wastes) for the Vambraces of Avoidance.",
+        "steps": [
+          "Defeat Ekelng Thunderstone in the northeast corner of Eastern Wastes and loot his head",
+          "Return the head to Vorken Iceshard in Kael Drakkel"
+        ],
+        "wiki_title": "Vambraces of Avoidance Quest",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vambraces-of-avoidance",
+        "label": "Vambraces of Avoidance",
+        "type": "item",
+        "slots": [
+          "Arms"
+        ],
+        "ac": 12,
+        "stats": {
+          "str": 3
+        },
+        "resists": {
+          "magic": 5
+        },
+        "magic": true,
+        "weight": 3.2,
+        "size": "Small",
+        "source": "Vambraces of Avoidance Quest reward (Vorken Iceshard, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:vasty-deep-water",
+        "label": "Vasty Deep Water",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Rarnan Lapice in Erudin requests the Testament of Vanear, chaining through Illithi Nollith, Tol Nicelot, and Nolusia Finharn to obtain and deliver Erud's Tonic (a no-trade and a tradeable version) to Moodoro Finharn and Flynn Merrington, a poisoned tonic meant to eliminate a criminal's associate; the Label of Erud's Tonic returned to Nolusia Finharn completes the chain.",
+        "steps": [
+          "Obtain the Testament of Vanear for Rarnan Lapice",
+          "Follow the chain through Illithi Nollith and Tol Nicelot to Nolusia Finharn",
+          "Obtain Erud's Tonic via Sinnkin Highbrow and deliver the no-trade version to Nolusia Finharn",
+          "Receive a tradeable Erud's Tonic and instructions; deliver the no-trade tonic to Moodoro Finharn and the tradeable tonic to Flynn Merrington",
+          "Return the Label of Erud's Tonic from Flynn Merrington to Nolusia Finharn"
+        ],
+        "wiki_title": "Vasty Deep Water"
+      }
+    },
+    {
+      "data": {
+        "id": "item:splintering-club",
+        "label": "Splintering Club",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 4,
+        "weight": 1,
+        "size": "Small",
+        "source": "Vasty Deep Water reward (Rarnan Lapice, Erudin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:ungdin",
+        "label": "Ungdin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:velium-retrieval",
+        "label": "Velium Retrieval",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Sentry Kale in Skyshrine gives a Velium Delivery Note for Ungdin in the Thurgadin mines; paying Ungdin 50 platinum for a Shipment of Velium Ore and returning it to Sentry Kale occasionally yields the Bracer of Hammerfal.",
+        "steps": [
+          "Receive a Velium Delivery Note from Sentry Kale in Skyshrine",
+          "Deliver the note to Ungdin in the Thurgadin mines and pay 50 platinum",
+          "Receive a Shipment of Velium Ore",
+          "Return the shipment to Sentry Kale in Skyshrine"
+        ],
+        "wiki_title": "Velium Retrieval"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracer-of-hammerfal",
+        "label": "Bracer of Hammerfal",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "ac": 6,
+        "stats": {
+          "sta": 5,
+          "wis": 3
+        },
+        "hp": 25,
+        "magic": true,
+        "noTrade": true,
+        "effect": "Summon Throwing Hammer",
+        "source": "Velium Retrieval reward (Sentry Kale, Skyshrine); not always given"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:surefall-glade:frenway-marthank",
+        "label": "Frenway Marthank",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:vengeance-for-frenway",
+        "label": "Vengeance for Frenway",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Frenway Marthank in Surefall Glade takes a Mammoth's Hide, looted alongside a Bayle List II from a Mammoth, for coin and faction. Killing the Mammoth incurs a large negative faction hit with Surefall's residents that the hide turn-in only partly recovers.",
+        "steps": [
+          "Defeat a Mammoth and loot its Mammoth's Hide and Bayle List II",
+          "Turn in the hide to Frenway Marthank in Surefall Glade"
+        ],
+        "wiki_title": "Vengeance for Frenway"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:sabertooths-of-blackburrow",
+        "label": "Sabertooths of Blackburrow",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:lord-qyzar",
+        "label": "Lord Qyzar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:visceral-dagger",
+        "label": "Visceral Dagger",
+        "type": "quest",
+        "classes": [
+          "shadow knight",
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "description": "Lord Qyzar in East Cabilis collects a Dagger Hilt, Sharp Metal Shard, and Jagged Metal Shard (each from a different a kly imprecator) plus a Forge Hammer of Dalnir (undead blacksmith), combined at the Grand Forge for the Visceral Dagger.",
+        "steps": [
+          "Defeat three a kly imprecators for a Dagger Hilt, Sharp Metal Shard, and Jagged Metal Shard",
+          "Defeat an undead blacksmith for the Forge Hammer of Dalnir",
+          "Combine the pieces at the Grand Forge",
+          "Return to Lord Qyzar in East Cabilis"
+        ],
+        "wiki_title": "Visceral Dagger"
+      }
+    },
+    {
+      "data": {
+        "id": "item:visceral-dagger",
+        "label": "The Visceral Dagger",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight",
+          "necromancer"
+        ],
+        "skill": "Piercing",
+        "damage": 6,
+        "delay": 21,
+        "stats": {
+          "int": 8
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "source": "Visceral Dagger reward (Lord Qyzar, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:vkjor",
+        "label": "Vkjor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:vkjors-major-task",
+        "label": "Vkjor's Major Task",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "description": "Vkjor in Kael Drakkel sends warriors to slay three dragons in Western Wastes -- Draazak, Jerigozia, and Veredenia -- and loot a claw from each, for the Silver Steel Gauntlets.",
+        "steps": [
+          "Defeat Draazak, Jerigozia, and Veredenia in Western Wastes for a claw each",
+          "Return the three claws to Vkjor in Kael Drakkel"
+        ],
+        "wiki_title": "Vkjor's Major Task",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "item:silver-steel-gauntlets",
+        "label": "Silver Steel Gauntlets",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "ac": 16,
+        "stats": {
+          "str": 7
+        },
+        "hp": 80,
+        "resists": {
+          "disease": 10,
+          "cold": 10
+        },
+        "magic": true,
+        "noTrade": true,
+        "source": "Vkjor's Major Task reward (Vkjor, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:iceclad-ocean:graktar-bluehammer",
+        "label": "Graktar Bluehammer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:vkjors-minor-task",
+        "label": "Vkjor's Minor Task",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Vkjor in Kael Drakkel gives a Large Note for Graktar Bluehammer in Iceclad Ocean; Graktar's Signet Ring, retrieved from a wedding at the Tower of Frozen Shadow, is returned to Graktar for coin and faction.",
+        "steps": [
+          "Receive a Large Note from Vkjor in Kael Drakkel",
+          "Deliver the note to Graktar Bluehammer in Iceclad Ocean",
+          "Retrieve Graktar's Signet Ring from the Tower of Frozen Shadow",
+          "Return the ring to Graktar Bluehammer"
+        ],
+        "wiki_title": "Vkjor's Minor Task",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:kromrif-recruiter",
+        "label": "A Kromrif Recruiter",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wage-war-upon-the-coldain",
+        "label": "Wage War Upon The Coldain",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "A Kromrif recruiter in Kael Drakkel, available at Dubious or better faction, buys Coldain Heads (up to 4 per turn-in) for experience and faction with the Kromrif and Kromzek.",
+        "steps": [
+          "Reach at least Dubious faction with the Kromrif recruiter",
+          "Defeat Coldain and loot their heads",
+          "Turn in up to 4 heads at a time to the Kromrif recruiter in Kael Drakkel"
+        ],
+        "wiki_title": "Wage War Upon The Coldain",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:marshal-ghobber",
+        "label": "Marshal Ghobber",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wall-squad-ring",
+        "label": "Wall Squad Ring",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "After completing the Orc Belts quest, Marshal Ghobber at the Rivervale bank gives the Squad Ring to players at Warmly or better Guardians of the Vale faction; Hendi Mrubble recharges it at Amiable faction.",
+        "steps": [
+          "Complete the Orc Belts quest",
+          "Reach at least Warmly faction with Guardians of the Vale",
+          "Ask Marshal Ghobber \"Am I one with the Wall?\" at the Rivervale bank",
+          "Bring the ring to Hendi Mrubble to recharge it (requires Amiable faction)"
+        ],
+        "wiki_title": "Wall Squad Ring"
+      }
+    },
+    {
+      "data": {
+        "id": "item:squad-ring",
+        "label": "Squad Ring",
+        "type": "item",
+        "slots": [
+          "Finger"
+        ],
+        "charges": 1,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "effect": "Healing (Any Slot, instant cast)",
+        "source": "Wall Squad Ring reward (Marshal Ghobber, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:warsliks-woods:captain-gideen",
+        "label": "Captain Gideen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:watcher-torches",
+        "label": "Watcher Torches",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Captain Gideen in Warsliks Woods rewards no fewer than three Watcher Signal Torches with an Aloe Swatch.",
+        "steps": [
+          "Collect three Watcher Signal Torches",
+          "Turn them in to Captain Gideen in Warsliks Woods"
+        ],
+        "wiki_title": "Watcher Torches"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aloe-swatch",
+        "label": "Aloe Swatch",
+        "type": "item",
+        "weight": 0.5,
+        "size": "Small",
+        "source": "Watcher Torches reward (Captain Gideen, Warsliks Woods)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:kragek-thunderforge",
+        "label": "Kragek Thunderforge",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:warrior-kael-armor-quests",
+        "label": "Warrior Kael Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Kragek Thunderforge in Kael Drakkel trades an Ancient Tarnished armor piece plus three matching gems for its Warlord's counterpart. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-crown",
+        "label": "Warrior Kael Armor Quests: Crown",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Plate Helmet plus 3 Crushed Coral to Kragek Thunderforge in Kael Drakkel for the Warlord's Crown.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-crown",
+        "label": "Warlord's Crown",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 30,
+        "stats": {
+          "str": 4,
+          "dex": 3,
+          "sta": 7
+        },
+        "hp": 35,
+        "source": "Warrior Kael Armor Quests: Crown reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-breastplate",
+        "label": "Warrior Kael Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Breastplate plus 3 Flawless Diamond to Kragek Thunderforge in Kael Drakkel for the Warlord's Breastplate.",
+        "steps": [
+          "Gather a Ancient Tarnished Breastplate and 3 Flawless Diamond",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-breastplate",
+        "label": "Warlord's Breastplate",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 59,
+        "stats": {
+          "str": 16,
+          "dex": 7,
+          "sta": 10,
+          "agi": 7
+        },
+        "hp": 90,
+        "source": "Warrior Kael Armor Quests: Breastplate reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-vambraces",
+        "label": "Warrior Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Vambraces plus 3 Flawed Emerald to Kragek Thunderforge in Kael Drakkel for the Warlord's Vambraces.",
+        "steps": [
+          "Gather a Ancient Tarnished Vambraces and 3 Flawed Emerald",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-vambraces",
+        "label": "Warlord's Vambraces",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 33,
+        "stats": {
+          "str": 5,
+          "sta": 6
+        },
+        "hp": 25,
+        "source": "Warrior Kael Armor Quests: Vambraces reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-bracer",
+        "label": "Warrior Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Plate Bracelet plus 3 Crushed Flame Emerald to Kragek Thunderforge in Kael Drakkel for the Warlord's Bracer.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Bracelet and 3 Crushed Flame Emerald",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-bracer",
+        "label": "Warlord's Bracer",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 25,
+        "stats": {
+          "sta": 2,
+          "agi": 7
+        },
+        "hp": 35,
+        "source": "Warrior Kael Armor Quests: Bracer reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-gauntlets",
+        "label": "Warrior Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Plate Gauntlets plus 3 Crushed Topaz to Kragek Thunderforge in Kael Drakkel for the Warlord's Gauntlets.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-gauntlets",
+        "label": "Warlord's Gauntlets",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 30,
+        "stats": {
+          "sta": 5
+        },
+        "hp": 60,
+        "source": "Warrior Kael Armor Quests: Gauntlets reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-greaves",
+        "label": "Warrior Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Greaves plus 3 Flawed Sea Sapphire to Kragek Thunderforge in Kael Drakkel for the Warlord's Greaves.",
+        "steps": [
+          "Gather a Ancient Tarnished Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-greaves",
+        "label": "Warlord's Greaves",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 45,
+        "stats": {
+          "str": 9,
+          "dex": 7,
+          "sta": 5
+        },
+        "source": "Warrior Kael Armor Quests: Greaves reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-kael-armor-quests-boots",
+        "label": "Warrior Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Ancient Tarnished Plate Boots plus 3 Crushed Black Marble to Kragek Thunderforge in Kael Drakkel for the Warlord's Boots.",
+        "steps": [
+          "Gather a Ancient Tarnished Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Kragek Thunderforge in Kael Drakkel"
+        ],
+        "wiki_title": "Warrior Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:warlord-s-boots",
+        "label": "Warlord's Boots",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 32,
+        "stats": {
+          "sta": 3,
+          "agi": 2
+        },
+        "hp": 30,
+        "source": "Warrior Kael Armor Quests: Boots reward (Kragek Thunderforge, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:jendavudd-fedhar",
+        "label": "Jendavudd Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:warrior-skyshrine-armor-quests",
+        "label": "Warrior Skyshrine Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Jendavudd Fe`Dhar in Skyshrine trades an Unadorned Plate armor piece plus three matching gems for its Myrmidon counterpart. Seven independent sub-quests, no ordering between them (Bracer of the Myrmidon has two independent turn-ins for the same reward).",
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-crown",
+        "label": "Warrior Skyshrine Armor Quests: Crown",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Helmet plus 3 Crushed Coral to Jendavudd Fe`Dhar in Skyshrine for the Crown of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crown-of-the-myrmidon",
+        "label": "Crown of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 27,
+        "stats": {
+          "str": 3,
+          "dex": 12
+        },
+        "hp": 35,
+        "source": "Warrior Skyshrine Armor Quests: Crown reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "label": "Warrior Skyshrine Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Breastplate plus 3 Flawless Diamond to Jendavudd Fe`Dhar in Skyshrine for the Breastplate of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Breastplate and 3 Flawless Diamond",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:breastplate-of-the-myrmidon",
+        "label": "Breastplate of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 54,
+        "stats": {
+          "str": 15,
+          "dex": 7,
+          "sta": 10,
+          "agi": 7
+        },
+        "hp": 90,
+        "source": "Warrior Skyshrine Armor Quests: Breastplate reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "label": "Warrior Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Vambraces plus 3 Flawed Emerald to Jendavudd Fe`Dhar in Skyshrine for the Vambraces of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:vambraces-of-the-myrmidon",
+        "label": "Vambraces of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 30,
+        "stats": {
+          "str": 5,
+          "sta": 5,
+          "agi": 5
+        },
+        "hp": 25,
+        "source": "Warrior Skyshrine Armor Quests: Vambraces reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-bracer",
+        "label": "Warrior Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Bracer plus 3 Crushed Flame Emerald to Jendavudd Fe`Dhar in Skyshrine for the Bracer of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bracer-of-the-myrmidon",
+        "label": "Bracer of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "str": 2,
+          "dex": 2,
+          "sta": 5,
+          "agi": 9
+        },
+        "hp": 15,
+        "source": "Warrior Skyshrine Armor Quests: Bracer reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "label": "Warrior Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Gauntlets plus 3 Crushed Topaz to Jendavudd Fe`Dhar in Skyshrine for the Gauntlets of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-the-myrmidon",
+        "label": "Gauntlets of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 27,
+        "stats": {
+          "dex": 8
+        },
+        "hp": 90,
+        "source": "Warrior Skyshrine Armor Quests: Gauntlets reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-greaves",
+        "label": "Warrior Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Greaves plus 3 Flawed Sea Sapphire to Jendavudd Fe`Dhar in Skyshrine for the Greaves of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:greaves-of-the-myrmidon",
+        "label": "Greaves of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 40,
+        "stats": {
+          "str": 9,
+          "dex": 9,
+          "agi": 9
+        },
+        "hp": 40,
+        "source": "Warrior Skyshrine Armor Quests: Greaves reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-skyshrine-armor-quests-boots",
+        "label": "Warrior Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Unadorned Plate Boots plus 3 Crushed Black Marble to Jendavudd Fe`Dhar in Skyshrine for the Boots of the Myrmidon.",
+        "steps": [
+          "Gather a Unadorned Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Jendavudd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Warrior Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:boots-of-the-myrmidon",
+        "label": "Boots of the Myrmidon",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 28,
+        "stats": {
+          "sta": 4,
+          "dex": 2
+        },
+        "hp": 25,
+        "source": "Warrior Skyshrine Armor Quests: Boots reward (Jendavudd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:captain-njall",
+        "label": "Captain Njall",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:warrior-thurgadin-armor-quests",
+        "label": "Warrior Thurgadin Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Captain Njall in Thurgadin trades a Corroded Plate armor piece plus three matching gems for its Champion's counterpart. Seven independent sub-quests, no ordering between them (Champion's Bracer has two independent turn-ins for the same reward).",
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-helm",
+        "label": "Warrior Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Helmet plus 3 Crushed Coral to Captain Njall in Thurgadin for the Champion's Crown.",
+        "steps": [
+          "Gather a Corroded Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-crown",
+        "label": "Champion's Crown",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 2,
+          "sta": 7
+        },
+        "hp": 35,
+        "source": "Warrior Thurgadin Armor Quests: Helm reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "label": "Warrior Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Breastplate plus 3 Flawless Diamond to Captain Njall in Thurgadin for the Champion's Breastplate.",
+        "steps": [
+          "Gather a Corroded Breastplate and 3 Flawless Diamond",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-breastplate",
+        "label": "Champion's Breastplate",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 47,
+        "stats": {
+          "str": 14
+        },
+        "hp": 90,
+        "resists": {
+          "magic": 4
+        },
+        "source": "Warrior Thurgadin Armor Quests: Breastplate reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "label": "Warrior Thurgadin Armor Quests: Arm Plates",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Vambraces plus 3 Flawed Emerald to Captain Njall in Thurgadin for the Champion's Vambraces.",
+        "steps": [
+          "Gather a Corroded Plate Vambraces and 3 Flawed Emerald",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-vambraces",
+        "label": "Champion's Vambraces",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 4
+        },
+        "hp": 25,
+        "source": "Warrior Thurgadin Armor Quests: Arm Plates reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-bracers",
+        "label": "Warrior Thurgadin Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Bracer plus 3 Crushed Flame Emerald to Captain Njall in Thurgadin for the Champion's Bracer.",
+        "steps": [
+          "Gather a Corroded Plate Bracer and 3 Crushed Flame Emerald",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-bracer",
+        "label": "Champion's Bracer",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "agi": 7
+        },
+        "hp": 15,
+        "source": "Warrior Thurgadin Armor Quests: Bracers reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "label": "Warrior Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Gauntlets plus 3 Crushed Topaz to Captain Njall in Thurgadin for the Champion's Gauntlets.",
+        "steps": [
+          "Gather a Corroded Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-gauntlets",
+        "label": "Champion's Gauntlets",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "agi": 5
+        },
+        "hp": 40,
+        "source": "Warrior Thurgadin Armor Quests: Gauntlets reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-greaves",
+        "label": "Warrior Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Greaves plus 3 Flawed Sea Sapphire to Captain Njall in Thurgadin for the Champion's Greaves.",
+        "steps": [
+          "Gather a Corroded Plate Greaves and 3 Flawed Sea Sapphire",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-greaves",
+        "label": "Champion's Greaves",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 34,
+        "stats": {
+          "str": 9,
+          "sta": 7
+        },
+        "source": "Warrior Thurgadin Armor Quests: Greaves reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-thurgadin-armor-quests-boots",
+        "label": "Warrior Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Corroded Plate Boots plus 3 Crushed Black Marble to Captain Njall in Thurgadin for the Champion's Boots.",
+        "steps": [
+          "Gather a Corroded Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Captain Njall in Thurgadin"
+        ],
+        "wiki_title": "Warrior Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:champion-s-boots",
+        "label": "Champion's Boots",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 25,
+        "stats": {
+          "str": 1,
+          "sta": 3
+        },
+        "source": "Warrior Thurgadin Armor Quests: Boots reward (Captain Njall, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:torgon-blademaster",
+        "label": "Torgon Blademaster",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:falorn",
+        "label": "Falorn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:ogog",
+        "label": "Ogog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:warrior-plane-of-sky-tests",
+        "label": "Warrior Plane of Sky Tests",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Torgon Blademaster in the Plane of Sky hands warriors a book to read, then summons either Falorn or Ogog based on the player's choice; each apprentice offers three independent item-turn-in tests for a named reward. Six independent sub-quests, no ordering between them.",
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-strength",
+        "label": "Warrior Plane of Sky Tests: Test of Strength",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring a bronze disc, small pick, and stone amulet to Falorn in the Plane of Sky for the Runed Wind Amulet.",
+        "steps": [
+          "Gather a bronze disc, small pick, and stone amulet",
+          "Turn them in to Falorn in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-wind-amulet",
+        "label": "Runed Wind Amulet",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 6,
+        "stats": {
+          "str": 7,
+          "agi": 7
+        },
+        "hp": 40,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Warrior Plane of Sky Tests: Test of Strength reward (Falorn, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-force",
+        "label": "Warrior Plane of Sky Tests: Test of Force",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring a pearlescent globe, silver mesh, and spiroc air totem to Falorn in the Plane of Sky for the Pauldrons of the Blue Sky.",
+        "steps": [
+          "Gather a pearlescent globe, silver mesh, and spiroc air totem",
+          "Turn them in to Falorn in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pauldrons-of-the-blue-sky",
+        "label": "Pauldrons of the Blue Sky",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Shoulders"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 12,
+        "stats": {
+          "str": 8,
+          "dex": 10,
+          "sta": 7,
+          "agi": 10
+        },
+        "effect": "Spirit of Cheetah (Must Equip, instant cast) at Level 45",
+        "weight": 4.5,
+        "size": "Medium",
+        "source": "Warrior Plane of Sky Tests: Test of Force reward (Falorn, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-skill",
+        "label": "Warrior Plane of Sky Tests: Test of Skill",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring an ivory tessera, small ruby, and azure ring to Falorn in the Plane of Sky for the Azure Ruby Ring.",
+        "steps": [
+          "Gather an ivory tessera, small ruby, and azure ring",
+          "Turn them in to Falorn in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:azure-ruby-ring",
+        "label": "Azure Ruby Ring",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Finger"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 5,
+        "stats": {
+          "str": 6,
+          "dex": 9,
+          "sta": 6
+        },
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Warrior Plane of Sky Tests: Test of Skill reward (Falorn, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-bash",
+        "label": "Warrior Plane of Sky Tests: Test of Bash",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring an efreeti battle axe, honeyed nectar, bottled djinni, and ethereal emerald to Ogog in the Plane of Sky for the Fangol.",
+        "steps": [
+          "Gather an efreeti battle axe, honeyed nectar, bottled djinni, and ethereal emerald",
+          "Turn them in to Ogog in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fangol",
+        "label": "Fangol",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Primary"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "2H Slashing",
+        "damage": 29,
+        "delay": 35,
+        "stats": {
+          "str": 3,
+          "dex": 10,
+          "sta": 10
+        },
+        "resists": {
+          "poison": 5
+        },
+        "effect": "Fangol's Breath (Combat, instant cast) at Level 50",
+        "weight": 8,
+        "size": "Giant",
+        "source": "Warrior Plane of Sky Tests: Test of Bash reward (Ogog, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-smash",
+        "label": "Warrior Plane of Sky Tests: Test of Smash",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring a djinni war blade, virulent poison, and mottled spiroc feather to Ogog in the Plane of Sky for the Dagas.",
+        "steps": [
+          "Gather a djinni war blade, virulent poison, and mottled spiroc feather",
+          "Turn them in to Ogog in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dagas",
+        "label": "Dagas",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "1H Slashing",
+        "damage": 11,
+        "delay": 21,
+        "ac": 20,
+        "stats": {
+          "str": 3,
+          "agi": 2
+        },
+        "hp": 100,
+        "weight": 2.5,
+        "size": "Medium",
+        "source": "Warrior Plane of Sky Tests: Test of Smash reward (Ogog, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-plane-of-sky-test-of-think",
+        "label": "Warrior Plane of Sky Tests: Test of Think",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Bring an efreeti belt, pegasus statuette, spiroc wind totem, and wind tablet to Ogog in the Plane of Sky for the Belt of the Four Winds.",
+        "steps": [
+          "Gather an efreeti belt, pegasus statuette, spiroc wind totem, and wind tablet",
+          "Turn them in to Ogog in the Plane of Sky"
+        ],
+        "wiki_title": "Warrior Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:belt-of-the-four-winds",
+        "label": "Belt of the Four Winds",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Waist"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 5,
+        "stats": {
+          "str": 12,
+          "dex": 6,
+          "sta": 12,
+          "agi": 6
+        },
+        "resists": {
+          "magic": 5
+        },
+        "effect": "Haste +41%",
+        "weight": 2,
+        "size": "Medium",
+        "source": "Warrior Plane of Sky Tests: Test of Think reward (Ogog, Plane of Sky)"
+      }
     }
   ],
   "edges": [
@@ -194414,6 +196258,2331 @@
         "id": "e-rewards-13670",
         "source": "quest:tumpy-tonics",
         "target": "item:dwarven-wire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13671",
+        "source": "npc:greater-faydark:tylfon",
+        "target": "quest:tunare-scouts-dagger",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13672",
+        "source": "quest:tunare-scouts-dagger",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13673",
+        "source": "quest:tunare-scouts-dagger",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13674",
+        "source": "quest:tunare-scouts-dagger",
+        "target": "faction:tunare-s-scouts",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13675",
+        "source": "quest:tunare-scouts-dagger",
+        "target": "item:tarnished-dagger",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13676",
+        "source": "npc:qeynos-aqueducts:lyris-moonbane",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13677",
+        "source": "npc:paineel:royal-guard-sheltuin",
+        "target": "quest:tunic-of-ridossan-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13678",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13679",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13680",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13681",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13682",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "zone:the-warrens",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13683",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13684",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13685",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13686",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13687",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13688",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13689",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "faction:deepwater-knights",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13690",
+        "source": "quest:tunic-of-ridossan-quest",
+        "target": "item:tunic-of-ridossan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13691",
+        "source": "npc:cobalt-scar:chief-kalan",
+        "target": "quest:ulthork-tusks-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13692",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "zone:cobalt-scar",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13693",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "zone:cobalt-scar",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13694",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "faction:othmir",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13695",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "faction:ulthork",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13696",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:black-sapphire-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13697",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:blue-diamond-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13698",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:crystallized-sulfur-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13699",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:diamond-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13700",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:fire-emerald-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13701",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:fire-emerald-ring-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13702",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:jacinth-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13703",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:ruby-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13704",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:ruby-crown-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13705",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:sapphire-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13706",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:sapphire-necklace-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13707",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:star-ruby-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13708",
+        "source": "quest:ulthork-tusks-quest",
+        "target": "item:star-ruby-earring-ulthork",
+        "type": "rewards",
+        "randomGroup": "ulthork-tusks-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13709",
+        "source": "npc:south-qeynos:unsar-koldhagon",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13710",
+        "source": "npc:south-qeynos:unsar-koldhagon",
+        "target": "quest:unsars-glory",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13711",
+        "source": "quest:unsars-glory",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13712",
+        "source": "quest:unsars-glory",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13713",
+        "source": "quest:unsars-glory",
+        "target": "faction:order-of-three",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13714",
+        "source": "quest:unsars-glory",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13715",
+        "source": "quest:unsars-glory",
+        "target": "faction:bloodsabers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13716",
+        "source": "quest:unsars-glory",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13717",
+        "source": "npc:grobb:urako",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13718",
+        "source": "npc:grobb:urako",
+        "target": "quest:urakos-big-mistake",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13719",
+        "source": "quest:urakos-big-mistake",
+        "target": "zone:grobb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13720",
+        "source": "quest:urakos-big-mistake",
+        "target": "zone:grobb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13721",
+        "source": "quest:urakos-big-mistake",
+        "target": "zone:oggok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13722",
+        "source": "quest:urakos-big-mistake",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13723",
+        "source": "quest:urakos-big-mistake",
+        "target": "faction:dark-ones",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13724",
+        "source": "quest:urakos-big-mistake",
+        "target": "faction:shadowknights-of-night-keep",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13725",
+        "source": "quest:urakos-big-mistake",
+        "target": "item:kaglari-mana-doll",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13726",
+        "source": "npc:kael-drakkal:vorken-iceshard",
+        "target": "quest:vambraces-of-avoidance-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13727",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13728",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13729",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13730",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13731",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13732",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13733",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13734",
+        "source": "quest:vambraces-of-avoidance-quest",
+        "target": "item:vambraces-of-avoidance",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13735",
+        "source": "npc:erudin:rarnan-lapice",
+        "target": "quest:vasty-deep-water",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13736",
+        "source": "quest:vasty-deep-water",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13737",
+        "source": "quest:vasty-deep-water",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13738",
+        "source": "quest:vasty-deep-water",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13739",
+        "source": "quest:vasty-deep-water",
+        "target": "faction:craftkeepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13740",
+        "source": "quest:vasty-deep-water",
+        "target": "faction:high-council-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13741",
+        "source": "quest:vasty-deep-water",
+        "target": "faction:heretics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13742",
+        "source": "quest:vasty-deep-water",
+        "target": "faction:high-guard-of-erudin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13743",
+        "source": "quest:vasty-deep-water",
+        "target": "item:splintering-club",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13744",
+        "source": "quest:vasty-deep-water",
+        "target": "item:eruds-tonic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13745",
+        "source": "npc:thurgadin:ungdin",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13746",
+        "source": "npc:skyshrine:sentry-kale",
+        "target": "quest:velium-retrieval",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13747",
+        "source": "quest:velium-retrieval",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13748",
+        "source": "quest:velium-retrieval",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13749",
+        "source": "quest:velium-retrieval",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13750",
+        "source": "quest:velium-retrieval",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13751",
+        "source": "quest:velium-retrieval",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13752",
+        "source": "quest:velium-retrieval",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13753",
+        "source": "quest:velium-retrieval",
+        "target": "item:bracer-of-hammerfal",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13754",
+        "source": "npc:surefall-glade:frenway-marthank",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13755",
+        "source": "npc:surefall-glade:frenway-marthank",
+        "target": "quest:vengeance-for-frenway",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13756",
+        "source": "quest:vengeance-for-frenway",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13757",
+        "source": "quest:vengeance-for-frenway",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13758",
+        "source": "quest:vengeance-for-frenway",
+        "target": "faction:protectors-of-the-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13759",
+        "source": "quest:vengeance-for-frenway",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13760",
+        "source": "quest:vengeance-for-frenway",
+        "target": "faction:sabertooths-of-blackburrow",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13761",
+        "source": "quest:vengeance-for-frenway",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13762",
+        "source": "npc:east-cabilis:lord-qyzar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13763",
+        "source": "npc:east-cabilis:lord-qyzar",
+        "target": "quest:visceral-dagger",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13764",
+        "source": "quest:visceral-dagger",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13765",
+        "source": "quest:visceral-dagger",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13766",
+        "source": "quest:visceral-dagger",
+        "target": "item:visceral-dagger",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13767",
+        "source": "npc:kael-drakkal:vkjor",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13768",
+        "source": "npc:kael-drakkal:vkjor",
+        "target": "quest:vkjors-major-task",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13769",
+        "source": "quest:vkjors-major-task",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13770",
+        "source": "quest:vkjors-major-task",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13771",
+        "source": "quest:vkjors-major-task",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13772",
+        "source": "quest:vkjors-major-task",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13773",
+        "source": "quest:vkjors-major-task",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13774",
+        "source": "quest:vkjors-major-task",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13775",
+        "source": "quest:vkjors-major-task",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13776",
+        "source": "quest:vkjors-major-task",
+        "target": "item:silver-steel-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13777",
+        "source": "npc:iceclad-ocean:graktar-bluehammer",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13778",
+        "source": "npc:kael-drakkal:vkjor",
+        "target": "quest:vkjors-minor-task",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13779",
+        "source": "quest:vkjors-minor-task",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13780",
+        "source": "quest:vkjors-minor-task",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13781",
+        "source": "quest:vkjors-minor-task",
+        "target": "zone:iceclad-ocean",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13782",
+        "source": "quest:vkjors-minor-task",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13783",
+        "source": "quest:vkjors-minor-task",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13784",
+        "source": "quest:vkjors-minor-task",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13785",
+        "source": "quest:vkjors-minor-task",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13786",
+        "source": "npc:kael-drakkal:kromrif-recruiter",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13787",
+        "source": "npc:kael-drakkal:kromrif-recruiter",
+        "target": "quest:wage-war-upon-the-coldain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13788",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13789",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13790",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13791",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13792",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13793",
+        "source": "quest:wage-war-upon-the-coldain",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13794",
+        "source": "npc:rivervale:marshal-ghobber",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13795",
+        "source": "npc:rivervale:marshal-ghobber",
+        "target": "quest:wall-squad-ring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13796",
+        "source": "quest:wall-squad-ring",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13797",
+        "source": "quest:wall-squad-ring",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-13798",
+        "source": "quest:wall-squad-ring",
+        "target": "quest:orc-belts",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13799",
+        "source": "quest:wall-squad-ring",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13800",
+        "source": "quest:wall-squad-ring",
+        "target": "item:squad-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13801",
+        "source": "npc:warsliks-woods:captain-gideen",
+        "target": "zone:warsliks-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13802",
+        "source": "npc:warsliks-woods:captain-gideen",
+        "target": "quest:watcher-torches",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13803",
+        "source": "quest:watcher-torches",
+        "target": "zone:warsliks-woods",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13804",
+        "source": "quest:watcher-torches",
+        "target": "zone:warsliks-woods",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13805",
+        "source": "quest:watcher-torches",
+        "target": "faction:legion-of-cabilis",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13806",
+        "source": "quest:watcher-torches",
+        "target": "faction:cabilis-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13807",
+        "source": "quest:watcher-torches",
+        "target": "faction:scaled-mystics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13808",
+        "source": "quest:watcher-torches",
+        "target": "faction:crusaders-of-greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13809",
+        "source": "quest:watcher-torches",
+        "target": "faction:swift-tails",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13810",
+        "source": "quest:watcher-torches",
+        "target": "item:aloe-swatch",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13811",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13812",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13813",
+        "source": "quest_group:warrior-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13814",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-crown",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13815",
+        "source": "quest:warrior-kael-armor-quests-crown",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13816",
+        "source": "quest:warrior-kael-armor-quests-crown",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13817",
+        "source": "quest:warrior-kael-armor-quests-crown",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13818",
+        "source": "quest:warrior-kael-armor-quests-crown",
+        "target": "item:warlord-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13819",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13820",
+        "source": "quest:warrior-kael-armor-quests-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13821",
+        "source": "quest:warrior-kael-armor-quests-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13822",
+        "source": "quest:warrior-kael-armor-quests-breastplate",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13823",
+        "source": "quest:warrior-kael-armor-quests-breastplate",
+        "target": "item:warlord-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13824",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13825",
+        "source": "quest:warrior-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13826",
+        "source": "quest:warrior-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13827",
+        "source": "quest:warrior-kael-armor-quests-vambraces",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13828",
+        "source": "quest:warrior-kael-armor-quests-vambraces",
+        "target": "item:warlord-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13829",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13830",
+        "source": "quest:warrior-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13831",
+        "source": "quest:warrior-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13832",
+        "source": "quest:warrior-kael-armor-quests-bracer",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13833",
+        "source": "quest:warrior-kael-armor-quests-bracer",
+        "target": "item:warlord-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13834",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13835",
+        "source": "quest:warrior-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13836",
+        "source": "quest:warrior-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13837",
+        "source": "quest:warrior-kael-armor-quests-gauntlets",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13838",
+        "source": "quest:warrior-kael-armor-quests-gauntlets",
+        "target": "item:warlord-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13839",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13840",
+        "source": "quest:warrior-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13841",
+        "source": "quest:warrior-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13842",
+        "source": "quest:warrior-kael-armor-quests-greaves",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13843",
+        "source": "quest:warrior-kael-armor-quests-greaves",
+        "target": "item:warlord-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13844",
+        "source": "npc:kael-drakkal:kragek-thunderforge",
+        "target": "quest:warrior-kael-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13845",
+        "source": "quest:warrior-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13846",
+        "source": "quest:warrior-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13847",
+        "source": "quest:warrior-kael-armor-quests-boots",
+        "target": "quest_group:warrior-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13848",
+        "source": "quest:warrior-kael-armor-quests-boots",
+        "target": "item:warlord-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13849",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13850",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13851",
+        "source": "quest_group:warrior-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13852",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-crown",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13853",
+        "source": "quest:warrior-skyshrine-armor-quests-crown",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13854",
+        "source": "quest:warrior-skyshrine-armor-quests-crown",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13855",
+        "source": "quest:warrior-skyshrine-armor-quests-crown",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13856",
+        "source": "quest:warrior-skyshrine-armor-quests-crown",
+        "target": "item:crown-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13857",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13858",
+        "source": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13859",
+        "source": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13860",
+        "source": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13861",
+        "source": "quest:warrior-skyshrine-armor-quests-breastplate",
+        "target": "item:breastplate-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13862",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13863",
+        "source": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13864",
+        "source": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13865",
+        "source": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13866",
+        "source": "quest:warrior-skyshrine-armor-quests-vambraces",
+        "target": "item:vambraces-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13867",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13868",
+        "source": "quest:warrior-skyshrine-armor-quests-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13869",
+        "source": "quest:warrior-skyshrine-armor-quests-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13870",
+        "source": "quest:warrior-skyshrine-armor-quests-bracer",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13871",
+        "source": "quest:warrior-skyshrine-armor-quests-bracer",
+        "target": "item:bracer-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13872",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13873",
+        "source": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13874",
+        "source": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13875",
+        "source": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13876",
+        "source": "quest:warrior-skyshrine-armor-quests-gauntlets",
+        "target": "item:gauntlets-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13877",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13878",
+        "source": "quest:warrior-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13879",
+        "source": "quest:warrior-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13880",
+        "source": "quest:warrior-skyshrine-armor-quests-greaves",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13881",
+        "source": "quest:warrior-skyshrine-armor-quests-greaves",
+        "target": "item:greaves-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13882",
+        "source": "npc:skyshrine:jendavudd-fedhar",
+        "target": "quest:warrior-skyshrine-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13883",
+        "source": "quest:warrior-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13884",
+        "source": "quest:warrior-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13885",
+        "source": "quest:warrior-skyshrine-armor-quests-boots",
+        "target": "quest_group:warrior-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13886",
+        "source": "quest:warrior-skyshrine-armor-quests-boots",
+        "target": "item:boots-of-the-myrmidon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13887",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13888",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13889",
+        "source": "quest_group:warrior-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13890",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13891",
+        "source": "quest:warrior-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13892",
+        "source": "quest:warrior-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13893",
+        "source": "quest:warrior-thurgadin-armor-quests-helm",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13894",
+        "source": "quest:warrior-thurgadin-armor-quests-helm",
+        "target": "item:champion-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13895",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13896",
+        "source": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13897",
+        "source": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13898",
+        "source": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13899",
+        "source": "quest:warrior-thurgadin-armor-quests-breastplate",
+        "target": "item:champion-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13900",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13901",
+        "source": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13902",
+        "source": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13903",
+        "source": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13904",
+        "source": "quest:warrior-thurgadin-armor-quests-arm-plates",
+        "target": "item:champion-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13905",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13906",
+        "source": "quest:warrior-thurgadin-armor-quests-bracers",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13907",
+        "source": "quest:warrior-thurgadin-armor-quests-bracers",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13908",
+        "source": "quest:warrior-thurgadin-armor-quests-bracers",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13909",
+        "source": "quest:warrior-thurgadin-armor-quests-bracers",
+        "target": "item:champion-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13910",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13911",
+        "source": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13912",
+        "source": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13913",
+        "source": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13914",
+        "source": "quest:warrior-thurgadin-armor-quests-gauntlets",
+        "target": "item:champion-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13915",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13916",
+        "source": "quest:warrior-thurgadin-armor-quests-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13917",
+        "source": "quest:warrior-thurgadin-armor-quests-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13918",
+        "source": "quest:warrior-thurgadin-armor-quests-greaves",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13919",
+        "source": "quest:warrior-thurgadin-armor-quests-greaves",
+        "target": "item:champion-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13920",
+        "source": "npc:thurgadin:captain-njall",
+        "target": "quest:warrior-thurgadin-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13921",
+        "source": "quest:warrior-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13922",
+        "source": "quest:warrior-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13923",
+        "source": "quest:warrior-thurgadin-armor-quests-boots",
+        "target": "quest_group:warrior-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13924",
+        "source": "quest:warrior-thurgadin-armor-quests-boots",
+        "target": "item:champion-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13925",
+        "source": "npc:plane-of-sky:torgon-blademaster",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13926",
+        "source": "npc:plane-of-sky:falorn",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13927",
+        "source": "npc:plane-of-sky:ogog",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13928",
+        "source": "npc:plane-of-sky:torgon-blademaster",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13929",
+        "source": "quest_group:warrior-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13930",
+        "source": "npc:plane-of-sky:falorn",
+        "target": "quest:warrior-plane-of-sky-test-of-strength",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13931",
+        "source": "quest:warrior-plane-of-sky-test-of-strength",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13932",
+        "source": "quest:warrior-plane-of-sky-test-of-strength",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13933",
+        "source": "quest:warrior-plane-of-sky-test-of-strength",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13934",
+        "source": "quest:warrior-plane-of-sky-test-of-strength",
+        "target": "item:runed-wind-amulet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13935",
+        "source": "npc:plane-of-sky:falorn",
+        "target": "quest:warrior-plane-of-sky-test-of-force",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13936",
+        "source": "quest:warrior-plane-of-sky-test-of-force",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13937",
+        "source": "quest:warrior-plane-of-sky-test-of-force",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13938",
+        "source": "quest:warrior-plane-of-sky-test-of-force",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13939",
+        "source": "quest:warrior-plane-of-sky-test-of-force",
+        "target": "item:pauldrons-of-the-blue-sky",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13940",
+        "source": "npc:plane-of-sky:falorn",
+        "target": "quest:warrior-plane-of-sky-test-of-skill",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13941",
+        "source": "quest:warrior-plane-of-sky-test-of-skill",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13942",
+        "source": "quest:warrior-plane-of-sky-test-of-skill",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13943",
+        "source": "quest:warrior-plane-of-sky-test-of-skill",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13944",
+        "source": "quest:warrior-plane-of-sky-test-of-skill",
+        "target": "item:azure-ruby-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13945",
+        "source": "npc:plane-of-sky:ogog",
+        "target": "quest:warrior-plane-of-sky-test-of-bash",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13946",
+        "source": "quest:warrior-plane-of-sky-test-of-bash",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13947",
+        "source": "quest:warrior-plane-of-sky-test-of-bash",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13948",
+        "source": "quest:warrior-plane-of-sky-test-of-bash",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13949",
+        "source": "quest:warrior-plane-of-sky-test-of-bash",
+        "target": "item:fangol",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13950",
+        "source": "npc:plane-of-sky:ogog",
+        "target": "quest:warrior-plane-of-sky-test-of-smash",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13951",
+        "source": "quest:warrior-plane-of-sky-test-of-smash",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13952",
+        "source": "quest:warrior-plane-of-sky-test-of-smash",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13953",
+        "source": "quest:warrior-plane-of-sky-test-of-smash",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13954",
+        "source": "quest:warrior-plane-of-sky-test-of-smash",
+        "target": "item:dagas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13955",
+        "source": "npc:plane-of-sky:ogog",
+        "target": "quest:warrior-plane-of-sky-test-of-think",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13956",
+        "source": "quest:warrior-plane-of-sky-test-of-think",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13957",
+        "source": "quest:warrior-plane-of-sky-test-of-think",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-13958",
+        "source": "quest:warrior-plane-of-sky-test-of-think",
+        "target": "quest_group:warrior-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13959",
+        "source": "quest:warrior-plane-of-sky-test-of-think",
+        "target": "item:belt-of-the-four-winds",
         "type": "rewards"
       }
     }
