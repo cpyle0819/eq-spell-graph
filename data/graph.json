@@ -86506,6 +86506,600 @@
         "size": "Medium",
         "source": "Warrior Plane of Sky Tests: Test of Think reward (Ogog, Plane of Sky)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:west-freeport:larn-brugal",
+        "label": "Larn Brugal",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:weapons-delivery",
+        "label": "Weapons Delivery",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Larn Brugal in West Freeport trades four raw short swords -- three found on the ground in orc tents, one a rare drop from an Orc Weaponsmith -- for Groflah's Stoutbite.",
+        "steps": [
+          "Collect four raw short swords (three ground drops in orc tents, one rare drop from an Orc Weaponsmith)",
+          "Turn them in to Larn Brugal in West Freeport"
+        ],
+        "wiki_title": "Weapons Delivery"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:commons-residents",
+        "label": "Commons Residents",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:death-fist-orcs",
+        "label": "Death Fist Orcs",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:groflahs-stoutbite",
+        "label": "Groflah's Stoutbite",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 5,
+        "delay": 28,
+        "source": "Weapons Delivery reward (Larn Brugal, West Freeport)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:weeping-wand-quest",
+        "label": "Weeping Wand Quest",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "description": "Gardern in the Temple of Solusek Ro trades a Silver Wand (from a silvered guard in Cazic Thule), a Bloodblack Wand (from giant skeletons in Mount Rathe), Twice-Woven Silk (from fairies), and a Scepter (from the Tomb in Castle Mistmoore) for the Weeping Wand.",
+        "steps": [
+          "Collect a Silver Wand, a Bloodblack Wand, Twice-Woven Silk, and a Scepter",
+          "Turn them in to Gardern in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Weeping Wand Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:weeping-wand",
+        "label": "Weeping Wand",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 5,
+        "delay": 25,
+        "stats": {
+          "int": 3
+        },
+        "effect": "Strip Enchantment (Any Slot/Can Equip, instant cast) at Level 20",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 1,
+        "size": "Medium",
+        "source": "Weeping Wand Quest reward (Gardern, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:guard-wenbie",
+        "label": "Guard Wenbie",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wenbies-muffins",
+        "label": "Wenbie's Muffins",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Guard Wenbie in South Qeynos takes 1-4 individual (not stacked) Muffins for experience, faction, and a small amount of coin; roughly 1 in 10 turn-ins also yields a Brass Ring.",
+        "steps": [
+          "Collect 1-4 individual Muffins",
+          "Turn them in to Guard Wenbie in South Qeynos"
+        ],
+        "wiki_title": "Wenbie's Muffins"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:fjokar-frozenshard",
+        "label": "Fjokar Frozenshard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wenglawks-the-traitor",
+        "label": "Wenglawks The Traitor",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 1,
+        "description": "Fjokar Frozenshard, in the halls behind King Tormax in Kael Drakkal, takes a Sealed Letter dropped by a Shardwing Courier in Western Wastes and trades it for the Frozen Shard.",
+        "steps": [
+          "Defeat a Shardwing Courier in Western Wastes for a Sealed Letter",
+          "Return the letter to Fjokar Frozenshard in Kael Drakkal"
+        ],
+        "wiki_title": "Wenglawks The Traitor",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "item:frozen-shard",
+        "label": "Frozen Shard",
+        "type": "item",
+        "classes": [
+          "rogue"
+        ],
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "Piercing",
+        "damage": 13,
+        "delay": 26,
+        "effect": "Affliction (Combat, instant cast) at Level 44",
+        "magic": true,
+        "lore": true,
+        "weight": 2.5,
+        "size": "Medium",
+        "source": "Wenglawks The Traitor reward (Fjokar Frozenshard, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-karana:fixxin-followig",
+        "label": "Fixxin Followig",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:werewolf-hunters",
+        "label": "Werewolf Hunters",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Fixxin Followig in Northern Karana accepts one silver bar at a time (and only one) in exchange for the lore book Fixxin Followigs Silvery Blades, detailing how to craft silver weapons.",
+        "steps": [
+          "Collect a silver bar",
+          "Turn it in to Fixxin Followig in Northern Karana"
+        ],
+        "wiki_title": "Werewolf Hunters"
+      }
+    },
+    {
+      "data": {
+        "id": "item:fixxin-followigs-silvery-blades",
+        "label": "Fixxin Followigs Silvery Blades",
+        "type": "item",
+        "lore": true,
+        "source": "Werewolf Hunters reward (Fixxin Followig, Northern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:werewolf-skin-cloak-quest",
+        "label": "Werewolf Skin Cloak Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Karg IceBear in Everfrost Peaks trades a Werewolf Pelt plus 100 platinum, handed in together in a single trade, for the Werewolf Skin Cloak.",
+        "steps": [
+          "Collect a Werewolf Pelt and 100 platinum",
+          "Turn in both together to Karg IceBear in Everfrost Peaks"
+        ],
+        "wiki_title": "Werewolf Skin Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:werewolf-skin-cloak",
+        "label": "Werewolf Skin Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 5,
+        "stats": {
+          "str": 3,
+          "sta": 3
+        },
+        "magic": true,
+        "source": "Werewolf Skin Cloak Quest reward (Karg IceBear, Everfrost Peaks)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:white-dragonscale-cloak-quest",
+        "label": "White Dragonscale Cloak Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Karam Dragonforge in Rathe Mountains trades a White Dragon Hide (from Lady Vox), a magical Platinum Diamond Wedding Ring, and a magical Black Sapphire Platinum Necklace (both Jewelcrafted) for the White Dragonscale Cloak.",
+        "steps": [
+          "Defeat Lady Vox for a White Dragon Hide",
+          "Craft a magical Platinum Diamond Wedding Ring and a magical Black Sapphire Platinum Necklace via Jewelcrafting",
+          "Turn in all three items to Karam Dragonforge in Rathe Mountains"
+        ],
+        "wiki_title": "White Dragonscale Cloak Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:white-dragonscale-cloak",
+        "label": "White Dragonscale Cloak",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 10,
+        "stats": {
+          "wis": 9,
+          "int": 9
+        },
+        "mana": 75,
+        "resists": {
+          "cold": 25
+        },
+        "magic": true,
+        "source": "White Dragonscale Cloak Quest reward (Karam Dragonforge, Rathe Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-karana:vhalen-nostrolo",
+        "label": "Vhalen Nostrolo",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:winds-of-karana",
+        "label": "Winds of Karana",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 1,
+        "description": "Vhalen Nostrolo in Southern Karana takes two song sheets, obtained from the hermit and from Cordelia Minster, and teaches Jaxan's Jig o' Vigor in exchange, plus 1 silver.",
+        "steps": [
+          "Obtain two song sheets from the hermit and Cordelia Minster",
+          "Turn them in to Vhalen Nostrolo in Southern Karana"
+        ],
+        "wiki_title": "Winds of Karana"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:mayong-mistmoore",
+        "label": "Mayong Mistmoore",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:greater-faydark:a-drunkard",
+        "label": "A Drunkard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wino",
+        "label": "Wino",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "A drunkard in Kelethin (Greater Faydark) accepts an Elven Wine, purchasable from most any barkeep in Kelethin, in exchange for no reward -- an alternate path to discover the Bandit Sisters quest.",
+        "steps": [
+          "Purchase an Elven Wine from a Kelethin barkeep",
+          "Hand it to a drunkard in Kelethin"
+        ],
+        "wiki_title": "Wino"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:wislen-mamluk",
+        "label": "Wislen Mamluk",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wislen-mamluks-catfish",
+        "label": "Wislen Mamluk's Catfish",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Wislen Mamluk on Kerra Island trades a Kerra Catfish for the Kerran Fishing Pole.",
+        "steps": [
+          "Catch a Kerra Catfish",
+          "Turn it in to Wislen Mamluk on Kerra Island"
+        ],
+        "wiki_title": "Wislen Mamluk's Catfish"
+      }
+    },
+    {
+      "data": {
+        "id": "item:kerran-fishing-pole",
+        "label": "Kerran Fishing Pole",
+        "type": "item",
+        "noTrade": true,
+        "source": "Wislen Mamluk's Catfish reward (Wislen Mamluk, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:erudin-palace:raskena-djor",
+        "label": "Raskena Djor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizards-first-assignment",
+        "label": "Wizard's First Assignment",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "description": "Raskena Djor in Erudin Palace takes two fire beetle legs and two fire beetle eyes and teaches a random low-level wizard spell in return.",
+        "steps": [
+          "Collect two fire beetle legs and two fire beetle eyes",
+          "Turn them in to Raskena Djor in Erudin Palace"
+        ],
+        "wiki_title": "Wizard's First Assignment"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wolfskin-gloves-quest",
+        "label": "Wolfskin Gloves Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Ged Twigborn in Kithicor Forest trades 13 gold and a high quality wolf pelt for a pair of Wolfskin Gloves.",
+        "steps": [
+          "Collect 13 gold and a high quality wolf pelt",
+          "Turn them in to Ged Twigborn in Kithicor Forest"
+        ],
+        "wiki_title": "Wolfskin Gloves Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolfskin-gloves",
+        "label": "Wolfskin Gloves",
+        "type": "item",
+        "classes": [
+          "bard",
+          "beastlord",
+          "berserker",
+          "cleric",
+          "druid",
+          "monk",
+          "paladin",
+          "ranger",
+          "rogue",
+          "shadow knight",
+          "shaman",
+          "warrior"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "ac": 4,
+        "source": "Wolfskin Gloves Quest reward (Ged Twigborn, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wooly-fungus-quest",
+        "label": "Wooly Fungus Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Waltor Felligan in Halas takes a Jar of Fungus, made by combining 8 Wooly Fungus in an Empty Jar, and teaches a random low-level spell in return.",
+        "steps": [
+          "Combine 8 Wooly Fungus in an Empty Jar to make a Jar of Fungus",
+          "Turn it in to Waltor Felligan in Halas"
+        ],
+        "wiki_title": "Wooly Fungus Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:words-of-darkness-quest",
+        "label": "Words of Darkness Quest",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "description": "Vurgo in the Temple of Solusek Ro takes a Shadowed Book, Book of Darkness, and Book of Frost plus 300 gold, then a note he provides, in exchange for the Words of Darkness.",
+        "steps": [
+          "Collect a Shadowed Book, Book of Darkness, Book of Frost, and 300 gold",
+          "Turn them in to Vurgo in the Temple of Solusek Ro",
+          "Return the note Vurgo provides"
+        ],
+        "wiki_title": "Words of Darkness Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:words-of-darkness",
+        "label": "Words of Darkness",
+        "type": "item",
+        "classes": [
+          "necromancer"
+        ],
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "mana": 45,
+        "effect": "Allure of Death (instant cast) at Level 20",
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 0.4,
+        "size": "Small",
+        "source": "Words of Darkness Quest reward (Vurgo, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:xelhas-cyclops-eye",
+        "label": "Xelha's Cyclops Eye",
+        "type": "quest",
+        "classes": [
+          "necromancer"
+        ],
+        "minLevel": 1,
+        "description": "Xelha Nevagon in East Freeport takes a cyclops eye and teaches a random necromancer spell in return, plus 7 gold 12 silver.",
+        "steps": [
+          "Collect a cyclops eye",
+          "Turn it in to Xelha Nevagon in East Freeport"
+        ],
+        "wiki_title": "Xelha's Cyclops Eye"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-hills:baobob-miller",
+        "label": "Baobob Miller",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:wolf-hide-armor",
+        "label": "Wolf Hide Armor",
+        "type": "quest_group",
+        "description": "Baobob Miller in Qeynos Hills trades a wolf skin of the matching quality plus coin for a wolf-hide armor piece. Three independent sub-quests, no ordering between them.",
+        "wiki_title": "Wolf Hide Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wolf-hide-armor-belt",
+        "label": "Wolf Hide Armor: Belt",
+        "type": "quest",
+        "description": "Turn in a Low Quality Wolf Skin plus 5 gold to Baobob Miller in Qeynos Hills for the Wolf-hide Belt.",
+        "steps": [
+          "Gather a Low Quality Wolf Skin and 5 gold",
+          "Turn them in to Baobob Miller in Qeynos Hills"
+        ],
+        "wiki_title": "Wolf Hide Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-hide-belt",
+        "label": "Wolf-hide Belt",
+        "type": "item",
+        "slots": [
+          "Waist"
+        ],
+        "ac": 3,
+        "source": "Wolf Hide Armor: Belt reward (Baobob Miller, Qeynos Hills)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wolf-hide-armor-boots",
+        "label": "Wolf Hide Armor: Boots",
+        "type": "quest",
+        "description": "Turn in a Medium Quality Wolf Skin plus 15 gold to Baobob Miller in Qeynos Hills for the Wolf-hide Boots.",
+        "steps": [
+          "Gather a Medium Quality Wolf Skin and 15 gold",
+          "Turn them in to Baobob Miller in Qeynos Hills"
+        ],
+        "wiki_title": "Wolf Hide Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-hide-boots",
+        "label": "Wolf-hide Boots",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "ac": 4,
+        "source": "Wolf Hide Armor: Boots reward (Baobob Miller, Qeynos Hills)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wolf-hide-armor-cape",
+        "label": "Wolf Hide Armor: Cape",
+        "type": "quest",
+        "description": "Turn in a High Quality Wolf Skin plus 21 gold to Baobob Miller in Qeynos Hills for the Wolf-hide Cape.",
+        "steps": [
+          "Gather a High Quality Wolf Skin and 21 gold",
+          "Turn them in to Baobob Miller in Qeynos Hills"
+        ],
+        "wiki_title": "Wolf Hide Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wolf-hide-cape",
+        "label": "Wolf-hide Cape",
+        "type": "item",
+        "slots": [
+          "Back"
+        ],
+        "ac": 5,
+        "source": "Wolf Hide Armor: Cape reward (Baobob Miller, Qeynos Hills)"
+      }
     }
   ],
   "edges": [
@@ -198583,6 +199177,1175 @@
         "id": "e-rewards-13959",
         "source": "quest:warrior-plane-of-sky-test-of-think",
         "target": "item:belt-of-the-four-winds",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13960",
+        "source": "npc:west-freeport:larn-brugal",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13961",
+        "source": "npc:west-freeport:larn-brugal",
+        "target": "quest:weapons-delivery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13962",
+        "source": "quest:weapons-delivery",
+        "target": "zone:west-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13963",
+        "source": "quest:weapons-delivery",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13964",
+        "source": "quest:weapons-delivery",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13965",
+        "source": "quest:weapons-delivery",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13966",
+        "source": "quest:weapons-delivery",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13967",
+        "source": "quest:weapons-delivery",
+        "target": "faction:ashen-order",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13968",
+        "source": "quest:weapons-delivery",
+        "target": "faction:commons-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13969",
+        "source": "quest:weapons-delivery",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13970",
+        "source": "quest:weapons-delivery",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13971",
+        "source": "quest:weapons-delivery",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13972",
+        "source": "quest:weapons-delivery",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13973",
+        "source": "quest:weapons-delivery",
+        "target": "faction:death-fist-orcs",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13974",
+        "source": "quest:weapons-delivery",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13975",
+        "source": "quest:weapons-delivery",
+        "target": "faction:the-freeport-militia",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13976",
+        "source": "quest:weapons-delivery",
+        "target": "item:groflahs-stoutbite",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13977",
+        "source": "npc:temple-of-solusek-ro:gardern",
+        "target": "quest:weeping-wand-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13978",
+        "source": "quest:weeping-wand-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13979",
+        "source": "quest:weeping-wand-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13980",
+        "source": "quest:weeping-wand-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13981",
+        "source": "quest:weeping-wand-quest",
+        "target": "faction:shadowed-men",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13982",
+        "source": "quest:weeping-wand-quest",
+        "target": "item:weeping-wand",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13983",
+        "source": "npc:south-qeynos:guard-wenbie",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13984",
+        "source": "npc:south-qeynos:guard-wenbie",
+        "target": "quest:wenbies-muffins",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13985",
+        "source": "quest:wenbies-muffins",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13986",
+        "source": "quest:wenbies-muffins",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13987",
+        "source": "quest:wenbies-muffins",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13988",
+        "source": "quest:wenbies-muffins",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13989",
+        "source": "quest:wenbies-muffins",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13990",
+        "source": "quest:wenbies-muffins",
+        "target": "faction:corrupt-qeynos-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13991",
+        "source": "quest:wenbies-muffins",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13992",
+        "source": "quest:wenbies-muffins",
+        "target": "item:brass-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13993",
+        "source": "npc:kael-drakkal:fjokar-frozenshard",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-13994",
+        "source": "npc:kael-drakkal:fjokar-frozenshard",
+        "target": "quest:wenglawks-the-traitor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-13995",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13996",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-13997",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13998",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-13999",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14000",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "faction:dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14001",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14002",
+        "source": "quest:wenglawks-the-traitor",
+        "target": "item:frozen-shard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14003",
+        "source": "npc:northern-karana:fixxin-followig",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14004",
+        "source": "npc:northern-karana:fixxin-followig",
+        "target": "quest:werewolf-hunters",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14005",
+        "source": "quest:werewolf-hunters",
+        "target": "zone:northern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14006",
+        "source": "quest:werewolf-hunters",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14007",
+        "source": "quest:werewolf-hunters",
+        "target": "faction:karana-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14008",
+        "source": "quest:werewolf-hunters",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14009",
+        "source": "quest:werewolf-hunters",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14010",
+        "source": "quest:werewolf-hunters",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14011",
+        "source": "quest:werewolf-hunters",
+        "target": "item:fixxin-followigs-silvery-blades",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14012",
+        "source": "npc:everfrost-peaks:karg-icebear",
+        "target": "quest:werewolf-skin-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14013",
+        "source": "quest:werewolf-skin-cloak-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14014",
+        "source": "quest:werewolf-skin-cloak-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14015",
+        "source": "quest:werewolf-skin-cloak-quest",
+        "target": "item:werewolf-skin-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14016",
+        "source": "npc:rathe-mountains:karam-dragonforge",
+        "target": "quest:white-dragonscale-cloak-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14017",
+        "source": "quest:white-dragonscale-cloak-quest",
+        "target": "zone:rathe-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14018",
+        "source": "quest:white-dragonscale-cloak-quest",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14019",
+        "source": "quest:white-dragonscale-cloak-quest",
+        "target": "zone:permafrost",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14020",
+        "source": "quest:white-dragonscale-cloak-quest",
+        "target": "item:white-dragonscale-cloak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14021",
+        "source": "npc:southern-karana:vhalen-nostrolo",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14022",
+        "source": "npc:southern-karana:vhalen-nostrolo",
+        "target": "quest:winds-of-karana",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14023",
+        "source": "quest:winds-of-karana",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14024",
+        "source": "quest:winds-of-karana",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14025",
+        "source": "quest:winds-of-karana",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14026",
+        "source": "quest:winds-of-karana",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14027",
+        "source": "quest:winds-of-karana",
+        "target": "faction:league-of-antonican-bards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14028",
+        "source": "quest:winds-of-karana",
+        "target": "faction:mayong-mistmoore",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14029",
+        "source": "quest:winds-of-karana",
+        "target": "faction:ring-of-scale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14030",
+        "source": "quest:winds-of-karana",
+        "target": "spell:jaxan-s-jig-o-vigor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14031",
+        "source": "npc:greater-faydark:a-drunkard",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14032",
+        "source": "npc:greater-faydark:a-drunkard",
+        "target": "quest:wino",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14033",
+        "source": "quest:wino",
+        "target": "zone:greater-faydark",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14034",
+        "source": "quest:wino",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14035",
+        "source": "npc:kerra-island:wislen-mamluk",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14036",
+        "source": "npc:kerra-island:wislen-mamluk",
+        "target": "quest:wislen-mamluks-catfish",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14037",
+        "source": "quest:wislen-mamluks-catfish",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14038",
+        "source": "quest:wislen-mamluks-catfish",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14039",
+        "source": "quest:wislen-mamluks-catfish",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14040",
+        "source": "quest:wislen-mamluks-catfish",
+        "target": "item:kerran-fishing-pole",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14041",
+        "source": "npc:erudin-palace:raskena-djor",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14042",
+        "source": "npc:erudin-palace:raskena-djor",
+        "target": "quest:wizards-first-assignment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14043",
+        "source": "quest:wizards-first-assignment",
+        "target": "zone:erudin-palace",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14044",
+        "source": "quest:wizards-first-assignment",
+        "target": "zone:erudin-palace",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14045",
+        "source": "quest:wizards-first-assignment",
+        "target": "spell:frost-bolt",
+        "type": "rewards",
+        "randomGroup": "wizards-first-assignment-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14046",
+        "source": "quest:wizards-first-assignment",
+        "target": "spell:minor-shielding",
+        "type": "rewards",
+        "randomGroup": "wizards-first-assignment-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14047",
+        "source": "quest:wizards-first-assignment",
+        "target": "spell:sphere-of-light",
+        "type": "rewards",
+        "randomGroup": "wizards-first-assignment-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14048",
+        "source": "npc:kithicor-forest:ged-twigborn",
+        "target": "quest:wolfskin-gloves-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14049",
+        "source": "quest:wolfskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14050",
+        "source": "quest:wolfskin-gloves-quest",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14051",
+        "source": "quest:wolfskin-gloves-quest",
+        "target": "item:wolfskin-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14052",
+        "source": "npc:halas:waltor-felligan",
+        "target": "quest:wooly-fungus-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14053",
+        "source": "quest:wooly-fungus-quest",
+        "target": "zone:halas",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14054",
+        "source": "quest:wooly-fungus-quest",
+        "target": "zone:halas",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14055",
+        "source": "quest:wooly-fungus-quest",
+        "target": "faction:shamen-of-justice",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14056",
+        "source": "quest:wooly-fungus-quest",
+        "target": "faction:merchants-of-halas",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14057",
+        "source": "quest:wooly-fungus-quest",
+        "target": "faction:circle-of-unseen-hands",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14058",
+        "source": "quest:wooly-fungus-quest",
+        "target": "faction:coalition-of-tradefolk-underground",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14059",
+        "source": "quest:wooly-fungus-quest",
+        "target": "faction:hall-of-the-ebon-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14060",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:cure-poison",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14061",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:drowsy",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14062",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:endure-fire",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14063",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:feet-like-cat",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14064",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:fleeting-fury",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14065",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:frost-rift",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14066",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:gate",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14067",
+        "source": "quest:wooly-fungus-quest",
+        "target": "spell:sicken",
+        "type": "rewards",
+        "randomGroup": "wooly-fungus-quest-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14068",
+        "source": "npc:temple-of-solusek-ro:vurgo",
+        "target": "quest:words-of-darkness-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14069",
+        "source": "quest:words-of-darkness-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14070",
+        "source": "quest:words-of-darkness-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14071",
+        "source": "quest:words-of-darkness-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14072",
+        "source": "quest:words-of-darkness-quest",
+        "target": "faction:shadowed-men",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14073",
+        "source": "quest:words-of-darkness-quest",
+        "target": "item:words-of-darkness",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14074",
+        "source": "npc:east-freeport:xelha-nevagon",
+        "target": "quest:xelhas-cyclops-eye",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14075",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14076",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14077",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "faction:dismal-rage",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14078",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "faction:opal-dark-briar",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14079",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14080",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:beguile-undead",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14081",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:call-of-bones",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14082",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:invoke-shadow",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14083",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:greater-shielding",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14084",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:resist-disease",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14085",
+        "source": "quest:xelhas-cyclops-eye",
+        "target": "spell:venom-of-the-snake",
+        "type": "rewards",
+        "randomGroup": "xelhas-cyclops-eye-drop"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14086",
+        "source": "npc:qeynos-hills:baobob-miller",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14087",
+        "source": "npc:qeynos-hills:baobob-miller",
+        "target": "quest_group:wolf-hide-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14088",
+        "source": "quest_group:wolf-hide-armor",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14089",
+        "source": "npc:qeynos-hills:baobob-miller",
+        "target": "quest:wolf-hide-armor-belt",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14090",
+        "source": "quest:wolf-hide-armor-belt",
+        "target": "zone:qeynos-hills",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14091",
+        "source": "quest:wolf-hide-armor-belt",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14092",
+        "source": "quest:wolf-hide-armor-belt",
+        "target": "quest_group:wolf-hide-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14093",
+        "source": "quest:wolf-hide-armor-belt",
+        "target": "item:wolf-hide-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14094",
+        "source": "npc:qeynos-hills:baobob-miller",
+        "target": "quest:wolf-hide-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14095",
+        "source": "quest:wolf-hide-armor-boots",
+        "target": "zone:qeynos-hills",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14096",
+        "source": "quest:wolf-hide-armor-boots",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14097",
+        "source": "quest:wolf-hide-armor-boots",
+        "target": "quest_group:wolf-hide-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14098",
+        "source": "quest:wolf-hide-armor-boots",
+        "target": "item:wolf-hide-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14099",
+        "source": "npc:qeynos-hills:baobob-miller",
+        "target": "quest:wolf-hide-armor-cape",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14100",
+        "source": "quest:wolf-hide-armor-cape",
+        "target": "zone:qeynos-hills",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14101",
+        "source": "quest:wolf-hide-armor-cape",
+        "target": "zone:qeynos-hills",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14102",
+        "source": "quest:wolf-hide-armor-cape",
+        "target": "quest_group:wolf-hide-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14103",
+        "source": "quest:wolf-hide-armor-cape",
+        "target": "item:wolf-hide-cape",
         "type": "rewards"
       }
     }
