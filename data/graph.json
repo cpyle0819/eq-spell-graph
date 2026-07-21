@@ -78776,6 +78776,1121 @@
         "effect": "Percussion Resonance: 8",
         "source": "Spiderling Silks reward (Sylia Windlehands, Kelethin)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:saemey-wirewhisker",
+        "label": "Saemey Wirewhisker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:spirit-aid",
+        "label": "Spirit Aid",
+        "type": "quest",
+        "minLevel": 35,
+        "description": "Saemey Wirewhisker in Kejek Village, Stonebrunt Mountains, sends players to Emylie Steelclaws with a Large Brick of High Quality Ore and an Oak Shaft; Emylie's Kejekan Smithy Hammer is then given to Giang Yin, who returns a Soulforge Hammer. Combining the Soulforge Hammer at a forge unlocks its use as a repeatable tool to purify Fading/Crystallized weapons and armor into upgraded \"Purified\" versions -- the wiki notes the remainder of the quest past the hammer may be broken or incomplete, and the hammer alone can be kept and reused indefinitely.",
+        "steps": [
+          "Speak with Saemey Wirewhisker in Kejek Village, Stonebrunt Mountains",
+          "Give Emylie Steelclaws a Large Brick of High Quality Ore and an Oak Shaft",
+          "Give the Kejekan Smithy Hammer to Giang Yin",
+          "Receive and combine the Soulforge Hammer at a forge"
+        ],
+        "wiki_title": "Spirit Aid"
+      }
+    },
+    {
+      "data": {
+        "id": "item:soulforge-hammer",
+        "label": "Soulforge Hammer",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Blunt",
+        "damage": 6,
+        "delay": 40,
+        "magic": true,
+        "weight": 18,
+        "size": "Small",
+        "source": "Spirit Aid reward (Saemey Wirewhisker / Giang Yin, Stonebrunt Mountains); doubles as a repeatable tool for purifying Fading/Crystallized gear"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:staff-of-temperate-flux-quest",
+        "label": "Staff of Temperate Flux Quest",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 25,
+        "description": "Gardern in the Temple of Solusek Ro trades a Darkwood Staff (from Romar Sunto via a Lambent Stone), a Heart of Fire (from an inferno goblin wizard in Solusek's Eye), a Heart of Frost (from a goblin wizard in Permafrost), and a Rod of Bone (from a stone skeleton in Lake Rathetear) for the Staff of Temperate Flux. Not clickable until level 20; recommended 30-35 solo, or 25 with friends.",
+        "steps": [
+          "Trade a Lambent Stone to Romar Sunto for a Darkwood Staff",
+          "Kill an inferno goblin wizard in Solusek's Eye for a Heart of Fire",
+          "Kill a goblin wizard in Permafrost for a Heart of Frost",
+          "Kill a stone skeleton in Lake Rathetear for a Rod of Bone",
+          "Turn in all four items to Gardern in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Staff of Temperate Flux Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:staff-of-temperate-flux",
+        "label": "Staff of Temperate Flux",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "wizard"
+        ],
+        "skill": "1H Blunt",
+        "damage": 6,
+        "delay": 30,
+        "magic": true,
+        "resists": {
+          "fire": 5,
+          "cold": 5
+        },
+        "weight": 4,
+        "size": "Medium",
+        "source": "Staff of Temperate Flux Quest reward (Gardern, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:general-vghera",
+        "label": "General V`ghera",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:stanos-head",
+        "label": "Stanos' Head",
+        "type": "quest",
+        "classes": [
+          "bard",
+          "rogue"
+        ],
+        "minLevel": 50,
+        "description": "General V`ghera in Kithicor Forest trades the Head of Stanos (from killing Stanos Herkanor in Highpass Hold) for the Guise of the Coercer, and grants \"the blessing of Innoruuk.\"",
+        "steps": [
+          "Kill Stanos Herkanor in Highpass Hold for the Head of Stanos",
+          "Turn it in to General V`ghera in Kithicor Forest"
+        ],
+        "wiki_title": "Stanos' Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:guise-of-the-coercer",
+        "label": "Guise of the Coercer",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "classes": [
+          "bard",
+          "rogue"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "cha": 13
+        },
+        "resists": {
+          "magic": 7
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "effect": "Illusion (usable at Level 15)",
+        "source": "Stanos' Head reward (General V`ghera, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:brin-stolunger",
+        "label": "Brin Stolunger",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:steel-warrior-initiation",
+        "label": "Steel Warrior Initiation",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 6,
+        "description": "Brin Stolunger in South Qeynos sends players on an errand chain -- fill an Empty Arena Sack with 5 bat wings and 5 snake scales, deliver sealed letters to Axe Broadsmith and Grahan Rothkar, and loot a Skull and an Arena Lion Skin from combat -- for the Steel Warrior Bracer. Requires amiable faction with Steel Warriors to start.",
+        "steps": [
+          "Fill an Empty Arena Sack with 5 bat wings and 5 snake scales for a Full Arena Sack",
+          "Deliver a Sealed Letter from Brin to Axe Broadsmith and receive a Letter of Recommendation",
+          "Loot a Skull from a defeated skeleton and an Arena Lion Skin from a defeated young lion",
+          "Deliver a second Sealed Letter from Brin to Grahan Rothkar",
+          "Return to Brin Stolunger in South Qeynos for the Steel Warrior Bracer"
+        ],
+        "wiki_title": "Steel Warrior Initiation"
+      }
+    },
+    {
+      "data": {
+        "id": "item:steel-warrior-bracer",
+        "label": "Steel Warrior Bracer",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "magic": true,
+        "ac": 3,
+        "stats": {
+          "agi": 1
+        },
+        "source": "Steel Warrior Initiation reward (Brin Stolunger, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:stein-of-ulissa-quest",
+        "label": "Stein Of Ulissa Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 33,
+        "description": "Vira in the Temple of Solusek Ro trades a Sapphire (bought from a jewelry merchant), a Mermaid Scale (from mermaids), a Stein of Water (from Najena magicians, Cazic Thule alligators, or Lake Rathetear creatures), and Ice Giant Toes (from ice giants in Everfrost, Permafrost, or Gornit) for the Stein of Ulissa.",
+        "steps": [
+          "Buy a Sapphire from a jewelry merchant",
+          "Kill a mermaid for a Mermaid Scale",
+          "Kill a magician in Najena, an alligator in Temple of Cazic Thule, or a creature in Lake Rathetear for a Stein of Water",
+          "Kill an ice giant in Everfrost Peaks or Permafrost for Ice Giant Toes",
+          "Turn in all four items to Vira in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Stein Of Ulissa Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:stein-of-ulissa",
+        "label": "Stein of Ulissa",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "magician"
+        ],
+        "skill": "1H Blunt",
+        "magic": true,
+        "stats": {
+          "int": 2
+        },
+        "resists": {
+          "cold": 5
+        },
+        "effect": "Reclaim Energy",
+        "source": "Stein Of Ulissa Quest reward (Vira, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:storm-giant-toes-to-sentry-kcor",
+        "label": "Storm Giant Toes to Sentry Kcor",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Sentry Kcor in Skyshrine trades Storm Giant Toes (from storm giants in Kael Drakkel or Wakening Land, handed in one at a time) for faction, coin, and experience.",
+        "steps": [
+          "Kill storm giants in Kael Drakkel or Wakening Land for Storm Giant Toes",
+          "Turn them in one at a time to Sentry Kcor in Skyshrine"
+        ],
+        "wiki_title": "Storm Giant Toes to Sentry Kcor"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:semkak-prophet-of-vallon",
+        "label": "Semkak Prophet of Vallon",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:strategies-of-the-ancient-dragons",
+        "label": "Strategies of the Ancient Dragons",
+        "type": "quest_group",
+        "minLevel": 50,
+        "description": "Semkak Prophet of Vallon in Kael Drakkel runs two independent turn-in tracks from Dragon Necropolis dragon-construct drops: a Golden Tablet of Draconic Strategy gives the Book of Strategy; a Scroll of Scaled Tactics gives one of Circlet of Vallon, Shield of Battle, or Steel Wristband of Strategy -- the wiki's own page says \"the reward may vary depending on which scroll you bring back or is random\" without resolving which.",
+        "wiki_title": "Strategies of the Ancient Dragons"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "label": "Strategies of the Ancient Dragons: Golden Tablet",
+        "type": "quest",
+        "minLevel": 50,
+        "description": "Turn in a Golden Tablet of Draconic Strategy (dropped by dragon constructs in Dragon Necropolis) to Semkak Prophet of Vallon in Kael Drakkel for the Book of Strategy.",
+        "steps": [
+          "Kill a dragon construct in Dragon Necropolis for a Golden Tablet of Draconic Strategy",
+          "Turn it in to Semkak Prophet of Vallon"
+        ],
+        "wiki_title": "Strategies of the Ancient Dragons"
+      }
+    },
+    {
+      "data": {
+        "id": "item:book-of-strategy",
+        "label": "Book of Strategy",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "stats": {
+          "str": 6,
+          "wis": 6
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 1.5,
+        "size": "Medium",
+        "source": "Strategies of the Ancient Dragons: Golden Tablet reward (Semkak Prophet of Vallon, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:strategies-of-the-ancient-dragons-scroll",
+        "label": "Strategies of the Ancient Dragons: Scroll of Scaled Tactics",
+        "type": "quest",
+        "minLevel": 50,
+        "description": "Turn in a Scroll of Scaled Tactics (dropped by dragon constructs in Dragon Necropolis) to Semkak Prophet of Vallon in Kael Drakkel for one of Circlet of Vallon, Shield of Battle, or Steel Wristband of Strategy -- the wiki does not resolve whether the outcome depends on the specific scroll variant or is fully random.",
+        "steps": [
+          "Kill a dragon construct in Dragon Necropolis for a Scroll of Scaled Tactics",
+          "Turn it in to Semkak Prophet of Vallon"
+        ],
+        "wiki_title": "Strategies of the Ancient Dragons"
+      }
+    },
+    {
+      "data": {
+        "id": "item:circlet-of-vallon",
+        "label": "Circlet of Vallon",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "ac": 18,
+        "resists": {
+          "fire": 9,
+          "disease": 9,
+          "magic": 9
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 0.6,
+        "size": "Small",
+        "source": "Strategies of the Ancient Dragons: Scroll of Scaled Tactics random reward (Semkak Prophet of Vallon, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shield-of-battle",
+        "label": "Shield of Battle",
+        "type": "item",
+        "slots": [
+          "Secondary"
+        ],
+        "classes": [
+          "warrior",
+          "cleric",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "druid",
+          "bard",
+          "shaman"
+        ],
+        "ac": 13,
+        "stats": {
+          "str": 2,
+          "wis": 9
+        },
+        "mana": 10,
+        "magic": true,
+        "lore": true,
+        "weight": 9.7,
+        "size": "Giant",
+        "source": "Strategies of the Ancient Dragons: Scroll of Scaled Tactics random reward (Semkak Prophet of Vallon, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:steel-wristband-of-strategy",
+        "label": "Steel Wristband of Strategy",
+        "type": "item",
+        "slots": [
+          "Wrist"
+        ],
+        "classes": [
+          "necromancer",
+          "wizard",
+          "magician",
+          "enchanter"
+        ],
+        "ac": 2,
+        "stats": {
+          "str": 7,
+          "dex": 7,
+          "cha": -5,
+          "int": 7
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 1,
+        "size": "Small",
+        "source": "Strategies of the Ancient Dragons: Scroll of Scaled Tactics random reward (Semkak Prophet of Vallon, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:clrakk-blackfist",
+        "label": "Clrakk Blackfist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:strife-to-the-coldain",
+        "label": "Strife to the Coldain",
+        "type": "quest_group",
+        "minLevel": 50,
+        "description": "Clrakk Blackfist in the Iceshard Manor of Kael Drakkel runs two independent turn-in tracks from Deaen Greyforge (Eastern Wastes) drops: the Hand of Deaen Greyforge gives the Mask of Malediction; the Legs of Deaen Greyforge gives the Dark Spear of Venom. Amiable faction is not high enough to complete either turn-in.",
+        "wiki_title": "Strife to the Coldain"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:strife-to-the-coldain-hand",
+        "label": "Strife to the Coldain: Hand of Deaen Greyforge",
+        "type": "quest",
+        "minLevel": 50,
+        "description": "Turn in the Hand of Deaen Greyforge (looted from Deaen Greyforge, Eastern Wastes) to Clrakk Blackfist in Kael Drakkel for the Mask of Malediction.",
+        "steps": [
+          "Kill Deaen Greyforge in Eastern Wastes for the Hand of Deaen Greyforge",
+          "Turn it in to Clrakk Blackfist"
+        ],
+        "wiki_title": "Strife to the Coldain"
+      }
+    },
+    {
+      "data": {
+        "id": "item:mask-of-malediction",
+        "label": "Mask of Malediction",
+        "type": "item",
+        "slots": [
+          "Face"
+        ],
+        "stats": {
+          "wis": -4,
+          "int": 5
+        },
+        "mana": 10,
+        "resists": {
+          "fire": -5,
+          "cold": -5
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Strife to the Coldain: Hand of Deaen Greyforge reward (Clrakk Blackfist, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:strife-to-the-coldain-legs",
+        "label": "Strife to the Coldain: Legs of Deaen Greyforge",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 50,
+        "description": "Turn in the Legs of Deaen Greyforge (looted from Deaen Greyforge, Eastern Wastes) to Clrakk Blackfist in Kael Drakkel for the Dark Spear of Venom.",
+        "steps": [
+          "Kill Deaen Greyforge in Eastern Wastes for the Legs of Deaen Greyforge",
+          "Turn it in to Clrakk Blackfist"
+        ],
+        "wiki_title": "Strife to the Coldain"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dark-spear-of-venom",
+        "label": "Dark Spear of Venom",
+        "type": "item",
+        "slots": [
+          "Range",
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "skill": "Piercing",
+        "damage": 17,
+        "delay": 27,
+        "stats": {
+          "int": 5
+        },
+        "hp": 20,
+        "resists": {
+          "magic": 5
+        },
+        "magic": true,
+        "noTrade": true,
+        "weight": 7,
+        "size": "Medium",
+        "effect": "Sicken (instant cast) at Level 45",
+        "source": "Strife to the Coldain: Legs of Deaen Greyforge reward (Clrakk Blackfist, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:northern-desert-of-ro:crusader-iktra",
+        "label": "Crusader Iktra",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:supplies-for-the-new-sebilisian-expedition",
+        "label": "Supplies for the New Sebilisian Expedition",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Crusader Iktra in the Northern Desert of Ro trades a Small Piece of High Quality Ore (drops from goblins in Permafrost, Solusek's Eye, or High Keep; or made via Blacksmithing) for 10 New Sebilisian Expedition faction, or a Small Brick of High Quality Ore (made via Blacksmithing by breaking down Fine Steel weapons) for 15 faction, repeatably.",
+        "steps": [
+          "Gather a Small Piece or Small Brick of High Quality Ore",
+          "Turn it in to Crusader Iktra in the Northern Desert of Ro"
+        ],
+        "wiki_title": "Supplies for the New Sebilisian Expedition"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:new-sebilisian-expedition",
+        "label": "New Sebilisian Expedition",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:urkath-greyface",
+        "label": "Urkath Greyface",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:sylvani-leaf-quest",
+        "label": "Sylvani Leaf Quest",
+        "type": "quest",
+        "minLevel": 20,
+        "description": "Urkath Greyface on Kerra Island trades a Sylvani Leaf (from killing Ivie Bramblefoot, a level 20 brownie druid in Lesser Faydark) for the Worn Leather Shoulderpads and improved Kerra Isle faction. Poor faction may prevent the NPC from accepting the turn-in.",
+        "steps": [
+          "Kill Ivie Bramblefoot in Lesser Faydark for a Sylvani Leaf",
+          "Turn it in to Urkath Greyface on Kerra Island"
+        ],
+        "wiki_title": "Sylvani Leaf Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:worn-leather-shoulderpads",
+        "label": "Worn Leather Shoulderpads",
+        "type": "item",
+        "slots": [
+          "Shoulders"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "iksar",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 4,
+        "stats": {
+          "str": 4
+        },
+        "weight": 2,
+        "size": "Medium",
+        "source": "Sylvani Leaf Quest reward (Urkath Greyface, Kerra Island)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:talym-shoontars-head",
+        "label": "Talym Shoontar's Head",
+        "type": "quest",
+        "minLevel": 20,
+        "description": "Hager Sureshot in Surefall Glade trades the head of Talym Shoontar (a poacher who spawns in the Plains of Karana tunnels) for a Hunting Bow, coin, and experience.",
+        "steps": [
+          "Kill Talym Shoontar in the Plains of Karana tunnels for his head",
+          "Turn it in to Hager Sureshot in Surefall Glade"
+        ],
+        "wiki_title": "Talym Shoontar's Head"
+      }
+    },
+    {
+      "data": {
+        "id": "item:hunting-bow",
+        "label": "Hunting Bow",
+        "type": "item",
+        "slots": [
+          "Range"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "rogue"
+        ],
+        "skill": "Archery",
+        "damage": 5,
+        "delay": 43,
+        "weight": 3.5,
+        "size": "Medium",
+        "source": "Talym Shoontar's Head reward (Hager Sureshot, Surefall Glade)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:everfrost-peaks:sulgar",
+        "label": "Sulgar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tartons-wheel",
+        "label": "Tarton's Wheel",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 35,
+        "description": "Sulgar in Everfrost Peaks trades a Staff of the Wheel and a Star of Eyes (crafted by combining ten rods in the Glowing Chest) for Spell: Ice Comet. Both turn-in items are consumed.",
+        "steps": [
+          "Combine ten rods in the Glowing Chest to craft a Staff of the Wheel and a Star of Eyes",
+          "Turn both in to Sulgar in Everfrost Peaks"
+        ],
+        "wiki_title": "Tarton's Wheel"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:crushbone:elven-slave",
+        "label": "an elven slave",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:taskmaster-earring",
+        "label": "Taskmaster Earring",
+        "type": "quest",
+        "minLevel": 14,
+        "description": "An enslaved elf in Crushbone trades a Brass Earring (dropped by an orc taskmaster) for a small named token, whose exact identity depends on which of several possible enslaved NPCs is present; the token can be redeemed with a matching merchant for gear (leather armor, axes, shields, robes, or rings per the wiki, not itemized further). Requires dubious faction or better.",
+        "steps": [
+          "Kill an orc taskmaster in Crushbone for a Brass Earring",
+          "Give it to an elven slave in Crushbone"
+        ],
+        "wiki_title": "Taskmaster Earring"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:vicus-nonad",
+        "label": "Vicus Nonad",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:taxes",
+        "label": "Taxes",
+        "type": "quest",
+        "minLevel": 3,
+        "description": "Vicus Nonad in South Qeynos sends players to collect tax payments from 11 merchants across South Qeynos, North Qeynos, and Northern Karana, combine them into a Full Tax Collection Box with a List of Debtors, and turn both in for the Brass Ring, Copper Amulet, Turquoise, coin, and experience.",
+        "steps": [
+          "Collect tax payments from 11 merchants in South Qeynos, North Qeynos, and Northern Karana",
+          "Combine the payments into a Full Tax Collection Box",
+          "Turn in the box and a List of Debtors to Vicus Nonad in South Qeynos"
+        ],
+        "wiki_title": "Taxes"
+      }
+    },
+    {
+      "data": {
+        "id": "item:copper-amulet",
+        "label": "Copper Amulet",
+        "type": "item",
+        "slots": [
+          "Neck"
+        ],
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Taxes reward (Vicus Nonad, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:brohan-ironforge",
+        "label": "Brohan Ironforge",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tayla-ironforge",
+        "label": "Tayla Ironforge",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Brohan Ironforge in North Qeynos sends players to buy a Jasper for Mare X'Lottl, receive Klok's Seal in return, use a ground-spawn Key to unlock a door in front of Haggle Baron Klok, and deliver a sealed letter from a Half Elf Maiden, for a Combine Short Sword and improved faction.",
+        "steps": [
+          "Buy a Jasper and give it to Mare X'Lottl",
+          "Receive Klok's Seal from Mare X'Lottl",
+          "Use the ground-spawn Key in front of Haggle Baron Klok to unlock the door",
+          "Deliver the sealed letter from the Half Elf Maiden",
+          "Return to Brohan Ironforge in North Qeynos for the Combine Short Sword"
+        ],
+        "wiki_title": "Tayla Ironforge"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:teirdal-courier",
+        "label": "Teir`Dal Courier",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Seloxia Punox in Neriak Commons sends a Sealed Letter to Ambassador K'Rynn, who sends a reply Sealed Letter back to Seloxia, for the Bronze Short Sword, faction, and experience. Requires amiable faction or better.",
+        "steps": [
+          "Deliver the Sealed Letter from Seloxia Punox to Ambassador K'Rynn",
+          "Return K'Rynn's reply letter to Seloxia Punox for the Bronze Short Sword"
+        ],
+        "wiki_title": "Teir`Dal Courier"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bronze-short-sword",
+        "label": "Bronze Short Sword",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "skill": "1H Slashing",
+        "damage": 4,
+        "delay": 21,
+        "weight": 2,
+        "size": "Small",
+        "source": "Teir`Dal Courier reward (Seloxia Punox, Neriak Commons)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:telescope-lenses",
+        "label": "Telescope Lenses",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 1,
+        "description": "Tobon Starpyre in Ak'Anon trades four spare telescope lenses (from Fodin, Tindo, and Phiz Frugrin near Ak'Anon/Steamfont Mountains, and Bidl Frugrin in the Kelethin tavern at night) plus a lens recovered from Zenita D`Rin in East Freeport (by combat or a card game) for one of Spell: Column of Frost, Spell: Fire Bolt, or Spell: Shock of Ice, plus coin and experience. Requires amiable faction or better.",
+        "steps": [
+          "Collect spare telescope lenses from Fodin, Tindo, Phiz, and Bidl Frugrin",
+          "Recover the stolen lens from Zenita D`Rin in East Freeport",
+          "Turn in all five lenses to Tobon Starpyre in Ak'Anon"
+        ],
+        "wiki_title": "Telescope Lenses"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:temple-blankets-quest",
+        "label": "Temple Blankets Quest",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Chesgard Sydwen in South Qeynos, a member of the Temple of Thunder, hands over Temple Blankets to be delivered to Rongol (or Tukk) in West Karana, for improved faction. Requires membership in the Temple of Thunder to start.",
+        "steps": [
+          "Receive Temple Blankets from Chesgard Sydwen in South Qeynos",
+          "Deliver them to Rongol or Tukk in West Karana"
+        ],
+        "wiki_title": "Temple Blankets Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tergons-spellbook-quest",
+        "label": "Tergon's Spellbook Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 15,
+        "description": "Tergon Brenclog in Ak'Anon trades Tergon's Spellbook (from high-level orcs, or from D'Vinn in Crushbone) for faction, experience, and an item -- usually a scroll, unnamed on the wiki.",
+        "steps": [
+          "Obtain Tergon's Spellbook from high-level orcs or D'Vinn in Crushbone",
+          "Turn it in to Tergon Brenclog in Ak'Anon"
+        ],
+        "wiki_title": "Tergon's Spellbook Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:south-qeynos:edvard-tommels",
+        "label": "Edvard Tommels",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:tesch-val-scrolls",
+        "label": "Tesch Val Scrolls",
+        "type": "quest",
+        "minLevel": 20,
+        "description": "Edvard Tommels in South Qeynos trades a Tanned Split Paw Skin (identifies as \"History of the Verishe Mal,\" from gnolls in Southern Karana and Splitpaw Lair) for Karana's Tear, faction, and experience.",
+        "steps": [
+          "Kill gnolls in Southern Karana or Splitpaw Lair for a Tanned Split Paw Skin",
+          "Turn it in to Edvard Tommels in South Qeynos"
+        ],
+        "wiki_title": "Tesch Val Scrolls"
+      }
+    },
+    {
+      "data": {
+        "id": "faction:qeynoscitizen",
+        "label": "QeynosCitizen",
+        "type": "faction"
+      }
+    },
+    {
+      "data": {
+        "id": "item:karanas-tear",
+        "label": "Karana's Tear",
+        "type": "item",
+        "slots": [
+          "Ear"
+        ],
+        "stats": {
+          "sta": 5
+        },
+        "magic": true,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Tesch Val Scrolls reward (Edvard Tommels, South Qeynos)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:gapeers-johhanis",
+        "label": "Gapeers Johhanis",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-acolyte",
+        "label": "The Acolyte",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "druid"
+        ],
+        "minLevel": 14,
+        "description": "Gapeers Johhanis in Rivervale trades Algae Covered Flesh (from a zombie sailor in Erud's Crossing), Swollen Flesh (from a drowned caravan guard in The Feerrott), and Waterlogged Flesh (from a drowned citizen in the West Freeport sewers) for the Acolyte's Anklet. Requires amiable faction with Priests of Mischief.",
+        "steps": [
+          "Kill a zombie sailor in Erud's Crossing for Algae Covered Flesh",
+          "Kill a drowned caravan guard in The Feerrott for Swollen Flesh",
+          "Kill a drowned citizen in the West Freeport sewers for Waterlogged Flesh",
+          "Turn in all three to Gapeers Johhanis in Rivervale"
+        ],
+        "wiki_title": "The Acolyte"
+      }
+    },
+    {
+      "data": {
+        "id": "item:acolytes-anklet",
+        "label": "Acolyte's Anklet",
+        "type": "item",
+        "slots": [
+          "Feet"
+        ],
+        "classes": [
+          "cleric",
+          "druid"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 3,
+        "stats": {
+          "cha": 3,
+          "wis": 2,
+          "agi": 2
+        },
+        "weight": 1.2,
+        "size": "Small",
+        "source": "The Acolyte reward (Gapeers Johhanis, Rivervale)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-growth:gleaming-sphere-of-light",
+        "label": "a gleaming sphere of light",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-ancient-tomes",
+        "label": "The Ancient Tomes",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "race": [
+          "high elf"
+        ],
+        "minLevel": 50,
+        "description": "A gleaming sphere of light in the Plane of Growth trades the First and Second Halves of Vin`Pekir's Tome (from random dragons and Sapara brood dragons in Western Wastes) and the First and Second Halves of Al`Tarlkal's Tome (from Harla Dar and Esorpa of the Ring) for the Wreath of Nature. Tunare-worshipping High Elf Enchanters only.",
+        "steps": [
+          "Kill dragons in Western Wastes for both halves of Vin`Pekir's Tome",
+          "Kill Harla Dar and Esorpa of the Ring for both halves of Al`Tarlkal's Tome",
+          "Turn in all four tome halves to the gleaming sphere of light in the Plane of Growth"
+        ],
+        "wiki_title": "The Ancient Tomes"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wreath-of-nature",
+        "label": "Wreath of Nature",
+        "type": "item",
+        "slots": [
+          "Head"
+        ],
+        "classes": [
+          "enchanter"
+        ],
+        "race": [
+          "high elf"
+        ],
+        "deity": [
+          "Tunare"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 5,
+        "stats": {
+          "cha": 7,
+          "int": 10
+        },
+        "mana": 40,
+        "resists": {
+          "magic": 20
+        },
+        "weight": 0.5,
+        "size": "Small",
+        "source": "The Ancient Tomes reward (gleaming sphere of light, Plane of Growth)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bayle-list",
+        "label": "The Bayle List",
+        "type": "quest",
+        "minLevel": 25,
+        "description": "Commander Kane in the Qeynos Aqueducts assembles Bayle List I (from delivering Blackburrow Stout to Barn Bloodstone, or killing Mutt Rootlit), Bayle List II (from killing a Mammoth, or completing The Regurgitonic quest), and Bayle List III (from Dyllin Starshine) plus 20 gold. Giving the assembled list to Pietro Zarn, the Shadow Knight guildmaster in the East Freeport sewers, usually yields the Rage War Maul -- the wiki notes very high faction with Zarn may be required.",
+        "steps": [
+          "Gather Bayle List I, II, and III plus 20 gold",
+          "Give the assembled list to Pietro Zarn in the East Freeport sewers for the Rage War Maul"
+        ],
+        "wiki_title": "The Bayle List"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rage-war-maul",
+        "label": "Rage War Maul",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "troll",
+          "ogre",
+          "iksar",
+          "gnome"
+        ],
+        "skill": "2H Blunt",
+        "damage": 16,
+        "delay": 46,
+        "resists": {
+          "magic": 15
+        },
+        "magic": true,
+        "lore": true,
+        "weight": 13,
+        "size": "Large",
+        "source": "The Bayle List reward (Pietro Zarn, East Freeport sewers)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:rivervale:ilscent-tagglefoot",
+        "label": "Ilscent Tagglefoot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bind",
+        "label": "The Bind",
+        "type": "quest",
+        "minLevel": 3,
+        "description": "Ilscent Tagglefoot in Rivervale hands over a Case of Jumjum Juice to be delivered onward; completing the delivery grants minor coin, a minor unnamed item, and improved faction with Storm Reapers, Mayor Gubbin, and Merchants of Rivervale.",
+        "steps": [
+          "Receive a Case of Jumjum Juice from Ilscent Tagglefoot in Rivervale",
+          "Deliver it as instructed"
+        ],
+        "wiki_title": "The Bind"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:high-keep:captain-boshinko",
+        "label": "Captain Boshinko",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bloody-shank",
+        "label": "The Bloody Shank",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 18,
+        "description": "Captain Boshinko in High Keep hands over the Bloody Shank to be delivered to the escaped prisoner Bronin Higginsbot in Rivervale, who attacks on sight; killing him sometimes drops a Scouts Blade. Requires amiable faction or better to accept.",
+        "steps": [
+          "Receive the Bloody Shank from Captain Boshinko in High Keep",
+          "Deliver it to Bronin Higginsbot in Rivervale and kill him"
+        ],
+        "wiki_title": "The Bloody Shank"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:gorge-of-king-xorbb:diggs-duggun",
+        "label": "Diggs Duggun",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:the-bones-of-darak-lightforge",
+        "label": "The Bones of Darak Lightforge",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 49,
+        "description": "Diggs Duggun in the Gorge of King Xorbb (Beholder's Maze) assembles a Pick (bought from a Kaladim bank vendor), two unstacked Dwarven Ales, six dusty bones plus a sword and shield (collected from various zones), and a Full Gem Bag (seven gems and two enchanted platinum bars) for Spell: Divine Might.",
+        "steps": [
+          "Buy a Pick from a Kaladim bank vendor and gather two unstacked Dwarven Ales",
+          "Collect six dusty bones, a sword, and a shield",
+          "Combine seven gems and two enchanted platinum bars into a Full Gem Bag",
+          "Turn in all items to Diggs Duggun in the Gorge of King Xorbb"
+        ],
+        "wiki_title": "The Bones of Darak Lightforge"
+      }
     }
   ],
   "edges": [
@@ -180704,6 +181819,1724 @@
         "id": "e-rewards-12696",
         "source": "quest:spiderling-silks",
         "target": "item:hand-drum",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12697",
+        "source": "npc:stonebrunt-mountains:saemey-wirewhisker",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12698",
+        "source": "npc:stonebrunt-mountains:saemey-wirewhisker",
+        "target": "quest:spirit-aid",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12699",
+        "source": "quest:spirit-aid",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12700",
+        "source": "quest:spirit-aid",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12701",
+        "source": "quest:spirit-aid",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12702",
+        "source": "quest:spirit-aid",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12703",
+        "source": "quest:spirit-aid",
+        "target": "item:soulforge-hammer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12704",
+        "source": "npc:temple-of-solusek-ro:gardern",
+        "target": "quest:staff-of-temperate-flux-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12705",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12706",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12707",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "zone:solusek-s-eye",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12708",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "zone:permafrost",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12709",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12710",
+        "source": "quest:staff-of-temperate-flux-quest",
+        "target": "item:staff-of-temperate-flux",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12711",
+        "source": "npc:kithicor-forest:general-vghera",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12712",
+        "source": "npc:kithicor-forest:general-vghera",
+        "target": "quest:stanos-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12713",
+        "source": "quest:stanos-head",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12714",
+        "source": "quest:stanos-head",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12715",
+        "source": "quest:stanos-head",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12716",
+        "source": "quest:stanos-head",
+        "target": "item:guise-of-the-coercer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12717",
+        "source": "npc:south-qeynos:brin-stolunger",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12718",
+        "source": "npc:south-qeynos:brin-stolunger",
+        "target": "quest:steel-warrior-initiation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12719",
+        "source": "quest:steel-warrior-initiation",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12720",
+        "source": "quest:steel-warrior-initiation",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12721",
+        "source": "quest:steel-warrior-initiation",
+        "target": "faction:steel-warriors",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12722",
+        "source": "quest:steel-warrior-initiation",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12723",
+        "source": "quest:steel-warrior-initiation",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12724",
+        "source": "quest:steel-warrior-initiation",
+        "target": "item:steel-warrior-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12725",
+        "source": "npc:temple-of-solusek-ro:vira",
+        "target": "quest:stein-of-ulissa-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12726",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12727",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12728",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12729",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:temple-of-cazic-thule",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12730",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12731",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12732",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "zone:permafrost",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12733",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "faction:temple-of-sol-ro",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12734",
+        "source": "quest:stein-of-ulissa-quest",
+        "target": "item:stein-of-ulissa",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12735",
+        "source": "npc:skyshrine:sentry-kcor",
+        "target": "quest:storm-giant-toes-to-sentry-kcor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12736",
+        "source": "quest:storm-giant-toes-to-sentry-kcor",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12737",
+        "source": "quest:storm-giant-toes-to-sentry-kcor",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12738",
+        "source": "quest:storm-giant-toes-to-sentry-kcor",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12739",
+        "source": "quest:storm-giant-toes-to-sentry-kcor",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12740",
+        "source": "quest:storm-giant-toes-to-sentry-kcor",
+        "target": "faction:yelinak",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12741",
+        "source": "npc:kael-drakkal:semkak-prophet-of-vallon",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12742",
+        "source": "npc:kael-drakkal:semkak-prophet-of-vallon",
+        "target": "quest_group:strategies-of-the-ancient-dragons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12743",
+        "source": "quest_group:strategies-of-the-ancient-dragons",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12744",
+        "source": "quest_group:strategies-of-the-ancient-dragons",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12745",
+        "source": "quest_group:strategies-of-the-ancient-dragons",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12746",
+        "source": "quest_group:strategies-of-the-ancient-dragons",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12747",
+        "source": "quest_group:strategies-of-the-ancient-dragons",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12748",
+        "source": "npc:kael-drakkal:semkak-prophet-of-vallon",
+        "target": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12749",
+        "source": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12750",
+        "source": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12751",
+        "source": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12752",
+        "source": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "target": "quest_group:strategies-of-the-ancient-dragons",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12753",
+        "source": "quest:strategies-of-the-ancient-dragons-golden-tablet",
+        "target": "item:book-of-strategy",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12754",
+        "source": "npc:kael-drakkal:semkak-prophet-of-vallon",
+        "target": "quest:strategies-of-the-ancient-dragons-scroll",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12755",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12756",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12757",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "zone:dragon-necropolis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12758",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "quest_group:strategies-of-the-ancient-dragons",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12759",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "item:circlet-of-vallon",
+        "type": "rewards",
+        "randomGroup": "strategies-of-the-ancient-dragons-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12760",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "item:shield-of-battle",
+        "type": "rewards",
+        "randomGroup": "strategies-of-the-ancient-dragons-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12761",
+        "source": "quest:strategies-of-the-ancient-dragons-scroll",
+        "target": "item:steel-wristband-of-strategy",
+        "type": "rewards",
+        "randomGroup": "strategies-of-the-ancient-dragons-scroll"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12762",
+        "source": "npc:kael-drakkal:clrakk-blackfist",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12763",
+        "source": "npc:kael-drakkal:clrakk-blackfist",
+        "target": "quest_group:strife-to-the-coldain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12764",
+        "source": "quest_group:strife-to-the-coldain",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12765",
+        "source": "quest_group:strife-to-the-coldain",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12766",
+        "source": "quest_group:strife-to-the-coldain",
+        "target": "faction:kromrif",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12767",
+        "source": "quest_group:strife-to-the-coldain",
+        "target": "faction:kromzek",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12768",
+        "source": "npc:kael-drakkal:clrakk-blackfist",
+        "target": "quest:strife-to-the-coldain-hand",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12769",
+        "source": "quest:strife-to-the-coldain-hand",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12770",
+        "source": "quest:strife-to-the-coldain-hand",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12771",
+        "source": "quest:strife-to-the-coldain-hand",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12772",
+        "source": "quest:strife-to-the-coldain-hand",
+        "target": "quest_group:strife-to-the-coldain",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12773",
+        "source": "quest:strife-to-the-coldain-hand",
+        "target": "item:mask-of-malediction",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12774",
+        "source": "npc:kael-drakkal:clrakk-blackfist",
+        "target": "quest:strife-to-the-coldain-legs",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12775",
+        "source": "quest:strife-to-the-coldain-legs",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12776",
+        "source": "quest:strife-to-the-coldain-legs",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12777",
+        "source": "quest:strife-to-the-coldain-legs",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-12778",
+        "source": "quest:strife-to-the-coldain-legs",
+        "target": "quest_group:strife-to-the-coldain",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12779",
+        "source": "quest:strife-to-the-coldain-legs",
+        "target": "item:dark-spear-of-venom",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12780",
+        "source": "npc:northern-desert-of-ro:crusader-iktra",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12781",
+        "source": "npc:northern-desert-of-ro:crusader-iktra",
+        "target": "quest:supplies-for-the-new-sebilisian-expedition",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12782",
+        "source": "quest:supplies-for-the-new-sebilisian-expedition",
+        "target": "zone:northern-desert-of-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12783",
+        "source": "quest:supplies-for-the-new-sebilisian-expedition",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12784",
+        "source": "quest:supplies-for-the-new-sebilisian-expedition",
+        "target": "faction:new-sebilisian-expedition",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12785",
+        "source": "npc:kerra-island:urkath-greyface",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12786",
+        "source": "npc:kerra-island:urkath-greyface",
+        "target": "quest:sylvani-leaf-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12787",
+        "source": "quest:sylvani-leaf-quest",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12788",
+        "source": "quest:sylvani-leaf-quest",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12789",
+        "source": "quest:sylvani-leaf-quest",
+        "target": "zone:lesser-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12790",
+        "source": "quest:sylvani-leaf-quest",
+        "target": "faction:kerra-isle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12791",
+        "source": "quest:sylvani-leaf-quest",
+        "target": "item:worn-leather-shoulderpads",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12792",
+        "source": "npc:surefall-glade:hager-sureshot",
+        "target": "quest:talym-shoontars-head",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12793",
+        "source": "quest:talym-shoontars-head",
+        "target": "zone:surefall-glade",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12794",
+        "source": "quest:talym-shoontars-head",
+        "target": "zone:surefall-glade",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12795",
+        "source": "quest:talym-shoontars-head",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12796",
+        "source": "quest:talym-shoontars-head",
+        "target": "faction:protectors-of-pine",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12797",
+        "source": "quest:talym-shoontars-head",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12798",
+        "source": "quest:talym-shoontars-head",
+        "target": "item:hunting-bow",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12799",
+        "source": "npc:everfrost-peaks:sulgar",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12800",
+        "source": "npc:everfrost-peaks:sulgar",
+        "target": "quest:tartons-wheel",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12801",
+        "source": "quest:tartons-wheel",
+        "target": "zone:everfrost-peaks",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12802",
+        "source": "quest:tartons-wheel",
+        "target": "zone:everfrost-peaks",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12803",
+        "source": "quest:tartons-wheel",
+        "target": "spell:ice-comet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12804",
+        "source": "npc:crushbone:elven-slave",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12805",
+        "source": "npc:crushbone:elven-slave",
+        "target": "quest:taskmaster-earring",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12806",
+        "source": "quest:taskmaster-earring",
+        "target": "zone:crushbone",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12807",
+        "source": "quest:taskmaster-earring",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12808",
+        "source": "npc:south-qeynos:vicus-nonad",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12809",
+        "source": "npc:south-qeynos:vicus-nonad",
+        "target": "quest:taxes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12810",
+        "source": "quest:taxes",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12811",
+        "source": "quest:taxes",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12812",
+        "source": "quest:taxes",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12813",
+        "source": "quest:taxes",
+        "target": "zone:northern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12814",
+        "source": "quest:taxes",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12815",
+        "source": "quest:taxes",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12816",
+        "source": "quest:taxes",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12817",
+        "source": "quest:taxes",
+        "target": "item:brass-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12818",
+        "source": "quest:taxes",
+        "target": "item:copper-amulet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12819",
+        "source": "npc:north-qeynos:brohan-ironforge",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12820",
+        "source": "npc:north-qeynos:brohan-ironforge",
+        "target": "quest:tayla-ironforge",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12821",
+        "source": "quest:tayla-ironforge",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12822",
+        "source": "quest:tayla-ironforge",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12823",
+        "source": "quest:tayla-ironforge",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12824",
+        "source": "quest:tayla-ironforge",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12825",
+        "source": "quest:tayla-ironforge",
+        "target": "faction:coalition-of-tradefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12826",
+        "source": "quest:tayla-ironforge",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12827",
+        "source": "npc:neriak-commons:seloxia-punox",
+        "target": "quest:teirdal-courier",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12828",
+        "source": "quest:teirdal-courier",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12829",
+        "source": "quest:teirdal-courier",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12830",
+        "source": "quest:teirdal-courier",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12831",
+        "source": "quest:teirdal-courier",
+        "target": "item:bronze-short-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12832",
+        "source": "npc:ak-anon:tobon-starpyre",
+        "target": "quest:telescope-lenses",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12833",
+        "source": "quest:telescope-lenses",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12834",
+        "source": "quest:telescope-lenses",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12835",
+        "source": "quest:telescope-lenses",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12836",
+        "source": "quest:telescope-lenses",
+        "target": "zone:greater-faydark",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12837",
+        "source": "quest:telescope-lenses",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12838",
+        "source": "quest:telescope-lenses",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12839",
+        "source": "quest:telescope-lenses",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12840",
+        "source": "quest:telescope-lenses",
+        "target": "faction:king-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12841",
+        "source": "quest:telescope-lenses",
+        "target": "spell:column-of-frost",
+        "type": "rewards",
+        "randomGroup": "telescope-lenses-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12842",
+        "source": "quest:telescope-lenses",
+        "target": "spell:fire-bolt",
+        "type": "rewards",
+        "randomGroup": "telescope-lenses-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12843",
+        "source": "quest:telescope-lenses",
+        "target": "spell:shock-of-ice",
+        "type": "rewards",
+        "randomGroup": "telescope-lenses-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12844",
+        "source": "npc:south-qeynos:chesgard-sydwen",
+        "target": "quest:temple-blankets-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12845",
+        "source": "quest:temple-blankets-quest",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12846",
+        "source": "quest:temple-blankets-quest",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12847",
+        "source": "quest:temple-blankets-quest",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12848",
+        "source": "quest:temple-blankets-quest",
+        "target": "faction:karana-residents",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12849",
+        "source": "quest:temple-blankets-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12850",
+        "source": "quest:temple-blankets-quest",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12851",
+        "source": "quest:temple-blankets-quest",
+        "target": "faction:knights-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12852",
+        "source": "npc:ak-anon:tergon-brenclog",
+        "target": "quest:tergons-spellbook-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12853",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "zone:ak-anon",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12854",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12855",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12856",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "faction:eldritch-collective",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12857",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "faction:gem-choppers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12858",
+        "source": "quest:tergons-spellbook-quest",
+        "target": "faction:king-ak-anon",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12859",
+        "source": "npc:south-qeynos:edvard-tommels",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12860",
+        "source": "npc:south-qeynos:edvard-tommels",
+        "target": "quest:tesch-val-scrolls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12861",
+        "source": "quest:tesch-val-scrolls",
+        "target": "zone:south-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12862",
+        "source": "quest:tesch-val-scrolls",
+        "target": "zone:south-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12863",
+        "source": "quest:tesch-val-scrolls",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12864",
+        "source": "quest:tesch-val-scrolls",
+        "target": "zone:splitpaw",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12865",
+        "source": "quest:tesch-val-scrolls",
+        "target": "faction:qeynoscitizen",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12866",
+        "source": "quest:tesch-val-scrolls",
+        "target": "item:karanas-tear",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12867",
+        "source": "npc:rivervale:gapeers-johhanis",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12868",
+        "source": "npc:rivervale:gapeers-johhanis",
+        "target": "quest:the-acolyte",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12869",
+        "source": "quest:the-acolyte",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12870",
+        "source": "quest:the-acolyte",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12871",
+        "source": "quest:the-acolyte",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12872",
+        "source": "quest:the-acolyte",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12873",
+        "source": "quest:the-acolyte",
+        "target": "faction:priests-of-mischief",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12874",
+        "source": "quest:the-acolyte",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12875",
+        "source": "quest:the-acolyte",
+        "target": "faction:guardians-of-the-vale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12876",
+        "source": "quest:the-acolyte",
+        "target": "item:acolytes-anklet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12877",
+        "source": "npc:plane-of-growth:gleaming-sphere-of-light",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12878",
+        "source": "npc:plane-of-growth:gleaming-sphere-of-light",
+        "target": "quest:the-ancient-tomes",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12879",
+        "source": "quest:the-ancient-tomes",
+        "target": "zone:plane-of-growth",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12880",
+        "source": "quest:the-ancient-tomes",
+        "target": "zone:plane-of-growth",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12881",
+        "source": "quest:the-ancient-tomes",
+        "target": "zone:western-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12882",
+        "source": "quest:the-ancient-tomes",
+        "target": "item:wreath-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12883",
+        "source": "npc:qeynos-aqueducts:commander-kane",
+        "target": "quest:the-bayle-list",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12884",
+        "source": "quest:the-bayle-list",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12885",
+        "source": "quest:the-bayle-list",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12886",
+        "source": "quest:the-bayle-list",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12887",
+        "source": "quest:the-bayle-list",
+        "target": "item:rage-war-maul",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12888",
+        "source": "npc:rivervale:ilscent-tagglefoot",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12889",
+        "source": "npc:rivervale:ilscent-tagglefoot",
+        "target": "quest:the-bind",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12890",
+        "source": "quest:the-bind",
+        "target": "zone:rivervale",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12891",
+        "source": "quest:the-bind",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12892",
+        "source": "quest:the-bind",
+        "target": "faction:storm-reapers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12893",
+        "source": "quest:the-bind",
+        "target": "faction:mayor-gubbin",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12894",
+        "source": "quest:the-bind",
+        "target": "faction:merchants-of-rivervale",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12895",
+        "source": "npc:high-keep:captain-boshinko",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12896",
+        "source": "npc:high-keep:captain-boshinko",
+        "target": "quest:the-bloody-shank",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12897",
+        "source": "quest:the-bloody-shank",
+        "target": "zone:high-keep",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12898",
+        "source": "quest:the-bloody-shank",
+        "target": "zone:high-keep",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12899",
+        "source": "quest:the-bloody-shank",
+        "target": "zone:rivervale",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12900",
+        "source": "quest:the-bloody-shank",
+        "target": "faction:highpass-guards",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12901",
+        "source": "quest:the-bloody-shank",
+        "target": "faction:carson-mccabe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12902",
+        "source": "quest:the-bloody-shank",
+        "target": "faction:merchants-of-highpass",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12903",
+        "source": "quest:the-bloody-shank",
+        "target": "item:scouts-blade",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12904",
+        "source": "npc:gorge-of-king-xorbb:diggs-duggun",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-12905",
+        "source": "npc:gorge-of-king-xorbb:diggs-duggun",
+        "target": "quest:the-bones-of-darak-lightforge",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-12906",
+        "source": "quest:the-bones-of-darak-lightforge",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-12907",
+        "source": "quest:the-bones-of-darak-lightforge",
+        "target": "zone:gorge-of-king-xorbb",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12908",
+        "source": "quest:the-bones-of-darak-lightforge",
+        "target": "faction:priests-of-marr",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12909",
+        "source": "quest:the-bones-of-darak-lightforge",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-12910",
+        "source": "quest:the-bones-of-darak-lightforge",
+        "target": "spell:divine-might",
         "type": "rewards"
       }
     }
