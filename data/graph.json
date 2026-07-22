@@ -97968,6 +97968,105 @@
         "effect": "Invoke Fear",
         "source": "Necromancer Plane of Sky Tests: Test of Finger reward (Drakis Bloodcaster, the Plane of Sky)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:southern-karana:a-hermit",
+        "label": "a hermit",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:unkempt-druids-quest",
+        "label": "Unkempt Druids (Quest)",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "A hermit inside a hut in Southern Karana wants Linaya Sowlin's heart, obtained in Western Karana, in exchange for one of her stolen song sheets ('Bring me her heart. A heart for a song sheet.'). No item reward is documented on the wiki (Reward: Unknown).",
+        "steps": [
+          "Speak to the hermit inside the hut in Southern Karana",
+          "Travel to Western Karana and obtain Linaya Sowlin's heart",
+          "Return the heart to the hermit"
+        ],
+        "wiki_title": "Unkempt Druids (Quest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:kalatrina-plossen",
+        "label": "Kalatrina Plossen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:zimels-blades-soulfire",
+        "label": "Zimel's Blades (SoulFire)",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "minLevel": 1,
+        "description": "A long multi-stage Paladin quest requiring high Knights of Truth and Priests of Life faction: assemble a Sealed Note (via brewed Bog Juice/Edible Goo and a West Freeport Arena prisoner turn-in), a Paladin's Testimony (via East Commonlands and North Freeport Hall of Truth token turn-ins culminating in defeating Guard Willia in the Freeport sewers), a Glowing Sword Hilt (Xicotl, Mistmoore Castle), and a Brilliant Sword of Faith (from Sir Lucan D'Lere's Testimony of Truth, traded at the Hall of Truth); all four are turned in to Brother Hayle in Splitpaw Lair for SoulFire. Realistically requires level 50 to fight the required NPCs.",
+        "steps": [
+          "Brew Bog Juice and Edible Goo",
+          "Trade 4 Drom's Champagne to Tykar Renlin at the Seafarer's Roost, East Freeport, for Bunker Cell #1",
+          "Trade Bog Juice, Edible Goo, and Bunker Cell #1 to a prisoner in the West Freeport Arena for H.K. 102",
+          "Trade H.K. 102 to Assistant Kiolna at the Highpass Hold bank for A Sealed Note",
+          "Trade a Cloth Shirt to Altunic Jartin in East Commonlands for a Token of Generosity",
+          "Trade a Spider Venom Sac to Merko Quetalis at the North Freeport Hall of Truth for a Token of Bravery",
+          "Turn in both tokens to Merko Quetalis to spawn Guard Willia in the Freeport sewers",
+          "Defeat Guard Willia and loot the Token of Truth",
+          "Return the Token of Truth to Merko Quetalis for a Testimony",
+          "Defeat Xicotl in the Mistmoore Castle pool room for a Glowing Sword Hilt",
+          "Defeat Sir Lucan D'Lere in West Freeport for a Testimony of Truth",
+          "Trade the Testimony of Truth to Valeron Dushire at the Hall of Truth for a Brilliant Sword of Faith",
+          "Turn in A Sealed Note, the Testimony, the Glowing Sword Hilt, and the Brilliant Sword of Faith to Brother Hayle in Splitpaw Lair"
+        ],
+        "wiki_title": "Zimel's Blades (SoulFire)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:soulfire",
+        "label": "SoulFire",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "paladin"
+        ],
+        "race": [
+          "human",
+          "erudite",
+          "high elf",
+          "half elf",
+          "dwarf",
+          "halfling",
+          "gnome"
+        ],
+        "skill": "2H Slashing",
+        "damage": 23,
+        "delay": 45,
+        "stats": {
+          "str": 7,
+          "wis": 7
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "weight": 5,
+        "size": "Large",
+        "effect": "Promised Renewal (Any Slot, instant cast) at Level 40",
+        "source": "Zimel's Blades (SoulFire) reward (Brother Hayle, Splitpaw Lair)"
+      }
     }
   ],
   "edges": [
@@ -221605,6 +221704,182 @@
         "id": "e-rewards-15400",
         "source": "quest:necromancer-plane-of-sky-tests-test-of-finger",
         "target": "item:band-of-wailing-winds",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15401",
+        "source": "npc:southern-karana:a-hermit",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15402",
+        "source": "npc:southern-karana:a-hermit",
+        "target": "quest:unkempt-druids-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15403",
+        "source": "quest:unkempt-druids-quest",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15404",
+        "source": "quest:unkempt-druids-quest",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15405",
+        "source": "quest:unkempt-druids-quest",
+        "target": "zone:western-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15406",
+        "source": "quest:unkempt-druids-quest",
+        "target": "faction:unkempt-druids",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15407",
+        "source": "quest:unkempt-druids-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15408",
+        "source": "quest:unkempt-druids-quest",
+        "target": "faction:jaggedpine-treefolk",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15409",
+        "source": "quest:unkempt-druids-quest",
+        "target": "faction:qrg-protected-animals",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15410",
+        "source": "npc:north-freeport:kalatrina-plossen",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15411",
+        "source": "npc:north-freeport:kalatrina-plossen",
+        "target": "quest:zimels-blades-soulfire",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15412",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15413",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15414",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15415",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:west-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15416",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:east-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15417",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15418",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15419",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "zone:splitpaw-lair",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15420",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "faction:knights-of-truth",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15421",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "faction:priests-of-life",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15422",
+        "source": "quest:zimels-blades-soulfire",
+        "target": "item:soulfire",
         "type": "rewards"
       }
     }
