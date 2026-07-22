@@ -98067,6 +98067,1932 @@
         "effect": "Promised Renewal (Any Slot, instant cast) at Level 40",
         "source": "Zimel's Blades (SoulFire) reward (Brother Hayle, Splitpaw Lair)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:wenden-blackhammer",
+        "label": "Wenden Blackhammer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ocean-of-tears:denken-strongpick",
+        "label": "Denken Strongpick",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:kargek-redblade",
+        "label": "Kargek Redblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:oknoggin-stonesmacker",
+        "label": "Oknoggin Stonesmacker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-freeport:tenal-redblade",
+        "label": "Tenal Redblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:jeweled-dragon-head-hilt-quest",
+        "label": "Jeweled Dragon Head Hilt Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Trade an Unjeweled Dragon Head Hilt, a Diamond, a Jacinth, and a Black Sapphire to Wenden Blackhammer in East Freeport for a Jeweled Dragon Head Hilt, one of the Warrior Epic Quest's four component branches.",
+        "steps": [
+          "Gather Unjeweled Dragon Head Hilt, Diamond, Jacinth, Black Sapphire",
+          "Turn them in to Wenden Blackhammer in East Freeport"
+        ],
+        "wiki_title": "Warrior Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:finely-crafted-dragon-head-hilt-quest",
+        "label": "Finely Crafted Dragon Head Hilt Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Trade a Severely Damaged Dragon Head Hilt, a Ball of Everliving Golem, and Rejesiam Ore to Wenden Blackhammer in East Freeport for a Finely Crafted Dragon Head Hilt, one of the Warrior Epic Quest's four component branches.",
+        "steps": [
+          "Gather Severely Damaged Dragon Head Hilt, Ball of Everliving Golem, Rejesiam Ore",
+          "Turn them in to Wenden Blackhammer in East Freeport"
+        ],
+        "wiki_title": "Warrior Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ancient-sword-blade-quest",
+        "label": "Ancient Sword Blade Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Trade a Keg of Vox Tail Ale, a Block of Permafrost, and two Rebreathers to Denken Strongpick in Ocean of Tears for an Ancient Sword Blade, then obtain an Ancient Blade from Queen Velazul Di'zok in Chardok -- one of the Warrior Epic Quest's four component branches.",
+        "steps": [
+          "Gather Keg of Vox Tail Ale, Block of Permafrost, two Rebreathers",
+          "Turn them in to Denken Strongpick in Ocean of Tears for an Ancient Sword Blade",
+          "Obtain an Ancient Blade from Queen Velazul Di'zok in Chardok"
+        ],
+        "wiki_title": "Warrior Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:red-scabbard-quest",
+        "label": "Red Scabbard Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Heart of Frost, Red Dragon Scales, Green Dragon Scales, Hand of the Maestro, and a Spiroc Wingblade to Kargek Redblade, Oknoggin Stonesmacker, and Tenal Redblade in East Freeport for a Red Scabbard -- one of the Warrior Epic Quest's four component branches.",
+        "steps": [
+          "Gather Heart of Frost, Red Dragon Scales, Green Dragon Scales, Hand of the Maestro, Spiroc Wingblade",
+          "Turn them in to Kargek Redblade / Oknoggin Stonesmacker / Tenal Redblade in East Freeport"
+        ],
+        "wiki_title": "Warrior Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:warrior-epic-quest",
+        "label": "Warrior Epic Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 50,
+        "description": "Combine the Jeweled Dragon Head Hilt, Finely Crafted Dragon Head Hilt, Ancient Sword Blade + Ancient Blade, and Red Scabbard into the Red Scabbard for the final Jagged Blade of War, which splits into Blade of Strategy and Blade of Tactics.",
+        "steps": [
+          "Complete all four component branches",
+          "Combine them in the Red Scabbard for the Jagged Blade of War"
+        ],
+        "wiki_title": "Warrior Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:jagged-blade-of-war",
+        "label": "Jagged Blade of War",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "2H Slashing",
+        "damage": 36,
+        "delay": 41,
+        "stats": {
+          "str": 20,
+          "dex": 15,
+          "sta": 15,
+          "hp": 100
+        },
+        "saves": {
+          "all": 10
+        },
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "weight": 6,
+        "size": "Medium",
+        "effect": "Rage of Zek (instant cast) at Level 50",
+        "source": "Warrior Epic Quest reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blade-of-tactics",
+        "label": "Blade of Tactics",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "1H Slashing",
+        "damage": 14,
+        "delay": 24,
+        "stats": {
+          "str": 10,
+          "dex": 15,
+          "hp": 50
+        },
+        "saves": {
+          "all": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "weight": 2.5,
+        "size": "Small",
+        "effect": "Rage of Tallon (worn)",
+        "source": "Warrior Epic Quest reward (split from Jagged Blade of War)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:blade-of-strategy",
+        "label": "Blade of Strategy",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "skill": "1H Slashing",
+        "damage": 14,
+        "delay": 24,
+        "stats": {
+          "str": 10,
+          "sta": 15,
+          "hp": 50
+        },
+        "saves": {
+          "all": 5
+        },
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "weight": 2.5,
+        "size": "Small",
+        "effect": "Rage of Vallon (instant cast) at Level 50",
+        "source": "Warrior Epic Quest reward (split from Jagged Blade of War)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:drill-master-kyg",
+        "label": "Drill Master Kyg",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:war-baron-eator",
+        "label": "War Baron Eator",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:partisans-pike-quest",
+        "label": "Partisan's Pike Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a note to Drill Master Vygan in East Cabilis for a Partisan's Pike, the first tier of the Warrior Pike Quests chain.",
+        "steps": [
+          "Turn in a note to Drill Master Vygan in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:militias-pike-quest",
+        "label": "Militia's Pike Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Partisan's Pike, an Iksar Head, and a Froglok Escort Fife to Drill Master Vygan in East Cabilis for a Militia's Pike.",
+        "steps": [
+          "Gather Partisan's Pike, Iksar Head, Froglok Escort Fife",
+          "Turn them in to Drill Master Vygan in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:footmans-pike-quest",
+        "label": "Footman's Pike Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in a Full Footman's Pack and a Militia's Pike to Drill Master Kyg in East Cabilis for a Footman's Pike.",
+        "steps": [
+          "Gather Full Footman's Pack",
+          "Turn it in with the Militia's Pike to Drill Master Kyg in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:soldiers-pike-quest",
+        "label": "Soldier's Pike Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in an Emerald, a Sapphire, a Ruby, and a Footman's Pike to War Baron Eator in East Cabilis for a Soldier's Pike.",
+        "steps": [
+          "Gather Emerald, Sapphire, Ruby",
+          "Turn them in with the Footman's Pike to War Baron Eator in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:troopers-pike-quest",
+        "label": "Trooper's Pike Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in three Froglok Heads and a Soldier's Pike to Drill Master Kyg in East Cabilis for a Trooper's Pike.",
+        "steps": [
+          "Gather three Froglok Heads",
+          "Turn them in with the Soldier's Pike to Drill Master Kyg in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:legionnaires-mancatcher-quest",
+        "label": "Legionnaire's Mancatcher Quest",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "description": "Turn in three recommendations and a Trooper's Pike to War Baron Eator in East Cabilis for a Legionnaire's Mancatcher, the final tier modeled from the Warrior Pike Quests chain.",
+        "steps": [
+          "Gather three recommendations",
+          "Turn them in with the Trooper's Pike to War Baron Eator in East Cabilis"
+        ],
+        "wiki_title": "Warrior Pike Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:hierophant-zand",
+        "label": "Hierophant Zand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:field-of-bone:crusader-quarg",
+        "label": "Crusader Quarg",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skull-clairvoyant-quest",
+        "label": "Shaman Skull Quests: Clairvoyant",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in three skulls (Logrin, Morgl, Waz) and an Iron Cudgel of the Petitioner to Hierophant Oxyn in East Cabilis for an Iron Cudgel of the Clairvoyant.",
+        "steps": [
+          "Gather three skulls (Logrin, Morgl, Waz) and Iron Cudgel of the Petitioner",
+          "Turn them in to Hierophant Oxyn in East Cabilis"
+        ],
+        "wiki_title": "Shaman Skull Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skull-seer-quest",
+        "label": "Shaman Skull Quests: Seer",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in Skull with I, Skull with II, and an Iron Cudgel of the Clairvoyant to Hierophant Oxyn in East Cabilis for an Iron Cudgel of the Seer.",
+        "steps": [
+          "Gather Skull with I, Skull with II",
+          "Turn them in with the Iron Cudgel of the Clairvoyant to Hierophant Oxyn in East Cabilis"
+        ],
+        "wiki_title": "Shaman Skull Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skull-mystic-quest",
+        "label": "Shaman Skull Quests: Mystic",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in a Froglok Hex Doll to Hierophant Zand in East Cabilis, then a Full C.O.B.B. Chest and an Iron Cudgel of the Seer to Crusader Quarg in Field of Bone for an Iron Cudgel of the Mystic.",
+        "steps": [
+          "Turn in a Froglok Hex Doll to Hierophant Zand in East Cabilis",
+          "Turn in a Full C.O.B.B. Chest and the Iron Cudgel of the Seer to Crusader Quarg in Field of Bone"
+        ],
+        "wiki_title": "Shaman Skull Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skull-prophet-quest",
+        "label": "Shaman Skull Quests: Prophet",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in a Full C.O.R.N. Chest and an Iron Cudgel of the Mystic to Mystic Dovan in Swamp of No Hope for an Iron Cudgel of the Prophet.",
+        "steps": [
+          "Gather Full C.O.R.N. Chest",
+          "Turn it in with the Iron Cudgel of the Mystic to Mystic Dovan in Swamp of No Hope"
+        ],
+        "wiki_title": "Shaman Skull Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-skull-channeler-quest",
+        "label": "Shaman Skull Quests: Channeler",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in an Iksar Skull Helm, an Iksar Skull (Dai Nozok), and an Iron Cudgel of the Prophet to Hierophant Zand in East Cabilis for the final Iron Cudgel of the Channeler.",
+        "steps": [
+          "Gather Iksar Skull Helm, Iksar Skull (Dai Nozok)",
+          "Turn them in with the Iron Cudgel of the Prophet to Hierophant Zand in East Cabilis"
+        ],
+        "wiki_title": "Shaman Skull Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:iron-cudgel-of-the-channeler",
+        "label": "Iron Cudgel of the Channeler",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "damage": 6,
+        "stats": {
+          "wis": 5
+        },
+        "saves": {
+          "disease": 3,
+          "poison": 3
+        },
+        "source": "Shaman Skull Quests: Channeler reward (Hierophant Zand, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:vegalys-keldrane",
+        "label": "Vegalys Keldrane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-qeynos:velarte-selire",
+        "label": "Velarte Selire",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:investigators-badge-quest",
+        "label": "Investigator's Badge Quest",
+        "type": "quest",
+        "minLevel": 24,
+        "description": "Turn in a Cracked Corrupt Guard Helm, Riley's Confession, Willie's Confession, and the Head of Donally Stultz to Vegalys Keldrane in North Qeynos for an Investigator's Badge (AC 1, +1 all stats, +5 HP/Mana).",
+        "steps": [
+          "Gather Cracked Corrupt Guard Helm, Riley's Confession, Willie's Confession, Head of Donally Stultz",
+          "Turn them in to Vegalys Keldrane in North Qeynos"
+        ],
+        "wiki_title": "Qeynos Badge Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:interrogators-badge-quest",
+        "label": "Interrogator's Badge Quest",
+        "type": "quest",
+        "minLevel": 30,
+        "description": "Turn in an Investigator's Badge, an unsigned Confession Document, Theodore's Confession, the Head of Morley Murrain, and the Head of Markus Cachexia to Vegalys Keldrane in North Qeynos for an Interrogator's Badge (AC 2, +2 all stats, +10 HP/Mana).",
+        "steps": [
+          "Gather unsigned Confession Document, Theodore's Confession, Head of Morley Murrain, Head of Markus Cachexia",
+          "Turn them in with the Investigator's Badge to Vegalys Keldrane in North Qeynos"
+        ],
+        "wiki_title": "Qeynos Badge Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:researchers-badge-quest",
+        "label": "Researcher's Badge Quest",
+        "type": "quest",
+        "minLevel": 40,
+        "description": "Retrieve three Enchanted Rat Jars, cure the rats for three Empty Enchanted Jars and a Research Briefing, then turn all of it in with an Interrogator's Badge to Velarte Selire at the Temple of Life in North Qeynos for a Researcher's Badge (AC 4, +3 all stats, +15 HP/Mana).",
+        "steps": [
+          "Retrieve three Enchanted Rat Jars and cure the rats for three Empty Enchanted Jars and a Research Briefing",
+          "Turn them in with the Interrogator's Badge to Velarte Selire at the Temple of Life, North Qeynos"
+        ],
+        "wiki_title": "Qeynos Badge Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:qeynos-badge-of-honor-quest",
+        "label": "Qeynos Badge of Honor Quest",
+        "type": "quest",
+        "minLevel": 40,
+        "description": "Turn in a Researcher's Badge, a Seal of Vegalys, and the Head of Azibelle Spavin to Vegalys Keldrane in North Qeynos for the final Qeynos Badge of Honor (AC 5, +4 all stats, +25 HP/Mana, See Invisible effect). Improves standing with Antonius Bayle, Guards of Qeynos, and Merchants of Qeynos; worsens standing with Ring of Scale and Kane Bayle.",
+        "steps": [
+          "Gather Seal of Vegalys, Head of Azibelle Spavin",
+          "Turn them in with the Researcher's Badge to Vegalys Keldrane in North Qeynos"
+        ],
+        "wiki_title": "Qeynos Badge Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:investigators-badge",
+        "label": "Investigator's Badge",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "stats": {
+          "ac": 1,
+          "str": 1,
+          "sta": 1,
+          "agi": 1,
+          "dex": 1,
+          "wis": 1,
+          "int": 1,
+          "cha": 1,
+          "hp": 5,
+          "mana": 5
+        },
+        "source": "Investigator's Badge Quest reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:interrogators-badge",
+        "label": "Interrogator's Badge",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "stats": {
+          "ac": 2,
+          "str": 2,
+          "sta": 2,
+          "agi": 2,
+          "dex": 2,
+          "wis": 2,
+          "int": 2,
+          "cha": 2,
+          "hp": 10,
+          "mana": 10
+        },
+        "source": "Interrogator's Badge Quest reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:researchers-badge",
+        "label": "Researcher's Badge",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "stats": {
+          "ac": 4,
+          "str": 3,
+          "sta": 3,
+          "agi": 3,
+          "dex": 3,
+          "wis": 3,
+          "int": 3,
+          "cha": 3,
+          "hp": 15,
+          "mana": 15
+        },
+        "source": "Researcher's Badge Quest reward"
+      }
+    },
+    {
+      "data": {
+        "id": "item:qeynos-badge-of-honor",
+        "label": "Qeynos Badge of Honor",
+        "type": "item",
+        "slots": [
+          "Chest"
+        ],
+        "stats": {
+          "ac": 5,
+          "str": 4,
+          "sta": 4,
+          "agi": 4,
+          "dex": 4,
+          "wis": 4,
+          "int": 4,
+          "cha": 4,
+          "hp": 25,
+          "mana": 25
+        },
+        "effect": "See Invisible (worn)",
+        "source": "Qeynos Badge of Honor Quest reward"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:sirran-the-lunatic",
+        "label": "Sirran the Lunatic",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-thunder-spirit-princess",
+        "label": "Plane of Sky Keys: Thunder Spirit Princess",
+        "type": "quest",
+        "description": "Defeat Thunder Spirit Princess in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Key of Swords, which unlocks the next island.",
+        "steps": [
+          "Defeat Thunder Spirit Princess",
+          "Turn in the drop to Sirran the Lunatic for the Key of Swords"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-protector-of-sky",
+        "label": "Plane of Sky Keys: Protector of Sky",
+        "type": "quest",
+        "description": "Defeat Protector of Sky in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Key of Misfortune, which unlocks the next island.",
+        "steps": [
+          "Defeat Protector of Sky",
+          "Turn in the drop to Sirran the Lunatic for the Key of Misfortune"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-gorgalosk",
+        "label": "Plane of Sky Keys: Gorgalosk",
+        "type": "quest",
+        "description": "Defeat Gorgalosk in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Key of Beasts, which unlocks the next island.",
+        "steps": [
+          "Defeat Gorgalosk",
+          "Turn in the drop to Sirran the Lunatic for the Key of Beasts"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-keeper-of-souls",
+        "label": "Plane of Sky Keys: Keeper of Souls",
+        "type": "quest",
+        "description": "Defeat Keeper of Souls in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Avian Key, which unlocks the next island.",
+        "steps": [
+          "Defeat Keeper of Souls",
+          "Turn in the drop to Sirran the Lunatic for the Avian Key"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-spiroc-lord",
+        "label": "Plane of Sky Keys: The Spiroc Lord",
+        "type": "quest",
+        "description": "Defeat The Spiroc Lord in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Key of the Swarm, which unlocks the next island.",
+        "steps": [
+          "Defeat The Spiroc Lord",
+          "Turn in the drop to Sirran the Lunatic for the Key of the Swarm"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-bazzt-zzzt",
+        "label": "Plane of Sky Keys: Bazzt Zzzt",
+        "type": "quest",
+        "description": "Defeat Bazzt Zzzt in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Key of Scale, which unlocks the next island.",
+        "steps": [
+          "Defeat Bazzt Zzzt",
+          "Turn in the drop to Sirran the Lunatic for the Key of Scale"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:plane-of-sky-key-sister-of-the-spire",
+        "label": "Plane of Sky Keys: Sister of the Spire",
+        "type": "quest",
+        "description": "Defeat Sister of the Spire in the Plane of Sky and turn in the drop to Sirran the Lunatic for the Veeshan's Key, which unlocks the next island.",
+        "steps": [
+          "Defeat Sister of the Spire",
+          "Turn in the drop to Sirran the Lunatic for the Veeshan's Key"
+        ],
+        "wiki_title": "Plane of Sky Keys"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:qeynos-aqueducts:malka-rale",
+        "label": "Malka Rale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-kaladim:founy-jestands",
+        "label": "Founy Jestands",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-3rd-gate:tani-nmar",
+        "label": "Tani N'Mar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:highpass-hold:stanos-herkanor",
+        "label": "Stanos Herkanor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-rathetear:eldreth",
+        "label": "Eldreth",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:steamfont-mountains:yendar-starpyre",
+        "label": "Yendar Starpyre",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-stanos-pouch",
+        "label": "Rogue Epic Quest: Stanos' Pouch",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Speak to Malka Rale in the Qeynos Aqueducts to receive Stanos' Pouch and begin the Rogue Epic Quest.",
+        "steps": [
+          "Speak to Malka Rale in the Qeynos Aqueducts"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-parchment-collection",
+        "label": "Rogue Epic Quest: Parchment Collection",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Pickpocket a Stained Parchment Top from Founy Jestands at the North Kaladim bank and a Stained Parchment Bottom from Tani N'Mar at Neriak Third Gate.",
+        "steps": [
+          "Pickpocket Stained Parchment Top from Founy Jestands, North Kaladim bank",
+          "Pickpocket Stained Parchment Bottom from Tani N'Mar, Neriak Third Gate"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-combined-parchment",
+        "label": "Rogue Epic Quest: Combined Parchment",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Turn in Stanos' Pouch plus both parchment pieces to Stanos Herkanor in Highpass Hold for a Combined Parchment.",
+        "steps": [
+          "Turn in Stanos' Pouch and both parchment pieces to Stanos Herkanor, Highpass Hold"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-translation-chain",
+        "label": "Rogue Epic Quest: Translation Chain",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Turn in the Combined Parchment, 100 platinum, and two Bottles of Milk to Eldreth at Lake Rathetear for a Scribbled Parchment, then turn that in to Yendar Starpyre in Steamfont Mountains for a Tattered Parchment.",
+        "steps": [
+          "Turn in Combined Parchment, 100pp, two Bottles of Milk to Eldreth, Lake Rathetear, for Scribbled Parchment",
+          "Turn in Scribbled Parchment to Yendar Starpyre, Steamfont Mountains, for Tattered Parchment"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-book-of-souls",
+        "label": "Rogue Epic Quest: Book of Souls",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Find the Book of Souls, a 10-hour ground spawn on a dresser in the Plane of Hate.",
+        "steps": [
+          "Find the Book of Souls ground spawn in the Plane of Hate"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-renux",
+        "label": "Rogue Epic Quest: Renux Herkanor",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Turn in the Tattered Parchment and Book of Souls to Yendar Starpyre in Steamfont Mountains to spawn Renux Herkanor (level 50 rogue); defeat him for Translated Parchment and a Jagged Diamond Dagger.",
+        "steps": [
+          "Turn in Tattered Parchment and Book of Souls to Yendar Starpyre, Steamfont Mountains",
+          "Defeat Renux Herkanor for Translated Parchment and Jagged Diamond Dagger"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-general-vghera",
+        "label": "Rogue Epic Quest: General V'Ghera",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Turn in Translated Parchment to Stanos Herkanor in Highpass Hold for a Sealed Box, then turn that in to any dark elf at the dark elf cabin in Kithicor Forest at night to spawn General V'Ghera (level 60); defeat him for a General's Pouch and possibly a Cazic Quill.",
+        "steps": [
+          "Turn in Translated Parchment to Stanos Herkanor, Highpass Hold, for Sealed Box",
+          "Turn in Sealed Box to a dark elf at the Kithicor Forest cabin (night) to spawn General V'Ghera",
+          "Defeat General V'Ghera for General's Pouch (and possibly Cazic Quill)"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:rogue-epic-quest",
+        "label": "Rogue Epic Quest",
+        "type": "quest",
+        "classes": [
+          "rogue"
+        ],
+        "minLevel": 46,
+        "description": "Turn in General's Pouch, Jagged Diamond Dagger, and Cazic Quill to Stanos Herkanor in Highpass Hold for Ragebringer. If Jagged Diamond Dagger or Cazic Quill didn't drop, they can be substituted by turning 4 of the relevant item (blades or robes) to Vilnius the Small in Western Plains of Karana.",
+        "steps": [
+          "(If needed) Turn 4 blades or 4 robes to Vilnius the Small, Western Plains of Karana, for a replacement Jagged Diamond Dagger or Cazic Quill",
+          "Turn in General's Pouch, Jagged Diamond Dagger, and Cazic Quill to Stanos Herkanor, Highpass Hold"
+        ],
+        "wiki_title": "Rogue Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ragebringer",
+        "label": "Ragebringer",
+        "type": "item",
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "classes": [
+          "rogue"
+        ],
+        "race": [
+          "human",
+          "wood elf",
+          "half elf",
+          "dwarf",
+          "halfling",
+          "gnome",
+          "barbarian",
+          "dark elf"
+        ],
+        "skill": "Piercing",
+        "damage": 15,
+        "delay": 25,
+        "backstab": 15,
+        "stats": {
+          "str": 20,
+          "dex": 10,
+          "sta": 10,
+          "agi": 10,
+          "hp": 100
+        },
+        "saves": {
+          "disease": 10,
+          "magic": 20,
+          "poison": 20
+        },
+        "haste": "40%",
+        "minLevel": 46,
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "source": "Rogue Epic Quest reward (Stanos Herkanor, Highpass Hold)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:kurron-ni",
+        "label": "Kurron Ni",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:paineel:duriek-bloodpool",
+        "label": "Duriek Bloodpool",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kerra-island:marl-kastane",
+        "label": "Marl Kastane",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:city-of-mist:lhranc",
+        "label": "Lhranc",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-letter-to-duriek",
+        "label": "Shadowknight Epic Quest: Letter to Duriek",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Darkforge Breastplate, Darkforge Greaves, Darkforge Helm, and 900 platinum to Kurron Ni in The Overthere, then defeat him for a Letter to Duriek.",
+        "steps": [
+          "Turn in Darkforge Breastplate, Darkforge Greaves, Darkforge Helm, 900pp to Kurron Ni, The Overthere",
+          "Defeat Kurron Ni for the Letter to Duriek"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-dusty-tome",
+        "label": "Shadowknight Epic Quest: Dusty Tome",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Buy a Cough Elixir from Smaka (1000 platinum), then turn it in with the Letter to Duriek to Duriek Bloodpool in Paineel, farming in The Hole toward the next stage.",
+        "steps": [
+          "Buy a Cough Elixir from Smaka for 1000pp",
+          "Turn in Cough Elixir and Letter to Duriek to Duriek Bloodpool, Paineel"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-corrupted-ghoulbane",
+        "label": "Shadowknight Epic Quest: Corrupted Ghoulbane",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in Ghoulbane, Soul Leech Dark Sword of Blood, Blade of Abrogation, and a Decrepit Sheath to Duriek Bloodpool in Paineel for a Corrupted Ghoulbane.",
+        "steps": [
+          "Gather Ghoulbane, Soul Leech Dark Sword of Blood, Blade of Abrogation, Decrepit Sheath",
+          "Turn them in to Duriek Bloodpool, Paineel"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-dark-shroud",
+        "label": "Shadowknight Epic Quest: Dark Shroud",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Defeat Kyrenna (Kerra Island / The Hole) for the Blood of Kyrenna, then turn it in to Marl Kastane for a Dark Shroud.",
+        "steps": [
+          "Defeat Kyrenna for Blood of Kyrenna",
+          "Turn in Blood of Kyrenna to Marl Kastane"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-lhrancs-coin",
+        "label": "Shadowknight Epic Quest: Lhranc's Coin",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in the Corrupted Ghoulbane, Heart of the Innocent, Head of the Valiant, and Will of Innoruuk to Lhranc in City of Mist for Lhranc's Coin.",
+        "steps": [
+          "Gather Heart of the Innocent, Head of the Valiant, Will of Innoruuk",
+          "Turn them in with Corrupted Ghoulbane to Lhranc, City of Mist"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shadowknight-epic-quest",
+        "label": "Shadowknight Epic Quest",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Defeat Lhranc in City of Mist, then turn in Lhranc's Coin to Marl Kastane for the final reward, Innoruuk's Curse.",
+        "steps": [
+          "Defeat Lhranc, City of Mist",
+          "Turn in Lhranc's Coin to Marl Kastane"
+        ],
+        "wiki_title": "Shadowknight Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:innoruuks-curse",
+        "label": "Innoruuk's Curse",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "damage": 40,
+        "stats": {
+          "str": 20,
+          "dex": 15,
+          "int": 15,
+          "hp": 60,
+          "mana": 40
+        },
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "source": "Shadowknight Epic Quest reward (Marl Kastane)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:arch-duke-xog",
+        "label": "Arch Duke Xog",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:lord-gikzic",
+        "label": "Lord Gikzic",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:lord-korzin",
+        "label": "Lord Korzin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:librarian-zimor",
+        "label": "Librarian Zimor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-the-newbie",
+        "label": "Crusader's Test of the Newbie",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 1,
+        "description": "Turn in a Guild Summons note to Arch Duke Xog in East Cabilis for a Pawn's Khukri, the first stage of Crusader's Tests.",
+        "steps": [
+          "Turn in a Guild Summons note to Arch Duke Xog, East Cabilis"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-the-pawn",
+        "label": "Crusader's Test of the Pawn",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Full Pack of Sarnak Heads and the Pawn's Khukri to Lord Gikzic in Lake of Ill Omen for a Knave's Khukri.",
+        "steps": [
+          "Gather Full Pack of Sarnak Heads",
+          "Turn them in with the Pawn's Khukri to Lord Gikzic, Lake of Ill Omen"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-pain",
+        "label": "Crusader's Test of Pain",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Magically Locked Tome and the Knave's Khukri to Lord Gikzic in Swamp of No Hope for a Squire's Khukri.",
+        "steps": [
+          "Gather Magically Locked Tome",
+          "Turn it in with the Knave's Khukri to Lord Gikzic, Swamp of No Hope"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-suffering",
+        "label": "Crusader's Test of Suffering",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Glowing Skull and the Squire's Khukri to Lord Korzin in Kurn's Tower for a Knight's Khukri.",
+        "steps": [
+          "Gather Glowing Skull",
+          "Turn it in with the Squire's Khukri to Lord Korzin, Kurn's Tower"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-the-zealot",
+        "label": "Crusader's Test of the Zealot",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Chalp Diagram and the Knight's Khukri to Lord Qyzar in Warsliks Woods for a Zealot's Khukri.",
+        "steps": [
+          "Gather Chalp Diagram",
+          "Turn it in with the Knight's Khukri to Lord Qyzar, Warsliks Woods"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-betrayal",
+        "label": "Crusader's Test of Betrayal",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in a Charasis Tome, a Charasis Tome Copy, and the Zealot's Khukri to Lord Qyzar in Firiona Vie for a Crusader's Khukri.",
+        "steps": [
+          "Gather Charasis Tome and Charasis Tome Copy",
+          "Turn them in with the Zealot's Khukri to Lord Qyzar, Firiona Vie"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-the-hero",
+        "label": "Crusader's Test of the Hero",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Turn in The Visceral Dagger and the Crusader's Khukri to Lord Qyzar in Dalnir for a Hero's Khukri.",
+        "steps": [
+          "Gather The Visceral Dagger",
+          "Turn it in with the Crusader's Khukri to Lord Qyzar, Dalnir"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-test-of-the-lord",
+        "label": "Crusader's Test of the Lord",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Retrieve a Stupendous Tome (Kaesora, City of Mist, Castle Mistmoore, or Droga Jail) and turn it in with the Hero's Khukri to Arch Duke Xog in East Cabilis for a Lord of Pain's Khukri.",
+        "steps": [
+          "Gather Stupendous Tome (Kaesora / City of Mist / Castle Mistmoore / Droga Jail)",
+          "Turn it in with the Hero's Khukri to Arch Duke Xog, East Cabilis"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crusaders-of-greenmist",
+        "label": "Crusaders of Greenmist",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "description": "Gather components from Chardok, Lake of Ill Omen, Karnor's Castle, Howling Stones, and Dalnir, then combine them with the Lord of Pain's Khukri at the Dalnir Forge for the final Greenmist.",
+        "steps": [
+          "Gather components across Chardok / Lake of Ill Omen / Karnor's Castle / Howling Stones / Dalnir",
+          "Combine them with the Lord of Pain's Khukri at the Dalnir Forge (Librarian Zimor, East Cabilis)"
+        ],
+        "wiki_title": "Crusader's Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:greenmist",
+        "label": "Greenmist",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shadow knight"
+        ],
+        "race": [
+          "iksar"
+        ],
+        "skill": "1H Slashing",
+        "damage": 18,
+        "delay": 22,
+        "ac": 5,
+        "baneDamage": {
+          "shissar": 6
+        },
+        "effect": "Greenmist at Level 45",
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "int": 10
+        },
+        "saves": {
+          "disease": 10,
+          "magic": 25,
+          "poison": 5
+        },
+        "weight": 4,
+        "size": "Medium",
+        "source": "Crusaders of Greenmist reward (Librarian Zimor, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:ocean-of-tears:a-lesser-spirit",
+        "label": "A Lesser Spirit",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:north-freeport:bondl-felligan",
+        "label": "Bondl Felligan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:jade-tigers-den:a-greater-spirit",
+        "label": "A Greater Spirit",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-karana:a-wandering-spirit",
+        "label": "A Wandering Spirit",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:emerald-jungle:spirit-sentinel",
+        "label": "Spirit Sentinel",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-hole:high-scale-kirn",
+        "label": "High Scale Kirn",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:city-of-mist:nehashiir",
+        "label": "Neh'Ashiir",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:city-of-mist:lord-rakashiir",
+        "label": "Lord Rak'Ashiir",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-tiny-gem",
+        "label": "Shaman Epic Quest: Tiny Gem",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Kill one of four specific mobs in Ocean of Tears, Rathe Mountains, Butcherblock Mountains, or Field of Bone to spawn A Lesser Spirit, who gives a Tiny Gem.",
+        "steps": [
+          "Kill the designated mob in Ocean of Tears / Rathe Mountains / Butcherblock Mountains / Field of Bone",
+          "Receive a Tiny Gem from A Lesser Spirit"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-drunken-shaman",
+        "label": "Shaman Epic Quest: The Drunken Shaman",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in the Tiny Gem to Bondl Felligan in the North Freeport sewers for an Opaque Gem and access to the Greater Spirits in Jade Tiger's Den.",
+        "steps": [
+          "Turn in Tiny Gem to Bondl Felligan, North Freeport sewers"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-test-of-patience",
+        "label": "Shaman Epic Quest: Test of Patience",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in the Opaque Gem to A Greater Spirit in Jade Tiger's Den (guided by Ooglyn, a female ogre shaman); after a waiting sequence, receive a Small Gem.",
+        "steps": [
+          "Turn in Opaque Gem to A Greater Spirit in Jade Tiger's Den",
+          "Wait out the sequence for a Small Gem"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-test-of-wisdom",
+        "label": "Shaman Epic Quest: Test of Wisdom",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Kill Tabien the Goodly and Glaron the Wicked in Rathe Mountains for Envy and Woe, then turn those in with Marr's Promise to A Wandering Spirit in West Karana for a Shield of Falsehood and Sparkling Gem.",
+        "steps": [
+          "Kill Tabien the Goodly and Glaron the Wicked, Rathe Mountains, for Envy and Woe",
+          "Turn in Envy, Woe, and Marr's Promise to A Wandering Spirit, West Karana"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-test-of-might",
+        "label": "Shaman Epic Quest: Test of Might",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Kill an Advisor then Black Dire in Mistmoore Castle for a Black Dire Pelt, and turn it in to the Spirit Sentinel in Emerald Jungle for Black Fur Boots and a 6-slot booklet.",
+        "steps": [
+          "Kill an Advisor, then Black Dire, in Mistmoore Castle, for Black Dire Pelt",
+          "Turn in Black Dire Pelt to Spirit Sentinel, Emerald Jungle"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-city-of-mist-reports",
+        "label": "Shaman Epic Quest: City of Mist Reports",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Collect a Personal Diary Page, Crier's Scroll, Merchant's Letter, Written Announcement, Priest's Diary Page, and Student's Log in City of Mist to fill a 6-page booklet, then turn it in to the Spirit Sentinel for a faction increase and instructions to find Lord Ghiosk's books.",
+        "steps": [
+          "Collect all 6 pages/documents in City of Mist",
+          "Turn in the completed booklet to Spirit Sentinel, Emerald Jungle"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-books-of-lord-ghiosk",
+        "label": "Shaman Epic Quest: Three Books of Lord Ghiosk",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Kill Lord Ghiosk in City of Mist for a Historic Article, Head Housekeeper's Log, and Crusades of the High Scale, then turn them in to the Spirit Sentinel at the pond in Emerald Jungle for instructions to find the Icon of the High Scale.",
+        "steps": [
+          "Kill Lord Ghiosk, City of Mist, for the three books",
+          "Turn them in to Spirit Sentinel, Emerald Jungle"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-icon-of-high-scale",
+        "label": "Shaman Epic Quest: Icon of the High Scale",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Find the Icon of the High Scale, a ground spawn in the temple in City of Mist.",
+        "steps": [
+          "Find the Icon of the High Scale ground spawn in the City of Mist temple"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-high-scale-kirn",
+        "label": "Shaman Epic Quest: High Scale Kirn",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in the Icon of the High Scale to High Scale Kirn in The Hole for an Engraved Ring (the Promise Ring of Neh'Ashiir).",
+        "steps": [
+          "Turn in Icon of the High Scale to High Scale Kirn, The Hole"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-nehashiir",
+        "label": "Shaman Epic Quest: Neh'Ashiir",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in the Engraved Ring to Neh'Ashiir in City of Mist for Neh'Ashiir's Diary.",
+        "steps": [
+          "Turn in the Engraved Ring to Neh'Ashiir, City of Mist"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-childs-tear",
+        "label": "Shaman Epic Quest: Child's Tear",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Kill Dread, Fright, or Terror in the Plane of Fear; loot a Child's Tear from an Iksar Broodling.",
+        "steps": [
+          "Kill Dread, Fright, or Terror in the Plane of Fear",
+          "Loot Child's Tear from an Iksar Broodling"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-rakashiir",
+        "label": "Shaman Epic Quest: Lord Rak'Ashiir",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "description": "Turn in the Child's Tear to Lord Rak'Ashiir in City of Mist for an Iksar Scale.",
+        "steps": [
+          "Turn in Child's Tear to Lord Rak'Ashiir, City of Mist"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:shaman-epic-quest",
+        "label": "Shaman Epic Quest",
+        "type": "quest",
+        "classes": [
+          "shaman"
+        ],
+        "minLevel": 46,
+        "description": "Turn in the Iksar Scale to the Spirit Sentinel at the pond in Emerald Jungle for the final reward, Spear of Fate.",
+        "steps": [
+          "Turn in Iksar Scale to Spirit Sentinel, pond in Emerald Jungle"
+        ],
+        "wiki_title": "Shaman Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spear-of-fate",
+        "label": "Spear of Fate",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "shaman"
+        ],
+        "skill": "Piercing",
+        "delay": 30,
+        "damage": 20,
+        "stats": {
+          "str": 10,
+          "dex": 10,
+          "sta": 10,
+          "wis": 20,
+          "hp": 30,
+          "mana": 70
+        },
+        "saves": {
+          "fire": 10,
+          "disease": 10,
+          "cold": 10,
+          "magic": 10,
+          "poison": 10
+        },
+        "minLevel": 46,
+        "effect": "Curse of the Spirits at Level 50",
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "source": "Shaman Epic Quest reward (Spirit Sentinel, Emerald Jungle)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:west-commonlands:jahsohn-aksot",
+        "label": "Jahsohn Aksot",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:butcherblock-mountains:walnan",
+        "label": "Walnan",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:najena:akksstaff",
+        "label": "Akksstaff",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:lake-rathetear:rykas",
+        "label": "Rykas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyfire-mountains:jennus-lyklobar",
+        "label": "Jennus Lyklobar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:tiblner-milnik",
+        "label": "Tiblner Milnik",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:dagnor-s-cauldron:jinalis-andir",
+        "label": "Jinalis Andir",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-air:kihun-solstin",
+        "label": "Kihun Solstin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-air:master-of-elements",
+        "label": "Master of Elements",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-words-of-magikot",
+        "label": "Magician Epic Quest: Words of Magi'Kot",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Turn in three torn pages looted from an enraged dread wolf (Kithicor Forest), tentacle terrors (Estate of Unrest), and a bloodthirsty ghoul (Lower Guk) to Jahsohn Aksot in West Commonlands for Words of Magi'Kot.",
+        "steps": [
+          "Loot three torn pages from Kithicor Forest / Estate of Unrest / Lower Guk",
+          "Turn them in to Jahsohn Aksot, West Commonlands"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-power-of-the-elements",
+        "label": "Magician Epic Quest: Power of the Elements",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Turn in Power of Wind, Fire, Water, and Earth (looted from various zone mobs) to Walnan in Butcherblock Mountains for Power of the Elements.",
+        "steps": [
+          "Gather Power of Wind, Fire, Water, Earth",
+          "Turn them in to Walnan, Butcherblock Mountains"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-words-of-mastery",
+        "label": "Magician Epic Quest: Words of Mastery",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Turn in four torn pages of Mastery, looted from female dark elf magicians/goblin magicians in Najena or alligators in Temple of Cazic Thule, to Akksstaff in Najena for Words of Mastery.",
+        "steps": [
+          "Loot four torn pages of Mastery (Najena or Temple of Cazic Thule)",
+          "Turn them in to Akksstaff, Najena"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-power-of-the-orb",
+        "label": "Magician Epic Quest: Power of the Orb",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Turn in Words of Magi'Kot, Power of the Elements, and Words of Mastery to Rykas at Lake Rathetear for Power of the Orb.",
+        "steps": [
+          "Turn in Words of Magi'Kot, Power of the Elements, Words of Mastery to Rykas, Lake Rathetear"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-elemental-fire",
+        "label": "Magician Epic Quest: Fire Component",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Complete Jennus Lyklobar's task in Skyfire Mountains for the Fire component.",
+        "steps": [
+          "Complete Jennus Lyklobar's task, Skyfire Mountains"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-elemental-earth",
+        "label": "Magician Epic Quest: Earth Component",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Complete Tiblner Milnik's task in Firiona Vie for the Earth component.",
+        "steps": [
+          "Complete Tiblner Milnik's task, Firiona Vie"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-elemental-water",
+        "label": "Magician Epic Quest: Water Component",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Complete Jinalis Andir's task in Dagnor's Cauldron for the Water component.",
+        "steps": [
+          "Complete Jinalis Andir's task, Dagnor's Cauldron"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-elemental-wind",
+        "label": "Magician Epic Quest: Wind Component",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "description": "Complete Kihun Solstin's task in the Plane of Air for the Wind component.",
+        "steps": [
+          "Complete Kihun Solstin's task, Plane of Air"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:magician-epic-quest",
+        "label": "Magician Epic Quest",
+        "type": "quest",
+        "classes": [
+          "magician"
+        ],
+        "minLevel": 46,
+        "description": "Turn in the Fire, Earth, Water, and Wind components to the Master of Elements in the Plane of Air for the final reward, Orb of Mastery.",
+        "steps": [
+          "Turn in all four elemental components to the Master of Elements, Plane of Air"
+        ],
+        "wiki_title": "Magician Epic Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:orb-of-mastery",
+        "label": "Orb of Mastery",
+        "type": "item",
+        "classes": [
+          "magician"
+        ],
+        "stats": {
+          "str": 15,
+          "int": 20,
+          "mana": 100
+        },
+        "effect": "Manifest Elements",
+        "magic": true,
+        "lore": true,
+        "noDrop": true,
+        "source": "Magician Epic Quest reward (Master of Elements, Plane of Air)"
+      }
     }
   ],
   "edges": [
@@ -221880,6 +223806,2230 @@
         "id": "e-rewards-15422",
         "source": "quest:zimels-blades-soulfire",
         "target": "item:soulfire",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15423",
+        "source": "npc:east-freeport:wenden-blackhammer",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15424",
+        "source": "npc:ocean-of-tears:denken-strongpick",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15425",
+        "source": "npc:east-freeport:kargek-redblade",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15426",
+        "source": "npc:east-freeport:oknoggin-stonesmacker",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15427",
+        "source": "npc:east-freeport:tenal-redblade",
+        "target": "zone:east-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15428",
+        "source": "npc:east-freeport:wenden-blackhammer",
+        "target": "quest:jeweled-dragon-head-hilt-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15429",
+        "source": "quest:jeweled-dragon-head-hilt-quest",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15430",
+        "source": "npc:east-freeport:wenden-blackhammer",
+        "target": "quest:finely-crafted-dragon-head-hilt-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15431",
+        "source": "quest:finely-crafted-dragon-head-hilt-quest",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15432",
+        "source": "npc:ocean-of-tears:denken-strongpick",
+        "target": "quest:ancient-sword-blade-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15433",
+        "source": "quest:ancient-sword-blade-quest",
+        "target": "zone:ocean-of-tears",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15434",
+        "source": "quest:ancient-sword-blade-quest",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15435",
+        "source": "npc:chardok:queen-velazul-dizok",
+        "target": "quest:ancient-sword-blade-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15436",
+        "source": "npc:east-freeport:kargek-redblade",
+        "target": "quest:red-scabbard-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15437",
+        "source": "quest:red-scabbard-quest",
+        "target": "zone:east-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15438",
+        "source": "quest:warrior-epic-quest",
+        "target": "quest:jeweled-dragon-head-hilt-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15439",
+        "source": "quest:warrior-epic-quest",
+        "target": "quest:finely-crafted-dragon-head-hilt-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15440",
+        "source": "quest:warrior-epic-quest",
+        "target": "quest:ancient-sword-blade-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15441",
+        "source": "quest:warrior-epic-quest",
+        "target": "quest:red-scabbard-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15442",
+        "source": "quest:warrior-epic-quest",
+        "target": "item:jagged-blade-of-war",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15443",
+        "source": "quest:warrior-epic-quest",
+        "target": "item:blade-of-tactics",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15444",
+        "source": "quest:warrior-epic-quest",
+        "target": "item:blade-of-strategy",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15445",
+        "source": "npc:east-cabilis:drill-master-kyg",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15446",
+        "source": "npc:east-cabilis:war-baron-eator",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15447",
+        "source": "npc:east-cabilis:drill-master-vygan",
+        "target": "quest:partisans-pike-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15448",
+        "source": "quest:partisans-pike-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15449",
+        "source": "npc:east-cabilis:drill-master-vygan",
+        "target": "quest:militias-pike-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15450",
+        "source": "quest:militias-pike-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15451",
+        "source": "quest:militias-pike-quest",
+        "target": "quest:partisans-pike-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15452",
+        "source": "npc:east-cabilis:drill-master-kyg",
+        "target": "quest:footmans-pike-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15453",
+        "source": "quest:footmans-pike-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15454",
+        "source": "quest:footmans-pike-quest",
+        "target": "quest:militias-pike-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15455",
+        "source": "npc:east-cabilis:war-baron-eator",
+        "target": "quest:soldiers-pike-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15456",
+        "source": "quest:soldiers-pike-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15457",
+        "source": "quest:soldiers-pike-quest",
+        "target": "quest:footmans-pike-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15458",
+        "source": "npc:east-cabilis:drill-master-kyg",
+        "target": "quest:troopers-pike-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15459",
+        "source": "quest:troopers-pike-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15460",
+        "source": "quest:troopers-pike-quest",
+        "target": "quest:soldiers-pike-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15461",
+        "source": "npc:east-cabilis:war-baron-eator",
+        "target": "quest:legionnaires-mancatcher-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15462",
+        "source": "quest:legionnaires-mancatcher-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15463",
+        "source": "quest:legionnaires-mancatcher-quest",
+        "target": "quest:troopers-pike-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15464",
+        "source": "npc:east-cabilis:hierophant-zand",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15465",
+        "source": "npc:field-of-bone:crusader-quarg",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15466",
+        "source": "npc:east-cabilis:hierophant-oxyn",
+        "target": "quest:shaman-skull-clairvoyant-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15467",
+        "source": "quest:shaman-skull-clairvoyant-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15468",
+        "source": "npc:east-cabilis:hierophant-oxyn",
+        "target": "quest:shaman-skull-seer-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15469",
+        "source": "quest:shaman-skull-seer-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15470",
+        "source": "quest:shaman-skull-seer-quest",
+        "target": "quest:shaman-skull-clairvoyant-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15471",
+        "source": "npc:east-cabilis:hierophant-zand",
+        "target": "quest:shaman-skull-mystic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15472",
+        "source": "npc:field-of-bone:crusader-quarg",
+        "target": "quest:shaman-skull-mystic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15473",
+        "source": "quest:shaman-skull-mystic-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15474",
+        "source": "quest:shaman-skull-mystic-quest",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15475",
+        "source": "quest:shaman-skull-mystic-quest",
+        "target": "quest:shaman-skull-seer-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15476",
+        "source": "npc:swamp-of-no-hope:mystic-dovan",
+        "target": "quest:shaman-skull-prophet-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15477",
+        "source": "quest:shaman-skull-prophet-quest",
+        "target": "zone:swamp-of-no-hope",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15478",
+        "source": "quest:shaman-skull-prophet-quest",
+        "target": "quest:shaman-skull-mystic-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15479",
+        "source": "npc:east-cabilis:hierophant-zand",
+        "target": "quest:shaman-skull-channeler-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15480",
+        "source": "quest:shaman-skull-channeler-quest",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15481",
+        "source": "quest:shaman-skull-channeler-quest",
+        "target": "quest:shaman-skull-prophet-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15482",
+        "source": "quest:shaman-skull-channeler-quest",
+        "target": "item:iron-cudgel-of-the-channeler",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15483",
+        "source": "npc:north-qeynos:vegalys-keldrane",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15484",
+        "source": "npc:north-qeynos:velarte-selire",
+        "target": "zone:north-qeynos",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15485",
+        "source": "npc:north-qeynos:vegalys-keldrane",
+        "target": "quest:investigators-badge-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15486",
+        "source": "quest:investigators-badge-quest",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15487",
+        "source": "npc:north-qeynos:vegalys-keldrane",
+        "target": "quest:interrogators-badge-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15488",
+        "source": "quest:interrogators-badge-quest",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15489",
+        "source": "quest:interrogators-badge-quest",
+        "target": "quest:investigators-badge-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15490",
+        "source": "npc:north-qeynos:velarte-selire",
+        "target": "quest:researchers-badge-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15491",
+        "source": "quest:researchers-badge-quest",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15492",
+        "source": "quest:researchers-badge-quest",
+        "target": "quest:interrogators-badge-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15493",
+        "source": "npc:north-qeynos:vegalys-keldrane",
+        "target": "quest:qeynos-badge-of-honor-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15494",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "zone:north-qeynos",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15495",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "quest:researchers-badge-quest",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15496",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "faction:antonius-bayle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15497",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "faction:guards-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15498",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "faction:merchants-of-qeynos",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15499",
+        "source": "quest:investigators-badge-quest",
+        "target": "item:investigators-badge",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15500",
+        "source": "quest:interrogators-badge-quest",
+        "target": "item:interrogators-badge",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15501",
+        "source": "quest:researchers-badge-quest",
+        "target": "item:researchers-badge",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15502",
+        "source": "quest:qeynos-badge-of-honor-quest",
+        "target": "item:qeynos-badge-of-honor",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15503",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15504",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-thunder-spirit-princess",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15505",
+        "source": "quest:plane-of-sky-key-thunder-spirit-princess",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15506",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-protector-of-sky",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15507",
+        "source": "quest:plane-of-sky-key-protector-of-sky",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15508",
+        "source": "quest:plane-of-sky-key-protector-of-sky",
+        "target": "quest:plane-of-sky-key-thunder-spirit-princess",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15509",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-gorgalosk",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15510",
+        "source": "quest:plane-of-sky-key-gorgalosk",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15511",
+        "source": "quest:plane-of-sky-key-gorgalosk",
+        "target": "quest:plane-of-sky-key-protector-of-sky",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15512",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-keeper-of-souls",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15513",
+        "source": "quest:plane-of-sky-key-keeper-of-souls",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15514",
+        "source": "quest:plane-of-sky-key-keeper-of-souls",
+        "target": "quest:plane-of-sky-key-gorgalosk",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15515",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-spiroc-lord",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15516",
+        "source": "quest:plane-of-sky-key-spiroc-lord",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15517",
+        "source": "quest:plane-of-sky-key-spiroc-lord",
+        "target": "quest:plane-of-sky-key-keeper-of-souls",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15518",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-bazzt-zzzt",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15519",
+        "source": "quest:plane-of-sky-key-bazzt-zzzt",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15520",
+        "source": "quest:plane-of-sky-key-bazzt-zzzt",
+        "target": "quest:plane-of-sky-key-spiroc-lord",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15521",
+        "source": "npc:plane-of-sky:sirran-the-lunatic",
+        "target": "quest:plane-of-sky-key-sister-of-the-spire",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15522",
+        "source": "quest:plane-of-sky-key-sister-of-the-spire",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15523",
+        "source": "quest:plane-of-sky-key-sister-of-the-spire",
+        "target": "quest:plane-of-sky-key-bazzt-zzzt",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15524",
+        "source": "npc:qeynos-aqueducts:malka-rale",
+        "target": "zone:qeynos-aqueducts",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15525",
+        "source": "npc:north-kaladim:founy-jestands",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15526",
+        "source": "npc:neriak-3rd-gate:tani-nmar",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15527",
+        "source": "npc:highpass-hold:stanos-herkanor",
+        "target": "zone:highpass-hold",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15528",
+        "source": "npc:lake-rathetear:eldreth",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15529",
+        "source": "npc:steamfont-mountains:yendar-starpyre",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15530",
+        "source": "npc:qeynos-aqueducts:malka-rale",
+        "target": "quest:rogue-epic-stanos-pouch",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15531",
+        "source": "quest:rogue-epic-stanos-pouch",
+        "target": "zone:qeynos-aqueducts",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15532",
+        "source": "quest:rogue-epic-parchment-collection",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15533",
+        "source": "quest:rogue-epic-parchment-collection",
+        "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15534",
+        "source": "quest:rogue-epic-parchment-collection",
+        "target": "quest:rogue-epic-stanos-pouch",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15535",
+        "source": "npc:highpass-hold:stanos-herkanor",
+        "target": "quest:rogue-epic-combined-parchment",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15536",
+        "source": "quest:rogue-epic-combined-parchment",
+        "target": "zone:highpass-hold",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15537",
+        "source": "quest:rogue-epic-combined-parchment",
+        "target": "quest:rogue-epic-parchment-collection",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15538",
+        "source": "npc:lake-rathetear:eldreth",
+        "target": "quest:rogue-epic-translation-chain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15539",
+        "source": "npc:steamfont-mountains:yendar-starpyre",
+        "target": "quest:rogue-epic-translation-chain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15540",
+        "source": "quest:rogue-epic-translation-chain",
+        "target": "zone:lake-rathetear",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15541",
+        "source": "quest:rogue-epic-translation-chain",
+        "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15542",
+        "source": "quest:rogue-epic-translation-chain",
+        "target": "quest:rogue-epic-combined-parchment",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15543",
+        "source": "npc:steamfont-mountains:yendar-starpyre",
+        "target": "quest:rogue-epic-renux",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15544",
+        "source": "quest:rogue-epic-renux",
+        "target": "zone:steamfont-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15545",
+        "source": "quest:rogue-epic-renux",
+        "target": "quest:rogue-epic-translation-chain",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15546",
+        "source": "quest:rogue-epic-renux",
+        "target": "quest:rogue-epic-book-of-souls",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15547",
+        "source": "npc:highpass-hold:stanos-herkanor",
+        "target": "quest:rogue-epic-general-vghera",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15548",
+        "source": "quest:rogue-epic-general-vghera",
+        "target": "zone:highpass-hold",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15549",
+        "source": "quest:rogue-epic-general-vghera",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15550",
+        "source": "quest:rogue-epic-general-vghera",
+        "target": "quest:rogue-epic-renux",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15551",
+        "source": "npc:highpass-hold:stanos-herkanor",
+        "target": "quest:rogue-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15552",
+        "source": "quest:rogue-epic-quest",
+        "target": "zone:highpass-hold",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15553",
+        "source": "quest:rogue-epic-quest",
+        "target": "quest:rogue-epic-general-vghera",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15554",
+        "source": "quest:rogue-epic-quest",
+        "target": "item:ragebringer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15555",
+        "source": "npc:the-overthere:kurron-ni",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15556",
+        "source": "npc:paineel:duriek-bloodpool",
+        "target": "zone:paineel",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15557",
+        "source": "npc:kerra-island:marl-kastane",
+        "target": "zone:kerra-island",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15558",
+        "source": "npc:city-of-mist:lhranc",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15559",
+        "source": "npc:the-overthere:kurron-ni",
+        "target": "quest:shadowknight-epic-letter-to-duriek",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15560",
+        "source": "quest:shadowknight-epic-letter-to-duriek",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15561",
+        "source": "npc:paineel:duriek-bloodpool",
+        "target": "quest:shadowknight-epic-dusty-tome",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15562",
+        "source": "quest:shadowknight-epic-dusty-tome",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15563",
+        "source": "quest:shadowknight-epic-dusty-tome",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15564",
+        "source": "quest:shadowknight-epic-dusty-tome",
+        "target": "quest:shadowknight-epic-letter-to-duriek",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15565",
+        "source": "npc:paineel:duriek-bloodpool",
+        "target": "quest:shadowknight-epic-corrupted-ghoulbane",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15566",
+        "source": "quest:shadowknight-epic-corrupted-ghoulbane",
+        "target": "zone:paineel",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15567",
+        "source": "quest:shadowknight-epic-corrupted-ghoulbane",
+        "target": "quest:shadowknight-epic-dusty-tome",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15568",
+        "source": "npc:kerra-island:marl-kastane",
+        "target": "quest:shadowknight-epic-dark-shroud",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15569",
+        "source": "quest:shadowknight-epic-dark-shroud",
+        "target": "zone:kerra-island",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15570",
+        "source": "quest:shadowknight-epic-dark-shroud",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15571",
+        "source": "quest:shadowknight-epic-dark-shroud",
+        "target": "quest:shadowknight-epic-corrupted-ghoulbane",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15572",
+        "source": "npc:city-of-mist:lhranc",
+        "target": "quest:shadowknight-epic-lhrancs-coin",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15573",
+        "source": "quest:shadowknight-epic-lhrancs-coin",
+        "target": "zone:city-of-mist",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15574",
+        "source": "quest:shadowknight-epic-lhrancs-coin",
+        "target": "quest:shadowknight-epic-dark-shroud",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15575",
+        "source": "npc:kerra-island:marl-kastane",
+        "target": "quest:shadowknight-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15576",
+        "source": "quest:shadowknight-epic-quest",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15577",
+        "source": "quest:shadowknight-epic-quest",
+        "target": "quest:shadowknight-epic-lhrancs-coin",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15578",
+        "source": "quest:shadowknight-epic-quest",
+        "target": "item:innoruuks-curse",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15579",
+        "source": "npc:east-cabilis:arch-duke-xog",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15580",
+        "source": "npc:east-cabilis:lord-gikzic",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15581",
+        "source": "npc:east-cabilis:lord-korzin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15582",
+        "source": "npc:east-cabilis:librarian-zimor",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15583",
+        "source": "npc:east-cabilis:arch-duke-xog",
+        "target": "quest:crusaders-test-of-the-newbie",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15584",
+        "source": "quest:crusaders-test-of-the-newbie",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15585",
+        "source": "npc:east-cabilis:lord-gikzic",
+        "target": "quest:crusaders-test-of-the-pawn",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15586",
+        "source": "quest:crusaders-test-of-the-pawn",
+        "target": "zone:lake-of-ill-omen",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15587",
+        "source": "quest:crusaders-test-of-the-pawn",
+        "target": "quest:crusaders-test-of-the-newbie",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15588",
+        "source": "npc:east-cabilis:lord-gikzic",
+        "target": "quest:crusaders-test-of-pain",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15589",
+        "source": "quest:crusaders-test-of-pain",
+        "target": "zone:swamp-of-no-hope",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15590",
+        "source": "quest:crusaders-test-of-pain",
+        "target": "quest:crusaders-test-of-the-pawn",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15591",
+        "source": "npc:east-cabilis:lord-korzin",
+        "target": "quest:crusaders-test-of-suffering",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15592",
+        "source": "quest:crusaders-test-of-suffering",
+        "target": "zone:kurns-tower",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15593",
+        "source": "quest:crusaders-test-of-suffering",
+        "target": "quest:crusaders-test-of-pain",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15594",
+        "source": "npc:east-cabilis:lord-qyzar",
+        "target": "quest:crusaders-test-of-the-zealot",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15595",
+        "source": "quest:crusaders-test-of-the-zealot",
+        "target": "zone:warsliks-woods",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15596",
+        "source": "quest:crusaders-test-of-the-zealot",
+        "target": "quest:crusaders-test-of-suffering",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15597",
+        "source": "npc:east-cabilis:lord-qyzar",
+        "target": "quest:crusaders-test-of-betrayal",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15598",
+        "source": "quest:crusaders-test-of-betrayal",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15599",
+        "source": "quest:crusaders-test-of-betrayal",
+        "target": "quest:crusaders-test-of-the-zealot",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15600",
+        "source": "npc:east-cabilis:lord-qyzar",
+        "target": "quest:crusaders-test-of-the-hero",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15601",
+        "source": "quest:crusaders-test-of-the-hero",
+        "target": "zone:dalnir",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15602",
+        "source": "quest:crusaders-test-of-the-hero",
+        "target": "quest:crusaders-test-of-betrayal",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15603",
+        "source": "npc:east-cabilis:arch-duke-xog",
+        "target": "quest:crusaders-test-of-the-lord",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15604",
+        "source": "quest:crusaders-test-of-the-lord",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15605",
+        "source": "quest:crusaders-test-of-the-lord",
+        "target": "zone:kaesora",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15606",
+        "source": "quest:crusaders-test-of-the-lord",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15607",
+        "source": "quest:crusaders-test-of-the-lord",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15608",
+        "source": "quest:crusaders-test-of-the-lord",
+        "target": "quest:crusaders-test-of-the-hero",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15609",
+        "source": "npc:east-cabilis:librarian-zimor",
+        "target": "quest:crusaders-of-greenmist",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15610",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15611",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15612",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:lake-of-ill-omen",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15613",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:karnors-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15614",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:old-sebilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15615",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "zone:dalnir",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15616",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "quest:crusaders-test-of-the-lord",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15617",
+        "source": "quest:crusaders-of-greenmist",
+        "target": "item:greenmist",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15618",
+        "source": "npc:ocean-of-tears:a-lesser-spirit",
+        "target": "zone:ocean-of-tears",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15619",
+        "source": "npc:north-freeport:bondl-felligan",
+        "target": "zone:north-freeport",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15620",
+        "source": "npc:west-karana:a-wandering-spirit",
+        "target": "zone:west-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15621",
+        "source": "npc:emerald-jungle:spirit-sentinel",
+        "target": "zone:emerald-jungle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15622",
+        "source": "npc:the-hole:high-scale-kirn",
+        "target": "zone:the-hole",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15623",
+        "source": "npc:city-of-mist:nehashiir",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15624",
+        "source": "npc:city-of-mist:lord-rakashiir",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15625",
+        "source": "npc:ocean-of-tears:a-lesser-spirit",
+        "target": "quest:shaman-epic-tiny-gem",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15626",
+        "source": "quest:shaman-epic-tiny-gem",
+        "target": "zone:ocean-of-tears",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15627",
+        "source": "quest:shaman-epic-tiny-gem",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15628",
+        "source": "quest:shaman-epic-tiny-gem",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15629",
+        "source": "quest:shaman-epic-tiny-gem",
+        "target": "zone:field-of-bone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15630",
+        "source": "npc:north-freeport:bondl-felligan",
+        "target": "quest:shaman-epic-drunken-shaman",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15631",
+        "source": "quest:shaman-epic-drunken-shaman",
+        "target": "zone:north-freeport",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15632",
+        "source": "quest:shaman-epic-drunken-shaman",
+        "target": "quest:shaman-epic-tiny-gem",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15633",
+        "source": "npc:jade-tigers-den:a-greater-spirit",
+        "target": "quest:shaman-epic-test-of-patience",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15634",
+        "source": "quest:shaman-epic-test-of-patience",
+        "target": "quest:shaman-epic-drunken-shaman",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15635",
+        "source": "npc:west-karana:a-wandering-spirit",
+        "target": "quest:shaman-epic-test-of-wisdom",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15636",
+        "source": "quest:shaman-epic-test-of-wisdom",
+        "target": "zone:west-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15637",
+        "source": "quest:shaman-epic-test-of-wisdom",
+        "target": "zone:rathe-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15638",
+        "source": "quest:shaman-epic-test-of-wisdom",
+        "target": "quest:shaman-epic-test-of-patience",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15639",
+        "source": "npc:emerald-jungle:spirit-sentinel",
+        "target": "quest:shaman-epic-test-of-might",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15640",
+        "source": "quest:shaman-epic-test-of-might",
+        "target": "zone:emerald-jungle",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15641",
+        "source": "quest:shaman-epic-test-of-might",
+        "target": "zone:mistmoore-castle",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15642",
+        "source": "quest:shaman-epic-test-of-might",
+        "target": "quest:shaman-epic-test-of-wisdom",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15643",
+        "source": "npc:emerald-jungle:spirit-sentinel",
+        "target": "quest:shaman-epic-city-of-mist-reports",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15644",
+        "source": "quest:shaman-epic-city-of-mist-reports",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15645",
+        "source": "quest:shaman-epic-city-of-mist-reports",
+        "target": "quest:shaman-epic-test-of-might",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15646",
+        "source": "npc:emerald-jungle:spirit-sentinel",
+        "target": "quest:shaman-epic-books-of-lord-ghiosk",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15647",
+        "source": "quest:shaman-epic-books-of-lord-ghiosk",
+        "target": "zone:city-of-mist",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15648",
+        "source": "quest:shaman-epic-books-of-lord-ghiosk",
+        "target": "quest:shaman-epic-city-of-mist-reports",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15649",
+        "source": "quest:shaman-epic-icon-of-high-scale",
+        "target": "zone:city-of-mist",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15650",
+        "source": "quest:shaman-epic-icon-of-high-scale",
+        "target": "quest:shaman-epic-books-of-lord-ghiosk",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15651",
+        "source": "npc:the-hole:high-scale-kirn",
+        "target": "quest:shaman-epic-high-scale-kirn",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15652",
+        "source": "quest:shaman-epic-high-scale-kirn",
+        "target": "zone:the-hole",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15653",
+        "source": "quest:shaman-epic-high-scale-kirn",
+        "target": "quest:shaman-epic-icon-of-high-scale",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15654",
+        "source": "npc:city-of-mist:nehashiir",
+        "target": "quest:shaman-epic-nehashiir",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15655",
+        "source": "quest:shaman-epic-nehashiir",
+        "target": "zone:city-of-mist",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15656",
+        "source": "quest:shaman-epic-nehashiir",
+        "target": "quest:shaman-epic-high-scale-kirn",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15657",
+        "source": "quest:shaman-epic-childs-tear",
+        "target": "zone:plane-of-fear",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15658",
+        "source": "quest:shaman-epic-childs-tear",
+        "target": "quest:shaman-epic-nehashiir",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15659",
+        "source": "npc:city-of-mist:lord-rakashiir",
+        "target": "quest:shaman-epic-rakashiir",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15660",
+        "source": "quest:shaman-epic-rakashiir",
+        "target": "zone:city-of-mist",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15661",
+        "source": "quest:shaman-epic-rakashiir",
+        "target": "quest:shaman-epic-childs-tear",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15662",
+        "source": "npc:emerald-jungle:spirit-sentinel",
+        "target": "quest:shaman-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15663",
+        "source": "quest:shaman-epic-quest",
+        "target": "zone:emerald-jungle",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15664",
+        "source": "quest:shaman-epic-quest",
+        "target": "quest:shaman-epic-rakashiir",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15665",
+        "source": "quest:shaman-epic-quest",
+        "target": "item:spear-of-fate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15666",
+        "source": "npc:west-commonlands:jahsohn-aksot",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15667",
+        "source": "npc:butcherblock-mountains:walnan",
+        "target": "zone:butcherblock-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15668",
+        "source": "npc:najena:akksstaff",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15669",
+        "source": "npc:lake-rathetear:rykas",
+        "target": "zone:lake-rathetear",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15670",
+        "source": "npc:skyfire-mountains:jennus-lyklobar",
+        "target": "zone:skyfire-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15671",
+        "source": "npc:firiona-vie:tiblner-milnik",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-15672",
+        "source": "npc:dagnor-s-cauldron:jinalis-andir",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15673",
+        "source": "npc:west-commonlands:jahsohn-aksot",
+        "target": "quest:magician-epic-words-of-magikot",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15674",
+        "source": "quest:magician-epic-words-of-magikot",
+        "target": "zone:west-commonlands",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15675",
+        "source": "npc:butcherblock-mountains:walnan",
+        "target": "quest:magician-epic-power-of-the-elements",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15676",
+        "source": "quest:magician-epic-power-of-the-elements",
+        "target": "zone:butcherblock-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15677",
+        "source": "quest:magician-epic-power-of-the-elements",
+        "target": "quest:magician-epic-words-of-magikot",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15678",
+        "source": "npc:najena:akksstaff",
+        "target": "quest:magician-epic-words-of-mastery",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15679",
+        "source": "quest:magician-epic-words-of-mastery",
+        "target": "zone:najena",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15680",
+        "source": "quest:magician-epic-words-of-mastery",
+        "target": "quest:magician-epic-power-of-the-elements",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15681",
+        "source": "npc:lake-rathetear:rykas",
+        "target": "quest:magician-epic-power-of-the-orb",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15682",
+        "source": "quest:magician-epic-power-of-the-orb",
+        "target": "zone:lake-rathetear",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15683",
+        "source": "quest:magician-epic-power-of-the-orb",
+        "target": "quest:magician-epic-words-of-mastery",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15684",
+        "source": "npc:skyfire-mountains:jennus-lyklobar",
+        "target": "quest:magician-epic-elemental-fire",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15685",
+        "source": "quest:magician-epic-elemental-fire",
+        "target": "zone:skyfire-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15686",
+        "source": "quest:magician-epic-elemental-fire",
+        "target": "quest:magician-epic-power-of-the-orb",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15687",
+        "source": "npc:firiona-vie:tiblner-milnik",
+        "target": "quest:magician-epic-elemental-earth",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15688",
+        "source": "quest:magician-epic-elemental-earth",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15689",
+        "source": "quest:magician-epic-elemental-earth",
+        "target": "quest:magician-epic-power-of-the-orb",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15690",
+        "source": "npc:dagnor-s-cauldron:jinalis-andir",
+        "target": "quest:magician-epic-elemental-water",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-15691",
+        "source": "quest:magician-epic-elemental-water",
+        "target": "zone:dagnor-s-cauldron",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15692",
+        "source": "quest:magician-epic-elemental-water",
+        "target": "quest:magician-epic-power-of-the-orb",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15693",
+        "source": "npc:plane-of-air:kihun-solstin",
+        "target": "quest:magician-epic-elemental-wind",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15694",
+        "source": "quest:magician-epic-elemental-wind",
+        "target": "quest:magician-epic-power-of-the-orb",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-15695",
+        "source": "npc:plane-of-air:master-of-elements",
+        "target": "quest:magician-epic-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15696",
+        "source": "quest:magician-epic-quest",
+        "target": "quest:magician-epic-elemental-fire",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15697",
+        "source": "quest:magician-epic-quest",
+        "target": "quest:magician-epic-elemental-earth",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15698",
+        "source": "quest:magician-epic-quest",
+        "target": "quest:magician-epic-elemental-water",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-15699",
+        "source": "quest:magician-epic-quest",
+        "target": "quest:magician-epic-elemental-wind",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-15700",
+        "source": "quest:magician-epic-quest",
+        "target": "item:orb-of-mastery",
         "type": "rewards"
       }
     }
