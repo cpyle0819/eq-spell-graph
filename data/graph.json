@@ -90980,6 +90980,3152 @@
         "size": "Small",
         "source": "Paladin Plane of Sky Tests: Test of Spirit reward (Dirkog Steelhand, Plane of Sky)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:jaglorm-ygorr",
+        "label": "Jaglorm Ygorr",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:druid-kael-armor-quests",
+        "label": "Druid Kael Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "druid"
+        ],
+        "description": "Jaglorm Ygorr in Kael Drakkal trades a set of quest items for one piece of Nature Walker's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-circlet",
+        "label": "Druid Kael Armor Quests: Circlet",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Ancient Leather Cap and 3 Crushed Onyx Sapphires to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Circlet.",
+        "steps": [
+          "Gather an Ancient Leather Cap and 3 Crushed Onyx Sapphires",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-circlet",
+        "label": "Nature Walker's Circlet",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "wis": 9,
+          "agi": 2
+        },
+        "resists": {
+          "fire": 1,
+          "disease": 1,
+          "cold": 1,
+          "magic": 3,
+          "poison": 1
+        },
+        "mana": 20,
+        "weight": 0.6,
+        "source": "Druid Kael Armor Quests: Circlet reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-chestguard",
+        "label": "Druid Kael Armor Quests: Chestguard",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Ancient Leather Tunic and 3 Black Marble to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Chestguard.",
+        "steps": [
+          "Gather an Ancient Leather Tunic and 3 Black Marble",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-chestguard",
+        "label": "Nature Walker's Chestguard",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 27,
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "wis": 15
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 2,
+          "cold": 2,
+          "magic": 10,
+          "poison": 3
+        },
+        "hp": 40,
+        "mana": 80,
+        "weight": 3.5,
+        "source": "Druid Kael Armor Quests: Chestguard reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-vambraces",
+        "label": "Druid Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Ancient Leather Sleeves and 3 Jaundice Gems to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Vambraces.",
+        "steps": [
+          "Gather Ancient Leather Sleeves and 3 Jaundice Gems",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-vambraces",
+        "label": "Nature Walker's Vambraces",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "wis": 2
+        },
+        "resists": {
+          "magic": 2
+        },
+        "hp": 20,
+        "mana": 30,
+        "weight": 1.5,
+        "source": "Druid Kael Armor Quests: Vambraces reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-bracer",
+        "label": "Druid Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Ancient Leather Bracelet and 3 Crushed Opals to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Bracer.",
+        "steps": [
+          "Gather an Ancient Leather Bracelet and 3 Crushed Opals",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-bracer",
+        "label": "Nature Walker's Bracer",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "wis": 9
+        },
+        "resists": {
+          "disease": 2
+        },
+        "mana": 20,
+        "weight": 1,
+        "source": "Druid Kael Armor Quests: Bracer reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-gauntlets",
+        "label": "Druid Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Ancient Leather Gloves and 3 Crushed Lava Rubies to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Gauntlets.",
+        "steps": [
+          "Gather Ancient Leather Gloves and 3 Crushed Lava Rubies",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-gauntlets",
+        "label": "Nature Walker's Gauntlets",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "sta": 2,
+          "wis": 2,
+          "agi": 2
+        },
+        "resists": {
+          "cold": 1,
+          "magic": 2
+        },
+        "mana": 25,
+        "weight": 1.5,
+        "source": "Druid Kael Armor Quests: Gauntlets reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-greaves",
+        "label": "Druid Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Ancient Leather Leggings and 3 Chipped Onyx Sapphires to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Greaves.",
+        "steps": [
+          "Gather Ancient Leather Leggings and 3 Chipped Onyx Sapphires",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-greaves",
+        "label": "Nature Walker's Greaves",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 14,
+        "stats": {
+          "dex": 6,
+          "wis": 7
+        },
+        "resists": {
+          "fire": 3,
+          "cold": 3
+        },
+        "hp": 20,
+        "mana": 70,
+        "weight": 4,
+        "source": "Druid Kael Armor Quests: Greaves reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-kael-armor-quests-boots",
+        "label": "Druid Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Ancient Leather Boots and 3 Crushed Flame Emeralds to Jaglorm Ygorr in Kael Drakkal for the Nature Walker's Boots.",
+        "steps": [
+          "Gather Ancient Leather Boots and 3 Crushed Flame Emeralds",
+          "Turn them in to Jaglorm Ygorr in Kael Drakkal"
+        ],
+        "wiki_title": "Druid Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-boots",
+        "label": "Nature Walker's Boots",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "agi": 13
+        },
+        "resists": {
+          "fire": 2,
+          "cold": 2,
+          "magic": 2
+        },
+        "mana": 10,
+        "weight": 2.5,
+        "source": "Druid Kael Armor Quests: Boots reward (Jaglorm Ygorr, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:qynydd-fedhar",
+        "label": "Qynydd Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:druid-skyshrine-armor-quests",
+        "label": "Druid Skyshrine Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "druid"
+        ],
+        "description": "Qynydd Fe`Dhar in Skyshrine trades a set of quest items for one piece of Woven Grass armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-headband",
+        "label": "Druid Skyshrine Armor Quests: Headband",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Unadorned Leather Cap and 3 Crushed Onyx Sapphires to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Headband.",
+        "steps": [
+          "Gather an Unadorned Leather Cap and 3 Crushed Onyx Sapphires",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-headband",
+        "label": "Woven Grass Headband",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "wis": 10
+        },
+        "resists": {
+          "disease": 3,
+          "cold": 3,
+          "magic": 5
+        },
+        "mana": 15,
+        "weight": 0.6,
+        "source": "Druid Skyshrine Armor Quests: Headband reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-chestguard",
+        "label": "Druid Skyshrine Armor Quests: Chestguard",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Unadorned Leather Tunic and 3 Black Marble to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Chestguard.",
+        "steps": [
+          "Gather an Unadorned Leather Tunic and 3 Black Marble",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-chestguard",
+        "label": "Woven Grass Chestguard",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 20,
+        "stats": {
+          "str": 5,
+          "sta": 7,
+          "wis": 14
+        },
+        "resists": {
+          "fire": 9,
+          "magic": 9,
+          "poison": 9
+        },
+        "hp": 50,
+        "mana": 80,
+        "weight": 3.5,
+        "source": "Druid Skyshrine Armor Quests: Chestguard reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-vambraces",
+        "label": "Druid Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Unadorned Leather Sleeves and 3 Jaundice Gems to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Vambraces.",
+        "steps": [
+          "Gather Unadorned Leather Sleeves and 3 Jaundice Gems",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-vambraces",
+        "label": "Woven Grass Vambraces",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 2,
+          "wis": 5
+        },
+        "hp": 30,
+        "mana": 30,
+        "weight": 1.5,
+        "source": "Druid Skyshrine Armor Quests: Vambraces reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-bracelet",
+        "label": "Druid Skyshrine Armor Quests: Bracelet",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Unadorned Leather Bracelet and 3 Crushed Opals to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Bracelet.",
+        "steps": [
+          "Gather an Unadorned Leather Bracelet and 3 Crushed Opals",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-bracelet",
+        "label": "Woven Grass Bracelet",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "wis": 9
+        },
+        "resists": {
+          "cold": 4,
+          "magic": 4,
+          "poison": 4
+        },
+        "hp": 30,
+        "mana": 30,
+        "weight": 1,
+        "source": "Druid Skyshrine Armor Quests: Bracelet reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "label": "Druid Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Unadorned Leather Gloves and 3 Crushed Lava Rubies to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Gauntlets.",
+        "steps": [
+          "Gather Unadorned Leather Gloves and 3 Crushed Lava Rubies",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-gauntlets",
+        "label": "Woven Grass Gauntlets",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "dex": 2,
+          "sta": 2,
+          "wis": 3
+        },
+        "resists": {
+          "disease": 5,
+          "magic": 5
+        },
+        "mana": 45,
+        "weight": 1.5,
+        "source": "Druid Skyshrine Armor Quests: Gauntlets reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-greaves",
+        "label": "Druid Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Unadorned Leather Leggings and 3 Chipped Onyx Sapphires to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Greaves.",
+        "steps": [
+          "Gather Unadorned Leather Leggings and 3 Chipped Onyx Sapphires",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-greaves",
+        "label": "Woven Grass Greaves",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "sta": 5,
+          "wis": 9,
+          "agi": 6
+        },
+        "resists": {
+          "poison": 3
+        },
+        "hp": 20,
+        "mana": 90,
+        "weight": 4,
+        "source": "Druid Skyshrine Armor Quests: Greaves reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-skyshrine-armor-quests-boots",
+        "label": "Druid Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in Unadorned Leather Boots and 3 Crushed Flame Emeralds to Qynydd Fe`Dhar in Skyshrine for the Woven Grass Boots.",
+        "steps": [
+          "Gather Unadorned Leather Boots and 3 Crushed Flame Emeralds",
+          "Turn them in to Qynydd Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Druid Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:woven-grass-boots",
+        "label": "Woven Grass Boots",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "dex": 15
+        },
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 2,
+          "poison": 2
+        },
+        "mana": 50,
+        "weight": 2.5,
+        "source": "Druid Skyshrine Armor Quests: Boots reward (Qynydd Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:cobi-frostbeard",
+        "label": "Cobi Frostbeard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:druid-thurgadin-armor-quests",
+        "label": "Druid Thurgadin Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "druid"
+        ],
+        "description": "Cobi Frostbeard in Thurgadin trades a set of quest items for one piece of Rowyl's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-circlet",
+        "label": "Druid Thurgadin Armor Quests: Circlet",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Eroded Leather Cap and 3 Crushed Onyx Sapphires to Cobi Frostbeard in Thurgadin for the Rowyl's Circlet of Nature.",
+        "steps": [
+          "Gather an Eroded Leather Cap and 3 Crushed Onyx Sapphires",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-circlet-of-nature",
+        "label": "Rowyl's Circlet of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "sta": 2,
+          "wis": 8
+        },
+        "resists": {
+          "fire": 2,
+          "magic": 3,
+          "poison": 2
+        },
+        "weight": 0.6,
+        "source": "Druid Thurgadin Armor Quests: Circlet reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-tunic",
+        "label": "Druid Thurgadin Armor Quests: Tunic",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in an Eroded Leather Tunic and 3 Black Marble to Cobi Frostbeard in Thurgadin for the Rowyl's Chestguard of Nature.",
+        "steps": [
+          "Gather an Eroded Leather Tunic and 3 Black Marble",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-chestguard-of-nature",
+        "label": "Rowyl's Chestguard of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 20,
+        "stats": {
+          "str": 5,
+          "cha": 4,
+          "wis": 14
+        },
+        "resists": {
+          "disease": 5,
+          "cold": 5,
+          "magic": 7
+        },
+        "hp": 30,
+        "mana": 80,
+        "weight": 3.5,
+        "source": "Druid Thurgadin Armor Quests: Tunic reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-sleeves",
+        "label": "Druid Thurgadin Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in 3 Jaundice Gems and a set of Eroded Leather Sleeves to Cobi Frostbeard in Thurgadin for the Rowyl's Vambraces of Nature.",
+        "steps": [
+          "Gather 3 Jaundice Gems and a set of Eroded Leather Sleeves",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-vambraces-of-nature",
+        "label": "Rowyl's Vambraces of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "wis": 2
+        },
+        "mana": 30,
+        "weight": 1.5,
+        "source": "Druid Thurgadin Armor Quests: Sleeves reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-bracers",
+        "label": "Druid Thurgadin Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in 3 Crushed Opals and an Eroded Leather Bracer to Cobi Frostbeard in Thurgadin for the Rowyl's Bracer of Nature.",
+        "steps": [
+          "Gather 3 Crushed Opals and an Eroded Leather Bracer",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-bracer-of-nature",
+        "label": "Rowyl's Bracer of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "wis": 7
+        },
+        "resists": {
+          "fire": 2
+        },
+        "mana": 20,
+        "weight": 1,
+        "source": "Druid Thurgadin Armor Quests: Bracers reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-gloves",
+        "label": "Druid Thurgadin Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in a set of Eroded Leather Gloves and 3 Crushed Lava Rubies to Cobi Frostbeard in Thurgadin for the Rowyl's Gauntlets of Nature.",
+        "steps": [
+          "Gather a set of Eroded Leather Gloves and 3 Crushed Lava Rubies",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-gauntlets-of-nature",
+        "label": "Rowyl's Gauntlets of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "sta": 2,
+          "wis": 2
+        },
+        "resists": {
+          "magic": 2,
+          "poison": 1
+        },
+        "mana": 25,
+        "weight": 1.5,
+        "source": "Druid Thurgadin Armor Quests: Gloves reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-leggings",
+        "label": "Druid Thurgadin Armor Quests: Leggings",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in 3 Chipped Onyx Sapphires and Eroded Leather Leggings to Cobi Frostbeard in Thurgadin for the Rowyl's Greaves of Nature.",
+        "steps": [
+          "Gather 3 Chipped Onyx Sapphires and Eroded Leather Leggings",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-greaves-of-nature",
+        "label": "Rowyl's Greaves of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 6,
+          "wis": 7
+        },
+        "resists": {
+          "cold": 3
+        },
+        "mana": 70,
+        "weight": 4,
+        "source": "Druid Thurgadin Armor Quests: Leggings reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-thurgadin-armor-quests-boots",
+        "label": "Druid Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Turn in 3 Crushed Flame Emeralds and a pair of Eroded Leather Boots to Cobi Frostbeard in Thurgadin for the Rowyl's Boots of Nature.",
+        "steps": [
+          "Gather 3 Crushed Flame Emeralds and a pair of Eroded Leather Boots",
+          "Turn them in to Cobi Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Druid Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rowyl-s-boots-of-nature",
+        "label": "Rowyl's Boots of Nature",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "cha": 13
+        },
+        "resists": {
+          "fire": 1,
+          "cold": 1,
+          "magic": 1
+        },
+        "mana": 10,
+        "weight": 2.5,
+        "source": "Druid Thurgadin Armor Quests: Boots reward (Cobi Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:stoem-lekbar",
+        "label": "Stoem Lekbar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:enchanter-kael-armor-quests",
+        "label": "Enchanter Kael Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Stoem Lekbar in Kael Drakkal trades a set of quest items for one piece of Dazzling armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-helm",
+        "label": "Enchanter Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in an Ancient Silk Turban and 3 Crushed Flame Opals to Stoem Lekbar in Kael Drakkal for the Dazzling Circlet.",
+        "steps": [
+          "Gather an Ancient Silk Turban and 3 Crushed Flame Opals",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-circlet",
+        "label": "Dazzling Circlet",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "cha": 15,
+          "int": 10
+        },
+        "resists": {
+          "disease": 2,
+          "magic": 7
+        },
+        "hp": 30,
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Kael Armor Quests: Helm reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-robe",
+        "label": "Enchanter Kael Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in an Ancient Silk Robe and 3 Pristine Emeralds to Stoem Lekbar in Kael Drakkal for the Dazzling Robe.",
+        "steps": [
+          "Gather an Ancient Silk Robe and 3 Pristine Emeralds",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-robe",
+        "label": "Dazzling Robe",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 14,
+        "stats": {
+          "sta": 7,
+          "cha": 7,
+          "int": 14
+        },
+        "resists": {
+          "fire": 10,
+          "disease": 8,
+          "magic": 8,
+          "poison": 8
+        },
+        "hp": 60,
+        "mana": 60,
+        "weight": 0.5,
+        "source": "Enchanter Kael Armor Quests: Robe reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-sleeves",
+        "label": "Enchanter Kael Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Ancient Silk Sleeves and 3 Flawed Topaz to Stoem Lekbar in Kael Drakkal for the Dazzling Sleeves.",
+        "steps": [
+          "Gather Ancient Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-sleeves",
+        "label": "Dazzling Sleeves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "cha": 4,
+          "int": 5
+        },
+        "resists": {
+          "fire": 4,
+          "cold": 4,
+          "magic": 2
+        },
+        "hp": 10,
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Kael Armor Quests: Sleeves reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-wristguard",
+        "label": "Enchanter Kael Armor Quests: Wristguard",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in an Ancient Silk Wristband and 3 Crushed Onyx Sapphires to Stoem Lekbar in Kael Drakkal for the Dazzling Wristguard.",
+        "steps": [
+          "Gather an Ancient Silk Wristband and 3 Crushed Onyx Sapphires",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-wristguard",
+        "label": "Dazzling Wristguard",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "cha": 2,
+          "int": 2,
+          "agi": 5
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 4,
+          "cold": 3,
+          "magic": 1,
+          "poison": 3
+        },
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Kael Armor Quests: Wristguard reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-gloves",
+        "label": "Enchanter Kael Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Ancient Silk Gloves and 3 Crushed Topaz to Stoem Lekbar in Kael Drakkal for the Dazzling Gloves.",
+        "steps": [
+          "Gather Ancient Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-gloves",
+        "label": "Dazzling Gloves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "int": 10,
+          "agi": 10
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 3,
+          "poison": 3
+        },
+        "mana": 35,
+        "weight": 0.2,
+        "source": "Enchanter Kael Armor Quests: Gloves reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-trousers",
+        "label": "Enchanter Kael Armor Quests: Trousers",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Ancient Silk Pantaloons and 3 Nephrite to Stoem Lekbar in Kael Drakkal for the Dazzling Trousers.",
+        "steps": [
+          "Gather Ancient Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-trousers",
+        "label": "Dazzling Trousers",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "sta": 4,
+          "cha": 6
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 2,
+          "cold": 3,
+          "magic": 3,
+          "poison": 2
+        },
+        "hp": 20,
+        "mana": 15,
+        "weight": 0.5,
+        "source": "Enchanter Kael Armor Quests: Trousers reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-kael-armor-quests-slippers",
+        "label": "Enchanter Kael Armor Quests: Slippers",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Ancient Silk Boots and 3 Crushed Jaundice Gems to Stoem Lekbar in Kael Drakkal for the Dazzling Slippers.",
+        "steps": [
+          "Gather Ancient Silk Boots and 3 Crushed Jaundice Gems",
+          "Turn them in to Stoem Lekbar in Kael Drakkal"
+        ],
+        "wiki_title": "Enchanter Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dazzling-slippers",
+        "label": "Dazzling Slippers",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "cha": 4,
+          "int": 5
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 2,
+          "poison": 3
+        },
+        "mana": 35,
+        "weight": 0.5,
+        "source": "Enchanter Kael Armor Quests: Slippers reward (Stoem Lekbar, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:lothieder-fedhar",
+        "label": "Lothieder Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:enchanter-skyshrine-armor-quests",
+        "label": "Enchanter Skyshrine Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Lothieder Fe`Dhar in Skyshrine trades a set of quest items for one piece of Illusionist's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-headband",
+        "label": "Enchanter Skyshrine Armor Quests: Headband",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Tattered Silk Turban and 3 Crushed Flame Opals to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Headband.",
+        "steps": [
+          "Gather a Tattered Silk Turban and 3 Crushed Flame Opals",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-headband",
+        "label": "Illusionist's Headband",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "sta": 7,
+          "cha": 15,
+          "int": 10
+        },
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 7,
+          "poison": 2
+        },
+        "hp": 15,
+        "weight": 0.2,
+        "source": "Enchanter Skyshrine Armor Quests: Headband reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-robe",
+        "label": "Enchanter Skyshrine Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Tattered Silk Robe and 3 Pristine Emeralds to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Robe.",
+        "steps": [
+          "Gather a Tattered Silk Robe and 3 Pristine Emeralds",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-robe",
+        "label": "Illusionist's Robe",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "sta": 5,
+          "cha": 7,
+          "int": 15
+        },
+        "resists": {
+          "fire": 6,
+          "disease": 6,
+          "cold": 10,
+          "magic": 6,
+          "poison": 6
+        },
+        "hp": 80,
+        "mana": 80,
+        "weight": 0.5,
+        "source": "Enchanter Skyshrine Armor Quests: Robe reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "label": "Enchanter Skyshrine Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Tattered Silk Sleeves and 3 Flawed Topaz to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Sleeves.",
+        "steps": [
+          "Gather Tattered Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-sleeves",
+        "label": "Illusionist's Sleeves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "int": 5
+        },
+        "resists": {
+          "fire": 1,
+          "disease": 4,
+          "cold": 1,
+          "magic": 1,
+          "poison": 1
+        },
+        "hp": 10,
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Skyshrine Armor Quests: Sleeves reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "label": "Enchanter Skyshrine Armor Quests: Wristguard",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Tattered Silk Wristband and 3 Crushed Onyx Sapphires to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Wristguard.",
+        "steps": [
+          "Gather a Tattered Silk Wristband and 3 Crushed Onyx Sapphires",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-wristguard",
+        "label": "Illusionist's Wristguard",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "sta": 5,
+          "int": 5,
+          "agi": 5
+        },
+        "resists": {
+          "magic": 1,
+          "poison": 1
+        },
+        "hp": 40,
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Skyshrine Armor Quests: Wristguard reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "label": "Enchanter Skyshrine Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Tattered Silk Gloves and 3 Crushed Topaz to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Gloves.",
+        "steps": [
+          "Gather Tattered Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-gloves",
+        "label": "Illusionist's Gloves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "int": 10,
+          "agi": 10
+        },
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "magic": 3,
+          "poison": 3
+        },
+        "hp": 30,
+        "mana": 45,
+        "weight": 0.2,
+        "source": "Enchanter Skyshrine Armor Quests: Gloves reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "label": "Enchanter Skyshrine Armor Quests: Pantaloons",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Tattered Silk Pantaloons and 3 Nephrite to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Pantaloons.",
+        "steps": [
+          "Gather Tattered Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-pantaloons",
+        "label": "Illusionist's Pantaloons",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 5,
+          "int": 2
+        },
+        "resists": {
+          "magic": 3,
+          "poison": 1
+        },
+        "hp": 20,
+        "mana": 50,
+        "weight": 0.5,
+        "source": "Enchanter Skyshrine Armor Quests: Pantaloons reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "label": "Enchanter Skyshrine Armor Quests: Slippers",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Tattered Silk Boots and 3 Crushed Jaundice Gems to Lothieder Fe`Dhar in Skyshrine for the Illusionist's Slippers.",
+        "steps": [
+          "Gather Tattered Silk Boots and 3 Crushed Jaundice Gems",
+          "Turn them in to Lothieder Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Enchanter Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:illusionist-s-slippers",
+        "label": "Illusionist's Slippers",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "sta": 7,
+          "cha": 5
+        },
+        "resists": {
+          "magic": 3,
+          "poison": 3
+        },
+        "hp": 30,
+        "mana": 35,
+        "weight": 0.5,
+        "source": "Enchanter Skyshrine Armor Quests: Slippers reward (Lothieder Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:lorekeeper-brita",
+        "label": "Lorekeeper Brita",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:enchanter-thurgadin-armor-quests",
+        "label": "Enchanter Thurgadin Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Lorekeeper Brita in Thurgadin trades a set of quest items for one piece of Beguiler's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-helm",
+        "label": "Enchanter Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Turban and 3 Crushed Flame Opals to Lorekeeper Brita in Thurgadin for the Beguiler's Crown.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Turban and 3 Crushed Flame Opals",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-crown",
+        "label": "Beguiler's Crown",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "cha": 15,
+          "int": 10
+        },
+        "resists": {
+          "fire": 2,
+          "magic": 7
+        },
+        "weight": 0.2,
+        "source": "Enchanter Thurgadin Armor Quests: Helm reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-robe",
+        "label": "Enchanter Thurgadin Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Robe and 3 Pristine Emeralds to Lorekeeper Brita in Thurgadin for the Beguiler's Robe.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Robe and 3 Pristine Emeralds",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-robe",
+        "label": "Beguiler's Robe",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "sta": 5,
+          "cha": 7,
+          "int": 14
+        },
+        "hp": 60,
+        "mana": 60,
+        "weight": 0.5,
+        "source": "Enchanter Thurgadin Armor Quests: Robe reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "label": "Enchanter Thurgadin Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Torn Enchanted Silk Sleeves and 3 Flawed Topaz to Lorekeeper Brita in Thurgadin for the Beguiler's Sleeves.",
+        "steps": [
+          "Gather Torn Enchanted Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-sleeves",
+        "label": "Beguiler's Sleeves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "cha": 4,
+          "int": 5
+        },
+        "resists": {
+          "poison": 2
+        },
+        "hp": 10,
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Thurgadin Armor Quests: Sleeves reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "label": "Enchanter Thurgadin Armor Quests: Wristguard",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Wristband and 3 Crushed Onyx Sapphires to Lorekeeper Brita in Thurgadin for the Beguiler's Wristguard.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Wristband and 3 Crushed Onyx Sapphires",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-wristguard",
+        "label": "Beguiler's Wristguard",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "int": 2,
+          "agi": 5
+        },
+        "mana": 20,
+        "weight": 0.2,
+        "source": "Enchanter Thurgadin Armor Quests: Wristguard reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "label": "Enchanter Thurgadin Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Torn Enchanted Silk Gloves and 3 Crushed Topaz to Lorekeeper Brita in Thurgadin for the Beguiler's Gloves.",
+        "steps": [
+          "Gather Torn Enchanted Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-gloves",
+        "label": "Beguiler's Gloves",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "int": 9,
+          "agi": 9
+        },
+        "mana": 35,
+        "weight": 0.2,
+        "source": "Enchanter Thurgadin Armor Quests: Gloves reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "label": "Enchanter Thurgadin Armor Quests: Trousers",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Torn Enchanted Silk Pantaloons and 3 Nephrite to Lorekeeper Brita in Thurgadin for the Beguiler's Trousers.",
+        "steps": [
+          "Gather Torn Enchanted Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-trousers",
+        "label": "Beguiler's Trousers",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 4,
+          "cha": 3
+        },
+        "weight": 0.5,
+        "source": "Enchanter Thurgadin Armor Quests: Trousers reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "label": "Enchanter Thurgadin Armor Quests: Slippers",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Turn in Torn Enchanted Silk Boots and 3 Crushed Jaundice Gems to Lorekeeper Brita in Thurgadin for the Beguiler's Slippers.",
+        "steps": [
+          "Gather Torn Enchanted Silk Boots and 3 Crushed Jaundice Gems",
+          "Turn them in to Lorekeeper Brita in Thurgadin"
+        ],
+        "wiki_title": "Enchanter Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:beguiler-s-slippers",
+        "label": "Beguiler's Slippers",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "cha": 4
+        },
+        "mana": 35,
+        "weight": 0.5,
+        "source": "Enchanter Thurgadin Armor Quests: Slippers reward (Lorekeeper Brita, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:strandar-pinemist",
+        "label": "Strandar Pinemist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:will-treewalker",
+        "label": "Will Treewalker",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:fenalla-moonshadow",
+        "label": "Fenalla Moonshadow",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:druid-plane-of-sky-tests",
+        "label": "Druid Plane of Sky Tests",
+        "type": "quest_group",
+        "classes": [
+          "druid"
+        ],
+        "description": "Strandar Pinemist in the Plane of Sky directs Druids to two testers, Will Treewalker (Wolf, Bear, Tree) or Fenalla Moonshadow (Bee, Eagle, Nature), each offering independent item-turn-in tests for a named reward. Six independent sub-quests, no ordering between them.",
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-wolf",
+        "label": "Druid Plane of Sky Tests: Test of Wolf",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring an azure tessera, black face paint, and a worn leather mask to Will Treewalker in the Plane of Sky for Drake-Hide Mask.",
+        "steps": [
+          "Gather an azure tessera, black face paint, and a worn leather mask",
+          "Turn them in to Will Treewalker in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:drake-hide-mask",
+        "label": "Drake-Hide Mask",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Face"
+        ],
+        "ac": 4,
+        "stats": {
+          "str": 10,
+          "dex": 10,
+          "wis": 10,
+          "agi": 10
+        },
+        "resists": {
+          "magic": 7
+        },
+        "mana": 10,
+        "weight": 0.4,
+        "source": "Druid Plane of Sky Tests: Test of Wolf reward (Will Treewalker, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-bear",
+        "label": "Druid Plane of Sky Tests: Test of Bear",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring a copper disc, Nature Walker's Sky Emerald, and a Mantle of Woven Grass to Will Treewalker in the Plane of Sky for Nature Walker's Mantle.",
+        "steps": [
+          "Gather a copper disc, Nature Walker's Sky Emerald, and a Mantle of Woven Grass",
+          "Turn them in to Will Treewalker in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nature-walker-s-mantle",
+        "label": "Nature Walker's Mantle",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 6,
+        "stats": {
+          "dex": 4,
+          "wis": 4,
+          "agi": 4
+        },
+        "mana": 50,
+        "weight": 2.5,
+        "source": "Druid Plane of Sky Tests: Test of Bear reward (Will Treewalker, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-tree",
+        "label": "Druid Plane of Sky Tests: Test of Tree",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring a diaphanous globe, hardened clay, and a spiroc battle staff to Will Treewalker in the Plane of Sky for Shillelagh.",
+        "steps": [
+          "Gather a diaphanous globe, hardened clay, and a spiroc battle staff",
+          "Turn them in to Will Treewalker in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shillelagh",
+        "label": "Shillelagh",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "damage": 10,
+        "ac": 2,
+        "skill": "1H Blunt",
+        "stats": {
+          "cha": 4,
+          "wis": 9,
+          "agi": 2
+        },
+        "resists": {
+          "fire": 5
+        },
+        "mana": 50,
+        "weight": 4,
+        "source": "Druid Plane of Sky Tests: Test of Tree reward (Will Treewalker, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-bee",
+        "label": "Druid Plane of Sky Tests: Test of Bee",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring an efreeti statuette, a wilder's girdle, and divine honeycomb to Fenalla Moonshadow in the Plane of Sky for Honeycomb Belt.",
+        "steps": [
+          "Gather an efreeti statuette, a wilder's girdle, and divine honeycomb",
+          "Turn them in to Fenalla Moonshadow in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:honeycomb-belt",
+        "label": "Honeycomb Belt",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Waist"
+        ],
+        "ac": 6,
+        "stats": {
+          "cha": 2,
+          "wis": 8
+        },
+        "effect": "Haste +26%",
+        "mana": 75,
+        "weight": 2,
+        "source": "Druid Plane of Sky Tests: Test of Bee reward (Fenalla Moonshadow, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-eagle",
+        "label": "Druid Plane of Sky Tests: Test of Eagle",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring a white-tipped spiroc feather, acidic venom, an ethereal ruby, and a spiroc elder's totem to Fenalla Moonshadow in the Plane of Sky for Spiroc Banisher Focus.",
+        "steps": [
+          "Gather a white-tipped spiroc feather, acidic venom, an ethereal ruby, and a spiroc elder's totem",
+          "Turn them in to Fenalla Moonshadow in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:spiroc-banisher-focus",
+        "label": "Spiroc Banisher Focus",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary",
+          "Secondary"
+        ],
+        "stats": {
+          "wis": 20
+        },
+        "mana": 10,
+        "weight": 1,
+        "source": "Druid Plane of Sky Tests: Test of Eagle reward (Fenalla Moonshadow, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:druid-plane-of-sky-test-of-nature",
+        "label": "Druid Plane of Sky Tests: Test of Nature",
+        "type": "quest",
+        "classes": [
+          "druid"
+        ],
+        "description": "Bring an efreeti scimitar, lush nectar, a fire sky ruby, and a storm sky opal to Fenalla Moonshadow in the Plane of Sky for Espri.",
+        "steps": [
+          "Gather an efreeti scimitar, lush nectar, a fire sky ruby, and a storm sky opal",
+          "Turn them in to Fenalla Moonshadow in the Plane of Sky"
+        ],
+        "wiki_title": "Druid Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:espri",
+        "label": "Espri",
+        "type": "item",
+        "classes": [
+          "druid"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "damage": 10,
+        "skill": "1H Slashing",
+        "stats": {
+          "dex": 9,
+          "wis": 9
+        },
+        "effect": "Combust at Level 45",
+        "mana": 50,
+        "weight": 2,
+        "source": "Druid Plane of Sky Tests: Test of Nature reward (Fenalla Moonshadow, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:enchanter-jolas",
+        "label": "Enchanter Jolas",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:enchanter-plane-of-sky-tests",
+        "label": "Enchanter Plane of Sky Tests",
+        "type": "quest_group",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Enchanter Jolas in the Plane of Sky offers six independent item-turn-in tests (Illusion, Metamorphism, Deception, Disillusion, Memorization, Incapacitation), each for a named reward. No ordering between them.",
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "label": "Enchanter Plane of Sky Tests: Test of Illusion",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Meda and a Finely Woven Cloth Cord to Enchanter Jolas in the Plane of Sky for Sphinx Hair Cord.",
+        "steps": [
+          "Gather a Wind Rune Meda and a Finely Woven Cloth Cord",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sphinx-hair-cord",
+        "label": "Sphinx Hair Cord",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Waist"
+        ],
+        "ac": 4,
+        "stats": {
+          "cha": 5,
+          "int": 5
+        },
+        "resists": {
+          "fire": 10,
+          "disease": 10,
+          "cold": 10
+        },
+        "weight": 0.2,
+        "size": "Small",
+        "source": "Enchanter Plane of Sky Tests: Test of Illusion reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "label": "Enchanter Plane of Sky Tests: Test of Metamorphism",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Ozah and a Light Cloth Mantle to Enchanter Jolas in the Plane of Sky for Wind Walker's Mantle.",
+        "steps": [
+          "Gather a Wind Rune Ozah and a Light Cloth Mantle",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wind-walker-s-mantle",
+        "label": "Wind Walker's Mantle",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Shoulders"
+        ],
+        "ac": 6,
+        "stats": {
+          "str": 5,
+          "dex": 5,
+          "cha": 10,
+          "agi": 2
+        },
+        "hp": 50,
+        "weight": 0.3,
+        "size": "Small",
+        "source": "Enchanter Plane of Sky Tests: Test of Metamorphism reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-deception",
+        "label": "Enchanter Plane of Sky Tests: Test of Deception",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Beza and a Silken Mask to Enchanter Jolas in the Plane of Sky for Ivory Mask.",
+        "steps": [
+          "Gather a Wind Rune Beza and a Silken Mask",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivory-mask",
+        "label": "Ivory Mask",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Face"
+        ],
+        "ac": 6,
+        "stats": {
+          "cha": 6,
+          "int": 6
+        },
+        "mana": 30,
+        "weight": 0.5,
+        "size": "Medium",
+        "source": "Enchanter Plane of Sky Tests: Test of Deception reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "label": "Enchanter Plane of Sky Tests: Test of Disillusion",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Caza and an Adamantium Earring to Enchanter Jolas in the Plane of Sky for Earring of Displacement.",
+        "steps": [
+          "Gather a Wind Rune Caza and an Adamantium Earring",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:earring-of-displacement",
+        "label": "Earring of Displacement",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Ear"
+        ],
+        "ac": 6,
+        "stats": {
+          "cha": 4,
+          "int": 4
+        },
+        "effect": "Gravity Flux",
+        "mana": 25,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Enchanter Plane of Sky Tests: Test of Disillusion reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "label": "Enchanter Plane of Sky Tests: Test of Memorization",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Fana and a Glowing Necklace to Enchanter Jolas in the Plane of Sky for Necklace of Whispering Winds.",
+        "steps": [
+          "Gather a Wind Rune Fana and a Glowing Necklace",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:necklace-of-whispering-winds",
+        "label": "Necklace of Whispering Winds",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Neck"
+        ],
+        "ac": 4,
+        "stats": {
+          "sta": 5,
+          "cha": 10,
+          "int": 5
+        },
+        "effect": "Cajoling Whispers",
+        "mana": 35,
+        "weight": 0.1,
+        "size": "Tiny",
+        "source": "Enchanter Plane of Sky Tests: Test of Memorization reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "label": "Enchanter Plane of Sky Tests: Test of Incapacitation",
+        "type": "quest",
+        "classes": [
+          "enchanter"
+        ],
+        "description": "Bring a Wind Rune Izah, a Large Sky Sapphire, and an Efreeti Wind Staff to Enchanter Jolas in the Plane of Sky for Rod of the Protecting Winds.",
+        "steps": [
+          "Gather a Wind Rune Izah, a Large Sky Sapphire, and an Efreeti Wind Staff",
+          "Turn them in to Enchanter Jolas in the Plane of Sky"
+        ],
+        "wiki_title": "Enchanter Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:rod-of-the-protecting-winds",
+        "label": "Rod of the Protecting Winds",
+        "type": "item",
+        "classes": [
+          "enchanter"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "ac": 10,
+        "damage": 35,
+        "stats": {
+          "cha": 15,
+          "int": 15
+        },
+        "effect": "Rune III",
+        "mana": 75,
+        "weight": 5,
+        "size": "Large",
+        "source": "Enchanter Plane of Sky Tests: Test of Incapacitation reward (Enchanter Jolas, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:sirtha-scarscale",
+        "label": "Sirtha Scarscale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:east-cabilis:sarth-scarscale",
+        "label": "Sarth Scarscale",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:dreadscale-armor",
+        "label": "Dreadscale Armor",
+        "type": "quest_group",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Sirtha Scarscale and Sarth Scarscale in East Cabilis each trade a set of quest items for one piece of Dreadscale armor. Eight independent sub-quests, no ordering between them (Sirtha has four pieces, Sarth has four).",
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-helm",
+        "label": "Dreadscale Armor: Helm",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in a Sarnak Berserker Head, a Sarnak Knight's Sword, a Ruby, and a Banded Helm to Sirtha Scarscale in East Cabilis for the Dreadscale Helm.",
+        "steps": [
+          "Gather a Sarnak Berserker Head, a Sarnak Knight's Sword, a Ruby, and a Banded Helm",
+          "Turn them in to Sirtha Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-helm",
+        "label": "Dreadscale Helm",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "int": 5
+        },
+        "resists": {
+          "fire": 5,
+          "disease": 5,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "weight": 3,
+        "source": "Dreadscale Armor: Helm reward (Sirtha Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-gauntlets",
+        "label": "Dreadscale Armor: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in a Skeletal Hand, 2 Star Rubies, and Banded Gauntlets to Sirtha Scarscale in East Cabilis for the Dreadscale Gauntlets.",
+        "steps": [
+          "Gather a Skeletal Hand, 2 Star Rubies, and Banded Gauntlets",
+          "Turn them in to Sirtha Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-gauntlets",
+        "label": "Dreadscale Gauntlets",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "dex": 4,
+          "int": 2
+        },
+        "resists": {
+          "magic": 5
+        },
+        "weight": 3,
+        "source": "Dreadscale Armor: Gauntlets reward (Sirtha Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-boots",
+        "label": "Dreadscale Armor: Boots",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Cactus Quills, Skeletal Feet, a Fire Emerald, and Banded Boots to Sirtha Scarscale in East Cabilis for the Dreadscale Boots.",
+        "steps": [
+          "Gather Cactus Quills, Skeletal Feet, a Fire Emerald, and Banded Boots",
+          "Turn them in to Sirtha Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-boots",
+        "label": "Dreadscale Boots",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "str": 3,
+          "sta": 3
+        },
+        "weight": 3.5,
+        "source": "Dreadscale Armor: Boots reward (Sirtha Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-vambraces",
+        "label": "Dreadscale Armor: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Golra Skin, 2 Sapphires, and Banded Sleeves to Sirtha Scarscale in East Cabilis for the Dreadscale Vambraces.",
+        "steps": [
+          "Gather Golra Skin, 2 Sapphires, and Banded Sleeves",
+          "Turn them in to Sirtha Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-vambraces",
+        "label": "Dreadscale Vambraces",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 4,
+          "dex": 3
+        },
+        "hp": 10,
+        "weight": 3.5,
+        "source": "Dreadscale Armor: Vambraces reward (Sirtha Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-bracer",
+        "label": "Dreadscale Armor: Bracer",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Bloodgill Scales, a Sapphire, and a Banded Bracer to Sarth Scarscale in East Cabilis for the Dreadscale Bracer.",
+        "steps": [
+          "Gather Bloodgill Scales, a Sapphire, and a Banded Bracer",
+          "Turn them in to Sarth Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-bracer",
+        "label": "Dreadscale Bracer",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "dex": 3
+        },
+        "resists": {
+          "fire": 2,
+          "cold": 2
+        },
+        "weight": 1.8,
+        "source": "Dreadscale Armor: Bracer reward (Sarth Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-greaves",
+        "label": "Dreadscale Armor: Greaves",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Grachnist's Head, Boots of Zorash, a Star Ruby, and Banded Leggings to Sarth Scarscale in East Cabilis for the Dreadscale Greaves.",
+        "steps": [
+          "Gather Grachnist's Head, Boots of Zorash, a Star Ruby, and Banded Leggings",
+          "Turn them in to Sarth Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-greaves",
+        "label": "Dreadscale Greaves",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "sta": 9,
+          "agi": 3
+        },
+        "resists": {
+          "magic": 3
+        },
+        "weight": 4,
+        "source": "Dreadscale Armor: Greaves reward (Sarth Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-mask",
+        "label": "Dreadscale Armor: Mask",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Wings of the Drixie Queen, a Fire Emerald, and a Banded Mask to Sarth Scarscale in East Cabilis for the Dreadscale Mask.",
+        "steps": [
+          "Gather Wings of the Drixie Queen, a Fire Emerald, and a Banded Mask",
+          "Turn them in to Sarth Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-mask",
+        "label": "Dreadscale Mask",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Face"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "str": 3,
+          "int": 3
+        },
+        "resists": {
+          "disease": 5,
+          "poison": 5
+        },
+        "weight": 1,
+        "source": "Dreadscale Armor: Mask reward (Sarth Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:dreadscale-armor-breastplate",
+        "label": "Dreadscale Armor: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 23,
+        "description": "Turn in Scorpion Chitin, a Sarnak War Braid, a Ruby, and Banded Mail to Sarth Scarscale in East Cabilis for the Dreadscale Breastplate.",
+        "steps": [
+          "Gather Scorpion Chitin, a Sarnak War Braid, a Ruby, and Banded Mail",
+          "Turn them in to Sarth Scarscale in East Cabilis"
+        ],
+        "wiki_title": "Dreadscale Armor"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dreadscale-breastplate",
+        "label": "Dreadscale Breastplate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "str": 2,
+          "sta": 10
+        },
+        "resists": {
+          "magic": 3
+        },
+        "weight": 6,
+        "source": "Dreadscale Armor: Breastplate reward (Sarth Scarscale, East Cabilis)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "label": "Cryssia Stardreamer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "label": "Walthin Fireweaver",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:lambent-armor-quests",
+        "label": "Lambent Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Cryssia Stardreamer and Walthin Fireweaver in the Temple of Solusek Ro each trade a set of quest items for one piece of Lambent armor. Seven independent sub-quests, no ordering between them (Cryssia has four pieces, Walthin has three).",
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-breastplate",
+        "label": "Lambent Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in a Gypsy Lute, a Basalt Carapace, and a Lambent Ruby to Cryssia Stardreamer in the Temple of Solusek Ro for the Lambent Breastplate.",
+        "steps": [
+          "Gather a Gypsy Lute, a Basalt Carapace, and a Lambent Ruby",
+          "Turn them in to Cryssia Stardreamer in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-breastplate",
+        "label": "Lambent Breastplate",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 20,
+        "stats": {
+          "sta": 5,
+          "cha": 1
+        },
+        "weight": 5.8,
+        "source": "Lambent Armor Quests: Breastplate reward (Cryssia Stardreamer, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-helm",
+        "label": "Lambent Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in a Mudwater Rune, an Opoline Helm, and a Lambent Star Ruby to Cryssia Stardreamer in the Temple of Solusek Ro for the Lambent Helm.",
+        "steps": [
+          "Gather a Mudwater Rune, an Opoline Helm, and a Lambent Star Ruby",
+          "Turn them in to Cryssia Stardreamer in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-helm",
+        "label": "Lambent Helm",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "cha": 3,
+          "int": 5
+        },
+        "weight": 3.8,
+        "source": "Lambent Armor Quests: Helm reward (Cryssia Stardreamer, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-vambraces",
+        "label": "Lambent Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in Fiery Vambraces, a Rune of the One Eye (Top), and a Lambent Sapphire to Cryssia Stardreamer in the Temple of Solusek Ro for the Lambent Vambraces.",
+        "steps": [
+          "Gather Fiery Vambraces, a Rune of the One Eye (Top), and a Lambent Sapphire",
+          "Turn them in to Cryssia Stardreamer in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-vambraces",
+        "label": "Lambent Vambraces",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "cha": 1
+        },
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 2,
+          "poison": 2
+        },
+        "weight": 3.5,
+        "source": "Lambent Armor Quests: Vambraces reward (Cryssia Stardreamer, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-bracers",
+        "label": "Lambent Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in a Dark-boned Bracelet, a Griffenne Charm, and a Lambent Fire Opal to Cryssia Stardreamer in the Temple of Solusek Ro for the Lambent Bracers.",
+        "steps": [
+          "Gather a Dark-boned Bracelet, a Griffenne Charm, and a Lambent Fire Opal",
+          "Turn them in to Cryssia Stardreamer in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-bracers",
+        "label": "Lambent Bracers",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "str": 4,
+          "cha": 1
+        },
+        "weight": 2.5,
+        "source": "Lambent Armor Quests: Bracers reward (Cryssia Stardreamer, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-greaves",
+        "label": "Lambent Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in Icy Greaves, Shin Greaves, and a Lambent Fire Opal to Walthin Fireweaver in the Temple of Solusek Ro for the Lambent Greaves.",
+        "steps": [
+          "Gather Icy Greaves, Shin Greaves, and a Lambent Fire Opal",
+          "Turn them in to Walthin Fireweaver in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-greaves",
+        "label": "Lambent Greaves",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "cha": 1,
+          "agi": 5
+        },
+        "weight": 4,
+        "source": "Lambent Armor Quests: Greaves reward (Walthin Fireweaver, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-boots",
+        "label": "Lambent Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in Firewalker Boots, a Rune of the One Eye (Middle), and a Lambent Sapphire to Walthin Fireweaver in the Temple of Solusek Ro for the Lambent Boots.",
+        "steps": [
+          "Gather Firewalker Boots, a Rune of the One Eye (Middle), and a Lambent Sapphire",
+          "Turn them in to Walthin Fireweaver in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-boots",
+        "label": "Lambent Boots",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "cha": 1
+        },
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 2,
+          "poison": 2
+        },
+        "weight": 3.5,
+        "source": "Lambent Armor Quests: Boots reward (Walthin Fireweaver, Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:lambent-armor-quests-gauntlets",
+        "label": "Lambent Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "bard"
+        ],
+        "minLevel": 30,
+        "description": "Turn in Shin Gauntlets, Black Silk Gloves, and a Lambent Star Ruby to Walthin Fireweaver in the Temple of Solusek Ro for the Lambent Gauntlets.",
+        "steps": [
+          "Gather Shin Gauntlets, Black Silk Gloves, and a Lambent Star Ruby",
+          "Turn them in to Walthin Fireweaver in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Lambent Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:lambent-gauntlets",
+        "label": "Lambent Gauntlets",
+        "type": "item",
+        "classes": [
+          "bard"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "dex": 5,
+          "cha": 1
+        },
+        "weight": 2.8,
+        "source": "Lambent Armor Quests: Gauntlets reward (Walthin Fireweaver, Temple of Solusek Ro)"
+      }
     }
   ],
   "edges": [
@@ -207969,6 +211115,3054 @@
         "id": "e-rewards-14569",
         "source": "quest:paladin-plane-of-sky-test-of-spirit",
         "target": "item:girdle-of-faith",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14570",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14571",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14572",
+        "source": "quest_group:druid-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14573",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-circlet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14574",
+        "source": "quest:druid-kael-armor-quests-circlet",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14575",
+        "source": "quest:druid-kael-armor-quests-circlet",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14576",
+        "source": "quest:druid-kael-armor-quests-circlet",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14577",
+        "source": "quest:druid-kael-armor-quests-circlet",
+        "target": "item:nature-walker-s-circlet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14578",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-chestguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14579",
+        "source": "quest:druid-kael-armor-quests-chestguard",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14580",
+        "source": "quest:druid-kael-armor-quests-chestguard",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14581",
+        "source": "quest:druid-kael-armor-quests-chestguard",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14582",
+        "source": "quest:druid-kael-armor-quests-chestguard",
+        "target": "item:nature-walker-s-chestguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14583",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14584",
+        "source": "quest:druid-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14585",
+        "source": "quest:druid-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14586",
+        "source": "quest:druid-kael-armor-quests-vambraces",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14587",
+        "source": "quest:druid-kael-armor-quests-vambraces",
+        "target": "item:nature-walker-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14588",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14589",
+        "source": "quest:druid-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14590",
+        "source": "quest:druid-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14591",
+        "source": "quest:druid-kael-armor-quests-bracer",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14592",
+        "source": "quest:druid-kael-armor-quests-bracer",
+        "target": "item:nature-walker-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14593",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14594",
+        "source": "quest:druid-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14595",
+        "source": "quest:druid-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14596",
+        "source": "quest:druid-kael-armor-quests-gauntlets",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14597",
+        "source": "quest:druid-kael-armor-quests-gauntlets",
+        "target": "item:nature-walker-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14598",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14599",
+        "source": "quest:druid-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14600",
+        "source": "quest:druid-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14601",
+        "source": "quest:druid-kael-armor-quests-greaves",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14602",
+        "source": "quest:druid-kael-armor-quests-greaves",
+        "target": "item:nature-walker-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14603",
+        "source": "npc:kael-drakkal:jaglorm-ygorr",
+        "target": "quest:druid-kael-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14604",
+        "source": "quest:druid-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14605",
+        "source": "quest:druid-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14606",
+        "source": "quest:druid-kael-armor-quests-boots",
+        "target": "quest_group:druid-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14607",
+        "source": "quest:druid-kael-armor-quests-boots",
+        "target": "item:nature-walker-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14608",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14609",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14610",
+        "source": "quest_group:druid-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14611",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-headband",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14612",
+        "source": "quest:druid-skyshrine-armor-quests-headband",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14613",
+        "source": "quest:druid-skyshrine-armor-quests-headband",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14614",
+        "source": "quest:druid-skyshrine-armor-quests-headband",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14615",
+        "source": "quest:druid-skyshrine-armor-quests-headband",
+        "target": "item:woven-grass-headband",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14616",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-chestguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14617",
+        "source": "quest:druid-skyshrine-armor-quests-chestguard",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14618",
+        "source": "quest:druid-skyshrine-armor-quests-chestguard",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14619",
+        "source": "quest:druid-skyshrine-armor-quests-chestguard",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14620",
+        "source": "quest:druid-skyshrine-armor-quests-chestguard",
+        "target": "item:woven-grass-chestguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14621",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14622",
+        "source": "quest:druid-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14623",
+        "source": "quest:druid-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14624",
+        "source": "quest:druid-skyshrine-armor-quests-vambraces",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14625",
+        "source": "quest:druid-skyshrine-armor-quests-vambraces",
+        "target": "item:woven-grass-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14626",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-bracelet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14627",
+        "source": "quest:druid-skyshrine-armor-quests-bracelet",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14628",
+        "source": "quest:druid-skyshrine-armor-quests-bracelet",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14629",
+        "source": "quest:druid-skyshrine-armor-quests-bracelet",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14630",
+        "source": "quest:druid-skyshrine-armor-quests-bracelet",
+        "target": "item:woven-grass-bracelet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14631",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14632",
+        "source": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14633",
+        "source": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14634",
+        "source": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14635",
+        "source": "quest:druid-skyshrine-armor-quests-gauntlets",
+        "target": "item:woven-grass-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14636",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14637",
+        "source": "quest:druid-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14638",
+        "source": "quest:druid-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14639",
+        "source": "quest:druid-skyshrine-armor-quests-greaves",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14640",
+        "source": "quest:druid-skyshrine-armor-quests-greaves",
+        "target": "item:woven-grass-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14641",
+        "source": "npc:skyshrine:qynydd-fedhar",
+        "target": "quest:druid-skyshrine-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14642",
+        "source": "quest:druid-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14643",
+        "source": "quest:druid-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14644",
+        "source": "quest:druid-skyshrine-armor-quests-boots",
+        "target": "quest_group:druid-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14645",
+        "source": "quest:druid-skyshrine-armor-quests-boots",
+        "target": "item:woven-grass-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14646",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14647",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14648",
+        "source": "quest_group:druid-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14649",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-circlet",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14650",
+        "source": "quest:druid-thurgadin-armor-quests-circlet",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14651",
+        "source": "quest:druid-thurgadin-armor-quests-circlet",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14652",
+        "source": "quest:druid-thurgadin-armor-quests-circlet",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14653",
+        "source": "quest:druid-thurgadin-armor-quests-circlet",
+        "target": "item:rowyl-s-circlet-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14654",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-tunic",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14655",
+        "source": "quest:druid-thurgadin-armor-quests-tunic",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14656",
+        "source": "quest:druid-thurgadin-armor-quests-tunic",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14657",
+        "source": "quest:druid-thurgadin-armor-quests-tunic",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14658",
+        "source": "quest:druid-thurgadin-armor-quests-tunic",
+        "target": "item:rowyl-s-chestguard-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14659",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14660",
+        "source": "quest:druid-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14661",
+        "source": "quest:druid-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14662",
+        "source": "quest:druid-thurgadin-armor-quests-sleeves",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14663",
+        "source": "quest:druid-thurgadin-armor-quests-sleeves",
+        "target": "item:rowyl-s-vambraces-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14664",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14665",
+        "source": "quest:druid-thurgadin-armor-quests-bracers",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14666",
+        "source": "quest:druid-thurgadin-armor-quests-bracers",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14667",
+        "source": "quest:druid-thurgadin-armor-quests-bracers",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14668",
+        "source": "quest:druid-thurgadin-armor-quests-bracers",
+        "target": "item:rowyl-s-bracer-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14669",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14670",
+        "source": "quest:druid-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14671",
+        "source": "quest:druid-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14672",
+        "source": "quest:druid-thurgadin-armor-quests-gloves",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14673",
+        "source": "quest:druid-thurgadin-armor-quests-gloves",
+        "target": "item:rowyl-s-gauntlets-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14674",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14675",
+        "source": "quest:druid-thurgadin-armor-quests-leggings",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14676",
+        "source": "quest:druid-thurgadin-armor-quests-leggings",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14677",
+        "source": "quest:druid-thurgadin-armor-quests-leggings",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14678",
+        "source": "quest:druid-thurgadin-armor-quests-leggings",
+        "target": "item:rowyl-s-greaves-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14679",
+        "source": "npc:thurgadin:cobi-frostbeard",
+        "target": "quest:druid-thurgadin-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14680",
+        "source": "quest:druid-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14681",
+        "source": "quest:druid-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14682",
+        "source": "quest:druid-thurgadin-armor-quests-boots",
+        "target": "quest_group:druid-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14683",
+        "source": "quest:druid-thurgadin-armor-quests-boots",
+        "target": "item:rowyl-s-boots-of-nature",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14684",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14685",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14686",
+        "source": "quest_group:enchanter-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14687",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14688",
+        "source": "quest:enchanter-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14689",
+        "source": "quest:enchanter-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14690",
+        "source": "quest:enchanter-kael-armor-quests-helm",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14691",
+        "source": "quest:enchanter-kael-armor-quests-helm",
+        "target": "item:dazzling-circlet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14692",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14693",
+        "source": "quest:enchanter-kael-armor-quests-robe",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14694",
+        "source": "quest:enchanter-kael-armor-quests-robe",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14695",
+        "source": "quest:enchanter-kael-armor-quests-robe",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14696",
+        "source": "quest:enchanter-kael-armor-quests-robe",
+        "target": "item:dazzling-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14697",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14698",
+        "source": "quest:enchanter-kael-armor-quests-sleeves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14699",
+        "source": "quest:enchanter-kael-armor-quests-sleeves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14700",
+        "source": "quest:enchanter-kael-armor-quests-sleeves",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14701",
+        "source": "quest:enchanter-kael-armor-quests-sleeves",
+        "target": "item:dazzling-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14702",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-wristguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14703",
+        "source": "quest:enchanter-kael-armor-quests-wristguard",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14704",
+        "source": "quest:enchanter-kael-armor-quests-wristguard",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14705",
+        "source": "quest:enchanter-kael-armor-quests-wristguard",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14706",
+        "source": "quest:enchanter-kael-armor-quests-wristguard",
+        "target": "item:dazzling-wristguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14707",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14708",
+        "source": "quest:enchanter-kael-armor-quests-gloves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14709",
+        "source": "quest:enchanter-kael-armor-quests-gloves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14710",
+        "source": "quest:enchanter-kael-armor-quests-gloves",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14711",
+        "source": "quest:enchanter-kael-armor-quests-gloves",
+        "target": "item:dazzling-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14712",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-trousers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14713",
+        "source": "quest:enchanter-kael-armor-quests-trousers",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14714",
+        "source": "quest:enchanter-kael-armor-quests-trousers",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14715",
+        "source": "quest:enchanter-kael-armor-quests-trousers",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14716",
+        "source": "quest:enchanter-kael-armor-quests-trousers",
+        "target": "item:dazzling-trousers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14717",
+        "source": "npc:kael-drakkal:stoem-lekbar",
+        "target": "quest:enchanter-kael-armor-quests-slippers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14718",
+        "source": "quest:enchanter-kael-armor-quests-slippers",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14719",
+        "source": "quest:enchanter-kael-armor-quests-slippers",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14720",
+        "source": "quest:enchanter-kael-armor-quests-slippers",
+        "target": "quest_group:enchanter-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14721",
+        "source": "quest:enchanter-kael-armor-quests-slippers",
+        "target": "item:dazzling-slippers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14722",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14723",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14724",
+        "source": "quest_group:enchanter-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14725",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-headband",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14726",
+        "source": "quest:enchanter-skyshrine-armor-quests-headband",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14727",
+        "source": "quest:enchanter-skyshrine-armor-quests-headband",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14728",
+        "source": "quest:enchanter-skyshrine-armor-quests-headband",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14729",
+        "source": "quest:enchanter-skyshrine-armor-quests-headband",
+        "target": "item:illusionist-s-headband",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14730",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14731",
+        "source": "quest:enchanter-skyshrine-armor-quests-robe",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14732",
+        "source": "quest:enchanter-skyshrine-armor-quests-robe",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14733",
+        "source": "quest:enchanter-skyshrine-armor-quests-robe",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14734",
+        "source": "quest:enchanter-skyshrine-armor-quests-robe",
+        "target": "item:illusionist-s-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14735",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14736",
+        "source": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14737",
+        "source": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14738",
+        "source": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14739",
+        "source": "quest:enchanter-skyshrine-armor-quests-sleeves",
+        "target": "item:illusionist-s-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14740",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14741",
+        "source": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14742",
+        "source": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14743",
+        "source": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14744",
+        "source": "quest:enchanter-skyshrine-armor-quests-wristguard",
+        "target": "item:illusionist-s-wristguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14745",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14746",
+        "source": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14747",
+        "source": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14748",
+        "source": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14749",
+        "source": "quest:enchanter-skyshrine-armor-quests-gloves",
+        "target": "item:illusionist-s-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14750",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14751",
+        "source": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14752",
+        "source": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14753",
+        "source": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14754",
+        "source": "quest:enchanter-skyshrine-armor-quests-pantaloons",
+        "target": "item:illusionist-s-pantaloons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14755",
+        "source": "npc:skyshrine:lothieder-fedhar",
+        "target": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14756",
+        "source": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14757",
+        "source": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14758",
+        "source": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "target": "quest_group:enchanter-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14759",
+        "source": "quest:enchanter-skyshrine-armor-quests-slippers",
+        "target": "item:illusionist-s-slippers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14760",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14761",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14762",
+        "source": "quest_group:enchanter-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14763",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14764",
+        "source": "quest:enchanter-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14765",
+        "source": "quest:enchanter-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14766",
+        "source": "quest:enchanter-thurgadin-armor-quests-helm",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14767",
+        "source": "quest:enchanter-thurgadin-armor-quests-helm",
+        "target": "item:beguiler-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14768",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14769",
+        "source": "quest:enchanter-thurgadin-armor-quests-robe",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14770",
+        "source": "quest:enchanter-thurgadin-armor-quests-robe",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14771",
+        "source": "quest:enchanter-thurgadin-armor-quests-robe",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14772",
+        "source": "quest:enchanter-thurgadin-armor-quests-robe",
+        "target": "item:beguiler-s-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14773",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14774",
+        "source": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14775",
+        "source": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14776",
+        "source": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14777",
+        "source": "quest:enchanter-thurgadin-armor-quests-sleeves",
+        "target": "item:beguiler-s-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14778",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14779",
+        "source": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14780",
+        "source": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14781",
+        "source": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14782",
+        "source": "quest:enchanter-thurgadin-armor-quests-wristguard",
+        "target": "item:beguiler-s-wristguard",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14783",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14784",
+        "source": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14785",
+        "source": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14786",
+        "source": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14787",
+        "source": "quest:enchanter-thurgadin-armor-quests-gloves",
+        "target": "item:beguiler-s-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14788",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14789",
+        "source": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14790",
+        "source": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14791",
+        "source": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14792",
+        "source": "quest:enchanter-thurgadin-armor-quests-trousers",
+        "target": "item:beguiler-s-trousers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14793",
+        "source": "npc:thurgadin:lorekeeper-brita",
+        "target": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14794",
+        "source": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14795",
+        "source": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14796",
+        "source": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "target": "quest_group:enchanter-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14797",
+        "source": "quest:enchanter-thurgadin-armor-quests-slippers",
+        "target": "item:beguiler-s-slippers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14798",
+        "source": "npc:plane-of-sky:strandar-pinemist",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14799",
+        "source": "npc:plane-of-sky:will-treewalker",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14800",
+        "source": "npc:plane-of-sky:fenalla-moonshadow",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14801",
+        "source": "npc:plane-of-sky:strandar-pinemist",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14802",
+        "source": "quest_group:druid-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14803",
+        "source": "npc:plane-of-sky:will-treewalker",
+        "target": "quest:druid-plane-of-sky-test-of-wolf",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14804",
+        "source": "quest:druid-plane-of-sky-test-of-wolf",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14805",
+        "source": "quest:druid-plane-of-sky-test-of-wolf",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14806",
+        "source": "quest:druid-plane-of-sky-test-of-wolf",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14807",
+        "source": "quest:druid-plane-of-sky-test-of-wolf",
+        "target": "item:drake-hide-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14808",
+        "source": "npc:plane-of-sky:will-treewalker",
+        "target": "quest:druid-plane-of-sky-test-of-bear",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14809",
+        "source": "quest:druid-plane-of-sky-test-of-bear",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14810",
+        "source": "quest:druid-plane-of-sky-test-of-bear",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14811",
+        "source": "quest:druid-plane-of-sky-test-of-bear",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14812",
+        "source": "quest:druid-plane-of-sky-test-of-bear",
+        "target": "item:nature-walker-s-mantle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14813",
+        "source": "npc:plane-of-sky:will-treewalker",
+        "target": "quest:druid-plane-of-sky-test-of-tree",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14814",
+        "source": "quest:druid-plane-of-sky-test-of-tree",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14815",
+        "source": "quest:druid-plane-of-sky-test-of-tree",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14816",
+        "source": "quest:druid-plane-of-sky-test-of-tree",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14817",
+        "source": "quest:druid-plane-of-sky-test-of-tree",
+        "target": "item:shillelagh",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14818",
+        "source": "npc:plane-of-sky:fenalla-moonshadow",
+        "target": "quest:druid-plane-of-sky-test-of-bee",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14819",
+        "source": "quest:druid-plane-of-sky-test-of-bee",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14820",
+        "source": "quest:druid-plane-of-sky-test-of-bee",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14821",
+        "source": "quest:druid-plane-of-sky-test-of-bee",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14822",
+        "source": "quest:druid-plane-of-sky-test-of-bee",
+        "target": "item:honeycomb-belt",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14823",
+        "source": "npc:plane-of-sky:fenalla-moonshadow",
+        "target": "quest:druid-plane-of-sky-test-of-eagle",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14824",
+        "source": "quest:druid-plane-of-sky-test-of-eagle",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14825",
+        "source": "quest:druid-plane-of-sky-test-of-eagle",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14826",
+        "source": "quest:druid-plane-of-sky-test-of-eagle",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14827",
+        "source": "quest:druid-plane-of-sky-test-of-eagle",
+        "target": "item:spiroc-banisher-focus",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14828",
+        "source": "npc:plane-of-sky:fenalla-moonshadow",
+        "target": "quest:druid-plane-of-sky-test-of-nature",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14829",
+        "source": "quest:druid-plane-of-sky-test-of-nature",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14830",
+        "source": "quest:druid-plane-of-sky-test-of-nature",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14831",
+        "source": "quest:druid-plane-of-sky-test-of-nature",
+        "target": "quest_group:druid-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14832",
+        "source": "quest:druid-plane-of-sky-test-of-nature",
+        "target": "item:espri",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14833",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14834",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14835",
+        "source": "quest_group:enchanter-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14836",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14837",
+        "source": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14838",
+        "source": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14839",
+        "source": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14840",
+        "source": "quest:enchanter-plane-of-sky-test-of-illusion",
+        "target": "item:sphinx-hair-cord",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14841",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14842",
+        "source": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14843",
+        "source": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14844",
+        "source": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14845",
+        "source": "quest:enchanter-plane-of-sky-test-of-metamorphism",
+        "target": "item:wind-walker-s-mantle",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14846",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-deception",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14847",
+        "source": "quest:enchanter-plane-of-sky-test-of-deception",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14848",
+        "source": "quest:enchanter-plane-of-sky-test-of-deception",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14849",
+        "source": "quest:enchanter-plane-of-sky-test-of-deception",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14850",
+        "source": "quest:enchanter-plane-of-sky-test-of-deception",
+        "target": "item:ivory-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14851",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14852",
+        "source": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14853",
+        "source": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14854",
+        "source": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14855",
+        "source": "quest:enchanter-plane-of-sky-test-of-disillusion",
+        "target": "item:earring-of-displacement",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14856",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14857",
+        "source": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14858",
+        "source": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14859",
+        "source": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14860",
+        "source": "quest:enchanter-plane-of-sky-test-of-memorization",
+        "target": "item:necklace-of-whispering-winds",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14861",
+        "source": "npc:plane-of-sky:enchanter-jolas",
+        "target": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14862",
+        "source": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14863",
+        "source": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14864",
+        "source": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "target": "quest_group:enchanter-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14865",
+        "source": "quest:enchanter-plane-of-sky-test-of-incapacitation",
+        "target": "item:rod-of-the-protecting-winds",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14866",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14867",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14868",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "quest_group:dreadscale-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14869",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "quest_group:dreadscale-armor",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14870",
+        "source": "quest_group:dreadscale-armor",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14871",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "quest:dreadscale-armor-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14872",
+        "source": "quest:dreadscale-armor-helm",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14873",
+        "source": "quest:dreadscale-armor-helm",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14874",
+        "source": "quest:dreadscale-armor-helm",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14875",
+        "source": "quest:dreadscale-armor-helm",
+        "target": "item:dreadscale-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14876",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "quest:dreadscale-armor-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14877",
+        "source": "quest:dreadscale-armor-gauntlets",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14878",
+        "source": "quest:dreadscale-armor-gauntlets",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14879",
+        "source": "quest:dreadscale-armor-gauntlets",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14880",
+        "source": "quest:dreadscale-armor-gauntlets",
+        "target": "item:dreadscale-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14881",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "quest:dreadscale-armor-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14882",
+        "source": "quest:dreadscale-armor-boots",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14883",
+        "source": "quest:dreadscale-armor-boots",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14884",
+        "source": "quest:dreadscale-armor-boots",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14885",
+        "source": "quest:dreadscale-armor-boots",
+        "target": "item:dreadscale-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14886",
+        "source": "npc:east-cabilis:sirtha-scarscale",
+        "target": "quest:dreadscale-armor-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14887",
+        "source": "quest:dreadscale-armor-vambraces",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14888",
+        "source": "quest:dreadscale-armor-vambraces",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14889",
+        "source": "quest:dreadscale-armor-vambraces",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14890",
+        "source": "quest:dreadscale-armor-vambraces",
+        "target": "item:dreadscale-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14891",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "quest:dreadscale-armor-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14892",
+        "source": "quest:dreadscale-armor-bracer",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14893",
+        "source": "quest:dreadscale-armor-bracer",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14894",
+        "source": "quest:dreadscale-armor-bracer",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14895",
+        "source": "quest:dreadscale-armor-bracer",
+        "target": "item:dreadscale-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14896",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "quest:dreadscale-armor-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14897",
+        "source": "quest:dreadscale-armor-greaves",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14898",
+        "source": "quest:dreadscale-armor-greaves",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14899",
+        "source": "quest:dreadscale-armor-greaves",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14900",
+        "source": "quest:dreadscale-armor-greaves",
+        "target": "item:dreadscale-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14901",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "quest:dreadscale-armor-mask",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14902",
+        "source": "quest:dreadscale-armor-mask",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14903",
+        "source": "quest:dreadscale-armor-mask",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14904",
+        "source": "quest:dreadscale-armor-mask",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14905",
+        "source": "quest:dreadscale-armor-mask",
+        "target": "item:dreadscale-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14906",
+        "source": "npc:east-cabilis:sarth-scarscale",
+        "target": "quest:dreadscale-armor-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14907",
+        "source": "quest:dreadscale-armor-breastplate",
+        "target": "zone:east-cabilis",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14908",
+        "source": "quest:dreadscale-armor-breastplate",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14909",
+        "source": "quest:dreadscale-armor-breastplate",
+        "target": "quest_group:dreadscale-armor",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14910",
+        "source": "quest:dreadscale-armor-breastplate",
+        "target": "item:dreadscale-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14911",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14912",
+        "source": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14913",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14914",
+        "source": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14915",
+        "source": "quest_group:lambent-armor-quests",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14916",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "quest:lambent-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14917",
+        "source": "quest:lambent-armor-quests-breastplate",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14918",
+        "source": "quest:lambent-armor-quests-breastplate",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14919",
+        "source": "quest:lambent-armor-quests-breastplate",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14920",
+        "source": "quest:lambent-armor-quests-breastplate",
+        "target": "item:lambent-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14921",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "quest:lambent-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14922",
+        "source": "quest:lambent-armor-quests-helm",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14923",
+        "source": "quest:lambent-armor-quests-helm",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14924",
+        "source": "quest:lambent-armor-quests-helm",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14925",
+        "source": "quest:lambent-armor-quests-helm",
+        "target": "item:lambent-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14926",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "quest:lambent-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14927",
+        "source": "quest:lambent-armor-quests-vambraces",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14928",
+        "source": "quest:lambent-armor-quests-vambraces",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14929",
+        "source": "quest:lambent-armor-quests-vambraces",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14930",
+        "source": "quest:lambent-armor-quests-vambraces",
+        "target": "item:lambent-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14931",
+        "source": "npc:temple-of-solusek-ro:cryssia-stardreamer",
+        "target": "quest:lambent-armor-quests-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14932",
+        "source": "quest:lambent-armor-quests-bracers",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14933",
+        "source": "quest:lambent-armor-quests-bracers",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14934",
+        "source": "quest:lambent-armor-quests-bracers",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14935",
+        "source": "quest:lambent-armor-quests-bracers",
+        "target": "item:lambent-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14936",
+        "source": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "target": "quest:lambent-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14937",
+        "source": "quest:lambent-armor-quests-greaves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14938",
+        "source": "quest:lambent-armor-quests-greaves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14939",
+        "source": "quest:lambent-armor-quests-greaves",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14940",
+        "source": "quest:lambent-armor-quests-greaves",
+        "target": "item:lambent-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14941",
+        "source": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "target": "quest:lambent-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14942",
+        "source": "quest:lambent-armor-quests-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14943",
+        "source": "quest:lambent-armor-quests-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14944",
+        "source": "quest:lambent-armor-quests-boots",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14945",
+        "source": "quest:lambent-armor-quests-boots",
+        "target": "item:lambent-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14946",
+        "source": "npc:temple-of-solusek-ro:walthin-fireweaver",
+        "target": "quest:lambent-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14947",
+        "source": "quest:lambent-armor-quests-gauntlets",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14948",
+        "source": "quest:lambent-armor-quests-gauntlets",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14949",
+        "source": "quest:lambent-armor-quests-gauntlets",
+        "target": "quest_group:lambent-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14950",
+        "source": "quest:lambent-armor-quests-gauntlets",
+        "target": "item:lambent-gauntlets",
         "type": "rewards"
       }
     }
