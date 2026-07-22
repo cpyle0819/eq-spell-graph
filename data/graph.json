@@ -89775,6 +89775,1211 @@
         "weight": 1.5,
         "source": "Darkforge Armor Quests: Boots reward (An Undead Knight (Right), Temple of Solusek Ro)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:barlek-stonefist",
+        "label": "Barlek Stonefist",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:paladin-kael-armor-quests",
+        "label": "Paladin Kael Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Barlek Stonefist in Kael Drakkal trades a set of quest items for one piece of Shining armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-helm",
+        "label": "Paladin Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Ancient Tarnished Plate Helmet and 3 Crushed Coral to Barlek Stonefist in Kael Drakkal for the Shining Helm.",
+        "steps": [
+          "Gather an Ancient Tarnished Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-helm",
+        "label": "Shining Helm",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 27,
+        "stats": {
+          "str": 3,
+          "dex": 3,
+          "sta": 3,
+          "wis": 4
+        },
+        "resists": {
+          "disease": 3,
+          "magic": 2
+        },
+        "mana": 30,
+        "weight": 5.5,
+        "source": "Paladin Kael Armor Quests: Helm reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-breastplate",
+        "label": "Paladin Kael Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Ancient Tarnished Breastplate and 3 Flawless Diamonds to Barlek Stonefist in Kael Drakkal for the Shining Breastplate.",
+        "steps": [
+          "Gather an Ancient Tarnished Breastplate and 3 Flawless Diamonds",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-breastplate",
+        "label": "Shining Breastplate",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 54,
+        "stats": {
+          "str": 14,
+          "dex": 7,
+          "sta": 7,
+          "wis": 7,
+          "agi": 7
+        },
+        "resists": {
+          "cold": 4,
+          "magic": 8
+        },
+        "hp": 50,
+        "mana": 50,
+        "weight": 9,
+        "size": "Large",
+        "source": "Paladin Kael Armor Quests: Breastplate reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-vambraces",
+        "label": "Paladin Kael Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Ancient Tarnished Vambraces and 3 Flawed Emeralds to Barlek Stonefist in Kael Drakkal for the Shining Vambraces.",
+        "steps": [
+          "Gather Ancient Tarnished Vambraces and 3 Flawed Emeralds",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-vambraces",
+        "label": "Shining Vambraces",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 29,
+        "stats": {
+          "str": 2,
+          "dex": 2,
+          "wis": 7
+        },
+        "resists": {
+          "magic": 3,
+          "poison": 2
+        },
+        "mana": 30,
+        "weight": 6,
+        "source": "Paladin Kael Armor Quests: Vambraces reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-bracer",
+        "label": "Paladin Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Ancient Tarnished Plate Bracelet and 3 Crushed Flame Emeralds to Barlek Stonefist in Kael Drakkal for the Shining Bracer.",
+        "steps": [
+          "Gather an Ancient Tarnished Plate Bracelet and 3 Crushed Flame Emeralds",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-bracer",
+        "label": "Shining Bracer",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 3,
+          "dex": 1,
+          "sta": 2,
+          "wis": 2,
+          "agi": 1
+        },
+        "resists": {
+          "fire": 1,
+          "disease": 1
+        },
+        "hp": 10,
+        "mana": 10,
+        "weight": 3.5,
+        "size": "Small",
+        "source": "Paladin Kael Armor Quests: Bracer reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-gauntlets",
+        "label": "Paladin Kael Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Ancient Tarnished Plate Gauntlets and 3 Crushed Topaz to Barlek Stonefist in Kael Drakkal for the Shining Gauntlets.",
+        "steps": [
+          "Gather Ancient Tarnished Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-gauntlets",
+        "label": "Shining Gauntlets",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 4,
+          "dex": 1,
+          "sta": 1,
+          "wis": 2,
+          "agi": 1
+        },
+        "resists": {
+          "magic": 2
+        },
+        "mana": 10,
+        "weight": 4.5,
+        "source": "Paladin Kael Armor Quests: Gauntlets reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-greaves",
+        "label": "Paladin Kael Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Ancient Tarnished Greaves and 3 Flawed Sea Sapphires to Barlek Stonefist in Kael Drakkal for the Shining Greaves.",
+        "steps": [
+          "Gather Ancient Tarnished Greaves and 3 Flawed Sea Sapphires",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-greaves",
+        "label": "Shining Greaves",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 36,
+        "stats": {
+          "str": 10,
+          "sta": 6,
+          "wis": 6
+        },
+        "resists": {
+          "fire": 1,
+          "disease": 1,
+          "cold": 1,
+          "magic": 1,
+          "poison": 1
+        },
+        "weight": 7,
+        "source": "Paladin Kael Armor Quests: Greaves reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-kael-armor-quests-boots",
+        "label": "Paladin Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Ancient Tarnished Plate Boots and 3 Crushed Black Marble to Barlek Stonefist in Kael Drakkal for the Shining Boots.",
+        "steps": [
+          "Gather Ancient Tarnished Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Barlek Stonefist in Kael Drakkal"
+        ],
+        "wiki_title": "Paladin Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shining-boots",
+        "label": "Shining Boots",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 28,
+        "stats": {
+          "str": 4,
+          "wis": 4
+        },
+        "weight": 6,
+        "size": "Medium",
+        "source": "Paladin Kael Armor Quests: Boots reward (Barlek Stonefist, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:adwetram-fe-dhar",
+        "label": "Adwetram Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:paladin-skyshrine-armor-quests",
+        "label": "Paladin Skyshrine Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Adwetram Fe`Dhar in Skyshrine trades a set of quest items for one piece of Scaled Knight's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-helm",
+        "label": "Paladin Skyshrine Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Unadorned Plate Helmet and 3 Crushed Coral to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Helm.",
+        "steps": [
+          "Gather an Unadorned Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-helm",
+        "label": "Scaled Knight's Helm",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "str": 3,
+          "sta": 6,
+          "wis": 6
+        },
+        "hp": 30,
+        "resists": {
+          "cold": 5,
+          "magic": 5
+        },
+        "weight": 5.5,
+        "size": "Small",
+        "source": "Paladin Skyshrine Armor Quests: Helm reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "label": "Paladin Skyshrine Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Unadorned Breastplate and 3 Flawless Diamonds to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Breastplate.",
+        "steps": [
+          "Gather an Unadorned Breastplate and 3 Flawless Diamonds",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-breastplate",
+        "label": "Scaled Knight's Breastplate",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 50,
+        "stats": {
+          "str": 14,
+          "dex": 8,
+          "sta": 8,
+          "wis": 9,
+          "agi": 8
+        },
+        "hp": 70,
+        "mana": 60,
+        "resists": {
+          "disease": 5,
+          "magic": 9
+        },
+        "weight": 9,
+        "size": "Large",
+        "source": "Paladin Skyshrine Armor Quests: Breastplate reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "label": "Paladin Skyshrine Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Unadorned Plate Vambraces and 3 Flawed Emeralds to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Vambraces.",
+        "steps": [
+          "Gather Unadorned Plate Vambraces and 3 Flawed Emeralds",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-vambraces",
+        "label": "Scaled Knight's Vambraces",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 25,
+        "stats": {
+          "str": 4,
+          "dex": 3,
+          "sta": 7
+        },
+        "hp": 50,
+        "resists": {
+          "fire": 3,
+          "magic": 5
+        },
+        "weight": 6,
+        "source": "Paladin Skyshrine Armor Quests: Vambraces reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-bracer",
+        "label": "Paladin Skyshrine Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in an Unadorned Plate Bracer and 3 Crushed Flame Emeralds to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Bracer.",
+        "steps": [
+          "Gather an Unadorned Plate Bracer and 3 Crushed Flame Emeralds",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-bracer",
+        "label": "Scaled Knight's Bracer",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "str": 3,
+          "dex": 2,
+          "sta": 4,
+          "wis": 3,
+          "agi": 2
+        },
+        "hp": 10,
+        "mana": 10,
+        "resists": {
+          "poison": 1
+        },
+        "weight": 3.5,
+        "size": "Small",
+        "source": "Paladin Skyshrine Armor Quests: Bracer reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "label": "Paladin Skyshrine Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Unadorned Plate Gauntlets and 3 Crushed Topaz to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Gauntlets.",
+        "steps": [
+          "Gather Unadorned Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-gauntlets",
+        "label": "Scaled Knight's Gauntlets",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 18,
+        "stats": {
+          "str": 3,
+          "dex": 1,
+          "sta": 3,
+          "wis": 2,
+          "agi": 1
+        },
+        "hp": 40,
+        "mana": 10,
+        "resists": {
+          "magic": 5
+        },
+        "weight": 4.5,
+        "size": "Small",
+        "source": "Paladin Skyshrine Armor Quests: Gauntlets reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-greaves",
+        "label": "Paladin Skyshrine Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Unadorned Plate Greaves and 3 Flawed Sea Sapphires to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Greaves.",
+        "steps": [
+          "Gather Unadorned Plate Greaves and 3 Flawed Sea Sapphires",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-greaves",
+        "label": "Scaled Knight's Greaves",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 31,
+        "stats": {
+          "str": 7,
+          "dex": 10,
+          "sta": 5,
+          "wis": 7
+        },
+        "hp": 60,
+        "resists": {
+          "fire": 4,
+          "disease": 4,
+          "cold": 4,
+          "magic": 4,
+          "poison": 4
+        },
+        "weight": 7,
+        "size": "Large",
+        "source": "Paladin Skyshrine Armor Quests: Greaves reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-skyshrine-armor-quests-boots",
+        "label": "Paladin Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Unadorned Plate Boots and 3 Crushed Black Marble to Adwetram Fe`Dhar in Skyshrine for the Scaled Knight's Boots.",
+        "steps": [
+          "Gather Unadorned Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Adwetram Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Paladin Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:scaled-knight-s-boots",
+        "label": "Scaled Knight's Boots",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 3,
+          "dex": 2,
+          "sta": 6,
+          "wis": 2,
+          "agi": 2
+        },
+        "resists": {
+          "disease": 3,
+          "poison": 3
+        },
+        "weight": 6,
+        "source": "Paladin Skyshrine Armor Quests: Boots reward (Adwetram Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:battlepriest-daragor",
+        "label": "Battlepriest Daragor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:paladin-thurgadin-armor-quests",
+        "label": "Paladin Thurgadin Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Battlepriest Daragor in Thurgadin trades a set of quest items for one piece of Runed Protector's armor. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-helm",
+        "label": "Paladin Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in a Corroded Plate Helmet and 3 Crushed Coral to Battlepriest Daragor in Thurgadin for the Runed Protector's Helm.",
+        "steps": [
+          "Gather a Corroded Plate Helmet and 3 Crushed Coral",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-helm",
+        "label": "Runed Protector's Helm",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 4,
+          "dex": 3,
+          "sta": 3
+        },
+        "hp": 15,
+        "mana": 15,
+        "resists": {
+          "fire": 3,
+          "magic": 2
+        },
+        "weight": 5.5,
+        "source": "Paladin Thurgadin Armor Quests: Helm reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "label": "Paladin Thurgadin Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in a Corroded Breastplate and 3 Flawless Diamonds to Battlepriest Daragor in Thurgadin for the Runed Protector's Breastplate.",
+        "steps": [
+          "Gather a Corroded Breastplate and 3 Flawless Diamonds",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-breastplate",
+        "label": "Runed Protector's Breastplate",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 42,
+        "stats": {
+          "str": 6,
+          "dex": 8,
+          "sta": 8,
+          "wis": 8,
+          "agi": 8
+        },
+        "hp": 40,
+        "mana": 60,
+        "resists": {
+          "magic": 7,
+          "poison": 3
+        },
+        "weight": 9,
+        "source": "Paladin Thurgadin Armor Quests: Breastplate reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "label": "Paladin Thurgadin Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Corroded Plate Vambraces and 3 Flawed Emeralds to Battlepriest Daragor in Thurgadin for the Runed Protector's Vambraces.",
+        "steps": [
+          "Gather Corroded Plate Vambraces and 3 Flawed Emeralds",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-vambraces",
+        "label": "Runed Protector's Vambraces",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 19,
+        "stats": {
+          "str": 7
+        },
+        "mana": 30,
+        "resists": {
+          "cold": 2,
+          "magic": 3
+        },
+        "weight": 6,
+        "size": "Small",
+        "source": "Paladin Thurgadin Armor Quests: Vambraces reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-bracer",
+        "label": "Paladin Thurgadin Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in a Corroded Plate Bracer and 3 Crushed Flame Emeralds to Battlepriest Daragor in Thurgadin for the Runed Protector's Bracer.",
+        "steps": [
+          "Gather a Corroded Plate Bracer and 3 Crushed Flame Emeralds",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-bracer",
+        "label": "Runed Protector's Bracer",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 15,
+        "stats": {
+          "str": 2,
+          "dex": 1,
+          "sta": 1,
+          "wis": 2,
+          "agi": 1
+        },
+        "hp": 10,
+        "mana": 10,
+        "resists": {
+          "cold": 1
+        },
+        "weight": 3.5,
+        "size": "Small",
+        "source": "Paladin Thurgadin Armor Quests: Bracer reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "label": "Paladin Thurgadin Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Corroded Plate Gauntlets and 3 Crushed Topaz to Battlepriest Daragor in Thurgadin for the Runed Protector's Gauntlets.",
+        "steps": [
+          "Gather Corroded Plate Gauntlets and 3 Crushed Topaz",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-gauntlets",
+        "label": "Runed Protector's Gauntlets",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 15,
+        "stats": {
+          "str": 2,
+          "dex": 1,
+          "sta": 1,
+          "wis": 2,
+          "agi": 1
+        },
+        "mana": 10,
+        "resists": {
+          "magic": 2
+        },
+        "weight": 4.5,
+        "size": "Small",
+        "source": "Paladin Thurgadin Armor Quests: Gauntlets reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-greaves",
+        "label": "Paladin Thurgadin Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Corroded Plate Greaves and 3 Flawed Sea Sapphires to Battlepriest Daragor in Thurgadin for the Runed Protector's Greaves.",
+        "steps": [
+          "Gather Corroded Plate Greaves and 3 Flawed Sea Sapphires",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-greaves",
+        "label": "Runed Protector's Greaves",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 24,
+        "stats": {
+          "str": 10,
+          "dex": 4,
+          "sta": 4
+        },
+        "hp": 60,
+        "resists": {
+          "fire": 1,
+          "disease": 1,
+          "cold": 1,
+          "magic": 1,
+          "poison": 1
+        },
+        "weight": 7,
+        "size": "Large",
+        "source": "Paladin Thurgadin Armor Quests: Greaves reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-thurgadin-armor-quests-boots",
+        "label": "Paladin Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Turn in Corroded Plate Boots and 3 Crushed Black Marble to Battlepriest Daragor in Thurgadin for the Runed Protector's Boots.",
+        "steps": [
+          "Gather Corroded Plate Boots and 3 Crushed Black Marble",
+          "Turn them in to Battlepriest Daragor in Thurgadin"
+        ],
+        "wiki_title": "Paladin Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:runed-protector-s-boots",
+        "label": "Runed Protector's Boots",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 21,
+        "stats": {
+          "str": 3,
+          "wis": 2
+        },
+        "weight": 6,
+        "size": "Medium",
+        "source": "Paladin Thurgadin Armor Quests: Boots reward (Battlepriest Daragor, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:dason-goldblade",
+        "label": "Dason Goldblade",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:gregori-lightbringer",
+        "label": "Gregori Lightbringer",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:dirkog-steelhand",
+        "label": "Dirkog Steelhand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:paladin-plane-of-sky-tests",
+        "label": "Paladin Plane of Sky Tests",
+        "type": "quest_group",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Dason Goldblade in the Plane of Sky directs Paladins to two testers, Gregori Lightbringer (Sacrifice, Love, Compassion) or Dirkog Steelhand (Spirit), each offering independent item-turn-in tests for a named reward. Four independent sub-quests, no ordering between them.",
+        "wiki_title": "Paladin Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "label": "Paladin Plane of Sky Tests: Test of Sacrifice",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Bring a griffon statuette, a spiroc peace totem, and a bixie sword blade to Gregori Lightbringer in the Plane of Sky for Aldryn, Blade of the Ocean.",
+        "steps": [
+          "Gather a griffon statuette, a spiroc peace totem, and a bixie sword blade",
+          "Turn them in to Gregori Lightbringer in the Plane of Sky"
+        ],
+        "wiki_title": "Paladin Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:aldryn-blade-of-the-ocean",
+        "label": "Aldryn, Blade of the Ocean",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "damage": 20,
+        "delay": 26,
+        "skill": "1H Slashing",
+        "stats": {
+          "str": 10,
+          "sta": 10,
+          "wis": 8
+        },
+        "weight": 2,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "Paladin Plane of Sky Tests: Test of Sacrifice reward (Gregori Lightbringer, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-plane-of-sky-test-of-love",
+        "label": "Paladin Plane of Sky Tests: Test of Love",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Bring a dark spiroc feather, ethereal topaz, and a sphinxian claw to Gregori Lightbringer in the Plane of Sky for Thelvorn, Blade of Light.",
+        "steps": [
+          "Gather a dark spiroc feather, ethereal topaz, and a sphinxian claw",
+          "Turn them in to Gregori Lightbringer in the Plane of Sky"
+        ],
+        "wiki_title": "Paladin Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:thelvorn-blade-of-light",
+        "label": "Thelvorn, Blade of Light",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "damage": 20,
+        "delay": 26,
+        "skill": "1H Slashing",
+        "stats": {
+          "wis": 15
+        },
+        "effect": "Dismiss Summoned at Level 45",
+        "weight": 3,
+        "size": "Medium",
+        "lore": true,
+        "noTrade": true,
+        "source": "Paladin Plane of Sky Tests: Test of Love reward (Gregori Lightbringer, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-plane-of-sky-test-of-compassion",
+        "label": "Paladin Plane of Sky Tests: Test of Compassion",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Bring an efreeti two handed sword, dulcet nectar, a golden hilt, and a large sky diamond to Gregori Lightbringer in the Plane of Sky for Truvinan.",
+        "steps": [
+          "Gather an efreeti two handed sword, dulcet nectar, a golden hilt, and a large sky diamond",
+          "Turn them in to Gregori Lightbringer in the Plane of Sky"
+        ],
+        "wiki_title": "Paladin Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:truvinan",
+        "label": "Truvinan",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "slots": [
+          "Primary"
+        ],
+        "damage": 32,
+        "delay": 40,
+        "skill": "2H Slashing",
+        "effect": "Dismiss Undead at Level 45",
+        "weight": 8,
+        "size": "Large",
+        "noTrade": true,
+        "source": "Paladin Plane of Sky Tests: Test of Compassion reward (Gregori Lightbringer, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:paladin-plane-of-sky-test-of-spirit",
+        "label": "Paladin Plane of Sky Tests: Test of Spirit",
+        "type": "quest",
+        "classes": [
+          "paladin"
+        ],
+        "description": "Bring a silvery girdle, a diaphanous globe, and an ivory sky diamond to Dirkog Steelhand in the Plane of Sky for Girdle of Faith.",
+        "steps": [
+          "Gather a silvery girdle, a diaphanous globe, and an ivory sky diamond",
+          "Turn them in to Dirkog Steelhand in the Plane of Sky"
+        ],
+        "wiki_title": "Paladin Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:girdle-of-faith",
+        "label": "Girdle of Faith",
+        "type": "item",
+        "classes": [
+          "paladin"
+        ],
+        "magic": true,
+        "slots": [
+          "Waist"
+        ],
+        "ac": 10,
+        "stats": {
+          "str": 6,
+          "wis": 6,
+          "agi": 6
+        },
+        "effect": "Haste +41%",
+        "weight": 1,
+        "size": "Small",
+        "source": "Paladin Plane of Sky Tests: Test of Spirit reward (Dirkog Steelhand, Plane of Sky)"
+      }
     }
   ],
   "edges": [
@@ -205652,6 +206857,1118 @@
         "id": "e-rewards-14430",
         "source": "quest:darkforge-armor-quests-boots",
         "target": "item:darkforge-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14431",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14432",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14433",
+        "source": "quest_group:paladin-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14434",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14435",
+        "source": "quest:paladin-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14436",
+        "source": "quest:paladin-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14437",
+        "source": "quest:paladin-kael-armor-quests-helm",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14438",
+        "source": "quest:paladin-kael-armor-quests-helm",
+        "target": "item:shining-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14439",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14440",
+        "source": "quest:paladin-kael-armor-quests-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14441",
+        "source": "quest:paladin-kael-armor-quests-breastplate",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14442",
+        "source": "quest:paladin-kael-armor-quests-breastplate",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14443",
+        "source": "quest:paladin-kael-armor-quests-breastplate",
+        "target": "item:shining-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14444",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14445",
+        "source": "quest:paladin-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14446",
+        "source": "quest:paladin-kael-armor-quests-vambraces",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14447",
+        "source": "quest:paladin-kael-armor-quests-vambraces",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14448",
+        "source": "quest:paladin-kael-armor-quests-vambraces",
+        "target": "item:shining-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14449",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14450",
+        "source": "quest:paladin-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14451",
+        "source": "quest:paladin-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14452",
+        "source": "quest:paladin-kael-armor-quests-bracer",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14453",
+        "source": "quest:paladin-kael-armor-quests-bracer",
+        "target": "item:shining-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14454",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14455",
+        "source": "quest:paladin-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14456",
+        "source": "quest:paladin-kael-armor-quests-gauntlets",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14457",
+        "source": "quest:paladin-kael-armor-quests-gauntlets",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14458",
+        "source": "quest:paladin-kael-armor-quests-gauntlets",
+        "target": "item:shining-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14459",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14460",
+        "source": "quest:paladin-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14461",
+        "source": "quest:paladin-kael-armor-quests-greaves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14462",
+        "source": "quest:paladin-kael-armor-quests-greaves",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14463",
+        "source": "quest:paladin-kael-armor-quests-greaves",
+        "target": "item:shining-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14464",
+        "source": "npc:kael-drakkal:barlek-stonefist",
+        "target": "quest:paladin-kael-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14465",
+        "source": "quest:paladin-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14466",
+        "source": "quest:paladin-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14467",
+        "source": "quest:paladin-kael-armor-quests-boots",
+        "target": "quest_group:paladin-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14468",
+        "source": "quest:paladin-kael-armor-quests-boots",
+        "target": "item:shining-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14469",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14470",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14471",
+        "source": "quest_group:paladin-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14472",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14473",
+        "source": "quest:paladin-skyshrine-armor-quests-helm",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14474",
+        "source": "quest:paladin-skyshrine-armor-quests-helm",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14475",
+        "source": "quest:paladin-skyshrine-armor-quests-helm",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14476",
+        "source": "quest:paladin-skyshrine-armor-quests-helm",
+        "target": "item:scaled-knight-s-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14477",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14478",
+        "source": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14479",
+        "source": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14480",
+        "source": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14481",
+        "source": "quest:paladin-skyshrine-armor-quests-breastplate",
+        "target": "item:scaled-knight-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14482",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14483",
+        "source": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14484",
+        "source": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14485",
+        "source": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14486",
+        "source": "quest:paladin-skyshrine-armor-quests-vambraces",
+        "target": "item:scaled-knight-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14487",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14488",
+        "source": "quest:paladin-skyshrine-armor-quests-bracer",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14489",
+        "source": "quest:paladin-skyshrine-armor-quests-bracer",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14490",
+        "source": "quest:paladin-skyshrine-armor-quests-bracer",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14491",
+        "source": "quest:paladin-skyshrine-armor-quests-bracer",
+        "target": "item:scaled-knight-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14492",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14493",
+        "source": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14494",
+        "source": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14495",
+        "source": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14496",
+        "source": "quest:paladin-skyshrine-armor-quests-gauntlets",
+        "target": "item:scaled-knight-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14497",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14498",
+        "source": "quest:paladin-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14499",
+        "source": "quest:paladin-skyshrine-armor-quests-greaves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14500",
+        "source": "quest:paladin-skyshrine-armor-quests-greaves",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14501",
+        "source": "quest:paladin-skyshrine-armor-quests-greaves",
+        "target": "item:scaled-knight-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14502",
+        "source": "npc:skyshrine:adwetram-fe-dhar",
+        "target": "quest:paladin-skyshrine-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14503",
+        "source": "quest:paladin-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14504",
+        "source": "quest:paladin-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14505",
+        "source": "quest:paladin-skyshrine-armor-quests-boots",
+        "target": "quest_group:paladin-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14506",
+        "source": "quest:paladin-skyshrine-armor-quests-boots",
+        "target": "item:scaled-knight-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14507",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14508",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14509",
+        "source": "quest_group:paladin-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14510",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14511",
+        "source": "quest:paladin-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14512",
+        "source": "quest:paladin-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14513",
+        "source": "quest:paladin-thurgadin-armor-quests-helm",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14514",
+        "source": "quest:paladin-thurgadin-armor-quests-helm",
+        "target": "item:runed-protector-s-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14515",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14516",
+        "source": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14517",
+        "source": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14518",
+        "source": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14519",
+        "source": "quest:paladin-thurgadin-armor-quests-breastplate",
+        "target": "item:runed-protector-s-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14520",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14521",
+        "source": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14522",
+        "source": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14523",
+        "source": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14524",
+        "source": "quest:paladin-thurgadin-armor-quests-vambraces",
+        "target": "item:runed-protector-s-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14525",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14526",
+        "source": "quest:paladin-thurgadin-armor-quests-bracer",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14527",
+        "source": "quest:paladin-thurgadin-armor-quests-bracer",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14528",
+        "source": "quest:paladin-thurgadin-armor-quests-bracer",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14529",
+        "source": "quest:paladin-thurgadin-armor-quests-bracer",
+        "target": "item:runed-protector-s-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14530",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14531",
+        "source": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14532",
+        "source": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14533",
+        "source": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14534",
+        "source": "quest:paladin-thurgadin-armor-quests-gauntlets",
+        "target": "item:runed-protector-s-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14535",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14536",
+        "source": "quest:paladin-thurgadin-armor-quests-greaves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14537",
+        "source": "quest:paladin-thurgadin-armor-quests-greaves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14538",
+        "source": "quest:paladin-thurgadin-armor-quests-greaves",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14539",
+        "source": "quest:paladin-thurgadin-armor-quests-greaves",
+        "target": "item:runed-protector-s-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14540",
+        "source": "npc:thurgadin:battlepriest-daragor",
+        "target": "quest:paladin-thurgadin-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14541",
+        "source": "quest:paladin-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14542",
+        "source": "quest:paladin-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14543",
+        "source": "quest:paladin-thurgadin-armor-quests-boots",
+        "target": "quest_group:paladin-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14544",
+        "source": "quest:paladin-thurgadin-armor-quests-boots",
+        "target": "item:runed-protector-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14545",
+        "source": "npc:plane-of-sky:dason-goldblade",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14546",
+        "source": "npc:plane-of-sky:gregori-lightbringer",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14547",
+        "source": "npc:plane-of-sky:dirkog-steelhand",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14548",
+        "source": "npc:plane-of-sky:dason-goldblade",
+        "target": "quest_group:paladin-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14549",
+        "source": "quest_group:paladin-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14550",
+        "source": "npc:plane-of-sky:gregori-lightbringer",
+        "target": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14551",
+        "source": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14552",
+        "source": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14553",
+        "source": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "target": "quest_group:paladin-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14554",
+        "source": "quest:paladin-plane-of-sky-test-of-sacrifice",
+        "target": "item:aldryn-blade-of-the-ocean",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14555",
+        "source": "npc:plane-of-sky:gregori-lightbringer",
+        "target": "quest:paladin-plane-of-sky-test-of-love",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14556",
+        "source": "quest:paladin-plane-of-sky-test-of-love",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14557",
+        "source": "quest:paladin-plane-of-sky-test-of-love",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14558",
+        "source": "quest:paladin-plane-of-sky-test-of-love",
+        "target": "quest_group:paladin-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14559",
+        "source": "quest:paladin-plane-of-sky-test-of-love",
+        "target": "item:thelvorn-blade-of-light",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14560",
+        "source": "npc:plane-of-sky:gregori-lightbringer",
+        "target": "quest:paladin-plane-of-sky-test-of-compassion",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14561",
+        "source": "quest:paladin-plane-of-sky-test-of-compassion",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14562",
+        "source": "quest:paladin-plane-of-sky-test-of-compassion",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14563",
+        "source": "quest:paladin-plane-of-sky-test-of-compassion",
+        "target": "quest_group:paladin-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14564",
+        "source": "quest:paladin-plane-of-sky-test-of-compassion",
+        "target": "item:truvinan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14565",
+        "source": "npc:plane-of-sky:dirkog-steelhand",
+        "target": "quest:paladin-plane-of-sky-test-of-spirit",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14566",
+        "source": "quest:paladin-plane-of-sky-test-of-spirit",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14567",
+        "source": "quest:paladin-plane-of-sky-test-of-spirit",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14568",
+        "source": "quest:paladin-plane-of-sky-test-of-spirit",
+        "target": "quest_group:paladin-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14569",
+        "source": "quest:paladin-plane-of-sky-test-of-spirit",
+        "target": "item:girdle-of-faith",
         "type": "rewards"
       }
     }

@@ -1,0 +1,987 @@
+## Goal
+
+Get every quest documented on [eqlwiki.com](https://eqlwiki.com/Category:Quests) into the graph as real `quest`/`quest_group` nodes (see `decisions/quest-reward-modeling.md`, `decisions/quest-group-node-type.md`, `decisions/item-node-schema.md`, `decisions/quest-era-flagging.md`). Right now only 5 of the ~800+ pages below are done.
+
+## Why this isn't a scraper
+
+Quest pages on eqlwiki.com aren't uniformly structured — the same information (giver, zone, turn-in items, rewards, faction) shows up as a prose paragraph on one page, a table on another, a numbered step list on a third. A deterministic scraper can't reliably parse all three shapes. See `decisions/eqlwiki-quest-research-method.md` for the gotchas hit building the first 5 (a "quest" name isn't always its own authoritative page, one wiki page can hide 7 independent sub-quests, class abbreviations aren't standardized, etc.) — that doc is the starting playbook for adding more.
+
+**Process per quest** (LLM-assisted inference, not automation): fetch the quest's own wiki page — and its reward items' pages — via `WebFetch` with a "quote verbatim" prompt, infer the node/edge data from what's actually quoted (never fabricate a field the page doesn't state), write a migration, verify in the Quests tab (API + a real browser check per `.claude/skills/verify`), then check the box below.
+
+## Process guardrails
+
+A batch attempt at ~100 quests in one go fanned research out across 7 parallel background agents. One agent alone grew to a 144k-token context and burned 17% of the session's usage credits; several agents stopped mid-run with no recovery path once the conversation had to be compacted, and the whole batch had to be discarded uncommitted. Don't repeat that shape of failure:
+
+- **One agent at a time, if any.** Do quest research sequentially — inline in the main conversation, or one background subagent at a time, never fanned out in parallel. Parallel dispatch is what multiplied the context/token cost here.
+- **Small batches, max 25 standalone quests.** Work in small checklist batches (roughly the size of migrations 034/036/037: 10-25 quests), committing and pushing after each batch, rather than queuing up a large batch before anything lands. 25 standalone quests is a hard ceiling per batch, not a target to always hit.
+- **A standalone checklist entry that turns out multi-part is either a `quest_group` (model it now) or an ordered chain (defer it) — never assume the latter.** Two different shapes hide behind "this is more than one quest": an unordered *group* (several independent sub-quests sharing one page/giver, no order between them — same shape as Armor of Ro, `decisions/quest-group-node-type.md`) versus a genuinely *ordered* chain (`quest --requires--> quest`, `decisions/quest-prerequisite-requires-edge.md`, e.g. an Epic quest or Crusader's Tests). A group is normal batch work: research it and model it as a `quest_group` with per-piece sub-quests right then (migrations 062/063's Bard/Cleric armor sets and Cleric Plane of Sky Tests are the pattern) — it doesn't count against the 25-standalone cap or the 1-questline cap below. Only an ordered chain gets moved to the `## Questlines` section for a dedicated pass. When in doubt, fetch the page: "several turn-ins to one NPC, no order" is a group (model it now); "step 4 requires step 3's reward item" is a chain (defer it). Don't reflexively defer a class's armor/test cluster just because a same-named cluster for a different class is already sitting in `## Questlines` — some are there only because nobody's researched them yet, not because the shape demands it.
+- **Max 1 ordered chain modeled per batch.** If a batch does tackle a deferred entry from the `## Questlines` section, do at most one per batch — it's substantially more research per entry than a standalone quest or a `quest_group`, so don't mix it with a full 25-quest standalone batch.
+- **When you hit a new footgun, document it in this issue, not only in memory or a skill file.** This issue is what the next batch actually reads before starting; a lesson that only lands in session memory or `.claude/skills/verify/SKILL.md` won't surface here next time. Add it as a new guardrail bullet (or an inline annotation on the relevant checklist entry, same format as the broken/skipped-quest entries) in the same pass you discover it — don't leave it for a later cleanup pass that may not happen.
+- **Check usage periodically.** Check token/usage burn at natural checkpoints (e.g. after every few quests, or via `/usage`) and flag it if it's draining unusually fast, rather than only noticing after the fact.
+- **Keep WebFetch prompts narrow.** Ask each `WebFetch` call for only the specific fields needed (giver, zone, turn-in items, rewards, faction — quoted verbatim), not a full-page dump. A tight prompt keeps the fetched/summarized content small and out of context unnecessarily.
+- **A `node -e`/script invoked via the Bash tool on this machine cannot read or write a `/tmp/...` path.** The Bash tool's shell is Git Bash, which maps `/tmp` to its own MSYS root, but `node.exe` itself is a native Windows binary and resolves `/tmp/foo` as `C:\tmp\foo` (usually nonexistent), throwing `ENOENT` even though `gh ... > /tmp/foo.md` or `cp` just wrote the file successfully seconds earlier at that same-looking path. This has hit nearly every batch that post-processes the issue body (e.g. checking off entries with a script instead of by hand). Give the script a real Windows absolute path instead — under the repo directory (cleaned up before finishing) or the scratchpad directory — never a bare `/tmp/...` path when `node` (not a Bash builtin) is the thing reading or writing it.
+- **A checklist quest whose giver's zone is missing from this graph gets the zone added, not skipped.** Check eqlwiki.com for a real zone page, and confirm it's an actual separate zone rather than a sub-location like Kelethin inside Greater Faydark: a real zone has its own zone-line/succor target and shows up in a neighboring zone's own adjacency list as a peer, not just a named spot inside that neighbor's page. Add the zone (lore, faction table, a `connects_to` edge to at least one real neighbor) before modeling the quest and its edges, following migration 020 (Stonebrunt Mountains) or migration 052 (Kerra Island) as the template. Only skip the quest when the wiki itself confirms the content is broken, unfinished, or removed.
+- **A quest marked broken/unfinished/not-a-quest on its own eqlwiki.com page gets skipped and tagged inline on this checklist**, not modeled and not left silently unchecked — quote the wiki's own disclaimer next to the entry (see the Hate Tail Guard Shield / High Guard Battlestaff / Hopeless Love Part 2 entries below for the format) so the next pass doesn't re-research the same dead end.
+- **A cluster can hide behind alphabetically unrelated names.** Request of the Arcane and Request of the Strong don't look related to "Dozekar Tear Quests" by title at all -- they only surfaced as siblings because both pages named the same giver (Lendiniara the Keeper) and mechanic (tear turn-in for a named mask), matching the Questlines section's own description of that cluster ("~15 independent parallel turn-in chains... segregated by caster/melee/all class groups"). Only 2 of the ~15 have been spotted so far (deferred, not modeled -- see the checklist entries below). When a checklist entry's giver/mechanic matches an already-deferred cluster's description, defer it too rather than modeling it standalone, even if the title gives no hint.
+- **A quest page can point forward to its own sequel, alphabetically far away.** Regal Band of Bathezid Quest's own page said "This quest continues further to obtain the final item, see Spirit Wracked Cord Quest" -- Spirit Wracked Cord (in the S section) was pulled into the same batch as Regal Band (in the R section) so the `requires` edge (`decisions/quest-prerequisite-requires-edge.md`) landed immediately, rather than leaving one half of the chain unmodeled for several batches. Whenever a quest's own page names a specific sequel/prerequisite quest, research and model that quest in the same batch regardless of where it falls alphabetically.
+- **A big `git diff`/commit stat on `data/graph.json` after a small batch is not a red flag.** A migration adding ~30 nodes can still show roughly half the file's lines as changed (e.g. 94k of 194k lines for one 23-quest batch) -- this is a pre-existing line-ending/formatting quirk in the repo, confirmed present in prior migration commits too, not something this batch broke. Don't spend time investigating it; if worried, diff the stat against the previous migration's commit and confirm the same pattern already exists there.
+- **Re-`Read` this file's exact line range immediately before editing its checklist**, rather than building the `Edit` tool's `old_string` from memory of an earlier full-file read. An edit failed mid-batch because one unrelated entry (Tunare Scouts Dagger, sitting between two entries that were being checked off) was dropped from the assembled `old_string` -- a stale mental copy of a long list-style section drifts easily. A fresh, precise `Read` right before the edit avoids this.
+
+### Verifying a batch after running the migration
+- **Restart the dev server after every migration.** `src/graph.ts` reads `data/graph.json` once into memory and caches it; a `bun run dev` process left running from before the migration keeps serving the old graph, so both the API and a browser check will silently pass against stale data. Kill the process on port 4321 and start it fresh before verifying.
+- **A newly added quest returning zero results in the Quests page search is not necessarily a bug.** Any quest in (or inheriting from) a confirmed out-of-era zone (`decisions/quest-era-flagging.md`) is hidden by default behind the "Show Out of Era" checkbox. Check that box, or query `/api/quests` directly, before concluding a quest failed to save.
+- **`/api/quests` has no server-side `?search=` filter** -- unlike the Quests page's own `?search=` deep-link, the API route ignores unrecognized query params and always returns the entire quest list (`src/api.ts`'s `/api/quests` handler only reads `class`/`zone`/`level`). Fetch the full list and filter client-side (e.g. pipe through `node`/`jq` matching on `label`) rather than expecting the URL to narrow it.
+- **The Quests page lazy-loads results as the page scrolls** (viewport-relative `IntersectionObserver`, `public/components.js`), so a Playwright script that synthetically sets `scrollTop` on the results container often never triggers the next batch and only ever sees the first ~25 entries. The reliable way to check a specific quest renders is the page's own `?search=<name>` deep-link (e.g. `quests.html?search=Heretic+Heads`), not scrolling to find it.
+- **Every page here is a Shadow DOM web component** (`decisions/real-web-components-shadow-dom.md`), so `page.locator("body").innerText()` in a Playwright check comes back empty even when content is visibly rendered — `innerText` doesn't cross shadow boundaries. Assert on a tag/element locator (e.g. `page.locator("quest-card").count()`) instead of scraping body text.
+- **A `WebFetch` "quote verbatim" summary can occasionally return content that doesn't match the URL requested**, especially across a run of near-identical guild-quest pages sharing one template. If a summary comes back generically titled or its reward stats look inconsistent with the class in the page name, re-fetch asking it to first quote the page's own title/heading before trusting the rest.
+- **Reach for a direct `node -e` graph check or `curl` to the local API before a full Playwright browser pass.** Confirming a node/edge exists, resolves correctly (e.g. a `quest_group`'s members, an item's `itemRewards` shape), and has no dangling references is fully answerable from `data/graph.json` or `/api/quests` directly -- faster and just as conclusive as a browser check for those questions. Reserve the real Playwright pass (per `.claude/skills/verify`) for confirming actual UI rendering (a card showing up, the out-of-era checkbox toggling correctly), not for re-confirming facts already visible in the API response.
+
+## Checklist
+
+Gathered by paging through [Category:Quests](https://eqlwiki.com/Category:Quests) (5 pages, ~200 entries each). Four non-quest pages that showed up in the category by miscategorization or as wiki meta-content (`Category talk:Bard Quests`, `User:Fizl`, `Monk Quests` -- a class quest index, not a quest itself, per its own opening line -- and `Popular Quests by Level` -- a player-authored navigational index, not a quest) are excluded. This is the wiki's own quest index, not independently verified as exhaustive — if a real quest turns up that isn't listed here, add it to the list rather than skipping it.
+
+### A
+- [x] 10th Coldain Ring Quest
+- [x] A Job for Nanrum
+- [x] Acumen Mask Quest
+- [x] Aegis of Life Quest
+- [x] Aenia and Behroe
+- [x] Aid the Dar Brood
+- [x] Air Tight Box Quest
+- [x] Ale for Beur
+- [x] All Positive Faction Quests
+- [x] Ancient Dragon Tome
+- [x] Animal Skin Armor
+- [x] Armor of Ro Quests
+- [x] Armor of the Priest Quests
+- [x] Armor Size
+- [x] Assist the Great Xelha
+- [x] Aviak Chicks
+- [x] Aviak Talons
+- [x] Azraxs' Legacy
+- [x] Azzar's Dreadful Hat Quest
+- [x] Azzar's Dreadful Hat, Part 2
+
+### B
+- [x] Bandages for Honeybugger
+- [x] Bandit Sashes
+- [x] Bandit Sisters
+- [x] Bandit Spectacles
+- [x] Bard Epic Quest
+- [x] Bard Kael Armor Quests
+- [x] Bard Lambent Gems
+- [x] Bard Mail
+- [x] Bard Reports
+- [x] Bard Skyshrine Armor Quests
+- [x] Bard Thurgadin Armor Quests
+- [x] Barnacle Breastplate Quest
+- [x] Basilisk Tongues
+- [x] Bat Fur and Beetle Legs
+- [x] Bat Fur Quest
+- [x] Bat Wings
+- [x] Bat Wings and Snake Fangs
+- [x] Bear Hide Armor
+- [x] Bearskin Gloves Quest
+- [x] Become PvP (Ak'Anon)
+- [x] Become PvP (Erudin)
+- [x] Become PvP (Freeport)
+- [x] Become PvP (Halas)
+- [x] Become PvP (Kaladim)
+- [x] Become PvP (Neriak)
+- [x] Become PvP (Oggok)
+- [x] Become PvP (Paineel)
+- [x] Become PvP (Qeynos)
+- [x] Beguile Plants Quest
+- [x] Behead the Freeport Militia
+- [x] Bertoxxulous Symbol Quests
+- [x] Beta Neutral
+- [x] Black Wolf Skin Quest
+- [x] Blackburrow Brewers
+- [x] Blackburrow Stout Delivery
+- [x] Blackburrow Stout Quest
+- [x] Blackburrow Stout Shipment
+- [x] Bladed Weapons
+- [x] Blank Scrolls
+- [x] Blessed Oil
+- [x] Blessed Oil Quest
+- [x] Blizzent's Fang Quest
+- [x] Blood Ink
+- [x] Bloodboil Quest
+- [x] Blurred Map Quest
+- [x] Blyle Bundin's Head
+- [x] Bone Chips (Kaladim)
+- [x] Bone Chips Felwithe
+- [x] Bone Chips Field of Bone
+- [x] Bone Chips Grobb
+- [x] Bone Chips Qeynos
+- [x] Bone Chips Quests
+- [x] Bone Granite Powder Quest
+- [x] Bonethunder Staff Quest
+- [x] Book of Turmoil Quest
+- [x] Bottle of Red Wine
+- [x] Boysenberry Pie Quest
+- [x] Bozinite Pestle Quest
+- [x] Bracers of Erollisi Quest
+- [x] Brain Bite (Evil)
+- [x] Brain Bite (Good)
+- [x] Bread Shipment Quests
+- [x] Brell Serilis Symbol Quests
+- [x] Broken Lute
+- [x] Broom Of Trilon Quest
+- [x] Brother Trintle (Quest)
+- [x] Bug Collection
+- [x] Bugglegupp (Quest)
+- [x] Bulthar Trunks
+- [x] Burnished Wooden Staff Quest
+- [x] Burynai Bundt Cake
+- [x] Bvellos' Bounty
+
+### C
+- [x] Cabilis Pale Ale (Cabilis)
+- [x] Cabilis Pale Ale (Firiona Vie)
+- [x] Caduceus of Sacrament Quest
+- [x] Call of Flame Quest
+- [x] Cannibalize II (Evil)
+- [x] Cannibalize II (Good)
+- [x] Captain Nalot's Triple Strength Rum
+- [x] Captain Nealith's Brother
+- [x] Cat Courier
+- [x] Catfish Croak Sandwich Quest
+- [x] Catfish Tail
+- [x] Catman Alliance
+- [x] Cazic Thule Symbol Quests
+- [x] Chalice of Conquest Quest
+- [x] Cheslin's Illusion Cards
+- [x] Cindl's Polar Bear Collection
+- [x] Cindl's Wristband Collection
+- [x] Circlet of Mist Quest
+- [x] Class Race Quest List
+- [x] Clay Bracelet Quest
+- [x] Cleaner Clockwork
+- [x] Cleanse the Ocean
+- [x] Clear Water Quest
+- [x] Cleric Epic Quest
+- [x] Cleric Kael Armor Quests
+- [x] Cleric Plane of Sky Tests
+- [x] Cleric Skyshrine Armor Quests
+- [x] Cleric Spells (Evil)
+- [x] Cleric Spells (Good)
+- [x] Cleric Supplies
+- [x] Cleric Thurgadin Armor Quests
+- [x] Clurg's New Creation
+- [x] Clurg's Revenge
+- [x] Coin of Tash (Tashania)
+- [x] Cold Iron
+- [x] Coldain Books of Tactics
+- [x] Coldain Military Wristguard Quest
+- [x] Coldain Skulls
+- [x] Collect Drops of Shadow
+- [x] Collier's Weapon Treatment
+- [x] Corrupt Guards
+- [x] Corrupt Guards (Cleric version)
+- [x] Corrupt Guards (Paladin Version)
+- [x] Cougarskin Boots Quest
+- [x] Cougarskin Mask Quest
+- [x] Cougarskin Sleeves Quest
+- [x] Crest of the Drixie Quest
+- [x] Crest of the Faerie Dragons Quest
+- [x] Crest of the Fauns Quest
+- [x] Crest of the Sifaye Quest
+- [x] Crest of the Unicorn Quest
+- [x] Crest of the Wood Nymphs Quest
+- [x] Cromil's Remains
+- [x] Crude Stein Quest
+- [x] Crush the Undead
+- [x] Crushbone Belts
+- [x] Crushbone Shoulderpads Quest
+- [x] Crustacean Shell Armor Quest
+- [x] Crystal Caverns' Ancient Artifacts
+- [x] Cure Disease (Qeynos)
+- [x] Cure for Lempeck Hargrin
+- [x] Cure Poison (Qeynos)
+- [x] Cures
+- [x] Curscale Armor Quest
+- [x] Curscale Shield
+- [x] Cursed Wafers Quest
+- [x] Custom Plate Helms - Kael Drakkel
+- [x] Custom Plate Helms - Skyshrine
+- [x] Custom Plate Helms - Thurgadin
+- [x] Cutthroat Rings
+
+### D
+- [x] Dain's Head
+- [x] Darkwood Staff Quest
+- [x] Death of Lyda Nasin
+- [x] Deathfist Slashed Belts
+- [x] Deck of Spontaneous Generation Quest
+- [x] Demise of Blizzent
+- [x] Deputy Tagil's Debt
+- [x] Di'Zok Signet of Service Quest
+- [x] Dire Wolf-Hide Cloak Quest
+- [x] Direwolf Fur Cloak Quest
+- [x] Direwolf Fur Hood Quest
+- [x] Disease Cures
+- [x] Divine Duty
+- [x] Dragon Heads
+- [x] Dragon Scales Quest
+- [x] Drolvarg Teeth
+- [x] Drosco the Zombie (evil)
+- [x] Drosco the Zombie (good)
+- [x] Duster Models
+
+### E
+- [x] Earthen Boots Quest
+- [x] Emberfold Exchange
+- [x] Emerald Dragonscale Quest
+- [x] Emerald Warriors' Items
+- [x] Emil's Report
+- [x] Enchant Bonethunder
+- [x] Entalon's Quest
+- [x] Errand for Tonmerk
+- [x] Errand for Wolten
+- [x] Erud's Tonic Quest
+- [x] Erudin Cures
+- [x] Erudite Prisoners
+- [x] Essence Lens Quest
+- [x] Evil Research
+- [x] Exotic Drinks
+- [x] Experienced Courier
+- [x] Explorer Survival Knives
+- [x] Eye of Stormhammer
+
+### F
+- [x] Fabian's Strings
+- [x] Faction Quests
+- [x] Faerie Dragon Wings
+- [x] Faren's Tacklebox
+- [x] Feeding Dooga
+- [x] Fern Flower Collection
+- [x] Feskr's Supplies
+- [x] Field Supplies Quest
+- [x] Find Lucie Elron
+- [x] Fire Beetle Eyes
+- [x] Fire Goblin Runner
+- [x] First Test of Kejaar
+- [x] Fish Dinner
+- [x] Fisherman Convert
+- [x] Fleshy Orbs
+- [x] Fresh Baked Muffins (Kaladim)
+- [x] Fresh Baked Muffins (Qeynos)
+- [x] Friend of the Kin
+- [x] Friend of the Tunarean Court
+- [x] Froglock Tadpole Fleshies
+- [x] Froglok Skin Mask Quest
+- [x] Froglok Tad Tongues
+- [x] Frostbite's Fish
+- [x] Fusibility Research
+
+### G
+- [x] Garath's Weapons to Trade
+- [x] Gathering Grain
+- [x] Gearheart (Quest)
+- [x] Gem Inlaid Gauntlets Quest
+- [x] Geozite Tool Quest
+- [x] Gharin's Note (evil)
+- [x] Gharin's Note (good)
+- [x] Giant Helmets
+- [x] Gindlin's Poison
+- [x] Gleed's Bow
+- [x] Gloves of Earthcrafting Quest
+- [x] Gnasher's Head
+- [x] Gnoll Bounty
+- [x] Gnoll Fur
+- [x] Gnoll Paws
+- [x] Gnoll Scalp Collecting
+- [x] Gnomish Toy
+- [x] Goblin Battlemasters
+- [x] Goblin Caster Necklace
+- [x] Goblin Raiders
+- [x] Going Postal
+- [x] Going Postal (Felwithe to Kelethin)
+- [x] Going Postal (Kaladim to Kelethin)
+- [x] Granite Pebbles
+- [x] Greenblood Shadowknight Tunic
+- [x] Greenblood Tunics
+- [x] Gretta's Baking Supplies Quest
+- [x] Grim's Tiger Revenge
+- [x] Groflah Steadirt's Death
+- [x] Guard of Ik Quest
+- [x] Guard Shilster's Stout
+- [x] Guild Summons
+- [x] Guild Summons - Abbey of Deep Musing Cleric
+- [x] Guild Summons - Abbey of Deep Musing Rogue
+- [x] Guild Summons - Cathedral of Fortitude
+- [x] Guild Summons - Cauldron of Hate
+- [x] Guild Summons - Church of Underfoot
+- [x] Guild Summons - Circle of Unseen Hands
+- [x] Guild Summons - Coalition of Tradefolk Underground
+- [x] Guild Summons - Craft Keepers
+- [x] Guild Summons - Crimson Hands
+- [x] Guild Summons - Da Bashers
+- [x] Guild Summons - Dark Ones
+- [x] Guild Summons - Dark Reflection Cleric
+- [x] Guild Summons - Dark Reflection Enchanter
+- [x] Guild Summons - Dark Reflection Magician
+- [x] Guild Summons - Dark Reflection Necromancer
+- [x] Guild Summons - Dark Reflection Rogue
+- [x] Guild Summons - Dark Reflection Warrior
+- [x] Guild Summons - Dark Reflection Wizard
+- [x] Guild Summons - Deepwater Cleric
+- [x] Guild Summons - Deepwater Paladin
+- [x] Guild Summons - Dismal Rage Cleric
+- [x] Guild Summons - Dismal Rage Enchanter
+- [x] Guild Summons - Dismal Rage Magician
+- [x] Guild Summons - Dismal Rage Necromancer
+- [x] Guild Summons - Dismal Rage Shadowknight
+- [x] Guild Summons - Dismal Rage Warrior
+- [x] Guild Summons - Dismal Rage Wizard
+- [x] Guild Summons - Emerald Warriors
+- [x] Guild Summons - Faydark's Champions
+- [x] Guild Summons - Fortress Craknek
+- [x] Guild Summons - Gate Callers
+- [x] Guild Summons - Gemchopper Hall
+- [x] Guild Summons - Greenblood Rock
+- [x] Guild Summons - Hall of Sorcery Enchanter
+- [x] Guild Summons - Hall of Sorcery Magician
+- [x] Guild Summons - Hall of Sorcery Wizard
+- [x] Guild Summons - Hall of Steel
+- [x] Guild Summons - Hall of the Ebon Mask
+- [x] Guild Summons - Hall of Truth Cleric
+- [x] Guild Summons - Hall of Truth Paladin
+- [x] Guild Summons - Jaggedpine Treefolk
+- [x] Guild Summons - Libary Mechanimagica Enchanter
+- [x] Guild Summons - Libary Mechanimagica Magician
+- [x] Guild Summons - Libary Mechanimagica Wizard
+- [x] Guild Summons - Marsheart's Chords
+- [x] Guild Summons - Miners Guild 628
+- [x] Guild Summons - Murdunk's Palace
+- [x] Guild Summons - Night Keep
+- [x] Guild Summons - Order of the Silent Fist
+- [x] Guild Summons - Paladins of the Underfoot
+- [x] Guild Summons - Priests of Innoruuk
+- [x] Guild Summons - Protectors of the Pine
+- [x] Guild Summons - Rogues of the White Rose
+- [x] Guild Summons - Scouts of Tunare
+- [x] Guild Summons - Shamen of Justice
+- [x] Guild Summons - Shrine of Bertoxxulous Enchanter
+- [x] Guild Summons - Shrine of Bertoxxulous Magician
+- [x] Guild Summons - Shrine of Bertoxxulous Necromancer
+- [x] Guild Summons - Shrine of Bertoxxulous Shadowknight
+- [x] Guild Summons - Shrine of Bertoxxulous Warrior
+- [x] Guild Summons - Shrine of Bertoxxulous Wizard
+- [x] Guild Summons - Soldiers of Tunare
+- [x] Guild Summons - Songweavers
+- [x] Guild Summons - Stormguard
+- [x] Guild Summons - Tabernacle of Terror
+- [x] Guild Summons - Temple of Bertoxxulous Cleric
+- [x] Guild Summons - Temple of Divine Light Cleric
+- [x] Guild Summons - Temple of Divine Light Paladin
+- [x] Guild Summons - Temple of Life Cleric
+- [x] Guild Summons - Temple of Life Paladin
+- [x] Guild Summons - Temple of Marr Cleric
+- [x] Guild Summons - Temple of Marr Paladin
+- [x] Guild Summons - Temple of Thunder Cleric
+- [x] Guild Summons - Temple of Thunder Paladin
+- [x] Guild Summons - The Abbatoir
+- [x] Guild Summons - The Amethyst Palace
+- [x] Guild Summons - The Dead Necromancer
+- [x] Guild Summons - The Dead Shadowknight
+- [x] Guild Summons - The Fell Blade
+- [x] Guild Summons - The Spurned Enchanter
+- [x] Guild Summons - The Spurned Magician
+- [x] Guild Summons - The Spurned Wizard
+- [x] Guild Summons - The Wind Spirit's Song
+- [x] Guild Summons - Wolves of the North
+
+### H
+- [x] Halfling Raider Helms
+- [x] Handy Shillelagh
+- [x] Harvester Quest
+- [ ] Hate Tail Guard Shield — **broken/unfinished on eqlwiki.com** ("Appears this quest was never finished on live, perhaps no 'Giant Hate Tail Scorpions' exist"); not modeled, skip until the wiki page changes
+- [x] Head of Granin O'Gill
+- [x] Heal Yourself
+- [x] Healing (Dismal Rage)
+- [x] Healing Quest
+- [x] Healing Spells from Hendi
+- [x] Health Potion
+- [x] HEHE Meat Quest
+- [x] Helm of the Tracker Quest
+- [x] Helms of Giant Warriors
+- [x] Help Hergor Get Fatter
+- [x] Herb Shop
+- [x] Heretic Battle
+- [x] Heretic Heads
+- [x] Hero Bracers Quest
+- [ ] High Guard Battlestaff — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest"); not modeled, skip until the wiki page changes
+- [x] Hogcaller's Inn
+- [x] Hollow Skull Quest
+- [x] Holy Armor Buff Quest
+- [x] Holy Armor Scroll
+- [x] Honey Jum Quest
+- [x] Honey Mead for Trumpy
+- [x] Honeybugger Assassin
+- [x] Hopeless Love, Part 1
+- [ ] Hopeless Love, Part 2 — **not a real quest per eqlwiki.com** ("I am told that this is not a quest, but merely a story line"); not modeled, skip until the wiki page changes
+- [x] How the Goblins Stole Frostmas
+- [x] Hsagra's Wrath Quest
+- [x] Hukulk's Love
+- [x] Hungry Deputy
+- [x] Hurrieta's Tunic Quest
+
+### I
+- [x] Ice Goblin Beads
+- [x] Ice Goblin Necklaces
+- [x] Icestar's Eve Snowdrift Feast
+- [x] Iksar Prisoner Quest
+- [x] Ilanic's Scroll
+- [x] Illegible Cantrip Quest
+- [x] Illegible Scrolls
+- [x] Illegible Scrolls (Felwithe)
+- [x] Illusion: Iksar Quest
+- [x] Illweed Parchment Quest
+- [x] Incandescent Armor Quests
+- [x] Incandescent Mask quest
+- [x] Indaria's Doll
+- [x] Inert Potion Quest
+- [x] Innoruuk Recommendation
+- [x] Innoruuk Symbol Quests
+- [x] Ivan McMannus' Remains
+- [x] Ivy Etched Armor Quests (modeled as a 7-piece quest_group, migration 098)
+
+### J
+- [x] Jagged Pine Crook Staff
+- [x] Jillin's Stew
+- [x] Journal Strongbox
+- [x] Journeyman's Boots Quest
+
+### K
+- [x] Karana Clovers
+- [x] Karana's Blessing
+- [x] Keeper Rott's Pages
+- [x] Kelorek's Scales
+- [x] Kevlin Diggs' Debt
+- [x] Key to Charasis Quest
+- [x] Key to Cobalt Scar
+- [x] Key to Jaled Dar's Lair (Neb)
+- [x] Key to Jaled Dar's Lair (Zlandicar)
+- [x] Key to Sleeper's Tomb
+- [x] Kilij's Plans
+- [x] Knight Card Quest
+- [x] Kobold Killing
+- [x] Kobold Molars (Evil)
+- [x] Kobold Molars (Good)
+- [x] Kobold Shaman Artifacts
+- [x] Kobold Shaman Paws
+- [x] Kwinn's Quest
+- [x] Kwint's Kwest
+
+### L
+- [x] Langseax Quest
+- [x] Learn the Ways of Skinning and Tailoring
+- [x] Leatherfoot Raiders
+- [x] Left Goblin Ears
+- [ ] Legion Lager Quest — **broken/unfinished on eqlwiki.com** ("the Trooper was possibly removed from the game"); not modeled, skip until the wiki page changes
+- [x] Lenka's Pouch
+- [x] Letter to Master Whoopal
+- [x] Leuz's Task
+- [x] Library Book
+- [x] Lion Meat Shipment Quest
+- [x] Lionskin Gloves Quest
+- [x] Living Dragons
+- [x] Living Granite
+- [x] Lizard Dolls
+- [x] Lizard Meat No 2
+- [x] Lizard Meat Quest
+- [x] Lizard Tails
+- [x] Lizard Tails No 2
+- [x] Lodizal Shell Shield Quest
+- [ ] Long Iron Rod Quest — **broken/unfinished on eqlwiki.com** ("unsolved or broken"); not modeled, skip until the wiki page changes
+- [ ] Lord Grimlot's Love — **broken/unfinished on eqlwiki.com** ("an unsolved or broken quest"); not modeled, skip until the wiki page changes
+- [x] Lupine Claw Gauntlets Quest
+- [x] Lydl Mastat
+- [x] Lynuga's Gem Collection
+
+### M
+- [x] Madame Serena Quest
+- [x] Magic Elixir for the Warriors
+- [x] Magician Spells (Evil Version)
+- [x] Magician Spells (Evil)
+- [x] Magician Spells (Good)
+- [x] Majik Power
+- [x] Mammoth Calf Hides
+- [x] Mammoth Tusks Quest
+- [x] Marauder Armor
+- [x] Marda's Secret Mission
+- [x] Marr Minnows for Palon
+- [x] Mask of War Quest
+- [x] Mechanical Net Delivery
+- [x] Medallion of the Jarsath Quest
+- [x] Medallion of the Kylong Quest
+- [x] Medallion of the Obulus Quest
+- [x] Mercenary Assignments Quest
+- [x] Merona's Brother
+- [x] Message Intercept
+- [x] Messages For Neriak
+- [x] Miner's Cap
+- [x] Miners Pick
+- [x] Mining Caps
+- [x] Mining Picks
+- [x] Minotaur Horns
+- [x] Miranda's Chocolate
+- [x] Miranda's Dice
+- [x] Mirgon Dower's Head
+- [x] Moonstones Quest
+- [ ] Mooto's Proof — **broken/unfinished on eqlwiki.com** ("unsolved or broken"); not modeled, skip until the wiki page changes
+- [x] More Help for Innoruuk
+- [x] Morin's Sword
+- [x] Moss Snakes
+- [x] Muffin for Pandos
+- [x] Muffin Quests
+
+### N
+- [x] Natures Defender Quest
+- [x] Necro Spells
+- [x] Necromancer Spells
+- [x] Necromancer Spells (Cabilis)
+- [x] Neonate Cowardice
+- [x] Nesiff's Statue
+- [x] Newbie Quest: Halfling Druid
+- [x] Newbie Quest: Troll Warrior
+- [x] Niblek's Gems
+- [x] Nillipuss the Brownie
+- [x] Noble Hunters
+- [x] Note for Janam
+- [x] Note for Konem
+- [x] Note for Rebby
+- [x] Note to Neclo Quest
+
+### O
+- [ ] Odd Items — **broken/unfinished on eqlwiki.com** ("I think this was just stand in dialogue without actual quests attached"); not modeled, skip until the wiki page changes
+- [x] Odus Pearls
+- [x] Ogre Heads
+- [x] Old Dreams
+- [x] Orc Belt Quests
+- [x] Orc Belts
+- [x] Orc Hatchets
+- [x] Orc Pawn Picks
+- [x] Orc Picks
+- [x] Orc Runner (Felwithe)
+- [x] Orc Runner (Kelethin)
+- [x] Orc Scalp Collecting
+- [x] Orc Vest
+- [x] Order of Thunder (from Drosco)
+- [x] Ortallius' Cutthroat Rings
+- [x] Oven Mittens
+
+### P
+- [x] Package from Lomarc
+- [x] Paladin Epic Quest
+- [x] Paladin Hunting
+- [x] Paladin Message
+- [x] Parrying Pick Quest
+- [x] Paw of Opolla Quest
+- [x] Peacekeeper Staff Quest
+- [x] Pickled Frogloks
+- [x] Piranha Hunting
+- [x] Pirate Earrings
+- [x] Pixie Dust (Kelethin Ranger)
+- [x] Pixie Dust (Kelethin Rogue)
+- [x] Plaguebringer Proof
+- [x] Plane of Mischief Armor Quest
+- [x] Plane of Mischief Faction Quest
+- [x] Poacher Leader
+- [x] Poacher's Head Quest (Erudin)
+- [x] Poacher's Head Quest (Surefall Glade)
+- [x] Poison Cures
+- [x] Poison Sales
+- [x] Polar Bear Cloak Quest
+- [x] Porlos' Fury Quest
+- [x] Preserved Meat Delivery
+- [x] Princess Lenya (Quest)
+- [x] Protect the Shipyard
+- [x] Putrid Skeletons
+
+### Q
+- [x] Quellious Symbol Quests
+- [x] Quench Lasen's Thirst
+
+### R
+- [x] Rabid Grizzlies
+- [x] Rabid Wolves
+- [x] Rain Caller Quest
+- [x] Ralgyn's Promise
+- [x] Rallos Zek Symbol Quests
+- [x] Ranjor's Test
+- [x] Rare Coins
+- [x] Rat Ear Pie Quest
+- [x] Rat Fur Cap Quest
+- [x] Rat Patrol
+- [x] Rat Pelt Cape Quest
+- [x] Rat Pelts
+- [x] Rat Shaped Rings
+- [x] Rat Teeth
+- [x] Rat's Foot Necklace Quest
+- [x] Rathmana's Traveling Offer
+- [x] Ratskin Gloves Quest
+- [x] Razortooth
+- [x] Recharge Prayer Beads
+- [x] Red Dragonscale Armor Quest
+- [x] Red V Clockwork
+- [x] Red Wine to Lady Shae
+- [x] Reebo's Carrots
+- [x] Regal Band of Bathezid Quest
+- [x] Reinforcements for The Tunarean Regiment
+- [x] Renew Bones Quest
+- [ ] Request of the Arcane — **deferred, part of the Dozekar Tear Quests cluster** (Lendiniara the Keeper's caster-tear turn-in, Temple of Veeshan; same mechanic as Request of the Strong below and the ~13 other sibling chains); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Request of the Strong — **deferred, part of the Dozekar Tear Quests cluster** (Lendiniara the Keeper's melee-tear turn-in, Temple of Veeshan); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [x] Research Aid
+- [x] Reserve Militia
+- [ ] Respecialization — **broken/removed on eqlwiki.com** ("THIS QUEST HAS BEEN REMOVED FROM EQL, YOU CAN NOT DO THIS QUEST TO RE-SPECIALIZE"); not modeled, skip until the wiki page changes
+- [x] Ridossan's Spirit
+- [x] Robe of the Elements Quest
+- [x] Rod of Insidious Glamour Quest
+- [x] Rognarog's Head
+- [ ] Rogue Epic Quest — **deferred, real multi-stage questline** (pickpocket two parchment pieces in Kaladim/Neriak, retrieve the Book of Souls from Plane of Hate, defeat Renux Herkanor and General V'ghera, final turn-in to Stanos Herkanor for Ragebringer); not modeled standalone, tracked under a new "Rogue Epic Quest" entry in the Questlines section instead
+- [x] Rogue Errands
+- [x] Rogue Kael Armor Quests
+- [x] Rogue Plane of Sky Tests
+- [x] Rogue Redemption
+- [x] Rogue Skyshrine Armor Quests
+- [x] Rogue Thurgadin Armor Quests
+- [x] Rohand's Brandy
+- [x] Runescale Cloak Quest
+- [x] Rungupp (Quest)
+- [x] Runnyeye Warbeads (Kaladim Rogue)
+- [x] Runnyeye Warbeads (Kaladim Warrior)
+- [x] Runnyeye Warbeads (Rivervale)
+- [x] Rusted Black Boxes
+
+### S
+- [ ] Sad Klandicar — **broken/unfinished on eqlwiki.com** ("No one knows how to continue this quest," only initial NPC dialogue documented, no completion steps or reward); not modeled, skip until the wiki page changes
+- [x] Sarnak Hatchling Brains
+- [x] Saucy Salted Seadragon Steak
+- [x] Scaled Mystic Armor Quests
+- [x] Scarab Armor Quests
+- [x] Scholar Darnath's Help
+- [x] Scorpion Pincers
+- [x] Scout Blade
+- [x] Scouts Cape Quest
+- [x] Scouts Leggings
+- [x] Scrap Metal Quest
+- [x] Screaming Mace Quest
+- [ ] Scroll of G'han — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest"); not modeled, skip until the wiki page changes
+- [x] Scrolls of the Ancient Totem
+- [x] Sebilis and Veeshan's Peak Key Quest
+- [x] Second Test of Kejaar
+- [x] Sentry Xyrin Quest
+- [x] Series C Black Boxes
+- [x] Shadow Knight Plane of Sky Tests
+- [x] ShadowBound Armor Quests
+- [ ] Shadowknight Epic Quest — **deferred, real multi-stage questline** (5-stage ordered chain: Letter to Duriek, Dusty Tome, Corrupted Ghoulbane, Dark Shroud, Lhranc's Coin, ending in Innoruuk's Curse); not modeled standalone, tracked under a new "Shadowknight Epic Quest" entry in the Questlines section instead
+- [x] Shadowknight Kael Armor Quests
+- [x] Shadowknight Skyshrine Armor Quests
+- [x] Shadowknight Thurgadin Armor Quests
+- [ ] Shakey the Scarecrow's Head — **broken/unfinished on eqlwiki.com** ("This is a broken quest, as it was unfinished as implemented in classic EverQuest"); not modeled, skip until the wiki page changes
+- [x] Shakey's Stuffing
+- [ ] Shaman Epic Quest — **deferred, real multi-stage questline** (14-stage ordered chain from the lesser spirit's gem turn-ins through Lord Rak'Ashiir's Iksar Scale, ending in Spear of Fate); not modeled standalone, tracked under a new "Shaman Epic Quest" entry in the Questlines section instead
+- [x] Shaman Kael Armor Quests
+- [x] Shaman Plane of Sky Tests
+- [ ] Shaman Skull Quests — **deferred, real ordered chain, not a quest group** (5 sequential turn-ins to Hierophant Oxyn in East Cabilis where each stage's own reward Iron Cudgel is itself required as the next stage's turn-in: Clairvoyant → Seer → Mystic → Prophet → Channeler); not modeled standalone, tracked under a new "Shaman Skull Quests" entry in the Questlines section instead
+- [x] Shaman Skyshrine Armor Quests
+- [x] Shaman Spells (Evil - Iksar)
+- [x] Shaman Spells (Evil)
+- [x] Shaman Spells (Good)
+- [x] Shaman Thurgadin Armor Quests
+- [x] Shaman's Velium Sleeves (same giver/turn-in/reward as the Vambraces sub-quest under Shaman Thurgadin Armor Quests -- no separate node, just the wiki's colloquial name for that piece)
+- [x] Shark Hunting
+- [x] Shark Meat Quest
+- [x] Shestar's Scaled Coif Quest
+- [x] Shield of the Devout Quest
+- [x] Shiny Rings
+- [x] Shiny Robe of the Underfoot Quest
+- [x] Shondo and the Tonic
+- [x] Shovel Of Ponz Quest
+- [x] Sifaye Abominations
+- [x] Sir Lindeal's Testimony
+- [x] Sir Morgan's Armor
+- [x] Skeleton Killing
+- [x] Skunk Hunting
+- [x] Slaggak's Bounty
+- [x] Slave Keys
+- [x] Snake Fang Necklace Quest
+- [x] Sneed's Rat Infestation
+- [x] Soil of Underfoot
+- [x] Soil of Underfoot Quest (same giver/turn-in/reward as "Soil of Underfoot" above -- two conflicting eqlwiki.com pages for the same quest, modeled once under quest:soil-of-underfoot using the more detailed page's numbers)
+- [x] Solusek's Flower
+- [x] Solvedi Scimitar Quest
+- [ ] Souvenir Mugs — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest" / "It's possible this is only a storyline rather than a quest"); not modeled, skip until the wiki page changes
+- [x] Sparring Armor
+- [x] Spear Delivery
+- [x] Spider Legs Quest
+- [x] Spiderling Silks
+- [x] Spirit Aid
+- [x] Spirit Wracked Cord Quest
+- [x] Staff of Temperate Flux Quest
+- [x] Stanos' Head
+- [x] Steel Warrior Initiation
+- [x] Stein Of Ulissa Quest
+- [x] Storm Giant Toes to Sentry Kcor
+- [x] Strategies of the Ancient Dragons
+- [x] Strife to the Coldain
+- [x] Supplies for the New Sebilisian Expedition
+- [x] Sylvani Leaf Quest
+
+### T
+- [x] Talym Shoontar's Head
+- [x] Tarton's Wheel
+- [x] Taskmaster Earring
+- [x] Taxes
+- [x] Tayla Ironforge
+- [x] Teir`Dal Courier
+- [x] Telescope Lenses
+- [x] Temple Blankets Quest
+- [x] Tergon's Spellbook Quest
+- [x] Terrorantula Quest
+- [x] Tesch Val Scrolls
+- [ ] Test of Protection — **deferred, part of the Dozekar Tear Quests cluster** (Telkorenar's melee-class tear+symbol turn-in, Temple of Veeshan -- Ruby Tear, Emerald Tear, Emerald Symbol, Platinum Symbol for Pauldrons of the Deep Flame); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Emerald Tear — **deferred, part of the Dozekar Tear Quests cluster** (Lendiniara the Keeper's all-class tear+symbol turn-in, Temple of Veeshan -- her own page names this as one of "three tasks, which any may complete" alongside Ruby/Platinum Tear below); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Fire Storm — **deferred, part of the Dozekar Tear Quests cluster** (Telkorenar's melee-class tear+symbol turn-in, Temple of Veeshan -- his own page names "four tests": the test of the tooth, the test of the flame [Living Flame], the test of the fire storm, and the test of protection); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Living Flame — **deferred, part of the Dozekar Tear Quests cluster** (Telkorenar's melee-class tear+symbol turn-in, Temple of Veeshan; same four-test group as Test of the Fire Storm above); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Platinum Tear — **deferred, part of the Dozekar Tear Quests cluster** (Lendiniara the Keeper's all-class tear+symbol turn-in, Temple of Veeshan; one of her own "three tasks" alongside Ruby/Emerald Tear); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Ruby Tear — **deferred, part of the Dozekar Tear Quests cluster** (Lendiniara the Keeper's all-class tear+symbol turn-in, Temple of Veeshan; one of her own "three tasks" alongside Platinum/Emerald Tear); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Test of the Tooth — **deferred, part of the Dozekar Tear Quests cluster** (Telkorenar's melee-class tear+symbol turn-in, Temple of Veeshan -- White Tear, White Symbol, Silver Symbol, Glowing Drake Orb for the Serrated Dragon Tooth); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [x] The Acolyte
+- [x] The Ancient Tomes
+- [x] The Bayle List
+- [x] The Bind
+- [x] The Bloody Shank
+- [x] The Bones of Darak Lightforge
+- [ ] The Bread Shipment — **broken/removed on eqlwiki.com** ("The original (removed) quest follows:", describing Jarlen Meadowgreen's discontinued 2gp bread-loaves trade in Southern Karana -- still referenced as a live source step by every "The Bread Shipment (City)" quest, just no longer its own turn-in); not modeled, skip until the wiki page changes
+- [x] The Bread Shipment (East Freeport)
+- [x] The Bread Shipment (Erudin)
+- [x] The Bread Shipment (Feerrott)
+- [x] The Bread Shipment (Halas)
+- [x] The Bread Shipment (Kaladim)
+- [x] The Bread Shipment (Kelethin)
+- [x] The Bread Shipment (N Karana)
+- [x] The Bread Shipment (Neriak)
+- [x] The Bread Shipment (Qeynos)
+- [x] The Bread Shipment (W Karana Danin)
+- [x] The Bread Shipment (W Karana Rislarn)
+- [x] The Bridge
+- [ ] The Broodling — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest" / "MISSING INFO! Please expand the content", no confirmed reward); not modeled, skip until the wiki page changes
+- [ ] The Burning Dead — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest. Note: It is widely presumed this quest is broken."); not modeled, skip until the wiki page changes
+- [x] The Cigar
+- [x] The Clothspinner Sisters (evil)
+- [x] The Clothspinner Sisters (good)
+- [x] The Crate (evil)
+- [x] The Crate (good)
+- [x] The Donations
+- [x] The Emissary
+- [x] The Etched Stone
+- [x] The Etched Stone (Spell: Life Leech) (same giver/turn-in/reward as "The Etched Stone" above -- two eqlwiki.com pages for the same quest, modeled once under quest:the-etched-stone)
+- [x] The Falchion
+- [x] The Family Chest Straps
+- [x] The Fiery Avenger
+- [ ] The First Arcane Test — **deferred, new questline discovery** (Gozzrem in the Temple of Veeshan runs a Dozekar-the-Cursed tear-turn-in mechanic matching the Dozekar Tear Quests cluster's shape, and his own line -- "If this task is not hard enough for you, I have a second quest for you" -- confirms it chains into The Second Arcane Test as an ordered pair); not modeled standalone, tracked under a new "Arcane Tests" entry in the Questlines section instead
+- [x] The Fisherman
+- [x] The Fishslayers
+- [x] The Four Fragments
+- [x] The Four Idols
+- [x] The Frikniller Family
+- [x] The Geologist's Purloined Tools
+- [x] The Gift Box
+- [x] The Gnoll Slayer
+- [x] The Gnome Take
+- [x] The Grammar Manual
+- [x] The Icestar Dims
+- [x] The Icestar Remembers
+- [ ] The Loom — **broken/unfinished on eqlwiki.com** ("MISSING INFO! Please expand the content"; reward itself listed only as "UNKNOWN! Please correct."); not modeled, skip until the wiki page changes
+- [x] The Lorekeeper's Scrolls
+- [ ] The Lost Circle — **deferred, part of the Monk Armor & Sash/Shackle/Headband Progression cluster** (Brother Balatin's "Robe of the Lost Circle" -> "Robe of the Whistling Fists" turn-in chain, Dreadlands, is that cluster's own named sub-quest); not modeled standalone, tracked under that Questlines-section entry instead
+- [x] The Lost Map
+- [x] The Lost Pet
+- [x] The Lost Tome
+- [x] The Lottery Ticket
+- [x] The Mighty Garou
+- [x] The Mighty Snowfang Hero
+- [x] The Mudtoes
+- [x] The Mystic Cloak
+- [x] The New Worker
+- [x] The Nitrates and the Assassin
+- [x] The Orc Impaler
+- [x] The Package
+- [x] The Painting
+- [x] The Penance
+- [x] The Power of the Gatecallers
+- [x] The Rat King
+- [ ] The Realm of Heroes -- Felwithe — **broken/unfinished on eqlwiki.com** ("This quest was for a GM Event on live"; a one-time developer-run event, not repeatable content, reward listed as "None (GM event)"); not modeled, skip until the wiki page changes
+- [x] The Regurgitonic
+- [x] The Restraining Order
+- [x] The Rogue Take
+- [x] The Seax
+- [ ] The Second Arcane Test — **deferred, part of the new Arcane Tests questline** (Gozzrem's own page names this as the sequel to The First Arcane Test above -- "if this task is not hard enough for you, I have a second quest for you"); not modeled standalone, tracked under the Arcane Tests entry in the Questlines section instead
+- [x] The Spirit of Garzicor
+- [x] The Summoning of Dread
+- [x] The Summoning of Fright
+- [x] The Summoning of Terror
+- [x] The Supply Run - Eastern Wastes
+- [x] The Supply Run - Great Divide
+- [ ] The Supply Run - Wakening Land — **broken/unfinished on eqlwiki.com** ("This is an unsolved or broken quest" / "This seems to be a broken quest with no reward"); not modeled, skip until the wiki page changes
+- [x] The Sword of Nobility
+- [x] The Tattered Pouch
+- [x] The Telescope
+- [ ] The Test of the Green and Blue — **removed/non-Legends content per eqlwiki.com** ("THE ARTICLE CONTAINS NON-LEGENDS CONTENT" / "This quest was removed from Live EQ. Marking it as 'Does Not Exist.'"); not modeled, skip until the wiki page changes
+- [x] The Tome Raider
+- [x] The Torn Pouch
+- [x] The Traitor
+- [x] The Treant Fists
+- [x] The Unnamed Gift
+- [x] The Velium Focus
+- [x] The Vengeful Musicians
+- [x] The Visiting Priestess
+- [x] The Waylaid Courier
+- [ ] The Worldly Path — **not a real quest per eqlwiki.com** ("This custom quest is designed to send you to every dungeon in Norrath...", player-authored by User:Jaruden, no NPC giver/mechanic); not modeled, skip until the wiki page changes
+- [ ] Thex Dagger Quest — **non-Legends content per eqlwiki.com** ("THE ARTICLE CONTAINS NON-LEGENDS CONTENT" / "This quest is 'removed' with the Temple Era (October 1999)"); not modeled, skip until the wiki page changes
+- [x] Thex Mallet Quest
+- [x] Tibrinn's Quest
+- [x] Tinmizer's Fabulous Compactor (Quest)
+- [x] Tiny Savages
+- [x] Tiny Skeletons
+- [x] Tishan's Kilt Quest
+- [x] Titan Samples (evil)
+- [x] Titan Samples (good)
+- [x] Toko's Head
+- [x] Tome of Ages
+- [x] Tomer's Rescue
+- [x] Tonics for Groflah
+- [x] Toolset Delivery
+- [x] Torch Of Alna Quest
+- [x] Tormax's Head - Dragons
+- [x] Tormax's Head - Dwarves
+- [x] Totemic Armor Quests
+- [x] Toxdil's Poison
+- [x] Track, Stalk, Hunt
+- [x] Tribunal Healing
+- [x] Tribunal Initiate
+- [x] Trooper Scale Armor (modeled as an 8-piece quest_group, migration 095)
+- [x] Trueshot Longbow Quest
+- [x] Trumpy Irontoe
+- [x] Trumpy's Head
+- [x] Tumpy Tonics
+- [x] Tunare Scouts Dagger
+- [x] Tunare Symbol Quests
+- [x] Tunic of Ridossan Quest
+
+### U
+- [x] Ulthork Tusks Quest
+- [ ] Unkempt Druids (Quest) — **broken/unsolved on eqlwiki.com** ("This is an unsolved or broken quest," reward listed only as "Unknown"); not modeled, skip until the wiki page changes
+- [x] Unsar's Glory
+- [x] Unser's Call (same giver/turn-in items/faction deltas as "Unsar's Glory" above -- two eqlwiki.com pages for the same quest, modeled once under quest:unsars-glory)
+- [x] Urako's Big Mistake
+
+### V
+- [x] Vambraces of Avoidance Quest
+- [x] Vasty Deep Water
+- [ ] Velious Class Armor — **not a real quest per eqlwiki.com** ("The tables below exist to provide a quick side-by-side statistical comparison" of class armor sets; an index/comparison page linking to individual quest pages, same shape as migration 063's "Class Race Quest List"); not modeled
+- [ ] Velious Class Armor Comparisons — **not a real quest per eqlwiki.com** (same comparison-table shape as "Velious Class Armor" above); not modeled
+- [x] Velium Retrieval
+- [x] Vengeance for Frenway
+- [x] Visceral Dagger
+- [x] Vkjor's Major Task
+- [x] Vkjor's Minor Task
+
+### W
+- [x] Wage War Upon The Coldain
+- [x] Wall Squad Ring
+- [ ] Warrior Epic Quest — **deferred, real multi-stage questline** (two hilts and two blades combined, then a Red Scabbard built through an extensive chain across multiple dragons and planar bosses, ending in the Jagged Blade of War with two alternate one-handed forms); not modeled standalone, tracked under a new "Warrior Epic Quest" entry in the Questlines section instead
+- [x] Warrior Kael Armor Quests (modeled as a 7-piece quest_group, migration 096)
+- [ ] Warrior Pike Quests — **deferred, real ordered chain, not a quest group** (six sequential pike tiers in East Cabilis, each stage's reward feeding the next: Partisan's -> Militia's -> Footman's -> Soldier's -> Trooper's -> Legionnaire's Mancatcher); not modeled standalone, tracked under a new "Warrior Pike Quests" entry in the Questlines section instead
+- [x] Warrior Plane of Sky Tests (modeled as a 6-sub-quest quest_group, migration 096)
+- [x] Warrior Skyshrine Armor Quests (modeled as a 7-piece quest_group, migration 096)
+- [x] Warrior Thurgadin Armor Quests (modeled as a 7-piece quest_group, migration 096)
+- [x] Watcher Torches
+- [x] Weapons Delivery
+- [x] Weeping Wand Quest
+- [x] Wenbie's Muffins
+- [x] Wenglawks The Traitor
+- [x] Werewolf Hunters
+- [x] Werewolf Skin Cloak Quest
+- [x] White Dragonscale Cloak Quest
+- [x] Winds of Karana
+- [x] Wino
+- [ ] Wisdom - The Long Battle — **deferred, part of the Dozekar Tear Quests cluster** (Gozzrem's "wisdom" tear/symbol turn-in, Temple of Veeshan -- his own line "if you seek wisdom or the arcane... the short battle or the long battle?" ties this to the same mechanic as the Arcane Tests entry below); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [ ] Wisdom - The Short Battle — **deferred, part of the Dozekar Tear Quests cluster** (Gozzrem's "wisdom" tear/symbol turn-in, Temple of Veeshan; same giver/mechanic as Wisdom - The Long Battle above); not modeled standalone, tracked under the Dozekar Tear Quests entry in the Questlines section instead
+- [x] Wislen Mamluk's Catfish
+- [ ] Wizard Epic Quest — **deferred, real multi-stage questline** (Solomen in Temple of Solusek Ro sends players through Camin, Dargon/Arantir Karondor, and three staff-retrieval kills -- Phinigel Autropos, Venril Sathir, and a Plane of Fear golem -- combined into the Staff of the Four); not modeled standalone, tracked under a new "Wizard Epic Quest" entry in the Questlines section instead
+- [x] Wizard Kael Armor Quests (modeled as a 7-piece quest_group, migration 098)
+- [x] Wizard Plane of Sky Tests (modeled as a 6-sub-quest quest_group, migration 098)
+- [x] Wizard Skyshrine Armor Quests (modeled as a 7-piece quest_group, migration 098)
+- [x] Wizard Spells (Evil)
+- [x] Wizard Spells (Good)
+- [x] Wizard Thurgadin Armor Quests (modeled as a 7-piece quest_group, migration 098)
+- [x] Wizard's First Assignment
+- [x] Wolf Hide Armor (modeled as a 3-piece quest_group, migration 097)
+- [x] Wolfskin Gloves Quest
+- [x] Wooly Fungus Quest
+- [x] Words of Darkness Quest
+
+### X
+- [x] Xelha's Cyclops Eye
+
+### Y
+- [x] Yegek's Test, Part 1
+- [x] Yegek's Test, Part 2 (requires Part 1 -- `requires` edge, migration 098)
+- [x] Yelinak's Head Quest
+- [x] Yuio's Illness
+
+### Z
+- [ ] Zimel's Blades (SoulFire) — **deferred, real multi-stage questline** (Kalatrina Plossen in North Freeport starts an 18-step chain through Freeport Militia House, Office of the People, Groflah's Forge, Seafarer's Roost, the West Freeport Arena jail, Highpass Keep, Hall of Truth, East Commons, Mistmoore Castle, and Splitpaw Lair, ending in a SoulFire hand-in from Brother Hayle); not modeled standalone, tracked under a new "Zimel's Blades (SoulFire)" entry in the Questlines section instead
+- [x] Zombie Flesh Quest
+
+## Quest Groups (and one real Questline)
+
+Some checklist entries turned out to be multi-part rather than a single flat quest. Most of these are quest *groups* -- several independent sub-quests sharing one wiki page, with no order between them, same shape as Armor of Ro (`decisions/quest-group-node-type.md`), which needed its own `quest_group` node with per-piece sub-quests instead of one migration entry. Plane of Sky Keys, flagged below, is the one entry that's a real *questline* instead -- an ordered `quest --requires--> quest` chain (`decisions/quest-prerequisite-requires-edge.md`), not an unordered group. Pulled out of the alphabetical checklist above and tracked here until someone does the dedicated research pass each one deserves (their zones already exist in the graph, so nothing here is blocked on missing zones -- it's purely the multi-part modeling work):
+
+- [ ] Arcane Tests (real questline, not a quest group -- Gozzrem in the Temple of Veeshan runs a Dozekar-the-Cursed tear/symbol turn-in for The First Arcane Test, ending in the White Dragon Statue; his own page names The Second Arcane Test as a harder sequel, not yet researched)
+- [ ] Coldain Prayer Shawl Quests (real questline, not a quest group -- 7 progressive shawl tiers in Thurgadin, each tier requires finishing the previous one first, multiple tradeskills up to skill 208)
+- [ ] Coldain Ring Quests (real questline, not a quest group -- the 10-ring Coldain Ring War progression, Great Divide/Thurgadin; ring 10, the final stage, is already modeled standalone as `quest:10th-coldain-ring-quest` migration 062 -- rings 1-9 still need their own research pass)
+- [x] Crafted Armor Quests (8-piece Warrior armor set, two givers -- Shakrn Meadowgreen has 4 pieces, Ulan Meadowgreen has 4 -- modeled as a quest_group, migration 099)
+- [ ] Crusader's Tests (real questline, not a quest group -- 8 sequential Shadow Knight tests in East Cabilis, each stage requires the previous stage's reward weapon to advance, ending in a forged "Greenmist" two-handed khukri)
+- [x] Darkforge Armor Quests (7-piece Shadow Knight armor set, two givers -- an undead knight (left) has 4 pieces, an undead knight (right) has 3 -- modeled as a quest_group, migration 100)
+- [ ] Dozekar Tear Quests (~15 independent parallel turn-in chains, Temple of Veeshan, segregated by caster/melee/all class groups, each with its own unique tear+symbol turn-in and unique named item reward -- much larger than a normal armor/test quest group). 11 of ~15 spotted so far: Request of the Arcane, Request of the Strong (Lendiniara the Keeper, casters, undetermined reward yet); Test of the Emerald Tear, Test of the Platinum Tear, Test of the Ruby Tear (Lendiniara the Keeper, all-class, her own page calls these "three tasks, which any may complete"); Test of Protection, Test of the Fire Storm, Test of the Living Flame, Test of the Tooth (Telkorenar, melee classes only -- Bard/Monk/Paladin/Ranger/Rogue/Shadow Knight/Warrior -- his own page calls these "four tests"); Wisdom - The Long Battle, Wisdom - The Short Battle (Gozzrem, his own line "if you seek wisdom or the arcane... the short battle or the long battle?" -- Wisdom - The Short Battle rewards the White Dragon Idol for a Platinum Tear + Platinum/Silver/Emerald Symbol turn-in, Wisdom - The Long Battle rewards Boots of Silent Striding for a Runed Tear + Flame Kissed Tear + Black Symbol + Glowing Drake Orb turn-in). Three givers confirmed (Lendiniara the Keeper, Telkorenar, Gozzrem), each running their own class-segregated subset; Gozzrem also runs the separate but related Arcane Tests entry below (an ordered chain, not a parallel turn-in, hence tracked separately); still need to find the remaining ~4 to reach 15.
+- [ ] Dreadscale Armor (8-piece Iksar Shadow Knight armor set, East Cabilis)
+- [ ] Druid Epic Quest & Kael/Plane of Sky/Skyshrine/Thurgadin Armor Quests (same per-class progression pattern as Paladin/Ranger below)
+- [ ] Druid Spells (shape not yet confirmed against eqlwiki.com)
+- [ ] Enchanter Epic Quest & Kael/Plane of Sky/Skyshrine/Thurgadin Armor Quests (same per-class progression pattern)
+- [ ] Enchanter Spells (Evil), Enchanter Spells (Good) (shape not yet confirmed against eqlwiki.com)
+- [ ] Lambent Armor Quests (7-piece Bard armor set, Temple of Solusek Ro -- Cryssia Stardreamer has 4 pieces, Walthin Fireweaver has 3)
+- [ ] Magician Epic Quest & Kael/Plane of Sky/Skyshrine/Thurgadin Armor Quests (same per-class progression pattern; the Epic Quest alone is a confirmed 10-part progression -- Words of Magi'Kot, Power of the Elements, Words of Mastery, Power of the Orb, four elemental sub-quests, final Orb of Mastery turn-in)
+- [ ] Monk Armor & Sash/Shackle/Headband Progression (real questline cluster -- Monk Epic Quest itself chains through Monks of The Whistling Fist's "Robe of the Lost Circle" sub-quest plus a "Robe of the Whistling Fists" sub-quest, several Fist-of-element boss turn-ins, and a final book conversion; separately, Freeport Sash Quests, Qeynos Headband Quests, and Cabilis Shackle Quests are parallel colored-tier progressions, and Kael/Plane of Sky/Skyshrine/Thurgadin armor quests follow the usual per-class pattern -- confirmed multi-stage via eqlwiki.com)
+- [ ] Necromancer Epic Quest & Armor Progression (real questline cluster -- Necromancer Skullcap Quests alone confirmed as an 8-rank progression across 5 different quest givers; Kael/Plane of Sky/Skyshrine/Thurgadin armor quests follow the usual per-class pattern)
+- [ ] Necromancer Words Quests (three sister NPCs -- X`Ta Tempi, X`Ta Timpi, X`Ta Tompi -- in Neriak Foreign Quarter, each offering several different item-set-to-word/spell turn-in combinations)
+- [x] Paladin Kael/Plane of Sky/Skyshrine/Thurgadin Armor Quests (Paladin Epic Quest already modeled standalone; modeled as four quest_groups -- Kael/Skyshrine/Thurgadin 7-piece armor sets plus a 4-test Plane of Sky set -- migration 101)
+- [ ] Plane of Sky Keys -- **real questline, not a quest group** (Sirran the Lunatic gates access to each of Plane of Sky's 7 islands behind a boss-kill-then-key-turn-in on the previous island -- an ordered prerequisite chain, decisions/quest-prerequisite-requires-edge.md)
+- [ ] Qeynos Badge Quests (real questline, not a quest group -- four sequential badges, Investigator's → Interrogator's → Researcher's → Qeynos Badge of Honor, each requiring the previous stage's badge to advance; Vegalys Keldrane, North Qeynos)
+- [ ] Ranger Epic Quest & Kael/Plane of Sky/Skyshrine/Thurgadin Armor Quests (same per-class progression pattern)
+- [ ] Rogue Epic Quest (real questline, not a quest group -- Malka Rale in Qeynos Aqueducts starts an ordered chain: pickpocket two parchment pieces off rogues in Kaladim and Neriak, retrieve the Book of Souls from Plane of Hate, defeat Renux Herkanor for Translated Parchment and General V'ghera in Kithicor Forest, plus auxiliary Jagged Diamond Dagger/Cazic Quill sub-quests if not dropped by the bosses, final turn-in to Stanos Herkanor for Ragebringer; Rogue Kael/Skyshrine/Thurgadin Armor Quests and Rogue Plane of Sky Tests were already modeled standalone as quest_groups in migration 087 since they're simple unordered sibling sets, unlike this genuinely ordered chain)
+- [ ] Shadowknight Epic Quest (real questline, not a quest group -- 5-stage ordered chain, Kurron Ni in The Overthere through Lhranc in City of Mist: Letter to Duriek -> Dusty Tome -> Corrupted Ghoulbane -> Dark Shroud -> Lhranc's Coin, ending in Innoruuk's Curse; Shadowknight Kael/Skyshrine/Thurgadin Armor Quests were already modeled standalone as quest_groups in migration 088 since they're simple unordered sibling sets, unlike this genuinely ordered chain)
+- [ ] Shaman Epic Quest (real questline, not a quest group -- 14-stage ordered chain starting with a lesser spirit's gem turn-ins across Ocean of Tears/Rathe Mountains/Butcherblock Mountains/Field of Bone, through Emerald Jungle's Spirit Sentinel and City of Mist's Neh'Ashiir/Lord Rak'Ashiir, ending in Spear of Fate; Shaman Kael/Skyshrine/Thurgadin Armor Quests and Shaman Plane of Sky Tests were already modeled standalone as quest_groups in migration 088 since they're simple unordered sibling sets, unlike this genuinely ordered chain)
+- [ ] Shaman Skull Quests (real questline, not a quest group -- Hierophant Oxyn in East Cabilis runs 5 sequential turn-ins where each stage's own reward Iron Cudgel is itself required as the next stage's turn-in: Clairvoyant -> Seer -> Mystic -> Prophet -> Channeler)
+- [ ] Warrior Epic Quest (real questline, not a quest group -- two hilts and two blades combined, then a Red Scabbard built through an extensive chain across multiple dragons and planar bosses, Kargek Redblade/Wenden Blackhammer in East Freeport, ending in the Jagged Blade of War with two alternate one-handed forms; Warrior Kael/Skyshrine/Thurgadin Armor Quests and Warrior Plane of Sky Tests were already modeled standalone as quest_groups in migration 096 since they're simple unordered sibling sets, unlike this genuinely ordered chain)
+- [ ] Warrior Pike Quests (real questline, not a quest group -- Drill Master Vygan and other Warlords in East Cabilis run six sequential pike tiers, each stage building on the last: Partisan's Pike -> Militia's Pike -> Footman's Pike -> Soldier's Pike -> Trooper's Pike -> Legionnaire's Mancatcher; wiki notes the further "Champions' Mancatcher" tier is "NOT Classic - Quest finished in Gates of Discord" and out of scope)
+- [ ] Wizard Epic Quest (real questline, not a quest group -- Solomen in Temple of Solusek Ro sends players to Camin in Erudin, then a Ro's Breath potion trade through Dargon/Arantir Karondor in Halas and a ring modified by Challice in Felwithe, then three separate staff-retrieval kills (Phinigel Autropos in Kedge Keep, Venril Sathir in Karnor's Castle, an enraged golem in Plane of Fear) combined via Kandin Firepot in Butcherblock Mountains, final turn-in back through Arantir to Solomen for the Staff of the Four)
+- [ ] Zimel's Blades (SoulFire) (real questline, not a quest group -- Kalatrina Plossen in North Freeport starts an 18-step chain: Guard Alayle's flier, Rashinda Elore, Groflah Steadirt, Tykar Renlin's Bunker Cell #1, a West Freeport Arena prisoner, Assistant Kiolna's Sealed Note, several Merko Quetalis testimony-token turn-ins including a Guard Willia kill, a Xicotl kill in Mistmoore Castle for the Glowing Sword Hilt, a Sir Lucan D'Lere kill for Testimony of Truth, Valeron Dushire's Brilliant Sword of Faith, ending in a Brother Hayle hand-in at Splitpaw Lair for SoulFire; designed for Paladin, all classes can start it)
+
+If a similar class-progression page turns up elsewhere in the alphabetical list above, move it here rather than treating it as a normal one-line quest.
+
+## Status
+
+Every alphabetical A-Z checklist entry above is now checked off, modeled, or explicitly skipped/deferred with an inline annotation (migration 098, 2026-07-21). What's left is entirely in the "Quest Groups (and one real Questline)" tracking section above -- the per-class Epic Quest/armor-progression clusters and other real questlines that still need their own dedicated research pass.
+
+
+
+
+
+
+
