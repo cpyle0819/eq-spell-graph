@@ -89467,6 +89467,314 @@
         "size": "Small",
         "source": "Crafted Armor Quests: Pauldron reward (Ulan Meadowgreen, Southern Karana)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "label": "An Undead Knight (Left)",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "label": "An Undead Knight (Right)",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:darkforge-armor-quests",
+        "label": "Darkforge Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Two undead knights in the Temple of Solusek Ro each trade a set of quest items for one piece of Darkforge armor. Seven independent sub-quests, no ordering between them (the left knight has four pieces, the right knight has three).",
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-helm",
+        "label": "Darkforge Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Helm, a Decayed Visor, and 2 Damaged Militia Helms to An Undead Knight (Left) in the Temple of Solusek Ro for the Darkforge Helm.",
+        "steps": [
+          "Gather a Decayed Helm, a Decayed Visor, and 2 Damaged Militia Helms",
+          "Turn them in to An Undead Knight (Left) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-helm",
+        "label": "Darkforge Helm",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "int": 5
+        },
+        "resists": {
+          "fire": 5,
+          "disease": 5,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "weight": 3,
+        "source": "Darkforge Armor Quests: Helm reward (An Undead Knight (Left), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-breastplate",
+        "label": "Darkforge Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Chainmail, a Decayed Breastplate, and 2 Enchanted Platinum Bars to An Undead Knight (Left) in the Temple of Solusek Ro for the Darkforge Breastplate.",
+        "steps": [
+          "Gather a Decayed Chainmail, a Decayed Breastplate, and 2 Enchanted Platinum Bars",
+          "Turn them in to An Undead Knight (Left) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-breastplate",
+        "label": "Darkforge Breastplate",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 20,
+        "stats": {
+          "sta": 10
+        },
+        "resists": {
+          "magic": 3
+        },
+        "weight": 5,
+        "source": "Darkforge Armor Quests: Breastplate reward (An Undead Knight (Left), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-vambraces",
+        "label": "Darkforge Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Left Vambrace, a Decayed Right Vambrace, and a Qeynos Kite Shield to An Undead Knight (Left) in the Temple of Solusek Ro for the Darkforge Vambraces.",
+        "steps": [
+          "Gather a Decayed Left Vambrace, a Decayed Right Vambrace, and a Qeynos Kite Shield",
+          "Turn them in to An Undead Knight (Left) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-vambraces",
+        "label": "Darkforge Vambraces",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "str": 4
+        },
+        "weight": 3.2,
+        "source": "Darkforge Armor Quests: Vambraces reward (An Undead Knight (Left), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-bracer",
+        "label": "Darkforge Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Left Bracer, a Decayed Right Bracer, and a Broken Minotaur Lord's Horn to An Undead Knight (Left) in the Temple of Solusek Ro for the Darkforge Bracer.",
+        "steps": [
+          "Gather a Decayed Left Bracer, a Decayed Right Bracer, and a Broken Minotaur Lord's Horn",
+          "Turn them in to An Undead Knight (Left) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-bracer",
+        "label": "Darkforge Bracer",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "dex": 3
+        },
+        "weight": 2,
+        "source": "Darkforge Armor Quests: Bracer reward (An Undead Knight (Left), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-gauntlets",
+        "label": "Darkforge Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Left Gauntlet, a Decayed Right Gauntlet, and an Enchanted Platinum Bar to An Undead Knight (Right) in the Temple of Solusek Ro for the Darkforge Gauntlets.",
+        "steps": [
+          "Gather a Decayed Left Gauntlet, a Decayed Right Gauntlet, and an Enchanted Platinum Bar",
+          "Turn them in to An Undead Knight (Right) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-gauntlets",
+        "label": "Darkforge Gauntlets",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "dex": 2
+        },
+        "resists": {
+          "magic": 5
+        },
+        "weight": 2.5,
+        "source": "Darkforge Armor Quests: Gauntlets reward (An Undead Knight (Right), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-greaves",
+        "label": "Darkforge Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Left Legplate, a Decayed Right Legplate, and 2 Melatite to An Undead Knight (Right) in the Temple of Solusek Ro for the Darkforge Greaves.",
+        "steps": [
+          "Gather a Decayed Left Legplate, a Decayed Right Legplate, and 2 Melatite",
+          "Turn them in to An Undead Knight (Right) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-greaves",
+        "label": "Darkforge Greaves",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 13,
+        "stats": {
+          "sta": 9
+        },
+        "resists": {
+          "magic": 3
+        },
+        "weight": 3.7,
+        "source": "Darkforge Armor Quests: Greaves reward (An Undead Knight (Right), Temple of Solusek Ro)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:darkforge-armor-quests-boots",
+        "label": "Darkforge Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "shadow knight"
+        ],
+        "minLevel": 33,
+        "description": "Turn in a Decayed Left Boot, a Decayed Right Boot, and 2 Fairy Dust to An Undead Knight (Right) in the Temple of Solusek Ro for the Darkforge Boots.",
+        "steps": [
+          "Gather a Decayed Left Boot, a Decayed Right Boot, and 2 Fairy Dust",
+          "Turn them in to An Undead Knight (Right) in the Temple of Solusek Ro"
+        ],
+        "wiki_title": "Darkforge Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:darkforge-boots",
+        "label": "Darkforge Boots",
+        "type": "item",
+        "classes": [
+          "shadow knight"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 11,
+        "stats": {
+          "sta": 3
+        },
+        "weight": 1.5,
+        "source": "Darkforge Armor Quests: Boots reward (An Undead Knight (Right), Temple of Solusek Ro)"
+      }
     }
   ],
   "edges": [
@@ -205024,6 +205332,326 @@
         "id": "e-rewards-14390",
         "source": "quest:crafted-armor-quests-pauldron",
         "target": "item:crafted-pauldron",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14391",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14392",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14393",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14394",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14395",
+        "source": "quest_group:darkforge-armor-quests",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14396",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "quest:darkforge-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14397",
+        "source": "quest:darkforge-armor-quests-helm",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14398",
+        "source": "quest:darkforge-armor-quests-helm",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14399",
+        "source": "quest:darkforge-armor-quests-helm",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14400",
+        "source": "quest:darkforge-armor-quests-helm",
+        "target": "item:darkforge-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14401",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "quest:darkforge-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14402",
+        "source": "quest:darkforge-armor-quests-breastplate",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14403",
+        "source": "quest:darkforge-armor-quests-breastplate",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14404",
+        "source": "quest:darkforge-armor-quests-breastplate",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14405",
+        "source": "quest:darkforge-armor-quests-breastplate",
+        "target": "item:darkforge-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14406",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "quest:darkforge-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14407",
+        "source": "quest:darkforge-armor-quests-vambraces",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14408",
+        "source": "quest:darkforge-armor-quests-vambraces",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14409",
+        "source": "quest:darkforge-armor-quests-vambraces",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14410",
+        "source": "quest:darkforge-armor-quests-vambraces",
+        "target": "item:darkforge-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14411",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-left",
+        "target": "quest:darkforge-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14412",
+        "source": "quest:darkforge-armor-quests-bracer",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14413",
+        "source": "quest:darkforge-armor-quests-bracer",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14414",
+        "source": "quest:darkforge-armor-quests-bracer",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14415",
+        "source": "quest:darkforge-armor-quests-bracer",
+        "target": "item:darkforge-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14416",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "target": "quest:darkforge-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14417",
+        "source": "quest:darkforge-armor-quests-gauntlets",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14418",
+        "source": "quest:darkforge-armor-quests-gauntlets",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14419",
+        "source": "quest:darkforge-armor-quests-gauntlets",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14420",
+        "source": "quest:darkforge-armor-quests-gauntlets",
+        "target": "item:darkforge-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14421",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "target": "quest:darkforge-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14422",
+        "source": "quest:darkforge-armor-quests-greaves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14423",
+        "source": "quest:darkforge-armor-quests-greaves",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14424",
+        "source": "quest:darkforge-armor-quests-greaves",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14425",
+        "source": "quest:darkforge-armor-quests-greaves",
+        "target": "item:darkforge-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14426",
+        "source": "npc:temple-of-solusek-ro:an-undead-knight-right",
+        "target": "quest:darkforge-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14427",
+        "source": "quest:darkforge-armor-quests-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14428",
+        "source": "quest:darkforge-armor-quests-boots",
+        "target": "zone:temple-of-solusek-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14429",
+        "source": "quest:darkforge-armor-quests-boots",
+        "target": "quest_group:darkforge-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14430",
+        "source": "quest:darkforge-armor-quests-boots",
+        "target": "item:darkforge-boots",
         "type": "rewards"
       }
     }
