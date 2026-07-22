@@ -87100,6 +87100,1921 @@
         "ac": 5,
         "source": "Wolf Hide Armor: Cape reward (Baobob Miller, Qeynos Hills)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:gandari",
+        "label": "Gandari",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kithicor-forest:leaf-falldim",
+        "label": "Leaf Falldim",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:ivy-etched-armor-quests",
+        "label": "Ivy Etched Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Gandari and Leaf Falldim in Kithicor Forest, at Indifferent or better faction, each trade a set of quest items for one piece of Ivy Etched armor. Seven independent sub-quests, no ordering between them (Gandari has four pieces, Leaf Falldim has three).",
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-tunic",
+        "label": "Ivy Etched Armor Quests: Tunic",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in the Skull of Meldrath, Right Rune of Ivy, and two Rubies to Gandari in Kithicor Forest for the Ivy Etched Tunic.",
+        "steps": [
+          "Gather the Skull of Meldrath, Right Rune of Ivy, and two Rubies",
+          "Turn them in to Gandari in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-tunic",
+        "label": "Ivy Etched Tunic",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 19,
+        "stats": {
+          "str": 3,
+          "wis": 3
+        },
+        "hp": 30,
+        "weight": 6,
+        "size": "Large",
+        "source": "Ivy Etched Armor Quests: Tunic reward (Gandari, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-helm",
+        "label": "Ivy Etched Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in a Cyclops Charm, Top Rune of Ivy, and one Sapphire to Gandari in Kithicor Forest for the Ivy Etched Helm.",
+        "steps": [
+          "Gather a Cyclops Charm, Top Rune of Ivy, and one Sapphire",
+          "Turn them in to Gandari in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-helm",
+        "label": "Ivy Etched Helm",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "wis": 5
+        },
+        "resists": {
+          "disease": 5
+        },
+        "weight": 3.5,
+        "size": "Small",
+        "source": "Ivy Etched Armor Quests: Helm reward (Gandari, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-bracer",
+        "label": "Ivy Etched Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in the Bottom Rune of Ivy, a Water Ring, and one Fire Emerald to Gandari in Kithicor Forest for the Ivy Etched Bracer.",
+        "steps": [
+          "Gather the Bottom Rune of Ivy, a Water Ring, and one Fire Emerald",
+          "Turn them in to Gandari in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-bracer",
+        "label": "Ivy Etched Bracer",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 9,
+        "stats": {
+          "dex": 2
+        },
+        "resists": {
+          "poison": 3
+        },
+        "weight": 2.3,
+        "size": "Small",
+        "source": "Ivy Etched Armor Quests: Bracer reward (Gandari, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-sleeves",
+        "label": "Ivy Etched Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in the Heart of Fire, Left Rune of Ivy, and two Star Rubies to Gandari in Kithicor Forest for the Ivy Etched Sleeves.",
+        "steps": [
+          "Gather the Heart of Fire, Left Rune of Ivy, and two Star Rubies",
+          "Turn them in to Gandari in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-sleeves",
+        "label": "Ivy Etched Sleeves",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 10,
+        "stats": {
+          "str": 4
+        },
+        "weight": 3.7,
+        "size": "Small",
+        "source": "Ivy Etched Armor Quests: Sleeves reward (Gandari, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-boots",
+        "label": "Ivy Etched Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in a Bar of Ronium, Mistmoore Granite, and 2000 gold (must be gold, not platinum) to Leaf Falldim in Kithicor Forest for the Ivy Etched Boots.",
+        "steps": [
+          "Gather a Bar of Ronium, Mistmoore Granite, and 2000 gold (must be gold, not platinum)",
+          "Turn them in to Leaf Falldim in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-boots",
+        "label": "Ivy Etched Boots",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 10,
+        "stats": {
+          "sta": 5
+        },
+        "weight": 3.6,
+        "size": "Medium",
+        "source": "Ivy Etched Armor Quests: Boots reward (Leaf Falldim, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-gauntlets",
+        "label": "Ivy Etched Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in Broken Bow Part A and Broken Bow Part B to Leaf Falldim in Kithicor Forest for the Ivy Etched Gauntlets.",
+        "steps": [
+          "Gather Broken Bow Part A and Broken Bow Part B",
+          "Turn them in to Leaf Falldim in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-gauntlets",
+        "label": "Ivy Etched Gauntlets",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 11,
+        "resists": {
+          "fire": 7,
+          "cold": 7
+        },
+        "weight": 2.8,
+        "size": "Small",
+        "source": "Ivy Etched Armor Quests: Gauntlets reward (Leaf Falldim, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:ivy-etched-armor-quests-leggings",
+        "label": "Ivy Etched Armor Quests: Leggings",
+        "type": "quest",
+        "classes": [
+          "ranger"
+        ],
+        "minLevel": 35,
+        "description": "Turn in six specific arrows (from Brownie Outcasts), the Quiver of Kithicor, and the Star of Odus to Leaf Falldim in Kithicor Forest for the Ivy Etched Leggings.",
+        "steps": [
+          "Gather six specific arrows (from Brownie Outcasts), the Quiver of Kithicor, and the Star of Odus",
+          "Turn them in to Leaf Falldim in Kithicor Forest"
+        ],
+        "wiki_title": "Ivy Etched Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:ivy-etched-leggings",
+        "label": "Ivy Etched Leggings",
+        "type": "item",
+        "classes": [
+          "ranger"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "lore": true,
+        "ac": 12,
+        "stats": {
+          "agi": 5
+        },
+        "resists": {
+          "fire": 5,
+          "cold": 5
+        },
+        "weight": 4.2,
+        "size": "Large",
+        "source": "Ivy Etched Armor Quests: Leggings reward (Leaf Falldim, Kithicor Forest)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:kael-drakkal:ulkar-jollkarek",
+        "label": "Ulkar Jollkarek",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:wizard-kael-armor-quests",
+        "label": "Wizard Kael Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Ulkar Jollkarek in Kael Drakkel, at Ally faction, trades an Ancient Silk armor piece plus three matching gems for its Invoker counterpart. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-helm",
+        "label": "Wizard Kael Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Turban plus 3 Crushed Flame Opal to Ulkar Jollkarek in Kael Drakkel for the Circlet of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Turban and 3 Crushed Flame Opal",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:circlet-of-the-invoker",
+        "label": "Circlet of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "sta": 7,
+          "int": 6
+        },
+        "mana": 45,
+        "resists": {
+          "disease": 5,
+          "magic": 8
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Helm reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-robe",
+        "label": "Wizard Kael Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Robe plus 3 Pristine Emerald to Ulkar Jollkarek in Kael Drakkel for the Robe of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Robe and 3 Pristine Emerald",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:robe-of-the-invoker",
+        "label": "Robe of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 14,
+        "stats": {
+          "sta": 15,
+          "int": 14
+        },
+        "mana": 90,
+        "hp": 50,
+        "resists": {
+          "fire": 10,
+          "disease": 7,
+          "magic": 7,
+          "poison": 7
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Robe reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-sleeves",
+        "label": "Wizard Kael Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Sleeves plus 3 Flawed Topaz to Ulkar Jollkarek in Kael Drakkel for the Sleeves of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sleeves-of-the-invoker",
+        "label": "Sleeves of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 8,
+        "stats": {
+          "sta": 8,
+          "int": 5
+        },
+        "mana": 35,
+        "hp": 20,
+        "resists": {
+          "cold": 4
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Sleeves reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-bracer",
+        "label": "Wizard Kael Armor Quests: Bracer",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Wristband plus 3 Crushed Onyx Sapphire to Ulkar Jollkarek in Kael Drakkel for the Bangle of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Wristband and 3 Crushed Onyx Sapphire",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:bangle-of-the-invoker",
+        "label": "Bangle of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "int": 2,
+          "agi": 5
+        },
+        "mana": 20,
+        "hp": 10,
+        "resists": {
+          "fire": 4,
+          "disease": 4,
+          "cold": 3,
+          "magic": 2,
+          "poison": 2
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Bracer reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-gloves",
+        "label": "Wizard Kael Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Gloves plus 3 Crushed Topaz to Ulkar Jollkarek in Kael Drakkel for the Gloves of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gloves-of-the-invoker",
+        "label": "Gloves of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "int": 10,
+          "agi": 9
+        },
+        "mana": 35,
+        "hp": 20,
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 2,
+          "poison": 3
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Gloves reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-leggings",
+        "label": "Wizard Kael Armor Quests: Leggings",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Pantaloons plus 3 Nephrite to Ulkar Jollkarek in Kael Drakkel for the Pants of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:pants-of-the-invoker",
+        "label": "Pants of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 9,
+        "stats": {
+          "sta": 5,
+          "int": 5
+        },
+        "mana": 10,
+        "hp": 10,
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 3,
+          "poison": 3
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Leggings reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-kael-armor-quests-boots",
+        "label": "Wizard Kael Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in an Ancient Silk Boots plus 3 Crushed Jaundice Gem to Ulkar Jollkarek in Kael Drakkel for the Boots of the Invoker.",
+        "steps": [
+          "Gather an Ancient Silk Boots and 3 Crushed Jaundice Gem",
+          "Turn them in to Ulkar Jollkarek in Kael Drakkel"
+        ],
+        "wiki_title": "Wizard Kael Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:boots-of-the-invoker",
+        "label": "Boots of the Invoker",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 3,
+          "int": 2
+        },
+        "mana": 35,
+        "hp": 20,
+        "resists": {
+          "fire": 3,
+          "disease": 3,
+          "cold": 3,
+          "magic": 3,
+          "poison": 3
+        },
+        "weight": 0.1,
+        "source": "Wizard Kael Armor Quests: Boots reward (Ulkar Jollkarek, Kael Drakkal)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:skyshrine:elaend-fedhar",
+        "label": "Elaend Fe`Dhar",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:wizard-skyshrine-armor-quests",
+        "label": "Wizard Skyshrine Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Elaend Fe`Dhar, in a room atop the Skyshrine Tower, at Ally faction, trades a Tattered Silk armor piece plus three matching gems for its Icicle counterpart. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-cap",
+        "label": "Wizard Skyshrine Armor Quests: Cap",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Turban plus 3 Crushed Flame Opal to Elaend Fe`Dhar in Skyshrine for the Icicle Circlet.",
+        "steps": [
+          "Gather a Tattered Silk Turban and 3 Crushed Flame Opal",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-circlet",
+        "label": "Icicle Circlet",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "sta": 7,
+          "int": 7
+        },
+        "hp": 30,
+        "mana": 35,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Cap reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-robe",
+        "label": "Wizard Skyshrine Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Robe plus 3 Pristine Emerald to Elaend Fe`Dhar in Skyshrine for the Robe of Icicles.",
+        "steps": [
+          "Gather a Tattered Silk Robe and 3 Pristine Emerald",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:robe-of-icicles",
+        "label": "Robe of Icicles",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "str": 2,
+          "sta": 15,
+          "int": 15
+        },
+        "hp": 60,
+        "mana": 90,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Robe reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "label": "Wizard Skyshrine Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Sleeves plus 3 Flawed Topaz to Elaend Fe`Dhar in Skyshrine for the Icicle Sleeves.",
+        "steps": [
+          "Gather a Tattered Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-sleeves",
+        "label": "Icicle Sleeves",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "sta": 9,
+          "int": 6
+        },
+        "hp": 35,
+        "mana": 35,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Sleeves reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "label": "Wizard Skyshrine Armor Quests: Wristbands",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Wristband plus 3 Crushed Onyx Sapphire to Elaend Fe`Dhar in Skyshrine for the Icicle Bracelet.",
+        "steps": [
+          "Gather a Tattered Silk Wristband and 3 Crushed Onyx Sapphire",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-bracelet",
+        "label": "Icicle Bracelet",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "int": 6,
+          "agi": 5
+        },
+        "hp": 15,
+        "mana": 25,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Wristbands reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-gloves",
+        "label": "Wizard Skyshrine Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Gloves plus 3 Crushed Topaz to Elaend Fe`Dhar in Skyshrine for the Icicle Gloves.",
+        "steps": [
+          "Gather a Tattered Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-gloves",
+        "label": "Icicle Gloves",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "sta": 3,
+          "int": 10,
+          "agi": 9
+        },
+        "hp": 15,
+        "mana": 35,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Gloves reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-leggings",
+        "label": "Wizard Skyshrine Armor Quests: Leggings",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Pantaloons plus 3 Nephrite to Elaend Fe`Dhar in Skyshrine for the Icicle Pantaloons.",
+        "steps": [
+          "Gather a Tattered Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-pantaloons",
+        "label": "Icicle Pantaloons",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 8,
+          "int": 3
+        },
+        "hp": 25,
+        "mana": 40,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Leggings reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-skyshrine-armor-quests-boots",
+        "label": "Wizard Skyshrine Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Tattered Silk Boots plus 3 Crushed Jaundice Gem to Elaend Fe`Dhar in Skyshrine for the Icicle Boots.",
+        "steps": [
+          "Gather a Tattered Silk Boots and 3 Crushed Jaundice Gem",
+          "Turn them in to Elaend Fe`Dhar in Skyshrine"
+        ],
+        "wiki_title": "Wizard Skyshrine Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:icicle-boots",
+        "label": "Icicle Boots",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "sta": 5
+        },
+        "hp": 25,
+        "mana": 45,
+        "weight": 0.1,
+        "source": "Wizard Skyshrine Armor Quests: Boots reward (Elaend Fe`Dhar, Skyshrine)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:thurgadin:mauren-frostbeard",
+        "label": "Mauren Frostbeard",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:wizard-thurgadin-armor-quests",
+        "label": "Wizard Thurgadin Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Mauren Frostbeard in Thurgadin trades a Torn Enchanted Silk armor piece plus three matching gems for its Sage's counterpart. Seven independent sub-quests, no ordering between them.",
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-helm",
+        "label": "Wizard Thurgadin Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Turban plus 3 Crushed Flame Opal to Mauren Frostbeard in Thurgadin for the Sage's Crown.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Turban and 3 Crushed Flame Opal",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-crown",
+        "label": "Sage's Crown",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "sta": 6,
+          "int": 5
+        },
+        "mana": 35,
+        "resists": {
+          "fire": 2,
+          "magic": 7
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Helm reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-robe",
+        "label": "Wizard Thurgadin Armor Quests: Robe",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Robe plus 3 Pristine Emerald to Mauren Frostbeard in Thurgadin for the Sage's Robe.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Robe and 3 Pristine Emerald",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-robe",
+        "label": "Sage's Robe",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "sta": 15,
+          "int": 14
+        },
+        "hp": 30,
+        "mana": 90,
+        "resists": {
+          "fire": 5,
+          "disease": 5,
+          "cold": 5,
+          "magic": 5,
+          "poison": 5
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Robe reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "label": "Wizard Thurgadin Armor Quests: Sleeves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Sleeves plus 3 Flawed Topaz to Mauren Frostbeard in Thurgadin for the Sage's Sleeves.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Sleeves and 3 Flawed Topaz",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-sleeves",
+        "label": "Sage's Sleeves",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 6,
+        "stats": {
+          "sta": 4,
+          "int": 5
+        },
+        "mana": 35,
+        "resists": {
+          "poison": 2
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Sleeves reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "label": "Wizard Thurgadin Armor Quests: Wristbands",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Wristband plus 3 Crushed Onyx Sapphire to Mauren Frostbeard in Thurgadin for the Sage's Bracelet.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Wristband and 3 Crushed Onyx Sapphire",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-bracelet",
+        "label": "Sage's Bracelet",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 4,
+        "stats": {
+          "int": 2,
+          "agi": 5
+        },
+        "mana": 20,
+        "resists": {
+          "fire": 2,
+          "disease": 1,
+          "cold": 2,
+          "magic": 1,
+          "poison": 1
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Wristbands reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-gloves",
+        "label": "Wizard Thurgadin Armor Quests: Gloves",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Gloves plus 3 Crushed Topaz to Mauren Frostbeard in Thurgadin for the Sage's Gloves.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Gloves and 3 Crushed Topaz",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-gloves",
+        "label": "Sage's Gloves",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "int": 9,
+          "agi": 9
+        },
+        "mana": 35,
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 1,
+          "poison": 2
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Gloves reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-leggings",
+        "label": "Wizard Thurgadin Armor Quests: Leggings",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Pantaloons plus 3 Nephrite to Mauren Frostbeard in Thurgadin for the Sage's Pantaloons.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Pantaloons and 3 Nephrite",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-pantaloons",
+        "label": "Sage's Pantaloons",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 7,
+        "stats": {
+          "sta": 5,
+          "int": 2
+        },
+        "resists": {
+          "fire": 2,
+          "disease": 1,
+          "cold": 2,
+          "magic": 3,
+          "poison": 1
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Leggings reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-thurgadin-armor-quests-boots",
+        "label": "Wizard Thurgadin Armor Quests: Boots",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Turn in a Torn Enchanted Silk Boots plus 3 Crushed Jaundice Gem to Mauren Frostbeard in Thurgadin for the Sage's Boots.",
+        "steps": [
+          "Gather a Torn Enchanted Silk Boots and 3 Crushed Jaundice Gem",
+          "Turn them in to Mauren Frostbeard in Thurgadin"
+        ],
+        "wiki_title": "Wizard Thurgadin Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sage-s-boots",
+        "label": "Sage's Boots",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 5,
+        "stats": {
+          "sta": 3
+        },
+        "mana": 35,
+        "resists": {
+          "fire": 2,
+          "disease": 2,
+          "cold": 2,
+          "magic": 2,
+          "poison": 2
+        },
+        "weight": 0.1,
+        "source": "Wizard Thurgadin Armor Quests: Boots reward (Mauren Frostbeard, Thurgadin)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:wizard-schrock",
+        "label": "Wizard Schrock",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:neasin-leornic",
+        "label": "Neasin Leornic",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:abec-lanor",
+        "label": "Abec Lanor",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:wizard-plane-of-sky-tests",
+        "label": "Wizard Plane of Sky Tests",
+        "type": "quest_group",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Wizard Schrock in the Plane of Sky directs players to Neasin Leornic or Abec Lanor; each offers three independent item-turn-in tests for a named reward. Six independent sub-quests, no ordering between them.",
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-concentration",
+        "label": "Wizard Plane of Sky Tests: Test of Concentration",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring an azure tessera, an augmentor's gem, and a grey damask cloak to Neasin Leornic in the Plane of Sky for the Augmentor's Mask.",
+        "steps": [
+          "Gather an azure tessera, an augmentor's gem, and a grey damask cloak",
+          "Turn them in to Neasin Leornic in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:augmentor-s-mask",
+        "label": "Augmentor's Mask",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Face"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 6,
+        "stats": {
+          "dex": 4,
+          "int": 9,
+          "agi": 8
+        },
+        "mana": 9,
+        "source": "Wizard Plane of Sky Tests: Test of Concentration reward (Neasin Leornic, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-focus",
+        "label": "Wizard Plane of Sky Tests: Test of Focus",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring an iron disk, an ethereal opal, and a woven skull cap to Neasin Leornic in the Plane of Sky for the Al'Kabor's Cap of Binding.",
+        "steps": [
+          "Gather an iron disk, an ethereal opal, and a woven skull cap",
+          "Turn them in to Neasin Leornic in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:al-kabor-s-cap-of-binding",
+        "label": "Al'Kabor's Cap of Binding",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 6,
+        "stats": {
+          "str": 5,
+          "int": 8
+        },
+        "mana": 20,
+        "source": "Wizard Plane of Sky Tests: Test of Focus reward (Neasin Leornic, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-meditation",
+        "label": "Wizard Plane of Sky Tests: Test of Meditation",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring a hyaline globe, a sky topaz, and high quality raiment to Neasin Leornic in the Plane of Sky for the Raiment of Thunder.",
+        "steps": [
+          "Gather a hyaline globe, a sky topaz, and high quality raiment",
+          "Turn them in to Neasin Leornic in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:raiment-of-thunder",
+        "label": "Raiment of Thunder",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 4,
+        "stats": {
+          "str": 5,
+          "int": 5
+        },
+        "mana": 15,
+        "source": "Wizard Plane of Sky Tests: Test of Meditation reward (Neasin Leornic, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-conception",
+        "label": "Wizard Plane of Sky Tests: Test of Conception",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring an efreeti statuette, a mithril air ring, and a box of winds to Abec Lanor in the Plane of Sky for the Solidate Mithril Ring.",
+        "steps": [
+          "Gather an efreeti statuette, a mithril air ring, and a box of winds",
+          "Turn them in to Abec Lanor in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:solidate-mithril-ring",
+        "label": "Solidate Mithril Ring",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Finger"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 4,
+        "stats": {
+          "str": 5,
+          "int": 5,
+          "agi": 6
+        },
+        "mana": 50,
+        "source": "Wizard Plane of Sky Tests: Test of Conception reward (Abec Lanor, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-visualization",
+        "label": "Wizard Plane of Sky Tests: Test of Visualization",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring a white-tipped spiroc feather, a pulsating sapphire, and an amethyst amulet to Abec Lanor in the Plane of Sky for the Amulet of the Void.",
+        "steps": [
+          "Gather a white-tipped spiroc feather, a pulsating sapphire, and an amethyst amulet",
+          "Turn them in to Abec Lanor in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:amulet-of-the-void",
+        "label": "Amulet of the Void",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Neck"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "ac": 4,
+        "stats": {
+          "dex": 5,
+          "cha": 5,
+          "int": 5,
+          "agi": 5
+        },
+        "mana": 50,
+        "source": "Wizard Plane of Sky Tests: Test of Visualization reward (Abec Lanor, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-plane-of-sky-test-of-preparation",
+        "label": "Wizard Plane of Sky Tests: Test of Preparation",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "description": "Bring an efreeti war staff, lush nectar, a copper air band, and a large sky sapphire to Abec Lanor in the Plane of Sky for the Nargon's Staff.",
+        "steps": [
+          "Gather an efreeti war staff, lush nectar, a copper air band, and a large sky sapphire",
+          "Turn them in to Abec Lanor in the Plane of Sky"
+        ],
+        "wiki_title": "Wizard Plane of Sky Tests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:nargon-s-staff",
+        "label": "Nargon's Staff",
+        "type": "item",
+        "classes": [
+          "wizard"
+        ],
+        "slots": [
+          "Primary"
+        ],
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "skill": "2H Blunt",
+        "damage": 16,
+        "stats": {
+          "int": 15
+        },
+        "mana": 75,
+        "source": "Wizard Plane of Sky Tests: Test of Preparation reward (Abec Lanor, Plane of Sky)"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:abscond",
+        "label": "Abscond",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "wizard",
+            "level": 52
+          }
+        ],
+        "description": "Teleports you to a relatively safe location in the current zone.",
+        "mana": 600,
+        "skill": "Alteration",
+        "castTime": 7,
+        "recastTime": 10,
+        "duration": "Instant",
+        "targetType": "Self",
+        "spellType": "Beneficial",
+        "resist": "Unresistable",
+        "icon": "G"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:tears-of-solusek",
+        "label": "Tears of Solusek",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "wizard",
+            "level": 55
+          }
+        ],
+        "description": "Tears of searing flame fall around your target, causing three waves of 645 damage.",
+        "mana": 408,
+        "skill": "Evocation",
+        "castTime": 5,
+        "recastTime": 12,
+        "duration": "Instant",
+        "targetType": "Targeted AE",
+        "spellType": "Detrimental",
+        "resist": "Fire (-10)",
+        "range": 150,
+        "icon": "O"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:thunderbold",
+        "label": "Thunderbold",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "wizard",
+            "level": 54
+          }
+        ],
+        "description": "Calls down a bolt of thunderous energy, causing 600 damage, and briefly stunning up to four creatures in the vicinity of your target.",
+        "mana": 300,
+        "skill": "Evocation",
+        "castTime": 3,
+        "recastTime": 18,
+        "duration": "Instant",
+        "targetType": "Targeted AE",
+        "spellType": "Detrimental",
+        "resist": "Magic (0)",
+        "range": 200,
+        "icon": "O"
+      }
+    },
+    {
+      "data": {
+        "id": "spell:tishans-discord",
+        "label": "Tishan`s Discord",
+        "type": "spell",
+        "class_levels": [
+          {
+            "class": "wizard",
+            "level": 51
+          }
+        ],
+        "description": "Strikes your target with energy, stunning them briefly and causing 260 damage.",
+        "mana": 130,
+        "skill": "Evocation",
+        "castTime": 2.25,
+        "recastTime": 18,
+        "fizzleTime": 2.5,
+        "duration": "Instant",
+        "targetType": "Single",
+        "spellType": "Detrimental",
+        "resist": "Magic (0)",
+        "range": 200,
+        "icon": "D"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:the-overthere:utandar-rizndown",
+        "label": "Utandar Rizndown",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-spells-evil",
+        "label": "Wizard Spells (Evil)",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 51,
+        "description": "Utandar Rizndown in The Overthere trades any one of four spell scrolls (Atol's Spectral Shackles, Inferno of Al'Kabor, Pillar of Frost, Tears of Druzzil) for a random one of four rarer spells (Abscond, Tears of Solusek, Thunderbold, Tishan`s Discord). Wizard only.",
+        "steps": [
+          "Bring one of the four scrolls to Utandar Rizndown in The Overthere"
+        ],
+        "wiki_title": "Wizard Spells (Evil)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:firiona-vie:barnal-flamehand",
+        "label": "Barnal Flamehand",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:wizard-spells-good",
+        "label": "Wizard Spells (Good)",
+        "type": "quest",
+        "classes": [
+          "wizard"
+        ],
+        "minLevel": 51,
+        "description": "Barnal Flamehand in Firiona Vie trades any one of four spell scrolls (Atol's Spectral Shackles, Inferno of Al'Kabor, Pillar of Frost, Tears of Druzzil) for a random one of four rarer spells (Abscond, Tears of Solusek, Thunderbold, Tishan`s Discord). Wizard only.",
+        "steps": [
+          "Bring one of the four scrolls to Barnal Flamehand in Firiona Vie"
+        ],
+        "wiki_title": "Wizard Spells (Good)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:neriak-commons:yegek-blarin",
+        "label": "Yegek B`Larin",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:yegeks-test-part-1",
+        "label": "Yegek's Test, Part 1",
+        "type": "quest",
+        "minLevel": 1,
+        "description": "Yegek B`Larin, inside the arena at the Indigo Brotherhood guild hall in Neriak Commons, requires Amiable or better faction. Fill an Empty Bag with 3 fire beetle eyes and 3 Bone Chips, combine them into a Bag of Eyes n Bones, and turn it in for coin and experience.",
+        "steps": [
+          "Reach at least Amiable faction with the Indigo Brotherhood",
+          "Fill an Empty Bag with 3 fire beetle eyes and 3 Bone Chips",
+          "Turn in the Bag of Eyes n Bones to Yegek B`Larin in Neriak Commons"
+        ],
+        "wiki_title": "Yegek's Test, Part 1"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:yegeks-test-part-2",
+        "label": "Yegek's Test, Part 2",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 1,
+        "description": "After Yegek's Test, Part 1, Yegek B`Larin in Neriak Commons takes the player's starting no-drop shortsword; a Teir`Dal Coward spawns to fight. Killing it and returning its Teir`Dal Head to Yegek yields the Sullied Two Handed Sword.",
+        "steps": [
+          "Complete Yegek's Test, Part 1",
+          "Hand your starting shortsword to Yegek B`Larin",
+          "Defeat the Teir`Dal Coward that spawns and loot its Teir`Dal Head",
+          "Return the head to Yegek B`Larin for the Sullied Two Handed Sword"
+        ],
+        "wiki_title": "Yegek's Test, Part 2"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sullied-two-handed-sword",
+        "label": "Sullied Two Handed Sword",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "dark elf"
+        ],
+        "skill": "2H Slashing",
+        "damage": 9,
+        "delay": 46,
+        "weight": 11.5,
+        "source": "Yegek's Test, Part 2 reward (Yegek B`Larin, Neriak Commons)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:yelinaks-head-quest",
+        "label": "Yelinak's Head Quest",
+        "type": "quest",
+        "minLevel": 53,
+        "description": "King Tormax in Kael Drakkel, at Indifferent or better faction (minimum Dubious): \"If you are able to destroy either of my mortal foes, bring me proof of your exploits and you will be known as the hero of Kael Drakkel.\" Defeating Lord Yelinak in Skyshrine and returning his head earns the Gauntlets of Dragon Slaying.",
+        "steps": [
+          "Reach at least Dubious faction with King Tormax",
+          "Defeat Lord Yelinak in Skyshrine and loot his head",
+          "Return the head to King Tormax in Kael Drakkel"
+        ],
+        "wiki_title": "Yelinak's Head Quest",
+        "era": "Velious"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gauntlets-of-dragon-slaying",
+        "label": "Gauntlets of Dragon Slaying",
+        "type": "item",
+        "slots": [
+          "Hands"
+        ],
+        "ac": 30,
+        "stats": {
+          "str": 9,
+          "wis": 9,
+          "int": 9
+        },
+        "hp": 75,
+        "mana": 75,
+        "resists": {
+          "magic": 9,
+          "fire": 9,
+          "cold": 9,
+          "poison": 9,
+          "disease": 9
+        },
+        "magic": true,
+        "lore": true,
+        "noTrade": true,
+        "effect": "Haste +41%",
+        "source": "Yelinak's Head Quest reward (King Tormax, Kael Drakkel)"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:jali-kaliio",
+        "label": "Jali Kaliio",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:stonebrunt-mountains:khonza-ayssla",
+        "label": "Khonza Ayssla",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest:yuios-illness",
+        "label": "Yuio's Illness",
+        "type": "quest",
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "minLevel": 1,
+        "description": "Jali Kaliio in Stonebrunt Mountains asks for help with his ill wife Yuio; Khonza Ayssla, the High Shaman, agrees to prepare a remedy from 2 Panda Claws, 2 Tiger Skins, 2 Asp Poison Sacs, 1 Bamboo Shoot, and 1 Kejekan Palm Fruit, combined in a provided satchel. Returning the Full Gathering Satchel to Khonza and delivering her Vial of Healing Liquid to Jali completes the quest for the Wakizashi of the Frozen Skies.",
+        "steps": [
+          "Speak to Jali Kaliio and agree to help his wife Yuio",
+          "Speak to Khonza Ayssla and agree to gather ingredients",
+          "Collect 2 Panda Claws, 2 Tiger Skins, 2 Asp Poison Sacs, 1 Bamboo Shoot, and 1 Kejekan Palm Fruit",
+          "Combine the ingredients in Khonza's satchel and return the Full Gathering Satchel to her",
+          "Deliver the Vial of Healing Liquid she gives you to Jali Kaliio"
+        ],
+        "wiki_title": "Yuio's Illness"
+      }
+    },
+    {
+      "data": {
+        "id": "item:wakizashi-of-the-frozen-skies",
+        "label": "Wakizashi of the Frozen Skies",
+        "type": "item",
+        "slots": [
+          "Primary"
+        ],
+        "classes": [
+          "warrior",
+          "paladin",
+          "ranger",
+          "shadow knight",
+          "bard",
+          "rogue"
+        ],
+        "skill": "1H Slashing",
+        "damage": 6,
+        "delay": 22,
+        "magic": true,
+        "effect": "Spirit Strike (Combat, instant cast) at Level 35",
+        "source": "Yuio's Illness reward (Jali Kaliio, Stonebrunt Mountains)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:zombie-flesh-quest",
+        "label": "Zombie Flesh Quest",
+        "type": "quest",
+        "classes": [
+          "cleric",
+          "paladin"
+        ],
+        "minLevel": 10,
+        "description": "Dleria Mausrel in Erudin, at Amiable or better faction, has players combine four Zombie Skins in a Zombie Flesh Bag into a Bag of Zombie Flesh; turning it in yields one of three tradeable items (Backpack, Belt Pouch, Raw-hide Sleeves) and one of four spells (Divine Aura, Flash of Light, Lull, Spook the Dead) -- the wiki lists both reward groups under one \"Reward\" section without specifying an exact selection rule.",
+        "steps": [
+          "Collect four Zombie Skins",
+          "Combine them in a Zombie Flesh Bag to create a Bag of Zombie Flesh",
+          "Return the Bag of Zombie Flesh to Dleria Mausrel in Erudin"
+        ],
+        "wiki_title": "Zombie Flesh Quest"
+      }
+    },
+    {
+      "data": {
+        "id": "item:belt-pouch",
+        "label": "Belt Pouch",
+        "type": "item",
+        "weight": 0.4,
+        "source": "Zombie Flesh Quest reward (Dleria Mausrel, Erudin)"
+      }
     }
   ],
   "edges": [
@@ -200347,6 +202262,1957 @@
         "source": "quest:wolf-hide-armor-cape",
         "target": "item:wolf-hide-cape",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14104",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14105",
+        "source": "npc:kithicor-forest:leaf-falldim",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14106",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14107",
+        "source": "npc:kithicor-forest:leaf-falldim",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14108",
+        "source": "quest_group:ivy-etched-armor-quests",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14109",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "quest:ivy-etched-armor-quests-tunic",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14110",
+        "source": "quest:ivy-etched-armor-quests-tunic",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14111",
+        "source": "quest:ivy-etched-armor-quests-tunic",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14112",
+        "source": "quest:ivy-etched-armor-quests-tunic",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14113",
+        "source": "quest:ivy-etched-armor-quests-tunic",
+        "target": "item:ivy-etched-tunic",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14114",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "quest:ivy-etched-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14115",
+        "source": "quest:ivy-etched-armor-quests-helm",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14116",
+        "source": "quest:ivy-etched-armor-quests-helm",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14117",
+        "source": "quest:ivy-etched-armor-quests-helm",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14118",
+        "source": "quest:ivy-etched-armor-quests-helm",
+        "target": "item:ivy-etched-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14119",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "quest:ivy-etched-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14120",
+        "source": "quest:ivy-etched-armor-quests-bracer",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14121",
+        "source": "quest:ivy-etched-armor-quests-bracer",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14122",
+        "source": "quest:ivy-etched-armor-quests-bracer",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14123",
+        "source": "quest:ivy-etched-armor-quests-bracer",
+        "target": "item:ivy-etched-bracer",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14124",
+        "source": "npc:kithicor-forest:gandari",
+        "target": "quest:ivy-etched-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14125",
+        "source": "quest:ivy-etched-armor-quests-sleeves",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14126",
+        "source": "quest:ivy-etched-armor-quests-sleeves",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14127",
+        "source": "quest:ivy-etched-armor-quests-sleeves",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14128",
+        "source": "quest:ivy-etched-armor-quests-sleeves",
+        "target": "item:ivy-etched-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14129",
+        "source": "npc:kithicor-forest:leaf-falldim",
+        "target": "quest:ivy-etched-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14130",
+        "source": "quest:ivy-etched-armor-quests-boots",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14131",
+        "source": "quest:ivy-etched-armor-quests-boots",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14132",
+        "source": "quest:ivy-etched-armor-quests-boots",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14133",
+        "source": "quest:ivy-etched-armor-quests-boots",
+        "target": "item:ivy-etched-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14134",
+        "source": "npc:kithicor-forest:leaf-falldim",
+        "target": "quest:ivy-etched-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14135",
+        "source": "quest:ivy-etched-armor-quests-gauntlets",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14136",
+        "source": "quest:ivy-etched-armor-quests-gauntlets",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14137",
+        "source": "quest:ivy-etched-armor-quests-gauntlets",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14138",
+        "source": "quest:ivy-etched-armor-quests-gauntlets",
+        "target": "item:ivy-etched-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14139",
+        "source": "npc:kithicor-forest:leaf-falldim",
+        "target": "quest:ivy-etched-armor-quests-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14140",
+        "source": "quest:ivy-etched-armor-quests-leggings",
+        "target": "zone:kithicor-forest",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14141",
+        "source": "quest:ivy-etched-armor-quests-leggings",
+        "target": "zone:kithicor-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14142",
+        "source": "quest:ivy-etched-armor-quests-leggings",
+        "target": "quest_group:ivy-etched-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14143",
+        "source": "quest:ivy-etched-armor-quests-leggings",
+        "target": "item:ivy-etched-leggings",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14144",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14145",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14146",
+        "source": "quest_group:wizard-kael-armor-quests",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14147",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14148",
+        "source": "quest:wizard-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14149",
+        "source": "quest:wizard-kael-armor-quests-helm",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14150",
+        "source": "quest:wizard-kael-armor-quests-helm",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14151",
+        "source": "quest:wizard-kael-armor-quests-helm",
+        "target": "item:circlet-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14152",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14153",
+        "source": "quest:wizard-kael-armor-quests-robe",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14154",
+        "source": "quest:wizard-kael-armor-quests-robe",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14155",
+        "source": "quest:wizard-kael-armor-quests-robe",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14156",
+        "source": "quest:wizard-kael-armor-quests-robe",
+        "target": "item:robe-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14157",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14158",
+        "source": "quest:wizard-kael-armor-quests-sleeves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14159",
+        "source": "quest:wizard-kael-armor-quests-sleeves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14160",
+        "source": "quest:wizard-kael-armor-quests-sleeves",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14161",
+        "source": "quest:wizard-kael-armor-quests-sleeves",
+        "target": "item:sleeves-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14162",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-bracer",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14163",
+        "source": "quest:wizard-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14164",
+        "source": "quest:wizard-kael-armor-quests-bracer",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14165",
+        "source": "quest:wizard-kael-armor-quests-bracer",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14166",
+        "source": "quest:wizard-kael-armor-quests-bracer",
+        "target": "item:bangle-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14167",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14168",
+        "source": "quest:wizard-kael-armor-quests-gloves",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14169",
+        "source": "quest:wizard-kael-armor-quests-gloves",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14170",
+        "source": "quest:wizard-kael-armor-quests-gloves",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14171",
+        "source": "quest:wizard-kael-armor-quests-gloves",
+        "target": "item:gloves-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14172",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14173",
+        "source": "quest:wizard-kael-armor-quests-leggings",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14174",
+        "source": "quest:wizard-kael-armor-quests-leggings",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14175",
+        "source": "quest:wizard-kael-armor-quests-leggings",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14176",
+        "source": "quest:wizard-kael-armor-quests-leggings",
+        "target": "item:pants-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14177",
+        "source": "npc:kael-drakkal:ulkar-jollkarek",
+        "target": "quest:wizard-kael-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14178",
+        "source": "quest:wizard-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14179",
+        "source": "quest:wizard-kael-armor-quests-boots",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14180",
+        "source": "quest:wizard-kael-armor-quests-boots",
+        "target": "quest_group:wizard-kael-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14181",
+        "source": "quest:wizard-kael-armor-quests-boots",
+        "target": "item:boots-of-the-invoker",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14182",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14183",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14184",
+        "source": "quest_group:wizard-skyshrine-armor-quests",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14185",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-cap",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14186",
+        "source": "quest:wizard-skyshrine-armor-quests-cap",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14187",
+        "source": "quest:wizard-skyshrine-armor-quests-cap",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14188",
+        "source": "quest:wizard-skyshrine-armor-quests-cap",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14189",
+        "source": "quest:wizard-skyshrine-armor-quests-cap",
+        "target": "item:icicle-circlet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14190",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14191",
+        "source": "quest:wizard-skyshrine-armor-quests-robe",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14192",
+        "source": "quest:wizard-skyshrine-armor-quests-robe",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14193",
+        "source": "quest:wizard-skyshrine-armor-quests-robe",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14194",
+        "source": "quest:wizard-skyshrine-armor-quests-robe",
+        "target": "item:robe-of-icicles",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14195",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14196",
+        "source": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14197",
+        "source": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14198",
+        "source": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14199",
+        "source": "quest:wizard-skyshrine-armor-quests-sleeves",
+        "target": "item:icicle-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14200",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14201",
+        "source": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14202",
+        "source": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14203",
+        "source": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14204",
+        "source": "quest:wizard-skyshrine-armor-quests-wristbands",
+        "target": "item:icicle-bracelet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14205",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14206",
+        "source": "quest:wizard-skyshrine-armor-quests-gloves",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14207",
+        "source": "quest:wizard-skyshrine-armor-quests-gloves",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14208",
+        "source": "quest:wizard-skyshrine-armor-quests-gloves",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14209",
+        "source": "quest:wizard-skyshrine-armor-quests-gloves",
+        "target": "item:icicle-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14210",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14211",
+        "source": "quest:wizard-skyshrine-armor-quests-leggings",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14212",
+        "source": "quest:wizard-skyshrine-armor-quests-leggings",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14213",
+        "source": "quest:wizard-skyshrine-armor-quests-leggings",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14214",
+        "source": "quest:wizard-skyshrine-armor-quests-leggings",
+        "target": "item:icicle-pantaloons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14215",
+        "source": "npc:skyshrine:elaend-fedhar",
+        "target": "quest:wizard-skyshrine-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14216",
+        "source": "quest:wizard-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14217",
+        "source": "quest:wizard-skyshrine-armor-quests-boots",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14218",
+        "source": "quest:wizard-skyshrine-armor-quests-boots",
+        "target": "quest_group:wizard-skyshrine-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14219",
+        "source": "quest:wizard-skyshrine-armor-quests-boots",
+        "target": "item:icicle-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14220",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14221",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14222",
+        "source": "quest_group:wizard-thurgadin-armor-quests",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14223",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14224",
+        "source": "quest:wizard-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14225",
+        "source": "quest:wizard-thurgadin-armor-quests-helm",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14226",
+        "source": "quest:wizard-thurgadin-armor-quests-helm",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14227",
+        "source": "quest:wizard-thurgadin-armor-quests-helm",
+        "target": "item:sage-s-crown",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14228",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-robe",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14229",
+        "source": "quest:wizard-thurgadin-armor-quests-robe",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14230",
+        "source": "quest:wizard-thurgadin-armor-quests-robe",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14231",
+        "source": "quest:wizard-thurgadin-armor-quests-robe",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14232",
+        "source": "quest:wizard-thurgadin-armor-quests-robe",
+        "target": "item:sage-s-robe",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14233",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14234",
+        "source": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14235",
+        "source": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14236",
+        "source": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14237",
+        "source": "quest:wizard-thurgadin-armor-quests-sleeves",
+        "target": "item:sage-s-sleeves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14238",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14239",
+        "source": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14240",
+        "source": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14241",
+        "source": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14242",
+        "source": "quest:wizard-thurgadin-armor-quests-wristbands",
+        "target": "item:sage-s-bracelet",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14243",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-gloves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14244",
+        "source": "quest:wizard-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14245",
+        "source": "quest:wizard-thurgadin-armor-quests-gloves",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14246",
+        "source": "quest:wizard-thurgadin-armor-quests-gloves",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14247",
+        "source": "quest:wizard-thurgadin-armor-quests-gloves",
+        "target": "item:sage-s-gloves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14248",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-leggings",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14249",
+        "source": "quest:wizard-thurgadin-armor-quests-leggings",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14250",
+        "source": "quest:wizard-thurgadin-armor-quests-leggings",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14251",
+        "source": "quest:wizard-thurgadin-armor-quests-leggings",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14252",
+        "source": "quest:wizard-thurgadin-armor-quests-leggings",
+        "target": "item:sage-s-pantaloons",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14253",
+        "source": "npc:thurgadin:mauren-frostbeard",
+        "target": "quest:wizard-thurgadin-armor-quests-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14254",
+        "source": "quest:wizard-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14255",
+        "source": "quest:wizard-thurgadin-armor-quests-boots",
+        "target": "zone:thurgadin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14256",
+        "source": "quest:wizard-thurgadin-armor-quests-boots",
+        "target": "quest_group:wizard-thurgadin-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14257",
+        "source": "quest:wizard-thurgadin-armor-quests-boots",
+        "target": "item:sage-s-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14258",
+        "source": "quest_group:wizard-thurgadin-armor-quests",
+        "target": "faction:coldain",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14259",
+        "source": "quest_group:wizard-thurgadin-armor-quests",
+        "target": "faction:dain-frostreaver-iv",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14260",
+        "source": "npc:plane-of-sky:wizard-schrock",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14261",
+        "source": "npc:plane-of-sky:neasin-leornic",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14262",
+        "source": "npc:plane-of-sky:abec-lanor",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14263",
+        "source": "npc:plane-of-sky:wizard-schrock",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14264",
+        "source": "quest_group:wizard-plane-of-sky-tests",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14265",
+        "source": "npc:plane-of-sky:neasin-leornic",
+        "target": "quest:wizard-plane-of-sky-test-of-concentration",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14266",
+        "source": "quest:wizard-plane-of-sky-test-of-concentration",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14267",
+        "source": "quest:wizard-plane-of-sky-test-of-concentration",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14268",
+        "source": "quest:wizard-plane-of-sky-test-of-concentration",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14269",
+        "source": "quest:wizard-plane-of-sky-test-of-concentration",
+        "target": "item:augmentor-s-mask",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14270",
+        "source": "npc:plane-of-sky:neasin-leornic",
+        "target": "quest:wizard-plane-of-sky-test-of-focus",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14271",
+        "source": "quest:wizard-plane-of-sky-test-of-focus",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14272",
+        "source": "quest:wizard-plane-of-sky-test-of-focus",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14273",
+        "source": "quest:wizard-plane-of-sky-test-of-focus",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14274",
+        "source": "quest:wizard-plane-of-sky-test-of-focus",
+        "target": "item:al-kabor-s-cap-of-binding",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14275",
+        "source": "npc:plane-of-sky:neasin-leornic",
+        "target": "quest:wizard-plane-of-sky-test-of-meditation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14276",
+        "source": "quest:wizard-plane-of-sky-test-of-meditation",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14277",
+        "source": "quest:wizard-plane-of-sky-test-of-meditation",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14278",
+        "source": "quest:wizard-plane-of-sky-test-of-meditation",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14279",
+        "source": "quest:wizard-plane-of-sky-test-of-meditation",
+        "target": "item:raiment-of-thunder",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14280",
+        "source": "npc:plane-of-sky:abec-lanor",
+        "target": "quest:wizard-plane-of-sky-test-of-conception",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14281",
+        "source": "quest:wizard-plane-of-sky-test-of-conception",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14282",
+        "source": "quest:wizard-plane-of-sky-test-of-conception",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14283",
+        "source": "quest:wizard-plane-of-sky-test-of-conception",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14284",
+        "source": "quest:wizard-plane-of-sky-test-of-conception",
+        "target": "item:solidate-mithril-ring",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14285",
+        "source": "npc:plane-of-sky:abec-lanor",
+        "target": "quest:wizard-plane-of-sky-test-of-visualization",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14286",
+        "source": "quest:wizard-plane-of-sky-test-of-visualization",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14287",
+        "source": "quest:wizard-plane-of-sky-test-of-visualization",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14288",
+        "source": "quest:wizard-plane-of-sky-test-of-visualization",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14289",
+        "source": "quest:wizard-plane-of-sky-test-of-visualization",
+        "target": "item:amulet-of-the-void",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14290",
+        "source": "npc:plane-of-sky:abec-lanor",
+        "target": "quest:wizard-plane-of-sky-test-of-preparation",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14291",
+        "source": "quest:wizard-plane-of-sky-test-of-preparation",
+        "target": "zone:plane-of-sky",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14292",
+        "source": "quest:wizard-plane-of-sky-test-of-preparation",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14293",
+        "source": "quest:wizard-plane-of-sky-test-of-preparation",
+        "target": "quest_group:wizard-plane-of-sky-tests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14294",
+        "source": "quest:wizard-plane-of-sky-test-of-preparation",
+        "target": "item:nargon-s-staff",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14295",
+        "source": "npc:the-overthere:utandar-rizndown",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14296",
+        "source": "npc:the-overthere:utandar-rizndown",
+        "target": "quest:wizard-spells-evil",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14297",
+        "source": "quest:wizard-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14298",
+        "source": "quest:wizard-spells-evil",
+        "target": "zone:the-overthere",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14299",
+        "source": "quest:wizard-spells-evil",
+        "target": "spell:abscond",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-evil"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14300",
+        "source": "quest:wizard-spells-evil",
+        "target": "spell:tears-of-solusek",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-evil"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14301",
+        "source": "quest:wizard-spells-evil",
+        "target": "spell:thunderbold",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-evil"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14302",
+        "source": "quest:wizard-spells-evil",
+        "target": "spell:tishans-discord",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-evil"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14303",
+        "source": "npc:firiona-vie:barnal-flamehand",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14304",
+        "source": "npc:firiona-vie:barnal-flamehand",
+        "target": "quest:wizard-spells-good",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14305",
+        "source": "quest:wizard-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14306",
+        "source": "quest:wizard-spells-good",
+        "target": "zone:firiona-vie",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14307",
+        "source": "quest:wizard-spells-good",
+        "target": "spell:abscond",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-good"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14308",
+        "source": "quest:wizard-spells-good",
+        "target": "spell:tears-of-solusek",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-good"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14309",
+        "source": "quest:wizard-spells-good",
+        "target": "spell:thunderbold",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-good"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14310",
+        "source": "quest:wizard-spells-good",
+        "target": "spell:tishans-discord",
+        "type": "rewards",
+        "randomGroup": "wizard-spells-good"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14311",
+        "source": "npc:neriak-commons:yegek-blarin",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14312",
+        "source": "npc:neriak-commons:yegek-blarin",
+        "target": "quest:yegeks-test-part-1",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14313",
+        "source": "quest:yegeks-test-part-1",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14314",
+        "source": "quest:yegeks-test-part-1",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14315",
+        "source": "npc:neriak-commons:yegek-blarin",
+        "target": "quest:yegeks-test-part-2",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14316",
+        "source": "quest:yegeks-test-part-2",
+        "target": "zone:neriak-commons",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14317",
+        "source": "quest:yegeks-test-part-2",
+        "target": "zone:neriak-commons",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-requires-14318",
+        "source": "quest:yegeks-test-part-2",
+        "target": "quest:yegeks-test-part-1",
+        "type": "requires"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14319",
+        "source": "quest:yegeks-test-part-2",
+        "target": "faction:indigo-brotherhood",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14320",
+        "source": "quest:yegeks-test-part-2",
+        "target": "item:sullied-two-handed-sword",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14321",
+        "source": "npc:kael-drakkal:king-tormax",
+        "target": "quest:yelinaks-head-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14322",
+        "source": "quest:yelinaks-head-quest",
+        "target": "zone:kael-drakkal",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14323",
+        "source": "quest:yelinaks-head-quest",
+        "target": "zone:kael-drakkal",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14324",
+        "source": "quest:yelinaks-head-quest",
+        "target": "zone:skyshrine",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14325",
+        "source": "quest:yelinaks-head-quest",
+        "target": "faction:king-tormax",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14326",
+        "source": "quest:yelinaks-head-quest",
+        "target": "faction:claws-of-veeshan",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14327",
+        "source": "quest:yelinaks-head-quest",
+        "target": "item:gauntlets-of-dragon-slaying",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14328",
+        "source": "npc:stonebrunt-mountains:jali-kaliio",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14329",
+        "source": "npc:stonebrunt-mountains:khonza-ayssla",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14330",
+        "source": "npc:stonebrunt-mountains:jali-kaliio",
+        "target": "quest:yuios-illness",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14331",
+        "source": "quest:yuios-illness",
+        "target": "zone:stonebrunt-mountains",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14332",
+        "source": "quest:yuios-illness",
+        "target": "zone:stonebrunt-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14333",
+        "source": "quest:yuios-illness",
+        "target": "faction:kejek-village",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14334",
+        "source": "quest:yuios-illness",
+        "target": "faction:peace-keepers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14335",
+        "source": "quest:yuios-illness",
+        "target": "item:wakizashi-of-the-frozen-skies",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14336",
+        "source": "npc:erudin:dleria-mausrel",
+        "target": "quest:zombie-flesh-quest",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14337",
+        "source": "quest:zombie-flesh-quest",
+        "target": "zone:erudin",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14338",
+        "source": "quest:zombie-flesh-quest",
+        "target": "zone:erudin",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14339",
+        "source": "quest:zombie-flesh-quest",
+        "target": "spell:divine-aura",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14340",
+        "source": "quest:zombie-flesh-quest",
+        "target": "spell:flash-of-light",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14341",
+        "source": "quest:zombie-flesh-quest",
+        "target": "spell:lull",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14342",
+        "source": "quest:zombie-flesh-quest",
+        "target": "spell:spook-the-dead",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-spell"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14343",
+        "source": "quest:zombie-flesh-quest",
+        "target": "item:backpack",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-item"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14344",
+        "source": "quest:zombie-flesh-quest",
+        "target": "item:belt-pouch",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-item"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14345",
+        "source": "quest:zombie-flesh-quest",
+        "target": "item:raw-hide-sleeves",
+        "type": "rewards",
+        "randomGroup": "zombie-flesh-quest-item"
       }
     }
   ]
