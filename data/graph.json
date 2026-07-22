@@ -89015,6 +89015,458 @@
         "weight": 0.4,
         "source": "Zombie Flesh Quest reward (Dleria Mausrel, Erudin)"
       }
+    },
+    {
+      "data": {
+        "id": "npc:southern-karana:shakrn-meadowgreen",
+        "label": "Shakrn Meadowgreen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:southern-karana:ulan-meadowgreen",
+        "label": "Ulan Meadowgreen",
+        "type": "npc",
+        "roles": [
+          "quest_giver"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "quest_group:crafted-armor-quests",
+        "label": "Crafted Armor Quests",
+        "type": "quest_group",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Shakrn Meadowgreen and Ulan Meadowgreen in Southern Karana each trade a set of quest items for one piece of Crafted armor. Eight independent sub-quests, no ordering between them (Shakrn has four pieces, Ulan has four).",
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-vambraces",
+        "label": "Crafted Armor Quests: Vambraces",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 2 Fire Emeralds and 1 Griffon Eye to Shakrn Meadowgreen in Southern Karana for the Crafted Vambraces.",
+        "steps": [
+          "Gather 2 Fire Emeralds and 1 Griffon Eye",
+          "Turn them in to Shakrn Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-vambraces",
+        "label": "Crafted Vambraces",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Arms"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "str": 1
+        },
+        "resists": {
+          "disease": 2,
+          "poison": 2
+        },
+        "weight": 6.5,
+        "size": "Small",
+        "source": "Crafted Armor Quests: Vambraces reward (Shakrn Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-plate-boots",
+        "label": "Crafted Armor Quests: Plate Boots",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 2 Sapphires and 1 Goblin Frost Totem to Shakrn Meadowgreen in Southern Karana for the Crafted Plate Boots.",
+        "steps": [
+          "Gather 2 Sapphires and 1 Goblin Frost Totem",
+          "Turn them in to Shakrn Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-plate-boots",
+        "label": "Crafted Plate Boots",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Feet"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "agi": 5
+        },
+        "weight": 6.5,
+        "size": "Medium",
+        "source": "Crafted Armor Quests: Plate Boots reward (Shakrn Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-gauntlets",
+        "label": "Crafted Armor Quests: Gauntlets",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 2 Star Rubies and 1 Aviak Charm to Shakrn Meadowgreen in Southern Karana for the Crafted Gauntlets.",
+        "steps": [
+          "Gather 2 Star Rubies and 1 Aviak Charm",
+          "Turn them in to Shakrn Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-gauntlets",
+        "label": "Crafted Gauntlets",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Hands"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "str": 5
+        },
+        "weight": 5,
+        "size": "Small",
+        "source": "Crafted Armor Quests: Gauntlets reward (Shakrn Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-helm",
+        "label": "Crafted Armor Quests: Helm",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 1 Ruby and 1 Goblin Fire Totem to Shakrn Meadowgreen in Southern Karana for the Crafted Helm.",
+        "steps": [
+          "Gather 1 Ruby and 1 Goblin Fire Totem",
+          "Turn them in to Shakrn Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-helm",
+        "label": "Crafted Helm",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Head"
+        ],
+        "magic": true,
+        "ac": 14,
+        "stats": {
+          "cha": 5,
+          "wis": 5
+        },
+        "resists": {
+          "magic": 2
+        },
+        "weight": 6,
+        "size": "Small",
+        "source": "Crafted Armor Quests: Helm reward (Shakrn Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-breastplate",
+        "label": "Crafted Armor Quests: Breastplate",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 3 Rubies and 1 Werewolf Talon to Ulan Meadowgreen in Southern Karana for the Crafted Breastplate.",
+        "steps": [
+          "Gather 3 Rubies and 1 Werewolf Talon",
+          "Turn them in to Ulan Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-breastplate",
+        "label": "Crafted Breastplate",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "slots": [
+          "Chest"
+        ],
+        "magic": true,
+        "ac": 22,
+        "stats": {
+          "sta": 5
+        },
+        "hp": 25,
+        "weight": 10,
+        "size": "Large",
+        "source": "Crafted Armor Quests: Breastplate reward (Ulan Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-bracers",
+        "label": "Crafted Armor Quests: Bracers",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 1 Sapphire and 1 Bunch of Optic Nerves to Ulan Meadowgreen in Southern Karana for the Crafted Bracers.",
+        "steps": [
+          "Gather 1 Sapphire and 1 Bunch of Optic Nerves",
+          "Turn them in to Ulan Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-bracers",
+        "label": "Crafted Bracers",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Wrist"
+        ],
+        "magic": true,
+        "ac": 10,
+        "stats": {
+          "dex": 2,
+          "int": 2
+        },
+        "weight": 4,
+        "size": "Small",
+        "source": "Crafted Armor Quests: Bracers reward (Ulan Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-greaves",
+        "label": "Crafted Armor Quests: Greaves",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 2 Star Rubies and 1 Dark Circlet to Ulan Meadowgreen in Southern Karana for the Crafted Greaves.",
+        "steps": [
+          "Gather 2 Star Rubies and 1 Dark Circlet",
+          "Turn them in to Ulan Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-greaves",
+        "label": "Crafted Greaves",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Legs"
+        ],
+        "magic": true,
+        "ac": 14,
+        "stats": {
+          "str": 1
+        },
+        "resists": {
+          "fire": 2,
+          "cold": 2
+        },
+        "weight": 7.5,
+        "size": "Large",
+        "source": "Crafted Armor Quests: Greaves reward (Ulan Meadowgreen, Southern Karana)"
+      }
+    },
+    {
+      "data": {
+        "id": "quest:crafted-armor-quests-pauldron",
+        "label": "Crafted Armor Quests: Pauldron",
+        "type": "quest",
+        "classes": [
+          "warrior"
+        ],
+        "minLevel": 25,
+        "description": "Turn in 1 Fire Emerald and three fractured rune pieces to Ulan Meadowgreen in Southern Karana for the Crafted Pauldron.",
+        "steps": [
+          "Gather 1 Fire Emerald and three fractured rune pieces",
+          "Turn them in to Ulan Meadowgreen in Southern Karana"
+        ],
+        "wiki_title": "Crafted Armor Quests"
+      }
+    },
+    {
+      "data": {
+        "id": "item:crafted-pauldron",
+        "label": "Crafted Pauldron",
+        "type": "item",
+        "classes": [
+          "warrior"
+        ],
+        "race": [
+          "barbarian",
+          "dark elf",
+          "dwarf",
+          "erudite",
+          "gnome",
+          "half elf",
+          "halfling",
+          "high elf",
+          "human",
+          "ogre",
+          "troll",
+          "wood elf"
+        ],
+        "slots": [
+          "Shoulders"
+        ],
+        "magic": true,
+        "ac": 12,
+        "stats": {
+          "str": 2
+        },
+        "resists": {
+          "magic": 2
+        },
+        "weight": 4.5,
+        "size": "Small",
+        "source": "Crafted Armor Quests: Pauldron reward (Ulan Meadowgreen, Southern Karana)"
+      }
     }
   ],
   "edges": [
@@ -204213,6 +204665,366 @@
         "target": "item:raw-hide-sleeves",
         "type": "rewards",
         "randomGroup": "zombie-flesh-quest-item"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14346",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14347",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14348",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14349",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14350",
+        "source": "quest_group:crafted-armor-quests",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14351",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "quest:crafted-armor-quests-vambraces",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14352",
+        "source": "quest:crafted-armor-quests-vambraces",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14353",
+        "source": "quest:crafted-armor-quests-vambraces",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14354",
+        "source": "quest:crafted-armor-quests-vambraces",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14355",
+        "source": "quest:crafted-armor-quests-vambraces",
+        "target": "item:crafted-vambraces",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14356",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "quest:crafted-armor-quests-plate-boots",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14357",
+        "source": "quest:crafted-armor-quests-plate-boots",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14358",
+        "source": "quest:crafted-armor-quests-plate-boots",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14359",
+        "source": "quest:crafted-armor-quests-plate-boots",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14360",
+        "source": "quest:crafted-armor-quests-plate-boots",
+        "target": "item:crafted-plate-boots",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14361",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "quest:crafted-armor-quests-gauntlets",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14362",
+        "source": "quest:crafted-armor-quests-gauntlets",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14363",
+        "source": "quest:crafted-armor-quests-gauntlets",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14364",
+        "source": "quest:crafted-armor-quests-gauntlets",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14365",
+        "source": "quest:crafted-armor-quests-gauntlets",
+        "target": "item:crafted-gauntlets",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14366",
+        "source": "npc:southern-karana:shakrn-meadowgreen",
+        "target": "quest:crafted-armor-quests-helm",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14367",
+        "source": "quest:crafted-armor-quests-helm",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14368",
+        "source": "quest:crafted-armor-quests-helm",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14369",
+        "source": "quest:crafted-armor-quests-helm",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14370",
+        "source": "quest:crafted-armor-quests-helm",
+        "target": "item:crafted-helm",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14371",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "quest:crafted-armor-quests-breastplate",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14372",
+        "source": "quest:crafted-armor-quests-breastplate",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14373",
+        "source": "quest:crafted-armor-quests-breastplate",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14374",
+        "source": "quest:crafted-armor-quests-breastplate",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14375",
+        "source": "quest:crafted-armor-quests-breastplate",
+        "target": "item:crafted-breastplate",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14376",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "quest:crafted-armor-quests-bracers",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14377",
+        "source": "quest:crafted-armor-quests-bracers",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14378",
+        "source": "quest:crafted-armor-quests-bracers",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14379",
+        "source": "quest:crafted-armor-quests-bracers",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14380",
+        "source": "quest:crafted-armor-quests-bracers",
+        "target": "item:crafted-bracers",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14381",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "quest:crafted-armor-quests-greaves",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14382",
+        "source": "quest:crafted-armor-quests-greaves",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14383",
+        "source": "quest:crafted-armor-quests-greaves",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14384",
+        "source": "quest:crafted-armor-quests-greaves",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14385",
+        "source": "quest:crafted-armor-quests-greaves",
+        "target": "item:crafted-greaves",
+        "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts-14386",
+        "source": "npc:southern-karana:ulan-meadowgreen",
+        "target": "quest:crafted-armor-quests-pauldron",
+        "type": "starts"
+      }
+    },
+    {
+      "data": {
+        "id": "e-starts_in-14387",
+        "source": "quest:crafted-armor-quests-pauldron",
+        "target": "zone:southern-karana",
+        "type": "starts_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-14388",
+        "source": "quest:crafted-armor-quests-pauldron",
+        "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-member_of-14389",
+        "source": "quest:crafted-armor-quests-pauldron",
+        "target": "quest_group:crafted-armor-quests",
+        "type": "member_of"
+      }
+    },
+    {
+      "data": {
+        "id": "e-rewards-14390",
+        "source": "quest:crafted-armor-quests-pauldron",
+        "target": "item:crafted-pauldron",
+        "type": "rewards"
       }
     }
   ]
