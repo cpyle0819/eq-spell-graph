@@ -47,17 +47,16 @@
 //
 // Layout: lore reads as the scroll's opening line, full width, before
 // anything else -- it's a fact about the zone as a whole, not paired
-// specifically with the map. Below that, `.map-block` (floor tabs + the
-// map image) spans the full width of the scroll and takes whatever height
-// its image naturally needs -- a portrait dungeon floor and a wide outdoor
-// zone both just render at their own aspect ratio, nothing crops or caps
-// them anymore. `.dossier-row` sits below that as the three side-by-side
-// tracks: Map Legend (this floor's key), Bestiary, Quests Here, each
-// flexing evenly since none of them needs to reserve room for the map
-// anymore. All three stack full-width below ~760px. `.map-block` and the
+// specifically with the map. Below that, `.map-block` (floor tabs, then a
+// `.map-row` pairing the map image with its own Map Legend column) spans
+// the full width of the scroll, but the row itself only takes the width
+// the map+legend pair actually need and centers as a unit -- see
+// decisions/zone-multi-floor-maps.md's later note for why this replaced
+// the legend's brief stint living down with Bestiary/Quests instead.
+// `.dossier-columns` sits below that as Bestiary + Quests Here,
+// side by side, stacking full-width below ~640px. `.map-block` and the
 // legend column each collapse via `hidden` when there's no map (or no
-// legend for the current floor) so Bestiary/Quests aren't left indented
-// into blank space that has nothing left to reserve it.
+// legend for the current floor).
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
 import "./ledger-item.js";
@@ -187,15 +186,18 @@ ${WIKI_LINK_CSS}
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-.dossier-row { display: flex; flex-direction: column; gap: 22px; }
-.dossier-divider[hidden] { display: none; }
-.dossier-divider { border-top: 1px solid var(--parch-line); }
-@media (min-width: 760px) {
-  .dossier-row { flex-direction: row; align-items: flex-start; gap: 24px; }
-  .map-legend-col[hidden] { display: none; }
-  .map-legend-col { flex: 1 1 0; min-width: 0; }
-  .dossier-divider { align-self: stretch; width: 0; border-top: none; border-left: 1px solid var(--parch-line); }
-  .dossier-columns { flex: 2 1 0; min-width: 0; }
+/* The map and its legend as one centered unit -- neither stretches to fill
+   the row, so a modest map (every source image so far tops out around
+   640px wide) plus a legend sized to its own text just sit side by side in
+   the middle of the scroll, not pinned to the left edge. Stacks (map on
+   top, legend below, both full width) under 760px, same breakpoint
+   .dossier-columns already used for its own collapse. */
+.map-row { display: flex; justify-content: center; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
+.map-row .map-legend-col { flex: 0 1 320px; min-width: 220px; }
+.map-row .map-legend-col[hidden] { display: none; }
+@media (max-width: 760px) {
+  .map-row { flex-direction: column; align-items: stretch; }
+  .map-row .map-legend-col { flex: none; }
 }
 
 .map-legend {
@@ -289,23 +291,22 @@ class ZoneDossier extends HTMLElement {
           <div class="dossier-body">
             <div class="map-block" hidden>
               <div class="floor-tabs" hidden></div>
-              <zone-map></zone-map>
-            </div>
-            <div class="dossier-row">
-              <div class="dossier-col map-legend-col" hidden>
-                <div class="dossier-col-label">Map Legend</div>
-                <ol class="map-legend"></ol>
+              <div class="map-row">
+                <zone-map></zone-map>
+                <div class="dossier-col map-legend-col" hidden>
+                  <div class="dossier-col-label">Map Legend</div>
+                  <ol class="map-legend"></ol>
+                </div>
               </div>
-              <div class="dossier-divider" hidden></div>
-              <div class="dossier-columns">
-                <div class="dossier-col">
-                  <div class="dossier-col-label">Bestiary</div>
-                  <div class="mob-list"></div>
-                </div>
-                <div class="dossier-col">
-                  <div class="dossier-col-label">Quests Here</div>
-                  <div class="quest-ledger"></div>
-                </div>
+            </div>
+            <div class="dossier-columns">
+              <div class="dossier-col">
+                <div class="dossier-col-label">Bestiary</div>
+                <div class="mob-list"></div>
+              </div>
+              <div class="dossier-col">
+                <div class="dossier-col-label">Quests Here</div>
+                <div class="quest-ledger"></div>
               </div>
             </div>
           </div>
@@ -356,7 +357,6 @@ class ZoneDossier extends HTMLElement {
 
     const legendColEl = this.shadowRoot.querySelector(".map-legend-col");
     legendColEl.hidden = !floor?.legend?.length;
-    this.shadowRoot.querySelector(".dossier-divider").hidden = !floor?.legend?.length;
     this.shadowRoot.querySelector(".map-legend").innerHTML = (floor?.legend || [])
       .map((entry) => `<li><span class="legend-key">${entry.key}</span><span>${entry.label}</span></li>`)
       .join("");

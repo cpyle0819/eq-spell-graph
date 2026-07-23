@@ -10,22 +10,20 @@
 // floor tabs that swap `src` between calls -- this component only ever
 // renders one image at a time and has no notion of "floors" itself.
 //
-// Image only -- the map's numbered/lettered key used to render here too,
-// but it moved out to zone-dossier.js's own `.map-legend` column, which
-// sits beside Bestiary/Quests Here rather than crammed under a narrow
-// image: legend entries are short phrases, closer in shape to a third list
-// column than to map decoration. zone-dossier.js still gates the legend
-// column on this component actually having a map to show.
+// Image only -- the map's numbered/lettered key renders in zone-dossier.js's
+// own `.map-legend` column instead, a sibling of this component inside its
+// `.map-row`, not markup nested in here: legend entries are short phrases,
+// closer in shape to a list than to map decoration, and zone-dossier.js
+// swaps both together when floor tabs change. zone-dossier.js gates the
+// legend column on this component actually having a map to show.
 //
-// No max-height cap on the image (there used to be one, back when the map
-// shared a row with Bestiary/Quests at a fixed narrow rail width) -- now
-// that zone-dossier.js gives this component the full width of the card,
-// every map just renders at its own natural size up to that width, however
-// tall that makes it; a 3-floor dungeon's portrait map and a wide outdoor
-// zone's landscape map both look right without either being cropped or
-// squeezed to match the other. Tried stretching a narrower source image to
-// fill the full width (`width: 100%`) instead -- upscaled past its native
-// resolution, every map just looked soft/blurry, so natural size stayed.
+// No max-height cap on the image -- every map just renders at its own
+// natural size, however tall that makes it; a 3-floor dungeon's portrait
+// map and a wide outdoor zone's landscape map both look right without
+// either being cropped or squeezed to match the other. Tried stretching a
+// narrower source image to fill available width (`width: 100%`) instead --
+// upscaled past its native resolution, every map just looked soft/blurry,
+// so natural size stayed.
 //
 // Collapses itself via the native `hidden` attribute (same convention as
 // status-panel.js's own `:host([hidden])`) when `src` is unset — most zones
