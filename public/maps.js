@@ -71,19 +71,19 @@ function populateZones(zones) {
 
 // A zone has its own facts (map, level range, quests, mobs) whether or not
 // a route to it was ever computed -- e.g. a spell vendor's zone link lands
-// here with only "to" set. destination.wikiTitle/lore/mapImage ride along
-// on /api/route's existing payload (src/graph.ts's getZoneVendorInfo)
-// rather than a second lookup: calling it with from===to still resolves (0
-// hops, see shortestPath's own from===to short-circuit) without implying a
-// real route exists. mapImage is a bare filename under public/maps/
-// (migration 061) -- resolved to a real path here since getZoneVendorInfo
-// only knows the filename, not the app's own static-asset layout; <zone-map>
-// hides itself when it's null (most zones, until sourcing catches up).
-// mobs comes from /api/mobs?zone= (getMobs() in src/graph.ts, decisions/
-// mob-node-type.md) -- real for the zones migration 060 has covered so far
-// (Oasis of Marr), an empty list everywhere else, same as it would be for a
-// genuinely uncatalogued zone. levelRange is still a stage-1 placeholder --
-// see zone-mock-data.js.
+// here with only "to" set. destination.wikiTitle/lore/maps ride along on
+// /api/route's existing payload (src/graph.ts's getZoneVendorInfo) rather
+// than a second lookup: calling it with from===to still resolves (0 hops,
+// see shortestPath's own from===to short-circuit) without implying a real
+// route exists. `maps` (migration 125, decisions/zone-multi-floor-maps.md)
+// is a one-entry-per-floor array; each entry's `image` is a bare filename
+// under public/maps/ -- resolved to a real path in zone-dossier itself,
+// since getZoneVendorInfo only knows the filename, not the app's own
+// static-asset layout. mobs comes from /api/mobs?zone= (getMobs() in
+// src/graph.ts, decisions/mob-node-type.md) -- real for the zones
+// migration 060+ has covered, an empty list everywhere else, same as it
+// would be for a genuinely uncatalogued zone. levelRange is still a
+// stage-1 placeholder -- see zone-mock-data.js.
 async function buildDossierData(to) {
   const zone = zonesByLabel.get(to);
   const [{ destination }, quests, mobs] = await Promise.all([
@@ -96,8 +96,7 @@ async function buildDossierData(to) {
     wikiTitle: destination?.wikiTitle,
     outOfEra: zone?.outOfEra,
     lore: destination?.lore,
-    mapImage: destination?.mapImage,
-    mapLegend: destination?.mapLegend,
+    maps: destination?.maps,
     levelRange: mockLevelRange(to),
     mobs,
     quests,

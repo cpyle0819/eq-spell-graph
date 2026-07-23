@@ -1,7 +1,6 @@
 // <zone-dossier></zone-dossier>, with `.setData({ zoneLabel, wikiTitle,
-// outOfEra, lore, levelRange, mapImage, mapLegend, mobs, quests })` set as
-// one atomic call (same contract shape as route-card/zone-card's own
-// setters). Renders
+// outOfEra, lore, levelRange, maps, mobs, quests })` set as one atomic call
+// (same contract shape as route-card/zone-card's own setters). Renders
 // everything issue #28 asked Maps to surface about a *destination* once a
 // traveler arrives: a map, a level range to judge the trip at a glance, who
 // lives there, and what quests are running. Sits below route-card in
@@ -27,38 +26,38 @@
 //
 // levelRange is still stage-1 placeholder data (public/zone-mock-data.js) --
 // see that file's own header for why: zone nodes carry no real level-range
-// field yet, unlike mobs and mapImage, which now do. zoneLabel/wikiTitle/
-// lore/mapImage/quests are real: wikiTitle/lore/mapImage ride along on the
+// field yet, unlike mobs and maps, which now do. zoneLabel/wikiTitle/
+// lore/maps/quests are real: wikiTitle/lore/maps ride along on the
 // existing /api/route destination payload (src/graph.ts's
 // getZoneVendorInfo, the same one route-card already reads) rather than a
 // separate lookup, and quests come straight from /api/quests?zone=, which
 // already supports this filter with no new plumbing (issue #28's own
 // Technical Notes).
 //
-// `mapImage` is a filename under public/maps/ (migration 061 and its own
-// header comment) -- resolved to a full path here and handed to the nested
+// `maps` (migration 125, decisions/zone-multi-floor-maps.md) is one entry
+// per floor: `{ label, image, legend }[]`. `image` is a filename under
+// public/maps/ -- resolved to a full path here and handed to the nested
 // <zone-map>, which collapses itself when there's no map yet (most zones,
-// until sourcing catches up). Its own file has the styling/hide logic.
-// `mapLegend` (also migration 061) is this component's own `.map-legend`
-// list, not <zone-map>'s -- a map's numbered key is short phrases, closer
-// in shape to a third list column than to map decoration, so it gets its
-// own place in the row layout beside Bestiary/Quests Here rather than being
-// squeezed under the (deliberately narrow) map image.
+// until sourcing catches up). A zone with more than one entry gets a row of
+// floor tabs above the map (label falling back to "Floor N" when
+// eqlwiki.com's own floor name wasn't captured); picking one switches both
+// the image and that floor's own `.map-legend` together, since a dungeon
+// floor's numbered key only makes sense next to its own map. Single-map
+// zones (the common case) never show tabs at all.
 //
 // Layout: lore reads as the scroll's opening line, full width, before
 // anything else -- it's a fact about the zone as a whole, not paired
-// specifically with the map the way it first shipped (sitting directly
-// under the map read as cramped, and the two aren't actually related).
-// Below that, on wide layouts .dossier-body is three side-by-side tracks --
-// .map-rail (the image, see zone-map.js for why it's capped at a fixed
-// width rather than filling whatever space it's given), .map-legend (its
-// key), then .dossier-columns (Bestiary/Quests Here, flexing to take
-// whatever's left) -- using width a portrait map would otherwise leave
-// empty on both sides of it. All three stack full-width, map image first,
-// below ~900px ("pop back down" rather than staying cramped at three
-// columns). .map-rail/.map-legend each collapse via `hidden` when there's
-// no map (or no legend) so Bestiary/Quests aren't left indented into blank
-// space that has nothing left to reserve it.
+// specifically with the map. Below that, `.map-block` (floor tabs + the
+// map image) spans the full width of the scroll and takes whatever height
+// its image naturally needs -- a portrait dungeon floor and a wide outdoor
+// zone both just render at their own aspect ratio, nothing crops or caps
+// them anymore. `.dossier-row` sits below that as the three side-by-side
+// tracks: Map Legend (this floor's key), Bestiary, Quests Here, each
+// flexing evenly since none of them needs to reserve room for the map
+// anymore. All three stack full-width below ~760px. `.map-block` and the
+// legend column each collapse via `hidden` when there's no map (or no
+// legend for the current floor) so Bestiary/Quests aren't left indented
+// into blank space that has nothing left to reserve it.
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
 import "./ledger-item.js";
@@ -166,35 +165,37 @@ ${WIKI_LINK_CSS}
 .dossier-lore[hidden] { display: none; }
 
 .dossier-body { display: flex; flex-direction: column; gap: 22px; }
-/* Unconstrained (full width, same as before the row layout existed) below
-   the row breakpoint -- capping either one narrow there would strand it
-   alone on its own row with blank space beside it, since Bestiary/Quests
-   wraps to a separate row underneath rather than actually sharing this
-   one. */
-.map-rail[hidden] { display: none; }
-.map-legend[hidden] { display: none; }
-/* Same hidden state as .map-rail (see render()) -- nothing to divide once
-   there's no map group on the left at all, so Bestiary/Quests just starts
-   the row. A plain horizontal rule below the row breakpoint (matching
-   .dossier-lore's own divider language) separating the stacked map+legend
-   block from the stacked Bestiary/Quests block underneath; the media query
-   below turns it into a full-height vertical rule between the two groups
-   once they're actually side by side. */
+
+.map-block[hidden] { display: none; }
+.map-block { margin-bottom: 4px; }
+
+.floor-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.floor-tabs[hidden] { display: none; }
+.floor-tab {
+  font-family: var(--font-display); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 7px 16px; border-radius: 4px 4px 0 0; cursor: pointer;
+  background: var(--panel-deep); color: var(--parch-ink-soft);
+  border: 1px solid var(--parch-line); border-bottom: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.floor-tab:hover:not(.active) { color: var(--parch-ink); }
+.floor-tab:focus-visible { outline: 2px solid var(--parch-accent); outline-offset: 2px; }
+.floor-tab.active {
+  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+  color: var(--parch-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.dossier-row { display: flex; flex-direction: column; gap: 22px; }
 .dossier-divider[hidden] { display: none; }
 .dossier-divider { border-top: 1px solid var(--parch-line); }
-@media (min-width: 900px) {
-  .dossier-body { flex-direction: row; align-items: flex-start; gap: 24px; }
-  /* Fixed, not just a minimum -- readability is the priority here (a
-     portrait zone map is mostly wasted at a phone-thumbnail size), and
-     moving the legend into its own track (below) plus the mob-list grid
-     fix (further below) means Bestiary/Quests no longer need the width
-     they used to just to keep a comfortable gap in front of the level
-     column. Legend is wide enough that its own longer entries (a full
-     sentence, not just a place name) don't wrap on nearly every line. */
-  .map-rail { flex: 0 0 300px; }
-  .map-legend { flex: 0 0 260px; }
+@media (min-width: 760px) {
+  .dossier-row { flex-direction: row; align-items: flex-start; gap: 24px; }
+  .map-legend-col[hidden] { display: none; }
+  .map-legend-col { flex: 1 1 0; min-width: 0; }
   .dossier-divider { align-self: stretch; width: 0; border-top: none; border-left: 1px solid var(--parch-line); }
-  .dossier-columns { flex: 1; min-width: 0; }
+  .dossier-columns { flex: 2 1 0; min-width: 0; }
 }
 
 .map-legend {
@@ -270,6 +271,7 @@ ${WIKI_LINK_CSS}
 
 class ZoneDossier extends HTMLElement {
   #data = null;
+  #activeFloor = 0;
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -285,35 +287,50 @@ class ZoneDossier extends HTMLElement {
         <div class="dossier-scroll">
           <p class="dossier-lore" hidden></p>
           <div class="dossier-body">
-            <div class="map-rail"><zone-map></zone-map></div>
-            <ol class="map-legend" hidden></ol>
-            <div class="dossier-divider" hidden></div>
-            <div class="dossier-columns">
-              <div class="dossier-col">
-                <div class="dossier-col-label">Bestiary</div>
-                <div class="mob-list"></div>
+            <div class="map-block" hidden>
+              <div class="floor-tabs" hidden></div>
+              <zone-map></zone-map>
+            </div>
+            <div class="dossier-row">
+              <div class="dossier-col map-legend-col" hidden>
+                <div class="dossier-col-label">Map Legend</div>
+                <ol class="map-legend"></ol>
               </div>
-              <div class="dossier-col">
-                <div class="dossier-col-label">Quests Here</div>
-                <div class="quest-ledger"></div>
+              <div class="dossier-divider" hidden></div>
+              <div class="dossier-columns">
+                <div class="dossier-col">
+                  <div class="dossier-col-label">Bestiary</div>
+                  <div class="mob-list"></div>
+                </div>
+                <div class="dossier-col">
+                  <div class="dossier-col-label">Quests Here</div>
+                  <div class="quest-ledger"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       `;
+      this.shadowRoot.querySelector(".floor-tabs").addEventListener("click", (e) => {
+        const btn = e.target.closest(".floor-tab");
+        if (!btn) return;
+        this.#activeFloor = Number(btn.dataset.index);
+        this.render();
+      });
     }
     this.render();
   }
 
   setData(data) {
     this.#data = data;
+    this.#activeFloor = 0;
     if (this.shadowRoot) this.render();
   }
 
   render() {
     const d = this.#data;
     if (!d) return;
-    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, mapImage, mapLegend, mobs, quests } = d;
+    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, maps, mobs, quests } = d;
 
     this.shadowRoot.querySelector(".zone-name").textContent = zoneLabel;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = wikiTitle ? wikiLink(wikiTitle) : "";
@@ -324,13 +341,23 @@ class ZoneDossier extends HTMLElement {
     loreEl.hidden = !lore;
     loreEl.textContent = lore || "";
 
-    this.shadowRoot.querySelector(".map-rail").hidden = !mapImage;
-    this.shadowRoot.querySelector(".dossier-divider").hidden = !mapImage;
-    this.shadowRoot.querySelector("zone-map").setData({ src: mapImage ? `maps/${mapImage}` : null, label: zoneLabel });
+    const floors = maps || [];
+    const floor = floors[this.#activeFloor];
 
-    const legendEl = this.shadowRoot.querySelector(".map-legend");
-    legendEl.hidden = !mapLegend?.length;
-    legendEl.innerHTML = (mapLegend || [])
+    this.shadowRoot.querySelector(".map-block").hidden = floors.length === 0;
+
+    const tabsEl = this.shadowRoot.querySelector(".floor-tabs");
+    tabsEl.hidden = floors.length <= 1;
+    tabsEl.innerHTML = floors
+      .map((f, i) => `<button type="button" class="floor-tab${i === this.#activeFloor ? " active" : ""}" data-index="${i}">${f.label || `Floor ${i + 1}`}</button>`)
+      .join("");
+
+    this.shadowRoot.querySelector("zone-map").setData({ src: floor ? `maps/${floor.image}` : null, label: zoneLabel });
+
+    const legendColEl = this.shadowRoot.querySelector(".map-legend-col");
+    legendColEl.hidden = !floor?.legend?.length;
+    this.shadowRoot.querySelector(".dossier-divider").hidden = !floor?.legend?.length;
+    this.shadowRoot.querySelector(".map-legend").innerHTML = (floor?.legend || [])
       .map((entry) => `<li><span class="legend-key">${entry.key}</span><span>${entry.label}</span></li>`)
       .join("");
 

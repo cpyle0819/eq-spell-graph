@@ -995,20 +995,18 @@ export interface ZoneVendorInfo {
   // zone-naming-mismatches.md). null for the small number of zones with no
   // findable eqlwiki.com page.
   wikiTitle: string | null;
-  // Filename under public/maps/ (the zone node's own `map_image` field,
-  // migration 061) — a self-hosted copy of eqlwiki.com's own zone map, not
-  // a URL to eqlwiki.com itself (decisions/mob-node-type.md's sibling note
-  // on map sourcing covers why). null for the many zones not sourced yet.
-  mapImage: string | null;
-  // The map's own numbered/lettered key, transcribed from eqlwiki.com's key
-  // list (migration 061's `map_legend`) — `key` is the literal string
-  // printed on the map (not assumed numeric; some zones' maps key with
+  // One entry per floor/level (the zone node's own `maps` field, migration
+  // 125 — see decisions/zone-multi-floor-maps.md for why this replaced the
+  // old flat map_image/map_legend pair). `image` is a filename under
+  // public/maps/ — a self-hosted copy of eqlwiki.com's own zone map, not a
+  // URL to eqlwiki.com itself. `label` is the floor name as eqlwiki.com
+  // names it ("Levels One and Two", "Floor Three"), or null for the
+  // ordinary single-map zone. `legend.key` is the literal string printed
+  // on that floor's map (not assumed numeric; some zones' maps key with
   // letters instead), since the marker's position is drawn into the image
-  // itself and isn't recoverable as a coordinate. Independent of mapImage:
-  // a zone could in principle have one without the other, though in
-  // practice a legend implies a map. Empty array, not null, when a zone has
-  // a map but no legend was found on its wiki page.
-  mapLegend: { key: string; label: string }[];
+  // itself and isn't recoverable as a coordinate. Empty array for the many
+  // zones with no map sourced yet.
+  maps: { label: string | null; image: string; legend: { key: string; label: string }[] }[];
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -1049,8 +1047,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
     levelRange: Number.isFinite(min) ? { min, max } : null,
     lore: (zone?.lore as string | undefined) ?? null,
     wikiTitle: (zone?.wiki_title as string | undefined) ?? null,
-    mapImage: (zone?.map_image as string | undefined) ?? null,
-    mapLegend: (zone?.map_legend as { key: string; label: string }[] | undefined) ?? [],
+    maps: (zone?.maps as ZoneVendorInfo["maps"] | undefined) ?? [],
   };
 }
 
