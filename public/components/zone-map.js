@@ -23,7 +23,9 @@
 // every map just renders at its own natural size up to that width, however
 // tall that makes it; a 3-floor dungeon's portrait map and a wide outdoor
 // zone's landscape map both look right without either being cropped or
-// squeezed to match the other.
+// squeezed to match the other. Tried stretching a narrower source image to
+// fill the full width (`width: 100%`) instead -- upscaled past its native
+// resolution, every map just looked soft/blurry, so natural size stayed.
 //
 // Collapses itself via the native `hidden` attribute (same convention as
 // status-panel.js's own `:host([hidden])`) when `src` is unset — most zones
