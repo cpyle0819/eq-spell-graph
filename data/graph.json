@@ -103111,6 +103111,51 @@
         "noDrop": true,
         "source": "Warrior Pike Quests reward (Weaponsmith Grugl, East Cabilis)"
       }
+    },
+    {
+      "data": {
+        "id": "mob:ak-anon:brown-bear",
+        "label": "Brown Bear",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:ak-anon:decaying-gnome-skeleton",
+        "label": "Decaying Gnome Skeleton",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:ak-anon:rock-snake",
+        "label": "Rock Snake",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:ak-anon:rock-spider",
+        "label": "Rock Spider",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:ak-anon:tiger",
+        "label": "Tiger",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
     }
   ],
   "edges": [
@@ -233101,6 +233146,46 @@
         "source": "quest:warrior-pike-5-legionnaires-mancatcher",
         "target": "item:legionnaires-mancatcher",
         "type": "rewards"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-16195",
+        "source": "mob:ak-anon:brown-bear",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-16196",
+        "source": "mob:ak-anon:decaying-gnome-skeleton",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-16197",
+        "source": "mob:ak-anon:rock-snake",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-16198",
+        "source": "mob:ak-anon:rock-spider",
+        "target": "zone:ak-anon",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-16199",
+        "source": "mob:ak-anon:tiger",
+        "target": "zone:ak-anon",
+        "type": "located_in"
       }
     }
   ]
