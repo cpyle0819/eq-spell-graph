@@ -10820,7 +10820,55 @@
           }
         },
         "lore": "The Eastern Plains of Karana is a rough, rocky area that is populated with some very dangerous creatures indeed. It's connected to the rest of Norrath by a long narrow mountain pass on one end, and an impressively large wooden bridge at the other.",
-        "wiki_title": "Eastern Plains of Karana"
+        "wiki_title": "Eastern Plains of Karana",
+        "maps": [
+          {
+            "label": null,
+            "image": "eastern-karana.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Druid Ring with Druid and Treant"
+              },
+              {
+                "key": "2",
+                "label": "Bandit Camp with Tallus Holton"
+              },
+              {
+                "key": "3",
+                "label": "Shops selling Weapons, Food, Goods, and Cloth Armor"
+              },
+              {
+                "key": "4",
+                "label": "Sir Morgan (wanders east down the road and back)"
+              },
+              {
+                "key": "5",
+                "label": "Shops selling Archery Items and Food. Guards stand and patrol near the shops."
+              },
+              {
+                "key": "6",
+                "label": "Gnolls"
+              },
+              {
+                "key": "7",
+                "label": "Haunted Obelisk surrounded by a gnoll reavers. At night, An undead reavers spawn."
+              },
+              {
+                "key": "8",
+                "label": "Farm with farmers"
+              },
+              {
+                "key": "9",
+                "label": "Farm with farmers"
+              },
+              {
+                "key": "10",
+                "label": "Barbarian Fishing Village, with merchant selling food and other items."
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -12743,7 +12791,59 @@
         },
         "lore": "The Eastern Wastes are a vast area of frozen ground covering much of the northeastern continent of Velious. There are many groups here, the Coldain, the Frost Giants, and the orcs of Ry'Gorr Keep, who have outposts or homes here.",
         "wiki_title": "Eastern Wastes",
-        "era": "Velious"
+        "era": "Velious",
+        "maps": [
+          {
+            "label": null,
+            "image": "eastern-wastes.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Coldain Camp with Captain Berradin"
+              },
+              {
+                "key": "2",
+                "label": "Ruined Houses with Ry'Gorr and Giant Guards and Corbin Blackwell"
+              },
+              {
+                "key": "3",
+                "label": "Coldain Camp with Dobbin Crossaxe and Coldain Missionaries"
+              },
+              {
+                "key": "4",
+                "label": "Frost Giant Fortress with Fjloaren Icebane and Peffin Ambersnow, nearby Ekelng Thunderstone"
+              },
+              {
+                "key": "5",
+                "label": "Coldain Camp with Garadain Glacierbane"
+              },
+              {
+                "key": "6",
+                "label": "Ry'Gorr Keep with Chief Ry`Gorr, Oracle of Ry'Gorr, A blacksmith of Ry`Gorr, Firbrand the Black, and portal to Crystal Caverns, nearby is half-buried Tower with exit from Geonid part of Crystal Caverns with Rodrick Tardok and Ry'Gorr Emissary"
+              },
+              {
+                "key": "7",
+                "label": "Coldain Camp with Orcs"
+              },
+              {
+                "key": "8",
+                "label": "Great Span"
+              },
+              {
+                "key": "9",
+                "label": "Coldain Camp with IceFang and Korrigain"
+              },
+              {
+                "key": "10",
+                "label": "Kerafyrm's sleeping body with Portal to Sleeper's Tomb"
+              },
+              {
+                "key": "11",
+                "label": "Coldain Camp with Coldains and Loremaster Derrin"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -112748,6 +112848,1212 @@
         "type": "mob",
         "minLevel": 61,
         "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:black-wolf",
+        "label": "A Black Wolf",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:druid",
+        "label": "A Druid",
+        "type": "mob",
+        "minLevel": 23,
+        "maxLevel": 27
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:griffawn",
+        "label": "A Griffawn",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:griffon",
+        "label": "A Griffon",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:highwayman",
+        "label": "A Highwayman",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:hill-giant",
+        "label": "A Hill Giant",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:lion",
+        "label": "A Lion",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:lion-patriarch",
+        "label": "A Lion Patriarch",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:rogue-lion",
+        "label": "A Rogue Lion",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:treant",
+        "label": "A Treant",
+        "type": "mob",
+        "minLevel": 23,
+        "maxLevel": 27
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:war-wolf",
+        "label": "A War Wolf",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:willowisp",
+        "label": "A Willowisp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:bandit",
+        "label": "A Bandit",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:bullnose-snake",
+        "label": "A Bullnose Snake",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:carrion-spider",
+        "label": "A Carrion Spider",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:chasm-crawler",
+        "label": "A Chasm Crawler",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:crag-spider",
+        "label": "A Crag Spider",
+        "type": "mob",
+        "minLevel": 18,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:dark-stalker",
+        "label": "A Dark Stalker",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:gnoll-reaver",
+        "label": "A Gnoll Reaver",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:gorge-hound",
+        "label": "A Gorge Hound",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:lioness-matriarch",
+        "label": "A Lioness Matriarch",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:spirit-stalker",
+        "label": "A Spirit Stalker",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:evil-eye",
+        "label": "An Evil Eye",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 19
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:undead-reaver",
+        "label": "An Undead Reaver",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:aagron",
+        "label": "Aagron",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:adrian",
+        "label": "Adrian",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:beanu-mucktail",
+        "label": "Beanu Mucktail",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:broon",
+        "label": "Broon",
+        "type": "mob",
+        "minLevel": 23,
+        "maxLevel": 23
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:burah-mucktail",
+        "label": "Burah Mucktail",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:chief-sanre-rexsa",
+        "label": "Chief Sanre`Rexsa",
+        "type": "mob",
+        "minLevel": 21,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:dark-elf-corruptor",
+        "label": "Dark Elf Corruptor",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:dark-elf-reaver",
+        "label": "Dark Elf Reaver",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:droon",
+        "label": "Droon",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 33
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:emhu-mucktail",
+        "label": "Emhu Mucktail",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:fang",
+        "label": "Fang",
+        "type": "mob",
+        "minLevel": 51,
+        "maxLevel": 51
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:felodius-sworddancer",
+        "label": "Felodius Sworddancer",
+        "type": "mob",
+        "minLevel": 55,
+        "maxLevel": 55
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:ganelorn-oast",
+        "label": "Ganelorn Oast",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:hibber-mucktail",
+        "label": "Hibber Mucktail",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:hukex-mucktail",
+        "label": "Hukex Mucktail",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:jekca-mucktail",
+        "label": "Jekca Mucktail",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:klage-mucktail",
+        "label": "Klage Mucktail",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:mechi-mucktail",
+        "label": "Mechi Mucktail",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:milea-clothspinner",
+        "label": "Milea Clothspinner",
+        "type": "mob",
+        "minLevel": 16,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:nra-brox-mucktail",
+        "label": "Nra`Brox Mucktail",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:nra-vren-mucktail",
+        "label": "Nra`Vren Mucktail",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:nre-glega-mucktail",
+        "label": "Nre`Glega Mucktail",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:nre-loxe-mucktail",
+        "label": "Nre`Loxe Mucktail",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:olixen-mucktail",
+        "label": "Olixen Mucktail",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:plur-mucktail",
+        "label": "Plur Mucktail",
+        "type": "mob",
+        "minLevel": 16,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:prark-mucktail",
+        "label": "Prark Mucktail",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:proon",
+        "label": "Proon",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:shalena-roan",
+        "label": "Shalena Roan",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:splintered-claw",
+        "label": "Splintered Claw",
+        "type": "mob",
+        "minLevel": 20,
+        "maxLevel": 20
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:tallus-holton",
+        "label": "Tallus Holton",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:tarbul-earthstrider",
+        "label": "Tarbul Earthstrider",
+        "type": "mob",
+        "minLevel": 48,
+        "maxLevel": 48
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:tenal-redblade",
+        "label": "Tenal Redblade",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:tholris",
+        "label": "Tholris",
+        "type": "mob",
+        "minLevel": 51,
+        "maxLevel": 51
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:tregil-mucktail",
+        "label": "Tregil Mucktail",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:vance-bearstalker",
+        "label": "Vance Bearstalker",
+        "type": "mob",
+        "minLevel": 53,
+        "maxLevel": 53
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-karana:yahg-mucktail",
+        "label": "Yahg Mucktail",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:frost-giant",
+        "label": "A Frost Giant",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 43
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:frost-giant-savage",
+        "label": "A Frost Giant Savage",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 39
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:a-kromrif-prison-guard",
+        "label": "A Kromrif Prison Guard",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-avenger",
+        "label": "A Ry`Gorr Avenger",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-centurion",
+        "label": "A Ry`Gorr Centurion",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 34
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-legionaire",
+        "label": "A Ry`Gorr Legionaire",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-prison-guard",
+        "label": "A Ry`Gorr Prison Guard",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 33
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-snow-trooper",
+        "label": "A Ry`Gorr Snow Trooper",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-clan-lookout",
+        "label": "A Ry`Gorr Clan Lookout",
+        "type": "mob",
+        "minLevel": 28,
+        "maxLevel": 28
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-clan-scout",
+        "label": "A Ry`Gorr Clan Scout",
+        "type": "mob",
+        "minLevel": 27,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-invader",
+        "label": "A Ry`Gorr Invader",
+        "type": "mob",
+        "minLevel": 43,
+        "maxLevel": 46
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:a-ry-gorr-messenger",
+        "label": "A Ry`Gorr Messenger",
+        "type": "mob",
+        "minLevel": 27,
+        "maxLevel": 27
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-oracle",
+        "label": "A Ry`Gorr Oracle",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 44
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:wooly-rhino",
+        "label": "A Wooly Rhino",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:blacksmith-of-ry-gorr",
+        "label": "A Blacksmith of Ry`Gorr",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:blizzard-dervish",
+        "label": "A Blizzard Dervish",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-cook",
+        "label": "A Coldain Cook",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-hunter",
+        "label": "A Coldain Hunter",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-lookout",
+        "label": "A Coldain Lookout",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-missionary",
+        "label": "A Coldain Missionary",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-skinner",
+        "label": "A Coldain Skinner",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 31
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:coldain-warrior",
+        "label": "A Coldain Warrior",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 33
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:dire-wolf",
+        "label": "A Dire Wolf",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 33
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:elder-snow-griffin",
+        "label": "A Elder Snow Griffin",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:frost-giant-captain",
+        "label": "A Frost Giant Captain",
+        "type": "mob",
+        "minLevel": 43,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:manticore",
+        "label": "A Manticore",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:savage-dire-wolf",
+        "label": "A Savage Dire Wolf",
+        "type": "mob",
+        "minLevel": 34,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:snow-bunny",
+        "label": "A Snow Bunny",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:snow-cougar",
+        "label": "A Snow Cougar",
+        "type": "mob",
+        "minLevel": 27,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:snow-griffin",
+        "label": "A Snow Griffin",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:tundra-kodiak",
+        "label": "A Tundra Kodiak",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 34
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:tundra-mammoth",
+        "label": "A Tundra Mammoth",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:walrus",
+        "label": "A Walrus",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ulthork-hunter",
+        "label": "An Ulthork Hunter",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 32
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ulthork-man-o-war",
+        "label": "An Ulthork Man O War",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ulthork-warrior",
+        "label": "An Ulthork Warrior",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:injured-warrior",
+        "label": "An Injured Warrior",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ogre-mercenary",
+        "label": "An Ogre Mercenary",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:bodyguard-nergan",
+        "label": "Bodyguard Nergan",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:bodyguard-persevil",
+        "label": "Bodyguard Persevil",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:bodyguard-stoneberg",
+        "label": "Bodyguard Stoneberg",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:boridain-glacierbane",
+        "label": "Boridain Glacierbane",
+        "type": "mob",
+        "minLevel": 21,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:captain-berradin",
+        "label": "Captain Berradin",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:chief-ry-gorr",
+        "label": "Chief Ry`Gorr",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:commander-bahreck",
+        "label": "Commander Bahreck",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:corbin-blackwell",
+        "label": "Corbin Blackwell",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:deaen-greyforge",
+        "label": "Deaen Greyforge",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:dobbin-crossaxe",
+        "label": "Dobbin Crossaxe",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ekelng-thunderstone",
+        "label": "Ekelng Thunderstone",
+        "type": "mob",
+        "minLevel": 48,
+        "maxLevel": 48
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:firbrand-the-black",
+        "label": "Firbrand the Black",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:fjloaren-icebane",
+        "label": "Fjloaren Icebane",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 39
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:garadain-glacierbane",
+        "label": "Garadain Glacierbane",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:garath-the-trader",
+        "label": "Garath the Trader",
+        "type": "mob",
+        "minLevel": 60,
+        "maxLevel": 60
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ghrek-squatnot",
+        "label": "Ghrek Squatnot",
+        "type": "mob",
+        "minLevel": 44,
+        "maxLevel": 44
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:gloradin-coldheart",
+        "label": "Gloradin Coldheart",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:icefang",
+        "label": "IceFang",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 39
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:interrogator-of-ry-gorr",
+        "label": "Interrogator of Ry`Gorr",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 36
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:korrigain",
+        "label": "Korrigain",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:kromrif-guardsman",
+        "label": "Kromrif Guardsman",
+        "type": "mob",
+        "minLevel": 43,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:kromrif-prison-guard",
+        "label": "Kromrif Prison Guard",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:loremaster-derrin",
+        "label": "Loremaster Derrin",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:mystic-of-ry-gorr",
+        "label": "Mystic of Ry`Gorr",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 31
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:oracle-of-ry-gorr",
+        "label": "Oracle of Ry`Gorr",
+        "type": "mob",
+        "minLevel": 44,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:peffin-ambersnow",
+        "label": "Peffin Ambersnow",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:poxbreath-yellowfang",
+        "label": "Poxbreath Yellowfang",
+        "type": "mob",
+        "minLevel": 46,
+        "maxLevel": 47
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:rabid-tundra-kodiak",
+        "label": "Rabid Tundra Kodiak",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:rodrick-tardok",
+        "label": "Rodrick Tardok",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-basher",
+        "label": "Ry`Gorr Basher",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-elite-guard",
+        "label": "Ry`Gorr Elite Guard",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-emissary",
+        "label": "Ry`Gorr Emissary",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ry-gorr-messenger",
+        "label": "Ry'Gorr Messenger",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:scarbrow-ga-hruk",
+        "label": "Scarbrow Ga`Hruk",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 46
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:ulthork-raider",
+        "label": "Ulthork Raider",
+        "type": "mob",
+        "minLevel": 66,
+        "maxLevel": 66
+      }
+    },
+    {
+      "data": {
+        "id": "mob:eastern-wastes:warden-bruke",
+        "label": "Warden Bruke",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
       }
     }
   ],
@@ -250162,6 +251468,1078 @@
         "id": "e-located_in-17122",
         "source": "mob:west-cabilis:sartar-the-unrivaled",
         "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17123",
+        "source": "mob:eastern-karana:black-wolf",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17124",
+        "source": "mob:eastern-karana:druid",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17125",
+        "source": "mob:eastern-karana:griffawn",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17126",
+        "source": "mob:eastern-karana:griffon",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17127",
+        "source": "mob:eastern-karana:highwayman",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17128",
+        "source": "mob:eastern-karana:hill-giant",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17129",
+        "source": "mob:eastern-karana:lion",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17130",
+        "source": "mob:eastern-karana:lion-patriarch",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17131",
+        "source": "mob:eastern-karana:rogue-lion",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17132",
+        "source": "mob:eastern-karana:treant",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17133",
+        "source": "mob:eastern-karana:war-wolf",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17134",
+        "source": "mob:eastern-karana:willowisp",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17135",
+        "source": "mob:eastern-karana:bandit",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17136",
+        "source": "mob:eastern-karana:bullnose-snake",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17137",
+        "source": "mob:eastern-karana:carrion-spider",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17138",
+        "source": "mob:eastern-karana:chasm-crawler",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17139",
+        "source": "mob:eastern-karana:crag-spider",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17140",
+        "source": "mob:eastern-karana:dark-stalker",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17141",
+        "source": "mob:eastern-karana:gnoll-reaver",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17142",
+        "source": "mob:eastern-karana:gorge-hound",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17143",
+        "source": "mob:eastern-karana:lioness-matriarch",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17144",
+        "source": "mob:eastern-karana:spirit-stalker",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17145",
+        "source": "mob:eastern-karana:evil-eye",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17146",
+        "source": "mob:eastern-karana:undead-reaver",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17147",
+        "source": "mob:eastern-karana:aagron",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17148",
+        "source": "mob:eastern-karana:adrian",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17149",
+        "source": "mob:eastern-karana:beanu-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17150",
+        "source": "mob:eastern-karana:broon",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17151",
+        "source": "mob:eastern-karana:burah-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17152",
+        "source": "mob:eastern-karana:chief-sanre-rexsa",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17153",
+        "source": "mob:eastern-karana:dark-elf-corruptor",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17154",
+        "source": "mob:eastern-karana:dark-elf-reaver",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17155",
+        "source": "mob:eastern-karana:droon",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17156",
+        "source": "mob:eastern-karana:emhu-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17157",
+        "source": "mob:eastern-karana:fang",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17158",
+        "source": "mob:eastern-karana:felodius-sworddancer",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17159",
+        "source": "mob:eastern-karana:ganelorn-oast",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17160",
+        "source": "mob:eastern-karana:hibber-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17161",
+        "source": "mob:eastern-karana:hukex-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17162",
+        "source": "mob:eastern-karana:jekca-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17163",
+        "source": "mob:eastern-karana:klage-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17164",
+        "source": "mob:eastern-karana:mechi-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17165",
+        "source": "mob:eastern-karana:milea-clothspinner",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17166",
+        "source": "mob:eastern-karana:nra-brox-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17167",
+        "source": "mob:eastern-karana:nra-vren-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17168",
+        "source": "mob:eastern-karana:nre-glega-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17169",
+        "source": "mob:eastern-karana:nre-loxe-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17170",
+        "source": "mob:eastern-karana:olixen-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17171",
+        "source": "mob:eastern-karana:plur-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17172",
+        "source": "mob:eastern-karana:prark-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17173",
+        "source": "mob:eastern-karana:proon",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17174",
+        "source": "mob:eastern-karana:shalena-roan",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17175",
+        "source": "mob:eastern-karana:splintered-claw",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17176",
+        "source": "mob:eastern-karana:tallus-holton",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17177",
+        "source": "mob:eastern-karana:tarbul-earthstrider",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17178",
+        "source": "mob:eastern-karana:tenal-redblade",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17179",
+        "source": "mob:eastern-karana:tholris",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17180",
+        "source": "mob:eastern-karana:tregil-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17181",
+        "source": "mob:eastern-karana:vance-bearstalker",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17182",
+        "source": "mob:eastern-karana:yahg-mucktail",
+        "target": "zone:eastern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17183",
+        "source": "mob:eastern-wastes:frost-giant",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17184",
+        "source": "mob:eastern-wastes:frost-giant-savage",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17185",
+        "source": "mob:eastern-wastes:a-kromrif-prison-guard",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17186",
+        "source": "mob:eastern-wastes:ry-gorr-avenger",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17187",
+        "source": "mob:eastern-wastes:ry-gorr-centurion",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17188",
+        "source": "mob:eastern-wastes:ry-gorr-legionaire",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17189",
+        "source": "mob:eastern-wastes:ry-gorr-prison-guard",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17190",
+        "source": "mob:eastern-wastes:ry-gorr-snow-trooper",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17191",
+        "source": "mob:eastern-wastes:ry-gorr-clan-lookout",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17192",
+        "source": "mob:eastern-wastes:ry-gorr-clan-scout",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17193",
+        "source": "mob:eastern-wastes:ry-gorr-invader",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17194",
+        "source": "mob:eastern-wastes:a-ry-gorr-messenger",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17195",
+        "source": "mob:eastern-wastes:ry-gorr-oracle",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17196",
+        "source": "mob:eastern-wastes:wooly-rhino",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17197",
+        "source": "mob:eastern-wastes:blacksmith-of-ry-gorr",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17198",
+        "source": "mob:eastern-wastes:blizzard-dervish",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17199",
+        "source": "mob:eastern-wastes:coldain-cook",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17200",
+        "source": "mob:eastern-wastes:coldain-hunter",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17201",
+        "source": "mob:eastern-wastes:coldain-lookout",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17202",
+        "source": "mob:eastern-wastes:coldain-missionary",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17203",
+        "source": "mob:eastern-wastes:coldain-skinner",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17204",
+        "source": "mob:eastern-wastes:coldain-warrior",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17205",
+        "source": "mob:eastern-wastes:dire-wolf",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17206",
+        "source": "mob:eastern-wastes:elder-snow-griffin",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17207",
+        "source": "mob:eastern-wastes:frost-giant-captain",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17208",
+        "source": "mob:eastern-wastes:manticore",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17209",
+        "source": "mob:eastern-wastes:savage-dire-wolf",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17210",
+        "source": "mob:eastern-wastes:snow-bunny",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17211",
+        "source": "mob:eastern-wastes:snow-cougar",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17212",
+        "source": "mob:eastern-wastes:snow-griffin",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17213",
+        "source": "mob:eastern-wastes:tundra-kodiak",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17214",
+        "source": "mob:eastern-wastes:tundra-mammoth",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17215",
+        "source": "mob:eastern-wastes:walrus",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17216",
+        "source": "mob:eastern-wastes:ulthork-hunter",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17217",
+        "source": "mob:eastern-wastes:ulthork-man-o-war",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17218",
+        "source": "mob:eastern-wastes:ulthork-warrior",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17219",
+        "source": "mob:eastern-wastes:injured-warrior",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17220",
+        "source": "mob:eastern-wastes:ogre-mercenary",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17221",
+        "source": "mob:eastern-wastes:bodyguard-nergan",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17222",
+        "source": "mob:eastern-wastes:bodyguard-persevil",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17223",
+        "source": "mob:eastern-wastes:bodyguard-stoneberg",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17224",
+        "source": "mob:eastern-wastes:boridain-glacierbane",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17225",
+        "source": "mob:eastern-wastes:captain-berradin",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17226",
+        "source": "mob:eastern-wastes:chief-ry-gorr",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17227",
+        "source": "mob:eastern-wastes:commander-bahreck",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17228",
+        "source": "mob:eastern-wastes:corbin-blackwell",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17229",
+        "source": "mob:eastern-wastes:deaen-greyforge",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17230",
+        "source": "mob:eastern-wastes:dobbin-crossaxe",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17231",
+        "source": "mob:eastern-wastes:ekelng-thunderstone",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17232",
+        "source": "mob:eastern-wastes:firbrand-the-black",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17233",
+        "source": "mob:eastern-wastes:fjloaren-icebane",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17234",
+        "source": "mob:eastern-wastes:garadain-glacierbane",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17235",
+        "source": "mob:eastern-wastes:garath-the-trader",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17236",
+        "source": "mob:eastern-wastes:ghrek-squatnot",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17237",
+        "source": "mob:eastern-wastes:gloradin-coldheart",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17238",
+        "source": "mob:eastern-wastes:icefang",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17239",
+        "source": "mob:eastern-wastes:interrogator-of-ry-gorr",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17240",
+        "source": "mob:eastern-wastes:korrigain",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17241",
+        "source": "mob:eastern-wastes:kromrif-guardsman",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17242",
+        "source": "mob:eastern-wastes:kromrif-prison-guard",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17243",
+        "source": "mob:eastern-wastes:loremaster-derrin",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17244",
+        "source": "mob:eastern-wastes:mystic-of-ry-gorr",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17245",
+        "source": "mob:eastern-wastes:oracle-of-ry-gorr",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17246",
+        "source": "mob:eastern-wastes:peffin-ambersnow",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17247",
+        "source": "mob:eastern-wastes:poxbreath-yellowfang",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17248",
+        "source": "mob:eastern-wastes:rabid-tundra-kodiak",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17249",
+        "source": "mob:eastern-wastes:rodrick-tardok",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17250",
+        "source": "mob:eastern-wastes:ry-gorr-basher",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17251",
+        "source": "mob:eastern-wastes:ry-gorr-elite-guard",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17252",
+        "source": "mob:eastern-wastes:ry-gorr-emissary",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17253",
+        "source": "mob:eastern-wastes:ry-gorr-messenger",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17254",
+        "source": "mob:eastern-wastes:scarbrow-ga-hruk",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17255",
+        "source": "mob:eastern-wastes:ulthork-raider",
+        "target": "zone:eastern-wastes",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17256",
+        "source": "mob:eastern-wastes:warden-bruke",
+        "target": "zone:eastern-wastes",
         "type": "located_in"
       }
     }

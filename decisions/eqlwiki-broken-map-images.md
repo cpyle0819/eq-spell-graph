@@ -1,0 +1,7 @@
+# Some eqlwiki zone pages have broken map images — skip, don't substitute
+
+Issue #36's Chardok entry can't get a map yet. Both `[[File:Chardok top.png]]` (Post-Revamp page) and `[[File:Map chardok.jpg]]` (Pre-Revamp page) render as `mw:Error mw:File/Thumb` / `mw-broken-media` in the page HTML — the files were never actually uploaded to eqlwiki, on either version of the page. `curl`ing the page (`action=raw` or the rendered HTML) makes this checkable without a browser: a real map image resolves to a `<figure typeof="mw:File/Thumb">` with a working `<img src=...>`; a broken one keeps the `mw:Error` typeof and a `mw-file-element mw-broken-media` span instead of an `<img>`.
+
+**Don't substitute a classic-EQ map for a missing eqlwiki one** — `decisions/eql-vs-classic-eq-zone-connectivity.md` already established that EQL zone layouts can diverge from classic EQ, and a Velious-era revamped zone like Chardok is exactly the kind of case where the divergence risk is highest.
+
+**What to do instead:** leave the zone's bestiary (if sourceable) and skip only the map, same as migration 157 did for Chardok's bestiary while its map stayed blocked. Check for a working image *before* investing time in legend transcription — a quick `curl <page> | grep -o 'File:[^"]*\.\(jpg\|png\|gif\)\|mw-broken-media'` on the target page is enough to tell up front whether a zone's map is worth pursuing this pass.
