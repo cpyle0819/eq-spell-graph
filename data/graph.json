@@ -261,7 +261,123 @@
         },
         "lore": "Cabilis (sometimes called New Sebilis) is the new heart of the Iksar Empire. The Iksar recaptured the city from the Sarnak long ago and have since made it their new home.",
         "wiki_title": "Cabilis",
-        "era": "Kunark"
+        "era": "Kunark",
+        "maps": [
+          {
+            "label": null,
+            "image": "east-cabilis.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Temple of Terror - Shaman and Shadow Knight Guild Hall"
+              },
+              {
+                "key": "2",
+                "label": "Tink n' Babble - Merchant selling Alcohol, Brew Barrel inside"
+              },
+              {
+                "key": "3",
+                "label": "Merchants selling Alcohol and Brewing Supplies, Brew Barrel nearby"
+              },
+              {
+                "key": "4",
+                "label": "The Block - Bank"
+              },
+              {
+                "key": "5",
+                "label": "Merchant selling Gems of all types, Metals and Jewelry Kit"
+              },
+              {
+                "key": "6",
+                "label": "Merchant selling Basic Smithing Molds"
+              },
+              {
+                "key": "7",
+                "label": "Merchant selling Cooking Supplies, Pastries and Cook Books, Oven inside"
+              },
+              {
+                "key": "8",
+                "label": "Court of Pain - Monk Guild, Merchants selling Monk Supplies, Iksar History Books and Bandages and Backpacks"
+              },
+              {
+                "key": "9",
+                "label": "The Haggle Baron - Merchant selling Bristle Silk Armor"
+              },
+              {
+                "key": "10",
+                "label": "The Haggle Baron"
+              },
+              {
+                "key": "11",
+                "label": "Merchant selling Food Items"
+              },
+              {
+                "key": "12",
+                "label": "Merchant selling Pottery Supplies, Kiln and Pottery Wheel outside"
+              },
+              {
+                "key": "13",
+                "label": "Merchants selling Blacksmithing Armor Molds and Sheet Metal, Pottery Molds, Sectional Molds, Forge nearby"
+              },
+              {
+                "key": "14",
+                "label": "Merchant selling Ore, Sharpening Stones, Smithy Hammers, and Clay"
+              },
+              {
+                "key": "15",
+                "label": "Merchant selling Sewing Patterns and Guides"
+              },
+              {
+                "key": "16",
+                "label": "Merchant selling Medium Cloth Armor, Large and Small Sewing Kits, Sewing Patterns"
+              },
+              {
+                "key": "17",
+                "label": "Merchant selling Food Items"
+              },
+              {
+                "key": "18",
+                "label": "Merchants selling Fishing Supplies and all Fletching Supplies for Bows"
+              },
+              {
+                "key": "19",
+                "label": "Merchant selling Bags and Boxes"
+              },
+              {
+                "key": "20",
+                "label": "Merchant selling Rhino Hide Armor, Loom outside"
+              },
+              {
+                "key": "21",
+                "label": "Merchant selling Wilderness Survival Gear"
+              },
+              {
+                "key": "22",
+                "label": "Merchant selling Blunt Weapons, Weapon Molds, Forge nearby"
+              },
+              {
+                "key": "23",
+                "label": "Merchants selling Combine Weapons, Weapon Blade Molds, and Weapon Part Molds"
+              },
+              {
+                "key": "24",
+                "label": "Merchants selling Weapons and Shields (all sizes), Ore, Skyfire Metal, and Shield Molds, Cabilis Forge"
+              },
+              {
+                "key": "25",
+                "label": "Merchant selling Lupine Scale Armor"
+              },
+              {
+                "key": "26",
+                "label": "Fortress Talishan - Warrior Guild with various Trainers scattered throughout the compound"
+              },
+              {
+                "key": "27",
+                "label": "Merchant selling Cooking and Lore Books"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -2584,7 +2700,55 @@
         },
         "lore": "Cabilis (sometimes called New Sebilis) is the new heart of the Iksar Empire. The Iksar recaptured the city from the Sarnak long ago and have since made it their new home.",
         "wiki_title": "Cabilis",
-        "era": "Kunark"
+        "era": "Kunark",
+        "maps": [
+          {
+            "label": null,
+            "image": "west-cabilis.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Tower of Death - Necromancer Guild Hall, Merchant selling Necromancer Equipment, Books, and some Gems"
+              },
+              {
+                "key": "2",
+                "label": "Merchant selling Ivory Weapons"
+              },
+              {
+                "key": "3",
+                "label": "Merchants selling Rhinohide Armor and Fletching Supplies (Arrows)"
+              },
+              {
+                "key": "4",
+                "label": "Merchant selling Food Items, water flasks and other Goods"
+              },
+              {
+                "key": "5",
+                "label": "Merchant selling Medium Cloth Armor, Erudite Sewing Kit and Metal Thread"
+              },
+              {
+                "key": "6",
+                "label": "A mortician selling Embalming Supplies, Coffins and Rubbing Alcohol; Lithriss Frizen selling high-level Necromancer spells"
+              },
+              {
+                "key": "7",
+                "label": "Merchants selling Alchemy Supplies, Potions, Crystals, and Dufrenite"
+              },
+              {
+                "key": "8",
+                "label": "Merchants selling Necromancer spells - underneath is a tunnel leading to a section of catacombs and a maze area"
+              },
+              {
+                "key": "9",
+                "label": "The Gauntlet - PvP area"
+              },
+              {
+                "key": "10",
+                "label": "An Iksar Hermit"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -111828,6 +111992,762 @@
         "type": "mob",
         "minLevel": 53,
         "maxLevel": 54
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:froglok-slave",
+        "label": "A Froglok Slave",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:pygmy-barracuda",
+        "label": "A Pygmy Barracuda",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:iksar-outcast",
+        "label": "An Iksar Outcast",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:bugrin-the-gatherer",
+        "label": "Bugrin the Gatherer",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:frizazz",
+        "label": "Frizazz",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:jozter",
+        "label": "Jozter",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:half-elf-maiden",
+        "label": "Half Elf Maiden",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:haggle-baron-klok",
+        "label": "Haggle Baron Klok",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:an-iksar-crusader",
+        "label": "An Iksar Crusader",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:clerk-doval",
+        "label": "Clerk Doval",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:grype",
+        "label": "Grype",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:the-toilmaster",
+        "label": "The Toilmaster",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:bloodgill-barracuda",
+        "label": "A Bloodgill Barracuda",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-cotat",
+        "label": "Crusader Cotat",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-daehod",
+        "label": "Crusader Daehod",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-golia",
+        "label": "Crusader Golia",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-hitol",
+        "label": "Crusader Hitol",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-olos",
+        "label": "Crusader Olos",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-reidak",
+        "label": "Crusader Reidak",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-wonku",
+        "label": "Crusader Wonku",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:crusader-zixo",
+        "label": "Crusader Zixo",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:himart-kichith",
+        "label": "Himart Kichith",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:sarth-scarscale",
+        "label": "Sarth Scarscale",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:shezlie-furscale",
+        "label": "Shezlie Furscale",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:sirtha-scarscale",
+        "label": "Sirtha Scarscale",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:zazlan-furscale",
+        "label": "Zazlan Furscale",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-azalin",
+        "label": "Trooper Azalin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-begzei",
+        "label": "Trooper Begzei",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-byzin",
+        "label": "Trooper Byzin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-feglesh",
+        "label": "Trooper Feglesh",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-fryp",
+        "label": "Trooper Fryp",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-googin",
+        "label": "Trooper Googin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-iggmin",
+        "label": "Trooper Iggmin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-ishlin",
+        "label": "Trooper Ishlin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-keplar",
+        "label": "Trooper Keplar",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-nagraz",
+        "label": "Trooper Nagraz",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-nishnish",
+        "label": "Trooper Nishnish",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-rofylin",
+        "label": "Trooper Rofylin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-shestar",
+        "label": "Trooper Shestar",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:trooper-zishrin",
+        "label": "Trooper Zishrin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:vessel-drozlin",
+        "label": "Vessel Drozlin",
+        "type": "mob",
+        "minLevel": 60,
+        "maxLevel": 60
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:arch-duke-xog",
+        "label": "Arch Duke Xog",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:drill-master-dal",
+        "label": "Drill Master Dal",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:drill-master-kyg",
+        "label": "Drill Master Kyg",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:drill-master-vygan",
+        "label": "Drill Master Vygan",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:grand-master-glox",
+        "label": "Grand Master Glox",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:hierophant-dexl",
+        "label": "Hierophant Dexl",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:hierophant-oxyn",
+        "label": "Hierophant Oxyn",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:hierophant-zand",
+        "label": "Hierophant Zand",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:librarian-zimor",
+        "label": "Librarian Zimor",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:lord-gikzic",
+        "label": "Lord Gikzic",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:lord-korzin",
+        "label": "Lord Korzin",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:lord-qyzar",
+        "label": "Lord Qyzar",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:master-bain",
+        "label": "Master Bain",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:master-niska",
+        "label": "Master Niska",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:master-raska",
+        "label": "Master Raska",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:prime-hierophant-vek",
+        "label": "Prime Hierophant Vek",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:east-cabilis:war-baron-eator",
+        "label": "War Baron Eator",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:izarod-fristan",
+        "label": "Izarod Fristan",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:crusader-axmo",
+        "label": "Crusader Axmo",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:crusader-ezrogz",
+        "label": "Crusader Ezrogz",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:crusader-mocdi",
+        "label": "Crusader Mocdi",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:nihilist-yeegarn",
+        "label": "Nihilist Yeegarn",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:nihilist-zeegarn",
+        "label": "Nihilist Zeegarn",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-dagnav",
+        "label": "Trooper Dagnav",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-eglo",
+        "label": "Trooper Eglo",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-egrephit",
+        "label": "Trooper Egrephit",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-gegren",
+        "label": "Trooper Gegren",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-gryfkyz",
+        "label": "Trooper Gryfkyz",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-hylpik",
+        "label": "Trooper Hylpik",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-moggoz",
+        "label": "Trooper Moggoz",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-ogmire",
+        "label": "Trooper Ogmire",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-ozlot",
+        "label": "Trooper Ozlot",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-ryzee",
+        "label": "Trooper Ryzee",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-shyzin",
+        "label": "Trooper Shyzin",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-tygar",
+        "label": "Trooper Tygar",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-xaxxot",
+        "label": "Trooper Xaxxot",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:trooper-yegmesh",
+        "label": "Trooper Yegmesh",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:iksar-hermit",
+        "label": "An Iksar Hermit",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:harbinger-glosk",
+        "label": "Harbinger Glosk",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:master-kyvix",
+        "label": "Master Kyvix",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:master-rixiz",
+        "label": "Master Rixiz",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:master-xydoz",
+        "label": "Master Xydoz",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-cabilis:sartar-the-unrivaled",
+        "label": "Sartar the Unrivaled",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
       }
     }
   ],
@@ -248570,6 +249490,678 @@
         "id": "e-located_in-17038",
         "source": "mob:chardok:wraith-of-a-di-zok-hero",
         "target": "zone:chardok",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17039",
+        "source": "mob:east-cabilis:froglok-slave",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17040",
+        "source": "mob:east-cabilis:pygmy-barracuda",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17041",
+        "source": "mob:east-cabilis:iksar-outcast",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17042",
+        "source": "mob:east-cabilis:bugrin-the-gatherer",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17043",
+        "source": "mob:east-cabilis:frizazz",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17044",
+        "source": "mob:east-cabilis:jozter",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17045",
+        "source": "mob:east-cabilis:half-elf-maiden",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17046",
+        "source": "mob:east-cabilis:haggle-baron-klok",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17047",
+        "source": "mob:east-cabilis:an-iksar-crusader",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17048",
+        "source": "mob:east-cabilis:clerk-doval",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17049",
+        "source": "mob:east-cabilis:grype",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17050",
+        "source": "mob:east-cabilis:the-toilmaster",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17051",
+        "source": "mob:east-cabilis:bloodgill-barracuda",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17052",
+        "source": "mob:east-cabilis:crusader-cotat",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17053",
+        "source": "mob:east-cabilis:crusader-daehod",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17054",
+        "source": "mob:east-cabilis:crusader-golia",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17055",
+        "source": "mob:east-cabilis:crusader-hitol",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17056",
+        "source": "mob:east-cabilis:crusader-olos",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17057",
+        "source": "mob:east-cabilis:crusader-reidak",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17058",
+        "source": "mob:east-cabilis:crusader-wonku",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17059",
+        "source": "mob:east-cabilis:crusader-zixo",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17060",
+        "source": "mob:east-cabilis:himart-kichith",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17061",
+        "source": "mob:east-cabilis:sarth-scarscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17062",
+        "source": "mob:east-cabilis:shezlie-furscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17063",
+        "source": "mob:east-cabilis:sirtha-scarscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17064",
+        "source": "mob:east-cabilis:zazlan-furscale",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17065",
+        "source": "mob:east-cabilis:trooper-azalin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17066",
+        "source": "mob:east-cabilis:trooper-begzei",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17067",
+        "source": "mob:east-cabilis:trooper-byzin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17068",
+        "source": "mob:east-cabilis:trooper-feglesh",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17069",
+        "source": "mob:east-cabilis:trooper-fryp",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17070",
+        "source": "mob:east-cabilis:trooper-googin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17071",
+        "source": "mob:east-cabilis:trooper-iggmin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17072",
+        "source": "mob:east-cabilis:trooper-ishlin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17073",
+        "source": "mob:east-cabilis:trooper-keplar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17074",
+        "source": "mob:east-cabilis:trooper-nagraz",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17075",
+        "source": "mob:east-cabilis:trooper-nishnish",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17076",
+        "source": "mob:east-cabilis:trooper-rofylin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17077",
+        "source": "mob:east-cabilis:trooper-shestar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17078",
+        "source": "mob:east-cabilis:trooper-zishrin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17079",
+        "source": "mob:east-cabilis:vessel-drozlin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17080",
+        "source": "mob:east-cabilis:arch-duke-xog",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17081",
+        "source": "mob:east-cabilis:drill-master-dal",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17082",
+        "source": "mob:east-cabilis:drill-master-kyg",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17083",
+        "source": "mob:east-cabilis:drill-master-vygan",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17084",
+        "source": "mob:east-cabilis:grand-master-glox",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17085",
+        "source": "mob:east-cabilis:hierophant-dexl",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17086",
+        "source": "mob:east-cabilis:hierophant-oxyn",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17087",
+        "source": "mob:east-cabilis:hierophant-zand",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17088",
+        "source": "mob:east-cabilis:librarian-zimor",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17089",
+        "source": "mob:east-cabilis:lord-gikzic",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17090",
+        "source": "mob:east-cabilis:lord-korzin",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17091",
+        "source": "mob:east-cabilis:lord-qyzar",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17092",
+        "source": "mob:east-cabilis:master-bain",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17093",
+        "source": "mob:east-cabilis:master-niska",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17094",
+        "source": "mob:east-cabilis:master-raska",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17095",
+        "source": "mob:east-cabilis:prime-hierophant-vek",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17096",
+        "source": "mob:east-cabilis:war-baron-eator",
+        "target": "zone:east-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17097",
+        "source": "mob:west-cabilis:izarod-fristan",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17098",
+        "source": "mob:west-cabilis:crusader-axmo",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17099",
+        "source": "mob:west-cabilis:crusader-ezrogz",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17100",
+        "source": "mob:west-cabilis:crusader-mocdi",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17101",
+        "source": "mob:west-cabilis:nihilist-yeegarn",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17102",
+        "source": "mob:west-cabilis:nihilist-zeegarn",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17103",
+        "source": "mob:west-cabilis:trooper-dagnav",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17104",
+        "source": "mob:west-cabilis:trooper-eglo",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17105",
+        "source": "mob:west-cabilis:trooper-egrephit",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17106",
+        "source": "mob:west-cabilis:trooper-gegren",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17107",
+        "source": "mob:west-cabilis:trooper-gryfkyz",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17108",
+        "source": "mob:west-cabilis:trooper-hylpik",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17109",
+        "source": "mob:west-cabilis:trooper-moggoz",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17110",
+        "source": "mob:west-cabilis:trooper-ogmire",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17111",
+        "source": "mob:west-cabilis:trooper-ozlot",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17112",
+        "source": "mob:west-cabilis:trooper-ryzee",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17113",
+        "source": "mob:west-cabilis:trooper-shyzin",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17114",
+        "source": "mob:west-cabilis:trooper-tygar",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17115",
+        "source": "mob:west-cabilis:trooper-xaxxot",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17116",
+        "source": "mob:west-cabilis:trooper-yegmesh",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17117",
+        "source": "mob:west-cabilis:iksar-hermit",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17118",
+        "source": "mob:west-cabilis:harbinger-glosk",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17119",
+        "source": "mob:west-cabilis:master-kyvix",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17120",
+        "source": "mob:west-cabilis:master-rixiz",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17121",
+        "source": "mob:west-cabilis:master-xydoz",
+        "target": "zone:west-cabilis",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-17122",
+        "source": "mob:west-cabilis:sartar-the-unrivaled",
+        "target": "zone:west-cabilis",
         "type": "located_in"
       }
     }
