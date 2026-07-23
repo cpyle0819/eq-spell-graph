@@ -47,6 +47,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Spell details partially sourced from the local client, not just eqlwiki.com](spell-details-partially-from-local-client.md)
 - [Spell lines sourced from the locally installed client, not eqlwiki.com](spell-lines-from-local-client.md)
 - [How the leveling-guide quests were researched (and what a future scraper needs)](eqlwiki-quest-research-method.md)
+- [Messy bestiary categories: query eqlwiki's MediaWiki API, don't hand-check every page](eqlwiki-mediawiki-api-for-messy-bestiary-categories.md)
 
 ## UI
 
