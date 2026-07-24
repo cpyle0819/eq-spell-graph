@@ -201,6 +201,7 @@ function save(graph: GraphData): void {
   writeFileSync(DATA_PATH, JSON.stringify(graph, null, 2));
   cachedGraph = graph;
   cachedIndex = null;
+  cachedHelpers = null;
 }
 
 function slugify(s: string): string {
@@ -425,7 +426,34 @@ interface GraphIndexHelpers {
   currentEraOrder: number | undefined;
 }
 
+// graph.json's node/edge counts grow with every content batch (issue #36
+// alone took it from ~2MB to 7MB+) -- a linear .find()/.filter() per call
+// here, times the ~7 calls buildQuestSummary() makes per quest, times
+// hundreds of quests, had grown slow enough to blow the Lambda's 10s
+// timeout on the unfiltered /api/quests route (502s in production).
+// Building real Maps once per graphIndexHelpers() call, keyed the same way
+// getIndex()'s sells/vendor index already does, keeps every lookup O(1)
+// regardless of how large the graph gets.
+let cachedHelpers: { graph: GraphData; helpers: GraphIndexHelpers } | null = null;
+
 function graphIndexHelpers(graph: GraphData): GraphIndexHelpers {
+  if (cachedHelpers?.graph === graph) return cachedHelpers.helpers;
+
+  const nodesById = new Map<string, NodeData>();
+  for (const n of graph.nodes) nodesById.set(n.data.id, n.data);
+
+  const edgesFromIndex = new Map<string, EdgeData[]>();
+  const edgesToIndex = new Map<string, EdgeData[]>();
+  for (const e of graph.edges) {
+    const fromKey = `${e.data.type}:${e.data.source}`;
+    if (!edgesFromIndex.has(fromKey)) edgesFromIndex.set(fromKey, []);
+    edgesFromIndex.get(fromKey)!.push(e.data);
+
+    const toKey = `${e.data.type}:${e.data.target}`;
+    if (!edgesToIndex.has(toKey)) edgesToIndex.set(toKey, []);
+    edgesToIndex.get(toKey)!.push(e.data);
+  }
+
   const eraOrderByLabel = new Map<string, number>();
   let currentEraOrder: number | undefined;
   for (const n of graph.nodes) {
@@ -433,13 +461,16 @@ function graphIndexHelpers(graph: GraphData): GraphIndexHelpers {
     eraOrderByLabel.set(n.data.label, n.data.order as number);
     if (n.data.current) currentEraOrder = n.data.order as number;
   }
-  return {
-    nodeById: (id) => graph.nodes.find((n) => n.data.id === id)?.data,
-    edgesFrom: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.source === id).map((e) => e.data),
-    edgesTo: (id, type) => graph.edges.filter((e) => e.data.type === type && e.data.target === id).map((e) => e.data),
+
+  const helpers: GraphIndexHelpers = {
+    nodeById: (id) => nodesById.get(id),
+    edgesFrom: (id, type) => edgesFromIndex.get(`${type}:${id}`) || [],
+    edgesTo: (id, type) => edgesToIndex.get(`${type}:${id}`) || [],
     eraOrderByLabel,
     currentEraOrder,
   };
+  cachedHelpers = { graph, helpers };
+  return helpers;
 }
 
 // A quest with no era, or an era not found among the known era nodes,
