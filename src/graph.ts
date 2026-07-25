@@ -385,30 +385,39 @@ export function getZones(): ZoneSummary[] {
     .sort((a, b) => a.label.localeCompare(b.label));
 }
 
-export interface MobSummary {
+export interface NpcSummary {
   id: string;
   label: string;
+  // "vendor"/"quest_giver"/"guard"/"guildmaster"/"mob" -- every entity in
+  // the graph is an npc now (decisions/npc-mob-unification-and-zone-groups.md
+  // retired the separate `mob` node type), roles is what distinguishes a
+  // shopkeeper from a hostile creature. An npc can carry more than one
+  // (a vendor who also gives a quest) -- callers group by role and render
+  // the npc once per matching group, not once overall.
+  roles: string[];
   // Same optional-bound shape as QuestSummary's own minLevel/maxLevel --
   // most eqlwiki.com creature entries are a level *range*, not one number;
   // a single-level mob (a named/unique) just has minLevel === maxLevel
   // rather than a separate scalar field, so callers check one shape either
-  // way. See decisions/mob-node-type.md.
+  // way. Only ever set for npcs with a "mob"/"guard"/"guildmaster" role --
+  // plain vendors/quest-givers have no known level.
   minLevel?: number;
   maxLevel?: number;
 }
 
 // zoneId is required, not optional like getQuests()'s -- there's no current
-// UI need for "every mob across every zone" the way Quests' own unfiltered
+// UI need for "every npc across every zone" the way Quests' own unfiltered
 // list is a real browsable tab, so this only supports the one query shape
 // Maps' zone dossier actually makes.
-export function getMobs(zoneId: string): MobSummary[] {
+export function getZoneNpcs(zoneId: string): NpcSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   return graph.nodes
-    .filter((n) => n.data.type === "mob" && helpers.edgesFrom(n.data.id, "located_in").some((e) => e.target === zoneId))
+    .filter((n) => n.data.type === "npc" && helpers.edgesFrom(n.data.id, "located_in").some((e) => e.target === zoneId))
     .map((n) => ({
       id: n.data.id,
       label: n.data.label,
+      roles: (n.data.roles as string[] | undefined) ?? [],
       minLevel: n.data.minLevel as number | undefined,
       maxLevel: n.data.maxLevel as number | undefined,
     }))
@@ -1042,6 +1051,13 @@ export interface ZoneVendorInfo {
   // itself and isn't recoverable as a coordinate. Empty array for the many
   // zones with no map sourced yet.
   maps: { label: string | null; image: string; legend: { key: string; label: string }[] }[];
+  // The zone node's own `zoneType` field (migration 266,
+  // decisions/npc-mob-unification-and-zone-groups.md) -- drives Maps'
+  // grouped-Bestiary display order client-side. Every zone got classified
+  // by that migration; null is just defensive typing for a future zone
+  // node that forgets to set one, same as this interface's other
+  // possibly-missing fields.
+  zoneType: "city" | "dungeon" | "open_world" | null;
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -1083,6 +1099,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
     lore: (zone?.lore as string | undefined) ?? null,
     wikiTitle: (zone?.wiki_title as string | undefined) ?? null,
     maps: (zone?.maps as ZoneVendorInfo["maps"] | undefined) ?? [],
+    zoneType: (zone?.zoneType as ZoneVendorInfo["zoneType"]) ?? null,
   };
 }
 

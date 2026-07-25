@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getMobs, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -248,13 +248,15 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getZones() };
   }
 
-  // GET /api/mobs?zone=zone:oasis-of-marr — mob nodes located in that zone.
-  // zone is required (unlike /api/quests' optional one); see getMobs()'s own
-  // comment in src/graph.ts for why. Empty zone param -> empty result, not
-  // every mob in the graph.
-  if (pathname === "/api/mobs") {
+  // GET /api/npcs?zone=zone:oasis-of-marr — every npc located_in that zone
+  // (vendors, quest-givers, guards, guildmasters, mobs alike — see
+  // decisions/npc-mob-unification-and-zone-groups.md). zone is required
+  // (unlike /api/quests' optional one); see getZoneNpcs()'s own comment in
+  // src/graph.ts for why. Empty zone param -> empty result, not every npc
+  // in the graph.
+  if (pathname === "/api/npcs") {
     const zone = searchParams.get("zone") || "";
-    return { status: 200, body: zone ? getMobs(zone) : [] };
+    return { status: 200, body: zone ? getZoneNpcs(zone) : [] };
   }
 
   return null;

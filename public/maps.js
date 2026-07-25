@@ -68,37 +68,36 @@ function populateZones(zones) {
   }
 }
 
-// A zone has its own facts (map, level range, quests, mobs) whether or not
+// A zone has its own facts (map, level range, quests, npcs) whether or not
 // a route to it was ever computed -- e.g. a spell vendor's zone link lands
-// here with only "to" set. destination.wikiTitle/lore/maps ride along on
-// /api/route's existing payload (src/graph.ts's getZoneVendorInfo) rather
-// than a second lookup: calling it with from===to still resolves (0 hops,
-// see shortestPath's own from===to short-circuit) without implying a real
-// route exists. `maps` (migration 125, decisions/zone-multi-floor-maps.md)
-// is a one-entry-per-floor array; each entry's `image` is a bare filename
-// under public/maps/ -- resolved to a real path in zone-dossier itself,
-// since getZoneVendorInfo only knows the filename, not the app's own
-// static-asset layout. mobs comes from /api/mobs?zone= (getMobs() in
-// src/graph.ts, decisions/mob-node-type.md) -- real for the zones
-// migration 060+ has covered, an empty list everywhere else, same as it
-// would be for a genuinely uncatalogued zone. levelRange is derived from
-// that same mobs array (min/max across the bestiary) rather than a second
-// lookup -- it used to be zone-mock-data.js's hash-based placeholder, which
-// had no connection to the zone at all and is why it never agreed with the
-// bestiary list right below it. null (not 1-Infinity or some other
-// sentinel) for a zone with no mobs yet, same "unknown" shape
+// here with only "to" set. destination.wikiTitle/lore/maps/zoneType ride
+// along on /api/route's existing payload (src/graph.ts's getZoneVendorInfo)
+// rather than a second lookup: calling it with from===to still resolves (0
+// hops, see shortestPath's own from===to short-circuit) without implying a
+// real route exists. `maps` (migration 125, decisions/
+// zone-multi-floor-maps.md) is a one-entry-per-floor array; each entry's
+// `image` is a bare filename under public/maps/ -- resolved to a real path
+// in zone-dossier itself, since getZoneVendorInfo only knows the filename,
+// not the app's own static-asset layout. npcs comes from /api/npcs?zone=
+// (getZoneNpcs() in src/graph.ts, decisions/
+// npc-mob-unification-and-zone-groups.md) -- every entity located_in the
+// zone (vendors, quest-givers, guards, guildmasters, mobs alike), grouped
+// and ordered by <zone-dossier> itself based on zoneType. levelRange is
+// derived from that same npcs array (min/max across every entry with a
+// known level) rather than a second lookup. null (not 1-Infinity or some
+// other sentinel) for a zone with no leveled npcs yet, same "unknown" shape
 // getZoneVendorInfo already uses for its own levelRange.
-function mobsLevelRange(mobs) {
-  const levels = mobs.flatMap((m) => [m.minLevel, m.maxLevel]).filter((n) => n != null);
+function npcsLevelRange(npcs) {
+  const levels = npcs.flatMap((n) => [n.minLevel, n.maxLevel]).filter((n) => n != null);
   return levels.length ? { min: Math.min(...levels), max: Math.max(...levels) } : null;
 }
 
 async function buildDossierData(to) {
   const zone = zonesByLabel.get(to);
-  const [{ destination }, quests, mobs] = await Promise.all([
+  const [{ destination }, quests, npcs] = await Promise.all([
     fetch(`api/route?${new URLSearchParams({ from: to, to })}`).then((r) => r.json()),
     zone ? fetch(`api/quests?${new URLSearchParams({ zone: zone.id })}`).then((r) => r.json()) : Promise.resolve([]),
-    zone ? fetch(`api/mobs?${new URLSearchParams({ zone: zone.id })}`).then((r) => r.json()) : Promise.resolve([]),
+    zone ? fetch(`api/npcs?${new URLSearchParams({ zone: zone.id })}`).then((r) => r.json()) : Promise.resolve([]),
   ]);
   return {
     zoneLabel: to,
@@ -106,8 +105,9 @@ async function buildDossierData(to) {
     outOfEra: zone?.outOfEra,
     lore: destination?.lore,
     maps: destination?.maps,
-    levelRange: mobsLevelRange(mobs),
-    mobs,
+    zoneType: destination?.zoneType,
+    levelRange: npcsLevelRange(npcs),
+    npcs,
     quests,
   };
 }

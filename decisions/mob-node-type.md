@@ -1,5 +1,7 @@
 # Mobs: a `mob` node type, reusing the `located_in` edge
 
+**Superseded by [npc/mob unification and zone-type-ordered groups](npc-mob-unification-and-zone-groups.md)** — migration 265 retired `mob` as a separate node type; every former mob is now an `npc` with a `guard`/`guildmaster`/`mob` role. This file stays as the reference for *how* the bestiary data itself was sourced (the eqlwiki.com method, the guard/guildmaster inclusion-exclusion precedents below) — that history is still exactly right, only the storage shape changed.
+
 Maps' zone dossier (issue #28) shipped a Bestiary section against fabricated placeholder data, since the graph had no mob/creature data or node type at all. Oasis of Marr is the first zone with real mob nodes, sourced directly from eqlwiki.com's own Oasis of Marr page (creature list with level/level-range per entry).
 
 Fix: a `mob` node type — `{ id, label, minLevel?, maxLevel? }`, same optional-bound shape `QuestSummary`/`QuestGroupSummary` already use for level gating, not a single `level` field, since eqlwiki.com mostly reports mobs as a level *range* ("Sand Giant: 33-37") rather than one number. A handful of named/unique mobs (Cazel, Hatar, Lockjaw) have a single wiki-stated level; those are stored as `minLevel === maxLevel`, not a separate scalar field, so every reader of a mob node checks the same two fields regardless of which kind it is.

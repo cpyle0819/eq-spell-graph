@@ -1,41 +1,53 @@
 // <zone-dossier></zone-dossier>, with `.setData({ zoneLabel, wikiTitle,
-// outOfEra, lore, levelRange, maps, mobs, quests })` set as one atomic call
-// (same contract shape as route-card/zone-card's own setters). Renders
-// everything issue #28 asked Maps to surface about a *destination* once a
-// traveler arrives: a map, a level range to judge the trip at a glance, who
-// lives there, and what quests are running. Sits below route-card in
-// maps.js's result column and, unlike route-card, renders whenever a
-// destination is picked at all -- a zone has its own facts regardless of
-// whether a route to it was ever computed (e.g. a spell vendor's zone link
-// with no "from" set yet).
+// outOfEra, lore, levelRange, maps, npcs, zoneType, quests })` set as one
+// atomic call (same contract shape as route-card/zone-card's own setters).
+// Renders everything issue #28 asked Maps to surface about a *destination*
+// once a traveler arrives: a map, a level range to judge the trip at a
+// glance, who lives there, and what quests are running. Sits below
+// route-card in maps.js's result column and, unlike route-card, renders
+// whenever a destination is picked at all -- a zone has its own facts
+// regardless of whether a route to it was ever computed (e.g. a spell
+// vendor's zone link with no "from" set yet).
 //
-// The bestiary is a plain name+level roster, not a danger rating -- an
-// early pass here also colored/labeled each mob by threat tier, but that
-// read as a real signal riding on data that was, at the time, entirely
-// invented, so it was cut after a first look. Level range alone is the
-// difficulty signal for now.
+// The old single "Bestiary" mob roster is gone
+// (decisions/npc-mob-unification-and-zone-groups.md) -- every entity in the
+// graph is an `npc` now, tagged via `roles` (vendor/quest_giver/guard/
+// guildmaster/mob), and this renders one labeled group per role actually
+// present, not a flat list. An npc with more than one role (a vendor who
+// also gives a quest) renders once per matching group -- intentional, not a
+// dedup bug. Group order depends on `zoneType` ("city"/"open_world" share
+// CITY_ROLE_ORDER; "dungeon" gets DUNGEON_ROLE_ORDER, the exact reverse --
+// a dungeon's own hostile roster is what a visitor actually came for) -- an
+// absent role's group is simply not rendered, per the same "if a group
+// isn't present, it isn't displayed" rule this redesign was built around.
+// This is still a plain name+level roster, not a danger rating -- an early
+// pass here also
+// colored/labeled each mob by threat tier, but that read as a real signal
+// riding on data that was, at the time, entirely invented, so it was cut
+// after a first look. Level range alone is the difficulty signal for now.
 //
-// `mobs` is `MobSummary[]` straight from /api/mobs?zone= (getMobs() in
-// src/graph.ts, decisions/mob-node-type.md) -- real for the zones the
+// `npcs` is `NpcSummary[]` straight from /api/npcs?zone= (getZoneNpcs() in
+// src/graph.ts) -- every npc located_in the zone, real for the zones the
 // issue #36 batches have covered so far, an empty array everywhere else,
-// same as a genuinely uncatalogued zone would be; the empty-bestiary branch
+// same as a genuinely uncatalogued zone would be; the empty-groups branch
 // below is the ordinary case, not a fallback for missing data plumbing.
-// `mob.name` doesn't exist -- it's `label`, matching every other summary
+// `npc.name` doesn't exist -- it's `label`, matching every other summary
 // shape in this app (QuestSummary, ZoneSummary, ...); `level` is
 // `minLevel`/`maxLevel`, since eqlwiki.com reports most creatures as a
-// range.
+// range, present only for npcs with a guard/guildmaster/mob role.
 //
-// levelRange is maps.js's own min/max reduction over that same `mobs` array
-// (mobsLevelRange() there) -- a real fact about this zone's bestiary, not
+// levelRange is maps.js's own min/max reduction over that same `npcs` array
+// (npcsLevelRange() there) -- a real fact about this zone's roster, not
 // zone-mock-data.js's old hash-based placeholder (deleted; it never agreed
 // with the bestiary list right below it because it wasn't derived from
-// anything). null for a zone with no mobs catalogued yet, same shape as the
-// no-vendors case elsewhere in this app. zoneLabel/wikiTitle/lore/maps/quests
-// are also real: wikiTitle/lore/maps ride along on the existing /api/route
-// destination payload (src/graph.ts's getZoneVendorInfo, the same one
-// route-card already reads) rather than a separate lookup, and quests come
-// straight from /api/quests?zone=, which already supports this filter with
-// no new plumbing (issue #28's own Technical Notes).
+// anything). null for a zone with no leveled npcs catalogued yet, same
+// shape as the no-vendors case elsewhere in this app. zoneLabel/wikiTitle/
+// lore/maps/zoneType/quests are also real: wikiTitle/lore/maps/zoneType
+// ride along on the existing /api/route destination payload (src/graph.ts's
+// getZoneVendorInfo, the same one route-card already reads) rather than a
+// separate lookup, and quests come straight from /api/quests?zone=, which
+// already supports this filter with no new plumbing (issue #28's own
+// Technical Notes).
 //
 // `maps` (migration 125, decisions/zone-multi-floor-maps.md) is one entry
 // per floor: `{ label, image, legend }[]`. `image` is a filename under
@@ -56,7 +68,7 @@
 // the map+legend pair actually need and centers as a unit -- see
 // decisions/zone-multi-floor-maps.md's later note for why this replaced
 // the legend's brief stint living down with Bestiary/Quests instead.
-// `.dossier-columns` sits below that as Bestiary + Quests Here,
+// `.dossier-columns` sits below that as the npc groups + Quests Here,
 // side by side, stacking full-width below ~640px. `.map-block` and the
 // legend column each collapse via `hidden` when there's no map (or no
 // legend for the current floor).
@@ -69,25 +81,52 @@ function levelBadgeText(levelRange) {
   return levelRange ? `Levels ${levelRange.min}–${levelRange.max}` : "Level range unknown";
 }
 
-// "L33-37" for a real ranged mob, "L51" when eqlwiki.com only gave a single
+// "L33-37" for a real ranged npc, "L51" when eqlwiki.com only gave a single
 // level (stored as minLevel === maxLevel, see decisions/mob-node-type.md --
 // not a separate scalar field, so this is the one place that distinction
-// collapses back into display text).
-function mobLevelText({ minLevel, maxLevel }) {
+// collapses back into display text). "" for a plain vendor/quest-giver with
+// no known level at all.
+function npcLevelText({ minLevel, maxLevel }) {
   if (minLevel == null && maxLevel == null) return "";
   if (minLevel === maxLevel) return `L${minLevel}`;
   return `L${minLevel ?? "?"}-${maxLevel ?? "?"}`;
 }
 
-// Two sibling grid cells, not a wrapping row div -- .mob-list itself is the
-// grid (see its own CSS comment for why), so every mob's name/level land in
+// Two sibling grid cells, not a wrapping row div -- .npc-list itself is the
+// grid (see its own CSS comment for why), so every npc's name/level land in
 // the same two columns and the level column aligns down the whole list
 // without each row needing to know the longest name in the list.
-function mobRow(mob) {
+function npcRow(npc) {
   return `
-    <span class="mob-name">${mob.label}</span>
-    <span class="mob-level">${mobLevelText(mob)}</span>
+    <span class="npc-name">${npc.label}</span>
+    <span class="npc-level">${npcLevelText(npc)}</span>
   `;
+}
+
+const ROLE_LABELS = { guildmaster: "Guildmasters", vendor: "Vendors", quest_giver: "Quest Givers", guard: "Guards", mob: "Mobs" };
+const CITY_ROLE_ORDER = ["guildmaster", "vendor", "quest_giver", "guard", "mob"];
+const DUNGEON_ROLE_ORDER = [...CITY_ROLE_ORDER].reverse();
+
+// Groups npcs by role (one npc can land in more than one group -- see this
+// file's own header) and orders the groups per zoneType. "city" and
+// "open_world" render identically; only "dungeon" differs
+// (decisions/npc-mob-unification-and-zone-groups.md), so anything else
+// (including a missing zoneType) falls back to the city/open_world order.
+function npcGroupsHtml(npcs, zoneType) {
+  const groups = {};
+  for (const npc of npcs || []) {
+    for (const role of npc.roles) (groups[role] ??= []).push(npc);
+  }
+  const order = zoneType === "dungeon" ? DUNGEON_ROLE_ORDER : CITY_ROLE_ORDER;
+  const blocks = order
+    .filter((role) => groups[role]?.length)
+    .map((role) => `
+      <div class="npc-group">
+        <div class="dossier-col-label">${ROLE_LABELS[role]}</div>
+        <div class="npc-list">${groups[role].map(npcRow).join("")}</div>
+      </div>
+    `);
+  return blocks.length ? blocks.join("") : `<div class="dossier-empty">No npcs catalogued yet for this zone.</div>`;
 }
 
 function questTeaser(quest) {
@@ -236,15 +275,23 @@ ${WIKI_LINK_CSS}
   padding-bottom: 5px; margin-bottom: 11px;
   border-bottom: 2px solid var(--parch-accent);
 }
-/* grid-column spans both of .mob-list's columns when this renders inside
+/* grid-column spans both of .npc-list's columns when this renders inside
    it (a no-op in .quest-ledger, which isn't a grid) -- otherwise a single
    grid item with no explicit span sizes column 1 (max-content) to this
    message's own long text, which is exactly the "column too wide" problem
    the grid fix above exists to avoid. */
 .dossier-empty { grid-column: 1 / -1; font-size: 12px; font-style: italic; color: var(--parch-ink-soft); }
 
+/* One or more stacked npc-groups (Guildmasters/Vendors/Quest Givers/Guards/
+   Mobs, whichever are actually present) replace the old single "Bestiary"
+   list -- each reuses .dossier-col-label for its own heading, so a group
+   reads with the same visual weight "Bestiary" used to, just repeated per
+   role. Margin only between groups, not before the first, so the stack
+   doesn't add extra space under "Quests Here" next to it. */
+.npc-group + .npc-group { margin-top: 16px; }
+
 /* Grid, not flex rows with justify-content: space-between -- the old flex
-   version stretched .mob-name/.mob-level to the column's full width every
+   version stretched .npc-name/.npc-level to the column's full width every
    row, leaving a huge, inconsistent gap between a short name and its level
    (the gap was however wide the column happened to be, not how wide the
    name actually was). A shared grid instead sizes column 1 to the single
@@ -253,11 +300,11 @@ ${WIKI_LINK_CSS}
    table column, but the list itself no longer needs to be wide enough to
    justify that gap, which is what actually freed up the room to widen the
    map (see decisions/ or this file's own layout comment above). */
-.mob-list { display: grid; grid-template-columns: max-content 1fr; column-gap: 16px; font-size: 13px; }
-.mob-name, .mob-level { padding: 5px 0; }
-.mob-name:nth-child(-n+2), .mob-level:nth-child(-n+2) { padding-top: 0; }
-.mob-name:not(:nth-child(-n+2)), .mob-level:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
-.mob-level { text-align: right; font-size: 11px; color: var(--parch-ink-soft); font-variant-numeric: tabular-nums; }
+.npc-list { display: grid; grid-template-columns: max-content 1fr; column-gap: 16px; font-size: 13px; }
+.npc-name, .npc-level { padding: 5px 0; }
+.npc-name:nth-child(-n+2), .npc-level:nth-child(-n+2) { padding-top: 0; }
+.npc-name:not(:nth-child(-n+2)), .npc-level:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
+.npc-level { text-align: right; font-size: 11px; color: var(--parch-ink-soft); font-variant-numeric: tabular-nums; }
 
 /* quest-ledger's <ledger-item>s live in this component's own shadow tree
    (nested the same way route-card nests route-path -- see this file's own
@@ -303,10 +350,7 @@ class ZoneDossier extends HTMLElement {
               </div>
             </div>
             <div class="dossier-columns">
-              <div class="dossier-col">
-                <div class="dossier-col-label">Bestiary</div>
-                <div class="mob-list"></div>
-              </div>
+              <div class="dossier-col npc-groups"></div>
               <div class="dossier-col">
                 <div class="dossier-col-label">Quests Here</div>
                 <div class="quest-ledger"></div>
@@ -334,14 +378,14 @@ class ZoneDossier extends HTMLElement {
   render() {
     const d = this.#data;
     if (!d) return;
-    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, maps, mobs, quests } = d;
+    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, maps, npcs, zoneType, quests } = d;
 
     this.shadowRoot.querySelector(".zone-name").textContent = zoneLabel;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = wikiTitle ? wikiLink(wikiTitle) : "";
     this.shadowRoot.querySelector(".era-badge").hidden = !outOfEra;
     const levelBadge = this.shadowRoot.querySelector(".level-badge");
     levelBadge.textContent = levelBadgeText(levelRange);
-    levelBadge.title = "Monster levels found in this zone, from the bestiary below.";
+    levelBadge.title = "Level range across every npc catalogued in this zone.";
 
     const loreEl = this.shadowRoot.querySelector(".dossier-lore");
     loreEl.hidden = !lore;
@@ -366,10 +410,7 @@ class ZoneDossier extends HTMLElement {
       .map((entry) => `<li><span class="legend-key">${entry.key}</span><span>${entry.label}</span></li>`)
       .join("");
 
-    const mobList = this.shadowRoot.querySelector(".mob-list");
-    mobList.innerHTML = mobs?.length
-      ? mobs.map(mobRow).join("")
-      : `<div class="dossier-empty">No bestiary data yet — nothing catalogued for this zone.</div>`;
+    this.shadowRoot.querySelector(".npc-groups").innerHTML = npcGroupsHtml(npcs, zoneType);
 
     const ledger = this.shadowRoot.querySelector(".quest-ledger");
     if (quests?.length) {
