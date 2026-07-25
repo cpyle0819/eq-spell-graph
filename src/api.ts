@@ -214,28 +214,33 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getSpellLines() };
   }
 
-  // GET /api/quests?class=warrior,paladin&zone=zone:ak-anon&level=8 — class
-  // (if given) excludes classless "anyone" quests rather than unioning with
-  // them, zone narrows to quests located in that zone, level checks against
-  // each quest's minLevel/maxLevel range. See getQuests() in src/graph.ts.
+  // GET /api/quests?class=warrior,paladin&zone=zone:ak-anon&levelMin=9&levelMax=11
+  // — class (if given) excludes classless "anyone" quests rather than
+  // unioning with them, zone narrows to quests located in that zone,
+  // levelMin/levelMax keep quests whose own minLevel (start level) falls in
+  // that range. See getQuests() in src/graph.ts.
   if (pathname === "/api/quests") {
     const classes = (searchParams.get("class") || "").split(",").filter(Boolean);
     const zone = searchParams.get("zone") || undefined;
-    const levelParam = searchParams.get("level");
-    const level = levelParam ? Number(levelParam) : undefined;
-    return { status: 200, body: getQuests(classes, zone, level) };
+    const levelMinParam = searchParams.get("levelMin");
+    const levelMaxParam = searchParams.get("levelMax");
+    const levelMin = levelMinParam ? Number(levelMinParam) : undefined;
+    const levelMax = levelMaxParam ? Number(levelMaxParam) : undefined;
+    return { status: 200, body: getQuests(classes, zone, levelMin, levelMax) };
   }
 
-  // GET /api/quest-groups?class=paladin&zone=...&level=... — same filter
-  // semantics as /api/quests, applied to quest_group nodes; each result
-  // carries its resolved `members` (full QuestSummary per sub-quest). See
-  // getQuestGroups() in src/graph.ts and decisions/quest-group-node-type.md.
+  // GET /api/quest-groups?class=paladin&zone=...&levelMin=...&levelMax=... —
+  // same filter semantics as /api/quests, applied to quest_group nodes; each
+  // result carries its resolved `members` (full QuestSummary per sub-quest).
+  // See getQuestGroups() in src/graph.ts and decisions/quest-group-node-type.md.
   if (pathname === "/api/quest-groups") {
     const classes = (searchParams.get("class") || "").split(",").filter(Boolean);
     const zone = searchParams.get("zone") || undefined;
-    const levelParam = searchParams.get("level");
-    const level = levelParam ? Number(levelParam) : undefined;
-    return { status: 200, body: getQuestGroups(classes, zone, level) };
+    const levelMinParam = searchParams.get("levelMin");
+    const levelMaxParam = searchParams.get("levelMax");
+    const levelMin = levelMinParam ? Number(levelMinParam) : undefined;
+    const levelMax = levelMaxParam ? Number(levelMaxParam) : undefined;
+    return { status: 200, body: getQuestGroups(classes, zone, levelMin, levelMax) };
   }
 
   // GET /api/zones — list all zone nodes

@@ -35,7 +35,7 @@ function renderSidebar() {
     <sidebar-panel>
       <field-row label="Classes"><tag-input id="quest-class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
       <field-row label="Zone"><select id="quest-zone-select"><option value="">All Zones</option></select></field-row>
-      <field-row label="Level"><select id="quest-level-select"><option value="all">All Levels</option></select></field-row>
+      <field-row label="Levels"><range-picker id="quest-level-range" min="1" max="${MAX_QUEST_LEVEL}" value-min="1" value-max="${MAX_QUEST_LEVEL}"></range-picker></field-row>
       <field-row label="Search"><input type="text" id="quest-search" placeholder="Name, description, or step text..."></field-row>
       <field-row label="Era"><toggle-checkbox id="quest-show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-quest-filters-btn">Reset filters</button>
@@ -52,7 +52,6 @@ export async function init() {
   ]);
   setupClassTagInput();
   populateZoneSelect();
-  populateLevelSelect();
   setupFilters();
   applyQueryParams();
   fetchQuests();
@@ -95,19 +94,17 @@ function populateZoneSelect() {
   }
 }
 
-function populateLevelSelect() {
-  const sel = document.getElementById("quest-level-select");
-  for (let i = 1; i <= MAX_QUEST_LEVEL; i++) {
-    const opt = document.createElement("option");
-    opt.value = String(i);
-    opt.textContent = `Level ${i}`;
-    sel.appendChild(opt);
-  }
-}
-
 function setupFilters() {
   document.getElementById("quest-zone-select").addEventListener("change", fetchQuests);
-  document.getElementById("quest-level-select").addEventListener("change", fetchQuests);
+
+  // Same "debounce while dragging, settle after" treatment as app.js's own
+  // level-range (spell vendors) -- a two-thumb slider fires many "input"
+  // events per drag, and re-fetching on every tick would hammer the API.
+  let levelDebounce;
+  document.getElementById("quest-level-range").addEventListener("input", () => {
+    clearTimeout(levelDebounce);
+    levelDebounce = setTimeout(fetchQuests, 500);
+  });
 
   let searchDebounce;
   document.getElementById("quest-search").addEventListener("input", () => {
@@ -131,7 +128,9 @@ function resetFilters() {
   selectedClassNames = [];
   classTagInput.selected = selectedClassNames;
   document.getElementById("quest-zone-select").value = "";
-  document.getElementById("quest-level-select").value = "all";
+  const levelRange = document.getElementById("quest-level-range");
+  levelRange.valueMin = 1;
+  levelRange.valueMax = MAX_QUEST_LEVEL;
   document.getElementById("quest-search").value = "";
   showOutOfEra = false;
   document.getElementById("quest-show-out-of-era").checked = false;
@@ -152,8 +151,9 @@ async function fetchQuests() {
   if (selectedClassNames.length) params.set("class", selectedClassNames.join(","));
   const zone = document.getElementById("quest-zone-select").value;
   if (zone) params.set("zone", zone);
-  const level = document.getElementById("quest-level-select").value;
-  if (level !== "all") params.set("level", level);
+  const levelRange = document.getElementById("quest-level-range");
+  params.set("levelMin", levelRange.valueMin);
+  params.set("levelMax", levelRange.valueMax);
 
   // Same filter params against both endpoints -- a quest group's own
   // classes/minLevel mirror its members' (decisions/quest-group-node-type.md),

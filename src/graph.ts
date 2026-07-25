@@ -575,21 +575,25 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
 // these classes" -- deliberately excludes classless "anyone" quests, not a
 // union with them, per decisions/quest-reward-modeling.md: picking a class
 // here is "show me what's for my class," not "show me everything my class
-// could also do." level, if given, is a single character level checked
-// against each quest's minLevel/maxLevel (either bound absent = unbounded
-// in that direction), not a class_levels-style per-class pairing -- see
-// decisions/quest-reward-modeling.md for why quest level range isn't
-// class-joined the way spell levels are. zoneId narrows to quests
-// --located_in--> that zone.
-function matchesFilters(node: NodeData, classNames?: string[], level?: number): boolean {
+// could also do." levelMin/levelMax (if given) bound the quest's own start
+// level (minLevel), not a character's current level -- a quest is kept if
+// its minLevel falls within [levelMin, levelMax], not a class_levels-style
+// per-class pairing -- see decisions/quest-reward-modeling.md for why quest
+// level range isn't class-joined the way spell levels are. Quests with no
+// minLevel at all (undocumented start level -- always paired with no
+// maxLevel either, never a partial bound) pass regardless of range, same
+// "absent = unbounded" convention as everywhere else, rather than
+// disappearing the moment any range narrower than the full slider is
+// picked. zoneId narrows to quests --located_in--> that zone.
+function matchesFilters(node: NodeData, classNames?: string[], levelMin?: number, levelMax?: number): boolean {
   if (classNames && classNames.length > 0) {
     const nodeClasses = (node.classes as string[] | undefined) || [];
     if (nodeClasses.length === 0 || !nodeClasses.some((c) => classNames.includes(c))) return false;
   }
-  if (level !== undefined) {
-    const min = node.minLevel as number | undefined;
-    const max = node.maxLevel as number | undefined;
-    if (!(min === undefined || level >= min) || !(max === undefined || level <= max)) return false;
+  const questStart = node.minLevel as number | undefined;
+  if (questStart !== undefined) {
+    if (levelMin !== undefined && questStart < levelMin) return false;
+    if (levelMax !== undefined && questStart > levelMax) return false;
   }
   return true;
 }
@@ -605,14 +609,14 @@ function touchesZone(id: string, zoneId: string, helpers: GraphIndexHelpers): bo
   );
 }
 
-export function getQuests(classNames?: string[], zoneId?: string, level?: number): QuestSummary[] {
+export function getQuests(classNames?: string[], zoneId?: string, levelMin?: number, levelMax?: number): QuestSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const results = graph.nodes
     .filter(
       (n) =>
         n.data.type === "quest" &&
-        matchesFilters(n.data, classNames, level) &&
+        matchesFilters(n.data, classNames, levelMin, levelMax) &&
         (!zoneId || touchesZone(n.data.id, zoneId, helpers))
     )
     .map((n) => buildQuestSummary(n.data, helpers));
@@ -626,13 +630,13 @@ export function getQuests(classNames?: string[], zoneId?: string, level?: number
 // what's actually filterable; members are resolved unconditionally once
 // their group passes the filter; zoneId only checks the group's own zone
 // (e.g. Temple of Solusek Ro), not each member's individual zone.
-export function getQuestGroups(classNames?: string[], zoneId?: string, level?: number): QuestGroupSummary[] {
+export function getQuestGroups(classNames?: string[], zoneId?: string, levelMin?: number, levelMax?: number): QuestGroupSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const { nodeById, edgesFrom, edgesTo } = helpers;
 
   const results = graph.nodes
-    .filter((n) => n.data.type === "quest_group" && matchesFilters(n.data, classNames, level))
+    .filter((n) => n.data.type === "quest_group" && matchesFilters(n.data, classNames, levelMin, levelMax))
     .map((n): QuestGroupSummary => {
       const id = n.data.id;
       const zones = edgesFrom(id, "located_in")
