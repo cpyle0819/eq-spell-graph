@@ -2260,7 +2260,55 @@
           }
         },
         "lore": "Kaladim is the underground city of the Dwarves of Norrath. A huge carved statue of a dwarf marks the entrance of their city onto the rugged Butcherblock Mountains.",
-        "wiki_title": "Kaladim"
+        "wiki_title": "Kaladim",
+        "maps": [
+          {
+            "label": null,
+            "image": "north-kaladim.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Merchant selling Gems"
+              },
+              {
+                "key": "2",
+                "label": "Merchant selling Brellium, Ore, Smithy Hammers, Sharpening Stones"
+              },
+              {
+                "key": "3",
+                "label": "Cleric Guild - Merchants selling Blunt Weapons, Food and Goods Merchant outside"
+              },
+              {
+                "key": "4",
+                "label": "Ratsbone Treasure and Assay Office - Bank, Merchants who sell Throwing Weapons, Mining Supplies & Boxes, and Rogue Guild Members outside"
+              },
+              {
+                "key": "5",
+                "label": "Pottery Wheel and Kiln"
+              },
+              {
+                "key": "6",
+                "label": "Empty Hut"
+              },
+              {
+                "key": "7",
+                "label": "Empty Hut"
+              },
+              {
+                "key": "8",
+                "label": "Everhot Forge - Merchants selling Blunt and Sharp Weapons, Small Chain and Plate Armor, Small Plate and Shield Molds, Weapon Molds, Jewelry Metal and Rare Gems, Forge Outside"
+              },
+              {
+                "key": "9",
+                "label": "Greybloom Farms - Merchants selling Grapes, Brew Barrel inside, Oven outside"
+              },
+              {
+                "key": "10",
+                "label": "Paladin Guild"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -53896,7 +53944,63 @@
           }
         },
         "lore": "Kaladim is the underground city of the Dwarves of Norrath. A huge carved statue of a dwarf marks the entrance of their city onto the rugged Butcherblock Mountains.",
-        "wiki_title": "Kaladim"
+        "wiki_title": "Kaladim",
+        "maps": [
+          {
+            "label": null,
+            "image": "south-kaladim.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Tanned Assets - Merchant selling Small Leather Armor"
+              },
+              {
+                "key": "2",
+                "label": "Irontoe's Eats - home of Tumpy Irontoe, Merchants selling Alcohol and Meat Pies"
+              },
+              {
+                "key": "3",
+                "label": "Staff and Spear - Merchants selling Swords and Fletching Supplies"
+              },
+              {
+                "key": "4",
+                "label": "Redfist's Metal - Merchants selling Small Shields and Weapons of all types, Forge and Stormguard Forge outside"
+              },
+              {
+                "key": "5",
+                "label": "The Arena (not PvP)"
+              },
+              {
+                "key": "6",
+                "label": "Pub Kal - Merchants selling Alcohol, Brew Barrel, Bard outside"
+              },
+              {
+                "key": "7",
+                "label": "Warrior's Guild with Merchants selling Various Weapons"
+              },
+              {
+                "key": "8",
+                "label": "Priest of Discord"
+              },
+              {
+                "key": "9",
+                "label": "Merchant selling Potions and Crystals"
+              },
+              {
+                "key": "10",
+                "label": "Merchant selling Bags, Pottery Wheel and Kiln outside"
+              },
+              {
+                "key": "11",
+                "label": "Gurtha's Ware with Merchants selling Small Boots, Small Cloth Armor, Pottery Supplies, Oven outside"
+              },
+              {
+                "key": "12",
+                "label": "Castle - home of the King"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -129246,6 +129350,537 @@
       "data": {
         "id": "mob:neriak-3rd-gate:xon-quexill",
         "label": "Xon Quexill",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:gunlok-jure",
+        "label": "Gunlok Jure",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:cleaner-vii",
+        "label": "Cleaner VII",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:guard-dalammer",
+        "label": "Guard Dalammer",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:guard-dalthur",
+        "label": "Guard Dalthur",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:guard-doradek",
+        "label": "Guard Doradek",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:guard-kaldolar",
+        "label": "Guard Kaldolar",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:kinlo-strongarm",
+        "label": "Kinlo Strongarm",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:trantor-everhot",
+        "label": "Trantor Everhot",
+        "type": "mob",
+        "minLevel": 35,
+        "maxLevel": 35
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:datur-nightseer",
+        "label": "Datur Nightseer",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:priestess-ghalea",
+        "label": "Priestess Ghalea",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:guard-ainamar",
+        "label": "Guard Ainamar",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 39
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:diggins",
+        "label": "Diggins",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:bumle-reminjar",
+        "label": "Bumle Reminjar",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:founy-jestands",
+        "label": "Founy Jestands",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:nultal-malfoot",
+        "label": "Nultal Malfoot",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:dunony-chestire",
+        "label": "Dunony Chestire",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:resron-silvern",
+        "label": "Resron Silvern",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:donnel-ratsbome",
+        "label": "Donnel Ratsbome",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:jark",
+        "label": "Jark",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:jeet",
+        "label": "Jeet",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:mater",
+        "label": "Mater",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:infected-rat",
+        "label": "Infected Rat",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:atheki-norkhitter",
+        "label": "Atheki Norkhitter",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:giant-rat",
+        "label": "Giant Rat",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:kalamin-norkhitter",
+        "label": "Kalamin Norkhitter",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:north-kaladim:usbak-the-old",
+        "label": "Usbak the Old",
+        "type": "mob",
+        "minLevel": 55,
+        "maxLevel": 55
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:hogunk-ventille",
+        "label": "Hogunk Ventille",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:beno-targnarle",
+        "label": "Beno Targnarle",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:canloe-nusback",
+        "label": "Canloe Nusback",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:byzar-bloodforge",
+        "label": "Byzar Bloodforge",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:furtog-ogrebane",
+        "label": "Furtog Ogrebane",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-adolar",
+        "label": "Guard Adolar",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-adolmer",
+        "label": "Guard Adolmer",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-anathur",
+        "label": "Guard Anathur",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-badmer",
+        "label": "Guard Badmer",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-bobbin",
+        "label": "Guard Bobbin",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-cardaff",
+        "label": "Guard Cardaff",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-didek",
+        "label": "Guard Didek",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 39
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-dinamin",
+        "label": "Guard Dinamin",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-dinler",
+        "label": "Guard Dinler",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-gabbles",
+        "label": "Guard Gabbles",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-hinolmer",
+        "label": "Guard Hinolmer",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-humkor",
+        "label": "Guard Humkor",
+        "type": "mob",
+        "minLevel": 39,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-humphet",
+        "label": "Guard Humphet",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-kanuf",
+        "label": "Guard Kanuf",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-kathur",
+        "label": "Guard Kathur",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-kindor",
+        "label": "Guard Kindor",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-koranin",
+        "label": "Guard Koranin",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-ninadek",
+        "label": "Guard Ninadek",
+        "type": "mob",
+        "minLevel": 41,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-ninaf",
+        "label": "Guard Ninaf",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 38
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-stump",
+        "label": "Guard Stump",
+        "type": "mob",
+        "minLevel": 38,
+        "maxLevel": 41
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:guard-tantan",
+        "label": "Guard Tantan",
+        "type": "mob",
+        "minLevel": 42,
+        "maxLevel": 42
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:king-kazon-stormhammer",
+        "label": "King Kazon Stormhammer",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:bronlor-lightblade",
+        "label": "Bronlor Lightblade",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:kilam-oresinger",
+        "label": "Kilam Oresinger",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:a-bloodforge-captain",
+        "label": "A Bloodforge Captain",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:barrith-the-brave",
+        "label": "Barrith the Brave",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:bloodforge-brigade",
+        "label": "Bloodforge Brigade",
+        "type": "mob",
+        "minLevel": 49,
+        "maxLevel": 49
+      }
+    },
+    {
+      "data": {
+        "id": "mob:south-kaladim:dirjadak-barbrawler",
+        "label": "Dirjadak Barbrawler",
         "type": "mob",
         "minLevel": 61,
         "maxLevel": 61
@@ -278247,6 +278882,478 @@
         "id": "e-located_in-18570",
         "source": "mob:neriak-3rd-gate:xon-quexill",
         "target": "zone:neriak-3rd-gate",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18571",
+        "source": "mob:north-kaladim:gunlok-jure",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18572",
+        "source": "mob:north-kaladim:cleaner-vii",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18573",
+        "source": "mob:north-kaladim:guard-dalammer",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18574",
+        "source": "mob:north-kaladim:guard-dalthur",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18575",
+        "source": "mob:north-kaladim:guard-doradek",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18576",
+        "source": "mob:north-kaladim:guard-kaldolar",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18577",
+        "source": "mob:north-kaladim:kinlo-strongarm",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18578",
+        "source": "mob:north-kaladim:trantor-everhot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18579",
+        "source": "mob:north-kaladim:datur-nightseer",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18580",
+        "source": "mob:north-kaladim:priestess-ghalea",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18581",
+        "source": "mob:north-kaladim:guard-ainamar",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18582",
+        "source": "mob:north-kaladim:diggins",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18583",
+        "source": "mob:north-kaladim:bumle-reminjar",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18584",
+        "source": "mob:north-kaladim:founy-jestands",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18585",
+        "source": "mob:north-kaladim:nultal-malfoot",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18586",
+        "source": "mob:north-kaladim:dunony-chestire",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18587",
+        "source": "mob:north-kaladim:resron-silvern",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18588",
+        "source": "mob:north-kaladim:donnel-ratsbome",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18589",
+        "source": "mob:north-kaladim:jark",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18590",
+        "source": "mob:north-kaladim:jeet",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18591",
+        "source": "mob:north-kaladim:mater",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18592",
+        "source": "mob:north-kaladim:infected-rat",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18593",
+        "source": "mob:north-kaladim:atheki-norkhitter",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18594",
+        "source": "mob:north-kaladim:giant-rat",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18595",
+        "source": "mob:north-kaladim:kalamin-norkhitter",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18596",
+        "source": "mob:north-kaladim:usbak-the-old",
+        "target": "zone:north-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18597",
+        "source": "mob:south-kaladim:hogunk-ventille",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18598",
+        "source": "mob:south-kaladim:beno-targnarle",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18599",
+        "source": "mob:south-kaladim:canloe-nusback",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18600",
+        "source": "mob:south-kaladim:byzar-bloodforge",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18601",
+        "source": "mob:south-kaladim:furtog-ogrebane",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18602",
+        "source": "mob:south-kaladim:guard-adolar",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18603",
+        "source": "mob:south-kaladim:guard-adolmer",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18604",
+        "source": "mob:south-kaladim:guard-anathur",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18605",
+        "source": "mob:south-kaladim:guard-badmer",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18606",
+        "source": "mob:south-kaladim:guard-bobbin",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18607",
+        "source": "mob:south-kaladim:guard-cardaff",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18608",
+        "source": "mob:south-kaladim:guard-didek",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18609",
+        "source": "mob:south-kaladim:guard-dinamin",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18610",
+        "source": "mob:south-kaladim:guard-dinler",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18611",
+        "source": "mob:south-kaladim:guard-gabbles",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18612",
+        "source": "mob:south-kaladim:guard-hinolmer",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18613",
+        "source": "mob:south-kaladim:guard-humkor",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18614",
+        "source": "mob:south-kaladim:guard-humphet",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18615",
+        "source": "mob:south-kaladim:guard-kanuf",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18616",
+        "source": "mob:south-kaladim:guard-kathur",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18617",
+        "source": "mob:south-kaladim:guard-kindor",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18618",
+        "source": "mob:south-kaladim:guard-koranin",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18619",
+        "source": "mob:south-kaladim:guard-ninadek",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18620",
+        "source": "mob:south-kaladim:guard-ninaf",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18621",
+        "source": "mob:south-kaladim:guard-stump",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18622",
+        "source": "mob:south-kaladim:guard-tantan",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18623",
+        "source": "mob:south-kaladim:king-kazon-stormhammer",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18624",
+        "source": "mob:south-kaladim:bronlor-lightblade",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18625",
+        "source": "mob:south-kaladim:kilam-oresinger",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18626",
+        "source": "mob:south-kaladim:a-bloodforge-captain",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18627",
+        "source": "mob:south-kaladim:barrith-the-brave",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18628",
+        "source": "mob:south-kaladim:bloodforge-brigade",
+        "target": "zone:south-kaladim",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-18629",
+        "source": "mob:south-kaladim:dirjadak-barbrawler",
+        "target": "zone:south-kaladim",
         "type": "located_in"
       }
     }
