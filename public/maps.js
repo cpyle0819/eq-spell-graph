@@ -2,7 +2,6 @@
 // creates or configures one -- see app.js's identical import for why order
 // here is load bearing, not just tidiness.
 import "./components/index.js";
-import { mockLevelRange } from "./zone-mock-data.js";
 
 const STATE_KEY = "eq-route-state";
 
@@ -82,8 +81,18 @@ function populateZones(zones) {
 // static-asset layout. mobs comes from /api/mobs?zone= (getMobs() in
 // src/graph.ts, decisions/mob-node-type.md) -- real for the zones
 // migration 060+ has covered, an empty list everywhere else, same as it
-// would be for a genuinely uncatalogued zone. levelRange is still a
-// stage-1 placeholder -- see zone-mock-data.js.
+// would be for a genuinely uncatalogued zone. levelRange is derived from
+// that same mobs array (min/max across the bestiary) rather than a second
+// lookup -- it used to be zone-mock-data.js's hash-based placeholder, which
+// had no connection to the zone at all and is why it never agreed with the
+// bestiary list right below it. null (not 1-Infinity or some other
+// sentinel) for a zone with no mobs yet, same "unknown" shape
+// getZoneVendorInfo already uses for its own levelRange.
+function mobsLevelRange(mobs) {
+  const levels = mobs.flatMap((m) => [m.minLevel, m.maxLevel]).filter((n) => n != null);
+  return levels.length ? { min: Math.min(...levels), max: Math.max(...levels) } : null;
+}
+
 async function buildDossierData(to) {
   const zone = zonesByLabel.get(to);
   const [{ destination }, quests, mobs] = await Promise.all([
@@ -97,7 +106,7 @@ async function buildDossierData(to) {
     outOfEra: zone?.outOfEra,
     lore: destination?.lore,
     maps: destination?.maps,
-    levelRange: mockLevelRange(to),
+    levelRange: mobsLevelRange(mobs),
     mobs,
     quests,
   };

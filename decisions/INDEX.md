@@ -86,4 +86,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Item hover uses the generic detail-tooltip, shaped per card type](item-hover-uses-generic-detail-tooltip.md)
 - [Quest-group card replaces its members in the results list](quest-group-card-ui.md)
 - [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
+- [Zone level badge: retired the mock, and dropped route-card's second one](zone-level-badge-retired-mock-data.md)
 

@@ -16,23 +16,26 @@
 // difficulty signal for now.
 //
 // `mobs` is `MobSummary[]` straight from /api/mobs?zone= (getMobs() in
-// src/graph.ts, decisions/mob-node-type.md) -- real for zones migration 060
-// has covered (Oasis of Marr so far), an empty array everywhere else, same
-// as a genuinely uncatalogued zone would be; the empty-bestiary branch below
-// is the ordinary case, not a fallback for missing data plumbing. `mob.name`
-// doesn't exist -- it's `label`, matching every other summary shape in this
-// app (QuestSummary, ZoneSummary, ...); `level` is `minLevel`/`maxLevel`,
-// since eqlwiki.com reports most creatures as a range.
+// src/graph.ts, decisions/mob-node-type.md) -- real for the zones the
+// issue #36 batches have covered so far, an empty array everywhere else,
+// same as a genuinely uncatalogued zone would be; the empty-bestiary branch
+// below is the ordinary case, not a fallback for missing data plumbing.
+// `mob.name` doesn't exist -- it's `label`, matching every other summary
+// shape in this app (QuestSummary, ZoneSummary, ...); `level` is
+// `minLevel`/`maxLevel`, since eqlwiki.com reports most creatures as a
+// range.
 //
-// levelRange is still stage-1 placeholder data (public/zone-mock-data.js) --
-// see that file's own header for why: zone nodes carry no real level-range
-// field yet, unlike mobs and maps, which now do. zoneLabel/wikiTitle/
-// lore/maps/quests are real: wikiTitle/lore/maps ride along on the
-// existing /api/route destination payload (src/graph.ts's
-// getZoneVendorInfo, the same one route-card already reads) rather than a
-// separate lookup, and quests come straight from /api/quests?zone=, which
-// already supports this filter with no new plumbing (issue #28's own
-// Technical Notes).
+// levelRange is maps.js's own min/max reduction over that same `mobs` array
+// (mobsLevelRange() there) -- a real fact about this zone's bestiary, not
+// zone-mock-data.js's old hash-based placeholder (deleted; it never agreed
+// with the bestiary list right below it because it wasn't derived from
+// anything). null for a zone with no mobs catalogued yet, same shape as the
+// no-vendors case elsewhere in this app. zoneLabel/wikiTitle/lore/maps/quests
+// are also real: wikiTitle/lore/maps ride along on the existing /api/route
+// destination payload (src/graph.ts's getZoneVendorInfo, the same one
+// route-card already reads) rather than a separate lookup, and quests come
+// straight from /api/quests?zone=, which already supports this filter with
+// no new plumbing (issue #28's own Technical Notes).
 //
 // `maps` (migration 125, decisions/zone-multi-floor-maps.md) is one entry
 // per floor: `{ label, image, legend }[]`. `image` is a filename under
@@ -336,7 +339,9 @@ class ZoneDossier extends HTMLElement {
     this.shadowRoot.querySelector(".zone-name").textContent = zoneLabel;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = wikiTitle ? wikiLink(wikiTitle) : "";
     this.shadowRoot.querySelector(".era-badge").hidden = !outOfEra;
-    this.shadowRoot.querySelector(".level-badge").textContent = levelBadgeText(levelRange);
+    const levelBadge = this.shadowRoot.querySelector(".level-badge");
+    levelBadge.textContent = levelBadgeText(levelRange);
+    levelBadge.title = "Monster levels found in this zone, from the bestiary below.";
 
     const loreEl = this.shadowRoot.querySelector(".dossier-lore");
     loreEl.hidden = !lore;

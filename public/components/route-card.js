@@ -1,37 +1,28 @@
 // <route-card></route-card>, with
 // `.route = {from, to, hops, steps, destination}` set as a property.
-// Renders the "From → To" title, an "N hop(s)" badge, a destination-vendor
-// badge, and a nested <route-path> for the actual step-by-step directions.
+// Renders the "From → To" title, an "N hop(s)" badge, and a nested
+// <route-path> for the actual step-by-step directions.
 //
 // `destination` (from /api/route's `destination` field, see src/graph.ts's
-// getZoneVendorInfo) is `{vendorCount, levelRange, lore, wikiTitle}`
-// describing the *destination* zone -- vendorCount/levelRange are spell
-// vendors actually present there (not a faction/danger judgment, since
-// Maps has no race/class/deity context to resolve one, unlike
-// Spell Finder's zone-card), kept to a single small badge alongside the
-// hops badge, not a data dump. `wikiTitle` is the exact eqlwiki.com page
-// title this zone was sourced from (migration 023's `wiki_title`, not
-// always the same string as `to` -- see decisions/
-// zone-naming-mismatches.md) -- reused here for the header's wiki link
-// instead of re-deriving a URL from `to`, which would 404 for zones with a
-// mismatched label. `lore` itself isn't shown here -- <zone-dossier> is the
-// canonical place for it now (it renders unconditionally below this card),
-// so repeating it here read as a straight duplicate.
+// getZoneVendorInfo) is `{vendorCount, levelRange, lore, wikiTitle}`, but
+// this card only reads `wikiTitle` for the header's wiki link -- the exact
+// eqlwiki.com page title this zone was sourced from (migration 023's
+// `wiki_title`, not always the same string as `to` -- see decisions/
+// zone-naming-mismatches.md), reused here instead of re-deriving a URL from
+// `to`, which would 404 for zones with a mismatched label. vendorCount/
+// levelRange used to drive a second "dest-badge" here, but that number is a
+// spell-shopping level range (every class_levels entry across every spell
+// any vendor sells), a different concept from a zone's danger/mob level --
+// showing it next to the hop count alongside <zone-dossier>'s own,
+// bestiary-derived level badge below just read as two conflicting answers
+// to the same question. The bestiary level range in <zone-dossier> is now
+// the one place Maps answers "what level is this zone," so this card
+// dropped back to just the hop count. `lore` itself isn't shown here either
+// -- <zone-dossier> is the canonical place for it now (it renders
+// unconditionally below this card), so repeating it here read as a
+// straight duplicate.
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
-
-function destinationBadgeText({ vendorCount, levelRange } = {}) {
-  if (!vendorCount) return "No vendors here";
-  const noun = vendorCount === 1 ? "vendor" : "vendors";
-  return levelRange ? `${vendorCount} ${noun} · Lvl ${levelRange.min}–${levelRange.max}` : `${vendorCount} ${noun}`;
-}
-
-function destinationBadgeTitle(to, { vendorCount, levelRange } = {}) {
-  if (!vendorCount) return `No known spell vendors in ${to}.`;
-  const noun = vendorCount === 1 ? "vendor sells" : "vendors sell";
-  const levels = levelRange ? ` spells for levels ${levelRange.min}–${levelRange.max}` : "spells";
-  return `${vendorCount} ${noun}${levels} in ${to}.`;
-}
 
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
@@ -64,19 +55,6 @@ ${WIKI_LINK_CSS}
   color: #c9a25e;
   font-variant-numeric: tabular-nums;
 }
-/* Same sunken-badge language as .hops-badge, but --ink-muted rather than
-   gold -- this is a neutral fact about the destination, not the card's
-   headline stat (that's still the hop count). */
-.dest-badge {
-  font-size: 12px; padding: 3px 10px; border-radius: 3px;
-  background: var(--panel-deep);
-  border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  color: var(--ink-muted);
-  font-variant-numeric: tabular-nums;
-  cursor: help;
-}
-.dest-badge.is-empty { font-style: italic; opacity: 0.85; }
 /* maps.html's own page-level route-path override can no longer reach this
    element now that it's nested inside this component's shadow root, so
    this component owns the override directly instead. */
@@ -95,7 +73,6 @@ class RouteCard extends HTMLElement {
           <span class="route-card-title"></span>
           <span class="wiki-link-holder"></span>
           <span class="hops-badge"></span>
-          <span class="dest-badge"></span>
         </div>
         <route-path></route-path>
       `;
@@ -116,10 +93,6 @@ class RouteCard extends HTMLElement {
     this.shadowRoot.querySelector(".route-card-title").textContent = `${this.#from} → ${this.#to}`;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = this.#destination?.wikiTitle ? wikiLink(this.#destination.wikiTitle) : "";
     this.shadowRoot.querySelector(".hops-badge").textContent = this.#hops === 1 ? "1 hop" : `${this.#hops} hops`;
-    const destBadge = this.shadowRoot.querySelector(".dest-badge");
-    destBadge.textContent = destinationBadgeText(this.#destination);
-    destBadge.title = destinationBadgeTitle(this.#to, this.#destination);
-    destBadge.classList.toggle("is-empty", !this.#destination?.vendorCount);
     this.shadowRoot.querySelector("route-path").steps = this.#steps;
   }
 }
