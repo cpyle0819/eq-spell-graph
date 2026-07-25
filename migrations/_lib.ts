@@ -36,6 +36,11 @@ export function loadGraph(migrationDir: string) {
     graph.edges.push({ data: { id: `e-${type}-${graph.edges.length + 1}`, source, target, type, ...attrs } });
   }
 
+  function updateNode(id: string, updates: Record<string, unknown>) {
+    const node = graph.nodes.find((n: { data: { id: string } }) => n.data.id === id);
+    if (node) Object.assign(node.data, updates);
+  }
+
   function slug(label: string): string {
     return label.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   }
@@ -55,5 +60,5 @@ export function loadGraph(migrationDir: string) {
     writeFileSync(GRAPH_PATH, JSON.stringify(graph, null, 2));
   }
 
-  return { graph, hasNode, addNode, hasEdge, addEdge, slug, addFactionReward, addGiver, save };
+  return { graph, hasNode, addNode, hasEdge, addEdge, updateNode, slug, addFactionReward, addGiver, save };
 }
