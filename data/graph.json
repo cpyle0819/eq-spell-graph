@@ -9932,7 +9932,59 @@
           }
         },
         "lore": "The West Commonlands is a large open area that is the western continuation of East Commonlands. This area is significantly higher level than East Commonlands, and many of the monsters here are both dangerous and aggressive.",
-        "wiki_title": "West Commonlands"
+        "wiki_title": "West Commonlands",
+        "maps": [
+          {
+            "label": null,
+            "image": "west-commonlands.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "2",
+                "label": "Shop with Fishing Supplies"
+              },
+              {
+                "key": "3",
+                "label": "Inn with Shields, Food, Alcohol, and Cloth Armor"
+              },
+              {
+                "key": "4",
+                "label": "Ancient Pyramid"
+              },
+              {
+                "key": "5",
+                "label": "Stone Rings with Druids"
+              },
+              {
+                "key": "6",
+                "label": "Empty Hut"
+              },
+              {
+                "key": "7",
+                "label": "Cutthroat Dervish Camp"
+              },
+              {
+                "key": "8",
+                "label": "Haunted Tower"
+              },
+              {
+                "key": "9",
+                "label": "\"Toll Booth\" - Guard House"
+              },
+              {
+                "key": "10",
+                "label": "Inn with Food, Alcohol, and Cloth Armor, Bags and Boxes nearby"
+              },
+              {
+                "key": "11",
+                "label": "Hut with Metals"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -12185,7 +12237,43 @@
           }
         },
         "lore": "Nektulos Forest is a dark forest that lies north of the Commonlands on the eastern half of Antonica. It is home to a clan of halflings, and is also patrolled by the dark elves from nearby Neriak.",
-        "wiki_title": "Nektulos Forest"
+        "wiki_title": "Nektulos Forest",
+        "maps": [
+          {
+            "label": null,
+            "image": "nektulos-forest.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Newbie Area"
+              },
+              {
+                "key": "2",
+                "label": "Halfling Ruins"
+              },
+              {
+                "key": "3",
+                "label": "Wizard Teleport with Undead"
+              },
+              {
+                "key": "4",
+                "label": "Halfling Druid Temple"
+              },
+              {
+                "key": "5",
+                "label": "Ruined Obelisk with Shadow Men"
+              },
+              {
+                "key": "6",
+                "label": "Halfling Camp"
+              },
+              {
+                "key": "7",
+                "label": "Obelisk with Undead"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -12433,7 +12521,51 @@
           }
         },
         "lore": "The Feerrott is the dark swampy home of the ogres and lizard men of Antonica. The ogres live in a cave system at the edge of the swamp, while the lizard men have established camps scattered throughout.",
-        "wiki_title": "The Feerrott"
+        "wiki_title": "The Feerrott",
+        "maps": [
+          {
+            "label": null,
+            "image": "the-feerrott.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Lizard Man Camp"
+              },
+              {
+                "key": "2",
+                "label": "Innkeep Gub selling Food and Miscellaneous Items"
+              },
+              {
+                "key": "3",
+                "label": "Merchants with Bowyers Guide and Materials and Blacksmithing Books and Molds"
+              },
+              {
+                "key": "4",
+                "label": "Half Moon shaped Altar"
+              },
+              {
+                "key": "5",
+                "label": "Merchant with Cooking Supplies"
+              },
+              {
+                "key": "6",
+                "label": "Merchant with Large Sewing Kit and Tailoring Supplies"
+              },
+              {
+                "key": "7",
+                "label": "Druid Ring surrounded by Spiders"
+              },
+              {
+                "key": "8",
+                "label": "Roror (Lizard Man Shaman, High Priest of Cazic-Thule), will speak to good races, appears around this area"
+              },
+              {
+                "key": "9",
+                "label": "Spectres and Hidden Lair of Cyndreela, entrance to the Plane of Fear (Hidden Wall entrance at -1475,2690)"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -133842,6 +133974,1446 @@
         "type": "mob",
         "minLevel": 17,
         "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-ghoul",
+        "label": "A ghoul",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:mojax-hikspin",
+        "label": "Mojax Hikspin",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-hill-giant",
+        "label": "A Hill Giant",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:guard-valon",
+        "label": "Guard Valon",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:kizdean-gix",
+        "label": "Kizdean Gix",
+        "type": "mob",
+        "minLevel": 18,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:guard-colin",
+        "label": "Guard Colin",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 31
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:timtok-tonsmith",
+        "label": "Timtok Tonsmith",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 29
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:ranvigoz-tonsmith",
+        "label": "Ranvigoz Tonsmith",
+        "type": "mob",
+        "minLevel": 31,
+        "maxLevel": 31
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:cei-sunjumper",
+        "label": "Cei Sunjumper",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:sil-silverstar",
+        "label": "Sil Silverstar",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:ceel-moonwhisper",
+        "label": "Ceel Moonwhisper",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-dervish-thug",
+        "label": "A Dervish Thug",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:shadow-treebright",
+        "label": "Shadow Treebright",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-willowisp",
+        "label": "A Willowisp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:nightfall-giant",
+        "label": "Nightfall Giant",
+        "type": "mob",
+        "minLevel": 34,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-black-wolf",
+        "label": "A Black Wolf",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-dervish-cutthroat",
+        "label": "A Dervish Cutthroat",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:orc-apprentice",
+        "label": "Orc Apprentice",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-werewolf",
+        "label": "A Werewolf",
+        "type": "mob",
+        "minLevel": 22,
+        "maxLevel": 32
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-young-kodiak",
+        "label": "A Young Kodiak",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:dragoon-zytl",
+        "label": "Dragoon Zytl",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 29
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-kodiak",
+        "label": "A Kodiak",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-puma",
+        "label": "A Puma",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-bixie",
+        "label": "A Bixie",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-plains-cat",
+        "label": "A Plains Cat",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:jahsohn-aksot",
+        "label": "Jahsohn Aksot",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 29
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-tortured-revenant",
+        "label": "A Tortured Revenant",
+        "type": "mob",
+        "minLevel": 49,
+        "maxLevel": 49
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:simon-aldicott",
+        "label": "Simon Aldicott",
+        "type": "mob",
+        "minLevel": 65,
+        "maxLevel": 65
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-griffin",
+        "label": "A Griffin",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 36
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:orc-centurion-deathfist",
+        "label": "Orc Centurion (Deathfist)",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:orc-pawn-deathfist",
+        "label": "Orc Pawn (Deathfist)",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:orc-legionnaire-deathfist",
+        "label": "Orc Legionnaire (Deathfist)",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:an-asp",
+        "label": "An Asp",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:wallin-slyfoot",
+        "label": "Wallin Slyfoot",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:orc-oracle-deathfist",
+        "label": "Orc Oracle (Deathfist)",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:duggin-scumber",
+        "label": "Duggin Scumber",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-large-rattlesnake",
+        "label": "A large rattlesnake",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-rattlesnake",
+        "label": "A rattlesnake",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-darkweed-snake",
+        "label": "A Darkweed Snake",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:a-shadowed-man-west-commonlands",
+        "label": "A shadowed man (West Commonlands)",
+        "type": "mob",
+        "minLevel": 24,
+        "maxLevel": 26
+      }
+    },
+    {
+      "data": {
+        "id": "mob:west-commonlands:modren-fishcatcher",
+        "label": "Modren Fishcatcher",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-decaying-skeleton",
+        "label": "A Decaying Skeleton",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-zombie",
+        "label": "A Zombie",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:forley",
+        "label": "Forley",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-guanin",
+        "label": "Initiate Guanin",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-captain",
+        "label": "Leatherfoot Captain",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-corporal",
+        "label": "Leatherfoot Corporal",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-scout",
+        "label": "Leatherfoot Scout",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-sergeant",
+        "label": "Leatherfoot Sergeant",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:neophyte-hazel",
+        "label": "Neophyte Hazel",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:quester-dunden",
+        "label": "Quester Dunden",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:quester-hannil",
+        "label": "Quester Hannil",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-deathfist-legionnaire",
+        "label": "A Deathfist Legionnaire",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-greater-skeleton",
+        "label": "A Greater Skeleton",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 20
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:kirak-vil",
+        "label": "Kirak Vil",
+        "type": "mob",
+        "minLevel": 56,
+        "maxLevel": 56
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:dragoon-tsanne",
+        "label": "Dragoon Tsanne",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:dragoon-j-len",
+        "label": "Dragoon J`Len",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-rambel",
+        "label": "Initiate Rambel",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:neophyte-edel",
+        "label": "Neophyte Edel",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:neophyte-halle",
+        "label": "Neophyte Halle",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:master-whoopal",
+        "label": "Master Whoopal",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-z-den",
+        "label": "Guard Z`Den",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-spiderling",
+        "label": "A Spiderling",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:orc-runner",
+        "label": "Orc runner",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-rotting-citizen",
+        "label": "A Rotting Citizen",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-willowisp",
+        "label": "A Willowisp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-rotting-initiate",
+        "label": "A Rotting Initiate",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:an-undead-annalkeeper",
+        "label": "An Undead Annalkeeper",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:corporal-j-rais",
+        "label": "Corporal J`Rais",
+        "type": "mob",
+        "minLevel": 21,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-n-lan",
+        "label": "Guard N`Lan",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:corporal-x-horn",
+        "label": "Corporal X`Horn",
+        "type": "mob",
+        "minLevel": 22,
+        "maxLevel": 22
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-f-losta",
+        "label": "Guard F`Losta",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-stone-guardian",
+        "label": "A Stone Guardian",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:an-undead-steward",
+        "label": "An Undead Steward",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-black-wolf",
+        "label": "A Black Wolf",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-shadow-wolf",
+        "label": "A shadow wolf",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-pool",
+        "label": "Initiate Pool",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-abber",
+        "label": "Initiate Abber",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-hart",
+        "label": "Initiate Hart",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:initiate-umbra",
+        "label": "Initiate Umbra",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:gollee",
+        "label": "Gollee",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-deputy",
+        "label": "Leatherfoot Deputy",
+        "type": "mob",
+        "minLevel": 20,
+        "maxLevel": 29
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:himmel",
+        "label": "Himmel",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-young-kodiak",
+        "label": "A Young Kodiak",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:captain-n-farre",
+        "label": "Captain N`Farre",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-black-bear",
+        "label": "A Black Bear",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:bink",
+        "label": "Bink",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:hamer",
+        "label": "Hamer",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:jossle",
+        "label": "Jossle",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:klimmer",
+        "label": "Klimmer",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:quester-hannin",
+        "label": "Quester Hannin",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-fire-beetle",
+        "label": "A Fire Beetle",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:sergeant-c-orm",
+        "label": "Sergeant C`orm",
+        "type": "mob",
+        "minLevel": 60,
+        "maxLevel": 62
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-x-onnu",
+        "label": "Guard X`Onnu",
+        "type": "mob",
+        "minLevel": 15,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-e-tru",
+        "label": "Guard E`Tru",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:snitch",
+        "label": "Snitch",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:corporal-d-abth",
+        "label": "Corporal D`Abth",
+        "type": "mob",
+        "minLevel": 21,
+        "maxLevel": 21
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:travis-two-tone",
+        "label": "Travis Two Tone",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-e-brona",
+        "label": "Guard E`Brona",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:corporal-x-tis",
+        "label": "Corporal X`Tis",
+        "type": "mob",
+        "minLevel": 19,
+        "maxLevel": 19
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-t-aba",
+        "label": "Guard T`Aba",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-v-ehn",
+        "label": "Guard V`Ehn",
+        "type": "mob",
+        "minLevel": 17,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:an-iron-guardian",
+        "label": "An Iron Guardian",
+        "type": "mob",
+        "minLevel": 20,
+        "maxLevel": 22
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:leatherfoot-medic",
+        "label": "Leatherfoot Medic",
+        "type": "mob",
+        "minLevel": 20,
+        "maxLevel": 20
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-large-spider",
+        "label": "A large spider",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-giant-widow",
+        "label": "A giant widow",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-darkwater-piranha",
+        "label": "A darkwater piranha",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:sergeant-j-narus",
+        "label": "Sergeant J`Narus",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-g-varr",
+        "label": "Guard G`Varr",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:an-araneidae-spiderling",
+        "label": "An araneidae spiderling",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:rollis",
+        "label": "Rollis",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-t-quetal",
+        "label": "Guard T`Quetal",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-v-lex",
+        "label": "Guard V`Lex",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:guard-d-zel",
+        "label": "Guard D`Zel",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-garter-snake",
+        "label": "A garter snake",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-black-mamba",
+        "label": "A black mamba",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-pyre-beetle",
+        "label": "A pyre beetle",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:a-shadowed-man-nektulos-forest",
+        "label": "A shadowed man (Nektulos Forest)",
+        "type": "mob",
+        "minLevel": 24,
+        "maxLevel": 26
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:cannix",
+        "label": "Cannix",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:dragoon-v-tai",
+        "label": "Dragoon V`tai",
+        "type": "mob",
+        "minLevel": 36,
+        "maxLevel": 36
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:foley",
+        "label": "Foley",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:nektulos-forest:gammer",
+        "label": "Gammer",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:roror",
+        "label": "Roror",
+        "type": "mob",
+        "minLevel": 49,
+        "maxLevel": 49
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-decaying-skeleton",
+        "label": "A Decaying Skeleton",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-froglok-tad",
+        "label": "A froglok tad",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:bouncer-flerb",
+        "label": "Bouncer Flerb",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:bouncer-fug",
+        "label": "Bouncer Fug",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:bouncer-hurd",
+        "label": "Bouncer Hurd",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:bouncer-prud",
+        "label": "Bouncer Prud",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:drizda-tunesinger",
+        "label": "Drizda Tunesinger",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:cyndreela",
+        "label": "Cyndreela",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-marsh-bear",
+        "label": "A Marsh Bear",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:aqaar-aluram",
+        "label": "Aqaar Aluram",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-drowned-caravan-guard",
+        "label": "A drowned caravan guard",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-giant-bat",
+        "label": "A giant bat",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-bat",
+        "label": "A bat",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:oknoggin-stonesmacker",
+        "label": "Oknoggin Stonesmacker",
+        "type": "mob",
+        "minLevel": 55,
+        "maxLevel": 55
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-lizardman-scout",
+        "label": "A lizardman scout",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-marsh-bear-cub",
+        "label": "A marsh bear cub",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:lizard-man-broodling",
+        "label": "Lizard man broodling",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:lizardman-mystic",
+        "label": "Lizardman mystic",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-lizardman-watcher",
+        "label": "A lizardman watcher",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-lizardman-forager",
+        "label": "A lizardman forager",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-hatchling",
+        "label": "A Hatchling",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-lizard-man-scout",
+        "label": "A lizard man scout",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:annaelia-wylassi",
+        "label": "Annaelia Wylassi",
+        "type": "mob",
+        "minLevel": 61,
+        "maxLevel": 61
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:eleann-morkul",
+        "label": "Eleann Morkul",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:spanner-scrapsnatcher",
+        "label": "Spanner Scrapsnatcher",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-green-snake",
+        "label": "A green snake",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:duga",
+        "label": "Duga",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:grak",
+        "label": "Grak",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-gorilla",
+        "label": "A gorilla",
+        "type": "mob",
+        "minLevel": 19,
+        "maxLevel": 19
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-jungle-spider",
+        "label": "A jungle spider",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-jungle-spiderling",
+        "label": "A jungle spiderling",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-lizard-man-mystic",
+        "label": "A lizard man mystic",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-minor-scarab",
+        "label": "A minor scarab",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:the-feerrott:a-spectre",
+        "label": "A Spectre",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
       }
     }
   ],
@@ -286380,6 +287952,1286 @@
         "id": "e-located_in-19013",
         "source": "mob:southern-karana:an-aviak-ruffian",
         "target": "zone:southern-karana",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19014",
+        "source": "mob:west-commonlands:a-skeleton",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19015",
+        "source": "mob:west-commonlands:a-ghoul",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19016",
+        "source": "mob:west-commonlands:mojax-hikspin",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19017",
+        "source": "mob:west-commonlands:a-hill-giant",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19018",
+        "source": "mob:west-commonlands:guard-valon",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19019",
+        "source": "mob:west-commonlands:kizdean-gix",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19020",
+        "source": "mob:west-commonlands:guard-colin",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19021",
+        "source": "mob:west-commonlands:timtok-tonsmith",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19022",
+        "source": "mob:west-commonlands:ranvigoz-tonsmith",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19023",
+        "source": "mob:west-commonlands:cei-sunjumper",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19024",
+        "source": "mob:west-commonlands:sil-silverstar",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19025",
+        "source": "mob:west-commonlands:ceel-moonwhisper",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19026",
+        "source": "mob:west-commonlands:a-dervish-thug",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19027",
+        "source": "mob:west-commonlands:shadow-treebright",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19028",
+        "source": "mob:west-commonlands:a-willowisp",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19029",
+        "source": "mob:west-commonlands:nightfall-giant",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19030",
+        "source": "mob:west-commonlands:a-black-wolf",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19031",
+        "source": "mob:west-commonlands:a-dervish-cutthroat",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19032",
+        "source": "mob:west-commonlands:orc-apprentice",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19033",
+        "source": "mob:west-commonlands:a-werewolf",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19034",
+        "source": "mob:west-commonlands:a-young-kodiak",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19035",
+        "source": "mob:west-commonlands:dragoon-zytl",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19036",
+        "source": "mob:west-commonlands:a-kodiak",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19037",
+        "source": "mob:west-commonlands:a-puma",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19038",
+        "source": "mob:west-commonlands:a-bixie",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19039",
+        "source": "mob:west-commonlands:a-plains-cat",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19040",
+        "source": "mob:west-commonlands:jahsohn-aksot",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19041",
+        "source": "mob:west-commonlands:a-tortured-revenant",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19042",
+        "source": "mob:west-commonlands:simon-aldicott",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19043",
+        "source": "mob:west-commonlands:a-griffin",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19044",
+        "source": "mob:west-commonlands:orc-centurion-deathfist",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19045",
+        "source": "mob:west-commonlands:orc-pawn-deathfist",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19046",
+        "source": "mob:west-commonlands:orc-legionnaire-deathfist",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19047",
+        "source": "mob:west-commonlands:an-asp",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19048",
+        "source": "mob:west-commonlands:wallin-slyfoot",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19049",
+        "source": "mob:west-commonlands:orc-oracle-deathfist",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19050",
+        "source": "mob:west-commonlands:duggin-scumber",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19051",
+        "source": "mob:west-commonlands:a-large-rattlesnake",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19052",
+        "source": "mob:west-commonlands:a-rattlesnake",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19053",
+        "source": "mob:west-commonlands:a-darkweed-snake",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19054",
+        "source": "mob:west-commonlands:a-shadowed-man-west-commonlands",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19055",
+        "source": "mob:west-commonlands:modren-fishcatcher",
+        "target": "zone:west-commonlands",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19056",
+        "source": "mob:nektulos-forest:a-skeleton",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19057",
+        "source": "mob:nektulos-forest:a-decaying-skeleton",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19058",
+        "source": "mob:nektulos-forest:a-zombie",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19059",
+        "source": "mob:nektulos-forest:forley",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19060",
+        "source": "mob:nektulos-forest:initiate-guanin",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19061",
+        "source": "mob:nektulos-forest:leatherfoot-captain",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19062",
+        "source": "mob:nektulos-forest:leatherfoot-corporal",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19063",
+        "source": "mob:nektulos-forest:leatherfoot-scout",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19064",
+        "source": "mob:nektulos-forest:leatherfoot-sergeant",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19065",
+        "source": "mob:nektulos-forest:neophyte-hazel",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19066",
+        "source": "mob:nektulos-forest:quester-dunden",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19067",
+        "source": "mob:nektulos-forest:quester-hannil",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19068",
+        "source": "mob:nektulos-forest:a-deathfist-legionnaire",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19069",
+        "source": "mob:nektulos-forest:a-greater-skeleton",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19070",
+        "source": "mob:nektulos-forest:kirak-vil",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19071",
+        "source": "mob:nektulos-forest:dragoon-tsanne",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19072",
+        "source": "mob:nektulos-forest:dragoon-j-len",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19073",
+        "source": "mob:nektulos-forest:initiate-rambel",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19074",
+        "source": "mob:nektulos-forest:neophyte-edel",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19075",
+        "source": "mob:nektulos-forest:neophyte-halle",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19076",
+        "source": "mob:nektulos-forest:master-whoopal",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19077",
+        "source": "mob:nektulos-forest:guard-z-den",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19078",
+        "source": "mob:nektulos-forest:a-spiderling",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19079",
+        "source": "mob:nektulos-forest:orc-runner",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19080",
+        "source": "mob:nektulos-forest:a-rotting-citizen",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19081",
+        "source": "mob:nektulos-forest:a-willowisp",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19082",
+        "source": "mob:nektulos-forest:a-rotting-initiate",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19083",
+        "source": "mob:nektulos-forest:an-undead-annalkeeper",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19084",
+        "source": "mob:nektulos-forest:corporal-j-rais",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19085",
+        "source": "mob:nektulos-forest:guard-n-lan",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19086",
+        "source": "mob:nektulos-forest:corporal-x-horn",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19087",
+        "source": "mob:nektulos-forest:guard-f-losta",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19088",
+        "source": "mob:nektulos-forest:a-stone-guardian",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19089",
+        "source": "mob:nektulos-forest:an-undead-steward",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19090",
+        "source": "mob:nektulos-forest:a-black-wolf",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19091",
+        "source": "mob:nektulos-forest:a-shadow-wolf",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19092",
+        "source": "mob:nektulos-forest:initiate-pool",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19093",
+        "source": "mob:nektulos-forest:initiate-abber",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19094",
+        "source": "mob:nektulos-forest:initiate-hart",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19095",
+        "source": "mob:nektulos-forest:initiate-umbra",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19096",
+        "source": "mob:nektulos-forest:gollee",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19097",
+        "source": "mob:nektulos-forest:leatherfoot-deputy",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19098",
+        "source": "mob:nektulos-forest:himmel",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19099",
+        "source": "mob:nektulos-forest:a-young-kodiak",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19100",
+        "source": "mob:nektulos-forest:captain-n-farre",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19101",
+        "source": "mob:nektulos-forest:a-black-bear",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19102",
+        "source": "mob:nektulos-forest:bink",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19103",
+        "source": "mob:nektulos-forest:hamer",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19104",
+        "source": "mob:nektulos-forest:jossle",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19105",
+        "source": "mob:nektulos-forest:klimmer",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19106",
+        "source": "mob:nektulos-forest:quester-hannin",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19107",
+        "source": "mob:nektulos-forest:a-fire-beetle",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19108",
+        "source": "mob:nektulos-forest:sergeant-c-orm",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19109",
+        "source": "mob:nektulos-forest:guard-x-onnu",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19110",
+        "source": "mob:nektulos-forest:guard-e-tru",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19111",
+        "source": "mob:nektulos-forest:snitch",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19112",
+        "source": "mob:nektulos-forest:corporal-d-abth",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19113",
+        "source": "mob:nektulos-forest:travis-two-tone",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19114",
+        "source": "mob:nektulos-forest:guard-e-brona",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19115",
+        "source": "mob:nektulos-forest:corporal-x-tis",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19116",
+        "source": "mob:nektulos-forest:guard-t-aba",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19117",
+        "source": "mob:nektulos-forest:guard-v-ehn",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19118",
+        "source": "mob:nektulos-forest:an-iron-guardian",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19119",
+        "source": "mob:nektulos-forest:leatherfoot-medic",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19120",
+        "source": "mob:nektulos-forest:a-large-spider",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19121",
+        "source": "mob:nektulos-forest:a-giant-widow",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19122",
+        "source": "mob:nektulos-forest:a-darkwater-piranha",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19123",
+        "source": "mob:nektulos-forest:sergeant-j-narus",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19124",
+        "source": "mob:nektulos-forest:guard-g-varr",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19125",
+        "source": "mob:nektulos-forest:an-araneidae-spiderling",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19126",
+        "source": "mob:nektulos-forest:rollis",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19127",
+        "source": "mob:nektulos-forest:guard-t-quetal",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19128",
+        "source": "mob:nektulos-forest:guard-v-lex",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19129",
+        "source": "mob:nektulos-forest:guard-d-zel",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19130",
+        "source": "mob:nektulos-forest:a-garter-snake",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19131",
+        "source": "mob:nektulos-forest:a-black-mamba",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19132",
+        "source": "mob:nektulos-forest:a-pyre-beetle",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19133",
+        "source": "mob:nektulos-forest:a-shadowed-man-nektulos-forest",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19134",
+        "source": "mob:nektulos-forest:cannix",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19135",
+        "source": "mob:nektulos-forest:dragoon-v-tai",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19136",
+        "source": "mob:nektulos-forest:foley",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19137",
+        "source": "mob:nektulos-forest:gammer",
+        "target": "zone:nektulos-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19138",
+        "source": "mob:the-feerrott:a-skeleton",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19139",
+        "source": "mob:the-feerrott:roror",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19140",
+        "source": "mob:the-feerrott:a-decaying-skeleton",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19141",
+        "source": "mob:the-feerrott:a-froglok-tad",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19142",
+        "source": "mob:the-feerrott:bouncer-flerb",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19143",
+        "source": "mob:the-feerrott:bouncer-fug",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19144",
+        "source": "mob:the-feerrott:bouncer-hurd",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19145",
+        "source": "mob:the-feerrott:bouncer-prud",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19146",
+        "source": "mob:the-feerrott:drizda-tunesinger",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19147",
+        "source": "mob:the-feerrott:cyndreela",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19148",
+        "source": "mob:the-feerrott:a-marsh-bear",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19149",
+        "source": "mob:the-feerrott:aqaar-aluram",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19150",
+        "source": "mob:the-feerrott:a-drowned-caravan-guard",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19151",
+        "source": "mob:the-feerrott:a-giant-bat",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19152",
+        "source": "mob:the-feerrott:a-bat",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19153",
+        "source": "mob:the-feerrott:oknoggin-stonesmacker",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19154",
+        "source": "mob:the-feerrott:a-lizardman-scout",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19155",
+        "source": "mob:the-feerrott:a-marsh-bear-cub",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19156",
+        "source": "mob:the-feerrott:lizard-man-broodling",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19157",
+        "source": "mob:the-feerrott:lizardman-mystic",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19158",
+        "source": "mob:the-feerrott:a-lizardman-watcher",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19159",
+        "source": "mob:the-feerrott:a-lizardman-forager",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19160",
+        "source": "mob:the-feerrott:a-hatchling",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19161",
+        "source": "mob:the-feerrott:a-lizard-man-scout",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19162",
+        "source": "mob:the-feerrott:annaelia-wylassi",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19163",
+        "source": "mob:the-feerrott:eleann-morkul",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19164",
+        "source": "mob:the-feerrott:spanner-scrapsnatcher",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19165",
+        "source": "mob:the-feerrott:a-green-snake",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19166",
+        "source": "mob:the-feerrott:duga",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19167",
+        "source": "mob:the-feerrott:grak",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19168",
+        "source": "mob:the-feerrott:a-gorilla",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19169",
+        "source": "mob:the-feerrott:a-jungle-spider",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19170",
+        "source": "mob:the-feerrott:a-jungle-spiderling",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19171",
+        "source": "mob:the-feerrott:a-lizard-man-mystic",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19172",
+        "source": "mob:the-feerrott:a-minor-scarab",
+        "target": "zone:the-feerrott",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19173",
+        "source": "mob:the-feerrott:a-spectre",
+        "target": "zone:the-feerrott",
         "type": "located_in"
       }
     }
