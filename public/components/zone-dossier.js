@@ -216,11 +216,16 @@ ${WIKI_LINK_CSS}
   font-family: var(--font-display); font-size: 12px; font-weight: 700;
   letter-spacing: 0.03em;
   padding: 7px 16px; border-radius: 4px 4px 0 0; cursor: pointer;
-  background: var(--panel-deep); color: var(--parch-ink-soft);
+  /* --wood-2 (dark brown, scroll-roller color) instead of --panel-deep --
+     the near-black cool stone well read as too dark against the parchment
+     scroll. --ink-muted/--parchment (not --parch-ink-soft/--parch-ink,
+     tuned for dark-on-light parchment) keep contrast readable on this
+     dark-on-dark surface. */
+  background: var(--wood-2); color: var(--ink-muted);
   border: 1px solid var(--parch-line); border-bottom: none;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
-.floor-tab:hover:not(.active) { color: var(--parch-ink); }
+.floor-tab:hover:not(.active) { color: var(--parchment); }
 .floor-tab:focus-visible { outline: 2px solid var(--parch-accent); outline-offset: 2px; }
 .floor-tab.active {
   background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
