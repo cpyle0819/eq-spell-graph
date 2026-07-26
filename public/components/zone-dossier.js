@@ -108,10 +108,18 @@ function npcDropBadges(npc) {
 // grid (see its own CSS comment for why), so every npc's name/level land in
 // the same two columns and the level column aligns down the whole list
 // without each row needing to know the longest name in the list.
-function npcRow(npc) {
+//
+// The right-hand cell's content depends on which role group this row is
+// rendering for (an npc with more than one role gets called once per
+// group, see this file's header): vendors never carry a level at all
+// (src/graph.ts's NpcSummary comment), so that group shows what they sell
+// (NpcSummary.sellCategories) instead of an always-empty level column;
+// every other role keeps the level text.
+function npcRow(npc, role) {
+  const rightText = role === "vendor" ? (npc.sellCategories || []).join(", ") : npcLevelText(npc);
   return `
     <span class="npc-name">${npc.label}${npcDropBadges(npc)}</span>
-    <span class="npc-level">${npcLevelText(npc)}</span>
+    <span class="npc-level">${rightText}</span>
   `;
 }
 
@@ -135,7 +143,7 @@ function npcGroupsHtml(npcs, zoneType) {
     .map((role) => `
       <div class="npc-group">
         <div class="dossier-col-label">${ROLE_LABELS[role]}</div>
-        <div class="npc-list">${groups[role].map(npcRow).join("")}</div>
+        <div class="npc-list">${groups[role].map((npc) => npcRow(npc, role)).join("")}</div>
       </div>
     `);
   return blocks.length ? blocks.join("") : `<div class="dossier-empty">No npcs catalogued yet for this zone.</div>`;

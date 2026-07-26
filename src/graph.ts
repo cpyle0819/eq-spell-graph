@@ -409,6 +409,21 @@ export interface NpcSummary {
   // a second lookup. Omitted (not empty array) for the common case of no
   // drops edge at all, same optional-field convention as minLevel/maxLevel.
   drops?: ItemSummary[];
+  // What a vendor role npc actually sells, derived from `sells` edges'
+  // target node type (SELL_CATEGORY_LABELS below), not hand-tagged -- every
+  // sells edge in the graph targets a spell node today, so this is "Spells"
+  // for every vendor right now, but it's read off the real target type
+  // rather than hardcoded so a future `npc --sells--> item` (tailoring
+  // supplies, armor, etc.) shows up here with no dossier changes needed.
+  // Omitted for non-vendor npcs, same convention as drops/minLevel.
+  sellCategories?: string[];
+}
+
+// Only "spell" exists as a sells target today; the fallback plural covers
+// any future target type without needing a matching label added here first.
+const SELL_CATEGORY_LABELS: Record<string, string> = { spell: "Spells" };
+function sellCategoryLabel(nodeType: string): string {
+  return SELL_CATEGORY_LABELS[nodeType] ?? `${nodeType.charAt(0).toUpperCase()}${nodeType.slice(1)}s`;
 }
 
 // Resolves item ids straight to full ItemSummary data, no zone/quest/npc
@@ -441,6 +456,15 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
         .map((e) => helpers.nodeById(e.target))
         .filter((node): node is NodeData => node !== undefined)
         .map(toItemSummary);
+      const sellCategories = [
+        ...new Set(
+          helpers
+            .edgesFrom(n.data.id, "sells")
+            .map((e) => helpers.nodeById(e.target)?.type)
+            .filter((type): type is string => type !== undefined)
+            .map(sellCategoryLabel)
+        ),
+      ].sort();
       return {
         id: n.data.id,
         label: n.data.label,
@@ -448,6 +472,7 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
         minLevel: n.data.minLevel as number | undefined,
         maxLevel: n.data.maxLevel as number | undefined,
         ...(drops.length ? { drops } : {}),
+        ...(sellCategories.length ? { sellCategories } : {}),
       };
     })
     .sort((a, b) => (a.minLevel ?? 0) - (b.minLevel ?? 0));
