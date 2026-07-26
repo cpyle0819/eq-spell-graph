@@ -27,6 +27,12 @@ ${RESET_CSS}
   border-left-color: var(--edge-hi);
   border-radius: 0;
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.12), inset 2px 2px 3px rgba(0, 0, 0, 0.55);
+  /* Chrome for Android has been observed leaving this inset shadow (and
+     .btn's mix-blend-mode bevel below) unpainted until some later repaint
+     forces it -- tapping (:active) was the only thing that triggered it,
+     making the button flash from flat to beveled. Forcing its own
+     compositor layer up front makes the first paint already include it. */
+  transform: translateZ(0);
 }
 :host(.square) {
   flex-grow: 0; flex-shrink: 0; flex-basis: auto;
@@ -35,6 +41,7 @@ ${RESET_CSS}
 }
 .btn {
   position: relative; isolation: isolate; overflow: hidden;
+  transform: translateZ(0);
   display: inline-flex; align-items: center; justify-content: center;
   text-align: center;
   padding: 13px 23px;

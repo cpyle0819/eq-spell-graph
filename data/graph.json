@@ -5425,16 +5425,6 @@
     },
     {
       "data": {
-        "id": "vendor:northern-karana:tak-whistler-druid-ring",
-        "label": "Tak Whistler, Druid Ring",
-        "type": "npc",
-        "roles": [
-          "vendor"
-        ]
-      }
-    },
-    {
-      "data": {
         "id": "vendor:oggok:trusk-ogre-shadow-knight-guild",
         "label": "Trusk - Ogre, Shadow Knight Guild",
         "type": "npc",
@@ -41355,16 +41345,6 @@
       "data": {
         "id": "vendor:kaladim:dorlita-splitshield",
         "label": "Dorlita Splitshield",
-        "type": "npc",
-        "roles": [
-          "vendor"
-        ]
-      }
-    },
-    {
-      "data": {
-        "id": "vendor:northern-plains-of-karana:tak-whistler",
-        "label": "Tak Whistler",
         "type": "npc",
         "roles": [
           "vendor"
@@ -149343,22 +149323,6 @@
     },
     {
       "data": {
-        "id": "e-sells-513",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
-        "target": "spell:endure-disease",
-        "type": "sells"
-      }
-    },
-    {
-      "data": {
-        "id": "e-located-in-514",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
-        "target": "zone:northern-karana",
-        "type": "located_in"
-      }
-    },
-    {
-      "data": {
         "id": "e-sells-515",
         "source": "vendor:oggok:trusk-ogre-shadow-knight-guild",
         "target": "spell:endure-disease",
@@ -150155,14 +150119,6 @@
         "source": "vendor:northern-felwithe:allia-moondancer-cleric-guild",
         "target": "zone:northern-felwithe",
         "type": "located_in"
-      }
-    },
-    {
-      "data": {
-        "id": "e-sells-617",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
-        "target": "spell:endure-poison",
-        "type": "sells"
       }
     },
     {
@@ -151487,14 +151443,6 @@
     },
     {
       "data": {
-        "id": "e-sells-793",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
-        "target": "spell:cancel-magic",
-        "type": "sells"
-      }
-    },
-    {
-      "data": {
         "id": "e-sells-794",
         "source": "vendor:oggok:crilt-ogre-shadow-knight-guild",
         "target": "spell:cancel-magic",
@@ -151905,14 +151853,6 @@
       "data": {
         "id": "e-sells-850",
         "source": "vendor:north-qeynos:henlom-visrek-paladin-guild",
-        "target": "spell:healing",
-        "type": "sells"
-      }
-    },
-    {
-      "data": {
-        "id": "e-sells-851",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
         "target": "spell:healing",
         "type": "sells"
       }
@@ -153283,14 +153223,6 @@
         "source": "vendor:north-qeynos:enpero-mesog-cleric-guild",
         "target": "zone:north-qeynos",
         "type": "located_in"
-      }
-    },
-    {
-      "data": {
-        "id": "e-sells-1035",
-        "source": "vendor:northern-karana:tak-whistler-druid-ring",
-        "target": "spell:resist-fire",
-        "type": "sells"
       }
     },
     {
@@ -191482,17 +191414,9 @@
     {
       "data": {
         "id": "e-008-sells-174",
-        "source": "vendor:northern-plains-of-karana:tak-whistler",
+        "source": "vendor:northern-karana:tak-whistler",
         "target": "spell:imbue-plains-pebble",
         "type": "sells"
-      }
-    },
-    {
-      "data": {
-        "id": "e-008-located_in-175",
-        "source": "vendor:northern-plains-of-karana:tak-whistler",
-        "target": "zone:northern-karana",
-        "type": "located_in"
       }
     },
     {
@@ -192034,7 +191958,7 @@
     {
       "data": {
         "id": "e-008-sells-243",
-        "source": "vendor:northern-plains-of-karana:tak-whistler",
+        "source": "vendor:northern-karana:tak-whistler",
         "target": "spell:skin-like-steel",
         "type": "sells"
       }
