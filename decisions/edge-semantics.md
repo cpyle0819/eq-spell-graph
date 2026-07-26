@@ -8,6 +8,8 @@
 - `quest --rewards--> item` / `quest --rewards--> faction` (one edge type, disambiguated by the target node's `type` — see [quest-reward-modeling.md](quest-reward-modeling.md))
 - `quest --member_of--> quest_group` (same edge type as `spell --member_of--> spell_line` — see [quest-group-node-type.md](quest-group-node-type.md))
 - `quest --requires--> quest` (a real ordered prerequisite chain, distinct from `member_of`'s unordered siblings — see [quest-prerequisite-requires-edge.md](quest-prerequisite-requires-edge.md))
+- `npc --drops--> item` (only when a source states the specific dropper — see [item-drops-edge-and-item-located-in.md](item-drops-edge-and-item-located-in.md))
+- `item --located_in--> zone` (same edge type as above, reused again — see same doc)
 
 Edges encode relationships, not containment. An NPC can be both vendor and quest giver without hierarchy conflicts.
 

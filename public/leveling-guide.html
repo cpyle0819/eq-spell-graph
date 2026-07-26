@@ -74,15 +74,13 @@
     }
 
     /* ── The Trail: a chronological path down the page, one waypoint per
-       level bracket. The dashed line + diamond markers are the one place
-       this page borrows the console pages' ◆ motif — recolored for
-       parchment and put to a new job (marking real, ordered level ranges,
-       not decorating a divider). Deliberately NOT used for the
-       overflow/solo note below, since that isn't sequential — a numbered
-       waypoint would claim an order that doesn't exist. Each <trail-stop>
-       owns its own range/marker/copy rendering; this page only owns how
-       the run of them relates (the connecting line, positioned to match
-       trail-stop's own internal marker column). ── */
+       revamped zone in level order. The dashed line + diamond markers are
+       the one place this page borrows the console pages' ◆ motif —
+       recolored for parchment and put to a new job (marking real, ordered
+       level ranges, not decorating a divider). Each <trail-stop> owns its
+       own range/marker/copy rendering; this page only owns how the run of
+       them relates (the connecting line, positioned to match trail-stop's
+       own internal marker column). ── */
     .road-trail { margin-top: 34px; position: relative; }
     .road-trail h2 {
       font-family: var(--font-display); font-size: 11px; font-weight: 600;
@@ -96,31 +94,23 @@
       opacity: 0.6;
     }
 
-    /* <strong>/<a> nested inside a trail-stop's or the aside's slotted
-       content are light-DOM descendants a shadow ::slotted() rule can't
-       reach (single compound selector only) -- their styling lives here,
-       same as any other light-DOM content passed into a slot. */
-    trail-stop strong, .road-aside strong { color: var(--parch-ink); font-weight: 700; }
-    trail-stop a, .road-aside a, ledger-item a {
+    /* <strong>/<a> nested inside a trail-stop's slotted content are
+       light-DOM descendants a shadow ::slotted() rule can't reach (single
+       compound selector only) -- their styling lives here, same as any
+       other light-DOM content passed into a slot. */
+    trail-stop strong { color: var(--parch-ink); font-weight: 700; }
+    trail-stop a, ledger-item a {
       color: inherit; text-decoration: none; border-bottom: 1px dotted var(--parch-accent);
     }
-    trail-stop a:hover, .road-aside a:hover, ledger-item a:hover,
-    trail-stop a:focus-visible, .road-aside a:focus-visible, ledger-item a:focus-visible {
+    trail-stop a:hover, ledger-item a:hover,
+    trail-stop a:focus-visible, ledger-item a:focus-visible {
       color: var(--parch-accent); border-bottom-style: solid;
     }
-    trail-stop a:focus-visible, .road-aside a:focus-visible, ledger-item a:focus-visible {
+    trail-stop a:focus-visible, ledger-item a:focus-visible {
       outline: 2px solid var(--parch-accent); outline-offset: 2px; border-radius: 1px;
     }
 
-    /* ── Off the beaten path: situational, not sequential — set apart as
-       a margin note rather than folded into the trail. ── */
-    .road-aside {
-      margin-top: 8px; padding: 14px 18px;
-      border-left: 2px dashed var(--parch-line);
-      font-size: 13px; line-height: 1.7; color: var(--parch-ink-soft);
-    }
-
-    /* ── Ledgers (Notable Finds / Beyond the Kill Count): browsable lists
+    /* ── Ledgers (New Loot / Beyond the Kill Count): browsable lists
        of distinct, unordered entries, not a journey — set apart from the
        trail's flowing prose. Each <ledger-item> owns its own row look. ── */
     .road-ledger { margin-top: 34px; }
@@ -146,11 +136,11 @@
   <main>
     <parchment-page>
       <p class="eyebrow">Norraph Field Guide</p>
-      <h1 class="title">The Road to Fifty</h1>
+      <h1 class="title">The Revamped Road</h1>
       <div class="rule" aria-hidden="true"></div>
-      <p class="dek">Notes for a first character, kept for anyone walking the same road since.</p>
+      <p class="dek">Norraph rebuilt five classic zones from the ground up in mid-2026. Here's what changed, in level order.</p>
 
-      <p class="intro">The EverQuest experience has always been full of deep dungeon delves, epic exploration, and great gear. But it's not a complete adventure unless you dive into the in-depth tradeskill system, trade languages with other Norrathians, spend hours fishing off a pier, and make great friends along the way. The journey to fifty and beyond is full of excitement and surprises, and the leveling guide and tips below are just the beginning.</p>
+      <p class="intro">Blackburrow, Crushbone, Najena, Splitpaw Lair, and Plane of Sky each got a real overhaul this year, not a cosmetic pass: new named enemies, denser spawns, and loot tables pushed well past what those zones used to give up. A new character can walk all five in order and never outlevel what they offer. The trail below covers each one and what specifically changed; the ledger after it covers the new gear worth planning a stop for.</p>
 
       <div class="road-notes">
         <h2>Field Notes</h2>
@@ -173,49 +163,46 @@
       <div class="road-trail">
         <h2>The Trail</h2>
         <div class="trail-path">
-          <trail-stop range="Lv 1–10">
-            <p>Every class you own is leveling together while you find your footing. Start anywhere near your home city. Grouping up? A <strong>Magician</strong> and <strong>Cleric</strong> duo is fast and forgiving: the pet tanks, the Cleric keeps it upright. A loadout built around a <strong>Paladin</strong> or <strong>Shadow Knight</strong> with a <strong>Cleric</strong> or <strong>Shaman</strong> in the mix comes up again and again in beta chatter too, self-sustaining enough to solo through the rough patches once all three classes are unlocked.</p>
+          <trail-stop range="Lv 4–20">
+            <p><a href="maps.html?to=Blackburrow"><strong>Blackburrow</strong></a>, the gnoll stronghold between Everfrost and Qeynos Hills, was rebalanced in June 2026: population density was retuned for a smoother climb across the whole 4–20 range, and its old loot table was upgraded rather than left as a classic holdover. The <strong>Runed Totem Staff</strong>, <strong>Keg Mallet</strong>, and <strong>Sabertooth Short Bow</strong> are new drops here, not returning ones.</p>
           </trail-stop>
-          <trail-stop range="Lv 15–25">
-            <p>The <a href="maps.html?to=The%20Estate%20of%20Unrest"><strong>Estate of Unrest</strong></a> becomes the obvious anchor: once a dwarven noble's home, now one of the great undead havens on Norrath, with a strong experience bonus and camps that scale right alongside you. <a href="maps.html?to=Solusek's%20Eye"><strong>Solusek's Eye</strong></a>, home to fire goblins and an intrepid gnome mining company chasing the mineral wealth underneath them, and <a href="maps.html?to=Mistmoore%20Castle"><strong>Mistmoore Castle</strong></a>, vampire lord Mayong Mistmoore's mazelike stronghold, carry the rest of the climb through your low twenties. <a href="maps.html?to=High%20Keep"><strong>High Keep</strong></a>, the crumbling seat of an empire that once ruled central Antonica before centuries of orc and gnoll raids reduced it to Highpass Hold, is worth a look too for a change of scenery.</p>
+          <trail-stop range="Lv 5–22">
+            <p><a href="maps.html?to=Crushbone"><strong>Crushbone</strong></a>'s July 2026 update raised spawn and respawn rates throughout the orc encampment and extended its range to 5–22. <strong>Emperor Crush</strong> now drops a <strong>Dwarven Ringmail Tunic</strong>, and the zone's <strong>Orc Trainer</strong> carries a <strong>Shiny Brass Shield</strong> (+10 AC, +10 magic resist).</p>
           </trail-stop>
-          <trail-stop range="Lv 25–40">
-            <p><a href="maps.html?to=Ocean%20of%20Tears"><strong>Ocean of Tears'</strong></a> Elite Goblin Island picks up the pace, especially with an Enchanter along to charm the reptiles, on the same waters the old Antonica-Faydwer boat crossing has worked for as long as anyone can remember. <a href="maps.html?to=Lower%20Guk"><strong>Lower Guk</strong></a>, the tunnel-riddled Ruins of Ancient Guk that connect down to Innothule Swamp, is worth lingering at from 40–44: exactly the kind of single-spot camp multiclassing lets a trio hold down alone.</p>
+          <trail-stop range="Lv 8–35">
+            <p><a href="maps.html?to=Najena"><strong>Najena</strong></a>'s June 2026 touch-up smoothed the pacing of its key-and-lock progression from 8 to 35, adding new named enemies on top of the existing cast. <strong>Najena</strong> herself now drops a <strong>Flowing Black Robe</strong> and a <strong>Black Tome with Silver Runes</strong>.</p>
           </trail-stop>
-          <trail-stop range="Lv 40–48">
-            <p><a href="maps.html?to=The%20Hole"><strong>The Hole</strong></a>, officially the Ruins of Old Paineel (a hole the Heretics punched straight into Odus during their war with Erudin), or the Efreeti camp in <a href="maps.html?to=Nagafen's%20Lair"><strong>Nagafen's Lair</strong></a>, Sol B to anyone who's been around, deep in the Lavastorm Mountains where the Fire Giants serve Lord Nagafen himself, close out the climb before the Planes open their doors at 46.</p>
+          <trail-stop range="Lv 20–42">
+            <p><a href="maps.html?to=Splitpaw%20Lair"><strong>Splitpaw Lair</strong></a>'s July 2026 overhaul spans five difficulty bands across its 20–42 range, with new rare spawns and better equipment throughout the gnoll hierarchy. <strong>The Ishva Mal</strong>'s <strong>Robe of the Ishva</strong> (+50 mana) and <strong>Verishe Mal Executioner</strong>'s <strong>Verishe Mal Greataxe</strong> (2H Slashing, 26 dmg) are among the new loot.</p>
           </trail-stop>
-        </div>
-        <div class="road-aside">
-          <strong>Off the beaten path:</strong> <a href="maps.html?to=Najena"><strong>Najena</strong></a>, carved out by the dark elf magician of the same name as a den for her and her allies' experiments; <a href="maps.html?to=Permafrost"><strong>Permafrost</strong></a>, a castle being slowly swallowed by glacial ice with goblins now denning in its ruins; <a href="maps.html?to=Kedge%20Keep"><strong>Kedge Keep</strong></a>, the drowned fortress of an aquatic race that died out centuries ago; and <a href="maps.html?to=Stonebrunt%20Mountains"><strong>Stonebrunt Mountains</strong></a>, spiritual home of the Kejekan people atop Mount Klaw, all pull solid experience if you'd rather skip the well-known stops. Traveling solo? The game's built for it. The easiest difficulty lets you clear content made for a group at your own pace, and a private instance is always one option away.
+          <trail-stop range="Lv 46+">
+            <p><a href="maps.html?to=Plane%20of%20Sky"><strong>Plane of Sky</strong></a>'s June 2026 rework changed how its eight-island key system behaves: a key now stays on your keyring permanently once used, and drops from each island's boss instead of trash mobs. The class epic-quest requirements at each island were simplified to a handful of wind runes plus one or two specific items, and most of the zone's best loot now comes from finishing those quests rather than direct boss drops.</p>
+          </trail-stop>
         </div>
       </div>
 
       <div class="road-ledger">
-        <h2>Notable Finds Along the Way</h2>
+        <h2>New Loot from the Revamps</h2>
+        <p class="road-ledger-intro">What each overhaul actually added, zone by zone.</p>
         <ledger-item>
-          <span slot="label"><a href="https://eqlwiki.com/Soft_Wicker_Armor" target="_blank" rel="noopener">Soft Wicker armor</a></span>
-          <span slot="detail"><a href="maps.html?to=The%20Warrens">The Warrens</a>, a kobold warren Clan Kolbok dug into the heart of Odus, has its own gear set: Soft Wicker armor, leather-equivalent with a look you won't see anywhere else, weapons included.</span>
+          <span slot="label">Runed Totem Staff, Keg Mallet &amp; Sabertooth Short Bow</span>
+          <span slot="detail"><a href="maps.html?to=Blackburrow">Blackburrow</a>'s three new drops. The staff is a 2H blunt weapon (37 delay, 9 dmg) that also carries +5 HP and +5 mana.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label"><a href="quests.html?search=Armor%20of%20Ro">Armor of Ro</a></span>
-          <span slot="detail"><a href="maps.html?to=Rathe%20Mountains">Rathe Mountains</a> hides more than danger along its southern route between Freeport and Qeynos. Its paladin camp runs seven separate faction-gated turn-ins, one per armor piece -- David trades Deepwater Goblin Nets for the bracer's mold, for instance. Combine any mold with a Bar of Ronium crafted at the <a href="maps.html?to=Temple%20of%20Solusek%20Ro">Temple of Solusek Ro</a> for the finished piece.</span>
+          <span slot="label">Shiny Brass Shield &amp; Dwarven Ringmail Tunic</span>
+          <span slot="detail"><a href="maps.html?to=Crushbone">Crushbone</a>'s Orc Trainer drops the shield (+10 AC, +10 magic resist); Emperor Crush drops the tunic.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label"><a href="quests.html?search=Journeyman%27s%20Boots">Journeyman's Boots</a></span>
-          <span slot="detail">"JBoots" to anyone who's worn a pair: a speed buff usable anywhere, no reagent, no cast time. <a href="maps.html?to=Rathe%20Mountains">Rathe Mountains'</a> Hasten Bootstrutter wants a Ring of the Ancients, a Shadowed Rapier, and 3,250 gold for the pair. The rapier's borrowed, not kept: it vanishes after 30 minutes logged off, so don't dawdle turning it in.</span>
+          <span slot="label">Flowing Black Robe &amp; Black Tome with Silver Runes</span>
+          <span slot="detail">Both new drops from Najena herself, at the bottom of <a href="maps.html?to=Najena">Najena</a>'s key-and-lock progression.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label">Taskmaster's <a href="https://eqlwiki.com/Leather_Whip" target="_blank" rel="noopener">whip</a> &amp; <a href="https://eqlwiki.com/Brass_Earring" target="_blank" rel="noopener">earring</a></span>
-          <span slot="detail"><a href="maps.html?to=Crushbone">Crushbone</a>, the orc clan camp that's been a thorn in Faydwer's side for as long as anyone remembers. Its Taskmaster drops a 5/30 whip and his own brass earring.</span>
+          <span slot="label">Verishe Mal Greataxe, Robe of the Ishva &amp; Gnoll Hide Tome</span>
+          <span slot="detail"><a href="maps.html?to=Splitpaw%20Lair">Splitpaw Lair</a>'s new gear: the greataxe (2H slashing, 26 dmg) from Verishe Mal Executioner, the robe (+50 mana) from The Ishva Mal, and the tome (+10 INT, +5 WIS) from deeper in the gnoll hierarchy.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label"><a href="quests.html?search=Research%20Aid">Research Aid</a></span>
-          <span slot="detail"><a href="maps.html?to=Northern%20Karana">Northern Karana</a> sits at the crossroads of half the continent's bridge traffic, and its resident scholar Mrysila runs a repeatable turn-in: lightstones (a willowisp drop) buy spell research tomes, greater lightstones buy the Concordance of Research.</span>
-        </ledger-item>
-        <ledger-item>
-          <span slot="label"><a href="https://eqlwiki.com/Item_Upgrade_System" target="_blank" rel="noopener">Item Upgrade System</a></span>
-          <span slot="detail">Norraph's newest trick, not a classic EQ holdover: merge a duplicate of any item, or a Mote of Potential, into its own copy to push its tier from 0 up to 10, each tier worth a cumulative 10% to its stats. Nothing you find early gets thrown away later, it just gets better.</span>
+          <span slot="label">Permanent keyring keys</span>
+          <span slot="detail"><a href="maps.html?to=Plane%20of%20Sky">Plane of Sky</a>'s island keys now stay on your keyring for good once used, and each drops from its island's boss rather than trash.</span>
         </ledger-item>
       </div>
 
@@ -264,7 +251,7 @@
         </ledger-item>
       </div>
 
-      <p class="sources">Field notes and lore drawn from <a href="https://eqlwiki.com/Recommended_Levels_and_ZEM_List" target="_blank" rel="noopener">eqlwiki.com's Zone Experience Guide</a>, <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Commands" target="_blank" rel="noopener">Commands</a>, <a href="https://eqlwiki.com/Alternate_Advancement" target="_blank" rel="noopener">Alternate Advancement</a>, <a href="https://eqlwiki.com/Item_Upgrade_System" target="_blank" rel="noopener">Item Upgrade System</a>, <a href="https://eqlwiki.com/Tradeskills" target="_blank" rel="noopener">Tradeskills</a>, <a href="https://eqlwiki.com/Skill_Fishing" target="_blank" rel="noopener">Skill Fishing</a>, <a href="https://eqlwiki.com/Languages" target="_blank" rel="noopener">Languages</a>, <a href="https://eqlwiki.com/Class_Epic_Quest_List" target="_blank" rel="noopener">Class Epic Quest List</a>, and <a href="https://eqlwiki.com/Alanna's_Race_Unlock_Guide" target="_blank" rel="noopener">Race Unlock Guide</a> pages, each zone's own eqlwiki.com entry, plus community leveling routes and player-beta impressions from the EQL press and player wikis.</p>
+      <p class="sources">Revamp details drawn from <a href="https://eqlwiki.com/Patch_Notes" target="_blank" rel="noopener">eqlwiki.com's Patch Notes</a> and each zone's own eqlwiki.com entry (<a href="https://eqlwiki.com/Blackburrow" target="_blank" rel="noopener">Blackburrow</a>, <a href="https://eqlwiki.com/Crushbone" target="_blank" rel="noopener">Crushbone</a>, <a href="https://eqlwiki.com/Najena" target="_blank" rel="noopener">Najena</a>, <a href="https://eqlwiki.com/Splitpaw_Lair" target="_blank" rel="noopener">Splitpaw Lair</a>, <a href="https://eqlwiki.com/Plane_of_Sky" target="_blank" rel="noopener">Plane of Sky</a>); mechanics notes from <a href="https://eqlwiki.com/New_Player_Guide" target="_blank" rel="noopener">New Player Guide</a>, <a href="https://eqlwiki.com/Commands" target="_blank" rel="noopener">Commands</a>, <a href="https://eqlwiki.com/Alternate_Advancement" target="_blank" rel="noopener">Alternate Advancement</a>, and <a href="https://eqlwiki.com/Item_Upgrade_System" target="_blank" rel="noopener">Item Upgrade System</a>.</p>
     </parchment-page>
   </main>
 

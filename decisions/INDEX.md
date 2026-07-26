@@ -13,6 +13,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Spell class/level model](spell-class-level-model.md)
 - [Quest structure and reward modeling](quest-reward-modeling.md)
 - [Item node schema](item-node-schema.md)
+- [`npc --drops--> item`, and `item --located_in--> zone`](item-drops-edge-and-item-located-in.md)
 - [Quest groups: a `quest_group` node, reusing the `member_of` edge](quest-group-node-type.md)
 - [Quest prerequisites: a `requires` edge, and "questline" now means this](quest-prerequisite-requires-edge.md)
 - [Quest era flagging](quest-era-flagging.md)

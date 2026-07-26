@@ -145343,6 +145343,148 @@
           "mob"
         ]
       }
+    },
+    {
+      "data": {
+        "id": "item:runed-totem-staff",
+        "label": "Runed Totem Staff",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Blunt",
+        "damage": 9,
+        "delay": 37,
+        "hp": 5,
+        "mana": 5,
+        "source": "Blackburrow drop"
+      }
+    },
+    {
+      "data": {
+        "id": "item:keg-mallet",
+        "label": "Keg Mallet",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "1H Blunt",
+        "source": "Blackburrow drop"
+      }
+    },
+    {
+      "data": {
+        "id": "item:sabertooth-short-bow",
+        "label": "Sabertooth Short Bow",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Ranged"
+        ],
+        "skill": "Bow",
+        "source": "Blackburrow drop"
+      }
+    },
+    {
+      "data": {
+        "id": "item:shiny-brass-shield",
+        "label": "Shiny Brass Shield",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Secondary"
+        ],
+        "ac": 10,
+        "resists": {
+          "magic": 10
+        },
+        "source": "Orc Trainer (Crushbone)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:dwarven-ringmail-tunic",
+        "label": "Dwarven Ringmail Tunic",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Chest"
+        ],
+        "source": "Emperor Crush (Crushbone)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:flowing-black-robe",
+        "label": "Flowing Black Robe",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Chest"
+        ],
+        "source": "Najena (Najena)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:black-tome-with-silver-runes",
+        "label": "Black Tome with Silver Runes",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "source": "Najena (Najena)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:verishe-mal-greataxe",
+        "label": "Verishe Mal Greataxe",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Primary"
+        ],
+        "skill": "2H Slashing",
+        "damage": 26,
+        "source": "Verishe Mal Executioner (Splitpaw Lair)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:robe-of-the-ishva",
+        "label": "Robe of the Ishva",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "slots": [
+          "Chest"
+        ],
+        "mana": 50,
+        "source": "The Ishva Mal (Splitpaw Lair)"
+      }
+    },
+    {
+      "data": {
+        "id": "item:gnoll-hide-tome",
+        "label": "Gnoll Hide Tome",
+        "type": "item",
+        "magic": true,
+        "lore": true,
+        "stats": {
+          "int": 10,
+          "wis": 5
+        },
+        "source": "Splitpaw Lair drop"
+      }
     }
   ],
   "edges": [
@@ -298904,6 +299046,134 @@
         "id": "e-located_in-19346",
         "source": "mob:steamfont-mountains:zondo-hyzill",
         "target": "zone:steamfont-mountains",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19142",
+        "source": "item:runed-totem-staff",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19143",
+        "source": "item:keg-mallet",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19144",
+        "source": "item:sabertooth-short-bow",
+        "target": "zone:blackburrow",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19145",
+        "source": "item:shiny-brass-shield",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19146",
+        "source": "mob:crushbone:orc-trainer",
+        "target": "item:shiny-brass-shield",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19147",
+        "source": "item:dwarven-ringmail-tunic",
+        "target": "zone:crushbone",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19148",
+        "source": "mob:crushbone:emperor-crush",
+        "target": "item:dwarven-ringmail-tunic",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19149",
+        "source": "item:flowing-black-robe",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19150",
+        "source": "mob:najena:najena-npc",
+        "target": "item:flowing-black-robe",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19151",
+        "source": "item:black-tome-with-silver-runes",
+        "target": "zone:najena",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19152",
+        "source": "mob:najena:najena-npc",
+        "target": "item:black-tome-with-silver-runes",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19153",
+        "source": "item:verishe-mal-greataxe",
+        "target": "zone:splitpaw-lair",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19154",
+        "source": "mob:splitpaw:verishe-mal-executioner",
+        "target": "item:verishe-mal-greataxe",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19155",
+        "source": "item:robe-of-the-ishva",
+        "target": "zone:splitpaw-lair",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-drops-19156",
+        "source": "mob:splitpaw:the-ishva-mal",
+        "target": "item:robe-of-the-ishva",
+        "type": "drops"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19157",
+        "source": "item:gnoll-hide-tome",
+        "target": "zone:splitpaw-lair",
         "type": "located_in"
       }
     }
