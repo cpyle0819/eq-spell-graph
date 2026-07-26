@@ -74,6 +74,7 @@
 // legend for the current floor).
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
+import { itemStats } from "./quest-shared.js";
 import "./ledger-item.js";
 import "./zone-map.js";
 
@@ -92,13 +93,24 @@ function npcLevelText({ minLevel, maxLevel }) {
   return `L${minLevel ?? "?"}-${maxLevel ?? "?"}`;
 }
 
+// Drop chips render inline inside .npc-name (not as a third grid cell) so
+// the existing 2-column max-content/1fr grid (name, level) doesn't need a
+// third track -- an npc row with drops just has a wider first cell. Hover
+// wiring is in connectedCallback, same event-delegation shape as
+// quest-shared.js's wireItemTooltips(), reading item data back out of
+// #dropsById (rebuilt each render()) via data-item-id.
+function npcDropBadges(npc) {
+  if (!npc.drops?.length) return "";
+  return npc.drops.map((item) => `<span class="npc-drop-badge" data-item-id="${item.id}">${item.label}</span>`).join("");
+}
+
 // Two sibling grid cells, not a wrapping row div -- .npc-list itself is the
 // grid (see its own CSS comment for why), so every npc's name/level land in
 // the same two columns and the level column aligns down the whole list
 // without each row needing to know the longest name in the list.
 function npcRow(npc) {
   return `
-    <span class="npc-name">${npc.label}</span>
+    <span class="npc-name">${npc.label}${npcDropBadges(npc)}</span>
     <span class="npc-level">${npcLevelText(npc)}</span>
   `;
 }
@@ -311,6 +323,22 @@ ${WIKI_LINK_CSS}
 .npc-name:not(:nth-child(-n+2)), .npc-level:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
 .npc-level { text-align: right; font-size: 11px; color: var(--parch-ink-soft); font-variant-numeric: tabular-nums; }
 
+/* Same amber "item" gem language as quest-shared.js's own .item-badge
+   (decisions/item-hover-uses-generic-detail-tooltip.md) -- a different file
+   since this card has no reason to import that one's full CSS blob, but the
+   color says "this is loot" the same way across both pages. */
+.npc-drop-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-left: 8px; padding: 1px 7px 1px 5px; border-radius: 3px;
+  font-size: 11px; cursor: help;
+  background: rgba(122, 77, 5, 0.1); color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4);
+}
+.npc-drop-badge::before {
+  content: ""; width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0;
+  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
 /* quest-ledger's <ledger-item>s live in this component's own shadow tree
    (nested the same way route-card nests route-path -- see this file's own
    header), but the <a> inside each one's slot="label" is light-DOM content
@@ -329,6 +357,7 @@ ${WIKI_LINK_CSS}
 class ZoneDossier extends HTMLElement {
   #data = null;
   #activeFloor = 0;
+  #dropsById = new Map();
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -370,8 +399,29 @@ class ZoneDossier extends HTMLElement {
         this.#activeFloor = Number(btn.dataset.index);
         this.render();
       });
+      this.#wireDropTooltips();
     }
     this.render();
+  }
+
+  // Same event-delegation shape as quest-shared.js's wireItemTooltips() --
+  // listens on shadowRoot itself so retargeting doesn't apply (see that
+  // file's own comment) -- but reads from #dropsById instead of taking a
+  // findItem callback, since this component owns its own npc/item data
+  // rather than a parent page's.
+  #wireDropTooltips() {
+    if (!window.matchMedia("(pointer: fine)").matches) return; // touch devices: no hover tooltip, same as quest-shared.js
+    this.shadowRoot.addEventListener("mouseover", (e) => {
+      const chip = e.target.closest(".npc-drop-badge[data-item-id]");
+      if (!chip) return;
+      const item = this.#dropsById.get(chip.dataset.itemId);
+      if (item) document.getElementById("detail-tooltip")?.show({ name: item.label, description: item.source, stats: itemStats(item) }, chip);
+    });
+    this.shadowRoot.addEventListener("mouseout", (e) => {
+      if (!e.relatedTarget?.closest?.(".npc-drop-badge[data-item-id]")) {
+        document.getElementById("detail-tooltip")?.hide();
+      }
+    });
   }
 
   setData(data) {
@@ -415,6 +465,7 @@ class ZoneDossier extends HTMLElement {
       .map((entry) => `<li><span class="legend-key">${entry.key}</span><span>${entry.label}</span></li>`)
       .join("");
 
+    this.#dropsById = new Map((npcs || []).flatMap((n) => n.drops || []).map((item) => [item.id, item]));
     this.shadowRoot.querySelector(".npc-groups").innerHTML = npcGroupsHtml(npcs, zoneType);
 
     const ledger = this.shadowRoot.querySelector(".quest-ledger");

@@ -403,6 +403,12 @@ export interface NpcSummary {
   // plain vendors/quest-givers have no known level.
   minLevel?: number;
   maxLevel?: number;
+  // Resolved `npc --drops--> item` edges (decisions/
+  // item-drops-edge-and-item-located-in.md) -- full ItemSummary, same as
+  // getQuests()'s itemRewards, so a hover card can show real stats without
+  // a second lookup. Omitted (not empty array) for the common case of no
+  // drops edge at all, same optional-field convention as minLevel/maxLevel.
+  drops?: ItemSummary[];
 }
 
 // zoneId is required, not optional like getQuests()'s -- there's no current
@@ -414,13 +420,21 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
   const helpers = graphIndexHelpers(graph);
   return graph.nodes
     .filter((n) => n.data.type === "npc" && helpers.edgesFrom(n.data.id, "located_in").some((e) => e.target === zoneId))
-    .map((n) => ({
-      id: n.data.id,
-      label: n.data.label,
-      roles: (n.data.roles as string[] | undefined) ?? [],
-      minLevel: n.data.minLevel as number | undefined,
-      maxLevel: n.data.maxLevel as number | undefined,
-    }))
+    .map((n) => {
+      const drops = helpers
+        .edgesFrom(n.data.id, "drops")
+        .map((e) => helpers.nodeById(e.target))
+        .filter((node): node is NodeData => node !== undefined)
+        .map(toItemSummary);
+      return {
+        id: n.data.id,
+        label: n.data.label,
+        roles: (n.data.roles as string[] | undefined) ?? [],
+        minLevel: n.data.minLevel as number | undefined,
+        maxLevel: n.data.maxLevel as number | undefined,
+        ...(drops.length ? { drops } : {}),
+      };
+    })
     .sort((a, b) => (a.minLevel ?? 0) - (b.minLevel ?? 0));
 }
 
