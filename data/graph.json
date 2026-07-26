@@ -67149,7 +67149,51 @@
         "id": "zone:plane-of-sky",
         "label": "Plane of Sky",
         "type": "zone",
-        "zoneType": "dungeon"
+        "zoneType": "dungeon",
+        "maps": [
+          {
+            "label": null,
+            "image": "plane-of-sky.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Isle of Thunder Spirits, arrival island -- Thunder Spirit Princess"
+              },
+              {
+                "key": "1.5",
+                "label": "Noble Dojorn's isle, reachable from Isle 1"
+              },
+              {
+                "key": "2",
+                "label": "Isle of Azaracks -- Protector of Sky"
+              },
+              {
+                "key": "3",
+                "label": "Isle of Gorgalosk -- Gorgalosk"
+              },
+              {
+                "key": "4",
+                "label": "Isle of Pegasi -- Keeper of Souls"
+              },
+              {
+                "key": "5",
+                "label": "Isle of Spirocs -- The Spiroc Lord"
+              },
+              {
+                "key": "6",
+                "label": "Isle of Wasps -- Bazzt Zzzt (Queen Bee)"
+              },
+              {
+                "key": "7",
+                "label": "Isle of Drakes -- Sister of the Spire"
+              },
+              {
+                "key": "8",
+                "label": "Isle of Veeshan, final island -- Eye of Veeshan"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -85877,69 +85921,6 @@
         "charges": 6,
         "effect": "Lure of Frost (Must Equip, 12.0 sec cast)",
         "source": "The Gift Box occasional random reward (Peachy D`Vicci, Plane of Mischief)"
-      }
-    },
-    {
-      "data": {
-        "id": "zone:splitpaw-lair",
-        "label": "Splitpaw Lair",
-        "type": "zone",
-        "faction": {
-          "race": {
-            "barbarian": "neutral",
-            "dark elf": "neutral",
-            "dwarf": "neutral",
-            "erudite": "neutral",
-            "gnome": "neutral",
-            "half elf": "neutral",
-            "halfling": "neutral",
-            "high elf": "neutral",
-            "human": "neutral",
-            "iksar": "neutral",
-            "ogre": "neutral",
-            "troll": "neutral",
-            "wood elf": "neutral"
-          },
-          "class": {
-            "bard": "safe",
-            "beastlord": "safe",
-            "cleric": "safe",
-            "druid": "safe",
-            "enchanter": "safe",
-            "magician": "safe",
-            "monk": "safe",
-            "necromancer": "safe",
-            "paladin": "safe",
-            "ranger": "safe",
-            "rogue": "safe",
-            "shadow knight": "safe",
-            "shaman": "safe",
-            "warrior": "safe",
-            "wizard": "safe"
-          },
-          "deity": {
-            "agnostic": "neutral",
-            "bertoxxulous": "neutral",
-            "brell serilis": "neutral",
-            "bristlebane": "neutral",
-            "cazic-thule": "neutral",
-            "erollisi marr": "neutral",
-            "innoruuk": "neutral",
-            "karana": "neutral",
-            "mithaniel marr": "neutral",
-            "prexus": "neutral",
-            "quellious": "neutral",
-            "rallos zek": "neutral",
-            "rodcet nife": "neutral",
-            "solusek ro": "neutral",
-            "the tribunal": "neutral",
-            "tunare": "neutral",
-            "veeshan": "neutral"
-          }
-        },
-        "lore": "Splitpaw Lair (formerly Infected Paw) used to be the home of the Splitpaw clan of gnolls. Now their tribal home has been overrun by another more powerful clan of gnolls.",
-        "wiki_title": "Splitpaw Lair",
-        "zoneType": "dungeon"
       }
     },
     {
@@ -145484,6 +145465,86 @@
           "wis": 5
         },
         "source": "Splitpaw Lair drop"
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:thunder-spirit-princess",
+        "label": "Thunder Spirit Princess",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:protector-of-sky",
+        "label": "Protector of Sky",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:gorgalosk",
+        "label": "Gorgalosk",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:keeper-of-souls",
+        "label": "Keeper of Souls",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:the-spiroc-lord",
+        "label": "The Spiroc Lord",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:bazzt-zzzt",
+        "label": "Bazzt Zzzt",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:sister-of-the-spire",
+        "label": "Sister of the Spire",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "npc:plane-of-sky:eye-of-veeshan",
+        "label": "Eye of Veeshan",
+        "type": "npc",
+        "roles": [
+          "mob"
+        ]
       }
     }
   ],
@@ -249466,22 +249527,6 @@
     },
     {
       "data": {
-        "id": "e-connects_to-13068",
-        "source": "zone:splitpaw-lair",
-        "target": "zone:southern-karana",
-        "type": "connects_to"
-      }
-    },
-    {
-      "data": {
-        "id": "e-connects_to-13069",
-        "source": "zone:southern-karana",
-        "target": "zone:splitpaw-lair",
-        "type": "connects_to"
-      }
-    },
-    {
-      "data": {
         "id": "e-located_in-13070",
         "source": "npc:qeynos-hills:marton-sayer",
         "target": "zone:qeynos-hills",
@@ -249524,7 +249569,7 @@
       "data": {
         "id": "e-located_in-13075",
         "source": "quest:the-gnoll-slayer",
-        "target": "zone:splitpaw-lair",
+        "target": "zone:splitpaw",
         "type": "located_in"
       }
     },
@@ -268325,7 +268370,7 @@
       "data": {
         "id": "e-located_in-15419",
         "source": "quest:zimels-blades-soulfire",
-        "target": "zone:splitpaw-lair",
+        "target": "zone:splitpaw",
         "type": "located_in"
       }
     },
@@ -299141,7 +299186,7 @@
       "data": {
         "id": "e-located_in-19153",
         "source": "item:verishe-mal-greataxe",
-        "target": "zone:splitpaw-lair",
+        "target": "zone:splitpaw",
         "type": "located_in"
       }
     },
@@ -299157,7 +299202,7 @@
       "data": {
         "id": "e-located_in-19155",
         "source": "item:robe-of-the-ishva",
-        "target": "zone:splitpaw-lair",
+        "target": "zone:splitpaw",
         "type": "located_in"
       }
     },
@@ -299173,7 +299218,71 @@
       "data": {
         "id": "e-located_in-19157",
         "source": "item:gnoll-hide-tome",
-        "target": "zone:splitpaw-lair",
+        "target": "zone:splitpaw",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19156",
+        "source": "npc:plane-of-sky:thunder-spirit-princess",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19157",
+        "source": "npc:plane-of-sky:protector-of-sky",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19158",
+        "source": "npc:plane-of-sky:gorgalosk",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19159",
+        "source": "npc:plane-of-sky:keeper-of-souls",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19160",
+        "source": "npc:plane-of-sky:the-spiroc-lord",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19161",
+        "source": "npc:plane-of-sky:bazzt-zzzt",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19162",
+        "source": "npc:plane-of-sky:sister-of-the-spire",
+        "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19163",
+        "source": "npc:plane-of-sky:eye-of-veeshan",
+        "target": "zone:plane-of-sky",
         "type": "located_in"
       }
     }

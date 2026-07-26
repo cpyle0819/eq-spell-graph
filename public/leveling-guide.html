@@ -110,26 +110,14 @@
       outline: 2px solid var(--parch-accent); outline-offset: 2px; border-radius: 1px;
     }
 
-    /* ── Ledgers (New Loot / Beyond the Kill Count): browsable lists
-       of distinct, unordered entries, not a journey — set apart from the
-       trail's flowing prose. Each <ledger-item> owns its own row look. ── */
-    .road-ledger { margin-top: 34px; }
-    .road-ledger h2 {
-      font-family: var(--font-display); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
-      margin-bottom: 10px;
-    }
-    .road-ledger-intro { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; margin-bottom: 6px; }
-
     /* Same amber "item" gem language as zone-dossier.js's own
        .npc-drop-badge/quest-shared.js's .item-badge (decisions/
        item-hover-uses-generic-detail-tooltip.md), retuned for parchment
        instead of dark stone -- this page's own <detail-tooltip> + hover
        script at the bottom of the document is what makes these behave the
-       same as those. Light-DOM content passed into ledger-item's slot, so
+       same as those. Light-DOM content passed into trail-stop's slot, so
        styled here at the page level rather than the component's own
-       ::slotted() rule (same reason this page already styles slotted
-       <strong>/<a> directly). */
+       ::slotted() rule, same as trail-stop's own <strong>/<a> above. */
     .loot-badge {
       display: inline-flex; align-items: center; gap: 5px;
       padding: 1px 8px 1px 6px; border-radius: 3px;
@@ -141,6 +129,17 @@
       background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
       box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
     }
+
+    /* ── Ledgers (Beyond the Kill Count): browsable lists of distinct,
+       unordered entries, not a journey — set apart from the trail's
+       flowing prose. Each <ledger-item> owns its own row look. ── */
+    .road-ledger { margin-top: 34px; }
+    .road-ledger h2 {
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
+      margin-bottom: 10px;
+    }
+    .road-ledger-intro { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; margin-bottom: 6px; }
 
     @media (max-width: 600px) {
       main { padding: 40px 12px 48px; }
@@ -161,7 +160,7 @@
       <div class="rule" aria-hidden="true"></div>
       <p class="dek">EverQuest Legends rebuilt five classic zones from the ground up in mid-2026. Here's what changed, in level order.</p>
 
-      <p class="intro">Blackburrow, Crushbone, Najena, Splitpaw Lair, and Plane of Sky each got a real overhaul this year, not a cosmetic pass: new named enemies, denser spawns, and loot tables pushed well past what those zones used to give up. A new character can walk all five in order and never outlevel what they offer. The trail below covers each one and what specifically changed; the ledger after it covers the new gear worth planning a stop for.</p>
+      <p class="intro">Blackburrow, Crushbone, Najena, Splitpaw Lair, and Plane of Sky each got a real overhaul this year, not a cosmetic pass: new named enemies, denser spawns, and loot tables pushed well past what those zones used to give up. A new character can walk all five in order and never outlevel what they offer. The trail below covers each one and what specifically changed, including the new gear worth planning a stop for.</p>
 
       <div class="road-notes">
         <h2>Field Notes</h2>
@@ -185,46 +184,22 @@
         <h2>The Trail</h2>
         <div class="trail-path">
           <trail-stop range="Lv 4–20">
-            <p><a href="maps.html?to=Blackburrow"><strong>Blackburrow</strong></a>, the gnoll stronghold between Everfrost and Qeynos Hills, was rebalanced in June 2026: population density was retuned for a smoother climb across the whole 4–20 range, and its old loot table was upgraded rather than left as a classic holdover. The <strong>Runed Totem Staff</strong>, <strong>Keg Mallet</strong>, and <strong>Sabertooth Short Bow</strong> are new drops here, not returning ones.</p>
+            <p><a href="maps.html?to=Blackburrow"><strong>Blackburrow</strong></a>, the gnoll stronghold between Everfrost and Qeynos Hills, was rebalanced in June 2026: population density was retuned for a smoother climb across the whole 4–20 range, and its old loot table was upgraded rather than left as a classic holdover. The <span class="loot-badge" data-item-id="item:runed-totem-staff">Runed Totem Staff</span>, <span class="loot-badge" data-item-id="item:keg-mallet">Keg Mallet</span>, and <span class="loot-badge" data-item-id="item:sabertooth-short-bow">Sabertooth Short Bow</span> are new drops here, not returning ones.</p>
           </trail-stop>
           <trail-stop range="Lv 5–22">
-            <p><a href="maps.html?to=Crushbone"><strong>Crushbone</strong></a>'s July 2026 update raised spawn and respawn rates throughout the orc encampment and extended its range to 5–22. <strong>Emperor Crush</strong> now drops a <strong>Dwarven Ringmail Tunic</strong>, and the zone's <strong>Orc Trainer</strong> carries a <strong>Shiny Brass Shield</strong> (+10 AC, +10 magic resist).</p>
+            <p><a href="maps.html?to=Crushbone"><strong>Crushbone</strong></a>'s July 2026 update raised spawn and respawn rates throughout the orc encampment and extended its range to 5–22. <strong>Emperor Crush</strong> now drops a <span class="loot-badge" data-item-id="item:dwarven-ringmail-tunic">Dwarven Ringmail Tunic</span>, and the zone's <strong>Orc Trainer</strong> carries a <span class="loot-badge" data-item-id="item:shiny-brass-shield">Shiny Brass Shield</span> (+10 AC, +10 magic resist).</p>
           </trail-stop>
           <trail-stop range="Lv 8–35">
-            <p><a href="maps.html?to=Najena"><strong>Najena</strong></a>'s June 2026 touch-up smoothed the pacing of its key-and-lock progression from 8 to 35, adding new named enemies on top of the existing cast. <strong>Najena</strong> herself now drops a <strong>Flowing Black Robe</strong> and a <strong>Black Tome with Silver Runes</strong>.</p>
+            <p><a href="maps.html?to=Najena"><strong>Najena</strong></a>'s June 2026 touch-up smoothed the pacing of its key-and-lock progression from 8 to 35, adding new named enemies on top of the existing cast. <strong>Najena</strong> herself now drops a <span class="loot-badge" data-item-id="item:flowing-black-robe">Flowing Black Robe</span> and a <span class="loot-badge" data-item-id="item:black-tome-with-silver-runes">Black Tome with Silver Runes</span>.</p>
           </trail-stop>
           <trail-stop range="Lv 20–42">
-            <p><a href="maps.html?to=Splitpaw%20Lair"><strong>Splitpaw Lair</strong></a>'s July 2026 overhaul spans five difficulty bands across its 20–42 range, with new rare spawns and better equipment throughout the gnoll hierarchy. <strong>The Ishva Mal</strong>'s <strong>Robe of the Ishva</strong> (+50 mana) and <strong>Verishe Mal Executioner</strong>'s <strong>Verishe Mal Greataxe</strong> (2H Slashing, 26 dmg) are among the new loot.</p>
+            <p><a href="maps.html?to=Splitpaw"><strong>Splitpaw Lair</strong></a>'s July 2026 overhaul spans five difficulty bands across its 20–42 range, with new rare spawns and better equipment throughout the gnoll hierarchy. <strong>The Ishva Mal</strong>'s <span class="loot-badge" data-item-id="item:robe-of-the-ishva">Robe of the Ishva</span> (+50 mana) and <strong>Verishe Mal Executioner</strong>'s <span class="loot-badge" data-item-id="item:verishe-mal-greataxe">Verishe Mal Greataxe</span> (2H Slashing, 26 dmg) are among the new loot, alongside a <span class="loot-badge" data-item-id="item:gnoll-hide-tome">Gnoll Hide Tome</span> (+10 INT, +5 WIS) deeper in the gnoll hierarchy.</p>
           </trail-stop>
           <trail-stop range="Lv 46+">
             <p><a href="maps.html?to=Plane%20of%20Sky"><strong>Plane of Sky</strong></a>'s June 2026 rework changed how its eight-island key system behaves: a key now stays on your keyring permanently once used, and drops from each island's boss instead of trash mobs. The class epic-quest requirements at each island were simplified to a handful of wind runes plus one or two specific items, and most of the zone's best loot now comes from finishing those quests rather than direct boss drops.</p>
           </trail-stop>
         </div>
       </div>
-
-      <div class="road-ledger">
-        <h2>New Loot from the Revamps</h2>
-        <p class="road-ledger-intro">What each overhaul actually added, zone by zone.</p>
-        <ledger-item>
-          <span slot="label"><span class="loot-badge" data-item-id="item:runed-totem-staff">Runed Totem Staff</span>, <span class="loot-badge" data-item-id="item:keg-mallet">Keg Mallet</span> &amp; <span class="loot-badge" data-item-id="item:sabertooth-short-bow">Sabertooth Short Bow</span></span>
-          <span slot="detail"><a href="maps.html?to=Blackburrow">Blackburrow</a>'s three new drops. The staff is a 2H blunt weapon (37 delay, 9 dmg) that also carries +5 HP and +5 mana.</span>
-        </ledger-item>
-        <ledger-item>
-          <span slot="label"><span class="loot-badge" data-item-id="item:shiny-brass-shield">Shiny Brass Shield</span> &amp; <span class="loot-badge" data-item-id="item:dwarven-ringmail-tunic">Dwarven Ringmail Tunic</span></span>
-          <span slot="detail"><a href="maps.html?to=Crushbone">Crushbone</a>'s Orc Trainer drops the shield (+10 AC, +10 magic resist); Emperor Crush drops the tunic.</span>
-        </ledger-item>
-        <ledger-item>
-          <span slot="label"><span class="loot-badge" data-item-id="item:flowing-black-robe">Flowing Black Robe</span> &amp; <span class="loot-badge" data-item-id="item:black-tome-with-silver-runes">Black Tome with Silver Runes</span></span>
-          <span slot="detail">Both new drops from Najena herself, at the bottom of <a href="maps.html?to=Najena">Najena</a>'s key-and-lock progression.</span>
-        </ledger-item>
-        <ledger-item>
-          <span slot="label"><span class="loot-badge" data-item-id="item:verishe-mal-greataxe">Verishe Mal Greataxe</span>, <span class="loot-badge" data-item-id="item:robe-of-the-ishva">Robe of the Ishva</span> &amp; <span class="loot-badge" data-item-id="item:gnoll-hide-tome">Gnoll Hide Tome</span></span>
-          <span slot="detail"><a href="maps.html?to=Splitpaw%20Lair">Splitpaw Lair</a>'s new gear: the greataxe (2H slashing, 26 dmg) from Verishe Mal Executioner, the robe (+50 mana) from The Ishva Mal, and the tome (+10 INT, +5 WIS) from deeper in the gnoll hierarchy.</span>
-        </ledger-item>
-        <ledger-item>
-          <span slot="label">Permanent keyring keys</span>
-          <span slot="detail"><a href="maps.html?to=Plane%20of%20Sky">Plane of Sky</a>'s island keys now stay on your keyring for good once used, and each drops from its island's boss rather than trash.</span>
-        </ledger-item>
       </div>
 
       <div class="road-ledger">
