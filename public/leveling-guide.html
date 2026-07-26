@@ -121,6 +121,27 @@
     }
     .road-ledger-intro { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; margin-bottom: 6px; }
 
+    /* Same amber "item" gem language as zone-dossier.js's own
+       .npc-drop-badge/quest-shared.js's .item-badge (decisions/
+       item-hover-uses-generic-detail-tooltip.md), retuned for parchment
+       instead of dark stone -- this page's own <detail-tooltip> + hover
+       script at the bottom of the document is what makes these behave the
+       same as those. Light-DOM content passed into ledger-item's slot, so
+       styled here at the page level rather than the component's own
+       ::slotted() rule (same reason this page already styles slotted
+       <strong>/<a> directly). */
+    .loot-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 1px 8px 1px 6px; border-radius: 3px;
+      font-weight: 700; cursor: help;
+      background: rgba(122, 96, 42, 0.1); border: 1px solid var(--parch-line);
+    }
+    .loot-badge::before {
+      content: ""; width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0;
+      background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
+      box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
+    }
+
     @media (max-width: 600px) {
       main { padding: 40px 12px 48px; }
       parchment-page { padding: 36px 20px 32px !important; }
@@ -185,19 +206,19 @@
         <h2>New Loot from the Revamps</h2>
         <p class="road-ledger-intro">What each overhaul actually added, zone by zone.</p>
         <ledger-item>
-          <span slot="label">Runed Totem Staff, Keg Mallet &amp; Sabertooth Short Bow</span>
+          <span slot="label"><span class="loot-badge" data-item-id="item:runed-totem-staff">Runed Totem Staff</span>, <span class="loot-badge" data-item-id="item:keg-mallet">Keg Mallet</span> &amp; <span class="loot-badge" data-item-id="item:sabertooth-short-bow">Sabertooth Short Bow</span></span>
           <span slot="detail"><a href="maps.html?to=Blackburrow">Blackburrow</a>'s three new drops. The staff is a 2H blunt weapon (37 delay, 9 dmg) that also carries +5 HP and +5 mana.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label">Shiny Brass Shield &amp; Dwarven Ringmail Tunic</span>
+          <span slot="label"><span class="loot-badge" data-item-id="item:shiny-brass-shield">Shiny Brass Shield</span> &amp; <span class="loot-badge" data-item-id="item:dwarven-ringmail-tunic">Dwarven Ringmail Tunic</span></span>
           <span slot="detail"><a href="maps.html?to=Crushbone">Crushbone</a>'s Orc Trainer drops the shield (+10 AC, +10 magic resist); Emperor Crush drops the tunic.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label">Flowing Black Robe &amp; Black Tome with Silver Runes</span>
+          <span slot="label"><span class="loot-badge" data-item-id="item:flowing-black-robe">Flowing Black Robe</span> &amp; <span class="loot-badge" data-item-id="item:black-tome-with-silver-runes">Black Tome with Silver Runes</span></span>
           <span slot="detail">Both new drops from Najena herself, at the bottom of <a href="maps.html?to=Najena">Najena</a>'s key-and-lock progression.</span>
         </ledger-item>
         <ledger-item>
-          <span slot="label">Verishe Mal Greataxe, Robe of the Ishva &amp; Gnoll Hide Tome</span>
+          <span slot="label"><span class="loot-badge" data-item-id="item:verishe-mal-greataxe">Verishe Mal Greataxe</span>, <span class="loot-badge" data-item-id="item:robe-of-the-ishva">Robe of the Ishva</span> &amp; <span class="loot-badge" data-item-id="item:gnoll-hide-tome">Gnoll Hide Tome</span></span>
           <span slot="detail"><a href="maps.html?to=Splitpaw%20Lair">Splitpaw Lair</a>'s new gear: the greataxe (2H slashing, 26 dmg) from Verishe Mal Executioner, the robe (+50 mana) from The Ishva Mal, and the tome (+10 INT, +5 WIS) from deeper in the gnoll hierarchy.</span>
         </ledger-item>
         <ledger-item>
@@ -255,7 +276,38 @@
     </parchment-page>
   </main>
 
+  <detail-tooltip id="detail-tooltip" role="tooltip" aria-hidden="true"></detail-tooltip>
   <app-footer></app-footer>
   <script type="module" src="router.js"></script>
+  <script type="module">
+    // Loot badges reuse the same <detail-tooltip> + itemStats() pattern as
+    // zone-dossier.js's npc-drop badges and quest-card.js's reward chips
+    // (decisions/item-hover-uses-generic-detail-tooltip.md) -- this page has
+    // no per-quest/per-npc summary object to pull item data from (the ledger
+    // is hand-authored prose, not a rendered graph query), so it fetches its
+    // own /api/items?ids= for just the ids named on the page.
+    import { itemStats } from "./components/quest-shared.js";
+
+    const badges = [...document.querySelectorAll(".loot-badge[data-item-id]")];
+    if (badges.length && window.matchMedia("(pointer: fine)").matches) {
+      const ids = [...new Set(badges.map((b) => b.dataset.itemId))];
+      fetch(`api/items?${new URLSearchParams({ ids: ids.join(",") })}`)
+        .then((r) => r.json())
+        .then((items) => {
+          const byId = new Map(items.map((item) => [item.id, item]));
+          document.addEventListener("mouseover", (e) => {
+            const badge = e.target.closest(".loot-badge[data-item-id]");
+            if (!badge) return;
+            const item = byId.get(badge.dataset.itemId);
+            if (item) document.getElementById("detail-tooltip")?.show({ name: item.label, description: item.source, stats: itemStats(item) }, badge);
+          });
+          document.addEventListener("mouseout", (e) => {
+            if (!e.relatedTarget?.closest?.(".loot-badge[data-item-id]")) {
+              document.getElementById("detail-tooltip")?.hide();
+            }
+          });
+        });
+    }
+  </script>
 </body>
 </html>

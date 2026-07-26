@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -257,6 +257,14 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   if (pathname === "/api/npcs") {
     const zone = searchParams.get("zone") || "";
     return { status: 200, body: zone ? getZoneNpcs(zone) : [] };
+  }
+
+  // GET /api/items?ids=item:a,item:b — full ItemSummary per id, for a page
+  // (leveling-guide.html) that names specific items in hand-authored prose
+  // rather than rendering a quest/npc query's own resolved item fields.
+  if (pathname === "/api/items") {
+    const ids = (searchParams.get("ids") || "").split(",").filter(Boolean);
+    return { status: 200, body: ids.length ? getItemsByIds(ids) : [] };
   }
 
   return null;

@@ -411,6 +411,21 @@ export interface NpcSummary {
   drops?: ItemSummary[];
 }
 
+// Resolves item ids straight to full ItemSummary data, no zone/quest/npc
+// scoping -- for a page like leveling-guide.html that names specific items
+// in hand-authored prose rather than rendering a graph query's results, so
+// there's no existing per-quest/per-npc summary object to pull `drops`/
+// `itemRewards` from. Unknown ids are silently skipped, same as
+// getZoneNpcs() silently returning nothing for a zone with no npcs.
+export function getItemsByIds(ids: string[]): ItemSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  return ids
+    .map((id) => helpers.nodeById(id))
+    .filter((node): node is NodeData => node !== undefined && node.type === "item")
+    .map(toItemSummary);
+}
+
 // zoneId is required, not optional like getQuests()'s -- there's no current
 // UI need for "every npc across every zone" the way Quests' own unfiltered
 // list is a real browsable tab, so this only supports the one query shape
