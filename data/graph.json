@@ -60353,37 +60353,378 @@
       "id": "zone:dreadlands",
       "label": "Dreadlands",
       "type": "zone",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": "The Dreadlands",
+          "image": "dreadlands.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Tundra Yeti Caves (2098, 5050)"
+            },
+            {
+              "key": "2",
+              "label": "Mountain Giant Hut"
+            },
+            {
+              "key": "3",
+              "label": "Mountain Giant Hut"
+            },
+            {
+              "key": "4",
+              "label": "Drachnid Widow Web"
+            },
+            {
+              "key": "5",
+              "label": "Haunted Ruins"
+            },
+            {
+              "key": "6",
+              "label": "Empty Ruins"
+            },
+            {
+              "key": "7",
+              "label": "Glacier Yeti Caves"
+            },
+            {
+              "key": "8",
+              "label": "Mountain Giant Outpost with a mountain giant patriarch who drops Giant Sized Monocle (Warrior Epic)"
+            },
+            {
+              "key": "9",
+              "label": "Tundra Yeti Caves (-2346, 3502)"
+            },
+            {
+              "key": "10",
+              "label": "Mountain Giant Hut"
+            },
+            {
+              "key": "11",
+              "label": "Drachnid Widow Web"
+            },
+            {
+              "key": "12",
+              "label": "Drachnid Widow Web"
+            }
+          ]
+        },
+        {
+          "label": "Lost Valley",
+          "image": "dreadlands-lost-valley.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Wizard Portal Spires"
+            },
+            {
+              "key": "2",
+              "label": "Druid Portal Ring"
+            },
+            {
+              "key": "3",
+              "label": "Ancient Combine Outpost"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:dragon-necropolis",
       "label": "Dragon Necropolis",
       "type": "zone",
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": null,
+          "image": "dragon-necropolis.jpg",
+          "legend": []
+        }
+      ]
     },
     {
       "id": "zone:trakanon-s-teeth",
       "label": "Trakanon's Teeth",
       "type": "zone",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": null,
+          "image": "trakanons-teeth.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Ruins with Spectral Keepers"
+            },
+            {
+              "key": "2",
+              "label": "Ruin with Frogloks"
+            },
+            {
+              "key": "3",
+              "label": "Empty Ruins"
+            },
+            {
+              "key": "4",
+              "label": "Mausoleums with Spectral Keepers"
+            },
+            {
+              "key": "5",
+              "label": "Mausoleum with Emperor Ganak"
+            },
+            {
+              "key": "6",
+              "label": "Camps of Iksar Treasure Hunters"
+            },
+            {
+              "key": "7",
+              "label": "Ruins of Sebilis"
+            },
+            {
+              "key": "8",
+              "label": "Portal to the Ruins of Old Sebilis (-2055, -4450)"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:city-of-mist",
       "label": "City of Mist",
       "type": "zone",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": null,
+          "image": "city-of-mist.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Castle surrounded by the \"Moat\" with black reavers and Lord Ghiosk who drops Mace of the Shadowed Soul; upstairs after the lift is Lord Rak`Ashiir who drops Atramentous Shield and Ornate Rune Blade (front door is locked, need a Rogue to open)"
+            },
+            {
+              "key": "2",
+              "label": "Office with Lhranc"
+            },
+            {
+              "key": "3",
+              "label": "\"Goo House\" -- arena with a PvP area"
+            },
+            {
+              "key": "4",
+              "label": "\"Temple\""
+            },
+            {
+              "key": "5",
+              "label": "\"Bridge\""
+            },
+            {
+              "key": "6",
+              "label": "\"Stables\" with spectral courier in the western half"
+            },
+            {
+              "key": "7",
+              "label": "First Platform"
+            },
+            {
+              "key": "8",
+              "label": "Second Platform with a locked door"
+            },
+            {
+              "key": "9",
+              "label": "Final Platform with Neh`Ashiir who drops Ornate Rune Shield, Torch of the Elements and Woodsman's Staff"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:karnor-s-castle",
       "label": "Karnor's Castle",
       "type": "zone",
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "Upper Level",
+          "image": "karnors-castle-upper-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "\"Left Corner\""
+            },
+            {
+              "key": "2",
+              "label": "\"Right Corner\""
+            },
+            {
+              "key": "3",
+              "label": "\"Moat\" where multiple random monsters spawn"
+            },
+            {
+              "key": "4",
+              "label": "\"Captain Room\" where a drolvarg captain spawns, who drops Drolvarg Mantle (Common), Cobalt Gauntlets (Uncommon), Jade Mace (Uncommon), Polyphenomenal Axe (Rare), and Lupine Dagger (Very Rare)"
+            },
+            {
+              "key": "5",
+              "label": "\"Left courtyard\" (\"lcy\") with Sentry of Sathir who drops Jarsath Scale Helm (Common), Jaundiced Bone Gauntlets (Rare), Bone Amulet of Blade Turning (Rare), and Swarmcaller (Very Rare); Caller of Sathir who drops Kunzar Cloak (Common), Nature's Wrath, Cobalt Boots (Rare) and Sionachie's Partisan (Very Rare); and Skeletal Berserker who drops Jarsath Scale Chestplate (Common), Band of Eternal Flame, Deathbringer's Rod (Very Rare), and Jaundiced Bone Gauntlets"
+            },
+            {
+              "key": "6",
+              "label": "\"Right courtyard\" (\"rcy\") with the same spawns as the left courtyard"
+            },
+            {
+              "key": "7",
+              "label": "\"Towers\" where Skeletal Captain spawns, who drops Sarnak-Hide Mask (Common), Tolan's Darkwood Gauntlets (Uncommon), Soul Binder (Very Rare) and Fist of Zek"
+            },
+            {
+              "key": "8",
+              "label": "\"Warlord Room\" where a Drolvarg warlord spawns, who drops Supple Scale Armband (Common), Harmonic Dagger (Rare), Noctivagant Blade (Rare), and Donal's Boots of Mourning (Very Rare); along with a Drolvarg Bodyguard, a drolvarg pawbuster who drops Metal Pipe (Zan Fi), and a Wulfwere Bodyguard"
+            },
+            {
+              "key": "9",
+              "label": "Rooms where Skeletal Berserker (drops as in area 5) and skeletal warlord spawn, the latter dropping Jarsath Scale Wrist Guards (Common), Deepwater Boots (Rare), Dwarven Sap (Rare), and Tranquil Staff (Very Rare)"
+            },
+            {
+              "key": "10",
+              "label": "\"Hand Room\" with a Construct; Construct of Sathir who drops Helm of Rile (Common), Polished Obsidian Great Axe, Blood Ember Gauntlets (Rare), Fang Amulet of Calling (Very Rare); a cursed hand who drops Donal's Gauntlets of Mourning (Rare); and Hangnail who drops Elder Spiritist's Gauntlets (Common)"
+            },
+            {
+              "key": "11",
+              "label": "\"Jail Cell\" where skeletal warlord (drops as in area 9), a human skeleton (second door on the right), and Undead Jailer spawn, the latter dropping Jarsath Scale Leggings (Common), Mrylokar's Boots (Rare), and Baton of Faith (Very Rare)"
+            },
+            {
+              "key": "12",
+              "label": "\"Box Room\""
+            },
+            {
+              "key": "13",
+              "label": "\"Prep Room\", a multi-levelled room with multiple passages taking off here (colored numbers correspond to which level they take off on); Venril Sathir's Remains spawn here"
+            },
+            {
+              "key": "14",
+              "label": "Venril Sathir's Room where Venril Sathir spawns (see the raid encounter page for drops)"
+            },
+            {
+              "key": "C",
+              "label": "Leads to area C on the Catacombs map"
+            }
+          ]
+        },
+        {
+          "label": "Catacombs",
+          "image": "karnors-castle-catacombs.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Rooms with Skeletal Caretaker who drops Jarsath Scale Vambraces (Common), Mrylokar's Gift (Uncommon) and Tolan's Darkwood Boots (Rare); the easternmost area is also where Verix Kylox's Remains spawns, dropping Kylong Medallion"
+            },
+            {
+              "key": "2",
+              "label": "Rooms with Undead Jailer who drops Jarsath Scale Leggings (Common), Baton of Faith (Rare) and Mrylokar's Boots (Ultra Rare)"
+            },
+            {
+              "key": "3",
+              "label": "Area where moat monsters spawn and move west and south to the Moat, including Skeletal Scryer who drops Jarsath Scale Gauntlets (Common), Jarsath Trident (Rare), Deepwater Gauntlets (Rare), and Locustlure (Rare)"
+            },
+            {
+              "key": "4",
+              "label": "Rooms with Spectral Turnkey who drops Jarsath Scale Boots, Book of Obulus (Rare) and Mrylokar's Gauntlets (Ultra Rare)"
+            },
+            {
+              "key": "C",
+              "label": "Leads to the stairs marked C on the Upper Level map"
+            },
+            {
+              "key": "D",
+              "label": "Leads to the well marked D on the Upper Level map"
+            },
+            {
+              "key": "A",
+              "label": "The letter A sections connect to one another"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:warsliks-woods",
       "label": "Warsliks Woods",
       "type": "zone",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": "Warslik's Wood",
+          "image": "warsliks-woods.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Goblin Fort with Pit Fighter Dob and Grachnist the Destroyer"
+            },
+            {
+              "key": "2",
+              "label": "Hut with Goblins (the island to the northwest is where Ssolet Dnaas is located)"
+            },
+            {
+              "key": "3",
+              "label": "Hut with outcast Iksar"
+            },
+            {
+              "key": "4",
+              "label": "Hut with outcast Iksar"
+            },
+            {
+              "key": "5",
+              "label": "Hut with Goblins"
+            },
+            {
+              "key": "6",
+              "label": "Hut with Goblins"
+            },
+            {
+              "key": "7",
+              "label": "Hut with Goblins"
+            },
+            {
+              "key": "8",
+              "label": "Forest Giant Hut"
+            },
+            {
+              "key": "9",
+              "label": "Hut with outcast Iksar and Iksar Bandit Lord who drops Bracer of Scavenging"
+            },
+            {
+              "key": "10",
+              "label": "\"Bandit Lake\" -- lake surrounded by outcast Iksar"
+            },
+            {
+              "key": "11",
+              "label": "Hut with outcast Iksar"
+            },
+            {
+              "key": "12",
+              "label": "Forest Giant Fort"
+            },
+            {
+              "key": "13",
+              "label": "Cabilis Outpost Ruins -- merchants selling patch hide armor, newbie weapons, food items, and survival gear"
+            }
+          ]
+        },
+        {
+          "label": "Tunnels",
+          "image": "warsliks-woods-tunnels.jpg",
+          "legend": [
+            {
+              "key": "A",
+              "label": "Tunnels to Dalnir (with Brute caves)"
+            },
+            {
+              "key": "B",
+              "label": "Iksar Tunnels to Lake of Ill Omen"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "spell:brain-bite",
@@ -65551,7 +65892,123 @@
           "veeshan": "neutral"
         }
       },
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "First Level",
+          "image": "dalnir-first-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Entry Room"
+            },
+            {
+              "key": "2",
+              "label": "\"L Room\""
+            },
+            {
+              "key": "3",
+              "label": "\"The Temple\""
+            },
+            {
+              "key": "4",
+              "label": "Pit down to Area #4 on the Second Level"
+            }
+          ]
+        },
+        {
+          "label": "Second Level",
+          "image": "dalnir-second-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Teleporter to Warsliks Woods at the Dalnir entrance"
+            },
+            {
+              "key": "2",
+              "label": "\"Shackle Room\" with Kly Imprecator who drops Ancient Coin (Common), Dagger Hilt (Uncommon), Bo Stick (Uncommon), and Robe of Dalnir (Ultra Rare); a coerced crusader who drops Elliptical Veil (Uncommon), Bamboo Bo Stick (Uncommon) and Greenwood Bo Stick (Rare); and a coerced channeler who drops nothing"
+            },
+            {
+              "key": "3",
+              "label": "\"Bedrooms\""
+            },
+            {
+              "key": "4",
+              "label": "\"Pool Room\" where the pit from Area #4 on the First Level drops to"
+            },
+            {
+              "key": "5",
+              "label": "Room with \"Thistle Lumpy\" (a lumpy goo) who drops Two Handed Practice Sword (Rare) and Grave Sandals (Rare)"
+            },
+            {
+              "key": "6",
+              "label": "Room with \"Carpet Lumpy\" (a lumpy goo) who drops Fighting Baton (Rare) and Worm-eaten Gloves (Rare)"
+            },
+            {
+              "key": "7",
+              "label": "Secret pit trap leading down to Area #7 on the Third Level"
+            },
+            {
+              "key": "8",
+              "label": "\"Checkerboard Room\""
+            }
+          ]
+        },
+        {
+          "label": "Third Level",
+          "image": "dalnir-third-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "\"BBQ Room\""
+            },
+            {
+              "key": "2",
+              "label": "\"River\""
+            },
+            {
+              "key": "3",
+              "label": "\"Church\" with Kly Imprecator who drops Sharp Metal Shard (Uncommon) and Bamboo Bo Stick"
+            },
+            {
+              "key": "4",
+              "label": "\"Crusader Room\" with a coerced revenant who drops Defiled Drape of the Brood, Wand of Pain, Rod Segment I, Serpentwood Staff (Rare) and Tattered Tomb Shroud (Rare); a coerced penkeeper who drops a Nickel Key, Sarnak Enforcer (Uncommon) and Robe of the Foci (Rare); and a spectral crusader who drops Bamboo Bo Stick (Rare) and Tattered Arm Wrappings (Rare); the static spawn here has roughly a 21-minute timer"
+            },
+            {
+              "key": "5",
+              "label": "\"Laboratory\" with Kly Imprecator who drops Jagged Metal Shard (Uncommon)"
+            },
+            {
+              "key": "6",
+              "label": "Broken Crypt with a secret one-way door"
+            },
+            {
+              "key": "7",
+              "label": "\"Crossroads\" where the pit from Area #7 on the Second Level drops to"
+            },
+            {
+              "key": "8",
+              "label": "\"Dining Room\" with many Kly"
+            },
+            {
+              "key": "9",
+              "label": "\"Statue Room\" with an undead blacksmith who drops Forge Hammer of Dalnir (Common), Sarnak Enforcer (Rare), and Tattered Leg Wrappings (Rare); and a coerced penkeeper who drops a Nickel Key, Sarnak Enforcer (Uncommon) and Robe of the Foci (Rare)"
+            },
+            {
+              "key": "10",
+              "label": "\"Forge Room\" with a coerced smith and the Always Works forge"
+            },
+            {
+              "key": "11",
+              "label": "\"Overseer Room\" with Kly Overseer and The Kly, who drops Sarnak Headguard"
+            },
+            {
+              "key": "12",
+              "label": "Teleport to Warsliks Woods at the Dalnir entrance"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "npc:qeynos-catacombs:perkon-malok",
@@ -70321,7 +70778,87 @@
           "veeshan": "neutral"
         }
       },
-      "zoneType": "city"
+      "zoneType": "city",
+      "maps": [
+        {
+          "label": "Basement",
+          "image": "erudin-palace-basement.png",
+          "legend": [
+            {
+              "key": "2",
+              "label": "Bank of Erudin"
+            },
+            {
+              "key": "3",
+              "label": "Erudin City Office -- merchants selling bags, prison downstairs"
+            },
+            {
+              "key": "4",
+              "label": "Sothure's Fine Gems -- merchants selling gems, metals, and all jewelry supplies"
+            },
+            {
+              "key": "5",
+              "label": "Vials of Vitality -- merchants selling jewelry supplies (all except metal), potions, magic stones"
+            },
+            {
+              "key": "A",
+              "label": "Stairs to the corresponding A on Level One"
+            },
+            {
+              "key": "B",
+              "label": "Stairs to the corresponding B on Level One"
+            }
+          ]
+        },
+        {
+          "label": "Level One",
+          "image": "erudin-palace-level-one.png",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Upper is the Teleporter Arrival Platform; the teleporter down to Erudin is on the Basement level"
+            },
+            {
+              "key": "A",
+              "label": "Stairs to the corresponding A on the Basement"
+            },
+            {
+              "key": "B",
+              "label": "Stairs to the corresponding B on the Basement"
+            },
+            {
+              "key": "C",
+              "label": "Stairs to the corresponding C on Level Two"
+            }
+          ]
+        },
+        {
+          "label": "Level Two",
+          "image": "erudin-palace-level-two.png",
+          "legend": [
+            {
+              "key": "6",
+              "label": "Tower of the Crimson Hands -- Wizard Guild, merchants selling spells, Crimson Robes, wizard books, gems (assorted)"
+            },
+            {
+              "key": "7",
+              "label": "Tower of the Gate Callers -- Magician Guild, merchants selling spells, Blue Robes, gems (many), magician equipment"
+            },
+            {
+              "key": "8",
+              "label": "Tower of the Craft Keepers -- Enchanter Guild, merchants selling spells, Gold Robes, gems (assorted), and various spell components"
+            },
+            {
+              "key": "9",
+              "label": "Merchant selling common spells"
+            },
+            {
+              "key": "C",
+              "label": "Stairs to the corresponding C on Level One"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "npc:north-qeynos:knargon-lanenda",
@@ -72244,7 +72781,137 @@
           "veeshan": "neutral"
         }
       },
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "First Level",
+          "image": "old-sebilis-first-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Entry Room"
+            },
+            {
+              "key": "2",
+              "label": "Exit Teleport"
+            },
+            {
+              "key": "3",
+              "label": "\"Prison\" with Gangrenous scarab who drops Elder Spiritist's Helm, Gangrenous Beetle Mask, Staff of the Waterwalker"
+            },
+            {
+              "key": "4",
+              "label": "\"NG\" a necrosis scarab who drops Cane of the Tranquil, Crystalline Short Sword, Jaundiced Bone Vambraces"
+            },
+            {
+              "key": "5",
+              "label": "Armory with froglok armorer who drops Singing Steel Bracer"
+            },
+            {
+              "key": "6",
+              "label": "Bar with froglok bartender who drops Dark Scale Greaves, Mrylokar's Vambraces, Sebilite Scale Cape, Sebilite Scale Gloves"
+            },
+            {
+              "key": "7",
+              "label": "Froggy who drops Sebilite Scale Cap, Singing Steel Helm"
+            },
+            {
+              "key": "8",
+              "label": "froglok armsman who drops Mrylokar's Helm, Sebilite Scale Bracelet, Sebilite Scale Leggings, Truncheon of Doom"
+            },
+            {
+              "key": "9",
+              "label": "\"Pyramid\" with sebilite guardians who drop Lamentation, Larrikan's Mask, Wind Saber, and a locked door inside"
+            },
+            {
+              "key": "10",
+              "label": "frenzied pox scarab who drops Beetle Stinger, Deepwater Bracer, Imbued Fighters Staff"
+            },
+            {
+              "key": "11",
+              "label": "\"Disco One\" with froglok ostiary who drops Arbitor's Combine Greatsword, Donal's Vambraces of Mourning, Sebilite Scale Mantle, Sebilite Scale Neckguard; and Gruplinort who drops Elder Spiritist's Bracer, Froglok Bonecaster's Robe, and Sarnak Warhammer"
+            },
+            {
+              "key": "12",
+              "label": "froglok chef who drops Fayguard Bladecatcher, Mrylokar's Bracer, Sebilite Scale Cap, Sebilite Scale Vambraces; and froglok repairer who drops Singing Steel Vambraces, Sebilite Scale Leggings"
+            },
+            {
+              "key": "13",
+              "label": "\"Library\" with secret door to 14"
+            },
+            {
+              "key": "14",
+              "label": "Laboratory with Brogg who drops Clay Guardian Shield, Ebon Mace, Tolan's Darkwood Bracer"
+            },
+            {
+              "key": "15",
+              "label": "\"Disco Two\" with froglok commander who drops Donal's Helm of Mourning, Granite Face Grinder (?), Green Jade Halberd, Sebilite Scale Boots, Sebilite Scale Mask"
+            },
+            {
+              "key": "16",
+              "label": "froglok pickler who drops Donal's Bracer of Mourning, Sebilite Scale Belt, Sebilite Scale Coat, Zealot's Incarnadine Sword"
+            },
+            {
+              "key": "17",
+              "label": "\"The Crypt\" with crypt caretaker who drops Deepwater Helm, Obulus Mantle, and Imperial Crypt Guards"
+            },
+            {
+              "key": "17a",
+              "label": "Arch Duke Iatol who drops Jaundiced Bone Bracer, Silken Whip of Ensnaring, Ykeshan War Club"
+            },
+            {
+              "key": "17b",
+              "label": "Harbinger Freglor who drops Box of Nil Space, Cane of Harmony, Knuckle Dusters"
+            },
+            {
+              "key": "17c",
+              "label": "Hierophant Prime Grekal who drops Hierophant's Cloak, Sword of Skyfire, Sword of the Morning"
+            },
+            {
+              "key": "17d",
+              "label": "Baron Yosig who drops Journeyman's Walking Stick, Luminescent Staff, Tolan's Darkwood Helm"
+            },
+            {
+              "key": "18",
+              "label": "blood of chottal who drops Breath of Harmony, Cone of the Mystics, Tolan's Darkwood Vambraces"
+            },
+            {
+              "key": "19",
+              "label": "Emperor Chottal who drops Deepwater Vambraces, Nathsar Greatsword, Rod of Lamentation, Rod of Mourning; and Spectral Harbinger (a placeholder for Emperor) who drops Granite Face Grinder"
+            },
+            {
+              "key": "A",
+              "label": "Underwater tunnel to point A on the Second Level map"
+            }
+          ]
+        },
+        {
+          "label": "Second Level",
+          "image": "old-sebilis-second-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Exit Teleporter"
+            },
+            {
+              "key": "2",
+              "label": "myconid spore king who drops Fungi Covered Great Staff, Fungus Covered Scale Tunic, and Robe of Living Fungus"
+            },
+            {
+              "key": "3",
+              "label": "Entry Hall with a locked door at the entrance and a secret door at the rear; the front door can't be opened from the other side but can be opened from the front with the turning fire pot"
+            },
+            {
+              "key": "4",
+              "label": "Open Cavern with sebilite protector who drops Hardened Clay Bracelet, Staff of Battle, and Poison Wind Censer; Tolapumj who drops Cap of the Insubstantial, Peacebringer, and Tolapumj's Robe; and Trakanon (see the raid encounter page for drops)"
+            },
+            {
+              "key": "A",
+              "label": "Underwater tunnel to point A on the First Level map"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "npc:crushbone:dwarven-smith",
@@ -79689,7 +80356,99 @@
       "lore": "The Crystal Caverns are the ancient home of the Coldain, named Froststone, long since overrun by giants and now orcs and other creatures.",
       "wiki_title": "Crystal Caverns",
       "era": "Velious",
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "The Crystal Caverns",
+          "image": "crystal-caverns-tunnels.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Orc Bridge"
+            },
+            {
+              "key": "2",
+              "label": "The Chasm"
+            },
+            {
+              "key": "3",
+              "label": "Broken Bridge with Stalag Terrors"
+            },
+            {
+              "key": "4",
+              "label": "Rib Bridge"
+            },
+            {
+              "key": "5",
+              "label": "Great Hall with Stalag Terrors"
+            },
+            {
+              "key": "6",
+              "label": "Room with a stalag terror who drops Crystal Fiber (Uncommon); a terror carver who drops Crystal Covered Shroud (Common); a hollow crystal who drops Crystal Fiber (Common) and Froststone Stein (Rare); outside, a life leech who drops Chipped Velium Amulet (Common) and Blackened Crystalline Robe (Ultra Rare), and a terror carver who drops Stalagterror Spine Spear (Common); and Ghost of Burdael who drops Onyxbrand (quest: The Spirit of Garzicor)"
+            },
+            {
+              "key": "7",
+              "label": "Geonid Tunnels with a gem collector and a focus gem"
+            },
+            {
+              "key": "8",
+              "label": "Room with Queen Dracnia who drops Sceptre of the Coldain Ancients (Always), Crystalline Robes (Uncommon), Messenger of the Queen (Rare); Crystal Purifier who drops Crystal Lined Slippers (Rare); a crystal lurker who drops Spider Fang Choker (Common); and nearby a drachnid retainer who drops Crystallized Two Handed Sword (Common), Crystallized Sword (Rare), Glowing Velium Axe (Rare), and Crystal Webshield (Rare), and a crystal grinder who drops Crystal Grinder (Common)"
+            }
+          ]
+        },
+        {
+          "label": "The Well",
+          "image": "crystal-caverns-well.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "The Dead End"
+            },
+            {
+              "key": "2",
+              "label": "The Ice Hall"
+            },
+            {
+              "key": "3",
+              "label": "Bottom of the \"Well\" pull spot, nearby spawns Foreman Rixact"
+            },
+            {
+              "key": "4",
+              "label": "Orc Bridge"
+            },
+            {
+              "key": "*",
+              "label": "Lettered spots connect to their corresponding letter on the other section of the map"
+            }
+          ]
+        },
+        {
+          "label": "Froststone",
+          "image": "crystal-caverns-froststone.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Lower Room with a merchant who sells alcohol"
+            },
+            {
+              "key": "2",
+              "label": "Upper Room with banker Kramble Gemshard"
+            },
+            {
+              "key": "3",
+              "label": "Room with a merchant who sells alcohol"
+            },
+            {
+              "key": "4",
+              "label": "Upper Room with a merchant who sells food, water, bandages, and other goods; Lower Room with Captain Dunstan Coldheart"
+            },
+            {
+              "key": "5",
+              "label": "Lower Room with a merchant who sells food, water, bandages, and other goods"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "quest:the-supply-run-great-divide",
@@ -79924,7 +80683,57 @@
       "lore": "The history behind the ruins of Kaesora is lost, however most believe that the same cataclysm that struck down the wurm and permanently scoured the surface of the Field of Bone above it laid waste to Kaesora as well. Now only the dead walk these halls.",
       "wiki_title": "Kaesora",
       "era": "Kunark",
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "Main Level",
+          "image": "kaesora-main-level.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Room with Reaver of Xalgoz who drops Rod of Battle, Deathwatch Sword, Truesilver Armor"
+            },
+            {
+              "key": "2",
+              "label": "\"Runelord Room\" with spiders and Strathbone Runelord who drops Kylong War Dagger, Blade of Fiery Lamentations (Common), and Dagger of Frost (Rare)"
+            },
+            {
+              "key": "3",
+              "label": "\"Frenzied Room\" with Frenzied Strathbone who drops Mask of the Eight Eyes (Common) and Cryptrobber's Knife (Rare)"
+            },
+            {
+              "key": "4",
+              "label": "\"Backyard\" with Warder of Xalgoz who drops Spine Piercer (Uncommon) and Deadwood Stave"
+            },
+            {
+              "key": "5",
+              "label": "\"Library\" with spectral librarian who drops Spectral Shroud (Common) and Spirit Tome (Uncommon); tortured librarian who drops Kunzar Mantle (Common), Spirit Tome (Uncommon) and Sage's Battle Staff (Rare); Spectral Guardian who drops Shield of Spectral Essence (Rare); failed crypt raider who drops Terraz Ton Coin, Spear of Mortification (Uncommon) and Kylong Hunting Knife (Rare); and a piece of a medallion ground spawn for the Key of Veeshan on the second floor of the library"
+            },
+            {
+              "key": "6",
+              "label": "Hut with Hungered Ravener who drops Icy Blade (Common) and Luminary Two Handed Sword"
+            },
+            {
+              "key": "7",
+              "label": "Broken Floor Room; dropping down leads to a pathway to the exit and also to the Church area"
+            }
+          ]
+        },
+        {
+          "label": "Five Towers",
+          "image": "kaesora-five-towers.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "\"Church\" with Xalgoz who drops Xalgozian Fang (Common), Blade of Xalgoz (Common), Staff of the Dreaded Gaze (Ultra Super Duper Rare)"
+            },
+            {
+              "key": "A",
+              "label": "Tunnels labeled A connect together"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "npc:kaesora:tortured-librarian",
