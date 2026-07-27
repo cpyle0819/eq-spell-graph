@@ -25,7 +25,7 @@ for (const e of edges) {
 }
 
 function roleCounts(npcs: Node[]) {
-  const counts = { mob: 0, vendor: 0, quest_giver: 0, guard: 0, guildmaster: 0 };
+  const counts = { mob: 0, vendor: 0, quest_giver: 0, guard: 0, guildmaster: 0, banker: 0 };
   for (const n of npcs) {
     for (const r of n.roles ?? []) {
       if (r in counts) (counts as any)[r]++;

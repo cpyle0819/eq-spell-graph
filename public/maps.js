@@ -81,7 +81,8 @@ function populateZones(zones) {
 // not the app's own static-asset layout. npcs comes from /api/npcs?zone=
 // (getZoneNpcs() in src/graph.ts, decisions/
 // npc-mob-unification-and-zone-groups.md) -- every entity located_in the
-// zone (vendors, quest-givers, guards, guildmasters, mobs alike), grouped
+// zone (vendors, quest-givers, guards, guildmasters, bankers, mobs alike,
+// plus roleless residents), grouped
 // and ordered by <zone-dossier> itself based on zoneType. levelRange is
 // derived from that same npcs array (min/max across every entry with a
 // known level) rather than a second lookup. null (not 1-Infinity or some

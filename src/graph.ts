@@ -365,19 +365,27 @@ export function getZones(): ZoneSummary[] {
 export interface NpcSummary {
   id: string;
   label: string;
-  // "vendor"/"quest_giver"/"guard"/"guildmaster"/"mob" -- every entity in
-  // the graph is an npc now (decisions/npc-mob-unification-and-zone-groups.md
-  // retired the separate `mob` node type), roles is what distinguishes a
-  // shopkeeper from a hostile creature. An npc can carry more than one
-  // (a vendor who also gives a quest) -- callers group by role and render
-  // the npc once per matching group, not once overall.
+  // "vendor"/"quest_giver"/"guard"/"guildmaster"/"mob"/"banker" -- every
+  // entity in the graph is an npc now (decisions/
+  // npc-mob-unification-and-zone-groups.md retired the separate `mob` node
+  // type), roles is what distinguishes a shopkeeper from a hostile creature.
+  // "banker" (decisions/friendly-town-npcs-inside-a-hostile-dungeon.md) is a
+  // non-selling service NPC, distinct from "vendor" because it carries no
+  // `sells` edges. An npc can carry more than one role (a vendor who also
+  // gives a quest) -- callers group by role and render the npc once per
+  // matching group, not once overall. An npc can also carry zero roles at
+  // all (a named resident with no known function beyond presence) --
+  // callers must not assume every npc lands in at least one group.
   roles: string[];
   // Same optional-bound shape as QuestSummary's own minLevel/maxLevel --
   // most eqlwiki.com creature entries are a level *range*, not one number;
   // a single-level mob (a named/unique) just has minLevel === maxLevel
   // rather than a separate scalar field, so callers check one shape either
-  // way. Only ever set for npcs with a "mob"/"guard"/"guildmaster" role --
-  // plain vendors/quest-givers have no known level.
+  // way. Usually set for npcs with a "mob"/"guard"/"guildmaster"/"banker"
+  // role and omitted for "vendor"/"quest_giver" -- but a "guard" (or a
+  // roleless resident) with no stated wiki level is kept without one rather
+  // than excluded, so absence here never implies the role doesn't carry
+  // levels in general.
   minLevel?: number;
   maxLevel?: number;
   // Resolved `npc --drops--> item` edges (decisions/

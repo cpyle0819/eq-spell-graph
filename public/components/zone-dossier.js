@@ -12,10 +12,14 @@
 // The old single "Bestiary" mob roster is gone
 // (decisions/npc-mob-unification-and-zone-groups.md) -- every entity in the
 // graph is an `npc` now, tagged via `roles` (vendor/quest_giver/guard/
-// guildmaster/mob), and this renders one labeled group per role actually
-// present, not a flat list. An npc with more than one role (a vendor who
-// also gives a quest) renders once per matching group -- intentional, not a
-// dedup bug. Group order depends on `zoneType` ("city"/"open_world" share
+// guildmaster/mob/banker -- decisions/
+// friendly-town-npcs-inside-a-hostile-dungeon.md added the last one), and
+// this renders one labeled group per role actually present, not a flat
+// list. An npc can also carry zero roles (a named resident with no known
+// function) -- it simply doesn't land in any group, not an error. An npc
+// with more than one role (a vendor who also gives a quest) renders once
+// per matching group -- intentional, not a dedup bug. Group order depends
+// on `zoneType` ("city"/"open_world" share
 // CITY_ROLE_ORDER; "dungeon" gets DUNGEON_ROLE_ORDER, the exact reverse --
 // a dungeon's own hostile roster is what a visitor actually came for) -- an
 // absent role's group is simply not rendered, per the same "if a group
@@ -127,8 +131,8 @@ function npcRow(npc, role) {
   `;
 }
 
-const ROLE_LABELS = { guildmaster: "Guildmasters", vendor: "Vendors", quest_giver: "Quest Givers", guard: "Guards", mob: "Mobs" };
-const CITY_ROLE_ORDER = ["guildmaster", "vendor", "quest_giver", "guard", "mob"];
+const ROLE_LABELS = { guildmaster: "Guildmasters", vendor: "Vendors", banker: "Bankers", quest_giver: "Quest Givers", guard: "Guards", mob: "Mobs" };
+const CITY_ROLE_ORDER = ["guildmaster", "vendor", "banker", "quest_giver", "guard", "mob"];
 const DUNGEON_ROLE_ORDER = [...CITY_ROLE_ORDER].reverse();
 
 // Groups npcs by role (one npc can land in more than one group -- see this

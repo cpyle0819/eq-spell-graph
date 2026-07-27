@@ -143684,6 +143684,202 @@
       ],
       "minLevel": 50,
       "maxLevel": 50
+    },
+    {
+      "id": "npc:crystal-caverns:guard-evercold",
+      "label": "Guard Evercold",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-grabadin",
+      "label": "Guard Grabadin",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-hollander",
+      "label": "Guard Hollander",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-justik",
+      "label": "Guard Justik",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-kevin",
+      "label": "Guard Kevin",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-kristen",
+      "label": "Guard Kristen",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-slacey",
+      "label": "Guard Slacey",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:guard-solistak",
+      "label": "Guard Solistak",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:crystal-caverns:captain-dunstan-coldheart",
+      "label": "Captain Dunstan Coldheart",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ]
+    },
+    {
+      "id": "npc:crystal-caverns:soren-coldheart",
+      "label": "Soren Coldheart",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 28,
+      "maxLevel": 28
+    },
+    {
+      "id": "npc:crystal-caverns:cassia-gemshard",
+      "label": "Cassia Gemshard",
+      "type": "npc",
+      "roles": []
+    },
+    {
+      "id": "npc:crystal-caverns:derron-coldmist",
+      "label": "Derron Coldmist",
+      "type": "npc",
+      "roles": []
+    },
+    {
+      "id": "npc:crystal-caverns:flint-velweaver",
+      "label": "Flint Velweaver",
+      "type": "npc",
+      "roles": []
+    },
+    {
+      "id": "npc:crystal-caverns:fuller-velweaver",
+      "label": "Fuller Velweaver",
+      "type": "npc",
+      "roles": []
+    },
+    {
+      "id": "npc:crystal-caverns:nadalia-coldmist",
+      "label": "Nadalia Coldmist",
+      "type": "npc",
+      "roles": []
+    },
+    {
+      "id": "npc:crystal-caverns:tacy-mistheart",
+      "label": "Tacy MistHeart",
+      "type": "npc",
+      "roles": [],
+      "minLevel": 30,
+      "maxLevel": 30
+    },
+    {
+      "id": "npc:crystal-caverns:vevina-velweaver",
+      "label": "Vevina Velweaver",
+      "type": "npc",
+      "roles": [],
+      "minLevel": 28,
+      "maxLevel": 28
+    },
+    {
+      "id": "npc:crystal-caverns:kramble-gemshard",
+      "label": "Kramble Gemshard",
+      "type": "npc",
+      "roles": [
+        "banker"
+      ],
+      "minLevel": 30,
+      "maxLevel": 30
+    },
+    {
+      "id": "npc:crystal-caverns:historian-baenek",
+      "label": "Historian Baenek",
+      "type": "npc",
+      "roles": [
+        "quest_giver"
+      ],
+      "minLevel": 40,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:crystal-caverns:merchant-alcohol-1",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:crystal-caverns:merchant-alcohol-2",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:crystal-caverns:merchant-supplies-1",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:crystal-caverns:merchant-supplies-2",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -267593,6 +267789,192 @@
       "source": "npc:crystal-caverns:ghost-of-burdael",
       "target": "zone:crystal-caverns",
       "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20580",
+      "source": "npc:crystal-caverns:guard-evercold",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20581",
+      "source": "npc:crystal-caverns:guard-grabadin",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20582",
+      "source": "npc:crystal-caverns:guard-hollander",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20583",
+      "source": "npc:crystal-caverns:guard-justik",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20584",
+      "source": "npc:crystal-caverns:guard-kevin",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20585",
+      "source": "npc:crystal-caverns:guard-kristen",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20586",
+      "source": "npc:crystal-caverns:guard-slacey",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20587",
+      "source": "npc:crystal-caverns:guard-solistak",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20588",
+      "source": "npc:crystal-caverns:captain-dunstan-coldheart",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20589",
+      "source": "npc:crystal-caverns:soren-coldheart",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20590",
+      "source": "npc:crystal-caverns:cassia-gemshard",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20591",
+      "source": "npc:crystal-caverns:derron-coldmist",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20592",
+      "source": "npc:crystal-caverns:flint-velweaver",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20593",
+      "source": "npc:crystal-caverns:fuller-velweaver",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20594",
+      "source": "npc:crystal-caverns:nadalia-coldmist",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20595",
+      "source": "npc:crystal-caverns:tacy-mistheart",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20596",
+      "source": "npc:crystal-caverns:vevina-velweaver",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20597",
+      "source": "npc:crystal-caverns:kramble-gemshard",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20598",
+      "source": "npc:crystal-caverns:historian-baenek",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20599",
+      "source": "npc:crystal-caverns:merchant-alcohol-1",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20600",
+      "source": "npc:crystal-caverns:merchant-alcohol-1",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20601",
+      "source": "npc:crystal-caverns:merchant-alcohol-2",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20602",
+      "source": "npc:crystal-caverns:merchant-alcohol-2",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20603",
+      "source": "npc:crystal-caverns:merchant-supplies-1",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20604",
+      "source": "npc:crystal-caverns:merchant-supplies-1",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20605",
+      "source": "npc:crystal-caverns:merchant-supplies-1",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20606",
+      "source": "npc:crystal-caverns:merchant-supplies-1",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20607",
+      "source": "npc:crystal-caverns:merchant-supplies-2",
+      "target": "zone:crystal-caverns",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20608",
+      "source": "npc:crystal-caverns:merchant-supplies-2",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20609",
+      "source": "npc:crystal-caverns:merchant-supplies-2",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20610",
+      "source": "npc:crystal-caverns:merchant-supplies-2",
+      "target": "item:bandages",
+      "type": "sells"
     }
   ]
 }
