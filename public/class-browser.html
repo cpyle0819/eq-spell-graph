@@ -32,18 +32,12 @@
        zone-card. */
     #browser-results { padding: 0 0 24px; }
 
-    /* Packed edge-to-edge with a shared seam, same technique as the Spell
-       Finder's zone-card list — a proper stone panel per row, not a gap
-       between floating cards. Most categories render one card tag at a
-       time (spell-card/aa-card/ability-card/stance-card,
-       public/components/), so same-tag adjacency is enough for those —
-       except Quests, which interleaves quest-card and quest-group-card
-       alphabetically (decisions/quest-group-card-ui.md), so every
-       combination of the two needs the same treatment. */
-    spell-card + spell-card, aa-card + aa-card,
-    ability-card + ability-card, stance-card + stance-card,
-    quest-card + quest-card, quest-card + quest-group-card,
-    quest-group-card + quest-card, quest-group-card + quest-group-card { margin-top: -4px; }
+    /* Packed edge-to-edge with zero gap, same as the Spell Finder's
+       zone-card list — a proper stone panel per row, not a gap between
+       floating cards. Plain block stacking (margin:0) already achieves
+       that; no per-page rule needed. Don't add a negative margin to fold
+       adjacent borders into one seam — see decisions/
+       card-list-seams-no-border-overlap.md. */
 
     @media (min-width: 1100px) {
       #class-browser-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }

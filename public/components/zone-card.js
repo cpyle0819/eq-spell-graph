@@ -90,9 +90,9 @@ ${WIKI_LINK_CSS}
   transition: box-shadow 150ms;
 }
 /* Brighten via box-shadow, not filter -- filter forces its own compositing
-   layer, and these cards share a seam with their neighbor via a
-   negative-margin overlap (index.html), so layer promotion would visibly
-   desync the shared border during the hover transition. */
+   layer, which briefly desyncs the hovered card's own border from its
+   layout position during the transition (visible as a flicker at the
+   edges). box-shadow paints in the normal flow, so it doesn't. */
 :host(:hover) {
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }

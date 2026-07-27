@@ -73,8 +73,7 @@ ${WIKI_LINK_CSS}
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45);
 }
 /* box-shadow, not filter — see zone-card's own :host(:hover) comment
-   (public/components/zone-card.js) for why; same negative-margin
-   seam-sharing trick, same desync risk. */
+   (public/components/zone-card.js) for why. */
 :host(:hover) {
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), inset 0 0 0 999px rgba(255, 255, 255, 0.05);
 }

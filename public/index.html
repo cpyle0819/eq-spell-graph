@@ -68,16 +68,13 @@
        filters) lives in theme.css, shared by all three pages. */
 
     /* Zone rows: each one keeps a full, pronounced bevel border (its own
-       beveled box, not a flat divided row) but packs directly against its
-       neighbors — a negative margin overlaps each row's top border onto
-       the previous row's bottom border, one shared seam instead of two
-       stacked ones, the same way adjacent macro buttons in the reference
-       share an edge without a gap between them. zone-card
-       (public/components/zone-card.js) owns its own look (panel/border/
-       faction LED dot/opacity) and margin:0 (from theme.css's universal
-       reset reaching the host from outside, same as before) — this page
-       only needs the adjacency trick between instances. */
-    zone-card + zone-card { margin-top: -4px; }
+       beveled box, not a flat divided row) and packs directly against its
+       neighbors with zero gap via plain block stacking (margin:0, from
+       theme.css's universal reset reaching the host from outside) — no
+       extra rule needed here. Don't add a negative margin to fold the two
+       borders into one shared seam: it paints the next card's top
+       highlight edge directly over the previous card's bottom lowlight
+       edge, hiding half of every card's bevel (see decisions/). */
 
     /* Wide layout: sidebar. The sidebar column fills its full allocated
        width — left bevel flush against the screen edge (no padding

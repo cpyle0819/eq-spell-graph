@@ -91,4 +91,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Quest-group card replaces its members in the results list](quest-group-card-ui.md)
 - [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
 - [Zone level badge: retired the mock, and dropped route-card's second one](zone-level-badge-retired-mock-data.md)
+- [Card list seams: zero gap via plain block stacking, never a negative margin](card-list-seams-no-border-overlap.md)
 

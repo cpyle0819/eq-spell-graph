@@ -1,0 +1,7 @@
+# Card list seams: zero gap via plain block stacking, never a negative margin
+
+Packed card lists (Spell Finder's `zone-card`s, Class Browser's/Quests' `spell-card`/`aa-card`/`ability-card`/`stance-card`/`quest-card`/`quest-group-card`) want zero visible gap between adjacent cards. The correct way to get that is doing nothing: block-level siblings with `margin: 0` (theme.css's universal reset) already touch with no gap.
+
+Don't fold the two adjacent borders into what looks like one shared seam via a negative top margin (`margin-top: -4px`, canceling the shared component's 4px border). Each card's border is a bevel (`border-color: var(--edge-hi) var(--edge-hi) var(--edge-lo) var(--edge-lo)` — light highlight top/left, dark lowlight bottom/right). A negative margin equal to the border width doesn't blend the two borders — it relies on paint order, and the later sibling's opaque top (highlight) border paints fully over the earlier sibling's bottom (lowlight) border. The lowlight edge — half of every card's own bevel — never renders. Reported as cards "overlapping" (issue #40), though it was really full occlusion of one edge, not a layout overlap.
+
+Leaving the negative margin out costs a thicker seam (8px of stacked dark-then-light border instead of 4px) but every card's own bevel — including the bottom edge — stays visible, which is what a beveled stone-panel card actually needs to look intact next to its neighbors. See [[packed-card-hover-box-shadow-not-filter]] for the related hover-transition issue this same negative-margin trick used to make worse.
