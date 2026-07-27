@@ -3687,7 +3687,8 @@
       "label": "Keeper Bile",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -7217,7 +7218,8 @@
       "label": "Keeper Rott",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -16249,7 +16251,8 @@
       "label": "Ilscent Tagglefoot",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -16726,7 +16729,8 @@
       "label": "Lorekeeper Brita",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -16851,7 +16855,8 @@
       "label": "Lorekeeper Zorik",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -18695,7 +18700,8 @@
       "label": "Weltria Ostriss",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -20520,7 +20526,8 @@
       "label": "Loremaster Dorinan",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -21278,7 +21285,8 @@
       "label": "Keeper Pain",
       "type": "npc",
       "roles": [
-        "vendor"
+        "vendor",
+        "quest_giver"
       ]
     },
     {
@@ -56414,14 +56422,6 @@
       "wiki_title": "Karana's Blessing"
     },
     {
-      "id": "npc:west-cabilis:keeper-rott",
-      "label": "Keeper Rott",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:keeper-rotts-pages",
       "label": "Keeper Rott's Pages",
       "type": "quest",
@@ -58828,14 +58828,6 @@
       },
       "effect": "disease and poison resistance, plus a special combat effect",
       "source": "Nature's Defender Quest reward (Guardian of Takish, Plane of Growth) -- High Elf or Human only"
-    },
-    {
-      "id": "npc:west-cabilis:keeper-bile",
-      "label": "Keeper Bile",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:necro-spells",
@@ -62575,14 +62567,6 @@
       "id": "faction:priests-of-mischief",
       "label": "Priests of Mischief",
       "type": "faction"
-    },
-    {
-      "id": "npc:thurgadin:loremaster-dorinan",
-      "label": "Loremaster Dorinan",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:cleric-thurgadin-armor-quests",
@@ -70177,14 +70161,6 @@
       "source": "Reinforcements for The Tunarean Regiment reward choice"
     },
     {
-      "id": "npc:west-cabilis:keeper-pain",
-      "label": "Keeper Pain",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:renew-bones-quest",
       "label": "Renew Bones Quest",
       "type": "quest",
@@ -77542,14 +77518,6 @@
       "source": "The Bayle List reward (Pietro Zarn, East Freeport sewers)"
     },
     {
-      "id": "npc:rivervale:ilscent-tagglefoot",
-      "label": "Ilscent Tagglefoot",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:the-bind",
       "label": "The Bind",
       "type": "quest",
@@ -78690,14 +78658,6 @@
         "Return the broach to Isolde Winterveil in Eastern Wastes"
       ],
       "wiki_title": "The Icestar Remembers"
-    },
-    {
-      "id": "npc:erudin:weltria-ostriss",
-      "label": "Weltria Ostriss",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:the-lorekeepers-scrolls",
@@ -89127,14 +89087,6 @@
       "source": "Enchanter Skyshrine Armor Quests: Slippers reward (Lothieder Fe`Dhar, Skyshrine)"
     },
     {
-      "id": "npc:thurgadin:lorekeeper-brita",
-      "label": "Lorekeeper Brita",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:enchanter-thurgadin-armor-quests",
       "label": "Enchanter Thurgadin Armor Quests",
       "type": "quest_group",
@@ -93466,14 +93418,6 @@
       "weight": 0.4,
       "effect": "Invisibility versus Undead",
       "source": "Necromancer Skyshrine Armor Quests: Boots reward (Abudan Fe`Dhar, Skyshrine)"
-    },
-    {
-      "id": "npc:thurgadin:lorekeeper-zorik",
-      "label": "Lorekeeper Zorik",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:necromancer-thurgadin-armor-quests",
@@ -199056,14 +199000,8 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-9304",
-      "source": "npc:west-cabilis:keeper-rott",
-      "target": "zone:west-cabilis",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9305",
-      "source": "npc:west-cabilis:keeper-rott",
+      "source": "vendor:west-cabilis:keeper-rott",
       "target": "quest:keeper-rotts-pages",
       "type": "starts"
     },
@@ -201804,14 +201742,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-9762",
-      "source": "npc:west-cabilis:keeper-bile",
-      "target": "zone:west-cabilis",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9763",
-      "source": "npc:west-cabilis:keeper-bile",
+      "source": "vendor:west-cabilis:keeper-bile",
       "target": "quest:necro-spells",
       "type": "starts"
     },
@@ -206078,14 +206010,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-10475",
-      "source": "npc:thurgadin:loremaster-dorinan",
-      "target": "zone:thurgadin",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-10476",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest_group:cleric-thurgadin-armor-quests",
       "type": "starts"
     },
@@ -206097,7 +206023,7 @@
     },
     {
       "id": "e-starts-10478",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-helm",
       "type": "starts"
     },
@@ -206127,7 +206053,7 @@
     },
     {
       "id": "e-starts-10483",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-breastplate",
       "type": "starts"
     },
@@ -206157,7 +206083,7 @@
     },
     {
       "id": "e-starts-10488",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-vambraces",
       "type": "starts"
     },
@@ -206187,7 +206113,7 @@
     },
     {
       "id": "e-starts-10493",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-bracers",
       "type": "starts"
     },
@@ -206217,7 +206143,7 @@
     },
     {
       "id": "e-starts-10498",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-gauntlets",
       "type": "starts"
     },
@@ -206247,7 +206173,7 @@
     },
     {
       "id": "e-starts-10503",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-greaves",
       "type": "starts"
     },
@@ -206277,7 +206203,7 @@
     },
     {
       "id": "e-starts-10508",
-      "source": "npc:thurgadin:loremaster-dorinan",
+      "source": "vendor:thurgadin:loremaster-dorinan",
       "target": "quest:cleric-thurgadin-armor-boots",
       "type": "starts"
     },
@@ -213720,14 +213646,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-11711",
-      "source": "npc:west-cabilis:keeper-pain",
-      "target": "zone:west-cabilis",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-11712",
-      "source": "npc:west-cabilis:keeper-pain",
+      "source": "vendor:west-cabilis:keeper-pain",
       "target": "quest:renew-bones-quest",
       "type": "starts"
     },
@@ -220830,14 +220750,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-12888",
-      "source": "npc:rivervale:ilscent-tagglefoot",
-      "target": "zone:rivervale",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-12889",
-      "source": "npc:rivervale:ilscent-tagglefoot",
+      "source": "vendor:rivervale:ilscent-tagglefoot",
       "target": "quest:the-bind",
       "type": "starts"
     },
@@ -222260,14 +222174,8 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-13124",
-      "source": "npc:erudin:weltria-ostriss",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-13125",
-      "source": "npc:erudin:weltria-ostriss",
+      "source": "vendor:erudin:weltria-ostriss",
       "target": "quest:the-lorekeepers-scrolls",
       "type": "starts"
     },
@@ -232109,14 +232017,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-14760",
-      "source": "npc:thurgadin:lorekeeper-brita",
-      "target": "zone:thurgadin",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14761",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest_group:enchanter-thurgadin-armor-quests",
       "type": "starts"
     },
@@ -232128,7 +232030,7 @@
     },
     {
       "id": "e-starts-14763",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-helm",
       "type": "starts"
     },
@@ -232158,7 +232060,7 @@
     },
     {
       "id": "e-starts-14768",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-robe",
       "type": "starts"
     },
@@ -232188,7 +232090,7 @@
     },
     {
       "id": "e-starts-14773",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-sleeves",
       "type": "starts"
     },
@@ -232218,7 +232120,7 @@
     },
     {
       "id": "e-starts-14778",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-wristguard",
       "type": "starts"
     },
@@ -232248,7 +232150,7 @@
     },
     {
       "id": "e-starts-14783",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-gloves",
       "type": "starts"
     },
@@ -232278,7 +232180,7 @@
     },
     {
       "id": "e-starts-14788",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-trousers",
       "type": "starts"
     },
@@ -232308,7 +232210,7 @@
     },
     {
       "id": "e-starts-14793",
-      "source": "npc:thurgadin:lorekeeper-brita",
+      "source": "vendor:thurgadin:lorekeeper-brita",
       "target": "quest:enchanter-thurgadin-armor-quests-slippers",
       "type": "starts"
     },
@@ -235529,14 +235431,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-15330",
-      "source": "npc:thurgadin:lorekeeper-zorik",
-      "target": "zone:thurgadin",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-15331",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest_group:necromancer-thurgadin-armor-quests",
       "type": "starts"
     },
@@ -235548,7 +235444,7 @@
     },
     {
       "id": "e-starts-15333",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-crown",
       "type": "starts"
     },
@@ -235578,7 +235474,7 @@
     },
     {
       "id": "e-starts-15338",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-robe",
       "type": "starts"
     },
@@ -235608,7 +235504,7 @@
     },
     {
       "id": "e-starts-15343",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-sleeves",
       "type": "starts"
     },
@@ -235638,7 +235534,7 @@
     },
     {
       "id": "e-starts-15348",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-wristguard",
       "type": "starts"
     },
@@ -235668,7 +235564,7 @@
     },
     {
       "id": "e-starts-15353",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-gloves",
       "type": "starts"
     },
@@ -235698,7 +235594,7 @@
     },
     {
       "id": "e-starts-15358",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-pantaloons",
       "type": "starts"
     },
@@ -235728,7 +235624,7 @@
     },
     {
       "id": "e-starts-15363",
-      "source": "npc:thurgadin:lorekeeper-zorik",
+      "source": "vendor:thurgadin:lorekeeper-zorik",
       "target": "quest:necromancer-thurgadin-armor-quests-boots",
       "type": "starts"
     },
@@ -238800,7 +238696,7 @@
     },
     {
       "id": "e-starts-15875",
-      "source": "npc:west-cabilis:keeper-rott",
+      "source": "vendor:west-cabilis:keeper-rott",
       "target": "quest:necromancer-skullcap-rank6",
       "type": "starts"
     },
