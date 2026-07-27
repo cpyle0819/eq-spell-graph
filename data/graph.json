@@ -60936,12 +60936,33 @@
     },
     {
       "id": "item:kael-bard-helm",
-      "label": "Kael Bard Helm",
+      "label": "Troubadour's Helm",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Helm reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Helm reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 27,
+      "stats": {
+        "str": 6,
+        "sta": 2,
+        "cha": 5
+      },
+      "hp": 30,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 1
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-breastplate",
@@ -60960,12 +60981,34 @@
     },
     {
       "id": "item:kael-bard-breastplate",
-      "label": "Kael Bard Breastplate",
+      "label": "Troubadour's Breastplate",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Breastplate reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Breastplate reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 54,
+      "stats": {
+        "str": 14,
+        "cha": 10,
+        "agi": 10
+      },
+      "hp": 50,
+      "resists": {
+        "fire": 2,
+        "disease": 2,
+        "cold": 2,
+        "magic": 8,
+        "poison": 2
+      },
+      "effect": "Selo's Song of Travel (Any Slot/Can Equip, Casting Time: 5.5) at Level 46",
+      "weight": 9,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-armplates",
@@ -60984,12 +61027,34 @@
     },
     {
       "id": "item:kael-bard-vambraces",
-      "label": "Kael Bard Vambraces",
+      "label": "Troubadour's Vambraces",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Armplates reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Armplates reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 29,
+      "stats": {
+        "str": 4,
+        "dex": 4,
+        "cha": 4,
+        "agi": 3
+      },
+      "hp": 20,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 1
+      },
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-bracer",
@@ -61008,12 +61073,27 @@
     },
     {
       "id": "item:kael-bard-bracer",
-      "label": "Kael Bard Bracer",
+      "label": "Troubadour's Bracer",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Bracer reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Bracer reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 21,
+      "stats": {
+        "str": 3,
+        "agi": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-gauntlets",
@@ -61032,12 +61112,32 @@
     },
     {
       "id": "item:kael-bard-gauntlets",
-      "label": "Kael Bard Gauntlets",
+      "label": "Troubadour's Gauntlets",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Gauntlets reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Gauntlets reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 21,
+      "stats": {
+        "str": 2,
+        "dex": 1,
+        "cha": 5,
+        "agi": 1
+      },
+      "hp": 15,
+      "resists": {
+        "fire": 1,
+        "cold": 1,
+        "magic": 1
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-greaves",
@@ -61056,12 +61156,35 @@
     },
     {
       "id": "item:kael-bard-greaves",
-      "label": "Kael Bard Greaves",
+      "label": "Troubadour's Greaves",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Greaves reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Greaves reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 36,
+      "stats": {
+        "str": 10,
+        "dex": 5,
+        "sta": 5,
+        "cha": 4,
+        "agi": 5
+      },
+      "hp": 60,
+      "resists": {
+        "fire": 2,
+        "disease": 2,
+        "cold": 2,
+        "magic": 2,
+        "poison": 2
+      },
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-kael-armor-boots",
@@ -61080,12 +61203,24 @@
     },
     {
       "id": "item:kael-bard-boots",
-      "label": "Kael Bard Boots",
+      "label": "Troubadour's Boots",
       "type": "item",
       "classes": [
         "bard"
       ],
-      "source": "Bard Kael Armor Quests: Boots reward (Bygloirn Omorden, Kael Drakkal)"
+      "source": "Bard Kael Armor Quests: Boots reward (Bygloirn Omorden, Kael Drakkal)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 25,
+      "stats": {
+        "str": 3,
+        "cha": 5
+      },
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:temple-of-solusek-ro:ostorm",
@@ -61222,7 +61357,28 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Helm reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Helm reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 22,
+      "stats": {
+        "dex": 5,
+        "sta": 5,
+        "cha": 5
+      },
+      "hp": 45,
+      "resists": {
+        "fire": 3,
+        "disease": 3,
+        "cold": 3,
+        "magic": 3,
+        "poison": 3
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-breastplate",
@@ -61246,7 +61402,30 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Breastplate reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Breastplate reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 50,
+      "stats": {
+        "str": 11,
+        "sta": 11,
+        "cha": 11,
+        "agi": 11
+      },
+      "hp": 60,
+      "resists": {
+        "fire": 5,
+        "disease": 5,
+        "cold": 5,
+        "magic": 10,
+        "poison": 5
+      },
+      "effect": "Selo's Song of Travel (Must Equip, Casting Time: 5.5) at Level 46",
+      "weight": 9,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-armplates",
@@ -61270,7 +61449,28 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Armplates reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Armplates reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 25,
+      "stats": {
+        "str": 5,
+        "sta": 4,
+        "cha": 4
+      },
+      "hp": 20,
+      "resists": {
+        "fire": 4,
+        "disease": 4,
+        "cold": 4,
+        "magic": 4,
+        "poison": 4
+      },
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-bracer",
@@ -61294,7 +61494,27 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Bracer reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Bracer reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 18,
+      "stats": {
+        "str": 3,
+        "sta": 2,
+        "agi": 5
+      },
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 5,
+        "poison": 1
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-gauntlets",
@@ -61318,7 +61538,28 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Gauntlets reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Gauntlets reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 17,
+      "stats": {
+        "str": 4,
+        "dex": 3,
+        "sta": 3,
+        "cha": 3,
+        "agi": 3
+      },
+      "hp": 15,
+      "resists": {
+        "fire": 2,
+        "cold": 2,
+        "magic": 2
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-greaves",
@@ -61342,7 +61583,30 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Greaves reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Greaves reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 31,
+      "stats": {
+        "str": 7,
+        "dex": 7,
+        "sta": 7,
+        "cha": 5,
+        "agi": 7
+      },
+      "hp": 60,
+      "resists": {
+        "fire": 3,
+        "disease": 3,
+        "cold": 3,
+        "magic": 3,
+        "poison": 3
+      },
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-skyshrine-armor-boots",
@@ -61366,7 +61630,24 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Skyshrine Armor Quests: Boots reward (Umykith Fe`Dhar, Skyshrine)"
+      "source": "Bard Skyshrine Armor Quests: Boots reward (Umykith Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 22,
+      "stats": {
+        "str": 4,
+        "cha": 4
+      },
+      "resists": {
+        "fire": 2,
+        "cold": 2,
+        "magic": 3
+      },
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:thurgadin:leifur",
@@ -61421,7 +61702,27 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Helm reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Helm reward (Leifur, Thurgadin)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 19,
+      "stats": {
+        "str": 5,
+        "agi": 5
+      },
+      "hp": 30,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 1
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-breastplate",
@@ -61445,7 +61746,30 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Breastplate reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Breastplate reward (Leifur, Thurgadin)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 42,
+      "stats": {
+        "str": 8,
+        "dex": 10,
+        "sta": 10,
+        "cha": 10
+      },
+      "hp": 50,
+      "resists": {
+        "fire": 2,
+        "disease": 2,
+        "cold": 2,
+        "magic": 8,
+        "poison": 2
+      },
+      "effect": "Selo's Song of Travel (Any Slot/Can Equip, Casting Time: 5.5) at Level 46",
+      "weight": 9,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-vambraces",
@@ -61469,7 +61793,28 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Vambraces reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Vambraces reward (Leifur, Thurgadin)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 19,
+      "stats": {
+        "str": 4,
+        "sta": 3,
+        "agi": 4
+      },
+      "hp": 20,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 1
+      },
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-bracer",
@@ -61493,7 +61838,22 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Bracer reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Bracer reward (Leifur, Thurgadin)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 15,
+      "stats": {
+        "cha": 2,
+        "agi": 3
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-gauntlets",
@@ -61517,7 +61877,27 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Gauntlets reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Gauntlets reward (Leifur, Thurgadin)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 14,
+      "stats": {
+        "str": 2,
+        "dex": 1,
+        "cha": 3,
+        "agi": 1
+      },
+      "hp": 15,
+      "resists": {
+        "fire": 1,
+        "cold": 1,
+        "magic": 1
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-greaves",
@@ -61541,7 +61921,30 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Greaves reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Greaves reward (Leifur, Thurgadin)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 24,
+      "stats": {
+        "str": 5,
+        "dex": 5,
+        "sta": 4,
+        "cha": 5,
+        "agi": 4
+      },
+      "hp": 60,
+      "resists": {
+        "fire": 2,
+        "disease": 2,
+        "cold": 2,
+        "magic": 2,
+        "poison": 2
+      },
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:bard-thurgadin-armor-boots",
@@ -61565,7 +61968,19 @@
       "classes": [
         "bard"
       ],
-      "source": "Bard Thurgadin Armor Quests: Boots reward (Leifur, Thurgadin)"
+      "source": "Bard Thurgadin Armor Quests: Boots reward (Leifur, Thurgadin)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 19,
+      "stats": {
+        "str": 2,
+        "cha": 3
+      },
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:south-kaladim:priest-of-discord",
@@ -62108,7 +62523,27 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Helm reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Helm reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 28,
+      "stats": {
+        "str": 2,
+        "wis": 3
+      },
+      "mana": 35,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 8,
+        "poison": 1
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-chestplate",
@@ -62132,7 +62567,30 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Chestplate reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Chestplate reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 54,
+      "stats": {
+        "str": 5,
+        "sta": 8,
+        "wis": 15
+      },
+      "hp": 40,
+      "mana": 90,
+      "resists": {
+        "fire": 4,
+        "disease": 3,
+        "cold": 3,
+        "magic": 7,
+        "poison": 4
+      },
+      "effect": "Mark of Karn (Must Equip, Casting Time: 9.0) at Level 46",
+      "weight": 8,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-vambraces",
@@ -62156,7 +62614,23 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Vambraces reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Vambraces reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 29,
+      "stats": {
+        "str": 3,
+        "wis": 2
+      },
+      "hp": 40,
+      "resists": {
+        "magic": 4
+      },
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-bracer",
@@ -62180,7 +62654,25 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Bracer reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Bracer reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 21,
+      "stats": {
+        "str": 5,
+        "wis": 2
+      },
+      "hp": 35,
+      "mana": 20,
+      "resists": {
+        "disease": 2
+      },
+      "effect": "Abundant Food (Must Equip, Casting Time: 10.0) at Level 50",
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-gauntlets",
@@ -62204,7 +62696,24 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Gauntlets reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Gauntlets reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 21,
+      "stats": {
+        "str": 2,
+        "cha": 7
+      },
+      "mana": 40,
+      "resists": {
+        "cold": 4,
+        "magic": 2
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-greaves",
@@ -62228,7 +62737,25 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Greaves reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Greaves reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 36,
+      "stats": {
+        "wis": 10
+      },
+      "hp": 90,
+      "mana": 50,
+      "resists": {
+        "fire": 5,
+        "disease": 5
+      },
+      "effect": "Word of Health (Must Equip, Casting Time: 12.0) at Level 50",
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-kael-armor-boots",
@@ -62252,7 +62779,26 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Kael Armor Quests: Boots reward (Vylleam Vyaeltor, Kael Drakkal)"
+      "source": "Cleric Kael Armor Quests: Boots reward (Vylleam Vyaeltor, Kael Drakkal)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 27,
+      "stats": {
+        "str": 2,
+        "sta": 5,
+        "wis": 3
+      },
+      "resists": {
+        "fire": 1,
+        "cold": 1,
+        "magic": 1
+      },
+      "effect": "Abundant Drink (Must Equip, Casting Time: 10.0) at Level 50",
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:plane-of-sky:alan-harten",
@@ -62301,7 +62847,22 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of Courage reward (Alan Harten, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of Courage reward (Alan Harten, Plane of Sky)",
+      "slots": [
+        "Ear"
+      ],
+      "stats": {
+        "dex": 5,
+        "wis": 9
+      },
+      "resists": {
+        "cold": 10
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-plane-of-sky-test-of-skill",
@@ -62324,7 +62885,23 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of Skill reward (Alan Harten, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of Skill reward (Alan Harten, Plane of Sky)",
+      "slots": [
+        "Secondary"
+      ],
+      "ac": 25,
+      "stats": {
+        "wis": 9
+      },
+      "mana": 60,
+      "resists": {
+        "disease": 10
+      },
+      "weight": 9.5,
+      "size": "Large",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-plane-of-sky-test-of-protection",
@@ -62347,7 +62924,22 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of Protection reward (Alan Harten, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of Protection reward (Alan Harten, Plane of Sky)",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 11,
+      "stats": {
+        "sta": 8,
+        "cha": 2,
+        "wis": 12
+      },
+      "mana": 35,
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-plane-of-sky-test-of-resolution",
@@ -62370,7 +62962,23 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of Resolution reward (Deric Lennox, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of Resolution reward (Deric Lennox, Plane of Sky)",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 4,
+      "stats": {
+        "str": 5,
+        "wis": 7
+      },
+      "hp": 30,
+      "mana": 15,
+      "effect": "Promised Renewal (Must Equip, Casting Time: Instant) at Level 45",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-plane-of-sky-test-of-theurgy",
@@ -62393,7 +63001,27 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of Theurgy reward (Deric Lennox, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of Theurgy reward (Deric Lennox, Plane of Sky)",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "1H Blunt",
+      "damage": 15,
+      "delay": 25,
+      "stats": {
+        "wis": 10
+      },
+      "mana": 40,
+      "resists": {
+        "disease": 25,
+        "poison": 25
+      },
+      "effect": "Blessing of the Theurgist (Combat, Casting Time: Instant) at Level 50",
+      "weight": 4,
+      "size": "Medium",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-plane-of-sky-test-of-the-weak",
@@ -62416,7 +63044,25 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Plane of Sky Tests: Test of The Weak reward (Deric Lennox, Plane of Sky)"
+      "source": "Cleric Plane of Sky Tests: Test of The Weak reward (Deric Lennox, Plane of Sky)",
+      "slots": [
+        "Primary"
+      ],
+      "ac": 25,
+      "stats": {
+        "str": 10,
+        "wis": 15
+      },
+      "mana": 75,
+      "damage": 1,
+      "delay": 40,
+      "skill": "2H Blunt",
+      "effect": "Resurrection (Must Equip, Casting Time: Instant) at Level 49",
+      "weight": 8,
+      "size": "Medium",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "quest_group:cleric-skyshrine-armor-quests",
@@ -62450,7 +63096,27 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Helmet reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Helmet reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 22,
+      "stats": {
+        "str": 3,
+        "sta": 2,
+        "wis": 6
+      },
+      "hp": 30,
+      "mana": 35,
+      "resists": {
+        "disease": 3,
+        "cold": 3,
+        "magic": 4
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-chestplate",
@@ -62474,7 +63140,30 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Chestplate reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Chestplate reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 50,
+      "stats": {
+        "sta": 9,
+        "wis": 15,
+        "agi": 5
+      },
+      "hp": 50,
+      "mana": 90,
+      "resists": {
+        "fire": 8,
+        "disease": 9,
+        "cold": 8,
+        "magic": 9,
+        "poison": 8
+      },
+      "effect": "Mark of Karn (Must Equip, Casting Time: 9.0) at Level 46",
+      "weight": 8,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-vambraces",
@@ -62498,7 +63187,28 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Vambraces reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Vambraces reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 25,
+      "stats": {
+        "sta": 3,
+        "wis": 5
+      },
+      "hp": 35,
+      "mana": 20,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 1
+      },
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-bracers",
@@ -62522,7 +63232,26 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Bracers reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Bracers reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 19,
+      "stats": {
+        "str": 2,
+        "sta": 5,
+        "wis": 6
+      },
+      "hp": 35,
+      "mana": 20,
+      "resists": {
+        "cold": 5
+      },
+      "effect": "Abundant Food (Must Equip, Casting Time: 10.0)",
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-gauntlets",
@@ -62546,7 +63275,26 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Gauntlets reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Gauntlets reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 19,
+      "stats": {
+        "dex": 3,
+        "cha": 7,
+        "wis": 3
+      },
+      "hp": 20,
+      "mana": 40,
+      "resists": {
+        "disease": 3,
+        "magic": 5
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-greaves",
@@ -62570,7 +63318,29 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Greaves reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Greaves reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 31,
+      "stats": {
+        "sta": 5,
+        "wis": 10
+      },
+      "hp": 80,
+      "mana": 70,
+      "resists": {
+        "fire": 1,
+        "disease": 1,
+        "cold": 1,
+        "magic": 1,
+        "poison": 5
+      },
+      "effect": "Word of Health (Must Equip, Casting Time: 12.0)",
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-skyshrine-armor-boots",
@@ -62594,7 +63364,28 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Skyshrine Armor Quests: Boots reward (Fardonad Fe`Dhar, Skyshrine)"
+      "source": "Cleric Skyshrine Armor Quests: Boots reward (Fardonad Fe`Dhar, Skyshrine)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 24,
+      "stats": {
+        "str": 3,
+        "sta": 6,
+        "cha": 2
+      },
+      "hp": 20,
+      "mana": 20,
+      "resists": {
+        "fire": 2,
+        "cold": 2,
+        "magic": 2
+      },
+      "effect": "Abundant Drink (Must Equip, Casting Time: 10.0)",
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:the-overthere:brinaa-darkpact",
@@ -62748,7 +63539,25 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Helm reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Helm reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Head"
+      ],
+      "ac": 19,
+      "stats": {
+        "str": 2,
+        "wis": 3
+      },
+      "mana": 35,
+      "resists": {
+        "fire": 2,
+        "magic": 3,
+        "poison": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-breastplate",
@@ -62772,7 +63581,28 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Breastplate reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Breastplate reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 42,
+      "stats": {
+        "dex": 5,
+        "sta": 7,
+        "wis": 13
+      },
+      "hp": 30,
+      "mana": 80,
+      "resists": {
+        "disease": 5,
+        "cold": 5,
+        "magic": 7
+      },
+      "effect": "Mark of Karn (Must Equip, Casting Time: 9.0) at Level 46",
+      "weight": 8,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-vambraces",
@@ -62796,7 +63626,20 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Vambraces reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Vambraces reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 19,
+      "stats": {
+        "dex": 3,
+        "wis": 2
+      },
+      "hp": 35,
+      "weight": 6,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-bracers",
@@ -62820,7 +63663,24 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Bracers reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Bracers reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 15,
+      "stats": {
+        "wis": 2,
+        "agi": 5
+      },
+      "hp": 35,
+      "resists": {
+        "fire": 2
+      },
+      "effect": "Abundant Food (Must Equip, Casting Time: 10.0)",
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-gauntlets",
@@ -62844,7 +63704,24 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Gauntlets reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Gauntlets reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 15,
+      "stats": {
+        "cha": 7,
+        "agi": 2
+      },
+      "mana": 40,
+      "resists": {
+        "magic": 2,
+        "poison": 1
+      },
+      "weight": 4.5,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-greaves",
@@ -62868,7 +63745,24 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Greaves reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Greaves reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 24,
+      "stats": {
+        "wis": 10
+      },
+      "hp": 80,
+      "mana": 40,
+      "resists": {
+        "cold": 3
+      },
+      "effect": "Word of Health (Must Equip, Casting Time: 12.0)",
+      "weight": 7,
+      "size": "Large",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "quest:cleric-thurgadin-armor-boots",
@@ -62892,7 +63786,25 @@
       "classes": [
         "cleric"
       ],
-      "source": "Cleric Thurgadin Armor Quests: Boots reward (Loremaster Dorinan, Thurgadin)"
+      "source": "Cleric Thurgadin Armor Quests: Boots reward (Loremaster Dorinan, Thurgadin)",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 21,
+      "stats": {
+        "str": 2,
+        "sta": 5
+      },
+      "resists": {
+        "fire": 1,
+        "cold": 1,
+        "magic": 1
+      },
+      "effect": "Abundant Drink (Must Equip, Casting Time: 10.0)",
+      "weight": 6,
+      "size": "Medium",
+      "magic": true,
+      "noTrade": true
     },
     {
       "id": "npc:oggok:clurg-the-bartender",
