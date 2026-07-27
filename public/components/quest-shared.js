@@ -12,7 +12,7 @@
 // Quests category, decisions/class-browser-quests-category.md) --
 // buildQuestResultEntries() below, which neither is a card nor belongs in
 // card-base.js, but both pages need identically.
-import { classBadges } from "./card-base.js";
+import { classBadges, wikiUrl } from "./card-base.js";
 
 // Raw CSS text (not a constructed CSSStyleSheet), same convention as
 // reset.js's RESET_CSS / card-base.js's WIKI_LINK_CSS -- CardBase's
@@ -88,16 +88,22 @@ export const QUEST_CARD_CSS = `
 .xp-badge::before { background: radial-gradient(circle at 65% 30%, #7dffb0, #22c55e 60%, #157a3c); }
 .item-badge { background: rgba(122, 77, 5, 0.1);   color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4); }
 .item-badge::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d); }
+/* item-badge is a real <a> (wireItemTooltips()'s own comment) but keeps the
+   "help" cursor here, same as the plain xp/faction chips -- desktop hover
+   still shows the <detail-tooltip>, so it isn't styled as a plain text link
+   the way spell-badge-reward below is. On touch there's no hover, so the
+   coarse-pointer override below signals what tapping it actually does. */
+@media (pointer: coarse) { .spell-badge.item-badge { cursor: pointer; } }
 .faction-badge-reward { background: rgba(94, 42, 122, 0.1); color: #5e2a7a; border: 1px solid rgba(94, 42, 122, 0.4); }
 .faction-badge-reward::before { background: radial-gradient(circle at 65% 30%, #d9a8ff, #9d5ec7 55%, #5e2a7a); }
 
 /* Same blue this app already uses for spell-card's own mana-badge -- the
    one existing "this is a spell" color, reused here rather than inventing
-   a fourth reward hue. A real link (not a title-tooltip like the faction/
-   XP/item chips) -- normal pointer cursor and no title text, since a link
-   doesn't need "help" affordance the way a plain informational chip does;
-   underlines on hover/focus like the app's other text links (quest-zone-
-   link, wiki-link). */
+   a fourth reward hue. Styled as a plain text link (not the "help"-cursor
+   treatment the faction/XP/item chips keep) -- normal pointer cursor and no
+   title text, since this one has no hover-tooltip to defer to; underlines
+   on hover/focus like the app's other text links (quest-zone-link,
+   wiki-link). */
 .spell-badge-reward { background: rgba(30, 64, 175, 0.08); color: #1e40af; border: 1px solid rgba(30, 64, 175, 0.35); text-decoration: none; cursor: pointer; }
 .spell-badge-reward::before { background: radial-gradient(circle at 65% 30%, #9db8ff, #3a5fd9 60%, #1e3a8a); }
 .spell-badge-reward:hover, .spell-badge-reward:focus-visible { text-decoration: underline; }
@@ -274,8 +280,15 @@ export function spellFinderPinUrl(spell, quest) {
   return `index.html?${params}`;
 }
 
+// A real <a> (same reasoning as zone-card.js's spell-chip), not a <span> --
+// on desktop, hover shows the <detail-tooltip> and click is suppressed
+// below (hover is enough); on touch, there's no hover, so a plain tap just
+// navigates to the item's own eqlwiki.com page (decisions/
+// item-node-schema.md's items are each modeled on one, same wikiUrl()
+// guess already trusted for spell-chip). A bare <span> here previously left
+// item chips with no mobile equivalent at all.
 function itemChip(item) {
-  return `<span class="spell-badge item-badge" data-item-id="${item.id}">${item.label}</span>`;
+  return `<a class="spell-badge item-badge" data-item-id="${item.id}" href="${wikiUrl(item.label)}" target="_blank" rel="noopener">${item.label}</a>`;
 }
 
 function spellChip(spell, quest) {
@@ -363,6 +376,9 @@ export function wireItemTooltips(shadowRoot, findItem) {
     if (!e.relatedTarget?.closest?.(".item-badge[data-item-id]")) {
       document.getElementById("detail-tooltip")?.hide();
     }
+  });
+  shadowRoot.addEventListener("click", (e) => {
+    if (e.target.closest(".item-badge[data-item-id]")) e.preventDefault(); // hover is sufficient on desktop
   });
 }
 

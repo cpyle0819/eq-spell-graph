@@ -73,7 +73,7 @@
 // legend column each collapse via `hidden` when there's no map (or no
 // legend for the current floor).
 import { RESET_CSS } from "./reset.js";
-import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
+import { WIKI_LINK_CSS, wikiLink, wikiUrl } from "./card-base.js";
 import { itemStats } from "./quest-shared.js";
 import "./ledger-item.js";
 import "./zone-map.js";
@@ -99,9 +99,13 @@ function npcLevelText({ minLevel, maxLevel }) {
 // wiring is in connectedCallback, same event-delegation shape as
 // quest-shared.js's wireItemTooltips(), reading item data back out of
 // #dropsById (rebuilt each render()) via data-item-id.
+// A real <a> (same reasoning as quest-shared.js's itemChip()) -- desktop
+// hover shows the <detail-tooltip> and click is suppressed in
+// #wireDropTooltips() below; touch has no hover, so a bare tap navigates to
+// the item's own eqlwiki.com page instead of doing nothing.
 function npcDropBadges(npc) {
   if (!npc.drops?.length) return "";
-  return npc.drops.map((item) => `<span class="npc-drop-badge" data-item-id="${item.id}">${item.label}</span>`).join("");
+  return npc.drops.map((item) => `<a class="npc-drop-badge" data-item-id="${item.id}" href="${wikiUrl(item.label)}" target="_blank" rel="noopener">${item.label}</a>`).join("");
 }
 
 // Two sibling grid cells, not a wrapping row div -- .npc-list itself is the
@@ -346,6 +350,9 @@ ${WIKI_LINK_CSS}
   background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
+/* Same reasoning as quest-shared.js's .item-badge coarse-pointer override --
+   touch has no hover, so cursor:pointer signals what tapping it does. */
+@media (pointer: coarse) { .npc-drop-badge { cursor: pointer; } }
 
 /* quest-ledger's <ledger-item>s live in this component's own shadow tree
    (nested the same way route-card nests route-path -- see this file's own
@@ -429,6 +436,9 @@ class ZoneDossier extends HTMLElement {
       if (!e.relatedTarget?.closest?.(".npc-drop-badge[data-item-id]")) {
         document.getElementById("detail-tooltip")?.hide();
       }
+    });
+    this.shadowRoot.addEventListener("click", (e) => {
+      if (e.target.closest(".npc-drop-badge[data-item-id]")) e.preventDefault(); // hover is sufficient on desktop
     });
   }
 
