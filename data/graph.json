@@ -9277,7 +9277,51 @@
       "lore": "The Wakening Land is a large forested valley on this otherwise frozen continent. The goddess Tunare has a very palpable presence here, and is the reason that the area is so full of life.",
       "wiki_title": "The Wakening Land",
       "era": "Velious",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": null,
+          "image": "wakening-land.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Unicorn Valley"
+            },
+            {
+              "key": "2",
+              "label": "Sifaye Town with Countess Silveana"
+            },
+            {
+              "key": "3",
+              "label": "Tower with portal to the Plane of Growth and Merchant who sells Velious Druid Portal spells"
+            },
+            {
+              "key": "4",
+              "label": "Two ruins with A suit of sentient armor"
+            },
+            {
+              "key": "5",
+              "label": "Empty Building"
+            },
+            {
+              "key": "6",
+              "label": "Giant Building Site"
+            },
+            {
+              "key": "7",
+              "label": "Geonid Caverns with Phenocryst"
+            },
+            {
+              "key": "8",
+              "label": "Dragon Circle with Wuoshi"
+            },
+            {
+              "key": "9",
+              "label": "Cavern with Holgresh and Grand Vizier Poolakacha`tei"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "vendor:the-wakening-land:weinna-oakchild",
@@ -14192,7 +14236,59 @@
       "lore": "The Great Divide is a heavily mountainous area, cutting the continent of Velious into two halves, east and west. The harsh environment is home to all nature of powerful creatures.",
       "wiki_title": "Great Divide",
       "era": "Velious",
-      "zoneType": "open_world"
+      "zoneType": "open_world",
+      "maps": [
+        {
+          "label": null,
+          "image": "great-divide.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Tizmak Caverns"
+            },
+            {
+              "key": "2",
+              "label": "Inactive Wizard Spires (NOT Wizard port-in; see Dragon Portal #4)"
+            },
+            {
+              "key": "3",
+              "label": "Frost Giant Fort with Gralk Dwarfkiller and Fergul Frostsky"
+            },
+            {
+              "key": "4",
+              "label": "Dragon Portal / Druid & Wizard port-in"
+            },
+            {
+              "key": "5",
+              "label": "Shardwurm Caverns, Guardian Shardwurms and Shardwurm Broodmother in one room, Crystalline Wurms and Shardwurm Matriarch in the largest cavern"
+            },
+            {
+              "key": "6",
+              "label": "Caverns with Coldain Smuggler"
+            },
+            {
+              "key": "7",
+              "label": "Kodiak Bear Caves with Bloodmaw"
+            },
+            {
+              "key": "8",
+              "label": "Kodiak Bear Caves with Icetooth"
+            },
+            {
+              "key": "9",
+              "label": "Captain's Camp"
+            },
+            {
+              "key": "10",
+              "label": "Coldain Velium Mines with Relik and Korf Brokenhammer"
+            },
+            {
+              "key": "11",
+              "label": "Camp of Vores the Hunter"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:eastern-wastes",
@@ -14368,7 +14464,75 @@
       "lore": "Kael Drakkel (Sometimes Kael Drakkal) is the home city of the giants of Velious - the Kromzek and the Kromrif. The city was founded by giant refugees fleeing the wrath of the other gods after Rallos Zek's invasion of the Plane of Earth.",
       "wiki_title": "Kael Drakkel",
       "era": "Velious",
-      "zoneType": "city"
+      "zoneType": "city",
+      "maps": [
+        {
+          "label": null,
+          "image": "kael-drakkal.jpg",
+          "legend": [
+            {
+              "key": "1",
+              "label": "Temple of Rallos Zek with Statue of Rallos Zek"
+            },
+            {
+              "key": "1a",
+              "label": "Derakor the Vindicator, who drops Boots of the Vindicator, Chestplate of Vindication, Living Thunder Earring"
+            },
+            {
+              "key": "2",
+              "label": "Protectors of Zek"
+            },
+            {
+              "key": "3",
+              "label": "Arena; Avatar of War appears here when Statue of Rallos Zek dies; Merchant selling tickets and Food"
+            },
+            {
+              "key": "4",
+              "label": "Noble Building -- Merchants selling Food and Drink and Alcohol, also Wenglawks Kkeak and Noble Helssen"
+            },
+            {
+              "key": "5",
+              "label": "Slaggak the Trainer"
+            },
+            {
+              "key": "6",
+              "label": "Merchants selling Othmir Hide Armor, Drakkel Weapons, Frozen Flower, and Dwarf Bone Toothpick"
+            },
+            {
+              "key": "7",
+              "label": "Commoner Building"
+            },
+            {
+              "key": "8",
+              "label": "Ramp Area"
+            },
+            {
+              "key": "9",
+              "label": "Commoner Building"
+            },
+            {
+              "key": "10",
+              "label": "Bank; Staff Sergeant Drioc and Captain Bvellos, who roams outside"
+            },
+            {
+              "key": "11",
+              "label": "Iceshard Keep \"Plate House\", Doldigun Steinwielder (9th Coldain Ring Quests)"
+            },
+            {
+              "key": "12",
+              "label": "King Tormax's Throne Room with King Tormax"
+            },
+            {
+              "key": "13",
+              "label": "Bank; Merchant selling Spell Components; Bard Quest NPC"
+            },
+            {
+              "key": "14",
+              "label": "Keldor Dek`Torek, who drops Orb of the Infinite Void; Shaman and Helm Quest NPCs"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "zone:skyshrine",
@@ -53852,7 +54016,19 @@
       "era": "Velious",
       "lore": "Chardok is the site of the ancient sarnak military fortress that has existed for centuries since the time of Emperor Atrebe, and is considered by the sarnaks to be their home.",
       "wiki_title": "Chardok (Post-Revamp)",
-      "zoneType": "dungeon"
+      "zoneType": "dungeon",
+      "maps": [
+        {
+          "label": "Upper",
+          "image": "chardok-upper.png",
+          "legend": []
+        },
+        {
+          "label": "Lower",
+          "image": "chardok-lower.gif",
+          "legend": []
+        }
+      ]
     },
     {
       "id": "zone:temple-of-veeshan",
