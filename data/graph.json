@@ -16880,8 +16880,11 @@
       "label": "Stragak",
       "type": "npc",
       "roles": [
-        "vendor"
-      ]
+        "vendor",
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
     },
     {
       "id": "vendor:ak-anon:clockwork-merchant-lg-7",
@@ -38662,24 +38665,8 @@
       ]
     },
     {
-      "id": "vendor:kelethin:beleth-streamfoot",
-      "label": "Beleth Streamfoot",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:neriak-3rd-gate:sol-punox",
       "label": "Sol Punox",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:kelethin:zelli-starsfire",
-      "label": "Zelli Starsfire",
       "type": "npc",
       "roles": [
         "vendor"
@@ -38768,14 +38755,6 @@
     {
       "id": "vendor:neriak-commons:cizzar-j-axx",
       "label": "Cizzar J'Axx",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:northern-kaladim:zeffan-holdsman",
-      "label": "Zeffan Holdsman",
       "type": "npc",
       "roles": [
         "vendor"
@@ -38886,24 +38865,8 @@
       ]
     },
     {
-      "id": "vendor:kaladim:duppa-pickstone",
-      "label": "Duppa Pickstone",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:neriak-3rd-gate:friz-punox",
       "label": "Friz Punox",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:kaladim:dorlita-splitshield",
-      "label": "Dorlita Splitshield",
       "type": "npc",
       "roles": [
         "vendor"
@@ -38928,14 +38891,6 @@
     {
       "id": "vendor:neriak-commons:pisna-h-rugla",
       "label": "Pisna H'Rugla",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:kaladim:poriss-splitrock",
-      "label": "Poriss Splitrock",
       "type": "npc",
       "roles": [
         "vendor"
@@ -39006,30 +38961,6 @@
       ]
     },
     {
-      "id": "vendor:felwithe-south:seren-the-swift",
-      "label": "Seren the Swift",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:freeport-west:lasiris-oncre",
-      "label": "Lasiris Oncre",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:qeynos-south:corrao-duperame",
-      "label": "Corrao Duperame",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:erudin-palace:effunic-korett",
       "label": "Effunic Korett",
       "type": "npc",
@@ -39048,14 +38979,6 @@
     {
       "id": "vendor:neriak-commons:tizzy-c-luzz",
       "label": "Tizzy C'Luzz",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:overthere:kuglaz-grot",
-      "label": "Kuglaz Grot",
       "type": "npc",
       "roles": [
         "vendor"
@@ -55098,14 +55021,6 @@
       "type": "faction"
     },
     {
-      "id": "npc:neriak-commons:narex-tvem",
-      "label": "Narex T`Vem",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:halfling-raider-helms",
       "label": "Halfling Raider Helms",
       "type": "quest",
@@ -57645,14 +57560,6 @@
       "wiki_title": "Magician Spells (Good)"
     },
     {
-      "id": "npc:the-overthere:slicia-jsinge",
-      "label": "Slicia J`Singe",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:magician-spells-evil",
       "label": "Magician Spells (Evil)",
       "type": "quest",
@@ -57877,14 +57784,6 @@
       ],
       "ac": 5,
       "source": "Mammoth Calf Hides reward (Cappi McTarnigal, Halas)"
-    },
-    {
-      "id": "npc:neriak-3rd-gate:noxhil-vsek",
-      "label": "Noxhil V`Sek",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:mammoth-tusks-quest",
@@ -58708,14 +58607,6 @@
       "source": "Morin's Sword reward (Morin Shadowbane, Kithicor Forest) -- Human, Elf, Half-Elf, Halfling only"
     },
     {
-      "id": "npc:neriak-3rd-gate:hekzin-gzule",
-      "label": "Hekzin G`Zule",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:moss-snakes",
       "label": "Moss Snakes",
       "type": "quest",
@@ -59312,14 +59203,6 @@
       "weight": 7.5,
       "size": "Medium",
       "source": "Orc Hatchets reward (Dill Fireshine, Greater Faydark)"
-    },
-    {
-      "id": "npc:neriak-commons:trizam-ntan",
-      "label": "Trizam N`Tan",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:orc-pawn-picks",
@@ -61027,14 +60910,6 @@
       "wiki_title": "Bard Mail"
     },
     {
-      "id": "npc:skyshrine:umykith-fedhar",
-      "label": "Umykith Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:bard-skyshrine-armor-quests",
       "label": "Bard Skyshrine Armor Quests",
       "type": "quest_group",
@@ -62261,14 +62136,6 @@
         "cleric"
       ],
       "source": "Cleric Plane of Sky Tests: Test of The Weak reward (Deric Lennox, Plane of Sky)"
-    },
-    {
-      "id": "npc:skyshrine:fardonad-fedhar",
-      "label": "Fardonad Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:cleric-skyshrine-armor-quests",
@@ -65119,14 +64986,6 @@
       "source": "Guild Summons - Hall of Steel (South Qeynos) / Shrine of Bertoxxulous Warrior (Qeynos Catacombs) reward -- restricted to Warriors of Human or Half-Elf race"
     },
     {
-      "id": "npc:neriak-3rd-gate:eolorn-jaxx",
-      "label": "Eolorn J`Axx",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:guild-summons-hall-of-the-ebon-mask",
       "label": "Guild Summons - Hall of the Ebon Mask",
       "type": "quest",
@@ -66264,14 +66123,6 @@
         "Hand the note to Jayna D'Bious at the Tower of the Spurned"
       ],
       "wiki_title": "Guild Summons - The Spurned Magician"
-    },
-    {
-      "id": "npc:neriak-commons:gath-nmare",
-      "label": "Gath N`Mare",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:guild-summons-the-spurned-wizard",
@@ -70378,14 +70229,6 @@
       "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
     },
     {
-      "id": "npc:chardok:queen-velazul-dizok",
-      "label": "Queen Velazul Di`zok",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:spirit-wracked-cord-quest",
       "label": "Spirit Wracked Cord Quest",
       "type": "quest",
@@ -71203,14 +71046,6 @@
         "hp": 20
       },
       "source": "Rogue Kael Armor Quests: Boots reward (Kelenek Bluadfeth, Kael Drakkal)"
-    },
-    {
-      "id": "npc:skyshrine:crendatha-fedhar",
-      "label": "Crendatha Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:rogue-skyshrine-armor-quests",
@@ -73426,14 +73261,6 @@
       "source": "Shadowknight Kael Armor Quests: Boots reward (Veldern Blackhammer, Kael Drakkal)"
     },
     {
-      "id": "npc:skyshrine:onerind-fedhar",
-      "label": "Onerind Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:shadowknight-skyshrine-armor-quests",
       "label": "Shadowknight Skyshrine Armor Quests",
       "type": "quest_group",
@@ -74433,14 +74260,6 @@
       "mana": 75,
       "effect": "Tagar's Insects",
       "source": "Shaman Plane of Sky Tests: Test of Witch Doctor reward (Ooga, Plane of Sky)"
-    },
-    {
-      "id": "npc:skyshrine:asteinnon-fedhar",
-      "label": "Asteinnon Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:shaman-skyshrine-armor-quests",
@@ -75826,14 +75645,6 @@
       "weight": 0.1,
       "size": "Small",
       "source": "Sifaye Abominations reward (Nojas Blackfist, Kael Drakkel)"
-    },
-    {
-      "id": "npc:neriak-3rd-gate:loveal-snez",
-      "label": "Loveal S`Nez",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:sir-lindeals-testimony",
@@ -77902,14 +77713,6 @@
       "source": "The Emissary captain's-necklace random reward (Emissary Glib, Innothule Swamp guard tower)"
     },
     {
-      "id": "npc:rathe-mountains:kazzel-dleryt",
-      "label": "Kazzel D`Leryt",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:the-etched-stone",
       "label": "The Etched Stone",
       "type": "quest",
@@ -78333,14 +78136,6 @@
       "weight": 3.4,
       "size": "Tiny",
       "source": "The Geologist's Purloined Tools reward (Gans Paust, Erudin)"
-    },
-    {
-      "id": "npc:plane-of-mischief:peachy-dvicci",
-      "label": "Peachy D`Vicci",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:the-gift-box",
@@ -81295,14 +81090,6 @@
       "wiki_title": "Toxdil's Poison"
     },
     {
-      "id": "npc:neriak-commons:vexia-dynth",
-      "label": "Vexia D`Ynth",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest:track-stalk-hunt",
       "label": "Track, Stalk, Hunt",
       "type": "quest",
@@ -82710,14 +82497,6 @@
       },
       "hp": 30,
       "source": "Warrior Kael Armor Quests: Boots reward (Kragek Thunderforge, Kael Drakkel)"
-    },
-    {
-      "id": "npc:skyshrine:jendavudd-fedhar",
-      "label": "Jendavudd Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:warrior-skyshrine-armor-quests",
@@ -84632,14 +84411,6 @@
       "source": "Wizard Kael Armor Quests: Boots reward (Ulkar Jollkarek, Kael Drakkal)"
     },
     {
-      "id": "npc:skyshrine:elaend-fedhar",
-      "label": "Elaend Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:wizard-skyshrine-armor-quests",
       "label": "Wizard Skyshrine Armor Quests",
       "type": "quest_group",
@@ -85588,14 +85359,6 @@
         "Bring one of the four scrolls to Barnal Flamehand in Firiona Vie"
       ],
       "wiki_title": "Wizard Spells (Good)"
-    },
-    {
-      "id": "npc:neriak-commons:yegek-blarin",
-      "label": "Yegek B`Larin",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest:yegeks-test-part-1",
@@ -87881,14 +87644,6 @@
       "source": "Druid Kael Armor Quests: Boots reward (Jaglorm Ygorr, Kael Drakkal)"
     },
     {
-      "id": "npc:skyshrine:qynydd-fedhar",
-      "label": "Qynydd Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:druid-skyshrine-armor-quests",
       "label": "Druid Skyshrine Armor Quests",
       "type": "quest_group",
@@ -88775,14 +88530,6 @@
       "mana": 35,
       "weight": 0.5,
       "source": "Enchanter Kael Armor Quests: Slippers reward (Stoem Lekbar, Kael Drakkal)"
-    },
-    {
-      "id": "npc:skyshrine:lothieder-fedhar",
-      "label": "Lothieder Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:enchanter-skyshrine-armor-quests",
@@ -90752,14 +90499,6 @@
       "source": "Magician Kael Armor Quests: Boots reward (Mjeldor Felstorm, Kael Drakkal)"
     },
     {
-      "id": "npc:skyshrine:ocoenydd-fedhar",
-      "label": "Ocoenydd Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:magician-skyshrine-armor-quests",
       "label": "Magician Skyshrine Armor Quests",
       "type": "quest_group",
@@ -91918,14 +91657,6 @@
       },
       "weight": 6,
       "source": "Ranger Kael Armor Quests: Boots reward (Gragek Mjlorkigar, Kael Drakkal)"
-    },
-    {
-      "id": "npc:skyshrine:nalelin-fedhar",
-      "label": "Nalelin Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:ranger-skyshrine-armor-quests",
@@ -93095,14 +92826,6 @@
       "weight": 0.4,
       "effect": "Invisibility versus Undead",
       "source": "Necromancer Kael Armor Quests: Boots reward (Bjarorm Mjlorn, Kael Drakkal)"
-    },
-    {
-      "id": "npc:skyshrine:abudan-fedhar",
-      "label": "Abudan Fe`Dhar",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
     },
     {
       "id": "quest_group:necromancer-skyshrine-armor-quests",
@@ -96970,30 +96693,6 @@
       "wiki_title": "Necromancer Skullcap Quests"
     },
     {
-      "id": "npc:neriak-foreign-quarter:xta-tempi",
-      "label": "X`Ta Tempi",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
-      "id": "npc:neriak-foreign-quarter:xta-timpi",
-      "label": "X`Ta Timpi",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
-      "id": "npc:neriak-foreign-quarter:xta-tompi",
-      "label": "X`Ta Tompi",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
       "id": "quest_group:necromancer-words-quests",
       "label": "Necromancer Words Quests",
       "type": "quest_group",
@@ -97328,14 +97027,6 @@
     {
       "id": "npc:great-divide:korrigain",
       "label": "Korrigain",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
-      "id": "npc:icewell-keep:seneschal-aldikar",
-      "label": "Seneschal Aldikar",
       "type": "npc",
       "roles": [
         "quest_giver"
@@ -98334,14 +98025,6 @@
     {
       "id": "npc:firiona-vie:gracie-fliler",
       "label": "Gracie F`Liler",
-      "type": "npc",
-      "roles": [
-        "quest_giver"
-      ]
-    },
-    {
-      "id": "npc:the-overthere:siladdarae-nriese",
-      "label": "Siladdarae N`Riese",
       "type": "npc",
       "roles": [
         "quest_giver"
@@ -104624,16 +104307,6 @@
       ]
     },
     {
-      "id": "mob:innothule-swamp:stragak",
-      "label": "Stragak",
-      "type": "npc",
-      "minLevel": 45,
-      "maxLevel": 45,
-      "roles": [
-        "mob"
-      ]
-    },
-    {
       "id": "mob:innothule-swamp:tal-godin",
       "label": "Tal Godin",
       "type": "npc",
@@ -106720,7 +106393,8 @@
       "minLevel": 62,
       "maxLevel": 62,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -120950,7 +120624,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -120960,7 +120635,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121000,7 +120676,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121330,7 +121007,8 @@
       "minLevel": 70,
       "maxLevel": 70,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121370,7 +121048,8 @@
       "minLevel": 40,
       "maxLevel": 40,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121380,7 +121059,8 @@
       "minLevel": 40,
       "maxLevel": 40,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121420,7 +121100,8 @@
       "minLevel": 40,
       "maxLevel": 40,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121640,7 +121321,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121660,7 +121342,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -121670,7 +121353,8 @@
       "minLevel": 61,
       "maxLevel": 61,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -127990,7 +127674,8 @@
       "minLevel": 50,
       "maxLevel": 50,
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ]
     },
     {
@@ -133034,7 +132719,8 @@
       "label": "Slicia J`Singe",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 49,
       "maxLevel": 49
@@ -133454,7 +133140,8 @@
       "label": "Siladdarae N`Riese",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 49,
       "maxLevel": 49
@@ -135884,7 +135571,8 @@
       "label": "Seneschal Aldikar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 65,
       "maxLevel": 65
@@ -137234,7 +136922,8 @@
       "label": "Fardonad Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137304,7 +136993,8 @@
       "label": "Lothieder Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137654,7 +137344,8 @@
       "label": "Qynydd Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137734,7 +137425,8 @@
       "label": "Umykith Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137744,7 +137436,8 @@
       "label": "Jendavudd Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137754,7 +137447,8 @@
       "label": "Onerind Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137774,7 +137468,8 @@
       "label": "Crendatha Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137784,7 +137479,8 @@
       "label": "Asteinnon Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137794,7 +137490,8 @@
       "label": "Nalelin Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137804,7 +137501,8 @@
       "label": "Ocoenydd Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137814,7 +137512,8 @@
       "label": "Abudan Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -137824,7 +137523,8 @@
       "label": "Elaend Fe`Dhar",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -139644,7 +139344,8 @@
       "label": "Peachy D`Vicci",
       "type": "npc",
       "roles": [
-        "mob"
+        "mob",
+        "quest_giver"
       ],
       "minLevel": 48,
       "maxLevel": 48
@@ -177223,15 +176924,9 @@
     },
     {
       "id": "e-008-sells-4",
-      "source": "vendor:kelethin:beleth-streamfoot",
+      "source": "vendor:greater-faydark:beleth-streamfoot",
       "target": "spell:hymn-of-restoration",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-5",
-      "source": "vendor:kelethin:beleth-streamfoot",
-      "target": "zone:greater-faydark",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-6",
@@ -177273,18 +176968,6 @@
       "id": "e-008-located_in-12",
       "source": "vendor:neriak-3rd-gate:sol-punox",
       "target": "zone:neriak-3rd-gate",
-      "type": "located_in"
-    },
-    {
-      "id": "e-008-sells-13",
-      "source": "vendor:kelethin:zelli-starsfire",
-      "target": "spell:endure-cold",
-      "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-14",
-      "source": "vendor:kelethin:zelli-starsfire",
-      "target": "zone:greater-faydark",
       "type": "located_in"
     },
     {
@@ -177451,15 +177134,9 @@
     },
     {
       "id": "e-008-sells-42",
-      "source": "vendor:northern-kaladim:zeffan-holdsman",
+      "source": "vendor:north-kaladim:zeffan-holdsman",
       "target": "spell:endure-poison",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-43",
-      "source": "vendor:northern-kaladim:zeffan-holdsman",
-      "target": "zone:north-kaladim",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-44",
@@ -177901,7 +177578,7 @@
     },
     {
       "id": "e-008-sells-117",
-      "source": "vendor:northern-kaladim:zeffan-holdsman",
+      "source": "vendor:north-kaladim:zeffan-holdsman",
       "target": "spell:invisibility-versus-undead",
       "type": "sells"
     },
@@ -177937,7 +177614,7 @@
     },
     {
       "id": "e-008-sells-123",
-      "source": "vendor:northern-kaladim:zeffan-holdsman",
+      "source": "vendor:north-kaladim:zeffan-holdsman",
       "target": "spell:halo-of-light",
       "type": "sells"
     },
@@ -178093,15 +177770,9 @@
     },
     {
       "id": "e-008-sells-149",
-      "source": "vendor:kaladim:duppa-pickstone",
+      "source": "vendor:north-kaladim:duppa-pickstone",
       "target": "spell:word-of-shadow",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-150",
-      "source": "vendor:kaladim:duppa-pickstone",
-      "target": "zone:north-kaladim",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-151",
@@ -178147,7 +177818,7 @@
     },
     {
       "id": "e-008-sells-158",
-      "source": "vendor:kaladim:duppa-pickstone",
+      "source": "vendor:north-kaladim:duppa-pickstone",
       "target": "spell:dismiss-undead",
       "type": "sells"
     },
@@ -178213,15 +177884,9 @@
     },
     {
       "id": "e-008-sells-169",
-      "source": "vendor:kaladim:dorlita-splitshield",
+      "source": "vendor:north-kaladim:dorlita-splitshield",
       "target": "spell:abundant-drink",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-170",
-      "source": "vendor:kaladim:dorlita-splitshield",
-      "target": "zone:north-kaladim",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-171",
@@ -178231,7 +177896,7 @@
     },
     {
       "id": "e-008-sells-172",
-      "source": "vendor:kaladim:dorlita-splitshield",
+      "source": "vendor:north-kaladim:dorlita-splitshield",
       "target": "spell:divine-barrier",
       "type": "sells"
     },
@@ -178471,19 +178136,13 @@
     },
     {
       "id": "e-008-sells-213",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:hammer-of-requital",
       "type": "sells"
     },
     {
-      "id": "e-008-located_in-214",
-      "source": "vendor:kaladim:poriss-splitrock",
-      "target": "zone:north-kaladim",
-      "type": "located_in"
-    },
-    {
       "id": "e-008-sells-215",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:symbol-of-naltron",
       "type": "sells"
     },
@@ -178495,7 +178154,7 @@
     },
     {
       "id": "e-008-sells-217",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:yaulp-iii",
       "type": "sells"
     },
@@ -178507,7 +178166,7 @@
     },
     {
       "id": "e-008-sells-219",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:resolution",
       "type": "sells"
     },
@@ -178519,7 +178178,7 @@
     },
     {
       "id": "e-008-sells-221",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:banish-undead",
       "type": "sells"
     },
@@ -178549,7 +178208,7 @@
     },
     {
       "id": "e-008-sells-226",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:earthquake",
       "type": "sells"
     },
@@ -178561,7 +178220,7 @@
     },
     {
       "id": "e-008-sells-228",
-      "source": "vendor:kaladim:poriss-splitrock",
+      "source": "vendor:north-kaladim:poriss-splitrock",
       "target": "spell:retribution",
       "type": "sells"
     },
@@ -179197,27 +178856,15 @@
     },
     {
       "id": "e-008-sells-334",
-      "source": "vendor:felwithe-south:seren-the-swift",
+      "source": "vendor:southern-felwithe:seren-the-swift",
       "target": "spell:enthrall",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-335",
-      "source": "vendor:felwithe-south:seren-the-swift",
-      "target": "zone:southern-felwithe",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-336",
-      "source": "vendor:freeport-west:lasiris-oncre",
+      "source": "vendor:west-freeport:lasiris-oncre",
       "target": "spell:enthrall",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-337",
-      "source": "vendor:freeport-west:lasiris-oncre",
-      "target": "zone:west-freeport",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-338",
@@ -179227,15 +178874,9 @@
     },
     {
       "id": "e-008-sells-339",
-      "source": "vendor:qeynos-south:corrao-duperame",
+      "source": "vendor:south-qeynos:corrao-duperame",
       "target": "spell:enthrall",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-340",
-      "source": "vendor:qeynos-south:corrao-duperame",
-      "target": "zone:south-qeynos",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-341",
@@ -179935,15 +179576,9 @@
     },
     {
       "id": "e-008-sells-457",
-      "source": "vendor:overthere:kuglaz-grot",
+      "source": "vendor:the-overthere:kuglaz-grot",
       "target": "spell:paralyzing-earth",
       "type": "sells"
-    },
-    {
-      "id": "e-008-located_in-458",
-      "source": "vendor:overthere:kuglaz-grot",
-      "target": "zone:the-overthere",
-      "type": "located_in"
     },
     {
       "id": "e-008-sells-459",
@@ -197344,14 +196979,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-9028",
-      "source": "npc:neriak-commons:narex-tvem",
-      "target": "zone:neriak-commons",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9029",
-      "source": "npc:neriak-commons:narex-tvem",
+      "source": "npc:neriak-commons:narex-t-vem",
       "target": "quest:halfling-raider-helms",
       "type": "starts"
     },
@@ -200548,14 +200177,8 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-9563",
-      "source": "npc:the-overthere:slicia-jsinge",
-      "target": "zone:the-overthere",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9564",
-      "source": "npc:the-overthere:slicia-jsinge",
+      "source": "npc:the-overthere:slicia-j-singe",
       "target": "quest:magician-spells-evil",
       "type": "starts"
     },
@@ -200728,14 +200351,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-9593",
-      "source": "npc:neriak-3rd-gate:noxhil-vsek",
-      "target": "zone:neriak-3rd-gate",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9594",
-      "source": "npc:neriak-3rd-gate:noxhil-vsek",
+      "source": "npc:neriak-3rd-gate:noxhil-v-sek",
       "target": "quest:mammoth-tusks-quest",
       "type": "starts"
     },
@@ -201185,7 +200802,7 @@
     },
     {
       "id": "e-starts-9669",
-      "source": "npc:neriak-3rd-gate:noxhil-vsek",
+      "source": "npc:neriak-3rd-gate:noxhil-v-sek",
       "target": "quest:messages-for-neriak",
       "type": "starts"
     },
@@ -201628,14 +201245,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-9743",
-      "source": "npc:neriak-3rd-gate:hekzin-gzule",
-      "target": "zone:neriak-3rd-gate",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9744",
-      "source": "npc:neriak-3rd-gate:hekzin-gzule",
+      "source": "mob:neriak-3rd-gate:hekzin-g-zule",
       "target": "quest:moss-snakes",
       "type": "starts"
     },
@@ -202282,14 +201893,8 @@
       "type": "connects_to"
     },
     {
-      "id": "e-located_in-9855",
-      "source": "npc:neriak-commons:trizam-ntan",
-      "target": "zone:neriak-commons",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-9856",
-      "source": "npc:neriak-commons:trizam-ntan",
+      "source": "mob:neriak-commons:trizam-n-tan",
       "target": "quest:orc-pawn-picks",
       "type": "starts"
     },
@@ -203938,14 +203543,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-10131",
-      "source": "npc:skyshrine:umykith-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-10132",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest_group:bard-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -203957,7 +203556,7 @@
     },
     {
       "id": "e-starts-10134",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-helm",
       "type": "starts"
     },
@@ -203987,7 +203586,7 @@
     },
     {
       "id": "e-starts-10139",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-breastplate",
       "type": "starts"
     },
@@ -204017,7 +203616,7 @@
     },
     {
       "id": "e-starts-10144",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-armplates",
       "type": "starts"
     },
@@ -204047,7 +203646,7 @@
     },
     {
       "id": "e-starts-10149",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-bracer",
       "type": "starts"
     },
@@ -204077,7 +203676,7 @@
     },
     {
       "id": "e-starts-10154",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-gauntlets",
       "type": "starts"
     },
@@ -204107,7 +203706,7 @@
     },
     {
       "id": "e-starts-10159",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-greaves",
       "type": "starts"
     },
@@ -204137,7 +203736,7 @@
     },
     {
       "id": "e-starts-10164",
-      "source": "npc:skyshrine:umykith-fedhar",
+      "source": "npc:skyshrine:umykith-fe-dhar",
       "target": "quest:bard-skyshrine-armor-boots",
       "type": "starts"
     },
@@ -205630,14 +205229,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-10413",
-      "source": "npc:skyshrine:fardonad-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-10414",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest_group:cleric-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -205649,7 +205242,7 @@
     },
     {
       "id": "e-starts-10416",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-helmet",
       "type": "starts"
     },
@@ -205679,7 +205272,7 @@
     },
     {
       "id": "e-starts-10421",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-chestplate",
       "type": "starts"
     },
@@ -205709,7 +205302,7 @@
     },
     {
       "id": "e-starts-10426",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-vambraces",
       "type": "starts"
     },
@@ -205739,7 +205332,7 @@
     },
     {
       "id": "e-starts-10431",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-bracers",
       "type": "starts"
     },
@@ -205769,7 +205362,7 @@
     },
     {
       "id": "e-starts-10436",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-gauntlets",
       "type": "starts"
     },
@@ -205799,7 +205392,7 @@
     },
     {
       "id": "e-starts-10441",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-greaves",
       "type": "starts"
     },
@@ -205829,7 +205422,7 @@
     },
     {
       "id": "e-starts-10446",
-      "source": "npc:skyshrine:fardonad-fedhar",
+      "source": "npc:skyshrine:fardonad-fe-dhar",
       "target": "quest:cleric-skyshrine-armor-boots",
       "type": "starts"
     },
@@ -209106,14 +208699,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-10996",
-      "source": "npc:neriak-3rd-gate:eolorn-jaxx",
-      "target": "zone:neriak-3rd-gate",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-10997",
-      "source": "npc:neriak-3rd-gate:eolorn-jaxx",
+      "source": "mob:neriak-3rd-gate:eolorn-j-axx",
       "target": "quest:guild-summons-hall-of-the-ebon-mask",
       "type": "starts"
     },
@@ -210384,14 +209971,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-11209",
-      "source": "npc:neriak-commons:gath-nmare",
-      "target": "zone:neriak-commons",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-11210",
-      "source": "npc:neriak-commons:gath-nmare",
+      "source": "mob:neriak-commons:gath-n-mare",
       "target": "quest:guild-summons-the-spurned-wizard",
       "type": "starts"
     },
@@ -213910,14 +213491,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-11756",
-      "source": "npc:chardok:queen-velazul-dizok",
-      "target": "zone:chardok",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-11757",
-      "source": "npc:chardok:queen-velazul-dizok",
+      "source": "mob:chardok:queen-velazul-di-zok",
       "target": "quest:spirit-wracked-cord-quest",
       "type": "starts"
     },
@@ -214854,14 +214429,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-11913",
-      "source": "npc:skyshrine:crendatha-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-11914",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest_group:rogue-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -214873,7 +214442,7 @@
     },
     {
       "id": "e-starts-11916",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-crown",
       "type": "starts"
     },
@@ -214903,7 +214472,7 @@
     },
     {
       "id": "e-starts-11921",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-chestguard",
       "type": "starts"
     },
@@ -214933,7 +214502,7 @@
     },
     {
       "id": "e-starts-11926",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-vambraces",
       "type": "starts"
     },
@@ -214963,7 +214532,7 @@
     },
     {
       "id": "e-starts-11931",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-bracer",
       "type": "starts"
     },
@@ -214993,7 +214562,7 @@
     },
     {
       "id": "e-starts-11936",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-gauntlets",
       "type": "starts"
     },
@@ -215023,7 +214592,7 @@
     },
     {
       "id": "e-starts-11941",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-greaves",
       "type": "starts"
     },
@@ -215053,7 +214622,7 @@
     },
     {
       "id": "e-starts-11946",
-      "source": "npc:skyshrine:crendatha-fedhar",
+      "source": "npc:skyshrine:crendatha-fe-dhar",
       "target": "quest:rogue-skyshrine-armor-boots",
       "type": "starts"
     },
@@ -216874,14 +216443,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-12249",
-      "source": "npc:skyshrine:onerind-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-12250",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest_group:shadowknight-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -216893,7 +216456,7 @@
     },
     {
       "id": "e-starts-12252",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-helm",
       "type": "starts"
     },
@@ -216923,7 +216486,7 @@
     },
     {
       "id": "e-starts-12257",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-breastplate",
       "type": "starts"
     },
@@ -216953,7 +216516,7 @@
     },
     {
       "id": "e-starts-12262",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-vambraces",
       "type": "starts"
     },
@@ -216983,7 +216546,7 @@
     },
     {
       "id": "e-starts-12267",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-bracer",
       "type": "starts"
     },
@@ -217013,7 +216576,7 @@
     },
     {
       "id": "e-starts-12272",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-gauntlets",
       "type": "starts"
     },
@@ -217043,7 +216606,7 @@
     },
     {
       "id": "e-starts-12277",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-greaves",
       "type": "starts"
     },
@@ -217073,7 +216636,7 @@
     },
     {
       "id": "e-starts-12282",
-      "source": "npc:skyshrine:onerind-fedhar",
+      "source": "npc:skyshrine:onerind-fe-dhar",
       "target": "quest:shadowknight-skyshrine-armor-boots",
       "type": "starts"
     },
@@ -217768,14 +217331,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-12398",
-      "source": "npc:skyshrine:asteinnon-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-12399",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest_group:shaman-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -217787,7 +217344,7 @@
     },
     {
       "id": "e-starts-12401",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-helm",
       "type": "starts"
     },
@@ -217817,7 +217374,7 @@
     },
     {
       "id": "e-starts-12406",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-breastplate",
       "type": "starts"
     },
@@ -217847,7 +217404,7 @@
     },
     {
       "id": "e-starts-12411",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-vambraces",
       "type": "starts"
     },
@@ -217877,7 +217434,7 @@
     },
     {
       "id": "e-starts-12416",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-bracer",
       "type": "starts"
     },
@@ -217907,7 +217464,7 @@
     },
     {
       "id": "e-starts-12421",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-gauntlets",
       "type": "starts"
     },
@@ -217937,7 +217494,7 @@
     },
     {
       "id": "e-starts-12426",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-greaves",
       "type": "starts"
     },
@@ -217967,7 +217524,7 @@
     },
     {
       "id": "e-starts-12431",
-      "source": "npc:skyshrine:asteinnon-fedhar",
+      "source": "npc:skyshrine:asteinnon-fe-dhar",
       "target": "quest:shaman-skyshrine-armor-boots",
       "type": "starts"
     },
@@ -218814,14 +218371,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-12570",
-      "source": "npc:neriak-3rd-gate:loveal-snez",
-      "target": "zone:neriak-3rd-gate",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-12571",
-      "source": "npc:neriak-3rd-gate:loveal-snez",
+      "source": "mob:neriak-3rd-gate:loveal-s-nez",
       "target": "quest:sir-lindeals-testimony",
       "type": "starts"
     },
@@ -221372,14 +220923,8 @@
       "type": "requires"
     },
     {
-      "id": "e-located_in-12992",
-      "source": "npc:rathe-mountains:kazzel-dleryt",
-      "target": "zone:rathe-mountains",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-12993",
-      "source": "npc:rathe-mountains:kazzel-dleryt",
+      "source": "mob:rathe-mountains:kazzel-d-leryt",
       "target": "quest:the-etched-stone",
       "type": "starts"
     },
@@ -221792,14 +221337,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-13062",
-      "source": "npc:plane-of-mischief:peachy-dvicci",
-      "target": "zone:plane-of-mischief",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-13063",
-      "source": "npc:plane-of-mischief:peachy-dvicci",
+      "source": "npc:plane-of-mischief:peachy-d-vicci",
       "target": "quest:the-gift-box",
       "type": "starts"
     },
@@ -223093,7 +222632,7 @@
     },
     {
       "id": "e-starts-13278",
-      "source": "npc:neriak-3rd-gate:eolorn-jaxx",
+      "source": "mob:neriak-3rd-gate:eolorn-j-axx",
       "target": "quest:the-rogue-take",
       "type": "starts"
     },
@@ -223957,7 +223496,7 @@
     },
     {
       "id": "e-starts-13422",
-      "source": "npc:neriak-3rd-gate:loveal-snez",
+      "source": "mob:neriak-3rd-gate:loveal-s-nez",
       "target": "quest:thex-mallet-quest",
       "type": "starts"
     },
@@ -224724,14 +224263,8 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-13550",
-      "source": "npc:neriak-commons:vexia-dynth",
-      "target": "zone:neriak-commons",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-13551",
-      "source": "npc:neriak-commons:vexia-dynth",
+      "source": "mob:neriak-commons:vexia-d-ynth",
       "target": "quest:track-stalk-hunt",
       "type": "starts"
     },
@@ -226519,14 +226052,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-13849",
-      "source": "npc:skyshrine:jendavudd-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-13850",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest_group:warrior-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -226538,7 +226065,7 @@
     },
     {
       "id": "e-starts-13852",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-crown",
       "type": "starts"
     },
@@ -226568,7 +226095,7 @@
     },
     {
       "id": "e-starts-13857",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-breastplate",
       "type": "starts"
     },
@@ -226598,7 +226125,7 @@
     },
     {
       "id": "e-starts-13862",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-vambraces",
       "type": "starts"
     },
@@ -226628,7 +226155,7 @@
     },
     {
       "id": "e-starts-13867",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-bracer",
       "type": "starts"
     },
@@ -226658,7 +226185,7 @@
     },
     {
       "id": "e-starts-13872",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-gauntlets",
       "type": "starts"
     },
@@ -226688,7 +226215,7 @@
     },
     {
       "id": "e-starts-13877",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-greaves",
       "type": "starts"
     },
@@ -226718,7 +226245,7 @@
     },
     {
       "id": "e-starts-13882",
-      "source": "npc:skyshrine:jendavudd-fedhar",
+      "source": "npc:skyshrine:jendavudd-fe-dhar",
       "target": "quest:warrior-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -228534,14 +228061,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-14182",
-      "source": "npc:skyshrine:elaend-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14183",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest_group:wizard-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -228553,7 +228074,7 @@
     },
     {
       "id": "e-starts-14185",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-cap",
       "type": "starts"
     },
@@ -228583,7 +228104,7 @@
     },
     {
       "id": "e-starts-14190",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-robe",
       "type": "starts"
     },
@@ -228613,7 +228134,7 @@
     },
     {
       "id": "e-starts-14195",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-sleeves",
       "type": "starts"
     },
@@ -228643,7 +228164,7 @@
     },
     {
       "id": "e-starts-14200",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-wristbands",
       "type": "starts"
     },
@@ -228673,7 +228194,7 @@
     },
     {
       "id": "e-starts-14205",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-gloves",
       "type": "starts"
     },
@@ -228703,7 +228224,7 @@
     },
     {
       "id": "e-starts-14210",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-leggings",
       "type": "starts"
     },
@@ -228733,7 +228254,7 @@
     },
     {
       "id": "e-starts-14215",
-      "source": "npc:skyshrine:elaend-fedhar",
+      "source": "npc:skyshrine:elaend-fe-dhar",
       "target": "quest:wizard-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -229316,14 +228837,8 @@
       "randomGroup": "wizard-spells-good"
     },
     {
-      "id": "e-located_in-14311",
-      "source": "npc:neriak-commons:yegek-blarin",
-      "target": "zone:neriak-commons",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14312",
-      "source": "npc:neriak-commons:yegek-blarin",
+      "source": "mob:neriak-commons:yegek-b-larin",
       "target": "quest:yegeks-test-part-1",
       "type": "starts"
     },
@@ -229341,7 +228856,7 @@
     },
     {
       "id": "e-starts-14315",
-      "source": "npc:neriak-commons:yegek-blarin",
+      "source": "mob:neriak-commons:yegek-b-larin",
       "target": "quest:yegeks-test-part-2",
       "type": "starts"
     },
@@ -231105,14 +230620,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-14608",
-      "source": "npc:skyshrine:qynydd-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14609",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest_group:druid-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -231124,7 +230633,7 @@
     },
     {
       "id": "e-starts-14611",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-headband",
       "type": "starts"
     },
@@ -231154,7 +230663,7 @@
     },
     {
       "id": "e-starts-14616",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-chestguard",
       "type": "starts"
     },
@@ -231184,7 +230693,7 @@
     },
     {
       "id": "e-starts-14621",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-vambraces",
       "type": "starts"
     },
@@ -231214,7 +230723,7 @@
     },
     {
       "id": "e-starts-14626",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-bracelet",
       "type": "starts"
     },
@@ -231244,7 +230753,7 @@
     },
     {
       "id": "e-starts-14631",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-gauntlets",
       "type": "starts"
     },
@@ -231274,7 +230783,7 @@
     },
     {
       "id": "e-starts-14636",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-greaves",
       "type": "starts"
     },
@@ -231304,7 +230813,7 @@
     },
     {
       "id": "e-starts-14641",
-      "source": "npc:skyshrine:qynydd-fedhar",
+      "source": "npc:skyshrine:qynydd-fe-dhar",
       "target": "quest:druid-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -231789,14 +231298,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-14722",
-      "source": "npc:skyshrine:lothieder-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14723",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest_group:enchanter-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -231808,7 +231311,7 @@
     },
     {
       "id": "e-starts-14725",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-headband",
       "type": "starts"
     },
@@ -231838,7 +231341,7 @@
     },
     {
       "id": "e-starts-14730",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-robe",
       "type": "starts"
     },
@@ -231868,7 +231371,7 @@
     },
     {
       "id": "e-starts-14735",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-sleeves",
       "type": "starts"
     },
@@ -231898,7 +231401,7 @@
     },
     {
       "id": "e-starts-14740",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-wristguard",
       "type": "starts"
     },
@@ -231928,7 +231431,7 @@
     },
     {
       "id": "e-starts-14745",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-gloves",
       "type": "starts"
     },
@@ -231958,7 +231461,7 @@
     },
     {
       "id": "e-starts-14750",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-pantaloons",
       "type": "starts"
     },
@@ -231988,7 +231491,7 @@
     },
     {
       "id": "e-starts-14755",
-      "source": "npc:skyshrine:lothieder-fedhar",
+      "source": "npc:skyshrine:lothieder-fe-dhar",
       "target": "quest:enchanter-skyshrine-armor-quests-slippers",
       "type": "starts"
     },
@@ -233385,14 +232888,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-14989",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-14990",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest_group:magician-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -233404,7 +232901,7 @@
     },
     {
       "id": "e-starts-14992",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-headband",
       "type": "starts"
     },
@@ -233434,7 +232931,7 @@
     },
     {
       "id": "e-starts-14997",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-robe",
       "type": "starts"
     },
@@ -233464,7 +232961,7 @@
     },
     {
       "id": "e-starts-15002",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-sleeves",
       "type": "starts"
     },
@@ -233494,7 +232991,7 @@
     },
     {
       "id": "e-starts-15007",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-wristband",
       "type": "starts"
     },
@@ -233524,7 +233021,7 @@
     },
     {
       "id": "e-starts-15012",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-gloves",
       "type": "starts"
     },
@@ -233554,7 +233051,7 @@
     },
     {
       "id": "e-starts-15017",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-trousers",
       "type": "starts"
     },
@@ -233584,7 +233081,7 @@
     },
     {
       "id": "e-starts-15022",
-      "source": "npc:skyshrine:ocoenydd-fedhar",
+      "source": "npc:skyshrine:ocoenydd-fe-dhar",
       "target": "quest:magician-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -234309,14 +233806,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-15143",
-      "source": "npc:skyshrine:nalelin-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-15144",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest_group:ranger-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -234328,7 +233819,7 @@
     },
     {
       "id": "e-starts-15146",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-helm",
       "type": "starts"
     },
@@ -234358,7 +233849,7 @@
     },
     {
       "id": "e-starts-15151",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-breastplate",
       "type": "starts"
     },
@@ -234388,7 +233879,7 @@
     },
     {
       "id": "e-starts-15156",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-sleeves",
       "type": "starts"
     },
@@ -234418,7 +233909,7 @@
     },
     {
       "id": "e-starts-15161",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-bracer",
       "type": "starts"
     },
@@ -234448,7 +233939,7 @@
     },
     {
       "id": "e-starts-15166",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-gauntlets",
       "type": "starts"
     },
@@ -234478,7 +233969,7 @@
     },
     {
       "id": "e-starts-15171",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-leggings",
       "type": "starts"
     },
@@ -234508,7 +233999,7 @@
     },
     {
       "id": "e-starts-15176",
-      "source": "npc:skyshrine:nalelin-fedhar",
+      "source": "npc:skyshrine:nalelin-fe-dhar",
       "target": "quest:ranger-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -235203,14 +234694,8 @@
       "type": "rewards"
     },
     {
-      "id": "e-located_in-15292",
-      "source": "npc:skyshrine:abudan-fedhar",
-      "target": "zone:skyshrine",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-15293",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest_group:necromancer-skyshrine-armor-quests",
       "type": "starts"
     },
@@ -235222,7 +234707,7 @@
     },
     {
       "id": "e-starts-15295",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-cap",
       "type": "starts"
     },
@@ -235252,7 +234737,7 @@
     },
     {
       "id": "e-starts-15300",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-robe",
       "type": "starts"
     },
@@ -235282,7 +234767,7 @@
     },
     {
       "id": "e-starts-15305",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-sleeves",
       "type": "starts"
     },
@@ -235312,7 +234797,7 @@
     },
     {
       "id": "e-starts-15310",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-wristguard",
       "type": "starts"
     },
@@ -235342,7 +234827,7 @@
     },
     {
       "id": "e-starts-15315",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-gloves",
       "type": "starts"
     },
@@ -235372,7 +234857,7 @@
     },
     {
       "id": "e-starts-15320",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-leggings",
       "type": "starts"
     },
@@ -235402,7 +234887,7 @@
     },
     {
       "id": "e-starts-15325",
-      "source": "npc:skyshrine:abudan-fedhar",
+      "source": "npc:skyshrine:abudan-fe-dhar",
       "target": "quest:necromancer-skyshrine-armor-quests-boots",
       "type": "starts"
     },
@@ -236056,7 +235541,7 @@
     },
     {
       "id": "e-starts-15435",
-      "source": "npc:chardok:queen-velazul-dizok",
+      "source": "mob:chardok:queen-velazul-di-zok",
       "target": "quest:ancient-sword-blade-quest",
       "type": "starts"
     },
@@ -238761,24 +238246,6 @@
       "type": "requires"
     },
     {
-      "id": "e-located_in-15886",
-      "source": "npc:neriak-foreign-quarter:xta-tempi",
-      "target": "zone:neriak-foreign-quarter",
-      "type": "located_in"
-    },
-    {
-      "id": "e-located_in-15887",
-      "source": "npc:neriak-foreign-quarter:xta-timpi",
-      "target": "zone:neriak-foreign-quarter",
-      "type": "located_in"
-    },
-    {
-      "id": "e-located_in-15888",
-      "source": "npc:neriak-foreign-quarter:xta-tompi",
-      "target": "zone:neriak-foreign-quarter",
-      "type": "located_in"
-    },
-    {
       "id": "e-located_in-15889",
       "source": "quest_group:necromancer-words-quests",
       "target": "zone:neriak-foreign-quarter",
@@ -238786,7 +238253,7 @@
     },
     {
       "id": "e-starts-15890",
-      "source": "npc:neriak-foreign-quarter:xta-tempi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tempi",
       "target": "quest:necromancer-words-possession",
       "type": "starts"
     },
@@ -238804,7 +238271,7 @@
     },
     {
       "id": "e-starts-15893",
-      "source": "npc:neriak-foreign-quarter:xta-tempi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tempi",
       "target": "quest:necromancer-words-haunting",
       "type": "starts"
     },
@@ -238822,7 +238289,7 @@
     },
     {
       "id": "e-starts-15896",
-      "source": "npc:neriak-foreign-quarter:xta-tempi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tempi",
       "target": "quest:necromancer-words-collection-beza",
       "type": "starts"
     },
@@ -238840,7 +238307,7 @@
     },
     {
       "id": "e-starts-15899",
-      "source": "npc:neriak-foreign-quarter:xta-tempi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tempi",
       "target": "quest:necromancer-words-collection-caza",
       "type": "starts"
     },
@@ -238858,7 +238325,7 @@
     },
     {
       "id": "e-starts-15902",
-      "source": "npc:neriak-foreign-quarter:xta-timpi",
+      "source": "mob:neriak-foreign-quarter:x-ta-timpi",
       "target": "quest:necromancer-words-detachment",
       "type": "starts"
     },
@@ -238876,7 +238343,7 @@
     },
     {
       "id": "e-starts-15905",
-      "source": "npc:neriak-foreign-quarter:xta-timpi",
+      "source": "mob:neriak-foreign-quarter:x-ta-timpi",
       "target": "quest:necromancer-words-rupturing",
       "type": "starts"
     },
@@ -238894,7 +238361,7 @@
     },
     {
       "id": "e-starts-15908",
-      "source": "npc:neriak-foreign-quarter:xta-timpi",
+      "source": "mob:neriak-foreign-quarter:x-ta-timpi",
       "target": "quest:necromancer-words-suffering",
       "type": "starts"
     },
@@ -238912,7 +238379,7 @@
     },
     {
       "id": "e-starts-15911",
-      "source": "npc:neriak-foreign-quarter:xta-timpi",
+      "source": "mob:neriak-foreign-quarter:x-ta-timpi",
       "target": "quest:necromancer-words-requisition",
       "type": "starts"
     },
@@ -238930,7 +238397,7 @@
     },
     {
       "id": "e-starts-15914",
-      "source": "npc:neriak-foreign-quarter:xta-tompi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tompi",
       "target": "quest:necromancer-words-allure",
       "type": "starts"
     },
@@ -238948,7 +238415,7 @@
     },
     {
       "id": "e-starts-15917",
-      "source": "npc:neriak-foreign-quarter:xta-tompi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tompi",
       "target": "quest:necromancer-words-dark-paths",
       "type": "starts"
     },
@@ -238966,7 +238433,7 @@
     },
     {
       "id": "e-starts-15920",
-      "source": "npc:neriak-foreign-quarter:xta-tompi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tompi",
       "target": "quest:necromancer-words-obligation",
       "type": "starts"
     },
@@ -238984,7 +238451,7 @@
     },
     {
       "id": "e-starts-15923",
-      "source": "npc:neriak-foreign-quarter:xta-tompi",
+      "source": "mob:neriak-foreign-quarter:x-ta-tompi",
       "target": "quest:necromancer-words-acquisition-beza",
       "type": "starts"
     },
@@ -239211,12 +238678,6 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-15961",
-      "source": "npc:icewell-keep:seneschal-aldikar",
-      "target": "zone:icewell-keep",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-15962",
       "source": "npc:eastern-wastes:garadain-glacierbane",
       "target": "quest:coldain-ring-1-copper",
@@ -239362,7 +238823,7 @@
     },
     {
       "id": "e-starts-15986",
-      "source": "npc:icewell-keep:seneschal-aldikar",
+      "source": "npc:icewell-keep:seneschal-aldikar-icewell-keep",
       "target": "quest:coldain-ring-9-heros-insignia",
       "type": "starts"
     },
@@ -240327,12 +239788,6 @@
       "type": "located_in"
     },
     {
-      "id": "e-located_in-16147",
-      "source": "npc:the-overthere:siladdarae-nriese",
-      "target": "zone:the-overthere",
-      "type": "located_in"
-    },
-    {
       "id": "e-starts-16148",
       "source": "npc:firiona-vie:gracie-fliler",
       "target": "quest:enchanter-spells-good",
@@ -240346,7 +239801,7 @@
     },
     {
       "id": "e-starts-16150",
-      "source": "npc:the-overthere:siladdarae-nriese",
+      "source": "npc:the-overthere:siladdarae-n-riese",
       "target": "quest:enchanter-spells-evil",
       "type": "starts"
     },
@@ -244247,12 +243702,6 @@
     {
       "id": "e-located_in-16818",
       "source": "mob:innothule-swamp:spore-guardian",
-      "target": "zone:innothule-swamp",
-      "type": "located_in"
-    },
-    {
-      "id": "e-located_in-16819",
-      "source": "mob:innothule-swamp:stragak",
       "target": "zone:innothule-swamp",
       "type": "located_in"
     },
