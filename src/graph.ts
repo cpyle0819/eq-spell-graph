@@ -124,8 +124,8 @@ function toItemSummary(node: NodeData): ItemSummary {
 }
 
 export interface GraphData {
-  nodes: { data: NodeData }[];
-  edges: { data: EdgeData }[];
+  nodes: NodeData[];
+  edges: EdgeData[];
 }
 
 const DATA_PATH = resolve(__dirname, "../data/graph.json");
@@ -134,8 +134,9 @@ const DATA_PATH = resolve(__dirname, "../data/graph.json");
 // once directly in rankZones(), then again inside shortestPath() for every
 // candidate zone. Caching the parsed result for the life of the process
 // keeps that at one disk read + parse per process instead of dozens per
-// request. save() invalidates the cache (and the index below); mutation
-// routes are local-dev-only, so staying in sync with a single writer is fine.
+// request. save() invalidates the cache (and graphIndexHelpers()'s own
+// derived cache below); mutation routes are local-dev-only, so staying in
+// sync with a single writer is fine.
 let cachedGraph: GraphData | null = null;
 
 function load(): GraphData {
@@ -145,62 +146,39 @@ function load(): GraphData {
   return cachedGraph;
 }
 
-interface GraphIndex {
-  nodeById: Map<string, NodeData>;
-  sellsByTarget: Map<string, EdgeData[]>;
-  locatedInBySource: Map<string, EdgeData>;
-  lineBySpell: Map<string, { id: string; label: string }>;
-}
-
-let cachedIndex: GraphIndex | null = null;
-
-// Precomputed lookups for the hot path in rankZones(): each candidate spell's
-// sellers, each seller's zone, and each zone's display node, all O(1) instead
-// of linear scans over every node/edge repeated per spell/seller.
-function getIndex(): GraphIndex {
-  if (cachedIndex) return cachedIndex;
-  const graph = load();
-  const nodeById = new Map<string, NodeData>();
-  const sellsByTarget = new Map<string, EdgeData[]>();
-  const locatedInBySource = new Map<string, EdgeData>();
-  const lineBySpell = new Map<string, { id: string; label: string }>();
-  for (const n of graph.nodes) nodeById.set(n.data.id, n.data);
-  for (const e of graph.edges) {
-    if (e.data.type === "sells") {
-      if (!sellsByTarget.has(e.data.target)) sellsByTarget.set(e.data.target, []);
-      sellsByTarget.get(e.data.target)!.push(e.data);
-    } else if (e.data.type === "located_in") {
-      locatedInBySource.set(e.data.source, e.data);
-    } else if (e.data.type === "member_of") {
-      const lineNode = nodeById.get(e.data.target);
-      if (lineNode) lineBySpell.set(e.data.source, { id: lineNode.id, label: lineNode.label });
-    }
-  }
-  cachedIndex = { nodeById, sellsByTarget, locatedInBySource, lineBySpell };
-  return cachedIndex;
+// A spell's spell_line membership isn't a node field, it's a separate node +
+// member_of edge -- resolved through graphIndexHelpers()'s generic edge
+// index (member_of is scoped to spells here purely by which id is passed
+// in; a quest's own member_of points at a quest_group instead, but nothing
+// here ever looks that up by a spell id). Shared by withSpellLine() and
+// rankZones()'s own per-spell lookup below.
+function spellLineOf(spellId: string, helpers: GraphIndexHelpers): { id: string; label: string } | undefined {
+  const lineNode = helpers.edgesFrom(spellId, "member_of")
+    .map((e) => helpers.nodeById(e.target))
+    .find((n): n is NodeData => !!n);
+  return lineNode ? { id: lineNode.id, label: lineNode.label } : undefined;
 }
 
 // Spells returned from the graph don't carry their spell_line membership
-// directly (it's a separate node + member_of edge, not a node field) — this
-// attaches it as a plain `spellLine` label for API consumers, without
-// mutating the cached graph node itself (spread into a new object).
-function withSpellLine(data: NodeData, index: GraphIndex): NodeData {
-  const line = index.lineBySpell.get(data.id);
+// directly -- this attaches it as a plain `spellLine` label for API
+// consumers, without mutating the cached graph node itself (spread into a
+// new object).
+function withSpellLine(data: NodeData, helpers: GraphIndexHelpers): NodeData {
+  const line = spellLineOf(data.id, helpers);
   return line ? { ...data, spellLine: line.label, spellLineId: line.id } : data;
 }
 
 export function getSpellLines(): { id: string; label: string }[] {
   const graph = load();
   return graph.nodes
-    .filter((n) => n.data.type === "spell_line")
-    .map((n) => ({ id: n.data.id, label: n.data.label }))
+    .filter((n) => n.type === "spell_line")
+    .map((n) => ({ id: n.id, label: n.label }))
     .sort((a, b) => a.label.localeCompare(b.label));
 }
 
 function save(graph: GraphData): void {
   writeFileSync(DATA_PATH, JSON.stringify(graph, null, 2));
   cachedGraph = graph;
-  cachedIndex = null;
   cachedHelpers = null;
 }
 
@@ -219,53 +197,52 @@ export function getGraph(): GraphData {
 }
 
 export function getNode(id: string): NodeData | undefined {
-  return load().nodes.find((n) => n.data.id === id)?.data;
+  return load().nodes.find((n) => n.id === id);
 }
 
 export function findNodes(filter: Record<string, unknown>): NodeData[] {
   const graph = load();
   return graph.nodes
-    .filter((n) => Object.entries(filter).every(([k, v]) => n.data[k] === v))
-    .map((n) => n.data);
+    .filter((n) => Object.entries(filter).every(([k, v]) => n[k] === v));
 }
 
 export function getSpellsForClass(className: string, levels?: number[]): NodeData[] {
   const graph = load();
-  const index = getIndex();
+  const helpers = graphIndexHelpers(graph);
   return graph.nodes
     .filter((n) => {
-      if (n.data.type !== "spell" || !n.data.class_levels) return false;
-      return n.data.class_levels.some(
+      if (n.type !== "spell" || !n.class_levels) return false;
+      return n.class_levels.some(
         (cl) => cl.class === className && (!levels || levels.includes(cl.level))
       );
     })
-    .map((n) => withSpellLine(n.data, index));
+    .map((n) => withSpellLine(n, helpers));
 }
 
 // No class filter — every purchasable spell, still narrowed by level if given.
 export function getAllSpells(levels?: number[]): NodeData[] {
   const graph = load();
-  const index = getIndex();
+  const helpers = graphIndexHelpers(graph);
   return graph.nodes
     .filter((n) => {
-      if (n.data.type !== "spell" || !n.data.class_levels) return false;
-      return !levels || n.data.class_levels.some((cl) => levels.includes(cl.level));
+      if (n.type !== "spell" || !n.class_levels) return false;
+      return !levels || n.class_levels.some((cl) => levels.includes(cl.level));
     })
-    .map((n) => withSpellLine(n.data, index));
+    .map((n) => withSpellLine(n, helpers));
 }
 
 export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: NodeData | undefined }[] {
   const graph = load();
   const sellsEdges = graph.edges.filter(
-    (e) => e.data.type === "sells" && e.data.target === spellId
+    (e) => e.type === "sells" && e.target === spellId
   );
   return sellsEdges.map((e) => {
-    const npc = graph.nodes.find((n) => n.data.id === e.data.source)!.data;
+    const npc = graph.nodes.find((n) => n.id === e.source)!;
     const locEdge = graph.edges.find(
-      (le) => le.data.type === "located_in" && le.data.source === npc.id
+      (le) => le.type === "located_in" && le.source === npc.id
     );
     const zone = locEdge
-      ? graph.nodes.find((n) => n.data.id === locEdge.data.target)?.data
+      ? graph.nodes.find((n) => n.id === locEdge.target)
       : undefined;
     return { npc, zone };
   });
@@ -358,8 +335,8 @@ export interface EraSummary {
 export function getEras(): EraSummary[] {
   const graph = load();
   return graph.nodes
-    .filter((n) => n.data.type === "era")
-    .map((n) => ({ id: n.data.id, label: n.data.label, order: n.data.order as number, current: !!n.data.current }))
+    .filter((n) => n.type === "era")
+    .map((n) => ({ id: n.id, label: n.label, order: n.order as number, current: !!n.current }))
     .sort((a, b) => a.order - b.order);
 }
 
@@ -376,11 +353,11 @@ export function getZones(): ZoneSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   return graph.nodes
-    .filter((n) => n.data.type === "zone")
+    .filter((n) => n.type === "zone")
     .map((n) => ({
-      id: n.data.id,
-      label: n.data.label,
-      ...resolveEra(n.data.era as string | undefined, [], helpers),
+      id: n.id,
+      label: n.label,
+      ...resolveEra(n.era as string | undefined, [], helpers),
     }))
     .sort((a, b) => a.label.localeCompare(b.label));
 }
@@ -449,28 +426,28 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   return graph.nodes
-    .filter((n) => n.data.type === "npc" && helpers.edgesFrom(n.data.id, "located_in").some((e) => e.target === zoneId))
+    .filter((n) => n.type === "npc" && helpers.edgesFrom(n.id, "located_in").some((e) => e.target === zoneId))
     .map((n) => {
       const drops = helpers
-        .edgesFrom(n.data.id, "drops")
+        .edgesFrom(n.id, "drops")
         .map((e) => helpers.nodeById(e.target))
         .filter((node): node is NodeData => node !== undefined)
         .map(toItemSummary);
       const sellCategories = [
         ...new Set(
           helpers
-            .edgesFrom(n.data.id, "sells")
+            .edgesFrom(n.id, "sells")
             .map((e) => helpers.nodeById(e.target)?.type)
             .filter((type): type is string => type !== undefined)
             .map(sellCategoryLabel)
         ),
       ].sort();
       return {
-        id: n.data.id,
-        label: n.data.label,
-        roles: (n.data.roles as string[] | undefined) ?? [],
-        minLevel: n.data.minLevel as number | undefined,
-        maxLevel: n.data.maxLevel as number | undefined,
+        id: n.id,
+        label: n.label,
+        roles: (n.roles as string[] | undefined) ?? [],
+        minLevel: n.minLevel as number | undefined,
+        maxLevel: n.maxLevel as number | undefined,
         ...(drops.length ? { drops } : {}),
         ...(sellCategories.length ? { sellCategories } : {}),
       };
@@ -494,35 +471,36 @@ interface GraphIndexHelpers {
 // here, times the ~7 calls buildQuestSummary() makes per quest, times
 // hundreds of quests, had grown slow enough to blow the Lambda's 10s
 // timeout on the unfiltered /api/quests route (502s in production).
-// Building real Maps once per graphIndexHelpers() call, keyed the same way
-// getIndex()'s sells/vendor index already does, keeps every lookup O(1)
-// regardless of how large the graph gets.
+// Building real Maps once per graphIndexHelpers() call keeps every lookup
+// O(1) regardless of how large the graph gets. This is the graph's only
+// edge index -- rankZones() (the other hot path) resolves through it too,
+// rather than keeping a second, narrower index of its own.
 let cachedHelpers: { graph: GraphData; helpers: GraphIndexHelpers } | null = null;
 
 function graphIndexHelpers(graph: GraphData): GraphIndexHelpers {
   if (cachedHelpers?.graph === graph) return cachedHelpers.helpers;
 
   const nodesById = new Map<string, NodeData>();
-  for (const n of graph.nodes) nodesById.set(n.data.id, n.data);
+  for (const n of graph.nodes) nodesById.set(n.id, n);
 
   const edgesFromIndex = new Map<string, EdgeData[]>();
   const edgesToIndex = new Map<string, EdgeData[]>();
   for (const e of graph.edges) {
-    const fromKey = `${e.data.type}:${e.data.source}`;
+    const fromKey = `${e.type}:${e.source}`;
     if (!edgesFromIndex.has(fromKey)) edgesFromIndex.set(fromKey, []);
-    edgesFromIndex.get(fromKey)!.push(e.data);
+    edgesFromIndex.get(fromKey)!.push(e);
 
-    const toKey = `${e.data.type}:${e.data.target}`;
+    const toKey = `${e.type}:${e.target}`;
     if (!edgesToIndex.has(toKey)) edgesToIndex.set(toKey, []);
-    edgesToIndex.get(toKey)!.push(e.data);
+    edgesToIndex.get(toKey)!.push(e);
   }
 
   const eraOrderByLabel = new Map<string, number>();
   let currentEraOrder: number | undefined;
   for (const n of graph.nodes) {
-    if (n.data.type !== "era") continue;
-    eraOrderByLabel.set(n.data.label, n.data.order as number);
-    if (n.data.current) currentEraOrder = n.data.order as number;
+    if (n.type !== "era") continue;
+    eraOrderByLabel.set(n.label, n.order as number);
+    if (n.current) currentEraOrder = n.order as number;
   }
 
   const helpers: GraphIndexHelpers = {
@@ -678,11 +656,11 @@ export function getQuests(classNames?: string[], zoneId?: string, levelMin?: num
   const results = graph.nodes
     .filter(
       (n) =>
-        n.data.type === "quest" &&
-        matchesFilters(n.data, classNames, levelMin, levelMax) &&
-        (!zoneId || touchesZone(n.data.id, zoneId, helpers))
+        n.type === "quest" &&
+        matchesFilters(n, classNames, levelMin, levelMax) &&
+        (!zoneId || touchesZone(n.id, zoneId, helpers))
     )
-    .map((n) => buildQuestSummary(n.data, helpers));
+    .map((n) => buildQuestSummary(n, helpers));
 
   return results;
 }
@@ -699,9 +677,9 @@ export function getQuestGroups(classNames?: string[], zoneId?: string, levelMin?
   const { nodeById, edgesFrom, edgesTo } = helpers;
 
   const results = graph.nodes
-    .filter((n) => n.data.type === "quest_group" && matchesFilters(n.data, classNames, levelMin, levelMax))
+    .filter((n) => n.type === "quest_group" && matchesFilters(n, classNames, levelMin, levelMax))
     .map((n): QuestGroupSummary => {
-      const id = n.data.id;
+      const id = n.id;
       const zones = edgesFrom(id, "located_in")
         .map((e) => nodeById(e.target))
         .filter((z): z is NodeData => !!z)
@@ -716,17 +694,17 @@ export function getQuestGroups(classNames?: string[], zoneId?: string, levelMin?
         .map((m) => buildQuestSummary(m, helpers));
       return {
         id,
-        label: n.data.label,
-        description: n.data.description as string | undefined,
-        classes: (n.data.classes as string[] | undefined) || [],
-        minLevel: n.data.minLevel as number | undefined,
-        maxLevel: n.data.maxLevel as number | undefined,
-        steps: (n.data.steps as string[] | undefined) || [],
+        label: n.label,
+        description: n.description as string | undefined,
+        classes: (n.classes as string[] | undefined) || [],
+        minLevel: n.minLevel as number | undefined,
+        maxLevel: n.maxLevel as number | undefined,
+        steps: (n.steps as string[] | undefined) || [],
         zones,
         questGivers,
         members,
-        ...(n.data.wiki_title ? { wikiTitle: n.data.wiki_title as string } : {}),
-        ...resolveEra(n.data.era as string | undefined, zones.map((z) => z.id), helpers),
+        ...(n.wiki_title ? { wikiTitle: n.wiki_title as string } : {}),
+        ...resolveEra(n.era as string | undefined, zones.map((z) => z.id), helpers),
       };
     });
 
@@ -739,11 +717,11 @@ export function getZoneAdjacency(): Map<string, AdjEntry[]> {
   const graph = load();
   const adj = new Map<string, AdjEntry[]>();
   for (const e of graph.edges) {
-    if (e.data.type !== "connects_to") continue;
-    if (!adj.has(e.data.source)) adj.set(e.data.source, []);
-    const entry: AdjEntry = { zoneId: e.data.target };
-    if (e.data.transport) entry.transport = e.data.transport;
-    adj.get(e.data.source)!.push(entry);
+    if (e.type !== "connects_to") continue;
+    if (!adj.has(e.source)) adj.set(e.source, []);
+    const entry: AdjEntry = { zoneId: e.target };
+    if (e.transport) entry.transport = e.transport;
+    adj.get(e.source)!.push(entry);
   }
   // shortestPath()'s BFS keeps the first route it finds to each zone and
   // ignores ties, so tie-breaking is really about which neighbor gets tried
@@ -903,8 +881,7 @@ export function rankZones(
   spellLineIds?: string[]
 ): ZoneRanking[] {
   const graph = load();
-  const index = getIndex();
-  const eraHelpers = graphIndexHelpers(graph);
+  const helpers = graphIndexHelpers(graph);
 
   // race="any"/primaryClass="any"/deity="any" each neutralize only their own
   // dimension in the worst-of computation below — contributing "safe" for
@@ -920,7 +897,7 @@ export function rankZones(
   const deityIgnored = deity === "any";
 
   // Step 1 — start with all purchasable spells
-  let candidates = graph.nodes.filter((n) => n.data.type === "spell" && n.data.class_levels);
+  let candidates = graph.nodes.filter((n) => n.type === "spell" && n.class_levels);
 
   // Specific Spells is an *exclusive* override, not an addition: pinning any
   // spell means "show me only these, regardless of Shopping For classes" —
@@ -941,16 +918,16 @@ export function rankZones(
 
   // Step 2 — narrow to specific spells (if any pinned), else by class and/or spell line
   if (pinnedIds.size > 0) {
-    candidates = candidates.filter((n) => pinnedIds.has(n.data.id));
+    candidates = candidates.filter((n) => pinnedIds.has(n.id));
   } else {
     if (classNames.length > 0) {
       candidates = candidates.filter((n) =>
-        n.data.class_levels!.some((cl) => classNames.includes(cl.class))
+        n.class_levels!.some((cl) => classNames.includes(cl.class))
       );
     }
     if (lineFilterIds.size > 0) {
       candidates = candidates.filter((n) => {
-        const line = index.lineBySpell.get(n.data.id);
+        const line = spellLineOf(n.id, helpers);
         return line !== undefined && lineFilterIds.has(line.id);
       });
     }
@@ -958,26 +935,26 @@ export function rankZones(
 
   const zoneSpells = new Map<string, SpellVendorInfo[]>();
 
-  function addSpellToZones(spell: { data: NodeData }, matchingClasses: { cls: string; level: number }[]) {
+  function addSpellToZones(spell: NodeData, matchingClasses: { cls: string; level: number }[]) {
     if (!matchingClasses.length) return;
-    const sellers = index.sellsByTarget.get(spell.data.id) || [];
+    const sellers = helpers.edgesTo(spell.id, "sells");
     for (const seller of sellers) {
-      const npcNode = index.nodeById.get(seller.source);
-      const locEdge = index.locatedInBySource.get(seller.source);
+      const npcNode = helpers.nodeById(seller.source);
+      const locEdge = helpers.edgesFrom(seller.source, "located_in")[0];
       if (!locEdge || !npcNode) continue;
       const zoneId = locEdge.target;
       if (!zoneSpells.has(zoneId)) zoneSpells.set(zoneId, []);
       const existing = zoneSpells.get(zoneId)!;
-      const entry = existing.find((s) => s.id === spell.data.id);
+      const entry = existing.find((s) => s.id === spell.id);
       if (entry) {
         if (!entry.vendors.includes(npcNode.label)) entry.vendors.push(npcNode.label);
       } else {
-        const d = spell.data;
+        const d = spell;
         const details: SpellDetails = {};
         for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
           if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
         }
-        const line = index.lineBySpell.get(d.id);
+        const line = spellLineOf(d.id, helpers);
         existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.label], ...(line ? { spellLine: line.label } : {}), ...details });
       }
     }
@@ -988,14 +965,14 @@ export function rankZones(
   // pairs, same reasoning as the class bypass above.
   for (const spell of candidates) {
     let matchingClasses: { cls: string; level: number }[];
-    if (pinnedIds.has(spell.data.id)) {
-      matchingClasses = spell.data.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
+    if (pinnedIds.has(spell.id)) {
+      matchingClasses = spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
     } else if (classNames.length > 0) {
-      matchingClasses = spell.data.class_levels!
+      matchingClasses = spell.class_levels!
         .filter((cl) => classNames.includes(cl.class) && levels.includes(cl.level))
         .map((cl) => ({ cls: cl.class, level: cl.level }));
     } else {
-      matchingClasses = spell.data.class_levels!
+      matchingClasses = spell.class_levels!
         .filter((cl) => levels.includes(cl.level))
         .map((cl) => ({ cls: cl.class, level: cl.level }));
     }
@@ -1013,10 +990,10 @@ export function rankZones(
   // Rank with split faction awareness
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
-    const zoneNode = index.nodeById.get(zoneId);
-    const pathIds = shortestPath(currentZoneId, zoneId, eraHelpers);
+    const zoneNode = helpers.nodeById(zoneId);
+    const pathIds = shortestPath(currentZoneId, zoneId, helpers);
     const hops = pathIds ? pathIds.length - 1 : null;
-    const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => index.nodeById.get(id), eraHelpers) : [];
+    const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
@@ -1067,7 +1044,7 @@ export function rankZones(
         a.name.localeCompare(b.name)
       ),
       score,
-      ...resolveEra(zoneNode?.era as string | undefined, [], eraHelpers),
+      ...resolveEra(zoneNode?.era as string | undefined, [], helpers),
     });
   }
 
@@ -1126,27 +1103,27 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
   const graph = load();
   const npcIds = new Set(
     graph.edges
-      .filter((e) => e.data.type === "located_in" && e.data.target === zoneId)
-      .map((e) => e.data.source)
+      .filter((e) => e.type === "located_in" && e.target === zoneId)
+      .map((e) => e.source)
   );
   const vendorIds = new Set<string>();
   const spellIds = new Set<string>();
   for (const e of graph.edges) {
-    if (e.data.type === "sells" && npcIds.has(e.data.source)) {
-      vendorIds.add(e.data.source);
-      spellIds.add(e.data.target);
+    if (e.type === "sells" && npcIds.has(e.source)) {
+      vendorIds.add(e.source);
+      spellIds.add(e.target);
     }
   }
   let min = Infinity;
   let max = -Infinity;
   for (const spellId of spellIds) {
-    const spell = graph.nodes.find((n) => n.data.id === spellId)?.data;
+    const spell = graph.nodes.find((n) => n.id === spellId);
     for (const cl of spell?.class_levels || []) {
       if (cl.level < min) min = cl.level;
       if (cl.level > max) max = cl.level;
     }
   }
-  const zone = graph.nodes.find((n) => n.data.id === zoneId)?.data;
+  const zone = graph.nodes.find((n) => n.id === zoneId);
   return {
     vendorCount: vendorIds.size,
     levelRange: Number.isFinite(min) ? { min, max } : null,
@@ -1163,7 +1140,7 @@ export function getRoute(fromZoneId: string, toZoneId: string): { hops: number |
   const pathIds = shortestPath(fromZoneId, toZoneId, helpers);
   const hops = pathIds ? pathIds.length - 1 : null;
   const route: RouteStep[] = pathIds
-    ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.data.id === id)?.data, helpers)
+    ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers)
     : [];
   return { hops, route, destination: getZoneVendorInfo(toZoneId) };
 }
@@ -1173,11 +1150,11 @@ export function getRoute(fromZoneId: string, toZoneId: string): { hops: number |
 export function addSpell(name: string, classLevels: ClassLevel[]): NodeData {
   const graph = load();
   const id = `spell:${slugify(name)}`;
-  if (graph.nodes.some((n) => n.data.id === id)) {
+  if (graph.nodes.some((n) => n.id === id)) {
     throw new Error(`Spell already exists: ${id}`);
   }
   const data: NodeData = { id, label: name, type: "spell", class_levels: classLevels };
-  graph.nodes.push({ data });
+  graph.nodes.push(data);
   save(graph);
   return data;
 }
@@ -1185,10 +1162,10 @@ export function addSpell(name: string, classLevels: ClassLevel[]): NodeData {
 export function addZone(name: string): NodeData {
   const graph = load();
   const id = `zone:${slugify(name)}`;
-  const existing = graph.nodes.find((n) => n.data.id === id);
-  if (existing) return existing.data;
+  const existing = graph.nodes.find((n) => n.id === id);
+  if (existing) return existing;
   const data: NodeData = { id, label: name, type: "zone" };
-  graph.nodes.push({ data });
+  graph.nodes.push(data);
   save(graph);
   return data;
 }
@@ -1198,35 +1175,35 @@ export function addNpc(name: string, zoneName: string, roles: string[] = ["vendo
   const zoneId = `zone:${slugify(zoneName)}`;
   const npcId = `npc:${slugify(zoneName)}:${slugify(name)}`;
 
-  if (!graph.nodes.some((n) => n.data.id === zoneId)) {
-    graph.nodes.push({ data: { id: zoneId, label: zoneName, type: "zone" } });
+  if (!graph.nodes.some((n) => n.id === zoneId)) {
+    graph.nodes.push({ id: zoneId, label: zoneName, type: "zone" });
   }
 
-  if (!graph.nodes.some((n) => n.data.id === npcId)) {
+  if (!graph.nodes.some((n) => n.id === npcId)) {
     const data: NodeData = { id: npcId, label: name, type: "npc", roles };
-    graph.nodes.push({ data });
-    graph.edges.push({
-      data: { id: nextEdgeId(graph, "e-loc"), source: npcId, target: zoneId, type: "located_in" },
-    });
+    graph.nodes.push(data);
+    graph.edges.push(
+      { id: nextEdgeId(graph, "e-loc"), source: npcId, target: zoneId, type: "located_in" }
+    );
     save(graph);
     return data;
   }
 
-  return graph.nodes.find((n) => n.data.id === npcId)!.data;
+  return graph.nodes.find((n) => n.id === npcId)!;
 }
 
 export function addSellsEdge(npcId: string, spellId: string): EdgeData {
   const graph = load();
-  if (!graph.nodes.some((n) => n.data.id === npcId)) throw new Error(`NPC not found: ${npcId}`);
-  if (!graph.nodes.some((n) => n.data.id === spellId)) throw new Error(`Spell not found: ${spellId}`);
+  if (!graph.nodes.some((n) => n.id === npcId)) throw new Error(`NPC not found: ${npcId}`);
+  if (!graph.nodes.some((n) => n.id === spellId)) throw new Error(`Spell not found: ${spellId}`);
 
   const existing = graph.edges.find(
-    (e) => e.data.source === npcId && e.data.target === spellId && e.data.type === "sells"
+    (e) => e.source === npcId && e.target === spellId && e.type === "sells"
   );
-  if (existing) return existing.data;
+  if (existing) return existing;
 
   const data: EdgeData = { id: nextEdgeId(graph, "e-sells"), source: npcId, target: spellId, type: "sells" };
-  graph.edges.push({ data });
+  graph.edges.push(data);
   save(graph);
   return data;
 }
@@ -1237,48 +1214,48 @@ export function addConnectsTo(zoneA: string, zoneB: string): void {
   const idB = `zone:${slugify(zoneB)}`;
 
   for (const id of [idA, idB]) {
-    if (!graph.nodes.some((n) => n.data.id === id)) {
+    if (!graph.nodes.some((n) => n.id === id)) {
       const label = id === idA ? zoneA : zoneB;
-      graph.nodes.push({ data: { id, label, type: "zone" } });
+      graph.nodes.push({ id, label, type: "zone" });
     }
   }
 
   const hasAB = graph.edges.some(
-    (e) => e.data.type === "connects_to" && e.data.source === idA && e.data.target === idB
+    (e) => e.type === "connects_to" && e.source === idA && e.target === idB
   );
   const hasBA = graph.edges.some(
-    (e) => e.data.type === "connects_to" && e.data.source === idB && e.data.target === idA
+    (e) => e.type === "connects_to" && e.source === idB && e.target === idA
   );
 
-  if (!hasAB) graph.edges.push({ data: { id: nextEdgeId(graph, "e-conn"), source: idA, target: idB, type: "connects_to" } });
-  if (!hasBA) graph.edges.push({ data: { id: nextEdgeId(graph, "e-conn"), source: idB, target: idA, type: "connects_to" } });
+  if (!hasAB) graph.edges.push({ id: nextEdgeId(graph, "e-conn"), source: idA, target: idB, type: "connects_to" });
+  if (!hasBA) graph.edges.push({ id: nextEdgeId(graph, "e-conn"), source: idB, target: idA, type: "connects_to" });
   save(graph);
 }
 
 export function removeNode(id: string): boolean {
   const graph = load();
-  const idx = graph.nodes.findIndex((n) => n.data.id === id);
+  const idx = graph.nodes.findIndex((n) => n.id === id);
   if (idx === -1) return false;
   graph.nodes.splice(idx, 1);
-  graph.edges = graph.edges.filter((e) => e.data.source !== id && e.data.target !== id);
+  graph.edges = graph.edges.filter((e) => e.source !== id && e.target !== id);
   save(graph);
   return true;
 }
 
 export function updateNode(id: string, updates: Partial<NodeData>): NodeData | undefined {
   const graph = load();
-  const node = graph.nodes.find((n) => n.data.id === id);
+  const node = graph.nodes.find((n) => n.id === id);
   if (!node) return undefined;
-  Object.assign(node.data, updates);
-  node.data.id = id;
+  Object.assign(node, updates);
+  node.id = id;
   save(graph);
-  return node.data;
+  return node;
 }
 
 export function stats() {
   const graph = load();
-  const byType = (t: string) => graph.nodes.filter((n) => n.data.type === t).length;
-  const edgeByType = (t: string) => graph.edges.filter((e) => e.data.type === t).length;
+  const byType = (t: string) => graph.nodes.filter((n) => n.type === t).length;
+  const edgeByType = (t: string) => graph.edges.filter((e) => e.type === t).length;
   return {
     nodes: { spells: byType("spell"), npcs: byType("npc"), zones: byType("zone") },
     edges: { sells: edgeByType("sells"), located_in: edgeByType("located_in"), connects_to: edgeByType("connects_to") },

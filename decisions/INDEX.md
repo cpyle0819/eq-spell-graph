@@ -30,6 +30,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [A zone node's id must equal `zone:slugify(label)` exactly](zone-id-must-equal-slugify-label.md)
 - [Tech stack](tech-stack.md)
 - [Client-side shell router: app-header/app-footer persist across navigation](client-side-shell-router.md)
+- [`graph.json` nodes/edges are flat objects, not `{data:{...}}`](flat-node-edge-shape.md)
 
 ## Faction System (EQ Domain)
 

@@ -30,8 +30,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     if (q.length < 2) return { status: 200, body: [] };
     const graph = getGraph();
     const matches = graph.nodes
-      .filter((n) => n.data.type === "spell" && n.data.label.toLowerCase().includes(q))
-      .map((n) => ({ id: n.data.id, label: n.data.label }))
+      .filter((n) => n.type === "spell" && n.label.toLowerCase().includes(q))
+      .map((n) => ({ id: n.id, label: n.label }))
       .sort((a, b) => {
         const ai = a.label.toLowerCase().indexOf(q), bi = b.label.toLowerCase().indexOf(q);
         return ai !== bi ? ai - bi : a.label.localeCompare(b.label);
@@ -93,8 +93,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const graph = getGraph();
     const classes = new Set<string>();
     for (const n of graph.nodes) {
-      if (n.data.type === "spell" && n.data.class_levels) {
-        for (const cl of n.data.class_levels) {
+      if (n.type === "spell" && n.class_levels) {
+        for (const cl of n.class_levels) {
           classes.add(cl.class);
         }
       }
@@ -110,11 +110,11 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const graph = getGraph();
     const classes = new Set<string>();
     for (const n of graph.nodes) {
-      if ((n.data.type === "stance" || n.data.type === "invocation" || n.data.type === "aa") && n.data.classes) {
-        for (const cls of n.data.classes as string[]) classes.add(cls);
+      if ((n.type === "stance" || n.type === "invocation" || n.type === "aa") && n.classes) {
+        for (const cls of n.classes as string[]) classes.add(cls);
       }
-      if (n.data.type === "ability" && n.data.class_levels) {
-        for (const cl of n.data.class_levels as { class: string }[]) classes.add(cl.class);
+      if (n.type === "ability" && n.class_levels) {
+        for (const cl of n.class_levels as { class: string }[]) classes.add(cl.class);
       }
     }
     return { status: 200, body: [...classes].sort() };
@@ -128,13 +128,13 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const graph = getGraph();
     const matches = (type: "stance" | "invocation") =>
       graph.nodes
-        .filter((n) => n.data.type === type && n.data.classes &&
-          (classNames.length === 0 || (n.data.classes as string[]).some((c) => classNames.includes(c))))
+        .filter((n) => n.type === type && n.classes &&
+          (classNames.length === 0 || (n.classes as string[]).some((c) => classNames.includes(c))))
         .map((n) => ({
-          id: n.data.id,
-          name: n.data.label,
-          description: n.data.description,
-          classes: n.data.classes,
+          id: n.id,
+          name: n.label,
+          description: n.description,
+          classes: n.classes,
         }))
         .sort((a, b) => a.name.localeCompare(b.name));
     return { status: 200, body: { stances: matches("stance"), invocations: matches("invocation") } };
@@ -150,15 +150,15 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const categories = ["general", "archetype", "class", "special"] as const;
     const matches = (category: (typeof categories)[number]) =>
       graph.nodes
-        .filter((n) => n.data.type === "aa" && n.data.category === category && n.data.classes &&
-          (classNames.length === 0 || (n.data.classes as string[]).some((c) => classNames.includes(c))))
+        .filter((n) => n.type === "aa" && n.category === category && n.classes &&
+          (classNames.length === 0 || (n.classes as string[]).some((c) => classNames.includes(c))))
         .map((n) => ({
-          id: n.data.id,
-          name: n.data.label,
-          description: n.data.description,
-          ranks: n.data.ranks,
-          cost: n.data.cost,
-          classes: n.data.classes,
+          id: n.id,
+          name: n.label,
+          description: n.description,
+          ranks: n.ranks,
+          cost: n.cost,
+          classes: n.classes,
         }))
         .sort((a, b) => a.name.localeCompare(b.name));
     const body: Record<string, unknown> = {};
@@ -189,16 +189,16 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return {
       status: 200,
       body: graph.nodes
-        .filter((n) => n.data.type === "ability" && n.data.class_levels &&
-          (classNames.length === 0 || (n.data.class_levels as { class: string }[]).some((cl) => classNames.includes(cl.class))))
+        .filter((n) => n.type === "ability" && n.class_levels &&
+          (classNames.length === 0 || (n.class_levels as { class: string }[]).some((cl) => classNames.includes(cl.class))))
         .map((n) => ({
-          id: n.data.id,
-          name: n.data.label,
-          description: n.data.description,
-          class_levels: n.data.class_levels,
-          duration: n.data.duration,
-          reuseTime: n.data.reuseTime,
-          category: n.data.category,
+          id: n.id,
+          name: n.label,
+          description: n.description,
+          class_levels: n.class_levels,
+          duration: n.duration,
+          reuseTime: n.reuseTime,
+          category: n.category,
         }))
         .sort((a, b) =>
           hasPoisonTag(a.category) - hasPoisonTag(b.category) ||

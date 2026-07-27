@@ -17,28 +17,28 @@ export function loadGraph(migrationDir: string) {
   const graph = JSON.parse(readFileSync(GRAPH_PATH, "utf-8"));
 
   function hasNode(id: string): boolean {
-    return graph.nodes.some((n: { data: { id: string } }) => n.data.id === id);
+    return graph.nodes.some((n: { id: string }) => n.id === id);
   }
 
   function addNode(data: Record<string, unknown>) {
-    if (!hasNode(data.id as string)) graph.nodes.push({ data });
+    if (!hasNode(data.id as string)) graph.nodes.push(data);
   }
 
   function hasEdge(source: string, target: string, type: string): boolean {
     return graph.edges.some(
-      (e: { data: { source: string; target: string; type: string } }) =>
-        e.data.source === source && e.data.target === target && e.data.type === type
+      (e: { source: string; target: string; type: string }) =>
+        e.source === source && e.target === target && e.type === type
     );
   }
 
   function addEdge(source: string, target: string, type: string, attrs?: Record<string, unknown>) {
     if (hasEdge(source, target, type)) return;
-    graph.edges.push({ data: { id: `e-${type}-${graph.edges.length + 1}`, source, target, type, ...attrs } });
+    graph.edges.push({ id: `e-${type}-${graph.edges.length + 1}`, source, target, type, ...attrs });
   }
 
   function updateNode(id: string, updates: Record<string, unknown>) {
-    const node = graph.nodes.find((n: { data: { id: string } }) => n.data.id === id);
-    if (node) Object.assign(node.data, updates);
+    const node = graph.nodes.find((n: { id: string }) => n.id === id);
+    if (node) Object.assign(node, updates);
   }
 
   function slug(label: string): string {
