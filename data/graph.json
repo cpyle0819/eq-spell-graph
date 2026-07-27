@@ -64722,8 +64722,11 @@
         "label": "Ortallius",
         "type": "npc",
         "roles": [
-          "quest_giver"
-        ]
+          "quest_giver",
+          "mob"
+        ],
+        "minLevel": 30,
+        "maxLevel": 30
       }
     },
     {
@@ -145711,954 +145714,1260 @@
       "data": {
         "id": "mob:northern-desert-of-ro:dorn-b-dynn",
         "label": "Dorn B`Dynn",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 14,
-        "maxLevel": 16
+        "maxLevel": 16,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-skeleton",
         "label": "A skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 18
+        "maxLevel": 18,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-decaying-skeleton",
         "label": "A Decaying Skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:guard-brendyl",
         "label": "Guard Brendyl",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 40,
-        "maxLevel": 40
+        "maxLevel": 40,
+        "roles": [
+          "guard"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:guard-fintran",
         "label": "Guard Fintran",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 40,
-        "maxLevel": 40
+        "maxLevel": 40,
+        "roles": [
+          "guard"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:guard-stoutman",
         "label": "Guard Stoutman",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 40,
-        "maxLevel": 40
+        "maxLevel": 40,
+        "roles": [
+          "guard"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:puntar-sandfisher",
         "label": "Puntar Sandfisher",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 6,
-        "maxLevel": 6
+        "maxLevel": 6,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-shriveled-mummy",
         "label": "A Shriveled Mummy",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 10,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-sand-giant",
         "label": "A Sand Giant",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 33,
-        "maxLevel": 37
+        "maxLevel": 37,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-crypt-mummy",
         "label": "A Crypt Mummy",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 13,
-        "maxLevel": 15
+        "maxLevel": 15,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:an-armadillo",
         "label": "An Armadillo",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-madman",
         "label": "A Madman",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-dervish-cutthroat",
         "label": "A Dervish Cutthroat",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 11,
-        "maxLevel": 13
+        "maxLevel": 13,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-fire-beetle",
         "label": "A Fire Beetle",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-dune-tarantula",
         "label": "A Dune Tarantula",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 11,
-        "maxLevel": 13
+        "maxLevel": 13,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-parched-zombie",
         "label": "A Parched Zombie",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 6,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-puma",
         "label": "A Puma",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-desert-tarantula",
         "label": "A Desert Tarantula",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 9
+        "maxLevel": 9,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:rahotep",
         "label": "Rahotep",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 16,
-        "maxLevel": 16
+        "maxLevel": 16,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-sand-scarab",
         "label": "A Sand Scarab",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 11
+        "maxLevel": 11,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:dunedigger",
         "label": "Dunedigger",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 14,
-        "maxLevel": 14
+        "maxLevel": 14,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:orc-centurion-deathfist",
         "label": "Orc Centurion (Deathfist)",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-coyote",
         "label": "A coyote",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-jackal",
         "label": "A jackal",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:an-orc-raider",
         "label": "An orc raider",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:frankel-the-pirate",
         "label": "Frankel the Pirate",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 30,
-        "maxLevel": 30
+        "maxLevel": 30,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:northern-desert-of-ro:a-rattlesnake",
         "label": "A rattlesnake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-skeleton",
         "label": "A skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 18
-      }
-    },
-    {
-      "data": {
-        "id": "mob:southern-desert-of-ro:ortallius",
-        "label": "Ortallius",
-        "type": "mob",
-        "minLevel": 30,
-        "maxLevel": 30
+        "maxLevel": 18,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-zombie",
         "label": "A Zombie",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:obretl",
         "label": "Obretl",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 22,
-        "maxLevel": 22
+        "maxLevel": 22,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:terrorantula",
         "label": "Terrorantula",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 37,
-        "maxLevel": 40
+        "maxLevel": 40,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-desert-madman",
         "label": "A Desert Madman",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 11
+        "maxLevel": 11,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-sand-giant",
         "label": "A Sand Giant",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 33,
-        "maxLevel": 37
+        "maxLevel": 37,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:an-orc-cleric",
         "label": "An Orc Cleric",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:dry-bones-skeleton",
         "label": "Dry Bones Skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 16,
-        "maxLevel": 18
+        "maxLevel": 18,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:an-orc-warrior",
         "label": "An Orc Warrior",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 6,
-        "maxLevel": 18
+        "maxLevel": 18,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:andad-filla",
         "label": "Andad Filla",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 51,
-        "maxLevel": 51
+        "maxLevel": 51,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:erg-bluntbruiser",
         "label": "Erg Bluntbruiser",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 10,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:sandgiant-husam",
         "label": "Sandgiant Husam",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 29,
-        "maxLevel": 29
+        "maxLevel": 29,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-dervish-cutthroat",
         "label": "A Dervish Cutthroat",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 11,
-        "maxLevel": 13
+        "maxLevel": 13,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-fire-beetle",
         "label": "A Fire Beetle",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-puma",
         "label": "A Puma",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-moss-snake",
         "label": "A Moss Snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-giant-rattlesnake",
         "label": "A Giant Rattlesnake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 8
+        "maxLevel": 8,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-sand-scarab",
         "label": "A Sand Scarab",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 11
+        "maxLevel": 11,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-cistern-asp",
         "label": "A Cistern Asp",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 13
+        "maxLevel": 13,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:scrounge",
         "label": "Scrounge",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 8
+        "maxLevel": 8,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-sand-mummy",
         "label": "A sand mummy",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 14,
-        "maxLevel": 16
+        "maxLevel": 16,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:crypt-mummy",
         "label": "Crypt mummy",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 13,
-        "maxLevel": 13
+        "maxLevel": 13,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-tree-snake",
         "label": "A tree snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 6
+        "maxLevel": 6,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-coyote",
         "label": "A coyote",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-jackal",
         "label": "A jackal",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:an-asp",
         "label": "An Asp",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 10,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-mummy",
         "label": "A mummy",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 12,
-        "maxLevel": 12
+        "maxLevel": 12,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-rattlesnake",
         "label": "A rattlesnake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:southern-desert-of-ro:a-darkweed-snake",
         "label": "A Darkweed Snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-skeleton",
         "label": "A skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 18
+        "maxLevel": 18,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-decaying-skeleton",
         "label": "A Decaying Skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:rungupp",
         "label": "Rungupp",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:aglthin-dasmore",
         "label": "Aglthin Dasmore",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 8
+        "maxLevel": 8,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:ilanics-skeleton",
         "label": "Ilanics Skeleton",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:poacher-dell",
         "label": "Poacher Dell",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:poacher-shelli",
         "label": "Poacher Shelli",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 3
+        "maxLevel": 3,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:poacher-topi",
         "label": "Poacher Topi",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 3
+        "maxLevel": 3,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:poacher-willa",
         "label": "Poacher Willa",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:elial-brook",
         "label": "Elial Brook",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-skunk",
         "label": "A Large Skunk",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-spiderling",
         "label": "A Spiderling",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-willowisp",
         "label": "A Willowisp",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 11
+        "maxLevel": 11,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-runt",
         "label": "A Kobold Runt",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:phaeril-nightshire",
         "label": "Phaeril Nightshire",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 25,
-        "maxLevel": 25
+        "maxLevel": 25,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:veisha-fathomwalker",
         "label": "Veisha Fathomwalker",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 25,
-        "maxLevel": 25
+        "maxLevel": 25,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:knarthenne-skurl",
         "label": "Knarthenne Skurl",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 50,
-        "maxLevel": 50
+        "maxLevel": 50,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-watcher",
         "label": "A Kobold Watcher",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-shaman",
         "label": "A Kobold Shaman",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-sentry",
         "label": "A Kobold Sentry",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 3
+        "maxLevel": 3,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-fire-beetle",
         "label": "A Fire Beetle",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-caster",
         "label": "A Kobold Caster",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-giant-snake-toxxulia-forest",
         "label": "A Giant Snake (Toxxulia Forest)",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 11
+        "maxLevel": 11,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:sentinel-creot",
         "label": "Sentinel Creot",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 30,
-        "maxLevel": 30
+        "maxLevel": 30,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:sentinel-drom",
         "label": "Sentinel Drom",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 50,
-        "maxLevel": 50
+        "maxLevel": 50,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:sentinel-flavius",
         "label": "Sentinel Flavius",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 50,
-        "maxLevel": 50
+        "maxLevel": 50,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:shintar-vinlail",
         "label": "Shintar Vinlail",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-snake",
         "label": "A large snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-rat",
         "label": "A Large Rat",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-kobold-scout-toxxulia",
         "label": "A kobold scout (Toxxulia)",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-wood-spider",
         "label": "A large wood spider",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-pixie",
         "label": "A pixie",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 14,
-        "maxLevel": 17
+        "maxLevel": 17,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:jalen-goldsinger",
         "label": "Jalen Goldsinger",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 40,
-        "maxLevel": 40
+        "maxLevel": 40,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:an-erudin-emissary",
         "label": "An Erudin Emissary",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 22,
-        "maxLevel": 22
+        "maxLevel": 22,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:poacher-hill",
         "label": "Poacher Hill",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 4,
-        "maxLevel": 4
+        "maxLevel": 4,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:an-infected-rat",
         "label": "An infected rat",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-thistle-snake",
         "label": "A thistle snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 1,
-        "maxLevel": 1
+        "maxLevel": 1,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-briar-snake",
         "label": "A briar snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 3,
-        "maxLevel": 3
+        "maxLevel": 3,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-briar-snake",
         "label": "A large briar snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-large-thistle-snake",
         "label": "A large thistle snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 6,
-        "maxLevel": 6
+        "maxLevel": 6,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-giant-briar-snake",
         "label": "A giant briar snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 7,
-        "maxLevel": 7
+        "maxLevel": 7,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-giant-thistle-snake",
         "label": "A giant thistle snake",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 9,
-        "maxLevel": 9
+        "maxLevel": 9,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-heretic-prophet",
         "label": "A heretic prophet",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 5,
-        "maxLevel": 5
+        "maxLevel": 5,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-skunk",
         "label": "A skunk",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:a-widow-hatchling-toxxulia-forest",
         "label": "A Widow Hatchling (Toxxulia Forest)",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 2,
-        "maxLevel": 2
+        "maxLevel": 2,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:abandoned-heretic-pet",
         "label": "Abandoned heretic pet",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 8,
-        "maxLevel": 10
+        "maxLevel": 10,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:lanivon-baxer",
         "label": "Lanivon Baxer",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 50,
-        "maxLevel": 50
+        "maxLevel": 50,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:marzus-demsion",
         "label": "Marzus Demsion",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 45,
-        "maxLevel": 45
+        "maxLevel": 45,
+        "roles": [
+          "mob"
+        ]
       }
     },
     {
       "data": {
         "id": "mob:toxxulia-forest:talrigar-eklorin",
         "label": "Talrigar Eklorin",
-        "type": "mob",
+        "type": "npc",
         "minLevel": 34,
-        "maxLevel": 34
+        "maxLevel": 34,
+        "roles": [
+          "mob"
+        ]
       }
     }
   ],
@@ -300564,14 +300873,6 @@
       "data": {
         "id": "e-located_in-19184",
         "source": "mob:southern-desert-of-ro:a-skeleton",
-        "target": "zone:southern-desert-of-ro",
-        "type": "located_in"
-      }
-    },
-    {
-      "data": {
-        "id": "e-located_in-19185",
-        "source": "mob:southern-desert-of-ro:ortallius",
         "target": "zone:southern-desert-of-ro",
         "type": "located_in"
       }
