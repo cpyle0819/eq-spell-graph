@@ -98,6 +98,7 @@ for (const zone of zones) {
   const labelCounts = new Map<string, number>();
   for (const n of npcs) labelCounts.set(n.label, (labelCounts.get(n.label) ?? 0) + 1);
   for (const [label, count] of labelCounts) {
+    if (label === "?") continue; // eqlwiki gives some vendors no name at all -- expected to repeat, not a dupe
     if (count > 1) {
       flags.push({ zone: zone.label, zoneType: zt, severity: "med", message: `duplicate NPC label "${label}" appears ${count} times` });
     }

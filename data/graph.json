@@ -526,14 +526,6 @@
       "zoneType": "city"
     },
     {
-      "id": "vendor:erudin:killi-frillep-palace-magician-guild",
-      "label": "Killi Frillep, Palace Magician Guild",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "zone:greater-faydark",
       "label": "Greater Faydark",
       "type": "zone",
@@ -2221,14 +2213,6 @@
             }
           ]
         }
-      ]
-    },
-    {
-      "id": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
-      "label": "Crusader Silulika, Shadow Knight Spells",
-      "type": "npc",
-      "roles": [
-        "vendor"
       ]
     },
     {
@@ -4081,14 +4065,6 @@
       ]
     },
     {
-      "id": "vendor:erudin:vellenon-harrance-palace-enchanter-guild",
-      "label": "Vellenon Harrance, Palace Enchanter Guild",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:southern-felwithe:xista-finder-enchanter-guild",
       "label": "Xista Finder, Enchanter Guild",
       "type": "npc",
@@ -4170,14 +4146,6 @@
     {
       "id": "vendor:ak-anon:clockwork-merchant-ng-6-necromancer-guild",
       "label": "Clockwork Merchant (NG-6), Necromancer Guild",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:erudin:telor-beteria-palace-magician-guild",
-      "label": "Telor Beteria, Palace Magician Guild",
       "type": "npc",
       "roles": [
         "vendor"
@@ -4888,14 +4856,6 @@
     {
       "id": "vendor:ak-anon:clockwork-merchant-lg-6-library",
       "label": "Clockwork Merchant (LG-6), Library",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:erudin:danilla-delucic-palace-enchanter-guild",
-      "label": "Danilla Delucic, Palace Enchanter Guild",
       "type": "npc",
       "roles": [
         "vendor"
@@ -6305,14 +6265,6 @@
     {
       "id": "vendor:ak-anon:clockwork-merchant-lg-15-library",
       "label": "Clockwork Merchant (LG-15), Library",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:erudin:kestall-tulenci-palace-magician-guild",
-      "label": "Kestall Tulenci, Palace Magician Guild",
       "type": "npc",
       "roles": [
         "vendor"
@@ -7838,14 +7790,6 @@
       ]
     },
     {
-      "id": "vendor:erudin:estra-nancer-palace-enchanter-guild",
-      "label": "Estra Nancer, Palace Enchanter Guild",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:south-qeynos:corrao-duperame-the-herb-jar",
       "label": "Corrao Duperame, The Herb Jar",
       "type": "npc",
@@ -8333,14 +8277,6 @@
       ]
     },
     {
-      "id": "vendor:erudin:horacia-garnellia-palace-enchanter-guild",
-      "label": "Horacia Garnellia, Palace Enchanter Guild",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "vendor:south-qeynos:isobelle-losiwoo-caster-guild",
       "label": "Isobelle Losiwoo, Caster Guild",
       "type": "npc",
@@ -8784,14 +8720,6 @@
       ]
     },
     {
-      "id": "vendor:new-sebilis-expedition:zealot-zorshais-bank-room",
-      "label": "Zealot Zorshais, Bank Room",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "spell:nonchalance",
       "label": "Nonchalance",
       "type": "spell",
@@ -8975,14 +8903,6 @@
     {
       "id": "vendor:ak-anon:clockwork-merchant-lg-13-library",
       "label": "Clockwork Merchant (LG-13), Library",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:erudin:wistcona-palace",
-      "label": "Wistcona, Palace",
       "type": "npc",
       "roles": [
         "vendor"
@@ -10357,14 +10277,6 @@
     {
       "id": "vendor:ak-anon:clockwork-merchant-lg-5-library",
       "label": "Clockwork Merchant (LG-5), Library",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
-      "id": "vendor:erudin:elentar-bealtarik-palace-enchanter-guild",
-      "label": "Elentar Bealtarik, Palace Enchanter Guild",
       "type": "npc",
       "roles": [
         "vendor"
@@ -46424,7 +46336,8 @@
       ],
       "weight": 0.1,
       "size": "Tiny",
-      "source": "A Job for Nanrum reward (Basher Nanrum, Grobb)"
+      "source": "A Job for Nanrum reward (Basher Nanrum, Grobb)",
+      "ac": 1
     },
     {
       "id": "faction:dabashers",
@@ -48429,7 +48342,8 @@
       ],
       "weight": 0.1,
       "size": "Tiny",
-      "source": "Black Wolf Skin Quest reward (Tarker Blazetoss, Southern Felwithe)"
+      "source": "Black Wolf Skin Quest reward (Tarker Blazetoss, Southern Felwithe)",
+      "value": "6s"
     },
     {
       "id": "item:rusty-dagger",
@@ -51911,7 +51825,12 @@
       "delay": 30,
       "weight": 5,
       "lore": true,
-      "source": "Death of Lyda Nasin reward (Tani N`Mar, Neriak Third Gate)"
+      "source": "Death of Lyda Nasin reward (Tani N`Mar, Neriak Third Gate)",
+      "classes": [
+        "shadow knight",
+        "bard",
+        "rogue"
+      ]
     },
     {
       "id": "npc:west-freeport:cain-darkmoore",
@@ -55576,7 +55495,25 @@
       "slots": [
         "Back"
       ],
-      "source": "Hopeless Love, Part 1 reward (Milea Clothspinner, Eastern Karana)"
+      "source": "Hopeless Love, Part 1 reward (Milea Clothspinner, Eastern Karana)",
+      "ac": 6,
+      "hp": 5,
+      "weight": 3.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "beastlord",
+        "berserker",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
     },
     {
       "id": "npc:east-commonlands:merry-snowgleam",
@@ -57974,7 +57911,8 @@
       "noTrade": true,
       "weight": 0.1,
       "size": "Tiny",
-      "source": "Medallion of the Jarsath Quest reward (Xiblin Fizzlebik, Timorous Deep)"
+      "source": "Medallion of the Jarsath Quest reward (Xiblin Fizzlebik, Timorous Deep)",
+      "lore": true
     },
     {
       "id": "npc:lake-of-ill-omen:professor-akabao",
@@ -58011,7 +57949,9 @@
       "magic": true,
       "noTrade": true,
       "weight": 0.1,
-      "source": "Medallion of the Kylong Quest reward (Professor Akabao, Lake of Ill Omen)"
+      "source": "Medallion of the Kylong Quest reward (Professor Akabao, Lake of Ill Omen)",
+      "lore": true,
+      "size": "Tiny"
     },
     {
       "id": "npc:burning-wood:slixin-klex",
@@ -62989,7 +62929,25 @@
         "Primary"
       ],
       "skill": "1H Blunt",
-      "source": "Clurg's Revenge reward (Clurg the Bartender, Oggok)"
+      "source": "Clurg's Revenge reward (Clurg the Bartender, Oggok)",
+      "damage": 6,
+      "delay": 32,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "beastlord",
+        "berserker",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
     },
     {
       "id": "npc:kael-drakkal:gkrean-prophet-of-tallon",
@@ -63031,7 +62989,17 @@
       "slots": [
         "Wrist"
       ],
-      "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)",
+      "ac": -5,
+      "stats": {
+        "str": -2,
+        "cha": 1,
+        "wis": 6
+      },
+      "hp": -20,
+      "weight": 0.5,
+      "size": "Medium",
+      "magic": true
     },
     {
       "id": "item:circlet-of-tallon",
@@ -63059,7 +63027,18 @@
         "druid",
         "shaman"
       ],
-      "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)"
+      "source": "Coldain Books of Tactics reward (Gkrean Prophet of Tallon, Kael Drakkal)",
+      "ac": 2,
+      "stats": {
+        "str": 7,
+        "dex": 7,
+        "wis": 7,
+        "cha": -5
+      },
+      "weight": 1,
+      "size": "Small",
+      "magic": true,
+      "lore": true
     },
     {
       "id": "npc:kael-drakkal:slaggak-the-trainer",
@@ -63865,7 +63844,25 @@
         "paladin",
         "shadow knight"
       ],
-      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)",
+      "skill": "1H Slashing",
+      "damage": 25,
+      "delay": 24,
+      "hp": 75,
+      "mana": 75,
+      "resists": {
+        "fire": 10,
+        "disease": 10,
+        "cold": 10,
+        "magic": 10,
+        "poison": 10
+      },
+      "effect": "Essence Drain (Combat, Casting Time: Instant)",
+      "weight": 5,
+      "size": "Medium",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:essence-mace",
@@ -63882,7 +63879,25 @@
         "bard",
         "rogue"
       ],
-      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)",
+      "skill": "1H Blunt",
+      "damage": 13,
+      "delay": 18,
+      "hp": 50,
+      "mana": 50,
+      "resists": {
+        "fire": 10,
+        "disease": 10,
+        "cold": 10,
+        "magic": 10,
+        "poison": 10
+      },
+      "effect": "Essence Tap (Combat, Casting Time: Instant) at Level 55",
+      "weight": 3,
+      "size": "Small",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:essence-pearl",
@@ -63891,7 +63906,25 @@
       "slots": [
         "Ear"
       ],
-      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)",
+      "stats": {
+        "sta": 10,
+        "wis": 10,
+        "int": 10
+      },
+      "hp": 65,
+      "resists": {
+        "fire": 7,
+        "disease": 7,
+        "cold": 7,
+        "magic": 7,
+        "poison": 7
+      },
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:essence-ring",
@@ -63900,7 +63933,22 @@
       "slots": [
         "Finger"
       ],
-      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)"
+      "source": "Essence Lens Quest reward (Melalafen, Western Wastes)",
+      "ac": 8,
+      "hp": 65,
+      "mana": 65,
+      "resists": {
+        "fire": 12,
+        "disease": 12,
+        "cold": 12,
+        "magic": 12,
+        "poison": 12
+      },
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "npc:kerra-island:feskr-drinkmaker",
@@ -70311,7 +70359,23 @@
       "slots": [
         "Primary"
       ],
-      "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)"
+      "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)",
+      "skill": "1H Blunt",
+      "damage": 6,
+      "delay": 20,
+      "stats": {
+        "str": 2,
+        "dex": 2,
+        "agi": 2
+      },
+      "weight": 4,
+      "size": "Medium",
+      "lore": true,
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin"
+      ]
     },
     {
       "id": "item:ionys-absorber",
@@ -70320,7 +70384,15 @@
       "slots": [
         "Secondary"
       ],
-      "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)"
+      "source": "Red V Clockwork reward (Manik Compolten, Ak'Anon)",
+      "resists": {
+        "disease": 5,
+        "poison": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true
     },
     {
       "id": "npc:west-freeport:lady-shae",
@@ -70414,7 +70486,20 @@
       "slots": [
         "Face"
       ],
-      "source": "Reinforcements for The Tunarean Regiment intermediate reward (Staff Sergeant Drioc, Kael Drakkal)"
+      "source": "Reinforcements for The Tunarean Regiment intermediate reward (Staff Sergeant Drioc, Kael Drakkal)",
+      "ac": 5,
+      "stats": {
+        "agi": 5
+      },
+      "resists": {
+        "cold": 5
+      },
+      "effect": "Everlasting Breath (Any Slot, Casting Time: 2.0)",
+      "weight": 1.4,
+      "size": "Small",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:velium-studded-cloak",
@@ -70423,7 +70508,28 @@
       "slots": [
         "Back"
       ],
-      "source": "Reinforcements for The Tunarean Regiment optional reward"
+      "source": "Reinforcements for The Tunarean Regiment optional reward",
+      "ac": 12,
+      "hp": 25,
+      "resists": {
+        "fire": 5,
+        "cold": 5
+      },
+      "effect": "Superior Camouflage at Level 30 (Must Equip, Casting Time: 0.0)",
+      "weight": 6.5,
+      "size": "Large",
+      "magic": true,
+      "lore": true,
+      "value": "171p 3g 5s 9c",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "bard",
+        "shaman"
+      ]
     },
     {
       "id": "item:collar-of-the-storm",
@@ -70663,7 +70769,30 @@
         "Primary"
       ],
       "skill": "2H Blunt",
-      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)",
+      "ac": 4,
+      "hp": 10,
+      "damage": 7,
+      "delay": 32,
+      "weight": 5,
+      "size": "Medium",
+      "magic": true,
+      "classes": [
+        "beastlord",
+        "berserker",
+        "cleric",
+        "druid",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "shaman",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "item:titan-blessed-tachi",
@@ -70673,7 +70802,23 @@
         "Primary"
       ],
       "skill": "1H Slashing",
-      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)",
+      "ac": 2,
+      "hp": 5,
+      "damage": 6,
+      "delay": 24,
+      "weight": 8.5,
+      "size": "Medium",
+      "magic": true,
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "druid",
+        "bard",
+        "rogue"
+      ]
     },
     {
       "id": "item:titan-blessed-tanto",
@@ -70683,7 +70828,28 @@
         "Primary"
       ],
       "skill": "1H Piercing",
-      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)"
+      "source": "Rognarog's Head reward choice (Shazda Kaekwon, Stonebrunt Mountains)",
+      "ac": 2,
+      "hp": 5,
+      "damage": 4,
+      "delay": 19,
+      "weight": 3,
+      "size": "Small",
+      "magic": true,
+      "lore": true,
+      "classes": [
+        "bard",
+        "beastlord",
+        "berserker",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "quest:spirit-wracked-cord-quest",
@@ -71148,7 +71314,25 @@
       "slots": [
         "Wrist"
       ],
-      "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)"
+      "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)",
+      "ac": 6,
+      "stats": {
+        "int": 5
+      },
+      "hp": 65,
+      "mana": 65,
+      "effect": "Breath of the Dead (Worn)",
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true,
+      "classes": [
+        "necromancer",
+        "wizard",
+        "magician",
+        "enchanter"
+      ]
     },
     {
       "id": "item:paebala-fetish",
@@ -71163,7 +71347,26 @@
       "slots": [
         "Back"
       ],
-      "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)"
+      "source": "Scholar Darnath's Help reward choice (Scholar Darnath, East Commonlands)",
+      "ac": 14,
+      "stats": {
+        "str": 10,
+        "sta": 15,
+        "cha": 15
+      },
+      "hp": 45,
+      "resists": {
+        "fire": 5,
+        "disease": 5,
+        "cold": 5,
+        "magic": 10,
+        "poison": 5
+      },
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "npc:field-of-bone:warlord-zyzz",
@@ -73234,8 +73437,11 @@
       "label": "Emperor Ganak",
       "type": "npc",
       "roles": [
-        "quest_giver"
-      ]
+        "quest_giver",
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
     },
     {
       "id": "quest_group:sebilis-and-veeshans-peak-key-quest",
@@ -80740,8 +80946,11 @@
       "label": "tortured librarian",
       "type": "npc",
       "roles": [
-        "quest_giver"
-      ]
+        "quest_giver",
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
     },
     {
       "id": "quest:the-tome-raider",
@@ -98754,7 +98963,24 @@
         "shadow knight",
         "warrior"
       ],
-      "source": "Test of Protection reward (Telkorenar, Temple of Veeshan)"
+      "source": "Test of Protection reward (Telkorenar, Temple of Veeshan)",
+      "ac": 35,
+      "stats": {
+        "sta": 15
+      },
+      "hp": 100,
+      "resists": {
+        "fire": 20,
+        "disease": 20,
+        "cold": 20,
+        "magic": 20,
+        "poison": 20
+      },
+      "weight": 0.5,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:serrated-dragon-tooth",
@@ -98795,7 +99021,26 @@
         "druid",
         "shaman"
       ],
-      "source": "Wisdom - The Long Battle reward (Gozzrem, Temple of Veeshan)"
+      "source": "Wisdom - The Long Battle reward (Gozzrem, Temple of Veeshan)",
+      "ac": 35,
+      "stats": {
+        "sta": 10,
+        "wis": 15
+      },
+      "mana": 50,
+      "resists": {
+        "fire": 3,
+        "disease": 3,
+        "cold": 3,
+        "magic": 3,
+        "poison": 3
+      },
+      "effect": "Aura of Battle (Worn)",
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:white-dragon-idol",
@@ -99053,7 +99298,15 @@
       "magic": true,
       "lore": true,
       "noDrop": true,
-      "source": "Warrior Pike Quests reward (Weaponsmith Grugl, East Cabilis)"
+      "source": "Warrior Pike Quests reward (Weaponsmith Grugl, East Cabilis)",
+      "ac": 6,
+      "resists": {
+        "magic": 10
+      },
+      "damage": 12,
+      "delay": 40,
+      "weight": 12,
+      "size": "Giant"
     },
     {
       "id": "mob:ak-anon:brown-bear",
@@ -119513,7 +119766,7 @@
       "minLevel": 25,
       "maxLevel": 25,
       "roles": [
-        "mob"
+        "banker"
       ]
     },
     {
@@ -129733,7 +129986,30 @@
         "Primary"
       ],
       "skill": "1H Blunt",
-      "source": "Blackburrow drop"
+      "source": "Blackburrow drop",
+      "damage": 9,
+      "delay": 30,
+      "stats": {
+        "sta": 3,
+        "wis": 3
+      },
+      "weight": 1.5,
+      "size": "Small",
+      "value": "1p 1g 4s 3c",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "druid",
+        "monk",
+        "bard",
+        "rogue",
+        "shaman",
+        "beastlord",
+        "berserker"
+      ]
     },
     {
       "id": "item:sabertooth-short-bow",
@@ -129745,7 +130021,17 @@
         "Ranged"
       ],
       "skill": "Bow",
-      "source": "Blackburrow drop"
+      "source": "Blackburrow drop",
+      "damage": 6,
+      "delay": 30,
+      "weight": 3.5,
+      "size": "Small",
+      "effect": "Knee Shot (Req Level 15)",
+      "classes": [
+        "warrior",
+        "ranger",
+        "rogue"
+      ]
     },
     {
       "id": "item:shiny-brass-shield",
@@ -129771,7 +130057,24 @@
       "slots": [
         "Chest"
       ],
-      "source": "Emperor Crush (Crushbone)"
+      "source": "Emperor Crush (Crushbone)",
+      "ac": 12,
+      "resists": {
+        "fire": 8,
+        "cold": 8,
+        "magic": 8
+      },
+      "weight": 4.5,
+      "size": "Medium",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "bard",
+        "rogue"
+      ]
     },
     {
       "id": "item:flowing-black-robe",
@@ -129782,7 +130085,21 @@
       "slots": [
         "Chest"
       ],
-      "source": "Najena (Najena)"
+      "source": "Najena (Najena)",
+      "ac": 8,
+      "stats": {
+        "sta": 5,
+        "int": 3
+      },
+      "effect": "Reanimation Efficiency I (Focus)",
+      "weight": 3.5,
+      "size": "Medium",
+      "classes": [
+        "necromancer",
+        "wizard",
+        "magician",
+        "enchanter"
+      ]
     },
     {
       "id": "item:black-tome-with-silver-runes",
@@ -136591,7 +136908,7 @@
       "label": "Guard Leif",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 39,
       "maxLevel": 39
@@ -136601,7 +136918,7 @@
       "label": "Guard Royt",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136631,7 +136948,7 @@
       "label": "Guard Karl",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 39,
       "maxLevel": 39
@@ -136641,7 +136958,7 @@
       "label": "Guard Dagur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136671,7 +136988,7 @@
       "label": "Guard Teitur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136681,7 +136998,7 @@
       "label": "Guard Bergur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 37,
       "maxLevel": 37
@@ -136691,7 +137008,7 @@
       "label": "Guard Clorn",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136701,7 +137018,7 @@
       "label": "Guard Tinna",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136741,7 +137058,7 @@
       "label": "Guard Valdis",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136781,7 +137098,7 @@
       "label": "Guard Iris",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -136801,7 +137118,7 @@
       "label": "Guard Kilandur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 39,
       "maxLevel": 39
@@ -136811,7 +137128,7 @@
       "label": "Guard Baldvin",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 38,
       "maxLevel": 38
@@ -136821,7 +137138,7 @@
       "label": "Guard Bjorn",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136831,7 +137148,7 @@
       "label": "Guard Pert",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136841,7 +137158,7 @@
       "label": "Guard Dobbs",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136851,7 +137168,7 @@
       "label": "Guard Eirikur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 38,
       "maxLevel": 38
@@ -136861,7 +137178,7 @@
       "label": "Guard Suuna",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 38,
       "maxLevel": 38
@@ -136871,7 +137188,7 @@
       "label": "Guard Rakel",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136881,7 +137198,7 @@
       "label": "Guard Elin",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136891,7 +137208,7 @@
       "label": "Guard Thorbin",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 40,
       "maxLevel": 40
@@ -136901,7 +137218,7 @@
       "label": "Guard Kristrun",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 35
@@ -136911,7 +137228,7 @@
       "label": "Guard Larus",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 37,
       "maxLevel": 37
@@ -136921,7 +137238,7 @@
       "label": "Guard Halldor",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 39,
       "maxLevel": 39
@@ -136931,7 +137248,7 @@
       "label": "Guard Oskar",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 38,
       "maxLevel": 38
@@ -136941,7 +137258,7 @@
       "label": "Guard Audun",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 36,
       "maxLevel": 36
@@ -136951,7 +137268,7 @@
       "label": "Guard Sigrun",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 38,
       "maxLevel": 38
@@ -136961,7 +137278,7 @@
       "label": "Guard Gord",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136971,7 +137288,7 @@
       "label": "Guard Mason",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136981,7 +137298,7 @@
       "label": "Guard Enre",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -136991,7 +137308,7 @@
       "label": "Guard Eyvindur",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 37,
       "maxLevel": 37
@@ -137001,7 +137318,7 @@
       "label": "Guard Fjola",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 35,
       "maxLevel": 39
@@ -137051,7 +137368,7 @@
       "label": "Guard Jonas",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 37,
       "maxLevel": 37
@@ -140964,7 +141281,7 @@
       "label": "Guard McSprayel",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 51,
       "maxLevel": 51
@@ -140974,7 +141291,7 @@
       "label": "Guard McStinkles",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 50,
       "maxLevel": 50
@@ -140984,7 +141301,7 @@
       "label": "Guard Roses",
       "type": "npc",
       "roles": [
-        "mob"
+        "guard"
       ],
       "minLevel": 52,
       "maxLevel": 52
@@ -144334,6 +144651,3368 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "npc:trakanon-s-teeth:a-human-skeleton",
+      "label": "A human skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:trakanon-s-teeth:a-stonegazer-cockatrice",
+      "label": "A stonegazer cockatrice",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:trakanon-s-teeth:a-stoneleer-cockatrice",
+      "label": "A stoneleer cockatrice",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:trakanon-s-teeth:bloodeye",
+      "label": "Bloodeye",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:champion-arlek",
+      "label": "Champion Arlek",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:champion-thenrin",
+      "label": "Champion Thenrin",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:commander-sils",
+      "label": "Commander Sils",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:crusader-zoglic",
+      "label": "Crusader Zoglic",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:doom",
+      "label": "Doom",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:trakanon-s-teeth:dragontail",
+      "label": "Dragontail",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:trakanon-s-teeth:dreadlord-fanrik",
+      "label": "Dreadlord Fanrik",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:ebon-lotus",
+      "label": "Ebon Lotus",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:erollisi-mantrap",
+      "label": "Erollisi Mantrap",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:trakanon-s-teeth:fallen-iksar",
+      "label": "Fallen Iksar",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:trakanon-s-teeth:ffroaak",
+      "label": "Ffroaak",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:flayhte",
+      "label": "Flayhte",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-forager",
+      "label": "Froglok Forager",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-hunter",
+      "label": "Froglok hunter",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-shin-knight",
+      "label": "Froglok Shin Knight",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-shin-warrior",
+      "label": "Froglok Shin Warrior",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 32,
+      "maxLevel": 32
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-tal-shaman",
+      "label": "Froglok Tal Shaman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-urd-shaman",
+      "label": "Froglok urd shaman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-vis-knight",
+      "label": "Froglok Vis Knight",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-wan-knight",
+      "label": "Froglok Wan Knight",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 41
+    },
+    {
+      "id": "npc:trakanon-s-teeth:froglok-yun-shaman",
+      "label": "Froglok yun shaman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 41
+    },
+    {
+      "id": "npc:trakanon-s-teeth:hangman",
+      "label": "Hangman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:harbinger-dronik",
+      "label": "Harbinger Dronik",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:harbinger-josk",
+      "label": "Harbinger Josk",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:hierophant-ixyl",
+      "label": "Hierophant Ixyl",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:iksar-mercenary",
+      "label": "Iksar mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:trakanon-s-teeth:iksar-treasure-hunter",
+      "label": "Iksar treasure hunter",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:trakanon-s-teeth:mad-kaiaren",
+      "label": "Mad Kaiaren",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 52,
+      "maxLevel": 52
+    },
+    {
+      "id": "npc:trakanon-s-teeth:sane-kaiaren",
+      "label": "Sane Kaiaren",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 52,
+      "maxLevel": 52
+    },
+    {
+      "id": "npc:trakanon-s-teeth:keeper-lasnik",
+      "label": "Keeper Lasnik",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:keeper-sepsis",
+      "label": "Keeper Sepsis",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:klok-denris",
+      "label": "Klok Denris",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:knight-dragol",
+      "label": "Knight Dragol",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:oracle-froskil",
+      "label": "Oracle Froskil",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:pained-soul",
+      "label": "Pained Soul",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 43,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:trakanon-s-teeth:partisan-yinlen",
+      "label": "Partisan Yinlen",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:sabretooth-tigress",
+      "label": "Sabretooth Tigress",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 30,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:trakanon-s-teeth:sigra",
+      "label": "Sigra",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:trakanon-s-teeth:silvermane",
+      "label": "Silvermane",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-champion",
+      "label": "Spectral Champion",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-commander",
+      "label": "Spectral Commander",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 44,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-footman",
+      "label": "Spectral footman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-keeper",
+      "label": "Spectral keeper",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-legionnaire",
+      "label": "Spectral Legionnaire",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:trakanon-s-teeth:spectral-partisan",
+      "label": "Spectral partisan",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 31,
+      "maxLevel": 31
+    },
+    {
+      "id": "npc:trakanon-s-teeth:squire-glik",
+      "label": "Squire Glik",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:stonebeak",
+      "label": "Stonebeak",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:trakanon-s-teeth:throkkok",
+      "label": "Throkkok",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:trakanon-s-teeth:thruke",
+      "label": "Thruke",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:titail-sinok",
+      "label": "Titail Sinok",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:trakanon-s-teeth:trakanasaurus-rex",
+      "label": "Trakanasaurus Rex",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:trakanon-s-teeth:undead-keeper",
+      "label": "Undead keeper",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:trakanon-s-teeth:vessel-fryn",
+      "label": "Vessel Fryn",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:kaesora:spectral-librarian",
+      "label": "Spectral librarian",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:hungered-ravener",
+      "label": "Hungered Ravener",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:failed-crypt-raider",
+      "label": "Failed crypt raider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:kaesora:reaver-of-xalgoz",
+      "label": "Reaver of Xalgoz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:kaesora:warder-of-xalgoz",
+      "label": "Warder of Xalgoz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:kaesora:xalgoz",
+      "label": "Xalgoz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 40,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:kaesora:strathbone-runelord",
+      "label": "Strathbone Runelord",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:kaesora:frenzied-strathbone",
+      "label": "Frenzied Strathbone",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:kaesora:guardian-of-xalgoz",
+      "label": "Guardian Of Xalgoz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:kaesora:spectral-guardian",
+      "label": "Spectral Guardian",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 30,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:skeletal-guardian",
+      "label": "Skeletal Guardian",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:kaesora:bristleweb-spider",
+      "label": "Bristleweb Spider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 32
+    },
+    {
+      "id": "npc:kaesora:strathbone-healer",
+      "label": "Strathbone Healer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 30,
+      "maxLevel": 30
+    },
+    {
+      "id": "npc:kaesora:skeletal-warder",
+      "label": "Skeletal Warder",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:kaesora:skeletal-minion",
+      "label": "Skeletal Minion",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:kaesora:minion-of-xalgoz",
+      "label": "Minion of Xalgoz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 31,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:famished-ravener",
+      "label": "Famished ravener",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:kaesora:ravener",
+      "label": "Ravener",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:kaesora:a-frenzied-gnawer",
+      "label": "A frenzied gnawer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:kaesora:gorged-ravener",
+      "label": "Gorged ravener",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 32,
+      "maxLevel": 32
+    },
+    {
+      "id": "npc:kaesora:enraged-ravener",
+      "label": "Enraged ravener",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:kaesora:enraged-spectral-librarian",
+      "label": "Enraged spectral librarian",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:a-freed-soul",
+      "label": "A Freed Soul",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 1,
+      "maxLevel": 1
+    },
+    {
+      "id": "npc:kaesora:briarweb-spider",
+      "label": "Briarweb spider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 32,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kaesora:strathbone-spider",
+      "label": "Strathbone spider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 30,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:dragon-necropolis:a-carrion-bat",
+      "label": "A Carrion Bat",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chelaki",
+      "label": "A Chelaki",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 53,
+      "maxLevel": 53
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-adolescent",
+      "label": "A Chetari adolescent",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 46,
+      "maxLevel": 46
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-darkling",
+      "label": "A Chetari darkling",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-deathbinder",
+      "label": "A Chetari Deathbinder",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-deathshaper",
+      "label": "A Chetari Deathshaper",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 57,
+      "maxLevel": 57
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-dominator",
+      "label": "A Chetari Dominator",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-dustshaper",
+      "label": "A Chetari dustshaper",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 57,
+      "maxLevel": 57
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-guard",
+      "label": "A Chetari Guard",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 58
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-hoarder",
+      "label": "A Chetari Hoarder",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 62
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-hunter",
+      "label": "A Chetari Hunter",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-master",
+      "label": "A Chetari Master",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-neophyte",
+      "label": "A Chetari neophyte",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 52
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-packrat",
+      "label": "A Chetari Packrat",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 62,
+      "maxLevel": 62
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-runemage",
+      "label": "A Chetari runemage",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-scavenger",
+      "label": "A Chetari Scavenger",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-seeker",
+      "label": "A Chetari seeker",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 59
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-servant",
+      "label": "A Chetari Servant",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-warrior",
+      "label": "A Chetari Warrior",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 58,
+      "maxLevel": 58
+    },
+    {
+      "id": "npc:dragon-necropolis:a-chetari-worker",
+      "label": "A Chetari Worker",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dragon-necropolis:a-dragon-construct",
+      "label": "A Dragon Construct",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:dragon-necropolis:a-lava-keeper",
+      "label": "A lava keeper",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:dragon-necropolis:a-paebala-rebel",
+      "label": "A Paebala Rebel",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:dragon-necropolis:a-paebala-spirit-talker",
+      "label": "A Paebala Spirit Talker",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 54,
+      "maxLevel": 58
+    },
+    {
+      "id": "npc:dragon-necropolis:a-paebala-warrior",
+      "label": "A Paebala Warrior",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:dragon-necropolis:a-phase-spider",
+      "label": "A phase spider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 51
+    },
+    {
+      "id": "npc:dragon-necropolis:a-swarming-beetle",
+      "label": "A swarming beetle",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dragon-necropolis:a-voracious-hatchling",
+      "label": "A voracious hatchling",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dragon-necropolis:an-amorphous-mass",
+      "label": "An Amorphous Mass",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:dragon-necropolis:an-entropy-serpent",
+      "label": "An Entropy Serpent",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 54,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:dragon-necropolis:an-escaped-worker",
+      "label": "An escaped worker",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:dragon-necropolis:chetari-courier",
+      "label": "Chetari Courier",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:dragon-necropolis:dominator-yisaki",
+      "label": "Dominator Yisaki",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:dralliw-tar",
+      "label": "Dralliw`tar",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 59,
+      "maxLevel": 59
+    },
+    {
+      "id": "npc:dragon-necropolis:dustbinder-grakina",
+      "label": "Dustbinder Grakina",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:garzicor-s-corpse",
+      "label": "Garzicor's Corpse",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:dragon-necropolis:garzicor-s-wraith",
+      "label": "Garzicor's Wraith",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:jaled-dar-s-shade",
+      "label": "Jaled Dar`s Shade",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 70,
+      "maxLevel": 70
+    },
+    {
+      "id": "npc:dragon-necropolis:pierre",
+      "label": "Pierre",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:queen-raltaas",
+      "label": "Queen Raltaas",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 66,
+      "maxLevel": 66
+    },
+    {
+      "id": "npc:dragon-necropolis:seeker-bulava",
+      "label": "Seeker Bulava",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:vaniki",
+      "label": "Vaniki",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 66,
+      "maxLevel": 66
+    },
+    {
+      "id": "npc:dragon-necropolis:vilefang",
+      "label": "Vilefang",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dragon-necropolis:warmaster-utvara",
+      "label": "Warmaster Utvara",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:city-of-mist:a-black-reaver",
+      "label": "A black reaver",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 52
+    },
+    {
+      "id": "npc:city-of-mist:lord-rak-ashiir",
+      "label": "Lord Rak`Ashiir",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 54,
+      "maxLevel": 54
+    },
+    {
+      "id": "npc:city-of-mist:lord-ghiosk",
+      "label": "Lord Ghiosk",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 53,
+      "maxLevel": 53
+    },
+    {
+      "id": "npc:city-of-mist:neh-ashiir",
+      "label": "Neh`Ashiir",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 54,
+      "maxLevel": 54
+    },
+    {
+      "id": "npc:city-of-mist:wraith-of-jaxion",
+      "label": "Wraith of Jaxion",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:city-of-mist:an-army-behemoth",
+      "label": "An army behemoth",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 42
+    },
+    {
+      "id": "npc:city-of-mist:spectral-courier",
+      "label": "Spectral courier",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:city-of-mist:gyrating-goo",
+      "label": "Gyrating goo",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:city-of-mist:a-phantom",
+      "label": "A phantom",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:city-of-mist:greater-plaguebone",
+      "label": "Greater plaguebone",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:city-of-mist:a-haze-golem",
+      "label": "A haze golem",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:city-of-mist:a-vapor-golem",
+      "label": "A vapor golem",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:city-of-mist:a-fog-golem",
+      "label": "A fog golem",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:city-of-mist:greater-spurbone",
+      "label": "Greater Spurbone",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:city-of-mist:an-apparition",
+      "label": "An apparition",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:city-of-mist:a-wraith",
+      "label": "A wraith",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 46
+    },
+    {
+      "id": "npc:city-of-mist:a-mist-golem",
+      "label": "A mist golem",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 46
+    },
+    {
+      "id": "npc:city-of-mist:plaguebone-skeleton",
+      "label": "Plaguebone skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:city-of-mist:spurbone-skeleton",
+      "label": "Spurbone skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 31,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:city-of-mist:captain-of-the-guard",
+      "label": "Captain of the Guard",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:city-of-mist:a-human-skeleton",
+      "label": "A human skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:city-of-mist:a-shadow",
+      "label": "A shadow",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:city-of-mist:greater-war-boned-skeleton",
+      "label": "Greater war boned skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 46
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-soothsayer",
+      "label": "A Goblin Soothsayer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 20,
+      "maxLevel": 21
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-battlemaster",
+      "label": "A goblin battlemaster",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 14,
+      "maxLevel": 16
+    },
+    {
+      "id": "npc:warsliks-woods:a-forest-giant-evergreen",
+      "label": "A Forest Giant Evergreen",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 22,
+      "maxLevel": 27
+    },
+    {
+      "id": "npc:warsliks-woods:a-skulking-brute",
+      "label": "A Skulking Brute",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 22,
+      "maxLevel": 25
+    },
+    {
+      "id": "npc:warsliks-woods:a-forest-giant-greenwood",
+      "label": "A Forest Giant Greenwood",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 19,
+      "maxLevel": 23
+    },
+    {
+      "id": "npc:warsliks-woods:a-skulking-brutling",
+      "label": "A Skulking Brutling",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 13,
+      "maxLevel": 13
+    },
+    {
+      "id": "npc:warsliks-woods:a-forest-giant-sapling",
+      "label": "A Forest Giant Sapling",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 17,
+      "maxLevel": 19
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-skirmisher",
+      "label": "A Goblin Skirmisher",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 12,
+      "maxLevel": 12
+    },
+    {
+      "id": "npc:warsliks-woods:a-forest-giant",
+      "label": "A Forest Giant",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 20,
+      "maxLevel": 20
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-scout",
+      "label": "A Goblin Scout",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 2,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-witchdoctor",
+      "label": "A Goblin Witchdoctor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 13,
+      "maxLevel": 15
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-watcher",
+      "label": "A Goblin Watcher",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 3,
+      "maxLevel": 5
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-hextracer",
+      "label": "A Goblin Hextracer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 7,
+      "maxLevel": 8
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-bloodtracer",
+      "label": "A goblin bloodtracer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 18,
+      "maxLevel": 18
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-pit-fighter",
+      "label": "A goblin pit fighter",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 16,
+      "maxLevel": 16
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-outrider",
+      "label": "A goblin outrider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 5,
+      "maxLevel": 6
+    },
+    {
+      "id": "npc:warsliks-woods:a-scaled-wolf-cub",
+      "label": "A scaled wolf cub",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 2,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:warsliks-woods:a-scaled-wolf-pup",
+      "label": "A scaled wolf pup",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 1,
+      "maxLevel": 1
+    },
+    {
+      "id": "npc:warsliks-woods:a-pygmy-skulking-brute",
+      "label": "A pygmy skulking brute",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 18,
+      "maxLevel": 18
+    },
+    {
+      "id": "npc:warsliks-woods:a-decaying-skeleton",
+      "label": "A decaying skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 1,
+      "maxLevel": 1
+    },
+    {
+      "id": "npc:warsliks-woods:a-skeleton",
+      "label": "A skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 4,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-whelp",
+      "label": "A Goblin Whelp",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 1,
+      "maxLevel": 1
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-thief",
+      "label": "A goblin thief",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 4,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:warsliks-woods:a-shady-goblin",
+      "label": "A shady goblin",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 40,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:warsliks-woods:a-scaled-wolf-elder",
+      "label": "A scaled wolf elder",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 22,
+      "maxLevel": 22
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-bonecaster",
+      "label": "A goblin bonecaster",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 10,
+      "maxLevel": 10
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-agressor",
+      "label": "A goblin agressor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 19,
+      "maxLevel": 19
+    },
+    {
+      "id": "npc:warsliks-woods:a-goblin-brawler",
+      "label": "A goblin brawler",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 13,
+      "maxLevel": 15
+    },
+    {
+      "id": "npc:warsliks-woods:a-skulking-runtling",
+      "label": "A Skulking runtling",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 7,
+      "maxLevel": 9
+    },
+    {
+      "id": "npc:warsliks-woods:grachnist-the-destroyer",
+      "label": "Grachnist the Destroyer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 32,
+      "maxLevel": 32
+    },
+    {
+      "id": "npc:warsliks-woods:warlord-vyzer",
+      "label": "Warlord Vyzer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 51,
+      "maxLevel": 51
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-bandit",
+      "label": "An Iksar Bandit",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 8,
+      "maxLevel": 10
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-marauder",
+      "label": "An iksar marauder",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 14,
+      "maxLevel": 16
+    },
+    {
+      "id": "npc:warsliks-woods:iksar-bandit-lord",
+      "label": "Iksar Bandit Lord",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 31,
+      "maxLevel": 31
+    },
+    {
+      "id": "npc:warsliks-woods:goblin-spirit-caller",
+      "label": "Goblin Spirit Caller",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 22,
+      "maxLevel": 24
+    },
+    {
+      "id": "npc:warsliks-woods:iksar-pariah",
+      "label": "Iksar Pariah",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 19,
+      "maxLevel": 19
+    },
+    {
+      "id": "npc:warsliks-woods:crusader-eaxl",
+      "label": "Crusader Eaxl",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:crusader-myxl",
+      "label": "Crusader Myxl",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-manslayer",
+      "label": "An Iksar Manslayer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 18,
+      "maxLevel": 19
+    },
+    {
+      "id": "npc:warsliks-woods:pit-fighter-dob",
+      "label": "Pit Fighter Dob",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-brigand",
+      "label": "An iksar brigand",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 11,
+      "maxLevel": 13
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-footpad",
+      "label": "An iksar footpad",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 5,
+      "maxLevel": 5
+    },
+    {
+      "id": "npc:warsliks-woods:iksar-exile",
+      "label": "Iksar exile",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 22,
+      "maxLevel": 26
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-roklon",
+      "label": "Trooper Roklon",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:an-iksar-knight",
+      "label": "An iksar knight",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 21,
+      "maxLevel": 21
+    },
+    {
+      "id": "npc:warsliks-woods:skeleton",
+      "label": "Skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 4,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-agash",
+      "label": "Trooper Agash",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-gepwyz",
+      "label": "Trooper Gepwyz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-kroniz",
+      "label": "Trooper Kroniz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-lunmiz",
+      "label": "Trooper Lunmiz",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-melzok",
+      "label": "Trooper Melzok",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-olon",
+      "label": "Trooper Olon",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-syldon",
+      "label": "Trooper Syldon",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:warsliks-woods:trooper-walrun",
+      "label": "Trooper Walrun",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:the-wakening-land:a-geonid",
+      "label": "A Geonid",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 44,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:the-wakening-land:a-tar-goo",
+      "label": "A Tar Goo",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 40,
+      "maxLevel": 44
+    },
+    {
+      "id": "npc:the-wakening-land:a-suit-of-sentient-armor",
+      "label": "A suit of sentient armor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 43,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:the-wakening-land:a-holgresh-conjurer",
+      "label": "A Holgresh Conjurer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:the-wakening-land:a-frost-giant-laborer",
+      "label": "A Frost Giant Laborer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:the-wakening-land:a-drixie-thane",
+      "label": "A Drixie Thane",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:the-wakening-land:a-geonid-shaman",
+      "label": "A geonid shaman",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 46,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:the-wakening-land:a-frost-giant-sentinel",
+      "label": "A Frost Giant Sentinel",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:the-wakening-land:a-storm-giant-architect",
+      "label": "A storm giant architect",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:the-wakening-land:a-corrupted-faun",
+      "label": "A corrupted faun",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:the-wakening-land:a-corrupted-panther",
+      "label": "A corrupted panther",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 55,
+      "maxLevel": 55
+    },
+    {
+      "id": "npc:the-wakening-land:a-corrupted-unicorn",
+      "label": "A corrupted unicorn",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:the-wakening-land:a-tigeraptor",
+      "label": "A tigeraptor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:a-holgresh-elementalist",
+      "label": "A holgresh elementalist",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:the-wakening-land:a-storm-giant-surveyor",
+      "label": "A storm giant surveyor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:the-wakening-land:a-frost-giant-sentry",
+      "label": "A frost giant sentry",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 39
+    },
+    {
+      "id": "npc:the-wakening-land:a-holgresh-raider",
+      "label": "A holgresh raider",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:the-wakening-land:a-panther",
+      "label": "A panther",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:a-haze-panther",
+      "label": "A haze panther",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 41
+    },
+    {
+      "id": "npc:the-wakening-land:a-unicorn",
+      "label": "A unicorn",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:a-wounded-storm-giant",
+      "label": "A wounded storm giant",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 44,
+      "maxLevel": 44
+    },
+    {
+      "id": "npc:the-wakening-land:a-sifaye-thane",
+      "label": "A Sifaye Thane",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:the-wakening-land:a-sifaye-troubadour",
+      "label": "A Sifaye troubadour",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:a-sifaye-knight",
+      "label": "A sifaye knight",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:a-tigesaurous",
+      "label": "A tigesaurous",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:the-wakening-land:a-faun",
+      "label": "A Faun",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:the-wakening-land:accolyte-of-zek",
+      "label": "Accolyte of Zek",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 50,
+      "maxLevel": 50
+    },
+    {
+      "id": "npc:the-wakening-land:a-shimmering-geonid",
+      "label": "A shimmering geonid",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 48,
+      "maxLevel": 48
+    },
+    {
+      "id": "npc:the-wakening-land:an-elder-holgresh",
+      "label": "An elder holgresh",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:mist-panther",
+      "label": "Mist Panther",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:the-wakening-land:frostgiant-overseer",
+      "label": "Frostgiant Overseer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:the-wakening-land:priest-bjek",
+      "label": "Priest Bjek",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:the-wakening-land:priest-delar",
+      "label": "Priest Delar",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:the-wakening-land:priest-grenk",
+      "label": "Priest Grenk",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 56,
+      "maxLevel": 56
+    },
+    {
+      "id": "npc:the-wakening-land:tomekeeper-bjordnessin",
+      "label": "Tomekeeper Bjordnessin",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:the-wakening-land:korzak-stonehammer",
+      "label": "Korzak Stonehammer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:wuoshi",
+      "label": "Wuoshi",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 64,
+      "maxLevel": 64
+    },
+    {
+      "id": "npc:the-wakening-land:grand-vizier-poolakacha-tei",
+      "label": "Grand Vizier Poolakacha`tei",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 45,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:the-wakening-land:rapticor",
+      "label": "Rapticor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 42
+    },
+    {
+      "id": "npc:the-wakening-land:lieutenant-krofer",
+      "label": "Lieutenant Krofer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 47
+    },
+    {
+      "id": "npc:the-wakening-land:phenocryst",
+      "label": "Phenocryst",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 58,
+      "maxLevel": 58
+    },
+    {
+      "id": "npc:the-wakening-land:teir-dal-mercenary",
+      "label": "Teir`Dal Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:barbarian-mercenary",
+      "label": "Barbarian Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:troll-mercenary",
+      "label": "Troll Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:gnome-mercenary",
+      "label": "Gnome Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:human-mercenary",
+      "label": "Human Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:the-wakening-land:ogre-mercenary",
+      "label": "Ogre Mercenary",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 38,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:the-wakening-land:rolandal",
+      "label": "Rolandal",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:the-wakening-land:felisiana-of-tunare",
+      "label": "Felisiana of Tunare",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 44,
+      "maxLevel": 46
+    },
+    {
+      "id": "npc:the-wakening-land:toxonomist-drorjon",
+      "label": "Toxonomist Drorjon",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 49,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dreadlands:gorenaire",
+      "label": "Gorenaire",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 60,
+      "maxLevel": 60
+    },
+    {
+      "id": "npc:dreadlands:a-mountain-giant-patriarch",
+      "label": "A mountain giant patriarch",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 44,
+      "maxLevel": 44
+    },
+    {
+      "id": "npc:dreadlands:gem-cutter-skeleton",
+      "label": "Gem cutter skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 25,
+      "maxLevel": 25
+    },
+    {
+      "id": "npc:dreadlands:a-drolvarg-snarler",
+      "label": "A Drolvarg Snarler",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 32,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:dreadlands:a-drolvarg-growler",
+      "label": "A Drolvarg Growler",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:dreadlands:a-tundra-yeti",
+      "label": "A Tundra Yeti",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 31,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:dreadlands:a-drolvarg-rager",
+      "label": "A Drolvarg Rager",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 41
+    },
+    {
+      "id": "npc:dreadlands:greater-plaguebone",
+      "label": "Greater plaguebone",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 39,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:dreadlands:rotting-skeleton",
+      "label": "Rotting skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 43,
+      "maxLevel": 43
+    },
+    {
+      "id": "npc:dreadlands:a-drolvarg-gnasher",
+      "label": "A Drolvarg Gnasher",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 34,
+      "maxLevel": 38
+    },
+    {
+      "id": "npc:dreadlands:a-glacier-yeti",
+      "label": "A Glacier Yeti",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:a-dread-widow",
+      "label": "A dread widow",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 47,
+      "maxLevel": 49
+    },
+    {
+      "id": "npc:dreadlands:greater-spurbone",
+      "label": "Greater Spurbone",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:a-drachnid-recluse",
+      "label": "A Drachnid Recluse",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:a-drachnid-webmaster",
+      "label": "A Drachnid Webmaster",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:dreadlands:a-drachnid-widow",
+      "label": "A Drachnid Widow",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:a-mountain-giant-craig",
+      "label": "A Mountain Giant Craig",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:dreadlands:a-mountain-giant-brae",
+      "label": "A mountain giant brae",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 30,
+      "maxLevel": 34
+    },
+    {
+      "id": "npc:dreadlands:a-mountain-giant-steep",
+      "label": "A Mountain Giant Steep",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:plaguebone-skeleton",
+      "label": "Plaguebone skeleton",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:dreadlands:a-ravishing-drolvarg",
+      "label": "A Ravishing Drolvarg",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 40,
+      "maxLevel": 44
+    },
+    {
+      "id": "npc:dreadlands:a-plaguebone-thief",
+      "label": "A Plaguebone Thief",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:dreadlands:a-voracious-brute",
+      "label": "A Voracious Brute",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 36,
+      "maxLevel": 40
+    },
+    {
+      "id": "npc:dreadlands:a-stonegazer-cockatrice",
+      "label": "A stonegazer cockatrice",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:dreadlands:a-wulfware-lonewolf",
+      "label": "A wulfware lonewolf",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:dreadlands:wraithbone-champion",
+      "label": "Wraithbone champion",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 42,
+      "maxLevel": 45
+    },
+    {
+      "id": "npc:dreadlands:a-stoneleer-cockatrice",
+      "label": "A stoneleer cockatrice",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 29,
+      "maxLevel": 33
+    },
+    {
+      "id": "npc:dreadlands:a-petrifier-cockatrice",
+      "label": "A petrifier cockatrice",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 41
+    },
+    {
+      "id": "npc:dreadlands:a-drachnid-silkmistress",
+      "label": "A Drachnid Silkmistress",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 33,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:highpass-hold:the-golden-rooster",
+      "label": "The Golden Rooster",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:tiger-s-roar",
+      "label": "Tiger's Roar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:serpent-supply",
+      "label": "Serpent Supply",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:greenbanes-weapons",
+      "label": "Greenbanes' Weapons",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:the-lumberyard",
+      "label": "The Lumberyard",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:anson-mcbale",
+      "label": "Anson McBale",
+      "type": "npc",
+      "roles": [
+        "guildmaster"
+      ],
+      "minLevel": 61,
+      "maxLevel": 61
+    },
+    {
+      "id": "npc:highpass-hold:cyrla-shadowstepper",
+      "label": "Cyrla Shadowstepper",
+      "type": "npc",
+      "roles": [
+        "guildmaster"
+      ],
+      "minLevel": 61,
+      "maxLevel": 61
+    },
+    {
+      "id": "npc:highpass-hold:a-guard",
+      "label": "A Guard",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 20,
+      "maxLevel": 36
+    },
+    {
+      "id": "npc:highpass-hold:guard-becker",
+      "label": "Guard Becker",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 23,
+      "maxLevel": 23
+    },
+    {
+      "id": "npc:highpass-hold:guard-stald",
+      "label": "Guard Stald",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 14,
+      "maxLevel": 14
+    },
+    {
+      "id": "npc:highpass-hold:dyllin-starsine",
+      "label": "Dyllin Starsine",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 16,
+      "maxLevel": 16
+    },
+    {
+      "id": "npc:highpass-hold:a-highpass-citizen",
+      "label": "A Highpass Citizen",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 20,
+      "maxLevel": 20
+    },
+    {
+      "id": "npc:highpass-hold:a-smuggler",
+      "label": "A Smuggler",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 12,
+      "maxLevel": 18
+    },
+    {
+      "id": "npc:highpass-hold:volunteer-renlor",
+      "label": "Volunteer Renlor",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 5,
+      "maxLevel": 5
+    },
+    {
+      "id": "npc:highpass-hold:volunteer-delharn",
+      "label": "Volunteer Delharn",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 4,
+      "maxLevel": 4
+    },
+    {
+      "id": "npc:highpass-hold:commander-thafer",
+      "label": "Commander Thafer",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 37,
+      "maxLevel": 37
+    },
+    {
+      "id": "npc:highpass-hold:gublink-furnhorn",
+      "label": "Gublink Furnhorn",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:highpass-hold:malik-zaren",
+      "label": "Malik Zaren",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 16,
+      "maxLevel": 16
+    },
+    {
+      "id": "npc:highpass-hold:jovan",
+      "label": "Jovan",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:highpass-hold:alhareen-the-just",
+      "label": "Alhareen the Just",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ],
+      "minLevel": 61,
+      "maxLevel": 61
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:the-smugglers-inn",
+      "label": "The Smugglers Inn",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead",
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:silk-underground",
+      "label": "Silk Underground",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:dranas-bread-and-butcher",
+      "label": "Dranas Bread and Butcher",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:slug-s-tavern",
+      "label": "Slug's Tavern",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead",
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:gambel-s-greens",
+      "label": "Gambel's Greens",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:pig-stickers",
+      "label": "Pig Stickers",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:bites-n-pieces",
+      "label": "Bites n Pieces",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:shinie-tings",
+      "label": "Shinie Tings",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-tradeskill-goods",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-weapons-1",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-blacksmith-molds",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-armor",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-food-alcohol-1",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead",
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-spells",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:merchant-pvp-goods",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead",
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:guard-v-lask",
+      "label": "Guard V`Lask",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ],
+      "minLevel": 35,
+      "maxLevel": 35
+    },
+    {
+      "id": "npc:kael-drakkal:merchant-arena-tickets-food",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:kael-drakkal:merchant-food-drink-alcohol",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:ration",
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:kael-drakkal:merchant-hide-armor-weapons",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kael-drakkal:merchant-spell-components",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:tanned-assets",
+      "label": "Tanned Assets",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:irontoe-s-eats",
+      "label": "Irontoe's Eats",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead",
+        "item:ration"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:didek-stormhammer",
+      "label": "Didek Stormhammer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:alanury-stormhammer",
+      "label": "Alanury Stormhammer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:redfist-s-metal",
+      "label": "Redfist's Metal",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:hanamaf-darkfoam",
+      "label": "Hanamaf Darkfoam",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:dura-darkfoam",
+      "label": "Dura Darkfoam",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ],
+      "sells": [
+        "item:mead"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:gurtha-s-ware",
+      "label": "Gurtha's Ware",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:merchant-various-weapons",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:merchant-potions-crystals",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:merchant-bags",
+      "label": "?",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:icewell-keep:coldain-outcasts",
+      "label": "Coldain Outcasts",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:erudin-city-office",
+      "label": "Erudin City Office",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:sothures-fine-gems",
+      "label": "Sothure's Fine Gems",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:vials-of-vitality",
+      "label": "Vials of Vitality",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:tower-of-the-crimson-hands",
+      "label": "Tower of the Crimson Hands",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -144359,18 +148038,6 @@
       "id": "e-located-in-4",
       "source": "vendor:east-cabilis:vessel-kabda-temple-of-terror",
       "target": "zone:east-cabilis",
-      "type": "located_in"
-    },
-    {
-      "id": "e-sells-5",
-      "source": "vendor:erudin:killi-frillep-palace-magician-guild",
-      "target": "spell:burst-of-flame",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-6",
-      "source": "vendor:erudin:killi-frillep-palace-magician-guild",
-      "target": "zone:erudin",
       "type": "located_in"
     },
     {
@@ -144594,18 +148261,6 @@
       "source": "vendor:halas:corak-shaman-guild",
       "target": "spell:cure-disease",
       "type": "sells"
-    },
-    {
-      "id": "e-sells-50",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
-      "target": "spell:cure-disease",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-51",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
-      "target": "zone:new-sebilis-expedition",
-      "type": "located_in"
     },
     {
       "id": "e-sells-52",
@@ -144934,12 +148589,6 @@
     {
       "id": "e-sells-107",
       "source": "vendor:halas:corak-shaman-guild",
-      "target": "spell:endure-cold",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-114",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
       "target": "spell:endure-cold",
       "type": "sells"
     },
@@ -145562,18 +149211,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-221",
-      "source": "vendor:erudin:vellenon-harrance-palace-enchanter-guild",
-      "target": "spell:strengthen",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-222",
-      "source": "vendor:erudin:vellenon-harrance-palace-enchanter-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-223",
       "source": "vendor:grobb:tokun-troll-shaman-guild",
       "target": "spell:strengthen",
@@ -145680,18 +149317,6 @@
       "source": "vendor:erudin:syra-printell-cleric-guild-quellious",
       "target": "spell:true-north",
       "type": "sells"
-    },
-    {
-      "id": "e-sells-243",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
-      "target": "spell:true-north",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-244",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
     },
     {
       "id": "e-sells-245",
@@ -146056,12 +149681,6 @@
     {
       "id": "e-sells-309",
       "source": "vendor:erudin:syra-printell-cleric-guild-quellious",
-      "target": "spell:summon-drink",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-310",
-      "source": "vendor:erudin:killi-frillep-palace-magician-guild",
       "target": "spell:summon-drink",
       "type": "sells"
     },
@@ -146534,12 +150153,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-394",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
-      "target": "spell:gate",
-      "type": "sells"
-    },
-    {
       "id": "e-sells-395",
       "source": "vendor:greater-faydark:uleen-laughingwater-kelethin-druid-guild",
       "target": "spell:gate",
@@ -146684,18 +150297,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-421",
-      "source": "vendor:erudin:danilla-delucic-palace-enchanter-guild",
-      "target": "spell:serpent-sight",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-422",
-      "source": "vendor:erudin:danilla-delucic-palace-enchanter-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-425",
       "source": "vendor:oasis-of-marr:gadallion-gypsy-camp",
       "target": "spell:serpent-sight",
@@ -146812,12 +150413,6 @@
     {
       "id": "e-sells-444",
       "source": "vendor:erudin:mertitt-phentilly-cleric-guild-quellious",
-      "target": "spell:summon-food",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-445",
-      "source": "vendor:erudin:killi-frillep-palace-magician-guild",
       "target": "spell:summon-food",
       "type": "sells"
     },
@@ -147154,12 +150749,6 @@
     {
       "id": "e-sells-505",
       "source": "vendor:innothule-swamp:stragak-northern-hand",
-      "target": "spell:endure-disease",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-509",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
       "target": "spell:endure-disease",
       "type": "sells"
     },
@@ -147884,12 +151473,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-635",
-      "source": "vendor:erudin:danilla-delucic-palace-enchanter-guild",
-      "target": "spell:enduring-breath",
-      "type": "sells"
-    },
-    {
       "id": "e-sells-636",
       "source": "vendor:greater-faydark:zelli-starsfire-kelethin-druid-guild",
       "target": "spell:enduring-breath",
@@ -147994,12 +151577,6 @@
     {
       "id": "e-sells-654",
       "source": "vendor:erudin:issibla-belstince-cleric-guild-prexus",
-      "target": "spell:root",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-655",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
       "target": "spell:root",
       "type": "sells"
     },
@@ -148192,12 +151769,6 @@
     {
       "id": "e-sells-689",
       "source": "vendor:erudin:mertitt-phentilly-cleric-guild-quellious",
-      "target": "spell:bind-affinity",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-690",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
       "target": "spell:bind-affinity",
       "type": "sells"
     },
@@ -148472,12 +152043,6 @@
       "type": "located_in"
     },
     {
-      "id": "e-sells-739",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
-      "target": "spell:tiny-companion",
-      "type": "sells"
-    },
-    {
       "id": "e-sells-740",
       "source": "vendor:east-cabilis:grazik-plaguebringer-temple-of-terror-east-tower-basement",
       "target": "spell:insidious-fever",
@@ -148530,18 +152095,6 @@
       "source": "vendor:east-cabilis:vessel-grymm-temple-of-terror",
       "target": "spell:malaise",
       "type": "sells"
-    },
-    {
-      "id": "e-sells-749",
-      "source": "vendor:erudin:kestall-tulenci-palace-magician-guild",
-      "target": "spell:malaise",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-750",
-      "source": "vendor:erudin:kestall-tulenci-palace-magician-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
     },
     {
       "id": "e-sells-751",
@@ -148706,12 +152259,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-780",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
-      "target": "spell:cancel-magic",
-      "type": "sells"
-    },
-    {
       "id": "e-sells-781",
       "source": "vendor:northern-felwithe:celest-palestream-cleric-guild",
       "target": "spell:cancel-magic",
@@ -148744,12 +152291,6 @@
     {
       "id": "e-sells-786",
       "source": "vendor:halas:boraskor-shaman-guild",
-      "target": "spell:cancel-magic",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-789",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
       "target": "spell:cancel-magic",
       "type": "sells"
     },
@@ -149588,12 +153129,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-941",
-      "source": "vendor:new-sebilis-expedition:crusader-silulika-shadow-knight-spells",
-      "target": "spell:resist-cold",
-      "type": "sells"
-    },
-    {
       "id": "e-sells-942",
       "source": "vendor:north-freeport:nosspri-andrika-cleric-guild",
       "target": "spell:resist-cold",
@@ -149870,18 +153405,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-990",
-      "source": "vendor:erudin:estra-nancer-palace-enchanter-guild",
-      "target": "spell:quickness",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-991",
-      "source": "vendor:erudin:estra-nancer-palace-enchanter-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-992",
       "source": "vendor:grobb:cralk-troll-shaman-guild",
       "target": "spell:quickness",
@@ -149962,12 +153485,6 @@
     {
       "id": "e-sells-1007",
       "source": "vendor:east-cabilis:vessel-kirtokk-temple-of-terror",
-      "target": "spell:invisibility",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-1008",
-      "source": "vendor:erudin:telor-beteria-palace-magician-guild",
       "target": "spell:invisibility",
       "type": "sells"
     },
@@ -150356,18 +153873,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-1079",
-      "source": "vendor:erudin:horacia-garnellia-palace-enchanter-guild",
-      "target": "spell:listless-power",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-1080",
-      "source": "vendor:erudin:horacia-garnellia-palace-enchanter-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-1081",
       "source": "vendor:grobb:cralk-troll-shaman-guild",
       "target": "spell:listless-power",
@@ -150590,18 +154095,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-1122",
-      "source": "vendor:new-sebilis-expedition:zealot-zorshais-bank-room",
-      "target": "spell:resist-disease",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-1123",
-      "source": "vendor:new-sebilis-expedition:zealot-zorshais-bank-room",
-      "target": "zone:new-sebilis-expedition",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-1124",
       "source": "vendor:north-freeport:nosspri-andrika-cleric-guild",
       "target": "spell:resist-disease",
@@ -150804,18 +154297,6 @@
       "source": "vendor:east-cabilis:vessel-mortyr-temple-of-terror",
       "target": "spell:malaisement",
       "type": "sells"
-    },
-    {
-      "id": "e-sells-1160",
-      "source": "vendor:erudin:wistcona-palace",
-      "target": "spell:malaisement",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-1161",
-      "source": "vendor:erudin:wistcona-palace",
-      "target": "zone:erudin",
-      "type": "located_in"
     },
     {
       "id": "e-sells-1162",
@@ -151514,18 +154995,6 @@
       "type": "sells"
     },
     {
-      "id": "e-sells-1284",
-      "source": "vendor:erudin:elentar-bealtarik-palace-enchanter-guild",
-      "target": "spell:incapacitate",
-      "type": "sells"
-    },
-    {
-      "id": "e-located-in-1285",
-      "source": "vendor:erudin:elentar-bealtarik-palace-enchanter-guild",
-      "target": "zone:erudin",
-      "type": "located_in"
-    },
-    {
       "id": "e-sells-1286",
       "source": "vendor:grobb:korff-troll-shaman-guild",
       "target": "spell:incapacitate",
@@ -151594,12 +155063,6 @@
     {
       "id": "e-sells-1299",
       "source": "vendor:east-cabilis:vessel-migron-temple-of-terror",
-      "target": "spell:alacrity",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-1300",
-      "source": "vendor:erudin:estra-nancer-palace-enchanter-guild",
       "target": "spell:alacrity",
       "type": "sells"
     },
@@ -151876,12 +155339,6 @@
     {
       "id": "e-sells-1348",
       "source": "vendor:ak-anon:clockwork-merchant-lg-3-library",
-      "target": "spell:celerity",
-      "type": "sells"
-    },
-    {
-      "id": "e-sells-1349",
-      "source": "vendor:erudin:horacia-garnellia-palace-enchanter-guild",
       "target": "spell:celerity",
       "type": "sells"
     },
@@ -177872,7 +181329,7 @@
     {
       "id": "e-008-located_in-30",
       "source": "vendor:erudin-palace:vellenon-harrance",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -177896,7 +181353,7 @@
     {
       "id": "e-008-located_in-34",
       "source": "vendor:erudin-palace:danilla-delucic",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -177920,7 +181377,7 @@
     {
       "id": "e-008-located_in-38",
       "source": "vendor:erudin-palace:killi-frillep",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -178034,7 +181491,7 @@
     {
       "id": "e-008-located_in-58",
       "source": "vendor:erudin-palace:telor-beteria",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -178076,7 +181533,7 @@
     {
       "id": "e-008-located_in-65",
       "source": "vendor:erudin-palace:horacia-garnellia",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -178382,7 +181839,7 @@
     {
       "id": "e-008-located_in-116",
       "source": "vendor:erudin-palace:estra-nancer",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -178544,7 +182001,7 @@
     {
       "id": "e-008-located_in-143",
       "source": "vendor:erudin-palace:onyssa-vroce",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -178886,7 +182343,7 @@
     {
       "id": "e-008-located_in-203",
       "source": "vendor:erudin-palace:tuballi-stellari",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -179132,7 +182589,7 @@
     {
       "id": "e-008-located_in-245",
       "source": "vendor:erudin-palace:wistcona",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -179258,7 +182715,7 @@
     {
       "id": "e-008-located_in-266",
       "source": "vendor:erudin-palace:pinilla",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -179798,7 +183255,7 @@
     {
       "id": "e-008-located_in-359",
       "source": "vendor:erudin-palace:effunic-korett",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -180308,7 +183765,7 @@
     {
       "id": "e-008-located_in-444",
       "source": "vendor:erudin-palace:elentar-bealtarik",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -180842,7 +184299,7 @@
     {
       "id": "e-008-located_in-534",
       "source": "vendor:erudin-palace:kestall-tulenci",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -181604,7 +185061,7 @@
     {
       "id": "e-008-located_in-661",
       "source": "vendor:erudin-palace:gissa-brist",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -181874,7 +185331,7 @@
     {
       "id": "e-008-located_in-706",
       "source": "vendor:erudin-palace:barstall-methinon",
-      "target": "zone:erudin",
+      "target": "zone:erudin-palace",
       "type": "located_in"
     },
     {
@@ -268129,6 +271586,2172 @@
       "source": "npc:crystal-caverns:merchant-supplies-2",
       "target": "item:bandages",
       "type": "sells"
+    },
+    {
+      "id": "e-located_in-20561",
+      "source": "npc:trakanon-s-teeth:a-human-skeleton",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20562",
+      "source": "npc:trakanon-s-teeth:a-stonegazer-cockatrice",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20563",
+      "source": "npc:trakanon-s-teeth:a-stoneleer-cockatrice",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20564",
+      "source": "npc:trakanon-s-teeth:bloodeye",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20565",
+      "source": "npc:trakanon-s-teeth:champion-arlek",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20566",
+      "source": "npc:trakanon-s-teeth:champion-thenrin",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20567",
+      "source": "npc:trakanon-s-teeth:commander-sils",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20568",
+      "source": "npc:trakanon-s-teeth:crusader-zoglic",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20569",
+      "source": "npc:trakanon-s-teeth:doom",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20570",
+      "source": "npc:trakanon-s-teeth:dragontail",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20571",
+      "source": "npc:trakanon-s-teeth:dreadlord-fanrik",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20572",
+      "source": "npc:trakanon-s-teeth:ebon-lotus",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20573",
+      "source": "npc:trakanon-s-teeth:erollisi-mantrap",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20574",
+      "source": "npc:trakanon-s-teeth:fallen-iksar",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20575",
+      "source": "npc:trakanon-s-teeth:ffroaak",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20576",
+      "source": "npc:trakanon-s-teeth:flayhte",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20577",
+      "source": "npc:trakanon-s-teeth:froglok-forager",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20578",
+      "source": "npc:trakanon-s-teeth:froglok-hunter",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20579",
+      "source": "npc:trakanon-s-teeth:froglok-shin-knight",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20580",
+      "source": "npc:trakanon-s-teeth:froglok-shin-warrior",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20581",
+      "source": "npc:trakanon-s-teeth:froglok-tal-shaman",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20582",
+      "source": "npc:trakanon-s-teeth:froglok-urd-shaman",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20583",
+      "source": "npc:trakanon-s-teeth:froglok-vis-knight",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20584",
+      "source": "npc:trakanon-s-teeth:froglok-wan-knight",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20585",
+      "source": "npc:trakanon-s-teeth:froglok-yun-shaman",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20586",
+      "source": "npc:trakanon-s-teeth:hangman",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20587",
+      "source": "npc:trakanon-s-teeth:harbinger-dronik",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20588",
+      "source": "npc:trakanon-s-teeth:harbinger-josk",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20589",
+      "source": "npc:trakanon-s-teeth:hierophant-ixyl",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20590",
+      "source": "npc:trakanon-s-teeth:iksar-mercenary",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20591",
+      "source": "npc:trakanon-s-teeth:iksar-treasure-hunter",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20592",
+      "source": "npc:trakanon-s-teeth:mad-kaiaren",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20593",
+      "source": "npc:trakanon-s-teeth:sane-kaiaren",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20594",
+      "source": "npc:trakanon-s-teeth:keeper-lasnik",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20595",
+      "source": "npc:trakanon-s-teeth:keeper-sepsis",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20596",
+      "source": "npc:trakanon-s-teeth:klok-denris",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20597",
+      "source": "npc:trakanon-s-teeth:knight-dragol",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20598",
+      "source": "npc:trakanon-s-teeth:oracle-froskil",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20599",
+      "source": "npc:trakanon-s-teeth:pained-soul",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20600",
+      "source": "npc:trakanon-s-teeth:partisan-yinlen",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20601",
+      "source": "npc:trakanon-s-teeth:sabretooth-tigress",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20602",
+      "source": "npc:trakanon-s-teeth:sigra",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20603",
+      "source": "npc:trakanon-s-teeth:silvermane",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20604",
+      "source": "npc:trakanon-s-teeth:spectral-champion",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20605",
+      "source": "npc:trakanon-s-teeth:spectral-commander",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20606",
+      "source": "npc:trakanon-s-teeth:spectral-footman",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20607",
+      "source": "npc:trakanon-s-teeth:spectral-keeper",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20608",
+      "source": "npc:trakanon-s-teeth:spectral-legionnaire",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20609",
+      "source": "npc:trakanon-s-teeth:spectral-partisan",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20610",
+      "source": "npc:trakanon-s-teeth:squire-glik",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20611",
+      "source": "npc:trakanon-s-teeth:stonebeak",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20612",
+      "source": "npc:trakanon-s-teeth:throkkok",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20613",
+      "source": "npc:trakanon-s-teeth:thruke",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20614",
+      "source": "npc:trakanon-s-teeth:titail-sinok",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20615",
+      "source": "npc:trakanon-s-teeth:trakanasaurus-rex",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20616",
+      "source": "npc:trakanon-s-teeth:undead-keeper",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20617",
+      "source": "npc:trakanon-s-teeth:vessel-fryn",
+      "target": "zone:trakanon-s-teeth",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20618",
+      "source": "npc:kaesora:spectral-librarian",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20619",
+      "source": "npc:kaesora:hungered-ravener",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20620",
+      "source": "npc:kaesora:failed-crypt-raider",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20621",
+      "source": "npc:kaesora:reaver-of-xalgoz",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20622",
+      "source": "npc:kaesora:warder-of-xalgoz",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20623",
+      "source": "npc:kaesora:xalgoz",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20624",
+      "source": "npc:kaesora:strathbone-runelord",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20625",
+      "source": "npc:kaesora:frenzied-strathbone",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20626",
+      "source": "npc:kaesora:guardian-of-xalgoz",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20627",
+      "source": "npc:kaesora:spectral-guardian",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20628",
+      "source": "npc:kaesora:skeletal-guardian",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20629",
+      "source": "npc:kaesora:bristleweb-spider",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20630",
+      "source": "npc:kaesora:strathbone-healer",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20631",
+      "source": "npc:kaesora:skeletal-warder",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20632",
+      "source": "npc:kaesora:skeletal-minion",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20633",
+      "source": "npc:kaesora:minion-of-xalgoz",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20634",
+      "source": "npc:kaesora:famished-ravener",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20635",
+      "source": "npc:kaesora:ravener",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20636",
+      "source": "npc:kaesora:a-frenzied-gnawer",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20637",
+      "source": "npc:kaesora:gorged-ravener",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20638",
+      "source": "npc:kaesora:enraged-ravener",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20639",
+      "source": "npc:kaesora:enraged-spectral-librarian",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20640",
+      "source": "npc:kaesora:a-freed-soul",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20641",
+      "source": "npc:kaesora:briarweb-spider",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20642",
+      "source": "npc:kaesora:strathbone-spider",
+      "target": "zone:kaesora",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20643",
+      "source": "npc:dragon-necropolis:a-carrion-bat",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20644",
+      "source": "npc:dragon-necropolis:a-chelaki",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20645",
+      "source": "npc:dragon-necropolis:a-chetari-adolescent",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20646",
+      "source": "npc:dragon-necropolis:a-chetari-darkling",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20647",
+      "source": "npc:dragon-necropolis:a-chetari-deathbinder",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20648",
+      "source": "npc:dragon-necropolis:a-chetari-deathshaper",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20649",
+      "source": "npc:dragon-necropolis:a-chetari-dominator",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20650",
+      "source": "npc:dragon-necropolis:a-chetari-dustshaper",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20651",
+      "source": "npc:dragon-necropolis:a-chetari-guard",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20652",
+      "source": "npc:dragon-necropolis:a-chetari-hoarder",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20653",
+      "source": "npc:dragon-necropolis:a-chetari-hunter",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20654",
+      "source": "npc:dragon-necropolis:a-chetari-master",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20655",
+      "source": "npc:dragon-necropolis:a-chetari-neophyte",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20656",
+      "source": "npc:dragon-necropolis:a-chetari-packrat",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20657",
+      "source": "npc:dragon-necropolis:a-chetari-runemage",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20658",
+      "source": "npc:dragon-necropolis:a-chetari-scavenger",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20659",
+      "source": "npc:dragon-necropolis:a-chetari-seeker",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20660",
+      "source": "npc:dragon-necropolis:a-chetari-servant",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20661",
+      "source": "npc:dragon-necropolis:a-chetari-warrior",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20662",
+      "source": "npc:dragon-necropolis:a-chetari-worker",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20663",
+      "source": "npc:dragon-necropolis:a-dragon-construct",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20664",
+      "source": "npc:dragon-necropolis:a-lava-keeper",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20665",
+      "source": "npc:dragon-necropolis:a-paebala-rebel",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20666",
+      "source": "npc:dragon-necropolis:a-paebala-spirit-talker",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20667",
+      "source": "npc:dragon-necropolis:a-paebala-warrior",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20668",
+      "source": "npc:dragon-necropolis:a-phase-spider",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20669",
+      "source": "npc:dragon-necropolis:a-swarming-beetle",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20670",
+      "source": "npc:dragon-necropolis:a-voracious-hatchling",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20671",
+      "source": "npc:dragon-necropolis:an-amorphous-mass",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20672",
+      "source": "npc:dragon-necropolis:an-entropy-serpent",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20673",
+      "source": "npc:dragon-necropolis:an-escaped-worker",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20674",
+      "source": "npc:dragon-necropolis:chetari-courier",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20675",
+      "source": "npc:dragon-necropolis:dominator-yisaki",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20676",
+      "source": "npc:dragon-necropolis:dralliw-tar",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20677",
+      "source": "npc:dragon-necropolis:dustbinder-grakina",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20678",
+      "source": "npc:dragon-necropolis:garzicor-s-corpse",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20679",
+      "source": "npc:dragon-necropolis:garzicor-s-wraith",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20680",
+      "source": "npc:dragon-necropolis:jaled-dar-s-shade",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20681",
+      "source": "npc:dragon-necropolis:pierre",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20682",
+      "source": "npc:dragon-necropolis:queen-raltaas",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20683",
+      "source": "npc:dragon-necropolis:seeker-bulava",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20684",
+      "source": "npc:dragon-necropolis:vaniki",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20685",
+      "source": "npc:dragon-necropolis:vilefang",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20686",
+      "source": "npc:dragon-necropolis:warmaster-utvara",
+      "target": "zone:dragon-necropolis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20687",
+      "source": "npc:city-of-mist:a-black-reaver",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20688",
+      "source": "npc:city-of-mist:lord-rak-ashiir",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20689",
+      "source": "npc:city-of-mist:lord-ghiosk",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20690",
+      "source": "npc:city-of-mist:neh-ashiir",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20691",
+      "source": "npc:city-of-mist:wraith-of-jaxion",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20692",
+      "source": "npc:city-of-mist:an-army-behemoth",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20693",
+      "source": "npc:city-of-mist:spectral-courier",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20694",
+      "source": "npc:city-of-mist:gyrating-goo",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20695",
+      "source": "npc:city-of-mist:a-phantom",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20696",
+      "source": "npc:city-of-mist:greater-plaguebone",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20697",
+      "source": "npc:city-of-mist:a-haze-golem",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20698",
+      "source": "npc:city-of-mist:a-vapor-golem",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20699",
+      "source": "npc:city-of-mist:a-fog-golem",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20700",
+      "source": "npc:city-of-mist:greater-spurbone",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20701",
+      "source": "npc:city-of-mist:an-apparition",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20702",
+      "source": "npc:city-of-mist:a-wraith",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20703",
+      "source": "npc:city-of-mist:a-mist-golem",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20704",
+      "source": "npc:city-of-mist:plaguebone-skeleton",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20705",
+      "source": "npc:city-of-mist:spurbone-skeleton",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20706",
+      "source": "npc:city-of-mist:captain-of-the-guard",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20707",
+      "source": "npc:city-of-mist:a-human-skeleton",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20708",
+      "source": "npc:city-of-mist:a-shadow",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20709",
+      "source": "npc:city-of-mist:greater-war-boned-skeleton",
+      "target": "zone:city-of-mist",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20710",
+      "source": "npc:warsliks-woods:a-goblin-soothsayer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20711",
+      "source": "npc:warsliks-woods:a-goblin-battlemaster",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20712",
+      "source": "npc:warsliks-woods:a-forest-giant-evergreen",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20713",
+      "source": "npc:warsliks-woods:a-skulking-brute",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20714",
+      "source": "npc:warsliks-woods:a-forest-giant-greenwood",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20715",
+      "source": "npc:warsliks-woods:a-skulking-brutling",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20716",
+      "source": "npc:warsliks-woods:a-forest-giant-sapling",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20717",
+      "source": "npc:warsliks-woods:a-goblin-skirmisher",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20718",
+      "source": "npc:warsliks-woods:a-forest-giant",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20719",
+      "source": "npc:warsliks-woods:a-goblin-scout",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20720",
+      "source": "npc:warsliks-woods:a-goblin-witchdoctor",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20721",
+      "source": "npc:warsliks-woods:a-goblin-watcher",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20722",
+      "source": "npc:warsliks-woods:a-goblin-hextracer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20723",
+      "source": "npc:warsliks-woods:a-goblin-bloodtracer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20724",
+      "source": "npc:warsliks-woods:a-goblin-pit-fighter",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20725",
+      "source": "npc:warsliks-woods:a-goblin-outrider",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20726",
+      "source": "npc:warsliks-woods:a-scaled-wolf-cub",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20727",
+      "source": "npc:warsliks-woods:a-scaled-wolf-pup",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20728",
+      "source": "npc:warsliks-woods:a-pygmy-skulking-brute",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20729",
+      "source": "npc:warsliks-woods:a-decaying-skeleton",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20730",
+      "source": "npc:warsliks-woods:a-skeleton",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20731",
+      "source": "npc:warsliks-woods:a-goblin-whelp",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20732",
+      "source": "npc:warsliks-woods:a-goblin-thief",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20733",
+      "source": "npc:warsliks-woods:a-shady-goblin",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20734",
+      "source": "npc:warsliks-woods:a-scaled-wolf-elder",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20735",
+      "source": "npc:warsliks-woods:a-goblin-bonecaster",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20736",
+      "source": "npc:warsliks-woods:a-goblin-agressor",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20737",
+      "source": "npc:warsliks-woods:a-goblin-brawler",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20738",
+      "source": "npc:warsliks-woods:a-skulking-runtling",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20739",
+      "source": "npc:warsliks-woods:grachnist-the-destroyer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20740",
+      "source": "npc:warsliks-woods:warlord-vyzer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20741",
+      "source": "npc:warsliks-woods:an-iksar-bandit",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20742",
+      "source": "npc:warsliks-woods:an-iksar-marauder",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20743",
+      "source": "npc:warsliks-woods:iksar-bandit-lord",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20744",
+      "source": "npc:warsliks-woods:goblin-spirit-caller",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20745",
+      "source": "npc:warsliks-woods:iksar-pariah",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20746",
+      "source": "npc:warsliks-woods:crusader-eaxl",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20747",
+      "source": "npc:warsliks-woods:crusader-myxl",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20748",
+      "source": "npc:warsliks-woods:an-iksar-manslayer",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20749",
+      "source": "npc:warsliks-woods:pit-fighter-dob",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20750",
+      "source": "npc:warsliks-woods:an-iksar-brigand",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20751",
+      "source": "npc:warsliks-woods:an-iksar-footpad",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20752",
+      "source": "npc:warsliks-woods:iksar-exile",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20753",
+      "source": "npc:warsliks-woods:trooper-roklon",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20754",
+      "source": "npc:warsliks-woods:an-iksar-knight",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20755",
+      "source": "npc:warsliks-woods:skeleton",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20756",
+      "source": "npc:warsliks-woods:trooper-agash",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20757",
+      "source": "npc:warsliks-woods:trooper-gepwyz",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20758",
+      "source": "npc:warsliks-woods:trooper-kroniz",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20759",
+      "source": "npc:warsliks-woods:trooper-lunmiz",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20760",
+      "source": "npc:warsliks-woods:trooper-melzok",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20761",
+      "source": "npc:warsliks-woods:trooper-olon",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20762",
+      "source": "npc:warsliks-woods:trooper-syldon",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20763",
+      "source": "npc:warsliks-woods:trooper-walrun",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20764",
+      "source": "npc:the-wakening-land:a-geonid",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20765",
+      "source": "npc:the-wakening-land:a-tar-goo",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20766",
+      "source": "npc:the-wakening-land:a-suit-of-sentient-armor",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20767",
+      "source": "npc:the-wakening-land:a-holgresh-conjurer",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20768",
+      "source": "npc:the-wakening-land:a-frost-giant-laborer",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20769",
+      "source": "npc:the-wakening-land:a-drixie-thane",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20770",
+      "source": "npc:the-wakening-land:a-geonid-shaman",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20771",
+      "source": "npc:the-wakening-land:a-frost-giant-sentinel",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20772",
+      "source": "npc:the-wakening-land:a-storm-giant-architect",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20773",
+      "source": "npc:the-wakening-land:a-corrupted-faun",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20774",
+      "source": "npc:the-wakening-land:a-corrupted-panther",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20775",
+      "source": "npc:the-wakening-land:a-corrupted-unicorn",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20776",
+      "source": "npc:the-wakening-land:a-tigeraptor",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20777",
+      "source": "npc:the-wakening-land:a-holgresh-elementalist",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20778",
+      "source": "npc:the-wakening-land:a-storm-giant-surveyor",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20779",
+      "source": "npc:the-wakening-land:a-frost-giant-sentry",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20780",
+      "source": "npc:the-wakening-land:a-holgresh-raider",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20781",
+      "source": "npc:the-wakening-land:a-panther",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20782",
+      "source": "npc:the-wakening-land:a-haze-panther",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20783",
+      "source": "npc:the-wakening-land:a-unicorn",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20784",
+      "source": "npc:the-wakening-land:a-wounded-storm-giant",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20785",
+      "source": "npc:the-wakening-land:a-sifaye-thane",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20786",
+      "source": "npc:the-wakening-land:a-sifaye-troubadour",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20787",
+      "source": "npc:the-wakening-land:a-sifaye-knight",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20788",
+      "source": "npc:the-wakening-land:a-tigesaurous",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20789",
+      "source": "npc:the-wakening-land:a-faun",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20790",
+      "source": "npc:the-wakening-land:accolyte-of-zek",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20791",
+      "source": "npc:the-wakening-land:a-shimmering-geonid",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20792",
+      "source": "npc:the-wakening-land:an-elder-holgresh",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20793",
+      "source": "npc:the-wakening-land:mist-panther",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20794",
+      "source": "npc:the-wakening-land:frostgiant-overseer",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20795",
+      "source": "npc:the-wakening-land:priest-bjek",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20796",
+      "source": "npc:the-wakening-land:priest-delar",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20797",
+      "source": "npc:the-wakening-land:priest-grenk",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20798",
+      "source": "npc:the-wakening-land:tomekeeper-bjordnessin",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20799",
+      "source": "npc:the-wakening-land:korzak-stonehammer",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20800",
+      "source": "npc:the-wakening-land:wuoshi",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20801",
+      "source": "npc:the-wakening-land:grand-vizier-poolakacha-tei",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20802",
+      "source": "npc:the-wakening-land:rapticor",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20803",
+      "source": "npc:the-wakening-land:lieutenant-krofer",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20804",
+      "source": "npc:the-wakening-land:phenocryst",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20805",
+      "source": "npc:the-wakening-land:teir-dal-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20806",
+      "source": "npc:the-wakening-land:barbarian-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20807",
+      "source": "npc:the-wakening-land:troll-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20808",
+      "source": "npc:the-wakening-land:gnome-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20809",
+      "source": "npc:the-wakening-land:human-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20810",
+      "source": "npc:the-wakening-land:ogre-mercenary",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20811",
+      "source": "npc:the-wakening-land:rolandal",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20812",
+      "source": "npc:the-wakening-land:felisiana-of-tunare",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20813",
+      "source": "npc:the-wakening-land:toxonomist-drorjon",
+      "target": "zone:the-wakening-land",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20814",
+      "source": "npc:dreadlands:gorenaire",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20815",
+      "source": "npc:dreadlands:a-mountain-giant-patriarch",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20816",
+      "source": "npc:dreadlands:gem-cutter-skeleton",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20817",
+      "source": "npc:dreadlands:a-drolvarg-snarler",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20818",
+      "source": "npc:dreadlands:a-drolvarg-growler",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20819",
+      "source": "npc:dreadlands:a-tundra-yeti",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20820",
+      "source": "npc:dreadlands:a-drolvarg-rager",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20821",
+      "source": "npc:dreadlands:greater-plaguebone",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20822",
+      "source": "npc:dreadlands:rotting-skeleton",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20823",
+      "source": "npc:dreadlands:a-drolvarg-gnasher",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20824",
+      "source": "npc:dreadlands:a-glacier-yeti",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20825",
+      "source": "npc:dreadlands:a-dread-widow",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20826",
+      "source": "npc:dreadlands:greater-spurbone",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20827",
+      "source": "npc:dreadlands:a-drachnid-recluse",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20828",
+      "source": "npc:dreadlands:a-drachnid-webmaster",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20829",
+      "source": "npc:dreadlands:a-drachnid-widow",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20830",
+      "source": "npc:dreadlands:a-mountain-giant-craig",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20831",
+      "source": "npc:dreadlands:a-mountain-giant-brae",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20832",
+      "source": "npc:dreadlands:a-mountain-giant-steep",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20833",
+      "source": "npc:dreadlands:plaguebone-skeleton",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20834",
+      "source": "npc:dreadlands:a-ravishing-drolvarg",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20835",
+      "source": "npc:dreadlands:a-plaguebone-thief",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20836",
+      "source": "npc:dreadlands:a-voracious-brute",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20837",
+      "source": "npc:dreadlands:a-stonegazer-cockatrice",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20838",
+      "source": "npc:dreadlands:a-wulfware-lonewolf",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20839",
+      "source": "npc:dreadlands:wraithbone-champion",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20840",
+      "source": "npc:dreadlands:a-stoneleer-cockatrice",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20841",
+      "source": "npc:dreadlands:a-petrifier-cockatrice",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20842",
+      "source": "npc:dreadlands:a-drachnid-silkmistress",
+      "target": "zone:dreadlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20843",
+      "source": "npc:highpass-hold:the-golden-rooster",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20844",
+      "source": "npc:highpass-hold:the-golden-rooster",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20845",
+      "source": "npc:highpass-hold:tiger-s-roar",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20846",
+      "source": "npc:highpass-hold:tiger-s-roar",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20847",
+      "source": "npc:highpass-hold:serpent-supply",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20848",
+      "source": "npc:highpass-hold:serpent-supply",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20849",
+      "source": "npc:highpass-hold:greenbanes-weapons",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20850",
+      "source": "npc:highpass-hold:the-lumberyard",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20851",
+      "source": "npc:highpass-hold:the-lumberyard",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20852",
+      "source": "npc:highpass-hold:",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20853",
+      "source": "npc:highpass-hold:",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20854",
+      "source": "npc:highpass-hold:anson-mcbale",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20855",
+      "source": "npc:highpass-hold:cyrla-shadowstepper",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20856",
+      "source": "npc:highpass-hold:a-guard",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20857",
+      "source": "npc:highpass-hold:guard-becker",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20858",
+      "source": "npc:highpass-hold:guard-stald",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20859",
+      "source": "npc:highpass-hold:dyllin-starsine",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20860",
+      "source": "npc:highpass-hold:a-highpass-citizen",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20861",
+      "source": "npc:highpass-hold:a-smuggler",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20862",
+      "source": "npc:highpass-hold:volunteer-renlor",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20863",
+      "source": "npc:highpass-hold:volunteer-delharn",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20864",
+      "source": "npc:highpass-hold:commander-thafer",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20865",
+      "source": "npc:highpass-hold:gublink-furnhorn",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20866",
+      "source": "npc:highpass-hold:malik-zaren",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20867",
+      "source": "npc:highpass-hold:jovan",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20868",
+      "source": "npc:highpass-hold:alhareen-the-just",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20869",
+      "source": "npc:neriak-foreign-quarter:the-smugglers-inn",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20870",
+      "source": "npc:neriak-foreign-quarter:the-smugglers-inn",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20871",
+      "source": "npc:neriak-foreign-quarter:the-smugglers-inn",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20872",
+      "source": "npc:neriak-foreign-quarter:silk-underground",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20873",
+      "source": "npc:neriak-foreign-quarter:dranas-bread-and-butcher",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20874",
+      "source": "npc:neriak-foreign-quarter:dranas-bread-and-butcher",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20875",
+      "source": "npc:neriak-foreign-quarter:slug-s-tavern",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20876",
+      "source": "npc:neriak-foreign-quarter:slug-s-tavern",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20877",
+      "source": "npc:neriak-foreign-quarter:slug-s-tavern",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20878",
+      "source": "npc:neriak-foreign-quarter:gambel-s-greens",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20879",
+      "source": "npc:neriak-foreign-quarter:pig-stickers",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20880",
+      "source": "npc:neriak-foreign-quarter:bites-n-pieces",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20881",
+      "source": "npc:neriak-foreign-quarter:bites-n-pieces",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20882",
+      "source": "npc:neriak-foreign-quarter:shinie-tings",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20883",
+      "source": "npc:neriak-foreign-quarter:merchant-tradeskill-goods",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20884",
+      "source": "npc:neriak-foreign-quarter:merchant-weapons-1",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20885",
+      "source": "npc:neriak-foreign-quarter:merchant-blacksmith-molds",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20886",
+      "source": "npc:neriak-foreign-quarter:merchant-armor",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20887",
+      "source": "npc:neriak-foreign-quarter:merchant-food-alcohol-1",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20888",
+      "source": "npc:neriak-foreign-quarter:merchant-food-alcohol-1",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20889",
+      "source": "npc:neriak-foreign-quarter:merchant-food-alcohol-1",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20890",
+      "source": "npc:neriak-foreign-quarter:merchant-spells",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20891",
+      "source": "npc:neriak-foreign-quarter:merchant-pvp-goods",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20892",
+      "source": "npc:neriak-foreign-quarter:merchant-pvp-goods",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20893",
+      "source": "npc:neriak-foreign-quarter:merchant-pvp-goods",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20894",
+      "source": "npc:neriak-foreign-quarter:guard-v-lask",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20895",
+      "source": "npc:kael-drakkal:merchant-arena-tickets-food",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20896",
+      "source": "npc:kael-drakkal:merchant-arena-tickets-food",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20897",
+      "source": "npc:kael-drakkal:merchant-food-drink-alcohol",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20898",
+      "source": "npc:kael-drakkal:merchant-food-drink-alcohol",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20899",
+      "source": "npc:kael-drakkal:merchant-food-drink-alcohol",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20900",
+      "source": "npc:kael-drakkal:merchant-hide-armor-weapons",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20901",
+      "source": "npc:kael-drakkal:merchant-spell-components",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20902",
+      "source": "npc:south-kaladim:tanned-assets",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20903",
+      "source": "npc:south-kaladim:irontoe-s-eats",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20904",
+      "source": "npc:south-kaladim:irontoe-s-eats",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20905",
+      "source": "npc:south-kaladim:irontoe-s-eats",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20906",
+      "source": "npc:south-kaladim:didek-stormhammer",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20907",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20908",
+      "source": "npc:south-kaladim:redfist-s-metal",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20909",
+      "source": "npc:south-kaladim:hanamaf-darkfoam",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20910",
+      "source": "npc:south-kaladim:hanamaf-darkfoam",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20911",
+      "source": "npc:south-kaladim:dura-darkfoam",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20912",
+      "source": "npc:south-kaladim:dura-darkfoam",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20913",
+      "source": "npc:south-kaladim:gurtha-s-ware",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20914",
+      "source": "npc:south-kaladim:merchant-various-weapons",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20915",
+      "source": "npc:south-kaladim:merchant-potions-crystals",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20916",
+      "source": "npc:south-kaladim:merchant-bags",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20917",
+      "source": "npc:icewell-keep:coldain-outcasts",
+      "target": "zone:icewell-keep",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20890",
+      "source": "npc:erudin-palace:erudin-city-office",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20891",
+      "source": "npc:erudin-palace:sothures-fine-gems",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20892",
+      "source": "npc:erudin-palace:vials-of-vitality",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-20893",
+      "source": "npc:erudin-palace:tower-of-the-crimson-hands",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
     }
   ]
 }
