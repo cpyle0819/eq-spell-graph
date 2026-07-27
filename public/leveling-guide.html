@@ -117,11 +117,16 @@
        script at the bottom of the document is what makes these behave the
        same as those. Light-DOM content passed into trail-stop's slot, so
        styled here at the page level rather than the component's own
-       ::slotted() rule, same as trail-stop's own <strong>/<a> above. */
+       ::slotted() rule, same as trail-stop's own <strong>/<a> above.
+       A real <a href> to the item's eqlwiki.com page, not a bare <span> --
+       same "so they work on mobile" fix as itemChip()/npcDropBadges()
+       (quest-shared.js/zone-dossier.js): desktop hover still shows the
+       <detail-tooltip> (click suppressed below), touch has no hover so a
+       tap falls back to a normal navigate. */
     .loot-badge {
       display: inline-flex; align-items: center; gap: 5px;
       padding: 1px 8px 1px 6px; border-radius: 3px;
-      font-weight: 700; cursor: help;
+      font-weight: 700; cursor: help; color: inherit; text-decoration: none;
       background: rgba(122, 96, 42, 0.1); border: 1px solid var(--parch-line);
     }
     .loot-badge::before {
@@ -129,6 +134,7 @@
       background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
       box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
     }
+    @media (pointer: coarse) { .loot-badge { cursor: pointer; } }
 
     /* ── Ledgers (Beyond the Kill Count): browsable lists of distinct,
        unordered entries, not a journey — set apart from the trail's
@@ -184,16 +190,16 @@
         <h2>The Trail</h2>
         <div class="trail-path">
           <trail-stop range="Lv 4–20">
-            <p><a href="maps.html?to=Blackburrow"><strong>Blackburrow</strong></a>, the gnoll stronghold between Everfrost and Qeynos Hills, was rebalanced in June 2026: population density was retuned for a smoother climb across the whole 4–20 range, and its old loot table was upgraded rather than left as a classic holdover. The <span class="loot-badge" data-item-id="item:runed-totem-staff">Runed Totem Staff</span>, <span class="loot-badge" data-item-id="item:keg-mallet">Keg Mallet</span>, and <span class="loot-badge" data-item-id="item:sabertooth-short-bow">Sabertooth Short Bow</span> are new drops here, not returning ones.</p>
+            <p><a href="maps.html?to=Blackburrow"><strong>Blackburrow</strong></a>, the gnoll stronghold between Everfrost and Qeynos Hills, was rebalanced in June 2026: population density was retuned for a smoother climb across the whole 4–20 range, and its old loot table was upgraded rather than left as a classic holdover. The <a class="loot-badge" data-item-id="item:runed-totem-staff" href="https://eqlwiki.com/Runed_Totem_Staff" target="_blank" rel="noopener">Runed Totem Staff</a>, <a class="loot-badge" data-item-id="item:keg-mallet" href="https://eqlwiki.com/Keg_Mallet" target="_blank" rel="noopener">Keg Mallet</a>, and <a class="loot-badge" data-item-id="item:sabertooth-short-bow" href="https://eqlwiki.com/Sabertooth_Short_Bow" target="_blank" rel="noopener">Sabertooth Short Bow</a> are new drops here, not returning ones.</p>
           </trail-stop>
           <trail-stop range="Lv 5–22">
-            <p><a href="maps.html?to=Crushbone"><strong>Crushbone</strong></a>'s July 2026 update raised spawn and respawn rates throughout the orc encampment and extended its range to 5–22. <strong>Emperor Crush</strong> now drops a <span class="loot-badge" data-item-id="item:dwarven-ringmail-tunic">Dwarven Ringmail Tunic</span>, and the zone's <strong>Orc Trainer</strong> carries a <span class="loot-badge" data-item-id="item:shiny-brass-shield">Shiny Brass Shield</span> (+10 AC, +10 magic resist).</p>
+            <p><a href="maps.html?to=Crushbone"><strong>Crushbone</strong></a>'s July 2026 update raised spawn and respawn rates throughout the orc encampment and extended its range to 5–22. <strong>Emperor Crush</strong> now drops a <a class="loot-badge" data-item-id="item:dwarven-ringmail-tunic" href="https://eqlwiki.com/Dwarven_Ringmail_Tunic" target="_blank" rel="noopener">Dwarven Ringmail Tunic</a>, and the zone's <strong>Orc Trainer</strong> carries a <a class="loot-badge" data-item-id="item:shiny-brass-shield" href="https://eqlwiki.com/Shiny_Brass_Shield" target="_blank" rel="noopener">Shiny Brass Shield</a> (+10 AC, +10 magic resist).</p>
           </trail-stop>
           <trail-stop range="Lv 8–35">
-            <p><a href="maps.html?to=Najena"><strong>Najena</strong></a>'s June 2026 touch-up smoothed the pacing of its key-and-lock progression from 8 to 35, adding new named enemies on top of the existing cast. <strong>Najena</strong> herself now drops a <span class="loot-badge" data-item-id="item:flowing-black-robe">Flowing Black Robe</span> and a <span class="loot-badge" data-item-id="item:black-tome-with-silver-runes">Black Tome with Silver Runes</span>.</p>
+            <p><a href="maps.html?to=Najena"><strong>Najena</strong></a>'s June 2026 touch-up smoothed the pacing of its key-and-lock progression from 8 to 35, adding new named enemies on top of the existing cast. <strong>Najena</strong> herself now drops a <a class="loot-badge" data-item-id="item:flowing-black-robe" href="https://eqlwiki.com/Flowing_Black_Robe" target="_blank" rel="noopener">Flowing Black Robe</a> and a <a class="loot-badge" data-item-id="item:black-tome-with-silver-runes" href="https://eqlwiki.com/Black_Tome_with_Silver_Runes" target="_blank" rel="noopener">Black Tome with Silver Runes</a>.</p>
           </trail-stop>
           <trail-stop range="Lv 20–42">
-            <p><a href="maps.html?to=Splitpaw"><strong>Splitpaw Lair</strong></a>'s July 2026 overhaul spans five difficulty bands across its 20–42 range, with new rare spawns and better equipment throughout the gnoll hierarchy. <strong>The Ishva Mal</strong>'s <span class="loot-badge" data-item-id="item:robe-of-the-ishva">Robe of the Ishva</span> (+50 mana) and <strong>Verishe Mal Executioner</strong>'s <span class="loot-badge" data-item-id="item:verishe-mal-greataxe">Verishe Mal Greataxe</span> (2H Slashing, 26 dmg) are among the new loot, alongside a <span class="loot-badge" data-item-id="item:gnoll-hide-tome">Gnoll Hide Tome</span> (+10 INT, +5 WIS) deeper in the gnoll hierarchy.</p>
+            <p><a href="maps.html?to=Splitpaw"><strong>Splitpaw Lair</strong></a>'s July 2026 overhaul spans five difficulty bands across its 20–42 range, with new rare spawns and better equipment throughout the gnoll hierarchy. <strong>The Ishva Mal</strong>'s <a class="loot-badge" data-item-id="item:robe-of-the-ishva" href="https://eqlwiki.com/Robe_of_the_Ishva" target="_blank" rel="noopener">Robe of the Ishva</a> (+50 mana) and <strong>Verishe Mal Executioner</strong>'s <a class="loot-badge" data-item-id="item:verishe-mal-greataxe" href="https://eqlwiki.com/Verishe_Mal_Greataxe" target="_blank" rel="noopener">Verishe Mal Greataxe</a> (2H Slashing, 26 dmg) are among the new loot, alongside a <a class="loot-badge" data-item-id="item:gnoll-hide-tome" href="https://eqlwiki.com/Gnoll_Hide_Tome" target="_blank" rel="noopener">Gnoll Hide Tome</a> (+10 INT, +5 WIS) deeper in the gnoll hierarchy.</p>
           </trail-stop>
           <trail-stop range="Lv 46+">
             <p><a href="maps.html?to=Plane%20of%20Sky"><strong>Plane of Sky</strong></a>'s June 2026 rework changed how its eight-island key system behaves: a key now stays on your keyring permanently once used, and drops from each island's boss instead of trash mobs. The class epic-quest requirements at each island were simplified to a handful of wind runes plus one or two specific items, and most of the zone's best loot now comes from finishing those quests rather than direct boss drops.</p>
@@ -280,6 +286,9 @@
             if (!e.relatedTarget?.closest?.(".loot-badge[data-item-id]")) {
               document.getElementById("detail-tooltip")?.hide();
             }
+          });
+          document.addEventListener("click", (e) => {
+            if (e.target.closest(".loot-badge[data-item-id]")) e.preventDefault(); // hover is sufficient on desktop
           });
         });
     }
