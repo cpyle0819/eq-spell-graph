@@ -12483,7 +12483,71 @@
         },
         "lore": "The Northern Desert of Ro is a highly trafficked and popular area that marks the southern edge of the human city of Freeport as well as the northern edge of the vast Desert of Ro.",
         "wiki_title": "The Northern Desert of Ro",
-        "zoneType": "open_world"
+        "zoneType": "open_world",
+        "maps": [
+          {
+            "label": null,
+            "image": "northern-desert-of-ro.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Inn with Thimble and Needle Molds, Large Sewing Kit, Food and Alcohol"
+              },
+              {
+                "key": "2",
+                "label": "Empty Huts"
+              },
+              {
+                "key": "3",
+                "label": "Fishing Village selling Alchemy Supplies"
+              },
+              {
+                "key": "4",
+                "label": "Buried Pyramid (the \"platform\"; is a wizard spire)"
+              },
+              {
+                "key": "5",
+                "label": "Dervish Camp with Dorn B`Dynn - \"Derv Camp One\""
+              },
+              {
+                "key": "6",
+                "label": "Haunted Ruins"
+              },
+              {
+                "key": "7",
+                "label": "Dervish Camp - \"Derv Camp Two\""
+              },
+              {
+                "key": "8",
+                "label": "Ruins"
+              },
+              {
+                "key": "9",
+                "label": "Temple"
+              },
+              {
+                "key": "10",
+                "label": "Dervish Camp - \"Derv Camp Three\""
+              },
+              {
+                "key": "11",
+                "label": "Pillar"
+              },
+              {
+                "key": "12",
+                "label": "Pillar"
+              },
+              {
+                "key": "13",
+                "label": "Ruins"
+              },
+              {
+                "key": "14",
+                "label": "Dock - Raft to Velious zones to Iceclad Ocean"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -12546,7 +12610,71 @@
         },
         "lore": "Southern Desert of Ro marks the southern edge of the vast and dangerous Desert of Ro. It is the home base for the orcs that have spread northward into the desert proper, and their huts literally cover the grassy region next to the moister Innothule Swamp to the south.",
         "wiki_title": "Southern Desert of Ro",
-        "zoneType": "open_world"
+        "zoneType": "open_world",
+        "maps": [
+          {
+            "label": null,
+            "image": "southern-desert-of-ro.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Home of Ortallius and Rathmana Allin"
+              },
+              {
+                "key": "2",
+                "label": "Evil Merchants selling Pottery Supplies (all), Combine Weapons"
+              },
+              {
+                "key": "3",
+                "label": "Dervish Camp"
+              },
+              {
+                "key": "4",
+                "label": "Ruined Temple"
+              },
+              {
+                "key": "5",
+                "label": "Dervish Camp"
+              },
+              {
+                "key": "6",
+                "label": "Orc Town"
+              },
+              {
+                "key": "7",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "8",
+                "label": "Wizard Portal"
+              },
+              {
+                "key": "9",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "10",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "11",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "12",
+                "label": "Orc Camp"
+              },
+              {
+                "key": "13",
+                "label": "Druid Circle"
+              },
+              {
+                "key": "14",
+                "label": "Orc Camp"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -13886,7 +14014,59 @@
         },
         "lore": "Toxxulia Forest is a dark and quiet forest that encompasses much of the island continent of Odus. It is separated into two areas by a river running roughly east to west through it, the northern half more habited and the southern half controlled by the kobolds and the necromancers.",
         "wiki_title": "Toxxulia Forest",
-        "zoneType": "open_world"
+        "zoneType": "open_world",
+        "maps": [
+          {
+            "label": null,
+            "image": "toxxulia-forest.jpg",
+            "legend": [
+              {
+                "key": "1",
+                "label": "Wizard Hut: Books including On Languages and Lexicon, also Throwing Daggers and Blacksmithing Books and Molds"
+              },
+              {
+                "key": "2",
+                "label": "Bags"
+              },
+              {
+                "key": "3",
+                "label": "Enchanter's Hut: Books, Tiny Daggers, Gems, Gold Robes, also Cooking supplies"
+              },
+              {
+                "key": "4",
+                "label": "Magician's Hut: Books, Gems/Components, Blue Robes"
+              },
+              {
+                "key": "5",
+                "label": "Druid Ring with NPC selling the Succor and Circle Of spells"
+              },
+              {
+                "key": "6",
+                "label": "Abandoned Necromancer's Hut"
+              },
+              {
+                "key": "7",
+                "label": "Western Dock"
+              },
+              {
+                "key": "8",
+                "label": "Kobold Camp"
+              },
+              {
+                "key": "9",
+                "label": "Wizard Spires"
+              },
+              {
+                "key": "10",
+                "label": "Kobold Camp"
+              },
+              {
+                "key": "11",
+                "label": "Rungupp"
+              }
+            ]
+          }
+        ]
       }
     },
     {
@@ -145525,6 +145705,960 @@
         "roles": [
           "mob"
         ]
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:dorn-b-dynn",
+        "label": "Dorn B`Dynn",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-decaying-skeleton",
+        "label": "A Decaying Skeleton",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:guard-brendyl",
+        "label": "Guard Brendyl",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:guard-fintran",
+        "label": "Guard Fintran",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:guard-stoutman",
+        "label": "Guard Stoutman",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:puntar-sandfisher",
+        "label": "Puntar Sandfisher",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-shriveled-mummy",
+        "label": "A Shriveled Mummy",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-sand-giant",
+        "label": "A Sand Giant",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-crypt-mummy",
+        "label": "A Crypt Mummy",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 15
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:an-armadillo",
+        "label": "An Armadillo",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-madman",
+        "label": "A Madman",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-dervish-cutthroat",
+        "label": "A Dervish Cutthroat",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-fire-beetle",
+        "label": "A Fire Beetle",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-dune-tarantula",
+        "label": "A Dune Tarantula",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-parched-zombie",
+        "label": "A Parched Zombie",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-puma",
+        "label": "A Puma",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-desert-tarantula",
+        "label": "A Desert Tarantula",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:rahotep",
+        "label": "Rahotep",
+        "type": "mob",
+        "minLevel": 16,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-sand-scarab",
+        "label": "A Sand Scarab",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:dunedigger",
+        "label": "Dunedigger",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 14
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:orc-centurion-deathfist",
+        "label": "Orc Centurion (Deathfist)",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-coyote",
+        "label": "A coyote",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-jackal",
+        "label": "A jackal",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:an-orc-raider",
+        "label": "An orc raider",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:frankel-the-pirate",
+        "label": "Frankel the Pirate",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:northern-desert-of-ro:a-rattlesnake",
+        "label": "A rattlesnake",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:ortallius",
+        "label": "Ortallius",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-zombie",
+        "label": "A Zombie",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:obretl",
+        "label": "Obretl",
+        "type": "mob",
+        "minLevel": 22,
+        "maxLevel": 22
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:terrorantula",
+        "label": "Terrorantula",
+        "type": "mob",
+        "minLevel": 37,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-desert-madman",
+        "label": "A Desert Madman",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-sand-giant",
+        "label": "A Sand Giant",
+        "type": "mob",
+        "minLevel": 33,
+        "maxLevel": 37
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:an-orc-cleric",
+        "label": "An Orc Cleric",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:dry-bones-skeleton",
+        "label": "Dry Bones Skeleton",
+        "type": "mob",
+        "minLevel": 16,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:an-orc-warrior",
+        "label": "An Orc Warrior",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:andad-filla",
+        "label": "Andad Filla",
+        "type": "mob",
+        "minLevel": 51,
+        "maxLevel": 51
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:erg-bluntbruiser",
+        "label": "Erg Bluntbruiser",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:sandgiant-husam",
+        "label": "Sandgiant Husam",
+        "type": "mob",
+        "minLevel": 29,
+        "maxLevel": 29
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-dervish-cutthroat",
+        "label": "A Dervish Cutthroat",
+        "type": "mob",
+        "minLevel": 11,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-fire-beetle",
+        "label": "A Fire Beetle",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-puma",
+        "label": "A Puma",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-moss-snake",
+        "label": "A Moss Snake",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-giant-rattlesnake",
+        "label": "A Giant Rattlesnake",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-sand-scarab",
+        "label": "A Sand Scarab",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-cistern-asp",
+        "label": "A Cistern Asp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:scrounge",
+        "label": "Scrounge",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-sand-mummy",
+        "label": "A sand mummy",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 16
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:crypt-mummy",
+        "label": "Crypt mummy",
+        "type": "mob",
+        "minLevel": 13,
+        "maxLevel": 13
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-tree-snake",
+        "label": "A tree snake",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-coyote",
+        "label": "A coyote",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-jackal",
+        "label": "A jackal",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:an-asp",
+        "label": "An Asp",
+        "type": "mob",
+        "minLevel": 10,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-mummy",
+        "label": "A mummy",
+        "type": "mob",
+        "minLevel": 12,
+        "maxLevel": 12
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-rattlesnake",
+        "label": "A rattlesnake",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:southern-desert-of-ro:a-darkweed-snake",
+        "label": "A Darkweed Snake",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-skeleton",
+        "label": "A skeleton",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 18
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-decaying-skeleton",
+        "label": "A Decaying Skeleton",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:rungupp",
+        "label": "Rungupp",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:aglthin-dasmore",
+        "label": "Aglthin Dasmore",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 8
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:ilanics-skeleton",
+        "label": "Ilanics Skeleton",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:poacher-dell",
+        "label": "Poacher Dell",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:poacher-shelli",
+        "label": "Poacher Shelli",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:poacher-topi",
+        "label": "Poacher Topi",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:poacher-willa",
+        "label": "Poacher Willa",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:elial-brook",
+        "label": "Elial Brook",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-skunk",
+        "label": "A Large Skunk",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-spiderling",
+        "label": "A Spiderling",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-willowisp",
+        "label": "A Willowisp",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-runt",
+        "label": "A Kobold Runt",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:phaeril-nightshire",
+        "label": "Phaeril Nightshire",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:veisha-fathomwalker",
+        "label": "Veisha Fathomwalker",
+        "type": "mob",
+        "minLevel": 25,
+        "maxLevel": 25
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:knarthenne-skurl",
+        "label": "Knarthenne Skurl",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-watcher",
+        "label": "A Kobold Watcher",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-shaman",
+        "label": "A Kobold Shaman",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-sentry",
+        "label": "A Kobold Sentry",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-fire-beetle",
+        "label": "A Fire Beetle",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-caster",
+        "label": "A Kobold Caster",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-giant-snake-toxxulia-forest",
+        "label": "A Giant Snake (Toxxulia Forest)",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 11
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:sentinel-creot",
+        "label": "Sentinel Creot",
+        "type": "mob",
+        "minLevel": 30,
+        "maxLevel": 30
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:sentinel-drom",
+        "label": "Sentinel Drom",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:sentinel-flavius",
+        "label": "Sentinel Flavius",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:shintar-vinlail",
+        "label": "Shintar Vinlail",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-snake",
+        "label": "A large snake",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-rat",
+        "label": "A Large Rat",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-kobold-scout-toxxulia",
+        "label": "A kobold scout (Toxxulia)",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-wood-spider",
+        "label": "A large wood spider",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-pixie",
+        "label": "A pixie",
+        "type": "mob",
+        "minLevel": 14,
+        "maxLevel": 17
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:jalen-goldsinger",
+        "label": "Jalen Goldsinger",
+        "type": "mob",
+        "minLevel": 40,
+        "maxLevel": 40
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:an-erudin-emissary",
+        "label": "An Erudin Emissary",
+        "type": "mob",
+        "minLevel": 22,
+        "maxLevel": 22
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:poacher-hill",
+        "label": "Poacher Hill",
+        "type": "mob",
+        "minLevel": 4,
+        "maxLevel": 4
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:an-infected-rat",
+        "label": "An infected rat",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-thistle-snake",
+        "label": "A thistle snake",
+        "type": "mob",
+        "minLevel": 1,
+        "maxLevel": 1
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-briar-snake",
+        "label": "A briar snake",
+        "type": "mob",
+        "minLevel": 3,
+        "maxLevel": 3
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-briar-snake",
+        "label": "A large briar snake",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-large-thistle-snake",
+        "label": "A large thistle snake",
+        "type": "mob",
+        "minLevel": 6,
+        "maxLevel": 6
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-giant-briar-snake",
+        "label": "A giant briar snake",
+        "type": "mob",
+        "minLevel": 7,
+        "maxLevel": 7
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-giant-thistle-snake",
+        "label": "A giant thistle snake",
+        "type": "mob",
+        "minLevel": 9,
+        "maxLevel": 9
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-heretic-prophet",
+        "label": "A heretic prophet",
+        "type": "mob",
+        "minLevel": 5,
+        "maxLevel": 5
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-skunk",
+        "label": "A skunk",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:a-widow-hatchling-toxxulia-forest",
+        "label": "A Widow Hatchling (Toxxulia Forest)",
+        "type": "mob",
+        "minLevel": 2,
+        "maxLevel": 2
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:abandoned-heretic-pet",
+        "label": "Abandoned heretic pet",
+        "type": "mob",
+        "minLevel": 8,
+        "maxLevel": 10
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:lanivon-baxer",
+        "label": "Lanivon Baxer",
+        "type": "mob",
+        "minLevel": 50,
+        "maxLevel": 50
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:marzus-demsion",
+        "label": "Marzus Demsion",
+        "type": "mob",
+        "minLevel": 45,
+        "maxLevel": 45
+      }
+    },
+    {
+      "data": {
+        "id": "mob:toxxulia-forest:talrigar-eklorin",
+        "label": "Talrigar Eklorin",
+        "type": "mob",
+        "minLevel": 34,
+        "maxLevel": 34
       }
     }
   ],
@@ -299207,6 +300341,854 @@
         "id": "e-located_in-19163",
         "source": "npc:plane-of-sky:eye-of-veeshan",
         "target": "zone:plane-of-sky",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19157",
+        "source": "mob:northern-desert-of-ro:dorn-b-dynn",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19158",
+        "source": "mob:northern-desert-of-ro:a-skeleton",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19159",
+        "source": "mob:northern-desert-of-ro:a-decaying-skeleton",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19160",
+        "source": "mob:northern-desert-of-ro:guard-brendyl",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19161",
+        "source": "mob:northern-desert-of-ro:guard-fintran",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19162",
+        "source": "mob:northern-desert-of-ro:guard-stoutman",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19163",
+        "source": "mob:northern-desert-of-ro:puntar-sandfisher",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19164",
+        "source": "mob:northern-desert-of-ro:a-shriveled-mummy",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19165",
+        "source": "mob:northern-desert-of-ro:a-sand-giant",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19166",
+        "source": "mob:northern-desert-of-ro:a-crypt-mummy",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19167",
+        "source": "mob:northern-desert-of-ro:an-armadillo",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19168",
+        "source": "mob:northern-desert-of-ro:a-madman",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19169",
+        "source": "mob:northern-desert-of-ro:a-dervish-cutthroat",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19170",
+        "source": "mob:northern-desert-of-ro:a-fire-beetle",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19171",
+        "source": "mob:northern-desert-of-ro:a-dune-tarantula",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19172",
+        "source": "mob:northern-desert-of-ro:a-parched-zombie",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19173",
+        "source": "mob:northern-desert-of-ro:a-puma",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19174",
+        "source": "mob:northern-desert-of-ro:a-desert-tarantula",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19175",
+        "source": "mob:northern-desert-of-ro:rahotep",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19176",
+        "source": "mob:northern-desert-of-ro:a-sand-scarab",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19177",
+        "source": "mob:northern-desert-of-ro:dunedigger",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19178",
+        "source": "mob:northern-desert-of-ro:orc-centurion-deathfist",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19179",
+        "source": "mob:northern-desert-of-ro:a-coyote",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19180",
+        "source": "mob:northern-desert-of-ro:a-jackal",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19181",
+        "source": "mob:northern-desert-of-ro:an-orc-raider",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19182",
+        "source": "mob:northern-desert-of-ro:frankel-the-pirate",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19183",
+        "source": "mob:northern-desert-of-ro:a-rattlesnake",
+        "target": "zone:northern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19184",
+        "source": "mob:southern-desert-of-ro:a-skeleton",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19185",
+        "source": "mob:southern-desert-of-ro:ortallius",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19186",
+        "source": "mob:southern-desert-of-ro:a-zombie",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19187",
+        "source": "mob:southern-desert-of-ro:obretl",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19188",
+        "source": "mob:southern-desert-of-ro:terrorantula",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19189",
+        "source": "mob:southern-desert-of-ro:a-desert-madman",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19190",
+        "source": "mob:southern-desert-of-ro:a-sand-giant",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19191",
+        "source": "mob:southern-desert-of-ro:an-orc-cleric",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19192",
+        "source": "mob:southern-desert-of-ro:dry-bones-skeleton",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19193",
+        "source": "mob:southern-desert-of-ro:an-orc-warrior",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19194",
+        "source": "mob:southern-desert-of-ro:andad-filla",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19195",
+        "source": "mob:southern-desert-of-ro:erg-bluntbruiser",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19196",
+        "source": "mob:southern-desert-of-ro:sandgiant-husam",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19197",
+        "source": "mob:southern-desert-of-ro:a-dervish-cutthroat",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19198",
+        "source": "mob:southern-desert-of-ro:a-fire-beetle",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19199",
+        "source": "mob:southern-desert-of-ro:a-puma",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19200",
+        "source": "mob:southern-desert-of-ro:a-moss-snake",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19201",
+        "source": "mob:southern-desert-of-ro:a-giant-rattlesnake",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19202",
+        "source": "mob:southern-desert-of-ro:a-sand-scarab",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19203",
+        "source": "mob:southern-desert-of-ro:a-cistern-asp",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19204",
+        "source": "mob:southern-desert-of-ro:scrounge",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19205",
+        "source": "mob:southern-desert-of-ro:a-sand-mummy",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19206",
+        "source": "mob:southern-desert-of-ro:crypt-mummy",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19207",
+        "source": "mob:southern-desert-of-ro:a-tree-snake",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19208",
+        "source": "mob:southern-desert-of-ro:a-coyote",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19209",
+        "source": "mob:southern-desert-of-ro:a-jackal",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19210",
+        "source": "mob:southern-desert-of-ro:an-asp",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19211",
+        "source": "mob:southern-desert-of-ro:a-mummy",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19212",
+        "source": "mob:southern-desert-of-ro:a-rattlesnake",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19213",
+        "source": "mob:southern-desert-of-ro:a-darkweed-snake",
+        "target": "zone:southern-desert-of-ro",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19214",
+        "source": "mob:toxxulia-forest:a-skeleton",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19215",
+        "source": "mob:toxxulia-forest:a-decaying-skeleton",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19216",
+        "source": "mob:toxxulia-forest:rungupp",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19217",
+        "source": "mob:toxxulia-forest:aglthin-dasmore",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19218",
+        "source": "mob:toxxulia-forest:ilanics-skeleton",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19219",
+        "source": "mob:toxxulia-forest:poacher-dell",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19220",
+        "source": "mob:toxxulia-forest:poacher-shelli",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19221",
+        "source": "mob:toxxulia-forest:poacher-topi",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19222",
+        "source": "mob:toxxulia-forest:poacher-willa",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19223",
+        "source": "mob:toxxulia-forest:elial-brook",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19224",
+        "source": "mob:toxxulia-forest:a-large-skunk",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19225",
+        "source": "mob:toxxulia-forest:a-spiderling",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19226",
+        "source": "mob:toxxulia-forest:a-willowisp",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19227",
+        "source": "mob:toxxulia-forest:a-kobold-runt",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19228",
+        "source": "mob:toxxulia-forest:phaeril-nightshire",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19229",
+        "source": "mob:toxxulia-forest:veisha-fathomwalker",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19230",
+        "source": "mob:toxxulia-forest:knarthenne-skurl",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19231",
+        "source": "mob:toxxulia-forest:a-kobold-watcher",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19232",
+        "source": "mob:toxxulia-forest:a-kobold-shaman",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19233",
+        "source": "mob:toxxulia-forest:a-kobold-sentry",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19234",
+        "source": "mob:toxxulia-forest:a-fire-beetle",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19235",
+        "source": "mob:toxxulia-forest:a-kobold-caster",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19236",
+        "source": "mob:toxxulia-forest:a-giant-snake-toxxulia-forest",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19237",
+        "source": "mob:toxxulia-forest:sentinel-creot",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19238",
+        "source": "mob:toxxulia-forest:sentinel-drom",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19239",
+        "source": "mob:toxxulia-forest:sentinel-flavius",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19240",
+        "source": "mob:toxxulia-forest:shintar-vinlail",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19241",
+        "source": "mob:toxxulia-forest:a-large-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19242",
+        "source": "mob:toxxulia-forest:a-large-rat",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19243",
+        "source": "mob:toxxulia-forest:a-kobold-scout-toxxulia",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19244",
+        "source": "mob:toxxulia-forest:a-large-wood-spider",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19245",
+        "source": "mob:toxxulia-forest:a-pixie",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19246",
+        "source": "mob:toxxulia-forest:jalen-goldsinger",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19247",
+        "source": "mob:toxxulia-forest:an-erudin-emissary",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19248",
+        "source": "mob:toxxulia-forest:poacher-hill",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19249",
+        "source": "mob:toxxulia-forest:an-infected-rat",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19250",
+        "source": "mob:toxxulia-forest:a-thistle-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19251",
+        "source": "mob:toxxulia-forest:a-briar-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19252",
+        "source": "mob:toxxulia-forest:a-large-briar-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19253",
+        "source": "mob:toxxulia-forest:a-large-thistle-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19254",
+        "source": "mob:toxxulia-forest:a-giant-briar-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19255",
+        "source": "mob:toxxulia-forest:a-giant-thistle-snake",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19256",
+        "source": "mob:toxxulia-forest:a-heretic-prophet",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19257",
+        "source": "mob:toxxulia-forest:a-skunk",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19258",
+        "source": "mob:toxxulia-forest:a-widow-hatchling-toxxulia-forest",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19259",
+        "source": "mob:toxxulia-forest:abandoned-heretic-pet",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19260",
+        "source": "mob:toxxulia-forest:lanivon-baxer",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19261",
+        "source": "mob:toxxulia-forest:marzus-demsion",
+        "target": "zone:toxxulia-forest",
+        "type": "located_in"
+      }
+    },
+    {
+      "data": {
+        "id": "e-located_in-19262",
+        "source": "mob:toxxulia-forest:talrigar-eklorin",
+        "target": "zone:toxxulia-forest",
         "type": "located_in"
       }
     }
