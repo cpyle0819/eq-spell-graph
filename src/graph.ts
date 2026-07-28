@@ -510,6 +510,14 @@ export interface RecipeSummary {
   // Absent only if a recipe node somehow has no `crafted_in` edge -- every
   // recipe this migration batch added has exactly one (migration 356).
   container?: ContainerSummary;
+  // True only for a tradeskill's own hand-picked leveling-path recipes
+  // (migration 355's 11-recipe "Antonica Biased Brewers" path, flagged via
+  // migration 359) -- absent/false for every other recipe of that same
+  // tradeskill (migration 358's broader recipe-book coverage). The
+  // Tradeskills page's Leveling Guide filters on this so it stays exactly
+  // that original path regardless of how many more recipes a tradeskill
+  // later accumulates.
+  levelingGuide: boolean;
 }
 
 // Distinct `recipe.tradeskill` values across the graph, for the Tradeskills
@@ -550,6 +558,7 @@ export function getRecipes(tradeskill: string): RecipeSummary[] {
         uses,
         produces,
         container,
+        levelingGuide: !!n.levelingGuide,
       };
     })
     .sort((a, b) => a.trivial - b.trivial);
