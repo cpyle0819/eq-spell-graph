@@ -1,8 +1,8 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone, quest, quest_group, item, faction, era (extensible: more as needed)
- * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of, requires
+ * Node types: spell, npc, zone, quest, quest_group, item, faction, era, recipe, container (extensible: more as needed)
+ * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of, requires, drops, uses, produces, crafted_in
  *
  * `located_in` means different things by source type: npc --located_in--> zone
  * is "physically stands here" (unchanged). quest/quest_group --located_in--> zone
@@ -53,6 +53,10 @@ export interface EdgeData {
   // pool isn't guaranteed to be all one kind). Absent (the default) means
   // guaranteed, same "no flag = normal case" convention as outOfEra.
   randomGroup?: string;
+  // recipe --uses--> item / recipe --produces--> item (decisions/
+  // tradeskill-recipe-node-schema.md). Absent means 1, same "no flag = the
+  // common case" convention as randomGroup above.
+  quantity?: number;
 }
 
 export interface SpellDetails {
@@ -461,6 +465,133 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
       };
     })
     .sort((a, b) => (a.minLevel ?? 0) - (b.minLevel ?? 0));
+}
+
+// decisions/tradeskill-recipe-node-schema.md. quantity rides on the
+// resolved ItemSummary rather than a parallel array so a caller never has
+// to zip two lists back together -- same "resolve straight to the shape
+// the UI wants" precedent as getQuests()'s itemRewards.
+export interface RecipeIngredient extends ItemSummary {
+  quantity: number;
+}
+
+export interface ContainerSummary {
+  id: string;
+  label: string;
+}
+
+// Skill-success thresholds for attempting a recipe, computed from `trivial`
+// rather than stored -- a general tradeskill-mechanics formula (not
+// Brewing-specific, not eqlwiki-sourced -- see decisions/
+// tradeskill-recipe-node-schema.md for its provenance), so it's derived at
+// read time the same way a `container`'s own tradeskill is derived by
+// walking `crafted_in` rather than stored redundantly. 95% success is
+// capped at `trivial` itself, not a fourth linear formula.
+export function recipeSuccessThresholds(trivial: number): { p25: number; p50: number; p75: number; p95: number } {
+  const clamp = (n: number) => Math.max(0, n);
+  return {
+    p25: clamp(Math.ceil(0.75 * trivial - 26.5)),
+    p50: clamp(Math.ceil(0.75 * trivial - 1.5)),
+    p75: clamp(Math.ceil(0.75 * trivial + 23.5)),
+    p95: trivial,
+  };
+}
+
+export interface RecipeSummary {
+  id: string;
+  label: string;
+  tradeskill: string;
+  trivial: number;
+  success: { p25: number; p50: number; p75: number; p95: number };
+  uses: RecipeIngredient[];
+  // Absent only if a recipe node somehow has no `produces` edge -- every
+  // recipe this migration batch added has exactly one.
+  produces?: RecipeIngredient;
+  // Absent only if a recipe node somehow has no `crafted_in` edge -- every
+  // recipe this migration batch added has exactly one (migration 356).
+  container?: ContainerSummary;
+}
+
+// Distinct `recipe.tradeskill` values across the graph, for the Tradeskills
+// page's own select box -- no separate "tradeskill" node/lookup table (see
+// decisions/tradeskill-recipe-node-schema.md).
+export function getTradeskills(): string[] {
+  const graph = load();
+  return [...new Set(graph.nodes.filter((n) => n.type === "recipe").map((n) => n.tradeskill as string))].sort();
+}
+
+export function getRecipes(tradeskill: string): RecipeSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  return graph.nodes
+    .filter((n) => n.type === "recipe" && n.tradeskill === tradeskill)
+    .map((n) => {
+      const uses = helpers
+        .edgesFrom(n.id, "uses")
+        .map((e) => {
+          const item = helpers.nodeById(e.target);
+          return item ? { ...toItemSummary(item), quantity: (e.quantity as number) ?? 1 } : undefined;
+        })
+        .filter((ing): ing is RecipeIngredient => ing !== undefined);
+      const producesEdge = helpers.edgesFrom(n.id, "produces")[0];
+      const producesNode = producesEdge ? helpers.nodeById(producesEdge.target) : undefined;
+      const produces = producesNode
+        ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1 }
+        : undefined;
+      const containerNode = helpers.nodeById(helpers.edgesFrom(n.id, "crafted_in")[0]?.target);
+      const container = containerNode ? { id: containerNode.id, label: containerNode.label } : undefined;
+      const trivial = n.trivial as number;
+      return {
+        id: n.id,
+        label: n.label,
+        tradeskill: n.tradeskill as string,
+        trivial,
+        success: recipeSuccessThresholds(trivial),
+        uses,
+        produces,
+        container,
+      };
+    })
+    .sort((a, b) => a.trivial - b.trivial);
+}
+
+export interface TradeskillVendorSummary {
+  id: string;
+  label: string;
+  zoneId: string;
+  zoneLabel: string;
+  // Only the items this vendor sells that a `tradeskill` recipe actually
+  // uses -- a vendor's other, unrelated stock (a general goods vendor who
+  // happens to also sell a Brewing ingredient) doesn't get listed here.
+  sells: ItemSummary[];
+}
+
+// zoneId is optional (unlike getZoneNpcs' required one) -- the Tradeskills
+// page's own zone filter defaults to "any zone, show all" per issue #32,
+// the opposite default from Maps' zone dossier.
+export function getTradeskillVendors(tradeskill: string, zoneId?: string): TradeskillVendorSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const ingredientIds = new Set(
+    graph.nodes
+      .filter((n) => n.type === "recipe" && n.tradeskill === tradeskill)
+      .flatMap((n) => helpers.edgesFrom(n.id, "uses").map((e) => e.target))
+  );
+  const vendors: TradeskillVendorSummary[] = [];
+  for (const npc of graph.nodes) {
+    if (npc.type !== "npc" || !(npc.roles as string[] | undefined)?.includes("vendor")) continue;
+    const sells = helpers
+      .edgesFrom(npc.id, "sells")
+      .map((e) => helpers.nodeById(e.target))
+      .filter((item): item is NodeData => item !== undefined && item.type === "item" && ingredientIds.has(item.id))
+      .map(toItemSummary);
+    if (!sells.length) continue;
+    const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
+    if (!zoneEdge || (zoneId && zoneEdge.target !== zoneId)) continue;
+    const zoneNode = helpers.nodeById(zoneEdge.target);
+    vendors.push({ id: npc.id, label: npc.label, zoneId: zoneEdge.target, zoneLabel: zoneNode?.label ?? zoneEdge.target, sells });
+  }
+  return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));
 }
 
 interface GraphIndexHelpers {

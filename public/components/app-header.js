@@ -2,7 +2,8 @@
 // </nav-links></app-header> — the stone title bar shared by every page.
 // `home` (boolean attribute) renders the title as plain text instead of a
 // link back to home.html, and omits the nav slot entirely — home.html has
-// no nav-links of its own.
+// no nav-links of its own. `beta` (boolean attribute) renders a small badge
+// next to the subtitle for pages still under active development.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -41,11 +42,21 @@ h1 {
 h1 a { color: inherit; text-decoration: none; }
 h1 a:hover { text-decoration: underline; }
 h1 a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-.header-sub { font-size: 11px; color: var(--ink-muted); letter-spacing: 0.22em; text-transform: uppercase; }
+.header-sub { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--ink-muted); letter-spacing: 0.22em; text-transform: uppercase; }
+.beta-badge {
+  padding: 1px 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #2a1f0a;
+  background: linear-gradient(180deg, #f0d492, var(--gold));
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
 `);
 
 class AppHeader extends HTMLElement {
-  static get observedAttributes() { return ["subtitle", "home"]; }
+  static get observedAttributes() { return ["subtitle", "home", "beta"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -62,11 +73,12 @@ class AppHeader extends HTMLElement {
   render() {
     const subtitle = this.getAttribute("subtitle") || "";
     const home = this.hasAttribute("home");
+    const beta = this.hasAttribute("beta");
     const titleHtml = home ? "Norraph" : `<a href="home.html">Norraph</a>`;
     this.shadowRoot.innerHTML = `
       <div class="header-title">
         <h1>${titleHtml}</h1>
-        <p class="header-sub">${subtitle}</p>
+        <p class="header-sub">${subtitle}${beta ? '<span class="beta-badge">Beta</span>' : ""}</p>
       </div>
       ${home ? "" : `<slot name="nav"></slot>`}
     `;

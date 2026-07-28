@@ -50067,7 +50067,8 @@
       "label": "Karn Tassen",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -72030,7 +72031,8 @@
       "label": "Captain Rohand",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -148925,6 +148927,361 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:snake-scales",
+      "label": "Snake Scales",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by snakes across many zones -- Quest Item"
+    },
+    {
+      "id": "item:barley",
+      "label": "Barley",
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small",
+      "source": "Quest Item"
+    },
+    {
+      "id": "item:hops",
+      "label": "Hops",
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small",
+      "source": "Quest Item"
+    },
+    {
+      "id": "item:malt",
+      "label": "Malt",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item"
+    },
+    {
+      "id": "item:packet-of-kiola-sap",
+      "label": "Packet of Kiola Sap",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:grapes",
+      "label": "Grapes",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:fresh-fish",
+      "label": "Fresh Fish",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:rice",
+      "label": "Rice",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:spider-legs",
+      "label": "Spider Legs",
+      "type": "item",
+      "weight": 0.5,
+      "size": "Small",
+      "source": "Dropped by spiders across many zones -- Quest Item"
+    },
+    {
+      "id": "item:rat-ears",
+      "label": "Rat Ears",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by rats across many zones"
+    },
+    {
+      "id": "item:yeast",
+      "label": "Yeast",
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small"
+    },
+    {
+      "id": "item:vegetables",
+      "label": "Vegetables",
+      "type": "item",
+      "weight": 0.6,
+      "size": "Small",
+      "source": "Foraged"
+    },
+    {
+      "id": "item:dwarven-ale",
+      "label": "Dwarven Ale",
+      "type": "item",
+      "weight": 0.4,
+      "size": "Small",
+      "source": "Vendor-purchased only -- no known player recipe"
+    },
+    {
+      "id": "item:elven-wine",
+      "label": "Elven Wine",
+      "type": "item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:bottle",
+      "label": "Bottle",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item"
+    },
+    {
+      "id": "item:cask",
+      "label": "Cask",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:shotglass",
+      "label": "Shotglass",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:bog-juice",
+      "label": "Bog Juice",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 21) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:short-beer",
+      "label": "Short Beer",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 31) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:heady-kiola",
+      "label": "Heady Kiola",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 46) -- used in Tailoring",
+      "weight": 0.2,
+      "size": "Small"
+    },
+    {
+      "id": "item:short-ale",
+      "label": "Short Ale",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 51) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:fish-wine",
+      "label": "Fish Wine",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 62)",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:ale",
+      "label": "Ale",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 68)",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:gnomish-spirits",
+      "label": "Gnomish Spirits",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 102) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:ol-tujims-fierce-brew",
+      "label": "Ol'Tujim's Fierce Brew",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 135) -- Quest Item",
+      "weight": 0.5,
+      "size": "Small"
+    },
+    {
+      "id": "item:ginesh",
+      "label": "Ginesh",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 168)",
+      "weight": 0.2,
+      "size": "Small"
+    },
+    {
+      "id": "item:faydwer-shaker",
+      "label": "Faydwer Shaker",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 188) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "item:minotaur-heros-brew",
+      "label": "Minotaur Hero's Brew",
+      "type": "item",
+      "source": "Brewed via Brewing (trivial 248) -- Quest Item",
+      "weight": 0.4,
+      "size": "Small"
+    },
+    {
+      "id": "recipe:bog-juice",
+      "label": "Bog Juice",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 21
+    },
+    {
+      "id": "recipe:short-beer",
+      "label": "Short Beer",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:heady-kiola",
+      "label": "Heady Kiola",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 46
+    },
+    {
+      "id": "recipe:short-ale",
+      "label": "Short Ale",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:fish-wine",
+      "label": "Fish Wine",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 62
+    },
+    {
+      "id": "recipe:ale",
+      "label": "Ale",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:gnomish-spirits",
+      "label": "Gnomish Spirits",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 102
+    },
+    {
+      "id": "recipe:ol-tujims-fierce-brew",
+      "label": "Ol'Tujim's Fierce Brew",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:ginesh",
+      "label": "Ginesh",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 168
+    },
+    {
+      "id": "recipe:faydwer-shaker",
+      "label": "Faydwer Shaker",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 188
+    },
+    {
+      "id": "recipe:minotaur-heros-brew",
+      "label": "Minotaur Hero's Brew",
+      "type": "recipe",
+      "tradeskill": "Brewing",
+      "trivial": 248
+    },
+    {
+      "id": "npc:field-of-bone:klok-acet",
+      "label": "Klok Acet",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:rolfic-gohar",
+      "label": "Rolfic Gohar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:henna-treghost",
+      "label": "Henna Treghost",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:cloud-alemaker",
+      "label": "Cloud Alemaker",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:krystin-charcoal",
+      "label": "Krystin Charcoal",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:heidi-grainsifter",
+      "label": "Heidi Grainsifter",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:sunsa-jocub",
+      "label": "Sunsa Jocub",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "container:brew-barrel",
+      "label": "Brew Barrel",
+      "type": "container",
+      "source": "Stationary object found in most towns; interact with it to attempt a Brewing recipe."
     }
   ],
   "edges": [
@@ -274664,6 +275021,658 @@
       "source": "npc:erudin-palace:tower-of-the-crimson-hands",
       "target": "zone:erudin-palace",
       "type": "located_in"
+    },
+    {
+      "id": "e-uses-20885",
+      "source": "recipe:bog-juice",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20886",
+      "source": "recipe:bog-juice",
+      "target": "item:snake-scales",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20887",
+      "source": "recipe:bog-juice",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20888",
+      "source": "recipe:bog-juice",
+      "target": "item:bog-juice",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20889",
+      "source": "recipe:short-beer",
+      "target": "item:barley",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20890",
+      "source": "recipe:short-beer",
+      "target": "item:hops",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20891",
+      "source": "recipe:short-beer",
+      "target": "item:malt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20892",
+      "source": "recipe:short-beer",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20893",
+      "source": "recipe:short-beer",
+      "target": "item:short-beer",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20894",
+      "source": "recipe:heady-kiola",
+      "target": "item:packet-of-kiola-sap",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-20895",
+      "source": "recipe:heady-kiola",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20896",
+      "source": "recipe:heady-kiola",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20897",
+      "source": "recipe:heady-kiola",
+      "target": "item:heady-kiola",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20898",
+      "source": "recipe:short-ale",
+      "target": "item:barley",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20899",
+      "source": "recipe:short-ale",
+      "target": "item:hops",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20900",
+      "source": "recipe:short-ale",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20901",
+      "source": "recipe:short-ale",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20902",
+      "source": "recipe:short-ale",
+      "target": "item:short-ale",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20903",
+      "source": "recipe:fish-wine",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20904",
+      "source": "recipe:fish-wine",
+      "target": "item:grapes",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20905",
+      "source": "recipe:fish-wine",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20906",
+      "source": "recipe:fish-wine",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20907",
+      "source": "recipe:fish-wine",
+      "target": "item:fish-wine",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20908",
+      "source": "recipe:ale",
+      "target": "item:barley",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20909",
+      "source": "recipe:ale",
+      "target": "item:malt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20910",
+      "source": "recipe:ale",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20911",
+      "source": "recipe:ale",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20912",
+      "source": "recipe:ale",
+      "target": "item:ale",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20913",
+      "source": "recipe:gnomish-spirits",
+      "target": "item:rice",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20914",
+      "source": "recipe:gnomish-spirits",
+      "target": "item:spider-legs",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20915",
+      "source": "recipe:gnomish-spirits",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20916",
+      "source": "recipe:gnomish-spirits",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20917",
+      "source": "recipe:gnomish-spirits",
+      "target": "item:gnomish-spirits",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20918",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:barley",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20919",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:hops",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20920",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:yeast",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20921",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:malt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20922",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20923",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "item:ol-tujims-fierce-brew",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20924",
+      "source": "recipe:ginesh",
+      "target": "item:vegetables",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20925",
+      "source": "recipe:ginesh",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20926",
+      "source": "recipe:ginesh",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20927",
+      "source": "recipe:ginesh",
+      "target": "item:shotglass",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20928",
+      "source": "recipe:ginesh",
+      "target": "item:ginesh",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20929",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:dwarven-ale",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20930",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:elven-wine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20931",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:gnomish-spirits",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20932",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:mead",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20933",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20934",
+      "source": "recipe:faydwer-shaker",
+      "target": "item:faydwer-shaker",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-20935",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:malt",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-20936",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:short-beer",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-20937",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:water-flask",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-20938",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:yeast",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-20939",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:cask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-20940",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "item:minotaur-heros-brew",
+      "type": "produces"
+    },
+    {
+      "id": "e-located_in-20941",
+      "source": "npc:field-of-bone:klok-acet",
+      "target": "zone:field-of-bone",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20942",
+      "source": "npc:field-of-bone:klok-acet",
+      "target": "item:snake-scales",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20943",
+      "source": "npc:east-freeport:rolfic-gohar",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20944",
+      "source": "npc:east-freeport:rolfic-gohar",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20945",
+      "source": "npc:east-freeport:rolfic-gohar",
+      "target": "item:fresh-fish",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20946",
+      "source": "npc:east-freeport:henna-treghost",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20947",
+      "source": "npc:east-freeport:henna-treghost",
+      "target": "item:dwarven-ale",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20948",
+      "source": "npc:east-freeport:henna-treghost",
+      "target": "item:elven-wine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20949",
+      "source": "npc:east-freeport:henna-treghost",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20950",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20951",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "item:grapes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20952",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "item:bottle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20953",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "item:cask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20954",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "item:shotglass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20955",
+      "source": "npc:east-freeport:cloud-alemaker",
+      "target": "item:packet-of-kiola-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20956",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20957",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:barley",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20958",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:hops",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20959",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:malt",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20960",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:rice",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20961",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:yeast",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20962",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:bottle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20963",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:cask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20964",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:shotglass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20965",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:grapes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20966",
+      "source": "npc:west-freeport:krystin-charcoal",
+      "target": "item:packet-of-kiola-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20967",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20968",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "item:barley",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20969",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "item:hops",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20970",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "item:malt",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20971",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "item:rice",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20972",
+      "source": "npc:south-qeynos:heidi-grainsifter",
+      "target": "item:yeast",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-20973",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-20974",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:bottle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20975",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:cask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20976",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:shotglass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20977",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:packet-of-kiola-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20978",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:grapes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20979",
+      "source": "npc:south-qeynos:sunsa-jocub",
+      "target": "item:mead",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20980",
+      "source": "npc:south-qeynos:captain-rohand",
+      "target": "item:fresh-fish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-20981",
+      "source": "npc:south-qeynos:karn-tassen",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-crafted_in-20982",
+      "source": "recipe:bog-juice",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20983",
+      "source": "recipe:short-beer",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20984",
+      "source": "recipe:heady-kiola",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20985",
+      "source": "recipe:short-ale",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20986",
+      "source": "recipe:fish-wine",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20987",
+      "source": "recipe:ale",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20988",
+      "source": "recipe:gnomish-spirits",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20989",
+      "source": "recipe:ol-tujims-fierce-brew",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20990",
+      "source": "recipe:ginesh",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20991",
+      "source": "recipe:faydwer-shaker",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-20992",
+      "source": "recipe:minotaur-heros-brew",
+      "target": "container:brew-barrel",
+      "type": "crafted_in"
     }
   ]
 }
