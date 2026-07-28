@@ -130,6 +130,23 @@ function setupFilters() {
   });
 
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
+
+  // leveling-guide-card.js's own row click -- issue #32's spec: hides the
+  // guide and selects that recipe in the browsing list below. Resets the
+  // skill range too (not just Type + search), so a narrowed range from
+  // earlier browsing can't hide the very recipe just clicked.
+  document.getElementById("trades-results").addEventListener("recipe-select", (e) => {
+    showGuide = false;
+    updateGuideButtonLabel();
+    document.getElementById("trade-type-select").value = "recipes";
+    selectedType = "recipes";
+    updateSkillRangeVisibility();
+    const range = document.getElementById("trade-skill-range");
+    range.valueMin = 0;
+    range.valueMax = MAX_TRADESKILL_LEVEL;
+    document.getElementById("trade-search").value = e.detail.recipeLabel;
+    render();
+  });
 }
 
 function updateSkillRangeVisibility() {

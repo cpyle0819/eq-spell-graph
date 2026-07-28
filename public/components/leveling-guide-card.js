@@ -8,10 +8,19 @@
 //
 // A standalone panel, not a CardBase list item -- same "self-contained
 // dossier shell" shape as zone-dossier.js (its own bevel-panel + parchment-
-// scroll, no shared base class, no click/hover-brighten treatment, since
-// this isn't a clickable row in a list of many). trades.js adds/removes
-// this single element entirely via its Show Guide button; it has no
-// collapse affordance of its own.
+// scroll, no shared base class). trades.js adds/removes this single element
+// entirely via its Show Guide button; it has no collapse affordance of its
+// own.
+//
+// Each row IS clickable, though -- issue #32's own spec: clicking a recipe
+// in the guide hides the guide and selects that recipe in the browsing list
+// below. Dispatches a bubbling+composed "recipe-select" custom event
+// (bubbles/composed so it escapes this element's own shadow root, same
+// convention as status-panel.js's "toggle-owned"/zone-card.js's
+// "spell-owned-change") rather than trades.js reaching in to read state
+// itself; a click landing on an ingredient chip's own link is left alone
+// (its own nav-href already does something more specific -- deep-linking to
+// that ingredient, not this recipe).
 import { RESET_CSS } from "./reset.js";
 import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml } from "./tradeskill-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
@@ -70,8 +79,10 @@ ${RESET_CSS}
 
 .recipe-list { display: flex; flex-direction: column; }
 .recipe-empty { font-size: 12px; font-style: italic; color: var(--parch-ink-soft); }
-.recipe-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; padding: 10px 0; }
+.recipe-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; padding: 10px 0; cursor: pointer; }
 .recipe-row:not(:first-child) { border-top: 1px solid var(--parch-line); }
+.recipe-row:hover, .recipe-row:focus-visible { background: rgba(122, 96, 42, 0.08); outline: none; }
+.recipe-row:focus-visible { box-shadow: inset 0 0 0 2px var(--gold); }
 .skill-badges { display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
 .recipe-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .recipe-name { font-weight: 700; color: var(--parch-ink); font-size: 13px; }
@@ -83,7 +94,7 @@ ${RECIPE_ROW_CSS}
 
 function recipeRowHtml(recipe) {
   return `
-    <div class="recipe-row">
+    <div class="recipe-row" role="button" tabindex="0" data-recipe-id="${recipe.id}" data-recipe-label="${recipe.label}">
       <span class="skill-badges">${recipeBadgesHtml(recipe)}</span>
       <span class="recipe-body">
         <span class="recipe-name">${recipe.label}</span>
@@ -110,8 +121,26 @@ class LevelingGuideCard extends HTMLElement {
           <div class="recipe-list"></div>
         </div>
       `;
+      const list = this.shadowRoot.querySelector(".recipe-list");
+      list.addEventListener("click", (e) => this.#selectRow(e));
+      list.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.#selectRow(e); }
+      });
     }
     this.render();
+  }
+
+  // An ingredient chip inside the row is its own link (nav-href, deep-linking
+  // to that ingredient) -- a click landing there should do only that, not
+  // also select this whole recipe.
+  #selectRow(e) {
+    if (e.composedPath().some((n) => n.tagName === "ITEM-CHIP")) return;
+    const row = e.target.closest(".recipe-row");
+    if (!row) return;
+    this.dispatchEvent(new CustomEvent("recipe-select", {
+      bubbles: true, composed: true,
+      detail: { recipeId: row.dataset.recipeId, recipeLabel: row.dataset.recipeLabel },
+    }));
   }
 
   setData(recipes) {
