@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norraph — Tradeskills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap">
+  <link rel="stylesheet" href="theme.css">
+  <style id="page-style">
+    /* Page layout only — component styling lives in theme.css. Structure
+       mirrors quests.html/class-browser.html's console-frame + left sidebar
+       exactly (issue #32 asked for this over maps.html's horizontal
+       .finder-bar): filters live in <sidebar-panel>, the dossier packs the
+       content column. */
+    body { height: 100vh; display: flex; flex-direction: column; }
+
+    #trades-page {
+      display: flex; flex-direction: column; overflow: hidden; flex: 1;
+      background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      padding: 0 14px 14px; gap: 14px;
+    }
+    #trades-content { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; padding: 0 0 24px; }
+
+    @media (min-width: 1100px) {
+      #trades-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
+      #trades-content { overflow-y: auto; }
+    }
+
+    @media (max-width: 1099.98px) {
+      body { height: auto; min-height: 100vh; }
+      #trades-page { flex: none; overflow: visible; }
+      #trades-content { flex: none; overflow-y: visible; min-height: 0; }
+    }
+
+    @media (max-width: 700px) {
+      #trades-page { padding: 0 10px 10px; gap: 10px; }
+    }
+
+    .no-results { padding: 40px 20px; text-align: center; color: var(--ink-muted); font-size: 14px; }
+
+    /* The leveling-guide-card (when Show Guide is on) and the Recipes/
+       Ingredients card list are meant to read as one continuous packed
+       list, not two separate panels -- no group header, no gap between
+       them, same zero-gap seam contract as the cards within each list
+       (decisions/card-list-seams-no-border-overlap.md). Neither element
+       gets a display rule of its own; plain block stacking already gives
+       that seam. */
+
+    /* The Show Guide macro-button reuses the exact "Show all" square-button
+       convention (public/components/status-panel.js's own toggle-owned-btn)
+       -- this row just centers it in the filter panel, below the fields,
+       the same layout job status-panel's own .status-actions does for its
+       copy of the same button (that one lives in status-panel's shadow
+       root; this one's a page-level filter-panel action, so it gets a
+       plain generic wrapper here instead, no visual identity of its own). */
+    .guide-toggle-row { display: flex; justify-content: center; padding: 4px 0; }
+  </style>
+</head>
+<body>
+  <app-header subtitle="Tradeskills" beta>
+    <nav-links slot="nav" current="trades"></nav-links>
+  </app-header>
+
+  <div id="trades-page">
+    <div id="controls-panel-slot"></div>
+    <div id="trades-content">
+      <div id="trades-results"></div>
+    </div>
+  </div>
+
+  <detail-tooltip id="detail-tooltip" role="tooltip" aria-hidden="true"></detail-tooltip>
+  <app-footer></app-footer>
+  <script type="module" src="router.js"></script>
+</body>
+</html>

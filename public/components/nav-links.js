@@ -18,6 +18,7 @@ const PAGES = [
   { key: "class-browser", label: "Classes", href: "class-browser.html" },
   { key: "quests", label: "Quests", href: "quests.html" },
   { key: "leveling-guide", label: "Leveling Guide", href: "leveling-guide.html" },
+  { key: "trades", label: "Tradeskills", href: "trades.html" },
 ];
 
 const BREAKPOINT = 860;

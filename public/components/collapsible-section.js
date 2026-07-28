@@ -15,6 +15,13 @@
 // role="button"/tabindex over a real <button> to avoid fighting this app's
 // global bone-plate button styling (theme.css's `button {...}`) rather
 // than fight it with overrides.
+//
+// `static` opts a use out of the toggle behavior entirely -- for a labeled
+// group header that should never collapse (e.g. trades.js's own Recipes/
+// Ingredients result groups, where "hide the whole list" isn't a real
+// feature and a stray click on the header shouldn't do it by accident). No
+// chevron, no role="button"/tabindex, no click/keydown wiring -- it's a
+// plain heading that happens to share this component's label styling.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -29,7 +36,7 @@ ${RESET_CSS}
 .header {
   font-size: 13px; color: var(--parchment); letter-spacing: 0.1em;
   font-weight: 600; text-transform: uppercase; margin-top: 6px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: var(--header-text-shadow, 0 1px 1px rgba(0, 0, 0, 0.6));
   display: flex; align-items: center; gap: 6px; cursor: pointer;
 }
 .header[title] { cursor: help; }
@@ -39,6 +46,8 @@ ${RESET_CSS}
 }
 .header[aria-expanded="false"]::before { transform: rotate(-90deg); }
 .header:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+:host([static]) .header { cursor: default; }
+:host([static]) .header::before { display: none; }
 `);
 
 class CollapsibleSection extends HTMLElement {
@@ -48,15 +57,18 @@ class CollapsibleSection extends HTMLElement {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.adoptedStyleSheets = [sheet];
+      const isStatic = this.hasAttribute("static");
       this.shadowRoot.innerHTML = `
-        <div class="header" role="button" tabindex="0" aria-expanded="true"></div>
+        <div class="header"${isStatic ? "" : ' role="button" tabindex="0" aria-expanded="true"'}></div>
         <slot></slot>
       `;
-      const header = this.shadowRoot.querySelector(".header");
-      header.addEventListener("click", () => this.toggle());
-      header.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.toggle(); }
-      });
+      if (!isStatic) {
+        const header = this.shadowRoot.querySelector(".header");
+        header.addEventListener("click", () => this.toggle());
+        header.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.toggle(); }
+        });
+      }
     }
     this.render();
   }
@@ -71,7 +83,7 @@ class CollapsibleSection extends HTMLElement {
     const title = this.getAttribute("section-title");
     if (title) header.setAttribute("title", title);
     else header.removeAttribute("title");
-    header.setAttribute("aria-expanded", String(!this.collapsed));
+    if (!this.hasAttribute("static")) header.setAttribute("aria-expanded", String(!this.collapsed));
   }
 
   get collapsed() { return this.hasAttribute("collapsed"); }

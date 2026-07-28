@@ -35,6 +35,8 @@ The infra repo that actually owns deployment is **`coreypyle-infra`**, a sibling
 
 After a feature in this repo is implemented and verified, the default is to commit and push to `main` as part of finishing the work, not as a separate follow-up step someone has to ask for — pushing to `main` **is** deploying now, since it automatically triggers `coreypyle-infra`'s deploy pipeline with no manual steps in between. Ask first if a change seems risky to ship immediately (e.g. touches live data, is hard to reverse) — otherwise treat a push as already including deployment, and don't propose a separate manual deploy step afterward.
 
+**Big, multi-step features work on a feature branch instead** (e.g. `issue-32-tradeskills-brewing`): commit and push each incremental step to that branch as it's finished, not to `main`, so nothing half-built auto-deploys mid-feature. Merge to `main` (and get the deploy) once the feature is actually done, not after every step.
+
 ## Design Decisions
 
 `decisions/` holds architecture choices and EQ domain knowledge that shaped the code — one file per decision, grouped by category in `decisions/INDEX.md`. Read `decisions/INDEX.md` before making changes (it's short — one line per decision); open the specific file(s) relevant to what you're touching for the full rationale rather than reading the whole folder.

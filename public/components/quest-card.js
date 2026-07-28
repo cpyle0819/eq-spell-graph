@@ -36,18 +36,14 @@
 // quests.html?search=<name> rather than trying to scroll to/highlight the
 // actual card (which can be lazily unrendered or filtered out entirely).
 //
-// Item reward chips reuse the same <detail-tooltip> singleton the Spell
-// Finder uses (public/components/detail-tooltip.js, one instance per page
-// -- quests.html has its own) via quest-shared.js's wireItemTooltips(),
-// shared with quest-group-card.js. detail-tooltip itself has no field-level
-// knowledge of any entity type -- quest-shared.js's itemStats() shapes an
-// ItemSummary (full stat block per decisions/item-node-schema.md) into its
-// generic { name, description?, stats? } contract, the same division of
-// labor as zone-card.js's spellStats() for spells (see decisions/
-// item-hover-uses-generic-detail-tooltip.md for why that split, not a
-// tooltip subclass, is the pattern here). Faction/XP chips stay native-
-// `title` tooltips — they're not graph entities, so there's nothing more to
-// pop up. Spell reward chips are real links instead of a tooltip target —
+// Item reward chips render through <item-chip> (public/components/
+// item-chip.js) -- the one component every item rendering in this app goes
+// through, so an item reward here looks and behaves identically to a
+// recipe ingredient or an npc drop. rewardsBody() (quest-shared.js) emits
+// the chip markup; hydrateItemChips() below attaches each one's full
+// ItemSummary once it's in the DOM. Faction/XP chips stay native-`title`
+// tooltips — they're not graph entities, so there's nothing more to pop up.
+// Spell reward chips are real links instead of a tooltip target —
 // quest-shared.js's spellFinderPinUrl() sends them to the Spell Finder with
 // that spell pre-filled, the same "Find in Spells" deep link spell-card.js
 // already uses from the Class Browser.
@@ -65,7 +61,8 @@
 // numeral for its own member roster (the 7 Armor of Ro pieces have no
 // order between them) -- see that file for the plain-seal alternative.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, requiresBody, wireItemTooltips } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, requiresBody } from "./quest-shared.js";
+import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(QUEST_CARD_CSS);
@@ -78,10 +75,6 @@ class QuestCard extends CardBase {
   setData(quest) {
     this.#quest = quest;
     if (this.shadowRoot) this.render();
-  }
-
-  wireEvents() {
-    wireItemTooltips(this.shadowRoot, (id) => this.#quest?.itemRewards.find((i) => i.id === id));
   }
 
   render() {
@@ -101,6 +94,7 @@ class QuestCard extends CardBase {
         ${section("Rewards", rewardsBody(quest))}
       </div>
     `;
+    hydrateItemChips(this.shadowRoot, (id) => quest.itemRewards.find((i) => i.id === id));
   }
 }
 

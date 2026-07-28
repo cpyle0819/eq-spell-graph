@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -265,6 +265,29 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   if (pathname === "/api/items") {
     const ids = (searchParams.get("ids") || "").split(",").filter(Boolean);
     return { status: 200, body: ids.length ? getItemsByIds(ids) : [] };
+  }
+
+  // GET /api/tradeskills — distinct recipe.tradeskill values, for the
+  // Tradeskills page's own select box.
+  if (pathname === "/api/tradeskills") {
+    return { status: 200, body: getTradeskills() };
+  }
+
+  // GET /api/recipes?tradeskill=Brewing — every recipe for that trade,
+  // sorted by trivial (the leveling-guide order).
+  if (pathname === "/api/recipes") {
+    const tradeskill = searchParams.get("tradeskill") || "";
+    return { status: 200, body: tradeskill ? getRecipes(tradeskill) : [] };
+  }
+
+  // GET /api/tradeskill-vendors?tradeskill=Brewing&zone=zone:east-freeport —
+  // vendor npcs selling that trade's recipe ingredients. zone is optional —
+  // omitted means every zone (the Tradeskills page's own default), unlike
+  // /api/npcs' required one.
+  if (pathname === "/api/tradeskill-vendors") {
+    const tradeskill = searchParams.get("tradeskill") || "";
+    const zone = searchParams.get("zone") || undefined;
+    return { status: 200, body: tradeskill ? getTradeskillVendors(tradeskill, zone) : [] };
   }
 
   return null;

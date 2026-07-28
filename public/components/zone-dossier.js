@@ -77,8 +77,8 @@
 // legend column each collapse via `hidden` when there's no map (or no
 // legend for the current floor).
 import { RESET_CSS } from "./reset.js";
-import { WIKI_LINK_CSS, wikiLink, wikiUrl } from "./card-base.js";
-import { itemStats } from "./quest-shared.js";
+import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
+import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 import "./ledger-item.js";
 import "./zone-map.js";
 
@@ -99,17 +99,12 @@ function npcLevelText({ minLevel, maxLevel }) {
 
 // Drop chips render inline inside .npc-name (not as a third grid cell) so
 // the existing 2-column max-content/1fr grid (name, level) doesn't need a
-// third track -- an npc row with drops just has a wider first cell. Hover
-// wiring is in connectedCallback, same event-delegation shape as
-// quest-shared.js's wireItemTooltips(), reading item data back out of
-// #dropsById (rebuilt each render()) via data-item-id.
-// A real <a> (same reasoning as quest-shared.js's itemChip()) -- desktop
-// hover shows the <detail-tooltip> and click is suppressed in
-// #wireDropTooltips() below; touch has no hover, so a bare tap navigates to
-// the item's own eqlwiki.com page instead of doing nothing.
+// third track -- an npc row with drops just has a wider first cell.
+// hydrateItemChips() in render() attaches each chip's full item data from
+// #dropsById once this markup is in the DOM.
 function npcDropBadges(npc) {
   if (!npc.drops?.length) return "";
-  return npc.drops.map((item) => `<a class="npc-drop-badge" data-item-id="${item.id}" href="${wikiUrl(item.label)}" target="_blank" rel="noopener">${item.label}</a>`).join("");
+  return npc.drops.map(itemChipTag).join("");
 }
 
 // Two sibling grid cells, not a wrapping row div -- .npc-list itself is the
@@ -339,24 +334,10 @@ ${WIKI_LINK_CSS}
 .npc-name:not(:nth-child(-n+2)), .npc-level:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
 .npc-level { text-align: right; font-size: 11px; color: var(--parch-ink-soft); font-variant-numeric: tabular-nums; }
 
-/* Same amber "item" gem language as quest-shared.js's own .item-badge
-   (decisions/item-hover-uses-generic-detail-tooltip.md) -- a different file
-   since this card has no reason to import that one's full CSS blob, but the
-   color says "this is loot" the same way across both pages. */
-.npc-drop-badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  margin-left: 8px; padding: 1px 7px 1px 5px; border-radius: 3px;
-  font-size: 11px; cursor: help;
-  background: rgba(122, 77, 5, 0.1); color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4);
-}
-.npc-drop-badge::before {
-  content: ""; width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0;
-  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
-}
-/* Same reasoning as quest-shared.js's .item-badge coarse-pointer override --
-   touch has no hover, so cursor:pointer signals what tapping it does. */
-@media (pointer: coarse) { .npc-drop-badge { cursor: pointer; } }
+/* item-chip.js renders every drop chip itself -- this just places it after
+   the npc's name, since <item-chip> is an ordinary inline child here, not
+   slotted content. */
+.npc-name item-chip { margin-left: 8px; }
 
 /* quest-ledger's <ledger-item>s live in this component's own shadow tree
    (nested the same way route-card nests route-path -- see this file's own
@@ -418,32 +399,8 @@ class ZoneDossier extends HTMLElement {
         this.#activeFloor = Number(btn.dataset.index);
         this.render();
       });
-      this.#wireDropTooltips();
     }
     this.render();
-  }
-
-  // Same event-delegation shape as quest-shared.js's wireItemTooltips() --
-  // listens on shadowRoot itself so retargeting doesn't apply (see that
-  // file's own comment) -- but reads from #dropsById instead of taking a
-  // findItem callback, since this component owns its own npc/item data
-  // rather than a parent page's.
-  #wireDropTooltips() {
-    if (!window.matchMedia("(pointer: fine)").matches) return; // touch devices: no hover tooltip, same as quest-shared.js
-    this.shadowRoot.addEventListener("mouseover", (e) => {
-      const chip = e.target.closest(".npc-drop-badge[data-item-id]");
-      if (!chip) return;
-      const item = this.#dropsById.get(chip.dataset.itemId);
-      if (item) document.getElementById("detail-tooltip")?.show({ name: item.label, description: item.source, stats: itemStats(item) }, chip);
-    });
-    this.shadowRoot.addEventListener("mouseout", (e) => {
-      if (!e.relatedTarget?.closest?.(".npc-drop-badge[data-item-id]")) {
-        document.getElementById("detail-tooltip")?.hide();
-      }
-    });
-    this.shadowRoot.addEventListener("click", (e) => {
-      if (e.target.closest(".npc-drop-badge[data-item-id]")) e.preventDefault(); // hover is sufficient on desktop
-    });
   }
 
   setData(data) {
@@ -488,7 +445,9 @@ class ZoneDossier extends HTMLElement {
       .join("");
 
     this.#dropsById = new Map((npcs || []).flatMap((n) => n.drops || []).map((item) => [item.id, item]));
-    this.shadowRoot.querySelector(".npc-groups").innerHTML = npcGroupsHtml(npcs, zoneType);
+    const npcGroupsEl = this.shadowRoot.querySelector(".npc-groups");
+    npcGroupsEl.innerHTML = npcGroupsHtml(npcs, zoneType);
+    hydrateItemChips(npcGroupsEl, (id) => this.#dropsById.get(id));
 
     const ledger = this.shadowRoot.querySelector(".quest-ledger");
     if (quests?.length) {

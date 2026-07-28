@@ -12,7 +12,8 @@
 // Quests category, decisions/class-browser-quests-category.md) --
 // buildQuestResultEntries() below, which neither is a card nor belongs in
 // card-base.js, but both pages need identically.
-import { classBadges, wikiUrl } from "./card-base.js";
+import { classBadges } from "./card-base.js";
+import { itemChipTag } from "./item-chip.js";
 
 // Raw CSS text (not a constructed CSSStyleSheet), same convention as
 // reset.js's RESET_CSS / card-base.js's WIKI_LINK_CSS -- CardBase's
@@ -76,24 +77,16 @@ export const QUEST_CARD_CSS = `
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-.spell-badge.xp-badge, .spell-badge.item-badge, .spell-badge.faction-badge-reward, .spell-badge.spell-badge-reward {
+.spell-badge.xp-badge, .spell-badge.faction-badge-reward, .spell-badge.spell-badge-reward {
   display: inline-flex; align-items: center; gap: 6px;
 }
-.spell-badge.xp-badge, .spell-badge.item-badge, .spell-badge.faction-badge-reward { cursor: help; }
-.spell-badge.xp-badge::before, .spell-badge.item-badge::before, .spell-badge.faction-badge-reward::before, .spell-badge.spell-badge-reward::before {
+.spell-badge.xp-badge, .spell-badge.faction-badge-reward { cursor: help; }
+.spell-badge.xp-badge::before, .spell-badge.faction-badge-reward::before, .spell-badge.spell-badge-reward::before {
   content: ""; width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
 }
 .xp-badge   { background: rgba(16, 122, 46, 0.1);  color: #157a3c; border: 1px solid rgba(16, 122, 46, 0.35); }
 .xp-badge::before { background: radial-gradient(circle at 65% 30%, #7dffb0, #22c55e 60%, #157a3c); }
-.item-badge { background: rgba(122, 77, 5, 0.1);   color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4); }
-.item-badge::before { background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d); }
-/* item-badge is a real <a> (wireItemTooltips()'s own comment) but keeps the
-   "help" cursor here, same as the plain xp/faction chips -- desktop hover
-   still shows the <detail-tooltip>, so it isn't styled as a plain text link
-   the way spell-badge-reward below is. On touch there's no hover, so the
-   coarse-pointer override below signals what tapping it actually does. */
-@media (pointer: coarse) { .spell-badge.item-badge { cursor: pointer; } }
 .faction-badge-reward { background: rgba(94, 42, 122, 0.1); color: #5e2a7a; border: 1px solid rgba(94, 42, 122, 0.4); }
 .faction-badge-reward::before { background: radial-gradient(circle at 65% 30%, #d9a8ff, #9d5ec7 55%, #5e2a7a); }
 
@@ -146,10 +139,6 @@ export const QUEST_CARD_CSS = `
 .chain-icon::before { left: 0; }
 .chain-icon::after { left: 6px; }
 `;
-
-const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
-const STAT_LABELS = { str: "STR", sta: "STA", dex: "DEX", agi: "AGI", wis: "WIS", int: "INT", cha: "CHA" };
-const RESIST_LABELS = { fire: "Fire", cold: "Cold", disease: "Disease", poison: "Poison", magic: "Magic" };
 
 // "Level 5 – 15" / "Level 20+" / "Level ≤ 15" / "" (both bounds absent —
 // no badge at all rather than a misleading "All Levels" chip cluttering
@@ -216,43 +205,6 @@ export function stepsBody(steps) {
   return steps.length ? `<ol class="quest-steps">${steps.map((s) => `<li>${s}</li>`).join("")}</ol>` : "";
 }
 
-// Shapes an ItemSummary (src/graph.ts's ItemDetails, see decisions/
-// item-node-schema.md) into <detail-tooltip>'s generic { text, highlight? }
-// stat-chip contract -- slots is the one highlighted chip (mirrors
-// zone-card's spellStats() highlighting spellType), everything else plain.
-// Every field is optional on the source data, so each line is independently
-// skippable -- a container has weight/size and nothing else, a weapon has
-// damage/delay/skill and usually no resists.
-export function itemStats(item) {
-  const stats = [];
-  if (item.slots?.length) stats.push({ text: item.slots.join("/"), highlight: true });
-  if (item.ac != null) stats.push({ text: `${item.ac} AC` });
-  if (item.damage != null) stats.push({ text: `${item.damage} dmg` });
-  if (item.delay != null) stats.push({ text: `${item.delay} delay` });
-  if (item.skill) stats.push({ text: item.skill });
-  for (const [key, label] of Object.entries(STAT_LABELS)) {
-    const v = item.stats?.[key];
-    if (v) stats.push({ text: `${v > 0 ? "+" : ""}${v} ${label}` });
-  }
-  if (item.hp != null) stats.push({ text: `+${item.hp} HP` });
-  if (item.mana != null) stats.push({ text: `+${item.mana} Mana` });
-  for (const [key, label] of Object.entries(RESIST_LABELS)) {
-    const v = item.resists?.[key];
-    if (v) stats.push({ text: `${v > 0 ? "+" : ""}${v} SV ${label}` });
-  }
-  if (item.effect) stats.push({ text: `Effect: ${item.effect}` });
-  if (item.lightSource) stats.push({ text: "Light Source" });
-  if (item.weight != null) stats.push({ text: `WT ${item.weight}` });
-  if (item.size) stats.push({ text: item.size });
-  if (item.capacity != null) stats.push({ text: `${item.capacity} slots${item.containerSize ? ` (${item.containerSize} max)` : ""}` });
-  if (item.classes?.length) stats.push({ text: item.classes.map(titleCase).join(", ") });
-  if (item.magic) stats.push({ text: "Magic" });
-  if (item.lore) stats.push({ text: "Lore" });
-  if (item.noTrade) stats.push({ text: "No Trade" });
-  if (item.value) stats.push({ text: item.value });
-  return stats;
-}
-
 // Matches class-browser.js's / quests.js's own MAX_QUEST_LEVEL bound -- the
 // data tops out at level 50 (see decisions/). Only used as a fallback when
 // the rewarding quest itself has no minLevel/maxLevel to carry over.
@@ -278,17 +230,6 @@ export function spellFinderPinUrl(spell, quest) {
   });
   if (quest.classes?.length) params.set("classes", quest.classes.join(","));
   return `index.html?${params}`;
-}
-
-// A real <a> (same reasoning as zone-card.js's spell-chip), not a <span> --
-// on desktop, hover shows the <detail-tooltip> and click is suppressed
-// below (hover is enough); on touch, there's no hover, so a plain tap just
-// navigates to the item's own eqlwiki.com page (decisions/
-// item-node-schema.md's items are each modeled on one, same wikiUrl()
-// guess already trusted for spell-chip). A bare <span> here previously left
-// item chips with no mobile equivalent at all.
-function itemChip(item) {
-  return `<a class="spell-badge item-badge" data-item-id="${item.id}" href="${wikiUrl(item.label)}" target="_blank" rel="noopener">${item.label}</a>`;
 }
 
 function spellChip(spell, quest) {
@@ -339,7 +280,7 @@ function rewardBucketBody(rewards, toChip) {
 }
 
 export function rewardsBody(quest) {
-  const itemsBody = rewardBucketBody(quest.itemRewards, itemChip);
+  const itemsBody = rewardBucketBody(quest.itemRewards, itemChipTag);
   const spellsBody = rewardBucketBody(quest.spellRewards, (s) => spellChip(s, quest));
   const currencyBody = ""; // no coin data modeled yet -- decisions/quest-reward-modeling.md
   const experienceBody = quest.total_experience ? `<div class="spell-badges"><span class="spell-badge xp-badge" title="Experience reward">${quest.total_experience} XP</span></div>` : "";
@@ -354,32 +295,6 @@ export function rewardsBody(quest) {
     rewardSubsection("Experience", experienceBody),
     rewardSubsection("Faction", factionBody),
   ].join("");
-}
-
-// Wires item-reward-chip hover -> <detail-tooltip>, shared by quest-card.js
-// (one quest's own itemRewards) and quest-group-card.js (the union of every
-// member's itemRewards) -- only the lookup scope differs, so findItem(id)
-// is supplied by the caller. Listening on shadowRoot itself (not `this`/
-// the host) sees the real internal e.target/e.relatedTarget directly --
-// event retargeting to the host only applies to listeners outside the
-// shadow tree (see tag-input.js / zone-card.js's identical comment).
-export function wireItemTooltips(shadowRoot, findItem) {
-  if (!window.matchMedia("(pointer: fine)").matches) return; // touch devices: no hover tooltip, same as zone-card's spell-chip
-
-  shadowRoot.addEventListener("mouseover", (e) => {
-    const chip = e.target.closest(".item-badge[data-item-id]");
-    if (!chip) return;
-    const item = findItem(chip.dataset.itemId);
-    if (item) document.getElementById("detail-tooltip")?.show({ name: item.label, description: item.source, stats: itemStats(item) }, chip);
-  });
-  shadowRoot.addEventListener("mouseout", (e) => {
-    if (!e.relatedTarget?.closest?.(".item-badge[data-item-id]")) {
-      document.getElementById("detail-tooltip")?.hide();
-    }
-  });
-  shadowRoot.addEventListener("click", (e) => {
-    if (e.target.closest(".item-badge[data-item-id]")) e.preventDefault(); // hover is sufficient on desktop
-  });
 }
 
 // A quest group matches search if its own name does, or any member's does --
