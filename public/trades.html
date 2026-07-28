@@ -40,12 +40,22 @@
 
     .no-results { padding: 40px 20px; text-align: center; color: var(--ink-muted); font-size: 14px; }
 
-    /* Card-list-seams' zero-gap contract (decisions/
-       card-list-seams-no-border-overlap.md) applies within each group --
-       the two <collapsible-section> groups themselves aren't a packed card
-       list, so they get real spacing between them. */
-    #trades-results > collapsible-section + collapsible-section { margin-top: 22px; }
-    .trade-card-list { display: flex; flex-direction: column; }
+    /* The leveling-guide-card (when Show Guide is on) and the Recipes/
+       Ingredients card list are meant to read as one continuous packed
+       list, not two separate panels -- no group header, no gap between
+       them, same zero-gap seam contract as the cards within each list
+       (decisions/card-list-seams-no-border-overlap.md). Neither element
+       gets a display rule of its own; plain block stacking already gives
+       that seam. */
+
+    /* The Show Guide macro-button reuses the exact "Show all" square-button
+       convention (public/components/status-panel.js's own toggle-owned-btn)
+       -- this row just centers it in the filter panel, below the fields,
+       the same layout job status-panel's own .status-actions does for its
+       copy of the same button (that one lives in status-panel's shadow
+       root; this one's a page-level filter-panel action, so it gets a
+       plain generic wrapper here instead, no visual identity of its own). */
+    .guide-toggle-row { display: flex; justify-content: center; padding: 4px 0; }
   </style>
 </head>
 <body>

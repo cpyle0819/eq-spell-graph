@@ -44,7 +44,8 @@
 // blank, so the *absence* of a number reads as a real structural signal,
 // not an inconsistency.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, wireItemTooltips } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody } from "./quest-shared.js";
+import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`
@@ -121,16 +122,6 @@ class QuestGroupCard extends CardBase {
     if (this.shadowRoot) this.render();
   }
 
-  wireEvents() {
-    wireItemTooltips(this.shadowRoot, (id) => {
-      for (const member of this.#group?.members || []) {
-        const found = member.itemRewards.find((i) => i.id === id);
-        if (found) return found;
-      }
-      return undefined;
-    });
-  }
-
   render() {
     const group = this.#group;
     if (!group) return;
@@ -146,6 +137,13 @@ class QuestGroupCard extends CardBase {
         ${section(`Quests in This Group (${group.members.length})`, `<div class="group-roster">${roster}</div>`)}
       </div>
     `;
+    hydrateItemChips(this.shadowRoot, (id) => {
+      for (const member of group.members) {
+        const found = member.itemRewards.find((i) => i.id === id);
+        if (found) return found;
+      }
+      return undefined;
+    });
   }
 }
 

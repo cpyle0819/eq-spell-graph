@@ -88,7 +88,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Home page: tool buttons are a touching macro-socket grid, no per-tool description text, positioned left of the welcome scroll](home-page-macro-socket-grid.md)
 - [Wiki links: per-entity page vs. shared-page link, by node type](wiki-links-per-entity-vs-shared-page.md)
 - [Spell icons: real client art, a deliberate exception to the derived-facts-only policy](spell-icons-real-client-art-exception.md)
-- [Item hover uses the generic detail-tooltip, shaped per card type](item-hover-uses-generic-detail-tooltip.md)
+- [Item hover uses the generic detail-tooltip; every item renders through one `<item-chip>` component](item-hover-uses-generic-detail-tooltip.md)
 - [Quest-group card replaces its members in the results list](quest-group-card-ui.md)
 - [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
 - [Zone level badge: retired the mock, and dropped route-card's second one](zone-level-badge-retired-mock-data.md)

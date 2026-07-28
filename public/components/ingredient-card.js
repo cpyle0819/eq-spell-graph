@@ -37,7 +37,7 @@ function usedInBody(usedIn) {
   const chips = usedIn
     .map((u) => {
       const qty = u.quantity && u.quantity !== 1 ? `${u.quantity}x ` : "";
-      return `<span class="spell-badge skill-badge">${qty}${u.recipeLabel}</span>`;
+      return `<a class="spell-badge skill-badge ingredient-used-in-link" href="trades.html?type=recipes&search=${encodeURIComponent(u.recipeLabel)}">${qty}${u.recipeLabel}</a>`;
     })
     .join("");
   return `<div class="quest-section-body spell-badges">${chips}</div>`;
@@ -48,7 +48,7 @@ function vendorGroupsBody(vendorGroups) {
   return vendorGroups
     .map((g) => `
       <div class="ingredient-vendor-group">
-        <div class="ingredient-vendor-zone">${g.zoneLabel}</div>
+        <div class="ingredient-vendor-zone"><a href="maps.html?to=${encodeURIComponent(g.zoneLabel)}">${g.zoneLabel}</a></div>
         ${g.vendors.map((v) => `<div class="ingredient-vendor-row">${v.label}</div>`).join("")}
       </div>
     `)
@@ -62,7 +62,11 @@ ${QUEST_CARD_CSS}
 .ingredient-sold-by { margin-top: 12px; }
 .ingredient-vendor-group + .ingredient-vendor-group { margin-top: 10px; }
 .ingredient-vendor-zone { font-size: 11px; font-weight: 700; color: var(--parch-accent); margin-bottom: 4px; }
+.ingredient-vendor-zone a { color: inherit; text-decoration: none; }
+.ingredient-vendor-zone a:hover, .ingredient-vendor-zone a:focus-visible { text-decoration: underline; }
 .ingredient-vendor-row { font-size: 13px; color: #4a4232; padding: 2px 0; }
+.ingredient-used-in-link { text-decoration: none; cursor: pointer; }
+.ingredient-used-in-link:hover, .ingredient-used-in-link:focus-visible { text-decoration: underline; background: rgba(0, 0, 0, 0.1); }
 `);
 
 class IngredientCard extends CardBase {
@@ -86,7 +90,7 @@ class IngredientCard extends CardBase {
       <div class="spell-scroll">
         ${section("Used In", usedInBody(usedIn))}
         <div class="ingredient-sold-by">
-          <collapsible-section label="Sold By (${vendorCount})" section="sold-by" collapsed style="--parchment: var(--parch-ink);">
+          <collapsible-section label="Sold By (${vendorCount})" section="sold-by" collapsed style="--parchment: var(--parch-ink); --header-text-shadow: none;">
             ${vendorGroupsBody(vendorGroups)}
           </collapsible-section>
         </div>

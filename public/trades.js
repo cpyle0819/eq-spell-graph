@@ -4,30 +4,46 @@
 import "./components/index.js";
 import { lazyRenderList } from "./components.js";
 
-// Issue #32's first pass: a tradeskill select + a zone-filterable dossier
-// (leveling guide + vendor list), modeled first for Brewing (migration 355,
-// decisions/tradeskill-recipe-node-schema.md). Ingredient/recipe search
-// across all 8 trades is explicitly out of scope for this pass.
+// The Tradeskills page: a Trade Skill select, a Type filter (Recipes/
+// Ingredients), a skill-range filter (Recipes only), plain-text search, and
+// a Show Guide toggle (same square-macro-button convention as the Spell
+// Finder's own "Show all", public/components/status-panel.js). Modeled
+// first for Brewing (migration 355, decisions/
+// tradeskill-recipe-node-schema.md).
 //
-// Second pass: replaced tradeskill-dossier.js's single combined
-// leveling-guide-table + vendor-list card with two real per-entity card
-// types (recipe-card.js/ingredient-card.js), each grouped under its own
-// page-level <collapsible-section> -- "Leveling Guide" (one recipe-card
-// per recipe, already sorted by trivial ascending, same order the old
-// dossier rendered its rows in) and "Ingredients" (one ingredient-card per
-// distinct item any of this tradeskill's recipes `uses`, alphabetical).
-// Type/skill-range/search filters and the Show Guide toggle (the rest of
-// issue #32's remaining checklist) are still out of scope for this pass --
-// both groups render unconditionally, side by side, rather than one being
-// selected by a filter that doesn't exist yet.
-let availableZones = [];
+// There is no page-level Zone filter -- ingredient-card.js's own vendor
+// list is already grouped by zone per ingredient, which is the only place
+// "which zone sells this" matters, so /api/tradeskill-vendors is always
+// fetched unfiltered.
+//
+// Only the Trade Skill select triggers a refetch; Type/skill-range/search/
+// Show Guide are all display filters over the same already-fetched
+// recipes+vendors, same "search/showOutOfEra don't refetch" split
+// quests.js's own filters make.
+const MAX_TRADESKILL_LEVEL = 300; // EQ's tradeskill skill cap
+
 let selectedTradeskill = "";
+let selectedType = "recipes";
+let showGuide = true;
+
+let rawRecipes = [];
+let rawVendors = [];
 
 function renderSidebar() {
   const html = `
     <sidebar-panel>
       <field-row label="Trade Skill"><select id="trade-skill-select"><option value="">— Select —</option></select></field-row>
-      <field-row label="Zone"><select id="trade-zone-select"><option value="">All Zones</option></select></field-row>
+      <field-row label="Type">
+        <select id="trade-type-select">
+          <option value="recipes">Recipes</option>
+          <option value="ingredients">Ingredients</option>
+        </select>
+      </field-row>
+      <field-row label="Skill Range" id="trade-skill-range-row">
+        <range-picker id="trade-skill-range" min="0" max="${MAX_TRADESKILL_LEVEL}" value-min="0" value-max="${MAX_TRADESKILL_LEVEL}"></range-picker>
+      </field-row>
+      <field-row label="Search"><input type="text" id="trade-search" placeholder="Recipe or ingredient name..."></field-row>
+      <div class="guide-toggle-row"><macro-button square id="show-guide-btn">Hide Guide</macro-button></div>
       <button slot="actions" type="button" class="text-action" id="reset-trade-filters-btn">Reset filters</button>
     </sidebar-panel>
   `;
@@ -36,14 +52,12 @@ function renderSidebar() {
 
 export async function init() {
   renderSidebar();
-  const [tradeskills, zones] = await Promise.all([
-    fetch("api/tradeskills").then((r) => r.json()),
-    fetch("api/zones").then((r) => r.json()),
-  ]);
-  availableZones = zones;
+  const tradeskills = await fetch("api/tradeskills").then((r) => r.json());
   populateTradeskillSelect(tradeskills);
-  populateZoneSelect();
   setupFilters();
+  applyQueryParams();
+  updateSkillRangeVisibility();
+  updateGuideButtonLabel();
 
   // Brewing is the only tradeskill modeled so far -- pre-selecting the sole
   // option means a visitor sees a populated dossier immediately rather than
@@ -53,7 +67,23 @@ export async function init() {
     document.getElementById("trade-skill-select").value = tradeskills[0];
     selectedTradeskill = tradeskills[0];
   }
-  render();
+  fetchTradeskillData();
+}
+
+// ?type=recipes&search=<recipe name> deep-links here (e.g. from an
+// ingredient's own "Used In" chips, ingredient-card.js) straight to one
+// recipe, reusing the existing Type select + search box rather than a
+// separate highlight/scroll mechanism -- same convention as quests.js's own
+// applyQueryParams().
+function applyQueryParams() {
+  const params = new URLSearchParams(location.search);
+  const type = params.get("type");
+  if (type === "recipes" || type === "ingredients") {
+    document.getElementById("trade-type-select").value = type;
+    selectedType = type;
+  }
+  const search = params.get("search");
+  if (search) document.getElementById("trade-search").value = search;
 }
 
 function populateTradeskillSelect(tradeskills) {
@@ -66,23 +96,48 @@ function populateTradeskillSelect(tradeskills) {
   }
 }
 
-function populateZoneSelect() {
-  const sel = document.getElementById("trade-zone-select");
-  for (const z of availableZones) {
-    const opt = document.createElement("option");
-    opt.value = z.id;
-    opt.textContent = z.outOfEra ? `${z.label} (Out of Era)` : z.label;
-    sel.appendChild(opt);
-  }
-}
-
 function setupFilters() {
   document.getElementById("trade-skill-select").addEventListener("change", (e) => {
     selectedTradeskill = e.target.value;
+    fetchTradeskillData();
+  });
+
+  document.getElementById("trade-type-select").addEventListener("change", (e) => {
+    selectedType = e.target.value;
+    updateSkillRangeVisibility();
     render();
   });
-  document.getElementById("trade-zone-select").addEventListener("change", render);
+
+  // Same "debounce while dragging, settle after" treatment as quests.js's
+  // own level-range -- a two-thumb slider fires many "input" events per
+  // drag, and re-rendering the card lists on every tick would be wasteful.
+  let rangeDebounce;
+  document.getElementById("trade-skill-range").addEventListener("input", () => {
+    clearTimeout(rangeDebounce);
+    rangeDebounce = setTimeout(render, 300);
+  });
+
+  let searchDebounce;
+  document.getElementById("trade-search").addEventListener("input", () => {
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(render, 150);
+  });
+
+  document.getElementById("show-guide-btn").addEventListener("click", () => {
+    showGuide = !showGuide;
+    updateGuideButtonLabel();
+    render();
+  });
+
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
+}
+
+function updateSkillRangeVisibility() {
+  document.getElementById("trade-skill-range-row").hidden = selectedType !== "recipes";
+}
+
+function updateGuideButtonLabel() {
+  document.getElementById("show-guide-btn").textContent = showGuide ? "Hide Guide" : "Show Guide";
 }
 
 // Restores HTML defaults rather than blanking the form (same convention as
@@ -90,7 +145,15 @@ function setupFilters() {
 // stays whatever init() pre-selected, not blank -- a reset should return to
 // "the dossier as first landed on," not to an empty page.
 function resetFilters() {
-  document.getElementById("trade-zone-select").value = "";
+  document.getElementById("trade-type-select").value = "recipes";
+  selectedType = "recipes";
+  const range = document.getElementById("trade-skill-range");
+  range.valueMin = 0;
+  range.valueMax = MAX_TRADESKILL_LEVEL;
+  document.getElementById("trade-search").value = "";
+  showGuide = true;
+  updateGuideButtonLabel();
+  updateSkillRangeVisibility();
   render();
 }
 
@@ -147,19 +210,36 @@ function buildIngredientEntries(recipes, vendors) {
     }));
 }
 
-// A group's list of cards lives in its own plain block wrapper, not as
-// direct children of <collapsible-section> -- that element's :host is a
-// `display: flex; gap: 8px` column (fine for its usual sidebar-panel
-// field-rows), and slotting a whole card list straight into it would put
-// that same 8px gap between every card, breaking the zero-gap packed-list
-// seam every other card list in this app relies on (decisions/
-// card-list-seams-no-border-overlap.md). Wrapping the cards in one plain
-// div makes them a single slotted child instead -- the gap lands only
-// between the section header and the list, not inside it.
-function cardGroupSection(label, sectionName, items, tag) {
-  const section = document.createElement("collapsible-section");
-  section.setAttribute("label", `${label} (${items.length})`);
-  section.setAttribute("section", sectionName);
+// "Craftable N+" (success.p25, the same figure recipe-card.js's own badge
+// shows) is the number the Skill Range filter narrows on, not `trivial` --
+// it's the number actually named "craftable" in both the UI and issue #32's
+// own spec ("filter out recipe whose craftable number falls outside the
+// range").
+function recipeMatchesSkillRange(recipe, min, max) {
+  return recipe.success.p25 >= min && recipe.success.p25 <= max;
+}
+
+function matchesSearch(label, query) {
+  return label.toLowerCase().includes(query);
+}
+
+function recipeMatchesSearch(recipe, query) {
+  if (!query) return true;
+  if (matchesSearch(recipe.label, query)) return true;
+  if (recipe.produces && matchesSearch(recipe.produces.label, query)) return true;
+  return recipe.uses.some((i) => matchesSearch(i.label, query));
+}
+
+function ingredientMatchesSearch(entry, query) {
+  return !query || matchesSearch(entry.item.label, query);
+}
+
+// No group label/header at all -- just the packed card list, sitting
+// directly against whatever's above it (the leveling-guide-card, or the top
+// of #trades-results if Show Guide is off). Plain block stacking already
+// gives that zero-gap seam (decisions/card-list-seams-no-border-overlap.md)
+// without needing a wrapper.
+function cardGroupList(items, tag) {
   const list = document.createElement("div");
   list.className = "trade-card-list";
   lazyRenderList(list, items, (item) => {
@@ -167,17 +247,18 @@ function cardGroupSection(label, sectionName, items, tag) {
     el.setData(item);
     return el;
   });
-  section.appendChild(list);
-  return section;
+  return list;
 }
 
-// Bumped on every filter change so a slower, now-stale request can't
+// Bumped on every trade-skill change so a slower, now-stale request can't
 // overwrite a newer one -- same guard as quests.js's fetchToken.
 let fetchToken = 0;
 
-async function render() {
+async function fetchTradeskillData() {
   const resultsEl = document.getElementById("trades-results");
   if (!selectedTradeskill) {
+    rawRecipes = [];
+    rawVendors = [];
     resultsEl.innerHTML = '<div class="no-results">Select a trade skill to see its leveling guide and vendors.</div>';
     return;
   }
@@ -185,24 +266,51 @@ async function render() {
   const token = ++fetchToken;
   resultsEl.innerHTML = '<div class="loading">Loading, please wait...</div>';
 
-  const zone = document.getElementById("trade-zone-select").value;
-  const recipeParams = new URLSearchParams({ tradeskill: selectedTradeskill });
-  const vendorParams = new URLSearchParams({ tradeskill: selectedTradeskill });
-  if (zone) vendorParams.set("zone", zone);
-
+  const params = new URLSearchParams({ tradeskill: selectedTradeskill });
   const [recipes, vendors] = await Promise.all([
-    fetch(`api/recipes?${recipeParams}`).then((r) => r.json()),
-    fetch(`api/tradeskill-vendors?${vendorParams}`).then((r) => r.json()),
+    fetch(`api/recipes?${params}`).then((r) => r.json()),
+    fetch(`api/tradeskill-vendors?${params}`).then((r) => r.json()),
   ]);
-  if (token !== fetchToken) return; // a newer filter change superseded this request
+  if (token !== fetchToken) return; // a newer trade-skill change superseded this request
 
-  resultsEl.innerHTML = "";
-  if (!recipes.length) {
+  rawRecipes = recipes;
+  rawVendors = vendors;
+  render();
+}
+
+function render() {
+  const resultsEl = document.getElementById("trades-results");
+  if (!selectedTradeskill) return; // fetchTradeskillData() already rendered the prompt
+  if (!rawRecipes.length) {
     resultsEl.innerHTML = '<div class="no-results">No recipes catalogued yet for this tradeskill.</div>';
     return;
   }
 
-  const ingredients = buildIngredientEntries(recipes, vendors);
-  resultsEl.appendChild(cardGroupSection("Leveling Guide", "leveling-guide", recipes, "recipe-card"));
-  resultsEl.appendChild(cardGroupSection("Ingredients", "ingredients", ingredients, "ingredient-card"));
+  resultsEl.innerHTML = "";
+
+  // The guide is one fixed reference panel -- just the tradeskill's own
+  // hand-picked leveling path (recipe.levelingGuide, src/graph.ts), not
+  // every recipe of the tradeskill. Not a card per recipe, and not
+  // collapsible itself: the Show Guide button is what adds/removes it.
+  // Type/skill-range/search below narrow a separate browsing list over ALL
+  // of the tradeskill's recipes, so the two can show overlapping recipes at
+  // once. That's intentional: the guide answers "what's my leveling path,"
+  // the browse list answers "show me recipes/ingredients matching X."
+  if (showGuide) {
+    const guide = document.createElement("leveling-guide-card");
+    guide.setData(rawRecipes.filter((r) => r.levelingGuide));
+    resultsEl.appendChild(guide);
+  }
+
+  const query = document.getElementById("trade-search").value.trim().toLowerCase();
+  if (selectedType === "recipes") {
+    const range = document.getElementById("trade-skill-range");
+    const min = parseInt(range.valueMin);
+    const max = parseInt(range.valueMax);
+    const filtered = rawRecipes.filter((r) => recipeMatchesSkillRange(r, min, max) && recipeMatchesSearch(r, query));
+    resultsEl.appendChild(cardGroupList(filtered, "recipe-card"));
+  } else {
+    const ingredients = buildIngredientEntries(rawRecipes, rawVendors).filter((e) => ingredientMatchesSearch(e, query));
+    resultsEl.appendChild(cardGroupList(ingredients, "ingredient-card"));
+  }
 }
