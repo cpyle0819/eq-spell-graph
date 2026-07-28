@@ -4,12 +4,14 @@
 import "./components/index.js";
 import { lazyRenderList } from "./components.js";
 
-// The Tradeskills page: a Trade Skill select, a Type filter (Recipes/
-// Ingredients), a skill-range filter (Recipes only), plain-text search, and
-// a Show Guide toggle (same square-macro-button convention as the Spell
-// Finder's own "Show all", public/components/status-panel.js). Modeled
-// first for Brewing (migration 355, decisions/
-// tradeskill-recipe-node-schema.md).
+// The Tradeskills page: a Trade Skill select, plus a View select (Guide/
+// Browse) switching between the Leveling Guide and the Browse list --
+// mutually exclusive views, not stacked together. Browse adds its own Type
+// (Recipes/Ingredients), skill-range (Recipes only), and plain-text search
+// filters, which only make sense (and only show) in that view -- Guide is
+// one fixed reference panel with nothing to filter, so only Trade Skill +
+// View stay visible there. Modeled first for Brewing (migration 355,
+// decisions/tradeskill-recipe-node-schema.md).
 //
 // There is no page-level Zone filter -- ingredient-card.js's own vendor
 // list is already grouped by zone per ingredient, which is the only place
@@ -17,23 +19,93 @@ import { lazyRenderList } from "./components.js";
 // fetched unfiltered.
 //
 // Only the Trade Skill select triggers a refetch; Type/skill-range/search/
-// Show Guide are all display filters over the same already-fetched
+// active view are all display filters over the same already-fetched
 // recipes+vendors, same "search/showOutOfEra don't refetch" split
 // quests.js's own filters make.
 const MAX_TRADESKILL_LEVEL = 300; // EQ's tradeskill skill cap
+const SHOPPING_LIST_KEY = "eq-trades-shopping-list";
 
 let selectedTradeskill = "";
 let selectedType = "recipes";
-let showGuide = true;
+let activeView = "guide"; // "guide" | "browse"
 
 let rawRecipes = [];
 let rawVendors = [];
+
+// scrollbar-gutter: stable on #trades-content (trades.html) reserves the
+// scrollbar's width unconditionally, so #trades-results doesn't jump width
+// when a tab/filter crosses the overflow threshold -- but that width isn't
+// expressible as a CSS length, so trades.html's #trades-results rule reads
+// it from this custom property to bleed back into the reserved strip
+// instead of leaving it as a gap next to shopping-list-panel. Same trick as
+// app.js's syncResultsGutterWidth. Re-measured on resize since it tracks
+// the real scrollbar width (OS/zoom-dependent), not a fixed guess.
+function syncResultsGutterWidth() {
+  const el = document.getElementById("trades-content");
+  el.style.setProperty("--gutter-w", `${el.offsetWidth - el.clientWidth}px`);
+}
+
+// [{id, label, quantity}] -- persisted independently of selectedTradeskill,
+// so switching tradeskills (or reloading) doesn't lose what's collected so
+// far. Owned/rendered entirely by this page; ingredient-card.js's own
+// "+ Shopping List" button only ever dispatches the add event below, it
+// doesn't touch this array or localStorage directly.
+let shoppingList = [];
+
+function loadShoppingList() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(SHOPPING_LIST_KEY) || "[]");
+    shoppingList = Array.isArray(parsed) ? parsed : [];
+  } catch {
+    shoppingList = [];
+  }
+}
+
+function saveShoppingList() {
+  localStorage.setItem(SHOPPING_LIST_KEY, JSON.stringify(shoppingList));
+}
+
+function renderShoppingList() {
+  document.getElementById("shopping-list-panel").items = shoppingList;
+}
+
+function addShoppingItem(id, label) {
+  const existing = shoppingList.find((i) => i.id === id);
+  if (existing) existing.quantity += 1;
+  else shoppingList.push({ id, label, quantity: 1 });
+  saveShoppingList();
+  renderShoppingList();
+}
+
+// shopping-list-panel.js's own qty-dec/qty-inc buttons -- reaching 0 (or
+// below, though the panel never lets delta go past what a row already has)
+// removes the row entirely rather than leaving a "0x" entry, per issue spec.
+function changeShoppingQuantity(id, delta) {
+  const item = shoppingList.find((i) => i.id === id);
+  if (!item) return;
+  item.quantity += delta;
+  if (item.quantity <= 0) shoppingList = shoppingList.filter((i) => i.id !== id);
+  saveShoppingList();
+  renderShoppingList();
+}
+
+function clearShoppingList() {
+  shoppingList = [];
+  saveShoppingList();
+  renderShoppingList();
+}
 
 function renderSidebar() {
   const html = `
     <sidebar-panel>
       <field-row label="Trade Skill"><select id="trade-skill-select"><option value="">— Select —</option></select></field-row>
-      <field-row label="Type">
+      <field-row label="View">
+        <select id="trade-view-select">
+          <option value="guide">Guide</option>
+          <option value="browse">Browse</option>
+        </select>
+      </field-row>
+      <field-row label="Type" id="trade-type-row">
         <select id="trade-type-select">
           <option value="recipes">Recipes</option>
           <option value="ingredients">Ingredients</option>
@@ -42,8 +114,7 @@ function renderSidebar() {
       <field-row label="Skill Range" id="trade-skill-range-row">
         <range-picker id="trade-skill-range" min="0" max="${MAX_TRADESKILL_LEVEL}" value-min="0" value-max="${MAX_TRADESKILL_LEVEL}"></range-picker>
       </field-row>
-      <field-row label="Search"><input type="text" id="trade-search" placeholder="Recipe or ingredient name..."></field-row>
-      <div class="guide-toggle-row"><macro-button square id="show-guide-btn">Hide Guide</macro-button></div>
+      <field-row label="Search" id="trade-search-row"><input type="text" id="trade-search" placeholder="Recipe or ingredient name..."></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-trade-filters-btn">Reset filters</button>
     </sidebar-panel>
   `;
@@ -52,12 +123,13 @@ function renderSidebar() {
 
 export async function init() {
   renderSidebar();
+  loadShoppingList();
+  renderShoppingList();
   const tradeskills = await fetch("api/tradeskills").then((r) => r.json());
   populateTradeskillSelect(tradeskills);
   setupFilters();
   applyQueryParams();
-  updateSkillRangeVisibility();
-  updateGuideButtonLabel();
+  updateFilterVisibility();
 
   // Brewing is the only tradeskill modeled so far -- pre-selecting the sole
   // option means a visitor sees a populated dossier immediately rather than
@@ -68,6 +140,9 @@ export async function init() {
     selectedTradeskill = tradeskills[0];
   }
   fetchTradeskillData();
+
+  syncResultsGutterWidth();
+  window.addEventListener("resize", syncResultsGutterWidth);
 }
 
 // ?type=recipes&search=<recipe name> deep-links here (e.g. from an
@@ -84,6 +159,21 @@ function applyQueryParams() {
   }
   const search = params.get("search");
   if (search) document.getElementById("trade-search").value = search;
+
+  // A deep link to one specific recipe or ingredient (an item-chip's own
+  // nav-href, or ingredient-card's "Used In" links) always means "show me
+  // that one thing" -- switch to the Browse view so it's what's on screen,
+  // regardless of which view was showing before the click.
+  if (search) setActiveView("browse");
+
+  // Consumed into page state above -- clear the URL back to the bare path
+  // (same convention as app.js's own applyQueryParams()), or a chip whose
+  // nav-href points at this exact query string (e.g. re-opening the guide
+  // and clicking the same ingredient again) would match location.href
+  // exactly. Router.js's click handler only intercepts+soft-navs when the
+  // target URL differs from the current one -- an identical href falls
+  // through to a real, uncaught anchor click, i.e. a full page reload.
+  history.replaceState(null, "", location.pathname);
 }
 
 function populateTradeskillSelect(tradeskills) {
@@ -104,7 +194,7 @@ function setupFilters() {
 
   document.getElementById("trade-type-select").addEventListener("change", (e) => {
     selectedType = e.target.value;
-    updateSkillRangeVisibility();
+    updateFilterVisibility();
     render();
   });
 
@@ -123,38 +213,58 @@ function setupFilters() {
     searchDebounce = setTimeout(render, 150);
   });
 
-  document.getElementById("show-guide-btn").addEventListener("click", () => {
-    showGuide = !showGuide;
-    updateGuideButtonLabel();
+  document.getElementById("trade-view-select").addEventListener("change", (e) => {
+    setActiveView(e.target.value);
     render();
   });
 
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
 
-  // leveling-guide-card.js's own row click -- issue #32's spec: hides the
-  // guide and selects that recipe in the browsing list below. Resets the
-  // skill range too (not just Type + search), so a narrowed range from
-  // earlier browsing can't hide the very recipe just clicked.
+  // leveling-guide-card.js's own row click -- issue #32's spec: selects that
+  // recipe in the Browse view. Resets the skill range too (not just Type +
+  // search), so a narrowed range from earlier browsing can't hide the very
+  // recipe just clicked.
   document.getElementById("trades-results").addEventListener("recipe-select", (e) => {
-    showGuide = false;
-    updateGuideButtonLabel();
     document.getElementById("trade-type-select").value = "recipes";
     selectedType = "recipes";
-    updateSkillRangeVisibility();
     const range = document.getElementById("trade-skill-range");
     range.valueMin = 0;
     range.valueMax = MAX_TRADESKILL_LEVEL;
     document.getElementById("trade-search").value = e.detail.recipeLabel;
+    setActiveView("browse");
     render();
   });
+
+  // ingredient-card.js's own "+ Shopping List" button -- composed so it
+  // crosses out of that card's shadow root.
+  document.getElementById("trades-results").addEventListener("add-shopping-item", (e) => {
+    addShoppingItem(e.detail.id, e.detail.label);
+  });
+
+  const panel = document.getElementById("shopping-list-panel");
+  panel.addEventListener("change-shopping-quantity", (e) => changeShoppingQuantity(e.detail.id, e.detail.delta));
+  panel.addEventListener("clear-shopping-list", clearShoppingList);
 }
 
-function updateSkillRangeVisibility() {
-  document.getElementById("trade-skill-range-row").hidden = selectedType !== "recipes";
+// #trade-view-select (always visible, unlike the filters it governs) --
+// syncs its own value (in case this was called from something other than
+// the select's own change handler, e.g. a recipe-select deep-link) and
+// which filters are relevant to show. Guide is one fixed reference panel
+// with nothing to filter, so only Trade Skill + View stay visible there;
+// Browse's own Type/Search (and Skill Range, Recipes only) come back once
+// Browse is selected. Callers re-render themselves -- this only syncs
+// state + visibility, same split render()'s other callers already use.
+function setActiveView(view) {
+  activeView = view;
+  document.getElementById("trade-view-select").value = view;
+  updateFilterVisibility();
 }
 
-function updateGuideButtonLabel() {
-  document.getElementById("show-guide-btn").textContent = showGuide ? "Hide Guide" : "Show Guide";
+function updateFilterVisibility() {
+  const isGuide = activeView === "guide";
+  document.getElementById("trade-type-row").hidden = isGuide;
+  document.getElementById("trade-search-row").hidden = isGuide;
+  document.getElementById("trade-skill-range-row").hidden = isGuide || selectedType !== "recipes";
 }
 
 // Restores HTML defaults rather than blanking the form (same convention as
@@ -168,9 +278,7 @@ function resetFilters() {
   range.valueMin = 0;
   range.valueMax = MAX_TRADESKILL_LEVEL;
   document.getElementById("trade-search").value = "";
-  showGuide = true;
-  updateGuideButtonLabel();
-  updateSkillRangeVisibility();
+  setActiveView("guide");
   render();
 }
 
@@ -307,16 +415,15 @@ function render() {
 
   // The guide is one fixed reference panel -- just the tradeskill's own
   // hand-picked leveling path (recipe.levelingGuide, src/graph.ts), not
-  // every recipe of the tradeskill. Not a card per recipe, and not
-  // collapsible itself: the Show Guide button is what adds/removes it.
-  // Type/skill-range/search below narrow a separate browsing list over ALL
-  // of the tradeskill's recipes, so the two can show overlapping recipes at
-  // once. That's intentional: the guide answers "what's my leveling path,"
-  // the browse list answers "show me recipes/ingredients matching X."
-  if (showGuide) {
+  // every recipe of the tradeskill. #trade-view-select makes Guide and
+  // Browse mutually exclusive: the guide answers "what's my leveling path,"
+  // the browse list (Type/skill-range/search in the sidebar) answers "show
+  // me recipes/ingredients matching X," but only one is ever on screen.
+  if (activeView === "guide") {
     const guide = document.createElement("leveling-guide-card");
     guide.setData(rawRecipes.filter((r) => r.levelingGuide));
     resultsEl.appendChild(guide);
+    return;
   }
 
   const query = document.getElementById("trade-search").value.trim().toLowerCase();

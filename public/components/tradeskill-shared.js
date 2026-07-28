@@ -39,11 +39,12 @@ export function recipeBadgesHtml(recipe) {
 
 // Ingredients deep-link to their own ingredient-card on the Ingredients tab
 // (same trades.html `?type=`/`?search=` convention as ingredient-card.js's
-// own "Used In" chips, the reverse direction of this same link) -- the
-// produced item doesn't, since it's the recipe's own result, not something
-// to go look up ingredient-side.
+// own "Used In" chips, the reverse direction of this same link) and get the
+// "+" shopping-list button (item-chip.js's `shoppingList` option) -- the
+// produced item gets neither, since it's the recipe's own result, not
+// something to go shop for.
 export function recipeFormulaHtml(recipe) {
-  const uses = recipe.uses.map((item) => itemChipTag(item, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(item.label)}` })).join("");
+  const uses = recipe.uses.map((item) => itemChipTag(item, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(item.label)}`, shoppingList: true })).join("");
   const produces = recipe.produces ? itemChipTag(recipe.produces) : "";
   return `${uses}${produces ? `<span class="recipe-arrow">→</span>${produces}` : ""}`;
 }

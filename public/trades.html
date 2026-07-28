@@ -21,11 +21,33 @@
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
       padding: 0 14px 14px; gap: 14px;
     }
-    #trades-content { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; padding: 0 0 24px; }
+    #trades-content { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; padding: 0 0 24px; --gutter-w: 0px; }
+    /* scrollbar-gutter: stable always reserves the scrollbar's width, even
+       when nothing overflows (mobile: harmless no-op, since #trades-content
+       is overflow-y: visible there) -- on desktop that reserved strip sits
+       between #trades-results and shopping-list-panel and reads as a stray
+       gap keeping them from touching. Same --gutter-w bleed-back trick as
+       index.html's #results > * (app.js's syncResultsGutterWidth measures
+       the real offsetWidth/clientWidth delta into this custom property). */
+    #trades-results { width: calc(100% + var(--gutter-w)); margin-right: calc(-1 * var(--gutter-w)); }
 
     @media (min-width: 1100px) {
       #trades-page { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
-      #trades-content { overflow-y: auto; }
+      /* width/position/sticky are owned by sidebar-panel/shopping-list-panel
+         themselves -- this page only needs its own 3-column `order`, same
+         split index.html makes for sidebar-panel/status-panel. renderSidebar()
+         replaces #controls-panel-slot's own outerHTML with <sidebar-panel>,
+         so the order rule targets that tag directly, not the slot div. */
+      sidebar-panel { order: 0; }
+      /* No top/left inset here, deliberately -- #trades-results (the
+         leveling guide / recipe / ingredient cards) should touch the
+         header above and sidebar-panel/shopping-list-panel to the sides
+         flush, same convention as index.html's sidebar/results seam
+         ("sidebar's own right border *is* the seam"); sidebar-panel and
+         shopping-list-panel already sit flush against the header the same
+         way (#trades-page's own top padding is 0 here). */
+      #trades-content { overflow-y: auto; order: 1; padding: 0 0 24px 0; }
+      shopping-list-panel { order: 2; }
     }
 
     @media (max-width: 1099.98px) {
@@ -40,22 +62,13 @@
 
     .no-results { padding: 40px 20px; text-align: center; color: var(--ink-muted); font-size: 14px; }
 
-    /* The leveling-guide-card (when Show Guide is on) and the Recipes/
-       Ingredients card list are meant to read as one continuous packed
-       list, not two separate panels -- no group header, no gap between
-       them, same zero-gap seam contract as the cards within each list
-       (decisions/card-list-seams-no-border-overlap.md). Neither element
-       gets a display rule of its own; plain block stacking already gives
-       that seam. */
-
-    /* The Show Guide macro-button reuses the exact "Show all" square-button
-       convention (public/components/status-panel.js's own toggle-owned-btn)
-       -- this row just centers it in the filter panel, below the fields,
-       the same layout job status-panel's own .status-actions does for its
-       copy of the same button (that one lives in status-panel's shadow
-       root; this one's a page-level filter-panel action, so it gets a
-       plain generic wrapper here instead, no visual identity of its own). */
-    .guide-toggle-row { display: flex; justify-content: center; padding: 4px 0; }
+    /* Leveling Guide and Browse (recipes/ingredients) are mutually
+       exclusive views selected by #trade-view-select (sidebar-panel,
+       renderSidebar() in trades.js) -- only one ever renders into
+       #trades-results at a time, so there's no seam to manage between them
+       the way card-list rows need (decisions/
+       card-list-seams-no-border-overlap.md still governs that, just within
+       whichever single list is showing). */
   </style>
 </head>
 <body>
@@ -68,6 +81,7 @@
     <div id="trades-content">
       <div id="trades-results"></div>
     </div>
+    <shopping-list-panel id="shopping-list-panel"></shopping-list-panel>
   </div>
 
   <detail-tooltip id="detail-tooltip" role="tooltip" aria-hidden="true"></detail-tooltip>

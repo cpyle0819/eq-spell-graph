@@ -21,6 +21,7 @@ import "./range-picker.js";
 import "./sidebar-panel.js";
 import "./mana-bar.js";
 import "./status-panel.js";
+import "./shopping-list-panel.js";
 import "./zone-card.js";
 import "./spell-card.js";
 import "./aa-card.js";

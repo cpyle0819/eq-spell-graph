@@ -32,6 +32,14 @@
 import { CardBase, wikiLink } from "./card-base.js";
 import { QUEST_CARD_CSS, section } from "./quest-shared.js";
 
+// This button only ever renders inside an ingredient-card -- i.e. only for
+// an item already established (by trades.js's own buildIngredientEntries())
+// to be a genuine recipe ingredient, never for e.g. a quest reward or NPC
+// drop item-chip elsewhere in the app. That's deliberate: "add to shopping
+// list" is scoped to this one unambiguous context rather than bolted onto
+// item-chip.js itself (the app's single shared item-rendering component),
+// which renders items in plenty of contexts that aren't shopping-relevant.
+
 function usedInBody(usedIn) {
   if (!usedIn.length) return `<div class="quest-section-body ingredient-empty">Not used by any catalogued recipe.</div>`;
   const chips = usedIn
@@ -67,6 +75,11 @@ ${QUEST_CARD_CSS}
 .ingredient-vendor-row { font-size: 13px; color: #4a4232; padding: 2px 0; }
 .ingredient-used-in-link { text-decoration: none; cursor: pointer; }
 .ingredient-used-in-link:hover, .ingredient-used-in-link:focus-visible { text-decoration: underline; background: rgba(0, 0, 0, 0.1); }
+.add-shopping-btn {
+  margin-left: auto; font-size: 11px; color: var(--gold); background: none; border: none;
+  padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
+}
+.add-shopping-btn:hover, .add-shopping-btn:focus-visible { text-decoration: underline; }
 `);
 
 class IngredientCard extends CardBase {
@@ -79,6 +92,20 @@ class IngredientCard extends CardBase {
     if (this.shadowRoot) this.render();
   }
 
+  // Delegated on shadowRoot (not a specific button) so it keeps working
+  // across render() rebuilding the header's innerHTML -- same pattern as
+  // spell-card.js's own wireEvents().
+  wireEvents() {
+    this.shadowRoot.addEventListener("click", (e) => {
+      const btn = e.target.closest(".add-shopping-btn");
+      if (!btn) return;
+      this.dispatchEvent(new CustomEvent("add-shopping-item", {
+        bubbles: true, composed: true,
+        detail: { id: btn.dataset.itemId, label: btn.dataset.itemLabel },
+      }));
+    });
+  }
+
   render() {
     const d = this.#data;
     if (!d) return;
@@ -86,7 +113,10 @@ class IngredientCard extends CardBase {
     const vendorCount = vendorGroups.reduce((n, g) => n + g.vendors.length, 0);
 
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${item.label}</h3>${wikiLink(item.label)}</div>
+      <div class="spell-header">
+        <h3>${item.label}</h3>${wikiLink(item.label)}
+        <button type="button" class="add-shopping-btn" data-item-id="${item.id}" data-item-label="${item.label}">+ Shopping List</button>
+      </div>
       <div class="spell-scroll">
         ${section("Used In", usedInBody(usedIn))}
         <div class="ingredient-sold-by">

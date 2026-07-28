@@ -70,10 +70,20 @@ function itemStats(item) {
 // hover-tooltip rendering itself never changes; only the click destination
 // does, so this stays the one item component (decisions/
 // item-hover-uses-generic-detail-tooltip.md), not a second rendering.
-export function itemChipTag(item, { navHref } = {}) {
+//
+// `shoppingList`, when true, adds a small "+" button next to the chip that
+// dispatches the same composed `add-shopping-item` event ingredient-card.js's
+// own "+ Shopping List" button does (trades.js already listens for it on
+// #trades-results, so no page-side wiring change is needed for a new call
+// site to opt in). Opt-in per call site, same reasoning as `navHref` -- this
+// stays the one item component, but only usages that pass `shoppingList` (a
+// recipe's `uses` ingredients, never its `produces` result or an unrelated
+// quest-reward/npc-drop chip elsewhere in the app) grow the affordance.
+export function itemChipTag(item, { navHref, shoppingList } = {}) {
   const attrs = [`item-id="${item.id}"`, `label="${item.label}"`];
   if (item.quantity && item.quantity !== 1) attrs.push(`quantity="${item.quantity}"`);
   if (navHref) attrs.push(`nav-href="${navHref}"`);
+  if (shoppingList) attrs.push(`shopping-list`);
   return `<item-chip ${attrs.join(" ")}></item-chip>`;
 }
 
@@ -90,12 +100,22 @@ export function hydrateItemChips(root, findItem) {
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
 ${RESET_CSS}
-:host { display: inline-flex; }
+:host { display: inline-flex; align-items: center; }
+/* Default colors are tuned for this chip's usual home: a light parchment
+   scroll (recipe formulas, item drops/rewards). --chip-bg/--chip-color/
+   --chip-border let a *dark*-background caller (shopping-list-panel.js's
+   own dark stone panel) override just the palette without a second
+   rendering -- same CSS-custom-property-override pattern as collapsible-
+   section.js's --header-text-shadow, for the same reason (a low-opacity
+   dark-brown-on-parchment chip goes nearly invisible dark-brown-on-dark-
+   stone otherwise). */
 .chip {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 1px 7px 1px 5px; border-radius: 3px;
   font-size: 11px; cursor: help; text-decoration: none;
-  background: rgba(122, 77, 5, 0.1); color: #6a4204; border: 1px solid rgba(122, 77, 5, 0.4);
+  background: var(--chip-bg, rgba(122, 77, 5, 0.1));
+  color: var(--chip-color, #6a4204);
+  border: 1px solid var(--chip-border, rgba(122, 77, 5, 0.4));
 }
 .gem {
   width: 7px; height: 7px; border-radius: 2px; flex-shrink: 0;
@@ -104,6 +124,24 @@ ${RESET_CSS}
 }
 @media (pointer: coarse) { .chip { cursor: pointer; } }
 :host([nav-href]) .chip { cursor: pointer; }
+/* Hidden "drawer" by default -- zero width/opacity/border, so it takes up
+   no visual space and doesn't read as a second chip glued on. Hovering (or
+   keyboard-focusing anything inside this chip) slides it open. This is
+   purely a reveal effect layered on top of the chip's existing behavior --
+   the chip's own click/nav-href/tooltip-on-hover logic is untouched, this
+   button is just invisible until you're already hovering the chip. */
+.chip-add {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  box-sizing: border-box; width: 0; height: 15px; padding: 0; margin-left: 0;
+  border-radius: 3px; border-style: solid; border-width: 0; border-color: rgba(122, 77, 5, 0.4);
+  background: rgba(122, 77, 5, 0.15); color: #6a4204;
+  font-size: 11px; line-height: 1; cursor: pointer; overflow: hidden; opacity: 0;
+  transition: width 120ms ease, opacity 120ms ease, margin-left 120ms ease, border-width 120ms ease;
+}
+:host(:hover) .chip-add, :host(:focus-within) .chip-add {
+  width: 15px; opacity: 1; margin-left: 3px; border-width: 1px;
+}
+.chip-add:hover, .chip-add:focus-visible { background: rgba(122, 77, 5, 0.3); }
 `);
 
 class ItemChip extends HTMLElement {
@@ -113,7 +151,10 @@ class ItemChip extends HTMLElement {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.adoptedStyleSheets = [sheet];
-      this.shadowRoot.innerHTML = `<a class="chip" target="_blank" rel="noopener"><span class="gem" aria-hidden="true"></span><span class="label"></span></a>`;
+      const addBtn = this.hasAttribute("shopping-list")
+        ? `<button type="button" class="chip-add" title="Add to shopping list" aria-label="Add to shopping list">+</button>`
+        : "";
+      this.shadowRoot.innerHTML = `<a class="chip" target="_blank" rel="noopener"><span class="gem" aria-hidden="true"></span><span class="label"></span></a>${addBtn}`;
       this.#wireEvents();
     }
     this.render();
@@ -173,6 +214,19 @@ class ItemChip extends HTMLElement {
     // client-side-shell-router.md).
     a.addEventListener("click", (e) => {
       if (!this.hasAttribute("nav-href") && window.matchMedia("(pointer: fine)").matches) e.preventDefault();
+    });
+
+    this.shadowRoot.querySelector(".chip-add")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Clicking gives the button real focus, which (via :host(:focus-within))
+      // is what keeps the drawer open in the first place -- without this
+      // blur, it stays visibly "stuck open" after the mouse moves away since
+      // nothing else ever clears that focus state.
+      e.currentTarget.blur();
+      this.dispatchEvent(new CustomEvent("add-shopping-item", {
+        bubbles: true, composed: true,
+        detail: { id: this.itemId, label: this.getAttribute("label") },
+      }));
     });
   }
 }
