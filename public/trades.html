@@ -39,6 +39,13 @@
     }
 
     .no-results { padding: 40px 20px; text-align: center; color: var(--ink-muted); font-size: 14px; }
+
+    /* Card-list-seams' zero-gap contract (decisions/
+       card-list-seams-no-border-overlap.md) applies within each group --
+       the two <collapsible-section> groups themselves aren't a packed card
+       list, so they get real spacing between them. */
+    #trades-results > collapsible-section + collapsible-section { margin-top: 22px; }
+    .trade-card-list { display: flex; flex-direction: column; }
   </style>
 </head>
 <body>

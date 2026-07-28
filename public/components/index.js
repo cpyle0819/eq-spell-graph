@@ -31,4 +31,5 @@ import "./welcome-scroll.js";
 import "./parchment-page.js";
 import "./trail-stop.js";
 import "./ledger-item.js";
-import "./tradeskill-dossier.js";
+import "./recipe-card.js";
+import "./ingredient-card.js";

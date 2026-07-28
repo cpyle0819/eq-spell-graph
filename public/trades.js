@@ -2,11 +2,24 @@
 // sets properties on one -- see quests.js's identical import for why order
 // here is load bearing, not just tidiness.
 import "./components/index.js";
+import { lazyRenderList } from "./components.js";
 
 // Issue #32's first pass: a tradeskill select + a zone-filterable dossier
 // (leveling guide + vendor list), modeled first for Brewing (migration 355,
 // decisions/tradeskill-recipe-node-schema.md). Ingredient/recipe search
 // across all 8 trades is explicitly out of scope for this pass.
+//
+// Second pass: replaced tradeskill-dossier.js's single combined
+// leveling-guide-table + vendor-list card with two real per-entity card
+// types (recipe-card.js/ingredient-card.js), each grouped under its own
+// page-level <collapsible-section> -- "Leveling Guide" (one recipe-card
+// per recipe, already sorted by trivial ascending, same order the old
+// dossier rendered its rows in) and "Ingredients" (one ingredient-card per
+// distinct item any of this tradeskill's recipes `uses`, alphabetical).
+// Type/skill-range/search filters and the Show Guide toggle (the rest of
+// issue #32's remaining checklist) are still out of scope for this pass --
+// both groups render unconditionally, side by side, rather than one being
+// selected by a filter that doesn't exist yet.
 let availableZones = [];
 let selectedTradeskill = "";
 
@@ -81,6 +94,83 @@ function resetFilters() {
   render();
 }
 
+// Vendors already arrive sorted by (zoneLabel, label) from
+// /api/tradeskill-vendors -- filtering down to one item's own sellers
+// preserves that order, so this just walks and breaks on zoneLabel change
+// rather than re-sorting (same grouping the old tradeskill-dossier.js's own
+// vendorGroupsHtml() used).
+function groupVendorsByZone(vendors) {
+  const groups = [];
+  let current = null;
+  for (const v of vendors) {
+    if (!current || current.zoneLabel !== v.zoneLabel) {
+      current = { zoneLabel: v.zoneLabel, vendors: [] };
+      groups.push(current);
+    }
+    current.vendors.push({ id: v.id, label: v.label });
+  }
+  return groups;
+}
+
+// Builds ingredient-card.js's own data contract from the same two arrays
+// the Leveling Guide already fetched -- no separate "ingredients" API route
+// yet. The distinct ingredient set is every item any recipe of this
+// tradeskill `uses` (not `produces`) -- an intermediate product that's also
+// a later recipe's own ingredient (Brewing's Short Beer, decisions/
+// tradeskill-recipe-node-schema.md) shows up here exactly because it's in
+// some recipe's `uses`, not because it's also a `produces`.
+function buildIngredientEntries(recipes, vendors) {
+  const itemsById = new Map();
+  const usedInById = new Map();
+  for (const r of recipes) {
+    for (const ing of r.uses) {
+      if (!itemsById.has(ing.id)) itemsById.set(ing.id, ing);
+      if (!usedInById.has(ing.id)) usedInById.set(ing.id, []);
+      usedInById.get(ing.id).push({ recipeId: r.id, recipeLabel: r.label, quantity: ing.quantity });
+    }
+  }
+
+  const vendorsByItemId = new Map();
+  for (const v of vendors) {
+    for (const item of v.sells) {
+      if (!vendorsByItemId.has(item.id)) vendorsByItemId.set(item.id, []);
+      vendorsByItemId.get(item.id).push(v);
+    }
+  }
+
+  return [...itemsById.values()]
+    .sort((a, b) => a.label.localeCompare(b.label))
+    .map((item) => ({
+      item,
+      usedIn: usedInById.get(item.id) ?? [],
+      vendorGroups: groupVendorsByZone(vendorsByItemId.get(item.id) ?? []),
+    }));
+}
+
+// A group's list of cards lives in its own plain block wrapper, not as
+// direct children of <collapsible-section> -- that element's :host is a
+// `display: flex; gap: 8px` column (fine for its usual sidebar-panel
+// field-rows), and slotting a whole card list straight into it would put
+// that same 8px gap between every card, breaking the zero-gap packed-list
+// seam every other card list in this app relies on (decisions/
+// card-list-seams-no-border-overlap.md). Wrapping the cards in one plain
+// div makes them a single slotted child instead -- the gap lands only
+// between the section header and the list, not inside it.
+function cardGroupSection(label, sectionName, items, tag) {
+  const section = document.createElement("collapsible-section");
+  section.setAttribute("label", `${label} (${items.length})`);
+  section.setAttribute("section", sectionName);
+  const list = document.createElement("div");
+  list.className = "trade-card-list";
+  lazyRenderList(list, items, (item) => {
+    const el = document.createElement(tag);
+    el.setData(item);
+    return el;
+  });
+  section.appendChild(list);
+  return section;
+}
+
 // Bumped on every filter change so a slower, now-stale request can't
 // overwrite a newer one -- same guard as quests.js's fetchToken.
 let fetchToken = 0;
@@ -107,7 +197,12 @@ async function render() {
   if (token !== fetchToken) return; // a newer filter change superseded this request
 
   resultsEl.innerHTML = "";
-  const dossier = document.createElement("tradeskill-dossier");
-  dossier.setData({ tradeskillLabel: selectedTradeskill, recipes, vendors });
-  resultsEl.appendChild(dossier);
+  if (!recipes.length) {
+    resultsEl.innerHTML = '<div class="no-results">No recipes catalogued yet for this tradeskill.</div>';
+    return;
+  }
+
+  const ingredients = buildIngredientEntries(recipes, vendors);
+  resultsEl.appendChild(cardGroupSection("Leveling Guide", "leveling-guide", recipes, "recipe-card"));
+  resultsEl.appendChild(cardGroupSection("Ingredients", "ingredients", ingredients, "ingredient-card"));
 }
