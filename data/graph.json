@@ -152417,6 +152417,16 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:troll-head",
+      "label": "Troll Head",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "lore": true,
+      "noTrade": true,
+      "source": "Dropped by Ratraz (Neriak Third Gate), Guard Lumpin (Neriak Foreign Quarter), and Rungupp (Toxxulia Forest); turn-in item for Hukulk's Love and Rungupp (Quest)"
     }
   ],
   "edges": [
@@ -284728,6 +284738,42 @@
       "source": "npc:warsliks-woods:klok-rogalin",
       "target": "item:water-flask",
       "type": "sells"
+    },
+    {
+      "id": "e-drops-21973",
+      "source": "mob:neriak-3rd-gate:ratraz",
+      "target": "item:troll-head",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-21974",
+      "source": "item:troll-head",
+      "target": "zone:neriak-3rd-gate",
+      "type": "located_in"
+    },
+    {
+      "id": "e-drops-21975",
+      "source": "mob:neriak-foreign-quarter:guard-lumpin",
+      "target": "item:troll-head",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-21976",
+      "source": "item:troll-head",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-drops-21977",
+      "source": "mob:toxxulia-forest:rungupp",
+      "target": "item:troll-head",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-21978",
+      "source": "item:troll-head",
+      "target": "zone:toxxulia-forest",
+      "type": "located_in"
     }
   ]
 }
