@@ -59339,7 +59339,7 @@
       "type": "item",
       "weight": 0.4,
       "size": "Small",
-      "source": "Orc Pawn Picks reward (Trizam N`Tan, Neriak Commons) -- a drink"
+      "source": "Sold by Cecile K`Jartan (Neriak Third Gate); a drink. Not dropped by mobs, not player-crafted."
     },
     {
       "id": "item:rotgrub-rye",
@@ -69123,7 +69123,7 @@
       "type": "item",
       "weight": 0.5,
       "size": "Small",
-      "source": "Bracers of Erollisi Quest / Pirate Earrings reward (Styria Fearnon, Ocean of Tears)"
+      "source": "Sold by Cleonae Kalen (Erollisi Isle, Ocean of Tears); also appears in several Ocean of Tears-area quests (Exotic Drinks, Pirate Earrings, Tumpy Tonics, Trueshot Longbow). Not dropped by mobs, not player-crafted."
     },
     {
       "id": "item:conch-shell",
@@ -149128,7 +149128,7 @@
       "type": "item",
       "weight": 0.2,
       "size": "Small",
-      "source": "Quest Item"
+      "source": "Sold by merchants across many zones. Not dropped by mobs, no related quest."
     },
     {
       "id": "item:hops",
@@ -149136,7 +149136,7 @@
       "type": "item",
       "weight": 0.2,
       "size": "Small",
-      "source": "Quest Item"
+      "source": "Sold by merchants across many zones. Not dropped by mobs, no related quest."
     },
     {
       "id": "item:malt",
@@ -149144,7 +149144,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Quest Item"
+      "source": "Sold by merchants across many zones. Not dropped by mobs, not player-crafted."
     },
     {
       "id": "item:packet-of-kiola-sap",
@@ -149227,7 +149227,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Quest Item"
+      "source": "Sold by merchants across many zones; also craftable via Brewing. Not dropped by mobs, no related quest."
     },
     {
       "id": "item:cask",
@@ -153085,7 +153085,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Velious-era Spices substitute"
+      "source": "Sold by Bloogy Shellcracker (Cobalt Scar); the Velious-era substitute for Spices"
     },
     {
       "id": "item:jug-of-oyster-sauces",
@@ -153093,7 +153093,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Velious-era Jug of Sauces substitute"
+      "source": "Sold by Bloogy Shellcracker (Cobalt Scar); the Velious-era substitute for Jug of Sauces"
     },
     {
       "id": "item:plankton-frosting",
@@ -153101,7 +153101,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Velious-era Frosting substitute"
+      "source": "Sold by Bloogy Shellcracker (Cobalt Scar) or the Innkeep (Rivervale); the Velious-era substitute for Frosting"
     },
     {
       "id": "item:seaweed-vinegar",
@@ -153109,7 +153109,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Velious-era Vinegar substitute"
+      "source": "Sold by Bloogy Shellcracker (Cobalt Scar); the Velious-era substitute for Vinegar"
     },
     {
       "id": "npc:rivervale:bartle-barnick",
@@ -153341,13 +153341,13 @@
       "id": "item:human-meat",
       "label": "Human (Chunk of) Meat",
       "type": "item",
-      "source": "Dropped by humans -- Grobb Cleaver quest ingredient"
+      "source": "Dropped by humans"
     },
     {
       "id": "item:erudite-meat",
       "label": "Erudite Meat",
       "type": "item",
-      "source": "Dropped by erudites -- Grobb Cleaver quest ingredient"
+      "source": "Dropped by erudites"
     },
     {
       "id": "item:flaming-pungla",
@@ -153371,7 +153371,7 @@
       "id": "item:baking-spirits",
       "label": "Baking Spirits",
       "type": "item",
-      "source": "Found in South Qeynos -- Paw of Opolla quest ingredient"
+      "source": "Sold by Karn Tassen (South Qeynos); ingredient for the Rat Ear Pie Quest's Uncooked Rat Ear Pie. Not dropped by mobs, not player-crafted."
     },
     {
       "id": "item:tundra-kodiak-meat",
@@ -299153,6 +299153,19 @@
       "target": "zone:the-wakening-land",
       "type": "located_in",
       "method": "forage"
+    },
+    {
+      "id": "e-located_in-23497",
+      "source": "item:swamp-vegetables",
+      "target": "zone:innothule-swamp",
+      "type": "located_in",
+      "method": "forage"
+    },
+    {
+      "id": "e-sells-23498",
+      "source": "npc:south-qeynos:karn-tassen",
+      "target": "item:baking-spirits",
+      "type": "sells"
     }
   ]
 }
