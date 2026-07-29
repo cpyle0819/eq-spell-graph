@@ -78,10 +78,19 @@ ${RESET_CSS}
 .guide-scroll::before { left: -11px; }
 .guide-scroll::after { right: -11px; }
 
-.recipe-list { display: flex; flex-direction: column; }
-.recipe-empty { font-size: 12px; font-style: italic; color: var(--parch-ink-soft); }
-.recipe-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; padding: 10px 0; }
-.recipe-row:not(:first-child) { border-top: 1px solid var(--parch-line); }
+/* Grid, not a flex row per recipe -- a flex row sized .skill-badges to
+   that row's own badge widths alone, so a recipe with a long "Crafted in
+   Oven or Spit" badge pushed its own .recipe-body further right than every
+   other row's, an inconsistent left edge for the name/formula column top
+   to bottom. A shared grid instead sizes column 1 to the single widest
+   badge stack in the whole list (max-content) and starts column 2 right
+   after it for every row alike -- same fix zone-dossier.js's .npc-list
+   already uses for the identical "per-row flex column width" problem. */
+.recipe-list { display: grid; grid-template-columns: max-content 1fr; column-gap: 12px; }
+.recipe-empty { grid-column: 1 / -1; font-size: 12px; font-style: italic; color: var(--parch-ink-soft); }
+.skill-badges, .recipe-body { padding: 10px 0; }
+.skill-badges:nth-child(-n+2), .recipe-body:nth-child(-n+2) { padding-top: 0; }
+.skill-badges:not(:nth-child(-n+2)), .recipe-body:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
 .skill-badges { display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
 .recipe-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .recipe-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -99,18 +108,21 @@ ${RESET_CSS}
 ${RECIPE_ROW_CSS}
 `);
 
+// Two sibling spans, not a wrapping row div -- .recipe-list itself is the
+// grid (see its own CSS comment for why), so every recipe's badges/body
+// land in the same two grid columns and the body column aligns down the
+// whole list without each row needing to know the widest badge stack in
+// the list.
 function recipeRowHtml(recipe) {
   return `
-    <div class="recipe-row">
-      <span class="skill-badges">${recipeBadgesHtml(recipe)}</span>
-      <span class="recipe-body">
-        <span class="recipe-name-row">
-          <span class="recipe-name">${recipe.label}</span>
-          <button type="button" class="add-shopping-btn" data-recipe-id="${recipe.id}">+ Add Ingredients</button>
-        </span>
-        <span class="recipe-formula">${recipeFormulaHtml(recipe)}</span>
+    <span class="skill-badges">${recipeBadgesHtml(recipe)}</span>
+    <span class="recipe-body">
+      <span class="recipe-name-row">
+        <span class="recipe-name">${recipe.label}</span>
+        <button type="button" class="add-shopping-btn" data-recipe-id="${recipe.id}">+ Add Ingredients</button>
       </span>
-    </div>
+      <span class="recipe-formula">${recipeFormulaHtml(recipe)}</span>
+    </span>
   `;
 }
 

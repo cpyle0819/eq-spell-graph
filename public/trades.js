@@ -222,11 +222,22 @@ export async function init() {
   applyQueryParams();
   updateFilterVisibility();
 
-  // Brewing is the only tradeskill modeled so far -- pre-selecting the sole
-  // option means a visitor sees a populated dossier immediately rather than
-  // an empty "— Select —" landing state, same "show real data by default"
-  // call quests.js's own out-of-era toggle makes in reverse.
-  if (tradeskills.length === 1) {
+  // renderSidebar() rebuilt #trade-skill-select from scratch too, same as
+  // the view/type selects above -- but unlike those two, selectedTradeskill
+  // itself is deliberately NOT reset at the top of this function (a
+  // tradeskill choice should survive a soft-nav away and back, e.g.
+  // clicking an ingredient chip to its own Ingredients-tab entry and then
+  // back). Without this restore, the fresh <select> would just show its
+  // default "— Select —" option while the results below it kept rendering
+  // whatever tradeskill selectedTradeskill still held -- dropdown and
+  // results silently out of sync.
+  if (selectedTradeskill && tradeskills.includes(selectedTradeskill)) {
+    document.getElementById("trade-skill-select").value = selectedTradeskill;
+  } else if (tradeskills.length === 1) {
+    // Sole tradeskill modeled so far -- pre-selecting it means a visitor
+    // sees a populated dossier immediately rather than an empty
+    // "— Select —" landing state, same "show real data by default" call
+    // quests.js's own out-of-era toggle makes in reverse.
     document.getElementById("trade-skill-select").value = tradeskills[0];
     selectedTradeskill = tradeskills[0];
   }
