@@ -436,7 +436,7 @@ function distinctIngredientIds(recipes) {
   return [...ids];
 }
 
-const EMPTY_ITEM_SOURCES = { foraged: [], fished: [], dropped: [], craftedIn: [] };
+const EMPTY_ITEM_SOURCES = { foraged: [], fished: [], dropped: [], craftedIn: [], other: null };
 
 // Builds ingredient-card.js's own data contract from the arrays the
 // Leveling Guide/render() already fetched -- no separate "ingredients" API

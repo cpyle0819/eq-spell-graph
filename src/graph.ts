@@ -703,6 +703,15 @@ export interface ItemSourceSummary {
   fished: ItemSourceZone[];
   dropped: ItemSourceDrop[];
   craftedIn: ItemSourceRecipe[];
+  // The item's own free-text `source` field (ItemDetails.source, already
+  // shown in item-chip.js's hover tooltip everywhere else in the app) --
+  // covers one-off/arbitrary acquisition methods the four structured
+  // categories above can't express (issue #58, e.g. Flaming Pungla: handed
+  // over by an NPC for gold, not foraged/fished/dropped/crafted). No
+  // migration needed, same "don't store what's derivable" reasoning as
+  // craftedIn -- this is already-authored data, just not surfaced here
+  // before. null when the item has no `source` note at all.
+  other: string | null;
 }
 
 export function getItemSources(ids: string[]): ItemSourceSummary[] {
@@ -724,6 +733,7 @@ export function getItemSources(ids: string[]): ItemSourceSummary[] {
         fished: locEdges.filter((e) => e.method === "fish").map(zoneRef),
         dropped: locEdges.filter((e) => e.method === "drop").map((e) => ({ ...zoneRef(e), mobs: e.mobs ?? [] })),
         craftedIn,
+        other: (helpers.nodeById(id)?.source as string | undefined) ?? null,
       };
     });
 }

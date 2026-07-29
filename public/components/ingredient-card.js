@@ -17,14 +17,17 @@
 // full for the page's Leveling Guide. `sources` is /api/item-sources'
 // per-item ItemSourceSummary (src/graph.ts's getItemSources, issue #55) --
 // Foraged In/Fished From/Dropped By/Crafted In, every non-vendor way to
-// obtain the ingredient.
+// obtain the ingredient, plus a free-text `other` fallback (issue #58) for
+// one-off methods that don't fit any of those four shapes.
 //
 // Sections render in order Crafted In, Foraged In, Fished From, Dropped
-// By, Used In, Sold By -- roughly most- to least-actionable ("make it
-// yourself" beats "walk to a zone" beats "kill something specific" beats
+// By, Other, Used In, Sold By -- roughly most- to least-actionable ("make
+// it yourself" beats "walk to a zone" beats "kill something specific" beats
 // "hand someone money"), all above Sold By per issue #55. Each of the four
-// new sections only renders at all when non-empty (`section()` already
-// no-ops on empty bodyHtml) -- most ingredients only have 1-2 of the four.
+// structured sections only renders at all when non-empty (`section()`
+// already no-ops on empty bodyHtml) -- most ingredients only have 1-2 of
+// the four. Other only renders when none of those four (or a vendor) do --
+// see its own render()-time comment for why.
 //
 // Sold By used to be a <collapsible-section> (dark-stone styling, always
 // collapsed by default). Issue #55 asked it to look like the other
@@ -130,6 +133,7 @@ const EXTRA_SHEET = new CSSStyleSheet();
 EXTRA_SHEET.replaceSync(`
 ${QUEST_CARD_CSS}
 .ingredient-empty { font-style: italic; color: var(--parch-ink-soft); font-size: 12px; }
+.ingredient-other { font-size: 13px; color: #4a4232; line-height: 1.5; }
 .ingredient-vendor-group + .ingredient-vendor-group { margin-top: 10px; }
 .ingredient-vendor-zone { font-size: 11px; font-weight: 700; color: var(--parch-accent); margin-bottom: 4px; }
 .ingredient-vendor-zone a { color: inherit; text-decoration: none; }
@@ -198,7 +202,17 @@ class IngredientCard extends CardBase {
     const fishedHtml = section("Fished From", zoneChipsBody(sources.fished));
     const droppedHtml = section("Dropped By", droppedByBody(sources.dropped));
     const soldByHtml = vendorCount ? section(`Sold By (${vendorCount})`, soldByBody(vendorGroups)) : "";
-    const noAcquisitionHtml = (craftedInHtml || foragedHtml || fishedHtml || droppedHtml || soldByHtml)
+    const hasStructuredAcquisition = !!(craftedInHtml || foragedHtml || fishedHtml || droppedHtml || soldByHtml);
+    // Other -- the item's own free-text `source` note (issue #58), shown
+    // only when none of the four structured methods above (or a vendor)
+    // already cover it: a one-off acquisition method (an NPC handoff for
+    // gold, a ground spawn, a quest-only ingredient) that doesn't fit
+    // Foraged/Fished/Dropped/Crafted's own shapes still deserves a real
+    // answer instead of falling through to "no known way." Left out
+    // entirely when a structured method already applies, so this doesn't
+    // duplicate/clutter an already-answered card.
+    const otherHtml = !hasStructuredAcquisition && sources.other ? section("Other", `<div class="quest-section-body ingredient-other">${sources.other}</div>`) : "";
+    const noAcquisitionHtml = (hasStructuredAcquisition || otherHtml)
       ? ""
       : `<div class="ingredient-empty">No known way to acquire this ingredient is catalogued yet.</div>`;
 
@@ -212,6 +226,7 @@ class IngredientCard extends CardBase {
         ${foragedHtml}
         ${fishedHtml}
         ${droppedHtml}
+        ${otherHtml}
         ${noAcquisitionHtml}
         ${section("Used In", usedInBody(usedIn))}
         ${soldByHtml}
