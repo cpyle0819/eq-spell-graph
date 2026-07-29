@@ -37,6 +37,15 @@
     .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
     .field select { width: 100%; }
 
+    /* Reuses .field's own label styling (theme.css) so this reads as a
+       third field alongside From/To instead of a stray control wedged next
+       to the dropdowns — just flex: 0 0 auto instead of .field's flex: 1,
+       since a checkbox+text row doesn't need to grow to fill space the way
+       a select does. padding centers the checkbox against the dropdowns'
+       own height instead of hugging the label. */
+    .field.wizard-port-field { flex: 0 0 auto; min-width: 0; }
+    .wizard-port-field toggle-checkbox { padding: 6px 0; }
+
     .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
     #reset-route-btn { margin-left: auto; padding-bottom: 8px; }
 
@@ -85,7 +94,10 @@
         <label>To</label>
         <select id="route-to"><option value="">— Select Zone —</option></select>
       </div>
-      <toggle-checkbox id="include-wizard-port" label="Include Wizard Port" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky"></toggle-checkbox>
+      <div class="field wizard-port-field">
+        <label>Travel</label>
+        <toggle-checkbox id="include-wizard-port" label="Include Wizard Port" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky"></toggle-checkbox>
+      </div>
       <button type="button" class="text-action" id="reset-route-btn">Reset</button>
     </div>
     <div id="route-result"></div>
