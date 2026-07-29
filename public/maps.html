@@ -30,23 +30,23 @@
       padding: 0 0 14px; gap: 14px;
     }
 
+    /* center (not the old flex-end) since the 90px-tall macro-button pair
+       is taller than a label+select field — centering aligns the selects'
+       own midline with the buttons' midline instead of their bottoms. */
     .finder-bar {
-      display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;
+      display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
       padding: 16px 20px; flex-shrink: 0;
     }
     .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
     .field select { width: 100%; }
 
-    .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
+    .arrow { color: var(--line-strong); font-size: 20px; flex-shrink: 0; }
 
     /* Two square macro-buttons, touching (no gap) so they read as one
        shared control cluster rather than two separate buttons — same idea
        as status-panel's own side-by-side square actions. margin-left: auto
-       pins the pair to the row's right edge, next to the dropdowns;
-       align-self: flex-end matches finder-bar's own align-items so the
-       cluster's bottom sits flush with the selects' bottom, same as the
-       old Reset link did. */
-    .finder-actions { display: flex; margin-left: auto; align-self: flex-end; }
+       pins the pair to the row's right edge, next to the dropdowns. */
+    .finder-actions { display: flex; margin-left: auto; }
 
     @media (max-width: 600px) {
       /* flex-wrap on .finder-bar already drops this to its own line once
