@@ -114,24 +114,38 @@ ${RESET_CSS}
 }
 .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 /* Permanently "depressed" look for e.g. the current-page nav button --
-   same treatment as .btn:active, but held rather than momentary. */
-.btn.pressed, .btn.pressed:hover {
+   same treatment as .btn:active, but held rather than momentary. Disabled
+   reuses this exact same look rather than a separate grayscale/dimmed
+   treatment -- "can't press this yet" reads as already-pushed-in, the same
+   physical metaphor as a held-down button, not as broken or missing
+   artwork. */
+.btn.pressed, .btn.pressed:hover, .btn:disabled, .btn:disabled:hover, .btn:disabled:active {
   cursor: default;
   box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
   filter: brightness(0.96);
 }
-.btn.pressed::before {
+.btn.pressed::before, .btn:disabled::before {
   background-image: var(--bone-tex), linear-gradient(to top, black, transparent 5px), linear-gradient(to right, black, transparent 5px);
   mix-blend-mode: darken;
 }
-.btn.pressed::after {
+.btn.pressed::after, .btn:disabled::after {
   background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 5px), linear-gradient(to left, white, transparent 5px);
   mix-blend-mode: lighten;
+}
+/* Same square-specific 6px inset as .btn.square:active's own -- the
+   thicker square border needs a wider gradient falloff than the default
+   button's, same reasoning as that rule. .pressed never needed this
+   (nothing square uses it today), but disabled does (Find Near Me). */
+.btn.square:disabled::before {
+  background-image: var(--bone-tex), linear-gradient(to top, black, transparent 6px), linear-gradient(to right, black, transparent 6px);
+}
+.btn.square:disabled::after {
+  background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 6px), linear-gradient(to left, white, transparent 6px);
 }
 `);
 
 class MacroButton extends HTMLElement {
-  static get observedAttributes() { return ["href", "square", "pressed"]; }
+  static get observedAttributes() { return ["href", "square", "pressed", "disabled"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -149,6 +163,10 @@ class MacroButton extends HTMLElement {
     const href = this.getAttribute("href");
     const square = this.hasAttribute("square");
     const pressed = this.hasAttribute("pressed");
+    // Only meaningful for the plain-button case below -- a "disabled" link
+    // or permanently-"pressed" (current-page) button isn't a usage this app
+    // has, so there's no established look for either combination.
+    const disabled = this.hasAttribute("disabled") && !pressed && !href;
     this.classList.toggle("square", square);
 
     const label = this.textContent.trim();
@@ -159,6 +177,7 @@ class MacroButton extends HTMLElement {
     if (pressed) btn.setAttribute("aria-current", "page");
     else if (href) btn.setAttribute("href", href);
     else btn.setAttribute("type", "button");
+    if (disabled) btn.disabled = true;
     btn.appendChild(document.createElement("slot"));
 
     this.shadowRoot.replaceChildren(btn);

@@ -1,26 +1,38 @@
-// <shopping-list-panel>, with `.items = [{id, label, quantity}]` set as one
-// property. The Tradeskills page's own right-side panel (same bordered
-// marble box + sticky-on-desktop treatment as status-panel.js, the Spell
-// Finder's equivalent right panel) collecting ingredients added via the
-// "+" drawer on any ingredient item-chip (recipe-card.js/leveling-guide-
-// card.js's formula chips, ingredient-card.js's own header button).
+// <shopping-list-panel>, with `.items = [{id, label, quantity}]` and
+// `.zones = [{id, label}]` set as two properties. The Tradeskills page's own
+// right-side panel (same bordered marble box + sticky-on-desktop treatment
+// as status-panel.js, the Spell Finder's equivalent right panel) collecting
+// ingredients added via the "+" drawer on any ingredient item-chip
+// (recipe-card.js/leveling-guide-card.js's formula chips, ingredient-
+// card.js's own header button).
 //
 // Unlike status-panel (which hides via `hidden` when there's nothing
 // relevant to show), this stays visible even when empty -- it's this page's
 // own persistent furniture, not a conditional planner result -- with a
-// plain empty-state hint standing in until something's added.
+// plain empty-state hint standing in until something's added. The actions
+// cluster (Current Location + Find Near Me + Clear list) only appears once
+// there's a list to act on, though -- same reasoning, nothing to find or
+// clear yet.
 //
 // Each row renders the item through item-chip.js (itemChipTag) -- the app's
 // one item-rendering component, same as everywhere else an item shows up --
 // rather than a bespoke plain-text label, so it gets the same gem/name
 // styling and click-through to that ingredient's own card (nav-href).
 //
-// This component only renders; it owns no state and does no persistence.
-// A quantity nudge or Clear list dispatches composed
-// `change-shopping-quantity`/`clear-shopping-list` CustomEvents for
-// trades.js to act on, same split as status-panel's own toggle-owned/
-// clear-owned. Decrementing to 0 is how a single row is removed -- there's
-// no separate remove button.
+// This component only renders; it owns no state and does no persistence
+// (including "Current Location" -- unlike the shopping list itself, that
+// selection isn't saved, so it starts back at "-" on every fresh render of
+// this component, same as every other Tradeskills filter resetting on a
+// soft-navigation return). A quantity nudge, Clear list, or Find Near Me
+// dispatches composed `change-shopping-quantity`/`clear-shopping-list`/
+// `find-near-me` CustomEvents for trades.js to act on, same split as
+// status-panel's own toggle-owned/clear-owned. Decrementing to 0 is how a
+// single row is removed -- there's no separate remove button. Find Near Me
+// is disabled (native `<button disabled>`, via macro-button.js's own
+// `disabled` attribute) until a location is picked -- this component owns
+// that enable/disable toggle itself since it only depends on this
+// component's own dropdown, not on anything trades.js knows that this
+// doesn't.
 import { RESET_CSS } from "./reset.js";
 import { itemChipTag } from "./item-chip.js";
 
@@ -68,9 +80,10 @@ ${RESET_CSS}
 .qty-btn:hover, .qty-btn:focus-visible { background: rgba(122, 77, 5, 0.3); }
 .shopping-qty { flex-shrink: 0; min-width: 14px; text-align: center; font-variant-numeric: tabular-nums; color: var(--gold); font-weight: 700; }
 .shopping-actions {
-  display: flex; justify-content: center;
-  padding: 12px 20px 16px; border-top: 2px solid var(--edge-lo);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 14px 20px 16px; border-top: 2px solid var(--edge-lo);
 }
+.shopping-actions field-row { width: 100%; }
 /* theme.css's own .text-action look (sidebar-panel's "Reset filters"),
    replicated locally -- that's a light-DOM class handed to a slotted
    element, and this panel has no slot to pass one through, it renders
@@ -94,6 +107,7 @@ ${RESET_CSS}
 
 class ShoppingListPanel extends HTMLElement {
   #items = [];
+  #zones = [];
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -106,6 +120,12 @@ class ShoppingListPanel extends HTMLElement {
   get items() { return this.#items; }
   set items(value) {
     this.#items = value || [];
+    if (this.shadowRoot) this.render();
+  }
+
+  get zones() { return this.#zones; }
+  set zones(value) {
+    this.#zones = value || [];
     if (this.shadowRoot) this.render();
   }
 
@@ -127,10 +147,25 @@ class ShoppingListPanel extends HTMLElement {
           .join("")}</div>`
       : `<div class="shopping-empty">No ingredients added yet. Look for the "+" on an ingredient.</div>`;
 
+    const zoneOptions = this.#zones.map((z) => `<option value="${z.id}">${z.label}</option>`).join("");
+    const actionsHtml = items.length
+      ? `
+      <div class="shopping-actions">
+        <field-row label="Current Location">
+          <select id="location-select">
+            <option value="">-</option>
+            ${zoneOptions}
+          </select>
+        </field-row>
+        <macro-button square id="find-near-me-btn" disabled>Find Near Me</macro-button>
+        <button type="button" class="clear-link" id="clear-shopping-btn">Clear list</button>
+      </div>`
+      : "";
+
     this.shadowRoot.innerHTML = `
       <div class="shopping-header">Shopping List</div>
       ${bodyHtml}
-      ${items.length ? `<div class="shopping-actions"><button type="button" class="clear-link" id="clear-shopping-btn">Clear list</button></div>` : ""}
+      ${actionsHtml}
     `;
 
     const changeQty = (id, delta) => {
@@ -140,6 +175,13 @@ class ShoppingListPanel extends HTMLElement {
     this.shadowRoot.querySelectorAll(".qty-inc").forEach((btn) => btn.addEventListener("click", () => changeQty(btn.dataset.id, 1)));
     this.shadowRoot.getElementById("clear-shopping-btn")?.addEventListener("click", () => {
       this.dispatchEvent(new CustomEvent("clear-shopping-list", { bubbles: true, composed: true }));
+    });
+    this.shadowRoot.getElementById("location-select")?.addEventListener("change", (e) => {
+      this.shadowRoot.getElementById("find-near-me-btn").toggleAttribute("disabled", !e.target.value);
+    });
+    this.shadowRoot.getElementById("find-near-me-btn")?.addEventListener("click", () => {
+      const zoneId = this.shadowRoot.getElementById("location-select").value;
+      this.dispatchEvent(new CustomEvent("find-near-me", { bubbles: true, composed: true, detail: { zoneId } }));
     });
   }
 }

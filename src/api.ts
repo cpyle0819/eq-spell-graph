@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -86,6 +86,17 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const to = searchParams.get("to") || "";
     if (!from || !to) return { status: 400, body: { error: "from and to required" } };
     return { status: 200, body: getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`) };
+  }
+
+  // GET /api/zone-distances?from=zone:east-freeport&zones=zone:a,zone:b —
+  // hops + route (getRoute()'s own shape) from one zone to each of several
+  // target zones in one call, e.g. Tradeskills' "Find Near Me" ranking
+  // several vendor zones against one shopping trip's starting zone.
+  if (pathname === "/api/zone-distances") {
+    const from = searchParams.get("from") || "";
+    const zones = (searchParams.get("zones") || "").split(",").filter(Boolean);
+    if (!from || !zones.length) return { status: 200, body: {} };
+    return { status: 200, body: getZoneDistances(from, zones) };
   }
 
   // GET /api/classes — list classes that have spell data

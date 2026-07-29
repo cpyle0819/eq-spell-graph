@@ -9,18 +9,19 @@
 // A standalone panel, not a CardBase list item -- same "self-contained
 // dossier shell" shape as zone-dossier.js (its own bevel-panel + parchment-
 // scroll, no shared base class). trades.js adds/removes this single element
-// entirely via its Show Guide button; it has no collapse affordance of its
-// own.
+// entirely via the View select; it has no collapse affordance of its own.
 //
-// Each row IS clickable, though -- issue #32's own spec: clicking a recipe
-// in the guide hides the guide and selects that recipe in the browsing list
-// below. Dispatches a bubbling+composed "recipe-select" custom event
-// (bubbles/composed so it escapes this element's own shadow root, same
-// convention as status-panel.js's "toggle-owned"/zone-card.js's
-// "spell-owned-change") rather than trades.js reaching in to read state
-// itself; a click landing on an ingredient chip's own link is left alone
-// (its own nav-href already does something more specific -- deep-linking to
-// that ingredient, not this recipe).
+// Rows aren't clickable/don't link out to their own Browse-tab entry -- the
+// guide is a fixed reference path, not a jumping-off point for browsing.
+// Each ingredient chip already deep-links to its own entry (nav-href) and
+// carries its own "+" drawer (item-chip.js's shoppingList option) for
+// adding just that one ingredient. What the row itself adds on top: a
+// "+ Add Ingredients" button that adds every ingredient this recipe needs
+// to the shopping list in one click, at the quantities this recipe actually
+// calls for, rather than clicking each ingredient's own "+" one at a time.
+// Dispatches a bubbling+composed "add-recipe-ingredients" custom event
+// (detail: { items: recipe.uses }) for trades.js to act on, same convention
+// as ingredient-card.js's own "add-shopping-item".
 import { RESET_CSS } from "./reset.js";
 import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml } from "./tradeskill-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
@@ -79,13 +80,19 @@ ${RESET_CSS}
 
 .recipe-list { display: flex; flex-direction: column; }
 .recipe-empty { font-size: 12px; font-style: italic; color: var(--parch-ink-soft); }
-.recipe-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; padding: 10px 0; cursor: pointer; }
+.recipe-row { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; padding: 10px 0; }
 .recipe-row:not(:first-child) { border-top: 1px solid var(--parch-line); }
-.recipe-row:hover, .recipe-row:focus-visible { background: rgba(122, 96, 42, 0.08); outline: none; }
-.recipe-row:focus-visible { box-shadow: inset 0 0 0 2px var(--gold); }
 .skill-badges { display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
 .recipe-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.recipe-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .recipe-name { font-weight: 700; color: var(--parch-ink); font-size: 13px; }
+/* Same look as ingredient-card.js's own "+ Shopping List" button -- both
+   are a quiet secondary action on a parchment card, not a primary button. */
+.add-shopping-btn {
+  font-size: 11px; color: var(--gold); background: none; border: none;
+  padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
+}
+.add-shopping-btn:hover, .add-shopping-btn:focus-visible { text-decoration: underline; }
 
 .spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
 .skill-badge { background: rgba(0, 0, 0, 0.05); color: #4a4232; border: 1px solid var(--parch-line); }
@@ -94,10 +101,13 @@ ${RECIPE_ROW_CSS}
 
 function recipeRowHtml(recipe) {
   return `
-    <div class="recipe-row" role="button" tabindex="0" data-recipe-id="${recipe.id}" data-recipe-label="${recipe.label}">
+    <div class="recipe-row">
       <span class="skill-badges">${recipeBadgesHtml(recipe)}</span>
       <span class="recipe-body">
-        <span class="recipe-name">${recipe.label}</span>
+        <span class="recipe-name-row">
+          <span class="recipe-name">${recipe.label}</span>
+          <button type="button" class="add-shopping-btn" data-recipe-id="${recipe.id}">+ Add Ingredients</button>
+        </span>
         <span class="recipe-formula">${recipeFormulaHtml(recipe)}</span>
       </span>
     </div>
@@ -122,24 +132,19 @@ class LevelingGuideCard extends HTMLElement {
         </div>
       `;
       const list = this.shadowRoot.querySelector(".recipe-list");
-      list.addEventListener("click", (e) => this.#selectRow(e));
-      list.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); this.#selectRow(e); }
-      });
+      list.addEventListener("click", (e) => this.#addIngredients(e));
     }
     this.render();
   }
 
-  // An ingredient chip inside the row is its own link (nav-href, deep-linking
-  // to that ingredient) -- a click landing there should do only that, not
-  // also select this whole recipe.
-  #selectRow(e) {
-    if (e.composedPath().some((n) => n.tagName === "ITEM-CHIP")) return;
-    const row = e.target.closest(".recipe-row");
-    if (!row) return;
-    this.dispatchEvent(new CustomEvent("recipe-select", {
+  #addIngredients(e) {
+    const btn = e.target.closest(".add-shopping-btn");
+    if (!btn) return;
+    const recipe = this.#recipes.find((r) => r.id === btn.dataset.recipeId);
+    if (!recipe) return;
+    this.dispatchEvent(new CustomEvent("add-recipe-ingredients", {
       bubbles: true, composed: true,
-      detail: { recipeId: row.dataset.recipeId, recipeLabel: row.dataset.recipeLabel },
+      detail: { items: recipe.uses },
     }));
   }
 

@@ -1293,6 +1293,27 @@ export function getRoute(fromZoneId: string, toZoneId: string): { hops: number |
   return { hops, route, destination: getZoneVendorInfo(toZoneId) };
 }
 
+export interface ZoneDistance { hops: number; route: RouteStep[]; }
+
+// Batched sibling of getRoute() -- same shortestPath()/buildRouteSteps()
+// machinery, one call from a single origin to several target zones instead
+// of one pair, for callers ranking multiple destinations against one
+// starting point (Tradeskills' own "Find Near Me": several vendor zones
+// against one shopping trip's starting zone) without a round trip per
+// target. null means genuinely unreachable, same as getRoute()'s hops.
+export function getZoneDistances(fromZoneId: string, targetZoneIds: string[]): Record<string, ZoneDistance | null> {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const result: Record<string, ZoneDistance | null> = {};
+  for (const zoneId of new Set(targetZoneIds)) {
+    const pathIds = shortestPath(fromZoneId, zoneId, helpers);
+    result[zoneId] = pathIds
+      ? { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) }
+      : null;
+  }
+  return result;
+}
+
 // --- Writes ---
 
 export function addSpell(name: string, classLevels: ClassLevel[]): NodeData {

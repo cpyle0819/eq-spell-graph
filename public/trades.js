@@ -32,6 +32,12 @@ let activeView = "guide"; // "guide" | "browse"
 let rawRecipes = [];
 let rawVendors = [];
 
+// {id -> label}, from /api/zones -- populates shopping-list-panel's own
+// "Current Location" select and resolves that selection's label for
+// findNearMe()'s own dialog header. Fetched once in init(); zones don't
+// change within a session, unlike rawRecipes/rawVendors above.
+let zonesById = new Map();
+
 // scrollbar-gutter: stable on #trades-content (trades.html) reserves the
 // scrollbar's width unconditionally, so #trades-results doesn't jump width
 // when a tab/filter crosses the overflow threshold -- but that width isn't
@@ -69,10 +75,27 @@ function renderShoppingList() {
   document.getElementById("shopping-list-panel").items = shoppingList;
 }
 
-function addShoppingItem(id, label) {
+// Shared by both add paths below -- doesn't save/render itself, so
+// addShoppingItems() can add several ingredients as one atomic write/render
+// instead of one of each per ingredient.
+function addToShoppingList(id, label, quantity) {
   const existing = shoppingList.find((i) => i.id === id);
-  if (existing) existing.quantity += 1;
-  else shoppingList.push({ id, label, quantity: 1 });
+  if (existing) existing.quantity += quantity;
+  else shoppingList.push({ id, label, quantity });
+}
+
+function addShoppingItem(id, label) {
+  addToShoppingList(id, label, 1);
+  saveShoppingList();
+  renderShoppingList();
+}
+
+// leveling-guide-card.js's own "+ Add Ingredients" -- adds every ingredient
+// a recipe needs (items: recipe.uses, each already {id,label,quantity}) at
+// the quantities that recipe actually calls for, not a flat +1 each like a
+// single ingredient's own "+" drawer does.
+function addShoppingItems(items) {
+  for (const item of items) addToShoppingList(item.id, item.label, item.quantity);
   saveShoppingList();
   renderShoppingList();
 }
@@ -93,6 +116,59 @@ function clearShoppingList() {
   shoppingList = [];
   saveShoppingList();
   renderShoppingList();
+}
+
+// shopping-list-panel.js's own "Find Near Me" -- for each shopping-list
+// item, picks its single *nearest* seller (by hop count from fromZoneId),
+// then groups those winning picks by zone so the result reads as a trip
+// (closest stop first, everything found there together) rather than a flat
+// per-item list. rawVendors already covers every vendor for the currently
+// selected tradeskill (fetched unfiltered, see the top-of-file comment) --
+// every shopping-list item was added from that same tradeskill's own
+// ingredients, so no separate fetch is needed to know who sells what, only
+// how far each candidate zone is (graph pathfinding is server-side only).
+async function findNearMe(fromZoneId) {
+  const itemVendors = new Map(); // itemId -> TradeskillVendorSummary[]
+  for (const item of shoppingList) {
+    itemVendors.set(item.id, rawVendors.filter((v) => v.sells.some((s) => s.id === item.id)));
+  }
+
+  const candidateZoneIds = [...new Set([...itemVendors.values()].flat().map((v) => v.zoneId))];
+  const distances = candidateZoneIds.length
+    ? await fetch(`api/zone-distances?from=${encodeURIComponent(fromZoneId)}&zones=${candidateZoneIds.map(encodeURIComponent).join(",")}`).then((r) => r.json())
+    : {};
+
+  const stopsByZone = new Map(); // zoneId -> { zoneId, zoneLabel, hops, route, vendors: Map(vendorId -> {id,label,items}) }
+  const notFound = [];
+  for (const item of shoppingList) {
+    let best = null; // { vendor, dist }
+    for (const vendor of itemVendors.get(item.id) || []) {
+      const dist = distances[vendor.zoneId];
+      if (!dist) continue; // unreachable
+      if (!best || dist.hops < best.dist.hops || (dist.hops === best.dist.hops && vendor.label.localeCompare(best.vendor.label) < 0)) {
+        best = { vendor, dist };
+      }
+    }
+    if (!best) {
+      notFound.push(item);
+      continue;
+    }
+    const { vendor, dist } = best;
+    if (!stopsByZone.has(vendor.zoneId)) {
+      stopsByZone.set(vendor.zoneId, { zoneId: vendor.zoneId, zoneLabel: vendor.zoneLabel, hops: dist.hops, route: dist.route, vendors: new Map() });
+    }
+    const stop = stopsByZone.get(vendor.zoneId);
+    if (!stop.vendors.has(vendor.id)) stop.vendors.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
+    stop.vendors.get(vendor.id).items.push(item);
+  }
+
+  const stops = [...stopsByZone.values()]
+    .map((stop) => ({ ...stop, vendors: [...stop.vendors.values()].sort((a, b) => a.label.localeCompare(b.label)) }))
+    .sort((a, b) => a.hops - b.hops || a.zoneLabel.localeCompare(b.zoneLabel));
+
+  const dialog = document.getElementById("nearest-vendors-dialog");
+  dialog.setData({ fromLabel: zonesById.get(fromZoneId) || fromZoneId, stops, notFound });
+  dialog.show();
 }
 
 function renderSidebar() {
@@ -123,9 +199,24 @@ function renderSidebar() {
 
 export async function init() {
   renderSidebar();
+  // renderSidebar() just rebuilt #trade-view-select/#trade-type-select from
+  // scratch, defaulting to Guide/Recipes -- router.js caches this module
+  // across a soft-navigation away and back (an ES module's top level only
+  // ever runs once), so without this reset these two module vars would
+  // still hold whatever they were on the previous visit, going stale
+  // against the fresh DOM (dropdown reads "Guide," but render() still
+  // filters on a leftover activeView of "browse"). applyQueryParams() below
+  // can still override either from a deep link, same as any other landing.
+  selectedType = "recipes";
+  activeView = "guide";
   loadShoppingList();
   renderShoppingList();
-  const tradeskills = await fetch("api/tradeskills").then((r) => r.json());
+  const [tradeskills, zones] = await Promise.all([
+    fetch("api/tradeskills").then((r) => r.json()),
+    fetch("api/zones").then((r) => r.json()),
+  ]);
+  zonesById = new Map(zones.map((z) => [z.id, z.label]));
+  document.getElementById("shopping-list-panel").zones = zones;
   populateTradeskillSelect(tradeskills);
   setupFilters();
   applyQueryParams();
@@ -220,36 +311,29 @@ function setupFilters() {
 
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
 
-  // leveling-guide-card.js's own row click -- issue #32's spec: selects that
-  // recipe in the Browse view. Resets the skill range too (not just Type +
-  // search), so a narrowed range from earlier browsing can't hide the very
-  // recipe just clicked.
-  document.getElementById("trades-results").addEventListener("recipe-select", (e) => {
-    document.getElementById("trade-type-select").value = "recipes";
-    selectedType = "recipes";
-    const range = document.getElementById("trade-skill-range");
-    range.valueMin = 0;
-    range.valueMax = MAX_TRADESKILL_LEVEL;
-    document.getElementById("trade-search").value = e.detail.recipeLabel;
-    setActiveView("browse");
-    render();
-  });
-
-  // ingredient-card.js's own "+ Shopping List" button -- composed so it
-  // crosses out of that card's shadow root.
+  // ingredient-card.js's own "+ Shopping List" button and recipe-card.js/
+  // leveling-guide-card.js's own ingredient chips (recipeFormulaHtml's
+  // shoppingList option) -- composed so both cross out of their own shadow
+  // roots. leveling-guide-card.js's own "+ Add Ingredients" button dispatches
+  // the plural event below instead, one ingredient's worth of items at once.
   document.getElementById("trades-results").addEventListener("add-shopping-item", (e) => {
     addShoppingItem(e.detail.id, e.detail.label);
+  });
+  document.getElementById("trades-results").addEventListener("add-recipe-ingredients", (e) => {
+    addShoppingItems(e.detail.items);
   });
 
   const panel = document.getElementById("shopping-list-panel");
   panel.addEventListener("change-shopping-quantity", (e) => changeShoppingQuantity(e.detail.id, e.detail.delta));
   panel.addEventListener("clear-shopping-list", clearShoppingList);
+  panel.addEventListener("find-near-me", (e) => findNearMe(e.detail.zoneId));
 }
 
 // #trade-view-select (always visible, unlike the filters it governs) --
 // syncs its own value (in case this was called from something other than
-// the select's own change handler, e.g. a recipe-select deep-link) and
-// which filters are relevant to show. Guide is one fixed reference panel
+// the select's own change handler, e.g. applyQueryParams()'s ingredient
+// deep-link) and which filters are relevant to show. Guide is one fixed
+// reference panel
 // with nothing to filter, so only Trade Skill + View stay visible there;
 // Browse's own Type/Search (and Skill Range, Recipes only) come back once
 // Browse is selected. Callers re-render themselves -- this only syncs

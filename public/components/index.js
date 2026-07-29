@@ -22,6 +22,7 @@ import "./sidebar-panel.js";
 import "./mana-bar.js";
 import "./status-panel.js";
 import "./shopping-list-panel.js";
+import "./nearest-vendors-dialog.js";
 import "./zone-card.js";
 import "./spell-card.js";
 import "./aa-card.js";
