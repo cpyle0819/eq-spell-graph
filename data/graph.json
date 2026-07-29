@@ -156195,6 +156195,97 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:smithy-hammer",
+      "label": "Smithy Hammer",
+      "type": "item",
+      "weight": 18,
+      "size": "Small"
+    },
+    {
+      "id": "item:buckler-mold",
+      "label": "Buckler Mold",
+      "type": "item"
+    },
+    {
+      "id": "item:round-shield-mold",
+      "label": "Round Shield Mold",
+      "type": "item"
+    },
+    {
+      "id": "item:round-shield",
+      "label": "Round Shield",
+      "type": "item",
+      "ac": 6,
+      "weight": 5,
+      "size": "Medium",
+      "slots": [
+        "Secondary"
+      ],
+      "source": "Crafted via Blacksmithing (trivial 115)"
+    },
+    {
+      "id": "recipe:buckler",
+      "label": "Buckler",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:round-shield",
+      "label": "Round Shield",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 115
+    },
+    {
+      "id": "npc:east-cabilis:smithy-zern",
+      "label": "Smithy Zern",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:kif",
+      "label": "Kif",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-freeport:trudie-steelbone",
+      "label": "Trudie Steelbone",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:bubbgrib",
+      "label": "Bubbgrib",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:liln-sedder",
+      "label": "Liln Sedder",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:ukla",
+      "label": "Ukla",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -303335,6 +303426,259 @@
       "id": "e-sells-24019",
       "source": "npc:thurgadin:rexx-frostweaver",
       "target": "item:thimble-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-24020",
+      "source": "recipe:buckler",
+      "target": "item:sheet-metal",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-24021",
+      "source": "recipe:buckler",
+      "target": "item:buckler-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-24022",
+      "source": "recipe:buckler",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-24023",
+      "source": "recipe:buckler",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-24024",
+      "source": "recipe:buckler",
+      "target": "item:buckler",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-24025",
+      "source": "recipe:buckler",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-24026",
+      "source": "recipe:round-shield",
+      "target": "item:sheet-metal",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-24027",
+      "source": "recipe:round-shield",
+      "target": "item:round-shield-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-24028",
+      "source": "recipe:round-shield",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-24029",
+      "source": "recipe:round-shield",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-24030",
+      "source": "recipe:round-shield",
+      "target": "item:round-shield",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-24031",
+      "source": "recipe:round-shield",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-located_in-24032",
+      "source": "npc:east-cabilis:smithy-zern",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24033",
+      "source": "npc:east-cabilis:smithy-zern",
+      "target": "item:buckler-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24034",
+      "source": "npc:east-cabilis:smithy-zern",
+      "target": "item:round-shield-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-24035",
+      "source": "npc:east-freeport:kif",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24036",
+      "source": "npc:east-freeport:kif",
+      "target": "item:buckler-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24037",
+      "source": "npc:east-freeport:kif",
+      "target": "item:round-shield-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24038",
+      "source": "npc:south-qeynos:ton-firepride",
+      "target": "item:buckler-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24039",
+      "source": "npc:south-qeynos:ton-firepride",
+      "target": "item:round-shield-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24040",
+      "source": "npc:ak-anon:a-clockwork-miner",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24041",
+      "source": "npc:east-cabilis:klok-toren",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24042",
+      "source": "npc:erudin:shinan-orefinder",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24043",
+      "source": "npc:north-freeport:kyrin-steelbone",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-24044",
+      "source": "npc:north-freeport:trudie-steelbone",
+      "target": "zone:north-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24045",
+      "source": "npc:north-freeport:trudie-steelbone",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24046",
+      "source": "npc:grobb:okun",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24047",
+      "source": "npc:halas:greta-o-reilly",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24048",
+      "source": "npc:high-keep:miner-harton",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24049",
+      "source": "npc:north-kaladim:bloarn-norkhitter",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24050",
+      "source": "npc:north-kaladim:harnoff-splitrock",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24051",
+      "source": "npc:neriak-commons:glazn-d-unnar",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-24052",
+      "source": "npc:oggok:bubbgrib",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24053",
+      "source": "npc:oggok:bubbgrib",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24054",
+      "source": "npc:oggok:blergerda",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-24055",
+      "source": "npc:south-qeynos:liln-sedder",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24056",
+      "source": "npc:south-qeynos:liln-sedder",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-24057",
+      "source": "npc:rathe-mountains:ukla",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-24058",
+      "source": "npc:rathe-mountains:ukla",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24059",
+      "source": "npc:steamfont-mountains:godbin-strumharp",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24060",
+      "source": "npc:stonebrunt-mountains:kevar-claypaws",
+      "target": "item:smithy-hammer",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-24061",
+      "source": "npc:thurgadin:nimren-stonecutter",
+      "target": "item:smithy-hammer",
       "type": "sells"
     }
   ]
