@@ -65,6 +65,17 @@ export interface EdgeData {
   // tradeskill-recipe-node-schema.md). Absent means 1, same "no flag = the
   // common case" convention as randomGroup above.
   quantity?: number;
+  // item --located_in--> zone (decisions/item-drops-edge-and-item-located-in.md):
+  // how the item is obtained at that zone, not just that it's present there.
+  // Required whenever the edge's source is an item (an npc/quest
+  // --located_in--> zone edge never sets this -- see that doc's "method"
+  // section for why the overload needs disambiguating this way).
+  method?: "drop" | "forage" | "fish";
+  // Only set on a `method: "drop"` edge -- the specific creature name(s)
+  // eqlwiki's own item page lists under that zone (e.g. ["a bat", "a giant
+  // bat"]). Absent/empty means the wiki names the zone but not a specific
+  // mob.
+  mobs?: string[];
 }
 
 export interface SpellDetails {
@@ -660,6 +671,61 @@ export function getTradeskillVendors(tradeskill: string, zoneId?: string): Trade
     vendors.push({ id: npc.id, label: npc.label, zoneId: zoneEdge.target, zoneLabel: zoneNode?.label ?? zoneEdge.target, sells });
   }
   return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));
+}
+
+export interface ItemSourceZone {
+  zoneId: string;
+  zoneLabel: string;
+}
+
+export interface ItemSourceDrop extends ItemSourceZone {
+  mobs: string[];
+}
+
+export interface ItemSourceRecipe {
+  recipeId: string;
+  recipeLabel: string;
+  tradeskill: string;
+}
+
+// The "how do I get this ingredient besides buying it" facts ingredient-
+// card.js's Foraged In/Fished From/Dropped By/Crafted In sections render
+// (issue #55) -- everything but craftedIn comes from `item --located_in-->
+// zone` edges tagged with a `method` (migration 370, decisions/
+// item-drops-edge-and-item-located-in.md's "method" section). craftedIn
+// needs no migration at all: it's the reverse of the `recipe --produces-->
+// item` edge every recipe already has, so it tracks new recipes
+// automatically as they're added, the same "don't store what's derivable"
+// reasoning as recipeSuccessThresholds().
+export interface ItemSourceSummary {
+  id: string;
+  foraged: ItemSourceZone[];
+  fished: ItemSourceZone[];
+  dropped: ItemSourceDrop[];
+  craftedIn: ItemSourceRecipe[];
+}
+
+export function getItemSources(ids: string[]): ItemSourceSummary[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const zoneRef = (e: EdgeData): ItemSourceZone => ({ zoneId: e.target, zoneLabel: helpers.nodeById(e.target)?.label ?? e.target });
+  return ids
+    .filter((id) => !!helpers.nodeById(id))
+    .map((id) => {
+      const locEdges = helpers.edgesFrom(id, "located_in");
+      const craftedIn = helpers
+        .edgesTo(id, "produces")
+        .map((e) => helpers.nodeById(e.source))
+        .filter((r): r is NodeData => r?.type === "recipe")
+        .map((r) => ({ recipeId: r.id, recipeLabel: r.label, tradeskill: r.tradeskill as string }));
+      return {
+        id,
+        foraged: locEdges.filter((e) => e.method === "forage").map(zoneRef),
+        fished: locEdges.filter((e) => e.method === "fish").map(zoneRef),
+        dropped: locEdges.filter((e) => e.method === "drop").map((e) => ({ ...zoneRef(e), mobs: e.mobs ?? [] })),
+        craftedIn,
+      };
+    });
 }
 
 export interface GraphIndexHelpers {

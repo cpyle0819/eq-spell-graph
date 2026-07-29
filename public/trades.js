@@ -31,6 +31,12 @@ let activeView = "guide"; // "guide" | "browse"
 
 let rawRecipes = [];
 let rawVendors = [];
+// itemId -> ItemSourceSummary (src/graph.ts's getItemSources) -- Foraged
+// In/Fished From/Dropped By/Crafted In facts for ingredient-card.js
+// (issue #55). Fetched alongside rawVendors once the ingredient id set is
+// known from rawRecipes; absent from the map (not yet fetched, or an
+// ingredient with none of these facts) reads the same as "no sections."
+let rawItemSources = new Map();
 
 // {id -> label}, from /api/zones -- populates shopping-list-panel's own
 // "Current Location" select and resolves that selection's label for
@@ -395,21 +401,36 @@ function groupVendorsByZone(vendors) {
   return groups;
 }
 
-// Builds ingredient-card.js's own data contract from the same two arrays
-// the Leveling Guide already fetched -- no separate "ingredients" API route
-// yet. The distinct ingredient set is every item any recipe of this
-// tradeskill `uses` (not `produces`) -- an intermediate product that's also
-// a later recipe's own ingredient (Brewing's Short Beer, decisions/
+// The distinct ingredient set is every item any recipe of this tradeskill
+// `uses` (not `produces`) -- an intermediate product that's also a later
+// recipe's own ingredient (Brewing's Short Beer, decisions/
 // tradeskill-recipe-node-schema.md) shows up here exactly because it's in
-// some recipe's `uses`, not because it's also a `produces`.
-function buildIngredientEntries(recipes, vendors) {
+// some recipe's `uses`, not because it's also a `produces`. Alternate
+// ingredient combos (recipe.variants) are flattened in alongside the
+// primary combo -- an ingredient only the Velious variant of a recipe
+// calls for is still a real ingredient, even though that variant itself
+// doesn't get its own top-level entry in `recipes`. Shared by
+// fetchTradeskillData() (needs just the id set, to fetch /api/item-sources)
+// and buildIngredientEntries() (needs the full per-recipe usedIn detail
+// too) so both walk recipes/variants/uses exactly once each, not twice.
+function distinctIngredientIds(recipes) {
+  const ids = new Set();
+  for (const r of recipes) {
+    for (const combo of [r, ...(r.variants ?? [])]) {
+      for (const ing of combo.uses) ids.add(ing.id);
+    }
+  }
+  return [...ids];
+}
+
+const EMPTY_ITEM_SOURCES = { foraged: [], fished: [], dropped: [], craftedIn: [] };
+
+// Builds ingredient-card.js's own data contract from the arrays the
+// Leveling Guide/render() already fetched -- no separate "ingredients" API
+// route yet, besides itemSourcesById (see rawItemSources' own comment).
+function buildIngredientEntries(recipes, vendors, itemSourcesById) {
   const itemsById = new Map();
   const usedInById = new Map();
-  // Alternate ingredient combos (recipe.variants, decisions/
-  // tradeskill-recipe-node-schema.md) are flattened in alongside the
-  // primary combo -- an ingredient only the Velious variant of a recipe
-  // calls for is still a real "used in," even though that variant itself
-  // doesn't get its own top-level entry in `recipes`.
   for (const r of recipes) {
     for (const combo of [r, ...(r.variants ?? [])]) {
       for (const ing of combo.uses) {
@@ -434,6 +455,7 @@ function buildIngredientEntries(recipes, vendors) {
       item,
       usedIn: usedInById.get(item.id) ?? [],
       vendorGroups: groupVendorsByZone(vendorsByItemId.get(item.id) ?? []),
+      sources: itemSourcesById.get(item.id) ?? EMPTY_ITEM_SOURCES,
     }));
 }
 
@@ -486,6 +508,7 @@ async function fetchTradeskillData() {
   if (!selectedTradeskill) {
     rawRecipes = [];
     rawVendors = [];
+    rawItemSources = new Map();
     resultsEl.innerHTML = '<div class="no-results">Select a trade skill to see its leveling guide and vendors.</div>';
     return;
   }
@@ -494,14 +517,23 @@ async function fetchTradeskillData() {
   resultsEl.innerHTML = '<div class="loading">Loading, please wait...</div>';
 
   const params = new URLSearchParams({ tradeskill: selectedTradeskill });
-  const [recipes, vendors] = await Promise.all([
-    fetch(`api/recipes?${params}`).then((r) => r.json()),
+  // /api/item-sources' ids param depends on the recipe response (the
+  // ingredient id set), so recipes resolves first; vendors doesn't share
+  // that dependency and still runs alongside it, not after.
+  const recipes = await fetch(`api/recipes?${params}`).then((r) => r.json());
+  if (token !== fetchToken) return;
+  const ingredientIds = distinctIngredientIds(recipes);
+  const [vendors, itemSources] = await Promise.all([
     fetch(`api/tradeskill-vendors?${params}`).then((r) => r.json()),
+    ingredientIds.length
+      ? fetch(`api/item-sources?ids=${ingredientIds.map(encodeURIComponent).join(",")}`).then((r) => r.json())
+      : Promise.resolve([]),
   ]);
   if (token !== fetchToken) return; // a newer trade-skill change superseded this request
 
   rawRecipes = recipes;
   rawVendors = vendors;
+  rawItemSources = new Map(itemSources.map((s) => [s.id, s]));
   render();
 }
 
@@ -536,7 +568,7 @@ function render() {
     const filtered = rawRecipes.filter((r) => recipeMatchesSkillRange(r, min, max) && recipeMatchesSearch(r, query));
     resultsEl.appendChild(cardGroupList(filtered, "recipe-card"));
   } else {
-    const ingredients = buildIngredientEntries(rawRecipes, rawVendors).filter((e) => ingredientMatchesSearch(e, query));
+    const ingredients = buildIngredientEntries(rawRecipes, rawVendors, rawItemSources).filter((e) => ingredientMatchesSearch(e, query));
     resultsEl.appendChild(cardGroupList(ingredients, "ingredient-card"));
   }
 }
