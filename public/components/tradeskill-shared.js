@@ -51,7 +51,10 @@ export const RECIPE_ROW_CSS = `
 `;
 
 export function recipeBadgesHtml(recipe) {
-  const containerBadge = recipe.container ? `<span class="spell-badge skill-badge">Crafted in ${recipe.container.label}</span>` : "";
+  // "or" joins real alternatives (Baking's Batwing Crunchies: an Oven or a
+  // Spit both genuinely work), not a list of requirements to gather at once.
+  const containerLabel = recipe.containers?.length ? recipe.containers.map((c) => c.label).join(" or ") : "";
+  const containerBadge = containerLabel ? `<span class="spell-badge skill-badge">Crafted in ${containerLabel}</span>` : "";
   return `
     <span class="spell-badge trivial-badge" title="Skill level at which this recipe stops reliably granting skill-ups">Triv ${recipe.trivial}</span>
     <span class="spell-badge craftable-badge" title="Skill level at which this recipe becomes reasonably attemptable (~25% success)">Craftable ${recipe.success.p25}+</span>

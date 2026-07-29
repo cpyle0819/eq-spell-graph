@@ -515,9 +515,13 @@ export interface RecipeSummary {
   // Absent only if a recipe node somehow has no `produces` edge -- every
   // recipe this migration batch added has exactly one.
   produces?: RecipeIngredient;
-  // Absent only if a recipe node somehow has no `crafted_in` edge -- every
-  // recipe this migration batch added has exactly one (migration 356).
-  container?: ContainerSummary;
+  // Every container the recipe's own source lists as valid -- usually one
+  // (migration 356's Brewing recipes all point at the same Brew Barrel),
+  // but not always: Baking's Batwing Crunchies genuinely allows either an
+  // Oven or a Spit (migration 366), so this stays an array rather than
+  // silently keeping only the first and dropping the real alternative.
+  // Empty only if a recipe node somehow has no `crafted_in` edge at all.
+  containers: ContainerSummary[];
   // True only for a tradeskill's own hand-picked leveling-path recipes
   // (migration 355's 11-recipe "Antonica Biased Brewers" path, flagged via
   // migration 359) -- absent/false for every other recipe of that same
@@ -569,8 +573,11 @@ function buildRecipeSummary(n: NodeData, helpers: GraphIndexHelpers): Omit<Recip
   const produces = producesNode
     ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1 }
     : undefined;
-  const containerNode = helpers.nodeById(helpers.edgesFrom(n.id, "crafted_in")[0]?.target);
-  const container = containerNode ? { id: containerNode.id, label: containerNode.label } : undefined;
+  const containers = helpers
+    .edgesFrom(n.id, "crafted_in")
+    .map((e) => helpers.nodeById(e.target))
+    .filter((c): c is NodeData => c !== undefined)
+    .map((c) => ({ id: c.id, label: c.label }));
   const trivial = n.trivial as number;
   return {
     id: n.id,
@@ -580,7 +587,7 @@ function buildRecipeSummary(n: NodeData, helpers: GraphIndexHelpers): Omit<Recip
     success: recipeSuccessThresholds(trivial),
     uses,
     produces,
-    container,
+    containers,
     levelingGuide: !!n.levelingGuide,
   };
 }

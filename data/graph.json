@@ -152900,6 +152900,142 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "container:oven",
+      "label": "Oven",
+      "type": "container",
+      "source": "Stationary object available in major cities; interact with it to attempt a Baking recipe."
+    },
+    {
+      "id": "container:mixing-bowl",
+      "label": "Mixing Bowl",
+      "type": "container",
+      "weight": 0.4,
+      "capacity": 4,
+      "containerSize": "Large",
+      "source": "Quest Item; portable Baking container, unlike the stationary Oven -- also craftable via Pottery (trivial 17)"
+    },
+    {
+      "id": "container:spit",
+      "label": "Spit",
+      "type": "container",
+      "weight": 3,
+      "capacity": 6,
+      "containerSize": "Giant",
+      "source": "Portable Baking container, unlike the stationary Oven; works as an alternative to an Oven for many recipes"
+    },
+    {
+      "id": "npc:east-cabilis:klok-unlar",
+      "label": "Klok Unlar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:olyna-mudel",
+      "label": "Olyna Mudel",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-kaladim:tissin-greybloom",
+      "label": "Tissin Greybloom",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-kaladim:serenk-greybloom",
+      "label": "Serenk Greybloom",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:skyshrine:grudash-the-baker",
+      "label": "Grudash the Baker",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:butcherblock-mountains:nalda-griststone",
+      "label": "Nalda Griststone",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-cabilis:klok-gritchit",
+      "label": "Klok Gritchit",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-uaylain",
+      "label": "Merchant Uaylain",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:garklog",
+      "label": "Garklog",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:jil-mcdaniel",
+      "label": "Jil McDaniel",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:qeynos-hills:mira-sayer",
+      "label": "Mira Sayer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:frannie",
+      "label": "Frannie",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:steamfont-mountains:oren-furdenbline",
+      "label": "Oren Furdenbline",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:thurgadin:wevil-doughbeard",
+      "label": "Wevil Doughbeard",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -286649,6 +286785,378 @@
       "id": "e-sells-22192",
       "source": "npc:western-karana:chrislin-baker",
       "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-crafted_in-22193",
+      "source": "recipe:batwing-crunchies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22194",
+      "source": "recipe:batwing-crunchies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22195",
+      "source": "recipe:fish-fillets",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22196",
+      "source": "recipe:fish-rolls",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22197",
+      "source": "recipe:batwing-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22198",
+      "source": "recipe:wedding-cake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22199",
+      "source": "recipe:birthday-cake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22200",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22201",
+      "source": "recipe:dragon-steak",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-22202",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22203",
+      "source": "npc:east-cabilis:klok-unlar",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22204",
+      "source": "npc:east-cabilis:klok-unlar",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22205",
+      "source": "npc:erudin:beth-breadmaker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22206",
+      "source": "npc:erudin:helia-bluehawk",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22207",
+      "source": "npc:the-feerrott:bup",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22208",
+      "source": "npc:firiona-vie:glinya-sweetpie",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22209",
+      "source": "npc:north-freeport:rashinda-elore",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22210",
+      "source": "npc:west-freeport:olyna-mudel",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22211",
+      "source": "npc:west-freeport:olyna-mudel",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22212",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22213",
+      "source": "npc:halas:teria-o-danos",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22214",
+      "source": "npc:high-keep:baker-jena",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22215",
+      "source": "npc:north-kaladim:tissin-greybloom",
+      "target": "zone:north-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22216",
+      "source": "npc:north-kaladim:tissin-greybloom",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22217",
+      "source": "npc:north-kaladim:serenk-greybloom",
+      "target": "zone:north-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22218",
+      "source": "npc:north-kaladim:serenk-greybloom",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22219",
+      "source": "npc:neriak-foreign-quarter:tal-drana",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22220",
+      "source": "npc:neriak-foreign-quarter:sal-drana",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22221",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22222",
+      "source": "npc:paineel:gorng-alusnein",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22223",
+      "source": "npc:paineel:iva-tersala",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22224",
+      "source": "npc:south-qeynos:karn-tassen",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22225",
+      "source": "npc:south-qeynos:voleen-tassen",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22226",
+      "source": "npc:skyshrine:grudash-the-baker",
+      "target": "zone:skyshrine",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22227",
+      "source": "npc:skyshrine:grudash-the-baker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22228",
+      "source": "npc:skyshrine:ruru-the-cook",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22229",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22230",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22231",
+      "source": "npc:butcherblock-mountains:nalda-griststone",
+      "target": "zone:butcherblock-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22232",
+      "source": "npc:butcherblock-mountains:nalda-griststone",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22233",
+      "source": "npc:east-cabilis:klok-gritchit",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22234",
+      "source": "npc:east-cabilis:klok-gritchit",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22235",
+      "source": "npc:the-feerrott:bup",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22236",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22237",
+      "source": "npc:greater-faydark:merchant-uaylain",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22238",
+      "source": "npc:greater-faydark:merchant-uaylain",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22239",
+      "source": "npc:grobb:garklog",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22240",
+      "source": "npc:grobb:garklog",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22241",
+      "source": "npc:halas:jil-mcdaniel",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22242",
+      "source": "npc:halas:jil-mcdaniel",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22243",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22244",
+      "source": "npc:qeynos-hills:mira-sayer",
+      "target": "zone:qeynos-hills",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22245",
+      "source": "npc:qeynos-hills:mira-sayer",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22246",
+      "source": "npc:surefall-glade:frannie",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22247",
+      "source": "npc:surefall-glade:frannie",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22248",
+      "source": "npc:steamfont-mountains:oren-furdenbline",
+      "target": "zone:steamfont-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22249",
+      "source": "npc:steamfont-mountains:oren-furdenbline",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22250",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22251",
+      "source": "npc:thurgadin:wevil-doughbeard",
+      "target": "zone:thurgadin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22252",
+      "source": "npc:thurgadin:wevil-doughbeard",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22253",
+      "source": "npc:western-karana:henina-miller",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22254",
+      "source": "npc:western-karana:cleet-miller-jr",
+      "target": "container:mixing-bowl",
       "type": "sells"
     }
   ]
