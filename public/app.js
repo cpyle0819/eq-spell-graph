@@ -73,12 +73,14 @@ function renderSidebar() {
           <option value="dark elf">Dark Elf</option>
           <option value="dwarf">Dwarf</option>
           <option value="erudite">Erudite</option>
+          <option value="froglok">Froglok</option>
           <option value="gnome">Gnome</option>
           <option value="half elf">Half Elf</option>
           <option value="halfling">Halfling</option>
           <option value="high elf">High Elf</option>
           <option value="human">Human</option>
           <option value="iksar">Iksar</option>
+          <option value="kerran">Kerran</option>
           <option value="ogre">Ogre</option>
           <option value="troll">Troll</option>
           <option value="wood elf">Wood Elf</option>
