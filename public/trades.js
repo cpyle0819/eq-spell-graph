@@ -287,14 +287,19 @@ function applyQueryParams() {
   // regardless of which view was showing before the click.
   if (search) setActiveView("browse");
 
-  // Consumed into page state above -- clear the URL back to the bare path
-  // (same convention as app.js's own applyQueryParams()), or a chip whose
-  // nav-href points at this exact query string (e.g. re-opening the guide
-  // and clicking the same ingredient again) would match location.href
-  // exactly. Router.js's click handler only intercepts+soft-navs when the
-  // target URL differs from the current one -- an identical href falls
-  // through to a real, uncaught anchor click, i.e. a full page reload.
-  history.replaceState(null, "", location.pathname);
+  // Deliberately left in the URL (issue #59) -- this used to get wiped
+  // back to the bare path here, which broke Back/Forward: every deep-link
+  // landing collapsed to the same indistinguishable bare "trades.html"
+  // history entry, so Back never actually returned to the recipe/ingredient
+  // last viewed, just reset to the default Guide. Leaving it in place gives
+  // every distinct view its own real, restorable address (and an actually
+  // shareable link) -- same convention quests.js's own applyQueryParams()
+  // already used for its own `?search=`. router.js's click handler no
+  // longer needs the URL cleared to keep working when a chip's own
+  // nav-href happens to match the current address (e.g. re-opening the
+  // guide and clicking the same ingredient again) -- it re-navigates
+  // either way now, only skipping the *history push* (not the actual
+  // re-sync), so a stale-but-identical href still lands correctly.
 }
 
 function populateTradeskillSelect(tradeskills) {

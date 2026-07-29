@@ -80,38 +80,56 @@ function applySwap(newDoc) {
   });
 }
 
+// Guards against two navigate() calls overlapping (e.g. a real double-click,
+// or the popstate handler firing while a click-triggered navigation is still
+// in flight) -- each call swaps global document state (title, chrome,
+// content region) and then runs the target page's own init() against it, none
+// of which is written to tolerate a second call doing the same thing
+// concurrently against the same live document. A dropped in-flight click is a
+// no-op the user can just repeat once the first navigation lands, versus the
+// alternative (two swaps/inits racing) landing on a genuinely broken page --
+// confirmed empirically once issue #59 made a repeat click on the same URL a
+// real re-navigation instead of a silently ignored one.
+let navigating = false;
+
 async function navigate(url, { push = true } = {}) {
-  let html;
+  if (navigating) return;
+  navigating = true;
   try {
-    const res = await fetch(url.href);
-    if (!res.ok) throw new Error(`${res.status} ${url.href}`);
-    html = await res.text();
-  } catch {
-    // Same-origin page the router doesn't have a good way to render (e.g.
-    // offline, 404) — fall back to a real navigation rather than leaving
-    // the click silently swallowed.
-    location.href = url.href;
-    return;
+    let html;
+    try {
+      const res = await fetch(url.href);
+      if (!res.ok) throw new Error(`${res.status} ${url.href}`);
+      html = await res.text();
+    } catch {
+      // Same-origin page the router doesn't have a good way to render (e.g.
+      // offline, 404) — fall back to a real navigation rather than leaving
+      // the click silently swallowed.
+      location.href = url.href;
+      return;
+    }
+
+    const newDoc = new DOMParser().parseFromString(html, "text/html");
+    const doSwap = () => {
+      applySwap(newDoc);
+      if (push) history.pushState({}, "", url);
+      window.scrollTo(0, 0);
+    };
+    // Feature-detected, Chromium-only progressive enhancement: crossfades
+    // the swap instead of it happening as a hard cut. Reduced-motion is
+    // handled in theme.css, not here. updateCallbackDone (not the
+    // transition's own returned value) is what resolves once doSwap has
+    // actually run — the callback isn't guaranteed to run synchronously
+    // just because startViewTransition() itself returned (confirmed
+    // empirically: it didn't, on this Chromium build), so runPageInit()
+    // below can't safely follow doSwap() without awaiting this.
+    if (document.startViewTransition) await document.startViewTransition(doSwap).updateCallbackDone;
+    else doSwap();
+
+    await runPageInit(url);
+  } finally {
+    navigating = false;
   }
-
-  const newDoc = new DOMParser().parseFromString(html, "text/html");
-  const doSwap = () => {
-    applySwap(newDoc);
-    if (push) history.pushState({}, "", url);
-    window.scrollTo(0, 0);
-  };
-  // Feature-detected, Chromium-only progressive enhancement: crossfades the
-  // swap instead of it happening as a hard cut. Reduced-motion is handled
-  // in theme.css, not here. updateCallbackDone (not the transition's own
-  // returned value) is what resolves once doSwap has actually run — the
-  // callback isn't guaranteed to run synchronously just because
-  // startViewTransition() itself returned (confirmed empirically: it
-  // didn't, on this Chromium build), so runPageInit() below can't safely
-  // follow doSwap() without awaiting this.
-  if (document.startViewTransition) await document.startViewTransition(doSwap).updateCallbackDone;
-  else doSwap();
-
-  await runPageInit(url);
 }
 
 // e.composedPath() (not e.target) is required to find the actual <a>: every
@@ -139,7 +157,6 @@ document.addEventListener("click", (e) => {
   const a = findAnchor(e);
   if (!isRoutable(a)) return;
   const url = new URL(a.href, location.href);
-  if (url.href === location.href) return;
   e.preventDefault();
   // Bridges the gap between mouseup (which ends the native :active state)
   // and the swap actually landing below -- without this, the button
@@ -148,7 +165,18 @@ document.addEventListener("click", (e) => {
   // page, a visible flash. .pressed is macro-button's permanent depressed
   // state (same look as :active) so this reads as one continuous press.
   if (a.classList.contains("btn")) a.classList.add("pressed");
-  navigate(url);
+  // Always soft-navs, even back to the exact URL already showing (issue
+  // #59) -- e.g. clicking an ingredient chip whose href matches the
+  // current address because the last navigation landed there and left the
+  // query string in place (trades.js's own applyQueryParams() used to
+  // strip it specifically to dodge this branch, which broke Back/Forward
+  // in the process; not needed now that this always re-navigates instead
+  // of silently no-op'ing into a real, uncaught anchor click). `push`
+  // still only fires on a genuine address change, so a same-URL click
+  // re-syncs page state (a chip clicked from a different in-page view,
+  // e.g. Guide, than its own href implies) without spamming a duplicate
+  // back-stack entry.
+  navigate(url, { push: url.href !== location.href });
 });
 
 window.addEventListener("popstate", () => navigate(new URL(location.href), { push: false }));
