@@ -95,13 +95,6 @@ ${RESET_CSS}
 .recipe-body { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .recipe-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .recipe-name { font-weight: 700; color: var(--parch-ink); font-size: 13px; }
-/* Same look as ingredient-card.js's own "+ Shopping List" button -- both
-   are a quiet secondary action on a parchment card, not a primary button. */
-.add-shopping-btn {
-  font-size: 11px; color: var(--gold); background: none; border: none;
-  padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
-}
-.add-shopping-btn:hover, .add-shopping-btn:focus-visible { text-decoration: underline; }
 
 .spell-badge { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
 .skill-badge { background: rgba(0, 0, 0, 0.05); color: #4a4232; border: 1px solid var(--parch-line); }

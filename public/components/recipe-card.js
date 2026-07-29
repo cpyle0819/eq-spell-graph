@@ -28,12 +28,34 @@ class RecipeCard extends CardBase {
     if (this.shadowRoot) this.render();
   }
 
+  // Delegated on shadowRoot (not the button directly) so it keeps working
+  // across render() rebuilding the header's innerHTML -- same pattern as
+  // ingredient-card.js's own wireEvents(). Dispatches the same
+  // "add-recipe-ingredients" event leveling-guide-card.js's own
+  // "+ Add Ingredients" button does (trades.js already listens for it on
+  // #trades-results, regardless of which card type raised it), so Browse's
+  // recipe cards get the same "add every ingredient at once" affordance
+  // Guide already had (issue #56).
+  wireEvents() {
+    this.shadowRoot.addEventListener("click", (e) => {
+      const btn = e.target.closest(".add-shopping-btn");
+      if (!btn) return;
+      this.dispatchEvent(new CustomEvent("add-recipe-ingredients", {
+        bubbles: true, composed: true,
+        detail: { items: this.#recipe.uses },
+      }));
+    });
+  }
+
   render() {
     const recipe = this.#recipe;
     if (!recipe) return;
 
     this.shadowRoot.innerHTML = `
-      <div class="spell-header"><h3>${recipe.label}</h3></div>
+      <div class="spell-header">
+        <h3>${recipe.label}</h3>
+        <button type="button" class="add-shopping-btn">+ Add Ingredients</button>
+      </div>
       <div class="spell-scroll">
         <div class="spell-badges">${recipeBadgesHtml(recipe)}</div>
         ${section("Formula", `<div class="quest-section-body recipe-formula">${recipeFormulaHtml(recipe)}</div>`)}

@@ -27,6 +27,16 @@ export const RECIPE_ROW_CSS = `
 .recipe-formula { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .recipe-arrow { color: var(--parch-accent); font-weight: 700; }
 
+/* Same look as ingredient-card.js's own "+ Shopping List" button -- both
+   are a quiet secondary action on a parchment card, not a primary button.
+   Shared here since both recipe-card.js and leveling-guide-card.js need
+   the identical "+ Add Ingredients" affordance (issue #56). */
+.add-shopping-btn {
+  font-size: 11px; color: var(--gold); background: none; border: none;
+  padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
+}
+.add-shopping-btn:hover, .add-shopping-btn:focus-visible { text-decoration: underline; }
+
 /* Alternate ingredient combos for the same produced item (decisions/
    tradeskill-recipe-node-schema.md's "Recipe variants") -- same <details>/
    <summary> disclosure pattern as quest-group-card.js's own roster, reused
