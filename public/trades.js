@@ -394,11 +394,18 @@ function groupVendorsByZone(vendors) {
 function buildIngredientEntries(recipes, vendors) {
   const itemsById = new Map();
   const usedInById = new Map();
+  // Alternate ingredient combos (recipe.variants, decisions/
+  // tradeskill-recipe-node-schema.md) are flattened in alongside the
+  // primary combo -- an ingredient only the Velious variant of a recipe
+  // calls for is still a real "used in," even though that variant itself
+  // doesn't get its own top-level entry in `recipes`.
   for (const r of recipes) {
-    for (const ing of r.uses) {
-      if (!itemsById.has(ing.id)) itemsById.set(ing.id, ing);
-      if (!usedInById.has(ing.id)) usedInById.set(ing.id, []);
-      usedInById.get(ing.id).push({ recipeId: r.id, recipeLabel: r.label, quantity: ing.quantity });
+    for (const combo of [r, ...(r.variants ?? [])]) {
+      for (const ing of combo.uses) {
+        if (!itemsById.has(ing.id)) itemsById.set(ing.id, ing);
+        if (!usedInById.has(ing.id)) usedInById.set(ing.id, []);
+        usedInById.get(ing.id).push({ recipeId: combo.id, recipeLabel: combo.label, quantity: ing.quantity });
+      }
     }
   }
 

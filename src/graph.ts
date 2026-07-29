@@ -515,9 +515,13 @@ export interface RecipeSummary {
   // Absent only if a recipe node somehow has no `produces` edge -- every
   // recipe this migration batch added has exactly one.
   produces?: RecipeIngredient;
-  // Absent only if a recipe node somehow has no `crafted_in` edge -- every
-  // recipe this migration batch added has exactly one (migration 356).
-  container?: ContainerSummary;
+  // Every container the recipe's own source lists as valid -- usually one
+  // (migration 356's Brewing recipes all point at the same Brew Barrel),
+  // but not always: Baking's Batwing Crunchies genuinely allows either an
+  // Oven or a Spit (migration 366), so this stays an array rather than
+  // silently keeping only the first and dropping the real alternative.
+  // Empty only if a recipe node somehow has no `crafted_in` edge at all.
+  containers: ContainerSummary[];
   // True only for a tradeskill's own hand-picked leveling-path recipes
   // (migration 355's 11-recipe "Antonica Biased Brewers" path, flagged via
   // migration 359) -- absent/false for every other recipe of that same
@@ -526,6 +530,16 @@ export interface RecipeSummary {
   // that original path regardless of how many more recipes a tradeskill
   // later accumulates.
   levelingGuide: boolean;
+  // Alternate ingredient combos that produce this same recipe's `produces`
+  // item (decisions/tradeskill-recipe-node-schema.md's "Recipe variants" --
+  // e.g. Baking's classic vs. Velious Beer Braised Mammoth). This recipe is
+  // already the family's most-vendor-sourceable combo (see getRecipes());
+  // each entry here is a full RecipeSummary in its own right (recursing one
+  // level -- an alternate's own `variants` is always left empty so the
+  // nesting can't go deeper than one level, since a family only ever needs
+  // one "primary" and the rest are flat siblings of it, never their own
+  // sub-families). Absent/empty when this recipe has no known alternates.
+  variants: RecipeSummary[];
 }
 
 // Distinct `recipe.tradeskill` values across the graph, for the Tradeskills
@@ -536,40 +550,77 @@ export function getTradeskills(): string[] {
   return [...new Set(graph.nodes.filter((n) => n.type === "recipe").map((n) => n.tradeskill as string))].sort();
 }
 
+// How many of a recipe's `uses` ingredients have at least one vendor --
+// the "most vendor-sourceable" tiebreak a variant family's primary combo is
+// picked by (decisions/tradeskill-recipe-node-schema.md's "Recipe
+// variants"). Computed at read time, same as recipeSuccessThresholds, so it
+// tracks vendor data as it grows rather than needing a migration to re-flag
+// which combo is primary.
+function vendorSourceableCount(uses: RecipeIngredient[], helpers: GraphIndexHelpers): number {
+  return uses.filter((ing) => helpers.edgesTo(ing.id, "sells").length > 0).length;
+}
+
+function buildRecipeSummary(n: NodeData, helpers: GraphIndexHelpers): Omit<RecipeSummary, "variants"> {
+  const uses = helpers
+    .edgesFrom(n.id, "uses")
+    .map((e) => {
+      const item = helpers.nodeById(e.target);
+      return item ? { ...toItemSummary(item), quantity: (e.quantity as number) ?? 1 } : undefined;
+    })
+    .filter((ing): ing is RecipeIngredient => ing !== undefined);
+  const producesEdge = helpers.edgesFrom(n.id, "produces")[0];
+  const producesNode = producesEdge ? helpers.nodeById(producesEdge.target) : undefined;
+  const produces = producesNode
+    ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1 }
+    : undefined;
+  const containers = helpers
+    .edgesFrom(n.id, "crafted_in")
+    .map((e) => helpers.nodeById(e.target))
+    .filter((c): c is NodeData => c !== undefined)
+    .map((c) => ({ id: c.id, label: c.label }));
+  const trivial = n.trivial as number;
+  return {
+    id: n.id,
+    label: n.label,
+    tradeskill: n.tradeskill as string,
+    trivial,
+    success: recipeSuccessThresholds(trivial),
+    uses,
+    produces,
+    containers,
+    levelingGuide: !!n.levelingGuide,
+  };
+}
+
 export function getRecipes(tradeskill: string): RecipeSummary[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
-  return graph.nodes
-    .filter((n) => n.type === "recipe" && n.tradeskill === tradeskill)
-    .map((n) => {
-      const uses = helpers
-        .edgesFrom(n.id, "uses")
-        .map((e) => {
-          const item = helpers.nodeById(e.target);
-          return item ? { ...toItemSummary(item), quantity: (e.quantity as number) ?? 1 } : undefined;
-        })
-        .filter((ing): ing is RecipeIngredient => ing !== undefined);
-      const producesEdge = helpers.edgesFrom(n.id, "produces")[0];
-      const producesNode = producesEdge ? helpers.nodeById(producesEdge.target) : undefined;
-      const produces = producesNode
-        ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1 }
-        : undefined;
-      const containerNode = helpers.nodeById(helpers.edgesFrom(n.id, "crafted_in")[0]?.target);
-      const container = containerNode ? { id: containerNode.id, label: containerNode.label } : undefined;
-      const trivial = n.trivial as number;
-      return {
-        id: n.id,
-        label: n.label,
-        tradeskill: n.tradeskill as string,
-        trivial,
-        success: recipeSuccessThresholds(trivial),
-        uses,
-        produces,
-        container,
-        levelingGuide: !!n.levelingGuide,
-      };
-    })
-    .sort((a, b) => a.trivial - b.trivial);
+  const recipeNodes = graph.nodes.filter((n) => n.type === "recipe" && n.tradeskill === tradeskill);
+
+  // Group each recipe with its variant_of siblings (decisions/
+  // tradeskill-recipe-node-schema.md) -- a node with an outgoing variant_of
+  // edge joins its target's family instead of appearing as its own
+  // top-level entry; a node with none is a family of one.
+  const families = new Map<string, NodeData[]>();
+  for (const n of recipeNodes) {
+    const anchorId = helpers.edgesFrom(n.id, "variant_of")[0]?.target ?? n.id;
+    if (!families.has(anchorId)) families.set(anchorId, []);
+    families.get(anchorId)!.push(n);
+  }
+
+  const results: RecipeSummary[] = [];
+  for (const members of families.values()) {
+    const scored = members
+      .map((n) => ({ n, summary: buildRecipeSummary(n, helpers) }))
+      .sort((a, b) => {
+        const scoreDiff = vendorSourceableCount(b.summary.uses, helpers) - vendorSourceableCount(a.summary.uses, helpers);
+        return scoreDiff !== 0 ? scoreDiff : a.summary.trivial - b.summary.trivial;
+      });
+    const [primary, ...alternates] = scored;
+    results.push({ ...primary.summary, variants: alternates.map((a) => ({ ...a.summary, variants: [] })) });
+  }
+
+  return results.sort((a, b) => a.trivial - b.trivial);
 }
 
 export interface TradeskillVendorSummary {
@@ -611,7 +662,7 @@ export function getTradeskillVendors(tradeskill: string, zoneId?: string): Trade
   return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));
 }
 
-interface GraphIndexHelpers {
+export interface GraphIndexHelpers {
   nodeById: (id: string) => NodeData | undefined;
   edgesFrom: (id: string, type: string) => EdgeData[];
   edgesTo: (id: string, type: string) => EdgeData[];

@@ -152613,6 +152613,2557 @@
       "lore": true,
       "noTrade": true,
       "source": "Dropped by Ratraz (Neriak Third Gate), Guard Lumpin (Neriak Foreign Quarter), and Rungupp (Toxxulia Forest); turn-in item for Hukulk's Love and Rungupp (Quest)"
+    },
+    {
+      "id": "item:bat-wing",
+      "label": "Bat Wing",
+      "type": "item",
+      "weight": 0,
+      "size": "Small",
+      "source": "Quest Item; dropped by bats across many zones; also sold by several vendors"
+    },
+    {
+      "id": "item:jug-of-sauces",
+      "label": "Jug of Sauces",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Sold by bakery/tradeskill-supply vendors across many zones"
+    },
+    {
+      "id": "item:clump-of-dough",
+      "label": "Clump of Dough",
+      "type": "item",
+      "weight": 0.8,
+      "size": "Small",
+      "source": "Snack; crafted via Baking (trivial 17) from Bottle of Milk, Cup of Flour, and one of several egg types (yield varies by egg)"
+    },
+    {
+      "id": "item:white-chocolate",
+      "label": "White Chocolate",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; snack; crafted via Baking (trivial 95) from Brownie Parts, Frosting, and Spices"
+    },
+    {
+      "id": "item:winter-chocolate",
+      "label": "Winter Chocolate",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Snack; crafted via Baking (trivial 95) from Brownie Parts and Frosting"
+    },
+    {
+      "id": "item:cake-round",
+      "label": "Cake Round",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Crafted via Pottery (trivial 15) or Blacksmithing (trivial 38), not Baking itself; returned on both success and failure when used in a Baking recipe"
+    },
+    {
+      "id": "item:pie-tin",
+      "label": "Pie Tin",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Crafted via Blacksmithing (trivial 35) or Pottery (trivial 115/17), not Baking itself; returned on both success and failure when used in a Baking recipe"
+    },
+    {
+      "id": "item:dragon-meat",
+      "label": "Dragon Meat",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Dropped by dragons in Temple of Veeshan, The Wakening Land, and Western Wastes (Velious era)"
+    },
+    {
+      "id": "item:pixie-dust",
+      "label": "Pixie Dust",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Quest Item; dropped by pixies in Greater Faydark, Lesser Faydark, and Toxxulia Forest"
+    },
+    {
+      "id": "item:cinnamon-sticks",
+      "label": "Cinnamon Sticks",
+      "type": "item",
+      "weight": 0.6,
+      "size": "Small",
+      "source": "Foraged in Greater Faydark"
+    },
+    {
+      "id": "item:batwing-crunchies",
+      "label": "Batwing Crunchies",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; meal; baked via Baking (trivial 46)"
+    },
+    {
+      "id": "item:fish-fillets",
+      "label": "Fish Fillets",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; meal; baked via Baking (trivial 82); also sold directly by a couple of vendors"
+    },
+    {
+      "id": "item:fish-rolls",
+      "label": "Fish Rolls",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Banquet-sized meal; baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:batwing-pie",
+      "label": "Batwing Pie",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:wedding-cake",
+      "label": "Wedding Cake",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 157); also an ingredient in Wedding Cake Slices"
+    },
+    {
+      "id": "item:birthday-cake",
+      "label": "Birthday Cake",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 162); also an ingredient in Birthday Cake Slice"
+    },
+    {
+      "id": "item:pixie-powder-cinnesticks",
+      "label": "Pixie Powder Cinnesticks",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Snack; baked via Baking (trivial 202)",
+      "stats": {
+        "agi": 2
+      },
+      "resists": {
+        "magic": 2
+      }
+    },
+    {
+      "id": "item:dragon-steak",
+      "label": "Dragon Steak",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Hearty meal; baked via Baking. Trivial conflict between eqlwiki sources: this item's own page states 200 (used here); the Skill Baking recipe tables both say 242",
+      "stats": {
+        "str": 4,
+        "dex": 4,
+        "sta": 4,
+        "cha": 4,
+        "wis": 4,
+        "int": 4,
+        "agi": 4
+      }
+    },
+    {
+      "id": "recipe:batwing-crunchies",
+      "label": "Batwing Crunchies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 46,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:fish-fillets",
+      "label": "Fish Fillets",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:fish-rolls",
+      "label": "Fish Rolls",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:batwing-pie",
+      "label": "Batwing Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:wedding-cake",
+      "label": "Wedding Cake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 157,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:birthday-cake",
+      "label": "Birthday Cake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 162,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:pixie-powder-cinnesticks",
+      "label": "Pixie Powder Cinnesticks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 202,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:dragon-steak",
+      "label": "Dragon Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 200,
+      "levelingGuide": true
+    },
+    {
+      "id": "npc:east-commonlands:katha-firespinner",
+      "label": "Katha Firespinner",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:jeliala-glimmercharm",
+      "label": "Jeliala Glimmercharm",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:tika-shockstep",
+      "label": "Tika Shockstep",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:lindie-rains",
+      "label": "Lindie Rains",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:lysa-truegreen",
+      "label": "Lysa Truegreen",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:zasrin-blueflame",
+      "label": "Zasrin Blueflame",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kael-drakkal:ymik",
+      "label": "Ymik",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kithicor-forest:jeena-firechaser",
+      "label": "Jeena Firechaser",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:hrak",
+      "label": "Hrak",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "container:oven",
+      "label": "Oven",
+      "type": "container",
+      "source": "Stationary object available in major cities; interact with it to attempt a Baking recipe."
+    },
+    {
+      "id": "container:mixing-bowl",
+      "label": "Mixing Bowl",
+      "type": "container",
+      "weight": 0.4,
+      "capacity": 4,
+      "containerSize": "Large",
+      "source": "Quest Item; portable Baking container, unlike the stationary Oven -- also craftable via Pottery (trivial 17)"
+    },
+    {
+      "id": "container:spit",
+      "label": "Spit",
+      "type": "container",
+      "weight": 3,
+      "capacity": 6,
+      "containerSize": "Giant",
+      "source": "Portable Baking container, unlike the stationary Oven; works as an alternative to an Oven for many recipes"
+    },
+    {
+      "id": "npc:east-cabilis:klok-unlar",
+      "label": "Klok Unlar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:olyna-mudel",
+      "label": "Olyna Mudel",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-kaladim:tissin-greybloom",
+      "label": "Tissin Greybloom",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-kaladim:serenk-greybloom",
+      "label": "Serenk Greybloom",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:skyshrine:grudash-the-baker",
+      "label": "Grudash the Baker",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:butcherblock-mountains:nalda-griststone",
+      "label": "Nalda Griststone",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-cabilis:klok-gritchit",
+      "label": "Klok Gritchit",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-uaylain",
+      "label": "Merchant Uaylain",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:garklog",
+      "label": "Garklog",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:jil-mcdaniel",
+      "label": "Jil McDaniel",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:qeynos-hills:mira-sayer",
+      "label": "Mira Sayer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:frannie",
+      "label": "Frannie",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:steamfont-mountains:oren-furdenbline",
+      "label": "Oren Furdenbline",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:thurgadin:wevil-doughbeard",
+      "label": "Wevil Doughbeard",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "container:pot",
+      "label": "Pot",
+      "type": "container",
+      "source": "Baking implement used for soups and stews."
+    },
+    {
+      "id": "container:smoker",
+      "label": "Smoker",
+      "type": "container",
+      "source": "Baking implement used for smoked dishes."
+    },
+    {
+      "id": "item:garnish",
+      "label": "Garnish",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:cup-of-flour",
+      "label": "Cup of Flour",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:brownie-parts",
+      "label": "Brownie Parts",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by brownies in Greater/Lesser Faydark and Rivervale"
+    },
+    {
+      "id": "item:algae-spices",
+      "label": "Algae Spices",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Velious-era Spices substitute"
+    },
+    {
+      "id": "item:jug-of-oyster-sauces",
+      "label": "Jug of Oyster Sauces",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Velious-era Jug of Sauces substitute"
+    },
+    {
+      "id": "item:plankton-frosting",
+      "label": "Plankton Frosting",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Velious-era Frosting substitute"
+    },
+    {
+      "id": "item:seaweed-vinegar",
+      "label": "Seaweed Vinegar",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Velious-era Vinegar substitute"
+    },
+    {
+      "id": "npc:rivervale:bartle-barnick",
+      "label": "Bartle Barnick",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rivervale:innkeep",
+      "label": "Innkeep",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "item:bear-meat",
+      "label": "Bear Meat",
+      "type": "item",
+      "source": "Dropped by bears"
+    },
+    {
+      "id": "item:gator-meat",
+      "label": "Gator Meat",
+      "type": "item",
+      "source": "Dropped by alligators"
+    },
+    {
+      "id": "item:mammoth-meat",
+      "label": "Mammoth Meat",
+      "type": "item",
+      "source": "Dropped by mammoths"
+    },
+    {
+      "id": "item:lion-meat",
+      "label": "Lion Meat",
+      "type": "item",
+      "source": "Dropped by lions"
+    },
+    {
+      "id": "item:rat-meat",
+      "label": "Rat Meat",
+      "type": "item",
+      "source": "Dropped by rats"
+    },
+    {
+      "id": "item:wolf-meat",
+      "label": "Wolf Meat",
+      "type": "item",
+      "source": "Dropped by wolves"
+    },
+    {
+      "id": "item:dark-elf-parts",
+      "label": "Dark Elf Parts",
+      "type": "item",
+      "source": "Dropped by dark elves"
+    },
+    {
+      "id": "item:high-elf-parts",
+      "label": "High Elf Parts",
+      "type": "item",
+      "source": "Dropped by high elves"
+    },
+    {
+      "id": "item:dwarf-meat",
+      "label": "Dwarf Meat",
+      "type": "item",
+      "source": "Dropped by dwarves"
+    },
+    {
+      "id": "item:halfling-parts",
+      "label": "Halfling Parts",
+      "type": "item",
+      "source": "Dropped by halflings"
+    },
+    {
+      "id": "item:bixie-parts",
+      "label": "Bixie Parts",
+      "type": "item",
+      "source": "Dropped by bixies"
+    },
+    {
+      "id": "item:troll-parts",
+      "label": "Troll Parts",
+      "type": "item",
+      "source": "Dropped by trolls"
+    },
+    {
+      "id": "item:rabbit-meat",
+      "label": "Rabbit Meat",
+      "type": "item",
+      "source": "Dropped by rabbits"
+    },
+    {
+      "id": "item:scorpion-meat",
+      "label": "Scorpion Meat",
+      "type": "item",
+      "source": "Dropped by scorpions"
+    },
+    {
+      "id": "item:shark-meat",
+      "label": "Shark Meat",
+      "type": "item",
+      "source": "Dropped by sharks"
+    },
+    {
+      "id": "item:wood-elf-parts",
+      "label": "Wood Elf Parts",
+      "type": "item",
+      "source": "Dropped by wood elves"
+    },
+    {
+      "id": "item:snake-meat",
+      "label": "Snake Meat",
+      "type": "item",
+      "source": "Dropped by snakes"
+    },
+    {
+      "id": "item:kobold-meat",
+      "label": "Kobold Meat",
+      "type": "item",
+      "source": "Dropped by kobolds"
+    },
+    {
+      "id": "item:gnome-meat",
+      "label": "Gnome Meat",
+      "type": "item",
+      "source": "Dropped by gnomes"
+    },
+    {
+      "id": "item:lizard-meat",
+      "label": "Lizard Meat",
+      "type": "item",
+      "source": "Dropped by lizardmen"
+    },
+    {
+      "id": "item:panther-meat",
+      "label": "Panther Meat",
+      "type": "item",
+      "source": "Dropped by black panthers in The Wakening Land"
+    },
+    {
+      "id": "item:frost-giant-meat",
+      "label": "Frost Giant Meat",
+      "type": "item",
+      "source": "Dropped by frost giants"
+    },
+    {
+      "id": "item:storm-giant-meat",
+      "label": "Storm Giant Meat",
+      "type": "item",
+      "source": "Dropped by storm giants"
+    },
+    {
+      "id": "item:drake-meat",
+      "label": "Drake Meat",
+      "type": "item",
+      "source": "Dropped by drakes"
+    },
+    {
+      "id": "item:faun-meat",
+      "label": "Faun Meat",
+      "type": "item",
+      "source": "Dropped by fauns"
+    },
+    {
+      "id": "item:siren-parts",
+      "label": "Siren Parts",
+      "type": "item",
+      "source": "Dropped by sirens"
+    },
+    {
+      "id": "item:unicorn-meat",
+      "label": "Unicorn Meat",
+      "type": "item",
+      "source": "Dropped by unicorns"
+    },
+    {
+      "id": "item:wurm-meat",
+      "label": "Wurm Meat",
+      "type": "item",
+      "source": "Dropped by wurms"
+    },
+    {
+      "id": "item:wyvern-meat",
+      "label": "Wyvern Meat",
+      "type": "item",
+      "source": "Dropped by wyverns"
+    },
+    {
+      "id": "item:raptor-meat",
+      "label": "Raptor Meat",
+      "type": "item",
+      "source": "Dropped by raptors"
+    },
+    {
+      "id": "item:sifaye-parts",
+      "label": "Sifaye Parts",
+      "type": "item",
+      "source": "Dropped by sifaye"
+    },
+    {
+      "id": "item:yakman-parts",
+      "label": "Yakman Parts",
+      "type": "item",
+      "source": "Dropped by yakmen (tizmaks)"
+    },
+    {
+      "id": "item:rathe-muskie",
+      "label": "Rathe Muskie",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:wasp-wing",
+      "label": "Wasp Wing",
+      "type": "item",
+      "source": "Dropped by wasps"
+    },
+    {
+      "id": "item:chunk-of-meat",
+      "label": "Chunk of Meat",
+      "type": "item",
+      "source": "Dropped by various creatures"
+    },
+    {
+      "id": "item:human-meat",
+      "label": "Human (Chunk of) Meat",
+      "type": "item",
+      "source": "Dropped by humans -- Grobb Cleaver quest ingredient"
+    },
+    {
+      "id": "item:erudite-meat",
+      "label": "Erudite Meat",
+      "type": "item",
+      "source": "Dropped by erudites -- Grobb Cleaver quest ingredient"
+    },
+    {
+      "id": "item:flaming-pungla",
+      "label": "Flaming Pungla",
+      "type": "item",
+      "source": "Grobb Cleaver quest ingredient"
+    },
+    {
+      "id": "item:gray-ice",
+      "label": "Gray Ice",
+      "type": "item",
+      "source": "Ground spawn in Frontier Mountains -- Iksar warrior quest ingredient"
+    },
+    {
+      "id": "item:pondfish-spines",
+      "label": "Pondfish Spines",
+      "type": "item",
+      "source": "Dropped by pond sturgeon in Lake of Ill Omen -- Iksar warrior quest ingredient"
+    },
+    {
+      "id": "item:baking-spirits",
+      "label": "Baking Spirits",
+      "type": "item",
+      "source": "Found in South Qeynos -- Paw of Opolla quest ingredient"
+    },
+    {
+      "id": "item:tundra-kodiak-meat",
+      "label": "Tundra Kodiak Meat",
+      "type": "item",
+      "source": "Dropped by tundra kodiaks -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:snow-bunny-meat",
+      "label": "Snow Bunny Meat",
+      "type": "item",
+      "source": "Dropped by snow bunnies -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:ulthork-meat",
+      "label": "Ulthork Meat",
+      "type": "item",
+      "source": "Dropped by ulthorks -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:snow-griffin-egg",
+      "label": "Snow Griffin Egg",
+      "type": "item",
+      "source": "Foraged/dropped from snow griffins -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:boar-carp",
+      "label": "Boar Carp",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:despair-chub",
+      "label": "Despair Chub",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:rujarkian-chub",
+      "label": "Rujarkian Chub",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:highland-pike",
+      "label": "Highland Pike",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:hound-pike",
+      "label": "Hound Pike",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:greengill-salmon",
+      "label": "Greengill Salmon",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:thunder-salmon",
+      "label": "Thunder Salmon",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:bloodfin-trout",
+      "label": "Bloodfin Trout",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:cauldron-trout",
+      "label": "Cauldron Trout",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:fogwater-trout",
+      "label": "Fogwater Trout",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:iceclad-cutlassfish",
+      "label": "Iceclad Cutlassfish",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:salty-whitefish",
+      "label": "Salty Whitefish",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:red-roughy",
+      "label": "Red Roughy",
+      "type": "item",
+      "source": "Fished"
+    },
+    {
+      "id": "item:arctic-king-crab",
+      "label": "Arctic King Crab",
+      "type": "item",
+      "source": "Fished/dropped in Velious ocean zones"
+    },
+    {
+      "id": "item:arctic-scallop",
+      "label": "Arctic Scallop",
+      "type": "item",
+      "source": "Fished/dropped in Velious ocean zones"
+    },
+    {
+      "id": "item:cobalt-abalone",
+      "label": "Cobalt Abalone",
+      "type": "item",
+      "source": "Fished/dropped in Velious ocean zones"
+    },
+    {
+      "id": "item:cobalt-rock-crab",
+      "label": "Cobalt Rock Crab",
+      "type": "item",
+      "source": "Fished/dropped in Velious ocean zones"
+    },
+    {
+      "id": "item:small-clam",
+      "label": "Small Clam",
+      "type": "item",
+      "source": "Fished/dropped in Velious ocean zones"
+    },
+    {
+      "id": "item:marr-cherries",
+      "label": "Marr Cherries",
+      "type": "item",
+      "source": "Foraged"
+    },
+    {
+      "id": "item:muffin-tin",
+      "label": "Muffin Tin",
+      "type": "item",
+      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use"
+    },
+    {
+      "id": "item:skewers",
+      "label": "Skewers",
+      "type": "item",
+      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use"
+    },
+    {
+      "id": "item:bread-tin",
+      "label": "Bread Tin",
+      "type": "item",
+      "source": "Crafted via Blacksmithing, not Baking itself; can be lost on a burnt loaf"
+    },
+    {
+      "id": "item:bear-sandwich",
+      "label": "Bear Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 31)"
+    },
+    {
+      "id": "item:bear-steaks",
+      "label": "Bear Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "str": 1
+      }
+    },
+    {
+      "id": "item:beer-braised-bear",
+      "label": "Beer Braised Bear",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)",
+      "stats": {
+        "str": 2,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beer-braised-gator",
+      "label": "Beer Braised Gator",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)",
+      "stats": {
+        "str": 2,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beer-braised-mammoth",
+      "label": "Beer Braised Mammoth",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68); classic combo uses Short Beer, a Velious combo substitutes Othmir Algae Ale + Algae Spices",
+      "stats": {
+        "str": 3,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beer-braised-lion",
+      "label": "Beer Braised Lion",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)",
+      "stats": {
+        "agi": 2,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beer-braised-rat",
+      "label": "Beer Braised Rat",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)",
+      "stats": {
+        "dex": 2,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beer-braised-wolf",
+      "label": "Beer Braised Wolf",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68); classic combo uses Short Beer, a Velious combo substitutes Othmir Algae Ale + Algae Spices",
+      "stats": {
+        "sta": 2,
+        "int": -1
+      }
+    },
+    {
+      "id": "item:beetle-eye-pie",
+      "label": "Beetle Eye Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:berry-pie",
+      "label": "Berry Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142); also an ingredient in Pound Cake"
+    },
+    {
+      "id": "item:birthday-cake-slice",
+      "label": "Birthday Cake Slice",
+      "type": "item",
+      "source": "Baked via Baking (trivial 15) from a Birthday Cake"
+    },
+    {
+      "id": "item:bixie-crunchies",
+      "label": "Bixie Crunchies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 46)"
+    },
+    {
+      "id": "item:blackened-teirdal",
+      "label": "Blackened Teir'Dal",
+      "type": "item",
+      "source": "Baked via Baking (trivial 62)",
+      "stats": {
+        "dex": 1,
+        "int": 2,
+        "agi": 1
+      }
+    },
+    {
+      "id": "item:candied-spider",
+      "label": "Candied Spider",
+      "type": "item",
+      "source": "Baked via Baking (trivial 88)"
+    },
+    {
+      "id": "item:caynar-nut-stuffed-trout",
+      "label": "Caynar Nut Stuffed Trout",
+      "type": "item",
+      "source": "Baked via Baking (trivial 128)",
+      "stats": {
+        "sta": 2
+      },
+      "resists": {
+        "disease": 2
+      }
+    },
+    {
+      "id": "item:chocolate-cookies",
+      "label": "Chocolate Cookies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 148)"
+    },
+    {
+      "id": "item:chocolate-marr-cherries",
+      "label": "Chocolate Marr Cherries",
+      "type": "item",
+      "source": "Baked via Baking (trivial 126)",
+      "stats": {
+        "cha": 3
+      }
+    },
+    {
+      "id": "item:chocolate-muffins",
+      "label": "Chocolate Muffins",
+      "type": "item",
+      "source": "Baked via Baking (trivial 155)"
+    },
+    {
+      "id": "item:cookies",
+      "label": "Cookies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 102 normal, 115 with a shaped cookie cutter)"
+    },
+    {
+      "id": "item:cup-cakes",
+      "label": "Cup Cakes",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:dwarf-chops",
+      "label": "Dwarf Chops",
+      "type": "item",
+      "source": "Baked via Baking (trivial 36)",
+      "stats": {
+        "str": 2,
+        "sta": 2
+      }
+    },
+    {
+      "id": "item:edible-goo",
+      "label": "Edible Goo",
+      "type": "item",
+      "source": "Baked via Baking (trivial 21)"
+    },
+    {
+      "id": "item:elven-veal",
+      "label": "Elven Veal",
+      "type": "item",
+      "source": "Baked via Baking (trivial 115)",
+      "stats": {
+        "dex": 1,
+        "wis": 1,
+        "int": 1,
+        "agi": 1
+      }
+    },
+    {
+      "id": "item:fish-head-soup",
+      "label": "Fish Head Soup",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)"
+    },
+    {
+      "id": "item:fruit-pie",
+      "label": "Fruit Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:gator-rolls",
+      "label": "Gator Rolls",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:gator-steaks",
+      "label": "Gator Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "str": 1
+      }
+    },
+    {
+      "id": "item:gnome-kabobs",
+      "label": "Gnome Kabobs",
+      "type": "item",
+      "source": "Baked via Baking (trivial 56)",
+      "stats": {
+        "dex": 2,
+        "int": 2
+      }
+    },
+    {
+      "id": "item:hot-n-spicy-toelings",
+      "label": "Hot-N-Spicy Toelings",
+      "type": "item",
+      "source": "Baked via Baking (trivial 56)",
+      "stats": {
+        "dex": 2,
+        "agi": 2
+      }
+    },
+    {
+      "id": "item:hot-cross-buns",
+      "label": "Hot Cross Buns",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:kobold-steaks",
+      "label": "Kobold Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "str": 1,
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:lion-steaks",
+      "label": "Lion Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "agi": 1
+      }
+    },
+    {
+      "id": "item:lizard-on-a-stick",
+      "label": "Lizard-on-a-Stick",
+      "type": "item",
+      "source": "Baked via Baking (trivial 56)"
+    },
+    {
+      "id": "item:mammoth-sandwich",
+      "label": "Mammoth Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 31)"
+    },
+    {
+      "id": "item:mammoth-steaks",
+      "label": "Mammoth Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41); classic combo uses Jug of Sauces, a Velious combo substitutes Algae Spices + Jug of Oyster Sauces",
+      "stats": {
+        "str": 2
+      }
+    },
+    {
+      "id": "item:muskie-marinade",
+      "label": "Muskie Marinade",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)",
+      "stats": {
+        "str": 1
+      },
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      }
+    },
+    {
+      "id": "item:meat-filled-pie",
+      "label": "Meat-Filled Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:muffin",
+      "label": "Muffin",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:pickled-bixie",
+      "label": "Pickled Bixie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)"
+    },
+    {
+      "id": "item:pickled-froglok",
+      "label": "Pickled Froglok",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)"
+    },
+    {
+      "id": "item:pickled-gator",
+      "label": "Pickled Gator",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)"
+    },
+    {
+      "id": "item:pickled-lizard",
+      "label": "Pickled Lizard",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)"
+    },
+    {
+      "id": "item:pickled-troll",
+      "label": "Pickled Troll",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)"
+    },
+    {
+      "id": "item:pound-cake",
+      "label": "Pound Cake",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:rabbit-stew",
+      "label": "Rabbit Stew",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)"
+    },
+    {
+      "id": "item:rat-ear-turnovers",
+      "label": "Rat Ear Turnovers",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:rat-ear-sandwich",
+      "label": "Rat Ear Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 36)"
+    },
+    {
+      "id": "item:rat-kabobs",
+      "label": "Rat Kabobs",
+      "type": "item",
+      "source": "Baked via Baking (trivial 26)",
+      "stats": {
+        "dex": 1,
+        "agi": 1
+      }
+    },
+    {
+      "id": "item:rat-sandwich",
+      "label": "Rat Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 26)"
+    },
+    {
+      "id": "item:scorpion-sandwich",
+      "label": "Scorpion Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 26)",
+      "resists": {
+        "poison": 1
+      }
+    },
+    {
+      "id": "item:shark-fillet",
+      "label": "Shark Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82); classic combo uses Jug of Sauces, a Velious combo substitutes Algae Spices + Jug of Oyster Sauces"
+    },
+    {
+      "id": "item:shark-rolls",
+      "label": "Shark Rolls",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:smoked-shark",
+      "label": "Smoked Shark",
+      "type": "item",
+      "source": "Baked via Baking (trivial 95)"
+    },
+    {
+      "id": "item:smoked-wood-elf",
+      "label": "Smoked Wood Elf",
+      "type": "item",
+      "source": "Baked via Baking (trivial 95)",
+      "stats": {
+        "wis": 2,
+        "agi": 2
+      }
+    },
+    {
+      "id": "item:snake-pickles",
+      "label": "Snake Pickles",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51)",
+      "stats": {
+        "agi": 1
+      },
+      "resists": {
+        "poison": 1
+      }
+    },
+    {
+      "id": "item:snake-steak",
+      "label": "Snake Steak",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "resists": {
+        "poison": 2
+      }
+    },
+    {
+      "id": "item:vegetable-pie",
+      "label": "Vegetable Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:vegetable-soup",
+      "label": "Vegetable Soup",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68)"
+    },
+    {
+      "id": "item:wedding-cake-slices",
+      "label": "Wedding Cake Slices",
+      "type": "item",
+      "source": "Baked via Baking (trivial 115) from a Wedding Cake"
+    },
+    {
+      "id": "item:white-chocolate-cookies",
+      "label": "White Chocolate Cookies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 148)"
+    },
+    {
+      "id": "item:white-chocolate-muffins",
+      "label": "White Chocolate Muffins",
+      "type": "item",
+      "source": "Baked via Baking (trivial 155)"
+    },
+    {
+      "id": "item:wolf-sandwich",
+      "label": "Wolf Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 31)"
+    },
+    {
+      "id": "item:wolf-steaks",
+      "label": "Wolf Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:wooly-spider-crunchies",
+      "label": "Wooly Spider Crunchies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 46)",
+      "resists": {
+        "fire": -1,
+        "cold": 2
+      }
+    },
+    {
+      "id": "item:blackened-panther",
+      "label": "Blackened Panther",
+      "type": "item",
+      "source": "Baked via Baking (trivial 62)",
+      "stats": {
+        "sta": 1,
+        "agi": 2
+      }
+    },
+    {
+      "id": "item:cobalt-cup-cakes",
+      "label": "Cobalt Cup Cakes",
+      "type": "item",
+      "source": "Baked via Baking (trivial 135)",
+      "resists": {
+        "disease": 3,
+        "poison": 3
+      }
+    },
+    {
+      "id": "item:frost-giant-steak",
+      "label": "Frost Giant Steak",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)",
+      "stats": {
+        "str": 4,
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:orange-flavored-cod",
+      "label": "Orange Flavored Cod",
+      "type": "item",
+      "source": "Baked via Baking (trivial 102)",
+      "resists": {
+        "disease": 2,
+        "poison": 1
+      }
+    },
+    {
+      "id": "item:pickled-dragon",
+      "label": "Pickled Dragon",
+      "type": "item",
+      "source": "Baked via Baking (trivial 115)",
+      "stats": {
+        "str": 3,
+        "dex": 3,
+        "sta": 3,
+        "cha": 3,
+        "wis": 3,
+        "int": 3,
+        "agi": 3
+      }
+    },
+    {
+      "id": "item:pickled-drake",
+      "label": "Pickled Drake",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "stats": {
+        "wis": 2,
+        "int": 2
+      }
+    },
+    {
+      "id": "item:pickled-faun",
+      "label": "Pickled Faun",
+      "type": "item",
+      "source": "Baked via Baking (trivial 95)",
+      "stats": {
+        "sta": 3,
+        "cha": 1,
+        "int": 2
+      }
+    },
+    {
+      "id": "item:pickled-frost-giant",
+      "label": "Pickled Frost Giant",
+      "type": "item",
+      "source": "Baked via Baking (trivial 88)",
+      "stats": {
+        "str": 3,
+        "sta": 3
+      }
+    },
+    {
+      "id": "item:siren-pickles",
+      "label": "Siren Pickles",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "stats": {
+        "cha": 4
+      }
+    },
+    {
+      "id": "item:pickled-storm-giant",
+      "label": "Pickled Storm Giant",
+      "type": "item",
+      "source": "Baked via Baking (trivial 88)",
+      "stats": {
+        "str": 3,
+        "sta": 3
+      }
+    },
+    {
+      "id": "item:pickled-unicorn",
+      "label": "Pickled Unicorn",
+      "type": "item",
+      "source": "Baked via Baking (trivial 108)",
+      "stats": {
+        "cha": 2,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      }
+    },
+    {
+      "id": "item:pickled-wurm",
+      "label": "Pickled Wurm",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "stats": {
+        "str": 1,
+        "dex": 1,
+        "sta": 1,
+        "cha": 1,
+        "wis": 1,
+        "int": 1,
+        "agi": 1
+      }
+    },
+    {
+      "id": "item:pickled-wyvern",
+      "label": "Pickled Wyvern",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "resists": {
+        "magic": 3
+      }
+    },
+    {
+      "id": "item:raptor-steaks",
+      "label": "Raptor Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 41)",
+      "stats": {
+        "str": 2,
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:rolled-cutlassfish",
+      "label": "Rolled Cutlassfish",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:salty-whitefish-fillets",
+      "label": "Salty Whitefish Fillets",
+      "type": "item",
+      "source": "Baked via Baking (trivial 88)"
+    },
+    {
+      "id": "item:sea-green-cookies",
+      "label": "Sea Green Cookies",
+      "type": "item",
+      "source": "Baked via Baking (trivial 102)",
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      }
+    },
+    {
+      "id": "item:shellcrackers-seaside-salad",
+      "label": "Shellcracker's Seaside Salad",
+      "type": "item",
+      "source": "Baked via Baking (trivial 180)",
+      "stats": {
+        "dex": 5,
+        "cha": 5
+      },
+      "resists": {
+        "cold": 5
+      }
+    },
+    {
+      "id": "item:sifaye-pickles",
+      "label": "Sifaye Pickles",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "stats": {
+        "dex": 2,
+        "wis": 1
+      },
+      "resists": {
+        "magic": 2
+      }
+    },
+    {
+      "id": "item:storm-giant-steaks",
+      "label": "Storm Giant Steaks",
+      "type": "item",
+      "source": "Baked via Baking (trivial 142)",
+      "stats": {
+        "str": 4,
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:vegetable-roughy",
+      "label": "Vegetable Roughy",
+      "type": "item",
+      "source": "Baked via Baking (trivial 115)",
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      }
+    },
+    {
+      "id": "item:yakman-steak",
+      "label": "Yakman Steak",
+      "type": "item",
+      "source": "Baked via Baking (trivial 75)",
+      "stats": {
+        "str": 2,
+        "sta": 1
+      }
+    },
+    {
+      "id": "item:uncooked-rat-ear-pie",
+      "label": "Uncooked Rat Ear Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 28 unfinished, 142 to bake) -- Paw of Opolla quest ingredient"
+    },
+    {
+      "id": "item:hehe-meat",
+      "label": "HEHE Meat",
+      "type": "item",
+      "source": "Baked via Baking (trivial unknown per the wiki's own note) -- Grobb Cleaver quest ingredient"
+    },
+    {
+      "id": "item:spine-poison-extract",
+      "label": "Spine Poison Extract",
+      "type": "item",
+      "source": "Baked via Baking (trivial 21) -- Iksar warrior quest ingredient"
+    },
+    {
+      "id": "item:saucy-bearmeat",
+      "label": "Saucy Bearmeat",
+      "type": "item",
+      "source": "Baked via Baking (trivial 26) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:tundrabear-sandwich",
+      "label": "Tundrabear Sandwich",
+      "type": "item",
+      "source": "Baked via Baking (trivial 51) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:saucy-bunnymeat",
+      "label": "Saucy Bunnymeat",
+      "type": "item",
+      "source": "Baked via Baking (trivial 63) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:snow-bunny-stew",
+      "label": "Snow Bunny Stew",
+      "type": "item",
+      "source": "Baked via Baking (trivial 68) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:spicy-ulthork-meat",
+      "label": "Spicy Ulthork Meat",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:ulthork-meat-pie",
+      "label": "Ulthork Meat Pie",
+      "type": "item",
+      "source": "Baked via Baking (trivial 95) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:snow-griffin-souffle",
+      "label": "Snow Griffin Souffle",
+      "type": "item",
+      "source": "Baked via Baking (trivial 122) -- Thurgadin Prayer Shawl quest ingredient"
+    },
+    {
+      "id": "item:carp-fillet",
+      "label": "Carp Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82)"
+    },
+    {
+      "id": "item:chub-fillet",
+      "label": "Chub Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82)"
+    },
+    {
+      "id": "item:pike-fillet",
+      "label": "Pike Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82)"
+    },
+    {
+      "id": "item:salmon-fillet",
+      "label": "Salmon Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82)"
+    },
+    {
+      "id": "item:trout-fillet",
+      "label": "Trout Fillet",
+      "type": "item",
+      "source": "Baked via Baking (trivial 82)"
+    },
+    {
+      "id": "recipe:bear-sandwich",
+      "label": "Bear Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:bear-steaks",
+      "label": "Bear Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:beer-braised-bear",
+      "label": "Beer Braised Bear",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-gator",
+      "label": "Beer Braised Gator",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-mammoth",
+      "label": "Beer Braised Mammoth",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-mammoth-velious",
+      "label": "Beer Braised Mammoth",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-lion",
+      "label": "Beer Braised Lion",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-rat",
+      "label": "Beer Braised Rat",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-wolf",
+      "label": "Beer Braised Wolf",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beer-braised-wolf-velious",
+      "label": "Beer Braised Wolf",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:beetle-eye-pie",
+      "label": "Beetle Eye Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:berry-pie",
+      "label": "Berry Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:birthday-cake-slice",
+      "label": "Birthday Cake Slice",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:bixie-crunchies",
+      "label": "Bixie Crunchies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 46
+    },
+    {
+      "id": "recipe:blackened-teirdal",
+      "label": "Blackened Teir'Dal",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 62
+    },
+    {
+      "id": "recipe:loaf-of-bread",
+      "label": "Loaf of Bread",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:candied-spider",
+      "label": "Candied Spider",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 88
+    },
+    {
+      "id": "recipe:caynar-nut-stuffed-trout",
+      "label": "Caynar Nut Stuffed Trout",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 128
+    },
+    {
+      "id": "recipe:chocolate-cookies",
+      "label": "Chocolate Cookies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 148
+    },
+    {
+      "id": "recipe:chocolate-marr-cherries",
+      "label": "Chocolate Marr Cherries",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 126
+    },
+    {
+      "id": "recipe:chocolate-muffins",
+      "label": "Chocolate Muffins",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 155
+    },
+    {
+      "id": "recipe:clump-of-dough",
+      "label": "Clump of Dough",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 17
+    },
+    {
+      "id": "recipe:cookies",
+      "label": "Cookies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 102
+    },
+    {
+      "id": "recipe:cookies-shaped",
+      "label": "Cookies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:cup-cakes",
+      "label": "Cup Cakes",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:dwarf-chops",
+      "label": "Dwarf Chops",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 36
+    },
+    {
+      "id": "recipe:edible-goo",
+      "label": "Edible Goo",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 21
+    },
+    {
+      "id": "recipe:elven-veal",
+      "label": "Elven Veal",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:fish-head-soup",
+      "label": "Fish Head Soup",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:fruit-pie",
+      "label": "Fruit Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:gator-rolls",
+      "label": "Gator Rolls",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:gator-steaks",
+      "label": "Gator Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:gnome-kabobs",
+      "label": "Gnome Kabobs",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 56
+    },
+    {
+      "id": "recipe:hot-n-spicy-toelings",
+      "label": "Hot-N-Spicy Toelings",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 56
+    },
+    {
+      "id": "recipe:hot-cross-buns",
+      "label": "Hot Cross Buns",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:kobold-steaks",
+      "label": "Kobold Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:lion-steaks",
+      "label": "Lion Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:lizard-on-a-stick",
+      "label": "Lizard-on-a-Stick",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 56
+    },
+    {
+      "id": "recipe:mammoth-sandwich",
+      "label": "Mammoth Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:mammoth-steaks",
+      "label": "Mammoth Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:mammoth-steaks-velious",
+      "label": "Mammoth Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:muskie-marinade",
+      "label": "Muskie Marinade",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:meat-filled-pie",
+      "label": "Meat-Filled Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:muffin",
+      "label": "Muffin",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:pickled-bixie",
+      "label": "Pickled Bixie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:pickled-froglok",
+      "label": "Pickled Froglok",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:pickled-gator",
+      "label": "Pickled Gator",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:pickled-lizard",
+      "label": "Pickled Lizard",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:pickled-troll",
+      "label": "Pickled Troll",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:pound-cake",
+      "label": "Pound Cake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:rabbit-stew",
+      "label": "Rabbit Stew",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:rat-ear-turnovers",
+      "label": "Rat Ear Turnovers",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:rat-ear-sandwich",
+      "label": "Rat Ear Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 36
+    },
+    {
+      "id": "recipe:rat-kabobs",
+      "label": "Rat Kabobs",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:rat-sandwich",
+      "label": "Rat Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:scorpion-sandwich",
+      "label": "Scorpion Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:shark-fillet",
+      "label": "Shark Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:shark-fillet-velious",
+      "label": "Shark Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:shark-rolls",
+      "label": "Shark Rolls",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:smoked-shark",
+      "label": "Smoked Shark",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:smoked-wood-elf",
+      "label": "Smoked Wood Elf",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:snake-pickles",
+      "label": "Snake Pickles",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:snake-steak",
+      "label": "Snake Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:vegetable-pie",
+      "label": "Vegetable Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:vegetable-soup",
+      "label": "Vegetable Soup",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:wedding-cake-slices",
+      "label": "Wedding Cake Slices",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:white-chocolate",
+      "label": "White Chocolate",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:white-chocolate-cookies",
+      "label": "White Chocolate Cookies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 148
+    },
+    {
+      "id": "recipe:white-chocolate-muffins",
+      "label": "White Chocolate Muffins",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 155
+    },
+    {
+      "id": "recipe:winter-chocolate",
+      "label": "Winter Chocolate",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:wolf-sandwich",
+      "label": "Wolf Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:wolf-steaks",
+      "label": "Wolf Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:wooly-spider-crunchies",
+      "label": "Wooly Spider Crunchies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 46
+    },
+    {
+      "id": "recipe:carp-fillet",
+      "label": "Carp Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:chub-fillet",
+      "label": "Chub Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:chub-fillet-rujarkian",
+      "label": "Chub Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:pike-fillet",
+      "label": "Pike Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:pike-fillet-hound",
+      "label": "Pike Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:salmon-fillet",
+      "label": "Salmon Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:salmon-fillet-thunder",
+      "label": "Salmon Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:trout-fillet",
+      "label": "Trout Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:trout-fillet-cauldron",
+      "label": "Trout Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:trout-fillet-fogwater",
+      "label": "Trout Fillet",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:blackened-panther",
+      "label": "Blackened Panther",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 62
+    },
+    {
+      "id": "recipe:cobalt-cup-cakes",
+      "label": "Cobalt Cup Cakes",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:frost-giant-steak",
+      "label": "Frost Giant Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:frost-giant-steak-alt",
+      "label": "Frost Giant Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:orange-flavored-cod",
+      "label": "Orange Flavored Cod",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 102
+    },
+    {
+      "id": "recipe:pickled-dragon",
+      "label": "Pickled Dragon",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:pickled-drake",
+      "label": "Pickled Drake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:pickled-faun",
+      "label": "Pickled Faun",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:pickled-frost-giant",
+      "label": "Pickled Frost Giant",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 88
+    },
+    {
+      "id": "recipe:siren-pickles",
+      "label": "Siren Pickles",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:pickled-storm-giant",
+      "label": "Pickled Storm Giant",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 88
+    },
+    {
+      "id": "recipe:pickled-unicorn",
+      "label": "Pickled Unicorn",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 108
+    },
+    {
+      "id": "recipe:pickled-wurm",
+      "label": "Pickled Wurm",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:pickled-wyvern",
+      "label": "Pickled Wyvern",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:raptor-steaks",
+      "label": "Raptor Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:rolled-cutlassfish",
+      "label": "Rolled Cutlassfish",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:salty-whitefish-fillets",
+      "label": "Salty Whitefish Fillets",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 88
+    },
+    {
+      "id": "recipe:sea-green-cookies",
+      "label": "Sea Green Cookies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 102
+    },
+    {
+      "id": "recipe:shellcrackers-seaside-salad",
+      "label": "Shellcracker's Seaside Salad",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 180
+    },
+    {
+      "id": "recipe:sifaye-pickles",
+      "label": "Sifaye Pickles",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:storm-giant-steaks",
+      "label": "Storm Giant Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:storm-giant-steaks-alt",
+      "label": "Storm Giant Steaks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:vegetable-roughy",
+      "label": "Vegetable Roughy",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 115
+    },
+    {
+      "id": "recipe:yakman-steak",
+      "label": "Yakman Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:yakman-steak-alt",
+      "label": "Yakman Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:uncooked-rat-ear-pie",
+      "label": "Uncooked Rat Ear Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:hehe-meat",
+      "label": "HEHE Meat",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 0
+    },
+    {
+      "id": "recipe:spine-poison-extract",
+      "label": "Spine Poison Extract",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 21
+    },
+    {
+      "id": "recipe:saucy-bearmeat",
+      "label": "Saucy Bearmeat",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:tundrabear-sandwich",
+      "label": "Tundrabear Sandwich",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 51
+    },
+    {
+      "id": "recipe:saucy-bunnymeat",
+      "label": "Saucy Bunnymeat",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 63
+    },
+    {
+      "id": "recipe:snow-bunny-stew",
+      "label": "Snow Bunny Stew",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:spicy-ulthork-meat",
+      "label": "Spicy Ulthork Meat",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:ulthork-meat-pie",
+      "label": "Ulthork Meat Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:snow-griffin-souffle",
+      "label": "Snow Griffin Souffle",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 122
     }
   ],
   "edges": [
@@ -285924,6 +288475,5337 @@
       "target": "zone:plane-of-sky",
       "type": "connects_to",
       "transport": "wizard_port"
+    },
+    {
+      "id": "e-uses-22121",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22122",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22123",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:batwing-crunchies",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-22124",
+      "source": "recipe:fish-fillets",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22125",
+      "source": "recipe:fish-fillets",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22126",
+      "source": "recipe:fish-fillets",
+      "target": "item:fish-fillets",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22127",
+      "source": "recipe:fish-rolls",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22128",
+      "source": "recipe:fish-rolls",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22129",
+      "source": "recipe:fish-rolls",
+      "target": "item:fish-rolls",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-22130",
+      "source": "recipe:batwing-pie",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22131",
+      "source": "recipe:batwing-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22132",
+      "source": "recipe:batwing-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22133",
+      "source": "recipe:batwing-pie",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22134",
+      "source": "recipe:batwing-pie",
+      "target": "item:batwing-pie",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-uses-22135",
+      "source": "recipe:wedding-cake",
+      "target": "item:cake-round",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22136",
+      "source": "recipe:wedding-cake",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22137",
+      "source": "recipe:wedding-cake",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22138",
+      "source": "recipe:wedding-cake",
+      "target": "item:white-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22139",
+      "source": "recipe:wedding-cake",
+      "target": "item:wedding-cake",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22140",
+      "source": "recipe:birthday-cake",
+      "target": "item:cake-round",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22141",
+      "source": "recipe:birthday-cake",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22142",
+      "source": "recipe:birthday-cake",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22143",
+      "source": "recipe:birthday-cake",
+      "target": "item:winter-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22144",
+      "source": "recipe:birthday-cake",
+      "target": "item:birthday-cake",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22145",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:cinnamon-sticks",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22146",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:pixie-dust",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-22147",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:pixie-powder-cinnesticks",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-uses-22148",
+      "source": "recipe:dragon-steak",
+      "target": "item:dragon-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22149",
+      "source": "recipe:dragon-steak",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22150",
+      "source": "recipe:dragon-steak",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22151",
+      "source": "recipe:dragon-steak",
+      "target": "item:dragon-steak",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-located_in-22152",
+      "source": "npc:east-commonlands:katha-firespinner",
+      "target": "zone:east-commonlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22153",
+      "source": "npc:east-commonlands:katha-firespinner",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22154",
+      "source": "npc:erudin-palace:jeliala-glimmercharm",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22155",
+      "source": "npc:erudin-palace:jeliala-glimmercharm",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22156",
+      "source": "npc:erudin-palace:tika-shockstep",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22157",
+      "source": "npc:erudin-palace:tika-shockstep",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22158",
+      "source": "npc:field-of-bone:klok-acet",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22159",
+      "source": "npc:west-freeport:lindie-rains",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22160",
+      "source": "npc:west-freeport:lindie-rains",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22161",
+      "source": "npc:west-freeport:lysa-truegreen",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22162",
+      "source": "npc:west-freeport:lysa-truegreen",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22163",
+      "source": "npc:west-freeport:zasrin-blueflame",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22164",
+      "source": "npc:west-freeport:zasrin-blueflame",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22165",
+      "source": "npc:kael-drakkal:ymik",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22166",
+      "source": "npc:kael-drakkal:ymik",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22167",
+      "source": "npc:kithicor-forest:jeena-firechaser",
+      "target": "zone:kithicor-forest",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22168",
+      "source": "npc:kithicor-forest:jeena-firechaser",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22169",
+      "source": "npc:oggok:hrak",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22170",
+      "source": "npc:oggok:hrak",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22171",
+      "source": "npc:warsliks-woods:klok-gragin",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22172",
+      "source": "npc:warsliks-woods:klok-rogalin",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22173",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22174",
+      "source": "npc:butcherblock-mountains:urazun-thranon",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22175",
+      "source": "npc:east-cabilis:klok-sweetzie",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22176",
+      "source": "npc:crystal-caverns:praps-gemshard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22177",
+      "source": "npc:east-commonlands:parthar",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22178",
+      "source": "npc:the-feerrott:bup",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22179",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22180",
+      "source": "npc:halas:sissia",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22181",
+      "source": "npc:misty-thicket:bim-buskin",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22182",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22183",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22184",
+      "source": "npc:skyshrine:chef-kollof",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22185",
+      "source": "npc:steamfont-mountains:finkel-rardobaen",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22186",
+      "source": "npc:stonebrunt-mountains:chef-stead",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22187",
+      "source": "npc:thurgadin:perkins-doughbeard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22188",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22189",
+      "source": "npc:toxxulia-forest:quana-rainsparkle",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22190",
+      "source": "npc:east-cabilis:klok-foxmyr",
+      "target": "item:fish-fillets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22191",
+      "source": "npc:kerra-island:roary-fishpouncer",
+      "target": "item:fish-fillets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22192",
+      "source": "npc:western-karana:chrislin-baker",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-crafted_in-22193",
+      "source": "recipe:batwing-crunchies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22194",
+      "source": "recipe:batwing-crunchies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22195",
+      "source": "recipe:fish-fillets",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22196",
+      "source": "recipe:fish-rolls",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22197",
+      "source": "recipe:batwing-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22198",
+      "source": "recipe:wedding-cake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22199",
+      "source": "recipe:birthday-cake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22200",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22201",
+      "source": "recipe:dragon-steak",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-22202",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22203",
+      "source": "npc:east-cabilis:klok-unlar",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22204",
+      "source": "npc:east-cabilis:klok-unlar",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22205",
+      "source": "npc:erudin:beth-breadmaker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22206",
+      "source": "npc:erudin:helia-bluehawk",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22207",
+      "source": "npc:the-feerrott:bup",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22208",
+      "source": "npc:firiona-vie:glinya-sweetpie",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22209",
+      "source": "npc:north-freeport:rashinda-elore",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22210",
+      "source": "npc:west-freeport:olyna-mudel",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22211",
+      "source": "npc:west-freeport:olyna-mudel",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22212",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22213",
+      "source": "npc:halas:teria-o-danos",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22214",
+      "source": "npc:high-keep:baker-jena",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22215",
+      "source": "npc:north-kaladim:tissin-greybloom",
+      "target": "zone:north-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22216",
+      "source": "npc:north-kaladim:tissin-greybloom",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22217",
+      "source": "npc:north-kaladim:serenk-greybloom",
+      "target": "zone:north-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22218",
+      "source": "npc:north-kaladim:serenk-greybloom",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22219",
+      "source": "npc:neriak-foreign-quarter:tal-drana",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22220",
+      "source": "npc:neriak-foreign-quarter:sal-drana",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22221",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22222",
+      "source": "npc:paineel:gorng-alusnein",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22223",
+      "source": "npc:paineel:iva-tersala",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22224",
+      "source": "npc:south-qeynos:karn-tassen",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22225",
+      "source": "npc:south-qeynos:voleen-tassen",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22226",
+      "source": "npc:skyshrine:grudash-the-baker",
+      "target": "zone:skyshrine",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22227",
+      "source": "npc:skyshrine:grudash-the-baker",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22228",
+      "source": "npc:skyshrine:ruru-the-cook",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22229",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22230",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22231",
+      "source": "npc:butcherblock-mountains:nalda-griststone",
+      "target": "zone:butcherblock-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22232",
+      "source": "npc:butcherblock-mountains:nalda-griststone",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22233",
+      "source": "npc:east-cabilis:klok-gritchit",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22234",
+      "source": "npc:east-cabilis:klok-gritchit",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22235",
+      "source": "npc:the-feerrott:bup",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22236",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22237",
+      "source": "npc:greater-faydark:merchant-uaylain",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22238",
+      "source": "npc:greater-faydark:merchant-uaylain",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22239",
+      "source": "npc:grobb:garklog",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22240",
+      "source": "npc:grobb:garklog",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22241",
+      "source": "npc:halas:jil-mcdaniel",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22242",
+      "source": "npc:halas:jil-mcdaniel",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22243",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22244",
+      "source": "npc:qeynos-hills:mira-sayer",
+      "target": "zone:qeynos-hills",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22245",
+      "source": "npc:qeynos-hills:mira-sayer",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22246",
+      "source": "npc:surefall-glade:frannie",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22247",
+      "source": "npc:surefall-glade:frannie",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22248",
+      "source": "npc:steamfont-mountains:oren-furdenbline",
+      "target": "zone:steamfont-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22249",
+      "source": "npc:steamfont-mountains:oren-furdenbline",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22250",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22251",
+      "source": "npc:thurgadin:wevil-doughbeard",
+      "target": "zone:thurgadin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22252",
+      "source": "npc:thurgadin:wevil-doughbeard",
+      "target": "container:spit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22253",
+      "source": "npc:western-karana:henina-miller",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22254",
+      "source": "npc:western-karana:cleet-miller-jr",
+      "target": "container:mixing-bowl",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22255",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22256",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22257",
+      "source": "npc:butcherblock-mountains:urazun-thranon",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22258",
+      "source": "npc:butcherblock-mountains:urazun-thranon",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22259",
+      "source": "npc:east-cabilis:klok-sweetzie",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22260",
+      "source": "npc:east-cabilis:klok-sweetzie",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22261",
+      "source": "npc:crystal-caverns:praps-gemshard",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22262",
+      "source": "npc:crystal-caverns:praps-gemshard",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22263",
+      "source": "npc:east-commonlands:parthar",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22264",
+      "source": "npc:east-commonlands:parthar",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22265",
+      "source": "npc:the-feerrott:bup",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22266",
+      "source": "npc:the-feerrott:bup",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22267",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22268",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22269",
+      "source": "npc:halas:sissia",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22270",
+      "source": "npc:halas:sissia",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22271",
+      "source": "npc:misty-thicket:bim-buskin",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22272",
+      "source": "npc:misty-thicket:bim-buskin",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22273",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22274",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22275",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22276",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22277",
+      "source": "npc:western-karana:chrislin-baker",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22278",
+      "source": "npc:western-karana:chrislin-baker",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22279",
+      "source": "npc:steamfont-mountains:finkel-rardobaen",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22280",
+      "source": "npc:steamfont-mountains:finkel-rardobaen",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22281",
+      "source": "npc:skyshrine:chef-kollof",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22282",
+      "source": "npc:stonebrunt-mountains:chef-stead",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22283",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22284",
+      "source": "npc:thurgadin:perkins-doughbeard",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22285",
+      "source": "npc:thurgadin:perkins-doughbeard",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22286",
+      "source": "npc:toxxulia-forest:quana-rainsparkle",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22287",
+      "source": "npc:south-qeynos:karn-tassen",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22288",
+      "source": "npc:south-qeynos:voleen-tassen",
+      "target": "item:cup-of-flour",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22289",
+      "source": "npc:rivervale:bartle-barnick",
+      "target": "zone:rivervale",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22290",
+      "source": "npc:rivervale:bartle-barnick",
+      "target": "item:garnish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22291",
+      "source": "npc:cobalt-scar:bloogy-shellcracker",
+      "target": "item:algae-spices",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22292",
+      "source": "npc:cobalt-scar:bloogy-shellcracker",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22293",
+      "source": "npc:cobalt-scar:bloogy-shellcracker",
+      "target": "item:plankton-frosting",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22294",
+      "source": "npc:cobalt-scar:bloogy-shellcracker",
+      "target": "item:seaweed-vinegar",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22295",
+      "source": "npc:rivervale:innkeep",
+      "target": "zone:rivervale",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22296",
+      "source": "npc:rivervale:innkeep",
+      "target": "item:plankton-frosting",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-22297",
+      "source": "recipe:bear-sandwich",
+      "target": "item:bear-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22298",
+      "source": "recipe:bear-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22299",
+      "source": "recipe:bear-sandwich",
+      "target": "item:bear-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22300",
+      "source": "recipe:bear-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22301",
+      "source": "recipe:bear-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22302",
+      "source": "recipe:bear-steaks",
+      "target": "item:bear-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22303",
+      "source": "recipe:bear-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22304",
+      "source": "recipe:bear-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22305",
+      "source": "recipe:bear-steaks",
+      "target": "item:bear-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22306",
+      "source": "recipe:bear-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22307",
+      "source": "recipe:bear-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22308",
+      "source": "recipe:beer-braised-bear",
+      "target": "item:bear-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22309",
+      "source": "recipe:beer-braised-bear",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22310",
+      "source": "recipe:beer-braised-bear",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22311",
+      "source": "recipe:beer-braised-bear",
+      "target": "item:beer-braised-bear",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22312",
+      "source": "recipe:beer-braised-bear",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22313",
+      "source": "recipe:beer-braised-bear",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22314",
+      "source": "recipe:beer-braised-gator",
+      "target": "item:gator-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22315",
+      "source": "recipe:beer-braised-gator",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22316",
+      "source": "recipe:beer-braised-gator",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22317",
+      "source": "recipe:beer-braised-gator",
+      "target": "item:beer-braised-gator",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22318",
+      "source": "recipe:beer-braised-gator",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22319",
+      "source": "recipe:beer-braised-gator",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22320",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "item:mammoth-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22321",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22322",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22323",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "item:beer-braised-mammoth",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22324",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22325",
+      "source": "recipe:beer-braised-mammoth",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22326",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "item:mammoth-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22327",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "item:othmir-algae-ale",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22328",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22329",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "item:beer-braised-mammoth",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22330",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22331",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22332",
+      "source": "recipe:beer-braised-mammoth-velious",
+      "target": "recipe:beer-braised-mammoth",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22333",
+      "source": "recipe:beer-braised-lion",
+      "target": "item:lion-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22334",
+      "source": "recipe:beer-braised-lion",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22335",
+      "source": "recipe:beer-braised-lion",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22336",
+      "source": "recipe:beer-braised-lion",
+      "target": "item:beer-braised-lion",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22337",
+      "source": "recipe:beer-braised-lion",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22338",
+      "source": "recipe:beer-braised-lion",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22339",
+      "source": "recipe:beer-braised-rat",
+      "target": "item:rat-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22340",
+      "source": "recipe:beer-braised-rat",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22341",
+      "source": "recipe:beer-braised-rat",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22342",
+      "source": "recipe:beer-braised-rat",
+      "target": "item:beer-braised-rat",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22343",
+      "source": "recipe:beer-braised-rat",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22344",
+      "source": "recipe:beer-braised-rat",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22345",
+      "source": "recipe:beer-braised-wolf",
+      "target": "item:wolf-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22346",
+      "source": "recipe:beer-braised-wolf",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22347",
+      "source": "recipe:beer-braised-wolf",
+      "target": "item:short-beer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22348",
+      "source": "recipe:beer-braised-wolf",
+      "target": "item:beer-braised-wolf",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22349",
+      "source": "recipe:beer-braised-wolf",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22350",
+      "source": "recipe:beer-braised-wolf",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22351",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "item:wolf-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22352",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "item:othmir-algae-ale",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22353",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22354",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "item:beer-braised-wolf",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22355",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22356",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22357",
+      "source": "recipe:beer-braised-wolf-velious",
+      "target": "recipe:beer-braised-wolf",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22358",
+      "source": "recipe:beetle-eye-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22359",
+      "source": "recipe:beetle-eye-pie",
+      "target": "item:fire-beetle-eye",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22360",
+      "source": "recipe:beetle-eye-pie",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22361",
+      "source": "recipe:beetle-eye-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22362",
+      "source": "recipe:beetle-eye-pie",
+      "target": "item:beetle-eye-pie",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22363",
+      "source": "recipe:beetle-eye-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22364",
+      "source": "recipe:beetle-eye-pie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22365",
+      "source": "recipe:berry-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22366",
+      "source": "recipe:berry-pie",
+      "target": "item:berries",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22367",
+      "source": "recipe:berry-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22368",
+      "source": "recipe:berry-pie",
+      "target": "item:berry-pie",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22369",
+      "source": "recipe:berry-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22370",
+      "source": "recipe:berry-pie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22371",
+      "source": "recipe:birthday-cake-slice",
+      "target": "item:birthday-cake",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22372",
+      "source": "recipe:birthday-cake-slice",
+      "target": "item:birthday-cake-slice",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-22373",
+      "source": "recipe:birthday-cake-slice",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22374",
+      "source": "recipe:birthday-cake-slice",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22375",
+      "source": "recipe:bixie-crunchies",
+      "target": "item:bixie-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22376",
+      "source": "recipe:bixie-crunchies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22377",
+      "source": "recipe:bixie-crunchies",
+      "target": "item:bixie-crunchies",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22378",
+      "source": "recipe:bixie-crunchies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22379",
+      "source": "recipe:bixie-crunchies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22380",
+      "source": "recipe:blackened-teirdal",
+      "target": "item:dark-elf-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22381",
+      "source": "recipe:blackened-teirdal",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22382",
+      "source": "recipe:blackened-teirdal",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22383",
+      "source": "recipe:blackened-teirdal",
+      "target": "item:blackened-teirdal",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22384",
+      "source": "recipe:blackened-teirdal",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22385",
+      "source": "recipe:blackened-teirdal",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22386",
+      "source": "recipe:loaf-of-bread",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22387",
+      "source": "recipe:loaf-of-bread",
+      "target": "item:bread-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22388",
+      "source": "recipe:loaf-of-bread",
+      "target": "item:loaf-of-bread",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22389",
+      "source": "recipe:loaf-of-bread",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22390",
+      "source": "recipe:loaf-of-bread",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22391",
+      "source": "recipe:candied-spider",
+      "target": "item:spider-legs",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22392",
+      "source": "recipe:candied-spider",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22393",
+      "source": "recipe:candied-spider",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22394",
+      "source": "recipe:candied-spider",
+      "target": "item:candied-spider",
+      "type": "produces",
+      "quantity": 8
+    },
+    {
+      "id": "e-crafted_in-22395",
+      "source": "recipe:candied-spider",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22396",
+      "source": "recipe:candied-spider",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22397",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "item:bag-of-caynar-nuts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22398",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22399",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22400",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "item:caynar-nut-stuffed-trout",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22401",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22402",
+      "source": "recipe:caynar-nut-stuffed-trout",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22403",
+      "source": "recipe:chocolate-cookies",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22404",
+      "source": "recipe:chocolate-cookies",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22405",
+      "source": "recipe:chocolate-cookies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22406",
+      "source": "recipe:chocolate-cookies",
+      "target": "item:winter-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22407",
+      "source": "recipe:chocolate-cookies",
+      "target": "item:chocolate-cookies",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22408",
+      "source": "recipe:chocolate-cookies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22409",
+      "source": "recipe:chocolate-cookies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22410",
+      "source": "recipe:chocolate-marr-cherries",
+      "target": "item:marr-cherries",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-22411",
+      "source": "recipe:chocolate-marr-cherries",
+      "target": "item:winter-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22412",
+      "source": "recipe:chocolate-marr-cherries",
+      "target": "item:chocolate-marr-cherries",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-crafted_in-22413",
+      "source": "recipe:chocolate-marr-cherries",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22414",
+      "source": "recipe:chocolate-muffins",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22415",
+      "source": "recipe:chocolate-muffins",
+      "target": "item:fruit",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22416",
+      "source": "recipe:chocolate-muffins",
+      "target": "item:winter-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22417",
+      "source": "recipe:chocolate-muffins",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22418",
+      "source": "recipe:chocolate-muffins",
+      "target": "item:chocolate-muffins",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22419",
+      "source": "recipe:chocolate-muffins",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22420",
+      "source": "recipe:chocolate-muffins",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22421",
+      "source": "recipe:clump-of-dough",
+      "target": "item:cup-of-flour",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22422",
+      "source": "recipe:clump-of-dough",
+      "target": "item:bottle-of-milk",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22423",
+      "source": "recipe:clump-of-dough",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22424",
+      "source": "recipe:clump-of-dough",
+      "target": "item:clump-of-dough",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22425",
+      "source": "recipe:clump-of-dough",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22426",
+      "source": "recipe:cookies",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22427",
+      "source": "recipe:cookies",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22428",
+      "source": "recipe:cookies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22429",
+      "source": "recipe:cookies",
+      "target": "item:cookies",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22430",
+      "source": "recipe:cookies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22431",
+      "source": "recipe:cookies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22432",
+      "source": "recipe:cookies-shaped",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22433",
+      "source": "recipe:cookies-shaped",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22434",
+      "source": "recipe:cookies-shaped",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22435",
+      "source": "recipe:cookies-shaped",
+      "target": "item:cookies",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22436",
+      "source": "recipe:cookies-shaped",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22437",
+      "source": "recipe:cookies-shaped",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22438",
+      "source": "recipe:cookies-shaped",
+      "target": "recipe:cookies",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22439",
+      "source": "recipe:cup-cakes",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22440",
+      "source": "recipe:cup-cakes",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22441",
+      "source": "recipe:cup-cakes",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22442",
+      "source": "recipe:cup-cakes",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22443",
+      "source": "recipe:cup-cakes",
+      "target": "item:cup-cakes",
+      "type": "produces",
+      "quantity": 3
+    },
+    {
+      "id": "e-crafted_in-22444",
+      "source": "recipe:cup-cakes",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22445",
+      "source": "recipe:cup-cakes",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22446",
+      "source": "recipe:dwarf-chops",
+      "target": "item:dwarf-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22447",
+      "source": "recipe:dwarf-chops",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22448",
+      "source": "recipe:dwarf-chops",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22449",
+      "source": "recipe:dwarf-chops",
+      "target": "item:dwarf-chops",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22450",
+      "source": "recipe:dwarf-chops",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22451",
+      "source": "recipe:dwarf-chops",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22452",
+      "source": "recipe:edible-goo",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22453",
+      "source": "recipe:edible-goo",
+      "target": "item:fire-beetle-eye",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22454",
+      "source": "recipe:edible-goo",
+      "target": "item:edible-goo",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22455",
+      "source": "recipe:edible-goo",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22456",
+      "source": "recipe:edible-goo",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22457",
+      "source": "recipe:elven-veal",
+      "target": "item:high-elf-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22458",
+      "source": "recipe:elven-veal",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22459",
+      "source": "recipe:elven-veal",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22460",
+      "source": "recipe:elven-veal",
+      "target": "item:elven-veal",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22461",
+      "source": "recipe:elven-veal",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22462",
+      "source": "recipe:elven-veal",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22463",
+      "source": "recipe:fish-head-soup",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22464",
+      "source": "recipe:fish-head-soup",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22465",
+      "source": "recipe:fish-head-soup",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22466",
+      "source": "recipe:fish-head-soup",
+      "target": "item:fish-head-soup",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22467",
+      "source": "recipe:fish-head-soup",
+      "target": "container:pot",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22468",
+      "source": "recipe:fish-head-soup",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22469",
+      "source": "recipe:fish-head-soup",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22470",
+      "source": "recipe:fruit-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22471",
+      "source": "recipe:fruit-pie",
+      "target": "item:fruit",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22472",
+      "source": "recipe:fruit-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22473",
+      "source": "recipe:fruit-pie",
+      "target": "item:fruit-pie",
+      "type": "produces",
+      "quantity": 3
+    },
+    {
+      "id": "e-crafted_in-22474",
+      "source": "recipe:fruit-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22475",
+      "source": "recipe:fruit-pie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22476",
+      "source": "recipe:gator-rolls",
+      "target": "item:gator-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22477",
+      "source": "recipe:gator-rolls",
+      "target": "item:wasp-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22478",
+      "source": "recipe:gator-rolls",
+      "target": "item:gator-rolls",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22479",
+      "source": "recipe:gator-rolls",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22480",
+      "source": "recipe:gator-rolls",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22481",
+      "source": "recipe:gator-steaks",
+      "target": "item:gator-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22482",
+      "source": "recipe:gator-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22483",
+      "source": "recipe:gator-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22484",
+      "source": "recipe:gator-steaks",
+      "target": "item:gator-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22485",
+      "source": "recipe:gator-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22486",
+      "source": "recipe:gator-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22487",
+      "source": "recipe:gnome-kabobs",
+      "target": "item:gnome-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22488",
+      "source": "recipe:gnome-kabobs",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22489",
+      "source": "recipe:gnome-kabobs",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22490",
+      "source": "recipe:gnome-kabobs",
+      "target": "item:skewers",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22491",
+      "source": "recipe:gnome-kabobs",
+      "target": "item:gnome-kabobs",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22492",
+      "source": "recipe:gnome-kabobs",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22493",
+      "source": "recipe:gnome-kabobs",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22494",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "item:halfling-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22495",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22496",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22497",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "item:hot-n-spicy-toelings",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22498",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22499",
+      "source": "recipe:hot-n-spicy-toelings",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22500",
+      "source": "recipe:hot-cross-buns",
+      "target": "item:fruit",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22501",
+      "source": "recipe:hot-cross-buns",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22502",
+      "source": "recipe:hot-cross-buns",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22503",
+      "source": "recipe:hot-cross-buns",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22504",
+      "source": "recipe:hot-cross-buns",
+      "target": "item:hot-cross-buns",
+      "type": "produces",
+      "quantity": 8
+    },
+    {
+      "id": "e-crafted_in-22505",
+      "source": "recipe:hot-cross-buns",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22506",
+      "source": "recipe:hot-cross-buns",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22507",
+      "source": "recipe:kobold-steaks",
+      "target": "item:kobold-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22508",
+      "source": "recipe:kobold-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22509",
+      "source": "recipe:kobold-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22510",
+      "source": "recipe:kobold-steaks",
+      "target": "item:kobold-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22511",
+      "source": "recipe:kobold-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22512",
+      "source": "recipe:kobold-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22513",
+      "source": "recipe:lion-steaks",
+      "target": "item:lion-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22514",
+      "source": "recipe:lion-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22515",
+      "source": "recipe:lion-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22516",
+      "source": "recipe:lion-steaks",
+      "target": "item:lion-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22517",
+      "source": "recipe:lion-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22518",
+      "source": "recipe:lion-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22519",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "item:lizard-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22520",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22521",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22522",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "item:skewers",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22523",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "item:lizard-on-a-stick",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22524",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22525",
+      "source": "recipe:lizard-on-a-stick",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22526",
+      "source": "recipe:mammoth-sandwich",
+      "target": "item:mammoth-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22527",
+      "source": "recipe:mammoth-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22528",
+      "source": "recipe:mammoth-sandwich",
+      "target": "item:mammoth-sandwich",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22529",
+      "source": "recipe:mammoth-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22530",
+      "source": "recipe:mammoth-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22531",
+      "source": "recipe:mammoth-steaks",
+      "target": "item:mammoth-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22532",
+      "source": "recipe:mammoth-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22533",
+      "source": "recipe:mammoth-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22534",
+      "source": "recipe:mammoth-steaks",
+      "target": "item:mammoth-steaks",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22535",
+      "source": "recipe:mammoth-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22536",
+      "source": "recipe:mammoth-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22537",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "item:mammoth-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22538",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22539",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22540",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "item:mammoth-steaks",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22541",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22542",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22543",
+      "source": "recipe:mammoth-steaks-velious",
+      "target": "recipe:mammoth-steaks",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22544",
+      "source": "recipe:muskie-marinade",
+      "target": "item:rathe-muskie",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22545",
+      "source": "recipe:muskie-marinade",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22546",
+      "source": "recipe:muskie-marinade",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22547",
+      "source": "recipe:muskie-marinade",
+      "target": "item:snake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22548",
+      "source": "recipe:muskie-marinade",
+      "target": "item:fish-wine",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22549",
+      "source": "recipe:muskie-marinade",
+      "target": "item:muskie-marinade",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22550",
+      "source": "recipe:muskie-marinade",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22551",
+      "source": "recipe:muskie-marinade",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22552",
+      "source": "recipe:meat-filled-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22553",
+      "source": "recipe:meat-filled-pie",
+      "target": "item:chunk-of-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22554",
+      "source": "recipe:meat-filled-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22555",
+      "source": "recipe:meat-filled-pie",
+      "target": "item:meat-filled-pie",
+      "type": "produces",
+      "quantity": 3
+    },
+    {
+      "id": "e-crafted_in-22556",
+      "source": "recipe:meat-filled-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22557",
+      "source": "recipe:meat-filled-pie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22558",
+      "source": "recipe:muffin",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22559",
+      "source": "recipe:muffin",
+      "target": "item:fruit",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22560",
+      "source": "recipe:muffin",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22561",
+      "source": "recipe:muffin",
+      "target": "item:muffin",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-crafted_in-22562",
+      "source": "recipe:muffin",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22563",
+      "source": "recipe:muffin",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22564",
+      "source": "recipe:pickled-bixie",
+      "target": "item:bixie-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22565",
+      "source": "recipe:pickled-bixie",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22566",
+      "source": "recipe:pickled-bixie",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22567",
+      "source": "recipe:pickled-bixie",
+      "target": "item:pickled-bixie",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22568",
+      "source": "recipe:pickled-bixie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22569",
+      "source": "recipe:pickled-bixie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22570",
+      "source": "recipe:pickled-froglok",
+      "target": "item:froglok-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22571",
+      "source": "recipe:pickled-froglok",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22572",
+      "source": "recipe:pickled-froglok",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22573",
+      "source": "recipe:pickled-froglok",
+      "target": "item:pickled-froglok",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22574",
+      "source": "recipe:pickled-froglok",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22575",
+      "source": "recipe:pickled-froglok",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22576",
+      "source": "recipe:pickled-gator",
+      "target": "item:gator-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22577",
+      "source": "recipe:pickled-gator",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22578",
+      "source": "recipe:pickled-gator",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22579",
+      "source": "recipe:pickled-gator",
+      "target": "item:pickled-gator",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22580",
+      "source": "recipe:pickled-gator",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22581",
+      "source": "recipe:pickled-gator",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22582",
+      "source": "recipe:pickled-lizard",
+      "target": "item:lizard-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22583",
+      "source": "recipe:pickled-lizard",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22584",
+      "source": "recipe:pickled-lizard",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22585",
+      "source": "recipe:pickled-lizard",
+      "target": "item:pickled-lizard",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22586",
+      "source": "recipe:pickled-lizard",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22587",
+      "source": "recipe:pickled-lizard",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22588",
+      "source": "recipe:pickled-troll",
+      "target": "item:troll-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22589",
+      "source": "recipe:pickled-troll",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22590",
+      "source": "recipe:pickled-troll",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22591",
+      "source": "recipe:pickled-troll",
+      "target": "item:pickled-troll",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22592",
+      "source": "recipe:pickled-troll",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22593",
+      "source": "recipe:pickled-troll",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22594",
+      "source": "recipe:pound-cake",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22595",
+      "source": "recipe:pound-cake",
+      "target": "item:berry-pie",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22596",
+      "source": "recipe:pound-cake",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22597",
+      "source": "recipe:pound-cake",
+      "target": "item:pound-cake",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-crafted_in-22598",
+      "source": "recipe:pound-cake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22599",
+      "source": "recipe:pound-cake",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22600",
+      "source": "recipe:rabbit-stew",
+      "target": "item:rabbit-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22601",
+      "source": "recipe:rabbit-stew",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22602",
+      "source": "recipe:rabbit-stew",
+      "target": "item:rabbit-stew",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22603",
+      "source": "recipe:rabbit-stew",
+      "target": "container:pot",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22604",
+      "source": "recipe:rabbit-stew",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22605",
+      "source": "recipe:rabbit-stew",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22606",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22607",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22608",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22609",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "item:rat-ear-turnovers",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22610",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22611",
+      "source": "recipe:rat-ear-turnovers",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22612",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22613",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22614",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22615",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "item:rat-ear-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22616",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22617",
+      "source": "recipe:rat-ear-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22618",
+      "source": "recipe:rat-kabobs",
+      "target": "item:rat-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22619",
+      "source": "recipe:rat-kabobs",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22620",
+      "source": "recipe:rat-kabobs",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22621",
+      "source": "recipe:rat-kabobs",
+      "target": "item:skewers",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22622",
+      "source": "recipe:rat-kabobs",
+      "target": "item:rat-kabobs",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22623",
+      "source": "recipe:rat-kabobs",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22624",
+      "source": "recipe:rat-kabobs",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22625",
+      "source": "recipe:rat-sandwich",
+      "target": "item:rat-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22626",
+      "source": "recipe:rat-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22627",
+      "source": "recipe:rat-sandwich",
+      "target": "item:rat-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22628",
+      "source": "recipe:rat-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22629",
+      "source": "recipe:rat-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22630",
+      "source": "recipe:scorpion-sandwich",
+      "target": "item:scorpion-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22631",
+      "source": "recipe:scorpion-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22632",
+      "source": "recipe:scorpion-sandwich",
+      "target": "item:scorpion-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22633",
+      "source": "recipe:scorpion-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22634",
+      "source": "recipe:scorpion-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22635",
+      "source": "recipe:shark-fillet",
+      "target": "item:shark-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22636",
+      "source": "recipe:shark-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22637",
+      "source": "recipe:shark-fillet",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22638",
+      "source": "recipe:shark-fillet",
+      "target": "item:shark-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22639",
+      "source": "recipe:shark-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22640",
+      "source": "recipe:shark-fillet",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22641",
+      "source": "recipe:shark-fillet-velious",
+      "target": "item:shark-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22642",
+      "source": "recipe:shark-fillet-velious",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22643",
+      "source": "recipe:shark-fillet-velious",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22644",
+      "source": "recipe:shark-fillet-velious",
+      "target": "item:shark-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22645",
+      "source": "recipe:shark-fillet-velious",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22646",
+      "source": "recipe:shark-fillet-velious",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22647",
+      "source": "recipe:shark-fillet-velious",
+      "target": "recipe:shark-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22648",
+      "source": "recipe:shark-rolls",
+      "target": "item:shark-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22649",
+      "source": "recipe:shark-rolls",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22650",
+      "source": "recipe:shark-rolls",
+      "target": "item:shark-rolls",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22651",
+      "source": "recipe:shark-rolls",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22652",
+      "source": "recipe:shark-rolls",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22653",
+      "source": "recipe:smoked-shark",
+      "target": "item:shark-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22654",
+      "source": "recipe:smoked-shark",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22655",
+      "source": "recipe:smoked-shark",
+      "target": "item:smoked-shark",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22656",
+      "source": "recipe:smoked-shark",
+      "target": "container:smoker",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22657",
+      "source": "recipe:smoked-shark",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22658",
+      "source": "recipe:smoked-shark",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22659",
+      "source": "recipe:smoked-wood-elf",
+      "target": "item:wood-elf-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22660",
+      "source": "recipe:smoked-wood-elf",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22661",
+      "source": "recipe:smoked-wood-elf",
+      "target": "item:smoked-wood-elf",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22662",
+      "source": "recipe:smoked-wood-elf",
+      "target": "container:smoker",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22663",
+      "source": "recipe:smoked-wood-elf",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22664",
+      "source": "recipe:smoked-wood-elf",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22665",
+      "source": "recipe:snake-pickles",
+      "target": "item:snake-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22666",
+      "source": "recipe:snake-pickles",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22667",
+      "source": "recipe:snake-pickles",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22668",
+      "source": "recipe:snake-pickles",
+      "target": "item:snake-pickles",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22669",
+      "source": "recipe:snake-pickles",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22670",
+      "source": "recipe:snake-pickles",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22671",
+      "source": "recipe:snake-steak",
+      "target": "item:snake-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22672",
+      "source": "recipe:snake-steak",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22673",
+      "source": "recipe:snake-steak",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22674",
+      "source": "recipe:snake-steak",
+      "target": "item:snake-steak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22675",
+      "source": "recipe:snake-steak",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22676",
+      "source": "recipe:snake-steak",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22677",
+      "source": "recipe:vegetable-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22678",
+      "source": "recipe:vegetable-pie",
+      "target": "item:vegetables",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22679",
+      "source": "recipe:vegetable-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22680",
+      "source": "recipe:vegetable-pie",
+      "target": "item:vegetable-pie",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-crafted_in-22681",
+      "source": "recipe:vegetable-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22682",
+      "source": "recipe:vegetable-pie",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22683",
+      "source": "recipe:vegetable-soup",
+      "target": "item:vegetables",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22684",
+      "source": "recipe:vegetable-soup",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22685",
+      "source": "recipe:vegetable-soup",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22686",
+      "source": "recipe:vegetable-soup",
+      "target": "item:vegetable-soup",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22687",
+      "source": "recipe:vegetable-soup",
+      "target": "container:pot",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22688",
+      "source": "recipe:vegetable-soup",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22689",
+      "source": "recipe:vegetable-soup",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22690",
+      "source": "recipe:wedding-cake-slices",
+      "target": "item:wedding-cake",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22691",
+      "source": "recipe:wedding-cake-slices",
+      "target": "item:wedding-cake-slices",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-22692",
+      "source": "recipe:wedding-cake-slices",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22693",
+      "source": "recipe:wedding-cake-slices",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22694",
+      "source": "recipe:white-chocolate",
+      "target": "item:brownie-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22695",
+      "source": "recipe:white-chocolate",
+      "target": "item:frosting",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22696",
+      "source": "recipe:white-chocolate",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22697",
+      "source": "recipe:white-chocolate",
+      "target": "item:white-chocolate",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22698",
+      "source": "recipe:white-chocolate",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22699",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22700",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22701",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22702",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "item:white-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22703",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "item:white-chocolate-cookies",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22704",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22705",
+      "source": "recipe:white-chocolate-cookies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22706",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22707",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "item:fruit",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22708",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "item:white-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22709",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22710",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "item:white-chocolate-muffins",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22711",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22712",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22713",
+      "source": "recipe:white-chocolate-muffins",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22714",
+      "source": "recipe:winter-chocolate",
+      "target": "item:brownie-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22715",
+      "source": "recipe:winter-chocolate",
+      "target": "item:frosting",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-22716",
+      "source": "recipe:winter-chocolate",
+      "target": "item:winter-chocolate",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22717",
+      "source": "recipe:winter-chocolate",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22718",
+      "source": "recipe:winter-chocolate",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22719",
+      "source": "recipe:winter-chocolate",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22720",
+      "source": "recipe:wolf-sandwich",
+      "target": "item:wolf-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22721",
+      "source": "recipe:wolf-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22722",
+      "source": "recipe:wolf-sandwich",
+      "target": "item:wolf-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22723",
+      "source": "recipe:wolf-sandwich",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22724",
+      "source": "recipe:wolf-sandwich",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22725",
+      "source": "recipe:wolf-steaks",
+      "target": "item:wolf-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22726",
+      "source": "recipe:wolf-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22727",
+      "source": "recipe:wolf-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22728",
+      "source": "recipe:wolf-steaks",
+      "target": "item:wolf-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22729",
+      "source": "recipe:wolf-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22730",
+      "source": "recipe:wolf-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22731",
+      "source": "recipe:wooly-spider-crunchies",
+      "target": "item:spider-legs",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22732",
+      "source": "recipe:wooly-spider-crunchies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22733",
+      "source": "recipe:wooly-spider-crunchies",
+      "target": "item:wooly-spider-crunchies",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22734",
+      "source": "recipe:wooly-spider-crunchies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22735",
+      "source": "recipe:wooly-spider-crunchies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22736",
+      "source": "recipe:carp-fillet",
+      "target": "item:boar-carp",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22737",
+      "source": "recipe:carp-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22738",
+      "source": "recipe:carp-fillet",
+      "target": "item:carp-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22739",
+      "source": "recipe:carp-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22740",
+      "source": "recipe:chub-fillet",
+      "target": "item:despair-chub",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22741",
+      "source": "recipe:chub-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22742",
+      "source": "recipe:chub-fillet",
+      "target": "item:chub-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22743",
+      "source": "recipe:chub-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22744",
+      "source": "recipe:chub-fillet-rujarkian",
+      "target": "item:rujarkian-chub",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22745",
+      "source": "recipe:chub-fillet-rujarkian",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22746",
+      "source": "recipe:chub-fillet-rujarkian",
+      "target": "item:chub-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22747",
+      "source": "recipe:chub-fillet-rujarkian",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22748",
+      "source": "recipe:chub-fillet-rujarkian",
+      "target": "recipe:chub-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22749",
+      "source": "recipe:pike-fillet",
+      "target": "item:highland-pike",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22750",
+      "source": "recipe:pike-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22751",
+      "source": "recipe:pike-fillet",
+      "target": "item:pike-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22752",
+      "source": "recipe:pike-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22753",
+      "source": "recipe:pike-fillet-hound",
+      "target": "item:hound-pike",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22754",
+      "source": "recipe:pike-fillet-hound",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22755",
+      "source": "recipe:pike-fillet-hound",
+      "target": "item:pike-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22756",
+      "source": "recipe:pike-fillet-hound",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22757",
+      "source": "recipe:pike-fillet-hound",
+      "target": "recipe:pike-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22758",
+      "source": "recipe:salmon-fillet",
+      "target": "item:greengill-salmon",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22759",
+      "source": "recipe:salmon-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22760",
+      "source": "recipe:salmon-fillet",
+      "target": "item:salmon-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22761",
+      "source": "recipe:salmon-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22762",
+      "source": "recipe:salmon-fillet-thunder",
+      "target": "item:thunder-salmon",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22763",
+      "source": "recipe:salmon-fillet-thunder",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22764",
+      "source": "recipe:salmon-fillet-thunder",
+      "target": "item:salmon-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22765",
+      "source": "recipe:salmon-fillet-thunder",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22766",
+      "source": "recipe:salmon-fillet-thunder",
+      "target": "recipe:salmon-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22767",
+      "source": "recipe:trout-fillet",
+      "target": "item:bloodfin-trout",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22768",
+      "source": "recipe:trout-fillet",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22769",
+      "source": "recipe:trout-fillet",
+      "target": "item:trout-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22770",
+      "source": "recipe:trout-fillet",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22771",
+      "source": "recipe:trout-fillet-cauldron",
+      "target": "item:cauldron-trout",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22772",
+      "source": "recipe:trout-fillet-cauldron",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22773",
+      "source": "recipe:trout-fillet-cauldron",
+      "target": "item:trout-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22774",
+      "source": "recipe:trout-fillet-cauldron",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22775",
+      "source": "recipe:trout-fillet-cauldron",
+      "target": "recipe:trout-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22776",
+      "source": "recipe:trout-fillet-fogwater",
+      "target": "item:fogwater-trout",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22777",
+      "source": "recipe:trout-fillet-fogwater",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22778",
+      "source": "recipe:trout-fillet-fogwater",
+      "target": "item:trout-fillet",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22779",
+      "source": "recipe:trout-fillet-fogwater",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22780",
+      "source": "recipe:trout-fillet-fogwater",
+      "target": "recipe:trout-fillet",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22781",
+      "source": "recipe:blackened-panther",
+      "target": "item:panther-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22782",
+      "source": "recipe:blackened-panther",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22783",
+      "source": "recipe:blackened-panther",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22784",
+      "source": "recipe:blackened-panther",
+      "target": "item:blackened-panther",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22785",
+      "source": "recipe:blackened-panther",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22786",
+      "source": "recipe:blackened-panther",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22787",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22788",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22789",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "item:plankton-frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22790",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "item:muffin-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22791",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "item:cobalt-cup-cakes",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-crafted_in-22792",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22793",
+      "source": "recipe:cobalt-cup-cakes",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22794",
+      "source": "recipe:frost-giant-steak",
+      "target": "item:frost-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22795",
+      "source": "recipe:frost-giant-steak",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22796",
+      "source": "recipe:frost-giant-steak",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22797",
+      "source": "recipe:frost-giant-steak",
+      "target": "item:frost-giant-steak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22798",
+      "source": "recipe:frost-giant-steak",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22799",
+      "source": "recipe:frost-giant-steak",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22800",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "item:frost-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22801",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22802",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22803",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "item:frost-giant-steak",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22804",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22805",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22806",
+      "source": "recipe:frost-giant-steak-alt",
+      "target": "recipe:frost-giant-steak",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22807",
+      "source": "recipe:orange-flavored-cod",
+      "target": "item:cobalt-cod",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22808",
+      "source": "recipe:orange-flavored-cod",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22809",
+      "source": "recipe:orange-flavored-cod",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22810",
+      "source": "recipe:orange-flavored-cod",
+      "target": "item:emerald-orange",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22811",
+      "source": "recipe:orange-flavored-cod",
+      "target": "item:orange-flavored-cod",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22812",
+      "source": "recipe:orange-flavored-cod",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22813",
+      "source": "recipe:orange-flavored-cod",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22814",
+      "source": "recipe:pickled-dragon",
+      "target": "item:dragon-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22815",
+      "source": "recipe:pickled-dragon",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22816",
+      "source": "recipe:pickled-dragon",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22817",
+      "source": "recipe:pickled-dragon",
+      "target": "item:pickled-dragon",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22818",
+      "source": "recipe:pickled-dragon",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22819",
+      "source": "recipe:pickled-dragon",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22820",
+      "source": "recipe:pickled-drake",
+      "target": "item:drake-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22821",
+      "source": "recipe:pickled-drake",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22822",
+      "source": "recipe:pickled-drake",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22823",
+      "source": "recipe:pickled-drake",
+      "target": "item:pickled-drake",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22824",
+      "source": "recipe:pickled-drake",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22825",
+      "source": "recipe:pickled-drake",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22826",
+      "source": "recipe:pickled-faun",
+      "target": "item:faun-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22827",
+      "source": "recipe:pickled-faun",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22828",
+      "source": "recipe:pickled-faun",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22829",
+      "source": "recipe:pickled-faun",
+      "target": "item:pickled-faun",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22830",
+      "source": "recipe:pickled-faun",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22831",
+      "source": "recipe:pickled-faun",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22832",
+      "source": "recipe:pickled-frost-giant",
+      "target": "item:frost-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22833",
+      "source": "recipe:pickled-frost-giant",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22834",
+      "source": "recipe:pickled-frost-giant",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22835",
+      "source": "recipe:pickled-frost-giant",
+      "target": "item:pickled-frost-giant",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22836",
+      "source": "recipe:pickled-frost-giant",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22837",
+      "source": "recipe:pickled-frost-giant",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22838",
+      "source": "recipe:siren-pickles",
+      "target": "item:siren-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22839",
+      "source": "recipe:siren-pickles",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22840",
+      "source": "recipe:siren-pickles",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22841",
+      "source": "recipe:siren-pickles",
+      "target": "item:siren-pickles",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22842",
+      "source": "recipe:siren-pickles",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22843",
+      "source": "recipe:siren-pickles",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22844",
+      "source": "recipe:pickled-storm-giant",
+      "target": "item:storm-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22845",
+      "source": "recipe:pickled-storm-giant",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22846",
+      "source": "recipe:pickled-storm-giant",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22847",
+      "source": "recipe:pickled-storm-giant",
+      "target": "item:pickled-storm-giant",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22848",
+      "source": "recipe:pickled-storm-giant",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22849",
+      "source": "recipe:pickled-storm-giant",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22850",
+      "source": "recipe:pickled-unicorn",
+      "target": "item:unicorn-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22851",
+      "source": "recipe:pickled-unicorn",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22852",
+      "source": "recipe:pickled-unicorn",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22853",
+      "source": "recipe:pickled-unicorn",
+      "target": "item:pickled-unicorn",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22854",
+      "source": "recipe:pickled-unicorn",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22855",
+      "source": "recipe:pickled-unicorn",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22856",
+      "source": "recipe:pickled-wurm",
+      "target": "item:wurm-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22857",
+      "source": "recipe:pickled-wurm",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22858",
+      "source": "recipe:pickled-wurm",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22859",
+      "source": "recipe:pickled-wurm",
+      "target": "item:pickled-wurm",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22860",
+      "source": "recipe:pickled-wurm",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22861",
+      "source": "recipe:pickled-wurm",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22862",
+      "source": "recipe:pickled-wyvern",
+      "target": "item:wyvern-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22863",
+      "source": "recipe:pickled-wyvern",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22864",
+      "source": "recipe:pickled-wyvern",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22865",
+      "source": "recipe:pickled-wyvern",
+      "target": "item:pickled-wyvern",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22866",
+      "source": "recipe:pickled-wyvern",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22867",
+      "source": "recipe:pickled-wyvern",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22868",
+      "source": "recipe:raptor-steaks",
+      "target": "item:raptor-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22869",
+      "source": "recipe:raptor-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22870",
+      "source": "recipe:raptor-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22871",
+      "source": "recipe:raptor-steaks",
+      "target": "item:raptor-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22872",
+      "source": "recipe:raptor-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22873",
+      "source": "recipe:raptor-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22874",
+      "source": "recipe:rolled-cutlassfish",
+      "target": "item:iceclad-cutlassfish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22875",
+      "source": "recipe:rolled-cutlassfish",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22876",
+      "source": "recipe:rolled-cutlassfish",
+      "target": "item:rolled-cutlassfish",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22877",
+      "source": "recipe:rolled-cutlassfish",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22878",
+      "source": "recipe:rolled-cutlassfish",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22879",
+      "source": "recipe:salty-whitefish-fillets",
+      "target": "item:salty-whitefish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22880",
+      "source": "recipe:salty-whitefish-fillets",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22881",
+      "source": "recipe:salty-whitefish-fillets",
+      "target": "item:salty-whitefish-fillets",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22882",
+      "source": "recipe:salty-whitefish-fillets",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22883",
+      "source": "recipe:salty-whitefish-fillets",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22884",
+      "source": "recipe:sea-green-cookies",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22885",
+      "source": "recipe:sea-green-cookies",
+      "target": "item:plankton-frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22886",
+      "source": "recipe:sea-green-cookies",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22887",
+      "source": "recipe:sea-green-cookies",
+      "target": "item:sea-green-cookies",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22888",
+      "source": "recipe:sea-green-cookies",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22889",
+      "source": "recipe:sea-green-cookies",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22890",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:arctic-king-crab",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22891",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:arctic-mussels",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22892",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:arctic-scallop",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22893",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:cobalt-abalone",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22894",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:cobalt-rock-crab",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22895",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:small-clam",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22896",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:snapper-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22897",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:vegetables",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22898",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "item:shellcrackers-seaside-salad",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-crafted_in-22899",
+      "source": "recipe:shellcrackers-seaside-salad",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22900",
+      "source": "recipe:sifaye-pickles",
+      "target": "item:sifaye-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22901",
+      "source": "recipe:sifaye-pickles",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22902",
+      "source": "recipe:sifaye-pickles",
+      "target": "item:seaweed-vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22903",
+      "source": "recipe:sifaye-pickles",
+      "target": "item:sifaye-pickles",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22904",
+      "source": "recipe:sifaye-pickles",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22905",
+      "source": "recipe:sifaye-pickles",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22906",
+      "source": "recipe:storm-giant-steaks",
+      "target": "item:storm-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22907",
+      "source": "recipe:storm-giant-steaks",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22908",
+      "source": "recipe:storm-giant-steaks",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22909",
+      "source": "recipe:storm-giant-steaks",
+      "target": "item:storm-giant-steaks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22910",
+      "source": "recipe:storm-giant-steaks",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22911",
+      "source": "recipe:storm-giant-steaks",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22912",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "item:storm-giant-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22913",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22914",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22915",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "item:storm-giant-steaks",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22916",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22917",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22918",
+      "source": "recipe:storm-giant-steaks-alt",
+      "target": "recipe:storm-giant-steaks",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22919",
+      "source": "recipe:vegetable-roughy",
+      "target": "item:red-roughy",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22920",
+      "source": "recipe:vegetable-roughy",
+      "target": "item:vegetables",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22921",
+      "source": "recipe:vegetable-roughy",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22922",
+      "source": "recipe:vegetable-roughy",
+      "target": "item:garnish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22923",
+      "source": "recipe:vegetable-roughy",
+      "target": "item:vegetable-roughy",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-22924",
+      "source": "recipe:vegetable-roughy",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22925",
+      "source": "recipe:vegetable-roughy",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22926",
+      "source": "recipe:yakman-steak",
+      "target": "item:yakman-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22927",
+      "source": "recipe:yakman-steak",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22928",
+      "source": "recipe:yakman-steak",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22929",
+      "source": "recipe:yakman-steak",
+      "target": "item:yakman-steak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22930",
+      "source": "recipe:yakman-steak",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22931",
+      "source": "recipe:yakman-steak",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22932",
+      "source": "recipe:yakman-steak-alt",
+      "target": "item:yakman-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22933",
+      "source": "recipe:yakman-steak-alt",
+      "target": "item:jug-of-oyster-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22934",
+      "source": "recipe:yakman-steak-alt",
+      "target": "item:algae-spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22935",
+      "source": "recipe:yakman-steak-alt",
+      "target": "item:yakman-steak",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-crafted_in-22936",
+      "source": "recipe:yakman-steak-alt",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22937",
+      "source": "recipe:yakman-steak-alt",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-22938",
+      "source": "recipe:yakman-steak-alt",
+      "target": "recipe:yakman-steak",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-22939",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "item:rat-ears",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22940",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "item:cup-of-flour",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22941",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "item:baking-spirits",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22942",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "item:uncooked-rat-ear-pie",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22943",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22944",
+      "source": "recipe:uncooked-rat-ear-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22945",
+      "source": "recipe:hehe-meat",
+      "target": "item:human-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22946",
+      "source": "recipe:hehe-meat",
+      "target": "item:erudite-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22947",
+      "source": "recipe:hehe-meat",
+      "target": "item:high-elf-parts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22948",
+      "source": "recipe:hehe-meat",
+      "target": "item:flaming-pungla",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22949",
+      "source": "recipe:hehe-meat",
+      "target": "item:hehe-meat",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22950",
+      "source": "recipe:hehe-meat",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22951",
+      "source": "recipe:hehe-meat",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22952",
+      "source": "recipe:spine-poison-extract",
+      "target": "item:gray-ice",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22953",
+      "source": "recipe:spine-poison-extract",
+      "target": "item:pondfish-spines",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-22954",
+      "source": "recipe:spine-poison-extract",
+      "target": "item:spine-poison-extract",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22955",
+      "source": "recipe:spine-poison-extract",
+      "target": "container:pot",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22956",
+      "source": "recipe:spine-poison-extract",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22957",
+      "source": "recipe:spine-poison-extract",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22958",
+      "source": "recipe:saucy-bearmeat",
+      "target": "item:tundra-kodiak-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22959",
+      "source": "recipe:saucy-bearmeat",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22960",
+      "source": "recipe:saucy-bearmeat",
+      "target": "item:saucy-bearmeat",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22961",
+      "source": "recipe:saucy-bearmeat",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22962",
+      "source": "recipe:saucy-bearmeat",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22963",
+      "source": "recipe:tundrabear-sandwich",
+      "target": "item:saucy-bearmeat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22964",
+      "source": "recipe:tundrabear-sandwich",
+      "target": "item:loaf-of-bread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22965",
+      "source": "recipe:tundrabear-sandwich",
+      "target": "item:tundrabear-sandwich",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22966",
+      "source": "recipe:tundrabear-sandwich",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22967",
+      "source": "recipe:saucy-bunnymeat",
+      "target": "item:snow-bunny-meat",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22968",
+      "source": "recipe:saucy-bunnymeat",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22969",
+      "source": "recipe:saucy-bunnymeat",
+      "target": "item:saucy-bunnymeat",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22970",
+      "source": "recipe:saucy-bunnymeat",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22971",
+      "source": "recipe:snow-bunny-stew",
+      "target": "item:saucy-bunnymeat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22972",
+      "source": "recipe:snow-bunny-stew",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22973",
+      "source": "recipe:snow-bunny-stew",
+      "target": "item:water-flask",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-22974",
+      "source": "recipe:snow-bunny-stew",
+      "target": "item:snow-bunny-stew",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22975",
+      "source": "recipe:snow-bunny-stew",
+      "target": "container:pot",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22976",
+      "source": "recipe:snow-bunny-stew",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22977",
+      "source": "recipe:snow-bunny-stew",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22978",
+      "source": "recipe:spicy-ulthork-meat",
+      "target": "item:ulthork-meat",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22979",
+      "source": "recipe:spicy-ulthork-meat",
+      "target": "item:vinegar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22980",
+      "source": "recipe:spicy-ulthork-meat",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22981",
+      "source": "recipe:spicy-ulthork-meat",
+      "target": "item:spicy-ulthork-meat",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22982",
+      "source": "recipe:spicy-ulthork-meat",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22983",
+      "source": "recipe:ulthork-meat-pie",
+      "target": "item:spicy-ulthork-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22984",
+      "source": "recipe:ulthork-meat-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22985",
+      "source": "recipe:ulthork-meat-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22986",
+      "source": "recipe:ulthork-meat-pie",
+      "target": "item:ulthork-meat-pie",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22987",
+      "source": "recipe:ulthork-meat-pie",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-22988",
+      "source": "recipe:snow-griffin-souffle",
+      "target": "item:snow-griffin-egg",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-uses-22989",
+      "source": "recipe:snow-griffin-souffle",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22990",
+      "source": "recipe:snow-griffin-souffle",
+      "target": "item:snow-griffin-souffle",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-22991",
+      "source": "recipe:snow-griffin-souffle",
+      "target": "container:oven",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-crafted_in-22992",
+      "source": "recipe:snow-griffin-souffle",
+      "target": "container:spit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-22993",
+      "source": "npc:runnyeye-citadel:a-goblin-merchant",
+      "target": "container:mixing-bowl",
+      "type": "sells"
     }
   ]
 }
