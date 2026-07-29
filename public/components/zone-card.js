@@ -3,8 +3,11 @@
 // three separate setters) so a render never sees a partial mix of old and
 // new state. Renders the zone header (name + wiki link + faction LED dot,
 // faction badge, spell-count badge, hops badge), an optional nested
-// <route-path variant="stone">, and the spell-scroll list of spell-rows
-// (owned checkbox + spell-chip + vendor-tags). The header's wiki link uses
+// <route-path variant="stone">, and the spell-scroll list, grouped by
+// vendor (issue #45) so every spell one vendor sells sits together under
+// that vendor's name -- a spell sold by more than one vendor in the zone
+// repeats under each. Spell rows themselves are checkbox + spell-chip +
+// class pills. The header's wiki link uses
 // `ranking.wikiTitle` (src/graph.ts's rankZones, from the zone node's
 // migration-023 `wiki_title` field) rather than deriving a URL from
 // `zoneName` — several zone labels don't match their eqlwiki.com page
@@ -182,18 +185,32 @@ ${WIKI_LINK_CSS}
 .spell-scroll::before { left: -11px; }
 .spell-scroll::after { right: -11px; }
 
-.spell-vendor-list { display: flex; flex-direction: column; gap: 8px; }
-/* Checkbox is a fixed grid column; the name chip + class pills + vendor
-   tags all live in the second column as one flex-wrap flow. A short entry
-   (one class, one vendor) sits entirely on a single line -- no line is
-   spent on structure the content doesn't need. A long one (many classes,
-   several vendors) wraps, and because everything is confined to column 2,
-   every wrapped line lands at the same left edge as the spell name for
-   free, reading as "belongs to this spell" without a manual indent hack.
-   This also fixes the original bug: the class/level list used to be
-   concatenated as unbreakable text inside the name's own nowrap chip, so a
-   spell with several classes ran straight off the card with no wrap point
-   at all -- each class is now its own wrappable pill instead. */
+.spell-vendor-list { display: flex; flex-direction: column; gap: 14px; }
+/* Vendor name as a heading once per vendor (issue #45), spells they sell
+   listed underneath -- same recipe as zone-dossier's .dossier-col-label
+   (display face + underline separates "heading" from "content" the way a
+   same-weight muted label wouldn't), re-declared here rather than shared
+   since each component's shadow root has its own stylesheet. */
+.vendor-heading {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--parch-accent);
+  padding-bottom: 5px; margin-bottom: 8px;
+  border-bottom: 2px solid var(--parch-accent);
+}
+.vendor-spell-list { display: flex; flex-direction: column; gap: 8px; }
+/* Checkbox is a fixed grid column; the name chip + class pills all live in
+   the second column as one flex-wrap flow. A short entry (one class) sits
+   entirely on a single line -- no line is spent on structure the content
+   doesn't need. A long one (many classes) wraps, and because everything is
+   confined to column 2, every wrapped line lands at the same left edge as
+   the spell name for free, reading as "belongs to this spell" without a
+   manual indent hack. This also fixes the original bug: the class/level
+   list used to be concatenated as unbreakable text inside the name's own
+   nowrap chip, so a spell with several classes ran straight off the card
+   with no wrap point at all -- each class is now its own wrappable pill
+   instead. */
 .spell-row { display: grid; grid-template-columns: 15px 1fr; column-gap: 8px; row-gap: 4px; }
 .spell-check { padding-top: 3px; }
 .spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
@@ -222,12 +239,6 @@ ${WIKI_LINK_CSS}
 .class-pill {
   font-size: 11px; padding: 2px 7px; border-radius: 3px;
   background: rgba(90, 60, 20, 0.08); border: 1px solid rgba(90, 60, 20, 0.3); color: #5a3c14;
-  white-space: nowrap;
-}
-
-.vendor-tag {
-  font-size: 12px; padding: 3px 8px; border-radius: 3px;
-  background: rgba(30, 64, 175, 0.08); border: 1px solid rgba(30, 64, 175, 0.3); color: #1e40af;
   white-space: nowrap;
 }
 `);
@@ -296,21 +307,40 @@ class ZoneCard extends HTMLElement {
     const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
 
-    const spellRows = r.spells.map((s) => {
+    // Group by vendor (issue #45) rather than one row per spell -- a spell
+    // sold by more than one vendor in this zone lands in each of their
+    // groups, so "clear out one vendor, then move to the next" is a single
+    // top-to-bottom pass through one group instead of hunting the whole
+    // list for that vendor's tag on every row.
+    const vendorGroups = new Map();
+    for (const s of r.spells) {
       const isOwned = owned.has(s.id);
-      if (!showAllSpells && isOwned) return "";
+      if (!showAllSpells && isOwned) continue;
       const vendors = s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ",")));
-      return `
-        <div class="spell-row${isOwned ? " spell-owned" : ""}">
-          <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
-          <div class="spell-content">
-            <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}</a>
-            ${s.classes.map((c) => `<span class="class-pill">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}
-            ${vendors.map((v) => `<span class="vendor-tag">${v}</span>`).join("")}
-          </div>
+      for (const v of vendors) {
+        if (!vendorGroups.has(v)) vendorGroups.set(v, []);
+        vendorGroups.get(v).push(s);
+      }
+    }
+    const spellRows = [...vendorGroups.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([vendor, vendorSpells]) => `
+        <div class="vendor-group">
+          <div class="vendor-heading">${vendor}</div>
+          <div class="vendor-spell-list">${vendorSpells.map((s) => {
+            const isOwned = owned.has(s.id);
+            return `
+              <div class="spell-row${isOwned ? " spell-owned" : ""}">
+                <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
+                <div class="spell-content">
+                  <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}</a>
+                  ${s.classes.map((c) => `<span class="class-pill">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}
+                </div>
+              </div>
+            `;
+          }).join("")}</div>
         </div>
-      `;
-    }).join("");
+      `).join("");
 
     const hasRoute = r.route && r.route.length > 1;
     const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";
