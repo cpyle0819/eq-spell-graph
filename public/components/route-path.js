@@ -1,8 +1,11 @@
 // <route-path></route-path>, with `.steps = [{name, via}, ...]` set as a
 // property (structured data, not an attribute). Renders the "Route" label
 // plus a chain of zone names separated by a plain arrow, a boat icon
-// (⚓, title="Boat crossing"), or a translocator icon (✨, title=
-// "Translocator (paid teleport)") depending on each step's `via`.
+// (⚓, title="Boat crossing"), a translocator icon (✨, title=
+// "Translocator (paid teleport)"), a portal icon (🌀, title="Portal
+// (walk-through zone entrance)"), or a wizard port icon (🧙, title=
+// "Wizard Port (group teleport spell, Wizard class + reagent required)")
+// depending on each step's `via`.
 //
 // Default look is the parchment scroll insert (with wood-dowel end caps)
 // used by Maps' result. `variant="stone"` instead renders
@@ -59,9 +62,11 @@ ${RESET_CSS}
    flowing route text has no room for a boxed badge the way a card header does. */
 .route-zone.out-of-era { color: #9c2b2b; text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
 .route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
-.boat-sep, .translocator-sep { cursor: help; }
+.boat-sep, .translocator-sep, .portal-sep, .wizard-port-sep { cursor: help; }
 .boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
 .translocator-sep { color: #6d28d9; margin: 0 7px; font-size: 15px; }
+.portal-sep { color: #0f766e; margin: 0 7px; font-size: 15px; }
+.wizard-port-sep { color: #b45309; margin: 0 7px; font-size: 15px; }
 
 /* Bold serif at small sizes reads cramped on the dark, busy marble texture
    behind a zone-card, so the stone variant bumps size back up to match the
@@ -73,10 +78,12 @@ ${RESET_CSS}
 :host([variant="stone"]) .route-label { color: var(--ink-muted); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); }
 :host([variant="stone"]) .route-steps { color: var(--parchment); font-size: 13px; line-height: 2; letter-spacing: 0.055em; gap: 6px; }
 :host([variant="stone"]) .route-zone { color: var(--parchment); font-weight: 600; }
-:host([variant="stone"]) .route-sep, :host([variant="stone"]) .boat-sep, :host([variant="stone"]) .translocator-sep { margin: 0; }
+:host([variant="stone"]) .route-sep, :host([variant="stone"]) .boat-sep, :host([variant="stone"]) .translocator-sep, :host([variant="stone"]) .portal-sep, :host([variant="stone"]) .wizard-port-sep { margin: 0; }
 :host([variant="stone"]) .route-sep { color: var(--gold); }
 :host([variant="stone"]) .boat-sep { color: #7ba7f5; }
 :host([variant="stone"]) .translocator-sep { color: #c4a3f7; }
+:host([variant="stone"]) .portal-sep { color: #5eead4; }
+:host([variant="stone"]) .wizard-port-sep { color: #fbbf24; }
 :host([variant="stone"]) .route-zone.out-of-era { color: #ff6b6b; }
 `);
 
@@ -105,6 +112,8 @@ class RoutePath extends HTMLElement {
       if (i === 0) return zoneSpan;
       if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span>${zoneSpan}`;
       if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span>${zoneSpan}`;
+      if (step.via === "portal") return `<span class="portal-sep" title="Portal (walk-through zone entrance)">🌀</span>${zoneSpan}`;
+      if (step.via === "wizard_port") return `<span class="wizard-port-sep" title="Wizard Port (group teleport spell, Wizard class + reagent required)">🧙</span>${zoneSpan}`;
       return `<span class="route-sep">›</span>${zoneSpan}`;
     }).join("");
     this.shadowRoot.innerHTML = `<span class="route-label">Route</span><div class="route-steps">${stepsHtml}</div>`;

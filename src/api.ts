@@ -77,15 +77,20 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
     const specificZoneIds = (searchParams.get("zones") || "").split(",").filter(Boolean);
     const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
-    return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds) };
+    const includeWizardPort = searchParams.get("wizardPort") === "1";
+    return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includeWizardPort) };
   }
 
-  // GET /api/route?from=Halas&to=Kelethin
+  // GET /api/route?from=Halas&to=Kelethin&wizardPort=1 — wizardPort opts
+  // into wizard_port edges (Wizard-only group teleports, e.g. to Plane of
+  // Sky) being part of the route; omitted/not "1" means ordinary
+  // pathfinding only, same default as rankZones/getZoneDistances below.
   if (pathname === "/api/route") {
     const from = searchParams.get("from") || "";
     const to = searchParams.get("to") || "";
     if (!from || !to) return { status: 400, body: { error: "from and to required" } };
-    return { status: 200, body: getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`) };
+    const includeWizardPort = searchParams.get("wizardPort") === "1";
+    return { status: 200, body: getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`, includeWizardPort) };
   }
 
   // GET /api/zone-distances?from=zone:east-freeport&zones=zone:a,zone:b —
@@ -96,7 +101,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const from = searchParams.get("from") || "";
     const zones = (searchParams.get("zones") || "").split(",").filter(Boolean);
     if (!from || !zones.length) return { status: 200, body: {} };
-    return { status: 200, body: getZoneDistances(from, zones) };
+    const includeWizardPort = searchParams.get("wizardPort") === "1";
+    return { status: 200, body: getZoneDistances(from, zones, includeWizardPort) };
   }
 
   // GET /api/classes — list classes that have spell data

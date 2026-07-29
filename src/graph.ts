@@ -37,7 +37,15 @@ export interface NodeData {
   [key: string]: unknown;
 }
 
-export type Transport = "boat" | "translocator";
+// "portal" (a walk-through zone entrance any class can use, e.g. the orb
+// into Plane of Sky) and "wizard_port" (a Wizard-only group teleport spell,
+// e.g. Alter Plane: Sky -- see migration 364 and decisions/
+// wizard-port-transport-modeling.md) are both narrower than "boat"/
+// "translocator": those two are always part of ordinary pathfinding,
+// while wizard_port edges are excluded by getZoneAdjacency() unless the
+// caller opts in (the UI's "Include Wizard Port" toggle), since assuming
+// a Wizard is in the group isn't a safe default for a general route.
+export type Transport = "boat" | "translocator" | "portal" | "wizard_port";
 
 export interface EdgeData {
   id: string;
@@ -861,11 +869,12 @@ export function getQuestGroups(classNames?: string[], zoneId?: string, levelMin?
 
 interface AdjEntry { zoneId: string; transport?: Transport; }
 
-export function getZoneAdjacency(): Map<string, AdjEntry[]> {
+export function getZoneAdjacency(includeWizardPort = false): Map<string, AdjEntry[]> {
   const graph = load();
   const adj = new Map<string, AdjEntry[]>();
   for (const e of graph.edges) {
     if (e.type !== "connects_to") continue;
+    if (e.transport === "wizard_port" && !includeWizardPort) continue;
     if (!adj.has(e.source)) adj.set(e.source, []);
     const entry: AdjEntry = { zoneId: e.target };
     if (e.transport) entry.transport = e.transport;
@@ -957,9 +966,14 @@ function bfsPath(
 // the plain (era-blind) BFS rather than reporting the destination
 // unreachable -- buildRouteSteps() still flags whichever out-of-era hops
 // end up in that fallback route.
-export function shortestPath(fromZoneId: string, toZoneId: string, helpers?: GraphIndexHelpers): PathStep[] | null {
+export function shortestPath(
+  fromZoneId: string,
+  toZoneId: string,
+  helpers?: GraphIndexHelpers,
+  includeWizardPort = false
+): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
-  const adj = getZoneAdjacency();
+  const adj = getZoneAdjacency(includeWizardPort);
   const h = helpers ?? graphIndexHelpers(load());
   const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(h.nodeById(zoneId)?.era as string | undefined, h);
   const avoidingOutOfEra = bfsPath(fromZoneId, toZoneId, adj, isWaypointOutOfEra);
@@ -1026,7 +1040,8 @@ export function rankZones(
   deity?: string,
   specificSpellIds?: string[],
   specificZoneIds?: string[],
-  spellLineIds?: string[]
+  spellLineIds?: string[],
+  includeWizardPort = false
 ): ZoneRanking[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
@@ -1139,7 +1154,7 @@ export function rankZones(
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
     const zoneNode = helpers.nodeById(zoneId);
-    const pathIds = shortestPath(currentZoneId, zoneId, helpers);
+    const pathIds = shortestPath(currentZoneId, zoneId, helpers, includeWizardPort);
     const hops = pathIds ? pathIds.length - 1 : null;
     const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
 
@@ -1282,10 +1297,14 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
   };
 }
 
-export function getRoute(fromZoneId: string, toZoneId: string): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
+export function getRoute(
+  fromZoneId: string,
+  toZoneId: string,
+  includeWizardPort = false
+): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
-  const pathIds = shortestPath(fromZoneId, toZoneId, helpers);
+  const pathIds = shortestPath(fromZoneId, toZoneId, helpers, includeWizardPort);
   const hops = pathIds ? pathIds.length - 1 : null;
   const route: RouteStep[] = pathIds
     ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers)
@@ -1301,12 +1320,16 @@ export interface ZoneDistance { hops: number; route: RouteStep[]; }
 // starting point (Tradeskills' own "Find Near Me": several vendor zones
 // against one shopping trip's starting zone) without a round trip per
 // target. null means genuinely unreachable, same as getRoute()'s hops.
-export function getZoneDistances(fromZoneId: string, targetZoneIds: string[]): Record<string, ZoneDistance | null> {
+export function getZoneDistances(
+  fromZoneId: string,
+  targetZoneIds: string[],
+  includeWizardPort = false
+): Record<string, ZoneDistance | null> {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const result: Record<string, ZoneDistance | null> = {};
   for (const zoneId of new Set(targetZoneIds)) {
-    const pathIds = shortestPath(fromZoneId, zoneId, helpers);
+    const pathIds = shortestPath(fromZoneId, zoneId, helpers, includeWizardPort);
     result[zoneId] = pathIds
       ? { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) }
       : null;
