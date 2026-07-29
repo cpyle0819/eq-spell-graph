@@ -55,55 +55,57 @@ function usedInBody(usedIn) {
   return `<div class="quest-section-body spell-badges">${chips}</div>`;
 }
 
-function vendorGroupsBody(vendorGroups) {
-  return vendorGroups
+// How many zone groups a "X By" list (Sold By, Dropped By) shows before
+// it collapses behind a click -- both sections can run long (Chunk of
+// Meat: 28 drop zones; a common ingredient can have a dozen+ vendors), and
+// a reader scanning the card wants the acquisition-method sections above
+// it, not a wall of zones. 5, not 10 -- 10 read as "a lot" in practice.
+const ZONE_GROUP_COLLAPSE_THRESHOLD = 5;
+
+// Shared by both "X By" sections (Sold By, Dropped By) -- a list of
+// per-zone groups, each with its own detail rows (vendor names for Sold
+// By, drop-source mob names for Dropped By). One function, not two
+// near-identical ones, so the two lists can't drift in markup or collapse
+// threshold. Collapses behind a native <details> (not <collapsible-
+// section> -- see the header comment for why) once there are more than
+// ZONE_GROUP_COLLAPSE_THRESHOLD zone groups; group count drives this, not
+// vendor/mob count, since group count is what actually determines how
+// tall the list renders.
+function zoneGroupsBody(groups) {
+  if (!groups.length) return "";
+  const body = groups
     .map((g) => `
       <div class="ingredient-vendor-group">
         <div class="ingredient-vendor-zone"><a href="maps.html?to=${encodeURIComponent(g.zoneLabel)}">${g.zoneLabel}</a></div>
-        ${g.vendors.map((v) => `<div class="ingredient-vendor-row">${v.label}</div>`).join("")}
+        ${g.rows.map((r) => `<div class="ingredient-vendor-row">${r}</div>`).join("")}
       </div>
     `)
     .join("");
+  if (groups.length <= ZONE_GROUP_COLLAPSE_THRESHOLD) return body;
+  return `<details class="ingredient-collapse"><summary>${groups.length} zones -- click to expand</summary>${body}</details>`;
 }
 
-// Sold By, restyled to match Crafted In/Foraged In/Fished From/Dropped By
-// (plain section(), not the dark-stone <collapsible-section>) but still
-// collapsible once the list gets long -- a native <details> rather than
-// the custom element, since all this needs is "hide it behind a click,"
-// not collapsible-section's toggle-event/section-id machinery (nothing
-// here persists collapse state the way faction/quest sidebar sections do).
-function soldByBody(vendorGroups, vendorCount) {
-  if (!vendorCount) return `<div class="ingredient-empty">No known vendor sells this.</div>`;
-  const body = vendorGroupsBody(vendorGroups);
-  if (vendorCount <= 10) return body;
-  return `<details class="ingredient-collapse"><summary>${vendorCount} vendors -- click to expand</summary>${body}</details>`;
+function soldByBody(vendorGroups) {
+  return zoneGroupsBody(vendorGroups.map((g) => ({ zoneLabel: g.zoneLabel, rows: g.vendors.map((v) => v.label) })));
+}
+
+// Dropped By -- needs the specific mob name(s) per zone (when eqlwiki's
+// own page named one); a zone with no named mob gets no detail row at all
+// rather than an empty one.
+function droppedByBody(dropped) {
+  return zoneGroupsBody(dropped.map((d) => ({ zoneLabel: d.zoneLabel, rows: d.mobs.length ? [d.mobs.join(", ")] : [] })));
 }
 
 // Foraged In / Fished From -- a bare list of zones, same chip style as
 // Used In's own recipe links (usedInBody above), just linking to Maps
-// instead of a recipe search.
+// instead of a recipe search. No per-zone detail, so these don't need
+// zoneGroupsBody's row structure.
 function zoneChipsBody(zones) {
   if (!zones.length) return "";
   const chips = zones
     .map((z) => `<a class="spell-badge skill-badge ingredient-used-in-link" href="maps.html?to=${encodeURIComponent(z.zoneLabel)}">${z.zoneLabel}</a>`)
     .join("");
   return `<div class="quest-section-body spell-badges">${chips}</div>`;
-}
-
-// Dropped By -- needs the specific mob name(s) per zone (when eqlwiki's
-// own page named one), so it reuses the zone-group/row shape Sold By
-// already has rather than zoneChipsBody's plain link list.
-function droppedByBody(dropped) {
-  if (!dropped.length) return "";
-  const body = dropped
-    .map((d) => `
-      <div class="ingredient-vendor-group">
-        <div class="ingredient-vendor-zone"><a href="maps.html?to=${encodeURIComponent(d.zoneLabel)}">${d.zoneLabel}</a></div>
-        ${d.mobs.length ? `<div class="ingredient-vendor-row">${d.mobs.join(", ")}</div>` : ""}
-      </div>
-    `)
-    .join("");
-  return `<div class="quest-section-body">${body}</div>`;
 }
 
 // Crafted In -- recipes (any tradeskill, not just the one currently being
@@ -182,18 +184,33 @@ class IngredientCard extends CardBase {
     const { item, usedIn, vendorGroups, sources } = d;
     const vendorCount = vendorGroups.reduce((n, g) => n + g.vendors.length, 0);
 
+    // Every section below (including Sold By, as of issue #55's follow-up)
+    // is dropped entirely when empty -- section() already no-ops on a
+    // falsy body. If none of the five acquisition-method sections have
+    // anything, that's a real gap worth saying explicitly rather than
+    // just silently showing Used In with nothing above it.
+    const craftedInHtml = section("Crafted In", craftedInBody(sources.craftedIn));
+    const foragedHtml = section("Foraged In", zoneChipsBody(sources.foraged));
+    const fishedHtml = section("Fished From", zoneChipsBody(sources.fished));
+    const droppedHtml = section("Dropped By", droppedByBody(sources.dropped));
+    const soldByHtml = vendorCount ? section(`Sold By (${vendorCount})`, soldByBody(vendorGroups)) : "";
+    const noAcquisitionHtml = (craftedInHtml || foragedHtml || fishedHtml || droppedHtml || soldByHtml)
+      ? ""
+      : `<div class="ingredient-empty">No known way to acquire this ingredient is catalogued yet.</div>`;
+
     this.shadowRoot.innerHTML = `
       <div class="spell-header">
         <h3>${item.label}</h3>${wikiLink(item.label)}
         <button type="button" class="add-shopping-btn" data-item-id="${item.id}" data-item-label="${item.label}">+ Shopping List</button>
       </div>
       <div class="spell-scroll">
-        ${section("Crafted In", craftedInBody(sources.craftedIn))}
-        ${section("Foraged In", zoneChipsBody(sources.foraged))}
-        ${section("Fished From", zoneChipsBody(sources.fished))}
-        ${section("Dropped By", droppedByBody(sources.dropped))}
+        ${craftedInHtml}
+        ${foragedHtml}
+        ${fishedHtml}
+        ${droppedHtml}
+        ${noAcquisitionHtml}
         ${section("Used In", usedInBody(usedIn))}
-        ${section(`Sold By (${vendorCount})`, soldByBody(vendorGroups, vendorCount))}
+        ${soldByHtml}
       </div>
     `;
   }
