@@ -260,6 +260,19 @@ export async function init() {
 // applyQueryParams().
 function applyQueryParams() {
   const params = new URLSearchParams(location.search);
+
+  // ingredient-card.js's own "Crafted In" links (issue #57) carry this when
+  // the producing recipe belongs to a *different* tradeskill than whatever
+  // page the click originated from (e.g. Baking's own Beer Braised Mammoth
+  // linking to Brewing's Short Beer) -- init()'s own tradeskill-select
+  // restore, right after this function returns, validates it against the
+  // real tradeskill list and populates the dropdown, same as any other
+  // landing. Same-tradeskill crafted-in links (and every other deep-link
+  // into this page) carry the current tradeskill too, so this is always a
+  // same-tradeskill no-op except for the one case it exists to fix.
+  const tradeskill = params.get("tradeskill");
+  if (tradeskill) selectedTradeskill = tradeskill;
+
   const type = params.get("type");
   if (type === "recipes" || type === "ingredients") {
     document.getElementById("trade-type-select").value = type;

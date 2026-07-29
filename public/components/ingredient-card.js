@@ -113,11 +113,15 @@ function zoneChipsBody(zones) {
 // a Brewing product) that `produces` this ingredient, so a player can make
 // it instead of buying/foraging/fishing/killing for it. Cross-tradeskill
 // entries carry a "(Tradeskill)" note since that context isn't otherwise
-// visible on this card.
+// visible on this card. The link always carries its own `&tradeskill=` --
+// not just for cross-tradeskill entries -- so trades.js's
+// applyQueryParams() (issue #57) can switch the page to the *recipe's*
+// tradeskill before applying the search; without it, a Baking-page click on
+// a Brewing recipe would search Baking's own recipe list and come up empty.
 function craftedInBody(craftedIn) {
   if (!craftedIn.length) return "";
   const chips = craftedIn
-    .map((r) => `<a class="spell-badge skill-badge ingredient-used-in-link" href="trades.html?type=recipes&search=${encodeURIComponent(r.recipeLabel)}">${r.recipeLabel} <span class="ingredient-tradeskill-note">(${r.tradeskill})</span></a>`)
+    .map((r) => `<a class="spell-badge skill-badge ingredient-used-in-link" href="trades.html?type=recipes&tradeskill=${encodeURIComponent(r.tradeskill)}&search=${encodeURIComponent(r.recipeLabel)}">${r.recipeLabel} <span class="ingredient-tradeskill-note">(${r.tradeskill})</span></a>`)
     .join("");
   return `<div class="quest-section-body spell-badges">${chips}</div>`;
 }
