@@ -248,6 +248,7 @@ export async function init() {
     selectedTradeskill = tradeskills[0];
   }
   fetchTradeskillData();
+  syncUrlState();
 
   syncResultsGutterWidth();
   window.addEventListener("resize", syncResultsGutterWidth);
@@ -257,7 +258,9 @@ export async function init() {
 // ingredient's own "Used In" chips, ingredient-card.js) straight to one
 // recipe, reusing the existing Type select + search box rather than a
 // separate highlight/scroll mechanism -- same convention as quests.js's own
-// applyQueryParams().
+// applyQueryParams(). Also restores `view`/`min`/`max` (issue #59) so a
+// history entry captured by syncUrlState() below reconstructs the exact
+// prior Browse state, not just a specific-item deep link.
 function applyQueryParams() {
   const params = new URLSearchParams(location.search);
 
@@ -281,25 +284,60 @@ function applyQueryParams() {
   const search = params.get("search");
   if (search) document.getElementById("trade-search").value = search;
 
-  // A deep link to one specific recipe or ingredient (an item-chip's own
-  // nav-href, or ingredient-card's "Used In" links) always means "show me
-  // that one thing" -- switch to the Browse view so it's what's on screen,
-  // regardless of which view was showing before the click.
-  if (search) setActiveView("browse");
+  const min = params.get("min");
+  const max = params.get("max");
+  if (min || max) {
+    const range = document.getElementById("trade-skill-range");
+    if (min) range.valueMin = min;
+    if (max) range.valueMax = max;
+  }
 
-  // Deliberately left in the URL (issue #59) -- this used to get wiped
-  // back to the bare path here, which broke Back/Forward: every deep-link
-  // landing collapsed to the same indistinguishable bare "trades.html"
-  // history entry, so Back never actually returned to the recipe/ingredient
-  // last viewed, just reset to the default Guide. Leaving it in place gives
-  // every distinct view its own real, restorable address (and an actually
-  // shareable link) -- same convention quests.js's own applyQueryParams()
-  // already used for its own `?search=`. router.js's click handler no
-  // longer needs the URL cleared to keep working when a chip's own
-  // nav-href happens to match the current address (e.g. re-opening the
-  // guide and clicking the same ingredient again) -- it re-navigates
-  // either way now, only skipping the *history push* (not the actual
-  // re-sync), so a stale-but-identical href still lands correctly.
+  // `view` is syncUrlState()'s own explicit record of Guide-vs-Browse --
+  // older/external links (an item-chip's nav-href, ingredient-card's "Used
+  // In"/"Crafted In") only ever carry `type`+`search`, never `view`, so a
+  // present `search` still implies Browse the same way it always did, for
+  // those. An explicit `view=guide` (syncUrlState() restoring a Guide
+  // landing that happens to still have a leftover `search`/`type` from an
+  // earlier Browse visit) takes precedence over that inference.
+  const view = params.get("view");
+  if (view === "guide") setActiveView("guide");
+  else if (view === "browse" || search) setActiveView("browse");
+}
+
+// The live Browse-filter state (tradeskill/view/type/search/skill-range),
+// as a query string -- built fresh from the DOM/module vars every time
+// rather than cached, since it's only ever read at the moment something
+// changed. `min`/`max` are omitted at their default full range so a bare
+// Browse/Recipes visit doesn't grow a noisy `?min=0&max=300`.
+function buildStateParams() {
+  const params = new URLSearchParams();
+  if (selectedTradeskill) params.set("tradeskill", selectedTradeskill);
+  params.set("view", activeView);
+  if (activeView === "browse") {
+    params.set("type", selectedType);
+    const search = document.getElementById("trade-search").value.trim();
+    if (search) params.set("search", search);
+    if (selectedType === "recipes") {
+      const range = document.getElementById("trade-skill-range");
+      if (String(range.valueMin) !== "0") params.set("min", range.valueMin);
+      if (String(range.valueMax) !== String(MAX_TRADESKILL_LEVEL)) params.set("max", range.valueMax);
+    }
+  }
+  return params;
+}
+
+// Keeps the *current* history entry's own URL in sync with whatever's live
+// on screen (issue #59) -- replaceState, not pushState, so typing in the
+// search box or dragging the skill range doesn't spam the back-stack with
+// an entry per keystroke; it only ever overwrites the entry already at the
+// top. A real navigation (router.js's own pushState, e.g. clicking a
+// recipe's ingredient chip) still creates its own distinct entry on top of
+// whatever this last left behind -- so Back from there restores the exact
+// Browse state (tradeskill/view/type/search/range) the user had dialed in
+// right before they clicked away, not just "back to the default Guide."
+function syncUrlState() {
+  const qs = buildStateParams().toString();
+  history.replaceState(null, "", qs ? `${location.pathname}?${qs}` : location.pathname);
 }
 
 function populateTradeskillSelect(tradeskills) {
@@ -316,32 +354,36 @@ function setupFilters() {
   document.getElementById("trade-skill-select").addEventListener("change", (e) => {
     selectedTradeskill = e.target.value;
     fetchTradeskillData();
+    syncUrlState();
   });
 
   document.getElementById("trade-type-select").addEventListener("change", (e) => {
     selectedType = e.target.value;
     updateFilterVisibility();
     render();
+    syncUrlState();
   });
 
   // Same "debounce while dragging, settle after" treatment as quests.js's
   // own level-range -- a two-thumb slider fires many "input" events per
-  // drag, and re-rendering the card lists on every tick would be wasteful.
+  // drag, and re-rendering the card lists (or writing to history) on every
+  // tick would be wasteful.
   let rangeDebounce;
   document.getElementById("trade-skill-range").addEventListener("input", () => {
     clearTimeout(rangeDebounce);
-    rangeDebounce = setTimeout(render, 300);
+    rangeDebounce = setTimeout(() => { render(); syncUrlState(); }, 300);
   });
 
   let searchDebounce;
   document.getElementById("trade-search").addEventListener("input", () => {
     clearTimeout(searchDebounce);
-    searchDebounce = setTimeout(render, 150);
+    searchDebounce = setTimeout(() => { render(); syncUrlState(); }, 150);
   });
 
   document.getElementById("trade-view-select").addEventListener("change", (e) => {
     setActiveView(e.target.value);
     render();
+    syncUrlState();
   });
 
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
@@ -399,6 +441,7 @@ function resetFilters() {
   document.getElementById("trade-search").value = "";
   setActiveView("guide");
   render();
+  syncUrlState();
 }
 
 // Vendors already arrive sorted by (zoneLabel, label) from
