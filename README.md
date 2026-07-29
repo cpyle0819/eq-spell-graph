@@ -102,8 +102,6 @@ These have no auth and only exist in `src/server.ts` (the local Bun server); see
 
 ## Deploying
 
-This repo has no opinion on where or how it's hosted: no hardcoded domain, path prefix, or cloud-provider assumption anywhere in the code. It exposes two ways to run:
-
 - `bun run dev`: the full app (API + static frontend) via Bun, for local use.
 - `bun run build:lambda`: packages `src/lambda.ts` (a Lambda handler wrapping the same read-only route table `server.ts` uses) plus `data/graph.json` into `dist-lambda.zip`. Whatever infra deploys this app owns all routing/domain/path/CDN decisions; none of that lives here. `src/lambda.ts` expects to receive request paths already relative to its own root; stripping any external path prefix is the deploying infra's job.
 
