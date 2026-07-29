@@ -152613,6 +152613,293 @@
       "lore": true,
       "noTrade": true,
       "source": "Dropped by Ratraz (Neriak Third Gate), Guard Lumpin (Neriak Foreign Quarter), and Rungupp (Toxxulia Forest); turn-in item for Hukulk's Love and Rungupp (Quest)"
+    },
+    {
+      "id": "item:bat-wing",
+      "label": "Bat Wing",
+      "type": "item",
+      "weight": 0,
+      "size": "Small",
+      "source": "Quest Item; dropped by bats across many zones; also sold by several vendors"
+    },
+    {
+      "id": "item:jug-of-sauces",
+      "label": "Jug of Sauces",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Sold by bakery/tradeskill-supply vendors across many zones"
+    },
+    {
+      "id": "item:clump-of-dough",
+      "label": "Clump of Dough",
+      "type": "item",
+      "weight": 0.8,
+      "size": "Small",
+      "source": "Snack; crafted via Baking (trivial 17) from Bottle of Milk, Cup of Flour, and one of several egg types (yield varies by egg)"
+    },
+    {
+      "id": "item:white-chocolate",
+      "label": "White Chocolate",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; snack; crafted via Baking (trivial 95) from Brownie Parts, Frosting, and Spices"
+    },
+    {
+      "id": "item:winter-chocolate",
+      "label": "Winter Chocolate",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Snack; crafted via Baking (trivial 95) from Brownie Parts and Frosting"
+    },
+    {
+      "id": "item:cake-round",
+      "label": "Cake Round",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Crafted via Pottery (trivial 15) or Blacksmithing (trivial 38), not Baking itself; returned on both success and failure when used in a Baking recipe"
+    },
+    {
+      "id": "item:pie-tin",
+      "label": "Pie Tin",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Crafted via Blacksmithing (trivial 35) or Pottery (trivial 115/17), not Baking itself; returned on both success and failure when used in a Baking recipe"
+    },
+    {
+      "id": "item:dragon-meat",
+      "label": "Dragon Meat",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Dropped by dragons in Temple of Veeshan, The Wakening Land, and Western Wastes (Velious era)"
+    },
+    {
+      "id": "item:pixie-dust",
+      "label": "Pixie Dust",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Quest Item; dropped by pixies in Greater Faydark, Lesser Faydark, and Toxxulia Forest"
+    },
+    {
+      "id": "item:cinnamon-sticks",
+      "label": "Cinnamon Sticks",
+      "type": "item",
+      "weight": 0.6,
+      "size": "Small",
+      "source": "Foraged in Greater Faydark"
+    },
+    {
+      "id": "item:batwing-crunchies",
+      "label": "Batwing Crunchies",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; meal; baked via Baking (trivial 46)"
+    },
+    {
+      "id": "item:fish-fillets",
+      "label": "Fish Fillets",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Quest Item; meal; baked via Baking (trivial 82); also sold directly by a couple of vendors"
+    },
+    {
+      "id": "item:fish-rolls",
+      "label": "Fish Rolls",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Banquet-sized meal; baked via Baking (trivial 135)"
+    },
+    {
+      "id": "item:batwing-pie",
+      "label": "Batwing Pie",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 142)"
+    },
+    {
+      "id": "item:wedding-cake",
+      "label": "Wedding Cake",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 157); also an ingredient in Wedding Cake Slices"
+    },
+    {
+      "id": "item:birthday-cake",
+      "label": "Birthday Cake",
+      "type": "item",
+      "weight": 1,
+      "size": "Small",
+      "source": "Meal; baked via Baking (trivial 162); also an ingredient in Birthday Cake Slice"
+    },
+    {
+      "id": "item:pixie-powder-cinnesticks",
+      "label": "Pixie Powder Cinnesticks",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Snack; baked via Baking (trivial 202)",
+      "stats": {
+        "agi": 2
+      },
+      "resists": {
+        "magic": 2
+      }
+    },
+    {
+      "id": "item:dragon-steak",
+      "label": "Dragon Steak",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Hearty meal; baked via Baking. Trivial conflict between eqlwiki sources: this item's own page states 200 (used here); the Skill Baking recipe tables both say 242",
+      "stats": {
+        "str": 4,
+        "dex": 4,
+        "sta": 4,
+        "cha": 4,
+        "wis": 4,
+        "int": 4,
+        "agi": 4
+      }
+    },
+    {
+      "id": "recipe:batwing-crunchies",
+      "label": "Batwing Crunchies",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 46
+    },
+    {
+      "id": "recipe:fish-fillets",
+      "label": "Fish Fillets",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:fish-rolls",
+      "label": "Fish Rolls",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:batwing-pie",
+      "label": "Batwing Pie",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 142
+    },
+    {
+      "id": "recipe:wedding-cake",
+      "label": "Wedding Cake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 157
+    },
+    {
+      "id": "recipe:birthday-cake",
+      "label": "Birthday Cake",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 162
+    },
+    {
+      "id": "recipe:pixie-powder-cinnesticks",
+      "label": "Pixie Powder Cinnesticks",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 202
+    },
+    {
+      "id": "recipe:dragon-steak",
+      "label": "Dragon Steak",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 200
+    },
+    {
+      "id": "npc:east-commonlands:katha-firespinner",
+      "label": "Katha Firespinner",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:jeliala-glimmercharm",
+      "label": "Jeliala Glimmercharm",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin-palace:tika-shockstep",
+      "label": "Tika Shockstep",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:lindie-rains",
+      "label": "Lindie Rains",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:lysa-truegreen",
+      "label": "Lysa Truegreen",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:zasrin-blueflame",
+      "label": "Zasrin Blueflame",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kael-drakkal:ymik",
+      "label": "Ymik",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kithicor-forest:jeena-firechaser",
+      "label": "Jeena Firechaser",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:hrak",
+      "label": "Hrak",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -285924,6 +286211,445 @@
       "target": "zone:plane-of-sky",
       "type": "connects_to",
       "transport": "wizard_port"
+    },
+    {
+      "id": "e-uses-22121",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22122",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22123",
+      "source": "recipe:batwing-crunchies",
+      "target": "item:batwing-crunchies",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-22124",
+      "source": "recipe:fish-fillets",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22125",
+      "source": "recipe:fish-fillets",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22126",
+      "source": "recipe:fish-fillets",
+      "target": "item:fish-fillets",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22127",
+      "source": "recipe:fish-rolls",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22128",
+      "source": "recipe:fish-rolls",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22129",
+      "source": "recipe:fish-rolls",
+      "target": "item:fish-rolls",
+      "type": "produces"
+    },
+    {
+      "id": "e-uses-22130",
+      "source": "recipe:batwing-pie",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22131",
+      "source": "recipe:batwing-pie",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22132",
+      "source": "recipe:batwing-pie",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22133",
+      "source": "recipe:batwing-pie",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22134",
+      "source": "recipe:batwing-pie",
+      "target": "item:batwing-pie",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-uses-22135",
+      "source": "recipe:wedding-cake",
+      "target": "item:cake-round",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22136",
+      "source": "recipe:wedding-cake",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22137",
+      "source": "recipe:wedding-cake",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22138",
+      "source": "recipe:wedding-cake",
+      "target": "item:white-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22139",
+      "source": "recipe:wedding-cake",
+      "target": "item:wedding-cake",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22140",
+      "source": "recipe:birthday-cake",
+      "target": "item:cake-round",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22141",
+      "source": "recipe:birthday-cake",
+      "target": "item:clump-of-dough",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22142",
+      "source": "recipe:birthday-cake",
+      "target": "item:frosting",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22143",
+      "source": "recipe:birthday-cake",
+      "target": "item:winter-chocolate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22144",
+      "source": "recipe:birthday-cake",
+      "target": "item:birthday-cake",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-22145",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:cinnamon-sticks",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22146",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:pixie-dust",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-22147",
+      "source": "recipe:pixie-powder-cinnesticks",
+      "target": "item:pixie-powder-cinnesticks",
+      "type": "produces",
+      "quantity": 6
+    },
+    {
+      "id": "e-uses-22148",
+      "source": "recipe:dragon-steak",
+      "target": "item:dragon-meat",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22149",
+      "source": "recipe:dragon-steak",
+      "target": "item:jug-of-sauces",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-22150",
+      "source": "recipe:dragon-steak",
+      "target": "item:spices",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-22151",
+      "source": "recipe:dragon-steak",
+      "target": "item:dragon-steak",
+      "type": "produces",
+      "quantity": 5
+    },
+    {
+      "id": "e-located_in-22152",
+      "source": "npc:east-commonlands:katha-firespinner",
+      "target": "zone:east-commonlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22153",
+      "source": "npc:east-commonlands:katha-firespinner",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22154",
+      "source": "npc:erudin-palace:jeliala-glimmercharm",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22155",
+      "source": "npc:erudin-palace:jeliala-glimmercharm",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22156",
+      "source": "npc:erudin-palace:tika-shockstep",
+      "target": "zone:erudin-palace",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22157",
+      "source": "npc:erudin-palace:tika-shockstep",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22158",
+      "source": "npc:field-of-bone:klok-acet",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22159",
+      "source": "npc:west-freeport:lindie-rains",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22160",
+      "source": "npc:west-freeport:lindie-rains",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22161",
+      "source": "npc:west-freeport:lysa-truegreen",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22162",
+      "source": "npc:west-freeport:lysa-truegreen",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22163",
+      "source": "npc:west-freeport:zasrin-blueflame",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22164",
+      "source": "npc:west-freeport:zasrin-blueflame",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22165",
+      "source": "npc:kael-drakkal:ymik",
+      "target": "zone:kael-drakkal",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22166",
+      "source": "npc:kael-drakkal:ymik",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22167",
+      "source": "npc:kithicor-forest:jeena-firechaser",
+      "target": "zone:kithicor-forest",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22168",
+      "source": "npc:kithicor-forest:jeena-firechaser",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-22169",
+      "source": "npc:oggok:hrak",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-22170",
+      "source": "npc:oggok:hrak",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22171",
+      "source": "npc:warsliks-woods:klok-gragin",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22172",
+      "source": "npc:warsliks-woods:klok-rogalin",
+      "target": "item:bat-wing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22173",
+      "source": "npc:ak-anon:a-clockwork-baker",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22174",
+      "source": "npc:butcherblock-mountains:urazun-thranon",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22175",
+      "source": "npc:east-cabilis:klok-sweetzie",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22176",
+      "source": "npc:crystal-caverns:praps-gemshard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22177",
+      "source": "npc:east-commonlands:parthar",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22178",
+      "source": "npc:the-feerrott:bup",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22179",
+      "source": "npc:west-freeport:pincia-brownloe",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22180",
+      "source": "npc:halas:sissia",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22181",
+      "source": "npc:misty-thicket:bim-buskin",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22182",
+      "source": "npc:neriak-commons:niz-l-crit",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22183",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22184",
+      "source": "npc:skyshrine:chef-kollof",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22185",
+      "source": "npc:steamfont-mountains:finkel-rardobaen",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22186",
+      "source": "npc:stonebrunt-mountains:chef-stead",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22187",
+      "source": "npc:thurgadin:perkins-doughbeard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22188",
+      "source": "npc:thurgadin:petcas-coldbeard",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22189",
+      "source": "npc:toxxulia-forest:quana-rainsparkle",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22190",
+      "source": "npc:east-cabilis:klok-foxmyr",
+      "target": "item:fish-fillets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22191",
+      "source": "npc:kerra-island:roary-fishpouncer",
+      "target": "item:fish-fillets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-22192",
+      "source": "npc:western-karana:chrislin-baker",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
     }
   ]
 }
