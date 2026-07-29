@@ -4,6 +4,10 @@
 
 Spell shopping route planner for **EverQuest Legends** (EQL) — a separate, newer game from Daybreak, not classic EverQuest/Project 1999. Zone connectivity, NPCs, and content can diverge from classic EQ; verify against eqlwiki.com, not classic-EQ sources (see `decisions/eql-vs-classic-eq-zone-connectivity.md`). Graph-based, faction-aware. Bun + TypeScript backend, vanilla JS frontend.
 
+## Tenets
+
+`README.md`'s Tenets section (reference over tool, accuracy over UX/completeness, the data is the product) governs everything in this repo — read it before starting work. If a proposed change would conflict with a tenet, surface the conflict to the user before proceeding rather than resolving it silently.
+
 ## Commands
 
 ```bash
