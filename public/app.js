@@ -140,6 +140,7 @@ function renderSidebar() {
       <collapsible-section label="Location" section="location">
         <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
         <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
+        <field-row label="Travel"><toggle-checkbox id="include-wizard-port" label="Include Wizard Port" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky"></toggle-checkbox></field-row>
         <field-row label="Era"><toggle-checkbox id="show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
       </collapsible-section>
       <div class="control-sep" aria-hidden="true"></div>
@@ -222,6 +223,7 @@ function resetFilters() {
   selectedSpellLines = [];
   showOutOfEra = false;
   document.getElementById("show-out-of-era").checked = false;
+  document.getElementById("include-wizard-port").checked = false;
   applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
   renderSpellTags();
   renderZoneTags();
@@ -240,6 +242,7 @@ function getState() {
     classes: selectedClasses,
     spellLines: selectedSpellLines,
     zone: document.getElementById("zone-input").value,
+    wizardPort: document.getElementById("include-wizard-port").checked,
     levelMin: levelRange.valueMin,
     levelMax: levelRange.valueMax,
     specificSpells,
@@ -268,6 +271,7 @@ function restoreState() {
       renderSpellLineTags();
     }
     if (s.zone) document.getElementById("zone-input").value = s.zone;
+    if (s.wizardPort) document.getElementById("include-wizard-port").checked = true;
     const levelRange = document.getElementById("level-range");
     if (s.levelMin) levelRange.valueMin = s.levelMin;
     if (s.levelMax) levelRange.valueMax = s.levelMax;
@@ -340,7 +344,7 @@ function applyDefaults() {
 }
 
 function setupAutoSave() {
-  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "level-range"]) {
+  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "level-range", "include-wizard-port"]) {
     const el = document.getElementById(id);
     el?.addEventListener("change", saveState);
     el?.addEventListener("input", saveState);
@@ -491,7 +495,7 @@ function setupZoneSearch() {
 
 // --- Planner ---
 function setupPlanner() {
-  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input"]) {
+  for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "include-wizard-port"]) {
     document.getElementById(id).addEventListener("change", () => replan(300));
   }
   document.getElementById("level-range").addEventListener("input", () => replan(1000));
@@ -564,6 +568,7 @@ async function runPlan() {
   if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
   if (selectedSpellLines.length) params.set("lines", selectedSpellLines.map((l) => l.id).join(","));
+  if (document.getElementById("include-wizard-port").checked) params.set("wizardPort", "1");
   const rankings = await fetch(`api/plan?${params}`).then((r) => r.json());
 
   if (rankings.error) {

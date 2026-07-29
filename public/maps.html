@@ -30,15 +30,31 @@
       padding: 0 0 14px; gap: 14px;
     }
 
+    /* center (not the old flex-end) since the 90px-tall macro-button pair
+       is taller than a label+select field — centering aligns the selects'
+       own midline with the buttons' midline instead of their bottoms. */
     .finder-bar {
-      display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap;
+      display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
       padding: 16px 20px; flex-shrink: 0;
     }
     .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
     .field select { width: 100%; }
 
-    .arrow { color: var(--line-strong); font-size: 20px; padding-bottom: 8px; flex-shrink: 0; }
-    #reset-route-btn { margin-left: auto; padding-bottom: 8px; }
+    .arrow { color: var(--line-strong); font-size: 20px; flex-shrink: 0; }
+
+    /* Two square macro-buttons, touching (no gap) so they read as one
+       shared control cluster rather than two separate buttons — same idea
+       as status-panel's own side-by-side square actions. margin-left: auto
+       pins the pair to the row's right edge, next to the dropdowns. */
+    .finder-actions { display: flex; margin-left: auto; }
+
+    @media (max-width: 600px) {
+      /* flex-wrap on .finder-bar already drops this to its own line once
+         it no longer fits beside the selects; width: 100% forces that
+         wrap unconditionally (rather than waiting for a narrow-enough
+         viewport) and centers the touching pair under the dropdowns. */
+      .finder-actions { width: 100%; justify-content: center; margin-left: 0; margin-top: 4px; }
+    }
 
     /* Once a destination is chosen, up to two beveled objects stack here —
        route-card (the "how do I get there," only once a starting zone is
@@ -85,7 +101,10 @@
         <label>To</label>
         <select id="route-to"><option value="">— Select Zone —</option></select>
       </div>
-      <button type="button" class="text-action" id="reset-route-btn">Reset</button>
+      <div class="finder-actions">
+        <macro-button square id="wizard-port-btn" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky">Wizard Port</macro-button>
+        <macro-button square id="reset-route-btn">Reset</macro-button>
+      </div>
     </div>
     <div id="route-result"></div>
   </main>

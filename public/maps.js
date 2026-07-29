@@ -15,6 +15,11 @@ export async function init() {
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
+  document.getElementById("wizard-port-btn").addEventListener("click", (e) => {
+    e.currentTarget.toggleAttribute("toggled");
+    saveState();
+    runRoute();
+  });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
   runRoute();
 }
@@ -37,6 +42,7 @@ function applyQueryParams() {
 function resetRoute() {
   document.getElementById("route-from").value = "";
   document.getElementById("route-to").value = "";
+  document.getElementById("wizard-port-btn").removeAttribute("toggled");
   saveState();
   runRoute();
 }
@@ -47,13 +53,15 @@ function restoreState() {
     if (!s) return;
     if (s.from) document.getElementById("route-from").value = s.from;
     if (s.to) document.getElementById("route-to").value = s.to;
+    if (s.wizardPort) document.getElementById("wizard-port-btn").setAttribute("toggled", "");
   } catch { /* ignore malformed state */ }
 }
 
 function saveState() {
   const from = document.getElementById("route-from").value;
   const to = document.getElementById("route-to").value;
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to }));
+  const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort }));
 }
 
 function populateZones(zones) {
@@ -136,7 +144,9 @@ async function runRoute() {
   if (from && from === to) {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
   } else if (from) {
-    const result = await fetch(`api/route?${new URLSearchParams({ from, to })}`).then((r) => r.json());
+    const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}) };
+    const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
     if (!result.route || result.route.length === 0) {
       noticeHtml = `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
