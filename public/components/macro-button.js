@@ -9,6 +9,13 @@
 // default; `square` fixes it to a 90x90 slot regardless of label length,
 // shrinking the font further past 10 characters since a square box has
 // nowhere else for a long label to go.
+//
+// `toggled` gives a plain button the same depressed look as `pressed`
+// (current-nav-page) *without* `pressed`'s side effect of rendering as an
+// inert <span> — `pressed` is for a state the user can't click their way
+// out of (you're already on this page); `toggled` is for a real on/off
+// control (Maps' Include Wizard Port button) that has to stay clickable in
+// both states. Caller owns the state — toggle the attribute on click.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -145,7 +152,7 @@ ${RESET_CSS}
 `);
 
 class MacroButton extends HTMLElement {
-  static get observedAttributes() { return ["href", "square", "pressed", "disabled"]; }
+  static get observedAttributes() { return ["href", "square", "pressed", "toggled", "disabled"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -163,6 +170,7 @@ class MacroButton extends HTMLElement {
     const href = this.getAttribute("href");
     const square = this.hasAttribute("square");
     const pressed = this.hasAttribute("pressed");
+    const toggled = this.hasAttribute("toggled");
     // Only meaningful for the plain-button case below -- a "disabled" link
     // or permanently-"pressed" (current-page) button isn't a usage this app
     // has, so there's no established look for either combination.
@@ -173,10 +181,21 @@ class MacroButton extends HTMLElement {
     const isLong = square && label.length > 10;
 
     const btn = document.createElement(pressed ? "span" : href ? "a" : "button");
-    btn.className = ["btn", square ? "square" : "", isLong ? "long-label" : "", pressed ? "pressed" : href ? "" : "as-button"].filter(Boolean).join(" ");
-    if (pressed) btn.setAttribute("aria-current", "page");
-    else if (href) btn.setAttribute("href", href);
-    else btn.setAttribute("type", "button");
+    btn.className = [
+      "btn",
+      square ? "square" : "",
+      isLong ? "long-label" : "",
+      pressed || toggled ? "pressed" : "",
+      !pressed && !href ? "as-button" : "",
+    ].filter(Boolean).join(" ");
+    if (pressed) {
+      btn.setAttribute("aria-current", "page");
+    } else if (href) {
+      btn.setAttribute("href", href);
+    } else {
+      btn.setAttribute("type", "button");
+      if (toggled) btn.setAttribute("aria-pressed", "true");
+    }
     if (disabled) btn.disabled = true;
     btn.appendChild(document.createElement("slot"));
 
