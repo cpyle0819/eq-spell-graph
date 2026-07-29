@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -305,6 +305,14 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const tradeskill = searchParams.get("tradeskill") || "";
     const zone = searchParams.get("zone") || undefined;
     return { status: 200, body: tradeskill ? getTradeskillVendors(tradeskill, zone) : [] };
+  }
+
+  // GET /api/item-sources?ids=item:a,item:b — Foraged In/Fished From/
+  // Dropped By/Crafted In facts for ingredient-card.js (issue #55), same
+  // comma-separated-ids convention as /api/items.
+  if (pathname === "/api/item-sources") {
+    const ids = (searchParams.get("ids") || "").split(",").filter(Boolean);
+    return { status: 200, body: ids.length ? getItemSources(ids) : [] };
   }
 
   return null;
