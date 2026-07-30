@@ -110,6 +110,15 @@ export const QUEST_CARD_CSS = `
   font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: help;
 }
 
+/* A data gap, not a danger -- deliberately a different register from
+   out-of-era-badge's red (this doesn't warn the player off the content,
+   it warns *us* the record isn't finished yet), same amber "known
+   incomplete" language a caution sign uses rather than a stop sign. */
+.incomplete-badge {
+  background: rgba(180, 130, 20, 0.14); color: #8a5f10; border: 1px solid rgba(180, 130, 20, 0.5);
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; cursor: help;
+}
+
 /* A prerequisite is a real link to another quest-card, not a fact about
    *this* quest the way class/level/reward badges are -- so it gets its own
    iron-gray chain-link mark (two linked rings, same hand-drawn-icon
@@ -172,6 +181,16 @@ export function outOfEraBadge(entity) {
   if (!entity.outOfEra) return "";
   const title = entity.era ? `${entity.era} content isn't available in the current era yet` : "Not available in the current era yet";
   return `<span class="spell-badge out-of-era-badge" title="${title}">Out of Era</span>`;
+}
+
+// entity.incomplete is only ever present (and true) for a quest sourced
+// from a real player log rather than a finished wiki page, where some real
+// detail is still unconfirmed (decisions/eqlwiki-quest-research-method.md,
+// issue #54) -- same "do nothing" case as outOfEraBadge when absent.
+export function incompleteBadge(entity) {
+  if (!entity.incomplete) return "";
+  const title = entity.incompleteNote || "Some details of this quest are still unconfirmed";
+  return `<span class="spell-badge incomplete-badge" title="${title}">Unconfirmed Details</span>`;
 }
 
 // Zone is the link target (per decisions/); giver is supporting detail in

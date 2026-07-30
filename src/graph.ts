@@ -319,6 +319,14 @@ export interface QuestSummary {
   // not out of era, matching this codebase's convention of omitting a
   // flag field rather than asserting a negative.
   outOfEra?: boolean;
+  // true when this quest was sourced from a real player log rather than a
+  // finished eqlwiki.com page (decisions/eqlwiki-quest-research-method.md's
+  // log-sourcing exception) and some real detail -- an exact location, the
+  // final reward, whether steps are even fully ordered -- is still
+  // unconfirmed. incompleteNote states what's actually missing. Same
+  // "absent = normal case, no reassuring badge" convention as outOfEra.
+  incomplete?: boolean;
+  incompleteNote?: string;
 }
 
 // A quest_group's own zones/questGivers/classes/level fields describe the
@@ -892,6 +900,7 @@ function buildQuestSummary(node: NodeData, helpers: GraphIndexHelpers): QuestSum
     ...(requiresNodes.length ? { requires: requiresNodes.map((n) => ({ id: n.id, label: n.label })) } : {}),
     ...(node.wiki_title ? { wikiTitle: node.wiki_title as string } : {}),
     ...resolveEra(node.era as string | undefined, touchedZoneIds, helpers),
+    ...(node.incomplete ? { incomplete: true as const, ...(node.incompleteNote ? { incompleteNote: node.incompleteNote as string } : {}) } : {}),
   };
 }
 

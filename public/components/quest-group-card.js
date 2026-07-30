@@ -44,7 +44,7 @@
 // blank, so the *absence* of a number reads as a real structural signal,
 // not an inconsistency.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, incompleteBadge, startsInBody, stepsBody, rewardsBody } from "./quest-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
@@ -131,7 +131,7 @@ class QuestGroupCard extends CardBase {
     this.shadowRoot.innerHTML = `
       <div class="spell-header"><h3>${group.label}</h3>${group.wikiTitle ? wikiLink(group.wikiTitle) : ""}</div>
       <div class="spell-scroll">
-        <div class="spell-badges">${outOfEraBadge(group)}${headerBadges(group.classes, group.minLevel, group.maxLevel)}</div>
+        <div class="spell-badges">${outOfEraBadge(group)}${incompleteBadge(group)}${headerBadges(group.classes, group.minLevel, group.maxLevel)}</div>
         ${section("Description", group.description ? `<p class="spell-desc">${group.description}</p>` : "")}
         ${section("Starts In", startsInBody(group.zones, group.questGivers))}
         ${section(`Quests in This Group (${group.members.length})`, `<div class="group-roster">${roster}</div>`)}

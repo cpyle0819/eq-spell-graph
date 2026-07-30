@@ -61,7 +61,7 @@
 // numeral for its own member roster (the 7 Armor of Ro pieces have no
 // order between them) -- see that file for the plain-seal alternative.
 import { CardBase, wikiLink } from "./card-base.js";
-import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, startsInBody, stepsBody, rewardsBody, requiresBody } from "./quest-shared.js";
+import { QUEST_CARD_CSS, section, headerBadges, outOfEraBadge, incompleteBadge, startsInBody, stepsBody, rewardsBody, requiresBody } from "./quest-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
@@ -86,7 +86,7 @@ class QuestCard extends CardBase {
     this.shadowRoot.innerHTML = `
       <div class="spell-header"><h3>${quest.label}</h3>${quest.wikiTitle ? wikiLink(quest.wikiTitle) : ""}${questGroupNote}</div>
       <div class="spell-scroll">
-        <div class="spell-badges">${outOfEraBadge(quest)}${headerBadges(quest.classes, quest.minLevel, quest.maxLevel)}</div>
+        <div class="spell-badges">${outOfEraBadge(quest)}${incompleteBadge(quest)}${headerBadges(quest.classes, quest.minLevel, quest.maxLevel)}</div>
         ${section("Requires", requiresBody(quest.requires))}
         ${section("Description", quest.description ? `<p class="spell-desc">${quest.description}</p>` : "")}
         ${section("Starts In", startsInBody(quest.zones, quest.questGivers))}

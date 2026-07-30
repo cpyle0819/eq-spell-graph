@@ -94,4 +94,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Classes page's Quests category: "no selection" ≠ "everyone"](class-browser-quests-category.md)
 - [Zone level badge: retired the mock, and dropped route-card's second one](zone-level-badge-retired-mock-data.md)
 - [Card list seams: zero gap via plain block stacking, never a negative margin](card-list-seams-no-border-overlap.md)
+- [Quests sourced from a real chat log get an `incomplete` flag, not silence or invention](quest-log-sourcing-and-incomplete-flag.md)
 

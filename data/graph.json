@@ -13186,7 +13186,7 @@
             },
             {
               "key": "20",
-              "label": "Sphinx (Zazamoukh)"
+              "label": "Gukta, the Froglok Outpost of Marr (also Sphinx: Zazamoukh)"
             },
             {
               "key": "21",
@@ -157665,6 +157665,225 @@
       "type": "recipe",
       "tradeskill": "Blacksmithing",
       "trivial": 50
+    },
+    {
+      "id": "npc:rathe-mountains:shin-master-grubbus",
+      "label": "Shin Master Grubbus",
+      "type": "npc",
+      "roles": [
+        "guildmaster"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:scribe-rikik",
+      "label": "Scribe Rikik",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:dar-banker-zlopps",
+      "label": "Dar Banker Zlopps",
+      "type": "npc",
+      "roles": [
+        "banker"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:froglok-guardsman",
+      "label": "A froglok guardsman",
+      "type": "npc",
+      "roles": [
+        "guard"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-sevrana",
+      "label": "Zok Sevrana",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-giisip",
+      "label": "Zok Giisip",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:dar-forager-lumun",
+      "label": "Dar Forager Lumun",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-tabruu",
+      "label": "Zok Tabruu",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-caropni",
+      "label": "Zok Caropni",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-kilikko",
+      "label": "Zok Kilikko",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:yun-trainer-kintok",
+      "label": "Yun Trainer Kintok",
+      "type": "npc",
+      "roles": [
+        "guildmaster"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:kor-trainer-galdok",
+      "label": "Kor Trainer Galdok",
+      "type": "npc",
+      "roles": [
+        "guildmaster"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:assistant-faldok",
+      "label": "Assistant Faldok",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:lokta-elder-gritib",
+      "label": "Lokta Elder Gritib",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:zokta-elder-gubbigo",
+      "label": "Zokta Elder Gubbigo",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:lokta-elder-froops",
+      "label": "Lokta Elder Froops",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:lokta-elder-ginnid",
+      "label": "Lokta Elder Ginnid",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:zokta-noble-groobl",
+      "label": "Zokta Noble Groobl",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:zokta-elder-fogug",
+      "label": "Zokta Elder Fogug",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:lokta-elder-nywlek",
+      "label": "Lokta Elder Nywlek",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:zokta-noble-bribbiz",
+      "label": "Zokta Noble Bribbiz",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:dar-strategist-guib",
+      "label": "Dar Strategist Guib",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:quartermaster-grik",
+      "label": "Quartermaster Grik",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:tugog-grigol",
+      "label": "Tugog Grigol",
+      "type": "npc"
+    },
+    {
+      "id": "npc:rathe-mountains:zok-zribb",
+      "label": "Zok Zribb",
+      "type": "npc",
+      "roles": [
+        "vendor",
+        "quest_giver"
+      ]
+    },
+    {
+      "id": "quest:zok-zribbs-phosphorous-powder",
+      "label": "Phosphorous Powder for Zok Zribb",
+      "type": "quest",
+      "description": "Zok Zribb, a merchant in Gukta (Rathe Mountains): \"Ever since we left Guk behind, we've had to buy every scrap of phosphorous powder we can find. The stuff is incredibly useful for farming, smithing, alchemical work, and as a pest repellent! It used to seep in through the cracks in the walls of Guk, making it quite plentiful, however, we've had to scrounge every bit out here. If you could bring me two pinches of phospherous powder, I'd be most grateful!\"",
+      "steps": [
+        "Hail Zok Zribb in Rathe Mountains and ask about 'supplies'.",
+        "Bring 2 pinches of phosphorous powder back to Zok Zribb."
+      ],
+      "incomplete": true,
+      "incompleteNote": "Where phosphorous powder actually comes from, and this quest's reward, are both unconfirmed -- not yet found in-game or documented on eqlwiki.com."
+    },
+    {
+      "id": "npc:rathe-mountains:dar-collector-reokar",
+      "label": "Dar Collector Reokar",
+      "type": "npc",
+      "roles": [
+        "quest_giver"
+      ]
+    },
+    {
+      "id": "quest:dar-collector-reokars-bone-fragments",
+      "label": "Bone Fragments for Dar Collector Reokar",
+      "type": "quest",
+      "description": "Dar Collector Reokar, in Gukta (Rathe Mountains): \"I collect and study the mutations of the various pests in the area, collecting data on the effects of the environment they live in over a lengthy period of time. This research helps me track patterns and come up with more effective salves and other for our armies. Currently, I'm studying the recent infestation of skeletons. If you could bring me any fragments of bone you may find, I'd appreciate it.\"",
+      "steps": [
+        "Hail Dar Collector Reokar in Rathe Mountains.",
+        "Bring fragments of bone back to Dar Collector Reokar."
+      ],
+      "incomplete": true,
+      "incompleteNote": "This quest's reward, and exactly what counts as a qualifying bone fragment, are unconfirmed."
+    },
+    {
+      "id": "npc:rathe-mountains:master-scribe-uklo",
+      "label": "Master Scribe Uklo",
+      "type": "npc",
+      "roles": [
+        "quest_giver"
+      ]
+    },
+    {
+      "id": "quest:the-sword-of-chalex",
+      "label": "The Sword of Chalex",
+      "type": "quest",
+      "description": "Master Scribe Uklo, Gukta (Rathe Mountains): \"Long ago, a great hero of our people lost his life fighting the trolls. He was in Rathe Mountains investigating a rumor that the trolls were stockpiling special weapons in an effort to turn the tide of war back in their favor. He was ambushed by a group of troll marauders and their captain Krignok. He fought valiantly, slaying the marauders and eventually locking swords with the captain. But in the end, exhaustion got the better of him and he died by the troll's hand. The Krignok respected the froglok's ferocity and swore that they would one day finish their fight. So through a dark ritual the troll captain locked the froglok's spirit in his own sword and broke it into three pieces. One piece he placed on the battlefield where they fought. The other piece he gave to an infamous troll warrior to guard. The location of the third piece has been lost over the time but there are clues as to where it may be.\"",
+      "steps": [
+        "Hail Master Scribe Uklo in Rathe Mountains and ask about 'powerful magic', 'illusions', 'teach', and 'prove' to hear the full story.",
+        "Piece 1 -- 'battlefield': at the bones of froglok warrior Chalex, somewhere in Rathe Mountains. Say aloud \"I wish to recover what is lost\" at the bones. Exact location not yet found.",
+        "Piece 2 -- 'infamous troll': held by the troll Gribnor, described as short but immensely strong, in Neriak - Third Gate.",
+        "Piece 3 -- 'clues': lost in Lower Guk, in the possession of an explorer the sword's power drove insane."
+      ],
+      "incomplete": true,
+      "incompleteNote": "Chalex's exact bones location in Rathe Mountains, the reward for completing all three pieces, and whether this is one combined quest vs. three independent hand-ins are all unconfirmed. \"The Sword of Chalex\" is a descriptive label of our own -- no in-game journal title was captured in the log."
     }
   ],
   "edges": [
@@ -309507,6 +309726,222 @@
       "source": "npc:thurgadin:wevil-doughbeard",
       "target": "item:smoker-support-mold",
       "type": "sells"
+    },
+    {
+      "id": "e-located_in-24800",
+      "source": "npc:rathe-mountains:shin-master-grubbus",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24801",
+      "source": "npc:rathe-mountains:scribe-rikik",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24802",
+      "source": "npc:rathe-mountains:dar-banker-zlopps",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24803",
+      "source": "npc:rathe-mountains:froglok-guardsman",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24804",
+      "source": "npc:rathe-mountains:zok-sevrana",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24805",
+      "source": "npc:rathe-mountains:zok-giisip",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24806",
+      "source": "npc:rathe-mountains:dar-forager-lumun",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24807",
+      "source": "npc:rathe-mountains:zok-tabruu",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24808",
+      "source": "npc:rathe-mountains:zok-caropni",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24809",
+      "source": "npc:rathe-mountains:zok-kilikko",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24810",
+      "source": "npc:rathe-mountains:yun-trainer-kintok",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24811",
+      "source": "npc:rathe-mountains:kor-trainer-galdok",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24812",
+      "source": "npc:rathe-mountains:assistant-faldok",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24813",
+      "source": "npc:rathe-mountains:lokta-elder-gritib",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24814",
+      "source": "npc:rathe-mountains:zokta-elder-gubbigo",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24815",
+      "source": "npc:rathe-mountains:lokta-elder-froops",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24816",
+      "source": "npc:rathe-mountains:lokta-elder-ginnid",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24817",
+      "source": "npc:rathe-mountains:zokta-noble-groobl",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24818",
+      "source": "npc:rathe-mountains:zokta-elder-fogug",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24819",
+      "source": "npc:rathe-mountains:lokta-elder-nywlek",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24820",
+      "source": "npc:rathe-mountains:zokta-noble-bribbiz",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24821",
+      "source": "npc:rathe-mountains:dar-strategist-guib",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24822",
+      "source": "npc:rathe-mountains:quartermaster-grik",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24823",
+      "source": "npc:rathe-mountains:tugog-grigol",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24824",
+      "source": "npc:rathe-mountains:zok-zribb",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-starts-24825",
+      "source": "npc:rathe-mountains:zok-zribb",
+      "target": "quest:zok-zribbs-phosphorous-powder",
+      "type": "starts"
+    },
+    {
+      "id": "e-starts_in-24826",
+      "source": "quest:zok-zribbs-phosphorous-powder",
+      "target": "zone:rathe-mountains",
+      "type": "starts_in"
+    },
+    {
+      "id": "e-located_in-24827",
+      "source": "npc:rathe-mountains:dar-collector-reokar",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-starts-24828",
+      "source": "npc:rathe-mountains:dar-collector-reokar",
+      "target": "quest:dar-collector-reokars-bone-fragments",
+      "type": "starts"
+    },
+    {
+      "id": "e-starts_in-24829",
+      "source": "quest:dar-collector-reokars-bone-fragments",
+      "target": "zone:rathe-mountains",
+      "type": "starts_in"
+    },
+    {
+      "id": "e-located_in-24830",
+      "source": "npc:rathe-mountains:master-scribe-uklo",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-starts-24831",
+      "source": "npc:rathe-mountains:master-scribe-uklo",
+      "target": "quest:the-sword-of-chalex",
+      "type": "starts"
+    },
+    {
+      "id": "e-starts_in-24832",
+      "source": "quest:the-sword-of-chalex",
+      "target": "zone:rathe-mountains",
+      "type": "starts_in"
+    },
+    {
+      "id": "e-located_in-24833",
+      "source": "quest:the-sword-of-chalex",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24834",
+      "source": "quest:the-sword-of-chalex",
+      "target": "zone:neriak-3rd-gate",
+      "type": "located_in"
+    },
+    {
+      "id": "e-located_in-24835",
+      "source": "quest:the-sword-of-chalex",
+      "target": "zone:lower-guk",
+      "type": "located_in"
     }
   ]
 }
