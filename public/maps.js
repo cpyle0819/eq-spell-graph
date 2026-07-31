@@ -266,6 +266,13 @@ async function runRoute() {
   let noticeHtml = "";
   let routeCard = null;
 
+  // Defaults to the route's own first stop ("from") once one exists, not
+  // the destination -- a freshly-loaded/recomputed route reads left to
+  // right, so the map that opens should be the one at its start, not its
+  // end. Falls back to `to` when there's no route to speak of (no "from"
+  // yet, or from===to), since that's the only zone in play either way.
+  let initialZone = to;
+
   if (from && from === to) {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
   } else if (from) {
@@ -279,13 +286,14 @@ async function runRoute() {
         ? `<div class="no-results compact">No route found from ${from} to ${to} through ${stops.filter(Boolean).join(", ")}.</div>`
         : `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
     } else {
+      initialZone = from;
       routeCard = document.createElement("route-card");
       routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
-      routeCard.activeZone = to;
+      routeCard.activeZone = initialZone;
     }
   }
 
-  const dossierData = await buildDossierData(to);
+  const dossierData = await buildDossierData(initialZone);
   if (token !== fetchToken) return;
 
   el.innerHTML = noticeHtml;
@@ -295,7 +303,7 @@ async function runRoute() {
   el.appendChild(dossier);
   currentRouteCard = routeCard;
   currentDossier = dossier;
-  activeZone = to;
+  activeZone = initialZone;
 }
 
 // A route's own steps (route-path.js, issue #63) are each a clickable
