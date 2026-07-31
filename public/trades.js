@@ -277,7 +277,12 @@ export async function init() {
     document.getElementById("trade-skill-select").value = tradeskills[0];
     selectedTradeskill = tradeskills[0];
   }
-  fetchTradeskillData();
+  // Awaited so syncUrlState() below reflects Item Type/Subtype after
+  // fetchTradeskillData()'s own updateItemTypeOptions() has had a chance to
+  // reset either one for whatever tradeskill actually loaded (e.g. a
+  // `?itemType=Weapon` deep link into a tradeskill with no weapons) --
+  // same race setupFilters()'s trade-skill-select handler avoids.
+  await fetchTradeskillData();
   syncUrlState();
 
   syncResultsGutterWidth();
@@ -396,9 +401,15 @@ function populateTradeskillSelect(tradeskills) {
 }
 
 function setupFilters() {
-  document.getElementById("trade-skill-select").addEventListener("change", (e) => {
+  document.getElementById("trade-skill-select").addEventListener("change", async (e) => {
     selectedTradeskill = e.target.value;
-    fetchTradeskillData();
+    // Awaited, unlike every other syncUrlState() call site -- Item Type/
+    // Subtype can get silently reset *inside* fetchTradeskillData() (a new
+    // tradeskill's own updateItemTypeOptions() call, if the old selection
+    // doesn't exist for it), and syncUrlState() needs to run after that
+    // reset lands, not before it -- otherwise the URL keeps a stale
+    // `itemType`/`subtype` the live filter state no longer holds.
+    await fetchTradeskillData();
     syncUrlState();
   });
 
@@ -486,12 +497,39 @@ function updateFilterVisibility() {
   document.getElementById("trade-search-row").hidden = isGuide;
   const isRecipes = !isGuide && selectedType === "recipes";
   document.getElementById("trade-skill-range-row").hidden = !isRecipes;
-  document.getElementById("trade-item-type-row").hidden = !isRecipes;
+  // Nothing to narrow when the current tradeskill's recipes are all one
+  // type (most tradeskills -- only Blacksmithing currently produces both
+  // Armor and Weapon items) -- same "hide a filter that can't do anything"
+  // reasoning as Subtype below.
+  document.getElementById("trade-item-type-row").hidden = !isRecipes || availableItemTypes(rawRecipes).size < 2;
   // Subtype only means anything once a non-Other Item Type narrows the
   // field -- "Other" (raw materials, containers, tools) has no subtypes to
   // pick from, same reasoning classifyItem() never gives it one.
   document.getElementById("trade-item-subtype-row").hidden =
     !isRecipes || !selectedItemType || selectedItemType === "Other";
+}
+
+// Item Type select's own options -- only Armor/Weapon/Other values that
+// actually occur among the current tradeskill's recipes (availableItemTypes
+// above), same "populate from real data, reset a selection the new list
+// can't satisfy" pattern updateItemSubtypeOptions() already uses one level
+// down. Called after every fresh fetch (new tradeskill); Item Type's own
+// <select> doesn't otherwise change mid-tradeskill (only Subtype does, when
+// Item Type itself changes).
+function updateItemTypeOptions() {
+  const select = document.getElementById("trade-item-type-select");
+  const current = selectedItemType;
+  const types = availableItemTypes(rawRecipes);
+  select.innerHTML = '<option value="">— Any —</option>';
+  for (const t of ["Armor", "Weapon", "Other"]) {
+    if (!types.has(t)) continue;
+    const opt = document.createElement("option");
+    opt.value = t;
+    opt.textContent = t;
+    select.appendChild(opt);
+  }
+  selectedItemType = [...select.options].some((o) => o.value === current) ? current : "";
+  select.value = selectedItemType;
 }
 
 // Rebuilds the Subtype <select>'s own options from whichever armor slots or
@@ -662,6 +700,18 @@ function distinctSubtypes(recipes, itemType) {
   return [...subtypes].sort();
 }
 
+// Which of Armor/Weapon/Other actually occur among the current tradeskill's
+// recipes -- a tradeskill whose recipes are all food/drink (Brewing,
+// Baking) only ever has "Other," so offering Armor/Weapon options that can
+// only ever return zero results would be a dead-end filter, not a useful
+// one. The Item Type row itself hides entirely when this comes back with
+// fewer than 2 types (nothing to actually narrow), same reasoning.
+function availableItemTypes(recipes) {
+  const types = new Set();
+  for (const r of recipes) types.add(classifyItem(r.produces).type);
+  return types;
+}
+
 // "Craftable N+" (success.p25, the same figure recipe-card.js's own badge
 // shows) is the number the Skill Range filter narrows on, not `trivial` --
 // it's the number actually named "craftable" in both the UI and issue #32's
@@ -737,7 +787,9 @@ async function fetchTradeskillData() {
   rawRecipes = recipes;
   rawVendors = vendors;
   rawItemSources = new Map(itemSources.map((s) => [s.id, s]));
+  updateItemTypeOptions();
   updateItemSubtypeOptions();
+  updateFilterVisibility();
   render();
 }
 
