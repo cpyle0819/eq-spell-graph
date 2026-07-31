@@ -4,7 +4,7 @@
 // one combined card. Kept separate from quest-shared.js (imported here
 // alongside it) since these are tradeskill/recipe-domain specific, not
 // quest-domain.
-import { itemChipTag, itemStats } from "./item-chip.js";
+import { itemChipTag } from "./item-chip.js";
 
 // Trivial is the sourced fact (eqlwiki's own number); Craftable is
 // success.p25, a computed estimate (recipeSuccessThresholds() in
@@ -26,18 +26,6 @@ export const RECIPE_ROW_CSS = `
 }
 .recipe-formula { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .recipe-arrow { color: var(--parch-accent); font-weight: 700; }
-
-/* The produced item's own key stats (AC, class restriction, stat bonuses,
-   deity gate, weapon dmg/delay -- whatever itemStats() has), spelled out
-   next to its chip rather than left to the chip's own hover-only tooltip.
-   Browsing recipes is a scan-many-cards task -- a player deciding whether
-   an armor piece is worth crafting needs "is this restricted to my class,
-   does it have the AC I want" without hovering every single result one at
-   a time (issue feedback: cards showed nothing to evaluate the result by).
-   The hover tooltip (item-chip.js) still shows the exact same data; this
-   is a visibility upgrade, not a second source of truth -- both read
-   straight from the same recipe.produces object via the same itemStats(). */
-.produces-stats { font-size: 11px; color: var(--parch-ink-soft); }
 
 /* Same look as ingredient-card.js's own "+ Shopping List" button -- both
    are a quiet secondary action on a parchment card, not a primary button.
@@ -89,22 +77,13 @@ export function recipeBadgesHtml(recipe) {
 // own "Used In" chips, the reverse direction of this same link) and get the
 // "+" shopping-list button (item-chip.js's `shoppingList` option) -- the
 // produced item gets neither, since it's the recipe's own result, not
-// something to go shop for.
-// itemStats() already covers slot/AC/class/stat-bonus/deity/weapon dmg-delay
-// -- this just joins its text-only labels ("highlight" only affects the
-// tooltip's own chip styling, meaningless as inline text) into one compact
-// line. Empty when produces has nothing itemStats() surfaces (e.g. a plain
-// crafting intermediate with no ac/skill/classes of its own).
-function producesStatsHtml(item) {
-  const stats = itemStats(item);
-  return stats.length ? `<span class="produces-stats">${stats.map((s) => s.text).join(" · ")}</span>` : "";
-}
-
+// something to go shop for. Its own stats (AC, class restriction, etc.) are
+// left to its chip's hover tooltip (item-chip.js's itemStats()) rather than
+// spelled out again inline here -- one source of truth, not two.
 export function recipeFormulaHtml(recipe) {
   const uses = recipe.uses.map((item) => itemChipTag(item, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(item.label)}`, shoppingList: true })).join("");
   const produces = recipe.produces ? itemChipTag(recipe.produces) : "";
-  const producesStats = recipe.produces ? producesStatsHtml(recipe.produces) : "";
-  return `${uses}${produces ? `<span class="recipe-arrow">→</span>${produces}${producesStats}` : ""}`;
+  return `${uses}${produces ? `<span class="recipe-arrow">→</span>${produces}` : ""}`;
 }
 
 // One expandable row per alternate ingredient combo that produces the same
