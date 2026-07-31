@@ -62,7 +62,7 @@ route-path { --route-path-padding: 14px 18px; }
 `);
 
 class RouteCard extends HTMLElement {
-  #from = ""; #to = ""; #hops = 0; #steps = []; #destination = undefined;
+  #from = ""; #to = ""; #hops = 0; #steps = []; #destination = undefined; #activeZone = null;
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -89,11 +89,23 @@ class RouteCard extends HTMLElement {
     if (this.shadowRoot) this.render();
   }
 
+  // Which step's map maps.js currently has open in <zone-dossier> --
+  // separate from `.route` itself since clicking a step (issue #63) swaps
+  // this without recomputing the route, and re-setting the whole `.route`
+  // object every time would be a needlessly roundabout way to update one
+  // button's styling.
+  set activeZone(value) {
+    this.#activeZone = value ?? null;
+    if (this.shadowRoot) this.render();
+  }
+
   render() {
     this.shadowRoot.querySelector(".route-card-title").textContent = `${this.#from} → ${this.#to}`;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = this.#destination?.wikiTitle ? wikiLink(this.#destination.wikiTitle) : "";
     this.shadowRoot.querySelector(".hops-badge").textContent = this.#hops === 1 ? "1 hop" : `${this.#hops} hops`;
-    this.shadowRoot.querySelector("route-path").steps = this.#steps;
+    const path = this.shadowRoot.querySelector("route-path");
+    path.steps = this.#steps;
+    path.activeZone = this.#activeZone;
   }
 }
 

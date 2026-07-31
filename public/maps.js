@@ -21,6 +21,12 @@ export async function init() {
     runRoute();
   });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
+  // Delegated once here rather than re-attached per runRoute() -- #route-result
+  // itself is never replaced, only its children (route-card/zone-dossier),
+  // and the event bubbles+composes out of both their shadow roots (issue
+  // #63: clicking any stop in the route swaps <zone-dossier> to that zone
+  // without recomputing the route).
+  document.getElementById("route-result").addEventListener("zone-select", (e) => showZoneDossier(e.detail.name));
   runRoute();
 }
 
@@ -121,15 +127,26 @@ async function buildDossierData(to) {
   };
 }
 
-// Bumped on every from/to change so a slower, now-superseded fetch can't
-// clobber a newer selection's result (same guard as quests.js's fetchToken).
+// Bumped on every from/to change (and every zone-select click, which is its
+// own lighter-weight fetch outside runRoute() -- see showZoneDossier()) so a
+// slower, now-superseded fetch of either kind can't clobber a newer
+// selection's result (same guard as quests.js's fetchToken).
 let fetchToken = 0;
+
+// The live <route-card>/<zone-dossier> instances currently in #route-result,
+// so a step click (showZoneDossier) can update them in place instead of
+// re-running the whole route computation just to change which zone's map is
+// showing (issue #63).
+let currentRouteCard = null;
+let currentDossier = null;
 
 async function runRoute() {
   const token = ++fetchToken;
   const from = document.getElementById("route-from").value;
   const to = document.getElementById("route-to").value;
   const el = document.getElementById("route-result");
+  currentRouteCard = null;
+  currentDossier = null;
 
   if (!to) {
     el.innerHTML = '<div class="no-results">Select a destination to see its map, quests, and dangers.</div>';
@@ -153,6 +170,7 @@ async function runRoute() {
     } else {
       routeCard = document.createElement("route-card");
       routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
+      routeCard.activeZone = to;
     }
   }
 
@@ -164,4 +182,19 @@ async function runRoute() {
   const dossier = document.createElement("zone-dossier");
   dossier.setData(dossierData);
   el.appendChild(dossier);
+  currentRouteCard = routeCard;
+  currentDossier = dossier;
+}
+
+// A route's own steps (route-path.js, issue #63) are each a clickable
+// "zone-select" button -- picking one swaps <zone-dossier> to that zone's
+// map/npcs/quests without touching the "from"/"to" fields or recomputing
+// the route itself, since the route the traveler asked for hasn't changed,
+// only which of its stops they want to look at right now.
+async function showZoneDossier(zoneLabel) {
+  const token = ++fetchToken;
+  if (currentRouteCard) currentRouteCard.activeZone = zoneLabel;
+  const dossierData = await buildDossierData(zoneLabel);
+  if (token !== fetchToken || !currentDossier) return;
+  currentDossier.setData(dossierData);
 }
