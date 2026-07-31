@@ -103,10 +103,11 @@ function renderStops() {
   }
   for (const btn of container.querySelectorAll(".remove-stop-btn")) {
     btn.addEventListener("click", () => {
+      const removedZone = stops[Number(btn.dataset.index)];
       stops.splice(Number(btn.dataset.index), 1);
       renderStops();
       saveState();
-      runRoute();
+      recomputeRoute(removedZone);
     });
   }
   for (const btn of container.querySelectorAll(".gap-add-btn")) {
@@ -240,6 +241,11 @@ let fetchToken = 0;
 // showing (issue #63).
 let currentRouteCard = null;
 let currentDossier = null;
+// Whichever zone <zone-dossier> is currently showing -- mirrors
+// currentRouteCard's own #activeZone (route-card.js has no public getter
+// for it), tracked here so recomputeRoute() can tell whether a just-removed
+// stop was the one on screen without reaching into the component.
+let activeZone = null;
 
 async function runRoute() {
   const token = ++fetchToken;
@@ -248,6 +254,7 @@ async function runRoute() {
   const el = document.getElementById("route-result");
   currentRouteCard = null;
   currentDossier = null;
+  activeZone = null;
 
   if (!to) {
     el.innerHTML = '<div class="no-results">Select a destination to see its map, quests, and dangers.</div>';
@@ -288,6 +295,7 @@ async function runRoute() {
   el.appendChild(dossier);
   currentRouteCard = routeCard;
   currentDossier = dossier;
+  activeZone = to;
 }
 
 // A route's own steps (route-path.js, issue #63) are each a clickable
@@ -297,8 +305,47 @@ async function runRoute() {
 // only which of its stops they want to look at right now.
 async function showZoneDossier(zoneLabel) {
   const token = ++fetchToken;
+  activeZone = zoneLabel;
   if (currentRouteCard) currentRouteCard.activeZone = zoneLabel;
   const dossierData = await buildDossierData(zoneLabel);
   if (token !== fetchToken || !currentDossier) return;
   currentDossier.setData(dossierData);
+}
+
+// Recomputes an already-showing route in place after removing one of its
+// own stops -- no #route-result teardown/"Charting course..." flash, since
+// the route the traveler asked for is only getting a small edit, not
+// becoming a brand new one. Falls back to the full runRoute() whenever
+// there's no existing route-card to update in place, or the edit made the
+// route impossible -- only that function knows how to render every notice
+// state (no-route-found, you're-already-there, nothing selected yet).
+async function recomputeRoute(removedZone) {
+  const from = document.getElementById("route-from").value;
+  const to = document.getElementById("route-to").value;
+  if (!currentRouteCard || !from || !to || from === to) {
+    runRoute();
+    return;
+  }
+
+  const token = ++fetchToken;
+  const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+  const stopsParam = stops.filter(Boolean).join(",");
+  const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+  const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
+  if (token !== fetchToken) return;
+
+  if (!result.route || result.route.length === 0) {
+    runRoute();
+    return;
+  }
+
+  // route-card.js's own .route setter re-renders <route-path> with
+  // whichever activeZone it already had stored -- correct as-is when the
+  // removed stop wasn't the one on screen (it's still in the new steps),
+  // and about to be corrected below when it was.
+  currentRouteCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
+
+  if (removedZone && removedZone === activeZone) {
+    showZoneDossier(to);
+  }
 }
