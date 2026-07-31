@@ -37,7 +37,10 @@ export function itemStats(item) {
   if (item.ac != null) stats.push({ text: `${item.ac} AC` });
   if (item.damage != null) stats.push({ text: `${item.damage} dmg` });
   if (item.delay != null) stats.push({ text: `${item.delay} delay` });
-  if (item.skill) stats.push({ text: item.skill });
+  // Strip eqlwiki's trailing "v1"/"v2" (Range-only vs. Range-or-Ammo Throwing
+  // items -- same in-game skill, just different valid slots) so it doesn't
+  // read as a raw/broken value in the tooltip.
+  if (item.skill) stats.push({ text: item.skill.replace(/v[12]$/, "") });
   for (const [key, label] of Object.entries(STAT_LABELS)) {
     const v = item.stats?.[key];
     if (v) stats.push({ text: `${v > 0 ? "+" : ""}${v} ${label}` });

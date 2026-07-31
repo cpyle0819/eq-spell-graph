@@ -671,7 +671,12 @@ const ARMOR_SLOTS = new Set([
 // no `slots`/`skill` at all, e.g. most non-Blacksmithing recipe output).
 function classifyItem(item) {
   if (!item) return { type: "Other" };
-  if (item.skill) return { type: "Weapon", subtype: item.skill };
+  // eqlwiki's own Throwing pages carry a trailing "v1"/"v2" on the raw skill
+  // string (Range-slot-only vs. Range-or-Ammo-slot item -- both are the same
+  // Throwing skill in-game, just placeable in different slots), which reads
+  // as broken data once surfaced verbatim. Stripped for subtype purposes only;
+  // item.skill itself keeps the sourced value.
+  if (item.skill) return { type: "Weapon", subtype: item.skill.replace(/v[12]$/, "") };
   const armorSlot = item.slots?.find((s) => ARMOR_SLOTS.has(s));
   if (armorSlot) return { type: "Armor", subtype: armorSlot };
   if (item.slots?.length && item.slots.every((s) => s === "Secondary") && item.ac != null) {
