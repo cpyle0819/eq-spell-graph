@@ -316,8 +316,7 @@ class ZoneCard extends HTMLElement {
     for (const s of r.spells) {
       const isOwned = owned.has(s.id);
       if (!showAllSpells && isOwned) continue;
-      const vendors = s.vendors.filter((v, _, arr) => !arr.some((o) => o !== v && o.startsWith(v + ",")));
-      for (const v of vendors) {
+      for (const v of s.vendors) {
         if (!vendorGroups.has(v)) vendorGroups.set(v, []);
         vendorGroups.get(v).push(s);
       }
