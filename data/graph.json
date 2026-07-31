@@ -171081,7 +171081,8 @@
         "Warrior"
       ],
       "deity": "Brell Serilis",
-      "magic": true
+      "magic": true,
+      "hp": 5
     },
     {
       "id": "recipe:stormguard-battle-axe-of-brell",
@@ -171148,7 +171149,8 @@
         "Warrior"
       ],
       "deity": "Brell Serilis",
-      "magic": true
+      "magic": true,
+      "hp": 5
     },
     {
       "id": "recipe:stormguard-battle-hammer-of-brell",
@@ -176475,6 +176477,2309 @@
       "weight": 0.1,
       "size": "Tiny",
       "source": "Created from a normal Amber with the Imbue Amber spell. Creates items that are diety restricted to Cazic Thule."
+    },
+    {
+      "id": "item:imbued-ogre-war-boots-cazic-thule",
+      "label": "Imbued Ogre War Boots (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 13,
+      "stats": {
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9.1,
+      "size": "Medium",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "label": "Imbued Ogre War Boots (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 222
+    },
+    {
+      "id": "item:imbued-ogre-war-bracer-cazic-thule",
+      "label": "Imbued Ogre War Bracer (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 11,
+      "stats": {
+        "str": 2,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "label": "Imbued Ogre War Bracer (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 222
+    },
+    {
+      "id": "item:imbued-ogre-war-breastplate-cazic-thule",
+      "label": "Imbued Ogre War Breastplate (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 26,
+      "stats": {
+        "str": 8
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 14,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "label": "Imbued Ogre War Breastplate (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 242
+    },
+    {
+      "id": "item:imbued-ogre-war-cloak-cazic-thule",
+      "label": "Imbued Ogre War Cloak (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 11,
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 7.5,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "label": "Imbued Ogre War Cloak (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-collar-cazic-thule",
+      "label": "Imbued Ogre War Collar (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 2,
+        "sta": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "label": "Imbued Ogre War Collar (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 218
+    },
+    {
+      "id": "item:imbued-ogre-war-gauntlets-cazic-thule",
+      "label": "Imbued Ogre War Gauntlets (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 13,
+      "stats": {
+        "str": 6
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 7.3,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "label": "Imbued Ogre War Gauntlets (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-girdle-cazic-thule",
+      "label": "Imbued Ogre War Girdle (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 2,
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "label": "Imbued Ogre War Girdle (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 200
+    },
+    {
+      "id": "item:imbued-ogre-war-greaves-cazic-thule",
+      "label": "Imbued Ogre War Greaves (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 18,
+      "stats": {
+        "str": 2,
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 10.4,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "label": "Imbued Ogre War Greaves (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 235
+    },
+    {
+      "id": "item:imbued-ogre-war-helm-cazic-thule",
+      "label": "Imbued Ogre War Helm (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 14,
+      "stats": {
+        "wis": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "label": "Imbued Ogre War Helm (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 232
+    },
+    {
+      "id": "item:imbued-ogre-war-pauldron-cazic-thule",
+      "label": "Imbued Ogre War Pauldron (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 12,
+      "stats": {
+        "str": 2,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "label": "Imbued Ogre War Pauldron (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 222
+    },
+    {
+      "id": "item:imbued-ogre-war-vambraces-cazic-thule",
+      "label": "Imbued Ogre War Vambraces (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 14,
+      "stats": {
+        "str": 6
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "label": "Imbued Ogre War Vambraces (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-visor-cazic-thule",
+      "label": "Imbued Ogre War Visor (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 7,
+      "stats": {
+        "sta": 2,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 2.2,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "label": "Imbued Ogre War Visor (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 216
+    },
+    {
+      "id": "item:imbued-ogre-war-boots-rallos-zek",
+      "label": "Imbued Ogre War Boots (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 13,
+      "stats": {
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9.1,
+      "size": "Medium",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "label": "Imbued Ogre War Boots (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 222
+    },
+    {
+      "id": "item:imbued-ogre-war-bracer-rallos-zek",
+      "label": "Imbued Ogre War Bracer (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 11,
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "label": "Imbued Ogre War Bracer (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 220
+    },
+    {
+      "id": "item:imbued-ogre-war-breastplate-rallos-zek",
+      "label": "Imbued Ogre War Breastplate (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 26,
+      "stats": {
+        "str": 8
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 14,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "label": "Imbued Ogre War Breastplate (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 242
+    },
+    {
+      "id": "item:imbued-ogre-war-cloak-rallos-zek",
+      "label": "Imbued Ogre War Cloak (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 11,
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 7.5,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "label": "Imbued Ogre War Cloak (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-collar-rallos-zek",
+      "label": "Imbued Ogre War Collar (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 2,
+        "sta": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "label": "Imbued Ogre War Collar (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 219
+    },
+    {
+      "id": "item:imbued-ogre-war-gauntlets-rallos-zek",
+      "label": "Imbued Ogre War Gauntlets (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 13,
+      "stats": {
+        "str": 6
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 7.3,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "label": "Imbued Ogre War Gauntlets (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-girdle-rallos-zek",
+      "label": "Imbued Ogre War Girdle (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 2,
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "label": "Imbued Ogre War Girdle (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 200
+    },
+    {
+      "id": "item:imbued-ogre-war-helm-rallos-zek",
+      "label": "Imbued Ogre War Helm (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 14,
+      "stats": {
+        "int": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "label": "Imbued Ogre War Helm (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 232
+    },
+    {
+      "id": "item:imbued-ogre-war-pauldron-rallos-zek",
+      "label": "Imbued Ogre War Pauldron (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 12,
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "label": "Imbued Ogre War Pauldron (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 222
+    },
+    {
+      "id": "item:imbued-ogre-war-vambraces-rallos-zek",
+      "label": "Imbued Ogre War Vambraces (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 14,
+      "stats": {
+        "str": 6
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "label": "Imbued Ogre War Vambraces (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-ogre-war-visor-rallos-zek",
+      "label": "Imbued Ogre War Visor (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 7,
+      "stats": {
+        "sta": 2,
+        "int": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 2.2,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "label": "Imbued Ogre War Visor (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 214
+    },
+    {
+      "id": "item:ogre-bouncer-shield",
+      "label": "Ogre Bouncer Shield",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "ac": 12,
+      "hp": 8,
+      "weight": 6.2,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "source": "Note: This recipe incorrectly listed a ring instead of 2x adamantite sheet."
+    },
+    {
+      "id": "recipe:ogre-bouncer-shield",
+      "label": "Ogre Bouncer Shield",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 175
+    },
+    {
+      "id": "item:ogre-war-hammer",
+      "label": "Ogre War Hammer",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Blunt",
+      "delay": 56,
+      "damage": 19,
+      "weight": 13,
+      "size": "Large",
+      "classes": [
+        "Cleric",
+        "Monk",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-war-hammer",
+      "label": "Ogre War Hammer",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 115
+    },
+    {
+      "id": "item:ogre-war-mace",
+      "label": "Ogre War Mace",
+      "type": "item",
+      "slots": [
+        "Range",
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 40,
+      "damage": 10,
+      "weight": 10,
+      "size": "Medium",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-war-mace",
+      "label": "Ogre War Mace",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 102
+    },
+    {
+      "id": "item:ogre-war-plate-boots",
+      "label": "Ogre War Plate Boots",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 13,
+      "weight": 9.1,
+      "size": "Medium",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-boots",
+      "label": "Ogre War Plate Boots",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-war-plate-bracers",
+      "label": "Ogre War Plate Bracers",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 11,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-bracers",
+      "label": "Ogre War Plate Bracers",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-war-plate-breastplate",
+      "label": "Ogre War Plate Breastplate",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 26,
+      "weight": 14,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-breastplate",
+      "label": "Ogre War Plate Breastplate",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 188
+    },
+    {
+      "id": "item:ogre-war-plate-collar",
+      "label": "Ogre War Plate Collar",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 9,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-collar",
+      "label": "Ogre War Plate Collar",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 166
+    },
+    {
+      "id": "item:ogre-war-plate-gauntlets",
+      "label": "Ogre War Plate Gauntlets",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 13,
+      "weight": 7.3,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-gauntlets",
+      "label": "Ogre War Plate Gauntlets",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 175
+    },
+    {
+      "id": "item:ogre-war-plate-girdle",
+      "label": "Ogre War Plate Girdle",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 10,
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-girdle",
+      "label": "Ogre War Plate Girdle",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-war-plate-greaves",
+      "label": "Ogre War Plate Greaves",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 18,
+      "weight": 10.4,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-greaves",
+      "label": "Ogre War Plate Greaves",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 182
+    },
+    {
+      "id": "item:ogre-war-plate-helm",
+      "label": "Ogre War Plate Helm",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 14,
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-helm",
+      "label": "Ogre War Plate Helm",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 179
+    },
+    {
+      "id": "item:ogre-war-plate-pauldron",
+      "label": "Ogre War Plate Pauldron",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-pauldron",
+      "label": "Ogre War Plate Pauldron",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-war-plate-vambraces",
+      "label": "Ogre War Plate Vambraces",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 14,
+      "weight": 9,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-vambraces",
+      "label": "Ogre War Plate Vambraces",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 175
+    },
+    {
+      "id": "item:ogre-war-plate-visor",
+      "label": "Ogre War Plate Visor",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 7,
+      "weight": 2.2,
+      "size": "Small",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-plate-visor",
+      "label": "Ogre War Plate Visor",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 163
+    },
+    {
+      "id": "item:ogre-war-splinted-cloak",
+      "label": "Ogre War Splinted Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 11,
+      "weight": 7.5,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
+    },
+    {
+      "id": "recipe:ogre-war-splinted-cloak",
+      "label": "Ogre War Splinted Cloak",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 175
+    },
+    {
+      "id": "item:imbued-ogre-war-greaves-rallos-zek",
+      "label": "Imbued Ogre War Greaves (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 18,
+      "stats": {
+        "str": 2,
+        "sta": 4
+      },
+      "resists": {
+        "magic": 2
+      },
+      "weight": 10.4,
+      "size": "Large",
+      "classes": [
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek",
+      "magic": true
+    },
+    {
+      "id": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "label": "Imbued Ogre War Greaves (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 218
+    },
+    {
+      "id": "item:large-plate-visor-mold",
+      "label": "Large Plate Visor Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Gralbug (Oggok), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:ogre-imbued-splint-belt-cazic-thule",
+      "label": "Ogre Imbued Splint Belt (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "label": "Ogre Imbued Splint Belt (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-belt-rallos-zek",
+      "label": "Ogre Imbued Splint Belt (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 3
+      },
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "label": "Ogre Imbued Splint Belt (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-boots-cazic-thule",
+      "label": "Ogre Imbued Splint Boots (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "label": "Ogre Imbued Splint Boots (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 142
+    },
+    {
+      "id": "item:ogre-imbued-splint-boots-rallos-zek",
+      "label": "Ogre Imbued Splint Boots (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 3
+      },
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "label": "Ogre Imbued Splint Boots (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 142
+    },
+    {
+      "id": "item:ogre-imbued-splint-bracer-cazic-thule",
+      "label": "Ogre Imbued Splint Bracer (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "label": "Ogre Imbued Splint Bracer (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-bracer-rallos-zek",
+      "label": "Ogre Imbued Splint Bracer (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 3
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "label": "Ogre Imbued Splint Bracer (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-cloak-cazic-thule",
+      "label": "Ogre Imbued Splint Cloak (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 5.5,
+      "size": "Large",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "label": "Ogre Imbued Splint Cloak (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 155
+    },
+    {
+      "id": "item:ogre-imbued-splint-cloak-rallos-zek",
+      "label": "Ogre Imbued Splint Cloak (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 3
+      },
+      "weight": 5.5,
+      "size": "Large",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "label": "Ogre Imbued Splint Cloak (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 155
+    },
+    {
+      "id": "item:ogre-imbued-splint-gauntlets-cazic-thule",
+      "label": "Ogre Imbued Splint Gauntlets (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "label": "Ogre Imbued Splint Gauntlets (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 155
+    },
+    {
+      "id": "item:ogre-imbued-splint-gauntlets-rallos-zek",
+      "label": "Ogre Imbued Splint Gauntlets (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 3
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "label": "Ogre Imbued Splint Gauntlets (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 155
+    },
+    {
+      "id": "item:ogre-imbued-splint-gorget-cazic-thule",
+      "label": "Ogre Imbued Splint Gorget (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 7,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "label": "Ogre Imbued Splint Gorget (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 146
+    },
+    {
+      "id": "item:ogre-imbued-splint-gorget-rallos-zek",
+      "label": "Ogre Imbued Splint Gorget (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 7,
+      "stats": {
+        "str": 3
+      },
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "label": "Ogre Imbued Splint Gorget (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 146
+    },
+    {
+      "id": "item:ogre-imbued-splint-helm-cazic-thule",
+      "label": "Ogre Imbued Splint Helm (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "label": "Ogre Imbued Splint Helm (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 159
+    },
+    {
+      "id": "item:ogre-imbued-splint-helm-rallos-zek",
+      "label": "Ogre Imbued Splint Helm (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 3
+      },
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "label": "Ogre Imbued Splint Helm (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 159
+    },
+    {
+      "id": "item:ogre-imbued-splint-leggings-cazic-thule",
+      "label": "Ogre Imbued Splint Leggings (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 12,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "label": "Ogre Imbued Splint Leggings (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 162
+    },
+    {
+      "id": "item:ogre-imbued-splint-leggings-rallos-zek",
+      "label": "Ogre Imbued Splint Leggings (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 12,
+      "stats": {
+        "str": 3
+      },
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "label": "Ogre Imbued Splint Leggings (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 162
+    },
+    {
+      "id": "item:ogre-imbued-splint-mail-cazic-thule",
+      "label": "Ogre Imbued Splint Mail (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 18,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 9,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "label": "Ogre Imbued Splint Mail (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-imbued-splint-mail-rallos-zek",
+      "label": "Ogre Imbued Splint Mail (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 18,
+      "stats": {
+        "str": 3
+      },
+      "weight": 9,
+      "size": "Medium",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "label": "Ogre Imbued Splint Mail (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 168
+    },
+    {
+      "id": "item:ogre-imbued-splint-mantle-cazic-thule",
+      "label": "Ogre Imbued Splint Mantle (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "label": "Ogre Imbued Splint Mantle (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-mantle-rallos-zek",
+      "label": "Ogre Imbued Splint Mantle (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 3
+      },
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "label": "Ogre Imbued Splint Mantle (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-imbued-splint-mask-cazic-thule",
+      "label": "Ogre Imbued Splint Mask (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 6,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "label": "Ogre Imbued Splint Mask (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 143
+    },
+    {
+      "id": "item:ogre-imbued-splint-mask-rallos-zek",
+      "label": "Ogre Imbued Splint Mask (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 6,
+      "stats": {
+        "str": 3
+      },
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "label": "Ogre Imbued Splint Mask (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 143
+    },
+    {
+      "id": "item:ogre-imbued-splint-sleeves-cazic-thule",
+      "label": "Ogre Imbued Splint Sleeves (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 1,
+        "wis": 2
+      },
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "label": "Ogre Imbued Splint Sleeves (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 143
+    },
+    {
+      "id": "item:ogre-imbued-splint-sleeves-rallos-zek",
+      "label": "Ogre Imbued Splint Sleeves (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 3
+      },
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "label": "Ogre Imbued Splint Sleeves (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 155
+    },
+    {
+      "id": "item:ogre-splintmail-belt",
+      "label": "Ogre Splintmail Belt",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 8,
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-belt",
+      "label": "Ogre Splintmail Belt",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 128
+    },
+    {
+      "id": "item:ogre-splintmail-boots",
+      "label": "Ogre Splintmail Boots",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 9,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-boots",
+      "label": "Ogre Splintmail Boots",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 122
+    },
+    {
+      "id": "item:ogre-splintmail-bracer",
+      "label": "Ogre Splintmail Bracer",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 8,
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-bracer",
+      "label": "Ogre Splintmail Bracer",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 122
+    },
+    {
+      "id": "item:ogre-splintmail-cloak",
+      "label": "Ogre Splintmail Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 9,
+      "weight": 5.5,
+      "size": "Large",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-cloak",
+      "label": "Ogre Splintmail Cloak",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 135
+    },
+    {
+      "id": "item:ogre-splintmail-gauntlets",
+      "label": "Ogre Splintmail Gauntlets",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 9,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-gauntlets",
+      "label": "Ogre Splintmail Gauntlets",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 135
+    },
+    {
+      "id": "item:ogre-splintmail-gorget",
+      "label": "Ogre Splintmail Gorget",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 7,
+      "weight": 3.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-gorget",
+      "label": "Ogre Splintmail Gorget",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 126
+    },
+    {
+      "id": "item:ogre-splintmail-helm",
+      "label": "Ogre Splintmail Helm",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 10,
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-helm",
+      "label": "Ogre Splintmail Helm",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 139
+    },
+    {
+      "id": "item:ogre-splintmail-leggings",
+      "label": "Ogre Splintmail Leggings",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-leggings",
+      "label": "Ogre Splintmail Leggings",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 142
+    },
+    {
+      "id": "item:ogre-splintmail-mail",
+      "label": "Ogre Splintmail Mail",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 18,
+      "weight": 9,
+      "size": "Medium",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-mail",
+      "label": "Ogre Splintmail Mail",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 148
+    },
+    {
+      "id": "item:ogre-splintmail-mantle",
+      "label": "Ogre Splintmail Mantle",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 8,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-mantle",
+      "label": "Ogre Splintmail Mantle",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 128
+    },
+    {
+      "id": "item:ogre-splintmail-mask",
+      "label": "Ogre Splintmail Mask",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 6,
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-mask",
+      "label": "Ogre Splintmail Mask",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 123
+    },
+    {
+      "id": "item:ogre-splintmail-sleeves",
+      "label": "Ogre Splintmail Sleeves",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 10,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "recipe:ogre-splintmail-sleeves",
+      "label": "Ogre Splintmail Sleeves",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 135
+    },
+    {
+      "id": "item:large-breastplate-mold",
+      "label": "Large Breastplate Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-field-splinted-cloak-mold",
+      "label": "Large Field Splinted Cloak Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-belt-mold",
+      "label": "Large Plate Belt Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-boot-mold",
+      "label": "Large Plate Boot Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Gralbug (Oggok), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-bracer-mold",
+      "label": "Large Plate Bracer Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-gauntlet-mold",
+      "label": "Large Plate Gauntlet Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Gralbug (Oggok), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-gorget-mold",
+      "label": "Large Plate Gorget Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Gralbug (Oggok), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-greaves-mold",
+      "label": "Large Plate Greaves Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-helm-mold",
+      "label": "Large Plate Helm Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-pauldron-mold",
+      "label": "Large Plate Pauldron Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:large-plate-vambrace-mold",
+      "label": "Large Plate Vambrace Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Sold by Ambril McRohrer (Halas), Bubbgrib (Oggok)"
+    },
+    {
+      "id": "item:imbued-ogre-war-mace-rallos-zek",
+      "label": "Imbued Ogre War Mace (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Range",
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 40,
+      "damage": 10,
+      "weight": 10,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true,
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "label": "Imbued Ogre War Mace (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 190
+    },
+    {
+      "id": "item:imbued-ogre-war-mace-cazic-thule",
+      "label": "Imbued Ogre War Mace (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Range",
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 40,
+      "damage": 10,
+      "weight": 10,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true,
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "label": "Imbued Ogre War Mace (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 190
+    },
+    {
+      "id": "item:imbued-ogre-war-hammer-rallos-zek",
+      "label": "Imbued Ogre War Hammer (Rallos Zek)",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Blunt",
+      "delay": 56,
+      "damage": 19,
+      "weight": 13,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Shaman"
+      ],
+      "magic": true,
+      "deity": "Rallos Zek"
+    },
+    {
+      "id": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "label": "Imbued Ogre War Hammer (Rallos Zek)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 130
+    },
+    {
+      "id": "item:imbued-ogre-war-hammer-cazic-thule",
+      "label": "Imbued Ogre War Hammer (Cazic Thule)",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Blunt",
+      "delay": 56,
+      "damage": 19,
+      "weight": 13,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Shaman"
+      ],
+      "magic": true,
+      "deity": "Cazic Thule"
+    },
+    {
+      "id": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "label": "Imbued Ogre War Hammer (Cazic Thule)",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 130
     }
   ],
   "edges": [
@@ -355959,6 +358264,3862 @@
     {
       "id": "e-crafted_in-29344",
       "source": "recipe:skyiron-sheer-blade",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29345",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29346",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29347",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29348",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29349",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:large-plate-boot-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29350",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29351",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29352",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "item:imbued-ogre-war-boots-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29353",
+      "source": "recipe:imbued-ogre-war-boots-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29354",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29355",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29356",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29357",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29358",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:large-plate-bracer-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29359",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29360",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29361",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "item:imbued-ogre-war-bracer-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29362",
+      "source": "recipe:imbued-ogre-war-bracer-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29363",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29364",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29365",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29366",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29367",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:large-breastplate-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29368",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29369",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29370",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "item:imbued-ogre-war-breastplate-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29371",
+      "source": "recipe:imbued-ogre-war-breastplate-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29372",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29373",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29374",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29375",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29376",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:large-field-splinted-cloak-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29377",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29378",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29379",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "item:imbued-ogre-war-cloak-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29380",
+      "source": "recipe:imbued-ogre-war-cloak-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29381",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29382",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29383",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29384",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29385",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:large-plate-gorget-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29386",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29387",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29388",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "item:imbued-ogre-war-collar-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29389",
+      "source": "recipe:imbued-ogre-war-collar-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29390",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29391",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29392",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29393",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29394",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:large-plate-gauntlet-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29395",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29396",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29397",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "item:imbued-ogre-war-gauntlets-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29398",
+      "source": "recipe:imbued-ogre-war-gauntlets-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29399",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29400",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29401",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29402",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29403",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:large-plate-belt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29404",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29405",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29406",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "item:imbued-ogre-war-girdle-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29407",
+      "source": "recipe:imbued-ogre-war-girdle-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29408",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29409",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29410",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29411",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29412",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:large-plate-greaves-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29413",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29414",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29415",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "item:imbued-ogre-war-greaves-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29416",
+      "source": "recipe:imbued-ogre-war-greaves-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29417",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29418",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29419",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29420",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29421",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:large-plate-helm-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29422",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29423",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29424",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "item:imbued-ogre-war-helm-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29425",
+      "source": "recipe:imbued-ogre-war-helm-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29426",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29427",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29428",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29429",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29430",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:large-plate-helm-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29431",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29432",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29433",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "item:imbued-ogre-war-pauldron-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29434",
+      "source": "recipe:imbued-ogre-war-pauldron-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29435",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29436",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29437",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29438",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29439",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:large-plate-vambrace-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29440",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29441",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29442",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "item:imbued-ogre-war-vambraces-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29443",
+      "source": "recipe:imbued-ogre-war-vambraces-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29444",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29445",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29446",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29447",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29448",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:large-plate-visor-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29449",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29450",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29451",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "item:imbued-ogre-war-visor-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29452",
+      "source": "recipe:imbued-ogre-war-visor-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29453",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29454",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29455",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29456",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29457",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:large-plate-boot-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29458",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29459",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29460",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "item:imbued-ogre-war-boots-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29461",
+      "source": "recipe:imbued-ogre-war-boots-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29462",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29463",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29464",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29465",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29466",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:large-plate-bracer-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29467",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29468",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29469",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "item:imbued-ogre-war-bracer-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29470",
+      "source": "recipe:imbued-ogre-war-bracer-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29471",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29472",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29473",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29474",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29475",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:large-breastplate-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29476",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29477",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29478",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "item:imbued-ogre-war-breastplate-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29479",
+      "source": "recipe:imbued-ogre-war-breastplate-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29480",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29481",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29482",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29483",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29484",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:large-field-splinted-cloak-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29485",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29486",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29487",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "item:imbued-ogre-war-cloak-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29488",
+      "source": "recipe:imbued-ogre-war-cloak-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29489",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29490",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29491",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29492",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29493",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:large-plate-gorget-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29494",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29495",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29496",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "item:imbued-ogre-war-collar-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29497",
+      "source": "recipe:imbued-ogre-war-collar-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29498",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29499",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29500",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29501",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29502",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:large-plate-gauntlet-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29503",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29504",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29505",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "item:imbued-ogre-war-gauntlets-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29506",
+      "source": "recipe:imbued-ogre-war-gauntlets-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29507",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29508",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29509",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29510",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29511",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:large-plate-belt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29512",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29513",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29514",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "item:imbued-ogre-war-girdle-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29515",
+      "source": "recipe:imbued-ogre-war-girdle-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29516",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29517",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29518",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29519",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29520",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:large-plate-helm-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29521",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29522",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29523",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "item:imbued-ogre-war-helm-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29524",
+      "source": "recipe:imbued-ogre-war-helm-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29525",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29526",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29527",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29528",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29529",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:large-plate-helm-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29530",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29531",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29532",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "item:imbued-ogre-war-pauldron-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29533",
+      "source": "recipe:imbued-ogre-war-pauldron-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29534",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29535",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29536",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29537",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29538",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:large-plate-vambrace-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29539",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29540",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29541",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "item:imbued-ogre-war-vambraces-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29542",
+      "source": "recipe:imbued-ogre-war-vambraces-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29543",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29544",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29545",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29546",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29547",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:large-plate-visor-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29548",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29549",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29550",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "item:imbued-ogre-war-visor-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29551",
+      "source": "recipe:imbued-ogre-war-visor-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29552",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29553",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29554",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "item:round-shield-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29555",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29556",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "item:ogre-bouncer-shield",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29557",
+      "source": "recipe:ogre-bouncer-shield",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29558",
+      "source": "recipe:ogre-war-hammer",
+      "target": "item:hammer-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29559",
+      "source": "recipe:ogre-war-hammer",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29560",
+      "source": "recipe:ogre-war-hammer",
+      "target": "item:ogre-swill",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29561",
+      "source": "recipe:ogre-war-hammer",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29562",
+      "source": "recipe:ogre-war-hammer",
+      "target": "item:ogre-war-hammer",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29563",
+      "source": "recipe:ogre-war-hammer",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29564",
+      "source": "recipe:ogre-war-mace",
+      "target": "item:mace-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29565",
+      "source": "recipe:ogre-war-mace",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29566",
+      "source": "recipe:ogre-war-mace",
+      "target": "item:ogre-swill",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29567",
+      "source": "recipe:ogre-war-mace",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29568",
+      "source": "recipe:ogre-war-mace",
+      "target": "item:ogre-war-mace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29569",
+      "source": "recipe:ogre-war-mace",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29570",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29571",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29572",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29573",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:large-plate-boot-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29574",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29575",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29576",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "item:ogre-war-plate-boots",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29577",
+      "source": "recipe:ogre-war-plate-boots",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29578",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29579",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29580",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29581",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:large-plate-bracer-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29582",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29583",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29584",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "item:ogre-war-plate-bracers",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29585",
+      "source": "recipe:ogre-war-plate-bracers",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29586",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29587",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29588",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29589",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:large-breastplate-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29590",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29591",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29592",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "item:ogre-war-plate-breastplate",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29593",
+      "source": "recipe:ogre-war-plate-breastplate",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29594",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29595",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29596",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29597",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:large-plate-gorget-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29598",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29599",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29600",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "item:ogre-war-plate-collar",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29601",
+      "source": "recipe:ogre-war-plate-collar",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29602",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29603",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29604",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29605",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:large-plate-gauntlet-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29606",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29607",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29608",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "item:ogre-war-plate-gauntlets",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29609",
+      "source": "recipe:ogre-war-plate-gauntlets",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29610",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29611",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29612",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29613",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:large-plate-belt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29614",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29615",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29616",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "item:ogre-war-plate-girdle",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29617",
+      "source": "recipe:ogre-war-plate-girdle",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29618",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29619",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29620",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29621",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:large-plate-greaves-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29622",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29623",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29624",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "item:ogre-war-plate-greaves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29625",
+      "source": "recipe:ogre-war-plate-greaves",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29626",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29627",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29628",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29629",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:large-plate-helm-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29630",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29631",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29632",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "item:ogre-war-plate-helm",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29633",
+      "source": "recipe:ogre-war-plate-helm",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29634",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29635",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29636",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29637",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:large-plate-pauldron-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29638",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29639",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29640",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "item:ogre-war-plate-pauldron",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29641",
+      "source": "recipe:ogre-war-plate-pauldron",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29642",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29643",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29644",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29645",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:large-plate-vambrace-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29646",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29647",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29648",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "item:ogre-war-plate-vambraces",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29649",
+      "source": "recipe:ogre-war-plate-vambraces",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29650",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29651",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29652",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29653",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:large-plate-visor-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29654",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29655",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29656",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "item:ogre-war-plate-visor",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29657",
+      "source": "recipe:ogre-war-plate-visor",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29658",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:adamantite-chain-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29659",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29660",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:folded-sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29661",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:large-field-splinted-cloak-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29662",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29663",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29664",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "item:ogre-war-splinted-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29665",
+      "source": "recipe:ogre-war-splinted-cloak",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29666",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29667",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:enchanted-adamantite-jointing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29668",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:enchanted-folded-adamantite-sheet",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29669",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29670",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:large-plate-greaves-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29671",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:leather-padding",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29672",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29673",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "item:imbued-ogre-war-greaves-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29674",
+      "source": "recipe:imbued-ogre-war-greaves-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29675",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29676",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29677",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:chainmail-skirt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29678",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:large-leather-belt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29679",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29680",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29681",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "item:ogre-imbued-splint-belt-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29682",
+      "source": "recipe:ogre-imbued-splint-belt-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29683",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29684",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29685",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:chainmail-skirt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29686",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:large-leather-belt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29687",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29688",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29689",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "item:ogre-imbued-splint-belt-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29690",
+      "source": "recipe:ogre-imbued-splint-belt-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29691",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29692",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29693",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:chainmail-boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29694",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:large-leather-boots",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29695",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29696",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29697",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "item:ogre-imbued-splint-boots-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29698",
+      "source": "recipe:ogre-imbued-splint-boots-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29699",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29700",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29701",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:chainmail-boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29702",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:large-leather-boots",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29703",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29704",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29705",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "item:ogre-imbued-splint-boots-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29706",
+      "source": "recipe:ogre-imbued-splint-boots-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29707",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29708",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29709",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:chainmail-bracelet-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29710",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:large-leather-wristbands",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29711",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29712",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29713",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "item:ogre-imbued-splint-bracer-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29714",
+      "source": "recipe:ogre-imbued-splint-bracer-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29715",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29716",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29717",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:chainmail-bracelet-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29718",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:large-leather-wristbands",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29719",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29720",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29721",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "item:ogre-imbued-splint-bracer-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29722",
+      "source": "recipe:ogre-imbued-splint-bracer-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29723",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29724",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29725",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:chainmail-cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29726",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:large-leather-cloak",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29727",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29728",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29729",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "item:ogre-imbued-splint-cloak-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29730",
+      "source": "recipe:ogre-imbued-splint-cloak-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29731",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29732",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29733",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:chainmail-cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29734",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:large-leather-cloak",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29735",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29736",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29737",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "item:ogre-imbued-splint-cloak-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29738",
+      "source": "recipe:ogre-imbued-splint-cloak-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29739",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29740",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29741",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:chainmail-glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29742",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:large-leather-gloves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29743",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29744",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29745",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "item:ogre-imbued-splint-gauntlets-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29746",
+      "source": "recipe:ogre-imbued-splint-gauntlets-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29747",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29748",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29749",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:chainmail-glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29750",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:large-leather-gloves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29751",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29752",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29753",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "item:ogre-imbued-splint-gauntlets-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29754",
+      "source": "recipe:ogre-imbued-splint-gauntlets-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29755",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29756",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29757",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:chainmail-neckguard-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29758",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:large-leather-gorget",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29759",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29760",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29761",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "item:ogre-imbued-splint-gorget-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29762",
+      "source": "recipe:ogre-imbued-splint-gorget-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29763",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29764",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29765",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:chainmail-neckguard-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29766",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:large-leather-gorget",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29767",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29768",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29769",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "item:ogre-imbued-splint-gorget-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29770",
+      "source": "recipe:ogre-imbued-splint-gorget-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29771",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29772",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29773",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:chainmail-coif-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29774",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:large-leather-skullcap",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29775",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29776",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29777",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "item:ogre-imbued-splint-helm-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29778",
+      "source": "recipe:ogre-imbued-splint-helm-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29779",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29780",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29781",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:chainmail-coif-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29782",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:large-leather-skullcap",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29783",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29784",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29785",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "item:ogre-imbued-splint-helm-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29786",
+      "source": "recipe:ogre-imbued-splint-helm-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29787",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29788",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29789",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:chainmail-pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29790",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:large-leather-leggings",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29791",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29792",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29793",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "item:ogre-imbued-splint-leggings-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29794",
+      "source": "recipe:ogre-imbued-splint-leggings-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29795",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29796",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29797",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:chainmail-pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29798",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:large-leather-leggings",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29799",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29800",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29801",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "item:ogre-imbued-splint-leggings-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29802",
+      "source": "recipe:ogre-imbued-splint-leggings-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29803",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29804",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29805",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:chainmail-tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29806",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:large-leather-tunic",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29807",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29808",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29809",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "item:ogre-imbued-splint-mail-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29810",
+      "source": "recipe:ogre-imbued-splint-mail-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29811",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29812",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29813",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:chainmail-tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29814",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:large-leather-tunic",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29815",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29816",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29817",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "item:ogre-imbued-splint-mail-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29818",
+      "source": "recipe:ogre-imbued-splint-mail-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29819",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29820",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29821",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:chainmail-mantle-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29822",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:large-leather-shoulderpads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29823",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29824",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29825",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "item:ogre-imbued-splint-mantle-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29826",
+      "source": "recipe:ogre-imbued-splint-mantle-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29827",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29828",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29829",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:chainmail-mantle-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29830",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:large-leather-shoulderpads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29831",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29832",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29833",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "item:ogre-imbued-splint-mantle-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29834",
+      "source": "recipe:ogre-imbued-splint-mantle-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29835",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29836",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29837",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:chainmail-veil-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29838",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:large-leather-mask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29839",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29840",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29841",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "item:ogre-imbued-splint-mask-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29842",
+      "source": "recipe:ogre-imbued-splint-mask-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29843",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29844",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29845",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:chainmail-veil-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29846",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:large-leather-mask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29847",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29848",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29849",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "item:ogre-imbued-splint-mask-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29850",
+      "source": "recipe:ogre-imbued-splint-mask-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29851",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29852",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29853",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:chainmail-sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29854",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:large-leather-sleeves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29855",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29856",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29857",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "item:ogre-imbued-splint-sleeves-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29858",
+      "source": "recipe:ogre-imbued-splint-sleeves-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29859",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29860",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29861",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:chainmail-sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29862",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:large-leather-sleeves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29863",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29864",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29865",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "item:ogre-imbued-splint-sleeves-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29866",
+      "source": "recipe:ogre-imbued-splint-sleeves-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29867",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29868",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:chainmail-skirt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29869",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:large-leather-belt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29870",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29871",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29872",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "item:ogre-splintmail-belt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29873",
+      "source": "recipe:ogre-splintmail-belt",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29874",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29875",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:chainmail-boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29876",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:large-leather-boots",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29877",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29878",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29879",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "item:ogre-splintmail-boots",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29880",
+      "source": "recipe:ogre-splintmail-boots",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29881",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29882",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:chainmail-bracelet-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29883",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:large-leather-wristbands",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29884",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29885",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29886",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "item:ogre-splintmail-bracer",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29887",
+      "source": "recipe:ogre-splintmail-bracer",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29888",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29889",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:chainmail-cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29890",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:large-leather-cloak",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29891",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29892",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29893",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "item:ogre-splintmail-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29894",
+      "source": "recipe:ogre-splintmail-cloak",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29895",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29896",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:chainmail-glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29897",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:large-leather-gloves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29898",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29899",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29900",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "item:ogre-splintmail-gauntlets",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29901",
+      "source": "recipe:ogre-splintmail-gauntlets",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29902",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29903",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:chainmail-neckguard-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29904",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:large-leather-gorget",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29905",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29906",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29907",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "item:ogre-splintmail-gorget",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29908",
+      "source": "recipe:ogre-splintmail-gorget",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29909",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29910",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:chainmail-coif-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29911",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:large-leather-skullcap",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29912",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29913",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29914",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "item:ogre-splintmail-helm",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29915",
+      "source": "recipe:ogre-splintmail-helm",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29916",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29917",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:chainmail-pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29918",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:large-leather-leggings",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29919",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29920",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29921",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "item:ogre-splintmail-leggings",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29922",
+      "source": "recipe:ogre-splintmail-leggings",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29923",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29924",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:chainmail-tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29925",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:large-leather-tunic",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29926",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-29927",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29928",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "item:ogre-splintmail-mail",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29929",
+      "source": "recipe:ogre-splintmail-mail",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29930",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29931",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:chainmail-mantle-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29932",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:large-leather-shoulderpads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29933",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29934",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29935",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "item:ogre-splintmail-mantle",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29936",
+      "source": "recipe:ogre-splintmail-mantle",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29937",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29938",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:chainmail-veil-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29939",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:large-leather-mask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29940",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29941",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29942",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "item:ogre-splintmail-mask",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29943",
+      "source": "recipe:ogre-splintmail-mask",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29944",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29945",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:chainmail-sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29946",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:large-leather-sleeves",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29947",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-29948",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:smithy-hammer",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29949",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "item:ogre-splintmail-sleeves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29950",
+      "source": "recipe:ogre-splintmail-sleeves",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29951",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29952",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:mace-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29953",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29954",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29955",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29956",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "item:imbued-ogre-war-mace-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29957",
+      "source": "recipe:imbued-ogre-war-mace-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29958",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29959",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:mace-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29960",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29961",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29962",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29963",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "item:imbued-ogre-war-mace-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29964",
+      "source": "recipe:imbued-ogre-war-mace-cazic-thule",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29965",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:hammer-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29966",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29967",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29968",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29969",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29970",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "item:imbued-ogre-war-hammer-rallos-zek",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29971",
+      "source": "recipe:imbued-ogre-war-hammer-rallos-zek",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-29972",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:hammer-head-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29973",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:blood-temper",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29974",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:oak-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29975",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:sheet-of-adamantite",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-29976",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-29977",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
+      "target": "item:imbued-ogre-war-hammer-cazic-thule",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-29978",
+      "source": "recipe:imbued-ogre-war-hammer-cazic-thule",
       "target": "container:forge",
       "type": "crafted_in"
     }
