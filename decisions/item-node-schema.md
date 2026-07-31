@@ -7,6 +7,8 @@
   slots?: string[];        // e.g. ["Head"], ["Primary","Secondary"] -- wiki's "Slot" field is
                             // space-separated for multi-slot items (esp. weapons)
   classes?: string[];      // empty/absent = everyone -- same convention as quest.classes
+  deity?: string;          // absent = no deity restriction -- e.g. Blacksmithing's Imbued
+                            // Field Plate armor (migration 387), one set per deity
   ac?: number;
   stats?: { str?, sta?, dex?, agi?, wis?, int?, cha?: number };
   resists?: { fire?, cold?, disease?, poison?, magic?: number };

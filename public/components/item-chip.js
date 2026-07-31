@@ -26,9 +26,12 @@ import { wikiUrl } from "./card-base.js";
 const STAT_LABELS = { str: "STR", sta: "STA", agi: "AGI", dex: "DEX", wis: "WIS", int: "INT", cha: "CHA" };
 const RESIST_LABELS = { poison: "Poison", disease: "Disease", fire: "Fire", cold: "Cold", magic: "Magic" };
 
-function titleCase(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+// "shadow knight" -> "Shadow Knight" -- classes is stored lowercase (same
+// convention as quest.classes), but "shadow knight" is the one two-word
+// class name, so a first-letter-only capitalize would read "Shadow knight."
+function titleCase(s) { return s.split(" ").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" "); }
 
-function itemStats(item) {
+export function itemStats(item) {
   const stats = [];
   if (item.slots?.length) stats.push({ text: item.slots.join("/"), highlight: true });
   if (item.ac != null) stats.push({ text: `${item.ac} AC` });
@@ -51,6 +54,7 @@ function itemStats(item) {
   if (item.size) stats.push({ text: item.size });
   if (item.capacity != null) stats.push({ text: `${item.capacity} slots${item.containerSize ? ` (${item.containerSize} max)` : ""}` });
   if (item.classes?.length) stats.push({ text: item.classes.map(titleCase).join(", ") });
+  if (item.deity) stats.push({ text: `${item.deity} Only` });
   if (item.magic) stats.push({ text: "Magic" });
   if (item.lore) stats.push({ text: "Lore" });
   if (item.noTrade) stats.push({ text: "No Trade" });

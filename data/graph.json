@@ -59283,12 +59283,12 @@
         "Secondary"
       ],
       "classes": [
-        "warrior",
+        "bard",
         "paladin",
         "ranger",
+        "rogue",
         "shadow knight",
-        "bard",
-        "rogue"
+        "warrior"
       ],
       "skill": "1H Slashing",
       "damage": 6,
@@ -59306,13 +59306,13 @@
         "Secondary"
       ],
       "classes": [
-        "warrior",
+        "bard",
+        "druid",
         "paladin",
         "ranger",
+        "rogue",
         "shadow knight",
-        "druid",
-        "bard",
-        "rogue"
+        "warrior"
       ],
       "skill": "1H Slashing",
       "damage": 5,
@@ -59658,17 +59658,16 @@
         "Secondary"
       ],
       "classes": [
-        "warrior",
+        "bard",
         "cleric",
+        "druid",
+        "monk",
         "paladin",
         "ranger",
-        "shadow knight",
-        "druid",
-        "bard",
         "rogue",
         "shaman",
-        "monk",
-        "beastlord"
+        "shadow knight",
+        "warrior"
       ],
       "ac": 4,
       "weight": 3,
@@ -69018,14 +69017,14 @@
       ],
       "ac": 7,
       "classes": [
-        "warrior",
+        "bard",
         "cleric",
         "paladin",
         "ranger",
-        "shadow knight",
-        "bard",
         "rogue",
-        "shaman"
+        "shaman",
+        "shadow knight",
+        "warrior"
       ],
       "weight": 7.5,
       "size": "Medium",
@@ -70431,7 +70430,23 @@
       "weight": 1,
       "size": "Small",
       "lightSource": true,
-      "source": "Illegible Scrolls (Felwithe) reward (General Jyleel, Northern Felwithe)"
+      "source": "Illegible Scrolls (Felwithe) reward (General Jyleel, Northern Felwithe)",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "item:mead",
@@ -83790,7 +83805,18 @@
       "weight": 2.5,
       "size": "Small",
       "effect": "Backstab: 3",
-      "source": "Tunare Scouts Dagger reward (Tylfon, Kelethin)"
+      "source": "Tunare Scouts Dagger reward (Tylfon, Kelethin)",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "quest:tunic-of-ridossan-quest",
@@ -152660,7 +152686,8 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Crafted via Pottery (trivial 15) or Blacksmithing (trivial 38), not Baking itself; returned on both success and failure when used in a Baking recipe"
+      "source": "Crafted via Pottery (trivial 15) or Blacksmithing (trivial 38), not Baking itself; returned on both success and failure when used in a Baking recipe",
+      "classes": []
     },
     {
       "id": "item:pie-tin",
@@ -152668,7 +152695,8 @@
       "type": "item",
       "weight": 0.1,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 35) or Pottery (trivial 115/17), not Baking itself; returned on both success and failure when used in a Baking recipe"
+      "source": "Crafted via Blacksmithing (trivial 35) or Pottery (trivial 115/17), not Baking itself; returned on both success and failure when used in a Baking recipe",
+      "classes": []
     },
     {
       "id": "item:dragon-meat",
@@ -153049,13 +153077,19 @@
       "id": "container:pot",
       "label": "Pot",
       "type": "container",
-      "source": "Baking implement used for soups and stews."
+      "source": "Baking implement used for soups and stews.",
+      "weight": 0.3,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "container:smoker",
       "label": "Smoker",
       "type": "container",
-      "source": "Baking implement used for smoked dishes."
+      "source": "Baking implement used for smoked dishes.",
+      "weight": 0.4,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:garnish",
@@ -153515,19 +153549,28 @@
       "id": "item:muffin-tin",
       "label": "Muffin Tin",
       "type": "item",
-      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use"
+      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:skewers",
       "label": "Skewers",
       "type": "item",
-      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use"
+      "source": "Crafted via Blacksmithing or Pottery, not Baking itself; returned after use",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:bread-tin",
       "label": "Bread Tin",
       "type": "item",
-      "source": "Crafted via Blacksmithing, not Baking itself; can be lost on a burnt loaf"
+      "source": "Crafted via Blacksmithing, not Baking itself; can be lost on a burnt loaf",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:bear-sandwich",
@@ -155174,13 +155217,19 @@
       "id": "item:small-brick-of-ore",
       "label": "Small Brick of Ore",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 27) from 3x Small Piece of Ore"
+      "source": "Crafted via Blacksmithing (trivial 27) from 3x Small Piece of Ore",
+      "weight": 15,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:sheet-metal",
       "label": "Sheet Metal",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 56) from 2x Small Brick of Ore"
+      "source": "Crafted via Blacksmithing (trivial 56) from 2x Small Brick of Ore",
+      "weight": 2,
+      "size": "Tiny",
+      "classes": []
     },
     {
       "id": "item:file-mold",
@@ -155191,7 +155240,10 @@
       "id": "item:file",
       "label": "File",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 21) from a File Mold"
+      "source": "Crafted via Blacksmithing (trivial 21) from a File Mold",
+      "weight": 0.1,
+      "size": "Tiny",
+      "classes": []
     },
     {
       "id": "item:lantern-casing-mold",
@@ -155252,6 +155304,17 @@
       "source": "Crafted via Blacksmithing (trivial 135)",
       "slots": [
         "Face"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155268,6 +155331,17 @@
       "source": "Crafted via Blacksmithing (trivial 102)",
       "slots": [
         "Neck"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155284,6 +155358,17 @@
       "source": "Crafted via Blacksmithing (trivial 102)",
       "slots": [
         "Wrist"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155300,6 +155385,17 @@
       "source": "Crafted via Blacksmithing (trivial 135)",
       "slots": [
         "Feet"
+      ],
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155316,6 +155412,17 @@
       "source": "Crafted via Blacksmithing (trivial 135)",
       "slots": [
         "Waist"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155332,6 +155439,17 @@
       "source": "Crafted via Blacksmithing (trivial 168)",
       "slots": [
         "Shoulders"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155348,6 +155466,17 @@
       "source": "Crafted via Blacksmithing (trivial 175)",
       "slots": [
         "Back"
+      ],
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155364,6 +155493,17 @@
       "source": "Crafted via Blacksmithing (trivial 168)",
       "slots": [
         "Hands"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155380,6 +155520,17 @@
       "source": "Crafted via Blacksmithing (trivial 102)",
       "slots": [
         "Arms"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155396,6 +155547,17 @@
       "source": "Crafted via Blacksmithing (trivial 135)",
       "slots": [
         "Head"
+      ],
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155412,6 +155574,17 @@
       "source": "Crafted via Blacksmithing (trivial 168)",
       "slots": [
         "Legs"
+      ],
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155428,6 +155601,17 @@
       "source": "Crafted via Blacksmithing (trivial 135)",
       "slots": [
         "Chest"
+      ],
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -155821,31 +156005,34 @@
       "id": "item:small-metal-container",
       "label": "Small Metal Container",
       "type": "item",
-      "weight": 0.5,
+      "weight": 3,
       "size": "Small",
-      "capacity": 4,
-      "containerSize": "Tiny",
-      "source": "Crafted via Blacksmithing (trivial 31)"
+      "capacity": 2,
+      "containerSize": "Medium",
+      "source": "Crafted via Blacksmithing (trivial 31)",
+      "classes": []
     },
     {
       "id": "item:medium-metal-container",
       "label": "Medium Metal Container",
       "type": "item",
-      "weight": 0.8,
+      "weight": 4.5,
       "size": "Small",
-      "capacity": 6,
-      "containerSize": "Small",
-      "source": "Crafted via Blacksmithing (trivial 40)"
+      "capacity": 4,
+      "containerSize": "Medium",
+      "source": "Crafted via Blacksmithing (trivial 40)",
+      "classes": []
     },
     {
       "id": "item:large-metal-container",
       "label": "Large Metal Container",
       "type": "item",
-      "weight": 1.2,
+      "weight": 6,
       "size": "Medium",
       "capacity": 8,
       "containerSize": "Medium",
-      "source": "Crafted via Blacksmithing (trivial 46)"
+      "source": "Crafted via Blacksmithing (trivial 46)",
+      "classes": []
     },
     {
       "id": "item:dagger-blade-mold",
@@ -155868,7 +156055,20 @@
       ],
       "skill": "Piercing",
       "delay": 25,
-      "damage": 2
+      "damage": 2,
+      "weight": 2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "item:scaler-mold",
@@ -155879,7 +156079,10 @@
       "id": "item:scaler",
       "label": "Scaler",
       "type": "item",
-      "source": "Tool; crafted via Blacksmithing (trivial 39)"
+      "source": "Tool; crafted via Blacksmithing (trivial 39)",
+      "weight": 0.1,
+      "size": "Tiny",
+      "classes": []
     },
     {
       "id": "item:toolbox-mold",
@@ -155890,7 +156093,11 @@
       "id": "item:toolbox",
       "label": "Toolbox",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 52)"
+      "source": "Crafted via Blacksmithing (trivial 52)",
+      "weight": 3,
+      "capacity": 8,
+      "containerSize": "Giant",
+      "classes": []
     },
     {
       "id": "item:ceramic-lining",
@@ -155937,7 +156144,11 @@
       "id": "item:small-sewing-kit",
       "label": "Small Sewing Kit",
       "type": "item",
-      "source": "Tool; crafted via Blacksmithing (trivial 135)"
+      "source": "Tool; crafted via Blacksmithing (trivial 135)",
+      "weight": 0.4,
+      "capacity": 2,
+      "containerSize": "Large",
+      "classes": []
     },
     {
       "id": "recipe:small-metal-container",
@@ -156266,7 +156477,18 @@
       "slots": [
         "Secondary"
       ],
-      "source": "Crafted via Blacksmithing (trivial 115)"
+      "source": "Crafted via Blacksmithing (trivial 115)",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:buckler",
@@ -156336,7 +156558,8 @@
       "type": "item",
       "weight": 25.5,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 27) from 3x Small Brick of Ore + Water Flask, yield 2; also drops from muddites in Beholder's Maze and rock dervishes in Lavastorm Mountains (neither zone catalogued in this graph yet)"
+      "source": "Crafted via Blacksmithing (trivial 27) from 3x Small Brick of Ore + Water Flask, yield 2; also drops from muddites in Beholder's Maze and rock dervishes in Lavastorm Mountains (neither zone catalogued in this graph yet)",
+      "classes": []
     },
     {
       "id": "item:block-of-ore",
@@ -156344,21 +156567,24 @@
       "type": "item",
       "weight": 25.5,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 27) from 3x Large Brick of Ore + Water Flask; also drops from muddites in Beholder's Maze and rock dervishes in Lavastorm Mountains (neither zone catalogued in this graph yet)"
+      "source": "Crafted via Blacksmithing (trivial 27) from 3x Large Brick of Ore + Water Flask; also drops from muddites in Beholder's Maze and rock dervishes in Lavastorm Mountains (neither zone catalogued in this graph yet)",
+      "classes": []
     },
     {
       "id": "item:folded-sheet-metal",
       "label": "Folded Sheet Metal",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Tiny",
+      "classes": []
     },
     {
       "id": "item:studs",
       "label": "Studs",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Tiny",
+      "classes": []
     },
     {
       "id": "item:steel-boning",
@@ -156366,7 +156592,8 @@
       "type": "item",
       "weight": 0.1,
       "size": "Tiny",
-      "source": "Also an ingredient in the Innoruuk Regent quest line"
+      "source": "Also an ingredient in the Innoruuk Regent quest line",
+      "classes": []
     },
     {
       "id": "recipe:large-brick-of-ore",
@@ -156440,7 +156667,8 @@
       "label": "Medium Quality Folded Sheet Metal",
       "type": "item",
       "weight": 15,
-      "size": "Small"
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "recipe:medium-quality-folded-sheet-metal",
@@ -156477,7 +156705,17 @@
       "slots": [
         "Secondary"
       ],
-      "source": "Crafted via Blacksmithing (trivial 88); also drops from various city guards"
+      "source": "Crafted via Blacksmithing (trivial 88); also drops from various city guards",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:tower-shield-mold",
@@ -156493,6 +156731,16 @@
       "size": "Large",
       "slots": [
         "Secondary"
+      ],
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -156632,14 +156880,16 @@
       "label": "Field Point Arrowheads",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:hooked-arrowheads",
       "label": "Hooked Arrowheads",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:javelin-mold",
@@ -156650,8 +156900,8 @@
       "id": "item:antonian-javelin",
       "label": "Antonian Javelin",
       "type": "item",
-      "weight": 4,
-      "size": "Small",
+      "weight": 1.5,
+      "size": "Large",
       "source": "Cultural recipe usable only by Human Blacksmiths (per eqlwiki's own Misc recipe table)",
       "slots": [
         "Range",
@@ -156659,14 +156909,23 @@
       ],
       "skill": "Throwingv2",
       "delay": 30,
-      "damage": 8
+      "damage": 8,
+      "classes": [
+        "bard",
+        "monk",
+        "ranger",
+        "rogue",
+        "shaman",
+        "warrior"
+      ]
     },
     {
       "id": "item:bundled-steel-arrow-shafts",
       "label": "Bundled Steel Arrow Shafts",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:silver-bar",
@@ -156680,7 +156939,9 @@
       "label": "Silver Tipped Arrowheads",
       "type": "item",
       "weight": 0.1,
-      "size": "Tiny"
+      "size": "Small",
+      "magic": true,
+      "classes": []
     },
     {
       "id": "recipe:field-point-arrowheads",
@@ -156964,7 +157225,18 @@
       ],
       "skill": "1H Slashing",
       "delay": 33,
-      "damage": 7
+      "damage": 7,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-bastard-sword",
@@ -156984,7 +157256,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 34,
-      "damage": 7
+      "damage": 7,
+      "weight": 8.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-battle-axe",
@@ -157004,7 +157286,20 @@
       ],
       "skill": "Piercing",
       "delay": 21,
-      "damage": 3
+      "damage": 3,
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-dagger",
@@ -157023,7 +157318,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 48,
-      "damage": 14
+      "damage": 14,
+      "weight": 14,
+      "size": "Giant",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-halberd",
@@ -157043,7 +157346,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 28,
-      "damage": 6
+      "damage": 6,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-long-sword",
@@ -157063,7 +157376,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 36,
-      "damage": 7
+      "damage": 7,
+      "weight": 8,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-mace",
@@ -157083,7 +157410,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 38,
-      "damage": 8
+      "damage": 8,
+      "weight": 9,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-morning-star",
@@ -157103,7 +157444,18 @@
       ],
       "skill": "1H Slashing",
       "delay": 35,
-      "damage": 6
+      "damage": 6,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-pick",
@@ -157123,7 +157475,16 @@
       ],
       "skill": "Piercing",
       "delay": 26,
-      "damage": 5
+      "damage": 5,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-rapier",
@@ -157143,7 +157504,18 @@
       ],
       "skill": "1H Slashing",
       "delay": 24,
-      "damage": 5
+      "damage": 5,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-scimitar",
@@ -157163,7 +157535,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 24,
-      "damage": 4
+      "damage": 4,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-short-sword",
@@ -157182,7 +157564,17 @@
       ],
       "skill": "Piercing",
       "delay": 28,
-      "damage": 6
+      "damage": 6,
+      "weight": 7,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-spear",
@@ -157201,7 +157593,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 44,
-      "damage": 12
+      "damage": 12,
+      "weight": 11,
+      "size": "Large",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-two-handed-sword",
@@ -157221,7 +157621,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 30,
-      "damage": 6
+      "damage": 6,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-warhammer",
@@ -157241,7 +157655,16 @@
       ],
       "skill": "Throwingv2",
       "delay": 33,
-      "damage": 7
+      "damage": 7,
+      "weight": 2,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "monk",
+        "ranger",
+        "rogue",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-javelin",
@@ -157261,7 +157684,21 @@
       ],
       "skill": "Throwingv2",
       "delay": 25,
-      "damage": 4
+      "damage": 4,
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-shuriken",
@@ -157281,7 +157718,21 @@
       ],
       "skill": "Throwingv2",
       "delay": 29,
-      "damage": 6
+      "damage": 6,
+      "weight": 1,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-throwing-axe",
@@ -157301,7 +157752,21 @@
       ],
       "skill": "Throwingv2",
       "delay": 35,
-      "damage": 5
+      "damage": 5,
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-throwing-knife",
@@ -157321,7 +157786,18 @@
       ],
       "skill": "1H Slashing",
       "delay": 30,
-      "damage": 5
+      "damage": 5,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-fer-esh",
@@ -157341,7 +157817,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 38,
-      "damage": 8
+      "damage": 8,
+      "weight": 10,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-shan-tok",
@@ -157361,7 +157847,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 31,
-      "damage": 6
+      "damage": 6,
+      "weight": 8.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-sheer-blade",
@@ -157401,7 +157897,21 @@
       ],
       "skill": "1H Slashing",
       "delay": 36,
-      "damage": 4
+      "damage": 4,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:tarnished-mining-pick",
@@ -157421,7 +157931,17 @@
       ],
       "skill": "Piercing",
       "delay": 30,
-      "damage": 4
+      "damage": 4,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-shortened-spear",
@@ -157441,7 +157961,16 @@
       ],
       "skill": "Piercing",
       "delay": 29,
-      "damage": 4
+      "damage": 4,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-rapier",
@@ -157461,7 +157990,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 26,
-      "damage": 4
+      "damage": 4,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-short-sword",
@@ -157487,7 +158026,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 28,
-      "damage": 4
+      "damage": 4,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-warhammer",
@@ -157513,7 +158066,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 35,
-      "damage": 5
+      "damage": 5,
+      "weight": 9,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-flail",
@@ -157533,7 +158100,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 36,
-      "damage": 5
+      "damage": 5,
+      "weight": 8,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-mace",
@@ -157552,7 +158133,17 @@
       ],
       "skill": "Piercing",
       "delay": 36,
-      "damage": 5
+      "damage": 5,
+      "weight": 7,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-spear",
@@ -157572,7 +158163,18 @@
       ],
       "skill": "1H Slashing",
       "delay": 34,
-      "damage": 5
+      "damage": 5,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-axe",
@@ -157592,7 +158194,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 34,
-      "damage": 5
+      "damage": 5,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-broad-sword",
@@ -157618,7 +158230,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 33,
-      "damage": 5
+      "damage": 5,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-long-sword",
@@ -157657,7 +158279,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 40,
-      "damage": 6
+      "damage": 6,
+      "weight": 8.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-battle-axe",
@@ -157676,7 +158308,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 55,
-      "damage": 11
+      "damage": 11,
+      "weight": 14,
+      "size": "Giant",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-halberd",
@@ -157696,7 +158336,21 @@
       ],
       "skill": "1H Blunt",
       "delay": 42,
-      "damage": 6
+      "damage": 6,
+      "weight": 10,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-morning-star",
@@ -157734,7 +158388,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 49,
-      "damage": 8
+      "damage": 8,
+      "weight": 12,
+      "size": "Large",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-scythe",
@@ -157753,7 +158415,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 48,
-      "damage": 9
+      "damage": 9,
+      "weight": 12,
+      "size": "Large",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-two-handed-sword",
@@ -157772,7 +158442,15 @@
       ],
       "skill": "2H Slashing",
       "delay": 47,
-      "damage": 9
+      "damage": 9,
+      "weight": 13,
+      "size": "Large",
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:tarnished-two-handed-battle-axe",
@@ -157801,7 +158479,8 @@
       "label": "Sheet of Velium",
       "type": "item",
       "weight": 15,
-      "size": "Small"
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "recipe:sheet-of-velium",
@@ -157820,7 +158499,17 @@
       ],
       "skill": "2H Slashing",
       "delay": 43,
-      "damage": 13
+      "damage": 13,
+      "weight": 9,
+      "size": "Large",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-2-handed-sword",
@@ -157840,7 +158529,22 @@
       ],
       "skill": "Piercing",
       "delay": 18,
-      "damage": 3
+      "damage": 3,
+      "weight": 3.9,
+      "size": "Small",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-velium-dagger",
@@ -157860,7 +158564,19 @@
       ],
       "skill": "1H Slashing",
       "delay": 28,
-      "damage": 7
+      "damage": 7,
+      "weight": 4.5,
+      "size": "Medium",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-long-sword",
@@ -157880,7 +158596,23 @@
       ],
       "skill": "1H Blunt",
       "delay": 38,
-      "damage": 9
+      "damage": 9,
+      "weight": 9.5,
+      "size": "Medium",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-morning-star",
@@ -157900,7 +158632,20 @@
       ],
       "skill": "1H Slashing",
       "delay": 24,
-      "damage": 6
+      "damage": 6,
+      "weight": 4.5,
+      "size": "Medium",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "bard",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-scimitar",
@@ -157920,7 +158665,19 @@
       ],
       "skill": "1H Slashing",
       "delay": 23,
-      "damage": 5
+      "damage": 5,
+      "weight": 3.5,
+      "size": "Medium",
+      "effect": "Velium Shards (Combat, Casting Time: Instant) at Level 25",
+      "magic": true,
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-short-sword",
@@ -157940,7 +158697,22 @@
       ],
       "skill": "Throwingv2",
       "delay": 24,
-      "damage": 5
+      "damage": 5,
+      "weight": 0.3,
+      "size": "Small",
+      "magic": true,
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-velium-shuriken",
@@ -157960,7 +158732,22 @@
       ],
       "skill": "Throwingv2",
       "delay": 28,
-      "damage": 7
+      "damage": 7,
+      "weight": 0.8,
+      "size": "Medium",
+      "magic": true,
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-velium-throwing-axe",
@@ -157980,7 +158767,22 @@
       ],
       "skill": "Throwingv2",
       "delay": 34,
-      "damage": 6
+      "damage": 6,
+      "weight": 0.3,
+      "size": "Small",
+      "magic": true,
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "monk",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "recipe:forged-velium-throwing-knife",
@@ -158000,7 +158802,17 @@
       ],
       "skill": "Throwingv2",
       "delay": 32,
-      "damage": 8
+      "damage": 8,
+      "weight": 1.5,
+      "size": "Large",
+      "magic": true,
+      "classes": [
+        "bard",
+        "monk",
+        "ranger",
+        "rogue",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:forged-velium-throwing-spear",
@@ -158294,7 +159106,8 @@
       "type": "item",
       "weight": 7,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 27, yield 2) from 3x Small Piece of High Quality Ore + Water Flask; also drops from goblins; also sold by Mar Sedder in South Qeynos"
+      "source": "Crafted via Blacksmithing (trivial 27, yield 2) from 3x Small Piece of High Quality Ore + Water Flask; also drops from goblins; also sold by Mar Sedder in South Qeynos",
+      "classes": []
     },
     {
       "id": "item:block-of-high-quality-ore",
@@ -158302,7 +159115,8 @@
       "type": "item",
       "weight": 18,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 55) from 3x Large Brick of High Quality Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 55) from 3x Large Brick of High Quality Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "item:high-quality-sheet-metal",
@@ -158310,7 +159124,8 @@
       "type": "item",
       "weight": 15,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 36) from 2x Small Brick of High Quality Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 36) from 2x Small Brick of High Quality Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "recipe:small-brick-of-high-quality-ore",
@@ -158347,7 +159162,8 @@
       "type": "item",
       "weight": 15,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 39) from a Smithy Hammer + Block of High Quality Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 39) from a Smithy Hammer + Block of High Quality Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "item:small-brick-of-enchanted-ore",
@@ -158355,7 +159171,8 @@
       "type": "item",
       "weight": 7,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 21, yield 3) from a Large Brick of Enchanted Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 21, yield 3) from a Large Brick of Enchanted Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "item:large-brick-of-enchanted-ore",
@@ -158371,7 +159188,8 @@
       "type": "item",
       "weight": 15,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 42) from 2x Small Brick of Enchanted Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 42) from 2x Small Brick of Enchanted Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "item:block-of-enchanted-ore",
@@ -158379,7 +159197,8 @@
       "type": "item",
       "weight": 18,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 32) from 3x Large Brick of Enchanted Ore + Water Flask"
+      "source": "Crafted via Blacksmithing (trivial 32) from 3x Large Brick of Enchanted Ore + Water Flask",
+      "classes": []
     },
     {
       "id": "item:enchanted-folded-sheet-metal",
@@ -158387,7 +159206,8 @@
       "type": "item",
       "weight": 15,
       "size": "Small",
-      "source": "Crafted via Blacksmithing (trivial 44) from a Water Flask + Smithy Hammer + Block of Enchanted Ore"
+      "source": "Crafted via Blacksmithing (trivial 44) from a Water Flask + Smithy Hammer + Block of Enchanted Ore",
+      "classes": []
     },
     {
       "id": "recipe:high-quality-folded-sheet-metal",
@@ -158444,7 +159264,17 @@
       ],
       "skill": "Piercing",
       "delay": 26,
-      "damage": 6
+      "damage": 6,
+      "weight": 7,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:seafarers-dirk",
@@ -158457,7 +159287,20 @@
       ],
       "skill": "Piercing",
       "delay": 22,
-      "damage": 4
+      "damage": 4,
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "item:seafarers-cutlass",
@@ -158470,7 +159313,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 23,
-      "damage": 7
+      "damage": 7,
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:seafarers-buckler-shield",
@@ -158479,6 +159332,24 @@
       "source": "Crafted via Blacksmithing (trivial 88) at the Antonican Forge",
       "slots": [
         "Secondary"
+      ],
+      "ac": 7,
+      "weight": 3,
+      "size": "Small",
+      "stats": {
+        "dex": 2
+      },
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "monk",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158492,7 +159363,22 @@
       ],
       "skill": "1H Slashing",
       "delay": 23,
-      "damage": 7
+      "damage": 7,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "agi": 4,
+        "dex": 4
+      },
+      "magic": true,
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:enchanted-seafarers-dirk",
@@ -158505,7 +159391,25 @@
       ],
       "skill": "Piercing",
       "delay": 22,
-      "damage": 4
+      "damage": 4,
+      "weight": 2.5,
+      "size": "Small",
+      "stats": {
+        "agi": 2,
+        "dex": 2
+      },
+      "magic": true,
+      "classes": [
+        "bard",
+        "enchanter",
+        "magician",
+        "necromancer",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior",
+        "wizard"
+      ]
     },
     {
       "id": "item:enchanted-seafarers-harpoon",
@@ -158517,7 +159421,24 @@
       ],
       "skill": "Piercing",
       "delay": 26,
-      "damage": 6
+      "damage": 6,
+      "weight": 7,
+      "size": "Large",
+      "stats": {
+        "dex": 2
+      },
+      "resists": {
+        "cold": 3
+      },
+      "magic": true,
+      "classes": [
+        "bard",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:seafarers-harpoon",
@@ -158572,7 +159493,10 @@
       "id": "item:high-quality-metal-rings",
       "label": "High Quality Metal Rings",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 46) from a Large Brick of High Quality Ore + Water Flask + File"
+      "source": "Crafted via Blacksmithing (trivial 46) from a Large Brick of High Quality Ore + Water Flask + File",
+      "weight": 4,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "item:enchanted-metal-rings",
@@ -158583,7 +159507,10 @@
       "id": "item:enchanted-chain-jointing",
       "label": "Enchanted Chain Jointing",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 106) from Enchanted Metal Rings + Water Flask + Smithy Hammer + File"
+      "source": "Crafted via Blacksmithing (trivial 106) from Enchanted Metal Rings + Water Flask + Smithy Hammer + File",
+      "weight": 4,
+      "size": "Small",
+      "classes": []
     },
     {
       "id": "recipe:high-quality-metal-rings",
@@ -158610,7 +159537,17 @@
       ],
       "skill": "1H Slashing",
       "delay": 28,
-      "damage": 8
+      "damage": 8,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:enchanted-antonian-long-sword-fire-emerald",
@@ -158623,7 +159560,22 @@
       ],
       "skill": "1H Slashing",
       "delay": 26,
-      "damage": 9
+      "damage": 9,
+      "weight": 7.5,
+      "size": "Medium",
+      "stats": {
+        "str": 2,
+        "dex": 2
+      },
+      "magic": true,
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "item:enchanted-antonian-long-sword-star-ruby",
@@ -158636,7 +159588,22 @@
       ],
       "skill": "1H Slashing",
       "delay": 26,
-      "damage": 9
+      "damage": 9,
+      "weight": 7.5,
+      "size": "Medium",
+      "stats": {
+        "dex": 3,
+        "cha": 3
+      },
+      "magic": true,
+      "classes": [
+        "bard",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "warrior"
+      ]
     },
     {
       "id": "recipe:antonian-long-sword",
@@ -158671,6 +159638,19 @@
       "source": "Crafted via Blacksmithing (trivial 116) at the Antonican Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158697,6 +159677,19 @@
       "source": "Crafted via Blacksmithing (trivial 119) at the Antonican Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 7,
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158723,6 +159716,19 @@
       "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 8,
+      "weight": 2.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158749,6 +159755,19 @@
       "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 9,
+      "weight": 5.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158770,6 +159789,19 @@
       "source": "Crafted via Blacksmithing (trivial 132) at the Antonican Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 10,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158791,6 +159823,19 @@
       "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 8,
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158812,6 +159857,19 @@
       "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 8,
+      "weight": 3,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158833,6 +159891,19 @@
       "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 10,
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158859,6 +159930,19 @@
       "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158885,6 +159969,19 @@
       "source": "Crafted via Blacksmithing (trivial 142) at the Antonican Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 18,
+      "weight": 8,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158911,6 +160008,19 @@
       "source": "Crafted via Blacksmithing (trivial 140) at the Antonican Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158937,6 +160047,19 @@
       "source": "Crafted via Blacksmithing (trivial 135) at the Antonican Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shaman",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158968,6 +160091,16 @@
       "source": "Crafted via Blacksmithing (trivial 190) at the Antonican Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -158989,6 +160122,16 @@
       "source": "Crafted via Blacksmithing (trivial 192) at the Antonican Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159010,6 +160153,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159031,6 +160184,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159052,6 +160215,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159073,6 +160246,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159094,6 +160277,16 @@
       "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159115,6 +160308,16 @@
       "source": "Crafted via Blacksmithing (trivial 198) at the Antonican Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159136,6 +160339,16 @@
       "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159157,6 +160370,16 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159178,6 +160401,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Antonican Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159199,6 +160432,16 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159220,6 +160463,16 @@
       "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 26,
+      "weight": 11,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159241,6 +160494,16 @@
       "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 13,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159262,6 +160525,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 12,
+      "weight": 4.4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159283,6 +160556,16 @@
       "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159304,6 +160587,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 14,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159325,6 +160618,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 10,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159346,6 +160649,16 @@
       "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 18,
+      "weight": 8.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159367,6 +160680,16 @@
       "source": "Crafted via Blacksmithing (trivial 206) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 15,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159388,6 +160711,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 13,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159409,6 +160742,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 14,
+      "weight": 7,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159430,6 +160773,16 @@
       "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 7,
+      "weight": 2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159451,6 +160804,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 14,
+      "weight": 6.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159477,6 +160840,16 @@
       "source": "Crafted via Blacksmithing (trivial 222) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 26,
+      "weight": 11,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159493,6 +160866,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 13,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159509,6 +160892,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 12,
+      "weight": 4.4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159525,6 +160918,16 @@
       "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159541,6 +160944,16 @@
       "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 14,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159557,6 +160970,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 10,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159573,6 +160996,16 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 18,
+      "weight": 8.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159589,6 +161022,16 @@
       "source": "Crafted via Blacksmithing (trivial 212) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 15,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159605,6 +161048,16 @@
       "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 13,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159621,6 +161074,16 @@
       "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 14,
+      "weight": 7,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159637,6 +161100,16 @@
       "source": "Crafted via Blacksmithing (trivial 196) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 7,
+      "weight": 2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159653,6 +161126,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 14,
+      "weight": 6.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159674,6 +161157,16 @@
       "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 26,
+      "weight": 11,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159690,6 +161183,16 @@
       "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 13,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159706,6 +161209,16 @@
       "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 12,
+      "weight": 4.4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159722,6 +161235,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159738,6 +161261,16 @@
       "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 14,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159754,6 +161287,16 @@
       "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 10,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159770,6 +161313,16 @@
       "source": "Crafted via Blacksmithing (trivial 218) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 18,
+      "weight": 8.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159786,6 +161339,16 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 15,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159802,6 +161365,16 @@
       "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 13,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159818,6 +161391,16 @@
       "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 14,
+      "weight": 7,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159834,6 +161417,16 @@
       "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 7,
+      "weight": 2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159850,6 +161443,16 @@
       "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 14,
+      "weight": 6.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159871,6 +161474,16 @@
       "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 26,
+      "weight": 11,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159887,6 +161500,16 @@
       "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 13,
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159903,6 +161526,16 @@
       "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 12,
+      "weight": 4.4,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159919,6 +161552,16 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)",
       "slots": [
         "Neck"
+      ],
+      "ac": 9,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159934,6 +161577,16 @@
       "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 14,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159950,6 +161603,16 @@
       "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 10,
+      "weight": 4.5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159966,6 +161629,16 @@
       "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 18,
+      "weight": 8.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159982,6 +161655,16 @@
       "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 15,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -159998,6 +161681,16 @@
       "source": "Crafted via Blacksmithing (trivial 200) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 13,
+      "weight": 5,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160014,6 +161707,16 @@
       "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 14,
+      "weight": 7,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160030,6 +161733,16 @@
       "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "ac": 7,
+      "weight": 2,
+      "size": "Small",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160046,6 +161759,16 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)",
       "slots": [
         "Back"
+      ],
+      "ac": 14,
+      "weight": 6.5,
+      "size": "Large",
+      "classes": [
+        "bard",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160068,6 +161791,19 @@
       "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "size": "Large",
+      "stats": {
+        "sta": 5,
+        "agi": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160086,6 +161822,19 @@
       "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "size": "Medium",
+      "stats": {
+        "sta": 4,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160104,6 +161853,19 @@
       "source": "Crafted via Blacksmithing (trivial 209) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 3,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160122,6 +161884,19 @@
       "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 3,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160140,6 +161915,19 @@
       "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 4,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160158,6 +161946,19 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 3,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160176,6 +161977,19 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "size": "Large",
+      "stats": {
+        "sta": 5,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160194,6 +162008,19 @@
       "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 4,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160212,6 +162039,19 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 3,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160230,6 +162070,19 @@
       "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 4,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160248,6 +162101,19 @@
       "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "size": "Small",
+      "stats": {
+        "sta": 3,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160266,6 +162132,19 @@
       "source": "Crafted via Blacksmithing (trivial 226) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "size": "Large",
+      "stats": {
+        "sta": 5,
+        "agi": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160289,6 +162168,21 @@
       "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "size": "Large",
+      "stats": {
+        "dex": 5
+      },
+      "resists": {
+        "magic": 5
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160307,6 +162201,21 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 4
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160325,6 +162234,21 @@
       "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160343,6 +162267,21 @@
       "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160361,6 +162300,21 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 4
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160379,6 +162333,21 @@
       "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160397,6 +162366,21 @@
       "source": "Crafted via Blacksmithing (trivial 232) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "size": "Large",
+      "stats": {
+        "dex": 4
+      },
+      "resists": {
+        "magic": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160415,6 +162399,21 @@
       "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160433,6 +162432,21 @@
       "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160451,6 +162465,21 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160469,6 +162498,21 @@
       "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "size": "Small",
+      "stats": {
+        "dex": 3
+      },
+      "resists": {
+        "magic": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160487,6 +162531,21 @@
       "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "size": "Large",
+      "stats": {
+        "dex": 4
+      },
+      "resists": {
+        "magic": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160510,6 +162569,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Chest"
+      ],
+      "size": "Large",
+      "stats": {
+        "wis": 5,
+        "cha": 5
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160527,6 +162602,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Feet"
+      ],
+      "size": "Medium",
+      "stats": {
+        "wis": 2,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160544,6 +162635,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Wrist"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160561,6 +162668,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Neck"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160578,6 +162701,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Hands"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160595,6 +162734,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Waist"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 3,
+        "cha": 3
+      },
+      "resists": {
+        "disease": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160612,6 +162767,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Legs"
+      ],
+      "size": "Large",
+      "stats": {
+        "wis": 2,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160629,6 +162800,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Head"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 3,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160646,6 +162833,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Shoulders"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 3,
+        "cha": 3
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160663,6 +162866,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Arms"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160680,6 +162899,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Face"
+      ],
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160697,6 +162932,22 @@
       "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
       "slots": [
         "Back"
+      ],
+      "size": "Large",
+      "stats": {
+        "wis": 4,
+        "cha": 4
+      },
+      "resists": {
+        "disease": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160719,6 +162970,19 @@
       "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge",
       "slots": [
         "Chest"
+      ],
+      "size": "Large",
+      "stats": {
+        "str": 5,
+        "int": 5
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160737,6 +163001,19 @@
       "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
       "slots": [
         "Feet"
+      ],
+      "size": "Medium",
+      "stats": {
+        "str": 2,
+        "int": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160755,6 +163032,19 @@
       "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
       "slots": [
         "Wrist"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160773,6 +163063,19 @@
       "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
       "slots": [
         "Neck"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160791,6 +163094,19 @@
       "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
       "slots": [
         "Hands"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160809,6 +163125,19 @@
       "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
       "slots": [
         "Waist"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160827,6 +163156,19 @@
       "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge",
       "slots": [
         "Legs"
+      ],
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "int": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160845,6 +163187,19 @@
       "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
       "slots": [
         "Head"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 3,
+        "int": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160863,6 +163218,19 @@
       "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
       "slots": [
         "Shoulders"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 3,
+        "int": 3
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160881,6 +163249,19 @@
       "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge",
       "slots": [
         "Arms"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160899,6 +163280,19 @@
       "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
       "slots": [
         "Face"
+      ],
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160917,6 +163311,19 @@
       "source": "Crafted via Blacksmithing (trivial 238) at the Royal Qeynos Forge",
       "slots": [
         "Back"
+      ],
+      "size": "Large",
+      "stats": {
+        "str": 3,
+        "int": 4
+      },
+      "magic": true,
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -160938,6 +163345,25 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160953,6 +163379,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160968,6 +163412,25 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160983,6 +163446,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -160998,6 +163479,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161013,6 +163512,25 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161028,6 +163546,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161043,6 +163579,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161058,6 +163612,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161073,6 +163645,25 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161088,6 +163679,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161103,6 +163712,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "wis": 2,
+        "int": 4,
+        "cha": -2
+      },
+      "resists": {
+        "disease": 2
+      },
+      "deity": "Bertoxxulous",
+      "classes": [
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161123,6 +163750,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161138,6 +163780,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161153,6 +163809,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161168,6 +163839,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161183,6 +163868,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161198,6 +163897,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161213,6 +163927,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161228,6 +163956,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161243,6 +163985,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161258,6 +164014,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161273,6 +164044,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161288,6 +164073,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Erollisi Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161308,6 +164107,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161323,6 +164136,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161338,6 +164164,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161353,6 +164193,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161368,6 +164221,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161383,6 +164249,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161398,6 +164278,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161413,6 +164306,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161428,6 +164334,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161443,6 +164362,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "str": 2,
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161458,6 +164391,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161473,6 +164419,19 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "wis": 2,
+        "int": 4
+      },
+      "deity": "Innoruuk",
+      "classes": [
+        "cleric",
+        "shadow knight",
+        "warrior"
       ]
     },
     {
@@ -161493,6 +164452,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161508,6 +164482,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161523,6 +164511,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161538,6 +164541,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161553,6 +164570,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161568,6 +164599,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161583,6 +164629,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161598,6 +164658,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161613,6 +164687,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161628,6 +164716,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161643,6 +164746,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161658,6 +164775,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "dex": 2,
+        "wis": 4
+      },
+      "deity": "Karana",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161678,6 +164809,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "str": 4,
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161693,6 +164842,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161708,6 +164874,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161723,6 +164907,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161738,6 +164939,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161753,6 +164971,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "str": 4,
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161768,6 +165004,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161783,6 +165036,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161798,6 +165068,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161813,6 +165100,24 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "str": 4,
+        "wis": 2,
+        "cha": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161828,6 +165133,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161843,6 +165165,23 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "str": 4,
+        "wis": 2
+      },
+      "resists": {
+        "magic": 2
+      },
+      "deity": "Mithaniel Marr",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161863,6 +165202,18 @@
       "source": "Crafted via Blacksmithing (trivial 245) at the Antonican Forge",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161879,6 +165230,18 @@
       "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161895,6 +165258,18 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161911,6 +165286,18 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161926,6 +165313,18 @@
       "source": "Crafted via Blacksmithing (trivial 229) at the Antonican Forge",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161942,6 +165341,18 @@
       "source": "Crafted via Blacksmithing (trivial 236) at the Antonican Forge",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161958,6 +165369,18 @@
       "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161974,6 +165397,18 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -161990,6 +165425,18 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162006,6 +165453,18 @@
       "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "str": 6,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162022,6 +165481,18 @@
       "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162038,6 +165509,18 @@
       "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "str": 4,
+        "sta": 2
+      },
+      "deity": "Rallos Zek",
+      "classes": [
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162059,6 +165542,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Chest"
+      ],
+      "ac": 24,
+      "weight": 10.5,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162074,6 +165572,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Shoulders"
+      ],
+      "ac": 11,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162089,6 +165601,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Arms"
+      ],
+      "ac": 13,
+      "weight": 6.8,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162104,6 +165631,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Face"
+      ],
+      "ac": 6,
+      "weight": 1.7,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162119,6 +165660,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Head"
+      ],
+      "ac": 13,
+      "weight": 4.8,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162134,6 +165689,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Legs"
+      ],
+      "ac": 16,
+      "weight": 8,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162149,6 +165719,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Waist"
+      ],
+      "ac": 9,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162164,6 +165748,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Hands"
+      ],
+      "ac": 12,
+      "weight": 5.2,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162179,6 +165777,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Neck"
+      ],
+      "ac": 8,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162194,6 +165806,21 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Back"
+      ],
+      "ac": 12,
+      "weight": 6,
+      "size": "Large",
+      "stats": {
+        "sta": 2,
+        "wis": 4,
+        "cha": 2
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162209,6 +165836,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Wrist"
+      ],
+      "ac": 10,
+      "weight": 4.2,
+      "size": "Small",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {
@@ -162224,6 +165865,20 @@
       "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
       "slots": [
         "Feet"
+      ],
+      "ac": 12,
+      "weight": 7,
+      "size": "Medium",
+      "stats": {
+        "sta": 2,
+        "wis": 4
+      },
+      "deity": "Rodcet Nife",
+      "classes": [
+        "cleric",
+        "paladin",
+        "warrior",
+        "bard"
       ]
     },
     {

@@ -103,6 +103,13 @@ export interface SpellDetails {
 export interface ItemDetails {
   slots?: string[];
   classes?: string[];
+  // Restricts the item to worshipers of one deity (e.g. Blacksmithing's
+  // Imbued Field Plate armor, one set per deity) -- directly relevant to
+  // this app's own faction system (worst-of race/class/deity), not just
+  // flavor text. Sourced from eqlwiki's own `Deity:` statsblock line;
+  // absent means no deity restriction, same "absent = unrestricted"
+  // convention as `classes`.
+  deity?: string;
   ac?: number;
   stats?: { str?: number; sta?: number; dex?: number; agi?: number; wis?: number; int?: number; cha?: number };
   resists?: { fire?: number; cold?: number; disease?: number; poison?: number; magic?: number };
@@ -133,7 +140,7 @@ export interface ItemSummary extends ItemDetails {
 }
 
 const ITEM_DETAIL_KEYS = [
-  "slots", "classes", "ac", "stats", "resists", "hp", "mana", "damage", "delay",
+  "slots", "classes", "deity", "ac", "stats", "resists", "hp", "mana", "damage", "delay",
   "skill", "effect", "lightSource", "weight", "size", "magic", "lore", "noTrade", "value", "source",
   "capacity", "containerSize",
 ] as const;
