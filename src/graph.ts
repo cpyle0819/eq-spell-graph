@@ -1440,18 +1440,38 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
   };
 }
 
+// stopZoneIds (issue #63's "add stop") are visited in order between from and
+// to -- each consecutive pair (from→stop1, stop1→stop2, ..., stopN→to) is its
+// own independent shortestPath() call, stitched into one continuous path
+// rather than a single BFS that happens to pass through every stop, since
+// the visitor is asking for specific waypoints, not "the shortest route that
+// merely touches these zones somewhere." A leg's own start entry is dropped
+// when concatenating (except the very first leg's) so a stop zone doesn't
+// appear twice in a row -- it carries no `via` of its own anyway (that's on
+// the entry after it), so nothing is lost by dropping it. If a stop equals
+// its own neighbor (or from===to with no stops), shortestPath's own
+// from===to short-circuit yields a redundant single-entry leg that
+// contributes nothing once its start entry is dropped -- a harmless no-op,
+// not a real route through nothing. Any unreachable leg fails the whole
+// route (null hops, empty steps) rather than silently skipping a stop the
+// visitor explicitly asked to pass through.
 export function getRoute(
   fromZoneId: string,
   toZoneId: string,
-  includeWizardPort = false
+  includeWizardPort = false,
+  stopZoneIds: string[] = []
 ): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
-  const pathIds = shortestPath(fromZoneId, toZoneId, helpers, includeWizardPort);
-  const hops = pathIds ? pathIds.length - 1 : null;
-  const route: RouteStep[] = pathIds
-    ? buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers)
-    : [];
+  const waypoints = [fromZoneId, ...stopZoneIds, toZoneId];
+  const pathIds: PathStep[] = [];
+  for (let i = 0; i < waypoints.length - 1; i++) {
+    const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includeWizardPort);
+    if (!leg) return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId) };
+    pathIds.push(...(i === 0 ? leg : leg.slice(1)));
+  }
+  const hops = pathIds.length - 1;
+  const route: RouteStep[] = buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers);
   return { hops, route, destination: getZoneVendorInfo(toZoneId) };
 }
 

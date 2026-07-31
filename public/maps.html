@@ -42,6 +42,21 @@
 
     .arrow { color: var(--line-strong); font-size: 20px; flex-shrink: 0; }
 
+    /* A stop's label row carries its own remove action inline (not a
+       separate button-shaped element next to the field) -- same
+       "secondary, infrequent" .text-action treatment app.js/quests.js
+       already use for Show all/Clear owned, not a bone-plate macro-button,
+       since removing one stop out of several is a fine-grained edit, not a
+       primary action on par with Reset. */
+    .stop-field .field-label-row { display: flex; align-items: baseline; gap: 8px; }
+    #stops-container { display: contents; }
+
+    /* + Add Stop sits right after the To field rather than in
+       .finder-actions -- it edits the route's own shape (issue #63), so it
+       reads as part of the from/stops/to chain, not a page-level action
+       like Wizard Port/Reset. */
+    #add-stop-btn { align-self: flex-end; margin-bottom: 9px; white-space: nowrap; }
+
     /* Two square macro-buttons, touching (no gap) so they read as one
        shared control cluster rather than two separate buttons — same idea
        as status-panel's own side-by-side square actions. margin-left: auto
@@ -97,10 +112,12 @@
         <select id="route-from"><option value="">— Select Zone —</option></select>
       </div>
       <span class="arrow">›</span>
+      <div id="stops-container"></div>
       <div class="field">
         <label>To</label>
         <select id="route-to"><option value="">— Select Zone —</option></select>
       </div>
+      <button type="button" class="text-action" id="add-stop-btn" title="Insert a zone to pass through along the way">+ Add Stop</button>
       <div class="finder-actions">
         <macro-button square id="wizard-port-btn" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky">Wizard Port</macro-button>
         <macro-button square id="reset-route-btn">Reset</macro-button>

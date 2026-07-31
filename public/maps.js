@@ -6,11 +6,19 @@ import "./components/index.js";
 const STATE_KEY = "eq-route-state";
 
 let zonesByLabel = new Map();
+let allZones = [];
+// Ordered zone labels to route through between "from" and "to" (issue #63's
+// "add stop" -- an empty string is a stop row the visitor added but hasn't
+// picked a zone for yet, kept in the array so its position/remove button
+// survive a re-render rather than being silently dropped).
+let stops = [];
 
 export async function init() {
   const zones = await fetch("api/zones").then((r) => r.json());
+  allZones = zones;
   zonesByLabel = new Map(zones.map((z) => [z.label, z]));
-  populateZones(zones);
+  populateZoneSelect(document.getElementById("route-from"));
+  populateZoneSelect(document.getElementById("route-to"));
   restoreState();
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
@@ -21,6 +29,12 @@ export async function init() {
     runRoute();
   });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
+  document.getElementById("add-stop-btn").addEventListener("click", () => {
+    stops.push("");
+    renderStops();
+    saveState();
+    // No runRoute() -- an added-but-unpicked stop can't change the route yet.
+  });
   // Delegated once here rather than re-attached per runRoute() -- #route-result
   // itself is never replaced, only its children (route-card/zone-dossier),
   // and the event bubbles+composes out of both their shadow roots (issue
@@ -28,6 +42,37 @@ export async function init() {
   // without recomputing the route).
   document.getElementById("route-result").addEventListener("zone-select", (e) => showZoneDossier(e.detail.name));
   runRoute();
+}
+
+function renderStops() {
+  const container = document.getElementById("stops-container");
+  container.innerHTML = stops.map((value, i) => `
+    <span class="arrow">›</span>
+    <div class="field stop-field" data-index="${i}">
+      <div class="field-label-row">
+        <label>Stop ${i + 1}</label>
+        <button type="button" class="text-action remove-stop-btn" data-index="${i}" title="Remove this stop">×</button>
+      </div>
+      <select class="stop-select" data-index="${i}"><option value="">— Select Zone —</option></select>
+    </div>
+  `).join("");
+  for (const select of container.querySelectorAll(".stop-select")) {
+    populateZoneSelect(select);
+    select.value = stops[Number(select.dataset.index)];
+    select.addEventListener("change", () => {
+      stops[Number(select.dataset.index)] = select.value;
+      saveState();
+      runRoute();
+    });
+  }
+  for (const btn of container.querySelectorAll(".remove-stop-btn")) {
+    btn.addEventListener("click", () => {
+      stops.splice(Number(btn.dataset.index), 1);
+      renderStops();
+      saveState();
+      runRoute();
+    });
+  }
 }
 
 // ?to=<zone label> deep-links here (e.g. from the Leveling Guide) preset the
@@ -49,6 +94,8 @@ function resetRoute() {
   document.getElementById("route-from").value = "";
   document.getElementById("route-to").value = "";
   document.getElementById("wizard-port-btn").removeAttribute("toggled");
+  stops = [];
+  renderStops();
   saveState();
   runRoute();
 }
@@ -60,6 +107,8 @@ function restoreState() {
     if (s.from) document.getElementById("route-from").value = s.from;
     if (s.to) document.getElementById("route-to").value = s.to;
     if (s.wizardPort) document.getElementById("wizard-port-btn").setAttribute("toggled", "");
+    if (Array.isArray(s.stops)) stops = s.stops;
+    renderStops();
   } catch { /* ignore malformed state */ }
 }
 
@@ -67,18 +116,15 @@ function saveState() {
   const from = document.getElementById("route-from").value;
   const to = document.getElementById("route-to").value;
   const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort }));
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort, stops }));
 }
 
-function populateZones(zones) {
-  for (const id of ["route-from", "route-to"]) {
-    const select = document.getElementById(id);
-    for (const z of zones) {
-      const opt = document.createElement("option");
-      opt.value = z.label;
-      opt.textContent = z.label;
-      select.appendChild(opt);
-    }
+function populateZoneSelect(select) {
+  for (const z of allZones) {
+    const opt = document.createElement("option");
+    opt.value = z.label;
+    opt.textContent = z.label;
+    select.appendChild(opt);
   }
 }
 
@@ -162,11 +208,14 @@ async function runRoute() {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
   } else if (from) {
     const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
-    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}) };
+    const stopsParam = stops.filter(Boolean).join(",");
+    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
     const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
     if (!result.route || result.route.length === 0) {
-      noticeHtml = `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
+      noticeHtml = stopsParam
+        ? `<div class="no-results compact">No route found from ${from} to ${to} through ${stops.filter(Boolean).join(", ")}.</div>`
+        : `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
     } else {
       routeCard = document.createElement("route-card");
       routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
