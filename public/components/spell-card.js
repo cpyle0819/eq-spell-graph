@@ -1,12 +1,14 @@
 // <spell-card>, with `.setData(spell, selectedClasses, pinUrl)` set as one
 // atomic call. Renders a spell entry: name + owned checkbox, badges (type/
 // mana/skill/class), description, stats, and a footer with a vendor-list
-// toggle (fetches api/spell/{id}/vendors on first expand; collapsing and
-// re-expanding refetches, same as before) plus a "Find in Spell Finder"
-// link. Shares the same localStorage-backed owned set as the Spell Finder
+// toggle (fetches api/spell/{id}/vendors on first expand, grouped by zone
+// via vendorGroupsHtml() below, same "heading + list" visual language as
+// the Spell Vendors page's own zone-card.js; collapsing and re-expanding
+// refetches, same as before) plus a "Find in Spell Finder" link. Shares
+// the same localStorage-backed owned set as the Spell Finder
 // (components.js) —
 // marking a spell owned here shows up there and vice versa. `pinUrl` is
-// built by class-browser.js (it depends on the page's own level-select),
+// built by class-browser.js (it depends on the page's own level-range),
 // not computed here.
 import { CardBase, classBadges, fmtDuration, fmtCast, wikiLink } from "./card-base.js";
 import { getOwnedSpells, setSpellOwned } from "../components.js";
@@ -69,10 +71,23 @@ EXTRA_SHEET.replaceSync(`
 .spell-check-labeled:has(input:checked) { color: var(--gold); }
 .spell-check-labeled:has(input:checked) input { accent-color: var(--gold); }
 
-.vendor-list { margin-top: 10px; border-top: 1px solid #b5a77e; padding-top: 10px; display: flex; flex-direction: column; gap: 4px; }
-.vendor-row { display: flex; gap: 8px; font-size: 13px; color: #4a4232; padding: 2px 0; }
-.zone-tag { color: var(--parch-accent); text-decoration: none; }
-.zone-tag:hover, .zone-tag:focus-visible { text-decoration: underline; }
+.vendor-list { margin-top: 10px; border-top: 1px solid #b5a77e; padding-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+.vendor-group + .vendor-group { margin-top: 0; }
+/* Zone name as a heading once per zone, vendor names listed underneath --
+   same "heading + list" recipe as the Spell Vendors page's own zone-card.js
+   (.vendor-heading there groups spells under a vendor; here it groups
+   vendors under a zone -- the pivot a spell's own vendor list needs, since
+   it spans zones rather than living inside one already-fixed zone). */
+.vendor-heading {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--parch-accent);
+  padding-bottom: 3px; margin-bottom: 4px;
+  border-bottom: 1px solid var(--parch-accent);
+}
+.vendor-heading a { color: inherit; text-decoration: none; }
+.vendor-heading a:hover, .vendor-heading a:focus-visible { text-decoration: underline; }
+.vendor-row { font-size: 13px; color: #4a4232; padding: 2px 0; }
 .vendor-hint { font-size: 12px; color: var(--parch-ink-soft); margin-top: 6px; }
 
 .spell-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
@@ -83,6 +98,30 @@ EXTRA_SHEET.replaceSync(`
 }
 .spell-finder-link:hover { text-decoration: underline; }
 `);
+
+// Same grouped-by-zone shape as the Spell Vendors page's own zone-card.js
+// (heading + list underneath) and ingredient-card.js's Sold By section --
+// a zone heading (unknown zones grouped together, sorted last) with its
+// vendor names listed below, so a spell sold in three zones reads as three
+// trips rather than a flat wall of NPC names. `?to=<zone label>` deep-links
+// Maps (maps.js's applyQueryParams) straight to that destination.
+function vendorGroupsHtml(vendors) {
+  const groups = new Map();
+  for (const v of vendors) {
+    const key = v.zone ? v.zone.label : null;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(v.npc.label);
+  }
+  return [...groups.entries()]
+    .sort(([a], [b]) => (a === null ? 1 : b === null ? -1 : a.localeCompare(b)))
+    .map(([zoneLabel, npcLabels]) => `
+      <div class="vendor-group">
+        <div class="vendor-heading">${zoneLabel ? `<a href="maps.html?to=${encodeURIComponent(zoneLabel)}">${zoneLabel}</a>` : "Unknown Zone"}</div>
+        ${npcLabels.map((label) => `<div class="vendor-row">${label}</div>`).join("")}
+      </div>
+    `)
+    .join("");
+}
 
 class SpellCard extends CardBase {
   static extraSheet = EXTRA_SHEET;
@@ -112,7 +151,7 @@ class SpellCard extends CardBase {
       if (e.target.closest(".spell-finder-link")) return; // let the link navigate normally
       if (e.target.closest(".wiki-link")) return; // let the link navigate normally, not a vendor-toggle click
       if (e.target.closest(".spell-check")) return; // checkbox has its own handler, not a vendor-toggle click
-      if (e.target.closest(".zone-tag")) return; // let the Maps link navigate normally, same as the other two
+      if (e.target.closest(".vendor-heading a")) return; // let the Maps link navigate normally, same as the other two
       const scroll = this.shadowRoot.querySelector(".spell-scroll");
       const existing = scroll.querySelector(".vendor-list");
       if (existing) {
@@ -125,11 +164,7 @@ class SpellCard extends CardBase {
       this.shadowRoot.querySelector(".vendor-hint").textContent = "Click to hide vendors";
       const list = document.createElement("div");
       list.className = "vendor-list";
-      // ?to=<zone label> deep-links Maps (route.js's applyQueryParams)
-      // straight to that destination, letting you plan how to get there.
-      list.innerHTML = vendors.length
-        ? vendors.map((v) => `<div class="vendor-row"><span>${v.npc.label}</span>${v.zone ? `<a class="zone-tag" href="maps.html?to=${encodeURIComponent(v.zone.label)}">— ${v.zone.label}</a>` : `<span class="zone-tag">— unknown zone</span>`}</div>`).join("")
-        : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
+      list.innerHTML = vendors.length ? vendorGroupsHtml(vendors) : '<div class="vendor-row" style="color:#5a4428;">No vendors found</div>';
       scroll.appendChild(list);
     });
   }

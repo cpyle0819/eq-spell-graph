@@ -233,7 +233,7 @@ const MAX_SPELL_LEVEL = 50;
 // buildPinUrl() does (index.html?pinSpell=...&pinName=...), reusing the
 // quest's own classes/minLevel/maxLevel as the range/Shopping-For context
 // to carry over -- there's no per-class level for a quest-reward spell the
-// way class-browser has a level-select, so the quest's own gate is the
+// way class-browser has a level-range, so the quest's own gate is the
 // closest real substitute. race=any/deity=any for the same reason
 // class-browser always sets them: a leftover race/deity from whatever was
 // last open in the Spell Finder could otherwise produce a misleading

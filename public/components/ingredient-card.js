@@ -20,14 +20,16 @@
 // obtain the ingredient, plus a free-text `other` fallback (issue #58) for
 // one-off methods that don't fit any of those four shapes.
 //
-// Sections render in order Crafted In, Foraged In, Fished From, Dropped
-// By, Other, Used In, Sold By -- roughly most- to least-actionable ("make
-// it yourself" beats "walk to a zone" beats "kill something specific" beats
+// Sections render in order Used In, Crafted In, Foraged In, Fished From,
+// Dropped By, Other, Sold By -- Used In leads (issue #60: "what is this
+// ingredient for" is the question a player has before "how do I get it"),
+// then the acquisition methods roughly most- to least-actionable ("make it
+// yourself" beats "walk to a zone" beats "kill something specific" beats
 // "hand someone money"), all above Sold By per issue #55. Each of the four
-// structured sections only renders at all when non-empty (`section()`
-// already no-ops on empty bodyHtml) -- most ingredients only have 1-2 of
-// the four. Other only renders when none of those four (or a vendor) do --
-// see its own render()-time comment for why.
+// structured acquisition sections only renders at all when non-empty
+// (`section()` already no-ops on empty bodyHtml) -- most ingredients only
+// have 1-2 of the four. Other only renders when none of those four (or a
+// vendor) do -- see its own render()-time comment for why.
 //
 // Sold By used to be a <collapsible-section> (dark-stone styling, always
 // collapsed by default). Issue #55 asked it to look like the other
@@ -192,11 +194,11 @@ class IngredientCard extends CardBase {
     const { item, usedIn, vendorGroups, sources } = d;
     const vendorCount = vendorGroups.reduce((n, g) => n + g.vendors.length, 0);
 
-    // Every section below (including Sold By, as of issue #55's follow-up)
-    // is dropped entirely when empty -- section() already no-ops on a
-    // falsy body. If none of the five acquisition-method sections have
-    // anything, that's a real gap worth saying explicitly rather than
-    // just silently showing Used In with nothing above it.
+    // Every acquisition section below (including Sold By, as of issue #55's
+    // follow-up) is dropped entirely when empty -- section() already no-ops
+    // on a falsy body. If none of the five acquisition-method sections have
+    // anything, that's a real gap worth saying explicitly rather than just
+    // silently ending the card after Used In.
     const craftedInHtml = section("Crafted In", craftedInBody(sources.craftedIn));
     const foragedHtml = section("Foraged In", zoneChipsBody(sources.foraged));
     const fishedHtml = section("Fished From", zoneChipsBody(sources.fished));
@@ -222,13 +224,13 @@ class IngredientCard extends CardBase {
         <button type="button" class="add-shopping-btn" data-item-id="${item.id}" data-item-label="${item.label}">+ Shopping List</button>
       </div>
       <div class="spell-scroll">
+        ${section("Used In", usedInBody(usedIn))}
         ${craftedInHtml}
         ${foragedHtml}
         ${fishedHtml}
         ${droppedHtml}
         ${otherHtml}
         ${noAcquisitionHtml}
-        ${section("Used In", usedInBody(usedIn))}
         ${soldByHtml}
       </div>
     `;

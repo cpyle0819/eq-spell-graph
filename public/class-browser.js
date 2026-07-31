@@ -38,7 +38,7 @@ function renderSidebar() {
       <a id="class-wiki-link" class="wiki-link" target="_blank" rel="noopener" hidden></a>
       <field-row id="category-field" label="Category" hidden><select id="category-select"></select></field-row>
       <field-row id="spellline-field" label="Spell Line" hidden><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
-      <field-row id="level-field" label="Level" hidden><select id="level-select"><option value="all">All Levels</option></select></field-row>
+      <field-row id="level-field" label="Level" hidden><range-picker id="level-range" min="1" max="${MAX_SPELL_LEVEL}" value-min="1" value-max="${MAX_SPELL_LEVEL}"></range-picker></field-row>
       <field-row label="Search"><input type="text" id="browser-search" placeholder="Name or description..."></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
     </sidebar-panel>
@@ -62,7 +62,6 @@ export async function init() {
   ]);
   setupClassTagInput();
   setupSpellLineTagInput();
-  populateLevelSelect();
   setupFilters();
   fetchAbilities();
 }
@@ -119,18 +118,20 @@ function setupSpellLineTagInput() {
   });
 }
 
-function populateLevelSelect() {
-  const sel = document.getElementById("level-select");
-  for (let i = 1; i <= MAX_SPELL_LEVEL; i++) {
-    const opt = document.createElement("option");
-    opt.value = String(i);
-    opt.textContent = `Level ${i}`;
-    sel.appendChild(opt);
-  }
+function currentLevelRange() {
+  const levelRange = document.getElementById("level-range");
+  return { levelMin: parseInt(levelRange.valueMin), levelMax: parseInt(levelRange.valueMax) };
 }
 
+// Debounced like quests.js's own quest-level-range wiring -- a two-thumb
+// slider fires many "input" events per drag, and re-fetching on every tick
+// would hammer the API.
+let levelDebounce;
 function setupFilters() {
-  document.getElementById("level-select").addEventListener("change", fetchAbilities);
+  document.getElementById("level-range").addEventListener("input", () => {
+    clearTimeout(levelDebounce);
+    levelDebounce = setTimeout(fetchAbilities, 500);
+  });
   document.getElementById("category-select").addEventListener("change", (e) => {
     activeTab = e.target.value;
     render();
@@ -151,7 +152,9 @@ function resetFilters() {
   updateClassWikiLink();
   selectedSpellLineIds = [];
   spellLineTagInput.selected = selectedSpellLineIds;
-  document.getElementById("level-select").value = "all";
+  const levelRange = document.getElementById("level-range");
+  levelRange.valueMin = 1;
+  levelRange.valueMax = MAX_SPELL_LEVEL;
   document.getElementById("browser-search").value = "";
   activeTab = null; // back to the first available category, not wherever the user was
   fetchAbilities();
@@ -170,8 +173,16 @@ async function fetchAbilities() {
 
   const params = new URLSearchParams({ class: classes.join(",") });
   const spellParams = new URLSearchParams({ class: classes.join(",") });
-  const level = document.getElementById("level-select").value;
-  if (level !== "all") spellParams.set("levels", level);
+  const { levelMin, levelMax } = currentLevelRange();
+  // /api/spells takes an explicit level list, not a min/max range (unlike
+  // /api/quests' levelMin/levelMax) -- omitted entirely at the full 1..max
+  // bound so the default (unfiltered) request matches the pre-range-picker
+  // "All Levels" behavior exactly.
+  if (levelMin !== 1 || levelMax !== MAX_SPELL_LEVEL) {
+    const levels = [];
+    for (let i = levelMin; i <= levelMax; i++) levels.push(i);
+    spellParams.set("levels", levels.join(","));
+  }
 
   const [{ stances, invocations }, aa, spells, abilities] = await Promise.all([
     fetch(`api/stances-invocations?${params}`).then((r) => r.json()),
@@ -195,8 +206,7 @@ async function fetchAbilities() {
 // server-side, so this doesn't hide a real primaryClass-driven wont_sell —
 // there's just no primaryClass context to propagate either.
 function buildPinUrl(spell, selected) {
-  const level = document.getElementById("level-select").value;
-  const [levelMin, levelMax] = level === "all" ? [1, MAX_SPELL_LEVEL] : [level, level];
+  const { levelMin, levelMax } = currentLevelRange();
   const params = new URLSearchParams({
     pinSpell: spell.id,
     pinName: spell.label,
