@@ -7,11 +7,19 @@ import { lazyRenderList } from "./components.js";
 // The Tradeskills page: a Trade Skill select, plus a View select (Guide/
 // Browse) switching between the Leveling Guide and the Browse list --
 // mutually exclusive views, not stacked together. Browse adds its own Type
-// (Recipes/Ingredients), skill-range (Recipes only), and plain-text search
-// filters, which only make sense (and only show) in that view -- Guide is
-// one fixed reference panel with nothing to filter, so only Trade Skill +
-// View stay visible there. Modeled first for Brewing (migration 355,
-// decisions/tradeskill-recipe-node-schema.md).
+// (Recipes/Ingredients), skill-range/Item Type/Subtype (Recipes only), and
+// plain-text search filters, which only make sense (and only show) in that
+// view -- Guide is one fixed reference panel with nothing to filter, so
+// only Trade Skill + View stay visible there. Modeled first for Brewing
+// (migration 355, decisions/tradeskill-recipe-node-schema.md).
+//
+// Item Type (Armor/Weapon/Other) and Subtype (armor slot, or weapon skill)
+// filter Recipes by what the recipe's own `produces` item actually is --
+// computed client-side from that item's real `slots`/`skill`/`ac` fields
+// (classifyItem()), not a stored classification. Most non-Blacksmithing
+// recipes produce food/drink/etc, which just reads as "Other" -- this isn't
+// Blacksmithing-specific plumbing even though Blacksmithing (issue #48/#65)
+// is what surfaced the need for it.
 //
 // There is no page-level Zone filter -- ingredient-card.js's own vendor
 // list is already grouped by zone per ingredient, which is the only place
@@ -28,6 +36,15 @@ const SHOPPING_LIST_KEY = "eq-trades-shopping-list";
 let selectedTradeskill = "";
 let selectedType = "recipes";
 let activeView = "guide"; // "guide" | "browse"
+
+// Recipes-only: what a recipe's own `produces` item is, not the recipe/
+// ingredient Type select above (selectedType) -- "" means no filter. Item
+// Type narrows first (Armor/Weapon/Other); Item Subtype (armor slot, or
+// weapon skill) only makes sense once a non-Other Item Type is picked, so
+// it stays hidden/reset until then, same "narrower filter depends on a
+// broader one" relationship Browse's own Type->skill-range visibility has.
+let selectedItemType = "";
+let selectedItemSubtype = "";
 
 let rawRecipes = [];
 let rawVendors = [];
@@ -196,6 +213,17 @@ function renderSidebar() {
       <field-row label="Skill Range" id="trade-skill-range-row">
         <range-picker id="trade-skill-range" min="0" max="${MAX_TRADESKILL_LEVEL}" value-min="0" value-max="${MAX_TRADESKILL_LEVEL}"></range-picker>
       </field-row>
+      <field-row label="Item Type" id="trade-item-type-row">
+        <select id="trade-item-type-select">
+          <option value="">— Any —</option>
+          <option value="Armor">Armor</option>
+          <option value="Weapon">Weapon</option>
+          <option value="Other">Other</option>
+        </select>
+      </field-row>
+      <field-row label="Subtype" id="trade-item-subtype-row">
+        <select id="trade-item-subtype-select"><option value="">— Any —</option></select>
+      </field-row>
       <field-row label="Search" id="trade-search-row"><input type="text" id="trade-search" placeholder="Recipe or ingredient name..."></field-row>
       <button slot="actions" type="button" class="text-action" id="reset-trade-filters-btn">Reset filters</button>
     </sidebar-panel>
@@ -214,6 +242,8 @@ export async function init() {
   // filters on a leftover activeView of "browse"). applyQueryParams() below
   // can still override either from a deep link, same as any other landing.
   selectedType = "recipes";
+  selectedItemType = "";
+  selectedItemSubtype = "";
   activeView = "guide";
   loadShoppingList();
   renderShoppingList();
@@ -292,6 +322,19 @@ function applyQueryParams() {
     if (max) range.valueMax = max;
   }
 
+  // Subtype's own <select> isn't populated yet at this point (rawRecipes is
+  // still empty -- init() hasn't called fetchTradeskillData() yet), so only
+  // the module var is set here; updateItemSubtypeOptions() (called once
+  // rawRecipes is real, see fetchTradeskillData()) rebuilds the options and
+  // applies this value if it's still valid for the restored Item Type.
+  const itemType = params.get("itemType");
+  if (itemType === "Armor" || itemType === "Weapon" || itemType === "Other") {
+    document.getElementById("trade-item-type-select").value = itemType;
+    selectedItemType = itemType;
+  }
+  const subtype = params.get("subtype");
+  if (subtype) selectedItemSubtype = subtype;
+
   // `view` is syncUrlState()'s own explicit record of Guide-vs-Browse --
   // older/external links (an item-chip's nav-href, ingredient-card's "Used
   // In"/"Crafted In") only ever carry `type`+`search`, never `view`, so a
@@ -321,6 +364,8 @@ function buildStateParams() {
       const range = document.getElementById("trade-skill-range");
       if (String(range.valueMin) !== "0") params.set("min", range.valueMin);
       if (String(range.valueMax) !== String(MAX_TRADESKILL_LEVEL)) params.set("max", range.valueMax);
+      if (selectedItemType) params.set("itemType", selectedItemType);
+      if (selectedItemSubtype) params.set("subtype", selectedItemSubtype);
     }
   }
   return params;
@@ -360,6 +405,20 @@ function setupFilters() {
   document.getElementById("trade-type-select").addEventListener("change", (e) => {
     selectedType = e.target.value;
     updateFilterVisibility();
+    render();
+    syncUrlState();
+  });
+
+  document.getElementById("trade-item-type-select").addEventListener("change", (e) => {
+    selectedItemType = e.target.value;
+    updateItemSubtypeOptions();
+    updateFilterVisibility();
+    render();
+    syncUrlState();
+  });
+
+  document.getElementById("trade-item-subtype-select").addEventListener("change", (e) => {
+    selectedItemSubtype = e.target.value;
     render();
     syncUrlState();
   });
@@ -425,7 +484,39 @@ function updateFilterVisibility() {
   const isGuide = activeView === "guide";
   document.getElementById("trade-type-row").hidden = isGuide;
   document.getElementById("trade-search-row").hidden = isGuide;
-  document.getElementById("trade-skill-range-row").hidden = isGuide || selectedType !== "recipes";
+  const isRecipes = !isGuide && selectedType === "recipes";
+  document.getElementById("trade-skill-range-row").hidden = !isRecipes;
+  document.getElementById("trade-item-type-row").hidden = !isRecipes;
+  // Subtype only means anything once a non-Other Item Type narrows the
+  // field -- "Other" (raw materials, containers, tools) has no subtypes to
+  // pick from, same reasoning classifyItem() never gives it one.
+  document.getElementById("trade-item-subtype-row").hidden =
+    !isRecipes || !selectedItemType || selectedItemType === "Other";
+}
+
+// Rebuilds the Subtype <select>'s own options from whichever armor slots or
+// weapon skills actually occur among the current tradeskill's recipes (real
+// data only, same convention as populateTradeskillSelect) -- called after a
+// fresh fetch (new tradeskill) and after Item Type changes (new subtype
+// namespace). Preserves the current selection if it's still a valid option
+// for the new list (e.g. a query-param deep link setting selectedItemSubtype
+// before this ever ran); resets to "Any" otherwise, since a subtype that
+// doesn't exist for the newly selected Item Type/tradeskill can't stay
+// selected.
+function updateItemSubtypeOptions() {
+  const select = document.getElementById("trade-item-subtype-select");
+  const current = selectedItemSubtype;
+  select.innerHTML = '<option value="">— Any —</option>';
+  if (selectedItemType && selectedItemType !== "Other") {
+    for (const subtype of distinctSubtypes(rawRecipes, selectedItemType)) {
+      const opt = document.createElement("option");
+      opt.value = subtype;
+      opt.textContent = subtype;
+      select.appendChild(opt);
+    }
+  }
+  selectedItemSubtype = [...select.options].some((o) => o.value === current) ? current : "";
+  select.value = selectedItemSubtype;
 }
 
 // Restores HTML defaults rather than blanking the form (same convention as
@@ -438,6 +529,9 @@ function resetFilters() {
   const range = document.getElementById("trade-skill-range");
   range.valueMin = 0;
   range.valueMax = MAX_TRADESKILL_LEVEL;
+  document.getElementById("trade-item-type-select").value = "";
+  selectedItemType = "";
+  updateItemSubtypeOptions();
   document.getElementById("trade-search").value = "";
   setActiveView("guide");
   render();
@@ -520,6 +614,54 @@ function buildIngredientEntries(recipes, vendors, itemSourcesById) {
     }));
 }
 
+// Body slots that mean "this occupies a real armor slot," as opposed to
+// Primary/Secondary/Range/Ammo (also `item.slots` values, but weapon/tool
+// wield slots, not armor). A Shield is the one exception: it only ever
+// carries "Secondary" (same as an offhand weapon) but has `ac` and no
+// `skill` -- the same distinction a player would make just looking at the
+// item. Computed at read time from item-node-schema.md's real fields
+// (`slots`/`skill`/`ac`), not a stored `type`/`subtype` -- same "don't
+// store what's derivable" convention as recipeSuccessThresholds server-side.
+const ARMOR_SLOTS = new Set([
+  "Head", "Face", "Neck", "Shoulders", "Chest", "Arms", "Wrist",
+  "Hands", "Waist", "Legs", "Feet", "Back", "Ear", "Finger",
+]);
+
+// { type: "Armor"|"Weapon"|"Other", subtype?: string }. subtype is the
+// armor slot ("Head", "Shield", ...) or weapon skill ("1H Slashing", ...) --
+// absent for "Other" (raw materials, containers, tools; also anything with
+// no `slots`/`skill` at all, e.g. most non-Blacksmithing recipe output).
+function classifyItem(item) {
+  if (!item) return { type: "Other" };
+  if (item.skill) return { type: "Weapon", subtype: item.skill };
+  const armorSlot = item.slots?.find((s) => ARMOR_SLOTS.has(s));
+  if (armorSlot) return { type: "Armor", subtype: armorSlot };
+  if (item.slots?.length && item.slots.every((s) => s === "Secondary") && item.ac != null) {
+    return { type: "Armor", subtype: "Shield" };
+  }
+  return { type: "Other" };
+}
+
+function recipeMatchesItemType(recipe, itemType, subtype) {
+  if (!itemType) return true;
+  const c = classifyItem(recipe.produces);
+  if (c.type !== itemType) return false;
+  return !subtype || c.subtype === subtype;
+}
+
+// Subtype select's own options -- only values that actually occur among the
+// currently selected tradeskill's own recipes, same "populate from real
+// data" convention as populateTradeskillSelect. Sorted for a stable order
+// (armor slots have no inherent ranking; weapon skills likewise).
+function distinctSubtypes(recipes, itemType) {
+  const subtypes = new Set();
+  for (const r of recipes) {
+    const c = classifyItem(r.produces);
+    if (c.type === itemType && c.subtype) subtypes.add(c.subtype);
+  }
+  return [...subtypes].sort();
+}
+
 // "Craftable N+" (success.p25, the same figure recipe-card.js's own badge
 // shows) is the number the Skill Range filter narrows on, not `trivial` --
 // it's the number actually named "craftable" in both the UI and issue #32's
@@ -595,6 +737,7 @@ async function fetchTradeskillData() {
   rawRecipes = recipes;
   rawVendors = vendors;
   rawItemSources = new Map(itemSources.map((s) => [s.id, s]));
+  updateItemSubtypeOptions();
   render();
 }
 
@@ -626,7 +769,12 @@ function render() {
     const range = document.getElementById("trade-skill-range");
     const min = parseInt(range.valueMin);
     const max = parseInt(range.valueMax);
-    const filtered = rawRecipes.filter((r) => recipeMatchesSkillRange(r, min, max) && recipeMatchesSearch(r, query));
+    const filtered = rawRecipes.filter(
+      (r) =>
+        recipeMatchesSkillRange(r, min, max) &&
+        recipeMatchesSearch(r, query) &&
+        recipeMatchesItemType(r, selectedItemType, selectedItemSubtype)
+    );
     resultsEl.appendChild(cardGroupList(filtered, "recipe-card"));
   } else {
     const ingredients = buildIngredientEntries(rawRecipes, rawVendors, rawItemSources).filter((e) => ingredientMatchesSearch(e, query));

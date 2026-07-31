@@ -155249,7 +155249,10 @@
       "type": "item",
       "ac": 4,
       "weight": 1,
-      "source": "Crafted via Blacksmithing (trivial 135)"
+      "source": "Crafted via Blacksmithing (trivial 135)",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "item:gorget-mold",
@@ -155262,7 +155265,10 @@
       "type": "item",
       "ac": 5,
       "weight": 2,
-      "source": "Crafted via Blacksmithing (trivial 102)"
+      "source": "Crafted via Blacksmithing (trivial 102)",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "item:bracer-sectional-mold",
@@ -155275,7 +155281,10 @@
       "type": "item",
       "ac": 6,
       "weight": 2,
-      "source": "Crafted via Blacksmithing (trivial 102)"
+      "source": "Crafted via Blacksmithing (trivial 102)",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "item:boot-mold",
@@ -155288,7 +155297,10 @@
       "type": "item",
       "ac": 6,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 135)"
+      "source": "Crafted via Blacksmithing (trivial 135)",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "item:belt-sectional-mold",
@@ -155301,7 +155313,10 @@
       "type": "item",
       "ac": 6,
       "weight": 2.5,
-      "source": "Crafted via Blacksmithing (trivial 135)"
+      "source": "Crafted via Blacksmithing (trivial 135)",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "item:mantle-sectional-mold",
@@ -155314,7 +155329,10 @@
       "type": "item",
       "ac": 6,
       "weight": 3.5,
-      "source": "Crafted via Blacksmithing (trivial 168)"
+      "source": "Crafted via Blacksmithing (trivial 168)",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "item:cloak-sectional-mold",
@@ -155327,7 +155345,10 @@
       "type": "item",
       "ac": 7,
       "weight": 4,
-      "source": "Crafted via Blacksmithing (trivial 175)"
+      "source": "Crafted via Blacksmithing (trivial 175)",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "item:gauntlet-mold",
@@ -155340,7 +155361,10 @@
       "type": "item",
       "ac": 7,
       "weight": 4,
-      "source": "Crafted via Blacksmithing (trivial 168)"
+      "source": "Crafted via Blacksmithing (trivial 168)",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "item:sleeves-sectional-mold",
@@ -155353,7 +155377,10 @@
       "type": "item",
       "ac": 7,
       "weight": 3.5,
-      "source": "Crafted via Blacksmithing (trivial 102)"
+      "source": "Crafted via Blacksmithing (trivial 102)",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "item:helm-mold",
@@ -155366,7 +155393,10 @@
       "type": "item",
       "ac": 8,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 135)"
+      "source": "Crafted via Blacksmithing (trivial 135)",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "item:leggings-sectional-mold",
@@ -155379,7 +155409,10 @@
       "type": "item",
       "ac": 8,
       "weight": 5.5,
-      "source": "Crafted via Blacksmithing (trivial 168)"
+      "source": "Crafted via Blacksmithing (trivial 168)",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "item:mail-sectional-mold",
@@ -155392,7 +155425,10 @@
       "type": "item",
       "ac": 15,
       "weight": 7.5,
-      "source": "Crafted via Blacksmithing (trivial 135)"
+      "source": "Crafted via Blacksmithing (trivial 135)",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:banded-mask",
@@ -155825,7 +155861,14 @@
       "id": "item:skinning-knife",
       "label": "Skinning Knife",
       "type": "item",
-      "source": "Tool; crafted via Blacksmithing (trivial 41); downgrades a pelt's quality by one step (e.g. Medium Quality to Low Quality)"
+      "source": "Tool; crafted via Blacksmithing (trivial 41); downgrades a pelt's quality by one step (e.g. Medium Quality to Low Quality)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 25,
+      "damage": 2
     },
     {
       "id": "item:scaler-mold",
@@ -156609,7 +156652,14 @@
       "type": "item",
       "weight": 4,
       "size": "Small",
-      "source": "Cultural recipe usable only by Human Blacksmiths (per eqlwiki's own Misc recipe table)"
+      "source": "Cultural recipe usable only by Human Blacksmiths (per eqlwiki's own Misc recipe table)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 30,
+      "damage": 8
     },
     {
       "id": "item:bundled-steel-arrow-shafts",
@@ -156907,7 +156957,14 @@
       "id": "item:forged-bastard-sword",
       "label": "Forged Bastard Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 72)"
+      "source": "Crafted via Blacksmithing (trivial 72)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 33,
+      "damage": 7
     },
     {
       "id": "recipe:forged-bastard-sword",
@@ -156920,7 +156977,14 @@
       "id": "item:forged-battle-axe",
       "label": "Forged Battle Axe",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 73)"
+      "source": "Crafted via Blacksmithing (trivial 73)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 34,
+      "damage": 7
     },
     {
       "id": "recipe:forged-battle-axe",
@@ -156933,7 +156997,14 @@
       "id": "item:forged-dagger",
       "label": "Forged Dagger",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 48)"
+      "source": "Crafted via Blacksmithing (trivial 48)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 21,
+      "damage": 3
     },
     {
       "id": "recipe:forged-dagger",
@@ -156946,7 +157017,13 @@
       "id": "item:forged-halberd",
       "label": "Forged Halberd",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 82)"
+      "source": "Crafted via Blacksmithing (trivial 82)",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 48,
+      "damage": 14
     },
     {
       "id": "recipe:forged-halberd",
@@ -156959,7 +157036,14 @@
       "id": "item:forged-long-sword",
       "label": "Forged Long Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 68)"
+      "source": "Crafted via Blacksmithing (trivial 68)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 28,
+      "damage": 6
     },
     {
       "id": "recipe:forged-long-sword",
@@ -156972,7 +157056,14 @@
       "id": "item:forged-mace",
       "label": "Forged Mace",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 68)"
+      "source": "Crafted via Blacksmithing (trivial 68)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 36,
+      "damage": 7
     },
     {
       "id": "recipe:forged-mace",
@@ -156985,7 +157076,14 @@
       "id": "item:forged-morning-star",
       "label": "Forged Morning Star",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 68)"
+      "source": "Crafted via Blacksmithing (trivial 68)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 38,
+      "damage": 8
     },
     {
       "id": "recipe:forged-morning-star",
@@ -156998,7 +157096,14 @@
       "id": "item:forged-pick",
       "label": "Forged Pick",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 49)"
+      "source": "Crafted via Blacksmithing (trivial 49)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 35,
+      "damage": 6
     },
     {
       "id": "recipe:forged-pick",
@@ -157011,7 +157116,14 @@
       "id": "item:forged-rapier",
       "label": "Forged Rapier",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 72)"
+      "source": "Crafted via Blacksmithing (trivial 72)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 26,
+      "damage": 5
     },
     {
       "id": "recipe:forged-rapier",
@@ -157024,7 +157136,14 @@
       "id": "item:forged-scimitar",
       "label": "Forged Scimitar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 68)"
+      "source": "Crafted via Blacksmithing (trivial 68)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 24,
+      "damage": 5
     },
     {
       "id": "recipe:forged-scimitar",
@@ -157037,7 +157156,14 @@
       "id": "item:forged-short-sword",
       "label": "Forged Short Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 62)"
+      "source": "Crafted via Blacksmithing (trivial 62)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 24,
+      "damage": 4
     },
     {
       "id": "recipe:forged-short-sword",
@@ -157050,7 +157176,13 @@
       "id": "item:forged-spear",
       "label": "Forged Spear",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 66)"
+      "source": "Crafted via Blacksmithing (trivial 66)",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "delay": 28,
+      "damage": 6
     },
     {
       "id": "recipe:forged-spear",
@@ -157063,7 +157195,13 @@
       "id": "item:forged-two-handed-sword",
       "label": "Forged Two Handed Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 73)"
+      "source": "Crafted via Blacksmithing (trivial 73)",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 44,
+      "damage": 12
     },
     {
       "id": "recipe:forged-two-handed-sword",
@@ -157076,7 +157214,14 @@
       "id": "item:forged-warhammer",
       "label": "Forged Warhammer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 58)"
+      "source": "Crafted via Blacksmithing (trivial 58)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 30,
+      "damage": 6
     },
     {
       "id": "recipe:forged-warhammer",
@@ -157089,7 +157234,14 @@
       "id": "item:forged-javelin",
       "label": "Forged Javelin",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 60, yield 2)"
+      "source": "Crafted via Blacksmithing (trivial 60, yield 2)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 33,
+      "damage": 7
     },
     {
       "id": "recipe:forged-javelin",
@@ -157102,7 +157254,14 @@
       "id": "item:forged-shuriken",
       "label": "Forged Shuriken",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 58, yield 10)"
+      "source": "Crafted via Blacksmithing (trivial 58, yield 10)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 25,
+      "damage": 4
     },
     {
       "id": "recipe:forged-shuriken",
@@ -157115,7 +157274,14 @@
       "id": "item:forged-throwing-axe",
       "label": "Forged Throwing Axe",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 56, yield 5)"
+      "source": "Crafted via Blacksmithing (trivial 56, yield 5)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 29,
+      "damage": 6
     },
     {
       "id": "recipe:forged-throwing-axe",
@@ -157128,7 +157294,14 @@
       "id": "item:forged-throwing-knife",
       "label": "Forged Throwing Knife",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 53, yield 10)"
+      "source": "Crafted via Blacksmithing (trivial 53, yield 10)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 35,
+      "damage": 5
     },
     {
       "id": "recipe:forged-throwing-knife",
@@ -157141,7 +157314,14 @@
       "id": "item:forged-fer-esh",
       "label": "Forged Fer`Esh",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 115)"
+      "source": "Crafted via Blacksmithing (trivial 115)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 30,
+      "damage": 5
     },
     {
       "id": "recipe:forged-fer-esh",
@@ -157154,7 +157334,14 @@
       "id": "item:forged-shan-tok",
       "label": "Forged Shan`Tok",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 82)"
+      "source": "Crafted via Blacksmithing (trivial 82)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 38,
+      "damage": 8
     },
     {
       "id": "recipe:forged-shan-tok",
@@ -157167,7 +157354,14 @@
       "id": "item:forged-sheer-blade",
       "label": "Forged Sheer Blade",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 115)"
+      "source": "Crafted via Blacksmithing (trivial 115)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 31,
+      "damage": 6
     },
     {
       "id": "recipe:forged-sheer-blade",
@@ -157200,7 +157394,14 @@
       "id": "item:tarnished-mining-pick",
       "label": "Tarnished Mining Pick",
       "type": "item",
-      "source": "Made by sharpening a Rusty Mining Pick with a Sharpening Stone via Blacksmithing (trivial 19); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Mining Pick with a Sharpening Stone via Blacksmithing (trivial 19); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 36,
+      "damage": 4
     },
     {
       "id": "recipe:tarnished-mining-pick",
@@ -157213,7 +157414,14 @@
       "id": "item:tarnished-shortened-spear",
       "label": "Tarnished Shortened Spear",
       "type": "item",
-      "source": "Made by sharpening a Rusty Shortened Spear with a Sharpening Stone via Blacksmithing (trivial 19); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Shortened Spear with a Sharpening Stone via Blacksmithing (trivial 19); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 30,
+      "damage": 4
     },
     {
       "id": "recipe:tarnished-shortened-spear",
@@ -157226,7 +157434,14 @@
       "id": "item:tarnished-rapier",
       "label": "Tarnished Rapier",
       "type": "item",
-      "source": "Made by sharpening a Rusty Rapier with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Rapier with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 29,
+      "damage": 4
     },
     {
       "id": "recipe:tarnished-rapier",
@@ -157239,7 +157454,14 @@
       "id": "item:tarnished-short-sword",
       "label": "Tarnished Short Sword",
       "type": "item",
-      "source": "Made by sharpening a Rusty Short Sword with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Short Sword with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 26,
+      "damage": 4
     },
     {
       "id": "recipe:tarnished-short-sword",
@@ -157258,7 +157480,14 @@
       "id": "item:tarnished-warhammer",
       "label": "Tarnished Warhammer",
       "type": "item",
-      "source": "Made by sharpening a Rusty Warhammer with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Warhammer with a Sharpening Stone via Blacksmithing (trivial 20); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 28,
+      "damage": 4
     },
     {
       "id": "recipe:tarnished-warhammer",
@@ -157277,7 +157506,14 @@
       "id": "item:tarnished-flail",
       "label": "Tarnished Flail",
       "type": "item",
-      "source": "Made by sharpening a Rusty Flail with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Flail with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 35,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-flail",
@@ -157290,7 +157526,14 @@
       "id": "item:tarnished-mace",
       "label": "Tarnished Mace",
       "type": "item",
-      "source": "Made by sharpening a Rusty Mace with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Mace with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 36,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-mace",
@@ -157303,7 +157546,13 @@
       "id": "item:tarnished-spear",
       "label": "Tarnished Spear",
       "type": "item",
-      "source": "Made by sharpening a Rusty Spear with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Spear with a Sharpening Stone via Blacksmithing (trivial 21); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "delay": 36,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-spear",
@@ -157316,7 +157565,14 @@
       "id": "item:tarnished-axe",
       "label": "Tarnished Axe",
       "type": "item",
-      "source": "Made by sharpening a Rusty Axe with a Sharpening Stone via Blacksmithing (trivial 22); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Axe with a Sharpening Stone via Blacksmithing (trivial 22); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 34,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-axe",
@@ -157329,7 +157585,14 @@
       "id": "item:tarnished-broad-sword",
       "label": "Tarnished Broad Sword",
       "type": "item",
-      "source": "Made by sharpening a Rusty Broad Sword with a Sharpening Stone via Blacksmithing (trivial 22); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Broad Sword with a Sharpening Stone via Blacksmithing (trivial 22); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 34,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-broad-sword",
@@ -157348,7 +157611,14 @@
       "id": "item:tarnished-long-sword",
       "label": "Tarnished Long Sword",
       "type": "item",
-      "source": "Made by sharpening a Rusty Long Sword with a Sharpening Stone via Blacksmithing (trivial 23); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Long Sword with a Sharpening Stone via Blacksmithing (trivial 23); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 33,
+      "damage": 5
     },
     {
       "id": "recipe:tarnished-long-sword",
@@ -157380,7 +157650,14 @@
       "id": "item:tarnished-battle-axe",
       "label": "Tarnished Battle Axe",
       "type": "item",
-      "source": "Made by sharpening a Rusty Battle Axe with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Battle Axe with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 40,
+      "damage": 6
     },
     {
       "id": "recipe:tarnished-battle-axe",
@@ -157393,7 +157670,13 @@
       "id": "item:tarnished-halberd",
       "label": "Tarnished Halberd",
       "type": "item",
-      "source": "Made by sharpening a Rusty Halberd with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Halberd with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 55,
+      "damage": 11
     },
     {
       "id": "recipe:tarnished-halberd",
@@ -157406,7 +157689,14 @@
       "id": "item:tarnished-morning-star",
       "label": "Tarnished Morning Star",
       "type": "item",
-      "source": "Made by sharpening a Rusty Morning Star with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Morning Star with a Sharpening Stone via Blacksmithing (trivial 24); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 42,
+      "damage": 6
     },
     {
       "id": "recipe:tarnished-morning-star",
@@ -157438,7 +157728,13 @@
       "id": "item:tarnished-scythe",
       "label": "Tarnished Scythe",
       "type": "item",
-      "source": "Made by sharpening a Rusty Scythe with a Sharpening Stone via Blacksmithing (trivial 25); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Scythe with a Sharpening Stone via Blacksmithing (trivial 25); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 49,
+      "damage": 8
     },
     {
       "id": "recipe:tarnished-scythe",
@@ -157451,7 +157747,13 @@
       "id": "item:tarnished-two-handed-sword",
       "label": "Tarnished Two Handed Sword",
       "type": "item",
-      "source": "Made by sharpening a Rusty Two Handed Sword with a Sharpening Stone via Blacksmithing (trivial 25); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Two Handed Sword with a Sharpening Stone via Blacksmithing (trivial 25); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 48,
+      "damage": 9
     },
     {
       "id": "recipe:tarnished-two-handed-sword",
@@ -157464,7 +157766,13 @@
       "id": "item:tarnished-two-handed-battle-axe",
       "label": "Tarnished Two Handed Battle Axe",
       "type": "item",
-      "source": "Made by sharpening a Rusty Two Handed Battle Axe with a Sharpening Stone via Blacksmithing (trivial 26); sells to vendors for more than the rusty original"
+      "source": "Made by sharpening a Rusty Two Handed Battle Axe with a Sharpening Stone via Blacksmithing (trivial 26); sells to vendors for more than the rusty original",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 47,
+      "damage": 9
     },
     {
       "id": "recipe:tarnished-two-handed-battle-axe",
@@ -157506,7 +157814,13 @@
       "id": "item:forged-velium-2-handed-sword",
       "label": "Forged Velium 2-Handed Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122)"
+      "source": "Crafted via Blacksmithing (trivial 122)",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "delay": 43,
+      "damage": 13
     },
     {
       "id": "recipe:forged-velium-2-handed-sword",
@@ -157519,7 +157833,14 @@
       "id": "item:forged-velium-dagger",
       "label": "Forged Velium Dagger",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 95)"
+      "source": "Crafted via Blacksmithing (trivial 95)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 18,
+      "damage": 3
     },
     {
       "id": "recipe:forged-velium-dagger",
@@ -157532,7 +157853,14 @@
       "id": "item:forged-velium-long-sword",
       "label": "Forged Velium Long Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 115)"
+      "source": "Crafted via Blacksmithing (trivial 115)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 28,
+      "damage": 7
     },
     {
       "id": "recipe:forged-velium-long-sword",
@@ -157545,7 +157873,14 @@
       "id": "item:forged-velium-morning-star",
       "label": "Forged Velium Morning Star",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 119)"
+      "source": "Crafted via Blacksmithing (trivial 119)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 38,
+      "damage": 9
     },
     {
       "id": "recipe:forged-velium-morning-star",
@@ -157558,7 +157893,14 @@
       "id": "item:forged-velium-scimitar",
       "label": "Forged Velium Scimitar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 115)"
+      "source": "Crafted via Blacksmithing (trivial 115)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 24,
+      "damage": 6
     },
     {
       "id": "recipe:forged-velium-scimitar",
@@ -157571,7 +157913,14 @@
       "id": "item:forged-velium-short-sword",
       "label": "Forged Velium Short Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 108)"
+      "source": "Crafted via Blacksmithing (trivial 108)",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 23,
+      "damage": 5
     },
     {
       "id": "recipe:forged-velium-short-sword",
@@ -157584,7 +157933,14 @@
       "id": "item:forged-velium-shuriken",
       "label": "Forged Velium Shuriken",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 104, yield 20)"
+      "source": "Crafted via Blacksmithing (trivial 104, yield 20)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 24,
+      "damage": 5
     },
     {
       "id": "recipe:forged-velium-shuriken",
@@ -157597,7 +157953,14 @@
       "id": "item:forged-velium-throwing-axe",
       "label": "Forged Velium Throwing Axe",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 102, yield 15)"
+      "source": "Crafted via Blacksmithing (trivial 102, yield 15)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 28,
+      "damage": 7
     },
     {
       "id": "recipe:forged-velium-throwing-axe",
@@ -157610,7 +157973,14 @@
       "id": "item:forged-velium-throwing-knife",
       "label": "Forged Velium Throwing Knife",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 98, yield 20)"
+      "source": "Crafted via Blacksmithing (trivial 98, yield 20)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 34,
+      "damage": 6
     },
     {
       "id": "recipe:forged-velium-throwing-knife",
@@ -157623,7 +157993,14 @@
       "id": "item:forged-velium-throwing-spear",
       "label": "Forged Velium Throwing Spear",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 106, yield 15)"
+      "source": "Crafted via Blacksmithing (trivial 106, yield 15)",
+      "slots": [
+        "Range",
+        "Ammo"
+      ],
+      "skill": "Throwingv2",
+      "delay": 32,
+      "damage": 8
     },
     {
       "id": "recipe:forged-velium-throwing-spear",
@@ -158061,43 +158438,86 @@
       "id": "item:seafarers-harpoon",
       "label": "Seafarers Harpoon",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 112) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 112) at the Antonican Forge",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "delay": 26,
+      "damage": 6
     },
     {
       "id": "item:seafarers-dirk",
       "label": "Seafarers Dirk",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 95) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 95) at the Antonican Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 22,
+      "damage": 4
     },
     {
       "id": "item:seafarers-cutlass",
       "label": "Seafarers Cutlass",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 115) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 115) at the Antonican Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 23,
+      "damage": 7
     },
     {
       "id": "item:seafarers-buckler-shield",
       "label": "Seafarers Buckler Shield",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 88) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 88) at the Antonican Forge",
+      "slots": [
+        "Secondary"
+      ]
     },
     {
       "id": "item:enchanted-seafarers-cutlass",
       "label": "Enchanted Seafarers Cutlass",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 142) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 142) at the Antonican Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 23,
+      "damage": 7
     },
     {
       "id": "item:enchanted-seafarers-dirk",
       "label": "Enchanted Seafarers Dirk",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 22,
+      "damage": 4
     },
     {
       "id": "item:enchanted-seafarers-harpoon",
       "label": "Enchanted Seafarers Harpoon",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 139) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 139) at the Antonican Forge",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "delay": 26,
+      "damage": 6
     },
     {
       "id": "recipe:seafarers-harpoon",
@@ -158183,19 +158603,40 @@
       "id": "item:antonian-long-sword",
       "label": "Antonian Long Sword",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 125) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 125) at the Royal Qeynos Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 28,
+      "damage": 8
     },
     {
       "id": "item:enchanted-antonian-long-sword-fire-emerald",
       "label": "Enchanted Antonian Long Sword (Fire Emerald)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 142) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 142) at the Royal Qeynos Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 26,
+      "damage": 9
     },
     {
       "id": "item:enchanted-antonian-long-sword-star-ruby",
       "label": "Enchanted Antonian Long Sword (Star Ruby)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 142) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 142) at the Royal Qeynos Forge",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 26,
+      "damage": 9
     },
     {
       "id": "recipe:antonian-long-sword",
@@ -158227,7 +158668,10 @@
       "id": "item:seafarer-ring-mask",
       "label": "Seafarer Ring Mask",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 116) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 116) at the Antonican Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "item:leather-mask",
@@ -158250,7 +158694,10 @@
       "id": "item:seafarer-ring-gorget",
       "label": "Seafarer Ring Gorget",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 119) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 119) at the Antonican Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "item:leather-gorget",
@@ -158273,7 +158720,10 @@
       "id": "item:seafarer-ring-bracer",
       "label": "Seafarer Ring Bracer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "item:leather-wristbands",
@@ -158296,7 +158746,10 @@
       "id": "item:seafarer-ring-boots",
       "label": "Seafarer Ring Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "item:chainmail-boot-pattern",
@@ -158314,7 +158767,10 @@
       "id": "item:seafarer-ring-helm",
       "label": "Seafarer Ring Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 132) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 132) at the Antonican Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "item:chainmail-coif-pattern",
@@ -158332,7 +158788,10 @@
       "id": "item:seafarer-ring-mantle",
       "label": "Seafarer Ring Mantle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "item:chainmail-mantle-pattern",
@@ -158350,7 +158809,10 @@
       "id": "item:seafarer-ring-belt",
       "label": "Seafarer Ring Belt",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 122) at the Antonican Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "item:chainmail-skirt-pattern",
@@ -158368,7 +158830,10 @@
       "id": "item:seafarer-ring-sleeves",
       "label": "Seafarer Ring Sleeves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "item:leather-sleeves",
@@ -158391,7 +158856,10 @@
       "id": "item:seafarer-ring-gauntlets",
       "label": "Seafarer Ring Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 128) at the Antonican Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "item:leather-gloves",
@@ -158414,7 +158882,10 @@
       "id": "item:seafarer-ring-mail",
       "label": "Seafarer Ring Mail",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 142) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 142) at the Antonican Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "item:leather-tunic",
@@ -158437,7 +158908,10 @@
       "id": "item:seafarer-ring-cloak",
       "label": "Seafarer Ring Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 140) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 140) at the Antonican Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "item:leather-cloak",
@@ -158460,7 +158934,10 @@
       "id": "item:seafarer-ring-leggings",
       "label": "Seafarer Ring Leggings",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 135) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 135) at the Antonican Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "item:chainmail-pant-pattern",
@@ -158488,7 +158965,10 @@
       "id": "item:field-plate-visor",
       "label": "Field Plate Visor",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 190) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 190) at the Antonican Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "item:plate-visor-mold",
@@ -158506,7 +158986,10 @@
       "id": "item:field-plate-collar",
       "label": "Field Plate Collar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 192) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 192) at the Antonican Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "item:plate-gorget-mold",
@@ -158524,7 +159007,10 @@
       "id": "item:field-plate-boots",
       "label": "Field Plate Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "item:plate-boot-mold",
@@ -158542,7 +159028,10 @@
       "id": "item:field-plate-bracers",
       "label": "Field Plate Bracers",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "item:plate-bracer-mold",
@@ -158560,7 +159049,10 @@
       "id": "item:field-plate-helm",
       "label": "Field Plate Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "item:plate-helm-mold",
@@ -158578,7 +159070,10 @@
       "id": "item:field-plate-pauldron",
       "label": "Field Plate Pauldron",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Antonican Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "item:plate-pauldron-mold",
@@ -158596,7 +159091,10 @@
       "id": "item:field-plate-girdle",
       "label": "Field Plate Girdle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "item:plate-belt-mold",
@@ -158614,7 +159112,10 @@
       "id": "item:field-plate-vambraces",
       "label": "Field Plate Vambraces",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 198) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 198) at the Antonican Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "item:plate-vambrace-mold",
@@ -158632,7 +159133,10 @@
       "id": "item:field-plate-gauntlets",
       "label": "Field Plate Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 200) at the Antonican Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "item:plate-gauntlet-mold",
@@ -158650,7 +159154,10 @@
       "id": "item:field-breastplate",
       "label": "Field Breastplate",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "item:breastplate-mold",
@@ -158668,7 +159175,10 @@
       "id": "item:field-plate-cloak",
       "label": "Field Plate Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Antonican Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "item:field-splinted-cloak-mold",
@@ -158686,7 +159196,10 @@
       "id": "item:field-plate-greaves",
       "label": "Field Plate Greaves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Antonican Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "item:plate-greaves-mold",
@@ -158704,7 +159217,10 @@
       "id": "item:silver-full-breastplate",
       "label": "Silver Full Breastplate",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "item:full-breastplate-mold",
@@ -158722,7 +159238,10 @@
       "id": "item:silver-full-plate-boots",
       "label": "Silver Full Plate Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "item:full-plate-boot-mold",
@@ -158740,7 +159259,10 @@
       "id": "item:silver-full-plate-bracer",
       "label": "Silver Full Plate Bracer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "item:full-plate-bracer-mold",
@@ -158758,7 +159280,10 @@
       "id": "item:silver-full-plate-collar",
       "label": "Silver Full Plate Collar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "item:full-plate-gorget-mold",
@@ -158776,7 +159301,10 @@
       "id": "item:silver-full-plate-gauntlets",
       "label": "Silver Full Plate Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "item:full-plate-gauntlet-mold",
@@ -158794,7 +159322,10 @@
       "id": "item:silver-full-plate-girdle",
       "label": "Silver Full Plate Girdle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "item:full-plate-belt-mold",
@@ -158812,7 +159343,10 @@
       "id": "item:silver-full-plate-greaves",
       "label": "Silver Full Plate Greaves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "item:full-plate-greaves-mold",
@@ -158830,7 +159364,10 @@
       "id": "item:silver-full-plate-helm",
       "label": "Silver Full Plate Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 206) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 206) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "item:full-plate-helm-mold",
@@ -158848,7 +159385,10 @@
       "id": "item:silver-full-plate-pauldron",
       "label": "Silver Full Plate Pauldron",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "item:full-plate-pauldron-mold",
@@ -158866,7 +159406,10 @@
       "id": "item:silver-full-plate-vambraces",
       "label": "Silver Full Plate Vambraces",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "item:full-plate-vambrace-mold",
@@ -158884,7 +159427,10 @@
       "id": "item:silver-full-plate-visor",
       "label": "Silver Full Plate Visor",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 190) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "item:full-plate-visor-mold",
@@ -158902,7 +159448,10 @@
       "id": "item:silver-full-splinted-cloak",
       "label": "Silver Full Splinted Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "item:full-splinted-cloak-mold",
@@ -158925,7 +159474,10 @@
       "id": "item:electrum-full-breastplate",
       "label": "Electrum Full Breastplate",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 222) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 222) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:electrum-full-breastplate",
@@ -158938,7 +159490,10 @@
       "id": "item:electrum-full-plate-boots",
       "label": "Electrum Full Plate Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-boots",
@@ -158951,7 +159506,10 @@
       "id": "item:electrum-full-plate-bracer",
       "label": "Electrum Full Plate Bracer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-bracer",
@@ -158964,7 +159522,10 @@
       "id": "item:electrum-full-plate-collar",
       "label": "Electrum Full Plate Collar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-collar",
@@ -158977,7 +159538,10 @@
       "id": "item:electrum-full-plate-gauntlets",
       "label": "Electrum Full Plate Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-gauntlets",
@@ -158990,7 +159554,10 @@
       "id": "item:electrum-full-plate-girdle",
       "label": "Electrum Full Plate Girdle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-girdle",
@@ -159003,7 +159570,10 @@
       "id": "item:electrum-full-plate-greaves",
       "label": "Electrum Full Plate Greaves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-greaves",
@@ -159016,7 +159586,10 @@
       "id": "item:electrum-full-plate-helm",
       "label": "Electrum Full Plate Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 212) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 212) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-helm",
@@ -159029,7 +159602,10 @@
       "id": "item:electrum-full-plate-pauldron",
       "label": "Electrum Full Plate Pauldron",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 195) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-pauldron",
@@ -159042,7 +159618,10 @@
       "id": "item:electrum-full-plate-vambraces",
       "label": "Electrum Full Plate Vambraces",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-vambraces",
@@ -159055,7 +159634,10 @@
       "id": "item:electrum-full-plate-visor",
       "label": "Electrum Full Plate Visor",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 196) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 196) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:electrum-full-plate-visor",
@@ -159068,7 +159650,10 @@
       "id": "item:electrum-full-splinted-cloak",
       "label": "Electrum Full Splinted Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:electrum-full-splinted-cloak",
@@ -159086,7 +159671,10 @@
       "id": "item:gold-full-breastplate",
       "label": "Gold Full Breastplate",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:gold-full-breastplate",
@@ -159099,7 +159687,10 @@
       "id": "item:gold-full-plate-boots",
       "label": "Gold Full Plate Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-boots",
@@ -159112,7 +159703,10 @@
       "id": "item:gold-full-plate-bracer",
       "label": "Gold Full Plate Bracer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-bracer",
@@ -159125,7 +159719,10 @@
       "id": "item:gold-full-plate-collar",
       "label": "Gold Full Plate Collar",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-collar",
@@ -159138,7 +159735,10 @@
       "id": "item:gold-full-plate-gauntlets",
       "label": "Gold Full Plate Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-gauntlets",
@@ -159151,7 +159751,10 @@
       "id": "item:gold-full-plate-girdle",
       "label": "Gold Full Plate Girdle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-girdle",
@@ -159164,7 +159767,10 @@
       "id": "item:gold-full-plate-greaves",
       "label": "Gold Full Plate Greaves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 218) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 218) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-greaves",
@@ -159177,7 +159783,10 @@
       "id": "item:gold-full-plate-helm",
       "label": "Gold Full Plate Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-helm",
@@ -159190,7 +159799,10 @@
       "id": "item:gold-full-plate-pauldron",
       "label": "Gold Full Plate Pauldron",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 198) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-pauldron",
@@ -159203,7 +159815,10 @@
       "id": "item:gold-full-plate-vambraces",
       "label": "Gold Full Plate Vambraces",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 211) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-vambraces",
@@ -159216,7 +159831,10 @@
       "id": "item:gold-full-plate-visor",
       "label": "Gold Full Plate Visor",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 199) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:gold-full-plate-visor",
@@ -159229,7 +159847,10 @@
       "id": "item:gold-full-splinted-cloak",
       "label": "Gold Full Splinted Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 204) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:gold-full-splinted-cloak",
@@ -159247,7 +159868,10 @@
       "id": "item:platinum-full-breastplate",
       "label": "Platinum Full Breastplate",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:platinum-full-breastplate",
@@ -159260,7 +159884,10 @@
       "id": "item:platinum-full-plate-boots",
       "label": "Platinum Full Plate Boots",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-boots",
@@ -159273,7 +159900,10 @@
       "id": "item:platinum-full-plate-bracer",
       "label": "Platinum Full Plate Bracer",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-bracer",
@@ -159286,7 +159916,10 @@
       "id": "item:platinum-full-plate-collar",
       "label": "Platinum Full Plate Collar",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-collar",
@@ -159298,7 +159931,10 @@
       "id": "item:platinum-full-plate-gauntlets",
       "label": "Platinum Full Plate Gauntlets",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-gauntlets",
@@ -159311,7 +159947,10 @@
       "id": "item:platinum-full-plate-girdle",
       "label": "Platinum Full Plate Girdle",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 207) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-girdle",
@@ -159324,7 +159963,10 @@
       "id": "item:platinum-full-plate-greaves",
       "label": "Platinum Full Plate Greaves",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-greaves",
@@ -159337,7 +159979,10 @@
       "id": "item:platinum-full-plate-helm",
       "label": "Platinum Full Plate Helm",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 213) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-helm",
@@ -159350,7 +159995,10 @@
       "id": "item:platinum-full-plate-pauldron",
       "label": "Platinum Full Plate Pauldron",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 200) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 200) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-pauldron",
@@ -159363,7 +160011,10 @@
       "id": "item:platinum-full-plate-vambraces",
       "label": "Platinum Full Plate Vambraces",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 214) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-vambraces",
@@ -159376,7 +160027,10 @@
       "id": "item:platinum-full-plate-visor",
       "label": "Platinum Full Plate Visor",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 202) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:platinum-full-plate-visor",
@@ -159389,7 +160043,10 @@
       "id": "item:platinum-full-splinted-cloak",
       "label": "Platinum Full Splinted Cloak",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge (trivial not listed on eqlwiki)",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:platinum-full-splinted-cloak",
@@ -159408,7 +160065,10 @@
       "type": "item",
       "ac": 26,
       "weight": 11,
-      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:enchanted-full-breastplate-silver",
@@ -159423,7 +160083,10 @@
       "type": "item",
       "ac": 13,
       "weight": 7.5,
-      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 208) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-boots-silver",
@@ -159438,7 +160101,10 @@
       "type": "item",
       "ac": 12,
       "weight": 4.4,
-      "source": "Crafted via Blacksmithing (trivial 209) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 209) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-bracers-silver",
@@ -159453,7 +160119,10 @@
       "type": "item",
       "ac": 9,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-collar-silver",
@@ -159468,7 +160137,10 @@
       "type": "item",
       "ac": 14,
       "weight": 5.5,
-      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-gauntlets-silver",
@@ -159483,7 +160155,10 @@
       "type": "item",
       "ac": 10,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-girdle-silver",
@@ -159498,7 +160173,10 @@
       "type": "item",
       "ac": 18,
       "weight": 8.5,
-      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-greaves-silver",
@@ -159513,7 +160191,10 @@
       "type": "item",
       "ac": 15,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-helm-silver",
@@ -159528,7 +160209,10 @@
       "type": "item",
       "ac": 13,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-pauldron-silver",
@@ -159543,7 +160227,10 @@
       "type": "item",
       "ac": 14,
       "weight": 7,
-      "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 224) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-vambraces-silver",
@@ -159558,7 +160245,10 @@
       "type": "item",
       "ac": 7,
       "weight": 2,
-      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-visor-silver",
@@ -159573,7 +160263,10 @@
       "type": "item",
       "ac": 14,
       "weight": 6.5,
-      "source": "Crafted via Blacksmithing (trivial 226) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 226) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:enchanted-full-splinted-cloak-silver",
@@ -159593,7 +160286,10 @@
       "type": "item",
       "ac": 26,
       "weight": 11,
-      "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:enchanted-full-breastplate-electrum",
@@ -159608,7 +160304,10 @@
       "type": "item",
       "ac": 13,
       "weight": 7.5,
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-boots-electrum",
@@ -159623,7 +160322,10 @@
       "type": "item",
       "ac": 12,
       "weight": 4.4,
-      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 210) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-bracers-electrum",
@@ -159638,7 +160340,10 @@
       "type": "item",
       "ac": 9,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-collar-electrum",
@@ -159653,7 +160358,10 @@
       "type": "item",
       "ac": 14,
       "weight": 5.5,
-      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-gauntlets-electrum",
@@ -159668,7 +160376,10 @@
       "type": "item",
       "ac": 10,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-girdle-electrum",
@@ -159683,7 +160394,10 @@
       "type": "item",
       "ac": 18,
       "weight": 8.5,
-      "source": "Crafted via Blacksmithing (trivial 232) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 232) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-greaves-electrum",
@@ -159698,7 +160412,10 @@
       "type": "item",
       "ac": 15,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-helm-electrum",
@@ -159713,7 +160430,10 @@
       "type": "item",
       "ac": 13,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 220) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-pauldron-electrum",
@@ -159728,7 +160448,10 @@
       "type": "item",
       "ac": 14,
       "weight": 7,
-      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-vambraces-electrum",
@@ -159743,7 +160466,10 @@
       "type": "item",
       "ac": 7,
       "weight": 2,
-      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 215) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-visor-electrum",
@@ -159758,7 +160484,10 @@
       "type": "item",
       "ac": 14,
       "weight": 6.5,
-      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:enchanted-full-splinted-cloak-electrum",
@@ -159778,7 +160507,10 @@
       "type": "item",
       "ac": 26,
       "weight": 11,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:enchanted-full-breastplate-gold",
@@ -159792,7 +160524,10 @@
       "type": "item",
       "ac": 13,
       "weight": 7.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-boots-gold",
@@ -159806,7 +160541,10 @@
       "type": "item",
       "ac": 12,
       "weight": 4.4,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-bracers-gold",
@@ -159820,7 +160558,10 @@
       "type": "item",
       "ac": 9,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-collar-gold",
@@ -159834,7 +160575,10 @@
       "type": "item",
       "ac": 14,
       "weight": 5.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-gauntlets-gold",
@@ -159848,7 +160592,10 @@
       "type": "item",
       "ac": 10,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-girdle-gold",
@@ -159862,7 +160609,10 @@
       "type": "item",
       "ac": 18,
       "weight": 8.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-greaves-gold",
@@ -159876,7 +160626,10 @@
       "type": "item",
       "ac": 15,
       "weight": 5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-helm-gold",
@@ -159890,7 +160643,10 @@
       "type": "item",
       "ac": 13,
       "weight": 5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-pauldron-gold",
@@ -159904,7 +160660,10 @@
       "type": "item",
       "ac": 14,
       "weight": 7,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-vambraces-gold",
@@ -159918,7 +160677,10 @@
       "type": "item",
       "ac": 7,
       "weight": 2,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-visor-gold",
@@ -159932,7 +160694,10 @@
       "type": "item",
       "ac": 14,
       "weight": 6.5,
-      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table"
+      "source": "Crafted via Blacksmithing at the Royal Qeynos Forge; trivial unconfirmed on eqlwiki (\"??\") -- Enchanted Folded Sheet Metal quantity inferred from the identical Silver/Electrum/Platinum tiers' pattern, since Gold's own page shows no component table",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:enchanted-full-splinted-cloak-gold",
@@ -159951,7 +160716,10 @@
       "type": "item",
       "ac": 26,
       "weight": 11,
-      "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:enchanted-full-breastplate-platinum",
@@ -159966,7 +160734,10 @@
       "type": "item",
       "ac": 13,
       "weight": 7.5,
-      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-boots-platinum",
@@ -159981,7 +160752,10 @@
       "type": "item",
       "ac": 12,
       "weight": 4.4,
-      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-bracers-platinum",
@@ -159996,7 +160770,10 @@
       "type": "item",
       "ac": 9,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-collar-platinum",
@@ -160011,7 +160788,10 @@
       "type": "item",
       "ac": 14,
       "weight": 5.5,
-      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-gauntlets-platinum",
@@ -160026,7 +160806,10 @@
       "type": "item",
       "ac": 10,
       "weight": 4.5,
-      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 235) at the Royal Qeynos Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-girdle-platinum",
@@ -160041,7 +160824,10 @@
       "type": "item",
       "ac": 18,
       "weight": 8.5,
-      "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 240) at the Royal Qeynos Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-greaves-platinum",
@@ -160056,7 +160842,10 @@
       "type": "item",
       "ac": 15,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-helm-platinum",
@@ -160071,7 +160860,10 @@
       "type": "item",
       "ac": 13,
       "weight": 5,
-      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 230) at the Royal Qeynos Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-pauldron-platinum",
@@ -160086,7 +160878,10 @@
       "type": "item",
       "ac": 14,
       "weight": 7,
-      "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 236) at the Royal Qeynos Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-vambraces-platinum",
@@ -160101,7 +160896,10 @@
       "type": "item",
       "ac": 7,
       "weight": 2,
-      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 225) at the Royal Qeynos Forge",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:enchanted-full-plate-visor-platinum",
@@ -160116,7 +160914,10 @@
       "type": "item",
       "ac": 14,
       "weight": 6.5,
-      "source": "Crafted via Blacksmithing (trivial 238) at the Royal Qeynos Forge"
+      "source": "Crafted via Blacksmithing (trivial 238) at the Royal Qeynos Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:enchanted-full-splinted-cloak-platinum",
@@ -160134,7 +160935,10 @@
       "id": "item:imbued-field-breastplate-bertoxxulous",
       "label": "Imbued Field Breastplate (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-bertoxxulous",
@@ -160146,7 +160950,10 @@
       "id": "item:imbued-field-plate-pauldron-bertoxxulous",
       "label": "Imbued Field Plate Pauldron (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-bertoxxulous",
@@ -160158,7 +160965,10 @@
       "id": "item:imbued-field-plate-vambraces-bertoxxulous",
       "label": "Imbued Field Plate Vambraces (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-bertoxxulous",
@@ -160170,7 +160980,10 @@
       "id": "item:imbued-field-plate-visor-bertoxxulous",
       "label": "Imbued Field Plate Visor (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-bertoxxulous",
@@ -160182,7 +160995,10 @@
       "id": "item:imbued-field-plate-helm-bertoxxulous",
       "label": "Imbued Field Plate Helm (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-bertoxxulous",
@@ -160194,7 +161010,10 @@
       "id": "item:imbued-field-plate-greaves-bertoxxulous",
       "label": "Imbued Field Plate Greaves (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-bertoxxulous",
@@ -160206,7 +161025,10 @@
       "id": "item:imbued-field-plate-girdle-bertoxxulous",
       "label": "Imbued Field Plate Girdle (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-bertoxxulous",
@@ -160218,7 +161040,10 @@
       "id": "item:imbued-field-plate-gauntlets-bertoxxulous",
       "label": "Imbued Field Plate Gauntlets (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-bertoxxulous",
@@ -160230,7 +161055,10 @@
       "id": "item:imbued-field-plate-collar-bertoxxulous",
       "label": "Imbued Field Plate Collar (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-bertoxxulous",
@@ -160242,7 +161070,10 @@
       "id": "item:imbued-field-plate-cloak-bertoxxulous",
       "label": "Imbued Field Plate Cloak (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-bertoxxulous",
@@ -160254,7 +161085,10 @@
       "id": "item:imbued-field-plate-bracers-bertoxxulous",
       "label": "Imbued Field Plate Bracers (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-bertoxxulous",
@@ -160266,7 +161100,10 @@
       "id": "item:imbued-field-plate-boots-bertoxxulous",
       "label": "Imbued Field Plate Boots (Bertoxxulous)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-bertoxxulous",
@@ -160283,7 +161120,10 @@
       "id": "item:imbued-field-breastplate-erollisi-marr",
       "label": "Imbued Field Breastplate (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-erollisi-marr",
@@ -160295,7 +161135,10 @@
       "id": "item:imbued-field-plate-pauldron-erollisi-marr",
       "label": "Imbued Field Plate Pauldron (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-erollisi-marr",
@@ -160307,7 +161150,10 @@
       "id": "item:imbued-field-plate-vambraces-erollisi-marr",
       "label": "Imbued Field Plate Vambraces (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-erollisi-marr",
@@ -160319,7 +161165,10 @@
       "id": "item:imbued-field-plate-visor-erollisi-marr",
       "label": "Imbued Field Plate Visor (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-erollisi-marr",
@@ -160331,7 +161180,10 @@
       "id": "item:imbued-field-plate-helm-erollisi-marr",
       "label": "Imbued Field Plate Helm (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-erollisi-marr",
@@ -160343,7 +161195,10 @@
       "id": "item:imbued-field-plate-greaves-erollisi-marr",
       "label": "Imbued Field Plate Greaves (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-erollisi-marr",
@@ -160355,7 +161210,10 @@
       "id": "item:imbued-field-plate-girdle-erollisi-marr",
       "label": "Imbued Field Plate Girdle (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-erollisi-marr",
@@ -160367,7 +161225,10 @@
       "id": "item:imbued-field-plate-gauntlets-erollisi-marr",
       "label": "Imbued Field Plate Gauntlets (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-erollisi-marr",
@@ -160379,7 +161240,10 @@
       "id": "item:imbued-field-plate-collar-erollisi-marr",
       "label": "Imbued Field Plate Collar (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-erollisi-marr",
@@ -160391,7 +161255,10 @@
       "id": "item:imbued-field-plate-cloak-erollisi-marr",
       "label": "Imbued Field Plate Cloak (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-erollisi-marr",
@@ -160403,7 +161270,10 @@
       "id": "item:imbued-field-plate-bracers-erollisi-marr",
       "label": "Imbued Field Plate Bracers (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-erollisi-marr",
@@ -160415,7 +161285,10 @@
       "id": "item:imbued-field-plate-boots-erollisi-marr",
       "label": "Imbued Field Plate Boots (Erollisi Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-erollisi-marr",
@@ -160432,7 +161305,10 @@
       "id": "item:imbued-field-breastplate-innoruuk",
       "label": "Imbued Field Breastplate (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-innoruuk",
@@ -160444,7 +161320,10 @@
       "id": "item:imbued-field-plate-pauldron-innoruuk",
       "label": "Imbued Field Plate Pauldron (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-innoruuk",
@@ -160456,7 +161335,10 @@
       "id": "item:imbued-field-plate-vambraces-innoruuk",
       "label": "Imbued Field Plate Vambraces (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-innoruuk",
@@ -160468,7 +161350,10 @@
       "id": "item:imbued-field-plate-visor-innoruuk",
       "label": "Imbued Field Plate Visor (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-innoruuk",
@@ -160480,7 +161365,10 @@
       "id": "item:imbued-field-plate-helm-innoruuk",
       "label": "Imbued Field Plate Helm (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-innoruuk",
@@ -160492,7 +161380,10 @@
       "id": "item:imbued-field-plate-greaves-innoruuk",
       "label": "Imbued Field Plate Greaves (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-innoruuk",
@@ -160504,7 +161395,10 @@
       "id": "item:imbued-field-plate-girdle-innoruuk",
       "label": "Imbued Field Plate Girdle (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-innoruuk",
@@ -160516,7 +161410,10 @@
       "id": "item:imbued-field-plate-gauntlets-innoruuk",
       "label": "Imbued Field Plate Gauntlets (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-innoruuk",
@@ -160528,7 +161425,10 @@
       "id": "item:imbued-field-plate-collar-innoruuk",
       "label": "Imbued Field Plate Collar (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-innoruuk",
@@ -160540,7 +161440,10 @@
       "id": "item:imbued-field-plate-cloak-innoruuk",
       "label": "Imbued Field Plate Cloak (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-innoruuk",
@@ -160552,7 +161455,10 @@
       "id": "item:imbued-field-plate-bracers-innoruuk",
       "label": "Imbued Field Plate Bracers (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-innoruuk",
@@ -160564,7 +161470,10 @@
       "id": "item:imbued-field-plate-boots-innoruuk",
       "label": "Imbued Field Plate Boots (Innoruuk)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-innoruuk",
@@ -160581,7 +161490,10 @@
       "id": "item:imbued-field-breastplate-karana",
       "label": "Imbued Field Breastplate (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-karana",
@@ -160593,7 +161505,10 @@
       "id": "item:imbued-field-plate-pauldron-karana",
       "label": "Imbued Field Plate Pauldron (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-karana",
@@ -160605,7 +161520,10 @@
       "id": "item:imbued-field-plate-vambraces-karana",
       "label": "Imbued Field Plate Vambraces (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-karana",
@@ -160617,7 +161535,10 @@
       "id": "item:imbued-field-plate-visor-karana",
       "label": "Imbued Field Plate Visor (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-karana",
@@ -160629,7 +161550,10 @@
       "id": "item:imbued-field-plate-helm-karana",
       "label": "Imbued Field Plate Helm (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-karana",
@@ -160641,7 +161565,10 @@
       "id": "item:imbued-field-plate-greaves-karana",
       "label": "Imbued Field Plate Greaves (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-karana",
@@ -160653,7 +161580,10 @@
       "id": "item:imbued-field-plate-girdle-karana",
       "label": "Imbued Field Plate Girdle (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-karana",
@@ -160665,7 +161595,10 @@
       "id": "item:imbued-field-plate-gauntlets-karana",
       "label": "Imbued Field Plate Gauntlets (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-karana",
@@ -160677,7 +161610,10 @@
       "id": "item:imbued-field-plate-collar-karana",
       "label": "Imbued Field Plate Collar (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-karana",
@@ -160689,7 +161625,10 @@
       "id": "item:imbued-field-plate-cloak-karana",
       "label": "Imbued Field Plate Cloak (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-karana",
@@ -160701,7 +161640,10 @@
       "id": "item:imbued-field-plate-bracers-karana",
       "label": "Imbued Field Plate Bracers (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-karana",
@@ -160713,7 +161655,10 @@
       "id": "item:imbued-field-plate-boots-karana",
       "label": "Imbued Field Plate Boots (Karana)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-karana",
@@ -160730,7 +161675,10 @@
       "id": "item:imbued-field-breastplate-mithaniel-marr",
       "label": "Imbued Field Breastplate (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-mithaniel-marr",
@@ -160742,7 +161690,10 @@
       "id": "item:imbued-field-plate-pauldron-mithaniel-marr",
       "label": "Imbued Field Plate Pauldron (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-mithaniel-marr",
@@ -160754,7 +161705,10 @@
       "id": "item:imbued-field-plate-vambraces-mithaniel-marr",
       "label": "Imbued Field Plate Vambraces (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-mithaniel-marr",
@@ -160766,7 +161720,10 @@
       "id": "item:imbued-field-plate-visor-mithaniel-marr",
       "label": "Imbued Field Plate Visor (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-mithaniel-marr",
@@ -160778,7 +161735,10 @@
       "id": "item:imbued-field-plate-helm-mithaniel-marr",
       "label": "Imbued Field Plate Helm (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-mithaniel-marr",
@@ -160790,7 +161750,10 @@
       "id": "item:imbued-field-plate-greaves-mithaniel-marr",
       "label": "Imbued Field Plate Greaves (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-mithaniel-marr",
@@ -160802,7 +161765,10 @@
       "id": "item:imbued-field-plate-girdle-mithaniel-marr",
       "label": "Imbued Field Plate Girdle (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-mithaniel-marr",
@@ -160814,7 +161780,10 @@
       "id": "item:imbued-field-plate-gauntlets-mithaniel-marr",
       "label": "Imbued Field Plate Gauntlets (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-mithaniel-marr",
@@ -160826,7 +161795,10 @@
       "id": "item:imbued-field-plate-collar-mithaniel-marr",
       "label": "Imbued Field Plate Collar (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-mithaniel-marr",
@@ -160838,7 +161810,10 @@
       "id": "item:imbued-field-plate-cloak-mithaniel-marr",
       "label": "Imbued Field Plate Cloak (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-mithaniel-marr",
@@ -160850,7 +161825,10 @@
       "id": "item:imbued-field-plate-bracers-mithaniel-marr",
       "label": "Imbued Field Plate Bracers (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-mithaniel-marr",
@@ -160862,7 +161840,10 @@
       "id": "item:imbued-field-plate-boots-mithaniel-marr",
       "label": "Imbued Field Plate Boots (Mithaniel Marr)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-mithaniel-marr",
@@ -160879,7 +161860,10 @@
       "id": "item:imbued-field-breastplate-rallos-zek",
       "label": "Imbued Field Breastplate (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 245) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 245) at the Antonican Forge",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-rallos-zek",
@@ -160892,7 +161876,10 @@
       "id": "item:imbued-field-plate-pauldron-rallos-zek",
       "label": "Imbued Field Plate Pauldron (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-rallos-zek",
@@ -160905,7 +161892,10 @@
       "id": "item:imbued-field-plate-vambraces-rallos-zek",
       "label": "Imbued Field Plate Vambraces (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-rallos-zek",
@@ -160918,7 +161908,10 @@
       "id": "item:imbued-field-plate-visor-rallos-zek",
       "label": "Imbued Field Plate Visor (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-rallos-zek",
@@ -160930,7 +161923,10 @@
       "id": "item:imbued-field-plate-helm-rallos-zek",
       "label": "Imbued Field Plate Helm (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 229) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 229) at the Antonican Forge",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-rallos-zek",
@@ -160943,7 +161939,10 @@
       "id": "item:imbued-field-plate-greaves-rallos-zek",
       "label": "Imbued Field Plate Greaves (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 236) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 236) at the Antonican Forge",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-rallos-zek",
@@ -160956,7 +161955,10 @@
       "id": "item:imbued-field-plate-girdle-rallos-zek",
       "label": "Imbued Field Plate Girdle (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 223) at the Antonican Forge",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-rallos-zek",
@@ -160969,7 +161971,10 @@
       "id": "item:imbued-field-plate-gauntlets-rallos-zek",
       "label": "Imbued Field Plate Gauntlets (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-rallos-zek",
@@ -160982,7 +161987,10 @@
       "id": "item:imbued-field-plate-collar-rallos-zek",
       "label": "Imbued Field Plate Collar (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-rallos-zek",
@@ -160995,7 +162003,10 @@
       "id": "item:imbued-field-plate-cloak-rallos-zek",
       "label": "Imbued Field Plate Cloak (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 228) at the Antonican Forge",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-rallos-zek",
@@ -161008,7 +162019,10 @@
       "id": "item:imbued-field-plate-bracers-rallos-zek",
       "label": "Imbued Field Plate Bracers (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-rallos-zek",
@@ -161021,7 +162035,10 @@
       "id": "item:imbued-field-plate-boots-rallos-zek",
       "label": "Imbued Field Plate Boots (Rallos Zek)",
       "type": "item",
-      "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge"
+      "source": "Crafted via Blacksmithing (trivial 222) at the Antonican Forge",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-rallos-zek",
@@ -161039,7 +162056,10 @@
       "id": "item:imbued-field-breastplate-rodcet-nife",
       "label": "Imbued Field Breastplate (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Chest"
+      ]
     },
     {
       "id": "recipe:imbued-field-breastplate-rodcet-nife",
@@ -161051,7 +162071,10 @@
       "id": "item:imbued-field-plate-pauldron-rodcet-nife",
       "label": "Imbued Field Plate Pauldron (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Shoulders"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-pauldron-rodcet-nife",
@@ -161063,7 +162086,10 @@
       "id": "item:imbued-field-plate-vambraces-rodcet-nife",
       "label": "Imbued Field Plate Vambraces (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Arms"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-vambraces-rodcet-nife",
@@ -161075,7 +162101,10 @@
       "id": "item:imbued-field-plate-visor-rodcet-nife",
       "label": "Imbued Field Plate Visor (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Face"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-visor-rodcet-nife",
@@ -161087,7 +162116,10 @@
       "id": "item:imbued-field-plate-helm-rodcet-nife",
       "label": "Imbued Field Plate Helm (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Head"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-helm-rodcet-nife",
@@ -161099,7 +162131,10 @@
       "id": "item:imbued-field-plate-greaves-rodcet-nife",
       "label": "Imbued Field Plate Greaves (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Legs"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-greaves-rodcet-nife",
@@ -161111,7 +162146,10 @@
       "id": "item:imbued-field-plate-girdle-rodcet-nife",
       "label": "Imbued Field Plate Girdle (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Waist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-girdle-rodcet-nife",
@@ -161123,7 +162161,10 @@
       "id": "item:imbued-field-plate-gauntlets-rodcet-nife",
       "label": "Imbued Field Plate Gauntlets (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Hands"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-gauntlets-rodcet-nife",
@@ -161135,7 +162176,10 @@
       "id": "item:imbued-field-plate-collar-rodcet-nife",
       "label": "Imbued Field Plate Collar (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Neck"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-collar-rodcet-nife",
@@ -161147,7 +162191,10 @@
       "id": "item:imbued-field-plate-cloak-rodcet-nife",
       "label": "Imbued Field Plate Cloak (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Back"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-cloak-rodcet-nife",
@@ -161159,7 +162206,10 @@
       "id": "item:imbued-field-plate-bracers-rodcet-nife",
       "label": "Imbued Field Plate Bracers (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Wrist"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-bracers-rodcet-nife",
@@ -161171,7 +162221,10 @@
       "id": "item:imbued-field-plate-boots-rodcet-nife",
       "label": "Imbued Field Plate Boots (Rodcet Nife)",
       "type": "item",
-      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")"
+      "source": "Crafted via Blacksmithing at the Antonican Forge; trivial unconfirmed on eqlwiki (\"??\")",
+      "slots": [
+        "Feet"
+      ]
     },
     {
       "id": "recipe:imbued-field-plate-boots-rodcet-nife",
