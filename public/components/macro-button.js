@@ -8,7 +8,11 @@
 // <macro-button square>Clear owned</macro-button>. Size fits the label by
 // default; `square` fixes it to a 90x90 slot regardless of label length,
 // shrinking the font further past 10 characters since a square box has
-// nowhere else for a long label to go.
+// nowhere else for a long label to go. `square small` instead fixes it to
+// 37x37 -- Maps' finder-bar `.field select`/`.field input` render at that
+// same height (theme.css), so a small square sits flush next to them
+// (issue #63's inline "add a stop here" button) instead of towering over
+// a field the way the full 90px square would.
 //
 // `toggled` gives a plain button the same depressed look as `pressed`
 // (current-nav-page) *without* `pressed`'s side effect of rendering as an
@@ -46,6 +50,10 @@ ${RESET_CSS}
   width: 90px; height: 90px;
   border-width: 5px;
 }
+:host(.square.small) {
+  width: 37px; height: 37px;
+  border-width: 3px;
+}
 .btn {
   position: relative; isolation: isolate; overflow: hidden;
   transform: translateZ(0);
@@ -71,9 +79,11 @@ ${RESET_CSS}
 /* The global "button { min-height: 44px }" narrow-screen tap-target rule
    (theme.css) only ever matched .macro-btn when it rendered as a real
    button (not an anchor) -- replicated here scoped the same way, since
-   Shadow DOM means that outer rule can no longer reach in. */
+   Shadow DOM means that outer rule can no longer reach in. Excludes
+   .small: its :host is hard-fixed to 37px to match an adjacent input's
+   height, and a 44px min-height floor would overflow that fixed box. */
 @media (max-width: 700px) {
-  .btn.as-button { min-height: 44px; }
+  .btn.as-button:not(.small) { min-height: 44px; }
 }
 .btn::before, .btn::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
 .btn::before {
@@ -98,6 +108,26 @@ ${RESET_CSS}
 .btn.square::after {
   background-image: var(--bone-tex), linear-gradient(to top, black, transparent 6px), linear-gradient(to right, black, transparent 6px);
   clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 6px) calc(100% - 6px), 6px calc(100% - 6px), 6px 6px);
+}
+/* A 3px inset (not the regular square's 6px) -- the small square's own
+   border is 3px, so the highlight/shadow falloff scales down to match,
+   same reasoning as the regular square's 6px matching its 5px border. The
+   "+" glyph is a single bold character, not a wrapped label, so this drops
+   the label-oriented padding/word-wrap entirely rather than inheriting
+   .btn.square's. */
+.btn.square.small {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  overflow-wrap: normal;
+}
+.btn.square.small::before {
+  background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 3px), linear-gradient(to left, white, transparent 3px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 3px, 3px 3px);
+}
+.btn.square.small::after {
+  background-image: var(--bone-tex), linear-gradient(to top, black, transparent 3px), linear-gradient(to right, black, transparent 3px);
+  clip-path: polygon(0 0, 0 100%, 100% 100%, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 3px);
 }
 .btn.long-label { font-size: 8.5px; }
 .btn:hover { filter: brightness(1.05); }
@@ -149,10 +179,16 @@ ${RESET_CSS}
 .btn.square:disabled::after {
   background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 6px), linear-gradient(to left, white, transparent 6px);
 }
+.btn.square.small:disabled::before {
+  background-image: var(--bone-tex), linear-gradient(to top, black, transparent 3px), linear-gradient(to right, black, transparent 3px);
+}
+.btn.square.small:disabled::after {
+  background-image: var(--bone-tex), linear-gradient(to bottom, white, transparent 3px), linear-gradient(to left, white, transparent 3px);
+}
 `);
 
 class MacroButton extends HTMLElement {
-  static get observedAttributes() { return ["href", "square", "pressed", "toggled", "disabled"]; }
+  static get observedAttributes() { return ["href", "square", "small", "pressed", "toggled", "disabled"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -169,6 +205,7 @@ class MacroButton extends HTMLElement {
   render() {
     const href = this.getAttribute("href");
     const square = this.hasAttribute("square");
+    const small = this.hasAttribute("small");
     const pressed = this.hasAttribute("pressed");
     const toggled = this.hasAttribute("toggled");
     // Only meaningful for the plain-button case below -- a "disabled" link
@@ -176,14 +213,16 @@ class MacroButton extends HTMLElement {
     // has, so there's no established look for either combination.
     const disabled = this.hasAttribute("disabled") && !pressed && !href;
     this.classList.toggle("square", square);
+    this.classList.toggle("small", small);
 
     const label = this.textContent.trim();
-    const isLong = square && label.length > 10;
+    const isLong = square && !small && label.length > 10;
 
     const btn = document.createElement(pressed ? "span" : href ? "a" : "button");
     btn.className = [
       "btn",
       square ? "square" : "",
+      small ? "small" : "",
       isLong ? "long-label" : "",
       pressed || toggled ? "pressed" : "",
       !pressed && !href ? "as-button" : "",

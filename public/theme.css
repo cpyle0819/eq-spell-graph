@@ -202,6 +202,14 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 .text-action:hover { text-decoration: underline; color: var(--gold-bright); filter: none; }
 .text-action:active { filter: none; }
 .text-action:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+/* First real use of a disabled .text-action (Maps' "+ Add Stop" at
+   issue #63's 5-stop cap) -- plain reduced opacity/no-hover rather than
+   macro-button's "already pressed in" look, since there's no bevel here to
+   invert; opacity alone is the established idiom for a disabled plain-text
+   control everywhere else in this theme. */
+.text-action:disabled, .text-action:disabled:hover {
+  color: var(--ink-muted); opacity: 0.5; cursor: default; text-decoration: none;
+}
 
 /* eqlwiki.com link for the sidebar's Primary Class (Spell Finder) / Classes
    (Class Browser) field — only shown when exactly one class is in play

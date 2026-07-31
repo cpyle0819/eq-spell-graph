@@ -4,6 +4,10 @@
 import "./components/index.js";
 
 const STATE_KEY = "eq-route-state";
+// One less than this many gap-add-btn squares can ever exist (from-through-to
+// has stops.length + 1 gaps) -- an arbitrary but concrete ceiling so the
+// finder-bar can't be grown into an unreadable, near-endless chain.
+const MAX_STOPS = 5;
 
 let zonesByLabel = new Map();
 let allZones = [];
@@ -20,6 +24,11 @@ export async function init() {
   populateZoneSelect(document.getElementById("route-from"));
   populateZoneSelect(document.getElementById("route-to"));
   restoreState();
+  // Unconditional (not folded into restoreState() itself) -- a first-ever
+  // visit has no saved state to restore at all, but the chain still needs
+  // its one From-to-To gap-add-btn drawn, not just a stop list that
+  // happens to be empty.
+  renderStops();
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
@@ -29,12 +38,8 @@ export async function init() {
     runRoute();
   });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
-  document.getElementById("add-stop-btn").addEventListener("click", () => {
-    stops.push("");
-    renderStops();
-    saveState();
-    // No runRoute() -- an added-but-unpicked stop can't change the route yet.
-  });
+  document.getElementById("add-stop-btn").addEventListener("click", () => insertStop(stops.length));
+  window.addEventListener("resize", checkOverflow);
   // Delegated once here rather than re-attached per runRoute() -- #route-result
   // itself is never replaced, only its children (route-card/zone-dossier),
   // and the event bubbles+composes out of both their shadow roots (issue
@@ -44,10 +49,26 @@ export async function init() {
   runRoute();
 }
 
-function renderStops() {
-  const container = document.getElementById("stops-container");
-  container.innerHTML = stops.map((value, i) => `
-    <span class="arrow">›</span>
+// Inserting at `index` = "insert before whatever stop currently sits at that
+// position" (stops.length itself means "append after the last stop, right
+// before To") -- shared by both ways of adding a stop: a gap-add-btn between
+// two specific fields (issue #63's own click-in-the-gap spec) and the
+// vertical view's fallback #add-stop-btn, which only ever appends.
+function insertStop(index) {
+  if (stops.length >= MAX_STOPS) return;
+  stops.splice(index, 0, "");
+  renderStops();
+  saveState();
+  // No runRoute() -- an added-but-unpicked stop can't change the route yet.
+}
+
+function gapAddButtonHtml(index) {
+  const disabled = stops.length >= MAX_STOPS;
+  return `<macro-button square small class="gap-add-btn" data-index="${index}" title="Add a stop here"${disabled ? " disabled" : ""}>+</macro-button>`;
+}
+
+function stopFieldHtml(i) {
+  return `
     <div class="field stop-field" data-index="${i}">
       <div class="field-label-row">
         <label>Stop ${i + 1}</label>
@@ -55,7 +76,22 @@ function renderStops() {
       </div>
       <select class="stop-select" data-index="${i}"><option value="">— Select Zone —</option></select>
     </div>
-  `).join("");
+  `;
+}
+
+// One gap-add-btn before every stop plus one final one before To -- N stops
+// means N+1 gaps, each identified by the insertion index it would splice a
+// new stop at (issue #63: "between every pair of stops," which includes the
+// From/first-stop and last-stop/To gaps, not just between two stops).
+function renderStops() {
+  const container = document.getElementById("chain-middle");
+  const parts = [];
+  for (let i = 0; i < stops.length; i++) {
+    parts.push(gapAddButtonHtml(i), stopFieldHtml(i));
+  }
+  parts.push(gapAddButtonHtml(stops.length));
+  container.innerHTML = parts.join("");
+
   for (const select of container.querySelectorAll(".stop-select")) {
     populateZoneSelect(select);
     select.value = stops[Number(select.dataset.index)];
@@ -73,6 +109,26 @@ function renderStops() {
       runRoute();
     });
   }
+  for (const btn of container.querySelectorAll(".gap-add-btn")) {
+    btn.addEventListener("click", () => insertStop(Number(btn.dataset.index)));
+  }
+
+  document.getElementById("add-stop-btn").disabled = stops.length >= MAX_STOPS;
+  checkOverflow();
+}
+
+// Switches the finder-bar between the horizontal from/gaps/stops/to chain
+// and a stacked vertical layout (issue #63) once that chain's natural,
+// unshrunk width (route-chain's children are flex-shrink: 0, see maps.html)
+// no longer fits -- the one condition covers both a narrow viewport and a
+// wide one with enough stops added to overflow it anyway, rather than a
+// separate width media query plus a hardcoded stop-count threshold.
+function checkOverflow() {
+  const finderBar = document.querySelector(".finder-bar");
+  const chain = document.getElementById("route-chain");
+  finderBar.classList.remove("vertical");
+  const overflowing = chain.scrollWidth > chain.clientWidth;
+  finderBar.classList.toggle("vertical", overflowing);
 }
 
 // ?to=<zone label> deep-links here (e.g. from the Leveling Guide) preset the
@@ -108,7 +164,6 @@ function restoreState() {
     if (s.to) document.getElementById("route-to").value = s.to;
     if (s.wizardPort) document.getElementById("wizard-port-btn").setAttribute("toggled", "");
     if (Array.isArray(s.stops)) stops = s.stops;
-    renderStops();
   } catch { /* ignore malformed state */ }
 }
 
