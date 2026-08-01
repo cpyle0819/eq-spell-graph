@@ -10,12 +10,12 @@
 // repeating a zone name once per item. `notFound` is shopping-list items
 // (same {id,label,quantity} shape) no known vendor sells at all.
 //
-// Deliberately picks each item's own single *nearest* seller, not every
-// seller -- an item sold in three zones only ever appears under whichever
-// one is closest. That's a real simplification (the true fewest-stops trip
-// across the whole list could sometimes beat greedily nearest-per-item), but
-// matches what was asked for ("find the nearest vendors that sell those
-// items") without building actual multi-stop route optimization.
+// The stop set itself is a weighted-set-cover result (see findNearMe() in
+// trades.js), not each item's own independently-nearest seller -- so a zone
+// that has everything wins even if it isn't the single closest seller for
+// any one item on the list, and a shopping list needing multiple zones gets
+// the smallest number of nearby stops that between them cover it, not one
+// stop per item.
 //
 // A native <dialog> (showModal()/close(), ::backdrop, Escape-to-close, and
 // focus trapping all come free from the platform -- no existing modal
