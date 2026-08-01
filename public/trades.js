@@ -141,27 +141,26 @@ function clearShoppingList() {
   renderShoppingList();
 }
 
-// shopping-list-panel.js's own "Find Near Me" -- finds the smallest set of
-// vendor-zone stops that between them cover the whole shopping list, biased
-// toward nearby stops, rather than picking each item's own nearest seller in
-// isolation (that earlier approach could recommend N separate stops even
-// when a single zone -- just not *quite* the single nearest seller for any
-// one item -- already had everything). rawVendors already covers every
-// vendor for the currently selected tradeskill (fetched unfiltered, see the
-// top-of-file comment) -- every shopping-list item was added from that same
-// tradeskill's own ingredients, so no separate fetch is needed to know who
-// sells what, only how far each candidate zone is (graph pathfinding is
-// server-side only).
+// shopping-list-panel.js's own "Find Near Me" -- ranks every vendor zone
+// that sells *something* on the shopping list by how much of the list it
+// covers (most items first, nearest as the tiebreak), and shows the top 5.
+// Deliberately not a "here's your one trip" minimal-stop plan: an earlier
+// version tried to compute the smallest covering set of stops, but that
+// always hides options ("why isn't the zone I actually wanted to visit even
+// listed?") and is also easy to get subtly wrong (a zone that's the single
+// best pick for *one* item can look artificially attractive in a
+// stop-by-stop greedy even when a slightly farther zone would've covered
+// the whole list). Scoring each zone independently against the full list,
+// instead of a shrinking "still needed" set, sidesteps that class of bug
+// entirely -- and showing several ranked options instead of one prescribed
+// route is more useful anyway when the "best" stop is a judgment call
+// (e.g. slightly more items vs. slightly closer).
 //
-// This is weighted set cover (minimum stops to cover every item is
-// NP-hard in general; shopping lists and candidate zones are small enough
-// here that the standard greedy approximation -- repeatedly take the zone
-// that covers the most still-needed items per hop of travel -- is both fast
-// and, in practice, exact for the common case of "one zone happens to have
-// everything." A zone covering the full remaining list always wins that
-// round (nothing scores higher than covering everything), and among several
-// full-coverage zones the nearest one wins on hops. Ties fall back to
-// zoneLabel for a stable result.
+// rawVendors already covers every vendor for the currently selected
+// tradeskill (fetched unfiltered, see the top-of-file comment) -- every
+// shopping-list item was added from that same tradeskill's own ingredients,
+// so no separate fetch is needed to know who sells what, only how far each
+// candidate zone is (graph pathfinding is server-side only).
 async function findNearMe(fromZoneId) {
   const itemVendors = new Map(); // itemId -> TradeskillVendorSummary[]
   for (const item of shoppingList) {
@@ -174,21 +173,14 @@ async function findNearMe(fromZoneId) {
     : {};
 
   // notFound covers both "no vendor sells this at all" and "every vendor
-  // that sells it is in a zone with no known route from fromZoneId" -- same
-  // two cases the old per-item version folded together.
-  const notFound = [];
-  const remaining = new Map(); // itemId -> item, only items with >=1 reachable vendor
-  for (const item of shoppingList) {
-    const reachable = (itemVendors.get(item.id) || []).filter((v) => distances[v.zoneId]);
-    if (reachable.length) remaining.set(item.id, item);
-    else notFound.push(item);
-  }
+  // that sells it is in a zone with no known route from fromZoneId."
+  const notFound = shoppingList.filter((item) => !(itemVendors.get(item.id) || []).some((v) => distances[v.zoneId]));
 
   // zoneId -> itemId -> vendors in that zone selling it (sorted by label so
-  // "which vendor gets credit for this item" is deterministic below).
+  // "which vendor gets credit for this item" is deterministic below, when a
+  // zone has more than one seller of the same item).
   const zoneItemVendors = new Map();
   for (const [itemId, vendors] of itemVendors) {
-    if (!remaining.has(itemId)) continue;
     for (const vendor of vendors) {
       if (!distances[vendor.zoneId]) continue;
       if (!zoneItemVendors.has(vendor.zoneId)) zoneItemVendors.set(vendor.zoneId, new Map());
@@ -201,48 +193,29 @@ async function findNearMe(fromZoneId) {
     for (const vendors of byItem.values()) vendors.sort((a, b) => a.label.localeCompare(b.label));
   }
 
-  const stopsByZone = new Map(); // zoneId -> { zoneId, zoneLabel, hops, route, vendors: Map(vendorId -> {id,label,items}) }
-  while (remaining.size) {
-    let bestZoneId = null;
-    let bestCovered = null;
-    let bestScore = -Infinity;
-    let bestHops = Infinity;
-    for (const [zoneId, byItem] of zoneItemVendors) {
-      const covered = [...byItem.keys()].filter((id) => remaining.has(id));
-      if (!covered.length) continue;
-      const hops = distances[zoneId].hops;
-      const score = covered.length / (hops + 1); // items covered per hop of travel
-      const zoneLabel = rawVendors.find((v) => v.zoneId === zoneId)?.zoneLabel || zoneId;
-      const currentLabel = bestZoneId != null ? rawVendors.find((v) => v.zoneId === bestZoneId)?.zoneLabel || bestZoneId : null;
-      const better =
-        score > bestScore ||
-        (score === bestScore && hops < bestHops) ||
-        (score === bestScore && hops === bestHops && zoneLabel.localeCompare(currentLabel) < 0);
-      if (better) {
-        bestZoneId = zoneId;
-        bestCovered = covered;
-        bestScore = score;
-        bestHops = hops;
+  const stops = [...zoneItemVendors.entries()]
+    .map(([zoneId, byItem]) => {
+      const dist = distances[zoneId];
+      const vendorsByI = new Map();
+      for (const [itemId, vendors] of byItem) {
+        const vendor = vendors[0];
+        if (!vendorsByI.has(vendor.id)) vendorsByI.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
+        vendorsByI.get(vendor.id).items.push(shoppingList.find((i) => i.id === itemId));
       }
-    }
-    if (!bestZoneId) break; // shouldn't happen: every remaining item has >=1 entry in zoneItemVendors
-
-    const dist = distances[bestZoneId];
-    const byItem = zoneItemVendors.get(bestZoneId);
-    const stop = { zoneId: bestZoneId, zoneLabel: rawVendors.find((v) => v.zoneId === bestZoneId)?.zoneLabel || bestZoneId, hops: dist.hops, route: dist.route, vendors: new Map() };
-    for (const itemId of bestCovered) {
-      const item = remaining.get(itemId);
-      const vendor = byItem.get(itemId)[0]; // deterministic pick when several vendors in this zone sell it
-      if (!stop.vendors.has(vendor.id)) stop.vendors.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
-      stop.vendors.get(vendor.id).items.push(item);
-      remaining.delete(itemId);
-    }
-    stopsByZone.set(bestZoneId, stop);
-  }
-
-  const stops = [...stopsByZone.values()]
-    .map((stop) => ({ ...stop, vendors: [...stop.vendors.values()].sort((a, b) => a.label.localeCompare(b.label)) }))
-    .sort((a, b) => a.hops - b.hops || a.zoneLabel.localeCompare(b.zoneLabel));
+      return {
+        zoneId,
+        zoneLabel: rawVendors.find((v) => v.zoneId === zoneId)?.zoneLabel || zoneId,
+        hops: dist.hops,
+        route: dist.route,
+        itemCount: byItem.size,
+        vendors: [...vendorsByI.values()].sort((a, b) => a.label.localeCompare(b.label)),
+      };
+    })
+    // Most of the shopping list available in one place first; nearer breaks
+    // ties, since this is still "find *near* me."
+    .sort((a, b) => b.itemCount - a.itemCount || a.hops - b.hops || a.zoneLabel.localeCompare(b.zoneLabel))
+    .slice(0, 5)
+    .map(({ itemCount, ...stop }) => stop);
 
   const dialog = document.getElementById("nearest-vendors-dialog");
   dialog.setData({ fromLabel: zonesById.get(fromZoneId) || fromZoneId, stops, notFound });

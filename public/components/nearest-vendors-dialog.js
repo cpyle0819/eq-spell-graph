@@ -3,19 +3,18 @@
 // should never see a partial mix of old and new state). `.show()` opens it.
 // Tradeskills' "Find Near Me" result (shopping-list-panel.js's own
 // `find-near-me` event, computed in trades.js): each `stop` is one vendor
-// zone worth visiting -- `{ zoneId, zoneLabel, hops, route, vendors:
-// [{ id, label, items: [{id,label,quantity}] }] }` -- sorted nearest-first,
-// grouped by zone (not flattened per-item) so this reads as an actual trip:
-// closest stop first, everything found there listed together, rather than
-// repeating a zone name once per item. `notFound` is shopping-list items
-// (same {id,label,quantity} shape) no known vendor sells at all.
+// zone worth considering -- `{ zoneId, zoneLabel, hops, route, vendors:
+// [{ id, label, items: [{id,label,quantity}] }] }` -- grouped by zone (not
+// flattened per-item) so each entry reads as "here's what this zone has,"
+// rather than repeating a zone name once per item. `notFound` is
+// shopping-list items (same {id,label,quantity} shape) no known vendor
+// sells at all.
 //
-// The stop set itself is a weighted-set-cover result (see findNearMe() in
-// trades.js), not each item's own independently-nearest seller -- so a zone
-// that has everything wins even if it isn't the single closest seller for
-// any one item on the list, and a shopping list needing multiple zones gets
-// the smallest number of nearby stops that between them cover it, not one
-// stop per item.
+// These are the top 5 *candidate* zones ranked by how much of the shopping
+// list each one covers (most items first, nearest as the tiebreak, see
+// findNearMe() in trades.js) -- not a single prescribed trip. Items can
+// legitimately repeat across more than one listed zone; this is "here are
+// your best options," not a minimal covering route.
 //
 // A native <dialog> (showModal()/close(), ::backdrop, Escape-to-close, and
 // focus trapping all come free from the platform -- no existing modal
