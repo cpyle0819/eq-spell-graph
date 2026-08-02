@@ -2,12 +2,16 @@
 // `.setData(ranking, ownedSet, showAllSpells)` set as one atomic call (not
 // three separate setters) so a render never sees a partial mix of old and
 // new state. Renders the zone header (name + wiki link + faction LED dot,
-// faction badge, spell-count badge, hops badge), an optional nested
-// <route-path variant="stone">, and the spell-scroll list, grouped by
-// vendor (issue #45) so every spell one vendor sells sits together under
-// that vendor's name -- a spell sold by more than one vendor in the zone
-// repeats under each. Spell rows themselves are checkbox + spell-chip +
-// class pills. The header's wiki link uses
+// faction badge, goods-count badge, hops badge), an optional nested
+// <route-path variant="stone">, and the scroll list, grouped by vendor
+// (issue #45) so everything one vendor sells sits together under that
+// vendor's name -- a good sold by more than one vendor in the zone repeats
+// under each. `ranking.spells` (checkbox + spell-chip + class/level pills,
+// with owned-tracking) and `ranking.items` (plain item-chip, no owned
+// concept for items -- see #renderSpellScroll()/#renderItemScroll()) are
+// mutually exclusive; exactly one is ever set on a given ranking (src/
+// graph.ts's rankZones()/rankZonesByCategory()). ownedSet/showAllSpells are
+// simply unused whenever it's an item ranking. The header's wiki link uses
 // `ranking.wikiTitle` (src/graph.ts's rankZones, from the zone node's
 // migration-023 `wiki_title` field) rather than deriving a URL from
 // `zoneName` — several zone labels don't match their eqlwiki.com page
@@ -34,6 +38,7 @@
 // place spell fields become tooltip stat chips.
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiUrl, wikiLink } from "./card-base.js";
+import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 
 const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
 // EQ /consider verbiage; the title attribute carries the practical meaning
@@ -200,6 +205,12 @@ ${WIKI_LINK_CSS}
   border-bottom: 2px solid var(--parch-accent);
 }
 .vendor-spell-list { display: flex; flex-direction: column; gap: 8px; }
+/* Item results (Armor/Adventuring Supplies/Tradeskill Supplies -- no
+   owned/checkbox tracking, no class/level pills, since item-chip's own
+   hover tooltip already carries the full stat block) -- item-chip is
+   inline-flex sized-to-content, so a wrapping flex row (not the spell
+   list's fixed checkbox-grid rows) is the natural layout. */
+.vendor-item-list { display: flex; flex-wrap: wrap; gap: 6px 10px; }
 /* Checkbox is a fixed grid column; the name chip + class pills all live in
    the second column as one flex-wrap flow. A short entry (one class) sits
    entirely on a single line -- no line is spent on structure the content
@@ -298,20 +309,16 @@ class ZoneCard extends HTMLElement {
     });
   }
 
-  render() {
-    const r = this.#ranking;
-    if (!r) return;
+  // Groups by vendor (issue #45) rather than one row per spell -- a spell
+  // sold by more than one vendor in this zone lands in each of their
+  // groups, so "clear out one vendor, then move to the next" is a single
+  // top-to-bottom pass through one group instead of hunting the whole list
+  // for that vendor's tag on every row.
+  #renderSpellScroll(r) {
     const owned = this.#owned;
     const showAllSpells = this.#showAll;
-
     const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
-    const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
 
-    // Group by vendor (issue #45) rather than one row per spell -- a spell
-    // sold by more than one vendor in this zone lands in each of their
-    // groups, so "clear out one vendor, then move to the next" is a single
-    // top-to-bottom pass through one group instead of hunting the whole
-    // list for that vendor's tag on every row.
     const vendorGroups = new Map();
     for (const s of r.spells) {
       const isOwned = owned.has(s.id);
@@ -321,7 +328,7 @@ class ZoneCard extends HTMLElement {
         vendorGroups.get(v).push(s);
       }
     }
-    const spellRows = [...vendorGroups.entries()]
+    const body = [...vendorGroups.entries()]
       .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([vendor, vendorSpells]) => `
         <div class="vendor-group">
@@ -341,12 +348,43 @@ class ZoneCard extends HTMLElement {
         </div>
       `).join("");
 
+    const count = visibleSpells.length;
+    const ownedHere = r.spells.length - visibleSpells.length;
+    const badgeText = count + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
+    return { body, count, badgeText, noun: "spell" };
+  }
+
+  // Item results (Armor/Adventuring Supplies/Tradeskill Supplies) have no
+  // owned/checkbox tracking and no class/level pills -- item-chip's own
+  // hover tooltip already carries the full stat block (ac/damage/classes/
+  // etc.), same component every other item listing in this app uses.
+  #renderItemScroll(r) {
+    const vendorGroups = new Map();
+    for (const it of r.items) {
+      for (const v of it.vendors) {
+        if (!vendorGroups.has(v)) vendorGroups.set(v, []);
+        vendorGroups.get(v).push(it);
+      }
+    }
+    const body = [...vendorGroups.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([vendor, vendorItems]) => `
+        <div class="vendor-group">
+          <div class="vendor-heading">${vendor}</div>
+          <div class="vendor-item-list">${vendorItems.map((it) => itemChipTag({ ...it, label: it.name })).join("")}</div>
+        </div>
+      `).join("");
+    return { body, count: r.items.length, badgeText: String(r.items.length), noun: "item" };
+  }
+
+  render() {
+    const r = this.#ranking;
+    if (!r) return;
+
+    const { body, count, badgeText, noun } = r.spells ? this.#renderSpellScroll(r) : this.#renderItemScroll(r);
+    const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const hasRoute = r.route && r.route.length > 1;
     const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";
-
-    const spellCount = visibleSpells.length;
-    const ownedHere = r.spells.length - visibleSpells.length;
-    const spellBadge = spellCount + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
 
     const tooltip = factionTooltip(r.faction, r.factionReasons);
     const eraTitle = r.era ? `${r.era} content isn't available in the current era yet` : "Not available in the current era yet";
@@ -356,18 +394,22 @@ class ZoneCard extends HTMLElement {
         ${r.wikiTitle ? wikiLink(r.wikiTitle) : ""}
         ${r.outOfEra ? `<span class="era-badge" title="${eraTitle}">Out of Era</span>` : ""}
         ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
-        <span class="zone-badge">${spellBadge} spell${spellCount !== 1 ? "s" : ""}</span>
+        <span class="zone-badge">${badgeText} ${noun}${count !== 1 ? "s" : ""}</span>
         <span class="zone-badge hops">${hopsText}</span>
       </div>
       ${routeHtml}
       <div class="spell-scroll">
-        <div class="spell-vendor-list">${spellRows}</div>
+        <div class="spell-vendor-list">${body}</div>
       </div>
     `;
     if (hasRoute) {
       const path = this.shadowRoot.querySelector("route-path");
       path.steps = r.route;
       path.alternates = r.alternates;
+    }
+    if (r.items) {
+      const itemsById = new Map(r.items.map((it) => [it.id, { ...it, label: it.name }]));
+      hydrateItemChips(this.shadowRoot, (id) => itemsById.get(id));
     }
   }
 }

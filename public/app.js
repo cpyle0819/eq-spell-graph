@@ -8,10 +8,20 @@ import "./components/index.js";
 import { wikiUrl } from "./components/card-base.js";
 import { getOwnedSpells, setSpellOwned, clearOwnedSpells, lazyRenderList } from "./components.js";
 
+// Matches src/api.ts's own SPELLS_TYPE -- the one hardcoded vendor-goods
+// type (every other type is a real item.category value from migration 400,
+// read live off /api/vendor-categories).
+const SPELLS_TYPE = "Spells";
+
 // --- State ---
 let zones = [];
 let availableClasses = [];
 let availableSpellLines = []; // { id, label }[]
+// /api/vendor-categories -- "Spells" always first/present, the rest are
+// whichever item categories (migration 400) actually have a real sells
+// edge right now (decisions/ "let types drive the filters").
+let availableTypes = [SPELLS_TYPE];
+let selectedType = SPELLS_TYPE;
 let lastRankings = null;
 let lastLevelRange = { min: 1, max: 1 };
 let showAllSpells = false;
@@ -21,9 +31,10 @@ let showAllSpells = false;
 // a display filter over already-fetched data, so toggling it just
 // re-renders -- no replan needed.
 let showOutOfEra = false;
-let selectedClasses = []; // string[]
-let selectedSpellLines = []; // { id, label }[]
-let specificSpells = []; // { id, name }
+let selectedClasses = []; // string[] -- doubles as spell.class_levels' class facet (Type=Spells) and item.classes' facet (any other Type), same roster either way
+let selectedSpellLines = []; // { id, label }[] -- Spells only
+let specificSpells = []; // { id, name } -- Spells only
+let specificItems = []; // { id, name } -- any non-Spells type
 let specificZones = []; // { id, label }
 
 let planDebounce;
@@ -67,7 +78,16 @@ const VISITED_KEY = "eq-visited";
 function renderSidebar() {
   const html = `
     <sidebar-panel>
-      <collapsible-section label="Faction" section="faction" section-title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which spells show up below.">
+      <collapsible-section label="Location" section="location">
+        <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
+        <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Level" section="level" id="level-section" section-title="Only spells carry per-class level data -- hidden for any other Type.">
+        <field-row label="Levels"><range-picker id="level-range" min="1" max="50" value-min="1" value-max="10"></range-picker></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true" id="level-sep"></div>
+      <collapsible-section label="Faction" section="faction" section-title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which goods show up below.">
         <field-row label="Race"><select id="race-select">
           <option value="barbarian">Barbarian</option>
           <option value="dark elf">Dark Elf</option>
@@ -127,21 +147,17 @@ function renderSidebar() {
         </select></field-row>
       </collapsible-section>
       <div class="control-sep" aria-hidden="true"></div>
-      <collapsible-section label="Spells" section="spells">
-        <field-row label="Spell Class"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
-        <field-row label="Spell Line"><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
-        <field-row label="Specific Spells"><tag-input id="spell-tag-input" aria-label="Spell suggestions"></tag-input></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true"></div>
-      <collapsible-section label="Level" section="level">
-        <field-row label="Levels"><range-picker id="level-range" min="1" max="50" value-min="1" value-max="10"></range-picker></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true"></div>
-      <collapsible-section label="Location" section="location">
-        <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
-        <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
-        <field-row label="Travel"><toggle-checkbox id="include-ports" label="Include Ports" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route"></toggle-checkbox></field-row>
+      <collapsible-section label="Travel" section="travel">
+        <field-row label="Route"><toggle-checkbox id="include-ports" label="Include Ports" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route"></toggle-checkbox></field-row>
         <field-row label="Era"><toggle-checkbox id="show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Shopping For" section="shopping">
+        <field-row label="Type"><select id="type-select"></select></field-row>
+        <field-row label="Class"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
+        <field-row label="Spell Line" id="spellline-row"><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
+        <field-row label="Specific Spells" id="specific-spells-row"><tag-input id="spell-tag-input" aria-label="Spell suggestions"></tag-input></field-row>
+        <field-row label="Specific Items" id="specific-items-row" hidden><tag-input id="item-tag-input" aria-label="Item suggestions"></tag-input></field-row>
       </collapsible-section>
       <div class="control-sep" aria-hidden="true"></div>
       <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
@@ -150,15 +166,16 @@ function renderSidebar() {
   document.getElementById("controls-panel-slot").outerHTML = html;
 }
 
-// Only Spells starts open — picking which spells to look for is the page's
-// main job, everything else (Faction, Level, Location) is a secondary
-// narrowing/config concern you dip into as needed. Applied by
-// applyDefaults() — for a first-time visitor that's every section's only
-// assignment; for Reset filters (which also calls applyDefaults()) it's
-// what makes the collapse state, not just the filter values, fully reset
-// too, rather than leaving whatever the user had toggled untouched.
-const ALL_SECTIONS = ["faction", "spells", "level", "location"];
-const DEFAULT_COLLAPSED_SECTIONS = ["faction", "level", "location"];
+// Only Shopping For starts open — picking what to shop for is the page's
+// main job, everything else (Location, Level, Faction, Travel) is a
+// secondary narrowing/config concern you dip into as needed (decisions/
+// spell-finder-sidebar-four-sections.md). Applied by applyDefaults() — for
+// a first-time visitor that's every section's only assignment; for Reset
+// filters (which also calls applyDefaults()) it's what makes the collapse
+// state, not just the filter values, fully reset too, rather than leaving
+// whatever the user had toggled untouched.
+const ALL_SECTIONS = ["location", "level", "faction", "travel", "shopping"];
+const DEFAULT_COLLAPSED_SECTIONS = ["location", "level", "faction", "travel"];
 
 function getSectionEl(section) {
   return document.querySelector(`collapsible-section[section="${section}"]`);
@@ -182,17 +199,20 @@ export async function init() {
   if (redirectFirstTimeVisitor()) return;
   renderSidebar();
   document.addEventListener("toggle", (e) => { if (e.target.tagName === "COLLAPSIBLE-SECTION") saveState(); });
-  [zones, availableClasses, availableSpellLines] = await Promise.all([
+  [zones, availableClasses, availableSpellLines, availableTypes] = await Promise.all([
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
     fetch("api/spell-lines").then((r) => r.json()),
+    fetch("api/vendor-categories").then((r) => r.json()),
   ]);
   populateZoneList();
   setupPlanner();
   setupClassSearch();
   setupSpellLineSearch();
   setupSpellSearch();
+  setupItemSearch();
   setupZoneSearch();
+  setupTypeFilter();
   const hadState = restoreState();
   if (!hadState) applyDefaults();
   consumePinnedSpellFromUrl();
@@ -219,13 +239,18 @@ function resetFilters() {
   document.getElementById("level-range").valueMin = 1;
   document.getElementById("level-range").valueMax = 10;
   specificSpells = [];
+  specificItems = [];
   specificZones = [];
   selectedSpellLines = [];
   showOutOfEra = false;
   document.getElementById("show-out-of-era").checked = false;
   document.getElementById("include-ports").checked = false;
+  selectedType = SPELLS_TYPE;
+  document.getElementById("type-select").value = SPELLS_TYPE;
+  updateShoppingForVisibility();
   applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
   renderSpellTags();
+  renderItemTags();
   renderZoneTags();
   renderSpellLineTags();
   saveState();
@@ -246,7 +271,9 @@ function getState() {
     levelMin: levelRange.valueMin,
     levelMax: levelRange.valueMax,
     specificSpells,
+    specificItems,
     specificZones,
+    type: selectedType,
     collapsedSections: [...document.querySelectorAll("collapsible-section")]
       .filter((s) => s.collapsed)
       .map((s) => s.getAttribute("section")),
@@ -279,10 +306,19 @@ function restoreState() {
       specificSpells = s.specificSpells;
       renderSpellTags();
     }
+    if (Array.isArray(s.specificItems) && s.specificItems.length) {
+      specificItems = s.specificItems;
+      renderItemTags();
+    }
     if (Array.isArray(s.specificZones) && s.specificZones.length) {
       specificZones = s.specificZones;
       renderZoneTags();
     }
+    if (s.type && availableTypes.includes(s.type)) {
+      selectedType = s.type;
+      document.getElementById("type-select").value = s.type;
+    }
+    updateShoppingForVisibility();
     if (Array.isArray(s.collapsedSections)) {
       s.collapsedSections.forEach((section) => { const el = getSectionEl(section); if (el) el.collapsed = true; });
     }
@@ -305,6 +341,15 @@ function consumePinnedSpellFromUrl() {
   const params = new URLSearchParams(location.search);
   const id = params.get("pinSpell");
   if (!id) return;
+
+  // A pinned spell is inherently a Spells-type deep link -- if the saved
+  // state (restored just before this runs) had left Type on something
+  // else, force it back so the pinned spell actually shows up in results
+  // instead of silently vanishing under an item-type plan.
+  selectedType = SPELLS_TYPE;
+  document.getElementById("type-select").value = SPELLS_TYPE;
+  updateShoppingForVisibility();
+
   const name = params.get("pinName") || id;
   if (!specificSpells.some((s) => s.id === id)) {
     specificSpells.push({ id, name });
@@ -405,6 +450,35 @@ function setupClassSearch() {
   });
 }
 
+// --- Type filter ---
+// Level (spells only -- no equivalent to spell.class_levels on an item),
+// Spell Line, and Specific Spells all hide/show together based on Type;
+// Specific Items is the exact inverse. A plain field-row [hidden] toggle
+// (see field-row.js/collapsible-section.js's own [hidden] rules) rather
+// than a second render pass, since nothing about the fields themselves
+// changes between types.
+function updateShoppingForVisibility() {
+  const isSpells = selectedType === SPELLS_TYPE;
+  document.getElementById("level-section").hidden = !isSpells;
+  document.getElementById("level-sep").hidden = !isSpells;
+  document.getElementById("spellline-row").hidden = !isSpells;
+  document.getElementById("specific-spells-row").hidden = !isSpells;
+  document.getElementById("specific-items-row").hidden = isSpells;
+}
+
+function setupTypeFilter() {
+  const select = document.getElementById("type-select");
+  select.innerHTML = availableTypes.map((t) => `<option value="${t}">${t}</option>`).join("");
+  select.value = selectedType;
+  updateShoppingForVisibility();
+  select.addEventListener("change", (e) => {
+    selectedType = e.target.value;
+    updateShoppingForVisibility();
+    saveState();
+    replan(300);
+  });
+}
+
 // --- Spell Line filter ---
 let spellLineTagInput;
 
@@ -463,6 +537,37 @@ function setupSpellSearch() {
   };
   spellTagInput.addEventListener("change", (e) => {
     specificSpells = e.detail.selected;
+    saveState();
+    replan(300);
+  });
+}
+
+// --- Specific item search (any non-Spells Type) ---
+let itemTagInput;
+
+function renderItemTags() {
+  itemTagInput.selected = specificItems;
+}
+
+function setupItemSearch() {
+  itemTagInput = document.getElementById("item-tag-input");
+  itemTagInput.itemId = (it) => it.id;
+  itemTagInput.itemLabel = (it) => it.name;
+  itemTagInput.emptyMessage = "No matching items";
+  itemTagInput.minQueryLength = 2;
+  itemTagInput.debounceMs = 200;
+  itemTagInput.reopenOnFocus = false;
+  itemTagInput.closeOnScroll = true;
+  // Scoped to the currently selected Type so suggestions only ever show
+  // goods that type can actually match -- same "types drive the filters"
+  // idea as the Type select's own option list.
+  itemTagInput.getMatches = async (q) => {
+    const category = selectedType === SPELLS_TYPE ? "" : selectedType;
+    const results = await fetch(`api/items/search?q=${encodeURIComponent(q)}&category=${encodeURIComponent(category)}`).then((r) => r.json());
+    return results.map((r) => ({ id: r.id, name: r.label }));
+  };
+  itemTagInput.addEventListener("change", (e) => {
+    specificItems = e.detail.selected;
     saveState();
     replan(300);
   });
@@ -564,11 +669,15 @@ async function runPlan() {
 
   document.getElementById("results").innerHTML = '<div class="loading">Searching Norrath...</div>';
 
-  const params = new URLSearchParams({ class: classes.join(","), levelMin: String(levelMin), levelMax: String(levelMax), from, race, primaryClass, deity });
-  if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
+  const params = new URLSearchParams({ class: classes.join(","), levelMin: String(levelMin), levelMax: String(levelMax), from, race, primaryClass, deity, type: selectedType });
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
-  if (selectedSpellLines.length) params.set("lines", selectedSpellLines.map((l) => l.id).join(","));
   if (document.getElementById("include-ports").checked) params.set("ports", "1");
+  if (selectedType === SPELLS_TYPE) {
+    if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
+    if (selectedSpellLines.length) params.set("lines", selectedSpellLines.map((l) => l.id).join(","));
+  } else if (specificItems.length) {
+    params.set("items", specificItems.map((it) => it.id).join(","));
+  }
   const rankings = await fetch(`api/plan?${params}`).then((r) => r.json());
 
   if (rankings.error) {
@@ -585,11 +694,12 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const el = document.getElementById("results");
   const statusEl = document.getElementById("status-panel");
   if (!rankings.length) {
-    el.innerHTML = '<div class="no-results">No vendors found for those levels.</div>';
+    el.innerHTML = '<div class="no-results">No vendors found.</div>';
     statusEl.data = null;
     return;
   }
 
+  const isSpells = selectedType === SPELLS_TYPE;
   const owned = getOwnedSpells();
   // "any" only neutralizes its own dimension server-side (a real KOS from
   // race, say, still shows even with deity set to Any) — so faction/badge
@@ -602,9 +712,16 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const accessible = visibleRankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = visibleRankings.filter((r) => r.faction === "wont_sell");
   const kos = visibleRankings.filter((r) => r.faction === "kos");
-  const allSpellIds = new Set(accessible.flatMap((r) => r.spells.map((s) => s.id)));
-  const totalSpells = allSpellIds.size;
-  const ownedCount = [...allSpellIds].filter((id) => owned.has(id)).length;
+  // r.spells/r.items are mutually exclusive per src/graph.ts's
+  // rankZones()/rankZonesByCategory() -- whichever one this batch of
+  // rankings actually carries is the one selectedType says it should.
+  const goodsKey = isSpells ? "spells" : "items";
+  const allGoodIds = new Set(accessible.flatMap((r) => r[goodsKey].map((g) => g.id)));
+  const totalGoods = allGoodIds.size;
+  // Items have no "owned" concept in this app -- status-panel (and the
+  // mana-bar/toggle/clear UI it owns) only renders that block when
+  // ownedCount isn't null/undefined.
+  const ownedCount = isSpells ? [...allGoodIds].filter((id) => owned.has(id)).length : undefined;
 
   const warnings = [];
   const ignoredDims = [raceIgnored && "race", classIgnored && "class", deityIgnored && "deity"].filter(Boolean);
@@ -619,20 +736,26 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const outOfEraCount = rankings.length - visibleRankings.length;
   if (outOfEraCount > 0) warnings.push(`<span style="color:var(--ink-muted);">${outOfEraCount} out-of-era zone(s) hidden</span>`);
 
+  const levelText = isSpells ? (levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`) : null;
+
   // status-panel (public/components/status-panel.js) owns the meta text,
   // warnings, progress bar, and toggle/clear buttons' own markup -- this
   // just hands it the numbers. The empty-results "Show all" fallback
   // (below) stays a plain .text-action link instead of a MacroButton,
   // since it sits inline in body text, not a dedicated action row.
-  statusEl.data = { totalSpells, accessibleCount: accessible.length, levelMin, levelMax, warnings, ownedCount, showAllSpells };
+  statusEl.data = {
+    totalGoods, goodsLabel: isSpells ? "spell" : "item", accessibleCount: accessible.length,
+    levelText, warnings, ownedCount, showAllSpells,
+  };
 
   el.innerHTML = "";
 
   // Computed over the *entire* rankings array up front (not discovered
   // incrementally as cards get lazily rendered) so the "all owned" empty
   // state below is correct immediately, without needing to have scrolled
-  // through the whole lazy list first.
-  const renderableZones = visibleRankings.filter(
+  // through the whole lazy list first. Items have no owned concept, so this
+  // is just visibleRankings unfiltered for any non-Spells type.
+  const renderableZones = !isSpells ? visibleRankings : visibleRankings.filter(
     (r) => showAllSpells || r.spells.some((s) => !owned.has(s.id))
   );
 
@@ -640,7 +763,9 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   // marked owned — the header above still says "N spell(s) across M
   // zone(s)," so without this the results area just goes blank with no clue
   // why. Only reachable when !showAllSpells, since showAllSpells never
-  // filters anything out of renderableZones.
+  // filters anything out of renderableZones. For a non-Spells type,
+  // renderableZones === visibleRankings always, so this can only be the
+  // out-of-era branch below, never the all-owned one.
   if (renderableZones.length === 0) {
     const msg = document.createElement("div");
     msg.className = "no-results";

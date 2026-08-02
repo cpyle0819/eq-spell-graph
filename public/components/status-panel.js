@@ -1,11 +1,19 @@
-// <status-panel>, with `.data = {totalSpells, accessibleCount, levelMin,
-// levelMax, warnings, ownedCount, showAllSpells}` set as one property.
+// <status-panel>, with `.data = {totalGoods, goodsLabel, accessibleCount,
+// levelText, warnings, ownedCount, showAllSpells}` set as one property.
 // `warnings` is a pre-built array of HTML strings (app.js's own faction/
 // ignored-dimension copy) -- this component just lays them out, it doesn't
 // interpret planner results. `.data = null` clears the panel and hides it
 // via the native `hidden` attribute: `:empty` only ever sees light-DOM
 // children, and this component never has any (everything renders into its
 // shadow root), so a CSS `:empty` rule can't detect "no data" here.
+//
+// `goodsLabel` ("spell"/"item") and `levelText` (a ready-made "level 9"/
+// "levels 9–11" string, or null) generalize this for Vendors' item-category
+// results (Armor/Adventuring Supplies/Tradeskill Supplies), which have no
+// per-class level data the way spells do. `ownedCount` is spell-only --
+// items have no "owned" concept in this app -- so it's optional; when
+// omitted, the mana-bar/owned-count/toggle-owned/clear-owned block doesn't
+// render at all rather than showing a meaningless 0/N.
 //
 // Renders the meta text + warnings, a nested <mana-bar>, and the toggle/
 // clear <macro-button>s, all inside its own shadow root (not slotted).
@@ -69,36 +77,39 @@ class StatusPanel extends HTMLElement {
       this.shadowRoot.replaceChildren();
       return;
     }
-    const { totalSpells, accessibleCount, levelMin, levelMax, warnings, ownedCount, showAllSpells } = this.#data;
-    const levelText = levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`;
+    const { totalGoods, goodsLabel, accessibleCount, levelText, warnings, ownedCount, showAllSpells } = this.#data;
+    const hasOwned = ownedCount != null;
     const toggleLabel = showAllSpells ? "Show remaining" : "Show all";
-    const clearBtn = ownedCount > 0 ? `<macro-button square id="clear-owned-btn">Clear owned</macro-button>` : "";
+    const clearBtn = hasOwned && ownedCount > 0 ? `<macro-button square id="clear-owned-btn">Clear owned</macro-button>` : "";
 
     this.shadowRoot.innerHTML = `
       <div class="status-meta">
-        ${totalSpells} spell(s) across ${accessibleCount} zone(s) for ${levelText}
+        ${totalGoods} ${goodsLabel}(s) across ${accessibleCount} zone(s)${levelText ? ` for ${levelText}` : ""}
         ${warnings.length ? `<div class="status-warnings">${warnings.join(" · ")}</div>` : ""}
       </div>
+      ${hasOwned ? `
       <div class="status-summary">
         <mana-bar></mana-bar>
-        <span class="status-owned-count">${ownedCount} / ${totalSpells} owned</span>
+        <span class="status-owned-count">${ownedCount} / ${totalGoods} owned</span>
       </div>
       <div class="status-actions">
         <macro-button square id="toggle-owned-btn">${toggleLabel}</macro-button>
         ${clearBtn}
-      </div>
+      </div>` : ""}
     `;
 
-    const manaBar = this.shadowRoot.querySelector("mana-bar");
-    manaBar.value = ownedCount;
-    manaBar.max = totalSpells;
+    if (hasOwned) {
+      const manaBar = this.shadowRoot.querySelector("mana-bar");
+      manaBar.value = ownedCount;
+      manaBar.max = totalGoods;
 
-    this.shadowRoot.getElementById("toggle-owned-btn").addEventListener("click", () => {
-      this.dispatchEvent(new CustomEvent("toggle-owned", { bubbles: true, composed: true }));
-    });
-    this.shadowRoot.getElementById("clear-owned-btn")?.addEventListener("click", () => {
-      this.dispatchEvent(new CustomEvent("clear-owned", { bubbles: true, composed: true }));
-    });
+      this.shadowRoot.getElementById("toggle-owned-btn").addEventListener("click", () => {
+        this.dispatchEvent(new CustomEvent("toggle-owned", { bubbles: true, composed: true }));
+      });
+      this.shadowRoot.getElementById("clear-owned-btn")?.addEventListener("click", () => {
+        this.dispatchEvent(new CustomEvent("clear-owned", { bubbles: true, composed: true }));
+      });
+    }
   }
 }
 

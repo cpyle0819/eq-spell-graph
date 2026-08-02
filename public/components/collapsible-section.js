@@ -32,6 +32,13 @@ ${RESET_CSS}
   flex-direction: column;
   gap: 8px;
 }
+/* Same convention as field-row.js's own [hidden] rule -- a whole section
+   can be irrelevant to the current context (Vendors' Level section when
+   Type isn't Spells, since items have no per-class level data), not just
+   collapsed. Without this the host's own display:flex above would win over
+   the UA stylesheet's [hidden]{display:none}, since author CSS always
+   outranks UA CSS regardless of specificity. */
+:host([hidden]) { display: none; }
 :host([collapsed]) ::slotted(*) { display: none; }
 .header {
   font-size: 13px; color: var(--parchment); letter-spacing: 0.1em;
