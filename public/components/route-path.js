@@ -3,9 +3,10 @@
 // attributes). Renders the "Route" label plus a chain of zone names
 // separated by a plain arrow, a boat icon (⚓, title="Boat crossing"), a
 // translocator icon (✨, title="Translocator (paid teleport)"), a portal
-// icon (🌀, title="Portal (walk-through zone entrance)"), or a wizard port
-// icon (🧙, title="Wizard Port (group teleport spell, Wizard class +
-// reagent required)") depending on each step's `via`.
+// icon (🌀, title="Portal (walk-through zone entrance)"), a wizard port
+// icon (🧙, title="Wizard Port (Wizard-only teleport spell)"), or a druid
+// port icon (🌿, title="Druid Port (Druid-only teleport spell)") depending
+// on each step's `via`.
 //
 // A step whose zone carries a hand-set `warning` (RouteStep.warning,
 // decisions/zone-danger-warnings.md) gets a small ⚠ after its name, title
@@ -121,11 +122,12 @@ ${RESET_CSS}
 .route-zone-btn.out-of-era:not(.active) { color: #9c2b2b; text-decoration: underline dotted; text-underline-offset: 3px; }
 .route-warning-icon { cursor: help; margin-left: 3px; font-size: 11px; color: #b45309; }
 .route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
-.boat-sep, .translocator-sep, .portal-sep, .wizard-port-sep { cursor: help; }
+.boat-sep, .translocator-sep, .portal-sep, .wizard-port-sep, .druid-port-sep { cursor: help; }
 .boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
 .translocator-sep { color: #6d28d9; margin: 0 7px; font-size: 15px; }
 .portal-sep { color: #0f766e; margin: 0 7px; font-size: 15px; }
 .wizard-port-sep { color: #b45309; margin: 0 7px; font-size: 15px; }
+.druid-port-sep { color: #15803d; margin: 0 7px; font-size: 15px; }
 
 /* Bold serif at small sizes reads cramped on the dark, busy marble texture
    behind a zone-card, so the stone variant bumps size back up to match the
@@ -141,12 +143,13 @@ ${RESET_CSS}
    button back into plain inline text (no hover fill, no pointer, no click
    effect) rather than adopting the parchment variant's clickable styling. */
 :host([variant="stone"]) .route-zone-btn { pointer-events: none; padding: 0; margin: 0; background: none; box-shadow: none; color: var(--parchment); font-weight: 600; }
-:host([variant="stone"]) .route-sep, :host([variant="stone"]) .boat-sep, :host([variant="stone"]) .translocator-sep, :host([variant="stone"]) .portal-sep, :host([variant="stone"]) .wizard-port-sep { margin: 0; }
+:host([variant="stone"]) .route-sep, :host([variant="stone"]) .boat-sep, :host([variant="stone"]) .translocator-sep, :host([variant="stone"]) .portal-sep, :host([variant="stone"]) .wizard-port-sep, :host([variant="stone"]) .druid-port-sep { margin: 0; }
 :host([variant="stone"]) .route-sep { color: var(--gold); }
 :host([variant="stone"]) .boat-sep { color: #7ba7f5; }
 :host([variant="stone"]) .translocator-sep { color: #c4a3f7; }
 :host([variant="stone"]) .portal-sep { color: #5eead4; }
 :host([variant="stone"]) .wizard-port-sep { color: #fbbf24; }
+:host([variant="stone"]) .druid-port-sep { color: #4ade80; }
 :host([variant="stone"]) .route-zone-btn.out-of-era { color: #ff6b6b; }
 :host([variant="stone"]) .route-warning-icon { color: #fbbf24; }
 `);
@@ -221,7 +224,8 @@ class RoutePath extends HTMLElement {
       if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span>${zoneBtn}`;
       if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span>${zoneBtn}`;
       if (step.via === "portal") return `<span class="portal-sep" title="Portal (walk-through zone entrance)">🌀</span>${zoneBtn}`;
-      if (step.via === "wizard_port") return `<span class="wizard-port-sep" title="Wizard Port (group teleport spell, Wizard class + reagent required)">🧙</span>${zoneBtn}`;
+      if (step.via === "wizard_port") return `<span class="wizard-port-sep" title="Wizard Port (Wizard-only teleport spell)">🧙</span>${zoneBtn}`;
+      if (step.via === "druid_port") return `<span class="druid-port-sep" title="Druid Port (Druid-only teleport spell)">🌿</span>${zoneBtn}`;
       return `<span class="route-sep">›</span>${zoneBtn}`;
     }).join("");
     this.shadowRoot.innerHTML = `<div class="route-header"><span class="route-label">Route</span>${pillsHtml}</div><div class="route-steps">${stepsHtml}</div>`;

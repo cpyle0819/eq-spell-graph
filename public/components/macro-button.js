@@ -23,7 +23,7 @@
 // (current-nav-page) *without* `pressed`'s side effect of rendering as an
 // inert <span> — `pressed` is for a state the user can't click their way
 // out of (you're already on this page); `toggled` is for a real on/off
-// control (Maps' Include Wizard Port button) that has to stay clickable in
+// control (Maps' Ports button) that has to stay clickable in
 // both states. Caller owns the state — toggle the attribute on click.
 import { RESET_CSS } from "./reset.js";
 

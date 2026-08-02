@@ -30,7 +30,7 @@ export async function init() {
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
-  document.getElementById("wizard-port-btn").addEventListener("click", (e) => {
+  document.getElementById("ports-btn").addEventListener("click", (e) => {
     e.currentTarget.toggleAttribute("toggled");
     saveState();
     runRoute();
@@ -120,7 +120,7 @@ function applyQueryParams() {
 function resetRoute() {
   document.getElementById("route-from").value = "";
   document.getElementById("route-to").value = "";
-  document.getElementById("wizard-port-btn").removeAttribute("toggled");
+  document.getElementById("ports-btn").removeAttribute("toggled");
   document.getElementById("avoid-danger-btn").removeAttribute("toggled");
   stops = [];
   renderStops();
@@ -134,7 +134,7 @@ function restoreState() {
     if (!s) return;
     if (s.from) document.getElementById("route-from").value = s.from;
     if (s.to) document.getElementById("route-to").value = s.to;
-    if (s.wizardPort) document.getElementById("wizard-port-btn").setAttribute("toggled", "");
+    if (s.ports) document.getElementById("ports-btn").setAttribute("toggled", "");
     if (s.avoidDanger) document.getElementById("avoid-danger-btn").setAttribute("toggled", "");
     if (Array.isArray(s.stops)) stops = s.stops;
   } catch { /* ignore malformed state */ }
@@ -143,9 +143,9 @@ function restoreState() {
 function saveState() {
   const from = document.getElementById("route-from").value;
   const to = document.getElementById("route-to").value;
-  const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+  const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort, avoidDanger, stops }));
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, ports, avoidDanger, stops }));
 }
 
 function populateZoneSelect(select) {
@@ -250,10 +250,10 @@ async function runRoute() {
   if (from && from === to) {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
   } else if (from) {
-    const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+    const ports = document.getElementById("ports-btn").hasAttribute("toggled");
     const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
     const stopsParam = stops.filter(Boolean).join(",");
-    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+    const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
     const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
     if (!result.route || result.route.length === 0) {
@@ -311,10 +311,10 @@ async function recomputeRoute(removedZone) {
   }
 
   const token = ++fetchToken;
-  const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+  const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
   const stopsParam = stops.filter(Boolean).join(",");
-  const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+  const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
   const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
   if (token !== fetchToken) return;
 

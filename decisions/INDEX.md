@@ -23,7 +23,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Zone maps: a `maps` array, not flat `map_image`/`map_legend`](zone-multi-floor-maps.md)
 - [Transport is an edge attribute, not a node](transport-is-edge-attribute-not-node.md)
 - [Translocator wins hop-count ties over boat (or walking)](translocator-wins-hop-ties.md)
-- [Wizard Port: modeled as edges, excluded from pathfinding by default](wizard-port-transport-modeling.md)
+- [Wizard/Druid Port: modeled as edges, excluded from pathfinding by default](wizard-port-transport-modeling.md)
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)
 - [This game (EverQuest Legends) has different zone connectivity than classic EverQuest](eql-vs-classic-eq-zone-connectivity.md)
 - [Planning and routing are separate concerns](planning-and-routing-are-separate.md)

@@ -38,14 +38,15 @@ export interface NodeData {
 }
 
 // "portal" (a walk-through zone entrance any class can use, e.g. the orb
-// into Plane of Sky) and "wizard_port" (a Wizard-only group teleport spell,
-// e.g. Alter Plane: Sky -- see migration 364 and decisions/
-// wizard-port-transport-modeling.md) are both narrower than "boat"/
-// "translocator": those two are always part of ordinary pathfinding,
-// while wizard_port edges are excluded by getZoneAdjacency() unless the
-// caller opts in (the UI's "Include Wizard Port" toggle), since assuming
-// a Wizard is in the group isn't a safe default for a general route.
-export type Transport = "boat" | "translocator" | "portal" | "wizard_port";
+// into Plane of Sky) is narrower than "boat"/"translocator": those two are
+// always part of ordinary pathfinding, while "wizard_port" and
+// "druid_port" (Wizard- or Druid-only teleport-to-fixed-zone spells, e.g.
+// Alter Plane: Sky or Circle of Toxxulia -- see migrations 364/398 and
+// decisions/wizard-port-transport-modeling.md) are excluded by
+// getZoneAdjacency() unless the caller opts in (the UI's "Ports" toggle),
+// since assuming a Wizard or Druid is in the group isn't a safe default
+// for a general route.
+export type Transport = "boat" | "translocator" | "portal" | "wizard_port" | "druid_port";
 
 export interface EdgeData {
   id: string;
@@ -1012,12 +1013,12 @@ export function getQuestGroups(classNames?: string[], zoneId?: string, levelMin?
 
 interface AdjEntry { zoneId: string; transport?: Transport; }
 
-export function getZoneAdjacency(includeWizardPort = false): Map<string, AdjEntry[]> {
+export function getZoneAdjacency(includePorts = false): Map<string, AdjEntry[]> {
   const graph = load();
   const adj = new Map<string, AdjEntry[]>();
   for (const e of graph.edges) {
     if (e.type !== "connects_to") continue;
-    if (e.transport === "wizard_port" && !includeWizardPort) continue;
+    if ((e.transport === "wizard_port" || e.transport === "druid_port") && !includePorts) continue;
     if (!adj.has(e.source)) adj.set(e.source, []);
     const entry: AdjEntry = { zoneId: e.target };
     if (e.transport) entry.transport = e.transport;
@@ -1116,7 +1117,7 @@ function bfsPath(
 // unreachable -- buildRouteSteps() still flags whichever out-of-era hops
 // end up in that fallback route.
 //
-// avoidDanger (the "Avoid Danger" toggle, off by default like Wizard Port)
+// avoidDanger (the "Avoid Danger" toggle, off by default like Ports)
 // hands the resulting minimum hop count and skip set to safestPath() below
 // instead of returning the plain-BFS route directly -- see
 // decisions/danger-aware-routing-bounded-hop-budget.md.
@@ -1128,9 +1129,9 @@ function pathContext(
   fromZoneId: string,
   toZoneId: string,
   helpers: GraphIndexHelpers,
-  includeWizardPort: boolean
+  includePorts: boolean
 ): { adj: Map<string, AdjEntry[]>; skip: (zoneId: string) => boolean; shortest: PathStep[] | null } {
-  const adj = getZoneAdjacency(includeWizardPort);
+  const adj = getZoneAdjacency(includePorts);
   const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(helpers.nodeById(zoneId)?.era as string | undefined, helpers);
   let skip = isWaypointOutOfEra;
   let shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
@@ -1145,12 +1146,12 @@ export function shortestPath(
   fromZoneId: string,
   toZoneId: string,
   helpers?: GraphIndexHelpers,
-  includeWizardPort = false,
+  includePorts = false,
   avoidDanger = false
 ): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
   const h = helpers ?? graphIndexHelpers(load());
-  const { adj, skip, shortest } = pathContext(fromZoneId, toZoneId, h, includeWizardPort);
+  const { adj, skip, shortest } = pathContext(fromZoneId, toZoneId, h, includePorts);
   if (!shortest || !avoidDanger) return shortest;
   return safestPath(fromZoneId, toZoneId, adj, skip, shortest, h);
 }
@@ -1332,7 +1333,7 @@ export function rankZones(
   specificSpellIds?: string[],
   specificZoneIds?: string[],
   spellLineIds?: string[],
-  includeWizardPort = false
+  includePorts = false
 ): ZoneRanking[] {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
@@ -1445,12 +1446,12 @@ export function rankZones(
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
     const zoneNode = helpers.nodeById(zoneId);
-    const pathIds = shortestPath(currentZoneId, zoneId, helpers, includeWizardPort);
+    const pathIds = shortestPath(currentZoneId, zoneId, helpers, includePorts);
     const hops = pathIds ? pathIds.length - 1 : null;
     const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
     let alternates: RouteStep[][] = [];
     if (pathIds) {
-      const { adj, skip } = pathContext(currentZoneId, zoneId, helpers, includeWizardPort);
+      const { adj, skip } = pathContext(currentZoneId, zoneId, helpers, includePorts);
       alternates = routeAlternates(currentZoneId, zoneId, adj, skip, pathIds, false, helpers)
         .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
     }
@@ -1619,7 +1620,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
 export function getRoute(
   fromZoneId: string,
   toZoneId: string,
-  includeWizardPort = false,
+  includePorts = false,
   stopZoneIds: string[] = [],
   avoidDanger = false
 ): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo; alternates: RouteStep[][] } {
@@ -1628,7 +1629,7 @@ export function getRoute(
   const waypoints = [fromZoneId, ...stopZoneIds, toZoneId];
   const pathIds: PathStep[] = [];
   for (let i = 0; i < waypoints.length - 1; i++) {
-    const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includeWizardPort, avoidDanger);
+    const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includePorts, avoidDanger);
     if (!leg) return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId), alternates: [] };
     pathIds.push(...(i === 0 ? leg : leg.slice(1)));
   }
@@ -1640,7 +1641,7 @@ export function getRoute(
   // combinatorially for a feature nobody asked to route through waypoints.
   let alternates: RouteStep[][] = [];
   if (stopZoneIds.length === 0) {
-    const { adj, skip } = pathContext(fromZoneId, toZoneId, helpers, includeWizardPort);
+    const { adj, skip } = pathContext(fromZoneId, toZoneId, helpers, includePorts);
     alternates = routeAlternates(fromZoneId, toZoneId, adj, skip, pathIds, avoidDanger, helpers)
       .map((path) => buildRouteSteps(path, (id) => graph.nodes.find((n) => n.id === id), helpers));
   }
@@ -1658,19 +1659,19 @@ export interface ZoneDistance { hops: number; route: RouteStep[]; alternates: Ro
 export function getZoneDistances(
   fromZoneId: string,
   targetZoneIds: string[],
-  includeWizardPort = false,
+  includePorts = false,
   avoidDanger = false
 ): Record<string, ZoneDistance | null> {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const result: Record<string, ZoneDistance | null> = {};
   for (const zoneId of new Set(targetZoneIds)) {
-    const pathIds = shortestPath(fromZoneId, zoneId, helpers, includeWizardPort, avoidDanger);
+    const pathIds = shortestPath(fromZoneId, zoneId, helpers, includePorts, avoidDanger);
     if (!pathIds) {
       result[zoneId] = null;
       continue;
     }
-    const { adj, skip } = pathContext(fromZoneId, zoneId, helpers, includeWizardPort);
+    const { adj, skip } = pathContext(fromZoneId, zoneId, helpers, includePorts);
     const alternates = routeAlternates(fromZoneId, zoneId, adj, skip, pathIds, avoidDanger, helpers)
       .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
     result[zoneId] = { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers), alternates };
