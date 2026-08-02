@@ -14,3 +14,5 @@ The button's own bevel is a second, independent effect on top of the socket's: `
 
 **`pressed` vs. `toggled`:** `pressed` renders as an inert `<span>` (current-nav-page — nothing to click your way out of). A later real on/off control (Maps' Include Wizard Port button) needed the same depressed look but had to stay a clickable `<button>` in both states, so `toggled` was added as a separate attribute: same `.pressed` CSS class, but the element stays a real `<button>` with `aria-pressed`. Don't reuse `pressed` for anything the user needs to un-press by clicking it again.
 
+**`full`:** stretches the button (and its socket) to 100% of its container's width instead of sizing to the label, for a vertical stack of full-width feature buttons (Maps' left panel: Wizard Port / Avoid Danger / Reset) — the same bevel as a default nav-row button, just block-shaped instead of pill-shaped. Added instead of reaching for `square`, since a vertical stack of fixed-size squares would waste the panel's horizontal width and can't fit a longer label like "Avoid Danger."
+

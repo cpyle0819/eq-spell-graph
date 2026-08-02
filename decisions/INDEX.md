@@ -27,6 +27,8 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Hop count is a proxy for travel effort, not real-world time](hop-count-is-proxy-not-real-time.md)
 - [This game (EverQuest Legends) has different zone connectivity than classic EverQuest](eql-vs-classic-eq-zone-connectivity.md)
 - [Planning and routing are separate concerns](planning-and-routing-are-separate.md)
+- [Zone terror rating: zoneType-driven, not raw mob level](zone-terror-rating-heuristic.md)
+- [Danger-aware routing: bounded hop budget, worst-single-zone scoring](danger-aware-routing-bounded-hop-budget.md)
 - [Read-only routes are shared; mutation routes are Bun-server-only](readonly-routes-shared-mutation-routes-bun-only.md)
 - [This repo has no opinion on where it's deployed](repo-has-no-opinion-on-deployment.md)
 - [A zone node's id must equal `zone:slugify(label)` exactly](zone-id-must-equal-slugify-label.md)

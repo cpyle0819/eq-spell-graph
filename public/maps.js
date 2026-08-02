@@ -4,9 +4,8 @@
 import "./components/index.js";
 
 const STATE_KEY = "eq-route-state";
-// One less than this many gap-add-btn squares can ever exist (from-through-to
-// has stops.length + 1 gaps) -- an arbitrary but concrete ceiling so the
-// finder-bar can't be grown into an unreadable, near-endless chain.
+// Arbitrary but concrete ceiling so the route panel can't be grown into an
+// unreadable, near-endless chain of stops.
 const MAX_STOPS = 5;
 
 let zonesByLabel = new Map();
@@ -25,9 +24,8 @@ export async function init() {
   populateZoneSelect(document.getElementById("route-to"));
   restoreState();
   // Unconditional (not folded into restoreState() itself) -- a first-ever
-  // visit has no saved state to restore at all, but the chain still needs
-  // its one From-to-To gap-add-btn drawn, not just a stop list that
-  // happens to be empty.
+  // visit has no saved state to restore at all, but #add-stop-btn still
+  // needs its disabled state set from the (empty) stops array.
   renderStops();
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
@@ -37,9 +35,13 @@ export async function init() {
     saveState();
     runRoute();
   });
+  document.getElementById("avoid-danger-btn").addEventListener("click", (e) => {
+    e.currentTarget.toggleAttribute("toggled");
+    saveState();
+    runRoute();
+  });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
-  document.getElementById("add-stop-btn").addEventListener("click", () => insertStop(stops.length));
-  window.addEventListener("resize", checkOverflow);
+  document.getElementById("add-stop-btn").addEventListener("click", () => addStop());
   // Delegated once here rather than re-attached per runRoute() -- #route-result
   // itself is never replaced, only its children (route-card/zone-dossier),
   // and the event bubbles+composes out of both their shadow roots (issue
@@ -49,22 +51,17 @@ export async function init() {
   runRoute();
 }
 
-// Inserting at `index` = "insert before whatever stop currently sits at that
-// position" (stops.length itself means "append after the last stop, right
-// before To") -- shared by both ways of adding a stop: a gap-add-btn between
-// two specific fields (issue #63's own click-in-the-gap spec) and the
-// vertical view's fallback #add-stop-btn, which only ever appends.
-function insertStop(index) {
+// Always appends after the last stop, right before To -- the route panel
+// is a fixed-width vertical stack now (no horizontal chain with gaps to
+// click between), so inserting a stop at a specific position isn't a
+// supported affordance; issue #63's original mid-chain gap-add-btn was
+// removed along with the horizontal layout it lived in.
+function addStop() {
   if (stops.length >= MAX_STOPS) return;
-  stops.splice(index, 0, "");
+  stops.push("");
   renderStops();
   saveState();
   // No runRoute() -- an added-but-unpicked stop can't change the route yet.
-}
-
-function gapAddButtonHtml(index) {
-  const disabled = stops.length >= MAX_STOPS;
-  return `<macro-button square small class="gap-add-btn" data-index="${index}" title="Add a stop here"${disabled ? " disabled" : ""}>+</macro-button>`;
 }
 
 function stopFieldHtml(i) {
@@ -79,18 +76,9 @@ function stopFieldHtml(i) {
   `;
 }
 
-// One gap-add-btn before every stop plus one final one before To -- N stops
-// means N+1 gaps, each identified by the insertion index it would splice a
-// new stop at (issue #63: "between every pair of stops," which includes the
-// From/first-stop and last-stop/To gaps, not just between two stops).
 function renderStops() {
   const container = document.getElementById("chain-middle");
-  const parts = [];
-  for (let i = 0; i < stops.length; i++) {
-    parts.push(gapAddButtonHtml(i), stopFieldHtml(i));
-  }
-  parts.push(gapAddButtonHtml(stops.length));
-  container.innerHTML = parts.join("");
+  container.innerHTML = stops.map((_, i) => stopFieldHtml(i)).join("");
 
   for (const select of container.querySelectorAll(".stop-select")) {
     populateZoneSelect(select);
@@ -110,26 +98,8 @@ function renderStops() {
       recomputeRoute(removedZone);
     });
   }
-  for (const btn of container.querySelectorAll(".gap-add-btn")) {
-    btn.addEventListener("click", () => insertStop(Number(btn.dataset.index)));
-  }
 
   document.getElementById("add-stop-btn").disabled = stops.length >= MAX_STOPS;
-  checkOverflow();
-}
-
-// Switches the finder-bar between the horizontal from/gaps/stops/to chain
-// and a stacked vertical layout (issue #63) once that chain's natural,
-// unshrunk width (route-chain's children are flex-shrink: 0, see maps.html)
-// no longer fits -- the one condition covers both a narrow viewport and a
-// wide one with enough stops added to overflow it anyway, rather than a
-// separate width media query plus a hardcoded stop-count threshold.
-function checkOverflow() {
-  const finderBar = document.querySelector(".finder-bar");
-  const chain = document.getElementById("route-chain");
-  finderBar.classList.remove("vertical");
-  const overflowing = chain.scrollWidth > chain.clientWidth;
-  finderBar.classList.toggle("vertical", overflowing);
 }
 
 // ?to=<zone label> deep-links here (e.g. from the Leveling Guide) preset the
@@ -151,6 +121,7 @@ function resetRoute() {
   document.getElementById("route-from").value = "";
   document.getElementById("route-to").value = "";
   document.getElementById("wizard-port-btn").removeAttribute("toggled");
+  document.getElementById("avoid-danger-btn").removeAttribute("toggled");
   stops = [];
   renderStops();
   saveState();
@@ -164,6 +135,7 @@ function restoreState() {
     if (s.from) document.getElementById("route-from").value = s.from;
     if (s.to) document.getElementById("route-to").value = s.to;
     if (s.wizardPort) document.getElementById("wizard-port-btn").setAttribute("toggled", "");
+    if (s.avoidDanger) document.getElementById("avoid-danger-btn").setAttribute("toggled", "");
     if (Array.isArray(s.stops)) stops = s.stops;
   } catch { /* ignore malformed state */ }
 }
@@ -172,7 +144,8 @@ function saveState() {
   const from = document.getElementById("route-from").value;
   const to = document.getElementById("route-to").value;
   const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort, stops }));
+  const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, wizardPort, avoidDanger, stops }));
 }
 
 function populateZoneSelect(select) {
@@ -277,8 +250,9 @@ async function runRoute() {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
   } else if (from) {
     const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+    const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
     const stopsParam = stops.filter(Boolean).join(",");
-    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+    const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
     const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
     if (!result.route || result.route.length === 0) {
@@ -337,8 +311,9 @@ async function recomputeRoute(removedZone) {
 
   const token = ++fetchToken;
   const wizardPort = document.getElementById("wizard-port-btn").hasAttribute("toggled");
+  const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
   const stopsParam = stops.filter(Boolean).join(",");
-  const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+  const params = { from, to, ...(wizardPort ? { wizardPort: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
   const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
   if (token !== fetchToken) return;
 

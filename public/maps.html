@@ -13,52 +13,27 @@
     body { height: 100vh; display: flex; flex-direction: column; }
 
     /* main is the console frame — flush against the header and the
-       viewport edges, matching the Spell Finder's #planner. .finder-bar
-       and .route-card each keep their own pronounced bevel border (from
-       theme.css's shared panel rule) which provides the framing directly
-       against the frame's edges, rather than main adding its own outer
-       padding around them. A small gap (not zero) separates finder-bar
-       from the result below — they're two distinct panels stacked
-       vertically, not repeated items in one list, the same distinction
-       the Spell Finder's sidebar/status-panel (gap) vs. zone-card list
-       (packed, zero gap) draws. */
+       viewport edges, matching the Spell Finder's #planner (same
+       sidebar-panel + results split, just two columns instead of three —
+       see decisions/sidebar-filter-panel-shared.md). */
     main {
       flex: 1; min-height: 0;
       display: flex; flex-direction: column;
       overflow: hidden;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
-      padding: 0 0 14px; gap: 14px;
+      padding: 0 14px 14px; gap: 14px;
     }
 
-    /* center (not the old flex-end) since the 90px-tall macro-button pair
-       is taller than a label+select field — centering aligns the selects'
-       own midline with the buttons' midline instead of their bottoms. */
-    .finder-bar {
-      display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
-      padding: 16px 20px; flex-shrink: 0;
-    }
-    .field { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
+    .field { display: flex; flex-direction: column; gap: 5px; }
     .field select { width: 100%; }
 
-    /* From, every gap-add button + stop field, and To all live in one
-       nowrap flex row so its natural (unshrunk) width is measurable --
-       maps.js's checkOverflow() compares route-chain.scrollWidth against
-       its own clientWidth (flex-shrink: 0 below is what makes that
-       comparison meaningful; a shrinkable row would just squeeze itself to
-       fit and never actually overflow) and adds `.vertical` on
-       .finder-bar once it doesn't fit, covering both "narrow viewport" and
-       "too many stops" with the one signal rather than a hardcoded stop
-       count or a separate width media query (issue #63). #chain-middle is
-       `display: contents` so its dynamically-rendered gap-buttons/stop
-       fields size and participate in this same row directly, not as one
-       opaque child. */
-    .route-chain { display: flex; flex-wrap: nowrap; align-items: flex-end; gap: 10px; flex: 1 1 auto; min-width: 0; }
-    /* Descendant selector, not `>` -- #chain-middle's `display: contents`
-       (below) makes its gap-add-btn/stop-field children lay out as if they
-       were direct flex items of .route-chain, but the DOM parent/child
-       relationship a `>` combinator matches against is unchanged, so `>`
-       here would silently never match anything inside #chain-middle. */
-    .route-chain .field, .route-chain macro-button { flex-shrink: 0; }
+    /* The route panel is always the narrow sidebar-panel column now (not
+       just past some overflow threshold), so From/every stop/To simply
+       stack full-width in DOM order -- no horizontal chain, no gap-add-btn
+       between fields, no width measurement to decide when to wrap. Adding
+       a stop always appends after the last field (#add-stop-btn); removing
+       one is still each stop-field's own inline × (below). */
+    .route-chain { display: flex; flex-direction: column; gap: 10px; }
     #chain-middle { display: contents; }
 
     /* A stop's label row carries its own remove action inline (not a
@@ -69,45 +44,19 @@
        primary action on par with Reset. */
     .stop-field .field-label-row { display: flex; align-items: baseline; gap: 8px; }
 
-    /* + Add Stop only ever shows in vertical mode (below) -- in the normal
-       horizontal chain, the gap-add-btn squares between every pair of
-       fields already cover inserting a stop anywhere, including at the
-       very start/end, so a second "append" affordance would be redundant. */
-    #add-stop-btn { display: none; white-space: nowrap; }
+    #add-stop-btn { align-self: flex-start; white-space: nowrap; }
 
-    /* Vertical mode (added/removed by maps.js's checkOverflow(), not a
-       media query alone -- see .route-chain's own comment above): the
-       chain stacks full-width instead of wrapping raggedly mid-field, the
-       inline gap-add buttons hide (a 37px square between two full-width
-       stacked fields has nowhere sensible to sit), and the single
-       #add-stop-btn takes over as the one way to add a stop, always
-       appending after the last field -- ordering an insert into a specific
-       gap without the visual chain to click on would need its own picker,
-       not worth building for what's already a narrow/overflow fallback. */
-    .finder-bar.vertical .route-chain { flex-direction: column; align-items: stretch; }
-    .finder-bar.vertical .route-chain .field { min-width: 0; }
-    .finder-bar.vertical .gap-add-btn { display: none; }
-    .finder-bar.vertical #add-stop-btn { display: inline-block; align-self: flex-start; }
-
-    /* Two square macro-buttons, touching (no gap) so they read as one
-       shared control cluster rather than two separate buttons — same idea
-       as status-panel's own side-by-side square actions. margin-left: auto
-       pins the pair to the row's right edge, next to the dropdowns. */
-    .finder-actions { display: flex; margin-left: auto; }
-
-    @media (max-width: 600px) {
-      /* flex-wrap on .finder-bar already drops this to its own line once
-         it no longer fits beside the selects; width: 100% forces that
-         wrap unconditionally (rather than waiting for a narrow-enough
-         viewport) and centers the touching pair under the dropdowns. */
-      .finder-actions { width: 100%; justify-content: center; margin-left: 0; margin-top: 4px; }
-    }
+    /* Feature buttons (Wizard Port / Avoid Danger / Reset): full-width,
+       stacked, same nav-row bevel via macro-button's `full` variant
+       (decisions/macro-button-shared-component.md) instead of the old
+       bulky square pair. */
+    .panel-buttons { display: flex; flex-direction: column; gap: 8px; }
 
     /* Once a destination is chosen, up to two beveled objects stack here —
        route-card (the "how do I get there," only once a starting zone is
        also picked) above zone-dossier (the "what's actually there," which
        only needs a destination). Real gap between them, same "distinct
-       panels, not repeated list rows" reasoning as .finder-bar above. */
+       panels, not repeated list rows" reasoning as sidebar-panel above. */
     #route-result { flex: 1; min-height: 0; overflow-y: auto; scrollbar-gutter: stable; display: flex; flex-direction: column; gap: 14px; }
     /* route-card/zone-dossier each own their own layout (public/components/). */
 
@@ -125,9 +74,21 @@
        centered, padded .no-results used when nothing is selected at all. */
     .no-results.compact { padding: 4px 2px 0; text-align: left; }
 
-    @media (max-width: 600px) {
-      main { padding: 0 0 10px; gap: 10px; }
-      .finder-bar { gap: 10px; padding: 14px 16px; }
+    /* Wide layout: sidebar-panel sits left, route-result to its right --
+       same split/order convention as index.html's #planner (sidebar-panel
+       owns its own width/sticky/border). */
+    @media (min-width: 1100px) {
+      main { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
+      sidebar-panel { order: 0; }
+      #route-result { overflow-y: auto; order: 1; }
+    }
+    @media (max-width: 1099.98px) {
+      body { height: auto; min-height: 100vh; }
+      main { flex: none; overflow: visible; }
+      #route-result { flex: none; overflow-y: visible; min-height: 0; }
+    }
+    @media (max-width: 700px) {
+      main { padding: 0 10px 10px; gap: 10px; }
     }
   </style>
 </head>
@@ -137,7 +98,7 @@
   </app-header>
 
   <main>
-    <div class="finder-bar">
+    <sidebar-panel>
       <div class="route-chain" id="route-chain">
         <div class="field">
           <label>From</label>
@@ -150,11 +111,12 @@
         </div>
       </div>
       <button type="button" class="text-action" id="add-stop-btn" title="Add a stop to the end of the route">+ Add Stop</button>
-      <div class="finder-actions">
-        <macro-button square id="wizard-port-btn" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky">Wizard Port</macro-button>
-        <macro-button square id="reset-route-btn">Reset</macro-button>
+      <div class="panel-buttons">
+        <macro-button full id="wizard-port-btn" title="Let a Wizard-only group teleport (Alter Plane: Sky) count as a 1-hop route to Plane of Sky">Wizard Port</macro-button>
+        <macro-button full id="avoid-danger-btn" title="Prefer a less dangerous route over the shortest one, within a couple extra hops">Avoid Danger</macro-button>
+        <macro-button full id="reset-route-btn">Reset</macro-button>
       </div>
-    </div>
+    </sidebar-panel>
     <div id="route-result"></div>
   </main>
 
