@@ -34,11 +34,12 @@
 //
 // `.alternates = [[{name, via, ...}, ...], ...]` (RouteStep[][], up to 2 --
 // getRoute()'s own `alternates` field, decisions/alternate-routes.md) is
-// optional; when non-empty a pill row appears above the steps letting the
-// visitor pick which of up to 3 total routes (the primary `.steps` plus
-// these) to display. Picking a pill only changes which step list is shown
-// here -- it's local display state, not reported back to the caller, so
-// maps.js's own "which zone's map is open" tracking is untouched by it.
+// optional; when non-empty a row of pills appears inline with the "Route"
+// label letting the visitor pick which of up to 3 total routes (the
+// primary `.steps` plus these) to display below. Picking a pill only
+// changes which step list is shown here -- it's local display state, not
+// reported back to the caller, so maps.js's own "which zone's map is open"
+// tracking is untouched by it.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -77,13 +78,14 @@ ${RESET_CSS}
 :host(:not([variant="stone"]))::before { left: -11px; }
 :host(:not([variant="stone"]))::after { right: -11px; }
 
-.route-label { display: block; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; text-shadow: none; color: var(--parch-ink-soft); }
-.route-alt-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.route-header { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+.route-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; text-shadow: none; color: var(--parch-ink-soft); }
+.route-alt-pills { display: flex; flex-wrap: wrap; gap: 5px; }
 .route-alt-pill {
-  font: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+  font: inherit; font-size: 10px; font-weight: 700; letter-spacing: 0.02em;
   color: var(--parch-ink); background: rgba(122, 96, 42, 0.12);
   border: 1px solid var(--parch-line); border-radius: 20px;
-  padding: 2px 10px; cursor: pointer;
+  padding: 1px 8px; cursor: pointer;
 }
 .route-alt-pill:hover:not(.active) { background: rgba(122, 96, 42, 0.22); }
 .route-alt-pill:focus-visible { outline: 2px solid var(--parch-accent); outline-offset: 1px; }
@@ -222,7 +224,7 @@ class RoutePath extends HTMLElement {
       if (step.via === "wizard_port") return `<span class="wizard-port-sep" title="Wizard Port (group teleport spell, Wizard class + reagent required)">🧙</span>${zoneBtn}`;
       return `<span class="route-sep">›</span>${zoneBtn}`;
     }).join("");
-    this.shadowRoot.innerHTML = `<span class="route-label">Route</span>${pillsHtml}<div class="route-steps">${stepsHtml}</div>`;
+    this.shadowRoot.innerHTML = `<div class="route-header"><span class="route-label">Route</span>${pillsHtml}</div><div class="route-steps">${stepsHtml}</div>`;
   }
 }
 
