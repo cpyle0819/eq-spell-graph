@@ -15,12 +15,20 @@
     /* main is the console frame — flush against the header and the
        viewport edges, matching the Spell Finder's #planner (same
        sidebar-panel + results split, just two columns instead of three —
-       see decisions/sidebar-filter-panel-shared.md). */
+       see decisions/sidebar-filter-panel-shared.md). On wide layouts below
+       main also switches to overflow: visible so the sidebar can stick,
+       which means the *document* scrolls rather than an inner container --
+       same situation #planner solved in decisions/
+       planner-marble-backdrop-background-attachment-fixed.md, and the same
+       fix: fixed-attachment marble so it keeps covering the page past
+       main's own (viewport-sized) box instead of running out and exposing
+       the footer behind tall content (e.g. a zone with a long bestiary). */
     main {
       flex: 1; min-height: 0;
       display: flex; flex-direction: column;
       overflow: hidden;
       background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
+      background-attachment: fixed, scroll;
       padding: 0 14px 14px; gap: 14px;
     }
 
