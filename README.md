@@ -2,7 +2,7 @@
 
 An interactive wiki for EverQuest Legends (EQL). Six tools share one faction-aware graph of zones, spells, classes, quests, items, and tradeskills, each surfacing a direct, filtered answer instead of a wiki page you'd have to read in full.
 
-- **Spell Vendors**: given your race, primary class, deity, current zone, and desired spell levels, ranks destinations by spells available vs. travel distance, filtering out zones where you'd be killed on sight or refused service.
+- **Vendors**: given your race, primary class, deity, and current zone, ranks destinations by what a vendor sells (spells, armor, tradeskill supplies) vs. travel distance, filtering out zones where you'd be killed on sight or refused service.
 - **Maps**: shortest path between any two zones (boat/translocator hops flagged), plus the destination's own map and mob levels.
 - **Classes**: everything a class has access to (spells, class-defining abilities, stances, invocations, Alternate Advancements, and relevant quests), filterable by up to three classes at once.
 - **Quests**: quest lines worth running, their rewards, and the factions they shift.
@@ -29,13 +29,13 @@ bun run typecheck  # TypeScript validation
 
 ## How it works
 
-Zone, spell, class-ability, quest, item, and recipe data all live in one graph (`data/graph.json`). Spell Vendors (the planner):
+Zone, spell, class-ability, quest, item, and recipe data all live in one graph (`data/graph.json`). Vendors (the planner):
 
-1. Finds spells matching your selected class and level range
-2. Traces which NPCs sell those spells and which zones those NPCs are in
+1. Finds vendor-sold goods of the selected type (spells matching your class and level range, or items of a category like Armor/Tradeskill Supplies matching your class)
+2. Traces which NPCs sell those goods and which zones those NPCs are in
 3. Computes hop distance from your current zone via BFS over zone adjacency edges
 4. Resolves faction standing from three dimensions (race, primary class, deity), taking the worst of the three
-5. Ranks zones by `spells_available / hops`, with KOS and won't-sell zones sorted to the bottom
+5. Ranks zones by `goods_available / hops`, with KOS and won't-sell zones sorted to the bottom
 
 Maps walks the same zone adjacency graph via BFS for a plain point-to-point path, with no faction or spell context. Classes reads spell/stance/invocation/AA/ability/quest nodes directly, filtered by whichever 1-3 classes are selected. Quests and Tradeskills read quest and recipe nodes directly, filterable by class, zone, and level.
 

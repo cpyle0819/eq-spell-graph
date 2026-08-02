@@ -3,7 +3,7 @@
 // mana/skill/class), description, stats, and a footer with a vendor-list
 // toggle (fetches api/spell/{id}/vendors on first expand, grouped by zone
 // via vendorGroupsHtml() below, same "heading + list" visual language as
-// the Spell Vendors page's own zone-card.js; collapsing and re-expanding
+// the Vendors page's own zone-card.js; collapsing and re-expanding
 // refetches, same as before) plus a "Find in Spell Finder" link. Shares
 // the same localStorage-backed owned set as the Spell Finder
 // (components.js) —
@@ -74,7 +74,7 @@ EXTRA_SHEET.replaceSync(`
 .vendor-list { margin-top: 10px; border-top: 1px solid #b5a77e; padding-top: 10px; display: flex; flex-direction: column; gap: 10px; }
 .vendor-group + .vendor-group { margin-top: 0; }
 /* Zone name as a heading once per zone, vendor names listed underneath --
-   same "heading + list" recipe as the Spell Vendors page's own zone-card.js
+   same "heading + list" recipe as the Vendors page's own zone-card.js
    (.vendor-heading there groups spells under a vendor; here it groups
    vendors under a zone -- the pivot a spell's own vendor list needs, since
    it spans zones rather than living inside one already-fixed zone). */
@@ -99,7 +99,7 @@ EXTRA_SHEET.replaceSync(`
 .spell-finder-link:hover { text-decoration: underline; }
 `);
 
-// Same grouped-by-zone shape as the Spell Vendors page's own zone-card.js
+// Same grouped-by-zone shape as the Vendors page's own zone-card.js
 // (heading + list underneath) and ingredient-card.js's Sold By section --
 // a zone heading (unknown zones grouped together, sorted last) with its
 // vendor names listed below, so a spell sold in three zones reads as three
