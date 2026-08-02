@@ -1109,19 +1109,96 @@ function bfsPath(
 // the plain (era-blind) BFS rather than reporting the destination
 // unreachable -- buildRouteSteps() still flags whichever out-of-era hops
 // end up in that fallback route.
+//
+// avoidDanger (the "Avoid Danger" toggle, off by default like Wizard Port)
+// hands the resulting minimum hop count and skip set to safestPath() below
+// instead of returning the plain-BFS route directly -- see
+// decisions/danger-aware-routing-bounded-hop-budget.md.
 export function shortestPath(
   fromZoneId: string,
   toZoneId: string,
   helpers?: GraphIndexHelpers,
-  includeWizardPort = false
+  includeWizardPort = false,
+  avoidDanger = false
 ): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
   const adj = getZoneAdjacency(includeWizardPort);
   const h = helpers ?? graphIndexHelpers(load());
   const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(h.nodeById(zoneId)?.era as string | undefined, h);
-  const avoidingOutOfEra = bfsPath(fromZoneId, toZoneId, adj, isWaypointOutOfEra);
-  if (avoidingOutOfEra) return avoidingOutOfEra;
-  return bfsPath(fromZoneId, toZoneId, adj, () => false);
+  let skip = isWaypointOutOfEra;
+  let shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+  if (!shortest) {
+    skip = () => false;
+    shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+  }
+  if (!shortest || !avoidDanger) return shortest;
+  return safestPath(fromZoneId, toZoneId, adj, skip, shortest, h);
+}
+
+// How many hops beyond the true shortest route we're willing to accept in
+// exchange for a lower-terror route -- "a hop or two more" from the feature
+// request this implements. See decisions/danger-aware-routing-bounded-hop-budget.md.
+const DANGER_HOP_BUDGET = 2;
+
+// All *simple* (no revisited zone) paths from fromZoneId to toZoneId whose
+// hop count is <= maxHops, subject to the same skip() waypoint filter as
+// bfsPath(). The zone graph is sparse (avg degree ~3), so a plain DFS with a
+// depth cap is fast -- no need for a k-shortest-paths algorithm.
+function boundedPaths(
+  fromZoneId: string,
+  toZoneId: string,
+  adj: Map<string, AdjEntry[]>,
+  skip: (zoneId: string) => boolean,
+  maxHops: number
+): PathStep[][] {
+  const results: PathStep[][] = [];
+  const visited = new Set<string>([fromZoneId]);
+  const current: PathStep[] = [{ zoneId: fromZoneId }];
+
+  function dfs(zoneId: string, hops: number) {
+    if (zoneId === toZoneId) {
+      results.push(current.slice());
+      return;
+    }
+    if (hops >= maxHops) return;
+    for (const { zoneId: neighbor, transport } of adj.get(zoneId) || []) {
+      if (visited.has(neighbor)) continue;
+      if (neighbor !== toZoneId && skip(neighbor)) continue;
+      visited.add(neighbor);
+      current.push({ zoneId: neighbor, ...(transport ? { via: transport } : {}) });
+      dfs(neighbor, hops + 1);
+      current.pop();
+      visited.delete(neighbor);
+    }
+  }
+
+  dfs(fromZoneId, 0);
+  return results;
+}
+
+// Picks the least-scary route within DANGER_HOP_BUDGET hops of the true
+// shortest route. "Scary" is a route's single worst zone (not total
+// exposure -- decisions/danger-aware-routing-bounded-hop-budget.md), so
+// passing through several mildly-risky zones never outweighs a route that
+// avoids the one genuinely dangerous zone. Ties (same worst-zone rating)
+// prefer fewer hops, same as plain shortestPath's tie-breaking.
+function safestPath(
+  fromZoneId: string,
+  toZoneId: string,
+  adj: Map<string, AdjEntry[]>,
+  skip: (zoneId: string) => boolean,
+  shortest: PathStep[],
+  helpers: GraphIndexHelpers
+): PathStep[] {
+  const minHops = shortest.length - 1;
+  const candidates = boundedPaths(fromZoneId, toZoneId, adj, skip, minHops + DANGER_HOP_BUDGET);
+  if (candidates.length <= 1) return shortest;
+
+  const terrorOf = (zoneId: string) => (helpers.nodeById(zoneId)?.terrorRating as number | undefined) ?? 0;
+  const worstZoneTerror = (path: PathStep[]) => Math.max(...path.map((step) => terrorOf(step.zoneId)));
+
+  candidates.sort((a, b) => worstZoneTerror(a) - worstZoneTerror(b) || a.length - b.length);
+  return candidates[0];
 }
 
 export type FactionStanding = "safe" | "neutral" | "wont_sell" | "kos";
@@ -1459,14 +1536,15 @@ export function getRoute(
   fromZoneId: string,
   toZoneId: string,
   includeWizardPort = false,
-  stopZoneIds: string[] = []
+  stopZoneIds: string[] = [],
+  avoidDanger = false
 ): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const waypoints = [fromZoneId, ...stopZoneIds, toZoneId];
   const pathIds: PathStep[] = [];
   for (let i = 0; i < waypoints.length - 1; i++) {
-    const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includeWizardPort);
+    const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includeWizardPort, avoidDanger);
     if (!leg) return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId) };
     pathIds.push(...(i === 0 ? leg : leg.slice(1)));
   }
@@ -1486,13 +1564,14 @@ export interface ZoneDistance { hops: number; route: RouteStep[]; }
 export function getZoneDistances(
   fromZoneId: string,
   targetZoneIds: string[],
-  includeWizardPort = false
+  includeWizardPort = false,
+  avoidDanger = false
 ): Record<string, ZoneDistance | null> {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const result: Record<string, ZoneDistance | null> = {};
   for (const zoneId of new Set(targetZoneIds)) {
-    const pathIds = shortestPath(fromZoneId, zoneId, helpers, includeWizardPort);
+    const pathIds = shortestPath(fromZoneId, zoneId, helpers, includeWizardPort, avoidDanger);
     result[zoneId] = pathIds
       ? { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) }
       : null;
