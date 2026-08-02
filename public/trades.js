@@ -207,6 +207,7 @@ async function findNearMe(fromZoneId) {
         zoneLabel: rawVendors.find((v) => v.zoneId === zoneId)?.zoneLabel || zoneId,
         hops: dist.hops,
         route: dist.route,
+        alternates: dist.alternates,
         itemCount: byItem.size,
         vendors: [...vendorsByI.values()].sort((a, b) => a.label.localeCompare(b.label)),
       };

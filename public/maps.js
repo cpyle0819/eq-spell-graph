@@ -263,7 +263,7 @@ async function runRoute() {
     } else {
       initialZone = from;
       routeCard = document.createElement("route-card");
-      routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
+      routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination, alternates: result.alternates };
       routeCard.activeZone = initialZone;
     }
   }
@@ -327,7 +327,7 @@ async function recomputeRoute(removedZone) {
   // whichever activeZone it already had stored -- correct as-is when the
   // removed stop wasn't the one on screen (it's still in the new steps),
   // and about to be corrected below when it was.
-  currentRouteCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination };
+  currentRouteCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination, alternates: result.alternates };
 
   if (removedZone && removedZone === activeZone) {
     showZoneDossier(to);

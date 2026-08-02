@@ -1,5 +1,8 @@
 // <route-card></route-card>, with
-// `.route = {from, to, hops, steps, destination}` set as a property.
+// `.route = {from, to, hops, steps, destination, alternates}` set as a
+// property. `alternates` (RouteStep[][], see getRoute() in src/graph.ts) is
+// forwarded straight to the nested <route-path>, which owns the "up to 3
+// routes total" picker UI itself.
 // Renders the "From → To" title, an "N hop(s)" badge, and a nested
 // <route-path> for the actual step-by-step directions.
 //
@@ -62,7 +65,7 @@ route-path { --route-path-padding: 14px 18px; }
 `);
 
 class RouteCard extends HTMLElement {
-  #from = ""; #to = ""; #hops = 0; #steps = []; #destination = undefined; #activeZone = null;
+  #from = ""; #to = ""; #hops = 0; #steps = []; #alternates = []; #destination = undefined; #activeZone = null;
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -80,11 +83,12 @@ class RouteCard extends HTMLElement {
     this.render();
   }
 
-  set route({ from, to, hops, steps, destination }) {
+  set route({ from, to, hops, steps, destination, alternates }) {
     this.#from = from;
     this.#to = to;
     this.#hops = hops;
     this.#steps = steps;
+    this.#alternates = alternates || [];
     this.#destination = destination;
     if (this.shadowRoot) this.render();
   }
@@ -105,6 +109,7 @@ class RouteCard extends HTMLElement {
     this.shadowRoot.querySelector(".hops-badge").textContent = this.#hops === 1 ? "1 hop" : `${this.#hops} hops`;
     const path = this.shadowRoot.querySelector("route-path");
     path.steps = this.#steps;
+    path.alternates = this.#alternates;
     path.activeZone = this.#activeZone;
   }
 }

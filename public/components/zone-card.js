@@ -364,7 +364,11 @@ class ZoneCard extends HTMLElement {
         <div class="spell-vendor-list">${spellRows}</div>
       </div>
     `;
-    if (hasRoute) this.shadowRoot.querySelector("route-path").steps = r.route;
+    if (hasRoute) {
+      const path = this.shadowRoot.querySelector("route-path");
+      path.steps = r.route;
+      path.alternates = r.alternates;
+    }
   }
 }
 

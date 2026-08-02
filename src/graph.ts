@@ -1120,6 +1120,27 @@ function bfsPath(
 // hands the resulting minimum hop count and skip set to safestPath() below
 // instead of returning the plain-BFS route directly -- see
 // decisions/danger-aware-routing-bounded-hop-budget.md.
+// Shared by shortestPath() and routeAlternates() -- both need the same
+// adjacency map and era-skip predicate (with its out-of-era-unreachable
+// fallback) that produced the primary route, so alternates are drawn from
+// the same reachability rules rather than silently relaxing them.
+function pathContext(
+  fromZoneId: string,
+  toZoneId: string,
+  helpers: GraphIndexHelpers,
+  includeWizardPort: boolean
+): { adj: Map<string, AdjEntry[]>; skip: (zoneId: string) => boolean; shortest: PathStep[] | null } {
+  const adj = getZoneAdjacency(includeWizardPort);
+  const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(helpers.nodeById(zoneId)?.era as string | undefined, helpers);
+  let skip = isWaypointOutOfEra;
+  let shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+  if (!shortest) {
+    skip = () => false;
+    shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+  }
+  return { adj, skip, shortest };
+}
+
 export function shortestPath(
   fromZoneId: string,
   toZoneId: string,
@@ -1128,17 +1149,56 @@ export function shortestPath(
   avoidDanger = false
 ): PathStep[] | null {
   if (fromZoneId === toZoneId) return [{ zoneId: fromZoneId }];
-  const adj = getZoneAdjacency(includeWizardPort);
   const h = helpers ?? graphIndexHelpers(load());
-  const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(h.nodeById(zoneId)?.era as string | undefined, h);
-  let skip = isWaypointOutOfEra;
-  let shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
-  if (!shortest) {
-    skip = () => false;
-    shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
-  }
+  const { adj, skip, shortest } = pathContext(fromZoneId, toZoneId, h, includeWizardPort);
   if (!shortest || !avoidDanger) return shortest;
   return safestPath(fromZoneId, toZoneId, adj, skip, shortest, h);
+}
+
+// How many extra alternate routes (beyond the primary) to surface --
+// route-path.js's pill row caps display at this too. See
+// decisions/alternate-routes.md.
+const MAX_ALTERNATE_ROUTES = 2;
+
+// How many hops beyond the primary route we're willing to accept when
+// looking for alternates -- same "a hop or two more" budget as
+// DANGER_HOP_BUDGET below, reused here since both are "how far from optimal
+// is still a reasonable route to show someone" judgment calls.
+const ALTERNATE_HOP_BUDGET = 2;
+
+// Up to MAX_ALTERNATE_ROUTES distinct routes (by the exact sequence of
+// zones visited) besides the primary, within ALTERNATE_HOP_BUDGET hops of
+// it. Ordered the same way safestPath() would pick a winner -- lowest
+// worst-zone terror first when avoidDanger is on (so alternates read as
+// "next safest," consistent with why avoidDanger picked the primary it
+// did), else by hop count -- so the primary route is always the best entry
+// in that same ordering and alternates are strictly worse by it.
+function routeAlternates(
+  fromZoneId: string,
+  toZoneId: string,
+  adj: Map<string, AdjEntry[]>,
+  skip: (zoneId: string) => boolean,
+  primary: PathStep[],
+  avoidDanger: boolean,
+  helpers: GraphIndexHelpers
+): PathStep[][] {
+  if (fromZoneId === toZoneId) return [];
+  const minHops = primary.length - 1;
+  const candidates = boundedPaths(fromZoneId, toZoneId, adj, skip, minHops + ALTERNATE_HOP_BUDGET);
+  const key = (p: PathStep[]) => p.map((s) => s.zoneId).join(">");
+  const seen = new Set([key(primary)]);
+  const unique = candidates.filter((c) => {
+    const k = key(c);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const terrorOf = (zoneId: string) => (helpers.nodeById(zoneId)?.terrorRating as number | undefined) ?? 0;
+  const worstZoneTerror = (path: PathStep[]) => Math.max(...path.map((step) => terrorOf(step.zoneId)));
+  unique.sort((a, b) =>
+    avoidDanger ? worstZoneTerror(a) - worstZoneTerror(b) || a.length - b.length : a.length - b.length
+  );
+  return unique.slice(0, MAX_ALTERNATE_ROUTES);
 }
 
 // How many hops beyond the true shortest route we're willing to accept in
@@ -1240,6 +1300,11 @@ export interface ZoneRanking {
   wikiTitle: string | null;
   hops: number | null;
   route: RouteStep[];
+  // Up to 2 additional routes besides `route` itself (3 total) -- same
+  // shape/ordering convention as getRoute()'s own `alternates`
+  // (decisions/alternate-routes.md), forwarded to zone-card.js's
+  // <route-path> for its picker UI.
+  alternates: RouteStep[][];
   faction: FactionStanding;
   factionReasons?: FactionReason[];
   raceIgnored?: boolean;
@@ -1383,6 +1448,12 @@ export function rankZones(
     const pathIds = shortestPath(currentZoneId, zoneId, helpers, includeWizardPort);
     const hops = pathIds ? pathIds.length - 1 : null;
     const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
+    let alternates: RouteStep[][] = [];
+    if (pathIds) {
+      const { adj, skip } = pathContext(currentZoneId, zoneId, helpers, includeWizardPort);
+      alternates = routeAlternates(currentZoneId, zoneId, adj, skip, pathIds, false, helpers)
+        .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
+    }
 
     // Resolve faction from race, class, deity dimensions
     let faction: FactionStanding = "neutral";
@@ -1423,6 +1494,7 @@ export function rankZones(
       wikiTitle: (zoneNode?.wiki_title as string | undefined) ?? null,
       hops,
       route,
+      alternates,
       faction,
       ...(factionReasons.length ? { factionReasons } : {}),
       ...(raceIgnored ? { raceIgnored: true } : {}),
@@ -1550,22 +1622,32 @@ export function getRoute(
   includeWizardPort = false,
   stopZoneIds: string[] = [],
   avoidDanger = false
-): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo } {
+): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo; alternates: RouteStep[][] } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const waypoints = [fromZoneId, ...stopZoneIds, toZoneId];
   const pathIds: PathStep[] = [];
   for (let i = 0; i < waypoints.length - 1; i++) {
     const leg = shortestPath(waypoints[i], waypoints[i + 1], helpers, includeWizardPort, avoidDanger);
-    if (!leg) return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId) };
+    if (!leg) return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId), alternates: [] };
     pathIds.push(...(i === 0 ? leg : leg.slice(1)));
   }
   const hops = pathIds.length - 1;
   const route: RouteStep[] = buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers);
-  return { hops, route, destination: getZoneVendorInfo(toZoneId) };
+  // Alternates are only offered for a plain from->to hop -- with stops
+  // (issue #63) each leg is its own independent shortestPath() call
+  // stitched together, and combining per-leg alternates would multiply out
+  // combinatorially for a feature nobody asked to route through waypoints.
+  let alternates: RouteStep[][] = [];
+  if (stopZoneIds.length === 0) {
+    const { adj, skip } = pathContext(fromZoneId, toZoneId, helpers, includeWizardPort);
+    alternates = routeAlternates(fromZoneId, toZoneId, adj, skip, pathIds, avoidDanger, helpers)
+      .map((path) => buildRouteSteps(path, (id) => graph.nodes.find((n) => n.id === id), helpers));
+  }
+  return { hops, route, destination: getZoneVendorInfo(toZoneId), alternates };
 }
 
-export interface ZoneDistance { hops: number; route: RouteStep[]; }
+export interface ZoneDistance { hops: number; route: RouteStep[]; alternates: RouteStep[][]; }
 
 // Batched sibling of getRoute() -- same shortestPath()/buildRouteSteps()
 // machinery, one call from a single origin to several target zones instead
@@ -1584,9 +1666,14 @@ export function getZoneDistances(
   const result: Record<string, ZoneDistance | null> = {};
   for (const zoneId of new Set(targetZoneIds)) {
     const pathIds = shortestPath(fromZoneId, zoneId, helpers, includeWizardPort, avoidDanger);
-    result[zoneId] = pathIds
-      ? { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) }
-      : null;
+    if (!pathIds) {
+      result[zoneId] = null;
+      continue;
+    }
+    const { adj, skip } = pathContext(fromZoneId, zoneId, helpers, includeWizardPort);
+    const alternates = routeAlternates(fromZoneId, zoneId, adj, skip, pathIds, avoidDanger, helpers)
+      .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
+    result[zoneId] = { hops: pathIds.length - 1, route: buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers), alternates };
   }
   return result;
 }

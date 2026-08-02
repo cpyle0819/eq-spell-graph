@@ -31,6 +31,14 @@
 // zone-card, where the route is wayfinding detail rather than the page's
 // focus content (see decisions/) — same label/steps markup and logic,
 // just a different palette/box for a different surface.
+//
+// `.alternates = [[{name, via, ...}, ...], ...]` (RouteStep[][], up to 2 --
+// getRoute()'s own `alternates` field, decisions/alternate-routes.md) is
+// optional; when non-empty a pill row appears above the steps letting the
+// visitor pick which of up to 3 total routes (the primary `.steps` plus
+// these) to display. Picking a pill only changes which step list is shown
+// here -- it's local display state, not reported back to the caller, so
+// maps.js's own "which zone's map is open" tracking is untouched by it.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
@@ -70,6 +78,19 @@ ${RESET_CSS}
 :host(:not([variant="stone"]))::after { right: -11px; }
 
 .route-label { display: block; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; text-shadow: none; color: var(--parch-ink-soft); }
+.route-alt-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.route-alt-pill {
+  font: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--parch-ink); background: rgba(122, 96, 42, 0.12);
+  border: 1px solid var(--parch-line); border-radius: 20px;
+  padding: 2px 10px; cursor: pointer;
+}
+.route-alt-pill:hover:not(.active) { background: rgba(122, 96, 42, 0.22); }
+.route-alt-pill:focus-visible { outline: 2px solid var(--parch-accent); outline-offset: 1px; }
+.route-alt-pill.active { color: var(--parch-bg); cursor: default; background: var(--parch-accent); border-color: var(--parch-accent); }
+:host([variant="stone"]) .route-alt-pill { color: var(--parchment); background: var(--panel-deep); border-color: var(--edge-lo); }
+:host([variant="stone"]) .route-alt-pill:hover:not(.active) { background: rgba(255, 255, 255, 0.08); }
+:host([variant="stone"]) .route-alt-pill.active { color: var(--stone-1); background: var(--gold); border-color: var(--gold); }
 .route-steps { display: flex; align-items: center; flex-wrap: wrap; gap: 2px; font-size: 13px; line-height: 2.1; color: var(--parch-ink); }
 /* Button reset -- visually this should still read as plain route text, not
    a UI control, until you hover/focus it (the whole point is "each zone in
@@ -130,6 +151,8 @@ ${RESET_CSS}
 
 class RoutePath extends HTMLElement {
   #steps = [];
+  #alternates = [];
+  #selected = 0;
   #activeZone = null;
 
   connectedCallback() {
@@ -137,6 +160,12 @@ class RoutePath extends HTMLElement {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.adoptedStyleSheets = [sheet];
       this.shadowRoot.addEventListener("click", (e) => {
+        const pill = e.target.closest(".route-alt-pill");
+        if (pill) {
+          this.#selected = Number(pill.dataset.index);
+          this.render();
+          return;
+        }
         const btn = e.target.closest(".route-zone-btn");
         if (!btn) return;
         this.dispatchEvent(new CustomEvent("zone-select", { bubbles: true, composed: true, detail: { name: btn.dataset.name } }));
@@ -147,7 +176,19 @@ class RoutePath extends HTMLElement {
 
   get steps() { return this.#steps; }
   set steps(value) {
-    this.#steps = value || [];
+    const next = value || [];
+    // A caller re-rendering for an unrelated reason (route-card.js's own
+    // activeZone changing) re-assigns the same array reference here rather
+    // than computing a fresh route -- only a genuinely new array means the
+    // picked alternate should snap back to the primary route.
+    if (next !== this.#steps) this.#selected = 0;
+    this.#steps = next;
+    if (this.shadowRoot) this.render();
+  }
+
+  get alternates() { return this.#alternates; }
+  set alternates(value) {
+    this.#alternates = value || [];
     if (this.shadowRoot) this.render();
   }
 
@@ -158,7 +199,17 @@ class RoutePath extends HTMLElement {
   }
 
   render() {
-    const stepsHtml = this.#steps.map((step, i) => {
+    const routes = [this.#steps, ...this.#alternates];
+    const selected = routes[this.#selected] ? this.#selected : 0;
+    const displaySteps = routes[selected] || [];
+    const pillsHtml = routes.length > 1
+      ? `<div class="route-alt-pills">${routes.map((route, i) => {
+          const hops = route.length - 1;
+          const label = i === 0 ? `Shortest · ${hops === 1 ? "1 hop" : `${hops} hops`}` : `Alt ${i} · ${hops === 1 ? "1 hop" : `${hops} hops`}`;
+          return `<button type="button" class="route-alt-pill${i === selected ? " active" : ""}" data-index="${i}">${label}</button>`;
+        }).join("")}</div>`
+      : "";
+    const stepsHtml = displaySteps.map((step, i) => {
       const active = step.name === this.#activeZone;
       const classes = ["route-zone-btn", step.outOfEra && "out-of-era", active && "active"].filter(Boolean).join(" ");
       const title = step.outOfEra ? "Out of era — not available in the current era yet" : active ? "" : "Show this zone's map";
@@ -171,7 +222,7 @@ class RoutePath extends HTMLElement {
       if (step.via === "wizard_port") return `<span class="wizard-port-sep" title="Wizard Port (group teleport spell, Wizard class + reagent required)">🧙</span>${zoneBtn}`;
       return `<span class="route-sep">›</span>${zoneBtn}`;
     }).join("");
-    this.shadowRoot.innerHTML = `<span class="route-label">Route</span><div class="route-steps">${stepsHtml}</div>`;
+    this.shadowRoot.innerHTML = `<span class="route-label">Route</span>${pillsHtml}<div class="route-steps">${stepsHtml}</div>`;
   }
 }
 

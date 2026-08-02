@@ -99,4 +99,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Card list seams: zero gap via plain block stacking, never a negative margin](card-list-seams-no-border-overlap.md)
 - [Quests sourced from a real chat log get an `incomplete` flag, not silence or invention](quest-log-sourcing-and-incomplete-flag.md)
 - [Browse's Item Type/Subtype filter: computed from real item fields, not a stored classification](recipe-item-type-subtype-filter.md)
+- [Alternate routes: reuse the danger-routing hop-budget DFS, cap at 3 total](alternate-routes.md)
 

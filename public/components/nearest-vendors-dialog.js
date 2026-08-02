@@ -3,7 +3,7 @@
 // should never see a partial mix of old and new state). `.show()` opens it.
 // Tradeskills' "Find Near Me" result (shopping-list-panel.js's own
 // `find-near-me` event, computed in trades.js): each `stop` is one vendor
-// zone worth considering -- `{ zoneId, zoneLabel, hops, route, vendors:
+// zone worth considering -- `{ zoneId, zoneLabel, hops, route, alternates, vendors:
 // [{ id, label, items: [{id,label,quantity}] }] }` -- grouped by zone (not
 // flattened per-item) so each entry reads as "here's what this zone has,"
 // rather than repeating a zone name once per item. `notFound` is
@@ -195,7 +195,10 @@ class NearestVendorsDialog extends HTMLElement {
     body.innerHTML = stopsHtml + notFoundHtml;
     body.querySelectorAll(".stop").forEach((el, i) => {
       const routePath = el.querySelector("route-path");
-      if (routePath) routePath.steps = d.stops[i].route;
+      if (routePath) {
+        routePath.steps = d.stops[i].route;
+        routePath.alternates = d.stops[i].alternates;
+      }
     });
   }
 }
