@@ -29,6 +29,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Planning and routing are separate concerns](planning-and-routing-are-separate.md)
 - [Zone terror rating: zoneType-driven, not raw mob level](zone-terror-rating-heuristic.md)
 - [Danger-aware routing: bounded hop budget, worst-single-zone scoring](danger-aware-routing-bounded-hop-budget.md)
+- [Zone warnings: a plain-text caveat alongside `terrorRating`, not folded into it](zone-danger-warnings.md)
 - [Read-only routes are shared; mutation routes are Bun-server-only](readonly-routes-shared-mutation-routes-bun-only.md)
 - [This repo has no opinion on where it's deployed](repo-has-no-opinion-on-deployment.md)
 - [A zone node's id must equal `zone:slugify(label)` exactly](zone-id-must-equal-slugify-label.md)

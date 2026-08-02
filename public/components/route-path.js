@@ -7,6 +7,14 @@
 // icon (🧙, title="Wizard Port (group teleport spell, Wizard class +
 // reagent required)") depending on each step's `via`.
 //
+// A step whose zone carries a hand-set `warning` (RouteStep.warning,
+// decisions/zone-danger-warnings.md) gets a small ⚠ after its name, title
+// set to the warning text itself -- same per-step convention as `outOfEra`
+// (a route can pass a warned zone as a mid-route waypoint, not just at an
+// endpoint), but its own amber "caution" color rather than outOfEra's dark
+// red "can't use this," and a separate hover target from the button's own
+// title (which drives "show this zone's map") rather than overwriting it.
+//
 // Every step renders as a real <button>, not a plain span (issue #63) --
 // clicking one dispatches a bubbling, composed "zone-select" CustomEvent
 // with `detail: { name }` so an ancestor (maps.js) can swap <zone-dossier>
@@ -88,6 +96,7 @@ ${RESET_CSS}
    one. Dotted underline (not a separate badge chip) since a name inline in
    flowing route text has no room for a boxed badge the way a card header does. */
 .route-zone-btn.out-of-era:not(.active) { color: #9c2b2b; text-decoration: underline dotted; text-underline-offset: 3px; }
+.route-warning-icon { cursor: help; margin-left: 3px; font-size: 11px; color: #b45309; }
 .route-sep { color: var(--parch-accent); margin: 0 6px; font-weight: 700; }
 .boat-sep, .translocator-sep, .portal-sep, .wizard-port-sep { cursor: help; }
 .boat-sep { color: #1e40af; margin: 0 7px; font-size: 15px; }
@@ -116,6 +125,7 @@ ${RESET_CSS}
 :host([variant="stone"]) .portal-sep { color: #5eead4; }
 :host([variant="stone"]) .wizard-port-sep { color: #fbbf24; }
 :host([variant="stone"]) .route-zone-btn.out-of-era { color: #ff6b6b; }
+:host([variant="stone"]) .route-warning-icon { color: #fbbf24; }
 `);
 
 class RoutePath extends HTMLElement {
@@ -152,7 +162,8 @@ class RoutePath extends HTMLElement {
       const active = step.name === this.#activeZone;
       const classes = ["route-zone-btn", step.outOfEra && "out-of-era", active && "active"].filter(Boolean).join(" ");
       const title = step.outOfEra ? "Out of era — not available in the current era yet" : active ? "" : "Show this zone's map";
-      const zoneBtn = `<button type="button" class="${classes}" data-name="${step.name}"${title ? ` title="${title}"` : ""}>${step.name}</button>`;
+      const warningIcon = step.warning ? `<span class="route-warning-icon" title="${step.warning}">⚠</span>` : "";
+      const zoneBtn = `<button type="button" class="${classes}" data-name="${step.name}"${title ? ` title="${title}"` : ""}>${step.name}${warningIcon}</button>`;
       if (i === 0) return zoneBtn;
       if (step.via === "boat") return `<span class="boat-sep" title="Boat crossing">⚓</span>${zoneBtn}`;
       if (step.via === "translocator") return `<span class="translocator-sep" title="Translocator (paid teleport)">✨</span>${zoneBtn}`;

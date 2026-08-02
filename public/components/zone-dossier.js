@@ -1,6 +1,7 @@
 // <zone-dossier></zone-dossier>, with `.setData({ zoneLabel, wikiTitle,
-// outOfEra, lore, levelRange, maps, npcs, zoneType, quests })` set as one
-// atomic call (same contract shape as route-card/zone-card's own setters).
+// outOfEra, lore, levelRange, maps, npcs, zoneType, quests, warning })` set
+// as one atomic call (same contract shape as route-card/zone-card's own
+// setters).
 // Renders everything issue #28 asked Maps to surface about a *destination*
 // once a traveler arrives: a map, a level range to judge the trip at a
 // glance, who lives there, and what quests are running. Sits below
@@ -52,6 +53,16 @@
 // separate lookup, and quests come straight from /api/quests?zone=, which
 // already supports this filter with no new plumbing (issue #28's own
 // Technical Notes).
+//
+// `warning` rides along on that same destination payload
+// (ZoneVendorInfo.warning, decisions/zone-danger-warnings.md) -- a hand-set
+// plain-text caveat for the rare zone whose danger isn't well captured by
+// terrorRating alone (e.g. Kithicor Forest's night/day swing). null for
+// every zone without one, same "absent = normal case" convention as lore.
+// Rendered as a full banner above the lore line, not a hover-only badge --
+// unlike outOfEra (which just needs to flag "you can't use this yet"), a
+// danger caveat's actual content is the point, so it has to be readable at
+// a glance, not hidden behind a hover.
 //
 // `maps` (migration 125, decisions/zone-multi-floor-maps.md) is one entry
 // per floor: `{ label, image, legend }[]`. `image` is a filename under
@@ -228,6 +239,21 @@ ${WIKI_LINK_CSS}
 }
 .dossier-lore[hidden] { display: none; }
 
+/* Amber "caution," not the era-badge/faction-badge dark-red "you can't use
+   this" register -- a warning is advice for a zone the traveler *can* still
+   enter, not a blocked result, so it gets its own softer color. Full
+   readable text, not a hover-only badge (see this file's header). */
+.dossier-warning {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; line-height: 1.6; color: #7a4d05;
+  margin: 0 0 18px; padding: 10px 14px;
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  border-radius: 3px;
+}
+.dossier-warning[hidden] { display: none; }
+.dossier-warning-icon { flex-shrink: 0; font-size: 15px; }
+
 .dossier-body { display: flex; flex-direction: column; gap: 22px; }
 
 .map-block[hidden] { display: none; }
@@ -371,6 +397,7 @@ class ZoneDossier extends HTMLElement {
           <span class="level-badge"></span>
         </div>
         <div class="dossier-scroll">
+          <div class="dossier-warning" hidden><span class="dossier-warning-icon">⚠</span><span class="dossier-warning-text"></span></div>
           <p class="dossier-lore" hidden></p>
           <div class="dossier-body">
             <div class="map-block" hidden>
@@ -412,7 +439,7 @@ class ZoneDossier extends HTMLElement {
   render() {
     const d = this.#data;
     if (!d) return;
-    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, maps, npcs, zoneType, quests } = d;
+    const { zoneLabel, wikiTitle, outOfEra, lore, levelRange, maps, npcs, zoneType, quests, warning } = d;
 
     this.shadowRoot.querySelector(".zone-name").textContent = zoneLabel;
     this.shadowRoot.querySelector(".wiki-link-holder").innerHTML = wikiTitle ? wikiLink(wikiTitle) : "";
@@ -420,6 +447,10 @@ class ZoneDossier extends HTMLElement {
     const levelBadge = this.shadowRoot.querySelector(".level-badge");
     levelBadge.textContent = levelBadgeText(levelRange);
     levelBadge.title = "Level range across every npc catalogued in this zone.";
+
+    const warningEl = this.shadowRoot.querySelector(".dossier-warning");
+    warningEl.hidden = !warning;
+    this.shadowRoot.querySelector(".dossier-warning-text").textContent = warning || "";
 
     const loreEl = this.shadowRoot.querySelector(".dossier-lore");
     loreEl.hidden = !lore;

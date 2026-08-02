@@ -1045,6 +1045,11 @@ export interface RouteStep {
   // out of era (issue #35 -- Firiona Vie showing up unflagged mid-route),
   // so this has to be resolved per step, not just once for the destination.
   outOfEra?: boolean;
+  // Same per-hop convention as outOfEra -- a route can pass through a zone
+  // carrying a hand-set danger caveat (ZoneVendorInfo.warning,
+  // decisions/zone-danger-warnings.md) as a waypoint, not just at either
+  // endpoint, so route-path.js needs this resolved per step too.
+  warning?: string;
 }
 
 // Shared by getRoute() and rankZones() -- both turn a shortestPath() result
@@ -1062,6 +1067,7 @@ function buildRouteSteps(
     const entry: RouteStep = { name: n?.label || step.zoneId };
     if (step.via) entry.via = step.via;
     if (isOutOfEra(n?.era as string | undefined, helpers)) entry.outOfEra = true;
+    if (n?.warning) entry.warning = n.warning as string;
     return entry;
   });
 }
@@ -1472,6 +1478,11 @@ export interface ZoneVendorInfo {
   // node that forgets to set one, same as this interface's other
   // possibly-missing fields.
   zoneType: "city" | "dungeon" | "open_world" | null;
+  // Plain-text caveat about the zone that `terrorRating`'s 0-5 number can't
+  // capture on its own (decisions/zone-danger-warnings.md) -- e.g. a zone
+  // whose danger swings sharply by time of day. Hand-set per zone via a
+  // migration, not derived; null for the many zones with no such caveat.
+  warning: string | null;
 }
 
 // A "real" vendor is an NPC located_in the zone with at least one sells
@@ -1514,6 +1525,7 @@ export function getZoneVendorInfo(zoneId: string): ZoneVendorInfo {
     wikiTitle: (zone?.wiki_title as string | undefined) ?? null,
     maps: (zone?.maps as ZoneVendorInfo["maps"] | undefined) ?? [],
     zoneType: (zone?.zoneType as ZoneVendorInfo["zoneType"]) ?? null,
+    warning: (zone?.warning as string | undefined) ?? null,
   };
 }
 

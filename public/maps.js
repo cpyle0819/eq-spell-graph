@@ -196,6 +196,7 @@ async function buildDossierData(to) {
     lore: destination?.lore,
     maps: destination?.maps,
     zoneType: destination?.zoneType,
+    warning: destination?.warning,
     levelRange: npcsLevelRange(npcs),
     npcs,
     quests,
