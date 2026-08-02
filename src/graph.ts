@@ -1324,7 +1324,14 @@ export interface ZoneRanking {
   raceIgnored?: boolean;
   classIgnored?: boolean;
   deityIgnored?: boolean;
-  spells: SpellVendorInfo[];
+  // Exactly one of these two is set, never both -- a single rankZones()/
+  // rankZonesByCategory() call ranks by one type of vendor good at a time.
+  // Two separate optional arrays (rather than one generically-typed array)
+  // so callers on both sides keep real, type-specific fields (spell
+  // class/level pairs vs item stat block) instead of a lowest-common-
+  // denominator shape.
+  spells?: SpellVendorInfo[];
+  items?: ItemVendorInfo[];
   score: number;
   // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
   // resolveEra() below), and the same "own era or any touched zone" rule
@@ -1338,6 +1345,95 @@ export interface ZoneRanking {
   // actually reach yet without passing through Kunark/Velious territory.
   era?: string;
   outOfEra?: boolean;
+}
+
+// Shared by rankZones() (spells) and rankZonesByCategory() (vendor-sold
+// items/containers) -- everything past "how many goods does this zone have"
+// (route/faction/era/score) is identical between the two, so it only exists
+// once here. Callers assemble the final ZoneRanking by spreading this
+// result and adding their own `spells`/`items` array (already known by the
+// time they call this, since scoring needs its length).
+function buildZoneRankingBase(
+  zoneId: string,
+  goodsCount: number,
+  currentZoneId: string,
+  race: string | undefined,
+  primaryClass: string | undefined,
+  deity: string | undefined,
+  raceIgnored: boolean,
+  classIgnored: boolean,
+  deityIgnored: boolean,
+  includePorts: boolean,
+  helpers: GraphIndexHelpers
+): Omit<ZoneRanking, "spells" | "items"> {
+  const zoneNode = helpers.nodeById(zoneId);
+  const pathIds = shortestPath(currentZoneId, zoneId, helpers, includePorts);
+  const hops = pathIds ? pathIds.length - 1 : null;
+  const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
+  let alternates: RouteStep[][] = [];
+  if (pathIds) {
+    const { adj, skip } = pathContext(currentZoneId, zoneId, helpers, includePorts);
+    alternates = routeAlternates(currentZoneId, zoneId, adj, skip, pathIds, false, helpers)
+      .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
+  }
+
+  // Resolve faction from race, class, deity dimensions
+  let faction: FactionStanding = "neutral";
+  // Which dimension(s) are actually responsible for a bad result — only
+  // populated for wont_sell/kos, so the UI can explain *why* a zone is
+  // dubious/KOS instead of just that it is. A dimension only counts as a
+  // reason if it matches the overall (worst) standing; e.g. a wont_sell
+  // result with class="safe" and deity="wont_sell" cites deity, not class.
+  const factionReasons: FactionReason[] = [];
+  if (zoneNode?.faction) {
+    const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
+    const raceStanding: FactionStanding = raceIgnored ? "safe" : (race && zf.race?.[race]) || "neutral";
+    const classStanding: FactionStanding = classIgnored ? "safe" : (primaryClass && zf.class?.[primaryClass]) || "safe";
+    const deityStanding: FactionStanding = deityIgnored ? "safe" : (deity && zf.deity?.[deity]) || "neutral";
+    faction = worstStanding(raceStanding, classStanding, deityStanding);
+    if (faction === "wont_sell" || faction === "kos") {
+      if (race && raceStanding === faction) factionReasons.push({ dimension: "race", value: race });
+      if (primaryClass && classStanding === faction) factionReasons.push({ dimension: "class", value: primaryClass });
+      if (deity && deityStanding === faction) factionReasons.push({ dimension: "deity", value: deity });
+    }
+  }
+
+  let score: number;
+  if (faction === "kos") {
+    score = -2;
+  } else if (faction === "wont_sell") {
+    score = -1;
+  } else {
+    const factionMultiplier = faction === "safe" ? 1 : 0.5;
+    score = hops !== null && hops > 0
+      ? (goodsCount / hops) * factionMultiplier
+      : goodsCount * 100 * factionMultiplier;
+  }
+
+  return {
+    zoneId,
+    zoneName: zoneNode?.label || zoneId,
+    wikiTitle: (zoneNode?.wiki_title as string | undefined) ?? null,
+    hops,
+    route,
+    alternates,
+    faction,
+    ...(factionReasons.length ? { factionReasons } : {}),
+    ...(raceIgnored ? { raceIgnored: true } : {}),
+    ...(classIgnored ? { classIgnored: true } : {}),
+    ...(deityIgnored ? { deityIgnored: true } : {}),
+    score,
+    ...resolveEra(zoneNode?.era as string | undefined, pathIds ? pathIds.map((s) => s.zoneId) : [], helpers),
+  };
+}
+
+function sortRankings(rankings: ZoneRanking[]): ZoneRanking[] {
+  return rankings.sort((a, b) => {
+    if (STANDING_SEVERITY[a.faction] !== STANDING_SEVERITY[b.faction]) {
+      return STANDING_SEVERITY[a.faction] - STANDING_SEVERITY[b.faction];
+    }
+    return b.score - a.score;
+  });
 }
 
 export function rankZones(
@@ -1462,77 +1558,111 @@ export function rankZones(
   // Rank with split faction awareness
   const rankings: ZoneRanking[] = [];
   for (const [zoneId, spells] of zoneSpells) {
-    const zoneNode = helpers.nodeById(zoneId);
-    const pathIds = shortestPath(currentZoneId, zoneId, helpers, includePorts);
-    const hops = pathIds ? pathIds.length - 1 : null;
-    const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
-    let alternates: RouteStep[][] = [];
-    if (pathIds) {
-      const { adj, skip } = pathContext(currentZoneId, zoneId, helpers, includePorts);
-      alternates = routeAlternates(currentZoneId, zoneId, adj, skip, pathIds, false, helpers)
-        .map((path) => buildRouteSteps(path, (id) => helpers.nodeById(id), helpers));
-    }
-
-    // Resolve faction from race, class, deity dimensions
-    let faction: FactionStanding = "neutral";
-    // Which dimension(s) are actually responsible for a bad result — only
-    // populated for wont_sell/kos, so the UI can explain *why* a zone is
-    // dubious/KOS instead of just that it is. A dimension only counts as a
-    // reason if it matches the overall (worst) standing; e.g. a wont_sell
-    // result with class="safe" and deity="wont_sell" cites deity, not class.
-    const factionReasons: FactionReason[] = [];
-    if (zoneNode?.faction) {
-      const zf = zoneNode.faction as { race?: Record<string, FactionStanding>; class?: Record<string, FactionStanding>; deity?: Record<string, FactionStanding> };
-      const raceStanding: FactionStanding = raceIgnored ? "safe" : (race && zf.race?.[race]) || "neutral";
-      const classStanding: FactionStanding = classIgnored ? "safe" : (primaryClass && zf.class?.[primaryClass]) || "safe";
-      const deityStanding: FactionStanding = deityIgnored ? "safe" : (deity && zf.deity?.[deity]) || "neutral";
-      faction = worstStanding(raceStanding, classStanding, deityStanding);
-      if (faction === "wont_sell" || faction === "kos") {
-        if (race && raceStanding === faction) factionReasons.push({ dimension: "race", value: race });
-        if (primaryClass && classStanding === faction) factionReasons.push({ dimension: "class", value: primaryClass });
-        if (deity && deityStanding === faction) factionReasons.push({ dimension: "deity", value: deity });
-      }
-    }
-
-    let score: number;
-    if (faction === "kos") {
-      score = -2;
-    } else if (faction === "wont_sell") {
-      score = -1;
-    } else {
-      const factionMultiplier = faction === "safe" ? 1 : 0.5;
-      score = hops !== null && hops > 0
-        ? (spells.length / hops) * factionMultiplier
-        : spells.length * 100 * factionMultiplier;
-    }
-
+    const base = buildZoneRankingBase(zoneId, spells.length, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
     rankings.push({
-      zoneId,
-      zoneName: zoneNode?.label || zoneId,
-      wikiTitle: (zoneNode?.wiki_title as string | undefined) ?? null,
-      hops,
-      route,
-      alternates,
-      faction,
-      ...(factionReasons.length ? { factionReasons } : {}),
-      ...(raceIgnored ? { raceIgnored: true } : {}),
-      ...(classIgnored ? { classIgnored: true } : {}),
-      ...(deityIgnored ? { deityIgnored: true } : {}),
+      ...base,
       spells: spells.sort((a, b) =>
         Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level)) ||
         a.name.localeCompare(b.name)
       ),
-      score,
-      ...resolveEra(zoneNode?.era as string | undefined, pathIds ? pathIds.map((s) => s.zoneId) : [], helpers),
     });
   }
 
-  return rankings.sort((a, b) => {
-    if (STANDING_SEVERITY[a.faction] !== STANDING_SEVERITY[b.faction]) {
-      return STANDING_SEVERITY[a.faction] - STANDING_SEVERITY[b.faction];
+  return sortRankings(rankings);
+}
+
+export interface ItemVendorInfo extends ItemDetails {
+  id: string;
+  name: string;
+  vendors: string[];
+}
+
+// Non-spell counterpart to rankZones() -- ranks zones by which ones sell
+// vendor goods of the given `category` (an item/container node's own
+// `category` field, migration 400: "Armor", "Adventuring Supplies",
+// "Tradeskill Supplies") instead of spells. Shares all of rankZones()'
+// route/faction/era/scoring machinery via buildZoneRankingBase() above;
+// only candidate gathering differs, since items have no class_levels or
+// spell lines to filter by.
+//
+// Class filtering uses the item's own `classes` field with the same
+// "empty/absent = everyone" convention as quest.classes (decisions/
+// no-classes-selected-means-all-classes.md, decisions/item-node-schema.md)
+// -- an item with no class restriction (e.g. Water Flask) matches any
+// Shopping For class selection rather than being excluded for not
+// explicitly listing every class. There's no per-class level pairing for
+// items the way spell.class_levels has, so unlike rankZones() there's no
+// `levels` parameter here — the Level filter is hidden client-side
+// whenever Type isn't Spells for exactly this reason.
+export function rankZonesByCategory(
+  category: string,
+  classNames: string[],
+  currentZoneId: string,
+  race?: string,
+  primaryClass?: string,
+  deity?: string,
+  specificItemIds?: string[],
+  specificZoneIds?: string[],
+  includePorts = false
+): ZoneRanking[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+
+  const raceIgnored = race === "any";
+  const classIgnored = primaryClass === "any";
+  const deityIgnored = deity === "any";
+
+  let candidates = graph.nodes.filter(
+    (n) => (n.type === "item" || n.type === "container") && n.category === category
+  );
+
+  // Specific Items is the same exclusive override as rankZones()' Specific
+  // Spells -- pinning an item shows it regardless of the Shopping For class
+  // selection.
+  const pinnedIds = new Set(specificItemIds || []);
+  if (pinnedIds.size > 0) {
+    candidates = candidates.filter((n) => pinnedIds.has(n.id));
+  } else if (classNames.length > 0) {
+    candidates = candidates.filter((n) => {
+      const itemClasses = n.classes as string[] | undefined;
+      return !itemClasses || itemClasses.length === 0 || itemClasses.some((c) => classNames.includes(c));
+    });
+  }
+
+  const zoneItems = new Map<string, ItemVendorInfo[]>();
+  for (const item of candidates) {
+    const sellers = helpers.edgesTo(item.id, "sells");
+    for (const seller of sellers) {
+      const npcNode = helpers.nodeById(seller.source);
+      const locEdge = helpers.edgesFrom(seller.source, "located_in")[0];
+      if (!locEdge || !npcNode) continue;
+      const zoneId = locEdge.target;
+      if (!zoneItems.has(zoneId)) zoneItems.set(zoneId, []);
+      const existing = zoneItems.get(zoneId)!;
+      const entry = existing.find((it) => it.id === item.id);
+      if (entry) {
+        if (!entry.vendors.includes(npcNode.label)) entry.vendors.push(npcNode.label);
+      } else {
+        const { label, ...details } = toItemSummary(item);
+        existing.push({ ...details, id: item.id, name: label, vendors: [npcNode.label] });
+      }
     }
-    return b.score - a.score;
-  });
+  }
+
+  if (specificZoneIds?.length) {
+    const zoneSet = new Set(specificZoneIds);
+    for (const zoneId of zoneItems.keys()) {
+      if (!zoneSet.has(zoneId)) zoneItems.delete(zoneId);
+    }
+  }
+
+  const rankings: ZoneRanking[] = [];
+  for (const [zoneId, items] of zoneItems) {
+    const base = buildZoneRankingBase(zoneId, items.length, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
+    rankings.push({ ...base, items: items.sort((a, b) => a.name.localeCompare(b.name)) });
+  }
+
+  return sortRankings(rankings);
 }
 
 export interface ZoneVendorInfo {
