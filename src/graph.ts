@@ -1326,11 +1326,15 @@ export interface ZoneRanking {
   spells: SpellVendorInfo[];
   score: number;
   // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
-  // resolveEra() below) -- present only when this zone is itself confirmed
-  // out-of-era. Spell Finder results include out-of-era zones (unlike
-  // Quests/Maps, this list isn't otherwise filterable to just what's
-  // reachable) so the UI needs this to warn rather than silently recommend
-  // a zone the player can't actually reach yet.
+  // resolveEra() below), and the same "own era or any touched zone" rule
+  // QuestSummary uses -- true when the zone itself is confirmed out-of-era
+  // *or* the computed route to it is unavoidably routed through a
+  // confirmed out-of-era waypoint (route to New Sebilis Expedition via
+  // Firiona Vie/Emerald Jungle is the case that surfaced this). Spell
+  // Finder results include out-of-era zones (unlike Quests/Maps, this list
+  // isn't otherwise filterable to just what's reachable) so the UI needs
+  // this to warn rather than silently recommend a zone the player can't
+  // actually reach yet without passing through Kunark/Velious territory.
   era?: string;
   outOfEra?: boolean;
 }
@@ -1518,7 +1522,7 @@ export function rankZones(
         a.name.localeCompare(b.name)
       ),
       score,
-      ...resolveEra(zoneNode?.era as string | undefined, [], helpers),
+      ...resolveEra(zoneNode?.era as string | undefined, pathIds ? pathIds.map((s) => s.zoneId) : [], helpers),
     });
   }
 
@@ -1634,8 +1638,18 @@ export function getRoute(
   toZoneId: string,
   includePorts = false,
   stopZoneIds: string[] = [],
-  avoidDanger = false
-): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo; alternates: RouteStep[][] } {
+  avoidDanger = false,
+  // Maps' own "Show Out of Era" toggle, off by default (same "hidden unless
+  // asked for" convention as Quests/Spell Finder). Unlike those two, Maps
+  // never had a way to opt back in at all until this -- a route whose only
+  // path is unavoidably through a confirmed out-of-era zone (waypoint or
+  // destination) is blocked (null hops, empty steps, blockedByEra: true)
+  // rather than silently handed back with an outOfEra badge nobody asked to
+  // see. `from === to` dossier-only lookups (maps.js's buildDossierData)
+  // pass true here -- they're not routing anywhere, just fetching zone
+  // facts, so era has nothing to block.
+  allowOutOfEra = false
+): { hops: number | null; route: RouteStep[]; destination: ZoneVendorInfo; alternates: RouteStep[][]; blockedByEra?: boolean } {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
   const waypoints = [fromZoneId, ...stopZoneIds, toZoneId];
@@ -1647,6 +1661,9 @@ export function getRoute(
   }
   const hops = pathIds.length - 1;
   const route: RouteStep[] = buildRouteSteps(pathIds, (id) => graph.nodes.find((n) => n.id === id), helpers);
+  if (!allowOutOfEra && route.some((s) => s.outOfEra)) {
+    return { hops: null, route: [], destination: getZoneVendorInfo(toZoneId), alternates: [], blockedByEra: true };
+  }
   // Alternates are only offered for a plain from->to hop -- with stops
   // (issue #63) each leg is its own independent shortestPath() call
   // stitched together, and combining per-leg alternates would multiply out

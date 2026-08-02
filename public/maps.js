@@ -40,6 +40,11 @@ export async function init() {
     saveState();
     runRoute();
   });
+  document.getElementById("era-btn").addEventListener("click", (e) => {
+    e.currentTarget.toggleAttribute("toggled");
+    saveState();
+    runRoute();
+  });
   document.getElementById("reset-route-btn").addEventListener("click", resetRoute);
   document.getElementById("add-stop-btn").addEventListener("click", () => addStop());
   // Delegated once here rather than re-attached per runRoute() -- #route-result
@@ -122,6 +127,7 @@ function resetRoute() {
   document.getElementById("route-to").value = "";
   document.getElementById("ports-btn").removeAttribute("toggled");
   document.getElementById("avoid-danger-btn").removeAttribute("toggled");
+  document.getElementById("era-btn").removeAttribute("toggled");
   stops = [];
   renderStops();
   saveState();
@@ -136,6 +142,7 @@ function restoreState() {
     if (s.to) document.getElementById("route-to").value = s.to;
     if (s.ports) document.getElementById("ports-btn").setAttribute("toggled", "");
     if (s.avoidDanger) document.getElementById("avoid-danger-btn").setAttribute("toggled", "");
+    if (s.era) document.getElementById("era-btn").setAttribute("toggled", "");
     if (Array.isArray(s.stops)) stops = s.stops;
   } catch { /* ignore malformed state */ }
 }
@@ -145,7 +152,8 @@ function saveState() {
   const to = document.getElementById("route-to").value;
   const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, ports, avoidDanger, stops }));
+  const era = document.getElementById("era-btn").hasAttribute("toggled");
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, ports, avoidDanger, era, stops }));
 }
 
 function populateZoneSelect(select) {
@@ -185,7 +193,7 @@ function npcsLevelRange(npcs) {
 async function buildDossierData(to) {
   const zone = zonesByLabel.get(to);
   const [{ destination }, quests, npcs] = await Promise.all([
-    fetch(`api/route?${new URLSearchParams({ from: to, to })}`).then((r) => r.json()),
+    fetch(`api/route?${new URLSearchParams({ from: to, to, era: "1" })}`).then((r) => r.json()),
     zone ? fetch(`api/quests?${new URLSearchParams({ zone: zone.id })}`).then((r) => r.json()) : Promise.resolve([]),
     zone ? fetch(`api/npcs?${new URLSearchParams({ zone: zone.id })}`).then((r) => r.json()) : Promise.resolve([]),
   ]);
@@ -252,11 +260,14 @@ async function runRoute() {
   } else if (from) {
     const ports = document.getElementById("ports-btn").hasAttribute("toggled");
     const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
+    const era = document.getElementById("era-btn").hasAttribute("toggled");
     const stopsParam = stops.filter(Boolean).join(",");
-    const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+    const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(era ? { era: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
     const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
-    if (!result.route || result.route.length === 0) {
+    if (result.blockedByEra) {
+      noticeHtml = `<div class="no-results compact">The route to ${to} passes through a zone not yet available this era. Toggle Show Out of Era to see it anyway.</div>`;
+    } else if (!result.route || result.route.length === 0) {
       noticeHtml = stopsParam
         ? `<div class="no-results compact">No route found from ${from} to ${to} through ${stops.filter(Boolean).join(", ")}.</div>`
         : `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
@@ -313,8 +324,9 @@ async function recomputeRoute(removedZone) {
   const token = ++fetchToken;
   const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
+  const era = document.getElementById("era-btn").hasAttribute("toggled");
   const stopsParam = stops.filter(Boolean).join(",");
-  const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
+  const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(era ? { era: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
   const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
   if (token !== fetchToken) return;
 

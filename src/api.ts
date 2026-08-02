@@ -88,7 +88,10 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // pathfinding only, same default as rankZones/getZoneDistances below.
   // avoidDanger opts into terror-aware routing (decisions/
   // danger-aware-routing-bounded-hop-budget.md), same opt-in shape as
-  // ports. stops (issue #63's "add stop") is a comma-separated, ordered
+  // ports. era opts into allowing a route through a confirmed out-of-era
+  // zone (waypoint or destination) -- omitted/not "1" means such a route
+  // is blocked (blockedByEra: true in the response) rather than silently
+  // returned. stops (issue #63's "add stop") is a comma-separated, ordered
   // list of zone names to route through between from and to.
   if (pathname === "/api/route") {
     const from = searchParams.get("from") || "";
@@ -96,8 +99,9 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     if (!from || !to) return { status: 400, body: { error: "from and to required" } };
     const includePorts = searchParams.get("ports") === "1";
     const avoidDanger = searchParams.get("avoidDanger") === "1";
+    const allowOutOfEra = searchParams.get("era") === "1";
     const stops = (searchParams.get("stops") || "").split(",").filter(Boolean).map((s) => `zone:${slugify(s)}`);
-    return { status: 200, body: getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`, includePorts, stops, avoidDanger) };
+    return { status: 200, body: getRoute(`zone:${slugify(from)}`, `zone:${slugify(to)}`, includePorts, stops, avoidDanger, allowOutOfEra) };
   }
 
   // GET /api/zone-distances?from=zone:east-freeport&zones=zone:a,zone:b —
