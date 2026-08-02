@@ -434,20 +434,21 @@ export interface NpcSummary {
   // drops edge at all, same optional-field convention as minLevel/maxLevel.
   drops?: ItemSummary[];
   // What a vendor role npc actually sells, derived from `sells` edges'
-  // target node type (SELL_CATEGORY_LABELS below), not hand-tagged -- every
-  // sells edge in the graph targets a spell node today, so this is "Spells"
-  // for every vendor right now, but it's read off the real target type
-  // rather than hardcoded so a future `npc --sells--> item` (tailoring
-  // supplies, armor, etc.) shows up here with no dossier changes needed.
+  // target nodes (sellCategoryLabel() below) -- a spell target is always
+  // "Spells"; an item/container target uses its own hand-assigned
+  // `category` field (migration 400, e.g. "Armor", "Adventuring Supplies",
+  // "Tradeskill Supplies") since item type can't be inferred from stat
+  // shape alone. Falls back to a pluralized node type only for the
+  // vanishingly rare sold item/container with no category set yet, so a
+  // gap in categorization degrades gracefully instead of throwing.
   // Omitted for non-vendor npcs, same convention as drops/minLevel.
   sellCategories?: string[];
 }
 
-// Only "spell" exists as a sells target today; the fallback plural covers
-// any future target type without needing a matching label added here first.
 const SELL_CATEGORY_LABELS: Record<string, string> = { spell: "Spells" };
-function sellCategoryLabel(nodeType: string): string {
-  return SELL_CATEGORY_LABELS[nodeType] ?? `${nodeType.charAt(0).toUpperCase()}${nodeType.slice(1)}s`;
+function sellCategoryLabel(node: NodeData): string {
+  if (typeof node.category === "string") return node.category;
+  return SELL_CATEGORY_LABELS[node.type] ?? `${node.type.charAt(0).toUpperCase()}${node.type.slice(1)}s`;
 }
 
 // Resolves item ids straight to full ItemSummary data, no zone/quest/npc
@@ -484,8 +485,8 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
         ...new Set(
           helpers
             .edgesFrom(n.id, "sells")
-            .map((e) => helpers.nodeById(e.target)?.type)
-            .filter((type): type is string => type !== undefined)
+            .map((e) => helpers.nodeById(e.target))
+            .filter((node): node is NodeData => node !== undefined)
             .map(sellCategoryLabel)
         ),
       ].sort();
