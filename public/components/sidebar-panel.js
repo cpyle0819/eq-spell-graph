@@ -4,11 +4,13 @@
 //   ...
 //   <button slot="actions" class="text-action">Reset filters</button>
 // </sidebar-panel>
-// The sticky, fixed-width filter column shared by the Spell Finder's and
-// Class Browser's sidebars (Maps' horizontal .finder-bar is a
-// deliberately different layout and doesn't use this). `.control-sep`
-// dividers between sections are plain light-DOM markup (theme.css), not
-// componentized -- a single ornamental rule with nothing to own.
+// The sticky, fixed-width filter/control column shared by the Spell
+// Finder's, Class Browser's, Tradeskills', and Maps' left panels (Maps'
+// route-chain/panel-buttons content is its own plain markup rather than
+// collapsible-section/field-row, but still slots into this same shell).
+// `.control-sep` dividers between sections are plain light-DOM markup
+// (theme.css), not componentized -- a single ornamental rule with nothing
+// to own.
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();

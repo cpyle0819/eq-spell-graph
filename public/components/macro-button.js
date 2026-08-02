@@ -9,10 +9,15 @@
 // default; `square` fixes it to a 90x90 slot regardless of label length,
 // shrinking the font further past 10 characters since a square box has
 // nowhere else for a long label to go. `square small` instead fixes it to
-// 37x37 -- Maps' finder-bar `.field select`/`.field input` render at that
-// same height (theme.css), so a small square sits flush next to them
-// (issue #63's inline "add a stop here" button) instead of towering over
-// a field the way the full 90px square would.
+// 37x37, for a square sitting flush next to a `.field select`/`.field
+// input` of the same height (theme.css) instead of towering over it --
+// currently unused (Maps' old inline "add a stop here" button, issue #63,
+// used this before its route panel became a fixed-width vertical stack;
+// left in as a sized option should a future inline square need it again).
+// `full` instead stretches to its container's whole width, same bevel as
+// the default nav-row button but block-shaped -- for a vertical stack of
+// feature-toggle/action buttons (Maps' left panel) where a row of squares
+// would waste horizontal space.
 //
 // `toggled` gives a plain button the same depressed look as `pressed`
 // (current-nav-page) *without* `pressed`'s side effect of rendering as an
@@ -54,6 +59,8 @@ ${RESET_CSS}
   width: 37px; height: 37px;
   border-width: 3px;
 }
+:host(.full) { display: flex; width: 100%; }
+.btn.full { width: 100%; }
 .btn {
   position: relative; isolation: isolate; overflow: hidden;
   transform: translateZ(0);
@@ -188,7 +195,7 @@ ${RESET_CSS}
 `);
 
 class MacroButton extends HTMLElement {
-  static get observedAttributes() { return ["href", "square", "small", "pressed", "toggled", "disabled"]; }
+  static get observedAttributes() { return ["href", "square", "small", "full", "pressed", "toggled", "disabled"]; }
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -206,6 +213,7 @@ class MacroButton extends HTMLElement {
     const href = this.getAttribute("href");
     const square = this.hasAttribute("square");
     const small = this.hasAttribute("small");
+    const full = this.hasAttribute("full");
     const pressed = this.hasAttribute("pressed");
     const toggled = this.hasAttribute("toggled");
     // Only meaningful for the plain-button case below -- a "disabled" link
@@ -214,6 +222,7 @@ class MacroButton extends HTMLElement {
     const disabled = this.hasAttribute("disabled") && !pressed && !href;
     this.classList.toggle("square", square);
     this.classList.toggle("small", small);
+    this.classList.toggle("full", full);
 
     const label = this.textContent.trim();
     const isLong = square && !small && label.length > 10;
@@ -223,6 +232,7 @@ class MacroButton extends HTMLElement {
       "btn",
       square ? "square" : "",
       small ? "small" : "",
+      full ? "full" : "",
       isLong ? "long-label" : "",
       pressed || toggled ? "pressed" : "",
       !pressed && !href ? "as-button" : "",

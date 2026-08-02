@@ -128,7 +128,6 @@ body::before {
 *::-webkit-scrollbar-thumb:hover { background: #8b849f; }
 
 /* ── Panels: raised marble blocks with a real bevel ── */
-.finder-bar,
 .tag-dropdown {
   background: var(--marble-tex), linear-gradient(180deg, var(--stone-1), var(--stone-2));
   border: 4px solid;
@@ -138,11 +137,6 @@ body::before {
      cards floating above a page. Light top-right/dark bottom-left, matching
      the border-color above and every other raised surface in the app. */
   box-shadow: inset -1px 1px 0 rgba(255, 255, 255, 0.08), inset 1px -1px 0 rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-/* gold inlay hairline on the primary control surfaces */
-.finder-bar {
-  outline: 1px solid rgba(232, 168, 42, 0.22);
-  outline-offset: -5px;
 }
 
 /* ── Fields: sunken wells (bevel inverted — dark top-right, light
@@ -226,11 +220,12 @@ input::placeholder { color: var(--ink-muted); opacity: 0.75; }
 .wiki-link:hover, .wiki-link:focus-visible { color: var(--gold); border-bottom-color: var(--gold); border-bottom-style: solid; }
 .wiki-link[hidden] { display: none; }
 
-/* ── .field: Maps' own From/To fields (maps.html has no sidebar).
-   Spell Finder and Class Browser sidebar fields live in sidebar-panel/
-   field-row/collapsible-section/range-picker components (public/components/),
-   each owning their own rules directly since outer selectors can't reach
-   into shadow roots. ── */
+/* ── .field: Maps' own From/To/stop fields -- plain light-DOM markup
+   slotted into <sidebar-panel>, not the field-row component (its selects
+   need no tag-chip growth behavior, see field-row.js). Spell Finder and
+   Class Browser sidebar fields use field-row/collapsible-section/
+   range-picker components (public/components/) instead, each owning their
+   own rules directly since outer selectors can't reach into shadow roots. ── */
 .field { display: flex; align-items: center; gap: 10px; }
 .field[hidden] { display: none; }
 .field label { min-width: 100px; }

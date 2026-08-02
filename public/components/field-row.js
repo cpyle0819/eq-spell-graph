@@ -1,9 +1,9 @@
 // <field-row label="Race"><select>...</select></field-row> — a label +
 // control row. Shared by the Spell Finder's and Class Browser's sidebars
 // (adding a tag chip grows its own field downward, never reflows a
-// neighboring field, which only a stacked layout gives — Maps'
-// horizontal .finder-bar has a deliberately different field of its own and
-// doesn't use this).
+// neighboring field, which only a stacked layout gives — Maps' route panel
+// has its own plain `.field` markup instead and doesn't use this, since its
+// From/To/stop selects need no tag-chip growth behavior).
 import { RESET_CSS } from "./reset.js";
 
 const sheet = new CSSStyleSheet();
