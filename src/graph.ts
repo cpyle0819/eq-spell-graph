@@ -1131,15 +1131,27 @@ function pathContext(
   helpers: GraphIndexHelpers,
   includePorts: boolean
 ): { adj: Map<string, AdjEntry[]>; skip: (zoneId: string) => boolean; shortest: PathStep[] | null } {
-  const adj = getZoneAdjacency(includePorts);
+  const bfsAdj = getZoneAdjacency(includePorts);
+  // boundedPaths() (routeAlternates/safestPath, both consume the returned
+  // `adj`) enumerates every simple path up to a hop budget -- cheap only
+  // because the zone graph is sparse (avg degree ~3, see decisions/
+  // danger-aware-routing-bounded-hop-budget.md). wizard_port/druid_port
+  // edges fan out from every zone (migrations 364/398), so including them
+  // here inflates that to avg degree ~26 and turns the enumeration
+  // exponential -- confirmed hanging for 20+ seconds on a single route once
+  // Ports was on (issue #64 follow-up). The primary shortest-path search
+  // above still gets to use a port in one hop (bfsAdj); alternates and the
+  // danger-safest search fall back to ordinary routes only, same as if no
+  // better candidate existed.
+  const boundedAdj = includePorts ? getZoneAdjacency(false) : bfsAdj;
   const isWaypointOutOfEra = (zoneId: string) => isOutOfEra(helpers.nodeById(zoneId)?.era as string | undefined, helpers);
   let skip = isWaypointOutOfEra;
-  let shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+  let shortest = bfsPath(fromZoneId, toZoneId, bfsAdj, skip);
   if (!shortest) {
     skip = () => false;
-    shortest = bfsPath(fromZoneId, toZoneId, adj, skip);
+    shortest = bfsPath(fromZoneId, toZoneId, bfsAdj, skip);
   }
-  return { adj, skip, shortest };
+  return { adj: boundedAdj, skip, shortest };
 }
 
 export function shortestPath(
