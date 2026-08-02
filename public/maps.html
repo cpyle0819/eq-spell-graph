@@ -84,8 +84,21 @@
 
     /* Wide layout: sidebar-panel sits left, route-result to its right --
        same split/order convention as index.html's #planner (sidebar-panel
-       owns its own width/sticky/border). */
+       owns its own width/sticky/border). body switches from a fixed
+       height: 100vh to height: auto here (same as the narrow breakpoint
+       below already does) -- with a fixed-height body, main's own
+       flex: 1 box is capped at one screen tall, so overflow: visible just
+       lets #route-result's content spill past main's box uncovered by its
+       marble background rather than actually growing main to contain it.
+       That showed up as the page background (near-black) visible behind
+       any column shorter than the tallest one once you scrolled past
+       main's capped height -- most visibly on the left, since
+       sidebar-panel is far shorter than a long zone-dossier. auto height
+       lets main size to its tallest child like it already does on narrow
+       viewports, so the marble genuinely covers the full scrolled area on
+       both sides. */
     @media (min-width: 1100px) {
+      body { height: auto; min-height: 100vh; }
       main { flex-direction: row; align-items: flex-start; overflow: visible; padding: 0 0 14px 0; gap: 0; }
       sidebar-panel { order: 0; }
       #route-result { overflow-y: auto; order: 1; }
