@@ -1,4 +1,11 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, type NodeData } from "./graph";
+
+// Spells aren't tagged with a `category` field the way sold items are
+// (migration 400) -- they're the original, and only, sells-target type for
+// a long time, so this is the one hardcoded label rather than something
+// read off node data. Kept as the default `type` for /api/plan (see below)
+// so an old saved state/URL with no `type` param still plans spells.
+const SPELLS_TYPE = "Spells";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -62,22 +69,41 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getVendorsForSpell(id) };
   }
 
-  // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal
+  // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spells
+  // type (default "Spells", so old saved state/URLs with no type param keep
+  // working) selects which sold-goods flavor to rank zones by. "Spells"
+  // ranks via rankZones() exactly as before (class+level+spell-line
+  // matching against spell.class_levels); any other type (a real category
+  // from /api/vendor-categories, e.g. "Armor") ranks via
+  // rankZonesByCategory() instead -- class still narrows results (via the
+  // item's own `classes` field, empty/absent = everyone), but there's no
+  // level or spell-line equivalent for items, so those params are ignored
+  // for a non-Spells type.
   if (pathname === "/api/plan") {
+    const type = searchParams.get("type") || SPELLS_TYPE;
     const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
-    const levelMin = parseInt(searchParams.get("levelMin") || "1");
-    const levelMax = parseInt(searchParams.get("levelMax") || "1");
-    const levels: number[] = [];
-    for (let i = levelMin; i <= levelMax; i++) levels.push(i);
     const from = searchParams.get("from") || "";
     const race = searchParams.get("race") || undefined;
     const primaryClass = searchParams.get("primaryClass") || undefined;
     const deity = searchParams.get("deity") || undefined;
     const fromId = `zone:${slugify(from)}`;
-    const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
     const specificZoneIds = (searchParams.get("zones") || "").split(",").filter(Boolean);
-    const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
     const includePorts = searchParams.get("ports") === "1";
+
+    if (type !== SPELLS_TYPE) {
+      const extraItemIds = (searchParams.get("items") || "").split(",").filter(Boolean);
+      return {
+        status: 200,
+        body: rankZonesByCategory(type, classNames, fromId, race, primaryClass, deity, extraItemIds, specificZoneIds, includePorts),
+      };
+    }
+
+    const levelMin = parseInt(searchParams.get("levelMin") || "1");
+    const levelMax = parseInt(searchParams.get("levelMax") || "1");
+    const levels: number[] = [];
+    for (let i = levelMin; i <= levelMax; i++) levels.push(i);
+    const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
+    const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
     return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includePorts) };
   }
 
@@ -241,6 +267,52 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // Spell Finder's Spell Line tag filter's suggestions.
   if (pathname === "/api/spell-lines") {
     return { status: 200, body: getSpellLines() };
+  }
+
+  // GET /api/vendor-categories — every distinct sold-goods type, for the
+  // Vendors page's Type filter. "Spells" is always first and always present
+  // (it's the one hardcoded category, see SPELLS_TYPE above); the rest are
+  // whatever item/container `category` values (migration 400) actually have
+  // a real sells edge right now, sorted alphabetically after it. Driven by
+  // live sells-edge data rather than a fixed list so a category with
+  // nothing currently sold in it (e.g. "Weapons," if that's ever added)
+  // doesn't show an empty filter option -- decisions/ "let types drive the
+  // filters."
+  if (pathname === "/api/vendor-categories") {
+    const graph = getGraph();
+    const soldIds = new Set(graph.edges.filter((e) => e.type === "sells").map((e) => e.target));
+    const categories = new Set<string>();
+    for (const n of graph.nodes) {
+      if (soldIds.has(n.id) && (n.type === "item" || n.type === "container") && typeof n.category === "string") {
+        categories.add(n.category);
+      }
+    }
+    return { status: 200, body: [SPELLS_TYPE, ...[...categories].sort()] };
+  }
+
+  // GET /api/items/search?q=flask&category=Armor — item name search for the
+  // Vendors page's Specific Items tag input, same shape/contract as
+  // /api/spells/search. category (optional) scopes to one vendor-goods
+  // category so the suggestions match whatever Type is currently selected,
+  // same idea as /api/npcs' required zone scoping.
+  if (pathname === "/api/items/search") {
+    const q = (searchParams.get("q") || "").toLowerCase().trim();
+    const category = searchParams.get("category") || undefined;
+    if (q.length < 2) return { status: 200, body: [] };
+    const graph = getGraph();
+    const matches = graph.nodes
+      .filter((n) =>
+        (n.type === "item" || n.type === "container") &&
+        n.label.toLowerCase().includes(q) &&
+        (!category || n.category === category)
+      )
+      .map((n) => ({ id: n.id, label: n.label }))
+      .sort((a, b) => {
+        const ai = a.label.toLowerCase().indexOf(q), bi = b.label.toLowerCase().indexOf(q);
+        return ai !== bi ? ai - bi : a.label.localeCompare(b.label);
+      })
+      .slice(0, 12);
+    return { status: 200, body: matches };
   }
 
   // GET /api/quests?class=warrior,paladin&zone=zone:ak-anon&levelMin=9&levelMax=11
