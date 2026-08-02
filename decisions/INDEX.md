@@ -83,7 +83,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [MacroButton: one shared component for every non-text button, socket + raised button, two bevels](macro-button-shared-component.md)
 - [Spell Line: a new filterable/surfaceable dimension, from migration 019's `spell_line` nodes](spell-line-filterable-dimension.md)
 - [Sidebar filter panel: shared by Spell Finder and Class Browser, both markup and CSS](sidebar-filter-panel-shared.md)
-- [Spell Finder sidebar is grouped into four labeled sections: Faction, Spells, Level, Location](spell-finder-sidebar-four-sections.md)
+- [Vendors sidebar is grouped into five labeled sections: Location, Level, Faction, Travel, Shopping For (supersedes an earlier four-section order)](spell-finder-sidebar-four-sections.md)
 - [Sidebar sections are collapsible, and reuse the `[hidden]` fix from Class Browser's Spell Line bug](sidebar-sections-collapsible.md)
 - [Owned-spell tracking shares one localStorage key across both pages](owned-spell-tracking-shared-localstorage-key.md)
 - [Whole-app light-source consistency pass: top-right everywhere](whole-app-light-source-top-right.md)
@@ -100,4 +100,5 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Quests sourced from a real chat log get an `incomplete` flag, not silence or invention](quest-log-sourcing-and-incomplete-flag.md)
 - [Browse's Item Type/Subtype filter: computed from real item fields, not a stored classification](recipe-item-type-subtype-filter.md)
 - [Alternate routes: reuse the danger-routing hop-budget DFS, cap at 3 total](alternate-routes.md)
+- [Vendors' Type filter: a stored `category` on sold items, not a computed classification](vendors-type-filter.md)
 
