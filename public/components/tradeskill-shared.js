@@ -1,9 +1,11 @@
-// Shared rendering helpers for recipe-card.js and leveling-guide-card.js --
-// both render a recipe's Trivial/Craftable badges and its ingredient
-// formula, one as a full standalone card, the other as a compact row inside
-// one combined card. Kept separate from quest-shared.js (imported here
-// alongside it) since these are tradeskill/recipe-domain specific, not
-// quest-domain.
+// Shared rendering helpers for recipe-card.js, which renders a recipe's
+// Trivial/Craftable badges, ingredient formula, ingredient tree, and
+// alternate-recipe roster -- both Browse mode and the Leveling Guide render
+// recipes through this exact same component (leveling-guide-card.js just
+// renders a filtered/ordered subset of <recipe-card>s, see issue #67), so
+// there's no second caller here anymore. Kept separate from quest-shared.js
+// (imported here alongside it) since these are tradeskill/recipe-domain
+// specific, not quest-domain.
 import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 
 // Trivial is the sourced fact (eqlwiki's own number); Craftable is
@@ -28,9 +30,7 @@ export const RECIPE_ROW_CSS = `
 .recipe-arrow { color: var(--parch-accent); font-weight: 700; }
 
 /* Same look as ingredient-card.js's own "+ Shopping List" button -- both
-   are a quiet secondary action on a parchment card, not a primary button.
-   Shared here since both recipe-card.js and leveling-guide-card.js need
-   the identical "+ Add Ingredients" affordance (issue #56). */
+   are a quiet secondary action on a parchment card, not a primary button. */
 .add-shopping-btn {
   font-size: 11px; color: var(--gold); background: none; border: none;
   padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
@@ -127,9 +127,9 @@ export function recipeFormulaHtml(recipe) {
 // The "Show Ingredient Tree" toggle and its own (initially empty/hidden)
 // render target are two separate pieces, not one combined block -- the
 // button reads best sitting right next to a recipe's own "+ Add
-// Ingredients" (recipe-card.js's spell-header, leveling-guide-card.js's
-// recipe-name-row), while the expanded tree itself needs the full row width
-// below the formula, not squeezed into a header. wireRecipeTreeToggle()
+// Ingredients" (recipe-card.js's spell-header), while the expanded tree
+// itself needs the full row width below the formula, not squeezed into a
+// header. wireRecipeTreeToggle()
 // below finds the container via `rootEl.querySelector`, not DOM adjacency,
 // so the two can live in entirely different parts of a card's markup.
 // Both are absent entirely when `recipe.uses` has no craftable ingredient
@@ -197,13 +197,13 @@ function flattenTreeItems(node, acc) {
 }
 
 // recipeId -> RecipeTreeNode | Promise<RecipeTreeNode | undefined>, shared
-// across every card on the page (both recipe-card.js and
-// leveling-guide-card.js import this same module-level cache) -- a given
-// recipe's own tree never changes within a session, so toggling it closed
-// and back open, or expanding the same recipe from two different views,
-// never re-fetches. Caching the in-flight promise (not just the resolved
-// value) means a second click while the first fetch is still pending reuses
-// it instead of firing a duplicate request.
+// across every recipe-card on the page (Browse and the Leveling Guide alike,
+// since the guide renders its own recipes through this exact same
+// component) -- a given recipe's own tree never changes within a session, so
+// toggling it closed and back open, or expanding the same recipe from two
+// different views, never re-fetches. Caching the in-flight promise (not just
+// the resolved value) means a second click while the first fetch is still
+// pending reuses it instead of firing a duplicate request.
 const treeCache = new Map();
 
 function fetchRecipeTree(recipeId) {
@@ -214,9 +214,9 @@ function fetchRecipeTree(recipeId) {
 }
 
 // Shared click-delegation for every ".tree-toggle-btn" under `rootEl` --
-// call once per component (recipe-card.js/leveling-guide-card.js each wire
-// it on their own shadowRoot, same delegation pattern their other click
-// handlers already use). Fetches lazily on first open (not pre-fetched with
+// call once per component (recipe-card.js wires it on its own shadowRoot,
+// same delegation pattern its other click handlers already use). Fetches
+// lazily on first open (not pre-fetched with
 // the rest of a recipe's own data, since most trees are never expanded);
 // toggling closed again just hides the already-rendered container rather
 // than discarding it, so re-opening is instant.

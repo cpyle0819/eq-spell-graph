@@ -534,11 +534,13 @@ function setupFilters() {
 
   document.getElementById("reset-trade-filters-btn").addEventListener("click", resetFilters);
 
-  // ingredient-card.js's own "+ Shopping List" button and recipe-card.js/
-  // leveling-guide-card.js's own ingredient chips (recipeFormulaHtml's
-  // shoppingList option) -- composed so both cross out of their own shadow
-  // roots. leveling-guide-card.js's own "+ Add Ingredients" button dispatches
-  // the plural event below instead, one ingredient's worth of items at once.
+  // ingredient-card.js's own "+ Shopping List" button and recipe-card.js's
+  // own ingredient chips (recipeFormulaHtml's shoppingList option) --
+  // composed so both cross out of their own shadow roots (recipe-card.js's
+  // included, when it's rendering inside leveling-guide-card.js's own shadow
+  // root -- see issue #67). recipe-card.js's own "+ Add Ingredients" button
+  // dispatches the plural event below instead, one recipe's worth of
+  // ingredients at once.
   document.getElementById("trades-results").addEventListener("add-shopping-item", (e) => {
     addShoppingItem(e.detail.id, e.detail.label);
   });

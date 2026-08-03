@@ -30,12 +30,13 @@ class RecipeCard extends CardBase {
 
   // Delegated on shadowRoot (not the button directly) so it keeps working
   // across render() rebuilding the header's innerHTML -- same pattern as
-  // ingredient-card.js's own wireEvents(). Dispatches the same
-  // "add-recipe-ingredients" event leveling-guide-card.js's own
-  // "+ Add Ingredients" button does (trades.js already listens for it on
-  // #trades-results, regardless of which card type raised it), so Browse's
-  // recipe cards get the same "add every ingredient at once" affordance
-  // Guide already had (issue #56).
+  // ingredient-card.js's own wireEvents(). Dispatches a bubbling+composed
+  // "add-recipe-ingredients" CustomEvent (detail: { items: recipe.uses }),
+  // same convention as ingredient-card.js's own "add-shopping-item" --
+  // trades.js listens for it on #trades-results regardless of which card
+  // raised it, including one rendered inside leveling-guide-card.js's own
+  // shadow root (issue #67: the guide renders its recipes through this
+  // exact component now, not a bespoke row of its own).
   wireEvents() {
     this.shadowRoot.addEventListener("click", (e) => {
       const btn = e.target.closest(".add-shopping-btn");
