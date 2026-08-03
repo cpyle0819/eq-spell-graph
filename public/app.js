@@ -5,7 +5,6 @@
 // own accessor once it *is* defined, so registration order here is load
 // bearing, not just tidiness.
 import "./components/index.js";
-import { wikiUrl } from "./components/card-base.js";
 import { getOwnedSpells, setSpellOwned, clearOwnedSpells, lazyRenderList } from "./components.js";
 
 // Matches src/api.ts's own SPELLS_TYPE -- the one hardcoded vendor-goods
@@ -78,86 +77,83 @@ const VISITED_KEY = "eq-visited";
 function renderSidebar() {
   const html = `
     <sidebar-panel>
-      <collapsible-section label="Location" section="location">
-        <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
-        <field-row label="Specific Zones"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true"></div>
-      <collapsible-section label="Level" section="level" id="level-section" section-title="Only spells carry per-class level data -- hidden for any other Type.">
-        <field-row label="Levels"><range-picker id="level-range" min="1" max="50" value-min="1" value-max="10"></range-picker></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true" id="level-sep"></div>
-      <collapsible-section label="Faction" section="faction" section-title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which goods show up below.">
-        <field-row label="Race"><select id="race-select">
-          <option value="barbarian">Barbarian</option>
-          <option value="dark elf">Dark Elf</option>
-          <option value="dwarf">Dwarf</option>
-          <option value="erudite">Erudite</option>
-          <option value="froglok">Froglok</option>
-          <option value="gnome">Gnome</option>
-          <option value="half elf">Half Elf</option>
-          <option value="halfling">Halfling</option>
-          <option value="high elf">High Elf</option>
-          <option value="human">Human</option>
-          <option value="iksar">Iksar</option>
-          <option value="kerran">Kerran</option>
-          <option value="ogre">Ogre</option>
-          <option value="troll">Troll</option>
-          <option value="wood elf">Wood Elf</option>
-          <option value="any" selected>Any (ignore faction)</option>
-        </select></field-row>
-        <field-row label="Primary Class"><select id="primary-class-select">
-          <option value="bard">Bard</option>
-          <option value="beastlord">Beastlord</option>
-          <option value="cleric">Cleric</option>
-          <option value="druid">Druid</option>
-          <option value="enchanter">Enchanter</option>
-          <option value="magician">Magician</option>
-          <option value="monk">Monk</option>
-          <option value="necromancer">Necromancer</option>
-          <option value="paladin">Paladin</option>
-          <option value="ranger">Ranger</option>
-          <option value="rogue">Rogue</option>
-          <option value="shadow knight">Shadow Knight</option>
-          <option value="shaman">Shaman</option>
-          <option value="warrior">Warrior</option>
-          <option value="wizard">Wizard</option>
-          <option value="any" selected>Any (ignore faction)</option>
-        </select></field-row>
-        <a id="primary-class-wiki-link" class="wiki-link" target="_blank" rel="noopener" hidden></a>
-        <field-row label="Deity"><select id="deity-select">
-          <option value="agnostic">Agnostic</option>
-          <option value="bertoxxulous">Bertoxxulous</option>
-          <option value="brell serilis">Brell Serilis</option>
-          <option value="bristlebane">Bristlebane</option>
-          <option value="cazic-thule">Cazic-Thule</option>
-          <option value="erollisi marr">Erollisi Marr</option>
-          <option value="innoruuk">Innoruuk</option>
-          <option value="karana">Karana</option>
-          <option value="mithaniel marr">Mithaniel Marr</option>
-          <option value="prexus">Prexus</option>
-          <option value="quellious">Quellious</option>
-          <option value="rallos zek">Rallos Zek</option>
-          <option value="rodcet nife">Rodcet Nife</option>
-          <option value="solusek ro">Solusek Ro</option>
-          <option value="the tribunal">The Tribunal</option>
-          <option value="tunare">Tunare</option>
-          <option value="veeshan">Veeshan</option>
-          <option value="any" selected>Any (ignore faction)</option>
-        </select></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true"></div>
-      <collapsible-section label="Travel" section="travel">
-        <field-row label="Route"><toggle-checkbox id="include-ports" label="Include Ports" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route"></toggle-checkbox></field-row>
-        <field-row label="Era"><toggle-checkbox id="show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
-      </collapsible-section>
-      <div class="control-sep" aria-hidden="true"></div>
       <collapsible-section label="Shopping For" section="shopping">
         <field-row label="Type"><select id="type-select"></select></field-row>
         <field-row label="Class"><tag-input id="class-tag-input" aria-label="Class suggestions"></tag-input></field-row>
         <field-row label="Spell Line" id="spellline-row"><tag-input id="spellline-tag-input" aria-label="Spell line suggestions"></tag-input></field-row>
         <field-row label="Specific Spells" id="specific-spells-row"><tag-input id="spell-tag-input" aria-label="Spell suggestions"></tag-input></field-row>
         <field-row label="Specific Items" id="specific-items-row" hidden><tag-input id="item-tag-input" aria-label="Item suggestions"></tag-input></field-row>
+        <field-row label="Levels" id="level-row"><range-picker id="level-range" min="1" max="50" value-min="1" value-max="10"></range-picker></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Location" section="location">
+        <field-row label="Zone"><tag-input id="zone-tag-input" aria-label="Zone suggestions"></tag-input></field-row>
+      </collapsible-section>
+      <div class="control-sep" aria-hidden="true"></div>
+      <collapsible-section label="Advanced" section="advanced">
+        <collapsible-section label="Faction" static section-title="Race, Primary Class, and Deity only affect vendor faction standing — they don't filter which goods show up below.">
+          <field-row label="Race"><select id="race-select">
+            <option value="barbarian">Barbarian</option>
+            <option value="dark elf">Dark Elf</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="erudite">Erudite</option>
+            <option value="froglok">Froglok</option>
+            <option value="gnome">Gnome</option>
+            <option value="half elf">Half Elf</option>
+            <option value="halfling">Halfling</option>
+            <option value="high elf">High Elf</option>
+            <option value="human">Human</option>
+            <option value="iksar">Iksar</option>
+            <option value="kerran">Kerran</option>
+            <option value="ogre">Ogre</option>
+            <option value="troll">Troll</option>
+            <option value="wood elf">Wood Elf</option>
+            <option value="any" selected>Any (ignore faction)</option>
+          </select></field-row>
+          <field-row label="Primary Class"><select id="primary-class-select">
+            <option value="bard">Bard</option>
+            <option value="beastlord">Beastlord</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="enchanter">Enchanter</option>
+            <option value="magician">Magician</option>
+            <option value="monk">Monk</option>
+            <option value="necromancer">Necromancer</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rogue</option>
+            <option value="shadow knight">Shadow Knight</option>
+            <option value="shaman">Shaman</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+            <option value="any" selected>Any (ignore faction)</option>
+          </select></field-row>
+          <field-row label="Deity"><select id="deity-select">
+            <option value="agnostic">Agnostic</option>
+            <option value="bertoxxulous">Bertoxxulous</option>
+            <option value="brell serilis">Brell Serilis</option>
+            <option value="bristlebane">Bristlebane</option>
+            <option value="cazic-thule">Cazic-Thule</option>
+            <option value="erollisi marr">Erollisi Marr</option>
+            <option value="innoruuk">Innoruuk</option>
+            <option value="karana">Karana</option>
+            <option value="mithaniel marr">Mithaniel Marr</option>
+            <option value="prexus">Prexus</option>
+            <option value="quellious">Quellious</option>
+            <option value="rallos zek">Rallos Zek</option>
+            <option value="rodcet nife">Rodcet Nife</option>
+            <option value="solusek ro">Solusek Ro</option>
+            <option value="the tribunal">The Tribunal</option>
+            <option value="tunare">Tunare</option>
+            <option value="veeshan">Veeshan</option>
+            <option value="any" selected>Any (ignore faction)</option>
+          </select></field-row>
+        </collapsible-section>
+        <collapsible-section label="Location" static>
+          <field-row label="Current Zone"><select id="zone-input"><option value="">-- Select Zone --</option></select></field-row>
+          <field-row label="Route"><toggle-checkbox id="include-ports" label="Include Ports" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route"></toggle-checkbox></field-row>
+          <field-row label="Era"><toggle-checkbox id="show-out-of-era" label="Show Out of Era"></toggle-checkbox></field-row>
+        </collapsible-section>
       </collapsible-section>
       <div class="control-sep" aria-hidden="true"></div>
       <button slot="actions" type="button" class="text-action" id="reset-filters-btn">Reset filters</button>
@@ -167,15 +163,30 @@ function renderSidebar() {
 }
 
 // Only Shopping For starts open — picking what to shop for is the page's
-// main job, everything else (Location, Level, Faction, Travel) is a
-// secondary narrowing/config concern you dip into as needed (decisions/
-// spell-finder-sidebar-four-sections.md). Applied by applyDefaults() — for
-// a first-time visitor that's every section's only assignment; for Reset
-// filters (which also calls applyDefaults()) it's what makes the collapse
-// state, not just the filter values, fully reset too, rather than leaving
-// whatever the user had toggled untouched.
-const ALL_SECTIONS = ["location", "level", "faction", "travel", "shopping"];
-const DEFAULT_COLLAPSED_SECTIONS = ["location", "level", "faction", "travel"];
+// main job, everything else (Location, Advanced) is a secondary
+// narrowing/config concern you dip into as needed (decisions/
+// spell-finder-sidebar-four-sections.md). Levels lives as the last field
+// inside Shopping For itself now, not its own section -- it's a Spells-only
+// narrowing facet exactly like Spell Line/Specific Spells beside it (hidden
+// together via updateShoppingForVisibility()'s [hidden] toggles), so it
+// doesn't need a dedicated collapsible wrapper the way a genuinely separate
+// concern (Location, Advanced) does. Location's top-level "Zone" (specific
+// zones to search within) is split from Advanced's static "Location"
+// sub-group (routing origin + route/era travel options) -- they answer
+// different questions, narrowing results vs. where/how you're traveling
+// from, so they don't share one control despite the same real-world "zone"
+// concept. Faction and that Location sub-group (Current Zone, Route, Era)
+// live inside Advanced as static (non-collapsible) groups, not top-level
+// sections of their own -- their defaults (Any faction, ports off,
+// out-of-era hidden, no zone selected) already cover the common case, so
+// Advanced collapsed is the useful starting point rather than exposing
+// them up front. Applied by applyDefaults() — for a first-time visitor
+// that's every section's only assignment; for Reset filters (which also
+// calls applyDefaults()) it's what makes the collapse state, not just the
+// filter values, fully reset too, rather than leaving whatever the user
+// had toggled untouched.
+const ALL_SECTIONS = ["shopping", "location", "advanced"];
+const DEFAULT_COLLAPSED_SECTIONS = ["location", "advanced"];
 
 function getSectionEl(section) {
   return document.querySelector(`collapsible-section[section="${section}"]`);
@@ -221,8 +232,6 @@ export async function init() {
   syncResultsGutterWidth();
   window.addEventListener("resize", syncResultsGutterWidth);
   document.getElementById("reset-filters-btn").addEventListener("click", resetFilters);
-  document.getElementById("primary-class-select").addEventListener("change", updatePrimaryClassWikiLink);
-  updatePrimaryClassWikiLink();
   runPlan();
 }
 
@@ -234,7 +243,6 @@ export async function init() {
 function resetFilters() {
   document.getElementById("race-select").value = "any";
   document.getElementById("primary-class-select").value = "any";
-  updatePrimaryClassWikiLink();
   document.getElementById("deity-select").value = "any";
   document.getElementById("level-range").valueMin = 1;
   document.getElementById("level-range").valueMax = 10;
@@ -381,10 +389,11 @@ function consumePinnedSpellFromUrl() {
 function applyDefaults() {
   selectedClasses = ["shaman"];
   renderClassTags();
-  const zoneSelect = document.getElementById("zone-input");
-  const qeynos = [...zoneSelect.options].find((o) => o.value === "South Qeynos" || o.value === "North Qeynos" || o.value === "Qeynos");
-  if (qeynos) zoneSelect.value = qeynos.value;
-  else if (zoneSelect.options.length > 1) zoneSelect.selectedIndex = 1;
+  // Left on its "-- Select Zone --" placeholder rather than defaulting to
+  // Qeynos -- Current Zone lives in Advanced now, and results should work
+  // (ranked by goods count, no route/hops badge) before a player has picked
+  // a zone at all rather than silently assuming one.
+  document.getElementById("zone-input").value = "";
   ALL_SECTIONS.forEach((section) => { const el = getSectionEl(section); if (el) el.collapsed = DEFAULT_COLLAPSED_SECTIONS.includes(section); });
 }
 
@@ -394,27 +403,6 @@ function setupAutoSave() {
     el?.addEventListener("change", saveState);
     el?.addEventListener("input", saveState);
   }
-}
-
-// Classes aren't their own node/card anywhere in the UI (see decisions/) —
-// Primary Class is the one place a *single* class is always unambiguously
-// in focus (unlike Spell Class, a multi-select tag-input), so the wiki link
-// lives here rather than cluttering every tag chip. Hidden entirely for
-// "any," which isn't a real class. Title-cases the select's lowercase
-// value ("shadow knight" -> "Shadow Knight") to match eqlwiki.com's page
-// title convention.
-function updatePrimaryClassWikiLink() {
-  const cls = document.getElementById("primary-class-select").value;
-  const link = document.getElementById("primary-class-wiki-link");
-  if (!link) return;
-  if (cls === "any") {
-    link.hidden = true;
-    return;
-  }
-  const label = cls.replace(/\b\w/g, (c) => c.toUpperCase());
-  link.href = wikiUrl(label);
-  link.textContent = `${label} on eqlwiki.com ↗`;
-  link.hidden = false;
 }
 
 // --- Populate ---
@@ -459,8 +447,7 @@ function setupClassSearch() {
 // changes between types.
 function updateShoppingForVisibility() {
   const isSpells = selectedType === SPELLS_TYPE;
-  document.getElementById("level-section").hidden = !isSpells;
-  document.getElementById("level-sep").hidden = !isSpells;
+  document.getElementById("level-row").hidden = !isSpells;
   document.getElementById("spellline-row").hidden = !isSpells;
   document.getElementById("specific-spells-row").hidden = !isSpells;
   document.getElementById("specific-items-row").hidden = isSpells;
@@ -659,13 +646,6 @@ async function runPlan() {
   const deity = document.getElementById("deity-select").value;
   const from = document.getElementById("zone-input").value;
   const { min: levelMin, max: levelMax } = getSelectedLevelRange();
-
-  if (!from) {
-    document.getElementById("results").innerHTML =
-      '<div class="no-results">Select your current zone.</div>';
-    document.getElementById("status-panel").data = null;
-    return;
-  }
 
   document.getElementById("results").innerHTML = '<div class="loading">Searching Norrath...</div>';
 

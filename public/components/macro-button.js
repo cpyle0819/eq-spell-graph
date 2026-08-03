@@ -140,7 +140,7 @@ ${RESET_CSS}
 .btn:hover { filter: brightness(1.05); }
 .btn:active {
   box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
-  filter: brightness(0.96);
+  filter: brightness(0.8);
 }
 .btn:active::before {
   background-image: var(--bone-tex), linear-gradient(to top, black, transparent 5px), linear-gradient(to right, black, transparent 5px);
@@ -166,7 +166,7 @@ ${RESET_CSS}
 .btn.pressed, .btn.pressed:hover, .btn:disabled, .btn:disabled:hover, .btn:disabled:active {
   cursor: default;
   box-shadow: inset 2px -2px 3px rgba(255, 255, 255, 0.3), inset -2px 2px 3px rgba(0, 0, 0, 0.35);
-  filter: brightness(0.96);
+  filter: brightness(0.8);
 }
 .btn.pressed::before, .btn:disabled::before {
   background-image: var(--bone-tex), linear-gradient(to top, black, transparent 5px), linear-gradient(to right, black, transparent 5px);

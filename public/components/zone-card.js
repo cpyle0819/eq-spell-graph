@@ -385,6 +385,10 @@ class ZoneCard extends HTMLElement {
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const hasRoute = r.route && r.route.length > 1;
     const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";
+    // No current zone selected -- there's no "unreachable" to report, so
+    // omit the hops badge and any route entirely rather than showing a
+    // result that reads like the zone genuinely can't be reached.
+    const hopsHtml = r.noOrigin ? "" : `<span class="zone-badge hops">${hopsText}</span>`;
 
     const tooltip = factionTooltip(r.faction, r.factionReasons);
     const eraTitle = r.era ? `${r.era} content isn't available in the current era yet` : "Not available in the current era yet";
@@ -395,9 +399,9 @@ class ZoneCard extends HTMLElement {
         ${r.outOfEra ? `<span class="era-badge" title="${eraTitle}">Out of Era</span>` : ""}
         ${r.faction !== "safe" ? `<span class="faction-badge ${r.faction}" title="${tooltip}">${FACTION_LABELS[r.faction] || r.faction}</span>` : ""}
         <span class="zone-badge">${badgeText} ${noun}${count !== 1 ? "s" : ""}</span>
-        <span class="zone-badge hops">${hopsText}</span>
+        ${hopsHtml}
       </div>
-      ${routeHtml}
+      ${r.noOrigin ? "" : routeHtml}
       <div class="spell-scroll">
         <div class="spell-vendor-list">${body}</div>
       </div>
