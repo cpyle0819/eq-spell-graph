@@ -48949,7 +48949,8 @@
       "id": "item:malachite",
       "label": "Malachite",
       "type": "item",
-      "source": "Poacher's Head Quest (Erudin) reward (Jras Solsier, Erudin)"
+      "source": "Poacher's Head Quest (Erudin) reward (Jras Solsier, Erudin)",
+      "category": "Tradeskill Supplies"
     },
     {
       "id": "item:fishing-spear",
@@ -55786,7 +55787,8 @@
         "Secondary"
       ],
       "capacity": 8,
-      "source": "Lizard Dolls reward (Grevak, Oggok) -- 8-slot container, 0% weight reduction"
+      "source": "Lizard Dolls reward (Grevak, Oggok) -- 8-slot container, 0% weight reduction",
+      "category": "Adventuring Supplies"
     },
     {
       "id": "npc:oggok:soonog",
@@ -56791,7 +56793,8 @@
       "type": "item",
       "weight": 0.6,
       "size": "Small",
-      "source": "Messages For Neriak reward (Noxhil V`Sek, Neriak 3rd Gate) -- a hearty meal"
+      "source": "Messages For Neriak reward (Noxhil V`Sek, Neriak 3rd Gate) -- a hearty meal",
+      "category": "Adventuring Supplies"
     },
     {
       "id": "npc:north-kaladim:jeet",
@@ -179113,6 +179116,195 @@
       "type": "recipe",
       "tradeskill": "Blacksmithing",
       "trivial": 162
+    },
+    {
+      "id": "item:fishing-pole",
+      "label": "Fishing Pole",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "weight": 1,
+      "size": "Tiny",
+      "source": "Sold by the Adventuring Supply Merchant archetype across many zones",
+      "category": "Adventuring Supplies"
+    },
+    {
+      "id": "item:large-harness",
+      "label": "Large Harness",
+      "type": "item",
+      "weight": 2,
+      "capacity": 4,
+      "containerSize": "Giant",
+      "source": "Container for giant-sized items; sold by the Adventuring Supply Merchant archetype across many zones",
+      "category": "Adventuring Supplies"
+    },
+    {
+      "id": "item:trinket-pouch",
+      "label": "Trinket Pouch",
+      "type": "item",
+      "weight": 1.5,
+      "size": "Small",
+      "capacity": 12,
+      "containerSize": "Tiny",
+      "source": "Sold by the Adventuring Supply Merchant archetype across many zones",
+      "category": "Adventuring Supplies"
+    },
+    {
+      "id": "item:tiny-dagger",
+      "label": "Tiny Dagger",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": [
+        "enchanter"
+      ],
+      "source": "Reagent for Enchanter pet-summoning spells; sold by the Adventuring Supply Merchant archetype across many zones",
+      "category": "Tradeskill Supplies"
+    },
+    {
+      "id": "item:boots-of-the-long-road",
+      "label": "Boots of the Long Road",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 4,
+      "hp": 5,
+      "weight": 1.5,
+      "size": "Small",
+      "magic": true,
+      "effect": "Spirit of the Traveler (Must Equip, Instant cast, 10s recast)",
+      "source": "Sold by the Adventuring Supply Merchant archetype across many zones",
+      "category": "Armor"
+    },
+    {
+      "id": "npc:ak-anon:a-s-a-vi",
+      "label": "A.S.A. VI",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin:otumar",
+      "label": "Otumar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:paineel:otumar",
+      "label": "Otumar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:northern-felwithe:lanadin",
+      "label": "Lanadin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:pietro-drast",
+      "label": "Pietro Drast",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-freeport:lheron-drast",
+      "label": "Lheron Drast",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:beka",
+      "label": "Beka",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:waldadar",
+      "label": "Waldadar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:haneka-irontoe",
+      "label": "Haneka Irontoe",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-foreign-quarter:neuven",
+      "label": "Neuven",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:new-sebilis-expedition:klok-koglin",
+      "label": "Klok Koglin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:rlabok",
+      "label": "Rlabok",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-qeynos:danloc-starn",
+      "label": "Danloc Starn",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:elgahn-starn",
+      "label": "Elgahn Starn",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rivervale:sasie-rambleroot",
+      "label": "Sasie Rambleroot",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:colnro-cedar",
+      "label": "Colnro Cedar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -375112,6 +375304,1350 @@
       "id": "e-sells-31666",
       "source": "vendor:surefall-glade:arrivae-valleren",
       "target": "spell:tiny-companion",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31667",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "zone:ak-anon",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31668",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31669",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31670",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31671",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31672",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31673",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31674",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31675",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31676",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31677",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31678",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31679",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31680",
+      "source": "npc:ak-anon:a-s-a-vi",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31681",
+      "source": "npc:erudin:otumar",
+      "target": "zone:erudin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31682",
+      "source": "npc:erudin:otumar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31683",
+      "source": "npc:erudin:otumar",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31684",
+      "source": "npc:erudin:otumar",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31685",
+      "source": "npc:erudin:otumar",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31686",
+      "source": "npc:erudin:otumar",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31687",
+      "source": "npc:erudin:otumar",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31688",
+      "source": "npc:erudin:otumar",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31689",
+      "source": "npc:erudin:otumar",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31690",
+      "source": "npc:erudin:otumar",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31691",
+      "source": "npc:erudin:otumar",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31692",
+      "source": "npc:erudin:otumar",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31693",
+      "source": "npc:erudin:otumar",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31694",
+      "source": "npc:erudin:otumar",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31695",
+      "source": "npc:paineel:otumar",
+      "target": "zone:paineel",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31696",
+      "source": "npc:paineel:otumar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31697",
+      "source": "npc:paineel:otumar",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31698",
+      "source": "npc:paineel:otumar",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31699",
+      "source": "npc:paineel:otumar",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31700",
+      "source": "npc:paineel:otumar",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31701",
+      "source": "npc:paineel:otumar",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31702",
+      "source": "npc:paineel:otumar",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31703",
+      "source": "npc:paineel:otumar",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31704",
+      "source": "npc:paineel:otumar",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31705",
+      "source": "npc:paineel:otumar",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31706",
+      "source": "npc:paineel:otumar",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31707",
+      "source": "npc:paineel:otumar",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31708",
+      "source": "npc:paineel:otumar",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31709",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "zone:northern-felwithe",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31710",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31711",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31712",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31713",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31714",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31715",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31716",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31717",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31718",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31719",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31720",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31721",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31722",
+      "source": "npc:northern-felwithe:lanadin",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31723",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31724",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31725",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31726",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31727",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31728",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31729",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31730",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31731",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31732",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31733",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31734",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31735",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31736",
+      "source": "npc:east-freeport:pietro-drast",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31737",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "zone:west-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31738",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31739",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31740",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31741",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31742",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31743",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31744",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31745",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31746",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31747",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31748",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31749",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31750",
+      "source": "npc:west-freeport:lheron-drast",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31751",
+      "source": "npc:grobb:beka",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31752",
+      "source": "npc:grobb:beka",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31753",
+      "source": "npc:grobb:beka",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31754",
+      "source": "npc:grobb:beka",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31755",
+      "source": "npc:grobb:beka",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31756",
+      "source": "npc:grobb:beka",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31757",
+      "source": "npc:grobb:beka",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31758",
+      "source": "npc:grobb:beka",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31759",
+      "source": "npc:grobb:beka",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31760",
+      "source": "npc:grobb:beka",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31761",
+      "source": "npc:grobb:beka",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31762",
+      "source": "npc:grobb:beka",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31763",
+      "source": "npc:grobb:beka",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31764",
+      "source": "npc:grobb:beka",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31765",
+      "source": "npc:halas:waldadar",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31766",
+      "source": "npc:halas:waldadar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31767",
+      "source": "npc:halas:waldadar",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31768",
+      "source": "npc:halas:waldadar",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31769",
+      "source": "npc:halas:waldadar",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31770",
+      "source": "npc:halas:waldadar",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31771",
+      "source": "npc:halas:waldadar",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31772",
+      "source": "npc:halas:waldadar",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31773",
+      "source": "npc:halas:waldadar",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31774",
+      "source": "npc:halas:waldadar",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31775",
+      "source": "npc:halas:waldadar",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31776",
+      "source": "npc:halas:waldadar",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31777",
+      "source": "npc:halas:waldadar",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31778",
+      "source": "npc:halas:waldadar",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31779",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31780",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31781",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31782",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31783",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31784",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31785",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31786",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31787",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31788",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31789",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31790",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31791",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31792",
+      "source": "npc:south-kaladim:haneka-irontoe",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31793",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "zone:neriak-foreign-quarter",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31794",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31795",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31796",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31797",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31798",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31799",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31800",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31801",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31802",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31803",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31804",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31805",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31806",
+      "source": "npc:neriak-foreign-quarter:neuven",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31807",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "zone:new-sebilis-expedition",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31808",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31809",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31810",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31811",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31812",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31813",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31814",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31815",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31816",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31817",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31818",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31819",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31820",
+      "source": "npc:new-sebilis-expedition:klok-koglin",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31821",
+      "source": "npc:oggok:rlabok",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31822",
+      "source": "npc:oggok:rlabok",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31823",
+      "source": "npc:oggok:rlabok",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31824",
+      "source": "npc:oggok:rlabok",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31825",
+      "source": "npc:oggok:rlabok",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31826",
+      "source": "npc:oggok:rlabok",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31827",
+      "source": "npc:oggok:rlabok",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31828",
+      "source": "npc:oggok:rlabok",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31829",
+      "source": "npc:oggok:rlabok",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31830",
+      "source": "npc:oggok:rlabok",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31831",
+      "source": "npc:oggok:rlabok",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31832",
+      "source": "npc:oggok:rlabok",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31833",
+      "source": "npc:oggok:rlabok",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31834",
+      "source": "npc:oggok:rlabok",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31835",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "zone:north-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31836",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31837",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31838",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31839",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31840",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31841",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31842",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31843",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31844",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31845",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31846",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31847",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31848",
+      "source": "npc:north-qeynos:danloc-starn",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31849",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31850",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31851",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31852",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31853",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31854",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31855",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31856",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31857",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31858",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31859",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31860",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31861",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31862",
+      "source": "npc:south-qeynos:elgahn-starn",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31863",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "zone:rivervale",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31864",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31865",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31866",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31867",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31868",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31869",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31870",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31871",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31872",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31873",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31874",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31875",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31876",
+      "source": "npc:rivervale:sasie-rambleroot",
+      "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-31877",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-31878",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31879",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31880",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31881",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31882",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31883",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31884",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31885",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31886",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31887",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31888",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31889",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-31890",
+      "source": "npc:surefall-glade:colnro-cedar",
+      "target": "item:water-flask",
       "type": "sells"
     }
   ]
