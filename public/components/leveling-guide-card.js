@@ -92,7 +92,7 @@ ${RESET_CSS}
 .recipe-empty { font-size: 12px; font-style: italic; color: var(--ink-muted); margin-top: 16px; }
 `);
 
-const ALIGN_LABELS = { good: "Good City", evil: "Evil City", neutral: "Neutral City" };
+const ALIGN_LABELS = { good: "Good Zone", evil: "Evil Zone", neutral: "Neutral Zone" };
 
 // One badge per alignment side that actually has a covering city -- a side
 // with no vendor coverage at all (city.good/city.evil/city.neutral is null)
