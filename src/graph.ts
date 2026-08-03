@@ -656,6 +656,12 @@ export interface TradeskillVendorSummary {
   label: string;
   zoneId: string;
   zoneLabel: string;
+  // The real-world city zoneId belongs to (cityGroupLabel() below) -- always
+  // present, defaulting to zoneLabel for a zone with no explicit grouping.
+  // trades.js's own findNearMe() groups candidate stops by this so Freeport's
+  // three sub-zones (etc.) rank as one city's worth of coverage instead of
+  // three fragments, same fix getTradeskillLevelingCities() needed first.
+  cityGroup: string;
   // Only the items this vendor sells that a `tradeskill` recipe actually
   // uses -- a vendor's other, unrelated stock (a general goods vendor who
   // happens to also sell a Brewing ingredient) doesn't get listed here.
@@ -685,12 +691,79 @@ export function getTradeskillVendors(tradeskill: string, zoneId?: string): Trade
     const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
     if (!zoneEdge || (zoneId && zoneEdge.target !== zoneId)) continue;
     const zoneNode = helpers.nodeById(zoneEdge.target);
-    vendors.push({ id: npc.id, label: npc.label, zoneId: zoneEdge.target, zoneLabel: zoneNode?.label ?? zoneEdge.target, sells });
+    const zoneLabel = zoneNode?.label ?? zoneEdge.target;
+    vendors.push({
+      id: npc.id,
+      label: npc.label,
+      zoneId: zoneEdge.target,
+      zoneLabel,
+      cityGroup: zoneNode ? cityGroupLabel(zoneNode) : zoneLabel,
+      sells,
+    });
   }
   return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));
 }
 
+// The real-world city a zone belongs to (migration 402's `cityGroup`, e.g.
+// Freeport's three playable sub-zones all resolve to "Freeport") -- falls
+// back to the zone's own label for every other city (already its own single
+// zone, so grouping it with itself is a no-op), same "absence is the
+// default, not a gap" convention as `zone.faction`.
+function cityGroupLabel(zoneNode: NodeData): string {
+  return (zoneNode.cityGroup as string | undefined) ?? zoneNode.label;
+}
+
+// Deities whose worshippers a "good" city's own guards/vendors already treat
+// better than an "evil" deity's (and vice versa) -- matches app.js's own
+// Deity select; Agnostic/Prexus/Bristlebane/Veeshan are deliberately absent
+// from both, same as this graph's own faction data never singles them out.
+const GOOD_DEITIES = ["mithaniel marr", "tunare", "erollisi marr", "rodcet nife", "quellious", "karana", "the tribunal", "brell serilis"];
+const EVIL_DEITIES = ["innoruuk", "cazic-thule", "bertoxxulous", "rallos zek", "solusek ro"];
+
+// eqlwiki.com's own Freeport page explicitly describes it as a mixed city,
+// not aligned to either side -- "Freeport is a city of many layers, both
+// good and bad, as one would expect from a town so busy and so large,"
+// "Travelling through the city one can see an entire range of races,
+// including ogres and dark elves, humans and elves," and "The good races
+// travel its streets... and the dark races travel through the sewers to
+// reach most of the same destinations." That overrides whatever
+// deriveCityAlignment() below would otherwise compute from Freeport's own
+// in-graph deity faction table (flagged approximate, decisions/
+// faction-data-is-approximate.md -- not authoritative for an edge case like
+// this one) -- an explicit eqlwiki statement about the city itself beats an
+// inference from adjacent data. cityGroupLabel(), not raw zoneId, since this
+// is a fact about Freeport as a whole, not any one of its three sub-zones.
+const KNOWN_MIXED_CITY_GROUPS = new Set(["Freeport"]);
+
+// A city's good/evil alignment, derived from its own zone.faction.deity
+// table -- not a stored/hand-guessed fact (a prior version hardcoded classic
+// EQ's well-known starting-city convention; see decisions/
+// city-alignment-good-evil.md for why that got superseded). "Good" means
+// evil-deity worshippers get treated worse here than good-deity ones
+// (wont_sell/kos vs safe); "evil" is the mirror image. A zone with no deity
+// table, or one that doesn't discriminate either way (Cabilis's own faction
+// data is neutral across every deity -- Iksar culture isn't deity-driven the
+// way the good/evil city split is elsewhere), is "neutral" -- same bucket as
+// KNOWN_MIXED_CITY_GROUPS' own explicitly-documented mixed cities, just
+// arrived at by absence of a signal rather than eqlwiki stating it outright.
+function deriveCityAlignment(zoneNode: NodeData): "good" | "evil" | "neutral" {
+  if (KNOWN_MIXED_CITY_GROUPS.has(cityGroupLabel(zoneNode))) return "neutral";
+  const deityTable = (zoneNode.faction as { deity?: Record<string, FactionStanding> } | undefined)?.deity;
+  if (!deityTable) return "neutral";
+  const goodWorst = worstStanding(...GOOD_DEITIES.map((d) => deityTable[d]).filter((s): s is FactionStanding => !!s));
+  const evilWorst = worstStanding(...EVIL_DEITIES.map((d) => deityTable[d]).filter((s): s is FactionStanding => !!s));
+  if (STANDING_SEVERITY[evilWorst] > STANDING_SEVERITY[goodWorst]) return "good";
+  if (STANDING_SEVERITY[goodWorst] > STANDING_SEVERITY[evilWorst]) return "evil";
+  return "neutral";
+}
+
 export interface CityRecommendation {
+  cityLabel: string;
+  // The single best sub-zone within that city to deep-link to (highest own
+  // ingredient coverage among its siblings, alphabetical tiebreak) -- most
+  // cities are already one zone, so this is usually just cityLabel's own
+  // zone; a multi-sub-zone city (Freeport, Neriak, ...) picks whichever of
+  // its zones covers the most on its own.
   zoneId: string;
   zoneLabel: string;
   ingredientCount: number;
@@ -700,16 +773,30 @@ export interface TradeskillLevelingCities {
   totalIngredients: number;
   good: CityRecommendation | null;
   evil: CityRecommendation | null;
+  neutral: CityRecommendation | null;
 }
 
-// Which good city and which evil city best cover a tradeskill's leveling
+// Which good, evil, and neutral city best cover a tradeskill's leveling
 // path, per decisions/city-alignment-good-evil.md -- scored by how many
-// distinct ingredients across only the levelingGuide=true recipes (the same
-// fixed path leveling-guide-card.js renders, not the whole recipe book) at
-// least one vendor in that city sells. `zone.alignment` (migration 401) is
-// only set on 23 of the 27 city zones; every other city (and every
-// non-city zone) is silently excluded from both sides, same "absence isn't
-// a gap" convention as an ingredient with no `sells` edge.
+// distinct *vendor-purchasable* ingredients across only the levelingGuide=
+// true recipes (the same fixed path leveling-guide-card.js renders, not the
+// whole recipe book) at least one vendor across the *whole real-world city*
+// sells (cityGroupLabel above), not per playable sub-zone -- scoring
+// Freeport's three sub-zones as three unrelated cities made none of them
+// individually beat South Qeynos, even though Freeport as a whole covers
+// more. Deliberately not restricted to `zoneType === "city"` -- Kelethin
+// (the Wood Elf good city) has no zone node of its own in this graph at all,
+// its vendors are `located_in` "Greater Faydark" (zoneType "open_world"), so
+// a city-only filter would silently drop a real, correctly-scored good city
+// rather than a spurious one. The same real-vendor + real-deity-table
+// requirements below already keep genuinely irrelevant zones out.
+//
+// The denominator only counts ingredients at least one vendor *anywhere*
+// sells -- Baking's own leveling guide calls for several ingredients that
+// are crafted/foraged/dropped-only and never vendor-sold at all (Clump of
+// Dough, Pie Tin, Dragon Meat, ...); counting those against every city's
+// score made even a city with perfect vendor coverage of the purchasable
+// set read as falling short (5/13 looks like a gap; 5/5 is what it is).
 export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevelingCities {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
@@ -718,32 +805,47 @@ export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevel
       .filter((n) => n.type === "recipe" && n.tradeskill === tradeskill && n.levelingGuide)
       .flatMap((n) => helpers.edgesFrom(n.id, "uses").map((e) => e.target))
   );
+  const purchasableIds = new Set([...ingredientIds].filter((id) => helpers.edgesTo(id, "sells").length > 0));
 
-  const covered = new Map<string, { zoneLabel: string; alignment: string; items: Set<string> }>();
+  const covered = new Map<
+    string,
+    { alignment: "good" | "evil" | "neutral"; items: Set<string>; subZones: Map<string, { zoneLabel: string; items: Set<string> }> }
+  >();
   for (const npc of graph.nodes) {
     if (npc.type !== "npc" || !(npc.roles as string[] | undefined)?.includes("vendor")) continue;
     const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
     const zoneNode = zoneEdge ? helpers.nodeById(zoneEdge.target) : undefined;
-    const alignment = zoneNode?.alignment as string | undefined;
-    if (!zoneEdge || (alignment !== "good" && alignment !== "evil")) continue;
+    if (!zoneEdge || !zoneNode) continue;
+    const alignment = deriveCityAlignment(zoneNode);
 
-    const sold = helpers.edgesFrom(npc.id, "sells").map((e) => e.target).filter((id) => ingredientIds.has(id));
+    const sold = helpers.edgesFrom(npc.id, "sells").map((e) => e.target).filter((id) => purchasableIds.has(id));
     if (!sold.length) continue;
-    if (!covered.has(zoneEdge.target)) covered.set(zoneEdge.target, { zoneLabel: zoneNode!.label, alignment, items: new Set() });
-    const entry = covered.get(zoneEdge.target)!;
-    for (const id of sold) entry.items.add(id);
+
+    const cityLabel = cityGroupLabel(zoneNode);
+    if (!covered.has(cityLabel)) covered.set(cityLabel, { alignment, items: new Set(), subZones: new Map() });
+    const city = covered.get(cityLabel)!;
+    if (!city.subZones.has(zoneEdge.target)) city.subZones.set(zoneEdge.target, { zoneLabel: zoneNode.label, items: new Set() });
+    const subZone = city.subZones.get(zoneEdge.target)!;
+    for (const id of sold) {
+      city.items.add(id);
+      subZone.items.add(id);
+    }
   }
 
-  const pickBest = (alignment: "good" | "evil"): CityRecommendation | null => {
-    let best: CityRecommendation | null = null;
-    for (const [zoneId, city] of covered) {
+  const pickBest = (alignment: "good" | "evil" | "neutral"): CityRecommendation | null => {
+    let best: (CityRecommendation & { itemsSize: number }) | null = null;
+    for (const [cityLabel, city] of covered) {
       if (city.alignment !== alignment) continue;
-      if (!best || city.items.size > best.ingredientCount) best = { zoneId, zoneLabel: city.zoneLabel, ingredientCount: city.items.size };
+      if (best && city.items.size <= best.itemsSize) continue;
+      const [entryZoneId, entryZone] = [...city.subZones.entries()].sort(
+        (a, b) => b[1].items.size - a[1].items.size || a[1].zoneLabel.localeCompare(b[1].zoneLabel)
+      )[0];
+      best = { cityLabel, zoneId: entryZoneId, zoneLabel: entryZone.zoneLabel, ingredientCount: city.items.size, itemsSize: city.items.size };
     }
-    return best;
+    return best ? { cityLabel: best.cityLabel, zoneId: best.zoneId, zoneLabel: best.zoneLabel, ingredientCount: best.ingredientCount } : null;
   };
 
-  return { totalIngredients: ingredientIds.size, good: pickBest("good"), evil: pickBest("evil") };
+  return { totalIngredients: purchasableIds.size, good: pickBest("good"), evil: pickBest("evil"), neutral: pickBest("neutral") };
 }
 
 export interface ItemSourceZone {

@@ -101,5 +101,6 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Browse's Item Type/Subtype filter: computed from real item fields, not a stored classification](recipe-item-type-subtype-filter.md)
 - [Alternate routes: reuse the danger-routing hop-budget DFS, cap at 3 total](alternate-routes.md)
 - [Vendors' Type filter: a stored `category` on sold items, not a computed classification](vendors-type-filter.md)
-- [City alignment (good/evil): classic-EQ convention, not yet eqlwiki-verified](city-alignment-good-evil.md)
+- [City alignment (good/evil): derived from this graph's own faction data](city-alignment-good-evil.md)
+- [Shopping list rows group by sourcing category, not one flat list](shopping-list-sourcing-categories.md)
 

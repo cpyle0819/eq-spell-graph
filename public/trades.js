@@ -98,8 +98,28 @@ function saveShoppingList() {
   localStorage.setItem(SHOPPING_LIST_KEY, JSON.stringify(shoppingList));
 }
 
+// "vendor" (buy it), "crafted" (some recipe produces it), "gathered"
+// (foraged/fished/dropped/other free-text source), or "unknown" (no sourcing
+// data loaded for this id -- e.g. a leftover shopping-list item from a
+// tradeskill that isn't currently selected, since rawVendors/rawItemSources
+// only ever cover the current one). Priority order matches "how would a
+// player actually get this": buying beats crafting beats hunting it down,
+// so an item that's both vendor-sold and droppable (Bat Wing) still shows
+// under Vendor, the simplest real option.
+function categorizeShoppingItem(id, hasVendor, sources) {
+  if (hasVendor) return "vendor";
+  if (sources?.craftedIn?.length) return "crafted";
+  if (sources && (sources.foraged.length || sources.fished.length || sources.dropped.length || sources.other)) return "gathered";
+  return "unknown";
+}
+
 function renderShoppingList() {
-  document.getElementById("shopping-list-panel").items = shoppingList;
+  const vendorItemIds = new Set(rawVendors.flatMap((v) => v.sells.map((s) => s.id)));
+  const items = shoppingList.map((i) => ({
+    ...i,
+    category: categorizeShoppingItem(i.id, vendorItemIds.has(i.id), rawItemSources.get(i.id)),
+  }));
+  document.getElementById("shopping-list-panel").items = items;
 }
 
 // Shared by both add paths below -- doesn't save/render itself, so
@@ -145,20 +165,30 @@ function clearShoppingList() {
   renderShoppingList();
 }
 
-// shopping-list-panel.js's own "Find Near Me" -- ranks every vendor zone
-// that sells *something* on the shopping list by how much of the list it
-// covers (most items first, nearest as the tiebreak), and shows the top 5.
-// Deliberately not a "here's your one trip" minimal-stop plan: an earlier
-// version tried to compute the smallest covering set of stops, but that
-// always hides options ("why isn't the zone I actually wanted to visit even
-// listed?") and is also easy to get subtly wrong (a zone that's the single
-// best pick for *one* item can look artificially attractive in a
+// shopping-list-panel.js's own "Find Near Me" -- ranks every candidate real-
+// world city that sells *something* on the shopping list by how much of the
+// list it covers (most items first, nearest as the tiebreak), and shows the
+// top 5. Deliberately not a "here's your one trip" minimal-stop plan: an
+// earlier version tried to compute the smallest covering set of stops, but
+// that always hides options ("why isn't the zone I actually wanted to visit
+// even listed?") and is also easy to get subtly wrong (a zone that's the
+// single best pick for *one* item can look artificially attractive in a
 // stop-by-stop greedy even when a slightly farther zone would've covered
-// the whole list). Scoring each zone independently against the full list,
+// the whole list). Scoring each city independently against the full list,
 // instead of a shrinking "still needed" set, sidesteps that class of bug
 // entirely -- and showing several ranked options instead of one prescribed
 // route is more useful anyway when the "best" stop is a judgment call
 // (e.g. slightly more items vs. slightly closer).
+//
+// Candidates are grouped by real-world city (TradeskillVendorSummary's own
+// cityGroup, src/graph.ts), not raw zoneId -- Freeport's three playable
+// sub-zones (etc.) each stop scoring independently hid how much of the
+// shopping list Freeport as a whole actually covers, the same bug
+// getTradeskillLevelingCities() hit first (decisions/
+// city-alignment-good-evil.md). A group's own nearest reachable sub-zone
+// stands in for the whole city's hops/route -- once you've walked into one
+// of a city's sub-zones, reaching its others is a short in-city walk, not a
+// second trip.
 //
 // rawVendors already covers every vendor for the currently selected
 // tradeskill (fetched unfiltered, see the top-of-file comment) -- every
@@ -184,9 +214,11 @@ async function findNearMe(fromZoneId) {
   // "which vendor gets credit for this item" is deterministic below, when a
   // zone has more than one seller of the same item).
   const zoneItemVendors = new Map();
+  const cityOfZone = new Map(); // zoneId -> cityGroup label
   for (const [itemId, vendors] of itemVendors) {
     for (const vendor of vendors) {
       if (!distances[vendor.zoneId]) continue;
+      cityOfZone.set(vendor.zoneId, vendor.cityGroup);
       if (!zoneItemVendors.has(vendor.zoneId)) zoneItemVendors.set(vendor.zoneId, new Map());
       const byItem = zoneItemVendors.get(vendor.zoneId);
       if (!byItem.has(itemId)) byItem.set(itemId, []);
@@ -197,22 +229,33 @@ async function findNearMe(fromZoneId) {
     for (const vendors of byItem.values()) vendors.sort((a, b) => a.label.localeCompare(b.label));
   }
 
-  const stops = [...zoneItemVendors.entries()]
-    .map(([zoneId, byItem]) => {
-      const dist = distances[zoneId];
+  const zoneIdsByCity = new Map(); // cityGroup label -> zoneId[]
+  for (const [zoneId, city] of cityOfZone) {
+    if (!zoneIdsByCity.has(city)) zoneIdsByCity.set(city, []);
+    zoneIdsByCity.get(city).push(zoneId);
+  }
+
+  const stops = [...zoneIdsByCity.entries()]
+    .map(([cityLabel, zoneIds]) => {
+      const entryZoneId = zoneIds.reduce((a, b) => (distances[b].hops < distances[a].hops ? b : a));
+      const dist = distances[entryZoneId];
       const vendorsByI = new Map();
-      for (const [itemId, vendors] of byItem) {
-        const vendor = vendors[0];
-        if (!vendorsByI.has(vendor.id)) vendorsByI.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
-        vendorsByI.get(vendor.id).items.push(shoppingList.find((i) => i.id === itemId));
+      const items = new Set();
+      for (const zoneId of zoneIds) {
+        for (const [itemId, vendors] of zoneItemVendors.get(zoneId)) {
+          items.add(itemId);
+          const vendor = vendors[0];
+          if (!vendorsByI.has(vendor.id)) vendorsByI.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
+          vendorsByI.get(vendor.id).items.push(shoppingList.find((i) => i.id === itemId));
+        }
       }
       return {
-        zoneId,
-        zoneLabel: rawVendors.find((v) => v.zoneId === zoneId)?.zoneLabel || zoneId,
+        zoneId: entryZoneId,
+        zoneLabel: cityLabel,
         hops: dist.hops,
         route: dist.route,
         alternates: dist.alternates,
-        itemCount: byItem.size,
+        itemCount: items.size,
         vendors: [...vendorsByI.values()].sort((a, b) => a.label.localeCompare(b.label)),
       };
     })

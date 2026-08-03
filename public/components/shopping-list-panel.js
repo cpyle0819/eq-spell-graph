@@ -1,7 +1,19 @@
-// <shopping-list-panel>, with `.items = [{id, label, quantity}]` and
-// `.zones = [{id, label}]` set as two properties. The Tradeskills page's own
-// right-side panel (same bordered marble box + sticky-on-desktop treatment
-// as status-panel.js, the Spell Finder's equivalent right panel) collecting
+// <shopping-list-panel>, with `.items = [{id, label, quantity, category}]`
+// and `.zones = [{id, label}]` set as two properties. `category` is one of
+// "vendor"/"crafted"/"gathered"/"unknown" (trades.js's own
+// categorizeShoppingItem(), decisions/city-alignment-good-evil.md) -- rows
+// render grouped under a subheader per category rather than one flat list,
+// since "how do I actually get this" is a different question per bucket
+// (buy it vs. craft another recipe vs. forage/fish/loot it in the world).
+// Groups render in a fixed vendor/crafted/gathered/unknown order and only
+// when non-empty; an item's category is trades.js's own best read of
+// already-fetched vendor/item-source data, not a stored fact, so an item
+// added under a previously-selected tradeskill (whose sourcing data isn't
+// loaded anymore) falls back to "unknown" rather than a wrong guess.
+//
+// The Tradeskills page's own right-side panel (same bordered marble box +
+// sticky-on-desktop treatment as status-panel.js, the Spell Finder's
+// equivalent right panel) collecting
 // ingredients added via the "+" drawer on any ingredient item-chip
 // (recipe-card.js/leveling-guide-card.js's formula chips, ingredient-
 // card.js's own header button).
@@ -57,6 +69,15 @@ ${RESET_CSS}
 }
 .shopping-empty { padding: 16px 20px; text-align: center; font-size: 12px; color: var(--ink-muted); line-height: 1.5; }
 .shopping-list { display: flex; flex-direction: column; padding: 6px 0; }
+/* Each category group is its own block, not a shared border between the
+   last row of one and the first of the next -- a group boundary should
+   read as a real break, not the same seam a same-category row-to-row
+   border uses (.shopping-row + .shopping-row below). */
+.shopping-group + .shopping-group { border-top: 2px solid var(--edge-lo); }
+.shopping-group-label {
+  padding: 8px 20px 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-muted);
+}
 .shopping-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 20px; font-size: 12px; color: var(--ink-muted); }
 .shopping-row + .shopping-row { border-top: 1px solid rgba(0, 0, 0, 0.25); }
 /* This panel's own dark stone/marble background, not the light parchment
@@ -105,6 +126,30 @@ ${RESET_CSS}
 }
 `);
 
+// Fixed display order (not alphabetical) -- "how would you actually get
+// this" reads best as buy, then craft, then go hunt/gather it down, then
+// whatever's left with no known source at all. A group with zero items in
+// it renders nothing (see render()), so a shopping list with only vendor
+// items shows no empty "Crafted"/"Gathered" headers.
+const CATEGORY_GROUPS = [
+  { key: "vendor", label: "Sold By Vendors" },
+  { key: "crafted", label: "Crafted" },
+  { key: "gathered", label: "Foraged / Fished / Dropped" },
+  { key: "unknown", label: "Unknown Source" },
+];
+
+function shoppingRowHtml(i) {
+  return `
+        <div class="shopping-row">
+          ${itemChipTag({ id: i.id, label: i.label }, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(i.label)}` })}
+          <span class="shopping-qty-controls">
+            <button type="button" class="qty-btn qty-dec" data-id="${i.id}" aria-label="Decrease ${i.label} quantity">−</button>
+            <span class="shopping-qty">${i.quantity}</span>
+            <button type="button" class="qty-btn qty-inc" data-id="${i.id}" aria-label="Increase ${i.label} quantity">+</button>
+          </span>
+        </div>`;
+}
+
 class ShoppingListPanel extends HTMLElement {
   #items = [];
   #zones = [];
@@ -132,19 +177,15 @@ class ShoppingListPanel extends HTMLElement {
   render() {
     const items = this.#items;
     const bodyHtml = items.length
-      ? `<div class="shopping-list">${items
-          .map(
-            (i) => `
-        <div class="shopping-row">
-          ${itemChipTag({ id: i.id, label: i.label }, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(i.label)}` })}
-          <span class="shopping-qty-controls">
-            <button type="button" class="qty-btn qty-dec" data-id="${i.id}" aria-label="Decrease ${i.label} quantity">−</button>
-            <span class="shopping-qty">${i.quantity}</span>
-            <button type="button" class="qty-btn qty-inc" data-id="${i.id}" aria-label="Increase ${i.label} quantity">+</button>
-          </span>
-        </div>`
-          )
-          .join("")}</div>`
+      ? `<div class="shopping-list">${CATEGORY_GROUPS.map(({ key, label }) => {
+          const groupItems = items.filter((i) => (i.category ?? "unknown") === key);
+          if (!groupItems.length) return "";
+          return `
+        <div class="shopping-group">
+          <div class="shopping-group-label">${label}</div>
+          ${groupItems.map(shoppingRowHtml).join("")}
+        </div>`;
+        }).join("")}</div>`
       : `<div class="shopping-empty">No ingredients added yet. Look for the "+" on an ingredient.</div>`;
 
     const zoneOptions = this.#zones.map((z) => `<option value="${z.id}">${z.label}</option>`).join("");

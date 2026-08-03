@@ -7,8 +7,8 @@
 // (recipe-card.js's job). `recipes` is RecipeSummary[]; `levelingCities` is
 // TradeskillLevelingCities | null (src/graph.ts's
 // getTradeskillLevelingCities(), decisions/city-alignment-good-evil.md) --
-// the best good/evil city to shop this guide's own ingredient set, rendered
-// as a small badge pair under the header.
+// the best good/evil/neutral city to shop this guide's own ingredient set,
+// rendered as a small badge row under the header.
 //
 // A standalone panel, not a CardBase list item -- same "self-contained
 // dossier shell" shape as zone-dossier.js (its own bevel-panel + parchment-
@@ -61,11 +61,15 @@ ${RESET_CSS}
   font-variant-numeric: tabular-nums;
 }
 
-/* Good/evil city recommendation (decisions/city-alignment-good-evil.md) --
-   two small badges, not a third card: a supplementary fact about the guide
-   below, not its own entity. Empty (no ingredient coverage in either
-   alignment) renders nothing rather than an empty row. */
-.guide-cities { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+/* Good/evil/neutral city recommendation (decisions/
+   city-alignment-good-evil.md) -- up to three small badges, not a third
+   card: a supplementary fact about the guide below, not its own entity.
+   Empty (no ingredient coverage in any of the three) renders nothing at
+   all, caption included -- there's nothing to caption if no badge has
+   anything to say. */
+.guide-cities { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.guide-cities-caption { font-size: 11px; font-style: italic; color: var(--ink-muted); }
+.guide-cities-badges { display: flex; gap: 10px; flex-wrap: wrap; }
 .city-badge {
   display: flex; align-items: center; gap: 6px;
   font-size: 12px; padding: 4px 10px; border-radius: 3px;
@@ -76,9 +80,10 @@ ${RESET_CSS}
 }
 .city-badge .align-good { color: #7fbf6a; font-weight: 700; }
 .city-badge .align-evil { color: #c0554a; font-weight: 700; }
+.city-badge .align-neutral { color: var(--ink-muted); font-weight: 700; }
 .city-badge a { color: #c9a25e; text-decoration: none; }
 .city-badge a:hover, .city-badge a:focus-visible { text-decoration: underline; }
-.city-badge .city-count { color: var(--parch-ink-soft); }
+.city-badge .city-count { color: var(--ink-muted); }
 
 .guide-scroll {
   position: relative;
@@ -142,27 +147,62 @@ function recipeRowHtml(recipe) {
   `;
 }
 
+const ALIGN_LABELS = { good: "Good City", evil: "Evil City", neutral: "Neutral City" };
+
 // One badge per alignment side that actually has a covering city -- a side
-// with no vendor coverage at all (city.good/city.evil is null) renders
-// nothing rather than a dead "no recommendation" badge, same "absence isn't
-// a gap to fill" convention city-alignment-good-evil.md's own data uses.
+// with no vendor coverage at all (city.good/city.evil/city.neutral is null)
+// renders nothing rather than a dead "no recommendation" badge, same
+// "absence isn't a gap to fill" convention city-alignment-good-evil.md's own
+// data uses. "Neutral" (src/graph.ts's deriveCityAlignment()) covers both a
+// city eqlwiki itself documents as genuinely mixed (Freeport) and one this
+// graph's faction data just doesn't discriminate on (Cabilis) -- either way
+// it's a real third option, not a lesser one, so it renders the same way as
+// Good/Evil, not folded into either or hidden.
 // Deep-links to maps.html?to=<zoneLabel>, same convention leveling-guide.html
 // (the zone-revamp page, not this one) already uses for a plain zone name.
+// The count spells out "N of M ingredients" in the visible label itself, not
+// a bare "(N/M)" -- a slash-separated pair reads as a magic number without
+// units; `title` repeats it in full prose (what "ingredients" means here:
+// vendor-sourceable only, see cityBadgesHtml's own caption) for anyone
+// hovering. `total` (src/graph.ts's getTradeskillLevelingCities()) already
+// excludes this guide's own crafted/foraged/dropped-only ingredients --
+// ones no vendor anywhere sells, so no city could ever cover them -- so a
+// perfect score reads as "N of N," not as an unexplained gap.
 function cityBadgeHtml(align, city, total) {
   if (!city) return "";
-  const label = align === "good" ? "Good City" : "Evil City";
+  const label = ALIGN_LABELS[align];
+  const title = `${city.ingredientCount} of this guide's ${total} vendor-sourceable ingredients are sold in ${city.cityLabel}`;
+  // Links to the city's own best sub-zone (city.zoneLabel) even though the
+  // visible name is the real-world city (city.cityLabel) -- Freeport itself
+  // isn't a single zone maps.html can route to, only its three sub-zones
+  // are (decisions/city-alignment-good-evil.md).
   return `
-    <span class="city-badge">
+    <span class="city-badge" title="${title}">
       <span class="align-${align}">${label}:</span>
-      <a href="maps.html?to=${encodeURIComponent(city.zoneLabel)}">${city.zoneLabel}</a>
-      <span class="city-count">(${city.ingredientCount}/${total})</span>
+      <a href="maps.html?to=${encodeURIComponent(city.zoneLabel)}">${city.cityLabel}</a>
+      <span class="city-count">${city.ingredientCount} of ${total} ingredients</span>
     </span>
   `;
 }
 
+// A one-line caption above the badges spells out what they mean up front
+// (issue: the bare badges gave no hint what the count was even counting) --
+// visible text, not just each badge's own hover title, since a touch device
+// has no hover at all to discover that detail on. Names "vendor-sourceable"
+// explicitly -- this guide's own crafted/foraged/dropped-only ingredients
+// (never sold by any vendor) don't count toward either total, so a city
+// showing e.g. "5 of 5" already covers everything actually shoppable, even
+// though the guide itself calls for more ingredients than that.
 function cityBadgesHtml(cities) {
-  if (!cities || (!cities.good && !cities.evil)) return "";
-  return cityBadgeHtml("good", cities.good, cities.totalIngredients) + cityBadgeHtml("evil", cities.evil, cities.totalIngredients);
+  if (!cities || (!cities.good && !cities.evil && !cities.neutral)) return "";
+  return `
+    <span class="guide-cities-caption">Best good/evil/neutral city to buy this guide's vendor-sourceable ingredients from:</span>
+    <span class="guide-cities-badges">
+      ${cityBadgeHtml("good", cities.good, cities.totalIngredients)}
+      ${cityBadgeHtml("evil", cities.evil, cities.totalIngredients)}
+      ${cityBadgeHtml("neutral", cities.neutral, cities.totalIngredients)}
+    </span>
+  `;
 }
 
 class LevelingGuideCard extends HTMLElement {
