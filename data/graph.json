@@ -181061,6 +181061,14 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "npc:greater-faydark:tuloline",
+      "label": "Tuloline",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -389282,6 +389290,90 @@
       "id": "e-sells-33703",
       "source": "npc:toxxulia-forest:emil-parsini",
       "target": "item:large-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-33704",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-33705",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33706",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:bandages",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33707",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:boots-of-the-long-road",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33708",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:bottle-of-milk",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33709",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:fishing-bait",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33710",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:fishing-pole",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33711",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:iron-ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33712",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:large-harness",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33713",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:malachite",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33714",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:ration",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33715",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:tiny-dagger",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33716",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:trinket-pouch",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33717",
+      "source": "npc:greater-faydark:tuloline",
+      "target": "item:water-flask",
       "type": "sells"
     }
   ]
