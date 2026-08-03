@@ -903,6 +903,11 @@ export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevel
     const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
     const zoneNode = zoneEdge ? helpers.nodeById(zoneEdge.target) : undefined;
     if (!zoneEdge || !zoneNode) continue;
+    // A confirmed-out-of-era city (e.g. Firiona Vie, Kunark) can't be the
+    // best recommendation for a fresh leveler -- same era gate quests use
+    // (decisions/quest-era-flagging.md), just without a toggle to reveal it
+    // here since this is a single "best pick," not a filterable list.
+    if (isOutOfEra(zoneNode.era as string | undefined, helpers)) continue;
     const alignment = deriveCityAlignment(zoneNode);
 
     const sold = helpers.edgesFrom(npc.id, "sells").map((e) => e.target).filter((id) => purchasableIds.has(id));
