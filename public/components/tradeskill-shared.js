@@ -45,13 +45,7 @@ export const RECIPE_ROW_CSS = `
 .tree-toggle-btn {
   font-size: 11px; color: var(--gold); background: none; border: none;
   padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
-  /* A native <button>'s own UA default centers its text and (inside a flex
-     column ancestor with the usual align-items: stretch) stretches to the
-     full row width -- either alone would visually shove "Show Ingredient
-     Tree" away from whatever it's meant to sit beside. align-self here
-     keeps its width to its own content regardless of the parent's flex
-     direction, so this button is safe to drop into any layout context. */
-  text-align: left; align-self: flex-start;
+  text-align: left;
 }
 .tree-toggle-btn:hover, .tree-toggle-btn:focus-visible { text-decoration: underline; }
 .recipe-tree-container[hidden] { display: none; }
