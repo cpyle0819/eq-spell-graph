@@ -181069,6 +181069,22 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "npc:east-commonlands:merra-clayfinger",
+      "label": "Merra Clayfinger",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:qeynos-catacombs:felia-milltorn",
+      "label": "Felia Milltorn",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -389374,6 +389390,696 @@
       "id": "e-sells-33717",
       "source": "npc:greater-faydark:tuloline",
       "target": "item:water-flask",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33718",
+      "source": "npc:ak-anon:a-clockwork-merchant",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33719",
+      "source": "npc:ak-anon:drekon-vebnebber",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33720",
+      "source": "npc:ak-anon:a-clockwork-priest",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33721",
+      "source": "npc:east-cabilis:rastok",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33722",
+      "source": "npc:east-cabilis:klok-vednir",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33723",
+      "source": "npc:west-cabilis:lybar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33724",
+      "source": "npc:west-commonlands:ruby-boxcrafter",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33725",
+      "source": "npc:east-commonlands:ponila-quickfingers",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-33726",
+      "source": "npc:east-commonlands:merra-clayfinger",
+      "target": "zone:east-commonlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-33727",
+      "source": "npc:east-commonlands:merra-clayfinger",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33728",
+      "source": "npc:erudin:ayth-niphiria",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33729",
+      "source": "npc:erudin:stella-breezemoon",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33730",
+      "source": "npc:erudin:fhania-aserdon",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33731",
+      "source": "npc:erudin:nerth-sailwind",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33732",
+      "source": "npc:erudin:ghemna-nyjuss",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33733",
+      "source": "npc:erudin:luren-renthalis",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33734",
+      "source": "npc:erudin:reihan-wilhemson",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33735",
+      "source": "npc:erudin:kisrin-breezeshadow",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33736",
+      "source": "npc:erudin:reko-saltamer",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33737",
+      "source": "npc:erudin:rem-knarjon",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33738",
+      "source": "npc:erudin-palace:vall-stonewisp",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33739",
+      "source": "npc:erudin-palace:tan-monosty",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33740",
+      "source": "npc:erudin-palace:judge-monosty",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33741",
+      "source": "npc:northern-felwithe:merchant-issynal",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33742",
+      "source": "npc:northern-felwithe:tylar-windspirit",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33743",
+      "source": "npc:northern-felwithe:isyna-firspanyl",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33744",
+      "source": "npc:firiona-vie:dran-hieth",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33745",
+      "source": "npc:firiona-vie:broawn-goshart",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33746",
+      "source": "npc:firiona-vie:dom-pathfinder",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33747",
+      "source": "npc:east-freeport:ralfson-gerositan",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33748",
+      "source": "npc:east-freeport:celanie-xtoria",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33749",
+      "source": "npc:east-freeport:prasen-rusgor",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33750",
+      "source": "npc:east-freeport:tenni-kohern",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33751",
+      "source": "npc:north-freeport:mevah-toklius",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33752",
+      "source": "npc:north-freeport:hulos-ghenar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33753",
+      "source": "npc:north-freeport:jekel-enhied",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33754",
+      "source": "npc:north-freeport:jusia-vapious",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33755",
+      "source": "npc:west-freeport:asnod-marnoc",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33756",
+      "source": "npc:west-freeport:fania-esruc",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33757",
+      "source": "npc:west-freeport:tyeg-envil",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33758",
+      "source": "npc:greater-faydark:innkeep-wuleran",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33759",
+      "source": "npc:greater-faydark:merchant-aildien",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33760",
+      "source": "npc:greater-faydark:merchant-aluuvila",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33761",
+      "source": "npc:greater-faydark:merchant-tilluen",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33762",
+      "source": "npc:greater-faydark:merchant-tenra",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33763",
+      "source": "npc:greater-faydark:merchant-gililya",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33764",
+      "source": "npc:greater-faydark:merchant-tuluvdar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33765",
+      "source": "npc:greater-faydark:merchant-milania",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33766",
+      "source": "npc:greater-faydark:merchant-muvien",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33767",
+      "source": "npc:grobb:gluku",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33768",
+      "source": "npc:grobb:graktak",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33769",
+      "source": "npc:grobb:kagbkek",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33770",
+      "source": "npc:grobb:zumzal",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33771",
+      "source": "npc:halas:holana-oleary",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33772",
+      "source": "npc:halas:rose-mcdowell",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33773",
+      "source": "npc:halas:kar-o-dansin",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33774",
+      "source": "npc:halas:elona-mcmahon",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33775",
+      "source": "npc:high-keep:merchant-dominik",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33776",
+      "source": "npc:high-keep:treasurer-lynn",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33777",
+      "source": "npc:south-kaladim:vacto-molunel",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33778",
+      "source": "npc:south-kaladim:aarina-ratsbone",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33779",
+      "source": "npc:south-kaladim:handaaf-orcslicer",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33780",
+      "source": "npc:north-kaladim:kafia-ratsbone",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33781",
+      "source": "npc:north-kaladim:darthur-nightseer",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33782",
+      "source": "npc:north-kaladim:baleki-nightseer",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33783",
+      "source": "npc:kithicor-forest:eithne-walker",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33784",
+      "source": "npc:lake-rathetear:srynda",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33785",
+      "source": "npc:neriak-foreign-quarter:palais-derekor",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33786",
+      "source": "npc:neriak-foreign-quarter:relgor",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33787",
+      "source": "npc:neriak-foreign-quarter:namarg",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33788",
+      "source": "npc:neriak-commons:issva-h-rugla",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33789",
+      "source": "npc:neriak-3rd-gate:cazum-n-tan",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33790",
+      "source": "npc:neriak-3rd-gate:jerris-w-selo",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33791",
+      "source": "npc:neriak-3rd-gate:kanthu-m-rekkor",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33792",
+      "source": "npc:neriak-3rd-gate:tzanso-s-tai",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33793",
+      "source": "npc:northern-karana:mrysila",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33794",
+      "source": "npc:oasis-of-marr:synthan",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33795",
+      "source": "npc:oggok:brokk-boxtripper",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33796",
+      "source": "npc:oggok:rora-dirtstamp",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33797",
+      "source": "npc:oggok:iksob-darkchaser",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33798",
+      "source": "npc:oggok:snarg-bonesmacker",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33799",
+      "source": "npc:the-overthere:tin-merchant-ii",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33800",
+      "source": "npc:paineel:tenralus-brackmar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33801",
+      "source": "npc:paineel:rallia-hapera",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33802",
+      "source": "npc:paineel:geomar-hapera",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-33803",
+      "source": "npc:qeynos-catacombs:felia-milltorn",
+      "target": "zone:qeynos-catacombs",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-33804",
+      "source": "npc:qeynos-catacombs:felia-milltorn",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33805",
+      "source": "npc:south-qeynos:bassanio-weekin",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33806",
+      "source": "npc:south-qeynos:fellesha-varshen",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33807",
+      "source": "npc:south-qeynos:raheim-varshen",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33808",
+      "source": "npc:south-qeynos:gahna-salbeen",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33809",
+      "source": "npc:south-qeynos:sansa-nusk",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33810",
+      "source": "npc:south-qeynos:bisdlo-ravtahm",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33811",
+      "source": "npc:south-qeynos:rabley-trumend",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33812",
+      "source": "npc:north-qeynos:tubal-weaver",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33813",
+      "source": "npc:north-qeynos:shenro-kazpur",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33814",
+      "source": "npc:surefall-glade:sequea-erthinon",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33815",
+      "source": "npc:surefall-glade:grathin-nilm",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33816",
+      "source": "npc:rathe-mountains:ukla",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33817",
+      "source": "npc:rathe-mountains:roshmael",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33818",
+      "source": "npc:rathe-mountains:lianna-ferasa",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33819",
+      "source": "npc:rivervale:gaffin-deeppockets",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33820",
+      "source": "npc:rivervale:crista-tagglefoot",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33821",
+      "source": "npc:rivervale:pipple-purpleroot",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33822",
+      "source": "npc:rivervale:bag-merchant",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33823",
+      "source": "npc:rivervale:rantho-goobler",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33824",
+      "source": "npc:skyshrine:raelrik",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33825",
+      "source": "npc:skyshrine:tulgadin",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33826",
+      "source": "npc:solusek-s-eye:goblin-merchant",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33827",
+      "source": "npc:thurgadin:brigam",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33828",
+      "source": "npc:thurgadin:mordin-frostcleaver",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33829",
+      "source": "npc:thurgadin:agar",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33830",
+      "source": "npc:icewell-keep:coldain-outcast",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33831",
+      "source": "npc:toxxulia-forest:stylla-parsini",
+      "target": "item:backpack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-33832",
+      "source": "npc:toxxulia-forest:emil-parsini",
+      "target": "item:backpack",
       "type": "sells"
     }
   ]
