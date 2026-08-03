@@ -45210,7 +45210,7 @@
       "weight": 0.1,
       "size": "Small",
       "effect": "Stalking Probe (Any Slot, Casting Time: Instant)",
-      "source": "Bug Collection quest reward (Blixkin Entopop, Misty Thicket)"
+      "source": "Bug Collection quest reward (Blixkin Entopop, Misty Thicket); also craftable via Tinkering (trivial 102)"
     },
     {
       "id": "npc:paineel:antus-shelbra",
@@ -69682,7 +69682,7 @@
       "weight": 0.1,
       "size": "Tiny",
       "magic": true,
-      "source": "Nillipuss the Brownie reward (Reebo Leafsway, Rivervale)"
+      "source": "Nillipuss the Brownie reward (Reebo Leafsway, Rivervale); also craftable via Tinkering (trivial 50); also sold by merchants across many zones"
     },
     {
       "id": "item:earring-of-disease-reflection",
@@ -82479,7 +82479,7 @@
       "type": "item",
       "weight": 0.1,
       "size": "Tiny",
-      "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar)"
+      "source": "Ulthork Tusks Quest reward (Chief Kalan, Cobalt Scar); also drops from level 50+ mobs across many zones; used in several quests, Jewelcrafting recipes, and Tinkering's Gnomish Vanishing Device (trivial 302)"
     },
     {
       "id": "item:fire-emerald-ulthork",
@@ -154729,9 +154729,9 @@
       "category": "Tradeskill Supplies"
     },
     {
-      "id": "item:toolbox",
+      "id": "container:toolbox",
       "label": "Toolbox",
-      "type": "item",
+      "type": "container",
       "source": "Crafted via Blacksmithing (trivial 52)",
       "weight": 3,
       "capacity": 8,
@@ -183031,6 +183031,649 @@
       "type": "recipe",
       "tradeskill": "Pottery",
       "trivial": 282
+    },
+    {
+      "id": "npc:steamfont-mountains:bom-knotwood",
+      "label": "Bom Knotwood",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:steamfont-mountains:a-mechanical-merchant",
+      "label": "a mechanical merchant",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "item:cork",
+      "label": "Cork",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:spriket",
+      "label": "Spriket",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:metal-shaft",
+      "label": "Metal Shaft",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:metal-rod",
+      "label": "Metal Rod",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:gnomish-bolts",
+      "label": "Gnomish Bolts",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:static-orb",
+      "label": "Static Orb",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:gears",
+      "label": "Gears",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:sprockets",
+      "label": "Sprockets",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Dropped by a mechanic (Ak'Anon); also sold by several vendors"
+    },
+    {
+      "id": "item:metal-twine",
+      "label": "Metal Twine",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:grease",
+      "label": "Grease",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:tattered-gnomish-cloak",
+      "label": "Tattered Gnomish Cloak",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 2,
+      "weight": 0.7,
+      "size": "Medium",
+      "classes": [],
+      "source": "Dropped by several mobs in Solusek's Eye (fire goblin bartender, goblin drunkard, goblin high shaman, inferno goblin captain, Solusek goblin king, Flame Goblin Foreman)"
+    },
+    {
+      "id": "item:reflective-shard",
+      "label": "Reflective Shard",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:steel-lined-gloves",
+      "label": "Steel Lined Gloves",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:shaped-ashwood-recurve-bow-hemp",
+      "label": "Shaped Ashwood Recurve Bow (Hemp)",
+      "type": "item",
+      "slots": [
+        "Range"
+      ],
+      "skill": "Archery",
+      "damage": 14,
+      "delay": 49,
+      "weight": 4,
+      "size": "Large",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "rogue"
+      ],
+      "source": "Crafted via Fletching (trivial 148, not yet modeled in this graph) from Ashwood Bow Staff + Hemp Twine + Planing Tool"
+    },
+    {
+      "id": "item:fine-coral-mesh",
+      "label": "Fine Coral Mesh",
+      "type": "item",
+      "weight": 0.7,
+      "size": "Small"
+    },
+    {
+      "id": "item:silk-lined-steel-helm",
+      "label": "Silk Lined Steel Helm",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 4,
+      "magic": true,
+      "weight": 0.2,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "rogue"
+      ]
+    },
+    {
+      "id": "item:lime-coated-meshing",
+      "label": "Lime Coated Meshing",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:metal-fastening",
+      "label": "Metal Fastening",
+      "type": "item",
+      "weight": 5,
+      "size": "Small"
+    },
+    {
+      "id": "item:platemail-helm",
+      "label": "Platemail Helm",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 10,
+      "weight": 6,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "bard"
+      ]
+    },
+    {
+      "id": "item:sharkskin-tubing",
+      "label": "Sharkskin Tubing",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:haze-panther-eye",
+      "label": "Haze Panther Eye",
+      "type": "item",
+      "weight": 0.2,
+      "size": "Tiny",
+      "source": "Dropped by a haze panther (The Wakening Land)"
+    },
+    {
+      "id": "item:steel-wire",
+      "label": "Steel Wire",
+      "type": "item",
+      "weight": 1,
+      "size": "Tiny",
+      "noTrade": true
+    },
+    {
+      "id": "item:mana-battery-class-five",
+      "label": "Mana Battery - Class Five",
+      "type": "item",
+      "magic": true,
+      "weight": 1,
+      "size": "Tiny",
+      "source": "Also craftable via Tinkering (trivial 84) -- eqlwiki's own item page names the tradeskill but gives no ingredient list"
+    },
+    {
+      "id": "item:firewater",
+      "label": "Firewater",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:animated-bait",
+      "label": "Animated Bait",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:gnomish-firework",
+      "label": "Gnomish Firework",
+      "type": "item",
+      "magic": true,
+      "charges": 1,
+      "effect": "One of four random effects (Angry Bee, Blazing Comet, Ground Bloom Flower, Happy Panda; Any Slot, Casting Time: 1.5s)",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:collapsible-fishing-pole",
+      "label": "Collapsible Fishing Pole",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "effect": "Fishing Skill +5%",
+      "weight": 0.3,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:mechanized-lockpicks",
+      "label": "Mechanized Lockpicks",
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "effect": "Pick Lock Skill +2%",
+      "weight": 0.1,
+      "size": "Tiny",
+      "classes": [
+        "bard",
+        "rogue"
+      ]
+    },
+    {
+      "id": "item:flameless-lantern",
+      "label": "Flameless Lantern",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "lightSource": true,
+      "weight": 0.2,
+      "size": "Small"
+    },
+    {
+      "id": "item:standard-bow-cam",
+      "label": "Standard Bow Cam",
+      "type": "item",
+      "weight": 0.3,
+      "size": "Small",
+      "source": "Also used in several Fletching recipes (not yet modeled in this graph)"
+    },
+    {
+      "id": "item:thermal-cloak",
+      "label": "Thermal Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 6,
+      "resists": {
+        "cold": 20
+      },
+      "weight": 0.7,
+      "size": "Medium",
+      "classes": [
+        "warrior",
+        "cleric",
+        "paladin",
+        "shadow knight",
+        "rogue",
+        "necromancer",
+        "wizard",
+        "magician",
+        "enchanter"
+      ]
+    },
+    {
+      "id": "item:spyglass",
+      "label": "Spyglass",
+      "type": "item",
+      "effect": "Telescope (Any Slot, Casting Time: Instant)",
+      "weight": 0.2,
+      "size": "Small"
+    },
+    {
+      "id": "item:powered-gloves",
+      "label": "Powered Gloves",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "stats": {
+        "str": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:tinkered-catapult",
+      "label": "Tinkered Catapult",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:aqualung",
+      "label": "Aqualung",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 1,
+      "charges": 50,
+      "magic": true,
+      "effect": "Breath of the Dead (Any Slot, Casting Time: Instant)",
+      "weight": 10,
+      "size": "Giant"
+    },
+    {
+      "id": "item:rebreather",
+      "label": "Rebreather",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 1,
+      "effect": "Enduring Breath (Worn)",
+      "weight": 10,
+      "size": "Giant"
+    },
+    {
+      "id": "item:gnomish-vanishing-device",
+      "label": "Gnomish Vanishing Device",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "charges": 5,
+      "effect": "Invisibility Cloak (Any Slot/Can Equip, Casting Time: 5.0s)",
+      "weight": 0.8,
+      "size": "Small"
+    },
+    {
+      "id": "recipe:firewater",
+      "label": "Firewater",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 17
+    },
+    {
+      "id": "recipe:animated-bait",
+      "label": "Animated Bait",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:gnomish-firework",
+      "label": "Gnomish Firework",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 21
+    },
+    {
+      "id": "recipe:collapsible-fishing-pole",
+      "label": "Collapsible Fishing Pole",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:compass",
+      "label": "Compass",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 50
+    },
+    {
+      "id": "recipe:mechanized-lockpicks",
+      "label": "Mechanized Lockpicks",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 62
+    },
+    {
+      "id": "recipe:flameless-lantern-tinkering",
+      "label": "Flameless Lantern",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 68,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:standard-bow-cam",
+      "label": "Standard Bow Cam",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 75
+    },
+    {
+      "id": "recipe:thermal-cloak",
+      "label": "Thermal Cloak",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 82
+    },
+    {
+      "id": "recipe:spyglass",
+      "label": "Spyglass",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 95
+    },
+    {
+      "id": "recipe:stalking-probe-tinkering",
+      "label": "Stalking Probe",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 102,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:powered-gloves",
+      "label": "Powered Gloves",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 122,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:tinkered-catapult",
+      "label": "Tinkered Catapult",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 135
+    },
+    {
+      "id": "recipe:aqualung",
+      "label": "Aqualung",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 148,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:rebreather",
+      "label": "Rebreather",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 175,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:gnomish-vanishing-device",
+      "label": "Gnomish Vanishing Device",
+      "type": "recipe",
+      "tradeskill": "Tinkering",
+      "trivial": 302
+    },
+    {
+      "id": "npc:iceclad-ocean:adinel-jailbar",
+      "label": "Adinel Jailbar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:plane-of-sky:key-master",
+      "label": "Key Master",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:erudin:jagen-kindlor",
+      "label": "Jagen Kindlor",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:ikthar-fireheart",
+      "label": "Ikthar Fireheart",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-tananie",
+      "label": "Merchant Tananie",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-tegdian",
+      "label": "Merchant Tegdian",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:paineel:faratain",
+      "label": "Faratain",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:meera-lylon",
+      "label": "Meera Lylon",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:lanhern-firepride",
+      "label": "Lanhern Firepride",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-cabilis:klok-gogon",
+      "label": "Klok Gogon",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:the-feerrott:fugla",
+      "label": "Fugla",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:firiona-vie:jessica-winter",
+      "label": "Jessica Winter",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-freeport:timor-strongbranch",
+      "label": "Timor Strongbranch",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-sylnis",
+      "label": "Merchant Sylnis",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-commons:dianax-c-luzz",
+      "label": "Dianax C`Luzz",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:tonsia",
+      "label": "Tonsia",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rivervale:gerb-jinklebelly",
+      "label": "Gerb Jinklebelly",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -321602,7 +322245,7 @@
     {
       "id": "e-produces-23772",
       "source": "recipe:toolbox",
-      "target": "item:toolbox",
+      "target": "container:toolbox",
       "type": "produces"
     },
     {
@@ -398437,6 +399080,1257 @@
       "source": "recipe:idol-of-tunare",
       "target": "container:kiln",
       "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-34900",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "container:toolbox",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-34901",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "container:toolbox",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-34902",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "zone:steamfont-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-34903",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "container:toolbox",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-34904",
+      "source": "npc:steamfont-mountains:a-mechanical-merchant",
+      "target": "zone:steamfont-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-34905",
+      "source": "npc:steamfont-mountains:a-mechanical-merchant",
+      "target": "container:toolbox",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-34906",
+      "source": "recipe:firewater",
+      "target": "item:gnomish-spirits",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34907",
+      "source": "recipe:firewater",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34908",
+      "source": "recipe:firewater",
+      "target": "item:firewater",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34909",
+      "source": "recipe:firewater",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34910",
+      "source": "recipe:animated-bait",
+      "target": "item:cork",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34911",
+      "source": "recipe:animated-bait",
+      "target": "item:spriket",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34912",
+      "source": "recipe:animated-bait",
+      "target": "item:animated-bait",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34913",
+      "source": "recipe:animated-bait",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34914",
+      "source": "recipe:gnomish-firework",
+      "target": "item:metal-shaft",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34915",
+      "source": "recipe:gnomish-firework",
+      "target": "item:bat-wing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34916",
+      "source": "recipe:gnomish-firework",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34917",
+      "source": "recipe:gnomish-firework",
+      "target": "item:gnomish-firework",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-crafted_in-34918",
+      "source": "recipe:gnomish-firework",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34919",
+      "source": "recipe:collapsible-fishing-pole",
+      "target": "item:metal-rod",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-uses-34920",
+      "source": "recipe:collapsible-fishing-pole",
+      "target": "item:gnomish-bolts",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34921",
+      "source": "recipe:collapsible-fishing-pole",
+      "target": "item:collapsible-fishing-pole",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34922",
+      "source": "recipe:collapsible-fishing-pole",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34923",
+      "source": "recipe:compass",
+      "target": "item:static-orb",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34924",
+      "source": "recipe:compass",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34925",
+      "source": "recipe:compass",
+      "target": "item:pie-tin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34926",
+      "source": "recipe:compass",
+      "target": "item:cork",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34927",
+      "source": "recipe:compass",
+      "target": "item:skewers",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34928",
+      "source": "recipe:compass",
+      "target": "item:compass",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34929",
+      "source": "recipe:compass",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34930",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "item:gears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34931",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "item:sprockets",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34932",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "item:lockpicks",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34933",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "item:rat-ears",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34934",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "item:mechanized-lockpicks",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34935",
+      "source": "recipe:mechanized-lockpicks",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34936",
+      "source": "recipe:flameless-lantern-tinkering",
+      "target": "item:large-lantern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34937",
+      "source": "recipe:flameless-lantern-tinkering",
+      "target": "item:metal-twine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34938",
+      "source": "recipe:flameless-lantern-tinkering",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34939",
+      "source": "recipe:flameless-lantern-tinkering",
+      "target": "item:flameless-lantern",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34940",
+      "source": "recipe:flameless-lantern-tinkering",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34941",
+      "source": "recipe:standard-bow-cam",
+      "target": "item:gears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34942",
+      "source": "recipe:standard-bow-cam",
+      "target": "item:grease",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34943",
+      "source": "recipe:standard-bow-cam",
+      "target": "item:gnomish-bolts",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34944",
+      "source": "recipe:standard-bow-cam",
+      "target": "item:standard-bow-cam",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34945",
+      "source": "recipe:standard-bow-cam",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34946",
+      "source": "recipe:thermal-cloak",
+      "target": "item:tattered-gnomish-cloak",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34947",
+      "source": "recipe:thermal-cloak",
+      "target": "item:metal-rod",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34948",
+      "source": "recipe:thermal-cloak",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34949",
+      "source": "recipe:thermal-cloak",
+      "target": "item:thermal-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34950",
+      "source": "recipe:thermal-cloak",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34951",
+      "source": "recipe:spyglass",
+      "target": "item:collapsible-fishing-pole",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34952",
+      "source": "recipe:spyglass",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34953",
+      "source": "recipe:spyglass",
+      "target": "item:metal-twine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34954",
+      "source": "recipe:spyglass",
+      "target": "item:metal-rod",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34955",
+      "source": "recipe:spyglass",
+      "target": "item:reflective-shard",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34956",
+      "source": "recipe:spyglass",
+      "target": "item:spyglass",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34957",
+      "source": "recipe:spyglass",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34958",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "item:gears",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-34959",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "item:bottle",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34960",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "item:metal-rod",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34961",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34962",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "item:stalking-probe",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34963",
+      "source": "recipe:stalking-probe-tinkering",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34964",
+      "source": "recipe:powered-gloves",
+      "target": "item:gears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34965",
+      "source": "recipe:powered-gloves",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34966",
+      "source": "recipe:powered-gloves",
+      "target": "item:metal-twine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34967",
+      "source": "recipe:powered-gloves",
+      "target": "item:sprockets",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34968",
+      "source": "recipe:powered-gloves",
+      "target": "item:steel-lined-gloves",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34969",
+      "source": "recipe:powered-gloves",
+      "target": "item:powered-gloves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34970",
+      "source": "recipe:powered-gloves",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34971",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34972",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:gears",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34973",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:metal-twine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34974",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:shaped-ashwood-recurve-bow-hemp",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34975",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:sprockets",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34976",
+      "source": "recipe:tinkered-catapult",
+      "target": "item:tinkered-catapult",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34977",
+      "source": "recipe:tinkered-catapult",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34978",
+      "source": "recipe:aqualung",
+      "target": "item:fine-coral-mesh",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34979",
+      "source": "recipe:aqualung",
+      "target": "item:fresh-fish",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34980",
+      "source": "recipe:aqualung",
+      "target": "item:gnomish-bolts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34981",
+      "source": "recipe:aqualung",
+      "target": "item:metal-rod",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34982",
+      "source": "recipe:aqualung",
+      "target": "item:metal-twine",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34983",
+      "source": "recipe:aqualung",
+      "target": "item:silk-lined-steel-helm",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34984",
+      "source": "recipe:aqualung",
+      "target": "item:aqualung",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34985",
+      "source": "recipe:aqualung",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34986",
+      "source": "recipe:rebreather",
+      "target": "item:aqualung",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34987",
+      "source": "recipe:rebreather",
+      "target": "item:firewater",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34988",
+      "source": "recipe:rebreather",
+      "target": "item:lime-coated-meshing",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34989",
+      "source": "recipe:rebreather",
+      "target": "item:metal-fastening",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34990",
+      "source": "recipe:rebreather",
+      "target": "item:platemail-helm",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34991",
+      "source": "recipe:rebreather",
+      "target": "item:sharkskin-tubing",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-34992",
+      "source": "recipe:rebreather",
+      "target": "item:rebreather",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-34993",
+      "source": "recipe:rebreather",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-34994",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:diamond-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34995",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:gnomish-bolts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34996",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:haze-panther-eye",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34997",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:reflective-shard",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34998",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:small-lantern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-34999",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:steel-wire",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35000",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:mana-battery-class-five",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35001",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "item:gnomish-vanishing-device",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35002",
+      "source": "recipe:gnomish-vanishing-device",
+      "target": "container:toolbox",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-35003",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:cork",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35004",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:spriket",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35005",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:metal-shaft",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35006",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:metal-rod",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35007",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:gnomish-bolts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35008",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:static-orb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35009",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:gears",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35010",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:sprockets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35011",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:metal-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35012",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:grease",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35013",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:reflective-shard",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35014",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:steel-lined-gloves",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35015",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:fine-coral-mesh",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35016",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:silk-lined-steel-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35017",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:lime-coated-meshing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35018",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:metal-fastening",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35019",
+      "source": "npc:the-overthere:tin-merchant-v",
+      "target": "item:sharkskin-tubing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35020",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:cork",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35021",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:spriket",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35022",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:metal-shaft",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35023",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:metal-rod",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35024",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:gnomish-bolts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35025",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:static-orb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35026",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:gears",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35027",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:sprockets",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35028",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:metal-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35029",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:grease",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35030",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:reflective-shard",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35031",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:steel-lined-gloves",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35032",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:fine-coral-mesh",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35033",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:silk-lined-steel-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35034",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:lime-coated-meshing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35035",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:metal-fastening",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35036",
+      "source": "npc:steamfont-mountains:bom-knotwood",
+      "target": "item:sharkskin-tubing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35037",
+      "source": "npc:steamfont-mountains:a-mechanical-merchant",
+      "target": "item:metal-rod",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35038",
+      "source": "npc:steamfont-mountains:a-mechanical-merchant",
+      "target": "item:grease",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35039",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:static-orb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35040",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:gears",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35041",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:grease",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35042",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:steel-lined-gloves",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35043",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:lime-coated-meshing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35044",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:metal-fastening",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35045",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:sharkskin-tubing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35046",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:steel-wire",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35047",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:spriket",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35048",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:metal-shaft",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35049",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:static-orb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35050",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:gears",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35051",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:reflective-shard",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35052",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:steel-lined-gloves",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35053",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:fine-coral-mesh",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35054",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:metal-fastening",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35055",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:sharkskin-tubing",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35056",
+      "source": "npc:firiona-vie:leala-swiftarrow",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35057",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "zone:iceclad-ocean",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35058",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:steel-wire",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35059",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:mana-battery-class-five",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35060",
+      "source": "npc:steamfont-mountains:godbin-strumharp",
+      "target": "item:steel-wire",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35061",
+      "source": "npc:plane-of-sky:key-master",
+      "target": "zone:plane-of-sky",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35062",
+      "source": "npc:plane-of-sky:key-master",
+      "target": "item:mana-battery-class-five",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35063",
+      "source": "npc:erudin:jagen-kindlor",
+      "target": "zone:erudin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35064",
+      "source": "npc:erudin:jagen-kindlor",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35065",
+      "source": "npc:firiona-vie:gearin-gaxx",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35066",
+      "source": "npc:east-freeport:ikthar-fireheart",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35067",
+      "source": "npc:east-freeport:ikthar-fireheart",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35068",
+      "source": "npc:greater-faydark:merchant-tananie",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35069",
+      "source": "npc:greater-faydark:merchant-tananie",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35070",
+      "source": "npc:greater-faydark:merchant-tegdian",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35071",
+      "source": "npc:greater-faydark:merchant-tegdian",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35072",
+      "source": "npc:paineel:faratain",
+      "target": "zone:paineel",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35073",
+      "source": "npc:paineel:faratain",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35074",
+      "source": "npc:south-qeynos:meera-lylon",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35075",
+      "source": "npc:south-qeynos:meera-lylon",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35076",
+      "source": "npc:south-qeynos:lanhern-firepride",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35077",
+      "source": "npc:south-qeynos:lanhern-firepride",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35078",
+      "source": "npc:rathe-mountains:zok-kilikko",
+      "target": "item:platemail-helm",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35079",
+      "source": "npc:ak-anon:rylin-coil",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35080",
+      "source": "npc:east-commonlands:bubar",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35081",
+      "source": "npc:kithicor-forest:elsbyth",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35082",
+      "source": "npc:lake-rathetear:dreana",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35083",
+      "source": "npc:lavastorm-mountains:jenah-wheelspinner",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35084",
+      "source": "npc:northern-karana:romella",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35085",
+      "source": "npc:northern-desert-of-ro:murissa-sandwhisper",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35086",
+      "source": "npc:oasis-of-marr:isslana",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35087",
+      "source": "npc:south-qeynos:ghul-rustem",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35088",
+      "source": "npc:rathe-mountains:viira-bali",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35089",
+      "source": "npc:rathe-mountains:susanna",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35090",
+      "source": "npc:rathe-mountains:chandra-kali",
+      "target": "item:compass",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35091",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35092",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35093",
+      "source": "npc:the-feerrott:fugla",
+      "target": "zone:the-feerrott",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35094",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35095",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "zone:firiona-vie",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35096",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35097",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "zone:north-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35098",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35099",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35100",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35101",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "zone:neriak-commons",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35102",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35103",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35104",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35105",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "zone:rivervale",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35106",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35107",
+      "source": "npc:thurgadin:argash",
+      "target": "item:standard-bow-cam",
+      "type": "sells"
     }
   ]
 }
