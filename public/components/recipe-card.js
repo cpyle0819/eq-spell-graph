@@ -12,7 +12,7 @@
 // links out to its own real item page instead.
 import { CardBase } from "./card-base.js";
 import { QUEST_CARD_CSS, section } from "./quest-shared.js";
-import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml, variantsRosterHtml } from "./tradeskill-shared.js";
+import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml, recipeTreeToggleButtonHtml, recipeTreeContainerHtml, wireRecipeTreeToggle, variantsRosterHtml } from "./tradeskill-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
@@ -45,6 +45,7 @@ class RecipeCard extends CardBase {
         detail: { items: this.#recipe.uses },
       }));
     });
+    wireRecipeTreeToggle(this.shadowRoot);
   }
 
   render() {
@@ -55,10 +56,11 @@ class RecipeCard extends CardBase {
       <div class="spell-header">
         <h3>${recipe.label}</h3>
         <button type="button" class="add-shopping-btn">+ Add Ingredients</button>
+        ${recipeTreeToggleButtonHtml(recipe)}
       </div>
       <div class="spell-scroll">
         <div class="spell-badges">${recipeBadgesHtml(recipe)}</div>
-        ${section("Formula", `<div class="quest-section-body recipe-formula">${recipeFormulaHtml(recipe)}</div>`)}
+        ${section("Formula", `<div class="quest-section-body recipe-formula">${recipeFormulaHtml(recipe)}</div>${recipeTreeContainerHtml(recipe)}`)}
         ${section(`Alternate Recipes (${recipe.variants?.length ?? 0})`, variantsRosterHtml(recipe.variants))}
       </div>
     `;

@@ -506,9 +506,15 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
 // decisions/tradeskill-recipe-node-schema.md. quantity rides on the
 // resolved ItemSummary rather than a parallel array so a caller never has
 // to zip two lists back together -- same "resolve straight to the shape
-// the UI wants" precedent as getQuests()'s itemRewards.
+// the UI wants" precedent as getQuests()'s itemRewards. `craftable` is
+// whether *some* recipe (any tradeskill) has a `produces` edge to this
+// item -- computed alongside `uses` at the same read time as everything
+// else here, so the UI knows whether an ingredient's own "Show Ingredient
+// Tree" toggle would have anything to expand into without a separate
+// lookup (decisions/recipe-ingredient-tree.md).
 export interface RecipeIngredient extends ItemSummary {
   quantity: number;
+  craftable: boolean;
 }
 
 export interface ContainerSummary {
@@ -593,13 +599,15 @@ function buildRecipeSummary(n: NodeData, helpers: GraphIndexHelpers): Omit<Recip
     .edgesFrom(n.id, "uses")
     .map((e) => {
       const item = helpers.nodeById(e.target);
-      return item ? { ...toItemSummary(item), quantity: (e.quantity as number) ?? 1 } : undefined;
+      if (!item) return undefined;
+      const craftable = helpers.edgesTo(item.id, "produces").length > 0;
+      return { ...toItemSummary(item), quantity: (e.quantity as number) ?? 1, craftable };
     })
     .filter((ing): ing is RecipeIngredient => ing !== undefined);
   const producesEdge = helpers.edgesFrom(n.id, "produces")[0];
   const producesNode = producesEdge ? helpers.nodeById(producesEdge.target) : undefined;
   const produces = producesNode
-    ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1 }
+    ? { ...toItemSummary(producesNode), quantity: (producesEdge.quantity as number) ?? 1, craftable: true }
     : undefined;
   const containers = helpers
     .edgesFrom(n.id, "crafted_in")
@@ -649,6 +657,85 @@ export function getRecipes(tradeskill: string): RecipeSummary[] {
   }
 
   return results.sort((a, b) => a.trivial - b.trivial);
+}
+
+// Which recipe node to expand a craftable ingredient into, when more than
+// one recipe produces the same item (Pot: Blacksmithing or Pottery, though
+// only Blacksmithing's is modeled yet) -- same "most vendor-sourceable,
+// cheapest trivial as tiebreak" scoring getRecipes() already uses to pick a
+// variant family's own primary combo, reused here for the identical
+// "several real options, show the most approachable one first" call.
+function pickPrimaryProducer(itemId: string, helpers: GraphIndexHelpers): NodeData | undefined {
+  const producers = helpers
+    .edgesTo(itemId, "produces")
+    .map((e) => helpers.nodeById(e.source))
+    .filter((r): r is NodeData => r?.type === "recipe");
+  if (!producers.length) return undefined;
+  return producers
+    .map((r) => ({ r, summary: buildRecipeSummary(r, helpers) }))
+    .sort((a, b) => {
+      const scoreDiff = vendorSourceableCount(b.summary.uses, helpers) - vendorSourceableCount(a.summary.uses, helpers);
+      return scoreDiff !== 0 ? scoreDiff : a.summary.trivial - b.summary.trivial;
+    })[0].r;
+}
+
+export interface RecipeTreeIngredient extends RecipeIngredient {
+  // Present only when this ingredient is itself craftable (RecipeIngredient.
+  // craftable) *and* within RECIPE_TREE_DEPTH_BUDGET -- absent means "this
+  // is where the tree bottoms out for this branch," same as `craftable:
+  // false` but also covering the depth-budget cutoff and cycle guard below.
+  craftedBy?: RecipeTreeNode;
+}
+
+export interface RecipeTreeNode {
+  id: string;
+  label: string;
+  tradeskill: string;
+  trivial: number;
+  uses: RecipeTreeIngredient[];
+}
+
+// How many recipe-hops deep a tree expands before stopping even if an
+// ingredient is still craftable -- a safety bound, not a real gameplay
+// limit (nothing in this graph's own tradeskill data nests anywhere near
+// this deep today), same "budget as a backstop, not a tuned value" role
+// ALTERNATE_HOP_BUDGET/DANGER_HOP_BUDGET play for pathfinding below.
+const RECIPE_TREE_DEPTH_BUDGET = 6;
+
+// `visiting` guards against a genuine cycle (item A craftable from a recipe
+// that uses item B, itself craftable from a recipe using item A) turning
+// into infinite recursion -- not expected in real data, but recipe/item
+// authorship is migration-by-migration and nothing else in this graph
+// enforces acyclicity, so the guard costs little and removes a whole class
+// of future footgun.
+function buildRecipeTreeNode(n: NodeData, helpers: GraphIndexHelpers, depth: number, visiting: Set<string>): RecipeTreeNode {
+  const summary = buildRecipeSummary(n, helpers);
+  const uses: RecipeTreeIngredient[] = summary.uses.map((ing) => {
+    if (!ing.craftable || depth >= RECIPE_TREE_DEPTH_BUDGET || visiting.has(ing.id)) return ing;
+    const producer = pickPrimaryProducer(ing.id, helpers);
+    if (!producer) return ing;
+    visiting.add(ing.id);
+    const craftedBy = buildRecipeTreeNode(producer, helpers, depth + 1, visiting);
+    visiting.delete(ing.id);
+    return { ...ing, craftedBy };
+  });
+  return { id: summary.id, label: summary.label, tradeskill: summary.tradeskill, trivial: summary.trivial, uses };
+}
+
+// The full recursive ingredient tree for one specific recipe node, by id --
+// not scoped to a tradeskill (unlike getRecipes()) since a nested crafted
+// ingredient can belong to a different one entirely (decisions/
+// recipe-ingredient-tree.md), e.g. a Blacksmithing recipe using a Baking-
+// crafted Pie Tin. Fetched on demand (one id at a time) rather than
+// embedded in every RecipeSummary, since most recipes' trees are never
+// expanded and walking every recipe's full nesting on every /api/recipes
+// call would be wasted work.
+export function getRecipeTree(recipeId: string): RecipeTreeNode | undefined {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const n = helpers.nodeById(recipeId);
+  if (!n || n.type !== "recipe") return undefined;
+  return buildRecipeTreeNode(n, helpers, 0, new Set([recipeId]));
 }
 
 export interface TradeskillVendorSummary {

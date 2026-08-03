@@ -27,7 +27,7 @@
 // (detail: { items: recipe.uses }) for trades.js to act on, same convention
 // as ingredient-card.js's own "add-shopping-item".
 import { RESET_CSS } from "./reset.js";
-import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml } from "./tradeskill-shared.js";
+import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml, recipeTreeToggleButtonHtml, recipeTreeContainerHtml, wireRecipeTreeToggle } from "./tradeskill-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
 
 const sheet = new CSSStyleSheet();
@@ -141,8 +141,10 @@ function recipeRowHtml(recipe) {
       <span class="recipe-name-row">
         <span class="recipe-name">${recipe.label}</span>
         <button type="button" class="add-shopping-btn" data-recipe-id="${recipe.id}">+ Add Ingredients</button>
+        ${recipeTreeToggleButtonHtml(recipe)}
       </span>
       <span class="recipe-formula">${recipeFormulaHtml(recipe)}</span>
+      ${recipeTreeContainerHtml(recipe)}
     </span>
   `;
 }
@@ -226,6 +228,7 @@ class LevelingGuideCard extends HTMLElement {
       `;
       const list = this.shadowRoot.querySelector(".recipe-list");
       list.addEventListener("click", (e) => this.#addIngredients(e));
+      wireRecipeTreeToggle(list);
     }
     this.render();
   }

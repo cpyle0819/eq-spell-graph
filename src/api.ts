@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getRecipeTree, type NodeData } from "./graph";
 
 // Spells aren't tagged with a `category` field the way sold items are
 // (migration 400) -- they're the original, and only, sells-target type for
@@ -395,12 +395,23 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: tradeskill ? getTradeskillVendors(tradeskill, zone) : [] };
   }
 
-  // GET /api/tradeskill-leveling-cities?tradeskill=Brewing — the best good
-  // city and best evil city to shop that trade's leveling-guide ingredients
+  // GET /api/tradeskill-leveling-cities?tradeskill=Brewing — the best good,
+  // evil, and neutral city to shop that trade's leveling-guide ingredients
   // in (decisions/city-alignment-good-evil.md).
   if (pathname === "/api/tradeskill-leveling-cities") {
     const tradeskill = searchParams.get("tradeskill") || "";
-    return { status: 200, body: tradeskill ? getTradeskillLevelingCities(tradeskill) : { totalIngredients: 0, good: null, evil: null } };
+    return { status: 200, body: tradeskill ? getTradeskillLevelingCities(tradeskill) : { totalIngredients: 0, good: null, evil: null, neutral: null } };
+  }
+
+  // GET /api/recipe-tree?id=recipe:pot — the full recursive ingredient tree
+  // for one specific recipe (decisions/recipe-ingredient-tree.md), fetched
+  // on demand when a card's own "Show Ingredient Tree" toggle is first
+  // opened. Not scoped to any tradeskill -- a crafted ingredient can be
+  // produced by a recipe belonging to a different one entirely.
+  if (pathname === "/api/recipe-tree") {
+    const id = searchParams.get("id") || "";
+    const tree = id ? getRecipeTree(id) : undefined;
+    return { status: 200, body: tree ?? null };
   }
 
   // GET /api/item-sources?ids=item:a,item:b — Foraged In/Fished From/

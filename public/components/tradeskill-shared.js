@@ -4,7 +4,7 @@
 // one combined card. Kept separate from quest-shared.js (imported here
 // alongside it) since these are tradeskill/recipe-domain specific, not
 // quest-domain.
-import { itemChipTag } from "./item-chip.js";
+import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 
 // Trivial is the sourced fact (eqlwiki's own number); Craftable is
 // success.p25, a computed estimate (recipeSuccessThresholds() in
@@ -36,6 +36,44 @@ export const RECIPE_ROW_CSS = `
   padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
 }
 .add-shopping-btn:hover, .add-shopping-btn:focus-visible { text-decoration: underline; }
+
+/* Ingredient tree (decisions/recipe-ingredient-tree.md) -- a "Show
+   Ingredient Tree" toggle only rendered when at least one ingredient is
+   itself craftable (RecipeIngredient.craftable), expanding into the full
+   recursive breakdown for every craftable ingredient at once. Same quiet
+   text-button look as .add-shopping-btn, just a second one beside it. */
+.tree-toggle-btn {
+  font-size: 11px; color: var(--gold); background: none; border: none;
+  padding: 0; cursor: pointer; text-decoration: none; white-space: nowrap; font-family: var(--font-body);
+  /* A native <button>'s own UA default centers its text and (inside a flex
+     column ancestor with the usual align-items: stretch) stretches to the
+     full row width -- either alone would visually shove "Show Ingredient
+     Tree" away from whatever it's meant to sit beside. align-self here
+     keeps its width to its own content regardless of the parent's flex
+     direction, so this button is safe to drop into any layout context. */
+  text-align: left; align-self: flex-start;
+}
+.tree-toggle-btn:hover, .tree-toggle-btn:focus-visible { text-decoration: underline; }
+.recipe-tree-container[hidden] { display: none; }
+.recipe-tree-container { margin-top: 8px; }
+.recipe-tree-container .loading { font-size: 11px; font-style: italic; color: var(--parch-ink-soft); }
+/* One <ul> per level -- nesting depth reads from indentation alone (a
+   left border on each level, not a numeric label), same "the structure
+   itself is the explanation" call quest-group-card.js's own roster makes. */
+.tree-list { list-style: none; padding-left: 16px; border-left: 1px dashed var(--parch-line); }
+.tree-list.tree-list-root { padding-left: 0; border-left: none; }
+.tree-item { padding: 3px 0; }
+.tree-item-crafted-header { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+/* External-trade indicator (issue: "trades external to the active one
+   should be visually indicated") -- a small amber badge naming the other
+   tradeskill, only rendered when a nested recipe's own tradeskill differs
+   from the recipe the tree toggle was opened from. */
+.tree-trade-badge {
+  font-size: 10px; padding: 1px 6px; border-radius: 3px;
+  background: rgba(122, 96, 42, 0.14); border: 1px solid var(--parch-accent);
+  color: var(--parch-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.tree-crafted-label { font-size: 11px; font-style: italic; color: var(--parch-ink-soft); }
 
 /* Alternate ingredient combos for the same produced item (decisions/
    tradeskill-recipe-node-schema.md's "Recipe variants") -- same <details>/
@@ -86,6 +124,137 @@ export function recipeFormulaHtml(recipe) {
   return `${uses}${produces ? `<span class="recipe-arrow">→</span>${produces}` : ""}`;
 }
 
+// The "Show Ingredient Tree" toggle and its own (initially empty/hidden)
+// render target are two separate pieces, not one combined block -- the
+// button reads best sitting right next to a recipe's own "+ Add
+// Ingredients" (recipe-card.js's spell-header, leveling-guide-card.js's
+// recipe-name-row), while the expanded tree itself needs the full row width
+// below the formula, not squeezed into a header. wireRecipeTreeToggle()
+// below finds the container via `rootEl.querySelector`, not DOM adjacency,
+// so the two can live in entirely different parts of a card's markup.
+// Both are absent entirely when `recipe.uses` has no craftable ingredient
+// at all (RecipeIngredient.craftable, src/graph.ts), same "nothing to
+// expand into" reasoning city-alignment-good-evil.md's own null badges use.
+// `recipe.id` is the exact recipe/variant combo this toggle belongs to --
+// wireRecipeTreeToggle fetches that id's own tree, not the card's top-level
+// recipe, so a variant row's own toggle expands *that* combo's ingredients.
+export function recipeTreeToggleButtonHtml(recipe) {
+  if (!recipe.uses.some((ing) => ing.craftable)) return "";
+  return `<button type="button" class="tree-toggle-btn" data-tree-recipe-id="${recipe.id}">Show Ingredient Tree ▾</button>`;
+}
+
+export function recipeTreeContainerHtml(recipe) {
+  if (!recipe.uses.some((ing) => ing.craftable)) return "";
+  return `<div class="recipe-tree-container" data-tree-recipe-id="${recipe.id}" hidden></div>`;
+}
+
+// One <li> per ingredient -- a plain chip for a bought/foraged/dropped one,
+// or (when `craftedBy` is present, only ever true for a craftable ingredient
+// within RECIPE_TREE_DEPTH_BUDGET/cycle-free, src/graph.ts's
+// getRecipeTree()) the chip plus its own nested formula one level deeper.
+// `activeTradeskill` is always the *root* recipe's own tradeskill (the one
+// the toggle was opened from), not the immediate parent's -- so a
+// three-level chain that wanders back into the starting tradeskill after a
+// detour through another one still reads as "back home," not falsely
+// flagged external.
+function treeItemHtml(ing, activeTradeskill) {
+  const chip = itemChipTag(ing, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(ing.label)}`, shoppingList: true });
+  if (!ing.craftedBy) return `<li class="tree-item">${chip}</li>`;
+  const sub = ing.craftedBy;
+  const tradeBadge = sub.tradeskill !== activeTradeskill ? `<span class="tree-trade-badge">${sub.tradeskill}</span>` : "";
+  return `
+    <li class="tree-item tree-item-crafted">
+      <div class="tree-item-crafted-header">
+        ${chip}
+        <span class="tree-crafted-label">crafted from (Triv ${sub.trivial})</span>
+        ${tradeBadge}
+      </div>
+      <ul class="tree-list">${sub.uses.map((u) => treeItemHtml(u, activeTradeskill)).join("")}</ul>
+    </li>
+  `;
+}
+
+// Renders a fetched RecipeTreeNode (src/graph.ts's getRecipeTree()) into the
+// same shape recipeFormulaHtml's flat one-liner shows, just recursively
+// expanded -- `activeTradeskill` is the recipe the toggle itself belongs to
+// (recipe.tradeskill), so every nested tree-trade-badge is relative to where
+// the visitor actually started, not to whichever branch they're currently
+// looking at.
+export function recipeTreeHtml(treeNode, activeTradeskill) {
+  return `<ul class="tree-list tree-list-root">${treeNode.uses.map((u) => treeItemHtml(u, activeTradeskill)).join("")}</ul>`;
+}
+
+// Walks a fetched tree collecting every ingredient it mentions at any depth,
+// keyed by id -- hydrateItemChips() needs this to resolve every chip's own
+// hover stats in one pass, the same "resolve straight to what the UI wants"
+// call recipe-card.js's own render() already makes for its top-level/
+// variant ingredients.
+function flattenTreeItems(node, acc) {
+  for (const ing of node.uses) {
+    acc.set(ing.id, ing);
+    if (ing.craftedBy) flattenTreeItems(ing.craftedBy, acc);
+  }
+}
+
+// recipeId -> RecipeTreeNode | Promise<RecipeTreeNode | undefined>, shared
+// across every card on the page (both recipe-card.js and
+// leveling-guide-card.js import this same module-level cache) -- a given
+// recipe's own tree never changes within a session, so toggling it closed
+// and back open, or expanding the same recipe from two different views,
+// never re-fetches. Caching the in-flight promise (not just the resolved
+// value) means a second click while the first fetch is still pending reuses
+// it instead of firing a duplicate request.
+const treeCache = new Map();
+
+function fetchRecipeTree(recipeId) {
+  if (!treeCache.has(recipeId)) {
+    treeCache.set(recipeId, fetch(`api/recipe-tree?id=${encodeURIComponent(recipeId)}`).then((r) => r.json()));
+  }
+  return treeCache.get(recipeId);
+}
+
+// Shared click-delegation for every ".tree-toggle-btn" under `rootEl` --
+// call once per component (recipe-card.js/leveling-guide-card.js each wire
+// it on their own shadowRoot, same delegation pattern their other click
+// handlers already use). Fetches lazily on first open (not pre-fetched with
+// the rest of a recipe's own data, since most trees are never expanded);
+// toggling closed again just hides the already-rendered container rather
+// than discarding it, so re-opening is instant.
+export function wireRecipeTreeToggle(rootEl) {
+  rootEl.addEventListener("click", async (e) => {
+    const btn = e.target.closest(".tree-toggle-btn");
+    if (!btn) return;
+    const recipeId = btn.dataset.treeRecipeId;
+    const container = rootEl.querySelector(`.recipe-tree-container[data-tree-recipe-id="${CSS.escape(recipeId)}"]`);
+    if (!container) return;
+
+    if (!container.hidden) {
+      container.hidden = true;
+      btn.textContent = "Show Ingredient Tree ▾";
+      return;
+    }
+
+    if (!container.dataset.loaded) {
+      container.innerHTML = `<div class="loading">Loading...</div>`;
+      container.hidden = false;
+      const tree = await fetchRecipeTree(recipeId);
+      if (!tree) {
+        container.innerHTML = `<div class="loading">Couldn't load this recipe's ingredient tree.</div>`;
+        container.dataset.loaded = "true";
+        return;
+      }
+      container.innerHTML = recipeTreeHtml(tree, tree.tradeskill);
+      const itemsById = new Map();
+      flattenTreeItems(tree, itemsById);
+      hydrateItemChips(container, (id) => itemsById.get(id));
+      container.dataset.loaded = "true";
+    }
+
+    container.hidden = false;
+    btn.textContent = "Hide Ingredient Tree ▴";
+  });
+}
+
 // One expandable row per alternate ingredient combo that produces the same
 // item as the card's own primary recipe (decisions/
 // tradeskill-recipe-node-schema.md's "Recipe variants" -- e.g. Baking's
@@ -93,6 +262,13 @@ export function recipeFormulaHtml(recipe) {
 // formula already renders in the card's main Formula section, so this
 // roster never repeats it -- `recipe.variants` (getRecipes() in
 // src/graph.ts) is already just the alternates.
+// The toggle button stays out of <summary> deliberately -- a click
+// anywhere inside a <summary> (including on a nested button) also toggles
+// the parent <details> open/closed via the platform's own native behavior,
+// so a button living there would fire two effects at once. Living in
+// .variant-row-body instead means it's only visible once this variant is
+// already expanded, which is a fine place for it -- a collapsed variant row
+// has nothing to expand into further yet anyway.
 function variantRow(variant) {
   return `
     <details class="variant-row">
@@ -102,6 +278,8 @@ function variantRow(variant) {
       </summary>
       <div class="variant-row-body">
         <div class="spell-badges">${recipeBadgesHtml(variant)}</div>
+        ${recipeTreeToggleButtonHtml(variant)}
+        ${recipeTreeContainerHtml(variant)}
       </div>
     </details>
   `;
