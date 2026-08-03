@@ -690,6 +690,62 @@ export function getTradeskillVendors(tradeskill: string, zoneId?: string): Trade
   return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));
 }
 
+export interface CityRecommendation {
+  zoneId: string;
+  zoneLabel: string;
+  ingredientCount: number;
+}
+
+export interface TradeskillLevelingCities {
+  totalIngredients: number;
+  good: CityRecommendation | null;
+  evil: CityRecommendation | null;
+}
+
+// Which good city and which evil city best cover a tradeskill's leveling
+// path, per decisions/city-alignment-good-evil.md -- scored by how many
+// distinct ingredients across only the levelingGuide=true recipes (the same
+// fixed path leveling-guide-card.js renders, not the whole recipe book) at
+// least one vendor in that city sells. `zone.alignment` (migration 401) is
+// only set on 23 of the 27 city zones; every other city (and every
+// non-city zone) is silently excluded from both sides, same "absence isn't
+// a gap" convention as an ingredient with no `sells` edge.
+export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevelingCities {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const ingredientIds = new Set(
+    graph.nodes
+      .filter((n) => n.type === "recipe" && n.tradeskill === tradeskill && n.levelingGuide)
+      .flatMap((n) => helpers.edgesFrom(n.id, "uses").map((e) => e.target))
+  );
+
+  const covered = new Map<string, { zoneLabel: string; alignment: string; items: Set<string> }>();
+  for (const npc of graph.nodes) {
+    if (npc.type !== "npc" || !(npc.roles as string[] | undefined)?.includes("vendor")) continue;
+    const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
+    const zoneNode = zoneEdge ? helpers.nodeById(zoneEdge.target) : undefined;
+    const alignment = zoneNode?.alignment as string | undefined;
+    if (!zoneEdge || (alignment !== "good" && alignment !== "evil")) continue;
+
+    const sold = helpers.edgesFrom(npc.id, "sells").map((e) => e.target).filter((id) => ingredientIds.has(id));
+    if (!sold.length) continue;
+    if (!covered.has(zoneEdge.target)) covered.set(zoneEdge.target, { zoneLabel: zoneNode!.label, alignment, items: new Set() });
+    const entry = covered.get(zoneEdge.target)!;
+    for (const id of sold) entry.items.add(id);
+  }
+
+  const pickBest = (alignment: "good" | "evil"): CityRecommendation | null => {
+    let best: CityRecommendation | null = null;
+    for (const [zoneId, city] of covered) {
+      if (city.alignment !== alignment) continue;
+      if (!best || city.items.size > best.ingredientCount) best = { zoneId, zoneLabel: city.zoneLabel, ingredientCount: city.items.size };
+    }
+    return best;
+  };
+
+  return { totalIngredients: ingredientIds.size, good: pickBest("good"), evil: pickBest("evil") };
+}
+
 export interface ItemSourceZone {
   zoneId: string;
   zoneLabel: string;
@@ -1313,6 +1369,10 @@ export interface ZoneRanking {
   // eqlwiki.com page that actually covers them.
   wikiTitle: string | null;
   hops: number | null;
+  // True when no current zone was selected, so `hops`/`route` above are
+  // simply unset rather than a real "unreachable" result -- see
+  // buildZoneRankingBase().
+  noOrigin?: boolean;
   route: RouteStep[];
   // Up to 2 additional routes besides `route` itself (3 total) -- same
   // shape/ordering convention as getRoute()'s own `alternates`
@@ -1367,7 +1427,13 @@ function buildZoneRankingBase(
   helpers: GraphIndexHelpers
 ): Omit<ZoneRanking, "spells" | "items"> {
   const zoneNode = helpers.nodeById(zoneId);
-  const pathIds = shortestPath(currentZoneId, zoneId, helpers, includePorts);
+  // No current zone selected (Advanced's "Current Zone" left on its default
+  // placeholder) -- there's nothing to route from, so skip pathfinding
+  // entirely rather than asking shortestPath() to route from a bogus empty
+  // id. `noOrigin` tells the frontend to omit the hops badge/route entirely
+  // rather than rendering it as if the zone were merely unreachable.
+  const hasOrigin = !!currentZoneId;
+  const pathIds = hasOrigin ? shortestPath(currentZoneId, zoneId, helpers, includePorts) : null;
   const hops = pathIds ? pathIds.length - 1 : null;
   const route: RouteStep[] = pathIds ? buildRouteSteps(pathIds, (id) => helpers.nodeById(id), helpers) : [];
   let alternates: RouteStep[][] = [];
@@ -1422,6 +1488,7 @@ function buildZoneRankingBase(
     ...(raceIgnored ? { raceIgnored: true } : {}),
     ...(classIgnored ? { classIgnored: true } : {}),
     ...(deityIgnored ? { deityIgnored: true } : {}),
+    ...(hasOrigin ? {} : { noOrigin: true }),
     score,
     ...resolveEra(zoneNode?.era as string | undefined, pathIds ? pathIds.map((s) => s.zoneId) : [], helpers),
   };

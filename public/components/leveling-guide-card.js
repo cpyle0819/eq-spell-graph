@@ -1,10 +1,14 @@
-// <leveling-guide-card>, with `.setData(recipes)` set as one atomic call.
-// One compact panel listing every recipe of a tradeskill as an ordered row
-// (easiest to hardest, trivial ascending -- the order src/graph.ts's
-// getRecipes() already returns), not a separate card per recipe: this is
-// the fixed reference "how do I level this skill from 0" answer, distinct
-// from browsing/searching individual recipes (recipe-card.js's job).
-// `recipes` is RecipeSummary[].
+// <leveling-guide-card>, with `.setData(recipes, levelingCities)` set as one
+// atomic call. One compact panel listing every recipe of a tradeskill as an
+// ordered row (easiest to hardest, trivial ascending -- the order
+// src/graph.ts's getRecipes() already returns), not a separate card per
+// recipe: this is the fixed reference "how do I level this skill from 0"
+// answer, distinct from browsing/searching individual recipes
+// (recipe-card.js's job). `recipes` is RecipeSummary[]; `levelingCities` is
+// TradeskillLevelingCities | null (src/graph.ts's
+// getTradeskillLevelingCities(), decisions/city-alignment-good-evil.md) --
+// the best good/evil city to shop this guide's own ingredient set, rendered
+// as a small badge pair under the header.
 //
 // A standalone panel, not a CardBase list item -- same "self-contained
 // dossier shell" shape as zone-dossier.js (its own bevel-panel + parchment-
@@ -41,7 +45,7 @@ ${RESET_CSS}
   border-top: 2px solid var(--gold);
   padding: 22px 26px !important;
 }
-.guide-header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.guide-header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
 .guide-title {
   font-family: var(--font-display);
   font-size: 19px; font-weight: 700; color: var(--parchment);
@@ -56,6 +60,25 @@ ${RESET_CSS}
   color: #c9a25e;
   font-variant-numeric: tabular-nums;
 }
+
+/* Good/evil city recommendation (decisions/city-alignment-good-evil.md) --
+   two small badges, not a third card: a supplementary fact about the guide
+   below, not its own entity. Empty (no ingredient coverage in either
+   alignment) renders nothing rather than an empty row. */
+.guide-cities { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.city-badge {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; padding: 4px 10px; border-radius: 3px;
+  background: var(--panel-deep);
+  border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: var(--parchment);
+}
+.city-badge .align-good { color: #7fbf6a; font-weight: 700; }
+.city-badge .align-evil { color: #c0554a; font-weight: 700; }
+.city-badge a { color: #c9a25e; text-decoration: none; }
+.city-badge a:hover, .city-badge a:focus-visible { text-decoration: underline; }
+.city-badge .city-count { color: var(--parch-ink-soft); }
 
 .guide-scroll {
   position: relative;
@@ -119,9 +142,33 @@ function recipeRowHtml(recipe) {
   `;
 }
 
+// One badge per alignment side that actually has a covering city -- a side
+// with no vendor coverage at all (city.good/city.evil is null) renders
+// nothing rather than a dead "no recommendation" badge, same "absence isn't
+// a gap to fill" convention city-alignment-good-evil.md's own data uses.
+// Deep-links to maps.html?to=<zoneLabel>, same convention leveling-guide.html
+// (the zone-revamp page, not this one) already uses for a plain zone name.
+function cityBadgeHtml(align, city, total) {
+  if (!city) return "";
+  const label = align === "good" ? "Good City" : "Evil City";
+  return `
+    <span class="city-badge">
+      <span class="align-${align}">${label}:</span>
+      <a href="maps.html?to=${encodeURIComponent(city.zoneLabel)}">${city.zoneLabel}</a>
+      <span class="city-count">(${city.ingredientCount}/${total})</span>
+    </span>
+  `;
+}
+
+function cityBadgesHtml(cities) {
+  if (!cities || (!cities.good && !cities.evil)) return "";
+  return cityBadgeHtml("good", cities.good, cities.totalIngredients) + cityBadgeHtml("evil", cities.evil, cities.totalIngredients);
+}
+
 class LevelingGuideCard extends HTMLElement {
   #recipes = [];
   #itemsById = new Map();
+  #levelingCities = null;
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -132,6 +179,7 @@ class LevelingGuideCard extends HTMLElement {
           <span class="guide-title">Leveling Guide</span>
           <span class="guide-count-badge"></span>
         </div>
+        <div class="guide-cities"></div>
         <div class="guide-scroll">
           <div class="recipe-list"></div>
         </div>
@@ -153,15 +201,20 @@ class LevelingGuideCard extends HTMLElement {
     }));
   }
 
-  setData(recipes) {
+  // levelingCities is TradeskillLevelingCities (src/graph.ts) or null/
+  // undefined (not yet fetched, or no tradeskill selected) -- either reads
+  // the same as "nothing to recommend."
+  setData(recipes, levelingCities) {
     this.#recipes = recipes;
     this.#itemsById = new Map(recipes.flatMap((r) => [...r.uses, ...(r.produces ? [r.produces] : [])]).map((i) => [i.id, i]));
+    this.#levelingCities = levelingCities ?? null;
     if (this.shadowRoot) this.render();
   }
 
   render() {
     const recipes = this.#recipes;
     this.shadowRoot.querySelector(".guide-count-badge").textContent = `${recipes.length} Recipe${recipes.length === 1 ? "" : "s"}`;
+    this.shadowRoot.querySelector(".guide-cities").innerHTML = cityBadgesHtml(this.#levelingCities);
     const listEl = this.shadowRoot.querySelector(".recipe-list");
     listEl.innerHTML = recipes.length
       ? recipes.map(recipeRowHtml).join("")

@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, type NodeData } from "./graph";
 
 // Spells aren't tagged with a `category` field the way sold items are
 // (migration 400) -- they're the original, and only, sells-target type for
@@ -86,7 +86,11 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const race = searchParams.get("race") || undefined;
     const primaryClass = searchParams.get("primaryClass") || undefined;
     const deity = searchParams.get("deity") || undefined;
-    const fromId = `zone:${slugify(from)}`;
+    // Empty rather than a bogus `zone:` id when no zone was picked --
+    // buildZoneRankingBase() (src/graph.ts) treats a falsy currentZoneId as
+    // "no origin, skip routing" instead of trying to path from a zone that
+    // doesn't exist.
+    const fromId = from ? `zone:${slugify(from)}` : "";
     const specificZoneIds = (searchParams.get("zones") || "").split(",").filter(Boolean);
     const includePorts = searchParams.get("ports") === "1";
 
@@ -389,6 +393,14 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const tradeskill = searchParams.get("tradeskill") || "";
     const zone = searchParams.get("zone") || undefined;
     return { status: 200, body: tradeskill ? getTradeskillVendors(tradeskill, zone) : [] };
+  }
+
+  // GET /api/tradeskill-leveling-cities?tradeskill=Brewing — the best good
+  // city and best evil city to shop that trade's leveling-guide ingredients
+  // in (decisions/city-alignment-good-evil.md).
+  if (pathname === "/api/tradeskill-leveling-cities") {
+    const tradeskill = searchParams.get("tradeskill") || "";
+    return { status: 200, body: tradeskill ? getTradeskillLevelingCities(tradeskill) : { totalIngredients: 0, good: null, evil: null } };
   }
 
   // GET /api/item-sources?ids=item:a,item:b — Foraged In/Fished From/

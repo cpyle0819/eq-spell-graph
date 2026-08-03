@@ -48,6 +48,10 @@ let selectedItemSubtype = "";
 
 let rawRecipes = [];
 let rawVendors = [];
+// TradeskillLevelingCities (src/graph.ts) -- the best good/evil city to shop
+// the current tradeskill's leveling-guide ingredients in, decisions/
+// city-alignment-good-evil.md. null before the first fetch resolves.
+let rawLevelingCities = null;
 // itemId -> ItemSourceSummary (src/graph.ts's getItemSources) -- Foraged
 // In/Fished From/Dropped By/Crafted In facts for ingredient-card.js
 // (issue #55). Fetched alongside rawVendors once the ingredient id set is
@@ -298,11 +302,11 @@ export async function init() {
   // results silently out of sync.
   if (selectedTradeskill && tradeskills.includes(selectedTradeskill)) {
     document.getElementById("trade-skill-select").value = selectedTradeskill;
-  } else if (tradeskills.length === 1) {
-    // Sole tradeskill modeled so far -- pre-selecting it means a visitor
-    // sees a populated dossier immediately rather than an empty
-    // "— Select —" landing state, same "show real data by default" call
-    // quests.js's own out-of-era toggle makes in reverse.
+  } else if (tradeskills.length) {
+    // Pre-selecting the first (alphabetically, getTradeskills()) tradeskill
+    // means a visitor sees a populated dossier immediately rather than an
+    // empty "— Select —" landing state, same "show real data by default"
+    // call quests.js's own out-of-era toggle makes in reverse.
     document.getElementById("trade-skill-select").value = tradeskills[0];
     selectedTradeskill = tradeskills[0];
   }
@@ -796,6 +800,7 @@ async function fetchTradeskillData() {
     rawRecipes = [];
     rawVendors = [];
     rawItemSources = new Map();
+    rawLevelingCities = null;
     resultsEl.innerHTML = '<div class="no-results">Select a trade skill to see its leveling guide and vendors.</div>';
     return;
   }
@@ -805,22 +810,24 @@ async function fetchTradeskillData() {
 
   const params = new URLSearchParams({ tradeskill: selectedTradeskill });
   // /api/item-sources' ids param depends on the recipe response (the
-  // ingredient id set), so recipes resolves first; vendors doesn't share
-  // that dependency and still runs alongside it, not after.
+  // ingredient id set), so recipes resolves first; vendors/leveling-cities
+  // don't share that dependency and still run alongside it, not after.
   const recipes = await fetch(`api/recipes?${params}`).then((r) => r.json());
   if (token !== fetchToken) return;
   const ingredientIds = distinctIngredientIds(recipes);
-  const [vendors, itemSources] = await Promise.all([
+  const [vendors, itemSources, levelingCities] = await Promise.all([
     fetch(`api/tradeskill-vendors?${params}`).then((r) => r.json()),
     ingredientIds.length
       ? fetch(`api/item-sources?ids=${ingredientIds.map(encodeURIComponent).join(",")}`).then((r) => r.json())
       : Promise.resolve([]),
+    fetch(`api/tradeskill-leveling-cities?${params}`).then((r) => r.json()),
   ]);
   if (token !== fetchToken) return; // a newer trade-skill change superseded this request
 
   rawRecipes = recipes;
   rawVendors = vendors;
   rawItemSources = new Map(itemSources.map((s) => [s.id, s]));
+  rawLevelingCities = levelingCities;
   updateItemTypeOptions();
   updateItemSubtypeOptions();
   updateFilterVisibility();
@@ -845,7 +852,7 @@ function render() {
   // me recipes/ingredients matching X," but only one is ever on screen.
   if (activeView === "guide") {
     const guide = document.createElement("leveling-guide-card");
-    guide.setData(rawRecipes.filter((r) => r.levelingGuide));
+    guide.setData(rawRecipes.filter((r) => r.levelingGuide), rawLevelingCities);
     resultsEl.appendChild(guide);
     return;
   }
