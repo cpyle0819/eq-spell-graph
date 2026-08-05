@@ -184604,6 +184604,351 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:patch-of-gnoll-fur",
+      "label": "Patch of Gnoll Fur",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by gnolls"
+    },
+    {
+      "id": "item:gnoll-fur-patch",
+      "label": "Gnoll Fur Patch",
+      "type": "item",
+      "weight": 0.3,
+      "size": "Small"
+    },
+    {
+      "id": "item:gnoll-fur-patch-quarter",
+      "label": "Gnoll Fur Patch Quarter",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:patched-gnoll-fur-bundle",
+      "label": "Patched Gnoll Fur Bundle",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 4,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 4,
+      "size": "Large",
+      "classes": []
+    },
+    {
+      "id": "recipe:gnoll-fur-patch",
+      "label": "Gnoll Fur Patch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 21
+    },
+    {
+      "id": "recipe:gnoll-fur-patch-quarter",
+      "label": "Gnoll Fur Patch Quarter",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:patched-gnoll-fur-bundle",
+      "label": "Patched Gnoll Fur Bundle",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 31
+    },
+    {
+      "id": "item:torn-tapestry",
+      "label": "Torn Tapestry",
+      "type": "item",
+      "size": "Tiny",
+      "source": "Dropped in Lake of Ill Omen"
+    },
+    {
+      "id": "item:ripped-tapestry",
+      "label": "Ripped Tapestry",
+      "type": "item",
+      "size": "Tiny",
+      "source": "Dropped in Lake of Ill Omen"
+    },
+    {
+      "id": "item:mended-tapestry",
+      "label": "Mended Tapestry",
+      "type": "item",
+      "weight": 0,
+      "size": "Tiny",
+      "noTrade": true,
+      "source": "Lore item; the rolled-up Note for Necromancer Skullcap Quests, 2nd Rank"
+    },
+    {
+      "id": "recipe:mended-tapestry",
+      "label": "Mended Tapestry",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 23
+    },
+    {
+      "id": "item:shadow-wolf-pelt",
+      "label": "Shadow Wolf Pelt",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped by shadow wolves"
+    },
+    {
+      "id": "item:spell-scroll-gather-shadows",
+      "label": "Spell Scroll of Gather Shadows",
+      "type": "item",
+      "source": "Bought; consumed as a Tailoring reagent (distinct from casting the Gather Shadows spell itself)"
+    },
+    {
+      "id": "recipe:large-shadow-silk",
+      "label": "Large Shadow Silk",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 34
+    },
+    {
+      "id": "recipe:inky-shadow-silk",
+      "label": "Inky Shadow Silk",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 34
+    },
+    {
+      "id": "recipe:shadow-silk",
+      "label": "Shadow Silk",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 36
+    },
+    {
+      "id": "item:large-shadow-silk",
+      "label": "Large Shadow Silk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Robe of Enshroudment quest ingredient"
+    },
+    {
+      "id": "item:inky-shadow-silk",
+      "label": "Inky Shadow Silk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "ShadowBound Gloves quest ingredient"
+    },
+    {
+      "id": "item:shadow-silk",
+      "label": "Shadow Silk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "ShadowBound Boots quest ingredient; also used in the Monk epic quest Robe of the Lost Circle"
+    },
+    {
+      "id": "item:high-quality-cougarskin",
+      "label": "High Quality Cougarskin",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:high-quality-tundra-kodiak-pelt",
+      "label": "High Quality Tundra Kodiak Pelt",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:coldain-hunting-blanket",
+      "label": "Coldain Hunting Blanket",
+      "type": "item",
+      "slots": [
+        "Finger"
+      ],
+      "weight": 1,
+      "size": "Medium",
+      "noTrade": true,
+      "classes": []
+    },
+    {
+      "id": "recipe:coldain-hunting-blanket",
+      "label": "Coldain Hunting Blanket",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 41
+    },
+    {
+      "id": "item:fur-lined-coldain-prayer-shawl",
+      "label": "Fur-Lined Coldain Prayer Shawl",
+      "type": "item",
+      "source": "Coldain Prayer Shawl Quests reward (earlier shawl in the chain)"
+    },
+    {
+      "id": "item:glowing-crystalline-silk-piece",
+      "label": "Glowing Crystalline Silk Piece",
+      "type": "item",
+      "source": "Made from Crystalline Silk Fiber via a No-Fail non-tradeskill combine (not a skill-check recipe)"
+    },
+    {
+      "id": "item:silk-coldain-prayer-shawl",
+      "label": "Silk Coldain Prayer Shawl",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "magic": true,
+      "noTrade": true,
+      "ac": 5,
+      "stats": {
+        "cha": 5,
+        "wis": 5,
+        "int": 5
+      },
+      "resists": {
+        "fire": 5,
+        "cold": 5
+      },
+      "weight": 2,
+      "size": "Small",
+      "classes": [],
+      "source": "Coldain Prayer Shawl Quests #5"
+    },
+    {
+      "id": "recipe:silk-coldain-prayer-shawl",
+      "label": "Silk Coldain Prayer Shawl",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 115
+    },
+    {
+      "id": "item:drakkel-wolf-whisker",
+      "label": "Drakkel Wolf Whisker",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:manticore-mane",
+      "label": "Manticore Mane",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:siren-hair",
+      "label": "Siren Hair",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:woven-frost-giant-beard",
+      "label": "Woven Frost Giant Beard",
+      "type": "item",
+      "source": "Dropped"
+    },
+    {
+      "id": "item:spool-of-sacred-coldain-thread",
+      "label": "Spool of Sacred Coldain Thread",
+      "type": "item",
+      "magic": true,
+      "noTrade": true,
+      "weight": 0.2,
+      "size": "Small",
+      "source": "Coldain Prayer Shawl Quests #6 ingredient"
+    },
+    {
+      "id": "recipe:spool-of-sacred-coldain-thread",
+      "label": "Spool of Sacred Coldain Thread",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 162
+    },
+    {
+      "id": "item:embroidered-shawl-pattern",
+      "label": "Embroidered Shawl Pattern",
+      "type": "item",
+      "source": "Coldain Prayer Shawl Quests #6"
+    },
+    {
+      "id": "item:embroidered-coldain-prayer-shawl",
+      "label": "Embroidered Coldain Prayer Shawl",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "magic": true,
+      "noTrade": true,
+      "ac": 6,
+      "stats": {
+        "sta": 6,
+        "cha": 6,
+        "wis": 6,
+        "int": 6
+      },
+      "resists": {
+        "fire": 6,
+        "cold": 6
+      },
+      "weight": 2,
+      "size": "Small",
+      "classes": [],
+      "source": "Coldain Prayer Shawl Quests #6, shawl #6"
+    },
+    {
+      "id": "recipe:embroidered-coldain-prayer-shawl",
+      "label": "Embroidered Coldain Prayer Shawl",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 208
+    },
+    {
+      "id": "item:encased-velium-etched-rune",
+      "label": "Encased Velium Etched Rune",
+      "type": "item",
+      "source": "Coldain Prayer Shawl Quests #7 ingredient"
+    },
+    {
+      "id": "item:runed-prayer-shawl-pattern",
+      "label": "Runed Prayer Shawl Pattern",
+      "type": "item",
+      "source": "Coldain Prayer Shawl Quests #7, quested"
+    },
+    {
+      "id": "item:runed-coldain-prayer-shawl",
+      "label": "Runed Coldain Prayer Shawl",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "magic": true,
+      "noTrade": true,
+      "ac": 7,
+      "stats": {
+        "sta": 7,
+        "cha": 7,
+        "wis": 7,
+        "int": 7
+      },
+      "resists": {
+        "fire": 7,
+        "cold": 7,
+        "poison": 7
+      },
+      "effect": "Flowing Thought I (Worn)",
+      "weight": 2,
+      "size": "Small",
+      "classes": [],
+      "source": "Coldain Prayer Shawl Quests #7, shawl #7"
+    },
+    {
+      "id": "recipe:runed-coldain-prayer-shawl",
+      "label": "Runed Coldain Prayer Shawl",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 162
     }
   ],
   "edges": [
@@ -402942,6 +403287,329 @@
       "source": "npc:western-karana:cleet-miller",
       "target": "item:whip-pattern",
       "type": "sells"
+    },
+    {
+      "id": "e-uses-35387",
+      "source": "recipe:gnoll-fur-patch",
+      "target": "item:patch-of-gnoll-fur",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-35388",
+      "source": "recipe:gnoll-fur-patch",
+      "target": "item:gnoll-fur-patch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35389",
+      "source": "recipe:gnoll-fur-patch",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35390",
+      "source": "recipe:gnoll-fur-patch-quarter",
+      "target": "item:gnoll-fur-patch",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-35391",
+      "source": "recipe:gnoll-fur-patch-quarter",
+      "target": "item:gnoll-fur-patch-quarter",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35392",
+      "source": "recipe:gnoll-fur-patch-quarter",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35393",
+      "source": "recipe:patched-gnoll-fur-bundle",
+      "target": "item:gnoll-fur-patch-quarter",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-35394",
+      "source": "recipe:patched-gnoll-fur-bundle",
+      "target": "item:patched-gnoll-fur-bundle",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35395",
+      "source": "recipe:patched-gnoll-fur-bundle",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35396",
+      "source": "recipe:mended-tapestry",
+      "target": "item:torn-tapestry",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35397",
+      "source": "recipe:mended-tapestry",
+      "target": "item:ripped-tapestry",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35398",
+      "source": "recipe:mended-tapestry",
+      "target": "item:mended-tapestry",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35399",
+      "source": "recipe:mended-tapestry",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35400",
+      "source": "recipe:large-shadow-silk",
+      "target": "item:shadow-wolf-pelt",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-35401",
+      "source": "recipe:large-shadow-silk",
+      "target": "item:silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35402",
+      "source": "recipe:large-shadow-silk",
+      "target": "item:spell-scroll-gather-shadows",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35403",
+      "source": "recipe:large-shadow-silk",
+      "target": "item:large-shadow-silk",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35404",
+      "source": "recipe:large-shadow-silk",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35405",
+      "source": "recipe:inky-shadow-silk",
+      "target": "item:shadow-wolf-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35406",
+      "source": "recipe:inky-shadow-silk",
+      "target": "item:silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35407",
+      "source": "recipe:inky-shadow-silk",
+      "target": "item:spell-scroll-gather-shadows",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35408",
+      "source": "recipe:inky-shadow-silk",
+      "target": "item:inky-shadow-silk",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35409",
+      "source": "recipe:inky-shadow-silk",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35410",
+      "source": "recipe:shadow-silk",
+      "target": "item:shadow-wolf-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35411",
+      "source": "recipe:shadow-silk",
+      "target": "item:silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35412",
+      "source": "recipe:shadow-silk",
+      "target": "item:spell-scroll-gather-shadows",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35413",
+      "source": "recipe:shadow-silk",
+      "target": "item:shadow-silk",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35414",
+      "source": "recipe:shadow-silk",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35415",
+      "source": "recipe:coldain-hunting-blanket",
+      "target": "item:high-quality-cougarskin",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-35416",
+      "source": "recipe:coldain-hunting-blanket",
+      "target": "item:high-quality-tundra-kodiak-pelt",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35417",
+      "source": "recipe:coldain-hunting-blanket",
+      "target": "item:coldain-hunting-blanket",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35418",
+      "source": "recipe:coldain-hunting-blanket",
+      "target": "container:large-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35419",
+      "source": "recipe:silk-coldain-prayer-shawl",
+      "target": "item:fur-lined-coldain-prayer-shawl",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35420",
+      "source": "recipe:silk-coldain-prayer-shawl",
+      "target": "item:glowing-crystalline-silk-piece",
+      "type": "uses",
+      "quantity": 5
+    },
+    {
+      "id": "e-produces-35421",
+      "source": "recipe:silk-coldain-prayer-shawl",
+      "target": "item:silk-coldain-prayer-shawl",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35422",
+      "source": "recipe:silk-coldain-prayer-shawl",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35423",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "item:drakkel-wolf-whisker",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-35424",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "item:manticore-mane",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-35425",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "item:siren-hair",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-uses-35426",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "item:woven-frost-giant-beard",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35427",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "item:spool-of-sacred-coldain-thread",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35428",
+      "source": "recipe:spool-of-sacred-coldain-thread",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35429",
+      "source": "recipe:embroidered-coldain-prayer-shawl",
+      "target": "item:embroidered-shawl-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35430",
+      "source": "recipe:embroidered-coldain-prayer-shawl",
+      "target": "item:silk-coldain-prayer-shawl",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35431",
+      "source": "recipe:embroidered-coldain-prayer-shawl",
+      "target": "item:spool-of-sacred-coldain-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35432",
+      "source": "recipe:embroidered-coldain-prayer-shawl",
+      "target": "item:embroidered-coldain-prayer-shawl",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35433",
+      "source": "recipe:embroidered-coldain-prayer-shawl",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35434",
+      "source": "recipe:runed-coldain-prayer-shawl",
+      "target": "item:embroidered-coldain-prayer-shawl",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35435",
+      "source": "recipe:runed-coldain-prayer-shawl",
+      "target": "item:encased-velium-etched-rune",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35436",
+      "source": "recipe:runed-coldain-prayer-shawl",
+      "target": "item:runed-prayer-shawl-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35437",
+      "source": "recipe:runed-coldain-prayer-shawl",
+      "target": "item:runed-coldain-prayer-shawl",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35438",
+      "source": "recipe:runed-coldain-prayer-shawl",
+      "target": "container:loom",
+      "type": "crafted_in"
     }
   ]
 }
