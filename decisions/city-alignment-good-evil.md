@@ -61,16 +61,27 @@ version wrote — same "don't store what's derivable" call as
 For a given tradeskill, `getTradeskillLevelingCities()` collects the distinct
 ingredient set across only that tradeskill's `levelingGuide` recipes (the
 same fixed reference path `leveling-guide-card.js` renders, not the full
-recipe book), then for every alignment-derived city sums how many of those
-distinct ingredients at least one vendor there sells. The highest-scoring
-good city, evil city, and neutral city are surfaced independently — a tie or
-an alignment with no covering vendor at all resolves to `null` (the UI just
-omits that badge) rather than guessing. Neutral renders as a real third
-badge in `leveling-guide-card.js`, not folded into or hidden behind
-good/evil — Freeport routinely covers more of a tradeskill's ingredients
-than either single-alignment city (its three sub-zones combined beat every
-alternative for Brewing/Baking/Blacksmithing alike), so treating it as a
-lesser option would bury the actually best answer.
+recipe book), then for every covered city sums how many of those distinct
+ingredients at least one vendor there sells.
+
+**Update: surfaced as a plain top-3-by-coverage list, not one slot per
+alignment.** The first version picked the highest-scoring good city, evil
+city, and neutral city independently and guaranteed a badge for each
+(tie or no covering vendor at all resolved to `null`, omitting that one
+badge). That's gone from the UI — `getTradeskillLevelingCities()` now
+returns `topCities`, the 3 highest-coverage cities overall regardless of
+alignment, and `leveling-guide-card.js` renders them as plain ledger rows
+with no Good/Evil/Neutral label at all. `deriveCityAlignment()` still runs
+and every covered city is still tagged with it internally — the
+classification wasn't wrong or removed, it just stopped being the axis the
+UI groups its picks by, since a straight "where do the ingredients actually
+sell best" ranking is a more direct answer to the question a leveling player
+is actually asking, and three cities of the same alignment can legitimately
+all be the right answer if that's genuinely where the ingredients are sold
+(Freeport, being genuinely mixed and often the single best-covering city,
+no longer needs a dedicated "neutral" slot to keep it from being buried
+behind a single-alignment city — it just wins on coverage directly, same
+"highest count wins" rule every other city gets).
 
 **The denominator only counts vendor-purchasable ingredients.** Baking's own
 leveling guide surfaced why: 8 of its 13 distinct ingredients (Clump of

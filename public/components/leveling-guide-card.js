@@ -1,26 +1,33 @@
-// <leveling-guide-card>, with `.setData(recipes, levelingCities)` set as one
-// atomic call. Renders the tradeskill's own hand-picked leveling path
-// (recipe.levelingGuide === true, trades.js's own filter) in the same order
-// src/graph.ts's getRecipes() already returns (trivial ascending) -- this is
-// the fixed reference "how do I level this skill from 0" answer, distinct
-// from browsing/searching individual recipes (recipe-card.js's job), but the
-// recipes themselves render through that exact same <recipe-card> component
-// Browse mode uses (issue #67: previously a bespoke compact row here, which
-// let the two views drift out of sync on a per-recipe feature -- variants
-// and the ingredient-tree toggle both landed on recipe-card first and had to
-// be re-added here by hand each time).
+// <leveling-guide-card>, with `.setData(recipes, levelingCities, compatibility)`
+// set as one atomic call. Renders the tradeskill's own hand-picked leveling
+// path (recipe.levelingGuide === true, trades.js's own filter) in the same
+// order src/graph.ts's getRecipes() already returns (trivial ascending) --
+// this is the fixed reference "how do I level this skill from 0" answer,
+// distinct from browsing/searching individual recipes (recipe-card.js's
+// job), but the recipes themselves render through that exact same
+// <recipe-card> component Browse mode uses (issue #67: previously a bespoke
+// compact row here, which let the two views drift out of sync on a
+// per-recipe feature -- variants and the ingredient-tree toggle both landed
+// on recipe-card first and had to be re-added here by hand each time).
 //
 // `recipes` is RecipeSummary[]; `levelingCities` is TradeskillLevelingCities
 // | null (src/graph.ts's getTradeskillLevelingCities(),
-// decisions/city-alignment-good-evil.md) -- the best good/evil/neutral city
-// to shop this guide's own ingredient set, rendered as a small badge row
-// under the header.
+// decisions/city-alignment-good-evil.md) -- the top 3 cities by ingredient
+// coverage to shop this guide's own ingredient set in; `compatibility` is
+// TradeskillCompatibility | null (src/graph.ts's getTradeskillCompatibility(),
+// decisions/tradeskill-compatibility-cross-trade-dependency.md) -- the other
+// tradeskill that pairs best with this one. Both render as ledger rows
+// inside the header panel's own parchment-scroll insert.
 //
-// The header + city recommendation is its own small marble panel (same
-// "distinct visual object" bar as every other card in this app); the
-// recipe-card list below it is plain block stacking with no panel of its
-// own -- each recipe-card already brings its own stone-console-plus-
-// parchment-scroll shell (card-base.js), so wrapping the list in a second
+// The header + recommendations sit in the same console-row-plus-parchment-
+// scroll shell every other card in this app uses (card-base.js/
+// welcome-scroll.js) -- name-on-stone header, then a parchment insert with
+// wood-dowel end caps for the actual content, rather than flat pill badges
+// sitting directly on the stone panel (the look this replaced: it read as a
+// generic modern dashboard chip cluster next to recipe-card's own scroll
+// below it). The recipe-card list below the summary panel is plain block
+// stacking with no panel of its own -- each recipe-card already brings its
+// own version of this exact shell, so wrapping the list in a second stone
 // panel would nest stone inside stone.
 //
 // Every per-recipe affordance (the "+ Add Ingredients" button, ingredient
@@ -30,6 +37,7 @@
 // straight out of both its own shadow root and this one to reach trades.js's
 // listener on #trades-results without this component doing anything.
 import { RESET_CSS } from "./reset.js";
+import "./ledger-item.js";
 
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(`
@@ -65,94 +73,137 @@ ${RESET_CSS}
   font-variant-numeric: tabular-nums;
 }
 
-/* Good/evil/neutral city recommendation (decisions/
-   city-alignment-good-evil.md) -- up to three small badges, not a third
-   card: a supplementary fact about the guide below, not its own entity.
-   Empty (no ingredient coverage in any of the three) renders nothing at
-   all, caption included -- there's nothing to caption if no badge has
-   anything to say. */
-.guide-cities { display: flex; flex-direction: column; gap: 6px; margin-top: 16px; }
-.guide-cities-caption { font-size: 11px; font-style: italic; color: var(--ink-muted); }
-.guide-cities-badges { display: flex; gap: 10px; flex-wrap: wrap; }
-.city-badge {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 12px; padding: 4px 10px; border-radius: 3px;
-  background: var(--panel-deep);
-  border: 1px solid; border-color: var(--edge-lo) var(--edge-lo) #5a5570 #5a5570;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-  color: var(--parchment);
+/* The parchment insert with wood-dowel end caps every card-base.js-derived
+   card (and welcome-scroll.js standalone) already uses for its own body
+   content -- duplicated here rather than imported since neither of those
+   exports the raw CSS text, same "each shell owner keeps its own copy" call
+   welcome-scroll.js already made rather than extending CardBase itself.
+   Empty (nothing to recommend at all) renders nothing, the hidden attribute
+   set from render() below -- an empty parchment strip would read as a
+   mistake, not as "no recommendations right now." */
+.guide-scroll {
+  position: relative;
+  margin-top: 18px;
+  padding: 14px 22px;
+  border-radius: 2px;
+  background: var(--parch-tex), linear-gradient(180deg, #ece3c8, var(--parch-bg));
+  border: 1px solid var(--parch-line);
+  box-shadow: inset 0 0 22px rgba(122, 96, 42, 0.3), 0 2px 6px rgba(0, 0, 0, 0.45);
+  color: var(--parch-ink);
 }
-.city-badge .align-good { color: #7fbf6a; font-weight: 700; }
-.city-badge .align-evil { color: #c0554a; font-weight: 700; }
-.city-badge .align-neutral { color: var(--ink-muted); font-weight: 700; }
-.city-badge a { color: #c9a25e; text-decoration: none; }
-.city-badge a:hover, .city-badge a:focus-visible { text-decoration: underline; }
-.city-badge .city-count { color: var(--ink-muted); }
+.guide-scroll[hidden] { display: none; }
+.guide-scroll::before, .guide-scroll::after {
+  content: "";
+  position: absolute; top: -3px; bottom: -3px; width: 11px;
+  border-radius: 5px;
+  background:
+    radial-gradient(3px 3px at 50% 7px, rgba(0, 0, 0, 0.6), transparent 70%),
+    radial-gradient(3px 3px at 50% calc(100% - 7px), rgba(0, 0, 0, 0.6), transparent 70%),
+    linear-gradient(90deg, var(--wood-2), var(--wood-1) 40%, var(--wood-1) 60%, var(--wood-2));
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
+}
+.guide-scroll::before { left: -11px; }
+.guide-scroll::after { right: -11px; }
+
+.guide-section + .guide-section { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--parch-line); }
+/* A real subheading for each mini-section, not a caption that reads as one
+   more line of body copy -- previously 11px italic in the same muted
+   --parch-ink-soft <ledger-item>'s own detail slot already uses, so "Best
+   zones to buy..." barely stood out from the "3 of 5 ingredients" line
+   right under it (same flaw a Toptal typographic-hierarchy piece calls out:
+   without a real weight/color/case break, two adjacent text blocks read as
+   one tier). Bold + uppercase + accent color now separates it clearly from
+   both the ledger-item label (bold, but plain --parch-ink) and its detail
+   (muted, but not bold) -- distinct enough for its own thing without
+   competing with "Leveling Guide" itself for attention. */
+.guide-section-caption {
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--parch-accent);
+  margin-bottom: 8px;
+}
+
+/* <ledger-item>'s own hairline divider (:host + :host) already separates
+   rows -- this just resets the first row's top padding so it sits flush
+   under the caption instead of matching every other row's spacing. */
+.guide-section ledger-item:first-of-type { padding-top: 4px !important; }
+
+/* <ledger-item>'s slotted <a> is light-DOM content one level past what its
+   own ::slotted() rule can reach (single compound selector, no
+   combinators) -- same fix zone-dossier.js's own ".quest-ledger a" rule
+   applies for the identical reason, scoped to this shadow root instead. */
+.guide-scroll a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--parch-accent); }
+.guide-scroll a:hover, .guide-scroll a:focus-visible { color: var(--parch-accent); border-bottom-style: solid; }
+.guide-scroll a:focus-visible { outline: 2px solid var(--parch-accent); outline-offset: 2px; border-radius: 1px; }
 
 .recipe-empty { font-size: 12px; font-style: italic; color: var(--ink-muted); margin-top: 16px; }
 `);
 
-const ALIGN_LABELS = { good: "Good Zone", evil: "Evil Zone", neutral: "Neutral Zone" };
-
-// One badge per alignment side that actually has a covering city -- a side
-// with no vendor coverage at all (city.good/city.evil/city.neutral is null)
-// renders nothing rather than a dead "no recommendation" badge, same
-// "absence isn't a gap to fill" convention city-alignment-good-evil.md's own
-// data uses. "Neutral" (src/graph.ts's deriveCityAlignment()) covers both a
-// city eqlwiki itself documents as genuinely mixed (Freeport) and one this
-// graph's faction data just doesn't discriminate on (Cabilis) -- either way
-// it's a real third option, not a lesser one, so it renders the same way as
-// Good/Evil, not folded into either or hidden.
-// Deep-links to maps.html?to=<zoneLabel>, same convention leveling-guide.html
-// (the zone-revamp page, not this one) already uses for a plain zone name.
-// The count spells out "N of M ingredients" in the visible label itself, not
-// a bare "(N/M)" -- a slash-separated pair reads as a magic number without
-// units; `title` repeats it in full prose (what "ingredients" means here:
-// vendor-sourceable only, see cityBadgesHtml's own caption) for anyone
-// hovering. `total` (src/graph.ts's getTradeskillLevelingCities()) already
-// excludes this guide's own crafted/foraged/dropped-only ingredients --
-// ones no vendor anywhere sells, so no city could ever cover them -- so a
-// perfect score reads as "N of N," not as an unexplained gap.
-function cityBadgeHtml(align, city, total) {
-  if (!city) return "";
-  const label = ALIGN_LABELS[align];
-  const title = `${city.ingredientCount} of this guide's ${total} vendor-sourceable ingredients are sold in ${city.cityLabel}`;
-  // Links to the city's own best sub-zone (city.zoneLabel) even though the
-  // visible name is the real-world city (city.cityLabel) -- Freeport itself
-  // isn't a single zone maps.html can route to, only its three sub-zones
-  // are (decisions/city-alignment-good-evil.md).
+// Up to 3 <ledger-item> rows, highest ingredient coverage first -- the
+// TradeskillLevelingCities.topCities src/graph.ts already returns in that
+// order, so this just renders them, no re-sorting. No more per-alignment
+// good/evil/neutral labels (decisions/city-alignment-good-evil.md's own
+// update note) -- the classification is still computed on the backend, just
+// not grouped by here; three cities of the same alignment can legitimately
+// all show up if that's genuinely where the ingredients are sold. Links to
+// the city's own best sub-zone (city.zoneLabel) even though the visible name
+// is the real-world city (city.cityLabel) -- Freeport itself isn't a single
+// zone maps.html can route to, only its three sub-zones are.
+function zonesLedgerHtml(cities) {
+  if (!cities?.topCities?.length) return "";
+  const rows = cities.topCities
+    .map((city) => {
+      const title = `${city.ingredientCount} of this guide's ${cities.totalIngredients} vendor-sourceable ingredients are sold in ${city.cityLabel}`;
+      return `
+        <ledger-item title="${title}">
+          <span slot="label"><a href="maps.html?to=${encodeURIComponent(city.zoneLabel)}">${city.cityLabel}</a></span>
+          <span slot="detail">${city.ingredientCount} of ${cities.totalIngredients} ingredients</span>
+        </ledger-item>
+      `;
+    })
+    .join("");
   return `
-    <span class="city-badge" title="${title}">
-      <span class="align-${align}">${label}:</span>
-      <a href="maps.html?to=${encodeURIComponent(city.zoneLabel)}">${city.cityLabel}</a>
-      <span class="city-count">${city.ingredientCount} of ${total} ingredients</span>
-    </span>
+    <div class="guide-section">
+      <p class="guide-section-caption">Best zones to buy this guide's vendor-sourceable ingredients from:</p>
+      ${rows}
+    </div>
   `;
 }
 
-// A one-line caption above the badges spells out what they mean up front
-// (issue: the bare badges gave no hint what the count was even counting) --
-// visible text, not just each badge's own hover title, since a touch device
-// has no hover at all to discover that detail on. Names "vendor-sourceable"
-// explicitly -- this guide's own crafted/foraged/dropped-only ingredients
-// (never sold by any vendor) don't count toward either total, so a city
-// showing e.g. "5 of 5" already covers everything actually shoppable, even
-// though the guide itself calls for more ingredients than that.
-function cityBadgesHtml(cities) {
-  if (!cities || (!cities.good && !cities.evil && !cities.neutral)) return "";
+// TradeskillCompatibility (src/graph.ts's getTradeskillCompatibility(),
+// decisions/tradeskill-compatibility-cross-trade-dependency.md) -- the other
+// tradeskill that pairs best with this one, scored by *both* directions of
+// ingredient/tool dependency combined, not just this guide's own. No
+// compatible trade, or a tie between two, both read as "nothing to
+// recommend" (mostCompatible is null either way) and render nothing, same
+// convention zonesLedgerHtml uses. Deep-links to trades.html?tradeskill=,
+// the same param applyQueryParams() (public/trades.js) already restores
+// from ingredient-card.js's own cross-trade "Crafted In" links.
+function compatibilityLedgerHtml(compatibility) {
+  if (!compatibility?.mostCompatible) return "";
+  const { tradeskill, fromThisGuide, fromPartnerGuide } = compatibility.mostCompatible;
+  const shared = fromThisGuide + fromPartnerGuide;
+  // The relationship is usually one-way in practice (this guide leans on
+  // the partner's containers/ingredients, not the reverse) -- the tooltip
+  // spells out both halves so a 0 on either side reads as a real fact, not
+  // a rounding artifact of the combined count.
+  const title = fromPartnerGuide
+    ? `This guide needs ${fromThisGuide} ingredient(s)/tool(s) crafted via ${tradeskill}; ${tradeskill}'s own guide needs ${fromPartnerGuide} crafted via this trade in return.`
+    : `This guide needs ${fromThisGuide} ingredient(s)/tool(s) crafted via ${tradeskill}.`;
   return `
-    <span class="guide-cities-caption">Best good/evil/neutral city to buy this guide's vendor-sourceable ingredients from:</span>
-    <span class="guide-cities-badges">
-      ${cityBadgeHtml("good", cities.good, cities.totalIngredients)}
-      ${cityBadgeHtml("evil", cities.evil, cities.totalIngredients)}
-      ${cityBadgeHtml("neutral", cities.neutral, cities.totalIngredients)}
-    </span>
+    <div class="guide-section">
+      <p class="guide-section-caption">Most compatible trade skill (heaviest ingredient/tool overlap, both directions):</p>
+      <ledger-item title="${title}">
+        <span slot="label"><a href="trades.html?tradeskill=${encodeURIComponent(tradeskill)}">${tradeskill}</a></span>
+        <span slot="detail">${shared} ingredient/tool overlap</span>
+      </ledger-item>
+    </div>
   `;
 }
 
 class LevelingGuideCard extends HTMLElement {
   #recipes = [];
   #levelingCities = null;
+  #compatibility = null;
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -164,7 +215,7 @@ class LevelingGuideCard extends HTMLElement {
             <span class="guide-title">Leveling Guide</span>
             <span class="guide-count-badge"></span>
           </div>
-          <div class="guide-cities"></div>
+          <div class="guide-scroll" hidden></div>
         </div>
         <div class="recipe-card-list"></div>
       `;
@@ -174,17 +225,23 @@ class LevelingGuideCard extends HTMLElement {
 
   // levelingCities is TradeskillLevelingCities (src/graph.ts) or null/
   // undefined (not yet fetched, or no tradeskill selected) -- either reads
-  // the same as "nothing to recommend."
-  setData(recipes, levelingCities) {
+  // the same as "nothing to recommend." compatibility is
+  // TradeskillCompatibility or null/undefined, same convention.
+  setData(recipes, levelingCities, compatibility) {
     this.#recipes = recipes;
     this.#levelingCities = levelingCities ?? null;
+    this.#compatibility = compatibility ?? null;
     if (this.shadowRoot) this.render();
   }
 
   render() {
     const recipes = this.#recipes;
     this.shadowRoot.querySelector(".guide-count-badge").textContent = `${recipes.length} Recipe${recipes.length === 1 ? "" : "s"}`;
-    this.shadowRoot.querySelector(".guide-cities").innerHTML = cityBadgesHtml(this.#levelingCities);
+
+    const scrollEl = this.shadowRoot.querySelector(".guide-scroll");
+    const html = zonesLedgerHtml(this.#levelingCities) + compatibilityLedgerHtml(this.#compatibility);
+    scrollEl.innerHTML = html;
+    scrollEl.hidden = !html;
 
     const listEl = this.shadowRoot.querySelector(".recipe-card-list");
     listEl.innerHTML = "";

@@ -61,6 +61,12 @@
       border: 1px solid var(--parch-line); border-radius: 2px;
       background: rgba(122, 96, 42, 0.06);
     }
+    /* Kept deliberately small/kicker-style (unlike .road-trail/.road-ledger's
+       h2 below) -- these two boxes are short reference asides sandwiched
+       between the intro and the page's real content, not sections in their
+       own right, and the size gap against the two real section headings is
+       what signals that now (11px vs 18px -- comfortably past the "1-2pt
+       differences aren't perceptible" floor a size-based hierarchy needs). */
     .road-notes h2 {
       font-family: var(--font-display); font-size: 11px; font-weight: 600;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
@@ -87,11 +93,25 @@
        own range/marker/copy rendering; this page only owns how the run of
        them relates (the connecting line, positioned to match trail-stop's
        own internal marker column). ── */
-    .road-trail { margin-top: 34px; position: relative; }
+    .road-trail { margin-top: 40px; position: relative; }
+    /* The Trail and Beyond the Kill Count (below) are the page's two real
+       content sections -- a five-zone narrative, a ten-entry browsable list
+       -- so they get a genuinely bigger, bolder, darker-on-parchment
+       heading than Field Notes/A Few Tricks' small-caps kicker style
+       above: more size, more weight, --parch-ink instead of the muted
+       --parch-accent, a hairline rule underneath for the extra whitespace
+       that makes a heading read as prominent (a Toptal typographic-
+       hierarchy piece is what this pass is applying -- size contrast,
+       weight, color, and spacing all doing the differentiating work
+       together, not just one of them). Previously both used the exact same
+       11px kicker style as Field Notes/A Few Tricks *and* the page's own
+       .eyebrow line above the H1 -- three completely different kinds of
+       content flattened to one visual tier, nothing to actually scan for. */
     .road-trail h2 {
-      font-family: var(--font-display); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
-      margin-bottom: 6px;
+      font-family: var(--font-display); font-size: 18px; font-weight: 700;
+      color: var(--parch-ink); letter-spacing: 0.01em;
+      padding-bottom: 8px; margin-bottom: 16px;
+      border-bottom: 1px solid var(--parch-line);
     }
     .trail-path { position: relative; margin-top: 14px; }
     .trail-path::before {
@@ -104,6 +124,15 @@
        light-DOM descendants a shadow ::slotted() rule can't reach (single
        compound selector only) -- their styling lives here, same as any
        other light-DOM content passed into a slot. */
+    /* Zone names are the one thing a reader actually scans The Trail for --
+       previously just bold body-ink text, indistinguishable at a glance
+       from any other bolded word (Emperor Crush, Najena herself, ...) in
+       the same paragraph. The display font + accent color (same "give the
+       name its own look" treatment card-base.js's h3 already gives every
+       spell/recipe/quest name elsewhere in the app) makes the zone itself
+       the one word per stop that pops on a quick scan down the page,
+       without changing the paragraph's flow or size. */
+    trail-stop p > a:first-child strong { font-family: var(--font-display); color: var(--parch-accent); }
     trail-stop strong { color: var(--parch-ink); font-weight: 700; }
     trail-stop a, ledger-item a {
       color: inherit; text-decoration: none; border-bottom: 1px dotted var(--parch-accent);
@@ -123,11 +152,14 @@
     /* ── Ledgers (Beyond the Kill Count): browsable lists of distinct,
        unordered entries, not a journey — set apart from the trail's
        flowing prose. Each <ledger-item> owns its own row look. ── */
-    .road-ledger { margin-top: 34px; }
+    .road-ledger { margin-top: 40px; }
+    /* Same major-section treatment as .road-trail h2 above -- see that rule's
+       own comment for why. */
     .road-ledger h2 {
-      font-family: var(--font-display); font-size: 11px; font-weight: 600;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch-accent);
-      margin-bottom: 10px;
+      font-family: var(--font-display); font-size: 18px; font-weight: 700;
+      color: var(--parch-ink); letter-spacing: 0.01em;
+      padding-bottom: 8px; margin-bottom: 16px;
+      border-bottom: 1px solid var(--parch-line);
     }
     .road-ledger-intro { font-size: 13px; font-style: italic; color: var(--parch-ink-soft); line-height: 1.6; margin-bottom: 6px; }
 
@@ -189,7 +221,6 @@
             <p><a href="maps.html?to=Plane%20of%20Sky"><strong>Plane of Sky</strong></a>'s June 2026 rework changed how its eight-island key system behaves: a key now stays on your keyring permanently once used, and drops from each island's boss instead of trash mobs. The class epic-quest requirements at each island were simplified to a handful of wind runes plus one or two specific items, and most of the zone's best loot now comes from finishing those quests rather than direct boss drops.</p>
           </trail-stop>
         </div>
-      </div>
       </div>
 
       <div class="road-ledger">

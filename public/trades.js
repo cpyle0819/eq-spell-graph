@@ -52,6 +52,11 @@ let rawVendors = [];
 // the current tradeskill's leveling-guide ingredients in, decisions/
 // city-alignment-good-evil.md. null before the first fetch resolves.
 let rawLevelingCities = null;
+// TradeskillCompatibility (src/graph.ts) -- the other tradeskill this one's
+// leveling guide most depends on for ingredients/tools it can't make itself,
+// decisions/tradeskill-compatibility-cross-trade-dependency.md. null before
+// the first fetch resolves.
+let rawCompatibility = null;
 // itemId -> ItemSourceSummary (src/graph.ts's getItemSources) -- Foraged
 // In/Fished From/Dropped By/Crafted In facts for ingredient-card.js
 // (issue #55). Fetched alongside rawVendors once the ingredient id set is
@@ -846,6 +851,7 @@ async function fetchTradeskillData() {
     rawVendors = [];
     rawItemSources = new Map();
     rawLevelingCities = null;
+    rawCompatibility = null;
     resultsEl.innerHTML = '<div class="no-results">Select a trade skill to see its leveling guide and vendors.</div>';
     return;
   }
@@ -860,12 +866,13 @@ async function fetchTradeskillData() {
   const recipes = await fetch(`api/recipes?${params}`).then((r) => r.json());
   if (token !== fetchToken) return;
   const ingredientIds = distinctIngredientIds(recipes);
-  const [vendors, itemSources, levelingCities] = await Promise.all([
+  const [vendors, itemSources, levelingCities, compatibility] = await Promise.all([
     fetch(`api/tradeskill-vendors?${params}`).then((r) => r.json()),
     ingredientIds.length
       ? fetch(`api/item-sources?ids=${ingredientIds.map(encodeURIComponent).join(",")}`).then((r) => r.json())
       : Promise.resolve([]),
     fetch(`api/tradeskill-leveling-cities?${params}`).then((r) => r.json()),
+    fetch(`api/tradeskill-compatibility?${params}`).then((r) => r.json()),
   ]);
   if (token !== fetchToken) return; // a newer trade-skill change superseded this request
 
@@ -873,6 +880,7 @@ async function fetchTradeskillData() {
   rawVendors = vendors;
   rawItemSources = new Map(itemSources.map((s) => [s.id, s]));
   rawLevelingCities = levelingCities;
+  rawCompatibility = compatibility;
   updateItemTypeOptions();
   updateItemSubtypeOptions();
   updateFilterVisibility();
@@ -897,7 +905,7 @@ function render() {
   // me recipes/ingredients matching X," but only one is ever on screen.
   if (activeView === "guide") {
     const guide = document.createElement("leveling-guide-card");
-    guide.setData(rawRecipes.filter((r) => r.levelingGuide), rawLevelingCities);
+    guide.setData(rawRecipes.filter((r) => r.levelingGuide), rawLevelingCities, rawCompatibility);
     resultsEl.appendChild(guide);
     return;
   }

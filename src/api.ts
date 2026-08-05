@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getRecipeTree, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getTradeskillCompatibility, getRecipeTree, type NodeData } from "./graph";
 
 // Spells aren't tagged with a `category` field the way sold items are
 // (migration 400) -- they're the original, and only, sells-target type for
@@ -395,12 +395,21 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: tradeskill ? getTradeskillVendors(tradeskill, zone) : [] };
   }
 
-  // GET /api/tradeskill-leveling-cities?tradeskill=Brewing — the best good,
-  // evil, and neutral city to shop that trade's leveling-guide ingredients
-  // in (decisions/city-alignment-good-evil.md).
+  // GET /api/tradeskill-leveling-cities?tradeskill=Brewing — the top 3
+  // cities by ingredient coverage to shop that trade's leveling-guide
+  // ingredients in (decisions/city-alignment-good-evil.md).
   if (pathname === "/api/tradeskill-leveling-cities") {
     const tradeskill = searchParams.get("tradeskill") || "";
-    return { status: 200, body: tradeskill ? getTradeskillLevelingCities(tradeskill) : { totalIngredients: 0, good: null, evil: null, neutral: null } };
+    return { status: 200, body: tradeskill ? getTradeskillLevelingCities(tradeskill) : { totalIngredients: 0, topCities: [] } };
+  }
+
+  // GET /api/tradeskill-compatibility?tradeskill=Baking — the other
+  // tradeskill that pairs best with this one, by combined cross-trade
+  // ingredient/tool dependency in both directions (decisions/
+  // tradeskill-compatibility-cross-trade-dependency.md).
+  if (pathname === "/api/tradeskill-compatibility") {
+    const tradeskill = searchParams.get("tradeskill") || "";
+    return { status: 200, body: tradeskill ? getTradeskillCompatibility(tradeskill) : { mostCompatible: null } };
   }
 
   // GET /api/recipe-tree?id=recipe:pot — the full recursive ingredient tree

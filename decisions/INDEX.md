@@ -102,6 +102,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Alternate routes: reuse the danger-routing hop-budget DFS, cap at 3 total](alternate-routes.md)
 - [Vendors' Type filter: a stored `category` on sold items, not a computed classification](vendors-type-filter.md)
 - [City alignment (good/evil): derived from this graph's own faction data](city-alignment-good-evil.md)
+- [Tradeskill compatibility: scored by cross-trade ingredient/tool dependency](tradeskill-compatibility-cross-trade-dependency.md)
 - [Shopping list rows group by sourcing category, not one flat list](shopping-list-sourcing-categories.md)
 - [Recipe ingredient tree: fetched on demand, one toggle expands it all](recipe-ingredient-tree.md)
 

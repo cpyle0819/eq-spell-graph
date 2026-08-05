@@ -858,13 +858,13 @@ export interface CityRecommendation {
 
 export interface TradeskillLevelingCities {
   totalIngredients: number;
-  good: CityRecommendation | null;
-  evil: CityRecommendation | null;
-  neutral: CityRecommendation | null;
+  // The top 3 real-world cities by ingredient coverage, highest first --
+  // not one slot per alignment anymore (see below). Fewer than 3 entries
+  // only when fewer than 3 cities have any coverage at all.
+  topCities: CityRecommendation[];
 }
 
-// Which good, evil, and neutral city best cover a tradeskill's leveling
-// path, per decisions/city-alignment-good-evil.md -- scored by how many
+// The top cities to shop a tradeskill's leveling path in, scored by how many
 // distinct *vendor-purchasable* ingredients across only the levelingGuide=
 // true recipes (the same fixed path leveling-guide-card.js renders, not the
 // whole recipe book) at least one vendor across the *whole real-world city*
@@ -874,9 +874,17 @@ export interface TradeskillLevelingCities {
 // more. Deliberately not restricted to `zoneType === "city"` -- Kelethin
 // (the Wood Elf good city) has no zone node of its own in this graph at all,
 // its vendors are `located_in` "Greater Faydark" (zoneType "open_world"), so
-// a city-only filter would silently drop a real, correctly-scored good city
+// a city-only filter would silently drop a real, correctly-scored city
 // rather than a spurious one. The same real-vendor + real-deity-table
 // requirements below already keep genuinely irrelevant zones out.
+//
+// Every covered city is still tagged with deriveCityAlignment() internally
+// (decisions/city-alignment-good-evil.md) -- that classification isn't dead
+// code, just no longer what the top-3 picks are *grouped* by. The UI used to
+// guarantee one good/one evil/one neutral slot; that's gone (decisions/
+// city-alignment-good-evil.md's own update note) in favor of a plain
+// highest-coverage-wins top 3, which can legitimately be three cities of the
+// same alignment if that's genuinely where the ingredients are sold.
 //
 // The denominator only counts ingredients at least one vendor *anywhere*
 // sells -- Baking's own leveling guide calls for several ingredients that
@@ -903,11 +911,15 @@ export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevel
     const zoneEdge = helpers.edgesFrom(npc.id, "located_in")[0];
     const zoneNode = zoneEdge ? helpers.nodeById(zoneEdge.target) : undefined;
     if (!zoneEdge || !zoneNode) continue;
-    // A confirmed-out-of-era city (e.g. Firiona Vie, Kunark) can't be the
-    // best recommendation for a fresh leveler -- same era gate quests use
-    // (decisions/quest-era-flagging.md), just without a toggle to reveal it
-    // here since this is a single "best pick," not a filterable list.
+    // A confirmed-out-of-era city (e.g. Firiona Vie, Kunark) can't be a real
+    // recommendation for a fresh leveler -- same era gate quests use
+    // (decisions/quest-era-flagging.md).
     if (isOutOfEra(zoneNode.era as string | undefined, helpers)) continue;
+    // Still computed even though the top-3 picks below no longer group by
+    // it -- kept for whatever future feature wants city alignment without
+    // needing to re-derive it, same "don't delete a real classification just
+    // because the current UI stopped surfacing it" call as leaving
+    // deriveCityAlignment() itself in place.
     const alignment = deriveCityAlignment(zoneNode);
 
     const sold = helpers.edgesFrom(npc.id, "sells").map((e) => e.target).filter((id) => purchasableIds.has(id));
@@ -924,20 +936,119 @@ export function getTradeskillLevelingCities(tradeskill: string): TradeskillLevel
     }
   }
 
-  const pickBest = (alignment: "good" | "evil" | "neutral"): CityRecommendation | null => {
-    let best: (CityRecommendation & { itemsSize: number }) | null = null;
-    for (const [cityLabel, city] of covered) {
-      if (city.alignment !== alignment) continue;
-      if (best && city.items.size <= best.itemsSize) continue;
+  const topCities = [...covered.entries()]
+    .map(([cityLabel, city]) => {
       const [entryZoneId, entryZone] = [...city.subZones.entries()].sort(
         (a, b) => b[1].items.size - a[1].items.size || a[1].zoneLabel.localeCompare(b[1].zoneLabel)
       )[0];
-      best = { cityLabel, zoneId: entryZoneId, zoneLabel: entryZone.zoneLabel, ingredientCount: city.items.size, itemsSize: city.items.size };
-    }
-    return best ? { cityLabel: best.cityLabel, zoneId: best.zoneId, zoneLabel: best.zoneLabel, ingredientCount: best.ingredientCount } : null;
-  };
+      return { cityLabel, zoneId: entryZoneId, zoneLabel: entryZone.zoneLabel, ingredientCount: city.items.size };
+    })
+    .sort((a, b) => b.ingredientCount - a.ingredientCount || a.cityLabel.localeCompare(b.cityLabel))
+    .slice(0, 3);
 
-  return { totalIngredients: purchasableIds.size, good: pickBest("good"), evil: pickBest("evil"), neutral: pickBest("neutral") };
+  return { totalIngredients: purchasableIds.size, topCities };
+}
+
+export interface TradeskillCompatibility {
+  mostCompatible: {
+    tradeskill: string;
+    // Distinct ingredients/tools *this* tradeskill's own leveling guide
+    // needs crafted via the partner trade.
+    fromThisGuide: number;
+    // Distinct ingredients/tools the *partner's* own leveling guide needs
+    // crafted via this trade -- the other half of the same relationship.
+    // Often 0 (the dependency runs one-way, e.g. Baking needs Pottery's
+    // containers but Pottery's own guide needs nothing back from Baking) --
+    // that's a real, expected shape, not a data gap.
+    fromPartnerGuide: number;
+  } | null;
+}
+
+// Distinct ingredients/containers a tradeskill's own leveling guide needs
+// crafted via some *other* tradeskill, tallied per other trade -- the
+// one-directional half of getTradeskillCompatibility()'s own pairwise score
+// below. Walks each levelingGuide=true recipe's own `uses` ingredients *and*
+// `crafted_in` containers (Baking's Pot/Smoker/Mixing Bowl are genuinely
+// player-crafted via Blacksmithing/Pottery, not just consumed ingredients --
+// decisions/tradeskill-recipe-node-schema.md's "produces can target a
+// container" section) out to whichever recipe actually produces each one
+// (pickPrimaryProducer, same vendor-sourceable/trivial tiebreak
+// getRecipeTree() already uses), recursing through that producer's own
+// ingredients so a multi-hop dependency (this trade needs an ingredient
+// that's crafted from an ingredient crafted by a third trade) still counts
+// toward whichever trade actually produces the leaf. A dependency on this
+// tradeskill's own recipes doesn't count -- only crossing into a genuinely
+// different tradeskill is a real cross-trade fact.
+function tradeskillDependencyCounts(tradeskill: string, helpers: GraphIndexHelpers, graph: GraphData): Map<string, number> {
+  const levelingRecipes = graph.nodes.filter((n) => n.type === "recipe" && n.tradeskill === tradeskill && n.levelingGuide);
+
+  // itemId/containerId -> the other tradeskill that crafts it. Visited once
+  // ever (not just per-branch, unlike getRecipeTree's own cycle guard) so a
+  // shared dependency reached from two different leveling recipes is only
+  // counted once, matching getTradeskillLevelingCities' own "distinct
+  // ingredients" scoring.
+  const dependencyOwners = new Map<string, string>();
+  const visited = new Set<string>();
+
+  function resolve(id: string, depth: number) {
+    if (visited.has(id) || depth > RECIPE_TREE_DEPTH_BUDGET) return;
+    const producer = pickPrimaryProducer(id, helpers);
+    if (!producer) return;
+    visited.add(id);
+    const producerTradeskill = producer.tradeskill as string;
+    if (producerTradeskill !== tradeskill) dependencyOwners.set(id, producerTradeskill);
+    for (const e of helpers.edgesFrom(producer.id, "uses")) resolve(e.target, depth + 1);
+  }
+
+  for (const n of levelingRecipes) {
+    for (const e of helpers.edgesFrom(n.id, "uses")) resolve(e.target, 0);
+    for (const e of helpers.edgesFrom(n.id, "crafted_in")) resolve(e.target, 0);
+  }
+
+  const counts = new Map<string, number>();
+  for (const owner of dependencyOwners.values()) counts.set(owner, (counts.get(owner) ?? 0) + 1);
+  return counts;
+}
+
+// Which other tradeskill pairs best with this one, per decisions/
+// tradeskill-compatibility-cross-trade-dependency.md -- scored by *combining*
+// both directions of tradeskillDependencyCounts() for each candidate pair
+// (this trade's dependency on the candidate, plus the candidate's own
+// dependency back on this trade), not just this trade's own one-directional
+// count. A pure one-directional score picked mismatched, non-mutual partners
+// -- Baking's own guide leans on Pottery hard enough to make Pottery Baking's
+// top pick, but Pottery's own guide barely depends on anything (its only
+// directional dependency is one Brewing ingredient), so scoring Pottery's
+// side in isolation picked Brewing instead of reciprocating Baking, even
+// though Baking<->Pottery is obviously the real pairing. Summing both
+// directions fixes it: Baking<->Pottery's combined score (7) dominates any
+// pairing either trade has in isolation, so both sides now agree.
+export function getTradeskillCompatibility(tradeskill: string): TradeskillCompatibility {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const allTradeskills = [...new Set(graph.nodes.filter((n) => n.type === "recipe").map((n) => n.tradeskill as string))];
+  const ownDeps = tradeskillDependencyCounts(tradeskill, helpers, graph);
+
+  // Highest combined score wins; a tie resolves to null rather than
+  // guessing, same convention getTradeskillLevelingCities' own pickBest()
+  // uses for a tied or uncovered alignment.
+  let best: { tradeskill: string; fromThisGuide: number; fromPartnerGuide: number; combined: number } | null = null;
+  let tied = false;
+  for (const other of allTradeskills) {
+    if (other === tradeskill) continue;
+    const fromThisGuide = ownDeps.get(other) ?? 0;
+    const fromPartnerGuide = tradeskillDependencyCounts(other, helpers, graph).get(tradeskill) ?? 0;
+    const combined = fromThisGuide + fromPartnerGuide;
+    if (combined === 0) continue;
+    if (!best || combined > best.combined) {
+      best = { tradeskill: other, fromThisGuide, fromPartnerGuide, combined };
+      tied = false;
+    } else if (combined === best.combined) {
+      tied = true;
+    }
+  }
+
+  return { mostCompatible: !best || tied ? null : { tradeskill: best.tradeskill, fromThisGuide: best.fromThisGuide, fromPartnerGuide: best.fromPartnerGuide } };
 }
 
 export interface ItemSourceZone {
