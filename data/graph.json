@@ -198264,6 +198264,84 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:hickory-bow-staff",
+      "label": "Hickory Bow Staff",
+      "type": "item",
+      "size": "Large",
+      "weight": 4
+    },
+    {
+      "id": "item:elm-bow-staff",
+      "label": "Elm Bow Staff",
+      "type": "item",
+      "size": "Large",
+      "weight": 4
+    },
+    {
+      "id": "item:ashwood-bow-staff",
+      "label": "Ashwood Bow Staff",
+      "type": "item",
+      "size": "Large",
+      "weight": 4
+    },
+    {
+      "id": "item:oak-bow-staff",
+      "label": "Oak Bow Staff",
+      "type": "item",
+      "size": "Large",
+      "weight": 4
+    },
+    {
+      "id": "item:darkwood-bow-staff",
+      "label": "Darkwood Bow Staff",
+      "type": "item",
+      "size": "Large",
+      "weight": 4
+    },
+    {
+      "id": "item:hemp-twine",
+      "label": "Hemp Twine",
+      "type": "item",
+      "size": "Small",
+      "weight": 0.1
+    },
+    {
+      "id": "item:linen-string",
+      "label": "Linen String",
+      "type": "item",
+      "size": "Small",
+      "weight": 0.1
+    },
+    {
+      "id": "item:silk-string",
+      "label": "Silk String",
+      "type": "item",
+      "size": "Small",
+      "weight": 0.1
+    },
+    {
+      "id": "item:whittling-blade",
+      "label": "Whittling Blade",
+      "type": "item",
+      "size": "Small",
+      "weight": 0.1
+    },
+    {
+      "id": "item:planing-tool",
+      "label": "Planing Tool",
+      "type": "item",
+      "size": "Small",
+      "weight": 0.5
+    },
+    {
+      "id": "npc:iceclad-ocean:sojan-the-sleepless",
+      "label": "Sojan the Sleepless",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -438274,6 +438352,600 @@
       "id": "e-sells-38965",
       "source": "npc:thurgadin:argash",
       "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38966",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38967",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38968",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38969",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38970",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "zone:iceclad-ocean",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38971",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38972",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38973",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38974",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38975",
+      "source": "npc:thurgadin:argash",
+      "target": "item:hickory-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38976",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38977",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38978",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38979",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38980",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38981",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38982",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38983",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38984",
+      "source": "npc:thurgadin:argash",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38985",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:elm-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38986",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38987",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38988",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38989",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38990",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38991",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38992",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38993",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38994",
+      "source": "npc:thurgadin:argash",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38995",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:oak-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38996",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38997",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38998",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38999",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39000",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39001",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39002",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39003",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39004",
+      "source": "npc:thurgadin:argash",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39005",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:ashwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39006",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39007",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39008",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39009",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39010",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39011",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39012",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39013",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39014",
+      "source": "npc:thurgadin:argash",
+      "target": "item:darkwood-bow-staff",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39015",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39016",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39017",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39018",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39019",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39020",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39021",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39022",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39023",
+      "source": "npc:thurgadin:argash",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39024",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:hemp-twine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39025",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39026",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39027",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39028",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39029",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39030",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39031",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39032",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39033",
+      "source": "npc:thurgadin:argash",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39034",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:linen-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39035",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39036",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39037",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39038",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39039",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39040",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39041",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39042",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39043",
+      "source": "npc:thurgadin:argash",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39044",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:silk-string",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39045",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39046",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39047",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39048",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39049",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39050",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39051",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39052",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39053",
+      "source": "npc:thurgadin:argash",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39054",
+      "source": "npc:north-freeport:timor-strongbranch",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39055",
+      "source": "npc:southern-desert-of-ro:smith-tv-ysa",
+      "target": "item:whittling-blade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39056",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39057",
+      "source": "npc:the-feerrott:fugla",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39058",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39059",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39060",
+      "source": "npc:iceclad-ocean:sojan-the-sleepless",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39061",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39062",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39063",
+      "source": "npc:rivervale:gerb-jinklebelly",
+      "target": "item:planing-tool",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-39064",
+      "source": "npc:thurgadin:argash",
+      "target": "item:planing-tool",
       "type": "sells"
     }
   ]
