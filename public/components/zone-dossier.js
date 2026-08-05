@@ -89,9 +89,9 @@
 // legend for the current floor).
 import { RESET_CSS } from "./reset.js";
 import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
-import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 import "./ledger-item.js";
 import "./zone-map.js";
+import "./npc-drop-table.js";
 
 function levelBadgeText(levelRange) {
   return levelRange ? `Levels ${levelRange.min}–${levelRange.max}` : "Level range unknown";
@@ -108,16 +108,6 @@ function npcLevelText({ minLevel, maxLevel }) {
   return `L${minLevel ?? "?"}-${maxLevel ?? "?"}`;
 }
 
-// Drop chips render inline inside .npc-name (not as a third grid cell) so
-// the existing 2-column max-content/1fr grid (name, level) doesn't need a
-// third track -- an npc row with drops just has a wider first cell.
-// hydrateItemChips() in render() attaches each chip's full item data from
-// #dropsById once this markup is in the DOM.
-function npcDropBadges(npc) {
-  if (!npc.drops?.length) return "";
-  return npc.drops.map(itemChipTag).join("");
-}
-
 // Two sibling grid cells, not a wrapping row div -- .npc-list itself is the
 // grid (see its own CSS comment for why), so every npc's name/level land in
 // the same two columns and the level column aligns down the whole list
@@ -129,11 +119,21 @@ function npcDropBadges(npc) {
 // (src/graph.ts's NpcSummary comment), so that group shows what they sell
 // (NpcSummary.sellCategories) instead of an always-empty level column;
 // every other role keeps the level text.
+//
+// A third element, <npc-drop-table>, follows the pair when this npc has any
+// drops -- `grid-column: 1 / -1` (this file's own CSS) spans it across both
+// of .npc-list's columns rather than sizing column 1 to its content, same
+// span technique .dossier-empty already uses. It renders empty/collapsed
+// until render() hydrates it below (mob-id ties each instance back to the
+// npc whose drops it should show, same id-keyed hydrate step
+// hydrateItemChips() used to do for the old inline chips).
 function npcRow(npc, role) {
   const rightText = role === "vendor" ? (npc.sellCategories || []).join(", ") : npcLevelText(npc);
+  const dropsTable = npc.drops?.length ? `<npc-drop-table class="npc-drops" mob-id="${npc.id}"></npc-drop-table>` : "";
   return `
-    <span class="npc-name">${npc.label}${npcDropBadges(npc)}</span>
+    <span class="npc-name">${npc.label}</span>
     <span class="npc-level">${rightText}</span>
+    ${dropsTable}
   `;
 }
 
@@ -355,15 +355,23 @@ ${WIKI_LINK_CSS}
    justify that gap, which is what actually freed up the room to widen the
    map (see decisions/ or this file's own layout comment above). */
 .npc-list { display: grid; grid-template-columns: max-content 1fr; column-gap: 16px; font-size: 13px; }
-.npc-name, .npc-level { padding: 5px 0; }
-.npc-name:nth-child(-n+2), .npc-level:nth-child(-n+2) { padding-top: 0; }
-.npc-name:not(:nth-child(-n+2)), .npc-level:not(:nth-child(-n+2)) { border-top: 1px solid var(--parch-line); }
+/* A row-divider per npc row, not per child index -- a mob with drops
+   contributes a third grid item (.npc-drops, spanning both columns below
+   its name/level pair), so the old :nth-child(-n+2) "first two children"
+   trick (which assumed every row was exactly 2 children) no longer lines up
+   once rows have mixed lengths. The sibling combinator instead asks "is
+   there an earlier .npc-name (or .npc-level) sibling at all" -- true for
+   every row but the first, regardless of how many .npc-drops elements sit
+   between rows. */
+.npc-name, .npc-level { padding: 0 0 5px; }
+.npc-name ~ .npc-name, .npc-level ~ .npc-level { padding-top: 5px; border-top: 1px solid var(--parch-line); }
 .npc-level { text-align: right; font-size: 11px; color: var(--parch-ink-soft); font-variant-numeric: tabular-nums; }
 
-/* item-chip.js renders every drop chip itself -- this just places it after
-   the npc's name, since <item-chip> is an ordinary inline child here, not
-   slotted content. */
-.npc-name item-chip { margin-left: 8px; }
+/* npc-drop-table.js renders its own toggle/list -- this just spans it
+   across both of .npc-list's columns, same technique .dossier-empty above
+   uses, so a mob's loot table reads as a full-width row under its
+   name/level pair rather than being squeezed into column 1. */
+.npc-drops { grid-column: 1 / -1; }
 
 /* quest-ledger's <ledger-item>s live in this component's own shadow tree
    (nested the same way route-card nests route-path -- see this file's own
@@ -383,7 +391,6 @@ ${WIKI_LINK_CSS}
 class ZoneDossier extends HTMLElement {
   #data = null;
   #activeFloor = 0;
-  #dropsById = new Map();
 
   connectedCallback() {
     if (!this.shadowRoot) {
@@ -475,10 +482,12 @@ class ZoneDossier extends HTMLElement {
       .map((entry) => `<li><span class="legend-key">${entry.key}</span><span>${entry.label}</span></li>`)
       .join("");
 
-    this.#dropsById = new Map((npcs || []).flatMap((n) => n.drops || []).map((item) => [item.id, item]));
     const npcGroupsEl = this.shadowRoot.querySelector(".npc-groups");
     npcGroupsEl.innerHTML = npcGroupsHtml(npcs, zoneType);
-    hydrateItemChips(npcGroupsEl, (id) => this.#dropsById.get(id));
+    for (const table of npcGroupsEl.querySelectorAll("npc-drop-table[mob-id]")) {
+      const npc = (npcs || []).find((n) => n.id === table.getAttribute("mob-id"));
+      table.setData(npc?.drops);
+    }
 
     const ledger = this.shadowRoot.querySelector(".quest-ledger");
     if (quests?.length) {
