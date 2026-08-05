@@ -184081,6 +184081,529 @@
       "id": "container:loom",
       "label": "Loom",
       "type": "container"
+    },
+    {
+      "id": "item:spider-silk",
+      "label": "Spider Silk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by adult spiders/drachnids across many zones; foraged in Mistmoore Castle, Erud's Crossing, Everfrost Peaks, Field of Bone, Nektulos Forest, Southern Desert of Ro, Steamfont Mountains"
+    },
+    {
+      "id": "item:spiderling-silk",
+      "label": "Spiderling Silk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by spiderlings across many zones; foraged in Commonlands, Steamfont Mountains, Western Plains of Karana"
+    },
+    {
+      "id": "item:silk-thread",
+      "label": "Silk Thread",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:silk-cord",
+      "label": "Silk Cord",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:silk-bandage",
+      "label": "Silk Bandage",
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small",
+      "source": "Lighter than store-bought Bandages"
+    },
+    {
+      "id": "recipe:silk-thread",
+      "label": "Silk Thread",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:silk-swatch",
+      "label": "Silk Swatch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:silk-cord",
+      "label": "Silk Cord",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:silk-bandage",
+      "label": "Silk Bandage",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 21
+    },
+    {
+      "id": "item:high-quality-wolf-skin",
+      "label": "High Quality Wolf Skin",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large",
+      "source": "Dropped by wolves across many zones"
+    },
+    {
+      "id": "item:medium-quality-wolf-skin",
+      "label": "Medium Quality Wolf Skin",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:ruined-wolf-pelt",
+      "label": "Ruined Wolf Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:high-quality-cat-pelt",
+      "label": "High Quality Cat Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large",
+      "source": "Dropped by cats across many zones"
+    },
+    {
+      "id": "item:medium-quality-cat-pelt",
+      "label": "Medium Quality Cat Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:low-quality-cat-pelt",
+      "label": "Low Quality Cat Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:ruined-cat-pelt",
+      "label": "Ruined Cat Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:high-quality-bear-skin",
+      "label": "High Quality Bear Skin",
+      "type": "item",
+      "weight": 4,
+      "size": "Large",
+      "source": "Dropped by bears across many zones"
+    },
+    {
+      "id": "item:medium-quality-bear-skin",
+      "label": "Medium Quality Bear Skin",
+      "type": "item",
+      "weight": 4,
+      "size": "Large"
+    },
+    {
+      "id": "item:low-quality-bear-skin",
+      "label": "Low Quality Bear Skin",
+      "type": "item",
+      "weight": 4,
+      "size": "Large"
+    },
+    {
+      "id": "item:ruined-bear-pelt",
+      "label": "Ruined Bear Pelt",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "recipe:medium-quality-wolf-skin",
+      "label": "Medium Quality Wolf Skin",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:low-quality-wolf-skin",
+      "label": "Low Quality Wolf Skin",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:ruined-wolf-pelt",
+      "label": "Ruined Wolf Pelt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:medium-quality-cat-pelt",
+      "label": "Medium Quality Cat Pelt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:low-quality-cat-pelt",
+      "label": "Low Quality Cat Pelt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:ruined-cat-pelt",
+      "label": "Ruined Cat Pelt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:medium-quality-bear-skin",
+      "label": "Medium Quality Bear Skin",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:low-quality-bear-skin",
+      "label": "Low Quality Bear Skin",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:ruined-bear-pelt",
+      "label": "Ruined Bear Pelt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:leather-padding-cat",
+      "label": "Leather Padding (Cat)",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:leather-padding-wolf",
+      "label": "Leather Padding (Wolf)",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:leather-padding-bear",
+      "label": "Leather Padding (Bear)",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 31
+    },
+    {
+      "id": "item:whip-pattern",
+      "label": "Whip Pattern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:tailor-made-whip",
+      "label": "Tailor-made Whip",
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "damage": 7,
+      "delay": 33,
+      "weight": 6,
+      "size": "Medium",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "shadow knight",
+        "bard",
+        "rogue"
+      ]
+    },
+    {
+      "id": "recipe:tailor-made-whip",
+      "label": "Tailor-made Whip",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 36
+    },
+    {
+      "id": "item:crystalline-silk-thread",
+      "label": "Crystalline Silk Thread",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "noTrade": true,
+      "source": "Dropped in Velketor's Labyrinth; not stackable"
+    },
+    {
+      "id": "item:crystalline-silk-swatch",
+      "label": "Crystalline Silk Swatch",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:crystalline-silk-fiber",
+      "label": "Crystalline Silk Fiber",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "magic": true,
+      "noTrade": true
+    },
+    {
+      "id": "recipe:crystalline-silk-swatch",
+      "label": "Crystalline Silk Swatch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "recipe:crystalline-silk-fiber",
+      "label": "Crystalline Silk Fiber",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 51
+    },
+    {
+      "id": "item:high-quality-lion-skin",
+      "label": "High Quality Lion Skin",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large",
+      "source": "Dropped by a highland lion (Northern Karana)"
+    },
+    {
+      "id": "item:vial-of-distilled-mana",
+      "label": "Vial of Distilled Mana",
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "magic": true,
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created via the level 39 Enchanter spell Distill Mana, consuming 2 sapphires and a poison vial -- not a tradeskill combine"
+    },
+    {
+      "id": "item:backpack-pattern",
+      "label": "Backpack Pattern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:quiver-pattern",
+      "label": "Quiver Pattern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:fleeting-quiver-pattern",
+      "label": "Fleeting Quiver Pattern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:griffon-feathers",
+      "label": "Griffon Feathers",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "source": "Dropped by griffins/griffons in West/East Commonlands, Northern Karana"
+    },
+    {
+      "id": "item:tailored-wrist-pouch",
+      "label": "Tailored Wrist Pouch",
+      "type": "item",
+      "weight": 0.3,
+      "capacity": 4,
+      "containerSize": "Tiny"
+    },
+    {
+      "id": "item:tailored-small-bag",
+      "label": "Tailored Small Bag",
+      "type": "item",
+      "weight": 0.4,
+      "capacity": 4,
+      "containerSize": "Medium"
+    },
+    {
+      "id": "item:tailored-large-belt-pouch",
+      "label": "Tailored Large Belt Pouch",
+      "type": "item",
+      "weight": 0.6,
+      "capacity": 6,
+      "containerSize": "Medium"
+    },
+    {
+      "id": "item:tailored-large-bag",
+      "label": "Tailored Large Bag",
+      "type": "item",
+      "weight": 0.8,
+      "capacity": 6,
+      "containerSize": "Large"
+    },
+    {
+      "id": "item:reinforced-medicine-bag",
+      "label": "Reinforced Medicine Bag",
+      "type": "item",
+      "weight": 2.5,
+      "capacity": 10,
+      "containerSize": "Giant"
+    },
+    {
+      "id": "item:hand-made-backpack",
+      "label": "Hand Made Backpack",
+      "type": "item",
+      "weight": 3,
+      "capacity": 10,
+      "containerSize": "Large",
+      "source": "Cheap and often available in East Commonlands"
+    },
+    {
+      "id": "item:tailored-quiver",
+      "label": "Tailored Quiver",
+      "type": "item",
+      "weight": 0.4,
+      "capacity": 6,
+      "containerSize": "Medium",
+      "source": "Provides 7.3% bow haste"
+    },
+    {
+      "id": "item:fleeting-quiver",
+      "label": "Fleeting Quiver",
+      "type": "item",
+      "weight": 0.4,
+      "capacity": 6,
+      "containerSize": "Medium",
+      "source": "Velious-added; provides 20% bow haste"
+    },
+    {
+      "id": "recipe:tailored-wrist-pouch",
+      "label": "Tailored Wrist Pouch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 26
+    },
+    {
+      "id": "recipe:tailored-small-bag",
+      "label": "Tailored Small Bag",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 31
+    },
+    {
+      "id": "recipe:tailored-large-belt-pouch",
+      "label": "Tailored Large Belt Pouch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 36
+    },
+    {
+      "id": "recipe:tailored-large-bag",
+      "label": "Tailored Large Bag",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 41
+    },
+    {
+      "id": "recipe:reinforced-medicine-bag",
+      "label": "Reinforced Medicine Bag",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 68
+    },
+    {
+      "id": "recipe:hand-made-backpack",
+      "label": "Hand Made Backpack",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 88,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:tailored-quiver",
+      "label": "Tailored Quiver",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 115,
+      "levelingGuide": true
+    },
+    {
+      "id": "recipe:fleeting-quiver",
+      "label": "Fleeting Quiver",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 222,
+      "levelingGuide": true
+    },
+    {
+      "id": "npc:east-freeport:winsa-tanner",
+      "label": "Winsa Tanner",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:gretamog",
+      "label": "Gretamog",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-commons:garren-d-vek",
+      "label": "Garren D`Vek",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-gleeup",
+      "label": "Zok Gleeup",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-lubump",
+      "label": "Zok Lubump",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -401421,6 +401944,1003 @@
       "id": "e-sells-35221",
       "source": "npc:thurgadin:betti-frostweaver",
       "target": "container:coldain-tanners-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-35222",
+      "source": "recipe:silk-thread",
+      "target": "item:spiderling-silk",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35223",
+      "source": "recipe:silk-thread",
+      "target": "item:silk-thread",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35224",
+      "source": "recipe:silk-thread",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35225",
+      "source": "recipe:silk-swatch",
+      "target": "item:spider-silk",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35226",
+      "source": "recipe:silk-swatch",
+      "target": "item:silk-swatch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35227",
+      "source": "recipe:silk-swatch",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35228",
+      "source": "recipe:silk-cord",
+      "target": "item:silk-thread",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-35229",
+      "source": "recipe:silk-cord",
+      "target": "item:silk-cord",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35230",
+      "source": "recipe:silk-cord",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35231",
+      "source": "recipe:silk-bandage",
+      "target": "item:silk-thread",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35232",
+      "source": "recipe:silk-bandage",
+      "target": "item:silk-bandage",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35233",
+      "source": "recipe:silk-bandage",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35234",
+      "source": "recipe:medium-quality-wolf-skin",
+      "target": "item:high-quality-wolf-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35235",
+      "source": "recipe:medium-quality-wolf-skin",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35236",
+      "source": "recipe:medium-quality-wolf-skin",
+      "target": "item:medium-quality-wolf-skin",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35237",
+      "source": "recipe:medium-quality-wolf-skin",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35238",
+      "source": "recipe:low-quality-wolf-skin",
+      "target": "item:medium-quality-wolf-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35239",
+      "source": "recipe:low-quality-wolf-skin",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35240",
+      "source": "recipe:low-quality-wolf-skin",
+      "target": "item:low-quality-wolf-skin",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35241",
+      "source": "recipe:low-quality-wolf-skin",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35242",
+      "source": "recipe:ruined-wolf-pelt",
+      "target": "item:low-quality-wolf-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35243",
+      "source": "recipe:ruined-wolf-pelt",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35244",
+      "source": "recipe:ruined-wolf-pelt",
+      "target": "item:ruined-wolf-pelt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35245",
+      "source": "recipe:ruined-wolf-pelt",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35246",
+      "source": "recipe:medium-quality-cat-pelt",
+      "target": "item:high-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35247",
+      "source": "recipe:medium-quality-cat-pelt",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35248",
+      "source": "recipe:medium-quality-cat-pelt",
+      "target": "item:medium-quality-cat-pelt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35249",
+      "source": "recipe:medium-quality-cat-pelt",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35250",
+      "source": "recipe:low-quality-cat-pelt",
+      "target": "item:medium-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35251",
+      "source": "recipe:low-quality-cat-pelt",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35252",
+      "source": "recipe:low-quality-cat-pelt",
+      "target": "item:low-quality-cat-pelt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35253",
+      "source": "recipe:low-quality-cat-pelt",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35254",
+      "source": "recipe:ruined-cat-pelt",
+      "target": "item:low-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35255",
+      "source": "recipe:ruined-cat-pelt",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35256",
+      "source": "recipe:ruined-cat-pelt",
+      "target": "item:ruined-cat-pelt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35257",
+      "source": "recipe:ruined-cat-pelt",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35258",
+      "source": "recipe:medium-quality-bear-skin",
+      "target": "item:high-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35259",
+      "source": "recipe:medium-quality-bear-skin",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35260",
+      "source": "recipe:medium-quality-bear-skin",
+      "target": "item:medium-quality-bear-skin",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35261",
+      "source": "recipe:medium-quality-bear-skin",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35262",
+      "source": "recipe:low-quality-bear-skin",
+      "target": "item:medium-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35263",
+      "source": "recipe:low-quality-bear-skin",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35264",
+      "source": "recipe:low-quality-bear-skin",
+      "target": "item:low-quality-bear-skin",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35265",
+      "source": "recipe:low-quality-bear-skin",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35266",
+      "source": "recipe:ruined-bear-pelt",
+      "target": "item:low-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35267",
+      "source": "recipe:ruined-bear-pelt",
+      "target": "item:skinning-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35268",
+      "source": "recipe:ruined-bear-pelt",
+      "target": "item:ruined-bear-pelt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35269",
+      "source": "recipe:ruined-bear-pelt",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35270",
+      "source": "recipe:leather-padding-cat",
+      "target": "item:low-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35271",
+      "source": "recipe:leather-padding-cat",
+      "target": "item:silk-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35272",
+      "source": "recipe:leather-padding-cat",
+      "target": "item:leather-padding",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35273",
+      "source": "recipe:leather-padding-cat",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35274",
+      "source": "recipe:leather-padding-wolf",
+      "target": "item:low-quality-wolf-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35275",
+      "source": "recipe:leather-padding-wolf",
+      "target": "item:silk-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35276",
+      "source": "recipe:leather-padding-wolf",
+      "target": "item:leather-padding",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35277",
+      "source": "recipe:leather-padding-wolf",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35278",
+      "source": "recipe:leather-padding-bear",
+      "target": "item:low-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35279",
+      "source": "recipe:leather-padding-bear",
+      "target": "item:silk-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35280",
+      "source": "recipe:leather-padding-bear",
+      "target": "item:leather-padding",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35281",
+      "source": "recipe:leather-padding-bear",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-35282",
+      "source": "recipe:leather-padding-wolf",
+      "target": "recipe:leather-padding-cat",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-variant_of-35283",
+      "source": "recipe:leather-padding-bear",
+      "target": "recipe:leather-padding-cat",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-uses-35284",
+      "source": "recipe:tailor-made-whip",
+      "target": "item:heady-kiola",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-uses-35285",
+      "source": "recipe:tailor-made-whip",
+      "target": "item:medium-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35286",
+      "source": "recipe:tailor-made-whip",
+      "target": "item:whip-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35287",
+      "source": "recipe:tailor-made-whip",
+      "target": "item:tailor-made-whip",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35288",
+      "source": "recipe:tailor-made-whip",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35289",
+      "source": "recipe:crystalline-silk-swatch",
+      "target": "item:crystalline-silk",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35290",
+      "source": "recipe:crystalline-silk-swatch",
+      "target": "item:crystalline-silk-swatch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35291",
+      "source": "recipe:crystalline-silk-swatch",
+      "target": "container:small-sewing-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35292",
+      "source": "recipe:crystalline-silk-fiber",
+      "target": "item:crystalline-silk-thread",
+      "type": "uses",
+      "quantity": 5
+    },
+    {
+      "id": "e-produces-35293",
+      "source": "recipe:crystalline-silk-fiber",
+      "target": "item:crystalline-silk-fiber",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35294",
+      "source": "recipe:crystalline-silk-fiber",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35295",
+      "source": "recipe:tailored-wrist-pouch",
+      "target": "item:ruined-wolf-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35296",
+      "source": "recipe:tailored-wrist-pouch",
+      "target": "item:silk-cord",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35297",
+      "source": "recipe:tailored-wrist-pouch",
+      "target": "item:tailored-wrist-pouch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35298",
+      "source": "recipe:tailored-wrist-pouch",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35299",
+      "source": "recipe:tailored-small-bag",
+      "target": "item:low-quality-wolf-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35300",
+      "source": "recipe:tailored-small-bag",
+      "target": "item:silk-cord",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35301",
+      "source": "recipe:tailored-small-bag",
+      "target": "item:tailored-small-bag",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35302",
+      "source": "recipe:tailored-small-bag",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35303",
+      "source": "recipe:tailored-large-belt-pouch",
+      "target": "item:low-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35304",
+      "source": "recipe:tailored-large-belt-pouch",
+      "target": "item:silk-cord",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35305",
+      "source": "recipe:tailored-large-belt-pouch",
+      "target": "item:tailored-large-belt-pouch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35306",
+      "source": "recipe:tailored-large-belt-pouch",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35307",
+      "source": "recipe:tailored-large-bag",
+      "target": "item:low-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35308",
+      "source": "recipe:tailored-large-bag",
+      "target": "item:silk-cord",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35309",
+      "source": "recipe:tailored-large-bag",
+      "target": "item:tailored-large-bag",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35310",
+      "source": "recipe:tailored-large-bag",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35311",
+      "source": "recipe:reinforced-medicine-bag",
+      "target": "item:thick-grizzly-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35312",
+      "source": "recipe:reinforced-medicine-bag",
+      "target": "item:silk-cord",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35313",
+      "source": "recipe:reinforced-medicine-bag",
+      "target": "item:reinforced-medicine-bag",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35314",
+      "source": "recipe:reinforced-medicine-bag",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35315",
+      "source": "recipe:hand-made-backpack",
+      "target": "item:backpack-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35316",
+      "source": "recipe:hand-made-backpack",
+      "target": "item:high-quality-bear-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35317",
+      "source": "recipe:hand-made-backpack",
+      "target": "item:hand-made-backpack",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35318",
+      "source": "recipe:hand-made-backpack",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35319",
+      "source": "recipe:tailored-quiver",
+      "target": "item:high-quality-cat-pelt",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35320",
+      "source": "recipe:tailored-quiver",
+      "target": "item:quiver-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35321",
+      "source": "recipe:tailored-quiver",
+      "target": "item:tailored-quiver",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35322",
+      "source": "recipe:tailored-quiver",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35323",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:aviak-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35324",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35325",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:griffon-feathers",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35326",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:high-quality-lion-skin",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35327",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:vial-of-distilled-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35328",
+      "source": "recipe:fleeting-quiver",
+      "target": "item:fleeting-quiver",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35329",
+      "source": "recipe:fleeting-quiver",
+      "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-35330",
+      "source": "npc:ak-anon:a-clockwork-tailor",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35331",
+      "source": "npc:ak-anon:a-clockwork-tailor",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35332",
+      "source": "npc:butcherblock-mountains:alga-bruntbuckler",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35333",
+      "source": "npc:butcherblock-mountains:alga-bruntbuckler",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35334",
+      "source": "npc:east-cabilis:klok-stitch",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35335",
+      "source": "npc:east-cabilis:klok-stitch",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35336",
+      "source": "npc:erudin:gayle-weaven",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35337",
+      "source": "npc:erudin:gayle-weaven",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35338",
+      "source": "npc:everfrost-peaks:seria-o-danos",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35339",
+      "source": "npc:everfrost-peaks:seria-o-danos",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35340",
+      "source": "npc:the-feerrott:murga",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35341",
+      "source": "npc:the-feerrott:murga",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35342",
+      "source": "npc:firiona-vie:dionin-needlespin",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35343",
+      "source": "npc:firiona-vie:dionin-needlespin",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35344",
+      "source": "npc:east-freeport:winsa-tanner",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35345",
+      "source": "npc:east-freeport:winsa-tanner",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35346",
+      "source": "npc:east-freeport:winsa-tanner",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35347",
+      "source": "npc:greater-faydark:merchant-gaeadin",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35348",
+      "source": "npc:greater-faydark:merchant-gaeadin",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35349",
+      "source": "npc:highpass-hold:dyona-rossook",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35350",
+      "source": "npc:highpass-hold:dyona-rossook",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35351",
+      "source": "npc:misty-thicket:tipa-lighten",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35352",
+      "source": "npc:misty-thicket:tipa-lighten",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35353",
+      "source": "npc:steamfont-mountains:freed-fimplefur",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35354",
+      "source": "npc:steamfont-mountains:freed-fimplefur",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35355",
+      "source": "npc:thurgadin:rexx-frostweaver",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35356",
+      "source": "npc:thurgadin:rexx-frostweaver",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35357",
+      "source": "npc:northern-desert-of-ro:innkeep-tozie",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35358",
+      "source": "npc:oggok:gretamog",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35359",
+      "source": "npc:oggok:gretamog",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35360",
+      "source": "npc:oggok:gretamog",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35361",
+      "source": "npc:oggok:gretamog",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35362",
+      "source": "npc:the-overthere:tin-merchant-ix",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35363",
+      "source": "npc:the-overthere:tin-merchant-ix",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35364",
+      "source": "npc:south-qeynos:iala-lenard",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35365",
+      "source": "npc:south-qeynos:iala-lenard",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35366",
+      "source": "npc:neriak-commons:garren-d-vek",
+      "target": "zone:neriak-commons",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35367",
+      "source": "npc:neriak-commons:garren-d-vek",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35368",
+      "source": "npc:neriak-commons:garren-d-vek",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35369",
+      "source": "npc:neriak-commons:garren-d-vek",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35370",
+      "source": "npc:northern-desert-of-ro:spoolie-gee",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35371",
+      "source": "npc:east-cabilis:klok-stitch",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35372",
+      "source": "npc:highpass-hold:dyona-rossook",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35373",
+      "source": "npc:misty-thicket:tipa-lighten",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35374",
+      "source": "npc:the-overthere:tin-merchant-ix",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35375",
+      "source": "npc:rathe-mountains:zok-gleeup",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35376",
+      "source": "npc:rathe-mountains:zok-gleeup",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-35377",
+      "source": "npc:rathe-mountains:zok-lubump",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-35378",
+      "source": "npc:rathe-mountains:zok-lubump",
+      "target": "item:fleeting-quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35379",
+      "source": "npc:western-karana:alysa",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35380",
+      "source": "npc:western-karana:alysa",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35381",
+      "source": "npc:western-karana:alysa",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35382",
+      "source": "npc:neriak-3rd-gate:hutyn-l-lozz",
+      "target": "item:backpack-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35383",
+      "source": "npc:neriak-3rd-gate:hutyn-l-lozz",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35384",
+      "source": "npc:neriak-3rd-gate:hutyn-l-lozz",
+      "target": "item:whip-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35385",
+      "source": "npc:western-karana:cleet-miller",
+      "target": "item:quiver-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35386",
+      "source": "npc:western-karana:cleet-miller",
+      "target": "item:whip-pattern",
       "type": "sells"
     }
   ]
