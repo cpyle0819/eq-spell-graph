@@ -188034,6 +188034,743 @@
       "type": "recipe",
       "tradeskill": "Tailoring",
       "trivial": 335
+    },
+    {
+      "id": "item:othmir-fur",
+      "label": "Othmir Fur",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped (Velious)"
+    },
+    {
+      "id": "item:holgresh-fur",
+      "label": "Holgresh Fur",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped (Velious)"
+    },
+    {
+      "id": "item:velium-hound-fur",
+      "label": "Velium Hound Fur",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped (Velious)"
+    },
+    {
+      "id": "item:velium-mastodon-fur",
+      "label": "Velium Mastodon Fur",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped (Velious)"
+    },
+    {
+      "id": "item:gold-thread",
+      "label": "Gold Thread",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:othmir-fur-moccasins",
+      "label": "Othmir Fur Moccasins",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 4,
+      "stats": {
+        "dex": 3,
+        "cha": 3,
+        "agi": 3
+      },
+      "hp": 20,
+      "mana": 5,
+      "resists": {
+        "cold": 10
+      },
+      "weight": 0.8,
+      "classes": []
+    },
+    {
+      "id": "recipe:othmir-fur-moccasins",
+      "label": "Othmir Fur Moccasins",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 268
+    },
+    {
+      "id": "item:othmir-fur-cap",
+      "label": "Othmir Fur Cap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 3,
+      "stats": {
+        "agi": 2,
+        "dex": 3,
+        "wis": 6
+      },
+      "hp": 7,
+      "resists": {
+        "cold": 4
+      },
+      "weight": 0.4,
+      "classes": []
+    },
+    {
+      "id": "recipe:othmir-fur-cap",
+      "label": "Othmir Fur Cap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 262,
+      "levelingGuide": true
+    },
+    {
+      "id": "item:othmir-fur-cloak",
+      "label": "Othmir Fur Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 6,
+      "stats": {
+        "sta": 6,
+        "wis": 4,
+        "cha": 2
+      },
+      "hp": 5,
+      "resists": {
+        "magic": 2,
+        "disease": 4
+      },
+      "weight": 1.6,
+      "classes": []
+    },
+    {
+      "id": "recipe:othmir-fur-cloak",
+      "label": "Othmir Fur Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 295
+    },
+    {
+      "id": "item:holgresh-fur-moccasins",
+      "label": "Holgresh Fur Moccasins",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 4,
+      "stats": {
+        "dex": 3,
+        "cha": 3
+      },
+      "mana": 15,
+      "resists": {
+        "fire": 5,
+        "cold": 5,
+        "magic": 5
+      },
+      "weight": 0.9,
+      "classes": []
+    },
+    {
+      "id": "recipe:holgresh-fur-moccasins",
+      "label": "Holgresh Fur Moccasins",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 282
+    },
+    {
+      "id": "item:holgresh-fur-cap",
+      "label": "Holgresh Fur Cap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 3,
+      "stats": {
+        "dex": 3,
+        "int": 3,
+        "agi": 3
+      },
+      "mana": 5,
+      "resists": {
+        "fire": 2,
+        "cold": 2,
+        "magic": 2
+      },
+      "weight": 0.5,
+      "classes": []
+    },
+    {
+      "id": "recipe:holgresh-fur-cap",
+      "label": "Holgresh Fur Cap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 268
+    },
+    {
+      "id": "item:holgresh-fur-cloak",
+      "label": "Holgresh Fur Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 6,
+      "stats": {
+        "dex": 5,
+        "int": 4
+      },
+      "resists": {
+        "magic": 6
+      },
+      "weight": 1.8,
+      "classes": []
+    },
+    {
+      "id": "recipe:holgresh-fur-cloak",
+      "label": "Holgresh Fur Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 322
+    },
+    {
+      "id": "item:velium-hound-fur-moccasins",
+      "label": "Velium Hound Fur Moccasins",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 4,
+      "stats": {
+        "str": 4,
+        "sta": 8,
+        "agi": 4
+      },
+      "mana": 10,
+      "resists": {
+        "fire": 10
+      },
+      "weight": 1,
+      "classes": []
+    },
+    {
+      "id": "recipe:velium-hound-fur-moccasins",
+      "label": "Velium Hound Fur Moccasins",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 275
+    },
+    {
+      "id": "item:velium-hound-fur-cap",
+      "label": "Velium Hound Fur Cap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 5,
+      "stats": {
+        "str": 6,
+        "sta": 6
+      },
+      "resists": {
+        "fire": 10
+      },
+      "weight": 0.5,
+      "classes": []
+    },
+    {
+      "id": "recipe:velium-hound-fur-cap",
+      "label": "Velium Hound Fur Cap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 268
+    },
+    {
+      "id": "item:velium-hound-fur-cloak",
+      "label": "Velium Hound Fur Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 8,
+      "stats": {
+        "str": 8,
+        "sta": 10
+      },
+      "resists": {
+        "fire": 5,
+        "cold": 5
+      },
+      "weight": 1.9,
+      "classes": []
+    },
+    {
+      "id": "recipe:velium-hound-fur-cloak",
+      "label": "Velium Hound Fur Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 322
+    },
+    {
+      "id": "item:velium-mastodon-fur-cloak",
+      "label": "Velium Mastodon Fur Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 10,
+      "stats": {
+        "str": 10,
+        "sta": 10
+      },
+      "resists": {
+        "cold": 10
+      },
+      "weight": 4,
+      "classes": []
+    },
+    {
+      "id": "recipe:velium-mastodon-fur-cloak",
+      "label": "Velium Mastodon Fur Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 322
+    },
+    {
+      "id": "item:cobalt-drake-hide",
+      "label": "Cobalt Drake Hide",
+      "type": "item",
+      "size": "Large",
+      "source": "Dropped (Velious)"
+    },
+    {
+      "id": "item:velium-boning",
+      "label": "Velium Boning",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped/crafted (Velious)"
+    },
+    {
+      "id": "item:cobalt-drake-belt",
+      "label": "Cobalt Drake Belt",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 8,
+      "stats": {
+        "sta": 5,
+        "wis": 8
+      },
+      "mana": 5,
+      "resists": {
+        "cold": 4
+      },
+      "weight": 1,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-belt",
+      "label": "Cobalt Drake Belt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-boots",
+      "label": "Cobalt Drake Boots",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 8,
+      "stats": {
+        "sta": 4,
+        "cha": 5
+      },
+      "mana": 10,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 2.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-boots",
+      "label": "Cobalt Drake Boots",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-skullcap",
+      "label": "Cobalt Drake Skullcap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 9,
+      "mana": 8,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 0.6,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-skullcap",
+      "label": "Cobalt Drake Skullcap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-cloak",
+      "label": "Cobalt Drake Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 9,
+      "stats": {
+        "str": 8,
+        "wis": 4
+      },
+      "mana": 23,
+      "resists": {
+        "cold": 8
+      },
+      "weight": 2,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-cloak",
+      "label": "Cobalt Drake Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-gloves",
+      "label": "Cobalt Drake Gloves",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 8,
+      "mana": 10,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 1.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-gloves",
+      "label": "Cobalt Drake Gloves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-gorget",
+      "label": "Cobalt Drake Gorget",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 7,
+      "stats": {
+        "sta": 5
+      },
+      "mana": 5,
+      "resists": {
+        "cold": 4
+      },
+      "weight": 0.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-gorget",
+      "label": "Cobalt Drake Gorget",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-mask",
+      "label": "Cobalt Drake Mask",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 6,
+      "stats": {
+        "cha": 5
+      },
+      "mana": 5,
+      "resists": {
+        "cold": 3
+      },
+      "weight": 0.4,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-mask",
+      "label": "Cobalt Drake Mask",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-leggings",
+      "label": "Cobalt Drake Leggings",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 9,
+      "stats": {
+        "cha": 3
+      },
+      "mana": 25,
+      "resists": {
+        "cold": 8
+      },
+      "weight": 4,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-leggings",
+      "label": "Cobalt Drake Leggings",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-shoulderpads",
+      "label": "Cobalt Drake Shoulderpads",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 7,
+      "stats": {
+        "str": 8
+      },
+      "mana": 10,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 1.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-shoulderpads",
+      "label": "Cobalt Drake Shoulderpads",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-sleeves",
+      "label": "Cobalt Drake Sleeves",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 8,
+      "stats": {
+        "cha": 8
+      },
+      "mana": 22,
+      "resists": {
+        "cold": 6
+      },
+      "weight": 1.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-sleeves",
+      "label": "Cobalt Drake Sleeves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-tunic",
+      "label": "Cobalt Drake Tunic",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 14,
+      "stats": {
+        "sta": 8,
+        "cha": 12
+      },
+      "mana": 27,
+      "resists": {
+        "cold": 10
+      },
+      "weight": 3.5,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-tunic",
+      "label": "Cobalt Drake Tunic",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:cobalt-drake-wristbands",
+      "label": "Cobalt Drake Wristbands",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 7,
+      "stats": {
+        "str": 3,
+        "wis": 3
+      },
+      "mana": 5,
+      "resists": {
+        "cold": 3
+      },
+      "weight": 1,
+      "classes": [
+        "bard",
+        "cleric",
+        "druid",
+        "paladin",
+        "ranger",
+        "rogue",
+        "shadow knight",
+        "shaman",
+        "warrior"
+      ]
+    },
+    {
+      "id": "recipe:cobalt-drake-wristbands",
+      "label": "Cobalt Drake Wristbands",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
     }
   ],
   "edges": [
@@ -410479,6 +411216,817 @@
     {
       "id": "e-crafted_in-36054",
       "source": "recipe:ice-silk-robe",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36055",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36056",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36057",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "item:vial-of-clear-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36058",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "item:othmir-fur",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36059",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "item:othmir-fur-moccasins",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36060",
+      "source": "recipe:othmir-fur-moccasins",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36061",
+      "source": "recipe:othmir-fur-cap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36062",
+      "source": "recipe:othmir-fur-cap",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36063",
+      "source": "recipe:othmir-fur-cap",
+      "target": "item:vial-of-clear-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36064",
+      "source": "recipe:othmir-fur-cap",
+      "target": "item:othmir-fur",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36065",
+      "source": "recipe:othmir-fur-cap",
+      "target": "item:othmir-fur-cap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36066",
+      "source": "recipe:othmir-fur-cap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36067",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36068",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36069",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "item:vial-of-clear-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36070",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "item:othmir-fur",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-36071",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "item:othmir-fur-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36072",
+      "source": "recipe:othmir-fur-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36073",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36074",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "item:gold-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36075",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "item:vial-of-distilled-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36076",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "item:holgresh-fur",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36077",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "item:holgresh-fur-moccasins",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36078",
+      "source": "recipe:holgresh-fur-moccasins",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36079",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36080",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "item:gold-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36081",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "item:vial-of-distilled-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36082",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "item:holgresh-fur",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36083",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "item:holgresh-fur-cap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36084",
+      "source": "recipe:holgresh-fur-cap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36085",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36086",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "item:gold-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36087",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "item:vial-of-distilled-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36088",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "item:holgresh-fur",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-36089",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "item:holgresh-fur-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36090",
+      "source": "recipe:holgresh-fur-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36091",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36092",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36093",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36094",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "item:velium-hound-fur",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36095",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "item:velium-hound-fur-moccasins",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36096",
+      "source": "recipe:velium-hound-fur-moccasins",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36097",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36098",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36099",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36100",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "item:velium-hound-fur",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36101",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "item:velium-hound-fur-cap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36102",
+      "source": "recipe:velium-hound-fur-cap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36103",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36104",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36105",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36106",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "item:velium-hound-fur",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-36107",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "item:velium-hound-fur-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36108",
+      "source": "recipe:velium-hound-fur-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36109",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36110",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36111",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36112",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "item:velium-mastodon-fur",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-36113",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "item:velium-mastodon-fur-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36114",
+      "source": "recipe:velium-mastodon-fur-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36115",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "item:belt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36116",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36117",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36118",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36119",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "item:cobalt-drake-belt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36120",
+      "source": "recipe:cobalt-drake-belt",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36121",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36122",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36123",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36124",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36125",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "item:cobalt-drake-boots",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36126",
+      "source": "recipe:cobalt-drake-boots",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36127",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36128",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36129",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36130",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36131",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "item:cobalt-drake-skullcap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36132",
+      "source": "recipe:cobalt-drake-skullcap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36133",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36134",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36135",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36136",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36137",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "item:cobalt-drake-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36138",
+      "source": "recipe:cobalt-drake-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36139",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "item:glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36140",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36141",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36142",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36143",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "item:cobalt-drake-gloves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36144",
+      "source": "recipe:cobalt-drake-gloves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36145",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "item:gorget-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36146",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36147",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36148",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "item:velium-boning",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36149",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "item:cobalt-drake-gorget",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36150",
+      "source": "recipe:cobalt-drake-gorget",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36151",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "item:mask-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36152",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36153",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36154",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "item:velium-boning",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36155",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "item:cobalt-drake-mask",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36156",
+      "source": "recipe:cobalt-drake-mask",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36157",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "item:pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36158",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36159",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36160",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36161",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "item:cobalt-drake-leggings",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36162",
+      "source": "recipe:cobalt-drake-leggings",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36163",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "item:shoulderpad-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36164",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36165",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36166",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36167",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "item:cobalt-drake-shoulderpads",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36168",
+      "source": "recipe:cobalt-drake-shoulderpads",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36169",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "item:sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36170",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36171",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36172",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36173",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "item:cobalt-drake-sleeves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36174",
+      "source": "recipe:cobalt-drake-sleeves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36175",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "item:tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36176",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36177",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36178",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "item:velium-boning",
+      "type": "uses",
+      "quantity": 4
+    },
+    {
+      "id": "e-produces-36179",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "item:cobalt-drake-tunic",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36180",
+      "source": "recipe:cobalt-drake-tunic",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36181",
+      "source": "recipe:cobalt-drake-wristbands",
+      "target": "item:wristband-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36182",
+      "source": "recipe:cobalt-drake-wristbands",
+      "target": "item:cobalt-drake-hide",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36183",
+      "source": "recipe:cobalt-drake-wristbands",
+      "target": "item:drake-egg-oil",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36184",
+      "source": "recipe:cobalt-drake-wristbands",
+      "target": "item:velium-boning",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36185",
+      "source": "recipe:cobalt-drake-wristbands",
+      "target": "item:cobalt-drake-wristbands",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36186",
+      "source": "recipe:cobalt-drake-wristbands",
       "target": "container:coldain-tanners-kit",
       "type": "crafted_in"
     }
