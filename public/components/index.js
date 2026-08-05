@@ -10,6 +10,7 @@ import "./app-footer.js";
 import "./route-path.js";
 import "./route-card.js";
 import "./item-chip.js";
+import "./npc-drop-table.js";
 import "./zone-map.js";
 import "./zone-dossier.js";
 import "./detail-tooltip.js";
