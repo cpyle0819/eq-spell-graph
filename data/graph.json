@@ -46519,7 +46519,8 @@
       "label": "Marlyn McMerin",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -52137,7 +52138,8 @@
       "label": "Gindlin Toxfodder",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -54115,7 +54117,8 @@
       "label": "Kizzie Mintopp",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -75928,7 +75931,8 @@
       "label": "Melixis",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -96296,7 +96300,8 @@
       "label": "Dargon",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -104938,7 +104943,8 @@
       "minLevel": 45,
       "maxLevel": 45,
       "roles": [
-        "mob"
+        "mob",
+        "vendor"
       ]
     },
     {
@@ -195098,6 +195104,672 @@
     {
       "id": "npc:warsliks-woods:klok-nogolin",
       "label": "Klok Nogolin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "item:agrimony",
+      "label": "Agrimony",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:aloe",
+      "label": "Aloe",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:amanita-phalloide",
+      "label": "Amanita Phalloide",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:arnworth",
+      "label": "Arnworth",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:barbarian-meat",
+      "label": "Barbarian Meat",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:bat-fur",
+      "label": "Bat Fur",
+      "type": "item",
+      "weight": 0,
+      "size": "Small"
+    },
+    {
+      "id": "item:benzoin",
+      "label": "Benzoin",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:betherium-bark",
+      "label": "Betherium Bark",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:birthwort",
+      "label": "Birthwort",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:bistort",
+      "label": "Bistort",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:black-henbane",
+      "label": "Black Henbane",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:bladderwrack",
+      "label": "Bladderwrack",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:blade-leaf",
+      "label": "Blade Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:blue-vervain-bulb",
+      "label": "Blue Vervain Bulb",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:boneset",
+      "label": "Boneset",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:briar-thistle",
+      "label": "Briar Thistle",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:burdock-root",
+      "label": "Burdock Root",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:celandine-herb",
+      "label": "Celandine Herb",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:clivers",
+      "label": "Clivers",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:clover",
+      "label": "Clover",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:clubmoss",
+      "label": "Clubmoss",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:comfrey",
+      "label": "Comfrey",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:deepwater-ink",
+      "label": "Deepwater Ink",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:dhea",
+      "label": "Dhea",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:duskglow-vine",
+      "label": "Duskglow Vine",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:echinacea",
+      "label": "Echinacea",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:elderberry",
+      "label": "Elderberry",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:elf-leaf",
+      "label": "Elf Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:eucalyptus-leaf",
+      "label": "Eucalyptus Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:evil-eye-eyestalk",
+      "label": "Evil Eye Eyestalk",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:eyebright",
+      "label": "Eyebright",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:fennel",
+      "label": "Fennel",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:fenugreek",
+      "label": "Fenugreek",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:feverfew",
+      "label": "Feverfew",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:figwort",
+      "label": "Figwort",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:fire-drake-scale",
+      "label": "Fire Drake Scale",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:froglok-leg",
+      "label": "Froglok Leg",
+      "type": "item",
+      "weight": 1,
+      "size": "Medium"
+    },
+    {
+      "id": "item:gerti-blossom",
+      "label": "Gerti Blossom",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:giant-wasp-venom-sac",
+      "label": "Giant Wasp Venom Sac",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:green-froglok-skin",
+      "label": "Green Froglok Skin",
+      "type": "item",
+      "weight": 1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:ground-figwort",
+      "label": "Ground Figwort",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:heliotrope",
+      "label": "Heliotrope",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:horehound",
+      "label": "Horehound",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:human-parts",
+      "label": "Human Parts",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:hydrangea",
+      "label": "Hydrangea",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:hyssop",
+      "label": "Hyssop",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:jatamasi",
+      "label": "Jatamasi",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:katuka-bark",
+      "label": "Katuka Bark",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:lady-s-mantle",
+      "label": "Lady's Mantle",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:larkspur",
+      "label": "Larkspur",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:lightstone",
+      "label": "Lightstone",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:lucerne",
+      "label": "Lucerne",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:maidenhair-fern",
+      "label": "Maidenhair Fern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:maliak-leaf",
+      "label": "Maliak Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:mandrake-root",
+      "label": "Mandrake Root",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:mercury",
+      "label": "Mercury",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:methysticum",
+      "label": "Methysticum",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:mugwart",
+      "label": "Mugwart",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:mullein",
+      "label": "Mullein",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:mystic-ash",
+      "label": "Mystic Ash",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:night-shade",
+      "label": "Night Shade",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:oakmoss",
+      "label": "Oakmoss",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:polar-bear-skin",
+      "label": "Polar Bear Skin",
+      "type": "item",
+      "weight": 5,
+      "size": "Large"
+    },
+    {
+      "id": "item:red-hellebore",
+      "label": "Red Hellebore",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:sage-leaf",
+      "label": "Sage Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:sea-spirit",
+      "label": "Sea Spirit",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:sickle-leaf",
+      "label": "Sickle Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:small-vial",
+      "label": "Small Vial",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:snakes-head-iris",
+      "label": "Snakes Head Iris",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:star-reach-clover",
+      "label": "Star Reach Clover",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:sticklewort",
+      "label": "Sticklewort",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:sumbul",
+      "label": "Sumbul",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:thorny-ergot",
+      "label": "Thorny Ergot",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:tregrum",
+      "label": "Tregrum",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:tri-fern-leaf",
+      "label": "Tri-Fern Leaf",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:undead-froglok-tongue",
+      "label": "Undead Froglok Tongue",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:valerian-root",
+      "label": "Valerian Root",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:violet-tri-tube-sap",
+      "label": "Violet Tri-Tube Sap",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:vox-s-dust",
+      "label": "Vox's Dust",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:white-hellebore",
+      "label": "White Hellebore",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:white-wolf-skin",
+      "label": "White Wolf Skin",
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large"
+    },
+    {
+      "id": "item:wolf-blood",
+      "label": "Wolf Blood",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:wormwood",
+      "label": "Wormwood",
+      "type": "item",
+      "weight": 1,
+      "size": "Small"
+    },
+    {
+      "id": "item:woundwart",
+      "label": "Woundwart",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:yarrow",
+      "label": "Yarrow",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:yerbhimba",
+      "label": "Yerbhimba",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "npc:ak-anon:a-clockwork-alchemist",
+      "label": "A Clockwork Alchemist",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:everfrost-peaks:guri",
+      "label": "Guri",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:everfrost-peaks:sven-felligan",
+      "label": "Sven Felligan",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:raztara",
+      "label": "Raztara",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:murtog-macyee",
+      "label": "Murtog MacYee",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:innothule-swamp:sithgok",
+      "label": "Sithgok",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rathe-mountains:zok-ruppeta",
+      "label": "Zok Ruppeta",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-cabilis:klok-greyscale",
+      "label": "Klok Greyscale",
       "type": "npc",
       "roles": [
         "vendor"
@@ -425803,6 +426475,2358 @@
       "id": "e-sells-37420",
       "source": "npc:warsliks-woods:klok-nogolin",
       "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37421",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37422",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:betherium-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37423",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:bistort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37424",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:blade-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37425",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37426",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37427",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:mugwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37428",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:sticklewort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37429",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37430",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:violet-tri-tube-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37431",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:vox-s-dust",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37432",
+      "source": "mob:innothule-swamp:clork",
+      "target": "item:wormwood",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37433",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "zone:ak-anon",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37434",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37435",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37436",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37437",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37438",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37439",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:small-vial",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37440",
+      "source": "npc:ak-anon:a-clockwork-alchemist",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37441",
+      "source": "npc:east-commonlands:katha-firespinner",
+      "target": "item:bat-fur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37442",
+      "source": "npc:erudin-palace:jeliala-glimmercharm",
+      "target": "item:bat-fur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37443",
+      "source": "npc:erudin-palace:tika-shockstep",
+      "target": "item:bat-fur",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37444",
+      "source": "npc:everfrost-peaks:guri",
+      "target": "zone:everfrost-peaks",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37445",
+      "source": "npc:everfrost-peaks:guri",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37446",
+      "source": "npc:everfrost-peaks:guri",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37447",
+      "source": "npc:everfrost-peaks:guri",
+      "target": "item:violet-tri-tube-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37448",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "zone:everfrost-peaks",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37449",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37450",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37451",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37452",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37453",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37454",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37455",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37456",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37457",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37458",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37459",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37460",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37461",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37462",
+      "source": "npc:everfrost-peaks:sven-felligan",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37463",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37464",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37465",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37466",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37467",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37468",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37469",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37470",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37471",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37472",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37473",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37474",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37475",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37476",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37477",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37478",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37479",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37480",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37481",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37482",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37483",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37484",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37485",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37486",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37487",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37488",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37489",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37490",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37491",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37492",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37493",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37494",
+      "source": "npc:grobb:blergagg",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37495",
+      "source": "npc:grobb:blergagg",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37496",
+      "source": "npc:grobb:blergagg",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37497",
+      "source": "npc:grobb:blergagg",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37498",
+      "source": "npc:grobb:blergagg",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37499",
+      "source": "npc:grobb:blergagg",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37500",
+      "source": "npc:grobb:blergagg",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37501",
+      "source": "npc:grobb:blergagg",
+      "target": "item:feverfew",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37502",
+      "source": "npc:grobb:blergagg",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37503",
+      "source": "npc:grobb:blergagg",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37504",
+      "source": "npc:grobb:blergagg",
+      "target": "item:horehound",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37505",
+      "source": "npc:grobb:blergagg",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37506",
+      "source": "npc:grobb:blergagg",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37507",
+      "source": "npc:grobb:blergagg",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37508",
+      "source": "npc:grobb:blergagg",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37509",
+      "source": "npc:grobb:blergagg",
+      "target": "item:mugwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37510",
+      "source": "npc:grobb:blergagg",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37511",
+      "source": "npc:grobb:blergagg",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37512",
+      "source": "npc:grobb:blergagg",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37513",
+      "source": "npc:grobb:blergagg",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37514",
+      "source": "npc:grobb:blergagg",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37515",
+      "source": "npc:grobb:blergagg",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37516",
+      "source": "npc:grobb:blergagg",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37517",
+      "source": "npc:grobb:blergagg",
+      "target": "item:woundwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37518",
+      "source": "npc:grobb:blergagg",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37519",
+      "source": "npc:grobb:grabah",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37520",
+      "source": "npc:grobb:grabah",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37521",
+      "source": "npc:grobb:grabah",
+      "target": "item:comfrey",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37522",
+      "source": "npc:grobb:grabah",
+      "target": "item:dhea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37523",
+      "source": "npc:grobb:grabah",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37524",
+      "source": "npc:grobb:grabah",
+      "target": "item:elderberry",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37525",
+      "source": "npc:grobb:grabah",
+      "target": "item:eucalyptus-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37526",
+      "source": "npc:grobb:grabah",
+      "target": "item:fennel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37527",
+      "source": "npc:grobb:grabah",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37528",
+      "source": "npc:grobb:grabah",
+      "target": "item:hyssop",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37529",
+      "source": "npc:grobb:grabah",
+      "target": "item:lady-s-mantle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37530",
+      "source": "npc:grobb:grabah",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37531",
+      "source": "npc:grobb:grabah",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37532",
+      "source": "npc:grobb:grabah",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37533",
+      "source": "npc:grobb:raztara",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37534",
+      "source": "npc:grobb:raztara",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37535",
+      "source": "npc:grobb:raztara",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37536",
+      "source": "npc:grobb:raztara",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37537",
+      "source": "npc:grobb:raztara",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37538",
+      "source": "npc:grobb:raztara",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37539",
+      "source": "npc:grobb:raztara",
+      "target": "item:small-vial",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37540",
+      "source": "npc:grobb:raztara",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37541",
+      "source": "npc:halas:dargon",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37542",
+      "source": "npc:halas:dargon",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37543",
+      "source": "npc:halas:dargon",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37544",
+      "source": "npc:halas:dargon",
+      "target": "item:bistort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37545",
+      "source": "npc:halas:dargon",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37546",
+      "source": "npc:halas:dargon",
+      "target": "item:boneset",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37547",
+      "source": "npc:halas:dargon",
+      "target": "item:burdock-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37548",
+      "source": "npc:halas:dargon",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37549",
+      "source": "npc:halas:dargon",
+      "target": "item:eyebright",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37550",
+      "source": "npc:halas:dargon",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37551",
+      "source": "npc:halas:dargon",
+      "target": "item:feverfew",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37552",
+      "source": "npc:halas:dargon",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37553",
+      "source": "npc:halas:dargon",
+      "target": "item:horehound",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37554",
+      "source": "npc:halas:dargon",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37555",
+      "source": "npc:halas:dargon",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37556",
+      "source": "npc:halas:dargon",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37557",
+      "source": "npc:halas:dargon",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37558",
+      "source": "npc:halas:dargon",
+      "target": "item:mugwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37559",
+      "source": "npc:halas:dargon",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37560",
+      "source": "npc:halas:dargon",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37561",
+      "source": "npc:halas:dargon",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37562",
+      "source": "npc:halas:dargon",
+      "target": "item:sea-spirit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37563",
+      "source": "npc:halas:dargon",
+      "target": "item:sticklewort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37564",
+      "source": "npc:halas:dargon",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37565",
+      "source": "npc:halas:dargon",
+      "target": "item:vox-s-dust",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37566",
+      "source": "npc:halas:dargon",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37567",
+      "source": "npc:halas:dargon",
+      "target": "item:woundwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37568",
+      "source": "npc:halas:dargon",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37569",
+      "source": "npc:halas:murtog-macyee",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37570",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37571",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37572",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37573",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37574",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37575",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:small-vial",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37576",
+      "source": "npc:halas:murtog-macyee",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37577",
+      "source": "npc:halas:spirita",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37578",
+      "source": "npc:halas:spirita",
+      "target": "item:clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37579",
+      "source": "npc:halas:spirita",
+      "target": "item:clubmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37580",
+      "source": "npc:halas:spirita",
+      "target": "item:comfrey",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37581",
+      "source": "npc:halas:spirita",
+      "target": "item:dhea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37582",
+      "source": "npc:halas:spirita",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37583",
+      "source": "npc:halas:spirita",
+      "target": "item:elderberry",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37584",
+      "source": "npc:halas:spirita",
+      "target": "item:eucalyptus-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37585",
+      "source": "npc:halas:spirita",
+      "target": "item:fennel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37586",
+      "source": "npc:halas:spirita",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37587",
+      "source": "npc:halas:spirita",
+      "target": "item:hydrangea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37588",
+      "source": "npc:halas:spirita",
+      "target": "item:hyssop",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37589",
+      "source": "npc:halas:spirita",
+      "target": "item:jatamasi",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37590",
+      "source": "npc:halas:spirita",
+      "target": "item:lady-s-mantle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37591",
+      "source": "npc:halas:spirita",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37592",
+      "source": "npc:halas:spirita",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37593",
+      "source": "npc:halas:spirita",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37594",
+      "source": "npc:halas:spirita",
+      "target": "item:sumbul",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37595",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "zone:innothule-swamp",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37596",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37597",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37598",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37599",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37600",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37601",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37602",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37603",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37604",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37605",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37606",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37607",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37608",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37609",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37610",
+      "source": "npc:innothule-swamp:sithgok",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37611",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37612",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37613",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37614",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37615",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37616",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37617",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37618",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37619",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37620",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37621",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37622",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37623",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37624",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37625",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37626",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37627",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37628",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37629",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37630",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37631",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37632",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37633",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37634",
+      "source": "npc:kerra-island:melixis",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37635",
+      "source": "npc:kithicor-forest:elsbyth",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37636",
+      "source": "npc:kithicor-forest:elsbyth",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37637",
+      "source": "npc:lake-rathetear:dreana",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37638",
+      "source": "npc:lake-rathetear:dreana",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37639",
+      "source": "npc:lesser-faydark:anelia-thrywiel",
+      "target": "item:snakes-head-iris",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37640",
+      "source": "npc:neriak-3rd-gate:jerris-w-selo",
+      "target": "item:red-hellebore",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37641",
+      "source": "npc:neriak-3rd-gate:kanthu-m-rekkor",
+      "target": "item:red-hellebore",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37642",
+      "source": "npc:northern-karana:romella",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37643",
+      "source": "npc:northern-karana:romella",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37644",
+      "source": "npc:oasis-of-marr:isslana",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37645",
+      "source": "npc:oasis-of-marr:isslana",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37646",
+      "source": "npc:oggok:garakbar",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37647",
+      "source": "npc:oggok:garakbar",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37648",
+      "source": "npc:oggok:garakbar",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37649",
+      "source": "npc:oggok:garakbar",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37650",
+      "source": "npc:oggok:garakbar",
+      "target": "item:clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37651",
+      "source": "npc:oggok:garakbar",
+      "target": "item:clubmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37652",
+      "source": "npc:oggok:garakbar",
+      "target": "item:comfrey",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37653",
+      "source": "npc:oggok:garakbar",
+      "target": "item:dhea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37654",
+      "source": "npc:oggok:garakbar",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37655",
+      "source": "npc:oggok:garakbar",
+      "target": "item:elderberry",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37656",
+      "source": "npc:oggok:garakbar",
+      "target": "item:eucalyptus-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37657",
+      "source": "npc:oggok:garakbar",
+      "target": "item:fennel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37658",
+      "source": "npc:oggok:garakbar",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37659",
+      "source": "npc:oggok:garakbar",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37660",
+      "source": "npc:oggok:garakbar",
+      "target": "item:hydrangea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37661",
+      "source": "npc:oggok:garakbar",
+      "target": "item:hyssop",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37662",
+      "source": "npc:oggok:garakbar",
+      "target": "item:jatamasi",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37663",
+      "source": "npc:oggok:garakbar",
+      "target": "item:lady-s-mantle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37664",
+      "source": "npc:oggok:garakbar",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37665",
+      "source": "npc:oggok:garakbar",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37666",
+      "source": "npc:oggok:garakbar",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37667",
+      "source": "npc:oggok:garakbar",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37668",
+      "source": "npc:oggok:garakbar",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37669",
+      "source": "npc:oggok:garakbar",
+      "target": "item:sumbul",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37670",
+      "source": "npc:oggok:garakbar",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37671",
+      "source": "npc:oggok:garakbar",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37672",
+      "source": "npc:oggok:garakbar",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37673",
+      "source": "npc:oggok:hrak",
+      "target": "item:bat-fur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37674",
+      "source": "npc:oggok:pordopa",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37675",
+      "source": "npc:oggok:pordopa",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37676",
+      "source": "npc:oggok:pordopa",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37677",
+      "source": "npc:oggok:pordopa",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37678",
+      "source": "npc:oggok:pordopa",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37679",
+      "source": "npc:oggok:pordopa",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37680",
+      "source": "npc:oggok:pordopa",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37681",
+      "source": "npc:oggok:pordopa",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37682",
+      "source": "npc:oggok:pordopa",
+      "target": "item:sea-spirit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37683",
+      "source": "npc:rathe-mountains:chandra-kali",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37684",
+      "source": "npc:rathe-mountains:chandra-kali",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37685",
+      "source": "npc:rathe-mountains:susanna",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37686",
+      "source": "npc:rathe-mountains:susanna",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37687",
+      "source": "npc:rathe-mountains:viira-bali",
+      "target": "item:elf-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37688",
+      "source": "npc:rathe-mountains:viira-bali",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37689",
+      "source": "npc:rathe-mountains:zok-ruppeta",
+      "target": "zone:rathe-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37690",
+      "source": "npc:rathe-mountains:zok-ruppeta",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37691",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37692",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37693",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37694",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37695",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37696",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:small-vial",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37697",
+      "source": "npc:rivervale:kizzie-mintopp",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37698",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37699",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37700",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:clubmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37701",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:comfrey",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37702",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:dhea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37703",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37704",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:elderberry",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37705",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:eucalyptus-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37706",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:fennel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37707",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37708",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:hydrangea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37709",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:hyssop",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37710",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:jatamasi",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37711",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:lady-s-mantle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37712",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37713",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37714",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37715",
+      "source": "npc:thurgadin:brynjar",
+      "target": "item:sumbul",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37716",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37717",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37718",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37719",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37720",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37721",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37722",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37723",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37724",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37725",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37726",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37727",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37728",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37729",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37730",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37731",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37732",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37733",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37734",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37735",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37736",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37737",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37738",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37739",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37740",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37741",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37742",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37743",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37744",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37745",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37746",
+      "source": "npc:thurgadin:hulda",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37747",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:bladderwrack",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37748",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37749",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:clubmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37750",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:comfrey",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37751",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:dhea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37752",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:echinacea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37753",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:elderberry",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37754",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:eucalyptus-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37755",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:fennel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37756",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:heliotrope",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37757",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:hydrangea",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37758",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:hyssop",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37759",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:jatamasi",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37760",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:lady-s-mantle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37761",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:mercury",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37762",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:mystic-ash",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37763",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:oakmoss",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37764",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "item:sumbul",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37765",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "zone:west-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37766",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:betherium-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37767",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:bistort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37768",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:blade-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37769",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37770",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:larkspur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37771",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:mugwart",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37772",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:sticklewort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37773",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37774",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:violet-tri-tube-sap",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37775",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:vox-s-dust",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37776",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37777",
+      "source": "npc:west-cabilis:klok-greyscale",
+      "target": "item:wormwood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37778",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:agrimony",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37779",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:aloe",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37780",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:arnworth",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37781",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:benzoin",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37782",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37783",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:blue-vervain-bulb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37784",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:briar-thistle",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37785",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:celandine-herb",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37786",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:clivers",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37787",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:duskglow-vine",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37788",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:fenugreek",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37789",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37790",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:gerti-blossom",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37791",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:ground-figwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37792",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:katuka-bark",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37793",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:lucerne",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37794",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:maidenhair-fern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37795",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:maliak-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37796",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:mandrake-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37797",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:methysticum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37798",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:mullein",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37799",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:night-shade",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37800",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:sage-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37801",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:sickle-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37802",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:star-reach-clover",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37803",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:tregrum",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37804",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:tri-fern-leaf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37805",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:valerian-root",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37806",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:wolf-blood",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37807",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:yarrow",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37808",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "item:yerbhimba",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37809",
+      "source": "npc:west-freeport:lysa-truegreen",
+      "target": "item:bat-fur",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37810",
+      "source": "npc:western-karana:gindlin-toxfodder",
+      "target": "item:thorny-ergot",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37811",
+      "source": "vendor:south-qeynos:caleah-herblender",
+      "target": "item:birthwort",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37812",
+      "source": "vendor:south-qeynos:caleah-herblender",
+      "target": "item:wolf-blood",
       "type": "sells"
     }
   ]
