@@ -190085,6 +190085,635 @@
       "weight": 0.4,
       "containerSize": "Large",
       "capacity": 4
+    },
+    {
+      "id": "item:emerald",
+      "label": "Emerald",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:peridot",
+      "label": "Peridot",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:jade",
+      "label": "Jade",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:fire-opal",
+      "label": "Fire Opal",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:opal",
+      "label": "Opal",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:star-rose-quartz",
+      "label": "Star Rose Quartz",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:topaz",
+      "label": "Topaz",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:silver-diamond-wedding-ring",
+      "label": "Silver Diamond Wedding Ring",
+      "type": "item",
+      "resists": {
+        "fire": 3,
+        "cold": 3,
+        "disease": 3,
+        "poison": 3,
+        "magic": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-diamond-wedding-ring",
+      "label": "Silver Diamond Wedding Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 71
+    },
+    {
+      "id": "item:silver-emerald-ring",
+      "label": "Silver Emerald Ring",
+      "type": "item",
+      "ac": 2,
+      "resists": {
+        "fire": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-emerald-ring",
+      "label": "Silver Emerald Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 48
+    },
+    {
+      "id": "item:silver-hematite-ring",
+      "label": "Silver Hematite Ring",
+      "type": "item",
+      "resists": {
+        "fire": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-hematite-ring",
+      "label": "Silver Hematite Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 22
+    },
+    {
+      "id": "item:silver-malachite-ring",
+      "label": "Silver Malachite Ring",
+      "type": "item",
+      "resists": {
+        "poison": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-malachite-ring",
+      "label": "Silver Malachite Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 17
+    },
+    {
+      "id": "item:silver-turquoise-bracelet",
+      "label": "Silver Turquoise Bracelet",
+      "type": "item",
+      "resists": {
+        "cold": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ]
+    },
+    {
+      "id": "recipe:silver-turquoise-bracelet",
+      "label": "Silver Turquoise Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 20
+    },
+    {
+      "id": "item:silvered-pearl-ring",
+      "label": "Silvered Pearl Ring",
+      "type": "item",
+      "ac": 2,
+      "resists": {
+        "poison": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silvered-pearl-ring",
+      "label": "Silvered Pearl Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 42
+    },
+    {
+      "id": "item:silvered-peridot-ring",
+      "label": "Silvered Peridot Ring",
+      "type": "item",
+      "ac": 2,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silvered-peridot-ring",
+      "label": "Silvered Peridot Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 46
+    },
+    {
+      "id": "item:silver-amber-ring",
+      "label": "Silver Amber Ring",
+      "type": "item",
+      "stats": {
+        "str": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-amber-ring",
+      "label": "Silver Amber Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 36
+    },
+    {
+      "id": "item:black-sapphire-silvered-necklace",
+      "label": "Black Sapphire Silvered Necklace",
+      "type": "item",
+      "ac": 3,
+      "hp": 30,
+      "mana": 30,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:black-sapphire-silvered-necklace",
+      "label": "Black Sapphire Silvered Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 68
+    },
+    {
+      "id": "item:blackened-pearl-silver-ring",
+      "label": "Blackened Pearl Silver Ring",
+      "type": "item",
+      "stats": {
+        "dex": 3,
+        "agi": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:blackened-pearl-silver-ring",
+      "label": "Blackened Pearl Silver Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 52
+    },
+    {
+      "id": "item:jaded-silver-ring",
+      "label": "Jaded Silver Ring",
+      "type": "item",
+      "ac": 1,
+      "hp": 5,
+      "mana": 5,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:jaded-silver-ring",
+      "label": "Jaded Silver Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 40
+    },
+    {
+      "id": "item:silver-bloodstone-earring",
+      "label": "Silver Bloodstone Earring",
+      "type": "item",
+      "stats": {
+        "sta": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ]
+    },
+    {
+      "id": "recipe:silver-bloodstone-earring",
+      "label": "Silver Bloodstone Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 26
+    },
+    {
+      "id": "item:silver-blue-diamond-ring",
+      "label": "Silver Blue Diamond Ring",
+      "type": "item",
+      "mana": 10,
+      "resists": {
+        "fire": 4,
+        "cold": 4,
+        "disease": 4,
+        "poison": 4,
+        "magic": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "source": "Velious era"
+    },
+    {
+      "id": "recipe:silver-blue-diamond-ring",
+      "label": "Silver Blue Diamond Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 75
+    },
+    {
+      "id": "item:silver-carnelian-wedding-ring",
+      "label": "Silver Carnelian Wedding Ring",
+      "type": "item",
+      "stats": {
+        "agi": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-carnelian-wedding-ring",
+      "label": "Silver Carnelian Wedding Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 32
+    },
+    {
+      "id": "item:silver-cat-eye-necklace",
+      "label": "Silver Cat Eye Necklace",
+      "type": "item",
+      "stats": {
+        "cha": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:silver-cat-eye-necklace",
+      "label": "Silver Cat Eye Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 24
+    },
+    {
+      "id": "item:silver-fire-wedding-ring",
+      "label": "Silver Fire Wedding Ring",
+      "type": "item",
+      "ac": 2,
+      "hp": 30,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-fire-wedding-ring",
+      "label": "Silver Fire Wedding Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 54
+    },
+    {
+      "id": "item:silver-jacinth-wedding-ring",
+      "label": "Silver Jacinth Wedding Ring",
+      "type": "item",
+      "ac": 10,
+      "resists": {
+        "magic": -7
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-jacinth-wedding-ring",
+      "label": "Silver Jacinth Wedding Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 66
+    },
+    {
+      "id": "item:silver-jasper-ring",
+      "label": "Silver Jasper Ring",
+      "type": "item",
+      "stats": {
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-jasper-ring",
+      "label": "Silver Jasper Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 30
+    },
+    {
+      "id": "item:silver-lapis-lazuli-necklace",
+      "label": "Silver Lapis Lazuli Necklace",
+      "type": "item",
+      "resists": {
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:silver-lapis-lazuli-necklace",
+      "label": "Silver Lapis Lazuli Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 21
+    },
+    {
+      "id": "item:silver-onyx-bracelet",
+      "label": "Silver Onyx Bracelet",
+      "type": "item",
+      "stats": {
+        "dex": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ]
+    },
+    {
+      "id": "recipe:silver-onyx-bracelet",
+      "label": "Silver Onyx Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 28
+    },
+    {
+      "id": "item:silver-opal-engagement-ring",
+      "label": "Silver Opal Engagement Ring",
+      "type": "item",
+      "stats": {
+        "sta": 3,
+        "agi": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-opal-engagement-ring",
+      "label": "Silver Opal Engagement Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 50
+    },
+    {
+      "id": "item:silver-rose-engagement-ring",
+      "label": "Silver Rose Engagement Ring",
+      "type": "item",
+      "stats": {
+        "int": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silver-rose-engagement-ring",
+      "label": "Silver Rose Engagement Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 34
+    },
+    {
+      "id": "item:silver-ruby-veil",
+      "label": "Silver Ruby Veil",
+      "type": "item",
+      "stats": {
+        "str": 4,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ]
+    },
+    {
+      "id": "recipe:silver-ruby-veil",
+      "label": "Silver Ruby Veil",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 63
+    },
+    {
+      "id": "item:silver-wolf-s-eye-necklace",
+      "label": "Silver Wolf's Eye Necklace",
+      "type": "item",
+      "resists": {
+        "magic": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:silver-wolf-s-eye-necklace",
+      "label": "Silver Wolf's Eye Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 38
+    },
+    {
+      "id": "item:silvered-fire-emerald-ring",
+      "label": "Silvered Fire Emerald Ring",
+      "type": "item",
+      "stats": {
+        "str": 3,
+        "dex": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ]
+    },
+    {
+      "id": "recipe:silvered-fire-emerald-ring",
+      "label": "Silvered Fire Emerald Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 58
+    },
+    {
+      "id": "item:silvered-sapphire-necklace",
+      "label": "Silvered Sapphire Necklace",
+      "type": "item",
+      "stats": {
+        "str": 4,
+        "int": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:silvered-sapphire-necklace",
+      "label": "Silvered Sapphire Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 60
+    },
+    {
+      "id": "item:silvered-star-ruby-veil",
+      "label": "Silvered Star Ruby Veil",
+      "type": "item",
+      "stats": {
+        "dex": 5,
+        "cha": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ]
+    },
+    {
+      "id": "recipe:silvered-star-ruby-veil",
+      "label": "Silvered Star Ruby Veil",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 56
+    },
+    {
+      "id": "item:topaz-silver-necklace",
+      "label": "Topaz Silver Necklace",
+      "type": "item",
+      "ac": 3,
+      "resists": {
+        "disease": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ]
+    },
+    {
+      "id": "recipe:topaz-silver-necklace",
+      "label": "Topaz Silver Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 44
     }
   ],
   "edges": [
@@ -415255,6 +415884,678 @@
       "source": "npc:thurgadin:meg-tucter",
       "target": "container:jewelers-kit",
       "type": "sells"
+    },
+    {
+      "id": "e-uses-36499",
+      "source": "recipe:silver-diamond-wedding-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36500",
+      "source": "recipe:silver-diamond-wedding-ring",
+      "target": "item:diamond-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36501",
+      "source": "recipe:silver-diamond-wedding-ring",
+      "target": "item:silver-diamond-wedding-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36502",
+      "source": "recipe:silver-diamond-wedding-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36503",
+      "source": "recipe:silver-emerald-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36504",
+      "source": "recipe:silver-emerald-ring",
+      "target": "item:emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36505",
+      "source": "recipe:silver-emerald-ring",
+      "target": "item:silver-emerald-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36506",
+      "source": "recipe:silver-emerald-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36507",
+      "source": "recipe:silver-hematite-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36508",
+      "source": "recipe:silver-hematite-ring",
+      "target": "item:hematite",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36509",
+      "source": "recipe:silver-hematite-ring",
+      "target": "item:silver-hematite-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36510",
+      "source": "recipe:silver-hematite-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36511",
+      "source": "recipe:silver-malachite-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36512",
+      "source": "recipe:silver-malachite-ring",
+      "target": "item:malachite",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36513",
+      "source": "recipe:silver-malachite-ring",
+      "target": "item:silver-malachite-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36514",
+      "source": "recipe:silver-malachite-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36515",
+      "source": "recipe:silver-turquoise-bracelet",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36516",
+      "source": "recipe:silver-turquoise-bracelet",
+      "target": "item:turquoise",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36517",
+      "source": "recipe:silver-turquoise-bracelet",
+      "target": "item:silver-turquoise-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36518",
+      "source": "recipe:silver-turquoise-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36519",
+      "source": "recipe:silvered-pearl-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36520",
+      "source": "recipe:silvered-pearl-ring",
+      "target": "item:pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36521",
+      "source": "recipe:silvered-pearl-ring",
+      "target": "item:silvered-pearl-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36522",
+      "source": "recipe:silvered-pearl-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36523",
+      "source": "recipe:silvered-peridot-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36524",
+      "source": "recipe:silvered-peridot-ring",
+      "target": "item:peridot",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36525",
+      "source": "recipe:silvered-peridot-ring",
+      "target": "item:silvered-peridot-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36526",
+      "source": "recipe:silvered-peridot-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36527",
+      "source": "recipe:silver-amber-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36528",
+      "source": "recipe:silver-amber-ring",
+      "target": "item:amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36529",
+      "source": "recipe:silver-amber-ring",
+      "target": "item:silver-amber-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36530",
+      "source": "recipe:silver-amber-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36531",
+      "source": "recipe:black-sapphire-silvered-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36532",
+      "source": "recipe:black-sapphire-silvered-necklace",
+      "target": "item:black-sapphire-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36533",
+      "source": "recipe:black-sapphire-silvered-necklace",
+      "target": "item:black-sapphire-silvered-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36534",
+      "source": "recipe:black-sapphire-silvered-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36535",
+      "source": "recipe:blackened-pearl-silver-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36536",
+      "source": "recipe:blackened-pearl-silver-ring",
+      "target": "item:black-pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36537",
+      "source": "recipe:blackened-pearl-silver-ring",
+      "target": "item:blackened-pearl-silver-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36538",
+      "source": "recipe:blackened-pearl-silver-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36539",
+      "source": "recipe:jaded-silver-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36540",
+      "source": "recipe:jaded-silver-ring",
+      "target": "item:jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36541",
+      "source": "recipe:jaded-silver-ring",
+      "target": "item:jaded-silver-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36542",
+      "source": "recipe:jaded-silver-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36543",
+      "source": "recipe:silver-bloodstone-earring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36544",
+      "source": "recipe:silver-bloodstone-earring",
+      "target": "item:bloodstone",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36545",
+      "source": "recipe:silver-bloodstone-earring",
+      "target": "item:silver-bloodstone-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36546",
+      "source": "recipe:silver-bloodstone-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36547",
+      "source": "recipe:silver-blue-diamond-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36548",
+      "source": "recipe:silver-blue-diamond-ring",
+      "target": "item:blue-diamond-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36549",
+      "source": "recipe:silver-blue-diamond-ring",
+      "target": "item:silver-blue-diamond-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36550",
+      "source": "recipe:silver-blue-diamond-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36551",
+      "source": "recipe:silver-carnelian-wedding-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36552",
+      "source": "recipe:silver-carnelian-wedding-ring",
+      "target": "item:carnelian",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36553",
+      "source": "recipe:silver-carnelian-wedding-ring",
+      "target": "item:silver-carnelian-wedding-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36554",
+      "source": "recipe:silver-carnelian-wedding-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36555",
+      "source": "recipe:silver-cat-eye-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36556",
+      "source": "recipe:silver-cat-eye-necklace",
+      "target": "item:cat-s-eye-agate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36557",
+      "source": "recipe:silver-cat-eye-necklace",
+      "target": "item:silver-cat-eye-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36558",
+      "source": "recipe:silver-cat-eye-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36559",
+      "source": "recipe:silver-fire-wedding-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36560",
+      "source": "recipe:silver-fire-wedding-ring",
+      "target": "item:fire-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36561",
+      "source": "recipe:silver-fire-wedding-ring",
+      "target": "item:silver-fire-wedding-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36562",
+      "source": "recipe:silver-fire-wedding-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36563",
+      "source": "recipe:silver-jacinth-wedding-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36564",
+      "source": "recipe:silver-jacinth-wedding-ring",
+      "target": "item:jacinth-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36565",
+      "source": "recipe:silver-jacinth-wedding-ring",
+      "target": "item:silver-jacinth-wedding-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36566",
+      "source": "recipe:silver-jacinth-wedding-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36567",
+      "source": "recipe:silver-jasper-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36568",
+      "source": "recipe:silver-jasper-ring",
+      "target": "item:jasper",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36569",
+      "source": "recipe:silver-jasper-ring",
+      "target": "item:silver-jasper-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36570",
+      "source": "recipe:silver-jasper-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36571",
+      "source": "recipe:silver-lapis-lazuli-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36572",
+      "source": "recipe:silver-lapis-lazuli-necklace",
+      "target": "item:lapis-lazuli",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36573",
+      "source": "recipe:silver-lapis-lazuli-necklace",
+      "target": "item:silver-lapis-lazuli-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36574",
+      "source": "recipe:silver-lapis-lazuli-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36575",
+      "source": "recipe:silver-onyx-bracelet",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36576",
+      "source": "recipe:silver-onyx-bracelet",
+      "target": "item:onyx",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36577",
+      "source": "recipe:silver-onyx-bracelet",
+      "target": "item:silver-onyx-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36578",
+      "source": "recipe:silver-onyx-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36579",
+      "source": "recipe:silver-opal-engagement-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36580",
+      "source": "recipe:silver-opal-engagement-ring",
+      "target": "item:opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36581",
+      "source": "recipe:silver-opal-engagement-ring",
+      "target": "item:silver-opal-engagement-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36582",
+      "source": "recipe:silver-opal-engagement-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36583",
+      "source": "recipe:silver-rose-engagement-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36584",
+      "source": "recipe:silver-rose-engagement-ring",
+      "target": "item:star-rose-quartz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36585",
+      "source": "recipe:silver-rose-engagement-ring",
+      "target": "item:silver-rose-engagement-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36586",
+      "source": "recipe:silver-rose-engagement-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36587",
+      "source": "recipe:silver-ruby-veil",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36588",
+      "source": "recipe:silver-ruby-veil",
+      "target": "item:ruby-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36589",
+      "source": "recipe:silver-ruby-veil",
+      "target": "item:silver-ruby-veil",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36590",
+      "source": "recipe:silver-ruby-veil",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36591",
+      "source": "recipe:silver-wolf-s-eye-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36592",
+      "source": "recipe:silver-wolf-s-eye-necklace",
+      "target": "item:wolfs-eye-agate",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36593",
+      "source": "recipe:silver-wolf-s-eye-necklace",
+      "target": "item:silver-wolf-s-eye-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36594",
+      "source": "recipe:silver-wolf-s-eye-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36595",
+      "source": "recipe:silvered-fire-emerald-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36596",
+      "source": "recipe:silvered-fire-emerald-ring",
+      "target": "item:fire-emerald-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36597",
+      "source": "recipe:silvered-fire-emerald-ring",
+      "target": "item:silvered-fire-emerald-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36598",
+      "source": "recipe:silvered-fire-emerald-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36599",
+      "source": "recipe:silvered-sapphire-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36600",
+      "source": "recipe:silvered-sapphire-necklace",
+      "target": "item:sapphire-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36601",
+      "source": "recipe:silvered-sapphire-necklace",
+      "target": "item:silvered-sapphire-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36602",
+      "source": "recipe:silvered-sapphire-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36603",
+      "source": "recipe:silvered-star-ruby-veil",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36604",
+      "source": "recipe:silvered-star-ruby-veil",
+      "target": "item:star-ruby-ulthork",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36605",
+      "source": "recipe:silvered-star-ruby-veil",
+      "target": "item:silvered-star-ruby-veil",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36606",
+      "source": "recipe:silvered-star-ruby-veil",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36607",
+      "source": "recipe:topaz-silver-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36608",
+      "source": "recipe:topaz-silver-necklace",
+      "target": "item:topaz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36609",
+      "source": "recipe:topaz-silver-necklace",
+      "target": "item:topaz-silver-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36610",
+      "source": "recipe:topaz-silver-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
     }
   ]
 }
