@@ -190077,6 +190077,14 @@
       "type": "item",
       "weight": 0.1,
       "size": "Tiny"
+    },
+    {
+      "id": "container:jewelers-kit",
+      "label": "Jeweler's Kit",
+      "type": "container",
+      "weight": 0.4,
+      "containerSize": "Large",
+      "capacity": 4
     }
   ],
   "edges": [
@@ -415150,6 +415158,102 @@
       "id": "e-sells-36482",
       "source": "npc:thurgadin:cobi-frostbeard",
       "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36483",
+      "source": "npc:ak-anon:a-clockwork-jeweler",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36484",
+      "source": "npc:east-cabilis:klok-oxmod",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36485",
+      "source": "npc:west-commonlands:noresa-sparkle",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36486",
+      "source": "npc:erudin-palace:sothure-gemcutter",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36487",
+      "source": "npc:firiona-vie:brisha-fyrestone",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36488",
+      "source": "npc:greater-faydark:merchant-kweili",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36489",
+      "source": "npc:icewell-keep:coldain-outcast",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36490",
+      "source": "npc:north-kaladim:banaf-norkhitter",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36491",
+      "source": "npc:neriak-commons:zartox-ru-soe",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36492",
+      "source": "npc:neriak-3rd-gate:telnor-d-unnar",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36493",
+      "source": "npc:the-overthere:tin-merchant-iii",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36494",
+      "source": "npc:paineel:dannis-faleet",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36495",
+      "source": "npc:north-qeynos:svena-ironforge",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36496",
+      "source": "npc:rathe-mountains:darfumpel-zirubbel",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36497",
+      "source": "npc:steamfont-mountains:torodrane-frompwaddle",
+      "target": "container:jewelers-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36498",
+      "source": "npc:thurgadin:meg-tucter",
+      "target": "container:jewelers-kit",
       "type": "sells"
     }
   ]
