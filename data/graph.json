@@ -92679,7 +92679,8 @@
       "label": "Argash",
       "type": "npc",
       "roles": [
-        "quest_giver"
+        "quest_giver",
+        "vendor"
       ]
     },
     {
@@ -197994,6 +197995,79 @@
       "tradeskill": "Alchemy",
       "trivial": 302,
       "levelingGuide": true
+    },
+    {
+      "id": "container:fletching-kit",
+      "label": "Fletching Kit",
+      "type": "container",
+      "weight": 2,
+      "containerSize": "Large",
+      "capacity": 8,
+      "category": "Tradeskill Supplies"
+    },
+    {
+      "id": "npc:west-cabilis:zotalz",
+      "label": "Zotalz",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:firiona-vie:fleceal-summer",
+      "label": "Fleceal Summer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-lanin",
+      "label": "Merchant Lanin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:rain",
+      "label": "Rain",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:livam-t-lant",
+      "label": "Livam T`Lant",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:surefall-glade:jarse-kedison",
+      "label": "Jarse Kedison",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "label": "a clockwork fletcher",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:thurgadin:tavir",
+      "label": "Tavir",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -435503,6 +435577,150 @@
       "source": "recipe:distillate-of-spirituality-ix",
       "target": "container:reinforced-medicine-bag",
       "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-38549",
+      "source": "npc:east-cabilis:klok-gogon",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38550",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "zone:west-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38551",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38552",
+      "source": "npc:the-feerrott:fugla",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38553",
+      "source": "npc:firiona-vie:jessica-winter",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38554",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "zone:firiona-vie",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38555",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38556",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38557",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38558",
+      "source": "npc:greater-faydark:merchant-sylnis",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38559",
+      "source": "npc:halas:rain",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38560",
+      "source": "npc:halas:rain",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38561",
+      "source": "npc:neriak-commons:dianax-c-luzz",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38562",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38563",
+      "source": "npc:surefall-glade:tonsia",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38564",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38565",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38566",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38567",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38568",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "zone:steamfont-mountains",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38569",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38570",
+      "source": "npc:thurgadin:tavir",
+      "target": "zone:thurgadin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38571",
+      "source": "npc:thurgadin:tavir",
+      "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38572",
+      "source": "npc:thurgadin:argash",
+      "target": "container:fletching-kit",
+      "type": "sells"
     }
   ]
 }
