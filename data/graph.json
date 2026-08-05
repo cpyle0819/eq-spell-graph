@@ -184472,9 +184472,9 @@
       "containerSize": "Large"
     },
     {
-      "id": "item:reinforced-medicine-bag",
+      "id": "container:reinforced-medicine-bag",
       "label": "Reinforced Medicine Bag",
-      "type": "item",
+      "type": "container",
       "weight": 2.5,
       "capacity": 10,
       "containerSize": "Giant"
@@ -194949,6 +194949,159 @@
       "tradeskill": "Jewelcrafting",
       "trivial": 250,
       "levelingGuide": true
+    },
+    {
+      "id": "container:medicine-bag",
+      "label": "Medicine Bag",
+      "type": "container",
+      "weight": 0.4,
+      "containerSize": "Large",
+      "capacity": 6,
+      "category": "Tradeskill Supplies"
+    },
+    {
+      "id": "npc:ak-anon:a-clockwork-weaponsmith",
+      "label": "a clockwork weaponsmith",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:klan-smith",
+      "label": "Klan Smith",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-freeport:gord-smith",
+      "label": "Gord Smith",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:grabah",
+      "label": "Grabah",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:halas:spirita",
+      "label": "Spirita",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:highpass-hold:mardon-smith",
+      "label": "Mardon Smith",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-kaladim:hindaek-stormhammer",
+      "label": "Hindaek Stormhammer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:lake-of-ill-omen:klok-sargin",
+      "label": "Klok Sargin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-commons:opal-hrugla",
+      "label": "Opal H'Rugla",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:pordopa",
+      "label": "Pordopa",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-cabilis:smithy-qag",
+      "label": "Smithy Qag",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-cabilis:smithy-ygen",
+      "label": "Smithy Ygen",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:west-cabilis:jaxxtz",
+      "label": "Jaxxtz",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:field-of-bone:klok-canip",
+      "label": "Klok Canip",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:firiona-vie:quizan-gaxx",
+      "label": "Quizan Gaxx",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:swamp-of-no-hope:klok-bygle",
+      "label": "Klok Bygle",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:thurgadin:brynjar",
+      "label": "Brynjar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:warsliks-woods:klok-nogolin",
+      "label": "Klok Nogolin",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -412847,7 +413000,7 @@
     {
       "id": "e-produces-35313",
       "source": "recipe:reinforced-medicine-bag",
-      "target": "item:reinforced-medicine-bag",
+      "target": "container:reinforced-medicine-bag",
       "type": "produces"
     },
     {
@@ -425375,6 +425528,282 @@
       "source": "recipe:velium-wolf-s-eye-necklace-unenchanted",
       "target": "recipe:velium-wolf-s-eye-necklace",
       "type": "variant_of"
+    },
+    {
+      "id": "e-located_in-37375",
+      "source": "npc:ak-anon:a-clockwork-weaponsmith",
+      "target": "zone:ak-anon",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37376",
+      "source": "npc:ak-anon:a-clockwork-weaponsmith",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37377",
+      "source": "npc:east-freeport:klan-smith",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37378",
+      "source": "npc:east-freeport:klan-smith",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37379",
+      "source": "npc:east-freeport:gord-smith",
+      "target": "zone:east-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37380",
+      "source": "npc:east-freeport:gord-smith",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37381",
+      "source": "npc:grobb:grabah",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37382",
+      "source": "npc:grobb:grabah",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37383",
+      "source": "npc:grobb:blergagg",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37384",
+      "source": "npc:grobb:zumzal",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37385",
+      "source": "npc:halas:dargon",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37386",
+      "source": "npc:halas:spirita",
+      "target": "zone:halas",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37387",
+      "source": "npc:halas:spirita",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37388",
+      "source": "npc:halas:holana-oleary",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37389",
+      "source": "npc:highpass-hold:mardon-smith",
+      "target": "zone:highpass-hold",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37390",
+      "source": "npc:highpass-hold:mardon-smith",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37391",
+      "source": "npc:south-kaladim:hindaek-stormhammer",
+      "target": "zone:south-kaladim",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37392",
+      "source": "npc:south-kaladim:hindaek-stormhammer",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37393",
+      "source": "npc:lake-of-ill-omen:klok-sargin",
+      "target": "zone:lake-of-ill-omen",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37394",
+      "source": "npc:lake-of-ill-omen:klok-sargin",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37395",
+      "source": "npc:neriak-commons:opal-hrugla",
+      "target": "zone:neriak-commons",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37396",
+      "source": "npc:neriak-commons:opal-hrugla",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37397",
+      "source": "npc:oggok:garakbar",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37398",
+      "source": "npc:oggok:rora-dirtstamp",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37399",
+      "source": "npc:oggok:pordopa",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37400",
+      "source": "npc:oggok:pordopa",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37401",
+      "source": "npc:paineel:yvonne-ani",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37402",
+      "source": "npc:east-cabilis:smithy-qag",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37403",
+      "source": "npc:east-cabilis:smithy-qag",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37404",
+      "source": "npc:east-cabilis:smithy-ygen",
+      "target": "zone:east-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37405",
+      "source": "npc:east-cabilis:smithy-ygen",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37406",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "zone:west-cabilis",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37407",
+      "source": "npc:west-cabilis:jaxxtz",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37408",
+      "source": "npc:west-cabilis:klok-scaleroot",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37409",
+      "source": "npc:field-of-bone:klok-canip",
+      "target": "zone:field-of-bone",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37410",
+      "source": "npc:field-of-bone:klok-canip",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37411",
+      "source": "npc:firiona-vie:marlyn-mcmerin",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37412",
+      "source": "npc:firiona-vie:quizan-gaxx",
+      "target": "zone:firiona-vie",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37413",
+      "source": "npc:firiona-vie:quizan-gaxx",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37414",
+      "source": "npc:swamp-of-no-hope:klok-bygle",
+      "target": "zone:swamp-of-no-hope",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37415",
+      "source": "npc:swamp-of-no-hope:klok-bygle",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37416",
+      "source": "npc:thurgadin:brynjar",
+      "target": "zone:thurgadin",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37417",
+      "source": "npc:thurgadin:brynjar",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-37418",
+      "source": "npc:thurgadin:hulda",
+      "target": "container:medicine-bag",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-37419",
+      "source": "npc:warsliks-woods:klok-nogolin",
+      "target": "zone:warsliks-woods",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-37420",
+      "source": "npc:warsliks-woods:klok-nogolin",
+      "target": "container:medicine-bag",
+      "type": "sells"
     }
   ]
 }
