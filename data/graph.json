@@ -193072,6 +193072,1568 @@
       "type": "recipe",
       "tradeskill": "Jewelcrafting",
       "trivial": 302
+    },
+    {
+      "id": "item:imbued-topaz",
+      "label": "Imbued Topaz",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created from Topaz via the Imbue Topaz spell; deity-restricted to Quellious"
+    },
+    {
+      "id": "item:imbued-black-pearl",
+      "label": "Imbued Black Pearl",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created from Black Pearl via the Imbue Black Pearl spell; deity-restricted to Prexus"
+    },
+    {
+      "id": "item:imbued-fire-opal",
+      "label": "Imbued Fire Opal",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created from Fire Opal via the Imbue Fire Opal spell; deity-restricted to Solusek Ro, Wizard-only to cast"
+    },
+    {
+      "id": "item:imbued-silver-plains-ring",
+      "label": "Imbued Silver Plains Ring",
+      "type": "item",
+      "stats": {
+        "str": -1,
+        "sta": 2,
+        "wis": 1
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Karana",
+      "source": "Estimated trivial 49 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-plains-ring",
+      "label": "Imbued Silver Plains Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 49
+    },
+    {
+      "id": "item:imbued-electrum-plains-earring",
+      "label": "Imbued Electrum Plains Earring",
+      "type": "item",
+      "stats": {
+        "str": -2,
+        "sta": 2,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Karana",
+      "source": "Estimated trivial 117 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-plains-earring",
+      "label": "Imbued Electrum Plains Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 117
+    },
+    {
+      "id": "item:imbued-golden-plains-earring",
+      "label": "Imbued Golden Plains Earring",
+      "type": "item",
+      "stats": {
+        "str": -3,
+        "sta": 2,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Karana",
+      "source": "Estimated trivial 189 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-plains-earring",
+      "label": "Imbued Golden Plains Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 189
+    },
+    {
+      "id": "item:imbued-platinum-plains-ring",
+      "label": "Imbued Platinum Plains Ring",
+      "type": "item",
+      "stats": {
+        "str": -4,
+        "sta": 3,
+        "wis": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Karana",
+      "source": "Estimated trivial 261 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-plains-ring",
+      "label": "Imbued Platinum Plains Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 261
+    },
+    {
+      "id": "item:imbued-ivory-silver-necklace",
+      "label": "Imbued Ivory Silver Necklace",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "wis": 2
+      },
+      "resists": {
+        "cold": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "The Tribunal",
+      "source": "Estimated trivial 46 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-ivory-silver-necklace",
+      "label": "Imbued Ivory Silver Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 46
+    },
+    {
+      "id": "item:imbued-ivory-electrum-earring",
+      "label": "Imbued Ivory Electrum Earring",
+      "type": "item",
+      "ac": 2,
+      "stats": {
+        "wis": 1
+      },
+      "resists": {
+        "cold": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "The Tribunal",
+      "source": "Estimated trivial 114 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-ivory-electrum-earring",
+      "label": "Imbued Ivory Electrum Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 114
+    },
+    {
+      "id": "item:imbued-golden-ivory-earring",
+      "label": "Imbued Golden Ivory Earring",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "wis": 4
+      },
+      "resists": {
+        "cold": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "The Tribunal",
+      "source": "Estimated trivial 186 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-ivory-earring",
+      "label": "Imbued Golden Ivory Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 186
+    },
+    {
+      "id": "item:imbued-platinum-ivory-necklace",
+      "label": "Imbued Platinum Ivory Necklace",
+      "type": "item",
+      "ac": 5,
+      "stats": {
+        "wis": 5
+      },
+      "resists": {
+        "cold": 8
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "The Tribunal",
+      "source": "Estimated trivial 258 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-ivory-necklace",
+      "label": "Imbued Platinum Ivory Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 258
+    },
+    {
+      "id": "item:imbued-silver-rose-ring",
+      "label": "Imbued Silver Rose Ring",
+      "type": "item",
+      "stats": {
+        "sta": -1,
+        "int": 1,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Erollisi Marr",
+      "source": "Estimated trivial 34 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-rose-ring",
+      "label": "Imbued Silver Rose Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 34
+    },
+    {
+      "id": "item:imbued-electrum-rose-amulet",
+      "label": "Imbued Electrum Rose Amulet",
+      "type": "item",
+      "stats": {
+        "sta": -1,
+        "int": 1,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Erollisi Marr",
+      "source": "Estimated trivial 98 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-rose-amulet",
+      "label": "Imbued Electrum Rose Amulet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 98
+    },
+    {
+      "id": "item:imbued-golden-rose-amulet",
+      "label": "Imbued Golden Rose Amulet",
+      "type": "item",
+      "stats": {
+        "sta": -2,
+        "int": 2,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Erollisi Marr",
+      "source": "Estimated trivial 170 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-rose-amulet",
+      "label": "Imbued Golden Rose Amulet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 170
+    },
+    {
+      "id": "item:imbued-rose-platinum-ring",
+      "label": "Imbued Rose Platinum Ring",
+      "type": "item",
+      "stats": {
+        "sta": -2,
+        "int": 2,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Erollisi Marr",
+      "source": "Estimated trivial 242 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-rose-platinum-ring",
+      "label": "Imbued Rose Platinum Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 242
+    },
+    {
+      "id": "item:imbued-silver-amber-ring",
+      "label": "Imbued Silver Amber Ring",
+      "type": "item",
+      "stats": {
+        "str": 2,
+        "int": 1,
+        "cha": -1
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Cazic-Thule",
+      "source": "Estimated trivial 36 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-amber-ring",
+      "label": "Imbued Silver Amber Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 36
+    },
+    {
+      "id": "item:imbued-electrum-amber-earring",
+      "label": "Imbued Electrum Amber Earring",
+      "type": "item",
+      "stats": {
+        "str": 1,
+        "int": 2,
+        "cha": -2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Cazic-Thule",
+      "source": "Estimated trivial 100 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-amber-earring",
+      "label": "Imbued Electrum Amber Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 100
+    },
+    {
+      "id": "item:imbued-golden-amber-earring",
+      "label": "Imbued Golden Amber Earring",
+      "type": "item",
+      "stats": {
+        "str": 3,
+        "int": 3,
+        "cha": -3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Cazic-Thule",
+      "source": "Estimated trivial 172 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-amber-earring",
+      "label": "Imbued Golden Amber Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 172
+    },
+    {
+      "id": "item:imbued-platinum-amber-ring",
+      "label": "Imbued Platinum Amber Ring",
+      "type": "item",
+      "stats": {
+        "str": 4,
+        "int": 4,
+        "cha": -4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Cazic-Thule",
+      "source": "Estimated trivial 244 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-amber-ring",
+      "label": "Imbued Platinum Amber Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 244
+    },
+    {
+      "id": "item:imbued-jaded-silver-ring",
+      "label": "Imbued Jaded Silver Ring",
+      "type": "item",
+      "ac": 1,
+      "hp": 10,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Rallos Zek",
+      "source": "Estimated trivial 40 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-jaded-silver-ring",
+      "label": "Imbued Jaded Silver Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 40
+    },
+    {
+      "id": "item:imbued-jaded-electrum-bracelet",
+      "label": "Imbued Jaded Electrum Bracelet",
+      "type": "item",
+      "ac": 2,
+      "hp": 20,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Rallos Zek",
+      "source": "Estimated trivial 106 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-jaded-electrum-bracelet",
+      "label": "Imbued Jaded Electrum Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 106
+    },
+    {
+      "id": "item:imbued-golden-jaded-bracelet",
+      "label": "Imbued Golden Jaded Bracelet",
+      "type": "item",
+      "ac": 2,
+      "hp": 30,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Rallos Zek",
+      "source": "Estimated trivial 178 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-jaded-bracelet",
+      "label": "Imbued Golden Jaded Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 178
+    },
+    {
+      "id": "item:imbued-jaded-platinum-ring",
+      "label": "Imbued Jaded Platinum Ring",
+      "type": "item",
+      "ac": 4,
+      "hp": 40,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Rallos Zek",
+      "source": "Estimated trivial 250 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-jaded-platinum-ring",
+      "label": "Imbued Jaded Platinum Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 250
+    },
+    {
+      "id": "item:imbued-topaz-silver-necklace",
+      "label": "Imbued Topaz Silver Necklace",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "cha": 2
+      },
+      "resists": {
+        "disease": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Quellious",
+      "source": "Estimated trivial 44 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-topaz-silver-necklace",
+      "label": "Imbued Topaz Silver Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 44
+    },
+    {
+      "id": "item:imbued-topaz-electrum-earring",
+      "label": "Imbued Topaz Electrum Earring",
+      "type": "item",
+      "ac": 2,
+      "stats": {
+        "cha": 1
+      },
+      "resists": {
+        "disease": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Quellious",
+      "source": "Estimated trivial 111 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-topaz-electrum-earring",
+      "label": "Imbued Topaz Electrum Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 111
+    },
+    {
+      "id": "item:imbued-golden-topaz-earring",
+      "label": "Imbued Golden Topaz Earring",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "cha": 4
+      },
+      "resists": {
+        "disease": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Quellious",
+      "source": "Estimated trivial 183 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-topaz-earring",
+      "label": "Imbued Golden Topaz Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 183
+    },
+    {
+      "id": "item:imbued-platinum-topaz-necklace",
+      "label": "Imbued Platinum Topaz Necklace",
+      "type": "item",
+      "ac": 5,
+      "stats": {
+        "cha": 5
+      },
+      "resists": {
+        "disease": 8
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Quellious",
+      "source": "Estimated trivial 255 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-topaz-necklace",
+      "label": "Imbued Platinum Topaz Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 255
+    },
+    {
+      "id": "item:imbued-silvered-peridot-ring",
+      "label": "Imbued Silvered Peridot Ring",
+      "type": "item",
+      "ac": 1,
+      "stats": {
+        "agi": 3
+      },
+      "resists": {
+        "cold": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Bristlebane",
+      "source": "Estimated trivial 46 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silvered-peridot-ring",
+      "label": "Imbued Silvered Peridot Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 46
+    },
+    {
+      "id": "item:imbued-electrum-peridot-bracelet",
+      "label": "Imbued Electrum Peridot Bracelet",
+      "type": "item",
+      "ac": 2,
+      "stats": {
+        "agi": 3
+      },
+      "resists": {
+        "cold": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Bristlebane",
+      "source": "Estimated trivial 114 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-peridot-bracelet",
+      "label": "Imbued Electrum Peridot Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 114
+    },
+    {
+      "id": "item:imbued-golden-peridot-bracelet",
+      "label": "Imbued Golden Peridot Bracelet",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "agi": 4
+      },
+      "resists": {
+        "cold": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Bristlebane",
+      "source": "Estimated trivial 186 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-peridot-bracelet",
+      "label": "Imbued Golden Peridot Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 186
+    },
+    {
+      "id": "item:imbued-platinum-peridot-ring",
+      "label": "Imbued Platinum Peridot Ring",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "agi": 6
+      },
+      "resists": {
+        "cold": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Bristlebane",
+      "source": "Estimated trivial 258 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-peridot-ring",
+      "label": "Imbued Platinum Peridot Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 258
+    },
+    {
+      "id": "item:imbued-silver-emerald-ring",
+      "label": "Imbued Silver Emerald Ring",
+      "type": "item",
+      "ac": 2,
+      "stats": {
+        "str": -1,
+        "dex": 1
+      },
+      "resists": {
+        "fire": 3,
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Tunare",
+      "source": "Estimated trivial 48 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-emerald-ring",
+      "label": "Imbued Silver Emerald Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 48
+    },
+    {
+      "id": "item:imbued-emerald-electrum-bracelet",
+      "label": "Imbued Emerald Electrum Bracelet",
+      "type": "item",
+      "ac": 3,
+      "stats": {
+        "str": -2,
+        "dex": 2
+      },
+      "resists": {
+        "fire": 2,
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Tunare",
+      "source": "Estimated trivial 116 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-emerald-electrum-bracelet",
+      "label": "Imbued Emerald Electrum Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 116
+    },
+    {
+      "id": "item:imbued-golden-emerald-bracelet",
+      "label": "Imbued Golden Emerald Bracelet",
+      "type": "item",
+      "ac": 4,
+      "stats": {
+        "str": -3,
+        "dex": 3
+      },
+      "resists": {
+        "fire": 4,
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Wrist"
+      ],
+      "deity": "Tunare",
+      "source": "Estimated trivial 188 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-emerald-bracelet",
+      "label": "Imbued Golden Emerald Bracelet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 188
+    },
+    {
+      "id": "item:imbued-platinum-emerald-ring",
+      "label": "Imbued Platinum Emerald Ring",
+      "type": "item",
+      "ac": 4,
+      "stats": {
+        "str": -4,
+        "dex": 4
+      },
+      "resists": {
+        "fire": 8,
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Tunare",
+      "source": "Estimated trivial 260 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-emerald-ring",
+      "label": "Imbued Platinum Emerald Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 260
+    },
+    {
+      "id": "item:imbued-silver-opal-ring",
+      "label": "Imbued Silver Opal Ring",
+      "type": "item",
+      "stats": {
+        "sta": 2,
+        "agi": 1
+      },
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Rodcet Nife",
+      "source": "Estimated trivial 50 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-opal-ring",
+      "label": "Imbued Silver Opal Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 50
+    },
+    {
+      "id": "item:imbued-electrum-opal-amulet",
+      "label": "Imbued Electrum Opal Amulet",
+      "type": "item",
+      "stats": {
+        "sta": 3,
+        "agi": 2
+      },
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Rodcet Nife",
+      "source": "Estimated trivial 119 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-opal-amulet",
+      "label": "Imbued Electrum Opal Amulet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 119
+    },
+    {
+      "id": "item:imbued-golden-opal-amulet",
+      "label": "Imbued Golden Opal Amulet",
+      "type": "item",
+      "stats": {
+        "sta": 7,
+        "agi": 4
+      },
+      "resists": {
+        "disease": 4,
+        "poison": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Rodcet Nife",
+      "source": "Estimated trivial 191 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-opal-amulet",
+      "label": "Imbued Golden Opal Amulet",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 191
+    },
+    {
+      "id": "item:imbued-platinum-opal-ring",
+      "label": "Imbued Platinum Opal Ring",
+      "type": "item",
+      "stats": {
+        "sta": 6,
+        "agi": 4
+      },
+      "resists": {
+        "disease": 2,
+        "poison": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Rodcet Nife",
+      "source": "Estimated trivial 263 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-opal-ring",
+      "label": "Imbued Platinum Opal Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 263
+    },
+    {
+      "id": "item:imbued-blackened-pearl-silver-ring",
+      "label": "Imbued Blackened Pearl Silver Ring",
+      "type": "item",
+      "stats": {
+        "dex": 2,
+        "agi": 2,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Prexus",
+      "source": "Estimated trivial 52 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-blackened-pearl-silver-ring",
+      "label": "Imbued Blackened Pearl Silver Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 52
+    },
+    {
+      "id": "item:imbued-black-pearl-electrum-choker",
+      "label": "Imbued Black Pearl Electrum Choker",
+      "type": "item",
+      "stats": {
+        "dex": 3,
+        "agi": 3,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Prexus",
+      "source": "Estimated trivial 122 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-black-pearl-electrum-choker",
+      "label": "Imbued Black Pearl Electrum Choker",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 122
+    },
+    {
+      "id": "item:imbued-golden-black-pearl-choker",
+      "label": "Imbued Golden Black Pearl Choker",
+      "type": "item",
+      "stats": {
+        "dex": 5,
+        "agi": 5,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Prexus",
+      "source": "Estimated trivial 194 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-black-pearl-choker",
+      "label": "Imbued Golden Black Pearl Choker",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 194
+    },
+    {
+      "id": "item:imbued-black-pearl-platinum-ring",
+      "label": "Imbued Black Pearl Platinum Ring",
+      "type": "item",
+      "stats": {
+        "dex": 5,
+        "agi": 5,
+        "wis": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Prexus",
+      "source": "Estimated trivial 266 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-black-pearl-platinum-ring",
+      "label": "Imbued Black Pearl Platinum Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 266
+    },
+    {
+      "id": "item:imbued-silver-fire-ring",
+      "label": "Imbued Silver Fire Ring",
+      "type": "item",
+      "ac": 1,
+      "hp": 10,
+      "mana": 20,
+      "stats": {
+        "str": -2,
+        "int": 2
+      },
+      "resists": {
+        "fire": 1
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Solusek Ro",
+      "classes": [
+        "Bard",
+        "Wizard"
+      ],
+      "source": "Estimated trivial 54 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-fire-ring",
+      "label": "Imbued Silver Fire Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 54
+    },
+    {
+      "id": "item:imbued-electrum-fire-ring",
+      "label": "Imbued Electrum Fire Ring",
+      "type": "item",
+      "ac": 2,
+      "hp": 10,
+      "mana": 25,
+      "stats": {
+        "str": -4,
+        "int": 4
+      },
+      "resists": {
+        "fire": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Solusek Ro",
+      "classes": [
+        "Bard",
+        "Wizard"
+      ],
+      "source": "Estimated trivial 124 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-electrum-fire-ring",
+      "label": "Imbued Electrum Fire Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 124
+    },
+    {
+      "id": "item:imbued-golden-fire-ring",
+      "label": "Imbued Golden Fire Ring",
+      "type": "item",
+      "ac": 3,
+      "hp": 10,
+      "mana": 35,
+      "stats": {
+        "str": -6,
+        "int": 6
+      },
+      "resists": {
+        "fire": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Solusek Ro",
+      "classes": [
+        "Bard",
+        "Wizard"
+      ],
+      "source": "Estimated trivial 196 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-fire-ring",
+      "label": "Imbued Golden Fire Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 196
+    },
+    {
+      "id": "item:imbued-platinum-fire-ring",
+      "label": "Imbued Platinum Fire Ring",
+      "type": "item",
+      "ac": 4,
+      "hp": 10,
+      "mana": 45,
+      "stats": {
+        "str": -8,
+        "int": 8
+      },
+      "resists": {
+        "fire": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Solusek Ro",
+      "classes": [
+        "Bard",
+        "Wizard"
+      ],
+      "source": "Estimated trivial 268 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-fire-ring",
+      "label": "Imbued Platinum Fire Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 268
+    },
+    {
+      "id": "item:imbued-silvered-sapphire-necklace",
+      "label": "Imbued Silvered Sapphire Necklace",
+      "type": "item",
+      "stats": {
+        "str": 3,
+        "dex": 2,
+        "int": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Innoruuk",
+      "source": "Estimated trivial 60 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silvered-sapphire-necklace",
+      "label": "Imbued Silvered Sapphire Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 60
+    },
+    {
+      "id": "item:imbued-sapphire-electrum-earring",
+      "label": "Imbued Sapphire Electrum Earring",
+      "type": "item",
+      "stats": {
+        "str": 3,
+        "dex": 1,
+        "int": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Innoruuk",
+      "source": "Estimated trivial 132 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-sapphire-electrum-earring",
+      "label": "Imbued Sapphire Electrum Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 132
+    },
+    {
+      "id": "item:imbued-golden-sapphire-earring",
+      "label": "Imbued Golden Sapphire Earring",
+      "type": "item",
+      "stats": {
+        "str": 2,
+        "dex": 2,
+        "int": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Innoruuk",
+      "source": "Estimated trivial 204 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-sapphire-earring",
+      "label": "Imbued Golden Sapphire Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 204
+    },
+    {
+      "id": "item:imbued-sapphire-platinum-necklace",
+      "label": "Imbued Sapphire Platinum Necklace",
+      "type": "item",
+      "stats": {
+        "str": 6,
+        "dex": 2,
+        "int": 6
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Innoruuk",
+      "source": "Estimated trivial 276 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-sapphire-platinum-necklace",
+      "label": "Imbued Sapphire Platinum Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 276
+    },
+    {
+      "id": "item:imbued-silver-ruby-veil",
+      "label": "Imbued Silver Ruby Veil",
+      "type": "item",
+      "stats": {
+        "str": 4,
+        "sta": 1,
+        "agi": -1,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ],
+      "deity": "Brell Serilis",
+      "source": "Estimated trivial 63 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-ruby-veil",
+      "label": "Imbued Silver Ruby Veil",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 63
+    },
+    {
+      "id": "item:imbued-ruby-electrum-ring",
+      "label": "Imbued Ruby Electrum Ring",
+      "type": "item",
+      "stats": {
+        "str": 4,
+        "sta": 2,
+        "agi": -2,
+        "wis": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Brell Serilis",
+      "source": "Estimated trivial 135 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-ruby-electrum-ring",
+      "label": "Imbued Ruby Electrum Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 135
+    },
+    {
+      "id": "item:imbued-golden-ruby-ring",
+      "label": "Imbued Golden Ruby Ring",
+      "type": "item",
+      "stats": {
+        "str": 2,
+        "sta": 3,
+        "agi": -3,
+        "wis": 4
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Brell Serilis",
+      "source": "Estimated trivial 207 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-ruby-ring",
+      "label": "Imbued Golden Ruby Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 207
+    },
+    {
+      "id": "item:imbued-platinum-ruby-veil",
+      "label": "Imbued Platinum Ruby Veil",
+      "type": "item",
+      "stats": {
+        "str": 7,
+        "sta": 4,
+        "agi": -4,
+        "wis": 7
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ],
+      "deity": "Brell Serilis",
+      "source": "Estimated trivial 279 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-ruby-veil",
+      "label": "Imbued Platinum Ruby Veil",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 279
+    },
+    {
+      "id": "item:imbued-black-sapphire-silvered-necklace",
+      "label": "Imbued Black Sapphire Silvered Necklace",
+      "type": "item",
+      "hp": 20,
+      "mana": 40,
+      "resists": {
+        "disease": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Bertoxxulous",
+      "source": "Estimated trivial 75 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-black-sapphire-silvered-necklace",
+      "label": "Imbued Black Sapphire Silvered Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 75
+    },
+    {
+      "id": "item:imbued-black-sapphire-electrum-earring",
+      "label": "Imbued Black Sapphire Electrum Earring",
+      "type": "item",
+      "hp": 15,
+      "mana": 40,
+      "resists": {
+        "disease": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Bertoxxulous",
+      "source": "Estimated trivial 148 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-black-sapphire-electrum-earring",
+      "label": "Imbued Black Sapphire Electrum Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 148
+    },
+    {
+      "id": "item:imbued-golden-black-sapphire-earring",
+      "label": "Imbued Golden Black Sapphire Earring",
+      "type": "item",
+      "hp": 20,
+      "mana": 40,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Ear"
+      ],
+      "deity": "Bertoxxulous",
+      "source": "Estimated trivial 228 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-black-sapphire-earring",
+      "label": "Imbued Golden Black Sapphire Earring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 228
+    },
+    {
+      "id": "item:imbued-black-sapphire-platinum-necklace",
+      "label": "Imbued Black Sapphire Platinum Necklace",
+      "type": "item",
+      "hp": 35,
+      "mana": 75,
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Neck"
+      ],
+      "deity": "Bertoxxulous",
+      "source": "Estimated trivial 295 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-black-sapphire-platinum-necklace",
+      "label": "Imbued Black Sapphire Platinum Necklace",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 295
+    },
+    {
+      "id": "item:imbued-silver-diamond-ring",
+      "label": "Imbued Silver Diamond Ring",
+      "type": "item",
+      "stats": {
+        "sta": 2,
+        "wis": 3
+      },
+      "resists": {
+        "fire": 2,
+        "cold": 2,
+        "disease": 2,
+        "poison": 2,
+        "magic": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Mithaniel Marr",
+      "source": "Estimated trivial 71 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-silver-diamond-ring",
+      "label": "Imbued Silver Diamond Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 71
+    },
+    {
+      "id": "item:imbued-diamond-electrum-mask",
+      "label": "Imbued Diamond Electrum Mask",
+      "type": "item",
+      "stats": {
+        "sta": 4,
+        "wis": 4
+      },
+      "resists": {
+        "fire": 4,
+        "cold": 4,
+        "disease": 7,
+        "poison": 7,
+        "magic": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ],
+      "deity": "Mithaniel Marr",
+      "source": "Estimated trivial 143 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-diamond-electrum-mask",
+      "label": "Imbued Diamond Electrum Mask",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 143
+    },
+    {
+      "id": "item:imbued-golden-diamond-mask",
+      "label": "Imbued Golden Diamond Mask",
+      "type": "item",
+      "stats": {
+        "sta": 4,
+        "wis": 4
+      },
+      "resists": {
+        "fire": 7,
+        "cold": 7,
+        "disease": 4,
+        "poison": 4,
+        "magic": 3
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Face"
+      ],
+      "deity": "Mithaniel Marr",
+      "source": "Estimated trivial 215 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-golden-diamond-mask",
+      "label": "Imbued Golden Diamond Mask",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 215
+    },
+    {
+      "id": "item:imbued-platinum-diamond-ring",
+      "label": "Imbued Platinum Diamond Ring",
+      "type": "item",
+      "stats": {
+        "sta": 5,
+        "wis": 5
+      },
+      "resists": {
+        "fire": 5,
+        "cold": 5,
+        "disease": 5,
+        "poison": 5,
+        "magic": 5
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "slots": [
+        "Finger"
+      ],
+      "deity": "Mithaniel Marr",
+      "source": "Estimated trivial 287 (interpolated from material cost -- eqlwiki's own page gives no reliable value for this item)"
+    },
+    {
+      "id": "recipe:imbued-platinum-diamond-ring",
+      "label": "Imbued Platinum Diamond Ring",
+      "type": "recipe",
+      "tradeskill": "Jewelcrafting",
+      "trivial": 287
     }
   ],
   "edges": [
@@ -421606,6 +423168,1446 @@
     {
       "id": "e-crafted_in-37059",
       "source": "recipe:velium-blue-diamond-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37060",
+      "source": "recipe:imbued-silver-plains-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37061",
+      "source": "recipe:imbued-silver-plains-ring",
+      "target": "item:imbued-plains-pebble",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37062",
+      "source": "recipe:imbued-silver-plains-ring",
+      "target": "item:imbued-silver-plains-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37063",
+      "source": "recipe:imbued-silver-plains-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37064",
+      "source": "recipe:imbued-electrum-plains-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37065",
+      "source": "recipe:imbued-electrum-plains-earring",
+      "target": "item:imbued-plains-pebble",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37066",
+      "source": "recipe:imbued-electrum-plains-earring",
+      "target": "item:imbued-electrum-plains-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37067",
+      "source": "recipe:imbued-electrum-plains-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37068",
+      "source": "recipe:imbued-golden-plains-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37069",
+      "source": "recipe:imbued-golden-plains-earring",
+      "target": "item:imbued-plains-pebble",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37070",
+      "source": "recipe:imbued-golden-plains-earring",
+      "target": "item:imbued-golden-plains-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37071",
+      "source": "recipe:imbued-golden-plains-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37072",
+      "source": "recipe:imbued-platinum-plains-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37073",
+      "source": "recipe:imbued-platinum-plains-ring",
+      "target": "item:imbued-plains-pebble",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37074",
+      "source": "recipe:imbued-platinum-plains-ring",
+      "target": "item:imbued-platinum-plains-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37075",
+      "source": "recipe:imbued-platinum-plains-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37076",
+      "source": "recipe:imbued-ivory-silver-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37077",
+      "source": "recipe:imbued-ivory-silver-necklace",
+      "target": "item:imbued-ivory",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37078",
+      "source": "recipe:imbued-ivory-silver-necklace",
+      "target": "item:imbued-ivory-silver-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37079",
+      "source": "recipe:imbued-ivory-silver-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37080",
+      "source": "recipe:imbued-ivory-electrum-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37081",
+      "source": "recipe:imbued-ivory-electrum-earring",
+      "target": "item:imbued-ivory",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37082",
+      "source": "recipe:imbued-ivory-electrum-earring",
+      "target": "item:imbued-ivory-electrum-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37083",
+      "source": "recipe:imbued-ivory-electrum-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37084",
+      "source": "recipe:imbued-golden-ivory-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37085",
+      "source": "recipe:imbued-golden-ivory-earring",
+      "target": "item:imbued-ivory",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37086",
+      "source": "recipe:imbued-golden-ivory-earring",
+      "target": "item:imbued-golden-ivory-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37087",
+      "source": "recipe:imbued-golden-ivory-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37088",
+      "source": "recipe:imbued-platinum-ivory-necklace",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37089",
+      "source": "recipe:imbued-platinum-ivory-necklace",
+      "target": "item:imbued-ivory",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37090",
+      "source": "recipe:imbued-platinum-ivory-necklace",
+      "target": "item:imbued-platinum-ivory-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37091",
+      "source": "recipe:imbued-platinum-ivory-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37092",
+      "source": "recipe:imbued-silver-rose-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37093",
+      "source": "recipe:imbued-silver-rose-ring",
+      "target": "item:imbued-rose-quartz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37094",
+      "source": "recipe:imbued-silver-rose-ring",
+      "target": "item:imbued-silver-rose-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37095",
+      "source": "recipe:imbued-silver-rose-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37096",
+      "source": "recipe:imbued-electrum-rose-amulet",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37097",
+      "source": "recipe:imbued-electrum-rose-amulet",
+      "target": "item:imbued-rose-quartz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37098",
+      "source": "recipe:imbued-electrum-rose-amulet",
+      "target": "item:imbued-electrum-rose-amulet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37099",
+      "source": "recipe:imbued-electrum-rose-amulet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37100",
+      "source": "recipe:imbued-golden-rose-amulet",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37101",
+      "source": "recipe:imbued-golden-rose-amulet",
+      "target": "item:imbued-rose-quartz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37102",
+      "source": "recipe:imbued-golden-rose-amulet",
+      "target": "item:imbued-golden-rose-amulet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37103",
+      "source": "recipe:imbued-golden-rose-amulet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37104",
+      "source": "recipe:imbued-rose-platinum-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37105",
+      "source": "recipe:imbued-rose-platinum-ring",
+      "target": "item:imbued-rose-quartz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37106",
+      "source": "recipe:imbued-rose-platinum-ring",
+      "target": "item:imbued-rose-platinum-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37107",
+      "source": "recipe:imbued-rose-platinum-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37108",
+      "source": "recipe:imbued-silver-amber-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37109",
+      "source": "recipe:imbued-silver-amber-ring",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37110",
+      "source": "recipe:imbued-silver-amber-ring",
+      "target": "item:imbued-silver-amber-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37111",
+      "source": "recipe:imbued-silver-amber-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37112",
+      "source": "recipe:imbued-electrum-amber-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37113",
+      "source": "recipe:imbued-electrum-amber-earring",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37114",
+      "source": "recipe:imbued-electrum-amber-earring",
+      "target": "item:imbued-electrum-amber-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37115",
+      "source": "recipe:imbued-electrum-amber-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37116",
+      "source": "recipe:imbued-golden-amber-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37117",
+      "source": "recipe:imbued-golden-amber-earring",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37118",
+      "source": "recipe:imbued-golden-amber-earring",
+      "target": "item:imbued-golden-amber-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37119",
+      "source": "recipe:imbued-golden-amber-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37120",
+      "source": "recipe:imbued-platinum-amber-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37121",
+      "source": "recipe:imbued-platinum-amber-ring",
+      "target": "item:imbued-amber",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37122",
+      "source": "recipe:imbued-platinum-amber-ring",
+      "target": "item:imbued-platinum-amber-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37123",
+      "source": "recipe:imbued-platinum-amber-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37124",
+      "source": "recipe:imbued-jaded-silver-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37125",
+      "source": "recipe:imbued-jaded-silver-ring",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37126",
+      "source": "recipe:imbued-jaded-silver-ring",
+      "target": "item:imbued-jaded-silver-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37127",
+      "source": "recipe:imbued-jaded-silver-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37128",
+      "source": "recipe:imbued-jaded-electrum-bracelet",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37129",
+      "source": "recipe:imbued-jaded-electrum-bracelet",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37130",
+      "source": "recipe:imbued-jaded-electrum-bracelet",
+      "target": "item:imbued-jaded-electrum-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37131",
+      "source": "recipe:imbued-jaded-electrum-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37132",
+      "source": "recipe:imbued-golden-jaded-bracelet",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37133",
+      "source": "recipe:imbued-golden-jaded-bracelet",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37134",
+      "source": "recipe:imbued-golden-jaded-bracelet",
+      "target": "item:imbued-golden-jaded-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37135",
+      "source": "recipe:imbued-golden-jaded-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37136",
+      "source": "recipe:imbued-jaded-platinum-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37137",
+      "source": "recipe:imbued-jaded-platinum-ring",
+      "target": "item:imbued-jade",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37138",
+      "source": "recipe:imbued-jaded-platinum-ring",
+      "target": "item:imbued-jaded-platinum-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37139",
+      "source": "recipe:imbued-jaded-platinum-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37140",
+      "source": "recipe:imbued-topaz-silver-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37141",
+      "source": "recipe:imbued-topaz-silver-necklace",
+      "target": "item:imbued-topaz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37142",
+      "source": "recipe:imbued-topaz-silver-necklace",
+      "target": "item:imbued-topaz-silver-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37143",
+      "source": "recipe:imbued-topaz-silver-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37144",
+      "source": "recipe:imbued-topaz-electrum-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37145",
+      "source": "recipe:imbued-topaz-electrum-earring",
+      "target": "item:imbued-topaz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37146",
+      "source": "recipe:imbued-topaz-electrum-earring",
+      "target": "item:imbued-topaz-electrum-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37147",
+      "source": "recipe:imbued-topaz-electrum-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37148",
+      "source": "recipe:imbued-golden-topaz-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37149",
+      "source": "recipe:imbued-golden-topaz-earring",
+      "target": "item:imbued-topaz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37150",
+      "source": "recipe:imbued-golden-topaz-earring",
+      "target": "item:imbued-golden-topaz-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37151",
+      "source": "recipe:imbued-golden-topaz-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37152",
+      "source": "recipe:imbued-platinum-topaz-necklace",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37153",
+      "source": "recipe:imbued-platinum-topaz-necklace",
+      "target": "item:imbued-topaz",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37154",
+      "source": "recipe:imbued-platinum-topaz-necklace",
+      "target": "item:imbued-platinum-topaz-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37155",
+      "source": "recipe:imbued-platinum-topaz-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37156",
+      "source": "recipe:imbued-silvered-peridot-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37157",
+      "source": "recipe:imbued-silvered-peridot-ring",
+      "target": "item:imbued-peridot",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37158",
+      "source": "recipe:imbued-silvered-peridot-ring",
+      "target": "item:imbued-silvered-peridot-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37159",
+      "source": "recipe:imbued-silvered-peridot-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37160",
+      "source": "recipe:imbued-electrum-peridot-bracelet",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37161",
+      "source": "recipe:imbued-electrum-peridot-bracelet",
+      "target": "item:imbued-peridot",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37162",
+      "source": "recipe:imbued-electrum-peridot-bracelet",
+      "target": "item:imbued-electrum-peridot-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37163",
+      "source": "recipe:imbued-electrum-peridot-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37164",
+      "source": "recipe:imbued-golden-peridot-bracelet",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37165",
+      "source": "recipe:imbued-golden-peridot-bracelet",
+      "target": "item:imbued-peridot",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37166",
+      "source": "recipe:imbued-golden-peridot-bracelet",
+      "target": "item:imbued-golden-peridot-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37167",
+      "source": "recipe:imbued-golden-peridot-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37168",
+      "source": "recipe:imbued-platinum-peridot-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37169",
+      "source": "recipe:imbued-platinum-peridot-ring",
+      "target": "item:imbued-peridot",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37170",
+      "source": "recipe:imbued-platinum-peridot-ring",
+      "target": "item:imbued-platinum-peridot-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37171",
+      "source": "recipe:imbued-platinum-peridot-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37172",
+      "source": "recipe:imbued-silver-emerald-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37173",
+      "source": "recipe:imbued-silver-emerald-ring",
+      "target": "item:imbued-emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37174",
+      "source": "recipe:imbued-silver-emerald-ring",
+      "target": "item:imbued-silver-emerald-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37175",
+      "source": "recipe:imbued-silver-emerald-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37176",
+      "source": "recipe:imbued-emerald-electrum-bracelet",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37177",
+      "source": "recipe:imbued-emerald-electrum-bracelet",
+      "target": "item:imbued-emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37178",
+      "source": "recipe:imbued-emerald-electrum-bracelet",
+      "target": "item:imbued-emerald-electrum-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37179",
+      "source": "recipe:imbued-emerald-electrum-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37180",
+      "source": "recipe:imbued-golden-emerald-bracelet",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37181",
+      "source": "recipe:imbued-golden-emerald-bracelet",
+      "target": "item:imbued-emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37182",
+      "source": "recipe:imbued-golden-emerald-bracelet",
+      "target": "item:imbued-golden-emerald-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37183",
+      "source": "recipe:imbued-golden-emerald-bracelet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37184",
+      "source": "recipe:imbued-platinum-emerald-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37185",
+      "source": "recipe:imbued-platinum-emerald-ring",
+      "target": "item:imbued-emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37186",
+      "source": "recipe:imbued-platinum-emerald-ring",
+      "target": "item:imbued-platinum-emerald-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37187",
+      "source": "recipe:imbued-platinum-emerald-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37188",
+      "source": "recipe:imbued-silver-opal-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37189",
+      "source": "recipe:imbued-silver-opal-ring",
+      "target": "item:imbued-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37190",
+      "source": "recipe:imbued-silver-opal-ring",
+      "target": "item:imbued-silver-opal-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37191",
+      "source": "recipe:imbued-silver-opal-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37192",
+      "source": "recipe:imbued-electrum-opal-amulet",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37193",
+      "source": "recipe:imbued-electrum-opal-amulet",
+      "target": "item:imbued-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37194",
+      "source": "recipe:imbued-electrum-opal-amulet",
+      "target": "item:imbued-electrum-opal-amulet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37195",
+      "source": "recipe:imbued-electrum-opal-amulet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37196",
+      "source": "recipe:imbued-golden-opal-amulet",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37197",
+      "source": "recipe:imbued-golden-opal-amulet",
+      "target": "item:imbued-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37198",
+      "source": "recipe:imbued-golden-opal-amulet",
+      "target": "item:imbued-golden-opal-amulet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37199",
+      "source": "recipe:imbued-golden-opal-amulet",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37200",
+      "source": "recipe:imbued-platinum-opal-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37201",
+      "source": "recipe:imbued-platinum-opal-ring",
+      "target": "item:imbued-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37202",
+      "source": "recipe:imbued-platinum-opal-ring",
+      "target": "item:imbued-platinum-opal-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37203",
+      "source": "recipe:imbued-platinum-opal-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37204",
+      "source": "recipe:imbued-blackened-pearl-silver-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37205",
+      "source": "recipe:imbued-blackened-pearl-silver-ring",
+      "target": "item:imbued-black-pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37206",
+      "source": "recipe:imbued-blackened-pearl-silver-ring",
+      "target": "item:imbued-blackened-pearl-silver-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37207",
+      "source": "recipe:imbued-blackened-pearl-silver-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37208",
+      "source": "recipe:imbued-black-pearl-electrum-choker",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37209",
+      "source": "recipe:imbued-black-pearl-electrum-choker",
+      "target": "item:imbued-black-pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37210",
+      "source": "recipe:imbued-black-pearl-electrum-choker",
+      "target": "item:imbued-black-pearl-electrum-choker",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37211",
+      "source": "recipe:imbued-black-pearl-electrum-choker",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37212",
+      "source": "recipe:imbued-golden-black-pearl-choker",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37213",
+      "source": "recipe:imbued-golden-black-pearl-choker",
+      "target": "item:imbued-black-pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37214",
+      "source": "recipe:imbued-golden-black-pearl-choker",
+      "target": "item:imbued-golden-black-pearl-choker",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37215",
+      "source": "recipe:imbued-golden-black-pearl-choker",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37216",
+      "source": "recipe:imbued-black-pearl-platinum-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37217",
+      "source": "recipe:imbued-black-pearl-platinum-ring",
+      "target": "item:imbued-black-pearl",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37218",
+      "source": "recipe:imbued-black-pearl-platinum-ring",
+      "target": "item:imbued-black-pearl-platinum-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37219",
+      "source": "recipe:imbued-black-pearl-platinum-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37220",
+      "source": "recipe:imbued-silver-fire-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37221",
+      "source": "recipe:imbued-silver-fire-ring",
+      "target": "item:imbued-fire-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37222",
+      "source": "recipe:imbued-silver-fire-ring",
+      "target": "item:imbued-silver-fire-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37223",
+      "source": "recipe:imbued-silver-fire-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37224",
+      "source": "recipe:imbued-electrum-fire-ring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37225",
+      "source": "recipe:imbued-electrum-fire-ring",
+      "target": "item:imbued-fire-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37226",
+      "source": "recipe:imbued-electrum-fire-ring",
+      "target": "item:imbued-electrum-fire-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37227",
+      "source": "recipe:imbued-electrum-fire-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37228",
+      "source": "recipe:imbued-golden-fire-ring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37229",
+      "source": "recipe:imbued-golden-fire-ring",
+      "target": "item:imbued-fire-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37230",
+      "source": "recipe:imbued-golden-fire-ring",
+      "target": "item:imbued-golden-fire-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37231",
+      "source": "recipe:imbued-golden-fire-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37232",
+      "source": "recipe:imbued-platinum-fire-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37233",
+      "source": "recipe:imbued-platinum-fire-ring",
+      "target": "item:imbued-fire-opal",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37234",
+      "source": "recipe:imbued-platinum-fire-ring",
+      "target": "item:imbued-platinum-fire-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37235",
+      "source": "recipe:imbued-platinum-fire-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37236",
+      "source": "recipe:imbued-silvered-sapphire-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37237",
+      "source": "recipe:imbued-silvered-sapphire-necklace",
+      "target": "item:imbued-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37238",
+      "source": "recipe:imbued-silvered-sapphire-necklace",
+      "target": "item:imbued-silvered-sapphire-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37239",
+      "source": "recipe:imbued-silvered-sapphire-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37240",
+      "source": "recipe:imbued-sapphire-electrum-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37241",
+      "source": "recipe:imbued-sapphire-electrum-earring",
+      "target": "item:imbued-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37242",
+      "source": "recipe:imbued-sapphire-electrum-earring",
+      "target": "item:imbued-sapphire-electrum-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37243",
+      "source": "recipe:imbued-sapphire-electrum-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37244",
+      "source": "recipe:imbued-golden-sapphire-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37245",
+      "source": "recipe:imbued-golden-sapphire-earring",
+      "target": "item:imbued-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37246",
+      "source": "recipe:imbued-golden-sapphire-earring",
+      "target": "item:imbued-golden-sapphire-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37247",
+      "source": "recipe:imbued-golden-sapphire-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37248",
+      "source": "recipe:imbued-sapphire-platinum-necklace",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37249",
+      "source": "recipe:imbued-sapphire-platinum-necklace",
+      "target": "item:imbued-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37250",
+      "source": "recipe:imbued-sapphire-platinum-necklace",
+      "target": "item:imbued-sapphire-platinum-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37251",
+      "source": "recipe:imbued-sapphire-platinum-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37252",
+      "source": "recipe:imbued-silver-ruby-veil",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37253",
+      "source": "recipe:imbued-silver-ruby-veil",
+      "target": "item:imbued-ruby",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37254",
+      "source": "recipe:imbued-silver-ruby-veil",
+      "target": "item:imbued-silver-ruby-veil",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37255",
+      "source": "recipe:imbued-silver-ruby-veil",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37256",
+      "source": "recipe:imbued-ruby-electrum-ring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37257",
+      "source": "recipe:imbued-ruby-electrum-ring",
+      "target": "item:imbued-ruby",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37258",
+      "source": "recipe:imbued-ruby-electrum-ring",
+      "target": "item:imbued-ruby-electrum-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37259",
+      "source": "recipe:imbued-ruby-electrum-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37260",
+      "source": "recipe:imbued-golden-ruby-ring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37261",
+      "source": "recipe:imbued-golden-ruby-ring",
+      "target": "item:imbued-ruby",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37262",
+      "source": "recipe:imbued-golden-ruby-ring",
+      "target": "item:imbued-golden-ruby-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37263",
+      "source": "recipe:imbued-golden-ruby-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37264",
+      "source": "recipe:imbued-platinum-ruby-veil",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37265",
+      "source": "recipe:imbued-platinum-ruby-veil",
+      "target": "item:imbued-ruby",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37266",
+      "source": "recipe:imbued-platinum-ruby-veil",
+      "target": "item:imbued-platinum-ruby-veil",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37267",
+      "source": "recipe:imbued-platinum-ruby-veil",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37268",
+      "source": "recipe:imbued-black-sapphire-silvered-necklace",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37269",
+      "source": "recipe:imbued-black-sapphire-silvered-necklace",
+      "target": "item:imbued-black-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37270",
+      "source": "recipe:imbued-black-sapphire-silvered-necklace",
+      "target": "item:imbued-black-sapphire-silvered-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37271",
+      "source": "recipe:imbued-black-sapphire-silvered-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37272",
+      "source": "recipe:imbued-black-sapphire-electrum-earring",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37273",
+      "source": "recipe:imbued-black-sapphire-electrum-earring",
+      "target": "item:imbued-black-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37274",
+      "source": "recipe:imbued-black-sapphire-electrum-earring",
+      "target": "item:imbued-black-sapphire-electrum-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37275",
+      "source": "recipe:imbued-black-sapphire-electrum-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37276",
+      "source": "recipe:imbued-golden-black-sapphire-earring",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37277",
+      "source": "recipe:imbued-golden-black-sapphire-earring",
+      "target": "item:imbued-black-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37278",
+      "source": "recipe:imbued-golden-black-sapphire-earring",
+      "target": "item:imbued-golden-black-sapphire-earring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37279",
+      "source": "recipe:imbued-golden-black-sapphire-earring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37280",
+      "source": "recipe:imbued-black-sapphire-platinum-necklace",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37281",
+      "source": "recipe:imbued-black-sapphire-platinum-necklace",
+      "target": "item:imbued-black-sapphire",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37282",
+      "source": "recipe:imbued-black-sapphire-platinum-necklace",
+      "target": "item:imbued-black-sapphire-platinum-necklace",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37283",
+      "source": "recipe:imbued-black-sapphire-platinum-necklace",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37284",
+      "source": "recipe:imbued-silver-diamond-ring",
+      "target": "item:enchanted-silver-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37285",
+      "source": "recipe:imbued-silver-diamond-ring",
+      "target": "item:imbued-diamond",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37286",
+      "source": "recipe:imbued-silver-diamond-ring",
+      "target": "item:imbued-silver-diamond-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37287",
+      "source": "recipe:imbued-silver-diamond-ring",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37288",
+      "source": "recipe:imbued-diamond-electrum-mask",
+      "target": "item:enchanted-electrum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37289",
+      "source": "recipe:imbued-diamond-electrum-mask",
+      "target": "item:imbued-diamond",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37290",
+      "source": "recipe:imbued-diamond-electrum-mask",
+      "target": "item:imbued-diamond-electrum-mask",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37291",
+      "source": "recipe:imbued-diamond-electrum-mask",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37292",
+      "source": "recipe:imbued-golden-diamond-mask",
+      "target": "item:enchanted-gold-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37293",
+      "source": "recipe:imbued-golden-diamond-mask",
+      "target": "item:imbued-diamond",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37294",
+      "source": "recipe:imbued-golden-diamond-mask",
+      "target": "item:imbued-golden-diamond-mask",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37295",
+      "source": "recipe:imbued-golden-diamond-mask",
+      "target": "container:jewelers-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-37296",
+      "source": "recipe:imbued-platinum-diamond-ring",
+      "target": "item:enchanted-platinum-bar",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-37297",
+      "source": "recipe:imbued-platinum-diamond-ring",
+      "target": "item:imbued-diamond",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-37298",
+      "source": "recipe:imbued-platinum-diamond-ring",
+      "target": "item:imbued-platinum-diamond-ring",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-37299",
+      "source": "recipe:imbued-platinum-diamond-ring",
       "target": "container:jewelers-kit",
       "type": "crafted_in"
     }
