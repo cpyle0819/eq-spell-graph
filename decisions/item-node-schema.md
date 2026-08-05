@@ -17,6 +17,9 @@
   damage?: number;         // weapons
   delay?: number;          // weapons -- attack delay
   skill?: string;          // weapons -- e.g. "1H Slashing", "1H Blunt"
+  range?: number;          // bows -- max shot distance added on top of the arrow's own range;
+                            // never set on an arrow itself (see tradeskill-recipe-node-schema.md's
+                            // Fletching section for why arrows can't carry a single fixed value here)
   effect?: string;         // clicky/proc, e.g. "Ykesha (Combat) at Level 37"
   lightSource?: boolean;
   weight?: number;
