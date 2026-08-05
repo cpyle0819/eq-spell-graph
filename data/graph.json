@@ -198068,6 +198068,202 @@
       "roles": [
         "vendor"
       ]
+    },
+    {
+      "id": "item:bundled-wooden-arrow-shafts",
+      "label": "Bundled Wooden Arrow Shafts",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:bundled-bone-arrow-shafts",
+      "label": "Bundled Bone Arrow Shafts",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:bundled-ceramic-arrow-shafts",
+      "label": "Bundled Ceramic Arrow Shafts",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:several-round-cut-fletchings",
+      "label": "Several Round Cut Fletchings",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:several-parabolic-cut-fletchings",
+      "label": "Several Parabolic Cut Fletchings",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:several-shield-cut-fletchings",
+      "label": "Several Shield Cut Fletchings",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:set-of-wooden-arrow-vanes",
+      "label": "Set of Wooden Arrow Vanes",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:set-of-bone-arrow-vanes",
+      "label": "Set of Bone Arrow Vanes",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:set-of-ceramic-arrow-vanes",
+      "label": "Set of Ceramic Arrow Vanes",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:large-groove-nocks",
+      "label": "Large Groove Nocks",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:medium-groove-nocks",
+      "label": "Medium Groove Nocks",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:small-groove-nocks",
+      "label": "Small Groove Nocks",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "npc:ak-anon:a-clockwork-bowyer",
+      "label": "a clockwork bowyer",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:east-commonlands:joryd-longarms",
+      "label": "Joryd Longarms",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:eastern-karana:bryan",
+      "label": "Bryan",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:northern-felwithe:merchant-longarrow",
+      "label": "Merchant Longarrow",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-tiladinya",
+      "label": "Merchant Tiladinya",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:greater-faydark:merchant-neaien",
+      "label": "Merchant Neaien",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:grobb:zazhar",
+      "label": "Zazhar",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:kithicor-forest:krile-arrowsmith",
+      "label": "Krile Arrowsmith",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:neriak-commons:andara-c-luzz",
+      "label": "Andara C`Luzz",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:oggok:praak",
+      "label": "Praak",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:western-karana:brenzl-mcmannus",
+      "label": "Brenzl McMannus",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:south-qeynos:danon-fletcher",
+      "label": "Danon Fletcher",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:rivervale:joana-jinklebelly",
+      "label": "Joana Jinklebelly",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
+    },
+    {
+      "id": "npc:north-freeport:ping-fuzzlecutter",
+      "label": "Ping Fuzzlecutter",
+      "type": "npc",
+      "roles": [
+        "vendor"
+      ]
     }
   ],
   "edges": [
@@ -435720,6 +435916,2364 @@
       "id": "e-sells-38572",
       "source": "npc:thurgadin:argash",
       "target": "container:fletching-kit",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38573",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "zone:ak-anon",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38574",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38575",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38576",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "zone:east-commonlands",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38577",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38578",
+      "source": "npc:eastern-karana:bryan",
+      "target": "zone:eastern-karana",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38579",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38580",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "zone:northern-felwithe",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38581",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38582",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38583",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38584",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38585",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38586",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "zone:greater-faydark",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38587",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38588",
+      "source": "npc:grobb:zazhar",
+      "target": "zone:grobb",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38589",
+      "source": "npc:grobb:zazhar",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38590",
+      "source": "npc:halas:rain",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38591",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38592",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38593",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "zone:kithicor-forest",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38594",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38595",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "zone:neriak-commons",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38596",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38597",
+      "source": "npc:oggok:praak",
+      "target": "zone:oggok",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38598",
+      "source": "npc:oggok:praak",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38599",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38600",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "zone:western-karana",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38601",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38602",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "zone:south-qeynos",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38603",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38604",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38605",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38606",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38607",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:field-point-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38608",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38609",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38610",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38611",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38612",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38613",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38614",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38615",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38616",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38617",
+      "source": "npc:grobb:zazhar",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38618",
+      "source": "npc:halas:rain",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38619",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38620",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38621",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38622",
+      "source": "npc:oggok:praak",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38623",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38624",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38625",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38626",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38627",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38628",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "zone:rivervale",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38629",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38630",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38631",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:hooked-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38632",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38633",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38634",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38635",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38636",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38637",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38638",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38639",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38640",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38641",
+      "source": "npc:grobb:zazhar",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38642",
+      "source": "npc:halas:rain",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38643",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38644",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38645",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38646",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38647",
+      "source": "npc:oggok:praak",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38648",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38649",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38650",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38651",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38652",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38653",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38654",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38655",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:silver-tipped-arrowheads",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38656",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38657",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38658",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38659",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38660",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38661",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38662",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38663",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38664",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38665",
+      "source": "npc:grobb:zazhar",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38666",
+      "source": "npc:halas:rain",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38667",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38668",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38669",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38670",
+      "source": "npc:oggok:praak",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38671",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38672",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38673",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38674",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38675",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38676",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38677",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:bundled-wooden-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38678",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38679",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38680",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38681",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38682",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38683",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38684",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38685",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38686",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38687",
+      "source": "npc:grobb:zazhar",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38688",
+      "source": "npc:halas:rain",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38689",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38690",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38691",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38692",
+      "source": "npc:oggok:praak",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38693",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38694",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38695",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38696",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38697",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38698",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38699",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38700",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:bundled-bone-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38701",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38702",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38703",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38704",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38705",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38706",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38707",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38708",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38709",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38710",
+      "source": "npc:grobb:zazhar",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38711",
+      "source": "npc:halas:rain",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38712",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38713",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38714",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38715",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38716",
+      "source": "npc:oggok:praak",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38717",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38718",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38719",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38720",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38721",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38722",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38723",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38724",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:bundled-ceramic-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38725",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38726",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38727",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38728",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38729",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38730",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38731",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38732",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38733",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38734",
+      "source": "npc:grobb:zazhar",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38735",
+      "source": "npc:halas:rain",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38736",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38737",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38738",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38739",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38740",
+      "source": "npc:oggok:praak",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38741",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38742",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38743",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38744",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38745",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38746",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38747",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38748",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:bundled-steel-arrow-shafts",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38749",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38750",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38751",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38752",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38753",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38754",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38755",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38756",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38757",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38758",
+      "source": "npc:grobb:zazhar",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38759",
+      "source": "npc:halas:rain",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38760",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38761",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38762",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38763",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38764",
+      "source": "npc:oggok:praak",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38765",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38766",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38767",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38768",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38769",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38770",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38771",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38772",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:several-round-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38773",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38774",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38775",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38776",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38777",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38778",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38779",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38780",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38781",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38782",
+      "source": "npc:grobb:zazhar",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38783",
+      "source": "npc:halas:rain",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38784",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38785",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38786",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38787",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38788",
+      "source": "npc:oggok:praak",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38789",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38790",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38791",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38792",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38793",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38794",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38795",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38796",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:several-parabolic-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38797",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38798",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38799",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38800",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38801",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38802",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38803",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38804",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38805",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38806",
+      "source": "npc:grobb:zazhar",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38807",
+      "source": "npc:halas:rain",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38808",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38809",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38810",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38811",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38812",
+      "source": "npc:oggok:praak",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38813",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38814",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38815",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38816",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38817",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38818",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38819",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38820",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:several-shield-cut-fletchings",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38821",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38822",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38823",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38824",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38825",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38826",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-38827",
+      "source": "npc:north-freeport:ping-fuzzlecutter",
+      "target": "zone:north-freeport",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-38828",
+      "source": "npc:north-freeport:ping-fuzzlecutter",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38829",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38830",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38831",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38832",
+      "source": "npc:grobb:zazhar",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38833",
+      "source": "npc:halas:rain",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38834",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38835",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38836",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38837",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38838",
+      "source": "npc:oggok:praak",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38839",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38840",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38841",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38842",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38843",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38844",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38845",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38846",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:set-of-wooden-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38847",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38848",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38849",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38850",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38851",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38852",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38853",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38854",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38855",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38856",
+      "source": "npc:grobb:zazhar",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38857",
+      "source": "npc:halas:rain",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38858",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38859",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38860",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38861",
+      "source": "npc:oggok:praak",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38862",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38863",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38864",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38865",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38866",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38867",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38868",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:set-of-bone-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38869",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38870",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38871",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38872",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38873",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38874",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38875",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38876",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38877",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38878",
+      "source": "npc:grobb:zazhar",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38879",
+      "source": "npc:halas:rain",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38880",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38881",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38882",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38883",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38884",
+      "source": "npc:oggok:praak",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38885",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38886",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38887",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38888",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38889",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38890",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38891",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:set-of-ceramic-arrow-vanes",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38892",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38893",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38894",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38895",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38896",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38897",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38898",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38899",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38900",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38901",
+      "source": "npc:grobb:zazhar",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38902",
+      "source": "npc:halas:rain",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38903",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38904",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38905",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38906",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38907",
+      "source": "npc:oggok:praak",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38908",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38909",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38910",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38911",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38912",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38913",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38914",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38915",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38916",
+      "source": "npc:thurgadin:argash",
+      "target": "item:large-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38917",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38918",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38919",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38920",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38921",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38922",
+      "source": "npc:field-of-bone:klok-acet",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38923",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38924",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38925",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38926",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38927",
+      "source": "npc:grobb:zazhar",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38928",
+      "source": "npc:halas:rain",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38929",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38930",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38931",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38932",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38933",
+      "source": "npc:oggok:praak",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38934",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38935",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38936",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38937",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38938",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38939",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38940",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38941",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38942",
+      "source": "npc:thurgadin:argash",
+      "target": "item:medium-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38943",
+      "source": "npc:ak-anon:a-clockwork-bowyer",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38944",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38945",
+      "source": "npc:east-commonlands:joryd-longarms",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38946",
+      "source": "npc:eastern-karana:bryan",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38947",
+      "source": "npc:northern-felwithe:merchant-longarrow",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38948",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38949",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38950",
+      "source": "npc:greater-faydark:merchant-tiladinya",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38951",
+      "source": "npc:greater-faydark:merchant-neaien",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38952",
+      "source": "npc:grobb:zazhar",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38953",
+      "source": "npc:halas:rain",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38954",
+      "source": "npc:south-kaladim:alanury-stormhammer",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38955",
+      "source": "npc:kithicor-forest:krile-arrowsmith",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38956",
+      "source": "npc:oggok:praak",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38957",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38958",
+      "source": "npc:western-karana:brenzl-mcmannus",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38959",
+      "source": "npc:south-qeynos:danon-fletcher",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38960",
+      "source": "npc:surefall-glade:livam-t-lant",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38961",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38962",
+      "source": "npc:rivervale:joana-jinklebelly",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38963",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38964",
+      "source": "npc:thurgadin:tavir",
+      "target": "item:small-groove-nocks",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-38965",
+      "source": "npc:thurgadin:argash",
+      "target": "item:small-groove-nocks",
       "type": "sells"
     }
   ]
