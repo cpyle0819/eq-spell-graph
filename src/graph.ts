@@ -650,7 +650,15 @@ export function getRecipes(tradeskill: string): RecipeSummary[] {
       .map((n) => ({ n, summary: buildRecipeSummary(n, helpers) }))
       .sort((a, b) => {
         const scoreDiff = vendorSourceableCount(b.summary.uses, helpers) - vendorSourceableCount(a.summary.uses, helpers);
-        return scoreDiff !== 0 ? scoreDiff : a.summary.trivial - b.summary.trivial;
+        if (scoreDiff !== 0) return scoreDiff;
+        const trivialDiff = a.summary.trivial - b.summary.trivial;
+        if (trivialDiff !== 0) return trivialDiff;
+        // Fully tied (same vendor-sourceable count, same trivial) -- prefer
+        // whichever member is the recipe.levelingGuide flag actually points
+        // at, so a curated leveling-path pick (e.g. Jewelcrafting's
+        // unenchanted-bar variants, migration 432) doesn't get silently
+        // buried in `variants` by array order alone.
+        return (b.summary.levelingGuide ? 1 : 0) - (a.summary.levelingGuide ? 1 : 0);
       });
     const [primary, ...alternates] = scored;
     results.push({ ...primary.summary, variants: alternates.map((a) => ({ ...a.summary, variants: [] })) });
