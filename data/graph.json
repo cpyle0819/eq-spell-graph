@@ -187331,6 +187331,709 @@
       "tradeskill": "Tailoring",
       "trivial": 158,
       "levelingGuide": true
+    },
+    {
+      "id": "item:silver-thread",
+      "label": "Silver Thread",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:platinum-thread",
+      "label": "Platinum Thread",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "item:vial-of-purified-mana",
+      "label": "Vial of Purified Mana",
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "magic": true,
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created by Enchanters via the spell Purify Mana, consuming a poison vial and 4 rubies -- not vendor-sold"
+    },
+    {
+      "id": "item:ice-burrower-silk",
+      "label": "Ice Burrower Silk",
+      "type": "item",
+      "size": "Small",
+      "source": "Dropped by an ice burrower (Western Wastes)"
+    },
+    {
+      "id": "item:ice-silk-swatch",
+      "label": "Ice Silk Swatch",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
+    },
+    {
+      "id": "recipe:ice-silk-swatch",
+      "label": "Ice Silk Swatch",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 15
+    },
+    {
+      "id": "item:crystalline-silk-collar",
+      "label": "Crystalline Silk Collar",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 2,
+      "resists": {
+        "magic": 1
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-collar",
+      "label": "Crystalline Silk Collar",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 102
+    },
+    {
+      "id": "item:crystalline-silk-sash",
+      "label": "Crystalline Silk Sash",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 2,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-sash",
+      "label": "Crystalline Silk Sash",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 102
+    },
+    {
+      "id": "item:crystalline-silk-cloak",
+      "label": "Crystalline Silk Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 4,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-cloak",
+      "label": "Crystalline Silk Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 108
+    },
+    {
+      "id": "item:crystalline-silk-mask",
+      "label": "Crystalline Silk Mask",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 2,
+      "resists": {
+        "magic": 1
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-mask",
+      "label": "Crystalline Silk Mask",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 108,
+      "levelingGuide": true
+    },
+    {
+      "id": "item:crystalline-silk-wristbands",
+      "label": "Crystalline Silk Wristbands",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 2,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-wristbands",
+      "label": "Crystalline Silk Wristbands",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 108
+    },
+    {
+      "id": "item:crystalline-silk-cap",
+      "label": "Crystalline Silk Cap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 4,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-cap",
+      "label": "Crystalline Silk Cap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 115,
+      "levelingGuide": true
+    },
+    {
+      "id": "item:crystalline-silk-slippers",
+      "label": "Crystalline Silk Slippers",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 3,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-slippers",
+      "label": "Crystalline Silk Slippers",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 115
+    },
+    {
+      "id": "item:crystalline-silk-mantle",
+      "label": "Crystalline Silk Mantle",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 2,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-mantle",
+      "label": "Crystalline Silk Mantle",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 118
+    },
+    {
+      "id": "item:crystalline-silk-gloves",
+      "label": "Crystalline Silk Gloves",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 3,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-gloves",
+      "label": "Crystalline Silk Gloves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 124,
+      "levelingGuide": true
+    },
+    {
+      "id": "item:crystalline-silk-sleeves",
+      "label": "Crystalline Silk Sleeves",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 4,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-sleeves",
+      "label": "Crystalline Silk Sleeves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 124
+    },
+    {
+      "id": "item:crystalline-silk-pantaloons",
+      "label": "Crystalline Silk Pantaloons",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 4,
+      "resists": {
+        "magic": 3
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-pantaloons",
+      "label": "Crystalline Silk Pantaloons",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 128
+    },
+    {
+      "id": "item:crystalline-silk-shirt",
+      "label": "Crystalline Silk Shirt",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 7,
+      "resists": {
+        "magic": 4
+      },
+      "weight": 0.1,
+      "classes": []
+    },
+    {
+      "id": "recipe:crystalline-silk-shirt",
+      "label": "Crystalline Silk Shirt",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 131,
+      "levelingGuide": true
+    },
+    {
+      "id": "item:ice-silk-choker",
+      "label": "Ice Silk Choker",
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 4,
+      "stats": {
+        "int": 4,
+        "cha": 5
+      },
+      "hp": 5,
+      "mana": 10,
+      "resists": {
+        "magic": 5,
+        "cold": 5
+      },
+      "weight": 0.2,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-choker",
+      "label": "Ice Silk Choker",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 275
+    },
+    {
+      "id": "item:ice-silk-veil",
+      "label": "Ice Silk Veil",
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 3,
+      "stats": {
+        "int": 4,
+        "cha": 4
+      },
+      "hp": 5,
+      "mana": 10,
+      "resists": {
+        "magic": 5,
+        "cold": 5
+      },
+      "weight": 0.2,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-veil",
+      "label": "Ice Silk Veil",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 282
+    },
+    {
+      "id": "item:ice-silk-sash",
+      "label": "Ice Silk Sash",
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 4,
+      "stats": {
+        "cha": 1,
+        "wis": 1,
+        "int": 3
+      },
+      "hp": 5,
+      "mana": 10,
+      "resists": {
+        "magic": 5,
+        "cold": 5
+      },
+      "weight": 0.2,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-sash",
+      "label": "Ice Silk Sash",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 288
+    },
+    {
+      "id": "item:ice-silk-bracelet",
+      "label": "Ice Silk Bracelet",
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 3,
+      "stats": {
+        "sta": 5,
+        "cha": 3
+      },
+      "hp": 5,
+      "mana": 15,
+      "resists": {
+        "cold": 5
+      },
+      "weight": 0.3,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-bracelet",
+      "label": "Ice Silk Bracelet",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 295
+    },
+    {
+      "id": "item:ice-silk-amice",
+      "label": "Ice Silk Amice",
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 4,
+      "stats": {
+        "int": 3,
+        "cha": 5
+      },
+      "hp": 5,
+      "mana": 10,
+      "weight": 0.3,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-amice",
+      "label": "Ice Silk Amice",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 302
+    },
+    {
+      "id": "item:ice-silk-cap",
+      "label": "Ice Silk Cap",
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 5,
+      "stats": {
+        "int": 10,
+        "wis": 8,
+        "cha": 11
+      },
+      "mana": 20,
+      "resists": {
+        "magic": 5,
+        "cold": 5
+      },
+      "weight": 0.3,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-cap",
+      "label": "Ice Silk Cap",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 308
+    },
+    {
+      "id": "item:ice-silk-lined-shoes",
+      "label": "Ice Silk Lined Shoes",
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 4,
+      "stats": {
+        "dex": 5,
+        "cha": 4,
+        "agi": 4
+      },
+      "hp": 20,
+      "mana": 8,
+      "resists": {
+        "cold": 10
+      },
+      "weight": 0.7,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-lined-shoes",
+      "label": "Ice Silk Lined Shoes",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 315
+    },
+    {
+      "id": "item:ice-silk-cloak",
+      "label": "Ice Silk Cloak",
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 6,
+      "stats": {
+        "int": 8,
+        "cha": 6
+      },
+      "hp": 5,
+      "mana": 10,
+      "resists": {
+        "cold": 10,
+        "magic": 10
+      },
+      "weight": 0.6,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-cloak",
+      "label": "Ice Silk Cloak",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 322
+    },
+    {
+      "id": "item:ice-silk-gloves",
+      "label": "Ice Silk Gloves",
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 4,
+      "stats": {
+        "int": 7,
+        "cha": 3,
+        "agi": 10
+      },
+      "hp": 10,
+      "mana": 10,
+      "weight": 0.4,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-gloves",
+      "label": "Ice Silk Gloves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 328
+    },
+    {
+      "id": "item:ice-silk-sleeves",
+      "label": "Ice Silk Sleeves",
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 4,
+      "stats": {
+        "cha": 1,
+        "int": 8
+      },
+      "hp": 10,
+      "mana": 10,
+      "resists": {
+        "cold": 9
+      },
+      "weight": 0.4,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-sleeves",
+      "label": "Ice Silk Sleeves",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 328
+    },
+    {
+      "id": "item:ice-silk-pantaloons",
+      "label": "Ice Silk Pantaloons",
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 5,
+      "stats": {
+        "int": 5,
+        "cha": 6
+      },
+      "hp": 20,
+      "mana": 5,
+      "resists": {
+        "cold": 9
+      },
+      "weight": 0.7,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-pantaloons",
+      "label": "Ice Silk Pantaloons",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
+    },
+    {
+      "id": "item:ice-silk-robe",
+      "label": "Ice Silk Robe",
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 12,
+      "stats": {
+        "int": 14,
+        "dex": 11,
+        "cha": 10
+      },
+      "hp": 15,
+      "mana": 25,
+      "resists": {
+        "cold": 10
+      },
+      "weight": 1,
+      "magic": true,
+      "classes": [
+        "enchanter",
+        "magician",
+        "necromancer",
+        "wizard"
+      ]
+    },
+    {
+      "id": "recipe:ice-silk-robe",
+      "label": "Ice Silk Robe",
+      "type": "recipe",
+      "tradeskill": "Tailoring",
+      "trivial": 335
     }
   ],
   "edges": [
@@ -408892,6 +409595,891 @@
       "id": "e-crafted_in-35909",
       "source": "recipe:wus-fighting-shirt",
       "target": "container:loom",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35910",
+      "source": "recipe:ice-silk-swatch",
+      "target": "item:ice-burrower-silk",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35911",
+      "source": "recipe:ice-silk-swatch",
+      "target": "item:ice-silk-swatch",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35912",
+      "source": "recipe:ice-silk-swatch",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-35913",
+      "source": "npc:west-cabilis:kamzar",
+      "target": "item:silver-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35914",
+      "source": "npc:west-cabilis:kamzar",
+      "target": "item:platinum-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35915",
+      "source": "npc:erudin:galbasi-weaver",
+      "target": "item:silver-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35916",
+      "source": "npc:erudin:galbasi-weaver",
+      "target": "item:platinum-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35917",
+      "source": "npc:paineel:pardas-nalue",
+      "target": "item:silver-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35918",
+      "source": "npc:paineel:pardas-nalue",
+      "target": "item:platinum-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35919",
+      "source": "npc:thurgadin:kyla-frostbeard",
+      "target": "item:silver-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35920",
+      "source": "npc:thurgadin:kyla-frostbeard",
+      "target": "item:platinum-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35921",
+      "source": "npc:thurgadin:cobi-frostbeard",
+      "target": "item:silver-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-35922",
+      "source": "npc:thurgadin:cobi-frostbeard",
+      "target": "item:platinum-thread",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-35923",
+      "source": "recipe:crystalline-silk-collar",
+      "target": "item:gorget-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35924",
+      "source": "recipe:crystalline-silk-collar",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35925",
+      "source": "recipe:crystalline-silk-collar",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35926",
+      "source": "recipe:crystalline-silk-collar",
+      "target": "item:crystalline-silk-collar",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35927",
+      "source": "recipe:crystalline-silk-collar",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35928",
+      "source": "recipe:crystalline-silk-sash",
+      "target": "item:belt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35929",
+      "source": "recipe:crystalline-silk-sash",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35930",
+      "source": "recipe:crystalline-silk-sash",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35931",
+      "source": "recipe:crystalline-silk-sash",
+      "target": "item:crystalline-silk-sash",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35932",
+      "source": "recipe:crystalline-silk-sash",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35933",
+      "source": "recipe:crystalline-silk-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35934",
+      "source": "recipe:crystalline-silk-cloak",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35935",
+      "source": "recipe:crystalline-silk-cloak",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-35936",
+      "source": "recipe:crystalline-silk-cloak",
+      "target": "item:crystalline-silk-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35937",
+      "source": "recipe:crystalline-silk-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35938",
+      "source": "recipe:crystalline-silk-mask",
+      "target": "item:mask-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35939",
+      "source": "recipe:crystalline-silk-mask",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35940",
+      "source": "recipe:crystalline-silk-mask",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35941",
+      "source": "recipe:crystalline-silk-mask",
+      "target": "item:crystalline-silk-mask",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35942",
+      "source": "recipe:crystalline-silk-mask",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35943",
+      "source": "recipe:crystalline-silk-wristbands",
+      "target": "item:wristband-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35944",
+      "source": "recipe:crystalline-silk-wristbands",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35945",
+      "source": "recipe:crystalline-silk-wristbands",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35946",
+      "source": "recipe:crystalline-silk-wristbands",
+      "target": "item:crystalline-silk-wristbands",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35947",
+      "source": "recipe:crystalline-silk-wristbands",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35948",
+      "source": "recipe:crystalline-silk-cap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35949",
+      "source": "recipe:crystalline-silk-cap",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35950",
+      "source": "recipe:crystalline-silk-cap",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35951",
+      "source": "recipe:crystalline-silk-cap",
+      "target": "item:crystalline-silk-cap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35952",
+      "source": "recipe:crystalline-silk-cap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35953",
+      "source": "recipe:crystalline-silk-slippers",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35954",
+      "source": "recipe:crystalline-silk-slippers",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35955",
+      "source": "recipe:crystalline-silk-slippers",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35956",
+      "source": "recipe:crystalline-silk-slippers",
+      "target": "item:crystalline-silk-slippers",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35957",
+      "source": "recipe:crystalline-silk-slippers",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35958",
+      "source": "recipe:crystalline-silk-mantle",
+      "target": "item:shoulderpad-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35959",
+      "source": "recipe:crystalline-silk-mantle",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35960",
+      "source": "recipe:crystalline-silk-mantle",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35961",
+      "source": "recipe:crystalline-silk-mantle",
+      "target": "item:crystalline-silk-mantle",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35962",
+      "source": "recipe:crystalline-silk-mantle",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35963",
+      "source": "recipe:crystalline-silk-gloves",
+      "target": "item:glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35964",
+      "source": "recipe:crystalline-silk-gloves",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35965",
+      "source": "recipe:crystalline-silk-gloves",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35966",
+      "source": "recipe:crystalline-silk-gloves",
+      "target": "item:crystalline-silk-gloves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35967",
+      "source": "recipe:crystalline-silk-gloves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35968",
+      "source": "recipe:crystalline-silk-sleeves",
+      "target": "item:sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35969",
+      "source": "recipe:crystalline-silk-sleeves",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35970",
+      "source": "recipe:crystalline-silk-sleeves",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35971",
+      "source": "recipe:crystalline-silk-sleeves",
+      "target": "item:crystalline-silk-sleeves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35972",
+      "source": "recipe:crystalline-silk-sleeves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35973",
+      "source": "recipe:crystalline-silk-pantaloons",
+      "target": "item:pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35974",
+      "source": "recipe:crystalline-silk-pantaloons",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35975",
+      "source": "recipe:crystalline-silk-pantaloons",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-35976",
+      "source": "recipe:crystalline-silk-pantaloons",
+      "target": "item:crystalline-silk-pantaloons",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35977",
+      "source": "recipe:crystalline-silk-pantaloons",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35978",
+      "source": "recipe:crystalline-silk-shirt",
+      "target": "item:tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35979",
+      "source": "recipe:crystalline-silk-shirt",
+      "target": "item:silver-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35980",
+      "source": "recipe:crystalline-silk-shirt",
+      "target": "item:crystalline-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-35981",
+      "source": "recipe:crystalline-silk-shirt",
+      "target": "item:crystalline-silk-shirt",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35982",
+      "source": "recipe:crystalline-silk-shirt",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35983",
+      "source": "recipe:ice-silk-choker",
+      "target": "item:gorget-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35984",
+      "source": "recipe:ice-silk-choker",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35985",
+      "source": "recipe:ice-silk-choker",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35986",
+      "source": "recipe:ice-silk-choker",
+      "target": "item:ice-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35987",
+      "source": "recipe:ice-silk-choker",
+      "target": "item:ice-silk-choker",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35988",
+      "source": "recipe:ice-silk-choker",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35989",
+      "source": "recipe:ice-silk-veil",
+      "target": "item:mask-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35990",
+      "source": "recipe:ice-silk-veil",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35991",
+      "source": "recipe:ice-silk-veil",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35992",
+      "source": "recipe:ice-silk-veil",
+      "target": "item:ice-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-35993",
+      "source": "recipe:ice-silk-veil",
+      "target": "item:ice-silk-veil",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-35994",
+      "source": "recipe:ice-silk-veil",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-35995",
+      "source": "recipe:ice-silk-sash",
+      "target": "item:belt-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35996",
+      "source": "recipe:ice-silk-sash",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35997",
+      "source": "recipe:ice-silk-sash",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-35998",
+      "source": "recipe:ice-silk-sash",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-35999",
+      "source": "recipe:ice-silk-sash",
+      "target": "item:ice-silk-sash",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36000",
+      "source": "recipe:ice-silk-sash",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36001",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "item:wristband-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36002",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36003",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36004",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "item:ice-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36005",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "item:ice-silk-bracelet",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36006",
+      "source": "recipe:ice-silk-bracelet",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36007",
+      "source": "recipe:ice-silk-amice",
+      "target": "item:shoulderpad-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36008",
+      "source": "recipe:ice-silk-amice",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36009",
+      "source": "recipe:ice-silk-amice",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36010",
+      "source": "recipe:ice-silk-amice",
+      "target": "item:ice-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36011",
+      "source": "recipe:ice-silk-amice",
+      "target": "item:ice-silk-amice",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36012",
+      "source": "recipe:ice-silk-amice",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36013",
+      "source": "recipe:ice-silk-cap",
+      "target": "item:cap-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36014",
+      "source": "recipe:ice-silk-cap",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36015",
+      "source": "recipe:ice-silk-cap",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36016",
+      "source": "recipe:ice-silk-cap",
+      "target": "item:ice-silk-swatch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-36017",
+      "source": "recipe:ice-silk-cap",
+      "target": "item:ice-silk-cap",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36018",
+      "source": "recipe:ice-silk-cap",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36019",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "item:boot-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36020",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36021",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36022",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36023",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "item:ice-silk-lined-shoes",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36024",
+      "source": "recipe:ice-silk-lined-shoes",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36025",
+      "source": "recipe:ice-silk-cloak",
+      "target": "item:cloak-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36026",
+      "source": "recipe:ice-silk-cloak",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36027",
+      "source": "recipe:ice-silk-cloak",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36028",
+      "source": "recipe:ice-silk-cloak",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36029",
+      "source": "recipe:ice-silk-cloak",
+      "target": "item:ice-silk-cloak",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36030",
+      "source": "recipe:ice-silk-cloak",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36031",
+      "source": "recipe:ice-silk-gloves",
+      "target": "item:glove-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36032",
+      "source": "recipe:ice-silk-gloves",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36033",
+      "source": "recipe:ice-silk-gloves",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36034",
+      "source": "recipe:ice-silk-gloves",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36035",
+      "source": "recipe:ice-silk-gloves",
+      "target": "item:ice-silk-gloves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36036",
+      "source": "recipe:ice-silk-gloves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36037",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "item:sleeve-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36038",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36039",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36040",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 2
+    },
+    {
+      "id": "e-produces-36041",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "item:ice-silk-sleeves",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36042",
+      "source": "recipe:ice-silk-sleeves",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36043",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "item:pant-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36044",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36045",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36046",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36047",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "item:ice-silk-pantaloons",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36048",
+      "source": "recipe:ice-silk-pantaloons",
+      "target": "container:coldain-tanners-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-36049",
+      "source": "recipe:ice-silk-robe",
+      "target": "item:tunic-pattern",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36050",
+      "source": "recipe:ice-silk-robe",
+      "target": "item:platinum-thread",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36051",
+      "source": "recipe:ice-silk-robe",
+      "target": "item:vial-of-purified-mana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-36052",
+      "source": "recipe:ice-silk-robe",
+      "target": "item:ice-silk-swatch",
+      "type": "uses",
+      "quantity": 3
+    },
+    {
+      "id": "e-produces-36053",
+      "source": "recipe:ice-silk-robe",
+      "target": "item:ice-silk-robe",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-36054",
+      "source": "recipe:ice-silk-robe",
+      "target": "container:coldain-tanners-kit",
       "type": "crafted_in"
     }
   ]
