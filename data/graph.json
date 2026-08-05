@@ -184969,7 +184969,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 1
     },
     {
       "id": "recipe:tattered-belt",
@@ -185018,7 +185019,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 1.5
     },
     {
       "id": "recipe:tattered-gloves",
@@ -185046,7 +185048,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 0.5
     },
     {
       "id": "recipe:tattered-gorget",
@@ -185074,7 +185077,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 0.4
     },
     {
       "id": "recipe:tattered-mask",
@@ -185109,7 +185113,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 1.5
     },
     {
       "id": "recipe:tattered-shoulderpads",
@@ -185151,7 +185156,8 @@
         "shadow knight",
         "shaman",
         "warrior"
-      ]
+      ],
+      "weight": 1
     },
     {
       "id": "recipe:tattered-wristbands",
@@ -185468,7 +185474,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 0.8
     },
     {
       "id": "recipe:studded-belt",
@@ -185496,7 +185503,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 1.9
     },
     {
       "id": "recipe:studded-boots",
@@ -185524,7 +185532,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 0.5
     },
     {
       "id": "recipe:studded-skullcap",
@@ -185552,7 +185561,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 1.5
     },
     {
       "id": "recipe:studded-cloak",
@@ -185580,7 +185590,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 1.1
     },
     {
       "id": "recipe:studded-gloves",
@@ -185608,7 +185619,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 0.4
     },
     {
       "id": "recipe:studded-gorget",
@@ -185636,7 +185648,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 0.3
     },
     {
       "id": "recipe:studded-mask",
@@ -185664,7 +185677,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 4
     },
     {
       "id": "recipe:studded-leggings",
@@ -185692,7 +185706,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 1.1
     },
     {
       "id": "recipe:studded-shoulderpads",
@@ -185720,7 +185735,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 1.5
     },
     {
       "id": "recipe:studded-sleeves",
@@ -185748,7 +185764,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 3.5
     },
     {
       "id": "recipe:studded-tunic",
@@ -185776,7 +185793,8 @@
         "bard",
         "rogue",
         "shaman"
-      ]
+      ],
+      "weight": 0.8
     },
     {
       "id": "recipe:studded-wristbands",
@@ -188033,7 +188051,7 @@
       "label": "Ice Silk Robe",
       "type": "recipe",
       "tradeskill": "Tailoring",
-      "trivial": 335
+      "trivial": 342
     },
     {
       "id": "item:othmir-fur",
@@ -190052,6 +190070,13 @@
       "type": "recipe",
       "tradeskill": "Tailoring",
       "trivial": 335
+    },
+    {
+      "id": "item:robe-pattern",
+      "label": "Robe Pattern",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     }
   ],
   "edges": [
@@ -412466,7 +412491,7 @@
     {
       "id": "e-uses-36049",
       "source": "recipe:ice-silk-robe",
-      "target": "item:tunic-pattern",
+      "target": "item:robe-pattern",
       "type": "uses"
     },
     {
@@ -415078,6 +415103,54 @@
       "source": "recipe:arctic-wyvern-wristbands",
       "target": "container:coldain-tanners-kit",
       "type": "crafted_in"
+    },
+    {
+      "id": "e-sells-36475",
+      "source": "npc:ak-anon:a-clockwork-tailor",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36476",
+      "source": "npc:the-feerrott:murga",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36477",
+      "source": "npc:east-freeport:winsa-tanner",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36478",
+      "source": "npc:neriak-commons:garren-d-vek",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36479",
+      "source": "npc:oggok:gretamog",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36480",
+      "source": "npc:western-karana:cleet-miller",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36481",
+      "source": "npc:thurgadin:kyla-frostbeard",
+      "target": "item:robe-pattern",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-36482",
+      "source": "npc:thurgadin:cobi-frostbeard",
+      "target": "item:robe-pattern",
+      "type": "sells"
     }
   ]
 }
