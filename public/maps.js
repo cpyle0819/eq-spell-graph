@@ -21,15 +21,13 @@ export async function init() {
   allZones = zones;
   zonesByLabel = new Map(zones.map((z) => [z.label, z]));
   populateZoneSelect(document.getElementById("route-from"));
-  populateZoneSelect(document.getElementById("route-to"));
   restoreState();
   // Unconditional (not folded into restoreState() itself) -- a first-ever
-  // visit has no saved state to restore at all, but #add-stop-btn still
-  // needs its disabled state set from the (empty) stops array.
+  // visit has no saved state to restore at all, but #add-stop-btn and
+  // #route-toggles still need their state set from the (empty) stops array.
   renderStops();
   applyQueryParams();
   document.getElementById("route-from").addEventListener("change", () => { saveState(); runRoute(); });
-  document.getElementById("route-to").addEventListener("change", () => { saveState(); runRoute(); });
   document.getElementById("ports-btn").addEventListener("click", (e) => {
     e.currentTarget.toggleAttribute("toggled");
     saveState();
@@ -56,11 +54,13 @@ export async function init() {
   runRoute();
 }
 
-// Always appends after the last stop, right before To -- the route panel
-// is a fixed-width vertical stack now (no horizontal chain with gaps to
-// click between), so inserting a stop at a specific position isn't a
-// supported affordance; issue #63's original mid-chain gap-add-btn was
-// removed along with the horizontal layout it lived in.
+// Always appends after the last stop -- the route panel is a fixed-width
+// vertical stack now (no horizontal chain with gaps to click between), so
+// inserting a stop at a specific position isn't a supported affordance;
+// issue #63's original mid-chain gap-add-btn was removed along with the
+// horizontal layout it lived in. The newly-appended (blank) field becomes
+// the destination once picked, demoting whatever was previously last to a
+// waypoint -- see runRoute()'s filledStops/to/waypoints split.
 function addStop() {
   if (stops.length >= MAX_STOPS) return;
   stops.push("");
@@ -105,17 +105,26 @@ function renderStops() {
   }
 
   document.getElementById("add-stop-btn").disabled = stops.length >= MAX_STOPS;
+  // Ports/Avoid Danger/Show Out of Era only matter once there's an actual
+  // route to tune (i.e. at least one stop), so they stay hidden until then
+  // -- this single check covers add, remove-down-to-zero, reset, and a
+  // page reload that restores a saved stops array alike, since they all
+  // funnel through renderStops().
+  document.getElementById("route-toggles").hidden = stops.length === 0;
 }
 
-// ?to=<zone label> deep-links here (e.g. from the Leveling Guide) preset the
-// destination, letting the visitor just pick where they're coming from.
-// Takes priority over restored localStorage state, but only for a "to" value
-// that actually matches a real zone option -- a stale/mistyped link falls
-// back to whatever was already restored rather than clearing the field.
+// ?to=<zone label> deep-links here (e.g. from the Leveling Guide, spell/
+// ingredient vendor links, quest zone links) -- the query param name is an
+// external contract shared across the rest of the app and stays "to" even
+// though it now lands in Location, since Location is what shows a single
+// zone's map/quests/dangers on its own. Takes priority over restored
+// localStorage state, but only for a value that actually matches a real
+// zone option -- a stale/mistyped link falls back to whatever was already
+// restored rather than clearing the field.
 function applyQueryParams() {
   const to = new URLSearchParams(location.search).get("to");
   if (!to) return;
-  const select = document.getElementById("route-to");
+  const select = document.getElementById("route-from");
   if ([...select.options].some((o) => o.value === to)) {
     select.value = to;
     saveState();
@@ -124,7 +133,6 @@ function applyQueryParams() {
 
 function resetRoute() {
   document.getElementById("route-from").value = "";
-  document.getElementById("route-to").value = "";
   document.getElementById("ports-btn").removeAttribute("toggled");
   document.getElementById("avoid-danger-btn").removeAttribute("toggled");
   document.getElementById("era-btn").removeAttribute("toggled");
@@ -139,7 +147,6 @@ function restoreState() {
     const s = JSON.parse(localStorage.getItem(STATE_KEY) || "null");
     if (!s) return;
     if (s.from) document.getElementById("route-from").value = s.from;
-    if (s.to) document.getElementById("route-to").value = s.to;
     if (s.ports) document.getElementById("ports-btn").setAttribute("toggled", "");
     if (s.avoidDanger) document.getElementById("avoid-danger-btn").setAttribute("toggled", "");
     if (s.era) document.getElementById("era-btn").setAttribute("toggled", "");
@@ -149,11 +156,10 @@ function restoreState() {
 
 function saveState() {
   const from = document.getElementById("route-from").value;
-  const to = document.getElementById("route-to").value;
   const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
   const era = document.getElementById("era-btn").hasAttribute("toggled");
-  localStorage.setItem(STATE_KEY, JSON.stringify({ from, to, ports, avoidDanger, era, stops }));
+  localStorage.setItem(STATE_KEY, JSON.stringify({ from, ports, avoidDanger, era, stops }));
 }
 
 function populateZoneSelect(select) {
@@ -232,14 +238,13 @@ let activeZone = null;
 async function runRoute() {
   const token = ++fetchToken;
   const from = document.getElementById("route-from").value;
-  const to = document.getElementById("route-to").value;
   const el = document.getElementById("route-result");
   currentRouteCard = null;
   currentDossier = null;
   activeZone = null;
 
-  if (!to) {
-    el.innerHTML = '<div class="no-results">Select a destination to see its map, quests, and dangers.</div>';
+  if (!from) {
+    el.innerHTML = '<div class="no-results">Select a location to see its map, quests, and dangers.</div>';
     return;
   }
 
@@ -248,20 +253,30 @@ async function runRoute() {
   let noticeHtml = "";
   let routeCard = null;
 
-  // Defaults to the route's own first stop ("from") once one exists, not
-  // the destination -- a freshly-loaded/recomputed route reads left to
-  // right, so the map that opens should be the one at its start, not its
-  // end. Falls back to `to` when there's no route to speak of (no "from"
-  // yet, or from===to), since that's the only zone in play either way.
-  let initialZone = to;
+  // The chain's last *filled* stop is the destination; any filled stops
+  // before it are waypoints. Blank (not-yet-picked) stop fields are
+  // skipped entirely rather than blocking on the newest one, so a route
+  // through an already-picked stop still renders while its successor sits
+  // empty. No filled stops at all (the "only Location is selected" case)
+  // means there's nothing to route to -- Location is just being inspected
+  // on its own, so the route card stays hidden.
+  const filledStops = stops.filter(Boolean);
+  const to = filledStops[filledStops.length - 1];
+  const waypoints = filledStops.slice(0, -1);
 
-  if (from && from === to) {
+  // Defaults to `from` -- with no route computed yet, `from` (Location) is
+  // the only zone in play. A route that does compute always reopens on
+  // its own start (still `from`), matching how the chain reads left to
+  // right, so this only changes for the "already there" notice below.
+  let initialZone = from;
+
+  if (to && from === to) {
     noticeHtml = '<div class="no-results compact">You\'re already there.</div>';
-  } else if (from) {
+  } else if (to) {
     const ports = document.getElementById("ports-btn").hasAttribute("toggled");
     const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
     const era = document.getElementById("era-btn").hasAttribute("toggled");
-    const stopsParam = stops.filter(Boolean).join(",");
+    const stopsParam = waypoints.join(",");
     const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(era ? { era: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
     const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
     if (token !== fetchToken) return;
@@ -269,10 +284,9 @@ async function runRoute() {
       noticeHtml = `<div class="no-results compact">The route to ${to} passes through a zone not yet available this era. Toggle Show Out of Era to see it anyway.</div>`;
     } else if (!result.route || result.route.length === 0) {
       noticeHtml = stopsParam
-        ? `<div class="no-results compact">No route found from ${from} to ${to} through ${stops.filter(Boolean).join(", ")}.</div>`
+        ? `<div class="no-results compact">No route found from ${from} to ${to} through ${waypoints.join(", ")}.</div>`
         : `<div class="no-results compact">No route found from ${from} to ${to}.</div>`;
     } else {
-      initialZone = from;
       routeCard = document.createElement("route-card");
       routeCard.route = { from, to, hops: result.hops, steps: result.route, destination: result.destination, alternates: result.alternates };
       routeCard.activeZone = initialZone;
@@ -315,7 +329,9 @@ async function showZoneDossier(zoneLabel) {
 // state (no-route-found, you're-already-there, nothing selected yet).
 async function recomputeRoute(removedZone) {
   const from = document.getElementById("route-from").value;
-  const to = document.getElementById("route-to").value;
+  const filledStops = stops.filter(Boolean);
+  const to = filledStops[filledStops.length - 1];
+  const waypoints = filledStops.slice(0, -1);
   if (!currentRouteCard || !from || !to || from === to) {
     runRoute();
     return;
@@ -325,7 +341,7 @@ async function recomputeRoute(removedZone) {
   const ports = document.getElementById("ports-btn").hasAttribute("toggled");
   const avoidDanger = document.getElementById("avoid-danger-btn").hasAttribute("toggled");
   const era = document.getElementById("era-btn").hasAttribute("toggled");
-  const stopsParam = stops.filter(Boolean).join(",");
+  const stopsParam = waypoints.join(",");
   const params = { from, to, ...(ports ? { ports: "1" } : {}), ...(avoidDanger ? { avoidDanger: "1" } : {}), ...(era ? { era: "1" } : {}), ...(stopsParam ? { stops: stopsParam } : {}) };
   const result = await fetch(`api/route?${new URLSearchParams(params)}`).then((r) => r.json());
   if (token !== fetchToken) return;

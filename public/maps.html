@@ -42,11 +42,15 @@
     .field select { width: 100%; }
 
     /* The route panel is always the narrow sidebar-panel column now (not
-       just past some overflow threshold), so From/every stop/To simply
+       just past some overflow threshold), so Location/every stop simply
        stack full-width in DOM order -- no horizontal chain, no gap-add-btn
        between fields, no width measurement to decide when to wrap. Adding
        a stop always appends after the last field (#add-stop-btn); removing
-       one is still each stop-field's own inline × (below). */
+       one is still each stop-field's own inline × (below). Location is the
+       only field a first-time visitor needs -- it doubles as the single
+       zone to inspect until a stop is added, at which point the last
+       filled stop becomes the destination and earlier ones are waypoints
+       (see maps.js's runRoute()). */
     .route-chain { display: flex; flex-direction: column; gap: 10px; }
     #chain-middle { display: contents; }
 
@@ -65,6 +69,18 @@
        (decisions/macro-button-shared-component.md) instead of the old
        bulky square pair. */
     .panel-buttons { display: flex; flex-direction: column; gap: 8px; }
+
+    /* Ports/Avoid Danger/Show Out of Era are route-specific tuning that
+       means nothing until a route actually exists -- hidden (native
+       `hidden` attribute, toggled from maps.js's renderStops()) until the
+       visitor adds at least one stop. The `[hidden]` override is needed
+       because setting `display` in an author rule beats the UA
+       stylesheet's own `[hidden] { display: none }` regardless of order,
+       so this class would otherwise stay visible while hidden. Reset isn't
+       part of this group -- it's always meaningful, even with just a
+       Location picked. */
+    .route-toggles { display: flex; flex-direction: column; gap: 8px; }
+    .route-toggles[hidden] { display: none; }
 
     /* Once a destination is chosen, up to two beveled objects stack here —
        route-card (the "how do I get there," only once a starting zone is
@@ -128,20 +144,18 @@
     <sidebar-panel>
       <div class="route-chain" id="route-chain">
         <div class="field">
-          <label>From</label>
+          <label>Location</label>
           <select id="route-from"><option value="">— Select Zone —</option></select>
         </div>
         <div id="chain-middle"></div>
-        <div class="field">
-          <label>To</label>
-          <select id="route-to"><option value="">— Select Zone —</option></select>
-        </div>
       </div>
-      <button type="button" class="text-action" id="add-stop-btn" title="Add a stop to the end of the route">+ Add Stop</button>
+      <button type="button" class="text-action" id="add-stop-btn" title="Add a stop -- your last stop becomes the destination, any earlier ones are waypoints along the way">+ Add Stop</button>
       <div class="panel-buttons">
-        <macro-button full id="ports-btn" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route">Ports</macro-button>
-        <macro-button full id="avoid-danger-btn" title="Prefer a less dangerous route over the shortest one, within a couple extra hops">Avoid Danger</macro-button>
-        <macro-button full id="era-btn" title="Allow a route through a zone not yet available this era">Show Out of Era</macro-button>
+        <div class="route-toggles" id="route-toggles" hidden>
+          <macro-button full id="ports-btn" title="Let a Wizard- or Druid-only teleport spell (e.g. Alter Plane: Sky, Circle of Toxxulia) count as a 1-hop route">Ports</macro-button>
+          <macro-button full id="avoid-danger-btn" title="Prefer a less dangerous route over the shortest one, within a couple extra hops">Avoid Danger</macro-button>
+          <macro-button full id="era-btn" title="Allow a route through a zone not yet available this era">Show Out of Era</macro-button>
+        </div>
         <macro-button full id="reset-route-btn">Reset</macro-button>
       </div>
     </sidebar-panel>
