@@ -1,19 +1,14 @@
 /**
- * Shared helpers for migrations that add graph nodes/edges (quest batches,
- * item batches, etc). Not itself a numbered migration -- the leading
- * underscore keeps it out of `migrations/NNN-*.ts` glob matches, and it's
- * only ever imported, never run directly.
- *
- * Existing migrations predating this file keep their own copy-pasted
- * versions of these functions (they're historical, run-once records --
- * see CLAUDE.md); only new migrations need to import from here.
+ * Shared helpers for one-off scripts that add graph nodes/edges (quest
+ * batches, item batches, etc) -- see CLAUDE.md's "Updating the graph". Only
+ * ever imported, never run directly.
  */
 
 import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
 
-export function loadGraph(migrationDir: string) {
-  const GRAPH_PATH = resolve(migrationDir, "../data/graph.json");
+export function loadGraph(scriptDir: string) {
+  const GRAPH_PATH = resolve(scriptDir, "../data/graph.json");
   const graph = JSON.parse(readFileSync(GRAPH_PATH, "utf-8"));
 
   function hasNode(id: string): boolean {

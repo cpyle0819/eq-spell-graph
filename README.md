@@ -54,7 +54,7 @@ Maps walks the same zone adjacency graph via BFS for a plain point-to-point path
 
 1,082 spells, 112 zones, 131 Alternate Advancements, 78 tradeskill recipes, 1,363 quests (across 69 quest groups), 1,318 items, 202 spell lines, 31 class-defining abilities, 9 stances, and 9 invocations, all cross-linked to the 6,380 NPCs and zones that carry them. See `decisions/` for how each of these was scraped or derived, and why stances/invocations/AAs cover a broader class roster than spells do.
 
-**Updating the graph:** `data/graph.json` is never hand-edited or regenerated wholesale. Changes go through a numbered, run-once migration in `migrations/` (e.g. `bun run migrations/012-normalize-skill-names.ts`) that reads the current file, transforms it, and writes it back; see any existing migration for the pattern. `src/graph.ts` is the only code allowed to read/write it outside of migrations.
+**Updating the graph:** `data/graph.json` is never hand-edited or regenerated wholesale. Changes go through a one-off script in `scripts/` (e.g. `bun run scripts/normalize-skill-names.ts`) that reads the current file, transforms it, and writes it back, reusing `scripts/graph-lib.ts`'s helpers. Once run and committed, the script can be deleted — git history is the record, not a permanently kept folder. `src/graph.ts` is the only code allowed to read/write the graph outside these scripts.
 
 If this app is deployed as a Lambda (see "Deploying" below), **the deployment has its own bundled snapshot of `data/graph.json`; it does not read live from this repo.** Running a migration locally changes nothing for a live deployment until that deployment is rebuilt and redeployed.
 

@@ -1,6 +1,6 @@
 /**
- * Shared apply logic for log-sourced mob loot migrations (issue: Maps
- * collapsible loot tables, sourced from real chat logs -- see
+ * Shared apply logic for log-sourced mob loot (issue: Maps collapsible loot
+ * tables, sourced from real chat logs -- see
  * decisions/quest-log-sourcing-and-incomplete-flag.md for the precedent of
  * treating a real log as a valid EQL source, extended here to mobs/drops
  * rather than just quest dialogue).
@@ -9,9 +9,9 @@
  * (`{ zoneId, zoneLabel, mob, item, quantity, timestamp }[]`, one entry per
  * loot line) -- not pre-grouped, so this function is the only place that
  * dedupes. This keeps the pipeline fully mechanical for the next log: run
- * the extractor, save its output as a new `migrations/fixtures/NNN-*.json`
- * fixture, write a thin migration that reads that fixture and calls
- * `applyLogLoot()` -- no hand-transcription or re-derivation of data needed.
+ * the extractor, save its output to a scratch JSON file, write a thin
+ * one-off script that reads it and calls `applyLogLoot()` -- no
+ * hand-transcription or re-derivation of data needed.
  *
  * Every mob observed in a log gets an npc node (role: "mob") if one doesn't
  * already exist for that zone/name -- not filtered by any judgment call
@@ -27,12 +27,12 @@
  *     (zone-dossier.js's npc.drops).
  *   - `item --located_in--> zone` with `method: "drop"` and `mobs: [...]`
  *     (every mob name observed dropping that item in that zone, accumulated
- *     across the whole input before the edge is written -- `_lib.ts`'s
+ *     across the whole input before the edge is written -- `graph-lib.ts`'s
  *     generic `addEdge` dedupes on source/target/type alone, so writing this
  *     edge once per mob would silently drop every mob after the first).
  *     Same edge item detail pages already resolve for "Dropped By" sourcing.
  */
-import type { loadGraph } from "./_lib";
+import type { loadGraph } from "./graph-lib";
 
 export type LogLootRecord = {
   timestamp: string;

@@ -12,24 +12,22 @@ Spell shopping route planner for **EverQuest Legends** (EQL) — a separate, new
 
 ```bash
 bun run dev          # Start server on :4321
-bun run migrations/NNN-*.ts  # Run a specific migration
 ```
 
 ## Structure
 
-- `data/graph.json` — source of truth (never regenerate from markdown; mutate through `src/graph.ts`, in practice via a migration — see below)
+- `data/graph.json` — source of truth (never regenerate from markdown; mutate through `src/graph.ts`, in practice via a one-off script — see below)
 - `src/graph.ts` — data access layer, all reads and writes
 - `src/api.ts` — read-only route table, shared by both entry points below
 - `src/server.ts` — local Bun dev server: `src/api.ts` routes + dev-only mutation routes + static file serving
 - `src/lambda.ts` — Lambda handler wrapping `src/api.ts`; no mutation routes, no knowledge of deployment domain/path
-- `scripts/build-lambda.ts` — packages `src/lambda.ts` + `data/graph.json` into `dist-lambda.zip`
+- `scripts/` — one-off graph-mutation scripts plus reusable tooling they build on (`build-lambda.ts`, `graph-lib.ts`, `log-loot-lib.ts`, extractors like `extract-log-loot.ts`)
 - `public/` — SPA (vanilla HTML/JS, no build step); all links/fetches are path-relative, not domain-root-absolute
-- `migrations/` — historical, numbered, run-once transformations
 - `.github/workflows/deploy.yml` — fires a `repository_dispatch` to `coreypyle-infra` on every push to `main`; carries no AWS/cloud specifics of its own (see "Updating the graph" below)
 
 ## Updating the graph
 
-Never hand-edit `data/graph.json` or regenerate it wholesale. Write a new numbered migration in `migrations/` following the pattern of any existing one (read the file, transform, write it back), run it once with `bun run migrations/NNN-*.ts`, and it stays applied.
+Never hand-edit `data/graph.json` or regenerate it wholesale. Write a one-off script in `scripts/` that reads the current file, transforms it, and writes it back (reuse `scripts/graph-lib.ts`'s helpers rather than re-deriving node/edge mutation logic); run it once with `bun run scripts/<name>.ts`, verify the diff, then commit `data/graph.json`. Git history is the record of how the graph got here — there's no separate `migrations/` archive to keep in sync with it, so a one-off script can be deleted once it's been run and committed (git still has it if it's ever needed again). Reusable helpers (`graph-lib.ts`, `log-loot-lib.ts`, extractors) stay in `scripts/` since other scripts import them; one-off transform scripts don't need to stick around.
 
 **If this app is deployed as a Lambda, the deployment holds its own bundled snapshot of `data/graph.json` from whenever it was last rebuilt.** It does not read live from this repo or fetch data at runtime. Running a migration locally has zero effect until it's committed and pushed — a push to `main` now triggers an automatic redeploy (see below), so an uncommitted or unpushed migration is the only way local and live can drift. This repo still has no code, comments, or docs describing a specific domain, path, or cloud setup; that lives entirely in whichever separate infra repo does the deploying.
 

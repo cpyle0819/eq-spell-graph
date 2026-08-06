@@ -3,7 +3,7 @@
 // A collapsible loot table for a single npc/mob row: a toggle line
 // ("▸ N Drops") that expands into a stacked list of item-chips. Closed by
 // default -- a mob with a dozen+ drops (real ones, once log-sourced loot
-// started getting attached -- migrations/_log-loot-lib.ts) would otherwise
+// started getting attached -- scripts/log-loot-lib.ts) would otherwise
 // blow out the Bestiary's compact name/level grid.
 //
 // Lives as its own grid item inside zone-dossier.js's `.npc-list` (`grid-
