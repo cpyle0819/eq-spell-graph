@@ -202012,6 +202012,107 @@
       "id": "item:blackened-iron-mail",
       "label": "Blackened Iron Mail",
       "type": "item"
+    },
+    {
+      "id": "item:sleek-black-cape",
+      "label": "Sleek Black Cape",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-alloy-spaulder",
+      "label": "Blackened Alloy Spaulder",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-alloy-longsword",
+      "label": "Blackened Alloy Longsword",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-alloy-bracers",
+      "label": "Blackened Alloy Bracers",
+      "type": "item"
+    },
+    {
+      "id": "npc:runnyeye-citadel:a-mimic",
+      "label": "a mimic",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ]
+    },
+    {
+      "id": "item:sporali-defender-s-blade",
+      "label": "Sporali Defender's Blade",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-iron-boots",
+      "label": "Blackened Iron Boots",
+      "type": "item"
+    },
+    {
+      "id": "item:sapphire",
+      "label": "Sapphire",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-iron-waistband",
+      "label": "Blackened Iron Waistband",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-iron-gloves",
+      "label": "Blackened Iron Gloves",
+      "type": "item"
+    },
+    {
+      "id": "item:golden-earring",
+      "label": "Golden Earring",
+      "type": "item"
+    },
+    {
+      "id": "item:minotaur-battle-axe",
+      "label": "Minotaur Battle Axe",
+      "type": "item"
+    },
+    {
+      "id": "item:minotaur-horn",
+      "label": "Minotaur Horn",
+      "type": "item"
+    },
+    {
+      "id": "npc:eastern-karana:a-gorge-hound",
+      "label": "a gorge hound",
+      "type": "npc",
+      "roles": [
+        "mob"
+      ]
+    },
+    {
+      "id": "item:cyclops-toes",
+      "label": "Cyclops Toes",
+      "type": "item"
+    },
+    {
+      "id": "item:split-paw-hide-tunic",
+      "label": "Split Paw Hide Tunic",
+      "type": "item"
+    },
+    {
+      "id": "item:wolves-bane",
+      "label": "Wolves Bane",
+      "type": "item"
+    },
+    {
+      "id": "item:tanned-split-paw-skin",
+      "label": "Tanned Split Paw Skin",
+      "type": "item"
+    },
+    {
+      "id": "item:split-paw-hide-gloves",
+      "label": "Split Paw Hide Gloves",
+      "type": "item"
     }
   ],
   "edges": [
@@ -450561,6 +450662,440 @@
       "method": "drop",
       "mobs": [
         "a Pickclaw Ambushbaiter"
+      ]
+    },
+    {
+      "id": "e-drops-40247",
+      "source": "mob:runnyeye-citadel:a-pickclaw-ambushbaiter",
+      "target": "item:sleek-black-cape",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40248",
+      "source": "mob:runnyeye-citadel:a-sporali-miner",
+      "target": "item:small-brick-of-high-quality-ore",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40249",
+      "source": "mob:runnyeye-citadel:a-sporali-scavenger",
+      "target": "item:small-brick-of-high-quality-ore",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40250",
+      "source": "mob:runnyeye-citadel:a-sporali-worker",
+      "target": "item:carnelian",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40251",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foeslicer",
+      "target": "item:mote-of-potential",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40252",
+      "source": "mob:runnyeye-citadel:a-pickclaw-destroyer",
+      "target": "item:blackened-alloy-spaulder",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40253",
+      "source": "mob:runnyeye-citadel:a-pickclaw-destroyer",
+      "target": "item:blackened-alloy-longsword",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40254",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foechopper",
+      "target": "item:blackened-iron-spaulder",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40255",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foeslicer",
+      "target": "item:blackened-iron-legplates",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40256",
+      "source": "mob:runnyeye-citadel:a-pickclaw-destroyer",
+      "target": "item:blackened-alloy-bracers",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-40257",
+      "source": "npc:runnyeye-citadel:a-mimic",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in"
+    },
+    {
+      "id": "e-drops-40258",
+      "source": "npc:runnyeye-citadel:a-mimic",
+      "target": "item:mote-of-potential",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40259",
+      "source": "mob:runnyeye-citadel:the-sporali-moldmaster",
+      "target": "item:sporali-defender-s-blade",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40260",
+      "source": "mob:runnyeye-citadel:the-sporali-moldmaster",
+      "target": "item:mote-of-major-potential",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40261",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foechopper",
+      "target": "item:blackened-iron-boots",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40262",
+      "source": "mob:runnyeye-citadel:a-sporali-worker",
+      "target": "item:small-brick-of-high-quality-ore",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40263",
+      "source": "mob:runnyeye-citadel:battlewizard-unak",
+      "target": "item:sapphire",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40264",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foeslicer",
+      "target": "item:blackened-iron-waistband",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40265",
+      "source": "mob:runnyeye-citadel:a-pickclaw-destroyer",
+      "target": "item:blackened-iron-boots",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40266",
+      "source": "mob:runnyeye-citadel:a-pickclaw-destroyer",
+      "target": "item:blackened-iron-mail",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40267",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foeslicer",
+      "target": "item:blackened-iron-gloves",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40268",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foechopper",
+      "target": "item:blackened-iron-mail",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40269",
+      "source": "mob:runnyeye-citadel:a-sporali-worker",
+      "target": "item:star-rose-quartz",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40270",
+      "source": "mob:runnyeye-citadel:a-sporali-scavenger",
+      "target": "item:carnelian",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40271",
+      "source": "mob:gorge-of-king-xorbb:a-chasm-minotaur",
+      "target": "item:golden-earring",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40272",
+      "source": "mob:gorge-of-king-xorbb:a-chasm-minotaur",
+      "target": "item:minotaur-battle-axe",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40273",
+      "source": "mob:gorge-of-king-xorbb:a-chasm-minotaur",
+      "target": "item:minotaur-horn",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40274",
+      "source": "mob:gorge-of-king-xorbb:a-muddite-minor",
+      "target": "item:small-block-of-clay",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-40275",
+      "source": "npc:eastern-karana:a-gorge-hound",
+      "target": "zone:eastern-karana",
+      "type": "located_in"
+    },
+    {
+      "id": "e-drops-40276",
+      "source": "npc:eastern-karana:a-gorge-hound",
+      "target": "item:chunk-of-meat",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40277",
+      "source": "npc:eastern-karana:a-gorge-hound",
+      "target": "item:wolf-meat",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40278",
+      "source": "mob:southern-karana:a-cyclops",
+      "target": "item:cyclops-toes",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40279",
+      "source": "mob:splitpaw:a-tesch-mas-gnoll",
+      "target": "item:white-hellebore",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40280",
+      "source": "mob:splitpaw:a-tesch-mas-gnoll",
+      "target": "item:split-paw-hide-tunic",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40281",
+      "source": "mob:splitpaw:a-tesch-mas-gnoll",
+      "target": "item:wolves-bane",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40282",
+      "source": "mob:splitpaw:a-tesch-mas-gnoll",
+      "target": "item:tanned-split-paw-skin",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40283",
+      "source": "mob:splitpaw:a-tesch-mas-gnoll",
+      "target": "item:split-paw-hide-gloves",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-40284",
+      "source": "item:sleek-black-cape",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Ambushbaiter"
+      ]
+    },
+    {
+      "id": "e-located_in-40285",
+      "source": "item:carnelian",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Sporali worker",
+        "a Sporali Scavenger"
+      ]
+    },
+    {
+      "id": "e-located_in-40286",
+      "source": "item:blackened-alloy-spaulder",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Destroyer"
+      ]
+    },
+    {
+      "id": "e-located_in-40287",
+      "source": "item:blackened-alloy-longsword",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Destroyer"
+      ]
+    },
+    {
+      "id": "e-located_in-40288",
+      "source": "item:blackened-alloy-bracers",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Destroyer"
+      ]
+    },
+    {
+      "id": "e-located_in-40289",
+      "source": "item:sporali-defender-s-blade",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "The Sporali Moldmaster"
+      ]
+    },
+    {
+      "id": "e-located_in-40290",
+      "source": "item:mote-of-major-potential",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "The Sporali Moldmaster"
+      ]
+    },
+    {
+      "id": "e-located_in-40291",
+      "source": "item:blackened-iron-boots",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Foechopper",
+        "a Pickclaw Destroyer"
+      ]
+    },
+    {
+      "id": "e-located_in-40292",
+      "source": "item:sapphire",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "Battlewizard Unak"
+      ]
+    },
+    {
+      "id": "e-located_in-40293",
+      "source": "item:blackened-iron-waistband",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Foeslicer"
+      ]
+    },
+    {
+      "id": "e-located_in-40294",
+      "source": "item:blackened-iron-gloves",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Foeslicer"
+      ]
+    },
+    {
+      "id": "e-located_in-40295",
+      "source": "item:golden-earring",
+      "target": "zone:gorge-of-king-xorbb",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a chasm minotaur"
+      ]
+    },
+    {
+      "id": "e-located_in-40296",
+      "source": "item:minotaur-battle-axe",
+      "target": "zone:gorge-of-king-xorbb",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a chasm minotaur"
+      ]
+    },
+    {
+      "id": "e-located_in-40297",
+      "source": "item:minotaur-horn",
+      "target": "zone:gorge-of-king-xorbb",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a chasm minotaur"
+      ]
+    },
+    {
+      "id": "e-located_in-40298",
+      "source": "item:small-block-of-clay",
+      "target": "zone:gorge-of-king-xorbb",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a muddite minor"
+      ]
+    },
+    {
+      "id": "e-located_in-40299",
+      "source": "item:cyclops-toes",
+      "target": "zone:southern-karana",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a cyclops"
+      ]
+    },
+    {
+      "id": "e-located_in-40300",
+      "source": "item:white-hellebore",
+      "target": "zone:splitpaw",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Tesch Mas Gnoll"
+      ]
+    },
+    {
+      "id": "e-located_in-40301",
+      "source": "item:split-paw-hide-tunic",
+      "target": "zone:splitpaw",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Tesch Mas Gnoll"
+      ]
+    },
+    {
+      "id": "e-located_in-40302",
+      "source": "item:wolves-bane",
+      "target": "zone:splitpaw",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Tesch Mas Gnoll"
+      ]
+    },
+    {
+      "id": "e-located_in-40303",
+      "source": "item:tanned-split-paw-skin",
+      "target": "zone:splitpaw",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Tesch Mas Gnoll"
+      ]
+    },
+    {
+      "id": "e-located_in-40304",
+      "source": "item:split-paw-hide-gloves",
+      "target": "zone:splitpaw",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Tesch Mas Gnoll"
       ]
     }
   ]

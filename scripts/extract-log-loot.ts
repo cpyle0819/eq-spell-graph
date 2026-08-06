@@ -70,6 +70,7 @@ const ZONE_ALIASES: Record<string, string> = {
   "Eastern Plains of Karana": "Eastern Karana",
   "The Liberated Citadel of Runnyeye": "Runnyeye Citadel",
   "Liberated Citadel of Runnyeye": "Runnyeye Citadel",
+  "Lair of the Splitpaw": "Splitpaw",
 };
 
 type LootRecord = {
