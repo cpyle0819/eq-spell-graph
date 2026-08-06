@@ -201992,6 +201992,26 @@
       "id": "item:blackened-alloy-legplates",
       "label": "Blackened Alloy Legplates",
       "type": "item"
+    },
+    {
+      "id": "item:middle-of-a-fractured-rune",
+      "label": "Middle of a Fractured Rune",
+      "type": "item"
+    },
+    {
+      "id": "item:gossamer-robe",
+      "label": "Gossamer Robe",
+      "type": "item"
+    },
+    {
+      "id": "item:ice-of-velious",
+      "label": "Ice of Velious",
+      "type": "item"
+    },
+    {
+      "id": "item:blackened-iron-mail",
+      "label": "Blackened Iron Mail",
+      "type": "item"
     }
   ],
   "edges": [
@@ -450437,6 +450457,110 @@
       "method": "drop",
       "mobs": [
         "a Pickclaw Destroyer"
+      ]
+    },
+    {
+      "id": "e-drops-40233",
+      "source": "mob:runnyeye-citadel:a-pickclaw-mindripper",
+      "target": "item:mote-of-potential",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40234",
+      "source": "mob:runnyeye-citadel:an-evil-eye-prisoner",
+      "target": "item:middle-of-a-fractured-rune",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40235",
+      "source": "mob:runnyeye-citadel:an-evil-eye-prisoner",
+      "target": "item:mithril-earring",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40236",
+      "source": "mob:runnyeye-citadel:a-pickclaw-thoughtshaper",
+      "target": "item:gossamer-robe",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40237",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foeslicer",
+      "target": "item:ice-of-velious",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40238",
+      "source": "mob:runnyeye-citadel:a-pickclaw-ambushbaiter",
+      "target": "item:blackened-iron-mail",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40239",
+      "source": "mob:runnyeye-citadel:a-pickclaw-arroweater",
+      "target": "item:blackened-iron-collar",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40240",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foechopper",
+      "target": "item:blackened-iron-collar",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-40241",
+      "source": "mob:runnyeye-citadel:a-pickclaw-foechopper",
+      "target": "item:mote-of-potential",
+      "type": "drops"
+    },
+    {
+      "id": "e-located_in-40242",
+      "source": "item:middle-of-a-fractured-rune",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "an Evil Eye prisoner"
+      ]
+    },
+    {
+      "id": "e-located_in-40243",
+      "source": "item:mithril-earring",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "an Evil Eye prisoner"
+      ]
+    },
+    {
+      "id": "e-located_in-40244",
+      "source": "item:gossamer-robe",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Thoughtshaper"
+      ]
+    },
+    {
+      "id": "e-located_in-40245",
+      "source": "item:ice-of-velious",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Foeslicer"
+      ]
+    },
+    {
+      "id": "e-located_in-40246",
+      "source": "item:blackened-iron-mail",
+      "target": "zone:runnyeye-citadel",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a Pickclaw Ambushbaiter"
       ]
     }
   ]
