@@ -52,7 +52,18 @@
  * fresh parse from the start, since the file it refers to no longer exists
  * in any meaningful sense.
  *
- * Usage: bun run scripts/extract-log-loot.ts <path-to-eqlog.txt> [output-path]
+ * The cursor only advances when every record in this run resolved to a
+ * known zone. An unresolved zone label means `ZONE_ALIASES` (or the graph
+ * itself) is missing something fixable -- advancing past it anyway would
+ * make those lines permanently unreachable next run, since the raw log
+ * lines themselves are gone once the cursor moves past them. Add the alias
+ * (or the zone) and rerun; the same byte range gets reprocessed from
+ * scratch and any already-resolved records in it just come out identical
+ * (harmless, since the downstream apply step dedupes). Pass `--force` to
+ * advance the cursor anyway and accept permanently dropping the unresolved
+ * records.
+ *
+ * Usage: bun run scripts/extract-log-loot.ts <path-to-eqlog.txt> [output-path] [--force]
  * Default output: <input>.loot.json next to the source log.
  */
 import { readFileSync, writeFileSync, existsSync } from "fs";
@@ -116,9 +127,11 @@ function saveCursor(logPath: string, cursor: Cursor) {
   writeFileSync(cursorPath(logPath), JSON.stringify(cursor, null, 2) + "\n");
 }
 
-const [inputPath, outputPathArg] = process.argv.slice(2);
+const rawArgs = process.argv.slice(2);
+const force = rawArgs.includes("--force");
+const [inputPath, outputPathArg] = rawArgs.filter((a) => a !== "--force");
 if (!inputPath) {
-  console.error("Usage: bun run scripts/extract-log-loot.ts <path-to-eqlog.txt> [output-path]");
+  console.error("Usage: bun run scripts/extract-log-loot.ts <path-to-eqlog.txt> [output-path] [--force]");
   process.exit(1);
 }
 
@@ -172,15 +185,24 @@ for (const line of raw.slice(cursor.bytesProcessed).split(/\r?\n/)) {
 
 const outputPath = resolve(outputPathArg ?? `${inputPath}.loot.json`);
 writeFileSync(outputPath, JSON.stringify(records, null, 2) + "\n");
-saveCursor(resolvedInputPath, { bytesProcessed: raw.length, zoneId: currentZoneId, zoneLabel: currentZoneLabel });
+
+const cursorAdvanced = unresolvedZoneLabels.size === 0 || force;
+if (cursorAdvanced) {
+  saveCursor(resolvedInputPath, { bytesProcessed: raw.length, zoneId: currentZoneId, zoneLabel: currentZoneLabel });
+}
 
 const resolved = records.filter((r) => r.zoneId);
 const uniquePairs = new Set(resolved.map((r) => `${r.zoneId}::${r.mob}`));
 console.log(`${records.length} new loot record(s) since the last run -> ${outputPath}`);
 console.log(`  ${resolved.length} with a resolved zone, ${records.length - resolved.length} unresolved`);
 console.log(`  ${uniquePairs.size} unique (zone, mob) pair(s)`);
-console.log(`  cursor advanced to char ${raw.length} (${cursorPath(resolvedInputPath)})`);
+if (cursorAdvanced) {
+  console.log(`  cursor advanced to char ${raw.length} (${cursorPath(resolvedInputPath)})`);
+} else {
+  console.log(`  cursor NOT advanced -- unresolved zone label(s) below would become permanently unreachable otherwise`);
+}
 if (unresolvedZoneLabels.size) {
   console.log(`  Unresolved zone label(s) seen (add to ZONE_ALIASES or the graph is missing this zone):`);
   for (const z of unresolvedZoneLabels) console.log(`    - ${z}`);
+  if (!force) console.log(`  Fix the alias/zone and rerun (same range gets reprocessed), or pass --force to advance past them anyway.`);
 }
