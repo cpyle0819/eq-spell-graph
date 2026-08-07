@@ -202113,6 +202113,99 @@
       "id": "item:split-paw-hide-gloves",
       "label": "Split Paw Hide Gloves",
       "type": "item"
+    },
+    {
+      "id": "npc:surefall-glade:qaelin-hailstorm",
+      "label": "Qaelin Hailstorm",
+      "type": "npc",
+      "roles": [
+        "vendor",
+        "quest_giver"
+      ]
+    },
+    {
+      "id": "item:mark-of-karana",
+      "label": "Mark of Karana",
+      "type": "item",
+      "source": "Quested from Qaelin Hailstorm (Surefall Glade, Plains of Karana | Loc: +180, +140) -- say \"I need a mark\" while near him, not targeting him. Karana worshippers only. Returns on combine; a required ingredient for every Surefall Fletching combine."
+    },
+    {
+      "id": "item:small-brick-of-steel",
+      "label": "Small Brick of Steel",
+      "type": "item"
+    },
+    {
+      "id": "item:large-brick-of-steel",
+      "label": "Large Brick of Steel",
+      "type": "item"
+    },
+    {
+      "id": "item:arrow-shaft-mold",
+      "label": "Arrow Shaft Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "container:surefall-fletching-kit",
+      "label": "Surefall Fletching Kit",
+      "type": "container"
+    },
+    {
+      "id": "recipe:surefall-fletching-kit",
+      "label": "Surefall Fletching Kit",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 162
+    },
+    {
+      "id": "item:steel-working-knife",
+      "label": "Steel Working Knife",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 42, Forge) -- requires Karana as active deity to craft. Returns on combine; a required ingredient for Steel Fletch."
+    },
+    {
+      "id": "recipe:steel-working-knife",
+      "label": "Steel Working Knife",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:steel-arrowheads",
+      "label": "Steel Arrowheads",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-arrowheads",
+      "label": "Steel Arrowheads",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 188
+    },
+    {
+      "id": "item:steel-arrowshafts",
+      "label": "Steel Arrowshafts",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-arrowshafts",
+      "label": "Steel Arrowshafts",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:steel-fletch",
+      "label": "Steel Fletch",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-fletch",
+      "label": "Steel Fletch",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
     }
   ],
   "edges": [
@@ -451097,6 +451190,279 @@
       "mobs": [
         "a Tesch Mas Gnoll"
       ]
+    },
+    {
+      "id": "e-located_in-40305",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-40306",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "item:small-brick-of-steel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40307",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "item:large-brick-of-steel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40308",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40309",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40310",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40311",
+      "source": "npc:halas:rain",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40312",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40313",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40314",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40315",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40316",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-40317",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40318",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:hinge-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40319",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:container-base-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40320",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:container-lid-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40321",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40322",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40323",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "container:surefall-fletching-kit",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40324",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40325",
+      "source": "recipe:steel-working-knife",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40326",
+      "source": "recipe:steel-working-knife",
+      "target": "item:hilt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40327",
+      "source": "recipe:steel-working-knife",
+      "target": "item:dagger-blade-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40328",
+      "source": "recipe:steel-working-knife",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40329",
+      "source": "recipe:steel-working-knife",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40330",
+      "source": "recipe:steel-working-knife",
+      "target": "item:steel-working-knife",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40331",
+      "source": "recipe:steel-working-knife",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40332",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40333",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40334",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40335",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40336",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:steel-arrowheads",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40337",
+      "source": "recipe:steel-arrowheads",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40338",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40339",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40340",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:large-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40341",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:arrow-shaft-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40342",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40343",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:steel-arrowshafts",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40344",
+      "source": "recipe:steel-arrowshafts",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40345",
+      "source": "recipe:steel-fletch",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40346",
+      "source": "recipe:steel-fletch",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40347",
+      "source": "recipe:steel-fletch",
+      "target": "item:steel-working-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40348",
+      "source": "recipe:steel-fletch",
+      "target": "item:steel-fletch",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40349",
+      "source": "recipe:steel-fletch",
+      "target": "container:forge",
+      "type": "crafted_in"
     }
   ]
 }
