@@ -10,9 +10,19 @@
 // page (decisions/tradeskill-recipe-node-schema.md's sourcing note), so a
 // guessed per-recipe URL would likely 404; each ingredient chip already
 // links out to its own real item page instead.
+//
+// A "Where to Buy" section renders a recipe's hand-authored
+// RecipeSummary.guide (an alignment-branched walkthrough, e.g. Baking's
+// Batwing Pie) when one exists (tradeskill-shared.js's recipeGuideHtml).
+// Only a small, curated set of levelingGuide recipes has one; every other
+// recipe (including most other levelingGuide recipes) shows no such
+// section at all. A generic dump of every vendor who happens to sell a
+// common ingredient anywhere in the game is not a usable answer, so
+// absence of a real guide means absence of the section, not a fallback
+// listing.
 import { CardBase } from "./card-base.js";
 import { QUEST_CARD_CSS, section } from "./quest-shared.js";
-import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml, recipeTreeToggleButtonHtml, recipeTreeContainerHtml, wireRecipeTreeToggle, variantsRosterHtml } from "./tradeskill-shared.js";
+import { RECIPE_ROW_CSS, recipeBadgesHtml, recipeFormulaHtml, recipeTreeToggleButtonHtml, recipeTreeContainerHtml, wireRecipeTreeToggle, variantsRosterHtml, recipeGuideHtml } from "./tradeskill-shared.js";
 import { hydrateItemChips } from "./item-chip.js";
 
 const EXTRA_SHEET = new CSSStyleSheet();
@@ -53,6 +63,8 @@ class RecipeCard extends CardBase {
     const recipe = this.#recipe;
     if (!recipe) return;
 
+    const whereToBuyBody = recipeGuideHtml(recipe);
+
     this.shadowRoot.innerHTML = `
       <div class="spell-header">
         <h3>${recipe.label}</h3>
@@ -62,6 +74,7 @@ class RecipeCard extends CardBase {
       <div class="spell-scroll">
         <div class="spell-badges">${recipeBadgesHtml(recipe)}</div>
         ${section("Formula", `<div class="quest-section-body recipe-formula">${recipeFormulaHtml(recipe)}</div>${recipeTreeContainerHtml(recipe)}`)}
+        ${section("Where to Buy", whereToBuyBody ? `<div class="quest-section-body">${whereToBuyBody}</div>` : "")}
         ${section(`Alternate Recipes (${recipe.variants?.length ?? 0})`, variantsRosterHtml(recipe.variants))}
       </div>
     `;

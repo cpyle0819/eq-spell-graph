@@ -90,6 +90,17 @@ export const RECIPE_ROW_CSS = `
 .variant-row:not([open]) > summary::before { transform: rotate(-90deg); }
 .variant-row > summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
 .variant-row-body { padding: 0 2px 14px 26px; }
+
+/* Recipe Guide (recipe-card.js's Where to Buy section) -- an
+   alignment-branched walkthrough, rendered only for the small set of
+   recipes with a hand-authored RecipeSummary.guide. */
+.recipe-guide-intro { font-size: 12px; font-style: italic; color: var(--parch-ink-soft); margin-bottom: 10px; }
+.recipe-guide-path + .recipe-guide-path { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--parch-line); }
+.recipe-guide-path-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--parch-accent); margin-bottom: 4px; }
+.recipe-guide-steps { padding-left: 18px; }
+.recipe-guide-steps li { font-size: 13px; color: #4a4232; line-height: 1.5; padding: 2px 0; }
+.recipe-guide-steps a { color: inherit; text-decoration: underline dotted; }
+.recipe-guide-steps a:hover, .recipe-guide-steps a:focus-visible { text-decoration-style: solid; }
 `;
 
 export function recipeBadgesHtml(recipe) {
@@ -116,6 +127,39 @@ export function recipeFormulaHtml(recipe) {
   const uses = recipe.uses.map((item) => itemChipTag(item, { navHref: `trades.html?type=ingredients&search=${encodeURIComponent(item.label)}`, shoppingList: true })).join("");
   const produces = recipe.produces ? itemChipTag(recipe.produces) : "";
   return `${uses}${produces ? `<span class="recipe-arrow">→</span>${produces}` : ""}`;
+}
+
+// Recipe Guide -- a hand-authored, alignment-branched walkthrough
+// (RecipeSummary.guide, src/graph.ts), the entire content of recipe-card.js's
+// Where to Buy section. Only a small, curated set of recipes has one; every
+// other recipe renders nothing here (see recipe-card.js's own header
+// comment for why there's no generic vendor-listing fallback). Each step's
+// `links` are substrings of its own `text` to wrap in an anchor, applied by
+// a plain string replace per entry (authored content, not user input, so
+// no HTML-escaping concern).
+function recipeGuideStepHtml(step) {
+  let html = step.text;
+  for (const link of step.links ?? []) {
+    html = html.replace(link.label, `<a href="${link.href}">${link.label}</a>`);
+  }
+  return `<li>${html}</li>`;
+}
+
+export function recipeGuideHtml(recipe) {
+  const guide = recipe.guide;
+  if (!guide) return "";
+  const introHtml = guide.intro ? `<p class="recipe-guide-intro">${guide.intro}</p>` : "";
+  const multiplePaths = guide.paths.length > 1;
+  const pathsHtml = guide.paths
+    .map(
+      (path) => `
+      <div class="recipe-guide-path">
+        ${multiplePaths ? `<div class="recipe-guide-path-label">${path.label}</div>` : ""}
+        <ol class="recipe-guide-steps">${path.steps.map(recipeGuideStepHtml).join("")}</ol>
+      </div>`
+    )
+    .join("");
+  return `${introHtml}${pathsHtml}`;
 }
 
 // The "Show Ingredient Tree" toggle and its own (initially empty/hidden)

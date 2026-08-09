@@ -574,6 +574,44 @@ export interface RecipeSummary {
   // one "primary" and the rest are flat siblings of it, never their own
   // sub-families). Absent/empty when this recipe has no known alternates.
   variants: RecipeSummary[];
+  // A hand-authored, alignment-branched walkthrough, modeled on eqlwiki's
+  // own "Baking Leveling Guide (Detailed)". Present only on the handful of
+  // recipe.levelingGuide recipes an editor has actually written one for;
+  // absent elsewhere, including other levelingGuide recipes not yet
+  // authored. recipe-card.js's Where to Buy section renders nothing at all
+  // when this is absent. A generic dump of every vendor who happens to
+  // sell a common ingredient anywhere in the game isn't a usable answer.
+  guide?: RecipeGuide;
+}
+
+export interface RecipeGuide {
+  // Free-text caveat shown once above every path, e.g. a cost/time warning
+  // or a shared farming step every alignment needs. Omitted when none applies.
+  intro?: string;
+  // One entry per alignment branch the source guide actually splits on
+  // (e.g. "Good"/"Evil"/"Iksar"). A step with no real alignment split uses
+  // a single path, by convention labeled "All", not one path per alignment
+  // repeating the same steps.
+  paths: RecipeGuidePath[];
+}
+
+export interface RecipeGuidePath {
+  label: string;
+  steps: RecipeGuideStep[];
+}
+
+export interface RecipeGuideStep {
+  text: string;
+  // Substrings of `text` to hyperlink: a zone name to Maps, an item/recipe
+  // name to its own Trades page. Plain label/href pairs rather than inline
+  // markup, so authoring stays plain-text and the renderer does a single
+  // find-and-wrap per entry. Omitted when a step has nothing worth linking.
+  links?: RecipeGuideStepLink[];
+}
+
+export interface RecipeGuideStepLink {
+  label: string;
+  href: string;
 }
 
 // Distinct `recipe.tradeskill` values across the graph, for the Tradeskills
@@ -625,6 +663,7 @@ function buildRecipeSummary(n: NodeData, helpers: GraphIndexHelpers): Omit<Recip
     produces,
     containers,
     levelingGuide: !!n.levelingGuide,
+    ...(n.guide ? { guide: n.guide as RecipeGuide } : {}),
   };
 }
 
@@ -761,6 +800,10 @@ export interface TradeskillVendorSummary {
   // uses -- a vendor's other, unrelated stock (a general goods vendor who
   // happens to also sell a Brewing ingredient) doesn't get listed here.
   sells: ItemSummary[];
+  // Free-text field-verified finding aid (e.g. "Look for the building
+  // across from the Monk Guildmaster") -- omitted for the common case of an
+  // npc with no note, not an empty string.
+  notes?: string;
 }
 
 // zoneId is optional (unlike getZoneNpcs' required one) -- the Tradeskills
@@ -794,6 +837,7 @@ export function getTradeskillVendors(tradeskill: string, zoneId?: string): Trade
       zoneLabel,
       cityGroup: zoneNode ? cityGroupLabel(zoneNode) : zoneLabel,
       sells,
+      ...(npc.notes ? { notes: npc.notes as string } : {}),
     });
   }
   return vendors.sort((a, b) => a.zoneLabel.localeCompare(b.zoneLabel) || a.label.localeCompare(b.label));

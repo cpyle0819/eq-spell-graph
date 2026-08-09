@@ -4,9 +4,11 @@
 // Tradeskills' "Find Near Me" result (shopping-list-panel.js's own
 // `find-near-me` event, computed in trades.js): each `stop` is one vendor
 // zone worth considering -- `{ zoneId, zoneLabel, hops, route, alternates, vendors:
-// [{ id, label, items: [{id,label,quantity}] }] }` -- grouped by zone (not
-// flattened per-item) so each entry reads as "here's what this zone has,"
-// rather than repeating a zone name once per item. `notFound` is
+// [{ id, label, notes?, items: [{id,label,quantity}] }] }` -- grouped by zone
+// (not flattened per-item) so each entry reads as "here's what this zone has,"
+// rather than repeating a zone name once per item. A vendor's `notes` is a
+// free-text field-verified finding aid (e.g. which building to look for);
+// omitted when there's none. `notFound` is
 // shopping-list items (same {id,label,quantity} shape) no known vendor
 // sells at all.
 //
@@ -89,6 +91,7 @@ route-path { margin-bottom: 10px !important; }
 .stop-vendors { display: flex; flex-direction: column; gap: 8px; }
 .stop-vendor-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 12px; }
 .stop-vendor-name { color: var(--gold); font-weight: 600; }
+.stop-vendor-notes { flex-basis: 100%; color: var(--ink-muted); font-size: 11px; font-style: italic; }
 /* This panel's own dark stone/marble background, not the light parchment
    scroll item-chip's default palette assumes -- same override hooks
    shopping-list-panel.js already hands them on the same background. */
@@ -169,6 +172,7 @@ class NearestVendorsDialog extends HTMLElement {
           <div class="stop-vendor-row">
             <span class="stop-vendor-name">${v.label}</span>
             ${v.items.map((it) => itemChipTag(it)).join("")}
+            ${v.notes ? `<span class="stop-vendor-notes">${v.notes}</span>` : ""}
           </div>`
           )
           .join("");

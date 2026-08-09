@@ -48743,7 +48743,8 @@
       "type": "npc",
       "roles": [
         "quest_giver"
-      ]
+      ],
+      "notes": "Look for the human side of the Foreign Quarter."
     },
     {
       "id": "quest:the-bread-shipment-neriak",
@@ -54119,7 +54120,8 @@
       "roles": [
         "quest_giver",
         "vendor"
-      ]
+      ],
+      "notes": "Look directly south of the bank."
     },
     {
       "id": "quest:honey-jum-quest",
@@ -54337,7 +54339,8 @@
       "type": "npc",
       "roles": [
         "quest_giver"
-      ]
+      ],
+      "notes": "Look at the vegetable stand near the Druid guild."
     },
     {
       "id": "quest:hungry-deputy",
@@ -96303,7 +96306,8 @@
       "roles": [
         "quest_giver",
         "vendor"
-      ]
+      ],
+      "notes": "Look next to the Shaman guild, on the west side of Halas."
     },
     {
       "id": "npc:northern-felwithe:challice",
@@ -97630,7 +97634,8 @@
       "type": "npc",
       "roles": [
         "quest_giver"
-      ]
+      ],
+      "notes": "Look at the bank."
     },
     {
       "id": "quest:coldain-shawl-1-burlap",
@@ -147610,7 +147615,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in Staff & Spear."
     },
     {
       "id": "npc:south-kaladim:redfist-s-metal",
@@ -148042,7 +148048,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the building near the entrance to Cabilis."
     },
     {
       "id": "npc:east-freeport:rolfic-gohar",
@@ -149587,7 +149594,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the building near the bank."
     },
     {
       "id": "npc:crystal-caverns:praps-gemshard",
@@ -149619,7 +149627,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the building across from the Monk Guildmaster."
     },
     {
       "id": "npc:halas:sissia",
@@ -149643,7 +149652,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the Refined Palate, next to the bank."
     },
     {
       "id": "npc:the-overthere:tin-merchant-xi",
@@ -149691,7 +149701,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the bank."
     },
     {
       "id": "npc:toxxulia-forest:quana-rainsparkle",
@@ -149859,7 +149870,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look next to the bank."
     },
     {
       "id": "npc:north-freeport:alec-greenglade",
@@ -149891,7 +149903,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look on platform #20, near the Pottery Wheel."
     },
     {
       "id": "npc:grobb:ootok",
@@ -149923,7 +149936,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Located at (179, 483)."
     },
     {
       "id": "npc:highpass-hold:sernn-rossook",
@@ -150027,7 +150041,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in the 1st building on the right from the entrance to Ak'Anon."
     },
     {
       "id": "npc:thurgadin:petcas-coldbeard",
@@ -150347,7 +150362,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the Port Authority, 2nd floor dock."
     },
     {
       "id": "npc:east-freeport:iseba-gargurd",
@@ -150355,7 +150371,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the Port Authority building."
     },
     {
       "id": "npc:east-freeport:tarker-gargurd",
@@ -150419,7 +150436,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the area near Toadstool."
     },
     {
       "id": "npc:ocean-of-tears:craven-jonsbrow",
@@ -150515,7 +150533,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look near the Shaman guild."
     },
     {
       "id": "npc:west-cabilis:klok-scaleroot",
@@ -150523,7 +150542,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Not currently reachable in-game (eqlwiki lists this vendor as Out of Era)."
     },
     {
       "id": "npc:oggok:garakbar",
@@ -150531,7 +150551,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look northwest of the bank, in a room with a floating decorative skull."
     },
     {
       "id": "npc:thurgadin:hulda",
@@ -151417,7 +151438,125 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 46,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "paths": [
+          {
+            "label": "Good",
+            "steps": [
+              {
+                "text": "Go to West Freeport.",
+                "links": [
+                  {
+                    "label": "West Freeport",
+                    "href": "maps.html?to=West%20Freeport"
+                  }
+                ]
+              },
+              {
+                "text": "Lysa Truegreen (2nd floor of caster guild): buy 10 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Pincia Brownloe (building across from monk guild): buy 10 stacks of Frosting.",
+                "links": [
+                  {
+                    "label": "Frosting",
+                    "href": "trades.html?type=ingredients&search=Frosting"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Evil",
+            "steps": [
+              {
+                "text": "Go to East Commonlands.",
+                "links": [
+                  {
+                    "label": "East Commonlands",
+                    "href": "maps.html?to=East%20Commonlands"
+                  }
+                ]
+              },
+              {
+                "text": "Katha Firespinner (inn near the West Commonlands zone line; doesn't sell to Trolls): buy 10 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Go to Neriak Commons.",
+                "links": [
+                  {
+                    "label": "Neriak Commons",
+                    "href": "maps.html?to=Neriak%20Commons"
+                  }
+                ]
+              },
+              {
+                "text": "Niz L`Crit (Refined Palate, next to bank): buy 10 stacks of Frosting.",
+                "links": [
+                  {
+                    "label": "Frosting",
+                    "href": "trades.html?type=ingredients&search=Frosting"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Iksar",
+            "steps": [
+              {
+                "text": "Go to Field of Bone.",
+                "links": [
+                  {
+                    "label": "Field of Bone",
+                    "href": "maps.html?to=Field%20of%20Bone"
+                  }
+                ]
+              },
+              {
+                "text": "Klok Acet (near the entrance to Cabilis): buy 10 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Go to East Cabilis.",
+                "links": [
+                  {
+                    "label": "East Cabilis",
+                    "href": "maps.html?to=East%20Cabilis"
+                  }
+                ]
+              },
+              {
+                "text": "Klok Sweetzie (near bank): buy 10 stacks of Frosting.",
+                "links": [
+                  {
+                    "label": "Frosting",
+                    "href": "trades.html?type=ingredients&search=Frosting"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:fish-fillets",
@@ -151425,7 +151564,89 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 82,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "paths": [
+          {
+            "label": "Good",
+            "steps": [
+              {
+                "text": "Go to East Freeport.",
+                "links": [
+                  {
+                    "label": "East Freeport",
+                    "href": "maps.html?to=East%20Freeport"
+                  }
+                ]
+              },
+              {
+                "text": "Tanlok Harson (Port Authority, 2nd floor dock): buy 10 stacks of Fresh Fish.",
+                "links": [
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              },
+              {
+                "text": "Sun Alemaker (Trader's Holiday; the oven is right behind her): buy 10 stacks of Jug of Sauces.",
+                "links": [
+                  {
+                    "label": "Jug of Sauces",
+                    "href": "trades.html?type=ingredients&search=Jug%20of%20Sauces"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Evil",
+            "steps": [
+              {
+                "text": "Go to Neriak Commons.",
+                "links": [
+                  {
+                    "label": "Neriak Commons",
+                    "href": "maps.html?to=Neriak%20Commons"
+                  }
+                ]
+              },
+              {
+                "text": "Niz L`Crit (Refined Palate, next to bank): buy 10 stacks of Jug of Sauces.",
+                "links": [
+                  {
+                    "label": "Jug of Sauces",
+                    "href": "trades.html?type=ingredients&search=Jug%20of%20Sauces"
+                  }
+                ]
+              },
+              {
+                "text": "Mariz Ixtaz (near Toadstool): buy 30 stacks of Fresh Fish.",
+                "links": [
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Iksar",
+            "steps": [
+              {
+                "text": "Check nearby vendors for Fresh Fish, then fish until you have 30 stacks.",
+                "links": [
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:fish-rolls",
@@ -151433,7 +151654,111 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 135,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "paths": [
+          {
+            "label": "Good",
+            "steps": [
+              {
+                "text": "Go to West Freeport.",
+                "links": [
+                  {
+                    "label": "West Freeport",
+                    "href": "maps.html?to=West%20Freeport"
+                  }
+                ]
+              },
+              {
+                "text": "Lysa Truegreen (2nd floor of caster guild): buy 20 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Go to East Freeport.",
+                "links": [
+                  {
+                    "label": "East Freeport",
+                    "href": "maps.html?to=East%20Freeport"
+                  }
+                ]
+              },
+              {
+                "text": "Tanlok Harson (Port Authority, 2nd floor dock): buy 20 stacks of Fresh Fish.",
+                "links": [
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Evil",
+            "steps": [
+              {
+                "text": "Go to East Commonlands.",
+                "links": [
+                  {
+                    "label": "East Commonlands",
+                    "href": "maps.html?to=East%20Commonlands"
+                  }
+                ]
+              },
+              {
+                "text": "Katha Firespinner (inn near the West Commonlands zone line): buy 20 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Go to Neriak Commons.",
+                "links": [
+                  {
+                    "label": "Neriak Commons",
+                    "href": "maps.html?to=Neriak%20Commons"
+                  }
+                ]
+              },
+              {
+                "text": "Mariz Ixtaz (near Toadstool): buy 20 stacks of Fresh Fish.",
+                "links": [
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Iksar",
+            "steps": [
+              {
+                "text": "Buy Bat Wing and Fresh Fish from whichever nearby vendors carry them, or fish for the Fresh Fish yourself.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  },
+                  {
+                    "label": "Fresh Fish",
+                    "href": "trades.html?type=ingredients&search=Fresh%20Fish"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:batwing-pie",
@@ -151441,7 +151766,237 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 142,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "intro": "This step gets noticeably more expensive and time consuming than the ones before it.",
+        "paths": [
+          {
+            "label": "Good",
+            "steps": [
+              {
+                "text": "Go to Lavastorm Mountains and kill Lava Basilisks until you have 15 Basilisk Egg (one yields 15 Clump of Dough per combine).",
+                "links": [
+                  {
+                    "label": "Lavastorm Mountains",
+                    "href": "maps.html?to=Lavastorm%20Mountains"
+                  },
+                  {
+                    "label": "Basilisk Egg",
+                    "href": "trades.html?type=ingredients&search=Basilisk%20Egg"
+                  }
+                ]
+              },
+              {
+                "text": "Acquire a Pie Tin via the Blacksmithing or Pottery recipe; it's returned to you after each Batwing Pie combine, whether it succeeds or fails.",
+                "links": [
+                  {
+                    "label": "Pie Tin",
+                    "href": "trades.html?type=recipes&tradeskill=Blacksmithing&search=Pie%20Tin"
+                  }
+                ]
+              },
+              {
+                "text": "Go to West Freeport.",
+                "links": [
+                  {
+                    "label": "West Freeport",
+                    "href": "maps.html?to=West%20Freeport"
+                  }
+                ]
+              },
+              {
+                "text": "Pincia Brownloe (building across from monk guild): buy a Mixing Bowl, 15 Bottle of Milk, 15 Cup of Flour, and 10 stacks of Spices.",
+                "links": [
+                  {
+                    "label": "Mixing Bowl",
+                    "href": "trades.html?type=ingredients&search=Mixing%20Bowl"
+                  },
+                  {
+                    "label": "Bottle of Milk",
+                    "href": "trades.html?type=ingredients&search=Bottle%20of%20Milk"
+                  },
+                  {
+                    "label": "Cup of Flour",
+                    "href": "trades.html?type=ingredients&search=Cup%20of%20Flour"
+                  },
+                  {
+                    "label": "Spices",
+                    "href": "trades.html?type=ingredients&search=Spices"
+                  }
+                ]
+              },
+              {
+                "text": "Lysa Truegreen (2nd floor of caster guild): buy 10 stacks of Bat Wing (leftovers from Fish Rolls count too).",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Evil",
+            "steps": [
+              {
+                "text": "Go to Lavastorm Mountains and kill Lava Basilisks until you have 15 Basilisk Egg (one yields 15 Clump of Dough per combine).",
+                "links": [
+                  {
+                    "label": "Lavastorm Mountains",
+                    "href": "maps.html?to=Lavastorm%20Mountains"
+                  },
+                  {
+                    "label": "Basilisk Egg",
+                    "href": "trades.html?type=ingredients&search=Basilisk%20Egg"
+                  }
+                ]
+              },
+              {
+                "text": "Acquire a Pie Tin via the Blacksmithing or Pottery recipe; it's returned to you after each Batwing Pie combine, whether it succeeds or fails.",
+                "links": [
+                  {
+                    "label": "Pie Tin",
+                    "href": "trades.html?type=recipes&tradeskill=Blacksmithing&search=Pie%20Tin"
+                  }
+                ]
+              },
+              {
+                "text": "Go to Neriak Foreign Quarter.",
+                "links": [
+                  {
+                    "label": "Neriak Foreign Quarter",
+                    "href": "maps.html?to=Neriak%20Foreign%20Quarter"
+                  }
+                ]
+              },
+              {
+                "text": "Sal Drana (human side): buy a Mixing Bowl.",
+                "links": [
+                  {
+                    "label": "Mixing Bowl",
+                    "href": "trades.html?type=ingredients&search=Mixing%20Bowl"
+                  }
+                ]
+              },
+              {
+                "text": "Go to Neriak Commons.",
+                "links": [
+                  {
+                    "label": "Neriak Commons",
+                    "href": "maps.html?to=Neriak%20Commons"
+                  }
+                ]
+              },
+              {
+                "text": "Niz L`Crit (Refined Palate, next to bank): buy 15 Bottle of Milk, 15 Cup of Flour, and 10 stacks of Spices.",
+                "links": [
+                  {
+                    "label": "Bottle of Milk",
+                    "href": "trades.html?type=ingredients&search=Bottle%20of%20Milk"
+                  },
+                  {
+                    "label": "Cup of Flour",
+                    "href": "trades.html?type=ingredients&search=Cup%20of%20Flour"
+                  },
+                  {
+                    "label": "Spices",
+                    "href": "trades.html?type=ingredients&search=Spices"
+                  }
+                ]
+              },
+              {
+                "text": "Go to East Commonlands.",
+                "links": [
+                  {
+                    "label": "East Commonlands",
+                    "href": "maps.html?to=East%20Commonlands"
+                  }
+                ]
+              },
+              {
+                "text": "Katha Firespinner (inn near the West Commonlands zone line): buy 10 stacks of Bat Wing (leftovers from Fish Rolls count too).",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Iksar",
+            "steps": [
+              {
+                "text": "It's easier to just go to Freeport, but if you're staying in Kunark:"
+              },
+              {
+                "text": "Go to The Overthere and hunt Stonegazer Cockatrices, or forage, until you have 45 Cockatrice Eggs (a third of Basilisk Egg's yield per combine).",
+                "links": [
+                  {
+                    "label": "The Overthere",
+                    "href": "maps.html?to=The%20Overthere"
+                  }
+                ]
+              },
+              {
+                "text": "Go to Field of Bone.",
+                "links": [
+                  {
+                    "label": "Field of Bone",
+                    "href": "maps.html?to=Field%20of%20Bone"
+                  }
+                ]
+              },
+              {
+                "text": "Klok Acet (near the entrance to Cabilis): buy 10 stacks of Bat Wing.",
+                "links": [
+                  {
+                    "label": "Bat Wing",
+                    "href": "trades.html?type=ingredients&search=Bat%20Wing"
+                  }
+                ]
+              },
+              {
+                "text": "Go to East Cabilis.",
+                "links": [
+                  {
+                    "label": "East Cabilis",
+                    "href": "maps.html?to=East%20Cabilis"
+                  }
+                ]
+              },
+              {
+                "text": "Klok Sweetzie (near bank): buy 45 Bottle of Milk, 45 Cup of Flour, and 10 stacks of Spices.",
+                "links": [
+                  {
+                    "label": "Bottle of Milk",
+                    "href": "trades.html?type=ingredients&search=Bottle%20of%20Milk"
+                  },
+                  {
+                    "label": "Cup of Flour",
+                    "href": "trades.html?type=ingredients&search=Cup%20of%20Flour"
+                  },
+                  {
+                    "label": "Spices",
+                    "href": "trades.html?type=ingredients&search=Spices"
+                  }
+                ]
+              },
+              {
+                "text": "Craft Clump of Dough in a Mixing Bowl from Cockatrice Egg, Cup of Flour, and Bottle of Milk, then craft Batwing Pie in an Oven until skill 142.",
+                "links": [
+                  {
+                    "label": "Clump of Dough",
+                    "href": "trades.html?type=recipes&tradeskill=Baking&search=Clump%20of%20Dough"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:wedding-cake",
@@ -151449,7 +152004,48 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 157,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "intro": "Go to Greater Faydark or Lesser Faydark and hunt Brownies for Brownie Parts.",
+        "paths": [
+          {
+            "label": "All",
+            "steps": [
+              {
+                "text": "Craft White Chocolate in a Mixing Bowl from 2 Frosting, 1 Spices, and 1 Brownie Parts.",
+                "links": [
+                  {
+                    "label": "White Chocolate",
+                    "href": "trades.html?type=recipes&tradeskill=Baking&search=White%20Chocolate"
+                  },
+                  {
+                    "label": "Brownie Parts",
+                    "href": "trades.html?type=ingredients&search=Brownie%20Parts"
+                  }
+                ]
+              },
+              {
+                "text": "Acquire a Cake Round via the Smithing or Pottery recipe; it's returned to you after each combine.",
+                "links": [
+                  {
+                    "label": "Cake Round",
+                    "href": "trades.html?type=recipes&tradeskill=Blacksmithing&search=Cake%20Round"
+                  }
+                ]
+              },
+              {
+                "text": "Craft Wedding Cake in an Oven from 1 White Chocolate, 1 Frosting, and 1 Clump of Dough until skill 157.",
+                "links": [
+                  {
+                    "label": "Clump of Dough",
+                    "href": "trades.html?type=recipes&tradeskill=Baking&search=Clump%20of%20Dough"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:birthday-cake",
@@ -151457,7 +152053,48 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 162,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "intro": "Go to Greater Faydark or Lesser Faydark and hunt Brownies for Brownie Parts.",
+        "paths": [
+          {
+            "label": "All",
+            "steps": [
+              {
+                "text": "Craft Winter Chocolate in a Mixing Bowl from 2 Frosting and 1 Brownie Parts.",
+                "links": [
+                  {
+                    "label": "Winter Chocolate",
+                    "href": "trades.html?type=recipes&tradeskill=Baking&search=Winter%20Chocolate"
+                  },
+                  {
+                    "label": "Brownie Parts",
+                    "href": "trades.html?type=ingredients&search=Brownie%20Parts"
+                  }
+                ]
+              },
+              {
+                "text": "Acquire a Cake Round via the Smithing or Pottery recipe; it's returned to you after each combine.",
+                "links": [
+                  {
+                    "label": "Cake Round",
+                    "href": "trades.html?type=recipes&tradeskill=Blacksmithing&search=Cake%20Round"
+                  }
+                ]
+              },
+              {
+                "text": "Craft Birthday Cake in an Oven from 1 Winter Chocolate, 1 Frosting, and 1 Clump of Dough until skill 162.",
+                "links": [
+                  {
+                    "label": "Clump of Dough",
+                    "href": "trades.html?type=recipes&tradeskill=Baking&search=Clump%20of%20Dough"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:pixie-powder-cinnesticks",
@@ -151465,7 +152102,60 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 202,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "paths": [
+          {
+            "label": "All",
+            "steps": [
+              {
+                "text": "Go to Greater Faydark or Lesser Faydark.",
+                "links": [
+                  {
+                    "label": "Greater Faydark",
+                    "href": "maps.html?to=Greater%20Faydark"
+                  },
+                  {
+                    "label": "Lesser Faydark",
+                    "href": "maps.html?to=Lesser%20Faydark"
+                  }
+                ]
+              },
+              {
+                "text": "Buy or forage Cinnamon Sticks.",
+                "links": [
+                  {
+                    "label": "Cinnamon Sticks",
+                    "href": "trades.html?type=ingredients&search=Cinnamon%20Sticks"
+                  }
+                ]
+              },
+              {
+                "text": "Hunt Pixies for Pixie Dust. A pixie jongleur gives negative faction hits, so pick your targets carefully.",
+                "links": [
+                  {
+                    "label": "Pixie Dust",
+                    "href": "trades.html?type=ingredients&search=Pixie%20Dust"
+                  }
+                ]
+              },
+              {
+                "text": "Craft Pixie Powder Cinnesticks in a Mixing Bowl from 3 Pixie Dust and 1 Cinnamon Sticks until skill 200+.",
+                "links": [
+                  {
+                    "label": "Pixie Dust",
+                    "href": "trades.html?type=ingredients&search=Pixie%20Dust"
+                  },
+                  {
+                    "label": "Cinnamon Sticks",
+                    "href": "trades.html?type=ingredients&search=Cinnamon%20Sticks"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "recipe:dragon-steak",
@@ -151473,7 +152163,38 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 200,
-      "levelingGuide": true
+      "levelingGuide": true,
+      "guide": {
+        "paths": [
+          {
+            "label": "All",
+            "steps": [
+              {
+                "text": "Get Dragon Meat however you can; it's a rare drop off Velious dragons.",
+                "links": [
+                  {
+                    "label": "Dragon Meat",
+                    "href": "trades.html?type=ingredients&search=Dragon%20Meat"
+                  }
+                ]
+              },
+              {
+                "text": "Craft Dragon Steak from 1 Dragon Meat, 1 Jug of Sauces, and 1 Spices until you find its trivial.",
+                "links": [
+                  {
+                    "label": "Jug of Sauces",
+                    "href": "trades.html?type=ingredients&search=Jug%20of%20Sauces"
+                  },
+                  {
+                    "label": "Spices",
+                    "href": "trades.html?type=ingredients&search=Spices"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "npc:east-commonlands:katha-firespinner",
@@ -151481,7 +152202,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the inn near the West Commonlands zone line. Doesn't sell to Trolls."
     },
     {
       "id": "npc:erudin-palace:jeliala-glimmercharm",
@@ -151500,20 +152222,13 @@
       ]
     },
     {
-      "id": "npc:west-freeport:lindie-rains",
-      "label": "Lindie Rains",
-      "type": "npc",
-      "roles": [
-        "vendor"
-      ]
-    },
-    {
       "id": "npc:west-freeport:lysa-truegreen",
       "label": "Lysa Truegreen",
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the caster guild, 2nd floor."
     },
     {
       "id": "npc:west-freeport:zasrin-blueflame",
@@ -154415,7 +155130,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in Groflah's Forge."
     },
     {
       "id": "npc:grobb:okun",
@@ -179973,7 +180689,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for Trader's Holiday; the oven is right behind her."
     },
     {
       "id": "npc:north-freeport:galio",
@@ -181317,7 +182034,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look on platform #20, near the Pottery Wheel."
     },
     {
       "id": "npc:halas:merin",
@@ -181333,7 +182051,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Located at (-364, -124)."
     },
     {
       "id": "npc:south-kaladim:dooni",
@@ -181365,7 +182084,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in the first set of caves, near the Pottery Wheel."
     },
     {
       "id": "npc:the-overthere:tin-merchant-vi",
@@ -182279,7 +182999,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look next to the bank, near the Pottery Wheel."
     },
     {
       "id": "npc:west-freeport:jynsa-smithson",
@@ -182295,7 +183016,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look on platform #20, near the Pottery Wheel."
     },
     {
       "id": "npc:grobb:vynugga",
@@ -182319,7 +183041,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Located at (197, 461)."
     },
     {
       "id": "npc:neriak-3rd-gate:petra-d-dbth",
@@ -182335,7 +183058,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in the first set of caves, near the Pottery Wheel."
     },
     {
       "id": "npc:rivervale:marta-claytoe",
@@ -182343,7 +183067,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the Pottery Wheel, (-160, -90)."
     },
     {
       "id": "npc:southern-desert-of-ro:artist-passia",
@@ -182359,7 +183084,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the bank."
     },
     {
       "id": "item:sculpting-tools",
@@ -183047,7 +183773,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the windmill, (165, -881)."
     },
     {
       "id": "npc:steamfont-mountains:a-mechanical-merchant",
@@ -194996,7 +195723,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look near the Shaman guild."
     },
     {
       "id": "npc:halas:spirita",
@@ -195004,7 +195732,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look next to the Shaman guild, on the west side of Halas."
     },
     {
       "id": "npc:highpass-hold:mardon-smith",
@@ -195044,7 +195773,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look northwest of the bank, in a room with a floating decorative skull."
     },
     {
       "id": "npc:east-cabilis:smithy-qag",
@@ -195068,7 +195798,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Not currently reachable in-game (eqlwiki lists this vendor as Out of Era)."
     },
     {
       "id": "npc:field-of-bone:klok-canip",
@@ -195718,7 +196449,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look on the way to the palace, with the clockwork grocer and baker, at map marker #12."
     },
     {
       "id": "npc:everfrost-peaks:guri",
@@ -195726,7 +196458,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the Temple to the north, just west of the westmost ice river branch."
     },
     {
       "id": "npc:everfrost-peaks:sven-felligan",
@@ -195734,7 +196467,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the Temple to the north, just west of the westmost ice river branch."
     },
     {
       "id": "npc:grobb:raztara",
@@ -195742,7 +196476,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look around the corner north of the Shaman guild."
     },
     {
       "id": "npc:halas:murtog-macyee",
@@ -195758,7 +196493,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look for the Northern stone hand."
     },
     {
       "id": "npc:rathe-mountains:zok-ruppeta",
@@ -198027,7 +198763,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look one platform north of the Priest lift."
     },
     {
       "id": "npc:halas:rain",
@@ -198035,7 +198772,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in McPherson's Bloody Blades."
     },
     {
       "id": "npc:surefall-glade:livam-t-lant",
@@ -198043,7 +198781,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look inside the Druid guild."
     },
     {
       "id": "npc:surefall-glade:jarse-kedison",
@@ -198051,7 +198790,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look outside, near the arrow range."
     },
     {
       "id": "npc:steamfont-mountains:a-clockwork-fletcher",
@@ -198059,7 +198799,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the middle windmill."
     },
     {
       "id": "npc:thurgadin:tavir",
@@ -198159,7 +198900,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Located at (1250, -879)."
     },
     {
       "id": "npc:east-commonlands:joryd-longarms",
@@ -198167,7 +198909,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in Inn #3, at (980, 3760)."
     },
     {
       "id": "npc:eastern-karana:bryan",
@@ -198175,7 +198918,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look at the shops near the wooden bridge."
     },
     {
       "id": "npc:northern-felwithe:merchant-longarrow",
@@ -198191,7 +198935,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look inside Trueshot Bows."
     },
     {
       "id": "npc:greater-faydark:merchant-neaien",
@@ -198199,7 +198944,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look inside the Fletcher building."
     },
     {
       "id": "npc:grobb:zazhar",
@@ -198207,7 +198953,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look outside Krungs Clubs & Junk."
     },
     {
       "id": "npc:kithicor-forest:krile-arrowsmith",
@@ -198215,7 +198962,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Located at (-332, 3882)."
     },
     {
       "id": "npc:neriak-commons:andara-c-luzz",
@@ -198223,7 +198971,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in The Bleek Fletcher."
     },
     {
       "id": "npc:oggok:praak",
@@ -198231,7 +198980,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look inside Bouncer Keep, second floor."
     },
     {
       "id": "npc:western-karana:brenzl-mcmannus",
@@ -198239,7 +198989,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look in the hut near the ogre shrine."
     },
     {
       "id": "npc:south-qeynos:danon-fletcher",
@@ -198247,7 +198998,8 @@
       "type": "npc",
       "roles": [
         "vendor"
-      ]
+      ],
+      "notes": "Look outside, near the large clock."
     },
     {
       "id": "npc:rivervale:joana-jinklebelly",
@@ -202113,6 +202865,18 @@
       "id": "item:split-paw-hide-gloves",
       "label": "Split Paw Hide Gloves",
       "type": "item"
+    },
+    {
+      "id": "item:basilisk-egg",
+      "label": "Basilisk Egg",
+      "type": "item"
+    },
+    {
+      "id": "recipe:clump-of-dough-basilisk-egg",
+      "label": "Clump of Dough",
+      "type": "recipe",
+      "tradeskill": "Baking",
+      "trivial": 17
     }
   ],
   "edges": [
@@ -328575,18 +329339,6 @@
       "type": "sells"
     },
     {
-      "id": "e-located_in-22159",
-      "source": "npc:west-freeport:lindie-rains",
-      "target": "zone:west-freeport",
-      "type": "located_in"
-    },
-    {
-      "id": "e-sells-22160",
-      "source": "npc:west-freeport:lindie-rains",
-      "target": "item:bat-wing",
-      "type": "sells"
-    },
-    {
       "id": "e-located_in-22161",
       "source": "npc:west-freeport:lysa-truegreen",
       "target": "zone:west-freeport",
@@ -451097,6 +451849,83 @@
       "mobs": [
         "a Tesch Mas Gnoll"
       ]
+    },
+    {
+      "id": "e-sells-40303",
+      "source": "npc:east-freeport:iseba-gargurd",
+      "target": "item:fresh-fish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40304",
+      "source": "npc:east-freeport:tanlok-harson",
+      "target": "item:fresh-fish",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40305",
+      "source": "npc:east-freeport:sun-alemaker",
+      "target": "item:jug-of-sauces",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40306",
+      "source": "npc:neriak-commons:mariz-ixtaz",
+      "target": "item:fresh-fish",
+      "type": "sells"
+    },
+    {
+      "id": "e-located_in-40307",
+      "source": "item:basilisk-egg",
+      "target": "zone:lavastorm-mountains",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "A Lava Basilisk"
+      ]
+    },
+    {
+      "id": "e-uses-40308",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "item:bottle-of-milk",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40309",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "item:cup-of-flour",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40310",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "item:basilisk-egg",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40311",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "item:clump-of-dough",
+      "type": "produces",
+      "quantity": 15
+    },
+    {
+      "id": "e-crafted_in-40312",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "container:mixing-bowl",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-variant_of-40313",
+      "source": "recipe:clump-of-dough-basilisk-egg",
+      "target": "recipe:clump-of-dough",
+      "type": "variant_of"
+    },
+    {
+      "id": "e-sells-40314",
+      "source": "npc:steamfont-mountains:glen-garginburr",
+      "target": "item:bottle",
+      "type": "sells"
     }
   ]
 }

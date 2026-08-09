@@ -250,7 +250,7 @@ async function findNearMe(fromZoneId) {
         for (const [itemId, vendors] of zoneItemVendors.get(zoneId)) {
           items.add(itemId);
           const vendor = vendors[0];
-          if (!vendorsByI.has(vendor.id)) vendorsByI.set(vendor.id, { id: vendor.id, label: vendor.label, items: [] });
+          if (!vendorsByI.has(vendor.id)) vendorsByI.set(vendor.id, { id: vendor.id, label: vendor.label, notes: vendor.notes, items: [] });
           vendorsByI.get(vendor.id).items.push(shoppingList.find((i) => i.id === itemId));
         }
       }
