@@ -163879,7 +163879,10 @@
     {
       "id": "item:imbued-plains-pebble",
       "label": "Imbued Plains Pebble",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Created from a Plains Pebble with the Imbue Plains Pebble spell (Cleric/Druid L29, Karana-flavored, no-fail). A required ingredient for Imbued Plains Pebble Shard."
     },
     {
       "id": "item:imbued-field-breastplate-karana",
@@ -202877,6 +202880,328 @@
       "type": "recipe",
       "tradeskill": "Baking",
       "trivial": 17
+    },
+    {
+      "id": "npc:surefall-glade:qaelin-hailstorm",
+      "label": "Qaelin Hailstorm",
+      "type": "npc",
+      "roles": [
+        "vendor",
+        "quest_giver"
+      ]
+    },
+    {
+      "id": "item:mark-of-karana",
+      "label": "Mark of Karana",
+      "type": "item",
+      "source": "Quested from Qaelin Hailstorm (Surefall Glade, Plains of Karana | Loc: +180, +140) -- say \"I need a mark\" while near him, not targeting him. Karana worshippers only. Returns on combine; a required ingredient for every Surefall Fletching combine."
+    },
+    {
+      "id": "item:small-brick-of-steel",
+      "label": "Small Brick of Steel",
+      "type": "item"
+    },
+    {
+      "id": "item:large-brick-of-steel",
+      "label": "Large Brick of Steel",
+      "type": "item"
+    },
+    {
+      "id": "item:arrow-shaft-mold",
+      "label": "Arrow Shaft Mold",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "container:surefall-fletching-kit",
+      "label": "Surefall Fletching Kit",
+      "type": "container"
+    },
+    {
+      "id": "recipe:surefall-fletching-kit",
+      "label": "Surefall Fletching Kit",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 162
+    },
+    {
+      "id": "item:steel-working-knife",
+      "label": "Steel Working Knife",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 42, Forge) -- requires Karana as active deity to craft. Returns on combine; a required ingredient for Steel Fletch."
+    },
+    {
+      "id": "recipe:steel-working-knife",
+      "label": "Steel Working Knife",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:steel-arrowheads",
+      "label": "Steel Arrowheads",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-arrowheads",
+      "label": "Steel Arrowheads",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 188
+    },
+    {
+      "id": "item:steel-arrowshafts",
+      "label": "Steel Arrowshafts",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-arrowshafts",
+      "label": "Steel Arrowshafts",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:steel-fletch",
+      "label": "Steel Fletch",
+      "type": "item"
+    },
+    {
+      "id": "recipe:steel-fletch",
+      "label": "Steel Fletch",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:plains-pebble",
+      "label": "Plains Pebble",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
+    },
+    {
+      "id": "item:imbued-plains-pebble-shard",
+      "label": "Imbued Plains Pebble Shard",
+      "type": "item"
+    },
+    {
+      "id": "recipe:imbued-plains-pebble-shard",
+      "label": "Imbued Plains Pebble Shard",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 96
+    },
+    {
+      "id": "item:blessed-steel-arrowheads",
+      "label": "Blessed Steel Arrowheads",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 188, Forge) -- Karana worshippers only."
+    },
+    {
+      "id": "recipe:blessed-steel-arrowheads",
+      "label": "Blessed Steel Arrowheads",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 188
+    },
+    {
+      "id": "item:steel-guardian-arrows",
+      "label": "Steel Guardian Arrows",
+      "type": "item",
+      "slots": [
+        "Ammo"
+      ],
+      "damage": 11,
+      "effect": "Cold Damage: 3",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "rogue"
+      ],
+      "deity": "Karana"
+    },
+    {
+      "id": "recipe:steel-guardian-arrows",
+      "label": "Steel Guardian Arrows",
+      "type": "recipe",
+      "tradeskill": "Fletching",
+      "trivial": 335
+    },
+    {
+      "id": "item:blessed-guardian-arrows",
+      "label": "Blessed Guardian Arrows",
+      "type": "item",
+      "slots": [
+        "Ammo"
+      ],
+      "damage": 11,
+      "effect": "Cold Damage: 4",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "rogue"
+      ],
+      "deity": "Karana"
+    },
+    {
+      "id": "recipe:blessed-guardian-arrows",
+      "label": "Blessed Guardian Arrows",
+      "type": "recipe",
+      "tradeskill": "Fletching",
+      "trivial": 335
+    },
+    {
+      "id": "container:feirdal-fletching-kit",
+      "label": "Feir'Dal Fletching Kit",
+      "type": "container",
+      "weight": 1,
+      "capacity": 10,
+      "containerSize": "Large"
+    },
+    {
+      "id": "recipe:feirdal-fletching-kit",
+      "label": "Feir'Dal Fletching Kit",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 163
+    },
+    {
+      "id": "item:mithril-working-knife",
+      "label": "Mithril Working Knife",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 42, Forge) -- Wood Elves only. A required ingredient for Mithril Fletchings."
+    },
+    {
+      "id": "recipe:mithril-working-knife",
+      "label": "Mithril Working Knife",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:mithril-fletchings",
+      "label": "Mithril Fletchings",
+      "type": "item",
+      "source": "Crafted via Fletching (Trivial 34, Feir'Dal Fletching Kit) -- Wood Elves only."
+    },
+    {
+      "id": "recipe:mithril-fletchings",
+      "label": "Mithril Fletchings",
+      "type": "recipe",
+      "tradeskill": "Fletching",
+      "trivial": 34
+    },
+    {
+      "id": "item:mithril-arrow-heads",
+      "label": "Mithril Arrow Heads",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 42, Forge) -- Wood Elves only."
+    },
+    {
+      "id": "recipe:mithril-arrow-heads",
+      "label": "Mithril Arrow Heads",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:mithril-bundled-arrow-shafts",
+      "label": "Mithril Bundled Arrow Shafts",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 42, Forge) -- Wood Elves only."
+    },
+    {
+      "id": "recipe:mithril-bundled-arrow-shafts",
+      "label": "Mithril Bundled Arrow Shafts",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 42
+    },
+    {
+      "id": "item:imbued-emerald-shards",
+      "label": "Imbued Emerald Shards",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 96, Forge) -- Wood Elves only."
+    },
+    {
+      "id": "recipe:imbued-emerald-shards",
+      "label": "Imbued Emerald Shards",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 96
+    },
+    {
+      "id": "item:blessed-arrow-heads",
+      "label": "Blessed Arrow Heads",
+      "type": "item",
+      "source": "Crafted via Blacksmithing (Trivial 57, Forge) -- Wood Elves only."
+    },
+    {
+      "id": "recipe:blessed-arrow-heads",
+      "label": "Blessed Arrow Heads",
+      "type": "recipe",
+      "tradeskill": "Blacksmithing",
+      "trivial": 57
+    },
+    {
+      "id": "item:mithril-champion-arrows",
+      "label": "Mithril Champion Arrows",
+      "type": "item",
+      "slots": [
+        "Ammo"
+      ],
+      "damage": 11,
+      "effect": "Fire Damage: 3",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger",
+        "shadow knight"
+      ],
+      "source": "Crafted via Fletching -- Wood Elves only."
+    },
+    {
+      "id": "recipe:mithril-champion-arrows",
+      "label": "Mithril Champion Arrows",
+      "type": "recipe",
+      "tradeskill": "Fletching",
+      "trivial": 335
+    },
+    {
+      "id": "item:blessed-champion-arrows",
+      "label": "Blessed Champion Arrows",
+      "type": "item",
+      "slots": [
+        "Ammo"
+      ],
+      "damage": 11,
+      "effect": "Fire Damage: 4",
+      "weight": 0.1,
+      "size": "Small",
+      "classes": [
+        "warrior",
+        "paladin",
+        "ranger"
+      ],
+      "deity": "Tunare",
+      "source": "Crafted via Fletching -- Wood Elves only."
+    },
+    {
+      "id": "recipe:blessed-champion-arrows",
+      "label": "Blessed Champion Arrows",
+      "type": "recipe",
+      "tradeskill": "Fletching",
+      "trivial": 335
     }
   ],
   "edges": [
@@ -451902,6 +452227,733 @@
       "source": "npc:steamfont-mountains:glen-garginburr",
       "target": "item:bottle",
       "type": "sells"
+    },
+    {
+      "id": "e-located_in-40305",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "zone:surefall-glade",
+      "type": "located_in"
+    },
+    {
+      "id": "e-sells-40306",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "item:small-brick-of-steel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40307",
+      "source": "npc:surefall-glade:qaelin-hailstorm",
+      "target": "item:large-brick-of-steel",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40308",
+      "source": "npc:west-cabilis:zotalz",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40309",
+      "source": "npc:firiona-vie:fleceal-summer",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40310",
+      "source": "npc:greater-faydark:merchant-lanin",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40311",
+      "source": "npc:halas:rain",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40312",
+      "source": "npc:iceclad-ocean:adinel-jailbar",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40313",
+      "source": "npc:neriak-commons:andara-c-luzz",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40314",
+      "source": "npc:the-overthere:tin-merchant-xi",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40315",
+      "source": "npc:steamfont-mountains:a-clockwork-fletcher",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40316",
+      "source": "npc:surefall-glade:jarse-kedison",
+      "target": "item:arrow-shaft-mold",
+      "type": "sells"
+    },
+    {
+      "id": "e-uses-40317",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40318",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:hinge-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40319",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:container-base-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40320",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:container-lid-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40321",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40322",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40323",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "container:surefall-fletching-kit",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40324",
+      "source": "recipe:surefall-fletching-kit",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40325",
+      "source": "recipe:steel-working-knife",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40326",
+      "source": "recipe:steel-working-knife",
+      "target": "item:hilt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40327",
+      "source": "recipe:steel-working-knife",
+      "target": "item:dagger-blade-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40328",
+      "source": "recipe:steel-working-knife",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40329",
+      "source": "recipe:steel-working-knife",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40330",
+      "source": "recipe:steel-working-knife",
+      "target": "item:steel-working-knife",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40331",
+      "source": "recipe:steel-working-knife",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40332",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40333",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40334",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40335",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40336",
+      "source": "recipe:steel-arrowheads",
+      "target": "item:steel-arrowheads",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40337",
+      "source": "recipe:steel-arrowheads",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40338",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40339",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40340",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:large-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40341",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:arrow-shaft-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40342",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40343",
+      "source": "recipe:steel-arrowshafts",
+      "target": "item:steel-arrowshafts",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40344",
+      "source": "recipe:steel-arrowshafts",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40345",
+      "source": "recipe:steel-fletch",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40346",
+      "source": "recipe:steel-fletch",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40347",
+      "source": "recipe:steel-fletch",
+      "target": "item:steel-working-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40348",
+      "source": "recipe:steel-fletch",
+      "target": "item:steel-fletch",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40349",
+      "source": "recipe:steel-fletch",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40350",
+      "source": "recipe:imbued-plains-pebble-shard",
+      "target": "item:imbued-plains-pebble",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40351",
+      "source": "recipe:imbued-plains-pebble-shard",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40352",
+      "source": "recipe:imbued-plains-pebble-shard",
+      "target": "item:imbued-plains-pebble-shard",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-crafted_in-40353",
+      "source": "recipe:imbued-plains-pebble-shard",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40354",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40355",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:small-brick-of-steel",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40356",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40357",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:imbued-plains-pebble-shard",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40358",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40359",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "item:blessed-steel-arrowheads",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40360",
+      "source": "recipe:blessed-steel-arrowheads",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40361",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "item:small-groove-nocks",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40362",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "item:steel-arrowheads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40363",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "item:steel-arrowshafts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40364",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "item:steel-fletch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40365",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "item:steel-guardian-arrows",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-40366",
+      "source": "recipe:steel-guardian-arrows",
+      "target": "container:surefall-fletching-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40367",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:blessed-steel-arrowheads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40368",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:mark-of-karana",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40369",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:small-groove-nocks",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40370",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:steel-arrowshafts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40371",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:steel-fletch",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40372",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "item:blessed-guardian-arrows",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-40373",
+      "source": "recipe:blessed-guardian-arrows",
+      "target": "container:surefall-fletching-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40374",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "item:container-base-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40375",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "item:container-lid-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40376",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "item:hinge-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40377",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "item:small-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40378",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40379",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "container:feirdal-fletching-kit",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40380",
+      "source": "recipe:feirdal-fletching-kit",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40381",
+      "source": "recipe:mithril-working-knife",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40382",
+      "source": "recipe:mithril-working-knife",
+      "target": "item:hilt-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40383",
+      "source": "recipe:mithril-working-knife",
+      "target": "item:dagger-blade-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40384",
+      "source": "recipe:mithril-working-knife",
+      "target": "item:small-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40385",
+      "source": "recipe:mithril-working-knife",
+      "target": "item:mithril-working-knife",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40386",
+      "source": "recipe:mithril-working-knife",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40387",
+      "source": "recipe:mithril-fletchings",
+      "target": "item:mithril-working-knife",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40388",
+      "source": "recipe:mithril-fletchings",
+      "target": "item:small-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40389",
+      "source": "recipe:mithril-fletchings",
+      "target": "item:mithril-fletchings",
+      "type": "produces"
+    },
+    {
+      "id": "e-crafted_in-40390",
+      "source": "recipe:mithril-fletchings",
+      "target": "container:feirdal-fletching-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40391",
+      "source": "recipe:mithril-arrow-heads",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40392",
+      "source": "recipe:mithril-arrow-heads",
+      "target": "item:small-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40393",
+      "source": "recipe:mithril-arrow-heads",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40394",
+      "source": "recipe:mithril-arrow-heads",
+      "target": "item:mithril-arrow-heads",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40395",
+      "source": "recipe:mithril-arrow-heads",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40396",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "item:arrow-shaft-mold",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40397",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40398",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "item:large-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40399",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40400",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "item:mithril-bundled-arrow-shafts",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40401",
+      "source": "recipe:mithril-bundled-arrow-shafts",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40402",
+      "source": "recipe:imbued-emerald-shards",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40403",
+      "source": "recipe:imbued-emerald-shards",
+      "target": "item:imbued-emerald",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40404",
+      "source": "recipe:imbued-emerald-shards",
+      "target": "item:imbued-emerald-shards",
+      "type": "produces",
+      "quantity": 4
+    },
+    {
+      "id": "e-crafted_in-40405",
+      "source": "recipe:imbued-emerald-shards",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40406",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "item:file",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40407",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "item:imbued-emerald-shards",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40408",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "item:small-brick-of-mithril",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40409",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "item:water-flask",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40410",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "item:blessed-arrow-heads",
+      "type": "produces",
+      "quantity": 2
+    },
+    {
+      "id": "e-crafted_in-40411",
+      "source": "recipe:blessed-arrow-heads",
+      "target": "container:forge",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40412",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "item:mithril-arrow-heads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40413",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "item:mithril-bundled-arrow-shafts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40414",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "item:mithril-fletchings",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40415",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "item:small-groove-nocks",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40416",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "item:mithril-champion-arrows",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-40417",
+      "source": "recipe:mithril-champion-arrows",
+      "target": "container:feirdal-fletching-kit",
+      "type": "crafted_in"
+    },
+    {
+      "id": "e-uses-40418",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "item:blessed-arrow-heads",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40419",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "item:mithril-bundled-arrow-shafts",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40420",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "item:mithril-fletchings",
+      "type": "uses"
+    },
+    {
+      "id": "e-uses-40421",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "item:small-groove-nocks",
+      "type": "uses"
+    },
+    {
+      "id": "e-produces-40422",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "item:blessed-champion-arrows",
+      "type": "produces",
+      "quantity": 10
+    },
+    {
+      "id": "e-crafted_in-40423",
+      "source": "recipe:blessed-champion-arrows",
+      "target": "container:feirdal-fletching-kit",
+      "type": "crafted_in"
     }
   ]
 }
