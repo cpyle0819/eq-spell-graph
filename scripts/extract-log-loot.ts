@@ -82,6 +82,7 @@ const ZONE_ALIASES: Record<string, string> = {
   "The Liberated Citadel of Runnyeye": "Runnyeye Citadel",
   "Liberated Citadel of Runnyeye": "Runnyeye Citadel",
   "Lair of the Splitpaw": "Splitpaw",
+  "Clan Crushbone": "Crushbone",
 };
 
 type LootRecord = {
