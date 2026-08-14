@@ -13,12 +13,19 @@
  * anything not matched by either list is kept and tagged "unclassified" so
  * nothing quietly gets dropped before it's been seen.
  *
- * Also extracts vendor purchases ("You purchased 1 Spell: X from Y for
- * ...") into structured records alongside the condensed transcript, written
- * to <output>.purchases.json. `itemType` on each record is "spell" or
- * "item" -- the same values used for `type` on graph.json nodes -- derived
- * from the "Spell: " prefix the client puts on spell purchases (absent for
- * plain item purchases). A migration can diff these against a vendor npc's
+ * Also extracts vendor offers into structured records alongside the
+ * condensed transcript, written to <output>.vendor-offers.json. Two source
+ * lines both count, since either one confirms a vendor sells something:
+ *   - a confirmed purchase: "You purchased 1 Spell: X from Y for ..."
+ *   - a price check, from right-clicking an item in a vendor's sell window
+ *     without buying it: "Y told you, 'That'll be ... per Spell: X.'" --
+ *     the far more common source in practice, since checking a vendor's
+ *     whole list this way costs nothing, while confirming the same
+ *     coverage via purchases would mean actually buying every spell.
+ * Each record's `confirmed` field distinguishes the two. `itemType` is
+ * "spell" or "item" -- the same values used for `type` on graph.json nodes
+ * -- derived from the "Spell: " prefix the client puts on spells (absent
+ * for plain items). A migration can diff these against a vendor npc's
  * existing `sells` edges to fill gaps rather than hand-transcribing prices.
  *
  * Usage: bun run scripts/parse-eq-log.ts <path-to-eqlog.txt> [output-path]
@@ -58,23 +65,38 @@ const SIGNAL_PATTERNS: { type: string; pattern: RegExp }[] = [
 // "You purchased 1 Backpack from Colnro Cedar for  6 gold 9 silver 9 copper."
 const PURCHASE_PATTERN = /^You purchased (\d+) (.+?) from (.+?) for\s+(.+)\.$/;
 
-type Purchase = { quantity: number; itemLabel: string; itemType: "spell" | "item"; vendor: string; price: string };
+// "Arrivae Valleren told you, 'That'll be 2 platinum 3 gold per Spell: Tremor.'"
+// "Colnro Cedar told you, 'That'll be 1 copper per Cup of Flour.'"
+const PRICE_CHECK_PATTERN = /^(.+?) told you, 'That'll be (.+?) per (.+)\.'$/;
 
-function parsePurchase(text: string): Purchase | null {
-  const m = text.match(PURCHASE_PATTERN);
-  if (!m) return null;
-  const [, quantity, rawItem, vendor, price] = m;
+type VendorOffer = {
+  itemLabel: string;
+  itemType: "spell" | "item";
+  vendor: string;
+  price: string;
+  confirmed: boolean; // true: actual purchase. false: price check only, never bought.
+};
+
+function splitItemLabel(rawItem: string): { itemLabel: string; itemType: "spell" | "item" } {
   const spellMatch = rawItem.match(/^Spell: (.+)$/);
-  return {
-    quantity: Number(quantity),
-    itemLabel: spellMatch ? spellMatch[1] : rawItem,
-    itemType: spellMatch ? "spell" : "item",
-    vendor,
-    price,
-  };
+  return spellMatch ? { itemLabel: spellMatch[1], itemType: "spell" } : { itemLabel: rawItem, itemType: "item" };
 }
 
-type ParsedLine = { timestamp: string; type: string; text: string; purchase?: Purchase };
+function parseVendorOffer(text: string): VendorOffer | null {
+  const purchase = text.match(PURCHASE_PATTERN);
+  if (purchase) {
+    const [, , rawItem, vendor, price] = purchase;
+    return { ...splitItemLabel(rawItem), vendor, price, confirmed: true };
+  }
+  const priceCheck = text.match(PRICE_CHECK_PATTERN);
+  if (priceCheck) {
+    const [, vendor, price, rawItem] = priceCheck;
+    return { ...splitItemLabel(rawItem), vendor, price, confirmed: false };
+  }
+  return null;
+}
+
+type ParsedLine = { timestamp: string; type: string; text: string; vendorOffer?: VendorOffer };
 
 function parseLog(raw: string): ParsedLine[] {
   const out: ParsedLine[] = [];
@@ -86,9 +108,9 @@ function parseLog(raw: string): ParsedLine[] {
 
     if (NOISE_PATTERNS.some((p) => p.test(text))) continue;
 
-    const purchase = parsePurchase(text);
-    if (purchase) {
-      out.push({ timestamp, type: "purchase", text, purchase });
+    const vendorOffer = parseVendorOffer(text);
+    if (vendorOffer) {
+      out.push({ timestamp, type: vendorOffer.confirmed ? "purchase" : "price-check", text, vendorOffer });
       continue;
     }
 
@@ -110,11 +132,11 @@ const outputPath = resolve(outputPathArg ?? `${inputPath}.parsed.txt`);
 
 writeFileSync(outputPath, parsed.map((p) => `[${p.timestamp}] (${p.type}) ${p.text}`).join("\n") + "\n");
 
-const purchases = parsed.filter((p): p is ParsedLine & { purchase: Purchase } => p.purchase !== undefined);
-let purchasesPath: string | undefined;
-if (purchases.length) {
-  purchasesPath = outputPath.replace(/(\.parsed)?\.txt$/, "") + ".purchases.json";
-  writeFileSync(purchasesPath, JSON.stringify(purchases.map((p) => ({ timestamp: p.timestamp, ...p.purchase })), null, 2) + "\n");
+const offers = parsed.filter((p): p is ParsedLine & { vendorOffer: VendorOffer } => p.vendorOffer !== undefined);
+let offersPath: string | undefined;
+if (offers.length) {
+  offersPath = outputPath.replace(/(\.parsed)?\.txt$/, "") + ".vendor-offers.json";
+  writeFileSync(offersPath, JSON.stringify(offers.map((p) => ({ timestamp: p.timestamp, ...p.vendorOffer })), null, 2) + "\n");
 }
 
 const totalRaw = raw.split(/\r?\n/).filter((l) => l.trim()).length;
@@ -123,4 +145,4 @@ for (const p of parsed) counts.set(p.type, (counts.get(p.type) ?? 0) + 1);
 
 console.log(`${totalRaw} raw lines -> ${parsed.length} kept (${outputPath})`);
 for (const [type, count] of counts) console.log(`  ${type}: ${count}`);
-if (purchasesPath) console.log(`${purchases.length} purchase(s) -> ${purchasesPath}`);
+if (offersPath) console.log(`${offers.length} vendor offer(s) -> ${offersPath}`);
