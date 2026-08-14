@@ -1,0 +1,5 @@
+# Log-sourced vendor offer label resolution
+
+`scripts/parse-eq-log.ts`'s vendor-offer records carry `itemType: "spell" | "item"` (derived from the client's own "Spell: " prefix), but the graph's real node types are finer-grained than that (`container`, `recipe`, etc. alongside plain `item`). A one-off script resolving an offer to a node must not assume `${itemType}:${slug(label)}` is the right id; it has to check the label against all node types, since a vendor-sold "item" can already exist as a `container` node under a different id.
+
+Separately, the in-game price-check tell ("`<vendor>` told you, 'That'll be ... per ...'") sometimes truncates or pluralizes a spell's name differently from its real label (e.g. "Zephyr: Karana" for "Zephyr: North Karana", "Beguile Plant" for "Beguile Plants"). A "no matching node" result from a naive slug lookup can mean either a genuinely new spell/item or one of these label mismatches. Check for a close label match across all spell/item nodes before concluding it's new.

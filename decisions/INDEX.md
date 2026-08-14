@@ -58,6 +58,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Messy bestiary categories: query eqlwiki's MediaWiki API, don't hand-check every page](eqlwiki-mediawiki-api-for-messy-bestiary-categories.md)
 - [Some eqlwiki zone pages have broken map images — skip, don't substitute](eqlwiki-broken-map-images.md)
 - [Friendly town NPCs inside a hostile dungeon: sort by real signal, don't exclude wholesale](friendly-town-npcs-inside-a-hostile-dungeon.md)
+- [Log-sourced vendor offer label resolution](log-sourced-offer-label-resolution.md)
 
 ## UI
 
