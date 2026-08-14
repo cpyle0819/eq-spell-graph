@@ -203632,6 +203632,94 @@
       "id": "item:brain-of-the-ishva-mal",
       "label": "Brain of the Ishva Mal",
       "type": "item"
+    },
+    {
+      "id": "spell:dustdevil",
+      "label": "Dustdevil",
+      "type": "spell",
+      "class_levels": [
+        {
+          "class": "druid",
+          "level": 43
+        }
+      ],
+      "description": "Ignites your target's skin, doing 582 damage.",
+      "mana": 162,
+      "skill": "Evocation",
+      "castTime": 5,
+      "recastTime": 1.5,
+      "fizzleTime": 1.5,
+      "duration": "Instant",
+      "targetType": "Single",
+      "spellType": "Detrimental",
+      "resist": "Magic",
+      "range": 200,
+      "icon": "85"
+    },
+    {
+      "id": "spell:ros-fiery-sundering",
+      "label": "Ro's Fiery Sundering",
+      "type": "spell",
+      "class_levels": [
+        {
+          "class": "druid",
+          "level": 39
+        }
+      ],
+      "description": "Surrounds your target in dancing flames, lowering their fire resistance and armor class. This spell generates a large amount of hate.",
+      "mana": 50,
+      "skill": "Evocation",
+      "castTime": 3.5,
+      "recastTime": 6,
+      "fizzleTime": 2.5,
+      "duration": "1.9 minutes @L39 to 3 minutes @L60",
+      "targetType": "Single",
+      "spellType": "Detrimental",
+      "resist": "Fire (-200)",
+      "range": 200,
+      "icon": "O"
+    },
+    {
+      "id": "item:lute",
+      "label": "Lute",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "bard"
+      ],
+      "weight": 0.8,
+      "size": "Small",
+      "effect": "String Resonance: 10"
+    },
+    {
+      "id": "item:wooden-flute",
+      "label": "Wooden Flute",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "bard"
+      ],
+      "weight": 0.5,
+      "size": "Tiny",
+      "effect": "Wind Resonance: 8"
+    },
+    {
+      "id": "item:horn",
+      "label": "Horn",
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "bard"
+      ],
+      "weight": 0.6,
+      "size": "Small",
+      "effect": "Brass Resonance: 10"
     }
   ],
   "edges": [
@@ -457355,6 +457443,72 @@
       "id": "e-sells-40988",
       "source": "vendor:surefall-glade:arrivae-valleren",
       "target": "spell:zephyr-toxxulia",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40989",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:beguile-plants",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40990",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:share-form-of-the-great-wolf",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40991",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:zephyr-west-commons",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40992",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:zephyr-north-karana",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40993",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:zephyr-misty-thicket",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40994",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:zephyr-south-ro",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40995",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:dustdevil",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40996",
+      "source": "vendor:surefall-glade:arrivae-valleren",
+      "target": "spell:ros-fiery-sundering",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40997",
+      "source": "npc:north-freeport:lysric-loresinger",
+      "target": "item:lute",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40998",
+      "source": "npc:north-freeport:lysric-loresinger",
+      "target": "item:wooden-flute",
+      "type": "sells"
+    },
+    {
+      "id": "e-sells-40999",
+      "source": "npc:north-freeport:lysric-loresinger",
+      "target": "item:horn",
       "type": "sells"
     }
   ]
