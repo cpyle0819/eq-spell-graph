@@ -1,8 +1,8 @@
 /**
  * Graph data access layer — Schema v2.
  *
- * Node types: spell, npc, zone, quest, quest_group, item, faction, era, recipe, container (extensible: more as needed)
- * Edge types: sells, located_in, connects_to, starts, starts_in, rewards, member_of, requires, drops, uses, produces, crafted_in
+ * Node types: spell, npc, zone, quest, quest_group, item, faction, era, recipe, container, class (extensible: more as needed)
+ * Edge types: sells, sells_spells_for, located_in, connects_to, starts, starts_in, rewards, member_of, requires, drops, uses, produces, crafted_in
  *
  * `located_in` means different things by source type: npc --located_in--> zone
  * is "physically stands here" (unchanged). quest/quest_group --located_in--> zone
@@ -262,19 +262,35 @@ export function getAllSpells(levels?: number[]): NodeData[] {
     .map((n) => withSpellLine(n, helpers));
 }
 
+// decisions/class-spell-vendor-model.md's class node id convention. Same
+// slug shape as scripts/graph-lib.ts's own slug(), reimplemented here since
+// this module never imports script helpers.
+function classNodeId(cls: string): string {
+  return `class:${cls.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
+
+// A spell's real sellers come from two sources: a direct `sells` edge to
+// this exact spell (a vendor with too little sold-spell data to resolve to
+// a class, decisions/class-spell-vendor-model.md), and any vendor whose
+// `sells_spells_for` edge covers one of this spell's classes. A class
+// vendor carries no direct edge to the spell itself, so both sources are
+// checked and unioned.
+function sellersOfSpell(spell: NodeData, helpers: GraphIndexHelpers): string[] {
+  const direct = helpers.edgesTo(spell.id, "sells").map((e) => e.source);
+  const classIds = new Set((spell.class_levels ?? []).map((cl) => classNodeId(cl.class)));
+  const viaClass = [...classIds].flatMap((cid) => helpers.edgesTo(cid, "sells_spells_for").map((e) => e.source));
+  return [...new Set([...direct, ...viaClass])];
+}
+
 export function getVendorsForSpell(spellId: string): { npc: NodeData; zone: NodeData | undefined }[] {
   const graph = load();
-  const sellsEdges = graph.edges.filter(
-    (e) => e.type === "sells" && e.target === spellId
-  );
-  return sellsEdges.map((e) => {
-    const npc = graph.nodes.find((n) => n.id === e.source)!;
-    const locEdge = graph.edges.find(
-      (le) => le.type === "located_in" && le.source === npc.id
-    );
-    const zone = locEdge
-      ? graph.nodes.find((n) => n.id === locEdge.target)
-      : undefined;
+  const helpers = graphIndexHelpers(graph);
+  const spell = helpers.nodeById(spellId);
+  if (!spell) return [];
+  return sellersOfSpell(spell, helpers).map((npcId) => {
+    const npc = helpers.nodeById(npcId)!;
+    const locEdge = helpers.edgesFrom(npcId, "located_in")[0];
+    const zone = locEdge ? helpers.nodeById(locEdge.target) : undefined;
     return { npc, zone };
   });
 }
@@ -481,14 +497,16 @@ export function getZoneNpcs(zoneId: string): NpcSummary[] {
         .map((e) => helpers.nodeById(e.target))
         .filter((node): node is NodeData => node !== undefined)
         .map(toItemSummary);
+      const hasClassSpells = helpers.edgesFrom(n.id, "sells_spells_for").length > 0;
       const sellCategories = [
-        ...new Set(
-          helpers
+        ...new Set([
+          ...(hasClassSpells ? ["Spells"] : []),
+          ...helpers
             .edgesFrom(n.id, "sells")
             .map((e) => helpers.nodeById(e.target))
             .filter((node): node is NodeData => node !== undefined)
-            .map(sellCategoryLabel)
-        ),
+            .map(sellCategoryLabel),
+        ]),
       ].sort();
       return {
         id: n.id,
@@ -1704,12 +1722,28 @@ function worstStanding(...standings: FactionStanding[]): FactionStanding {
   , "safe");
 }
 
-export interface SpellVendorInfo extends SpellDetails {
+// A matching spell's own detail, independent of which vendor sells it. This
+// is the flat, deduplicated pool status-panel.js renders as the owned-
+// tracking checklist. A class vendor's inventory is the class's whole spell
+// list (decisions/class-spell-vendor-model.md), so the relevant question per
+// spell is which classes and levels it belongs to, not which vendor sells
+// it; `vendors` (below) answers "where do I go" separately, at the zone level.
+export interface SpellGoodInfo extends SpellDetails {
   id: string;
   name: string;
   classes: { cls: string; level: number }[];
-  vendors: string[];
   spellLine?: string;
+}
+
+// A zone's vendor, for the left-hand zone-card list. `classes` holds the
+// classes this vendor sells that also match the current search, a subset of
+// the vendor's real `sells_spells_for` classes. Empty for a vendor still on
+// per-spell `sells` edges (decisions/class-spell-vendor-model.md), since
+// there is no single class to badge it with.
+export interface VendorInfo {
+  id: string;
+  name: string;
+  classes: string[];
 }
 
 export interface FactionReason {
@@ -1741,13 +1775,20 @@ export interface ZoneRanking {
   raceIgnored?: boolean;
   classIgnored?: boolean;
   deityIgnored?: boolean;
-  // Exactly one of these two is set, never both -- a single rankZones()/
-  // rankZonesByCategory() call ranks by one type of vendor good at a time.
-  // Two separate optional arrays (rather than one generically-typed array)
-  // so callers on both sides keep real, type-specific fields (spell
-  // class/level pairs vs item stat block) instead of a lowest-common-
-  // denominator shape.
-  spells?: SpellVendorInfo[];
+  // Exactly one of these two pairs is set, never both -- a single
+  // rankZones()/rankZonesByCategory() call ranks by one type of vendor good
+  // at a time. Separate typed fields (rather than one generically-typed
+  // array) so callers on both sides keep real, type-specific shapes (a
+  // vendor+classes summary vs. an item stat block) instead of a lowest-
+  // common-denominator one. `vendors`/`spellIds` (Spells): the zone's real
+  // spell detail lives in rankZones()'s separate top-level `spells` pool,
+  // not per zone, since a class vendor's inventory is the same list
+  // everywhere that class is sold (decisions/class-spell-vendor-model.md);
+  // `spellIds` is only the ids purchasable in this zone, for scoring and for
+  // the client to work out which of the top-level pool's spells are
+  // reachable from the zones actually showing.
+  vendors?: VendorInfo[];
+  spellIds?: string[];
   items?: ItemVendorInfo[];
   score: number;
   // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
@@ -1782,7 +1823,7 @@ function buildZoneRankingBase(
   deityIgnored: boolean,
   includePorts: boolean,
   helpers: GraphIndexHelpers
-): Omit<ZoneRanking, "spells" | "items"> {
+): Omit<ZoneRanking, "vendors" | "spellIds" | "items"> {
   const zoneNode = helpers.nodeById(zoneId);
   // No current zone selected (Advanced's "Current Zone" left on its default
   // placeholder) -- there's nothing to route from, so skip pathfinding
@@ -1860,6 +1901,11 @@ function sortRankings(rankings: ZoneRanking[]): ZoneRanking[] {
   });
 }
 
+export interface SpellPlanResult {
+  zones: ZoneRanking[];
+  spells: SpellGoodInfo[];
+}
+
 export function rankZones(
   classNames: string[],
   levels: number[],
@@ -1871,7 +1917,7 @@ export function rankZones(
   specificZoneIds?: string[],
   spellLineIds?: string[],
   includePorts = false
-): ZoneRanking[] {
+): SpellPlanResult {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
 
@@ -1925,36 +1971,20 @@ export function rankZones(
     }
   }
 
-  const zoneSpells = new Map<string, SpellVendorInfo[]>();
+  // Per zone: which candidate spell ids are purchasable there (goodsCount
+  // for scoring, and the ids the client intersects against the flat
+  // `spells` pool below to work out which pool entries are reachable from
+  // the zones currently showing), and which vendors sell there, each tagged
+  // with the classes they cover that also match this search.
+  const zoneSpellIds = new Map<string, Set<string>>();
+  const zoneVendors = new Map<string, Map<string, { npc: NodeData; classes: Set<string> }>>();
+  const spellPool = new Map<string, SpellGoodInfo>();
 
-  function addSpellToZones(spell: NodeData, matchingClasses: { cls: string; level: number }[]) {
-    if (!matchingClasses.length) return;
-    const sellers = helpers.edgesTo(spell.id, "sells");
-    for (const seller of sellers) {
-      const npcNode = helpers.nodeById(seller.source);
-      const locEdge = helpers.edgesFrom(seller.source, "located_in")[0];
-      if (!locEdge || !npcNode) continue;
-      const zoneId = locEdge.target;
-      if (!zoneSpells.has(zoneId)) zoneSpells.set(zoneId, []);
-      const existing = zoneSpells.get(zoneId)!;
-      const entry = existing.find((s) => s.id === spell.id);
-      if (entry) {
-        if (!entry.vendors.includes(npcNode.label)) entry.vendors.push(npcNode.label);
-      } else {
-        const d = spell;
-        const details: SpellDetails = {};
-        for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
-          if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
-        }
-        const line = spellLineOf(d.id, helpers);
-        existing.push({ id: d.id, name: d.label, classes: matchingClasses, vendors: [npcNode.label], ...(line ? { spellLine: line.label } : {}), ...details });
-      }
-    }
-  }
-
-  // Step 4 — apply level filter per-spell and map to vendor zones; pinned
-  // spells bypass the level filter too and show all their real class/level
-  // pairs, same reasoning as the class bypass above.
+  // Step 4 — apply level filter per-spell, resolve real sellers (class
+  // vendors and any remaining per-spell vendors alike, see sellersOfSpell()
+  // above), and map into zones. Pinned spells bypass the level filter too
+  // and show all their real class/level pairs, same reasoning as the class
+  // bypass above.
   for (const spell of candidates) {
     let matchingClasses: { cls: string; level: number }[];
     if (pinnedIds.has(spell.id)) {
@@ -1968,31 +1998,71 @@ export function rankZones(
         .filter((cl) => levels.includes(cl.level))
         .map((cl) => ({ cls: cl.class, level: cl.level }));
     }
-    addSpellToZones(spell, matchingClasses);
+    if (!matchingClasses.length) continue;
+
+    const sellerIds = sellersOfSpell(spell, helpers);
+    if (!sellerIds.length) continue;
+
+    const matchedClassNames = new Set(matchingClasses.map((c) => c.cls));
+
+    for (const npcId of sellerIds) {
+      const npcNode = helpers.nodeById(npcId);
+      const locEdge = helpers.edgesFrom(npcId, "located_in")[0];
+      if (!npcNode || !locEdge) continue;
+      const zoneId = locEdge.target;
+
+      if (!zoneSpellIds.has(zoneId)) zoneSpellIds.set(zoneId, new Set());
+      zoneSpellIds.get(zoneId)!.add(spell.id);
+
+      if (!zoneVendors.has(zoneId)) zoneVendors.set(zoneId, new Map());
+      const vendorsInZone = zoneVendors.get(zoneId)!;
+      if (!vendorsInZone.has(npcId)) vendorsInZone.set(npcId, { npc: npcNode, classes: new Set() });
+      const vEntry = vendorsInZone.get(npcId)!;
+      const vendorClassIds = new Set(helpers.edgesFrom(npcId, "sells_spells_for").map((e) => e.target));
+      for (const cls of matchedClassNames) {
+        if (vendorClassIds.has(classNodeId(cls))) vEntry.classes.add(cls);
+      }
+    }
+
+    if (!spellPool.has(spell.id)) {
+      const d = spell;
+      const details: SpellDetails = {};
+      for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
+        if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
+      }
+      const line = spellLineOf(d.id, helpers);
+      spellPool.set(spell.id, { id: d.id, name: d.label, classes: matchingClasses, ...(line ? { spellLine: line.label } : {}), ...details });
+    }
   }
 
   // Step 5 — narrow to specific zones (if any pinned)
   if (specificZoneIds?.length) {
     const zoneSet = new Set(specificZoneIds);
-    for (const zoneId of zoneSpells.keys()) {
-      if (!zoneSet.has(zoneId)) zoneSpells.delete(zoneId);
+    for (const zoneId of zoneSpellIds.keys()) {
+      if (!zoneSet.has(zoneId)) {
+        zoneSpellIds.delete(zoneId);
+        zoneVendors.delete(zoneId);
+      }
     }
   }
 
   // Rank with split faction awareness
   const rankings: ZoneRanking[] = [];
-  for (const [zoneId, spells] of zoneSpells) {
-    const base = buildZoneRankingBase(zoneId, spells.length, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
-    rankings.push({
-      ...base,
-      spells: spells.sort((a, b) =>
-        Math.min(...a.classes.map(c => c.level)) - Math.min(...b.classes.map(c => c.level)) ||
-        a.name.localeCompare(b.name)
-      ),
-    });
+  for (const [zoneId, spellIds] of zoneSpellIds) {
+    const base = buildZoneRankingBase(zoneId, spellIds.size, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
+    const vendors = [...(zoneVendors.get(zoneId)?.values() ?? [])]
+      .map((v) => ({ id: v.npc.id, name: v.npc.label, classes: [...v.classes].sort() }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+    rankings.push({ ...base, vendors, spellIds: [...spellIds] });
   }
 
-  return sortRankings(rankings);
+  return {
+    zones: sortRankings(rankings),
+    spells: [...spellPool.values()].sort((a, b) =>
+      Math.min(...a.classes.map((c) => c.level)) - Math.min(...b.classes.map((c) => c.level)) ||
+      a.name.localeCompare(b.name)
+    ),
+  };
 }
 
 export interface ItemVendorInfo extends ItemDetails {

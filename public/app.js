@@ -592,29 +592,24 @@ function setupPlanner() {
   }
   document.getElementById("level-range").addEventListener("input", () => replan(1000));
 
-  const results = document.getElementById("results");
-  // zone-card (public/components/zone-card.js) owns its checkboxes inside
-  // its own shadow root and dispatches this composed event -- a delegated
-  // "change" listener here can't class/attribute-match e.target once it's
-  // retargeted to the zone-card host.
-  results.addEventListener("spell-owned-change", (e) => {
+  const planner = document.getElementById("planner");
+  // status-panel (public/components/status-panel.js) owns its checklist
+  // checkboxes inside its own shadow root and dispatches this composed
+  // event. A delegated "change" listener here can't class/attribute-match
+  // e.target once it's retargeted to the status-panel host. Delegated from
+  // #planner, not #results, since status-panel is a sibling of #results,
+  // not a descendant of it.
+  planner.addEventListener("spell-owned-change", (e) => {
     setSpellOwned(e.detail.spellId, e.detail.checked);
     renderRankings(lastRankings, lastLevelRange);
   });
 
-  const planner = document.getElementById("planner");
-  // Delegated from #planner, not #results — the toggle/clear actions live
-  // in #status-panel, a sibling of #results, not a descendant of it.
   // status-panel's own toggle/clear buttons live in its shadow root and
-  // dispatch composed toggle-owned/clear-owned events (handled below);
-  // this class-based listener only matches the empty-results fallback's
-  // plain "Show all" button (renderRankings), a plain element outside any
-  // shadow root that fires a real click.
+  // dispatch composed toggle-owned/clear-owned events (handled below).
+  // This class-based listener only matches the empty-results fallback's
+  // plain "Show out of era" button (renderRankings), a plain element
+  // outside any shadow root that fires a real click.
   planner.addEventListener("click", (e) => {
-    if (e.target.matches(".toggle-owned-btn")) {
-      showAllSpells = !showAllSpells;
-      renderRankings(lastRankings, lastLevelRange);
-    }
     if (e.target.matches(".toggle-out-of-era-btn")) {
       showOutOfEra = true;
       document.getElementById("show-out-of-era").checked = true;
@@ -631,7 +626,7 @@ function setupPlanner() {
   });
 
   // Purely a display filter over already-fetched data (era/outOfEra is
-  // already on every ranking rankZones() returns) -- re-render, not replan,
+  // already on every ranking rankZones() returns). Re-render, not replan,
   // same reasoning as quests.js's identical toggle.
   document.getElementById("show-out-of-era").addEventListener("change", (e) => {
     showOutOfEra = e.target.checked;
@@ -658,28 +653,37 @@ async function runPlan() {
   } else if (specificItems.length) {
     params.set("items", specificItems.map((it) => it.id).join(","));
   }
-  const rankings = await fetch(`api/plan?${params}`).then((r) => r.json());
+  const payload = await fetch(`api/plan?${params}`).then((r) => r.json());
 
-  if (rankings.error) {
-    document.getElementById("results").innerHTML = `<div class="no-results">${rankings.error}</div>`;
+  if (payload.error) {
+    document.getElementById("results").innerHTML = `<div class="no-results">${payload.error}</div>`;
     return;
   }
 
-  lastRankings = rankings;
+  lastRankings = payload;
   lastLevelRange = { min: levelMin, max: levelMax };
-  renderRankings(rankings, lastLevelRange);
+  renderRankings(payload, lastLevelRange);
 }
 
-function renderRankings(rankings, { min: levelMin, max: levelMax }) {
+// `payload` is /api/plan's raw response: for Spells, { zones, spells }
+// (src/graph.ts's rankZones -- zones carry a vendor+classes summary per
+// zone, decisions/class-spell-vendor-model.md; the flat spells array is the
+// one deduplicated pool of matching spell detail); for any other type, a
+// plain ZoneRanking[] with each zone's own items array (rankZonesByCategory,
+// unchanged).
+function renderRankings(payload, { min: levelMin, max: levelMax }) {
   const el = document.getElementById("results");
   const statusEl = document.getElementById("status-panel");
+  const isSpells = selectedType === SPELLS_TYPE;
+  const rankings = isSpells ? payload.zones : payload;
+  const spellPool = isSpells ? payload.spells : null;
+
   if (!rankings.length) {
     el.innerHTML = '<div class="no-results">No vendors found.</div>';
     statusEl.data = null;
     return;
   }
 
-  const isSpells = selectedType === SPELLS_TYPE;
   const owned = getOwnedSpells();
   // "any" only neutralizes its own dimension server-side (a real KOS from
   // race, say, still shows even with deity set to Any) — so faction/badge
@@ -692,16 +696,23 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const accessible = visibleRankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
   const wontSell = visibleRankings.filter((r) => r.faction === "wont_sell");
   const kos = visibleRankings.filter((r) => r.faction === "kos");
-  // r.spells/r.items are mutually exclusive per src/graph.ts's
-  // rankZones()/rankZonesByCategory() -- whichever one this batch of
-  // rankings actually carries is the one selectedType says it should.
-  const goodsKey = isSpells ? "spells" : "items";
-  const allGoodIds = new Set(accessible.flatMap((r) => r[goodsKey].map((g) => g.id)));
-  const totalGoods = allGoodIds.size;
-  // Items have no "owned" concept in this app -- status-panel (and the
-  // mana-bar/toggle/clear UI it owns) only renders that block when
-  // ownedCount isn't null/undefined.
-  const ownedCount = isSpells ? [...allGoodIds].filter((id) => owned.has(id)).length : undefined;
+
+  // totalGoods/ownedCount for Spells: dedupe the ids reachable from
+  // accessible+era-visible zones (r.spellIds), then look up full detail
+  // from the top-level spells pool for the status-panel checklist. Items
+  // have no owned concept, so status-panel's mana-bar/toggle/clear UI only
+  // renders when ownedCount isn't null/undefined.
+  let totalGoods, ownedCount, accessibleSpells;
+  if (isSpells) {
+    const accessibleIds = new Set(accessible.flatMap((r) => r.spellIds));
+    accessibleSpells = spellPool.filter((s) => accessibleIds.has(s.id));
+    totalGoods = accessibleSpells.length;
+    ownedCount = accessibleSpells.filter((s) => owned.has(s.id)).length;
+  } else {
+    const allGoodIds = new Set(accessible.flatMap((r) => r.items.map((g) => g.id)));
+    totalGoods = allGoodIds.size;
+    ownedCount = undefined;
+  }
 
   const warnings = [];
   const ignoredDims = [raceIgnored && "race", classIgnored && "class", deityIgnored && "deity"].filter(Boolean);
@@ -719,50 +730,32 @@ function renderRankings(rankings, { min: levelMin, max: levelMax }) {
   const levelText = isSpells ? (levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`) : null;
 
   // status-panel (public/components/status-panel.js) owns the meta text,
-  // warnings, progress bar, and toggle/clear buttons' own markup -- this
-  // just hands it the numbers. The empty-results "Show all" fallback
-  // (below) stays a plain .text-action link instead of a MacroButton,
-  // since it sits inline in body text, not a dedicated action row.
+  // warnings, progress bar, toggle/clear buttons, and (Spells) the
+  // checklist itself -- this just hands it the numbers and, for Spells,
+  // the filtered spell pool plus the live owned Set.
   statusEl.data = {
     totalGoods, goodsLabel: isSpells ? "spell" : "item", accessibleCount: accessible.length,
     levelText, warnings, ownedCount, showAllSpells,
+    ...(isSpells ? { spells: accessibleSpells, owned } : {}),
   };
 
   el.innerHTML = "";
 
-  // Computed over the *entire* rankings array up front (not discovered
-  // incrementally as cards get lazily rendered) so the "all owned" empty
-  // state below is correct immediately, without needing to have scrolled
-  // through the whole lazy list first. Items have no owned concept, so this
-  // is just visibleRankings unfiltered for any non-Spells type.
-  const renderableZones = !isSpells ? visibleRankings : visibleRankings.filter(
-    (r) => showAllSpells || r.spells.some((s) => !owned.has(s.id))
-  );
-
-  // Every zone had a real spell in it, but every one of those spells is
-  // marked owned — the header above still says "N spell(s) across M
-  // zone(s)," so without this the results area just goes blank with no clue
-  // why. Only reachable when !showAllSpells, since showAllSpells never
-  // filters anything out of renderableZones. For a non-Spells type,
-  // renderableZones === visibleRankings always, so this can only be the
-  // out-of-era branch below, never the all-owned one.
-  if (renderableZones.length === 0) {
+  // Zones render regardless of owned state now -- a zone's vendor+classes
+  // summary (Spells) stays useful even once everything currently reachable
+  // is owned, since the same vendors still sell there for next time. Only
+  // the era filter can empty this list.
+  if (visibleRankings.length === 0) {
     const msg = document.createElement("div");
     msg.className = "no-results";
-    // visibleRankings (not rankings) is the relevant emptiness check here --
-    // every real result could be hidden entirely by the era filter with
-    // none of them owned at all, which is a different cause than the
-    // all-owned case below and needs its own way out.
-    msg.innerHTML = visibleRankings.length === 0
-      ? `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`
-      : `All matching spells are marked owned. <button class="text-action toggle-owned-btn">Show all</button>`;
+    msg.innerHTML = `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`;
     el.appendChild(msg);
     return;
   }
 
-  lazyRenderList(el, renderableZones, (r) => {
+  lazyRenderList(el, visibleRankings, (r) => {
     const card = document.createElement("zone-card");
-    card.setData(r, owned, showAllSpells);
+    card.setData(r);
     return card;
   });
 }

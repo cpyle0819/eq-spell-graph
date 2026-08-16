@@ -72,13 +72,17 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spells
   // type (default "Spells", so old saved state/URLs with no type param keep
   // working) selects which sold-goods flavor to rank zones by. "Spells"
-  // ranks via rankZones() exactly as before (class+level+spell-line
-  // matching against spell.class_levels); any other type (a real category
-  // from /api/vendor-categories, e.g. "Armor") ranks via
-  // rankZonesByCategory() instead -- class still narrows results (via the
-  // item's own `classes` field, empty/absent = everyone), but there's no
-  // level or spell-line equivalent for items, so those params are ignored
-  // for a non-Spells type.
+  // ranks via rankZones() (class+level+spell-line matching against
+  // spell.class_levels), returning { zones, spells }: zones carry a
+  // vendor+classes summary per zone (decisions/class-spell-vendor-model.md),
+  // while the flat `spells` array is the one deduplicated pool of matching
+  // spell detail the frontend's status panel renders as its owned-tracking
+  // checklist. Any other type (a real category from /api/vendor-categories,
+  // e.g. "Armor") ranks via rankZonesByCategory() instead, returning a plain
+  // ZoneRanking[] with each zone's own `items` array, unchanged -- class
+  // still narrows results (via the item's own `classes` field, empty/absent
+  // = everyone), but there's no level or spell-line equivalent for items, so
+  // those params are ignored for a non-Spells type.
   if (pathname === "/api/plan") {
     const type = searchParams.get("type") || SPELLS_TYPE;
     const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
