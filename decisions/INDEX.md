@@ -36,6 +36,7 @@ One file per decision under `decisions/`. Read the specific file(s) relevant to 
 - [Tech stack](tech-stack.md)
 - [Client-side shell router: app-header/app-footer persist across navigation](client-side-shell-router.md)
 - [`graph.json` nodes/edges are flat objects, not `{data:{...}}`](flat-node-edge-shape.md)
+- [Class spell vendors: a `class` node type and `sells_spells_for` edge](class-spell-vendor-model.md)
 
 ## Faction System (EQ Domain)
 
