@@ -205738,12 +205738,6 @@
       "type": "sells"
     },
     {
-      "id": "e-008-sells-989",
-      "source": "vendor:north-kaladim:tempia-lauley",
-      "target": "spell:ward-undead",
-      "type": "sells"
-    },
-    {
       "id": "e-008-located_in-990",
       "source": "vendor:north-kaladim:tempia-lauley",
       "target": "zone:north-kaladim",
@@ -206026,12 +206020,6 @@
       "type": "sells"
     },
     {
-      "id": "e-008-sells-1871",
-      "source": "vendor:new-sebilis-expedition:zealot-zorshais",
-      "target": "spell:resist-disease",
-      "type": "sells"
-    },
-    {
       "id": "e-008-located_in-1872",
       "source": "vendor:new-sebilis-expedition:zealot-zorshais",
       "target": "zone:new-sebilis-expedition",
@@ -206218,12 +206206,6 @@
       "type": "sells"
     },
     {
-      "id": "e-008-sells-2252",
-      "source": "vendor:greater-faydark:hendricks",
-      "target": "spell:ring-of-surefall-glade",
-      "type": "sells"
-    },
-    {
       "id": "e-008-located_in-2253",
       "source": "vendor:greater-faydark:hendricks",
       "target": "zone:greater-faydark",
@@ -206234,12 +206216,6 @@
       "source": "vendor:toxxulia-forest:martyn-firechaser",
       "target": "zone:toxxulia-forest",
       "type": "located_in"
-    },
-    {
-      "id": "e-008-sells-2322",
-      "source": "vendor:greater-faydark:hendricks",
-      "target": "spell:circle-of-surefall-glade",
-      "type": "sells"
     },
     {
       "id": "e-008-sells-2325",
@@ -206440,22 +206416,10 @@
       "type": "located_in"
     },
     {
-      "id": "e-008-sells-2903",
-      "source": "vendor:skyshrine:guardian-seacly",
-      "target": "spell:brilliance",
-      "type": "sells"
-    },
-    {
       "id": "e-008-located_in-2904",
       "source": "vendor:skyshrine:guardian-seacly",
       "target": "zone:skyshrine",
       "type": "located_in"
-    },
-    {
-      "id": "e-008-sells-2910",
-      "source": "vendor:new-sebilis-expedition:conjuror-matranak",
-      "target": "spell:bounce",
-      "type": "sells"
     },
     {
       "id": "e-008-located_in-2911",
@@ -206468,12 +206432,6 @@
       "source": "vendor:new-sebilis-expedition:defector-jabitzu",
       "target": "zone:new-sebilis-expedition",
       "type": "located_in"
-    },
-    {
-      "id": "e-008-sells-2914",
-      "source": "vendor:new-sebilis-expedition:heretic-mkoriku",
-      "target": "spell:bounce",
-      "type": "sells"
     },
     {
       "id": "e-008-located_in-2915",
@@ -206497,12 +206455,6 @@
       "id": "e-008-sells-2942",
       "source": "vendor:south-qeynos:caleah-herblender",
       "target": "spell:gasping-embrace",
-      "type": "sells"
-    },
-    {
-      "id": "e-008-sells-2950",
-      "source": "vendor:skyshrine:zildainez",
-      "target": "spell:swift-like-the-wind",
       "type": "sells"
     },
     {
@@ -206590,12 +206542,6 @@
       "type": "located_in"
     },
     {
-      "id": "e-008-sells-3271",
-      "source": "vendor:skyshrine:guardian-seacly",
-      "target": "spell:greater-conjuration-earth",
-      "type": "sells"
-    },
-    {
       "id": "e-008-located_in-3400",
       "source": "vendor:ak-anon:clockwork-merchant-lg-8",
       "target": "zone:ak-anon",
@@ -206671,18 +206617,6 @@
       "id": "e-008-sells-3804",
       "source": "vendor:west-cabilis:lithrise-frizen",
       "target": "spell:envenomed-bolt",
-      "type": "sells"
-    },
-    {
-      "id": "e-008-sells-3805",
-      "source": "vendor:new-sebilis-expedition:zealot-zorshais",
-      "target": "spell:divine-purpose",
-      "type": "sells"
-    },
-    {
-      "id": "e-008-sells-3806",
-      "source": "vendor:new-sebilis-expedition:zealot-zorshais",
-      "target": "spell:flame-of-light",
       "type": "sells"
     },
     {
@@ -431451,6 +431385,72 @@
       "id": "e-sells_spells_for-41398",
       "source": "vendor:neriak-commons:kis-k-jartan",
       "target": "class:wizard",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36647",
+      "source": "vendor:greater-faydark:hendricks",
+      "target": "class:druid",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36648",
+      "source": "vendor:greater-faydark:hendricks",
+      "target": "class:ranger",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36649",
+      "source": "vendor:north-kaladim:tempia-lauley",
+      "target": "class:cleric",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36650",
+      "source": "vendor:north-kaladim:tempia-lauley",
+      "target": "class:paladin",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36651",
+      "source": "vendor:new-sebilis-expedition:zealot-zorshais",
+      "target": "class:cleric",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36652",
+      "source": "vendor:new-sebilis-expedition:zealot-zorshais",
+      "target": "class:paladin",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36653",
+      "source": "vendor:skyshrine:zildainez",
+      "target": "class:enchanter",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36654",
+      "source": "vendor:skyshrine:guardian-seacly",
+      "target": "class:magician",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36655",
+      "source": "vendor:skyshrine:guardian-seacly",
+      "target": "class:enchanter",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36656",
+      "source": "vendor:new-sebilis-expedition:conjuror-matranak",
+      "target": "class:magician",
+      "type": "sells_spells_for"
+    },
+    {
+      "id": "e-sells_spells_for-36657",
+      "source": "vendor:new-sebilis-expedition:heretic-mkoriku",
+      "target": "class:necromancer",
       "type": "sells_spells_for"
     }
   ]
