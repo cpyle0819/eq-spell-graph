@@ -1908,7 +1908,6 @@ export interface SpellPlanResult {
 
 export function rankZones(
   classNames: string[],
-  levels: number[],
   currentZoneId: string,
   race?: string,
   primaryClass?: string,
@@ -1974,36 +1973,33 @@ export function rankZones(
   // Per zone: which candidate spell ids are purchasable there (goodsCount
   // for scoring, and the ids the client intersects against the flat
   // `spells` pool below to work out which pool entries are reachable from
-  // the zones currently showing), and which vendors sell there, each tagged
-  // with the classes they cover that also match this search.
+  // the zones currently showing), and which vendors sell there. A vendor's
+  // `classes` is its real, full `sells_spells_for` roster, not narrowed to
+  // this search: a Cleric vendor surfaced only because Cure Poison is also
+  // druid-usable should still read "Cleric," not a blank badge that reads
+  // the same as a genuinely unclassified vendor.
   const zoneSpellIds = new Map<string, Set<string>>();
-  const zoneVendors = new Map<string, Map<string, { npc: NodeData; classes: Set<string> }>>();
+  const zoneVendors = new Map<string, Map<string, { npc: NodeData; classes: string[] }>>();
   const spellPool = new Map<string, SpellGoodInfo>();
 
-  // Step 4 — apply level filter per-spell, resolve real sellers (class
-  // vendors and any remaining per-spell vendors alike, see sellersOfSpell()
-  // above), and map into zones. Pinned spells bypass the level filter too
-  // and show all their real class/level pairs, same reasoning as the class
-  // bypass above.
+  // Step 4 — resolve real sellers (class vendors and any remaining
+  // per-spell vendors alike, see sellersOfSpell() above) and map into
+  // zones. No level filtering here: level is a purely client-side display
+  // filter over the returned `spells` pool now (public/app.js), since a
+  // class vendor sells its class's whole spellbook regardless of level, so
+  // which zones/vendors are relevant never depends on it (decisions/
+  // class-spell-vendor-model.md). matchingClasses carries every class/level
+  // pair for a class this search cares about, all levels included.
   for (const spell of candidates) {
-    let matchingClasses: { cls: string; level: number }[];
-    if (pinnedIds.has(spell.id)) {
-      matchingClasses = spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
-    } else if (classNames.length > 0) {
-      matchingClasses = spell.class_levels!
-        .filter((cl) => classNames.includes(cl.class) && levels.includes(cl.level))
-        .map((cl) => ({ cls: cl.class, level: cl.level }));
-    } else {
-      matchingClasses = spell.class_levels!
-        .filter((cl) => levels.includes(cl.level))
-        .map((cl) => ({ cls: cl.class, level: cl.level }));
-    }
+    const matchingClasses = pinnedIds.has(spell.id)
+      ? spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }))
+      : classNames.length > 0
+      ? spell.class_levels!.filter((cl) => classNames.includes(cl.class)).map((cl) => ({ cls: cl.class, level: cl.level }))
+      : spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
     if (!matchingClasses.length) continue;
 
     const sellerIds = sellersOfSpell(spell, helpers);
     if (!sellerIds.length) continue;
-
-    const matchedClassNames = new Set(matchingClasses.map((c) => c.cls));
 
     for (const npcId of sellerIds) {
       const npcNode = helpers.nodeById(npcId);
@@ -2016,11 +2012,12 @@ export function rankZones(
 
       if (!zoneVendors.has(zoneId)) zoneVendors.set(zoneId, new Map());
       const vendorsInZone = zoneVendors.get(zoneId)!;
-      if (!vendorsInZone.has(npcId)) vendorsInZone.set(npcId, { npc: npcNode, classes: new Set() });
-      const vEntry = vendorsInZone.get(npcId)!;
-      const vendorClassIds = new Set(helpers.edgesFrom(npcId, "sells_spells_for").map((e) => e.target));
-      for (const cls of matchedClassNames) {
-        if (vendorClassIds.has(classNodeId(cls))) vEntry.classes.add(cls);
+      if (!vendorsInZone.has(npcId)) {
+        const classes = helpers.edgesFrom(npcId, "sells_spells_for")
+          .map((e) => helpers.nodeById(e.target)?.label)
+          .filter((label): label is string => !!label)
+          .sort();
+        vendorsInZone.set(npcId, { npc: npcNode, classes });
       }
     }
 
@@ -2051,7 +2048,7 @@ export function rankZones(
   for (const [zoneId, spellIds] of zoneSpellIds) {
     const base = buildZoneRankingBase(zoneId, spellIds.size, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
     const vendors = [...(zoneVendors.get(zoneId)?.values() ?? [])]
-      .map((v) => ({ id: v.npc.id, name: v.npc.label, classes: [...v.classes].sort() }))
+      .map((v) => ({ id: v.npc.id, name: v.npc.label, classes: v.classes }))
       .sort((a, b) => a.name.localeCompare(b.name));
     rankings.push({ ...base, vendors, spellIds: [...spellIds] });
   }

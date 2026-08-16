@@ -590,7 +590,15 @@ function setupPlanner() {
   for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "include-ports"]) {
     document.getElementById(id).addEventListener("change", () => replan(300));
   }
-  document.getElementById("level-range").addEventListener("input", () => replan(1000));
+  // Level never changes which zones/vendors are relevant (a class vendor
+  // sells its class's whole spellbook at every level, decisions/
+  // class-spell-vendor-model.md) -- only which of the already-fetched
+  // spell pool's entries the status panel's checklist currently shows. No
+  // replan, and #results is never touched.
+  document.getElementById("level-range").addEventListener("input", () => {
+    lastLevelRange = getSelectedLevelRange();
+    if (lastRankings) updateStatusPanel(lastRankings, lastLevelRange);
+  });
 
   const planner = document.getElementById("planner");
   // status-panel (public/components/status-panel.js) owns its checklist
@@ -598,17 +606,19 @@ function setupPlanner() {
   // event. A delegated "change" listener here can't class/attribute-match
   // e.target once it's retargeted to the status-panel host. Delegated from
   // #planner, not #results, since status-panel is a sibling of #results,
-  // not a descendant of it.
+  // not a descendant of it. Owned state never changes which zones/vendors
+  // show either, so this only updates the status panel.
   planner.addEventListener("spell-owned-change", (e) => {
     setSpellOwned(e.detail.spellId, e.detail.checked);
-    renderRankings(lastRankings, lastLevelRange);
+    updateStatusPanel(lastRankings, lastLevelRange);
   });
 
   // status-panel's own toggle/clear buttons live in its shadow root and
   // dispatch composed toggle-owned/clear-owned events (handled below).
   // This class-based listener only matches the empty-results fallback's
   // plain "Show out of era" button (renderRankings), a plain element
-  // outside any shadow root that fires a real click.
+  // outside any shadow root that fires a real click. Out-of-era does
+  // change which zones show, so this one still triggers the full render.
   planner.addEventListener("click", (e) => {
     if (e.target.matches(".toggle-out-of-era-btn")) {
       showOutOfEra = true;
@@ -618,11 +628,11 @@ function setupPlanner() {
   });
   planner.addEventListener("toggle-owned", () => {
     showAllSpells = !showAllSpells;
-    renderRankings(lastRankings, lastLevelRange);
+    updateStatusPanel(lastRankings, lastLevelRange);
   });
   planner.addEventListener("clear-owned", () => {
     clearOwnedSpells();
-    renderRankings(lastRankings, lastLevelRange);
+    updateStatusPanel(lastRankings, lastLevelRange);
   });
 
   // Purely a display filter over already-fetched data (era/outOfEra is
@@ -644,7 +654,10 @@ async function runPlan() {
 
   document.getElementById("results").innerHTML = '<div class="loading">Searching Norrath...</div>';
 
-  const params = new URLSearchParams({ class: classes.join(","), levelMin: String(levelMin), levelMax: String(levelMax), from, race, primaryClass, deity, type: selectedType });
+  // levelMin/levelMax aren't part of this request: level is a purely
+  // client-side display filter over the returned spell pool (see
+  // setupPlanner()'s level-range handler), not a ranking input.
+  const params = new URLSearchParams({ class: classes.join(","), from, race, primaryClass, deity, type: selectedType });
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
   if (document.getElementById("include-ports").checked) params.set("ports", "1");
   if (selectedType === SPELLS_TYPE) {
@@ -668,18 +681,57 @@ async function runPlan() {
 // `payload` is /api/plan's raw response: for Spells, { zones, spells }
 // (src/graph.ts's rankZones -- zones carry a vendor+classes summary per
 // zone, decisions/class-spell-vendor-model.md; the flat spells array is the
-// one deduplicated pool of matching spell detail); for any other type, a
-// plain ZoneRanking[] with each zone's own items array (rankZonesByCategory,
-// unchanged).
-function renderRankings(payload, { min: levelMin, max: levelMax }) {
+// one deduplicated pool of matching spell detail, every level included);
+// for any other type, a plain ZoneRanking[] with each zone's own items
+// array (rankZonesByCategory, unchanged). renderZones() (#results) and
+// updateStatusPanel() (#status-panel) are two independent renders over the
+// same payload: which zones/vendors are relevant never depends on level or
+// owned state (a class vendor's inventory is the whole class's spellbook
+// regardless of level, decisions/class-spell-vendor-model.md), only on a
+// fresh fetch or the out-of-era toggle, so a caller that only changes level
+// or owned state calls updateStatusPanel() alone. renderRankings() runs
+// both.
+function renderRankings(payload, levelRange) {
+  renderZones(payload);
+  updateStatusPanel(payload, levelRange);
+}
+
+function renderZones(payload) {
   const el = document.getElementById("results");
+  const isSpells = selectedType === SPELLS_TYPE;
+  const rankings = isSpells ? payload.zones : payload;
+
+  if (!rankings.length) {
+    el.innerHTML = '<div class="no-results">No vendors found.</div>';
+    return;
+  }
+
+  const visibleRankings = showOutOfEra ? rankings : rankings.filter((r) => !r.outOfEra);
+
+  el.innerHTML = "";
+
+  if (visibleRankings.length === 0) {
+    const msg = document.createElement("div");
+    msg.className = "no-results";
+    msg.innerHTML = `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`;
+    el.appendChild(msg);
+    return;
+  }
+
+  lazyRenderList(el, visibleRankings, (r) => {
+    const card = document.createElement("zone-card");
+    card.setData(r);
+    return card;
+  });
+}
+
+function updateStatusPanel(payload, { min: levelMin, max: levelMax }) {
   const statusEl = document.getElementById("status-panel");
   const isSpells = selectedType === SPELLS_TYPE;
   const rankings = isSpells ? payload.zones : payload;
   const spellPool = isSpells ? payload.spells : null;
 
   if (!rankings.length) {
-    el.innerHTML = '<div class="no-results">No vendors found.</div>';
     statusEl.data = null;
     return;
   }
@@ -698,14 +750,20 @@ function renderRankings(payload, { min: levelMin, max: levelMax }) {
   const kos = visibleRankings.filter((r) => r.faction === "kos");
 
   // totalGoods/ownedCount for Spells: dedupe the ids reachable from
-  // accessible+era-visible zones (r.spellIds), then look up full detail
-  // from the top-level spells pool for the status-panel checklist. Items
-  // have no owned concept, so status-panel's mana-bar/toggle/clear UI only
-  // renders when ownedCount isn't null/undefined.
+  // accessible+era-visible zones (r.spellIds, level-independent), then
+  // narrow the top-level spell pool to those ids and to each spell's
+  // class/level pairs actually inside the current level range -- a spell
+  // drops out entirely once none of its pairs are in range, same as
+  // dropping a class that didn't match Shopping For. Items have no owned
+  // concept, so status-panel's mana-bar/toggle/clear UI only renders when
+  // ownedCount isn't null/undefined.
   let totalGoods, ownedCount, accessibleSpells;
   if (isSpells) {
     const accessibleIds = new Set(accessible.flatMap((r) => r.spellIds));
-    accessibleSpells = spellPool.filter((s) => accessibleIds.has(s.id));
+    accessibleSpells = spellPool
+      .filter((s) => accessibleIds.has(s.id))
+      .map((s) => ({ ...s, classes: s.classes.filter((c) => c.level >= levelMin && c.level <= levelMax) }))
+      .filter((s) => s.classes.length > 0);
     totalGoods = accessibleSpells.length;
     ownedCount = accessibleSpells.filter((s) => owned.has(s.id)).length;
   } else {
@@ -738,24 +796,4 @@ function renderRankings(payload, { min: levelMin, max: levelMax }) {
     levelText, warnings, ownedCount, showAllSpells,
     ...(isSpells ? { spells: accessibleSpells, owned } : {}),
   };
-
-  el.innerHTML = "";
-
-  // Zones render regardless of owned state now -- a zone's vendor+classes
-  // summary (Spells) stays useful even once everything currently reachable
-  // is owned, since the same vendors still sell there for next time. Only
-  // the era filter can empty this list.
-  if (visibleRankings.length === 0) {
-    const msg = document.createElement("div");
-    msg.className = "no-results";
-    msg.innerHTML = `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`;
-    el.appendChild(msg);
-    return;
-  }
-
-  lazyRenderList(el, visibleRankings, (r) => {
-    const card = document.createElement("zone-card");
-    card.setData(r);
-    return card;
-  });
 }

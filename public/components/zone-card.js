@@ -204,15 +204,17 @@ class ZoneCard extends HTMLElement {
     if (this.shadowRoot) this.render();
   }
 
-  // One row per vendor: name plus the class(es) it sells that match this
-  // search. Empty for a vendor still on per-spell sells edges (decisions/
-  // class-spell-vendor-model.md), so it renders with no badge rather than
-  // a wrong or guessed one.
+  // One row per vendor: name plus the vendor's own real class(es), never
+  // narrowed to this search. A Cleric vendor surfaced only because Cure
+  // Poison is also druid-usable still reads "Cleric," explaining why she's
+  // in a druid search rather than showing a blank badge indistinguishable
+  // from a genuinely unclassified vendor. Empty only for a vendor still on
+  // per-spell sells edges (decisions/class-spell-vendor-model.md).
   #renderVendorScroll(r) {
     const body = r.vendors.map((v) => `
       <div class="vendor-entry">
         <span class="vendor-entry-name">${v.name}</span>
-        ${v.classes.map((c) => `<span class="class-pill">${c.charAt(0).toUpperCase() + c.slice(1)}</span>`).join("")}
+        ${v.classes.map((c) => `<span class="class-pill">${c}</span>`).join("")}
       </div>
     `).join("");
     const count = r.spellIds.length;
