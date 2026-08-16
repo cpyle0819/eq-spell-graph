@@ -1,43 +1,22 @@
-// <zone-card faction="safe|neutral|wont_sell|kos">, with
-// `.setData(ranking, ownedSet, showAllSpells)` set as one atomic call (not
-// three separate setters) so a render never sees a partial mix of old and
-// new state. Renders the zone header (name + wiki link + faction LED dot,
-// faction badge, goods-count badge, hops badge), an optional nested
-// <route-path variant="stone">, and the scroll list, grouped by vendor
-// (issue #45) so everything one vendor sells sits together under that
-// vendor's name -- a good sold by more than one vendor in the zone repeats
-// under each. `ranking.spells` (checkbox + spell-chip + class/level pills,
-// with owned-tracking) and `ranking.items` (plain item-chip, no owned
-// concept for items -- see #renderSpellScroll()/#renderItemScroll()) are
-// mutually exclusive; exactly one is ever set on a given ranking (src/
-// graph.ts's rankZones()/rankZonesByCategory()). ownedSet/showAllSpells are
-// simply unused whenever it's an item ranking. The header's wiki link uses
-// `ranking.wikiTitle` (src/graph.ts's rankZones, from the zone node's
-// migration-023 `wiki_title` field) rather than deriving a URL from
-// `zoneName` — several zone labels don't match their eqlwiki.com page
-// title 1:1 (see decisions/zone-naming-mismatches.md), so a naive
-// label-to-URL guess would 404 for those. Each spell-chip already linked
-// to its own dedicated per-spell wiki page (card-base.js's `wikiUrl`, same
-// convention).
-//
-// Owns its own checkbox-change and hover-to-tooltip wiring rather than
-// delegating through app.js: once spell-chips/checkboxes live inside this
-// component's shadow root, a delegated listener on #results outside the
-// shadow tree can't class-match e.target (retargeting) or read
-// e.relatedTarget across the boundary at all. Checkbox changes dispatch a
-// composed `spell-owned-change` CustomEvent for app.js to react to (a
-// single change can affect *other* cards' visibility when showAllSpells is
-// false, so app.js re-renders the whole list rather than this card
-// patching itself). Hover/click-suppress for the wiki-link tooltip is
-// handled entirely internally, calling #detail-tooltip's show()/hide() API
-// directly -- this component already has full spell data via `ranking`, so
-// it never needs to reach into app.js's own state. spellStats() below
-// shapes a spell into <detail-tooltip>'s generic { name, description,
-// stats } contract -- that component itself has no spell-specific field
-// knowledge (see public/components/detail-tooltip.js), so this is the one
-// place spell fields become tooltip stat chips.
+// <zone-card faction="safe|neutral|wont_sell|kos">, with `.setData(ranking)`.
+// Renders the zone header (name + wiki link + faction LED dot, faction
+// badge, goods-count badge, hops badge), an optional nested <route-path
+// variant="stone">, and the scroll list: `ranking.vendors` (Spells) is a
+// compact list of vendor name + the class(es) they cover, since a class
+// vendor's inventory is the class's whole spell list, not a hand-picked
+// subset (decisions/class-spell-vendor-model.md) -- the spell detail itself
+// lives in status-panel.js's own deduplicated checklist, not here.
+// `ranking.items` (Items/Armor/etc, grouped by vendor -- issue #45, plain
+// item-chip, no owned concept) is the other shape a ranking can carry; the
+// two are mutually exclusive, exactly one set per ranking (src/graph.ts's
+// rankZones()/rankZonesByCategory() -- see #renderVendorScroll()/
+// #renderItemScroll()). The header's wiki link uses `ranking.wikiTitle`
+// (src/graph.ts's rankZones, from the zone node's migration-023
+// `wiki_title` field) rather than deriving a URL from `zoneName` — several
+// zone labels don't match their eqlwiki.com page title 1:1 (see decisions/
+// zone-naming-mismatches.md).
 import { RESET_CSS } from "./reset.js";
-import { WIKI_LINK_CSS, wikiUrl, wikiLink } from "./card-base.js";
+import { WIKI_LINK_CSS, wikiLink } from "./card-base.js";
 import { itemChipTag, hydrateItemChips } from "./item-chip.js";
 
 const FACTION_LABELS = { safe: "amiable", neutral: "indifferent", wont_sell: "dubious", kos: "scowls" };
@@ -50,25 +29,6 @@ const FACTION_TITLES = {
 };
 const DIMENSION_LABELS = { race: "race", class: "class", deity: "deity" };
 const titleCase = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
-
-// Shapes a spell into <detail-tooltip>'s generic { text, highlight? }[]
-// stat-chip contract -- spellType is the one highlighted chip (matches the
-// old spell-tooltip's hardcoded behavior), everything else is plain.
-function spellStats(spell) {
-  const dur = spell.duration
-    ? spell.duration.replace(/\s+minutes?/i, "m").replace(/\s+seconds?/i, "s").replace(/instant/i, "Instant")
-    : null;
-  const stats = [];
-  if (spell.spellType) stats.push({ text: spell.spellType, highlight: true });
-  if (spell.mana != null) stats.push({ text: `${spell.mana} mana` });
-  if (spell.targetType) stats.push({ text: spell.targetType });
-  if (dur) stats.push({ text: dur });
-  if (spell.castTime != null) stats.push({ text: `${spell.castTime.toFixed(1)}s cast` });
-  if (spell.resist && !/unresist/i.test(spell.resist)) stats.push({ text: `${spell.resist} resist` });
-  if (spell.skill) stats.push({ text: spell.skill });
-  if (spell.spellLine) stats.push({ text: spell.spellLine });
-  return stats;
-}
 
 // Same text for the badge and the LED dot (zone-name's ::before — a
 // pseudo-element can't carry its own title, so zone-name's covers it) —
@@ -191,11 +151,13 @@ ${WIKI_LINK_CSS}
 .spell-scroll::after { right: -11px; }
 
 .spell-vendor-list { display: flex; flex-direction: column; gap: 14px; }
-/* Vendor name as a heading once per vendor (issue #45), spells they sell
-   listed underneath -- same recipe as zone-dossier's .dossier-col-label
-   (display face + underline separates "heading" from "content" the way a
-   same-weight muted label wouldn't), re-declared here rather than shared
-   since each component's shadow root has its own stylesheet. */
+/* Vendor name as a heading once per vendor (issue #45), goods they sell
+   listed underneath. Items only -- Spells' own vendor list (.vendor-entry
+   below) is flat, one row per vendor, since there is no per-vendor spell
+   list left to head (decisions/class-spell-vendor-model.md). Same
+   "heading + content" recipe as zone-dossier's .dossier-col-label, re-
+   declared here rather than shared since each component's shadow root has
+   its own stylesheet. */
 .vendor-heading {
   font-family: var(--font-display);
   font-size: 13px; font-weight: 700;
@@ -204,48 +166,19 @@ ${WIKI_LINK_CSS}
   padding-bottom: 5px; margin-bottom: 8px;
   border-bottom: 2px solid var(--parch-accent);
 }
-.vendor-spell-list { display: flex; flex-direction: column; gap: 8px; }
-/* Item results (Armor/Adventuring Supplies/Tradeskill Supplies -- no
-   owned/checkbox tracking, no class/level pills, since item-chip's own
-   hover tooltip already carries the full stat block) -- item-chip is
-   inline-flex sized-to-content, so a wrapping flex row (not the spell
-   list's fixed checkbox-grid rows) is the natural layout. */
+/* Item results (Armor/Adventuring Supplies/Tradeskill Supplies) have no
+   owned/checkbox tracking and no class/level pills. item-chip's own hover
+   tooltip already carries the full stat block, so item-chip is inline-flex
+   sized-to-content and a wrapping flex row is the natural layout. */
 .vendor-item-list { display: flex; flex-wrap: wrap; gap: 6px 10px; }
-/* Checkbox is a fixed grid column; the name chip + class pills all live in
-   the second column as one flex-wrap flow. A short entry (one class) sits
-   entirely on a single line -- no line is spent on structure the content
-   doesn't need. A long one (many classes) wraps, and because everything is
-   confined to column 2, every wrapped line lands at the same left edge as
-   the spell name for free, reading as "belongs to this spell" without a
-   manual indent hack. This also fixes the original bug: the class/level
-   list used to be concatenated as unbreakable text inside the name's own
-   nowrap chip, so a spell with several classes ran straight off the card
-   with no wrap point at all -- each class is now its own wrappable pill
-   instead. */
-.spell-row { display: grid; grid-template-columns: 15px 1fr; column-gap: 8px; row-gap: 4px; }
-.spell-check { padding-top: 3px; }
-.spell-check input { cursor: pointer; accent-color: var(--gold); width: 15px; height: 15px; }
-.spell-content { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; }
-.spell-owned { opacity: 0.4; }
-.spell-owned .spell-chip { text-decoration: line-through; }
-.spell-owned .spell-chip::before { filter: grayscale(1) brightness(0.6); }
 
-.spell-chip {
-  font-size: 13px; padding: 3px 10px 3px 7px; border-radius: 3px;
-  background: rgba(122, 77, 5, 0.1);
-  border: 1px solid rgba(122, 77, 5, 0.35);
-  color: #5a3c14;
-  overflow-wrap: break-word; text-decoration: none;
-  display: inline-flex; align-items: center; min-width: 0;
-}
-/* spell gem — specular highlight biased top-right, matching the app's
-   light source. */
-.spell-chip::before {
-  content: ""; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; flex-shrink: 0;
-  background: radial-gradient(circle at 65% 30%, #ffd97a, #c98f1f 55%, #6e4a0d);
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.55);
-}
-@media (pointer: coarse) { .spell-chip { cursor: pointer; } }
+/* Spells: one row per vendor, name plus the class(es) it covers that match
+   the current search. No nested spell list: every vendor of a given class
+   carries the same full spellbook (decisions/class-spell-vendor-model.md),
+   so the matching spell detail itself renders once, in status-panel.js's
+   own deduplicated checklist, not repeated per vendor here. */
+.vendor-entry { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; padding: 3px 0; }
+.vendor-entry-name { font-size: 13px; color: #4a4232; }
 
 .class-pill {
   font-size: 11px; padding: 2px 7px; border-radius: 3px;
@@ -256,108 +189,42 @@ ${WIKI_LINK_CSS}
 
 class ZoneCard extends HTMLElement {
   #ranking = null;
-  #owned = new Set();
-  #showAll = false;
-  #isMouseDevice = window.matchMedia("(pointer: fine)").matches;
 
   connectedCallback() {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.adoptedStyleSheets = [sheet];
-      this.#wireEvents();
     }
     this.render();
   }
 
-  setData(ranking, owned, showAllSpells) {
+  setData(ranking) {
     this.#ranking = ranking;
-    this.#owned = owned;
-    this.#showAll = showAllSpells;
     this.setAttribute("faction", ranking.faction);
     if (this.shadowRoot) this.render();
   }
 
-  // Listening on shadowRoot itself (not `this`/the host) sees the real
-  // internal e.target/e.relatedTarget directly -- event retargeting to the
-  // host only applies to listeners outside the shadow tree (see tag-input.js).
-  #wireEvents() {
-    this.shadowRoot.addEventListener("change", (e) => {
-      const cb = e.target.closest("input[data-spell-id]");
-      if (!cb) return;
-      this.dispatchEvent(new CustomEvent("spell-owned-change", {
-        detail: { spellId: cb.dataset.spellId, checked: cb.checked },
-        bubbles: true, composed: true,
-      }));
-    });
-
-    if (!this.#isMouseDevice) return; // touch devices: tap navigates to wiki, no hover needed
-
-    this.shadowRoot.addEventListener("mouseover", (e) => {
-      const chip = e.target.closest(".spell-chip[data-spell-id]");
-      if (!chip) return;
-      const spell = this.#ranking?.spells.find((s) => s.id === chip.dataset.spellId);
-      if (spell) document.getElementById("detail-tooltip")?.show({ name: spell.name, description: spell.description, stats: spellStats(spell) }, chip);
-    });
-    this.shadowRoot.addEventListener("mouseout", (e) => {
-      if (!e.relatedTarget?.closest?.(".spell-chip[data-spell-id]")) {
-        document.getElementById("detail-tooltip")?.hide();
-      }
-    });
-    this.shadowRoot.addEventListener("click", (e) => {
-      const chip = e.target.closest(".spell-chip[data-spell-id]");
-      if (chip) e.preventDefault(); // hover is sufficient on desktop
-    });
+  // One row per vendor: name plus the vendor's own real class(es), never
+  // narrowed to this search. A Cleric vendor surfaced only because Cure
+  // Poison is also druid-usable still reads "Cleric," explaining why she's
+  // in a druid search rather than showing a blank badge indistinguishable
+  // from a genuinely unclassified vendor. Empty only for a vendor still on
+  // per-spell sells edges (decisions/class-spell-vendor-model.md).
+  #renderVendorScroll(r) {
+    const body = r.vendors.map((v) => `
+      <div class="vendor-entry">
+        <span class="vendor-entry-name">${v.name}</span>
+        ${v.classes.map((c) => `<span class="class-pill">${c}</span>`).join("")}
+      </div>
+    `).join("");
+    const count = r.spellIds.length;
+    return { body, count, badgeText: String(count), noun: "spell" };
   }
 
-  // Groups by vendor (issue #45) rather than one row per spell -- a spell
-  // sold by more than one vendor in this zone lands in each of their
-  // groups, so "clear out one vendor, then move to the next" is a single
-  // top-to-bottom pass through one group instead of hunting the whole list
-  // for that vendor's tag on every row.
-  #renderSpellScroll(r) {
-    const owned = this.#owned;
-    const showAllSpells = this.#showAll;
-    const visibleSpells = showAllSpells ? r.spells : r.spells.filter((s) => !owned.has(s.id));
-
-    const vendorGroups = new Map();
-    for (const s of r.spells) {
-      const isOwned = owned.has(s.id);
-      if (!showAllSpells && isOwned) continue;
-      for (const v of s.vendors) {
-        if (!vendorGroups.has(v)) vendorGroups.set(v, []);
-        vendorGroups.get(v).push(s);
-      }
-    }
-    const body = [...vendorGroups.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([vendor, vendorSpells]) => `
-        <div class="vendor-group">
-          <div class="vendor-heading">${vendor}</div>
-          <div class="vendor-spell-list">${vendorSpells.map((s) => {
-            const isOwned = owned.has(s.id);
-            return `
-              <div class="spell-row${isOwned ? " spell-owned" : ""}">
-                <label class="spell-check"><input type="checkbox" data-spell-id="${s.id}"${isOwned ? " checked" : ""}></label>
-                <div class="spell-content">
-                  <a class="spell-chip" data-spell-id="${s.id}" href="${wikiUrl(s.name)}" target="_blank" rel="noopener">${s.name}</a>
-                  ${s.classes.map((c) => `<span class="class-pill">${c.cls.charAt(0).toUpperCase() + c.cls.slice(1)} L${c.level}</span>`).join("")}
-                </div>
-              </div>
-            `;
-          }).join("")}</div>
-        </div>
-      `).join("");
-
-    const count = visibleSpells.length;
-    const ownedHere = r.spells.length - visibleSpells.length;
-    const badgeText = count + (ownedHere > 0 && !showAllSpells ? ` <span style="color:#4ade80;font-size:10px;">(${ownedHere} owned)</span>` : "");
-    return { body, count, badgeText, noun: "spell" };
-  }
-
-  // Item results (Armor/Adventuring Supplies/Tradeskill Supplies) have no
-  // owned/checkbox tracking and no class/level pills -- item-chip's own
-  // hover tooltip already carries the full stat block (ac/damage/classes/
-  // etc.), same component every other item listing in this app uses.
+  // Item results (Armor/Adventuring Supplies/Tradeskill Supplies), grouped
+  // by vendor (issue #45). item-chip's own hover tooltip already carries
+  // the full stat block (ac/damage/classes/etc.), same component every
+  // other item listing in this app uses.
   #renderItemScroll(r) {
     const vendorGroups = new Map();
     for (const it of r.items) {
@@ -381,7 +248,7 @@ class ZoneCard extends HTMLElement {
     const r = this.#ranking;
     if (!r) return;
 
-    const { body, count, badgeText, noun } = r.spells ? this.#renderSpellScroll(r) : this.#renderItemScroll(r);
+    const { body, count, badgeText, noun } = r.vendors ? this.#renderVendorScroll(r) : this.#renderItemScroll(r);
     const hopsText = r.hops === null ? "unreachable" : r.hops === 0 ? "you are here" : `${r.hops} hop${r.hops > 1 ? "s" : ""}`;
     const hasRoute = r.route && r.route.length > 1;
     const routeHtml = hasRoute ? `<route-path variant="stone"></route-path>` : "";

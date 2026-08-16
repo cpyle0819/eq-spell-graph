@@ -1,6 +1,7 @@
 # Edge semantics
 
-- `npc --sells--> spell`
+- `npc --sells--> spell` (only for vendors not yet resolved to a class edge, see below)
+- `npc --sells_spells_for--> class` (a confirmed class spell vendor, e.g. a Druid Guild vendor to `class:druid`, replaces per-spell `sells` edges for that vendor, see [class-spell-vendor-model.md](class-spell-vendor-model.md))
 - `npc --located_in--> zone`
 - `quest --located_in--> zone` (same edge type as above, reused — same relationship, different source type)
 - `zone --connects_to--> zone` (bidirectional; enables BFS pathfinding)

@@ -10,6 +10,8 @@ Vendors' categories (Armor, Adventuring Supplies, Tradeskill Supplies — migrat
 
 Scope is intentionally narrow: only the ~127 item/container nodes with a real `sells` edge got a `category` (migration 400) — not all ~2,515 item nodes. This answers "what can a vendor's Type filter offer," not "what kind of item is this in general"; drop-only/quest-only items have no bearing on that question. A category with nothing currently sold in it (e.g. "Weapons" — nothing sellable has `skill`/`damage` yet) simply never appears as a Type option, computed live from `/api/vendor-categories` rather than a fixed list — "let types drive the filters."
 
+A vendor's "Spells" category comes from either a direct `sells` edge to a spell node, or a `sells_spells_for` edge to a class (a confirmed class vendor, see [class-spell-vendor-model.md](class-spell-vendor-model.md)) with no per-spell `sells` edges at all.
+
 ## Backend: `rankZonesByCategory()` alongside `rankZones()`, sharing everything but candidate gathering
 
 `buildZoneRankingBase()` (`src/graph.ts`) extracts the route/faction/era/scoring machinery `rankZones()` (spells) already had — `rankZonesByCategory()` (any other type) calls the same function, differing only in how it gathers candidates:

@@ -69,16 +69,24 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getVendorsForSpell(id) };
   }
 
-  // GET /api/plan?class=shaman,druid&levels=9,10&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spells
+  // GET /api/plan?class=shaman,druid&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spells
   // type (default "Spells", so old saved state/URLs with no type param keep
   // working) selects which sold-goods flavor to rank zones by. "Spells"
-  // ranks via rankZones() exactly as before (class+level+spell-line
-  // matching against spell.class_levels); any other type (a real category
-  // from /api/vendor-categories, e.g. "Armor") ranks via
-  // rankZonesByCategory() instead -- class still narrows results (via the
-  // item's own `classes` field, empty/absent = everyone), but there's no
-  // level or spell-line equivalent for items, so those params are ignored
-  // for a non-Spells type.
+  // ranks via rankZones() (class+spell-line matching against
+  // spell.class_levels; no level here, see below), returning { zones,
+  // spells }: zones carry a vendor+classes summary per zone (decisions/
+  // class-spell-vendor-model.md), while the flat `spells` array is the one
+  // deduplicated pool of matching spell detail, every level included, the
+  // frontend's status panel renders as its owned-tracking checklist --
+  // level itself is a purely client-side display filter over that pool now
+  // (public/app.js), never sent here, since a class vendor's inventory is
+  // its class's whole spellbook regardless of level, so ranking zones never
+  // depended on it. Any other type (a real category from
+  // /api/vendor-categories, e.g. "Armor") ranks via rankZonesByCategory()
+  // instead, returning a plain ZoneRanking[] with each zone's own `items`
+  // array, unchanged -- class still narrows results (via the item's own
+  // `classes` field, empty/absent = everyone), but there's no level or
+  // spell-line equivalent for items either way.
   if (pathname === "/api/plan") {
     const type = searchParams.get("type") || SPELLS_TYPE;
     const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
@@ -102,13 +110,9 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
       };
     }
 
-    const levelMin = parseInt(searchParams.get("levelMin") || "1");
-    const levelMax = parseInt(searchParams.get("levelMax") || "1");
-    const levels: number[] = [];
-    for (let i = levelMin; i <= levelMax; i++) levels.push(i);
     const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
     const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
-    return { status: 200, body: rankZones(classNames, levels, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includePorts) };
+    return { status: 200, body: rankZones(classNames, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includePorts) };
   }
 
   // GET /api/route?from=Halas&to=Kelethin&ports=1&avoidDanger=1&stops=West

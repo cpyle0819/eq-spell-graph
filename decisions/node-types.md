@@ -1,6 +1,8 @@
 # Node types
 
-Current: `spell`, `npc`, `zone`, `stance`, `invocation`, `ability`, `spell_line`, `quest`, `quest_group`, `item`, `faction`, `era`, `recipe`, `container`. Generic typed nodes avoid schema changes when adding entity types.
+Current: `spell`, `npc`, `zone`, `stance`, `invocation`, `ability`, `spell_line`, `quest`, `quest_group`, `item`, `faction`, `era`, `recipe`, `container`, `class`. Generic typed nodes avoid schema changes when adding entity types.
+
+`class` (`class:druid`, `class:shaman`, etc.) is a deliberate exception to classes normally being a plain string field (`spell.class_levels[].class`, `item.classes[]`). See [Class spell vendors: a `class` node type and `sells_spells_for` edge](class-spell-vendor-model.md).
 
 There is no separate `mob` type anymore (migration 265 retired it) — every entity, hostile or friendly, is an `npc`, distinguished by its `roles` array (`vendor`/`quest_giver`/`guard`/`guildmaster`/`mob`; an npc can carry more than one). See [npc/mob unification and zone-type-ordered groups](npc-mob-unification-and-zone-groups.md), which supersedes [the original `mob` node type](mob-node-type.md) (kept for its sourcing-method history).
 
