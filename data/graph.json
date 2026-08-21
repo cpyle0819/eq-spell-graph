@@ -204650,12 +204650,34 @@
     {
       "id": "item:preserved-split-paw-eye",
       "label": "Preserved Split Paw Eye",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Range"
+      ],
+      "resists": {
+        "poison": 2
+      },
+      "effect": "Glimpse (Any Slot, Instant cast)",
+      "lightSource": true,
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "value": "9c"
     },
     {
       "id": "item:fine-steel-dagger",
       "label": "Fine Steel Dagger",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "damage": 3,
+      "delay": 19,
+      "skill": "Piercing",
+      "weight": 2.4,
+      "size": "Small",
+      "value": "4p 3g 1s 6c"
     },
     {
       "id": "npc:splitpaw:a-nisch-mas-mender",
@@ -204668,17 +204690,69 @@
     {
       "id": "item:cap-of-mending",
       "label": "Cap of Mending",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "classes": [
+        "Berserker",
+        "Bard",
+        "Beastlord",
+        "Cleric",
+        "Druid",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "ac": 3,
+      "stats": {
+        "str": 5,
+        "cha": 5
+      },
+      "resists": {
+        "poison": 3
+      },
+      "hp": 10,
+      "weight": 1,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "item:bronze-battle-axe",
       "label": "Bronze Battle Axe",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "damage": 6,
+      "delay": 37,
+      "weight": 9.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "value": "2p 6g 8s 6c"
     },
     {
       "id": "item:split-paw",
       "label": "Split Paw",
-      "type": "item"
+      "type": "item",
+      "effect": "Dance of the Fireflies (Any Slot, Instant cast; only activates between 7PM-5AM in-game)",
+      "weight": 0,
+      "size": "Tiny",
+      "magic": true,
+      "value": "9c"
     },
     {
       "id": "npc:splitpaw:a-nisch-mal-gnoll",
@@ -204691,7 +204765,20 @@
     {
       "id": "item:split-paw-hide-mask",
       "label": "Split Paw Hide Mask",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "ac": 3,
+      "resists": {
+        "magic": 5,
+        "poison": 5
+      },
+      "weight": 0.5,
+      "size": "Tiny",
+      "magic": true,
+      "lightSource": true,
+      "value": "3g 6s 7c"
     },
     {
       "id": "npc:splitpaw:a-lteth-val-deviant",
@@ -204704,17 +204791,50 @@
     {
       "id": "item:splitpaw-keepsake-ring",
       "label": "Splitpaw Keepsake Ring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Finger"
+      ],
+      "ac": 2,
+      "stats": {
+        "dex": 4
+      },
+      "hp": 10,
+      "weight": 0.5,
+      "size": "Tiny",
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:fine-steel-long-sword",
       "label": "Fine Steel Long Sword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "damage": 6,
+      "delay": 28,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "value": "5p 9g 2s 8c"
     },
     {
       "id": "item:tanned-splitpaw-skin",
       "label": "Tanned Splitpaw Skin",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "9c"
     },
     {
       "id": "item:gnoll-tongue",
@@ -204732,7 +204852,9 @@
     {
       "id": "item:basilisk-eye-stalk",
       "label": "Basilisk Eye Stalk",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "npc:lavastorm-mountains:a-fire-drake",
@@ -204771,12 +204893,50 @@
     {
       "id": "item:large-bone-shield",
       "label": "Large Bone Shield",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 8,
+      "resists": {
+        "disease": 1
+      },
+      "weight": 9.5,
+      "size": "Large",
+      "magic": true
     },
     {
       "id": "item:bone-spear",
       "label": "Bone Spear",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "skill": "Piercing",
+      "damage": 6,
+      "delay": 29,
+      "weight": 6.5,
+      "size": "Large",
+      "magic": true
     },
     {
       "id": "npc:lavastorm-mountains:a-fire-elemental",
@@ -204815,7 +204975,9 @@
     {
       "id": "item:imp-blood",
       "label": "Imp Blood",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
     },
     {
       "id": "npc:lavastorm-mountains:a-rock-dervish",
@@ -204828,77 +204990,147 @@
     {
       "id": "item:bloodstone-ring",
       "label": "Bloodstone Ring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Finger"
+      ],
+      "ac": 1,
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "9g 5s"
     },
     {
       "id": "item:putrid-bile",
       "label": "Putrid Bile",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:second-riddle-for-the-troll",
       "label": "Second Riddle for the Troll",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:russet-oxide",
       "label": "Russet Oxide",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:ashroot",
       "label": "Ashroot",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:ashweed",
       "label": "Ashweed",
-      "type": "item"
+      "type": "item",
+      "weight": 0.6,
+      "size": "Small"
     },
     {
       "id": "item:essence-of-fire",
       "label": "Essence of Fire",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "value": "4g 5c"
     },
     {
       "id": "item:spider-venom-sac",
       "label": "Spider Venom Sac",
-      "type": "item"
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small",
+      "value": "4g 8s"
     },
     {
       "id": "item:rune-of-ivy",
       "label": "Rune of Ivy",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:pouch-of-mistletoe-powder",
       "label": "Pouch of Mistletoe Powder",
-      "type": "item"
+      "type": "item",
+      "weight": 0.4,
+      "size": "Small",
+      "effect": "Befriend Animal",
+      "value": "3.3 platinum"
     },
     {
       "id": "item:pixie-wing",
       "label": "Pixie Wing",
-      "type": "item"
+      "type": "item",
+      "weight": 0,
+      "size": "Small"
     },
     {
       "id": "item:faerie-wing",
       "label": "Faerie Wing",
-      "type": "item"
+      "type": "item",
+      "weight": 0,
+      "size": "Small"
     },
     {
       "id": "item:fairy-dust",
       "label": "Fairy Dust",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:crushbone-belt",
       "label": "Crushbone Belt",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 1,
+      "weight": 1.3,
+      "size": "Small",
+      "source": "Related to the 'Orc Vest' and 'Crushbone Belts' quests"
     },
     {
       "id": "item:legionnaire-s-bracer",
       "label": "Legionnaire's Bracer",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "ac": 3,
+      "hp": 2,
+      "stats": {
+        "str": 1
+      },
+      "weight": 2,
+      "size": "Small",
+      "source": "Related to the Orange Sash of Order quest"
     },
     {
       "id": "item:cloth-gloves",
@@ -204908,22 +205140,67 @@
     {
       "id": "item:crushbone-shoulderpads",
       "label": "Crushbone Shoulderpads",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 1,
+      "weight": 1.9,
+      "size": "Small",
+      "value": "1 gold 4 silver 3 copper",
+      "source": "Related to the 'Orc Vest' and 'Crushbone Shoulderpads' quests"
     },
     {
       "id": "item:grimy-black-silk-robe",
       "label": "Grimy Black Silk Robe",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "ac": 6,
+      "mana": 10,
+      "stats": {
+        "agi": 2,
+        "int": 5
+      },
+      "weight": 3,
+      "size": "Medium"
     },
     {
       "id": "item:slave-trammels",
       "label": "Slave Trammels",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 15,
+      "stats": {
+        "agi": -2,
+        "dex": -2
+      },
+      "resists": {
+        "disease": 4,
+        "poison": 4
+      },
+      "weight": 150,
+      "size": "Medium",
+      "magic": true,
+      "value": "1 platinum, 4 gold, 2 silver, 9 copper"
     },
     {
       "id": "item:shackle-key-19",
       "label": "Shackle Key 19",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "lore": true,
+      "source": "Related to the 'Slave Keys' quest"
     },
     {
       "id": "item:cloth-pants",
@@ -204941,42 +205218,156 @@
     {
       "id": "item:rib-bone-stiletto",
       "label": "Rib-bone Stiletto",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter",
+        "Beastlord",
+        "Berserker"
+      ],
+      "stats": {
+        "str": 1,
+        "agi": 1,
+        "dex": 1
+      },
+      "damage": 4,
+      "delay": 18,
+      "skill": "Piercing",
+      "weight": 3,
+      "size": "Small"
     },
     {
       "id": "item:master-crushbone-cell-key",
       "label": "Master Crushbone Cell Key",
-      "type": "item"
+      "type": "item",
+      "noTrade": true,
+      "weight": 0,
+      "size": "Tiny",
+      "source": "Related to the \"Faydark Champions Long Sword\" quest"
     },
     {
       "id": "item:shackle-key-21",
       "label": "Shackle Key 21",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "lore": true,
+      "source": "Related to the \"Slave Keys\" quest"
     },
     {
       "id": "item:slaver-s-lash",
       "label": "Slaver`s Lash",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard"
+      ],
+      "skill": "1H Slashing",
+      "delay": 40,
+      "damage": 9,
+      "hp": 5,
+      "stats": {
+        "wis": 2,
+        "int": 2
+      },
+      "weight": 4,
+      "size": "Small"
     },
     {
       "id": "item:cloth-cord",
       "label": "Cloth Cord",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 1,
+      "weight": 0.2,
+      "size": "Small"
     },
     {
       "id": "item:spiky-splintmail",
       "label": "Spiky Splintmail",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Shaman",
+        "Berserker"
+      ],
+      "ac": 12,
+      "hp": 15,
+      "stats": {
+        "sta": 5
+      },
+      "weight": 16,
+      "size": "Large",
+      "effect": "Bramblecoat (Any Slot, Casting Time: 2.5 seconds) at Level 5",
+      "value": "12.3p"
     },
     {
       "id": "item:split-paw-hide-belt",
       "label": "Split Paw Hide Belt",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 5,
+      "resists": {
+        "poison": 5
+      },
+      "weight": 1,
+      "size": "Tiny",
+      "magic": true,
+      "value": "1g 8s 7c"
     },
     {
       "id": "item:nisch-mas-ilkvel",
       "label": "Nisch Mas Ilkvel",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "Cleric",
+        "Druid",
+        "Shaman"
+      ],
+      "ac": 10,
+      "mana": 15,
+      "stats": {
+        "sta": 6,
+        "wis": 6
+      },
+      "resists": {
+        "disease": 12
+      },
+      "weight": 7,
+      "size": "Medium",
+      "effect": "Mana Preservation II",
+      "lore": true
     },
     {
       "id": "item:gold-ring",
@@ -204986,17 +205377,70 @@
     {
       "id": "item:brutish-breastplate",
       "label": "Brutish Breastplate",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Shadow Knight"
+      ],
+      "ac": 24,
+      "stats": {
+        "sta": 7
+      },
+      "resists": {
+        "poison": 11,
+        "disease": 11
+      },
+      "weight": 15,
+      "size": "Medium",
+      "lore": true
     },
     {
       "id": "item:verishe-bracer-of-dominance",
       "label": "Verishe Bracer of Dominance",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Berserker"
+      ],
+      "ac": 6,
+      "stats": {
+        "str": 3,
+        "sta": 3,
+        "agi": 3
+      },
+      "resists": {
+        "magic": 6,
+        "disease": 6
+      },
+      "weight": 3.5,
+      "size": "Medium",
+      "lore": true
     },
     {
       "id": "item:fine-steel-great-staff",
       "label": "Fine Steel Great Staff",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Blunt",
+      "delay": 36,
+      "damage": 9,
+      "weight": 10,
+      "size": "Large",
+      "value": "6p 2g 3s 5c"
     },
     {
       "id": "npc:splitpaw:tesch-val-deval-nmak",
@@ -205009,12 +205453,35 @@
     {
       "id": "item:thick-amber-potion",
       "label": "Thick Amber Potion",
-      "type": "item"
+      "type": "item",
+      "weight": 0.4,
+      "size": "Small",
+      "lore": true,
+      "effect": "Greater Healing (Any Slot, Instant cast) at Level 45"
     },
     {
       "id": "item:fine-steel-scimitar",
       "label": "Fine Steel Scimitar",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Bard",
+        "Rogue"
+      ],
+      "skill": "1H Slashing",
+      "delay": 24,
+      "damage": 5,
+      "weight": 5,
+      "size": "Medium",
+      "value": "5p 5g 3c"
     },
     {
       "id": "npc:splitpaw:rosch-val-l-vlor",
@@ -205027,27 +205494,96 @@
     {
       "id": "item:looted-channeler-s-gloves",
       "label": "Looted Channeler's Gloves",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "ac": 2,
+      "mana": 5,
+      "stats": {
+        "dex": 4,
+        "int": 2
+      },
+      "resists": {
+        "disease": 5
+      },
+      "weight": 0.4,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "item:gnoll-s-eye",
       "label": "Gnoll's Eye",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true,
+      "source": "Related to \"The Gnoll Slayer\" quest"
     },
     {
       "id": "item:vacra-av-svim",
       "label": "Vacra Av Svim",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Bard",
+        "Rogue"
+      ],
+      "skill": "1H Slashing",
+      "delay": 31,
+      "damage": 10,
+      "ac": 6,
+      "stats": {
+        "str": 6,
+        "wis": 6,
+        "agi": 6
+      },
+      "hp": 5,
+      "weight": 5,
+      "size": "Medium",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:steel-knuckles",
       "label": "Steel Knuckles",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Monk",
+        "Beastlord"
+      ],
+      "skill": "Hand to Hand",
+      "delay": 20,
+      "damage": 3,
+      "weight": 2.5,
+      "size": "Small"
     },
     {
       "id": "item:journal-of-greater-enchantment",
       "label": "Journal of Greater Enchantment",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "noTrade": true,
+      "source": "Related to \"The Gnoll Slayer\" quest"
     },
     {
       "id": "npc:splitpaw:apprentice-ishva-mas",
@@ -205060,12 +205596,37 @@
     {
       "id": "item:apprentice-heretic-s-ring",
       "label": "Apprentice Heretic's Ring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Finger"
+      ],
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "ac": 2,
+      "mana": 75,
+      "stats": {
+        "sta": -10
+      },
+      "resists": {
+        "magic": 10
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "lore": true
     },
     {
       "id": "item:brain-of-the-ishva-mal",
       "label": "Brain of the Ishva Mal",
-      "type": "item"
+      "type": "item",
+      "weight": 0.5,
+      "size": "Tiny",
+      "lore": true,
+      "noTrade": true,
+      "source": "Related to \"The Summoning of Dread\" quest"
     },
     {
       "id": "spell:dustdevil",
