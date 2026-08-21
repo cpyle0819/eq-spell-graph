@@ -203122,17 +203122,42 @@
     {
       "id": "item:charred-bone-key",
       "label": "Charred Bone Key",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "effect": "Unlocks west second floor locked door in Befallen."
     },
     {
       "id": "item:smoked-glass-key",
       "label": "Smoked Glass Key",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "effect": "Unlocks east second floor locked door in Befallen."
     },
     {
       "id": "item:bone-bladed-claymore",
       "label": "Bone Bladed Claymore",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Slashing",
+      "damage": 17,
+      "delay": 45,
+      "stats": {
+        "agi": -8
+      },
+      "weight": 10,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight"
+      ],
+      "magic": true,
+      "lore": true
     },
     {
       "id": "npc:befallen:a-necro-theurgist",
@@ -203153,12 +203178,60 @@
     {
       "id": "item:pristine-studded-leather-bracer",
       "label": "Pristine Studded Leather Bracer",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 6,
+      "hp": 5,
+      "stats": {
+        "int": 2
+      },
+      "resists": {
+        "fire": 3
+      },
+      "weight": 1,
+      "size": "Small",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "noTrade": true
     },
     {
       "id": "item:blackened-wand",
       "label": "Blackened Wand",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "stats": {
+        "sta": 1
+      },
+      "resists": {
+        "magic": 5
+      },
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "lore": true,
+      "source": "Associated with the Monk Sash Quests and The Burning Dead quest line"
     },
     {
       "id": "npc:befallen:kahaptra-z-taj",
@@ -203171,7 +203244,35 @@
     {
       "id": "item:enchanted-fine-steel-great-staff",
       "label": "Enchanted Fine Steel Great Staff",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "2H Blunt",
+      "damage": 15,
+      "delay": 42,
+      "stats": {
+        "int": 4,
+        "wis": 4
+      },
+      "weight": 7,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Shaman",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter",
+        "Beastlord",
+        "Berserker"
+      ]
     },
     {
       "id": "npc:befallen:a-teir-dal-rogue",
@@ -203192,7 +203293,24 @@
     {
       "id": "item:fine-steel-rapier",
       "label": "Fine Steel Rapier",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "damage": 5,
+      "delay": 23,
+      "weight": 5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "value": "5pp 6gp 5sp 9cp (at CHA 80, Ally faction)"
     },
     {
       "id": "npc:befallen:soldier-of-v-zher",
@@ -203205,7 +203323,34 @@
     {
       "id": "item:pristine-studded-leather-sleeves",
       "label": "Pristine Studded Leather Sleeves",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 8,
+      "hp": 5,
+      "stats": {
+        "str": 3,
+        "sta": 2
+      },
+      "weight": 2,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "npc:befallen:baron-telyx-v-zher",
@@ -203218,12 +203363,62 @@
     {
       "id": "item:pristine-studded-leather-tunic",
       "label": "Pristine Studded Leather Tunic",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 14,
+      "stats": {
+        "str": 2,
+        "agi": 2,
+        "dex": 2
+      },
+      "resists": {
+        "poison": 5
+      },
+      "weight": 5,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:enchanted-fine-steel-rapier",
       "label": "Enchanted Fine Steel Rapier",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "damage": 5,
+      "delay": 19,
+      "stats": {
+        "str": 2,
+        "agi": 5
+      },
+      "weight": 4.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ]
     },
     {
       "id": "npc:befallen:a-teir-dal-shadowknight",
@@ -203236,12 +203431,56 @@
     {
       "id": "item:fine-steel-warhammer",
       "label": "Fine Steel Warhammer",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "damage": 6,
+      "delay": 30,
+      "weight": 7.3,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "value": "5pp 3gp 7sp 1cp (at CHA 80, indifferent faction)"
     },
     {
       "id": "item:barbed-legplates",
       "label": "Barbed Legplates",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 8,
+      "stats": {
+        "agi": 2
+      },
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true
     },
     {
       "id": "npc:befallen:knight-v-tal",
@@ -203254,27 +203493,90 @@
     {
       "id": "item:enchanted-fine-steel-long-sword",
       "label": "Enchanted Fine Steel Long Sword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "damage": 7,
+      "delay": 28,
+      "stats": {
+        "str": 5,
+        "agi": 2
+      },
+      "weight": 7.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ]
     },
     {
       "id": "item:fine-steel-spear",
       "label": "Fine Steel Spear",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "damage": 6,
+      "delay": 27,
+      "weight": 6.8,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord"
+      ],
+      "value": "6pp 1gp 3sp 9cp (at CHA 80, Indifferent faction)"
     },
     {
       "id": "item:skeletal-rod",
       "label": "Skeletal Rod",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "damage": 4,
+      "delay": 27,
+      "weight": 4.9,
+      "size": "Medium",
+      "value": "0pp"
     },
     {
       "id": "item:damask-amice",
       "label": "Damask Amice",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 2,
+      "weight": 0.3,
+      "size": "Small",
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "magic": true
     },
     {
       "id": "item:mote-of-major-potential",
       "label": "Mote of Major Potential",
-      "type": "item"
+      "type": "item",
+      "size": "Tiny"
     },
     {
       "id": "npc:befallen:a-dread-bone",
@@ -203295,7 +203597,9 @@
     {
       "id": "item:fish-scales",
       "label": "Fish Scales",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
     },
     {
       "id": "npc:kithicor-forest:a-bixie-drone",
@@ -203308,12 +203612,16 @@
     {
       "id": "item:bixie-wing",
       "label": "Bixie Wing",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
     },
     {
       "id": "item:honeycomb",
       "label": "Honeycomb",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "npc:misty-thicket:a-moss-snake",
@@ -203334,7 +203642,10 @@
     {
       "id": "item:spiderling-legs",
       "label": "Spiderling Legs",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small",
+      "value": "8 silver"
     },
     {
       "id": "npc:misty-thicket:a-goblin-warrior",
@@ -203360,12 +203671,20 @@
     {
       "id": "item:evil-eye-lens",
       "label": "Evil Eye Lens",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "effect": "Glimpse (20 charges, any slot, instant cast)"
     },
     {
       "id": "item:bunch-of-optic-nerves",
       "label": "Bunch of Optic Nerves",
-      "type": "item"
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small",
+      "magic": true
     },
     {
       "id": "item:small-brick-of-unrefined-ore",
@@ -203380,27 +203699,116 @@
     {
       "id": "item:cat-skull-cap",
       "label": "Cat Skull Cap",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "ac": 4,
+      "resists": {
+        "magic": 2
+      },
+      "weight": 0.5,
+      "size": "Small",
+      "magic": true,
+      "lore": true,
+      "noTrade": true,
+      "effect": "Enhancement Haste I (focus effect)"
     },
     {
       "id": "item:blackened-iron-legplates",
       "label": "Blackened Iron Legplates",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 7,
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "weight": 7,
+      "size": "Medium",
+      "magic": true
     },
     {
       "id": "item:fractured-femur",
       "label": "Fractured Femur",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 25,
+      "damage": 4,
+      "resists": {
+        "disease": 2
+      },
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "item:blackened-iron-spaulder",
       "label": "Blackened Iron Spaulder",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 5,
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "weight": 5,
+      "size": "Small",
+      "magic": true
     },
     {
       "id": "item:blackened-iron-bastard-sword",
       "label": "Blackened Iron Bastard Sword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight"
+      ],
+      "skill": "2H Slashing",
+      "damage": 20,
+      "delay": 47,
+      "weight": 9,
+      "size": "Medium",
+      "magic": true,
+      "lore": true
     },
     {
       "id": "item:large-brick-of-unrefined-ore",
@@ -203410,67 +203818,253 @@
     {
       "id": "item:sporestrand-shield",
       "label": "Sporestrand Shield",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "ac": 5,
+      "stats": {
+        "wis": 2,
+        "int": 2
+      },
+      "mana": 25,
+      "weight": 1,
+      "size": "Small",
+      "classes": [
+        "Cleric",
+        "Druid",
+        "Shaman",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "lightSource": true,
+      "lore": true
     },
     {
       "id": "item:fire-emerald",
       "label": "Fire Emerald",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "83pp 9g 8s"
     },
     {
       "id": "item:blackened-alloy-mail",
       "label": "Blackened Alloy Mail",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 16,
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "weight": 7,
+      "size": "Medium",
+      "magic": true
     },
     {
       "id": "item:blackened-iron-collar",
       "label": "Blackened Iron Collar",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 5,
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "weight": 3.5,
+      "size": "Small",
+      "magic": true
     },
     {
       "id": "item:blackened-alloy-legplates",
       "label": "Blackened Alloy Legplates",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "ac": 11,
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "weight": 5,
+      "size": "Medium",
+      "magic": true
     },
     {
       "id": "item:middle-of-a-fractured-rune",
       "label": "Middle of a Fractured Rune",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "lore": true
     },
     {
       "id": "item:gossamer-robe",
       "label": "Gossamer Robe",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 8,
+      "weight": 1,
+      "size": "Medium",
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "magic": true,
+      "effect": "Summoning Efficiency I (focus effect)",
+      "value": "2p 4g 9s 4c"
     },
     {
       "id": "item:ice-of-velious",
       "label": "Ice of Velious",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "3g 8s 4c"
     },
     {
       "id": "item:blackened-iron-mail",
       "label": "Blackened Iron Mail",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 12,
+      "weight": 9,
+      "size": "Medium",
+      "magic": true
     },
     {
       "id": "item:sleek-black-cape",
       "label": "Sleek Black Cape",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 6,
+      "weight": 2,
+      "size": "Large",
+      "magic": true
     },
     {
       "id": "item:blackened-alloy-spaulder",
       "label": "Blackened Alloy Spaulder",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 7,
+      "weight": 3,
+      "size": "Small",
+      "magic": true
     },
     {
       "id": "item:blackened-alloy-longsword",
       "label": "Blackened Alloy Longsword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 29,
+      "damage": 10,
+      "resists": {
+        "poison": 3
+      },
+      "weight": 2,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "magic": true,
+      "lore": true
     },
     {
       "id": "item:blackened-alloy-bracers",
       "label": "Blackened Alloy Bracers",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Wrist"
+      ],
+      "ac": 8,
+      "weight": 1.5,
+      "size": "Small",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ]
     },
     {
       "id": "npc:runnyeye-citadel:a-mimic",
@@ -203483,42 +204077,142 @@
     {
       "id": "item:sporali-defender-s-blade",
       "label": "Sporali Defender's Blade",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 37,
+      "damage": 17,
+      "weight": 5.5,
+      "size": "Medium",
+      "classes": [
+        "Paladin",
+        "Shadow Knight"
+      ],
+      "magic": true,
+      "lore": true
     },
     {
       "id": "item:blackened-iron-boots",
       "label": "Blackened Iron Boots",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 5,
+      "weight": 6.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true
     },
     {
       "id": "item:sapphire",
       "label": "Sapphire",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "98pp 8g"
     },
     {
       "id": "item:blackened-iron-waistband",
       "label": "Blackened Iron Waistband",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 5,
+      "weight": 4,
+      "size": "Small",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true
     },
     {
       "id": "item:blackened-iron-gloves",
       "label": "Blackened Iron Gloves",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 6,
+      "weight": 5.5,
+      "size": "Small",
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "magic": true
     },
     {
       "id": "item:golden-earring",
       "label": "Golden Earring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Ear"
+      ],
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "7g 6s 7c"
     },
     {
       "id": "item:minotaur-battle-axe",
       "label": "Minotaur Battle Axe",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Slashing",
+      "delay": 37,
+      "damage": 8,
+      "weight": 8.5,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "value": "~3pp"
     },
     {
       "id": "item:minotaur-horn",
       "label": "Minotaur Horn",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "weight": 0.1,
+      "size": "Small",
+      "effect": "Wind Resonance 10 (focus effect)",
+      "value": "9s 5c"
     },
     {
       "id": "npc:eastern-karana:a-gorge-hound",
@@ -203531,27 +204225,58 @@
     {
       "id": "item:cyclops-toes",
       "label": "Cyclops Toes",
-      "type": "item"
+      "type": "item",
+      "weight": 1.5,
+      "size": "Small",
+      "value": "8g 5s 7c",
+      "source": "Related to the Broom of Trilon Quest"
     },
     {
       "id": "item:split-paw-hide-tunic",
       "label": "Split Paw Hide Tunic",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "ac": 9,
+      "resists": {
+        "poison": 10
+      },
+      "weight": 4,
+      "size": "Tiny",
+      "value": "3g 7s 3c"
     },
     {
       "id": "item:wolves-bane",
       "label": "Wolves Bane",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "item:tanned-split-paw-skin",
       "label": "Tanned Split Paw Skin",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "9c"
     },
     {
       "id": "item:split-paw-hide-gloves",
       "label": "Split Paw Hide Gloves",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Hands"
+      ],
+      "ac": 4,
+      "stats": {
+        "dex": 3,
+        "wis": 2
+      },
+      "weight": 2,
+      "size": "Tiny",
+      "magic": true,
+      "value": "3g 6s 8c"
     },
     {
       "id": "item:basilisk-egg",
@@ -203890,12 +204615,37 @@
     {
       "id": "item:split-paw-tooth-necklace",
       "label": "Split Paw Tooth Necklace",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 2,
+      "stats": {
+        "cha": 5
+      },
+      "resists": {
+        "poison": 5
+      },
+      "weight": 0.2,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true,
+      "value": "1pp 5s 7c"
     },
     {
       "id": "item:fine-steel-morning-star",
       "label": "Fine Steel Morning Star",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "1H Blunt",
+      "delay": 38,
+      "damage": 8,
+      "weight": 10,
+      "size": "Medium",
+      "value": "5pp 9g 4s 7c"
     },
     {
       "id": "item:preserved-split-paw-eye",
