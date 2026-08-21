@@ -201786,7 +201786,9 @@
     {
       "id": "item:pristine-giant-scarab-carapace",
       "label": "Pristine Giant Scarab Carapace",
-      "type": "item"
+      "type": "item",
+      "weight": 5,
+      "size": "Medium"
     },
     {
       "id": "npc:lake-rathetear:a-gnoll-guard",
@@ -201799,7 +201801,16 @@
     {
       "id": "item:onyx-earring",
       "label": "Onyx Earring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Ear"
+      ],
+      "stats": {
+        "agi": 2
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true
     },
     {
       "id": "npc:blackburrow:a-gnoll",
@@ -201820,7 +201831,10 @@
     {
       "id": "item:gnoll-fang",
       "label": "Gnoll Fang",
-      "type": "item"
+      "type": "item",
+      "noTrade": true,
+      "weight": 0.1,
+      "size": "Small"
     },
     {
       "id": "npc:blackburrow:a-gnoll-elite",
@@ -201833,12 +201847,27 @@
     {
       "id": "item:mote-of-lesser-potential",
       "label": "Mote of Lesser Potential",
-      "type": "item"
+      "type": "item",
+      "size": "Tiny"
     },
     {
       "id": "item:crude-arrow",
       "label": "Crude Arrow",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Ammo"
+      ],
+      "damage": 3,
+      "weight": 0.1,
+      "size": "Tiny",
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Rogue"
+      ],
+      "skill": "Archery"
     },
     {
       "id": "npc:blackburrow:a-gnoll-scout",
@@ -201851,7 +201880,8 @@
     {
       "id": "item:mote-of-minor-potential",
       "label": "Mote of Minor Potential",
-      "type": "item"
+      "type": "item",
+      "size": "Tiny"
     },
     {
       "id": "npc:blackburrow:a-plague-ratling",
@@ -201864,7 +201894,9 @@
     {
       "id": "item:giant-rat-ear",
       "label": "Giant Rat Ear",
-      "type": "item"
+      "type": "item",
+      "weight": 0.8,
+      "size": "Small"
     },
     {
       "id": "npc:blackburrow:a-giant-plague-rat",
@@ -201877,7 +201909,26 @@
     {
       "id": "item:rat-paw-talisman",
       "label": "Rat Paw Talisman",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 2,
+      "mana": 2,
+      "stats": {
+        "wis": 2
+      },
+      "classes": [
+        "Cleric",
+        "Druid",
+        "Shaman",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "weight": 0.1,
+      "size": "Tiny"
     },
     {
       "id": "npc:blackburrow:a-patrolling-gnoll",
@@ -201914,17 +201965,32 @@
     {
       "id": "item:giant-snake-rattle",
       "label": "Giant Snake Rattle",
-      "type": "item"
+      "type": "item",
+      "weight": 1.2,
+      "size": "Medium"
     },
     {
       "id": "item:snake-venom-sac",
       "label": "Snake Venom Sac",
-      "type": "item"
+      "type": "item",
+      "weight": 0.2,
+      "size": "Small"
     },
     {
       "id": "item:ill-fitting-slippers",
       "label": "Ill-Fitting Slippers",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "ac": 2,
+      "stats": {
+        "str": 2,
+        "int": 2
+      },
+      "weight": 0.7,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "npc:blackburrow:an-elite-gnoll-guard",
@@ -201937,12 +202003,58 @@
     {
       "id": "item:studded-leather-collar",
       "label": "Studded Leather Collar",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 3,
+      "stats": {
+        "str": 1,
+        "sta": 1
+      },
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true
     },
     {
       "id": "item:spiked-collar",
       "label": "Spiked Collar",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 3,
+      "stats": {
+        "str": 3
+      },
+      "weight": 0.5,
+      "size": "Small",
+      "classes": [
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Shaman",
+        "Shadow Knight",
+        "Warrior"
+      ],
+      "magic": true,
+      "value": "1 Platinums, 1 Golds, 5 Silvers, 1 Coppers"
     },
     {
       "id": "npc:blackburrow:a-scruffy-gnoll",
@@ -201976,7 +202088,12 @@
     {
       "id": "item:goblin-ice-necklace",
       "label": "Goblin Ice Necklace",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "weight": 0.2,
+      "size": "Small"
     },
     {
       "id": "npc:everfrost-peaks:a-decaying-skeleton",
@@ -202005,7 +202122,18 @@
     {
       "id": "item:runed-sabertooth-girdle",
       "label": "Runed Sabertooth Girdle",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Waist"
+      ],
+      "ac": 5,
+      "stats": {
+        "sta": 5,
+        "wis": 5
+      },
+      "weight": 0.8,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "npc:blackburrow:a-gnoll-bouncer",
@@ -202018,12 +202146,45 @@
     {
       "id": "item:bronze-shortened-spear",
       "label": "Bronze Shortened Spear",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "skill": "Piercing",
+      "delay": 34,
+      "damage": 5,
+      "weight": 6,
+      "size": "Medium",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "value": "2 Platinums, 3 Golds, 9 Silvers, 8 Coppers"
     },
     {
       "id": "item:refugee-shroud",
       "label": "Refugee Shroud",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "ac": 2,
+      "mana": 10,
+      "stats": {
+        "cha": 4
+      },
+      "resists": {
+        "magic": 3
+      },
+      "weight": 0.2,
+      "size": "Small",
+      "lore": true,
+      "effect": "Shrink (Can Equip)"
     },
     {
       "id": "item:ivory",
@@ -202033,12 +202194,49 @@
     {
       "id": "item:bronze-spear",
       "label": "Bronze Spear",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "skill": "Piercing",
+      "delay": 32,
+      "damage": 5,
+      "weight": 8,
+      "size": "Large",
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "value": "2 Platinums, 9 Golds, 7 Silvers, 3 Coppers"
     },
     {
       "id": "item:sharpshooter-s-bandana",
       "label": "Sharpshooter's Bandana",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Head"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Druid",
+        "Monk",
+        "Rogue",
+        "Beastlord",
+        "Berserker"
+      ],
+      "ac": 3,
+      "stats": {
+        "str": 3,
+        "dex": 3
+      },
+      "weight": 0.3,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "npc:blackburrow:a-boisterous-gnoll",
@@ -202067,12 +202265,52 @@
     {
       "id": "item:bronze-rapier",
       "label": "Bronze Rapier",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "skill": "Piercing",
+      "damage": 4,
+      "delay": 28,
+      "weight": 6,
+      "size": "Medium"
     },
     {
       "id": "item:bronze-main-gauche",
       "label": "Bronze Main Gauche",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter",
+        "Beastlord",
+        "Berserker"
+      ],
+      "skill": "Piercing",
+      "damage": 3,
+      "delay": 23,
+      "weight": 4,
+      "size": "Small",
+      "value": "1 Platinum, 7 Gold, 2 Silver, 7 Copper (with CHA 80, Indifferent faction)"
     },
     {
       "id": "npc:blackburrow:a-gnoll-shaman",
@@ -202098,37 +202336,132 @@
     {
       "id": "item:mote-of-infinitesimal-potential",
       "label": "Mote of Infinitesimal Potential",
-      "type": "item"
+      "type": "item",
+      "size": "Tiny",
+      "source": "Associated with the quest 'Constructed Potential'"
     },
     {
       "id": "item:silver-amulet",
       "label": "Silver Amulet",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "2 Platinums, 3 Golds, 9 Silvers, 6 Coppers (with CHA 80, Indifferent faction)"
     },
     {
       "id": "item:bronze-mace",
       "label": "Bronze Mace",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "skill": "1H Blunt",
+      "damage": 6,
+      "delay": 38,
+      "weight": 9,
+      "size": "Medium",
+      "value": "3 Platinums, 3 Golds, 5 Silvers, 7 Coppers (with CHA 80 and Ally faction)",
+      "source": "Related to the 'Bandit Sashes' quest"
     },
     {
       "id": "item:well-worn-boots",
       "label": "Well Worn Boots",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "classes": [
+        "Druid",
+        "Monk",
+        "Shaman",
+        "Beastlord"
+      ],
+      "ac": 6,
+      "stats": {
+        "wis": 3
+      },
+      "weight": 3,
+      "size": "Small"
     },
     {
       "id": "item:leather-whip",
       "label": "Leather Whip",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue"
+      ],
+      "skill": "1H Slashing",
+      "damage": 5,
+      "delay": 30,
+      "weight": 5,
+      "size": "Medium"
     },
     {
       "id": "item:blackburrow-gnoll-pelt",
       "label": "Blackburrow Gnoll Pelt",
-      "type": "item"
+      "type": "item",
+      "weight": 3.5,
+      "size": "Large",
+      "source": "Used in the Monk Orange Headband quest"
     },
     {
       "id": "item:bark-splinted-shoulderpads",
       "label": "Bark Splinted Shoulderpads",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Shoulders"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "ac": 10,
+      "stats": {
+        "sta": 4
+      },
+      "resists": {
+        "disease": 3,
+        "poison": 3
+      },
+      "weight": 2.5,
+      "size": "Tiny"
     },
     {
       "id": "item:mammoth-skin",
@@ -202143,37 +202476,150 @@
     {
       "id": "item:hardened-bark-breastplate",
       "label": "Hardened Bark Breastplate",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Berserker"
+      ],
+      "ac": 16,
+      "resists": {
+        "disease": 10,
+        "poison": 10
+      },
+      "weight": 5.5,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "item:iron-visor",
       "label": "Iron Visor",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Face"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Berserker"
+      ],
+      "ac": 3,
+      "weight": 1.3,
+      "size": "Small"
     },
     {
       "id": "item:mithril-earring",
       "label": "Mithril Earring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Ear"
+      ],
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "3 Platinums, 4 Golds, 5 Silvers, 8 Coppers (with CHA 80, Indifferent faction)"
     },
     {
       "id": "item:bronze-two-handed-sword",
       "label": "Bronze Two Handed Sword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight"
+      ],
+      "skill": "2H Slashing",
+      "damage": 9,
+      "delay": 47,
+      "weight": 13,
+      "size": "Large",
+      "value": "4 Platinums, 0 Golds, 2 Silvers, 9 Coppers (with CHA 80, indifferent faction)"
     },
     {
       "id": "item:flame-agate",
       "label": "Flame Agate",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "value": "7 Platinums, 6 Golds, 7 Silvers, 3 Coppers (with CHA 80 and Ally faction)"
     },
     {
       "id": "item:giant-snake-fang",
       "label": "Giant Snake Fang",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Ranger",
+        "Shadow Knight",
+        "Bard",
+        "Rogue",
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter",
+        "Beastlord",
+        "Berserker"
+      ],
+      "skill": "Piercing",
+      "damage": 5,
+      "delay": 27,
+      "weight": 5,
+      "size": "Medium",
+      "source": "Connects to the 'Cazic Thule Symbol Quests' and 'Health Potion' quest chains"
     },
     {
       "id": "item:vagrant-s-tunic",
       "label": "Vagrant's Tunic",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Chest"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "ac": 8,
+      "hp": 5,
+      "stats": {
+        "wis": 4
+      },
+      "resists": {
+        "cold": 10
+      },
+      "weight": 5.5,
+      "size": "Tiny",
+      "effect": "Focus: Mana Preservation I"
     },
     {
       "id": "npc:blackburrow:a-gnoll-commander",
@@ -202194,17 +202640,56 @@
     {
       "id": "item:clay-totem",
       "label": "Clay Totem",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Cleric",
+        "Druid",
+        "Bard",
+        "Shaman"
+      ],
+      "stats": {
+        "wis": 7
+      },
+      "hp": 5,
+      "weight": 0.8,
+      "size": "Small",
+      "value": "1 platinum"
     },
     {
       "id": "item:dark-runed-leggings",
       "label": "Dark Runed Leggings",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Legs"
+      ],
+      "classes": [
+        "Necromancer",
+        "Wizard",
+        "Magician",
+        "Enchanter"
+      ],
+      "ac": 5,
+      "stats": {
+        "int": 5
+      },
+      "hp": 10,
+      "weight": 0.7,
+      "size": "Small",
+      "lore": true
     },
     {
       "id": "item:baby-joseph-sayer",
       "label": "Baby Joseph Sayer",
-      "type": "item"
+      "type": "item",
+      "weight": 0.5,
+      "size": "Small",
+      "lore": true,
+      "noTrade": true,
+      "source": "Quest item associated with the quest \"The Gnoll Slayer\"."
     },
     {
       "id": "npc:blackburrow:an-acolyte-of-elgnub",
@@ -202225,7 +202710,9 @@
     {
       "id": "item:terrorantula-silk",
       "label": "Terrorantula Silk",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Small"
     },
     {
       "id": "npc:befallen:a-skeletal-excavator",
@@ -202238,7 +202725,14 @@
     {
       "id": "item:cloth-choker",
       "label": "Cloth Choker",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Neck"
+      ],
+      "ac": 1,
+      "weight": 0.2,
+      "size": "Small",
+      "value": "1g 5s 3c (at CHA 80, indifferent faction)"
     },
     {
       "id": "npc:befallen:a-large-plague-rat",
@@ -202251,7 +202745,14 @@
     {
       "id": "item:cloth-cape",
       "label": "Cloth Cape",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Back"
+      ],
+      "ac": 2,
+      "weight": 0.4,
+      "size": "Medium",
+      "value": "0p 2g 4s 9c (at CHA 80, Ally faction)"
     },
     {
       "id": "npc:befallen:a-cracked-skeleton",
@@ -202272,7 +202773,13 @@
     {
       "id": "item:cloth-sleeves",
       "label": "Cloth Sleeves",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Arms"
+      ],
+      "ac": 2,
+      "weight": 0.3,
+      "size": "Small"
     },
     {
       "id": "npc:befallen:skeleton-l-rodd",
@@ -202285,12 +202792,41 @@
     {
       "id": "item:pristine-studded-leather-boots",
       "label": "Pristine Studded Leather Boots",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Feet"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman",
+        "Beastlord",
+        "Berserker"
+      ],
+      "ac": 6,
+      "stats": {
+        "agi": 5
+      },
+      "resists": {
+        "cold": 3
+      },
+      "weight": 3,
+      "size": "Small"
     },
     {
       "id": "item:rat-whiskers",
       "label": "Rat Whiskers",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Related to the quest \"Unsar's Glory\"; also sold by Jeena Firechaser in Kithicor Forest."
     },
     {
       "id": "npc:befallen:a-necro-neophyte",
@@ -202311,7 +202847,10 @@
     {
       "id": "item:splintered-wooden-key",
       "label": "Splintered Wooden Key",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "effect": "Unlocks first floor locked door in Befallen."
     },
     {
       "id": "npc:befallen:asaka-l-rei",
@@ -202324,7 +202863,34 @@
     {
       "id": "item:enchanted-fine-steel-morning-star",
       "label": "Enchanted Fine Steel Morning Star",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Monk",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "skill": "1H Blunt",
+      "damage": 7,
+      "delay": 30,
+      "stats": {
+        "str": 2,
+        "wis": 5
+      },
+      "weight": 9,
+      "size": "Medium",
+      "magic": true,
+      "value": "3p 5g 7s 1c"
     },
     {
       "id": "npc:befallen:a-plague-rat",
@@ -202337,7 +202903,25 @@
     {
       "id": "item:parrying-dagger",
       "label": "Parrying Dagger",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Secondary"
+      ],
+      "classes": [
+        "Warrior",
+        "Cleric",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight",
+        "Druid",
+        "Bard",
+        "Rogue",
+        "Shaman"
+      ],
+      "ac": 4,
+      "weight": 2.5,
+      "size": "Small",
+      "magic": true
     },
     {
       "id": "npc:befallen:a-putrid-skeleton",
@@ -202350,7 +202934,32 @@
     {
       "id": "item:ebon-scythe",
       "label": "Ebon Scythe",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Warrior",
+        "Shadow Knight",
+        "Berserker"
+      ],
+      "skill": "2H Slashing",
+      "stats": {
+        "str": 5,
+        "cha": -10,
+        "int": 2
+      },
+      "mana": 5,
+      "resists": {
+        "disease": -5,
+        "poison": -5
+      },
+      "damage": 17,
+      "delay": 45,
+      "weight": 15,
+      "size": "Large",
+      "magic": true,
+      "lore": true
     },
     {
       "id": "npc:befallen:a-necro-initiate",
@@ -202379,7 +202988,29 @@
     {
       "id": "item:silver-plated-war-sword",
       "label": "Silver Plated War Sword",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Warrior",
+        "Paladin",
+        "Ranger",
+        "Shadow Knight"
+      ],
+      "skill": "2H Slashing",
+      "stats": {
+        "str": 5,
+        "cha": -5
+      },
+      "hp": 15,
+      "damage": 15,
+      "delay": 38,
+      "weight": 4,
+      "size": "Medium",
+      "magic": true,
+      "lore": true,
+      "noTrade": true
     },
     {
       "id": "npc:befallen:a-necro-acolyte",
@@ -202392,7 +203023,28 @@
     {
       "id": "item:bronze-dagger",
       "label": "Bronze Dagger",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary",
+        "Secondary"
+      ],
+      "classes": [
+        "Bard",
+        "Enchanter",
+        "Magician",
+        "Necromancer",
+        "Ranger",
+        "Rogue",
+        "Shadow Knight",
+        "Warrior",
+        "Wizard"
+      ],
+      "skill": "Piercing",
+      "damage": 3,
+      "delay": 22,
+      "weight": 3,
+      "size": "Small",
+      "magic": false
     },
     {
       "id": "npc:befallen:an-elf-skeleton",
@@ -202405,27 +203057,59 @@
     {
       "id": "item:mallet-head",
       "label": "Mallet Head",
-      "type": "item"
+      "type": "item",
+      "weight": 4.5,
+      "size": "Small",
+      "lore": true,
+      "source": "Quest item for the \"Thex Mallet\" quest (wiki refers to it as \"Thex Mallet Head\")."
     },
     {
       "id": "item:mote-of-potential",
       "label": "Mote of Potential",
-      "type": "item"
+      "type": "item",
+      "size": "Tiny",
+      "source": "Connected to the quest \"Constructed Potential\"; used to upgrade gear and spells."
     },
     {
       "id": "item:bronze-knuckles",
       "label": "Bronze Knuckles",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Primary"
+      ],
+      "classes": [
+        "Monk"
+      ],
+      "skill": "Hand to Hand",
+      "damage": 3,
+      "delay": 22,
+      "weight": 3,
+      "size": "Small"
     },
     {
       "id": "item:copper-ring",
       "label": "Copper Ring",
-      "type": "item"
+      "type": "item",
+      "slots": [
+        "Finger"
+      ],
+      "stats": {
+        "sta": 1,
+        "cha": -1
+      },
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "lore": true
     },
     {
       "id": "item:necromancer-blood",
       "label": "Necromancer Blood",
-      "type": "item"
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "magic": true,
+      "source": "Connected to the quest \"Collier's Weapon Treatment\"."
     },
     {
       "id": "npc:befallen:a-greater-dread-bone",
