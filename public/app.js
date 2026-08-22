@@ -7,21 +7,21 @@
 import "./components/index.js";
 import { getOwnedSpells, setSpellOwned, clearOwnedSpells, lazyRenderList } from "./components.js";
 
-// Matches src/api.ts's own SPELLS_TYPE -- the one hardcoded vendor-goods
-// type (every other type is a real item.category value from migration 400,
-// read live off /api/vendor-categories).
-const SPELLS_TYPE = "Spells";
+// Matches src/graph.ts's own SPELL_TYPE -- the one hardcoded good type
+// (every other type is a real classifyItemType() value, read live off
+// /api/item-types).
+const SPELL_TYPE = "Spell";
 
 // --- State ---
 let zones = [];
 let availableClasses = [];
 let availableSpellLines = []; // { id, label }[]
-// /api/vendor-categories -- "Spells" always first/present, the rest are
-// whichever item categories (migration 400) actually have a real sells
-// edge right now (decisions/ "let types drive the filters").
-let availableTypes = [SPELLS_TYPE];
-let selectedType = SPELLS_TYPE;
-let lastRankings = null;
+// /api/item-types -- SPELL_TYPE always first/present, the rest are
+// whichever classifyItemType() values actually occur right now (decisions/
+// "let types drive the filters").
+let availableTypes = [SPELL_TYPE];
+let selectedType = SPELL_TYPE;
+let lastPayload = null;
 let lastLevelRange = { min: 1, max: 1 };
 let showAllSpells = false;
 // Out-of-era zones are hidden from results by default (decisions/
@@ -30,7 +30,7 @@ let showAllSpells = false;
 // a display filter over already-fetched data, so toggling it just
 // re-renders -- no replan needed.
 let showOutOfEra = false;
-let selectedClasses = []; // string[] -- doubles as spell.class_levels' class facet (Type=Spells) and item.classes' facet (any other Type), same roster either way
+let selectedClasses = []; // string[] -- doubles as spell.class_levels' class facet (Type=Spell) and item.classes' facet (any other Type), same roster either way
 let selectedSpellLines = []; // { id, label }[] -- Spells only
 let specificSpells = []; // { id, name } -- Spells only
 let specificItems = []; // { id, name } -- any non-Spells type
@@ -40,8 +40,8 @@ let planDebounce;
 function replan(delay = 300) { clearTimeout(planDebounce); planDebounce = setTimeout(runPlan, delay); }
 
 // --- Detail tooltip ---
-// zone-card (public/components/zone-card.js) owns hover-to-show and
-// click-suppress directly, scoped to its own shadow root -- a delegated
+// status-panel's own spell checklist (public/components/status-panel.js)
+// owns hover-to-show directly, scoped to its own shadow root -- a delegated
 // listener here can't reliably read e.target/e.relatedTarget for elements
 // retargeted across a shadow boundary. Scroll-to-hide has no such
 // dependency, so it stays here.
@@ -214,7 +214,7 @@ export async function init() {
     fetch("api/zones").then((r) => r.json()),
     fetch("api/classes").then((r) => r.json()),
     fetch("api/spell-lines").then((r) => r.json()),
-    fetch("api/vendor-categories").then((r) => r.json()),
+    fetch("api/item-types").then((r) => r.json()),
   ]);
   populateZoneList();
   setupPlanner();
@@ -253,8 +253,8 @@ function resetFilters() {
   showOutOfEra = false;
   document.getElementById("show-out-of-era").checked = false;
   document.getElementById("include-ports").checked = false;
-  selectedType = SPELLS_TYPE;
-  document.getElementById("type-select").value = SPELLS_TYPE;
+  selectedType = SPELL_TYPE;
+  document.getElementById("type-select").value = SPELL_TYPE;
   updateShoppingForVisibility();
   applyDefaults(); // resets selectedClasses to ["shaman"], zone to Qeynos, refreshes the level display
   renderSpellTags();
@@ -340,7 +340,7 @@ function restoreState() {
 // the other fields below) from localStorage, so applying the URL first would
 // just get clobbered.
 //
-// rankZones() bypasses its own class/level filters entirely for a pinned
+// rankGoods() bypasses its own class/level filters entirely for a pinned
 // spell (see decisions/), so levelMin/levelMax/classes aren't load-bearing
 // for the spell actually showing up — they're here so the planner's displayed
 // range and Shopping For chips make sense for what you just clicked, instead
@@ -354,8 +354,8 @@ function consumePinnedSpellFromUrl() {
   // state (restored just before this runs) had left Type on something
   // else, force it back so the pinned spell actually shows up in results
   // instead of silently vanishing under an item-type plan.
-  selectedType = SPELLS_TYPE;
-  document.getElementById("type-select").value = SPELLS_TYPE;
+  selectedType = SPELL_TYPE;
+  document.getElementById("type-select").value = SPELL_TYPE;
   updateShoppingForVisibility();
 
   const name = params.get("pinName") || id;
@@ -446,7 +446,7 @@ function setupClassSearch() {
 // than a second render pass, since nothing about the fields themselves
 // changes between types.
 function updateShoppingForVisibility() {
-  const isSpells = selectedType === SPELLS_TYPE;
+  const isSpells = selectedType === SPELL_TYPE;
   document.getElementById("level-row").hidden = !isSpells;
   document.getElementById("spellline-row").hidden = !isSpells;
   document.getElementById("specific-spells-row").hidden = !isSpells;
@@ -549,8 +549,8 @@ function setupItemSearch() {
   // goods that type can actually match -- same "types drive the filters"
   // idea as the Type select's own option list.
   itemTagInput.getMatches = async (q) => {
-    const category = selectedType === SPELLS_TYPE ? "" : selectedType;
-    const results = await fetch(`api/items/search?q=${encodeURIComponent(q)}&category=${encodeURIComponent(category)}`).then((r) => r.json());
+    const type = selectedType === SPELL_TYPE ? "" : selectedType;
+    const results = await fetch(`api/items/search?q=${encodeURIComponent(q)}&type=${encodeURIComponent(type)}`).then((r) => r.json());
     return results.map((r) => ({ id: r.id, name: r.label }));
   };
   itemTagInput.addEventListener("change", (e) => {
@@ -590,57 +590,53 @@ function setupPlanner() {
   for (const id of ["race-select", "primary-class-select", "deity-select", "zone-input", "include-ports"]) {
     document.getElementById(id).addEventListener("change", () => replan(300));
   }
-  // Level never changes which zones/vendors are relevant (a class vendor
+  // Level never changes which goods/offers are relevant (a class vendor
   // sells its class's whole spellbook at every level, decisions/
   // class-spell-vendor-model.md) -- only which of the already-fetched
-  // spell pool's entries the status panel's checklist currently shows. No
-  // replan, and #results is never touched.
+  // goods the status panel's checklist currently shows. No replan, and
+  // #results is never touched.
   document.getElementById("level-range").addEventListener("input", () => {
     lastLevelRange = getSelectedLevelRange();
-    if (lastRankings) updateStatusPanel(lastRankings, lastLevelRange);
+    if (lastPayload) updateStatusPanel(lastPayload, lastLevelRange);
   });
 
   const planner = document.getElementById("planner");
-  // status-panel (public/components/status-panel.js) owns its checklist
-  // checkboxes inside its own shadow root and dispatches this composed
-  // event. A delegated "change" listener here can't class/attribute-match
-  // e.target once it's retargeted to the status-panel host. Delegated from
-  // #planner, not #results, since status-panel is a sibling of #results,
-  // not a descendant of it. Owned state never changes which zones/vendors
-  // show either, so this only updates the status panel.
+  // Two independent owned checkboxes dispatch two differently-named composed
+  // events, both handled the same way: status-panel (public/components/
+  // status-panel.js) owns its own checklist checkboxes and dispatches
+  // `spell-owned-change`; good-card (public/components/good-card.js) owns
+  // its own per-result checkbox and dispatches `good-owned-change` (already
+  // calling setSpellOwned() on itself before dispatching, so this listener
+  // only needs to persist the status-panel one and refresh the status panel
+  // either way). A delegated "change" listener here can't class/attribute-
+  // match e.target once it's retargeted across either host's shadow
+  // boundary, hence the composed events. Delegated from #planner, not
+  // #results, since status-panel is a sibling of #results, not a
+  // descendant of it. Owned state never changes which goods/offers show
+  // either, so both only update the status panel.
   planner.addEventListener("spell-owned-change", (e) => {
     setSpellOwned(e.detail.spellId, e.detail.checked);
-    updateStatusPanel(lastRankings, lastLevelRange);
+    updateStatusPanel(lastPayload, lastLevelRange);
+  });
+  planner.addEventListener("good-owned-change", () => {
+    updateStatusPanel(lastPayload, lastLevelRange);
   });
 
-  // status-panel's own toggle/clear buttons live in its shadow root and
-  // dispatch composed toggle-owned/clear-owned events (handled below).
-  // This class-based listener only matches the empty-results fallback's
-  // plain "Show out of era" button (renderRankings), a plain element
-  // outside any shadow root that fires a real click. Out-of-era does
-  // change which zones show, so this one still triggers the full render.
-  planner.addEventListener("click", (e) => {
-    if (e.target.matches(".toggle-out-of-era-btn")) {
-      showOutOfEra = true;
-      document.getElementById("show-out-of-era").checked = true;
-      renderRankings(lastRankings, lastLevelRange);
-    }
-  });
   planner.addEventListener("toggle-owned", () => {
     showAllSpells = !showAllSpells;
-    updateStatusPanel(lastRankings, lastLevelRange);
+    updateStatusPanel(lastPayload, lastLevelRange);
   });
   planner.addEventListener("clear-owned", () => {
     clearOwnedSpells();
-    updateStatusPanel(lastRankings, lastLevelRange);
+    updateStatusPanel(lastPayload, lastLevelRange);
   });
 
   // Purely a display filter over already-fetched data (era/outOfEra is
-  // already on every ranking rankZones() returns). Re-render, not replan,
+  // already on every offer rankGoods() returns). Re-render, not replan,
   // same reasoning as quests.js's identical toggle.
   document.getElementById("show-out-of-era").addEventListener("change", (e) => {
     showOutOfEra = e.target.checked;
-    renderRankings(lastRankings, lastLevelRange);
+    renderRankings(lastPayload, lastLevelRange);
   });
 }
 
@@ -655,12 +651,12 @@ async function runPlan() {
   document.getElementById("results").innerHTML = '<div class="loading">Searching Norrath...</div>';
 
   // levelMin/levelMax aren't part of this request: level is a purely
-  // client-side display filter over the returned spell pool (see
+  // client-side display filter over the returned goods (see
   // setupPlanner()'s level-range handler), not a ranking input.
   const params = new URLSearchParams({ class: classes.join(","), from, race, primaryClass, deity, type: selectedType });
   if (specificZones.length) params.set("zones", specificZones.map((z) => z.id).join(","));
   if (document.getElementById("include-ports").checked) params.set("ports", "1");
-  if (selectedType === SPELLS_TYPE) {
+  if (selectedType === SPELL_TYPE) {
     if (specificSpells.length) params.set("spells", specificSpells.map((s) => s.id).join(","));
     if (selectedSpellLines.length) params.set("lines", selectedSpellLines.map((l) => l.id).join(","));
   } else if (specificItems.length) {
@@ -673,65 +669,48 @@ async function runPlan() {
     return;
   }
 
-  lastRankings = payload;
+  lastPayload = payload;
   lastLevelRange = { min: levelMin, max: levelMax };
   renderRankings(payload, lastLevelRange);
 }
 
-// `payload` is /api/plan's raw response: for Spells, { zones, spells }
-// (src/graph.ts's rankZones -- zones carry a vendor+classes summary per
-// zone, decisions/class-spell-vendor-model.md; the flat spells array is the
-// one deduplicated pool of matching spell detail, every level included);
-// for any other type, a plain ZoneRanking[] with each zone's own items
-// array (rankZonesByCategory, unchanged). renderZones() (#results) and
-// updateStatusPanel() (#status-panel) are two independent renders over the
-// same payload: which zones/vendors are relevant never depends on level or
-// owned state (a class vendor's inventory is the whole class's spellbook
-// regardless of level, decisions/class-spell-vendor-model.md), only on a
-// fresh fetch or the out-of-era toggle, so a caller that only changes level
-// or owned state calls updateStatusPanel() alone. renderRankings() runs
-// both.
+// `payload` is /api/plan's raw response for every type, Spell included:
+// { goods, raceIgnored?, classIgnored?, deityIgnored? } (src/graph.ts's
+// rankGoods()) -- one entry per matching spell/item, each carrying every
+// zone/vendor that actually sells it as its own `offers` array (possibly
+// empty). renderGoods() (#results) and updateStatusPanel() (#status-panel)
+// are two independent renders over the same payload: which goods/offers are
+// relevant never depends on level or owned state (a class vendor's
+// inventory is the whole class's spellbook regardless of level, decisions/
+// class-spell-vendor-model.md), only on a fresh fetch or the out-of-era
+// toggle, so a caller that only changes level or owned state calls
+// updateStatusPanel() alone. renderRankings() runs both.
 function renderRankings(payload, levelRange) {
-  renderZones(payload);
+  renderGoods(payload);
   updateStatusPanel(payload, levelRange);
 }
 
-function renderZones(payload) {
+function renderGoods(payload) {
   const el = document.getElementById("results");
-  const isSpells = selectedType === SPELLS_TYPE;
-  const rankings = isSpells ? payload.zones : payload;
-
-  if (!rankings.length) {
-    el.innerHTML = '<div class="no-results">No vendors found.</div>';
+  if (!payload.goods.length) {
+    el.innerHTML = '<div class="no-results">No results found.</div>';
     return;
   }
-
-  const visibleRankings = showOutOfEra ? rankings : rankings.filter((r) => !r.outOfEra);
 
   el.innerHTML = "";
-
-  if (visibleRankings.length === 0) {
-    const msg = document.createElement("div");
-    msg.className = "no-results";
-    msg.innerHTML = `All matching zones are out of era. <button class="text-action toggle-out-of-era-btn">Show out of era</button>`;
-    el.appendChild(msg);
-    return;
-  }
-
-  lazyRenderList(el, visibleRankings, (r) => {
-    const card = document.createElement("zone-card");
-    card.setData(r);
+  lazyRenderList(el, payload.goods, (g) => {
+    const card = document.createElement("good-card");
+    card.setData(g, { selectedClasses, showOutOfEra });
     return card;
   });
 }
 
 function updateStatusPanel(payload, { min: levelMin, max: levelMax }) {
   const statusEl = document.getElementById("status-panel");
-  const isSpells = selectedType === SPELLS_TYPE;
-  const rankings = isSpells ? payload.zones : payload;
-  const spellPool = isSpells ? payload.spells : null;
+  const goods = payload.goods;
+  const isSpells = selectedType === SPELL_TYPE;
 
-  if (!rankings.length) {
+  if (!goods.length) {
     statusEl.data = null;
     return;
   }
@@ -741,34 +720,51 @@ function updateStatusPanel(payload, { min: levelMin, max: levelMax }) {
   // race, say, still shows even with deity set to Any) — so faction/badge
   // rendering below needs no special-casing at all. This is purely an
   // informational aside about which dimension(s) aren't being checked.
-  const raceIgnored = rankings[0]?.raceIgnored === true;
-  const classIgnored = rankings[0]?.classIgnored === true;
-  const deityIgnored = rankings[0]?.deityIgnored === true;
-  const visibleRankings = showOutOfEra ? rankings : rankings.filter((r) => !r.outOfEra);
-  const accessible = visibleRankings.filter((r) => r.faction === "safe" || r.faction === "neutral");
-  const wontSell = visibleRankings.filter((r) => r.faction === "wont_sell");
-  const kos = visibleRankings.filter((r) => r.faction === "kos");
+  const raceIgnored = payload.raceIgnored === true;
+  const classIgnored = payload.classIgnored === true;
+  const deityIgnored = payload.deityIgnored === true;
 
-  // totalGoods/ownedCount for Spells: dedupe the ids reachable from
-  // accessible+era-visible zones (r.spellIds, level-independent), then
-  // narrow the top-level spell pool to those ids and to each spell's
-  // class/level pairs actually inside the current level range -- a spell
-  // drops out entirely once none of its pairs are in range, same as
-  // dropping a class that didn't match Shopping For. Items have no owned
-  // concept, so status-panel's mana-bar/toggle/clear UI only renders when
-  // ownedCount isn't null/undefined.
-  let totalGoods, ownedCount, accessibleSpells;
+  // Faction/era are properties of a zone (plus the current race/class/
+  // deity), not of any one good -- every offer sharing a zoneId carries the
+  // same faction/outOfEra, so one pass over every good's offers gives a
+  // deduplicated zone -> status map, same "how many zones are in each
+  // bucket" warnings the old zone-first view showed.
+  const zoneStatus = new Map(); // zoneId -> { faction, outOfEra }
+  for (const g of goods) for (const o of g.offers) zoneStatus.set(o.zoneId, { faction: o.faction, outOfEra: !!o.outOfEra });
+  let accessibleZoneCount = 0, wontSellZoneCount = 0, kosZoneCount = 0, outOfEraZoneCount = 0;
+  for (const { faction, outOfEra } of zoneStatus.values()) {
+    if (outOfEra && !showOutOfEra) { outOfEraZoneCount++; continue; }
+    if (faction === "safe" || faction === "neutral") accessibleZoneCount++;
+    else if (faction === "wont_sell") wontSellZoneCount++;
+    else if (faction === "kos") kosZoneCount++;
+  }
+
+  // A good counts as accessible once it has at least one era-visible offer
+  // in a safe/neutral zone -- a drop/quest-only good with zero offers, or
+  // one only reachable through a wont_sell/kos/hidden-out-of-era zone,
+  // isn't currently obtainable and drops out of the totals/checklist below
+  // (it still renders as its own card in the results list either way, just
+  // without counting toward "how many can I actually buy right now").
+  const accessibleGoods = goods.filter((g) => {
+    const visible = showOutOfEra ? g.offers : g.offers.filter((o) => !o.outOfEra);
+    return visible.some((o) => o.faction === "safe" || o.faction === "neutral");
+  });
+
+  // totalGoods/ownedCount for Spells: narrow each accessible spell's own
+  // class/level pairs to the current level range -- a spell drops out
+  // entirely once none of its pairs are in range, same as dropping a class
+  // that didn't match Shopping For. Items have no owned concept, so
+  // status-panel's mana-bar/toggle/clear UI only renders when ownedCount
+  // isn't null/undefined.
+  let totalGoods, ownedCount, spellChecklist;
   if (isSpells) {
-    const accessibleIds = new Set(accessible.flatMap((r) => r.spellIds));
-    accessibleSpells = spellPool
-      .filter((s) => accessibleIds.has(s.id))
-      .map((s) => ({ ...s, classes: s.classes.filter((c) => c.level >= levelMin && c.level <= levelMax) }))
+    spellChecklist = accessibleGoods
+      .map((g) => ({ id: g.id, name: g.name, description: g.description, classes: g.spellClasses.filter((c) => c.level >= levelMin && c.level <= levelMax) }))
       .filter((s) => s.classes.length > 0);
-    totalGoods = accessibleSpells.length;
-    ownedCount = accessibleSpells.filter((s) => owned.has(s.id)).length;
+    totalGoods = spellChecklist.length;
+    ownedCount = spellChecklist.filter((s) => owned.has(s.id)).length;
   } else {
-    const allGoodIds = new Set(accessible.flatMap((r) => r.items.map((g) => g.id)));
-    totalGoods = allGoodIds.size;
+    totalGoods = accessibleGoods.length;
     ownedCount = undefined;
   }
 
@@ -780,20 +776,19 @@ function updateStatusPanel(payload, { min: levelMin, max: levelMax }) {
       : ignoredDims[0];
     warnings.push(`<span style="color:var(--ink-muted);">${ignoredLabel} ignored</span>`);
   }
-  if (wontSell.length) warnings.push(`<span style="color:#f59e0b;">${wontSell.length} zone(s) won't sell to you</span>`);
-  if (kos.length) warnings.push(`<span style="color:#f87171;">${kos.length} zone(s) KOS</span>`);
-  const outOfEraCount = rankings.length - visibleRankings.length;
-  if (outOfEraCount > 0) warnings.push(`<span style="color:var(--ink-muted);">${outOfEraCount} out-of-era zone(s) hidden</span>`);
+  if (wontSellZoneCount) warnings.push(`<span style="color:#f59e0b;">${wontSellZoneCount} zone(s) won't sell to you</span>`);
+  if (kosZoneCount) warnings.push(`<span style="color:#f87171;">${kosZoneCount} zone(s) KOS</span>`);
+  if (outOfEraZoneCount) warnings.push(`<span style="color:var(--ink-muted);">${outOfEraZoneCount} out-of-era zone(s) hidden</span>`);
 
   const levelText = isSpells ? (levelMin === levelMax ? `level ${levelMin}` : `levels ${levelMin}–${levelMax}`) : null;
 
   // status-panel (public/components/status-panel.js) owns the meta text,
   // warnings, progress bar, toggle/clear buttons, and (Spells) the
   // checklist itself -- this just hands it the numbers and, for Spells,
-  // the filtered spell pool plus the live owned Set.
+  // the filtered spell checklist plus the live owned Set.
   statusEl.data = {
-    totalGoods, goodsLabel: isSpells ? "spell" : "item", accessibleCount: accessible.length,
+    totalGoods, goodsLabel: isSpells ? "spell" : "item", accessibleCount: accessibleZoneCount,
     levelText, warnings, ownedCount, showAllSpells,
-    ...(isSpells ? { spells: accessibleSpells, owned } : {}),
+    ...(isSpells ? { spells: spellChecklist, owned } : {}),
   };
 }

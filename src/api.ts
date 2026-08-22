@@ -1,11 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankZones, rankZonesByCategory, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getTradeskillCompatibility, getRecipeTree, type NodeData } from "./graph";
-
-// Spells aren't tagged with a `category` field the way sold items are
-// (migration 400) -- they're the original, and only, sells-target type for
-// a long time, so this is the one hardcoded label rather than something
-// read off node data. Kept as the default `type` for /api/plan (see below)
-// so an old saved state/URL with no `type` param still plans spells.
-const SPELLS_TYPE = "Spells";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankGoods, getItemTypes, getItemType, SPELL_TYPE, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getTradeskillCompatibility, getRecipeTree, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -69,26 +62,21 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getVendorsForSpell(id) };
   }
 
-  // GET /api/plan?class=shaman,druid&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spells
-  // type (default "Spells", so old saved state/URLs with no type param keep
-  // working) selects which sold-goods flavor to rank zones by. "Spells"
-  // ranks via rankZones() (class+spell-line matching against
-  // spell.class_levels; no level here, see below), returning { zones,
-  // spells }: zones carry a vendor+classes summary per zone (decisions/
-  // class-spell-vendor-model.md), while the flat `spells` array is the one
-  // deduplicated pool of matching spell detail, every level included, the
-  // frontend's status panel renders as its owned-tracking checklist --
-  // level itself is a purely client-side display filter over that pool now
-  // (public/app.js), never sent here, since a class vendor's inventory is
-  // its class's whole spellbook regardless of level, so ranking zones never
-  // depended on it. Any other type (a real category from
-  // /api/vendor-categories, e.g. "Armor") ranks via rankZonesByCategory()
-  // instead, returning a plain ZoneRanking[] with each zone's own `items`
-  // array, unchanged -- class still narrows results (via the item's own
-  // `classes` field, empty/absent = everyone), but there's no level or
-  // spell-line equivalent for items either way.
+  // GET /api/plan?class=shaman,druid&from=halas&race=barbarian&primaryClass=shaman&deity=the+tribunal&type=Spell
+  // type (default SPELL_TYPE, so an old saved state/URL with no type param
+  // still plans spells) selects which good to find: SPELL_TYPE ranks spells
+  // (class+spell-line matching against spell.class_levels; no level here,
+  // see below), anything else ranks items/containers whose computed type
+  // (classifyItemType(), src/graph.ts) matches -- a real value from
+  // /api/item-types. Either way returns { goods, ... } (rankGoods(),
+  // src/graph.ts): one entry per matching spell/item, each carrying every
+  // zone/vendor that actually sells it as `offers` (possibly empty, for an
+  // item with no vendor at all) -- "find the item, vendor is a byproduct of
+  // that." Level stays a purely client-side display filter over the
+  // returned spell pool (public/app.js), never sent here, since a class
+  // vendor sells its class's whole spellbook regardless of level.
   if (pathname === "/api/plan") {
-    const type = searchParams.get("type") || SPELLS_TYPE;
+    const type = searchParams.get("type") || SPELL_TYPE;
     const classNames = (searchParams.get("class") || "").split(",").filter(Boolean);
     const from = searchParams.get("from") || "";
     const race = searchParams.get("race") || undefined;
@@ -102,17 +90,17 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     const specificZoneIds = (searchParams.get("zones") || "").split(",").filter(Boolean);
     const includePorts = searchParams.get("ports") === "1";
 
-    if (type !== SPELLS_TYPE) {
+    if (type !== SPELL_TYPE) {
       const extraItemIds = (searchParams.get("items") || "").split(",").filter(Boolean);
       return {
         status: 200,
-        body: rankZonesByCategory(type, classNames, fromId, race, primaryClass, deity, extraItemIds, specificZoneIds, includePorts),
+        body: rankGoods(type, classNames, fromId, race, primaryClass, deity, extraItemIds, specificZoneIds, undefined, includePorts),
       };
     }
 
     const extraSpellIds = (searchParams.get("spells") || "").split(",").filter(Boolean);
     const spellLineIds = (searchParams.get("lines") || "").split(",").filter(Boolean);
-    return { status: 200, body: rankZones(classNames, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includePorts) };
+    return { status: 200, body: rankGoods(SPELL_TYPE, classNames, fromId, race, primaryClass, deity, extraSpellIds, specificZoneIds, spellLineIds, includePorts) };
   }
 
   // GET /api/route?from=Halas&to=Kelethin&ports=1&avoidDanger=1&stops=West
@@ -277,42 +265,32 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
     return { status: 200, body: getSpellLines() };
   }
 
-  // GET /api/vendor-categories — every distinct sold-goods type, for the
-  // Vendors page's Type filter. "Spells" is always first and always present
-  // (it's the one hardcoded category, see SPELLS_TYPE above); the rest are
-  // whatever item/container `category` values (migration 400) actually have
-  // a real sells edge right now, sorted alphabetically after it. Driven by
-  // live sells-edge data rather than a fixed list so a category with
-  // nothing currently sold in it (e.g. "Weapons," if that's ever added)
-  // doesn't show an empty filter option -- decisions/ "let types drive the
-  // filters."
-  if (pathname === "/api/vendor-categories") {
-    const graph = getGraph();
-    const soldIds = new Set(graph.edges.filter((e) => e.type === "sells").map((e) => e.target));
-    const categories = new Set<string>();
-    for (const n of graph.nodes) {
-      if (soldIds.has(n.id) && (n.type === "item" || n.type === "container") && typeof n.category === "string") {
-        categories.add(n.category);
-      }
-    }
-    return { status: 200, body: [SPELLS_TYPE, ...[...categories].sort()] };
+  // GET /api/item-types -- every distinct good type, for the Items page's
+  // Type filter. SPELL_TYPE is always first and always present (src/graph.ts);
+  // the rest are whatever classifyItemType() values actually occur among
+  // today's item/container nodes, sorted alphabetically after it -- computed
+  // over every item, not just ones with a real `sells` edge, since an item
+  // with no vendor at all is still findable. Same "let types drive the
+  // filters" convention migration 400's category list used.
+  if (pathname === "/api/item-types") {
+    return { status: 200, body: getItemTypes() };
   }
 
-  // GET /api/items/search?q=flask&category=Armor — item name search for the
-  // Vendors page's Specific Items tag input, same shape/contract as
-  // /api/spells/search. category (optional) scopes to one vendor-goods
-  // category so the suggestions match whatever Type is currently selected,
-  // same idea as /api/npcs' required zone scoping.
+  // GET /api/items/search?q=flask&type=Armor -- item name search for the
+  // Items page's Specific Items tag input, same shape/contract as
+  // /api/spells/search. type (optional) scopes to one computed item type so
+  // the suggestions match whatever Type is currently selected, same idea as
+  // /api/npcs' required zone scoping.
   if (pathname === "/api/items/search") {
     const q = (searchParams.get("q") || "").toLowerCase().trim();
-    const category = searchParams.get("category") || undefined;
+    const type = searchParams.get("type") || undefined;
     if (q.length < 2) return { status: 200, body: [] };
     const graph = getGraph();
     const matches = graph.nodes
       .filter((n) =>
         (n.type === "item" || n.type === "container") &&
         n.label.toLowerCase().includes(q) &&
-        (!category || n.category === category)
+        (!type || getItemType(n.id) === type)
       )
       .map((n) => ({ id: n.id, label: n.label }))
       .sort((a, b) => {

@@ -33,8 +33,8 @@ ${RESET_CSS}
   gap: 8px;
 }
 /* Same convention as field-row.js's own [hidden] rule -- a whole section
-   can be irrelevant to the current context (Vendors' Level section when
-   Type isn't Spells, since items have no per-class level data), not just
+   can be irrelevant to the current context (Items' Level section when
+   Type isn't Spell, since items have no per-class level data), not just
    collapsed. Without this the host's own display:flex above would win over
    the UA stylesheet's [hidden]{display:none}, since author CSS always
    outranks UA CSS regardless of specificity. */
