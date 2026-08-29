@@ -1924,6 +1924,12 @@ function sortOffers(offers: (GoodOffer & { score: number })[]): GoodOffer[] {
 // for them since a spell node's type is always just "Spell".
 export const SPELL_TYPE = "Spell";
 
+// The Items page's Type filter's catch-all: every item/container regardless
+// of classifyItemType(), Spell excluded (Spell stays its own option since it
+// ranks through a wholly different algorithm below -- class_levels/spell-line
+// matching, not classifyItemType()).
+export const ANY_TYPE = "Any";
+
 // Armor slots recognized by classifyItemType() below -- Range/Ammo aren't
 // included (a bow or arrow has no ac and no armor-slot signal of its own;
 // weapons are caught by the `skill` check first, ammo genuinely has neither).
@@ -2005,7 +2011,7 @@ export function classifyItemType(item: NodeData, helpers: GraphIndexHelpers): st
   return "Other";
 }
 
-// GET /api/item-types' full list: SPELL_TYPE first (always present), then
+// GET /api/item-types' full list: SPELL_TYPE and ANY_TYPE first (always present), then
 // every classifyItemType() value that actually occurs among today's item/
 // container nodes, sorted -- same "let types drive the filters" convention
 // migration 400's category list used, just computed over every item instead
@@ -2017,7 +2023,7 @@ export function getItemTypes(): string[] {
   for (const n of graph.nodes) {
     if (n.type === "item" || n.type === "container") types.add(classifyItemType(n, helpers));
   }
-  return [SPELL_TYPE, ...[...types].sort()];
+  return [SPELL_TYPE, ANY_TYPE, ...[...types].sort()];
 }
 
 // One item's computed type by id -- for /api/items/search's type-scoped
@@ -2034,7 +2040,7 @@ export function getItemType(itemId: string): string | undefined {
 // The one query behind the Items page (decisions/ Items page rework,
 // "find the item, vendor is a byproduct of that"): returns goods (spells for
 // `type === SPELL_TYPE`, otherwise items/containers matching
-// classifyItemType() === type), each carrying every zone/vendor that
+// classifyItemType() === type, or every item/container for `type === ANY_TYPE`), each carrying every zone/vendor that
 // actually sells it as `offers` -- possibly empty, for a real item with no
 // vendor at all. Route/faction/era per zone is computed once per distinct
 // zone and reused across every good sold there (zoneBase below), not
@@ -2176,7 +2182,9 @@ export function rankGoods(
       });
     }
   } else {
-    let candidates = graph.nodes.filter((n) => (n.type === "item" || n.type === "container") && classifyItemType(n, helpers) === type);
+    let candidates = graph.nodes.filter((n) =>
+      (n.type === "item" || n.type === "container") && (type === ANY_TYPE || classifyItemType(n, helpers) === type)
+    );
 
     // Specific Items is the same exclusive override as Specific Spells --
     // pinning an item shows it regardless of the Shopping For class
@@ -2222,7 +2230,10 @@ export function rankGoods(
       const offers = offerZoneIds.map((zoneId) => toOffer(zoneId, zoneVendors.get(zoneId)!));
 
       const { id: _id, label, ...details } = toItemSummary(item);
-      goods.push({ id: item.id, name: label, kind: "item", type, ...details, offers: sortOffers(offers) });
+      // Real per-item type, not the outer filter `type` -- identical to it
+      // for a single-type request, but Any spans multiple real types, and
+      // each good's own badge (good-card.js) needs its actual one.
+      goods.push({ id: item.id, name: label, kind: "item", type: classifyItemType(item, helpers), ...details, offers: sortOffers(offers) });
     }
   }
 

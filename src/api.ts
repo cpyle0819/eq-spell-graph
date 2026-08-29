@@ -1,4 +1,4 @@
-import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankGoods, getItemTypes, getItemType, SPELL_TYPE, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getTradeskillCompatibility, getRecipeTree, type NodeData } from "./graph";
+import { getGraph, getSpellsForClass, getAllSpells, getVendorsForSpell, rankGoods, getItemTypes, getItemType, SPELL_TYPE, ANY_TYPE, getRoute, getZoneDistances, stats, getSpellLines, getQuests, getQuestGroups, getZones, getZoneNpcs, getItemsByIds, getTradeskills, getRecipes, getTradeskillVendors, getItemSources, getTradeskillLevelingCities, getTradeskillCompatibility, getRecipeTree, type NodeData } from "./graph";
 
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -66,7 +66,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // type (default SPELL_TYPE, so an old saved state/URL with no type param
   // still plans spells) selects which good to find: SPELL_TYPE ranks spells
   // (class+spell-line matching against spell.class_levels; no level here,
-  // see below), anything else ranks items/containers whose computed type
+  // see below), ANY_TYPE ranks every item/container regardless of computed
+  // type, anything else ranks items/containers whose computed type
   // (classifyItemType(), src/graph.ts) matches -- a real value from
   // /api/item-types. Either way returns { goods, ... } (rankGoods(),
   // src/graph.ts): one entry per matching spell/item, each carrying every
@@ -283,7 +284,8 @@ export async function handleApi(pathname: string, searchParams: URLSearchParams)
   // /api/npcs' required zone scoping.
   if (pathname === "/api/items/search") {
     const q = (searchParams.get("q") || "").toLowerCase().trim();
-    const type = searchParams.get("type") || undefined;
+    const rawType = searchParams.get("type") || undefined;
+    const type = rawType === ANY_TYPE ? undefined : rawType;
     if (q.length < 2) return { status: 200, body: [] };
     const graph = getGraph();
     const matches = graph.nodes

@@ -7,9 +7,10 @@
 import "./components/index.js";
 import { getOwnedSpells, setSpellOwned, clearOwnedSpells, lazyRenderList } from "./components.js";
 
-// Matches src/graph.ts's own SPELL_TYPE -- the one hardcoded good type
-// (every other type is a real classifyItemType() value, read live off
-// /api/item-types).
+// Matches src/graph.ts's own SPELL_TYPE. ANY_TYPE ("Any", src/graph.ts) is
+// the type-select's other hardcoded option, spanning every item/container
+// type at once -- every other option is a real classifyItemType() value,
+// read live off /api/item-types.
 const SPELL_TYPE = "Spell";
 
 // --- State ---
