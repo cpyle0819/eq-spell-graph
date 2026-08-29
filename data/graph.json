@@ -205775,6 +205775,22 @@
       "id": "class:wizard",
       "type": "class",
       "label": "Wizard"
+    },
+    {
+      "id": "item:jack-o-lantern-fungus",
+      "label": "Jack-O-Lantern Fungus",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Poison Making ingredient (not modeled in this graph) for Fine Plate Armor's yellow dye"
+    },
+    {
+      "id": "item:sarcoscypha-fungus",
+      "label": "Sarcoscypha Fungus",
+      "type": "item",
+      "weight": 0.1,
+      "size": "Tiny",
+      "source": "Poison Making ingredient (not modeled in this graph) for Red Berry Dye, used to color Fine Plate Armor; combined with an Empty Vial and a Water Flask in a Mortar and Pestle (trivial 36)"
     }
   ],
   "edges": [
@@ -433447,6 +433463,160 @@
       "source": "vendor:new-sebilis-expedition:heretic-mkoriku",
       "target": "class:necromancer",
       "type": "sells_spells_for"
+    },
+    {
+      "id": "e-located-50000",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:the-estate-of-unrest",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a jack o lantern"
+      ]
+    },
+    {
+      "id": "e-located-50001",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:plane-of-fear",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a samhain"
+      ]
+    },
+    {
+      "id": "e-located-50002",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:western-karana",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a scarecrow",
+        "an animated scarecrow"
+      ]
+    },
+    {
+      "id": "e-located-50003",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:the-estate-of-unrest",
+      "type": "located_in",
+      "method": "forage"
+    },
+    {
+      "id": "e-located-50004",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:plane-of-fear",
+      "type": "located_in",
+      "method": "forage"
+    },
+    {
+      "id": "e-located-50005",
+      "source": "item:jack-o-lantern-fungus",
+      "target": "zone:western-karana",
+      "type": "located_in",
+      "method": "forage"
+    },
+    {
+      "id": "e-drops-36653",
+      "source": "mob:the-estate-of-unrest:a-jack-o-lantern",
+      "target": "item:jack-o-lantern-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36654",
+      "source": "npc:plane-of-fear:a-samhain",
+      "target": "item:jack-o-lantern-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36655",
+      "source": "mob:western-karana:a-scarecrow",
+      "target": "item:jack-o-lantern-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36656",
+      "source": "mob:western-karana:an-animated-scarecrow",
+      "target": "item:jack-o-lantern-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-located-50006",
+      "source": "item:sarcoscypha-fungus",
+      "target": "zone:the-estate-of-unrest",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "mortuary fungus"
+      ]
+    },
+    {
+      "id": "e-located-50007",
+      "source": "item:sarcoscypha-fungus",
+      "target": "zone:innothule-swamp",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a fungus spore",
+        "fungus man tracker"
+      ]
+    },
+    {
+      "id": "e-located-50008",
+      "source": "item:sarcoscypha-fungus",
+      "target": "zone:upper-guk",
+      "type": "located_in",
+      "method": "drop",
+      "mobs": [
+        "a fungus ancient",
+        "a fungus breeder",
+        "a fungus drone",
+        "a fungus mutant",
+        "a fungus soldier"
+      ]
+    },
+    {
+      "id": "e-located-50009",
+      "source": "item:sarcoscypha-fungus",
+      "target": "zone:lesser-faydark",
+      "type": "located_in",
+      "method": "forage"
+    },
+    {
+      "id": "e-drops-36661",
+      "source": "mob:the-estate-of-unrest:mortuary-fungus",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36662",
+      "source": "npc:upper-guk:a-fungus-ancient",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36663",
+      "source": "npc:upper-guk:a-fungus-breeder",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36664",
+      "source": "npc:upper-guk:a-fungus-drone",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36665",
+      "source": "npc:upper-guk:a-fungus-mutant",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
+    },
+    {
+      "id": "e-drops-36666",
+      "source": "npc:upper-guk:a-fungus-soldier",
+      "target": "item:sarcoscypha-fungus",
+      "type": "drops"
     }
   ]
 }
