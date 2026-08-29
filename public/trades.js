@@ -291,7 +291,7 @@ function renderSidebar() {
           <option value="ingredients">Ingredients</option>
         </select>
       </field-row>
-      <field-row label="Skill Range" id="trade-skill-range-row">
+      <field-row label="Trivial At" id="trade-skill-range-row">
         <range-picker id="trade-skill-range" min="0" max="${MAX_TRADESKILL_LEVEL}" value-min="0" value-max="${MAX_TRADESKILL_LEVEL}"></range-picker>
       </field-row>
       <field-row label="Item Type" id="trade-item-type-row">
@@ -565,7 +565,7 @@ function setupFilters() {
 // deep-link) and which filters are relevant to show. Guide is one fixed
 // reference panel
 // with nothing to filter, so only Trade Skill + View stay visible there;
-// Browse's own Type/Search (and Skill Range, Recipes only) come back once
+// Browse's own Type/Search (and Trivial At, Recipes only) come back once
 // Browse is selected. Callers re-render themselves -- this only syncs
 // state + visibility, same split render()'s other callers already use.
 function setActiveView(view) {
@@ -800,13 +800,11 @@ function availableItemTypes(recipes) {
   return types;
 }
 
-// "Craftable N+" (success.p25, the same figure recipe-card.js's own badge
-// shows) is the number the Skill Range filter narrows on, not `trivial` --
-// it's the number actually named "craftable" in both the UI and issue #32's
-// own spec ("filter out recipe whose craftable number falls outside the
-// range").
+// Trivial At filters on `recipe.trivial` itself, the skill level at which
+// this recipe stops reliably granting skill-ups -- not the derived
+// success.p25 "Craftable N+" figure recipe-card.js's own badge shows.
 function recipeMatchesSkillRange(recipe, min, max) {
-  return recipe.success.p25 >= min && recipe.success.p25 <= max;
+  return recipe.trivial >= min && recipe.trivial <= max;
 }
 
 function matchesSearch(label, query) {
