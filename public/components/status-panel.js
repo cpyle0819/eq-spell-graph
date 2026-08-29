@@ -8,23 +8,25 @@
 // into its shadow root), so a CSS `:empty` rule can't detect "no data" here.
 //
 // `goodsLabel` ("spell"/"item") and `levelText` (a ready-made "level 9"/
-// "levels 9-11" string, or null) generalize this for Vendors' item-category
-// results (Armor/Adventuring Supplies/Tradeskill Supplies), which have no
-// per-class level data the way spells do. `ownedCount` is spell-only --
-// items have no "owned" concept in this app -- so it's optional; when
-// omitted, the mana-bar/owned-count/toggle-owned/clear-owned block doesn't
-// render at all rather than showing a meaningless 0/N.
+// "levels 9-11" string, or null) generalize this for the Items page's own
+// item-type results (Armor/Food/Tradeskill Materials/etc., src/graph.ts's
+// classifyItemType()), which have no per-class level data the way spells
+// do. `ownedCount` is spell-only -- items have no "owned" concept in this
+// app -- so it's optional; when omitted, the mana-bar/owned-count/
+// toggle-owned/clear-owned block doesn't render at all rather than showing
+// a meaningless 0/N.
 //
-// `spells` (Spells type only, SpellGoodInfo[] from src/graph.ts's
-// rankZones) and `owned` (the full owned-id Set, not just its count) drive a
-// checklist rendered below the toggle/clear buttons, inside this same
-// panel: the one deduplicated, filter-driven place spell detail and
-// owned-tracking checkboxes live, since a class vendor's inventory is the
-// class's whole spell list (decisions/class-spell-vendor-model.md) and
-// zone-card.js's own scroll list carries a vendor+classes summary instead
-// (app.js hands this panel every matching spell reachable from the zones
-// currently showing, once). The panel widens (`:host([wide])`, keyed off
-// `spells` being present) to give that checklist room.
+// `spells` (Type=Spell only, app.js's own spellChecklist built from
+// src/graph.ts's rankGoods()) and `owned` (the full owned-id Set, not just
+// its count) drive a checklist rendered below the toggle/clear buttons,
+// inside this same panel: the one deduplicated, filter-driven place spell
+// detail and owned-tracking checkboxes live, since a class vendor's
+// inventory is the class's whole spell list (decisions/
+// class-spell-vendor-model.md) and each result's own good-card carries a
+// vendor+classes summary per offer instead (app.js hands this panel every
+// matching, currently-accessible spell once). The panel widens
+// (`:host([wide])`, keyed off `spells` being present) to give that
+// checklist room.
 //
 // Renders the meta text + warnings, a nested <mana-bar>, the toggle/clear
 // <macro-button>s, and (Spells only) the checklist, all inside its own

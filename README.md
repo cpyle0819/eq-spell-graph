@@ -2,7 +2,7 @@
 
 An interactive wiki for EverQuest Legends (EQL). Six tools share one faction-aware graph of zones, spells, classes, quests, items, and tradeskills, each surfacing a direct, filtered answer instead of a wiki page you'd have to read in full.
 
-- **Vendors**: given your race, primary class, deity, and current zone, ranks destinations by what a vendor sells (spells, armor, tradeskill supplies) vs. travel distance, filtering out zones where you'd be killed on sight or refused service.
+- **Items**: finds anything you need, spells included, and every vendor that actually sells it, ranked by travel distance from your current zone and checked against your race, primary class, and deity so a zone that won't deal with you (or would kill you on sight) sorts to the bottom instead of hiding the item.
 - **Maps**: shortest path between any two zones (boat/translocator hops flagged), plus the destination's own map and mob levels.
 - **Classes**: everything a class has access to (spells, class-defining abilities, stances, invocations, Alternate Advancements, and relevant quests), filterable by up to three classes at once.
 - **Quests**: quest lines worth running, their rewards, and the factions they shift.
@@ -29,13 +29,13 @@ bun run typecheck  # TypeScript validation
 
 ## How it works
 
-Zone, spell, class-ability, quest, item, and recipe data all live in one graph (`data/graph.json`). Vendors (the planner):
+Zone, spell, class-ability, quest, item, and recipe data all live in one graph (`data/graph.json`). Items (the planner):
 
-1. Finds vendor-sold goods of the selected type (spells matching your class and level range, or items of a category like Armor/Tradeskill Supplies matching your class)
-2. Traces which NPCs sell those goods and which zones those NPCs are in
-3. Computes hop distance from your current zone via BFS over zone adjacency edges
-4. Resolves faction standing from three dimensions (race, primary class, deity), taking the worst of the three
-5. Ranks zones by `goods_available / hops`, with KOS and won't-sell zones sorted to the bottom
+1. Finds goods of the selected type matching your class, with spells also matching your level range. Spell is a real type alongside computed item types like Armor, Weapon, Food, and Tradeskill Materials, not a separate system.
+2. Traces which NPCs sell each matching good and which zones those NPCs are in, attaching every such zone/vendor pair to that good as an "offer" (a good with no vendor at all, like a drop-only item, still shows up with an empty offer list)
+3. Computes hop distance from your current zone to each offer's zone via BFS over zone adjacency edges
+4. Resolves faction standing per zone from three dimensions (race, primary class, deity), taking the worst of the three
+5. Sorts each good's own offers by faction then hop distance, with KOS and won't-sell zones sorted to the bottom
 
 Maps walks the same zone adjacency graph via BFS for a plain point-to-point path, with no faction or spell context. Classes reads spell/stance/invocation/AA/ability/quest nodes directly, filtered by whichever 1-3 classes are selected. Quests and Tradeskills read quest and recipe nodes directly, filterable by class, zone, and level.
 
@@ -64,7 +64,8 @@ The `levelMin`/`levelMax` params take a range; `class`/`spells`/`zones` take com
 
 | Endpoint | Purpose |
 |----------|---------|
-| `GET /api/plan?class=shaman,druid&levelMin=5&levelMax=7&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Ranked zone recommendations |
+| `GET /api/plan?type=Spell&class=shaman,druid&from=Halas&race=barbarian&primaryClass=shaman&deity=the+tribunal` | Matching goods (`type` defaults to `Spell`), each with its own ranked vendor offers |
+| `GET /api/item-types` | Every real good type (`Spell` plus computed item types like `Armor`, `Weapon`, `Food`) |
 | `GET /api/route?from=Halas&to=Kelethin` | Point-to-point route, boat hops flagged |
 | `GET /api/zone-distances?from=zone:east-freeport&zones=zone:a,zone:b` | Hop distance from one zone to several |
 | `GET /api/spells?class=shaman&levels=9` | List spells for a class/level (omit `class` for every class) |

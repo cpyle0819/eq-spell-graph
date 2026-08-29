@@ -1722,43 +1722,36 @@ function worstStanding(...standings: FactionStanding[]): FactionStanding {
   , "safe");
 }
 
-// A matching spell's own detail, independent of which vendor sells it. This
-// is the flat, deduplicated pool status-panel.js renders as the owned-
-// tracking checklist. A class vendor's inventory is the class's whole spell
-// list (decisions/class-spell-vendor-model.md), so the relevant question per
-// spell is which classes and levels it belongs to, not which vendor sells
-// it; `vendors` (below) answers "where do I go" separately, at the zone level.
-export interface SpellGoodInfo extends SpellDetails {
-  id: string;
-  name: string;
-  classes: { cls: string; level: number }[];
-  spellLine?: string;
-}
-
-// A zone's vendor, for the left-hand zone-card list. `classes` holds the
-// classes this vendor sells that also match the current search, a subset of
-// the vendor's real `sells_spells_for` classes. Empty for a vendor still on
-// per-spell `sells` edges (decisions/class-spell-vendor-model.md), since
-// there is no single class to badge it with.
-export interface VendorInfo {
-  id: string;
-  name: string;
-  classes: string[];
-}
-
 export interface FactionReason {
   dimension: "race" | "class" | "deity";
   value: string;
 }
 
-export interface ZoneRanking {
+// One zone/vendor combination where a good (spell or item, see GoodResult)
+// can actually be bought -- the unit rankGoods() used to rank (a zone) is
+// now the detail hanging off the good it's ranking (issue: Items page
+// rework). Same route/faction/era shape buildZoneRankingBase() has always
+// produced, just attached to the good instead of the good being nested
+// under it.
+export interface GoodVendor {
+  id: string;
+  name: string;
+  // Populated only when this vendor is a confirmed class vendor selling a
+  // spell via its `sells_spells_for` edge (decisions/
+  // class-spell-vendor-model.md) -- empty for an item vendor, or a spell
+  // vendor still on per-spell `sells` edges with no class to badge it with.
+  classes: string[];
+}
+
+export interface GoodOffer {
   zoneId: string;
   zoneName: string;
   // Same resolved-page-title convention as ZoneVendorInfo.wikiTitle (see
-  // above) — a zone-card wiki link uses this instead of re-deriving a URL
+  // below) -- a card's wiki link uses this instead of re-deriving a URL
   // from zoneName, which would 404 for zones whose label differs from the
   // eqlwiki.com page that actually covers them.
   wikiTitle: string | null;
+  vendors: GoodVendor[];
   hops: number | null;
   // True when no current zone was selected, so `hops`/`route` above are
   // simply unset rather than a real "unreachable" result -- see
@@ -1767,50 +1760,71 @@ export interface ZoneRanking {
   route: RouteStep[];
   // Up to 2 additional routes besides `route` itself (3 total) -- same
   // shape/ordering convention as getRoute()'s own `alternates`
-  // (decisions/alternate-routes.md), forwarded to zone-card.js's
-  // <route-path> for its picker UI.
+  // (decisions/alternate-routes.md).
+  alternates: RouteStep[][];
+  faction: FactionStanding;
+  factionReasons?: FactionReason[];
+  // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
+  // resolveEra() below) -- true when the zone itself is confirmed
+  // out-of-era *or* the computed route to it is unavoidably routed through
+  // a confirmed out-of-era waypoint.
+  era?: string;
+  outOfEra?: boolean;
+}
+
+// A single findable thing -- a spell or an item/container node -- with
+// every place it's actually sold attached as `offers` (issue: Items page
+// rework, "find the item, vendor is a byproduct of that"). `type` is a
+// peer value alongside every other type ("Spell" sits next to "Armor",
+// "Weapon", "Food", ... -- see classifyItemType() below) even though a
+// spell node and an item node stay structurally distinct in the graph
+// (option 1: unify at the API/UI layer only, not the node schema). `offers`
+// is empty for a real item with no vendor at all (drop/quest/craft-only) --
+// it still shows up, since finding it doesn't depend on having a seller.
+export interface GoodResult extends Partial<SpellDetails>, Partial<ItemDetails> {
+  id: string;
+  name: string;
+  kind: "spell" | "item";
+  type: string;
+  // Spells only -- named distinctly from ItemDetails' own `classes` (an
+  // item's class-usability restriction list, e.g. ["warrior","paladin"],
+  // still read by item-chip.js's tooltip) rather than overloading one field
+  // with two incompatible shapes.
+  spellClasses?: { cls: string; level: number }[];
+  spellLine?: string; // spells only
+  offers: GoodOffer[]; // sorted best (safe faction, fewest hops) first
+}
+
+export interface GoodsPlanResult {
+  goods: GoodResult[];
+  raceIgnored?: boolean;
+  classIgnored?: boolean;
+  deityIgnored?: boolean;
+}
+
+interface ZoneRouteBase {
+  zoneId: string;
+  zoneName: string;
+  wikiTitle: string | null;
+  hops: number | null;
+  noOrigin?: boolean;
+  route: RouteStep[];
   alternates: RouteStep[][];
   faction: FactionStanding;
   factionReasons?: FactionReason[];
   raceIgnored?: boolean;
   classIgnored?: boolean;
   deityIgnored?: boolean;
-  // Exactly one of these two pairs is set, never both -- a single
-  // rankZones()/rankZonesByCategory() call ranks by one type of vendor good
-  // at a time. Separate typed fields (rather than one generically-typed
-  // array) so callers on both sides keep real, type-specific shapes (a
-  // vendor+classes summary vs. an item stat block) instead of a lowest-
-  // common-denominator one. `vendors`/`spellIds` (Spells): the zone's real
-  // spell detail lives in rankZones()'s separate top-level `spells` pool,
-  // not per zone, since a class vendor's inventory is the same list
-  // everywhere that class is sold (decisions/class-spell-vendor-model.md);
-  // `spellIds` is only the ids purchasable in this zone, for scoring and for
-  // the client to work out which of the top-level pool's spells are
-  // reachable from the zones actually showing.
-  vendors?: VendorInfo[];
-  spellIds?: string[];
-  items?: ItemVendorInfo[];
   score: number;
-  // Same era/outOfEra convention as ZoneSummary/QuestSummary (see
-  // resolveEra() below), and the same "own era or any touched zone" rule
-  // QuestSummary uses -- true when the zone itself is confirmed out-of-era
-  // *or* the computed route to it is unavoidably routed through a
-  // confirmed out-of-era waypoint (route to New Sebilis Expedition via
-  // Firiona Vie/Emerald Jungle is the case that surfaced this). Spell
-  // Finder results include out-of-era zones (unlike Quests/Maps, this list
-  // isn't otherwise filterable to just what's reachable) so the UI needs
-  // this to warn rather than silently recommend a zone the player can't
-  // actually reach yet without passing through Kunark/Velious territory.
   era?: string;
   outOfEra?: boolean;
 }
 
-// Shared by rankZones() (spells) and rankZonesByCategory() (vendor-sold
-// items/containers) -- everything past "how many goods does this zone have"
-// (route/faction/era/score) is identical between the two, so it only exists
-// once here. Callers assemble the final ZoneRanking by spreading this
-// result and adding their own `spells`/`items` array (already known by the
-// time they call this, since scoring needs its length).
+// Shared by rankGoods()'s spell and item branches -- everything about a
+// zone's route/faction/era/score is identical either way, so it only exists
+// once here. `goodsCount` only affects `score` (unhopped zones rank by raw
+// count); rankGoods() calls this once per distinct zone (memoized per
+// request) since the same zone can be an offer for many goods.
 function buildZoneRankingBase(
   zoneId: string,
   goodsCount: number,
@@ -1823,7 +1837,7 @@ function buildZoneRankingBase(
   deityIgnored: boolean,
   includePorts: boolean,
   helpers: GraphIndexHelpers
-): Omit<ZoneRanking, "vendors" | "spellIds" | "items"> {
+): ZoneRouteBase {
   const zoneNode = helpers.nodeById(zoneId);
   // No current zone selected (Advanced's "Current Zone" left on its default
   // placeholder) -- there's nothing to route from, so skip pathfinding
@@ -1892,31 +1906,151 @@ function buildZoneRankingBase(
   };
 }
 
-function sortRankings(rankings: ZoneRanking[]): ZoneRanking[] {
-  return rankings.sort((a, b) => {
+function sortOffers(offers: (GoodOffer & { score: number })[]): GoodOffer[] {
+  offers.sort((a, b) => {
     if (STANDING_SEVERITY[a.faction] !== STANDING_SEVERITY[b.faction]) {
       return STANDING_SEVERITY[a.faction] - STANDING_SEVERITY[b.faction];
     }
     return b.score - a.score;
   });
+  return offers.map(({ score: _score, ...offer }) => offer);
 }
 
-export interface SpellPlanResult {
-  zones: ZoneRanking[];
-  spells: SpellGoodInfo[];
+// The Items page's one hardcoded type (option 1 of the Items-page rework:
+// spell and item stay distinct node types in the graph, but the page treats
+// "Spell" as just another peer value in the same Type list as "Armor",
+// "Weapon", "Food", ...). Spells were the original, and only, sells-target
+// type for a long time -- there's no equivalent of classifyItemType() below
+// for them since a spell node's type is always just "Spell".
+export const SPELL_TYPE = "Spell";
+
+// Armor slots recognized by classifyItemType() below -- Range/Ammo aren't
+// included (a bow or arrow has no ac and no armor-slot signal of its own;
+// weapons are caught by the `skill` check first, ammo genuinely has neither).
+const ARMOR_SLOTS = new Set([
+  "Head", "Face", "Neck", "Shoulders", "Chest", "Arms", "Wrist",
+  "Hands", "Waist", "Legs", "Feet", "Back", "Ear", "Finger",
+]);
+
+// Which tradeskill produced an item decides Food/Drink/Potion -- Alchemy is
+// the only trade that makes potions/poisons, Brewing the only one that makes
+// drinks, Baking the only one that makes food (see recipe.tradeskill,
+// decisions/tradeskill-recipe-node-schema.md). Every other tradeskill
+// (Blacksmithing/Tailoring/Pottery/Tinkering/Jewelcrafting/Fletching) either
+// produces real gear (already caught by the Weapon/Armor checks above these
+// in classifyItemType) or a semi-finished intermediate with no stat block of
+// its own -- both fold into "Tradeskill Materials" alongside raw ingredients,
+// since the raw-material/semi-finished distinction only matters to someone
+// already crafting in the Trades tab, not someone browsing for an item.
+const FOOD_TRADES = new Set(["Baking"]);
+const DRINK_TRADES = new Set(["Brewing"]);
+const POTION_TRADES = new Set(["Alchemy"]);
+
+// Every type an item/container node can classify as, purely from real graph
+// facts -- no name-pattern guessing (decisions/
+// recipe-item-type-subtype-filter.md's migration 386 rejected that even for
+// "near certain" cases). Order matters: each check only runs once every
+// earlier one has failed.
+//
+//   Weapon    -- has a `skill` (classifyItem()'s own rule, public/trades.js)
+//   Armor     -- has an armor slot, or is a Secondary-only item with `ac`
+//                (the shield rule), or -- lacking `slots` entirely -- still
+//                carries real combat stats (ac/stats/resists/hp/mana) with
+//                no `skill`. That last branch is a deliberate, evidence-based
+//                call, not a guess: eqlwiki's own scrape for many quest-reward
+//                armor pieces (e.g. Griffon Wing Spauldors) never captured
+//                `slots`, but the stat block itself is unambiguous. The slot
+//                itself stays unknown until a real backfill migration (same
+//                pattern as migration 386) fetches the item's own wiki page.
+//   Container -- has `capacity`/`containerSize` (a carryable bag/pouch, not
+//                the world-object `container` nodes like Oven/Brew Barrel
+//                that have neither and fall through to Other)
+//   Food/Drink/Potion/Poison -- produced by Baking/Brewing/Alchemy
+//   Tradeskill Materials -- produced by any other tradeskill, used as an
+//                ingredient by any recipe, or already hand-tagged
+//                "Tradeskill Supplies" (migration 400, before this function
+//                existed)
+//   Adventuring Supplies -- migration 400's other hand-tagged bucket
+//                (general consumables like Water Flask/Bandages that aren't
+//                tradeskill-flavored at all -- kept separate rather than
+//                folded into Tradeskill Materials, which would misrepresent
+//                what they are)
+//   Other     -- no signal above applies. A real, visible filter option, not
+//                a bug: mostly bare tradeskill-intermediate stubs (id/label
+//                only) and quest-reward items whose eqlwiki page was never
+//                fully scraped. Shrinks over time as backfill migrations add
+//                real fields -- type is computed live, so a backfilled item
+//                reclassifies for free, no separate field to update.
+export function classifyItemType(item: NodeData, helpers: GraphIndexHelpers): string {
+  if (item.skill) return "Weapon";
+  const slots = item.slots as string[] | undefined;
+  if (slots?.some((s) => ARMOR_SLOTS.has(s))) return "Armor";
+  if (slots?.length && slots.every((s) => s === "Secondary") && item.ac != null) return "Armor";
+  if (item.ac != null || item.stats || item.resists || item.hp != null || item.mana != null) return "Armor";
+  if (item.capacity != null || item.containerSize != null) return "Container";
+
+  const producedTrades = new Set(
+    helpers.edgesTo(item.id, "produces")
+      .map((e) => helpers.nodeById(e.source)?.tradeskill as string | undefined)
+      .filter((t): t is string => !!t)
+  );
+  if ([...producedTrades].some((t) => FOOD_TRADES.has(t))) return "Food";
+  if ([...producedTrades].some((t) => DRINK_TRADES.has(t))) return "Drink";
+  if ([...producedTrades].some((t) => POTION_TRADES.has(t))) return "Potion/Poison";
+  if (producedTrades.size > 0) return "Tradeskill Materials";
+  if (helpers.edgesTo(item.id, "uses").length > 0) return "Tradeskill Materials";
+  if (item.category === "Tradeskill Supplies") return "Tradeskill Materials";
+  if (item.category === "Adventuring Supplies") return "Adventuring Supplies";
+  if (item.category === "Armor") return "Armor";
+  return "Other";
 }
 
-export function rankZones(
+// GET /api/item-types' full list: SPELL_TYPE first (always present), then
+// every classifyItemType() value that actually occurs among today's item/
+// container nodes, sorted -- same "let types drive the filters" convention
+// migration 400's category list used, just computed over every item instead
+// of only the ones with a `sells` edge.
+export function getItemTypes(): string[] {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const types = new Set<string>();
+  for (const n of graph.nodes) {
+    if (n.type === "item" || n.type === "container") types.add(classifyItemType(n, helpers));
+  }
+  return [SPELL_TYPE, ...[...types].sort()];
+}
+
+// One item's computed type by id -- for /api/items/search's type-scoped
+// suggestions, the one api.ts call site that needs classifyItemType()
+// without also needing graphIndexHelpers() itself (kept module-internal).
+export function getItemType(itemId: string): string | undefined {
+  const graph = load();
+  const helpers = graphIndexHelpers(graph);
+  const node = helpers.nodeById(itemId);
+  if (!node || (node.type !== "item" && node.type !== "container")) return undefined;
+  return classifyItemType(node, helpers);
+}
+
+// The one query behind the Items page (decisions/ Items page rework,
+// "find the item, vendor is a byproduct of that"): returns goods (spells for
+// `type === SPELL_TYPE`, otherwise items/containers matching
+// classifyItemType() === type), each carrying every zone/vendor that
+// actually sells it as `offers` -- possibly empty, for a real item with no
+// vendor at all. Route/faction/era per zone is computed once per distinct
+// zone and reused across every good sold there (zoneBase below), not
+// recomputed per good.
+export function rankGoods(
+  type: string,
   classNames: string[],
   currentZoneId: string,
   race?: string,
   primaryClass?: string,
   deity?: string,
-  specificSpellIds?: string[],
+  specificIds?: string[],
   specificZoneIds?: string[],
   spellLineIds?: string[],
   includePorts = false
-): SpellPlanResult {
+): GoodsPlanResult {
   const graph = load();
   const helpers = graphIndexHelpers(graph);
 
@@ -1933,227 +2067,173 @@ export function rankZones(
   const classIgnored = primaryClass === "any";
   const deityIgnored = deity === "any";
 
-  // Step 1 — start with all purchasable spells
-  let candidates = graph.nodes.filter((n) => n.type === "spell" && n.class_levels);
-
-  // Specific Spells is an *exclusive* override, not an addition: pinning any
-  // spell means "show me only these, regardless of Shopping For classes" —
-  // this is what lets you say "forget class browsing for a second, just
-  // find this one spell." Pinned ids are checked here, before the class
-  // filter below, so a pinned spell outside the current Shopping For
-  // classes still shows up as-is rather than being filtered out twice.
-  const pinnedIds = new Set(specificSpellIds || []);
-
-  // Spell Line is an additional narrowing facet, same idea as class: start
-  // from whatever's already been narrowed down, keep only spells whose line
-  // is in the selected set. Multiple selected lines are additive with each
-  // other (union within this facet — a spell only belongs to one line, so
-  // "AND across lines" would always be empty), same as multi-class Shopping
-  // For. Bypassed for pinned spells, same reasoning as the class bypass
-  // below: Specific Spells is an exclusive "show me only these" override.
-  const lineFilterIds = new Set(spellLineIds || []);
-
-  // Step 2 — narrow to specific spells (if any pinned), else by class and/or spell line
-  if (pinnedIds.size > 0) {
-    candidates = candidates.filter((n) => pinnedIds.has(n.id));
-  } else {
-    if (classNames.length > 0) {
-      candidates = candidates.filter((n) =>
-        n.class_levels!.some((cl) => classNames.includes(cl.class))
-      );
+  // Memoized per zone, not per good -- the same zone is an offer for every
+  // good it sells, and route/faction/era don't depend on which good is
+  // asking.
+  const baseCache = new Map<string, ZoneRouteBase>();
+  const zoneBase = (zoneId: string): ZoneRouteBase => {
+    let base = baseCache.get(zoneId);
+    if (!base) {
+      base = buildZoneRankingBase(zoneId, 1, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
+      baseCache.set(zoneId, base);
     }
-    if (lineFilterIds.size > 0) {
-      candidates = candidates.filter((n) => {
-        const line = spellLineOf(n.id, helpers);
-        return line !== undefined && lineFilterIds.has(line.id);
+    return base;
+  };
+  const zoneSet = specificZoneIds?.length ? new Set(specificZoneIds) : null;
+  const toOffer = (zoneId: string, vendors: GoodVendor[]): GoodOffer & { score: number } => {
+    const base = zoneBase(zoneId);
+    return {
+      zoneId: base.zoneId, zoneName: base.zoneName, wikiTitle: base.wikiTitle,
+      vendors: vendors.sort((a, b) => a.name.localeCompare(b.name)),
+      hops: base.hops, route: base.route, alternates: base.alternates,
+      faction: base.faction, score: base.score,
+      ...(base.noOrigin ? { noOrigin: true } : {}),
+      ...(base.factionReasons ? { factionReasons: base.factionReasons } : {}),
+      ...(base.era ? { era: base.era } : {}),
+      ...(base.outOfEra ? { outOfEra: true } : {}),
+    };
+  };
+
+  const goods: GoodResult[] = [];
+
+  if (type === SPELL_TYPE) {
+    let candidates = graph.nodes.filter((n) => n.type === "spell" && n.class_levels);
+
+    // Specific Spells is an *exclusive* override, not an addition: pinning
+    // any spell means "show me only this, regardless of Shopping For
+    // classes."
+    const pinnedIds = new Set(specificIds || []);
+    // Spell Line is an additional narrowing facet, same idea as class:
+    // multiple selected lines are additive with each other (a spell only
+    // belongs to one line, so "AND across lines" would always be empty).
+    // Bypassed for pinned spells, same reasoning as the class bypass below.
+    const lineFilterIds = new Set(spellLineIds || []);
+
+    if (pinnedIds.size > 0) {
+      candidates = candidates.filter((n) => pinnedIds.has(n.id));
+    } else {
+      if (classNames.length > 0) {
+        candidates = candidates.filter((n) => n.class_levels!.some((cl) => classNames.includes(cl.class)));
+      }
+      if (lineFilterIds.size > 0) {
+        candidates = candidates.filter((n) => {
+          const line = spellLineOf(n.id, helpers);
+          return line !== undefined && lineFilterIds.has(line.id);
+        });
+      }
+    }
+
+    for (const spell of candidates) {
+      // matchingClasses carries every class/level pair this search cares
+      // about, all levels included -- level itself stays a purely
+      // client-side display filter (public/app.js), since a class vendor
+      // sells its class's whole spellbook regardless of level.
+      const matchingClasses = pinnedIds.has(spell.id)
+        ? spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }))
+        : classNames.length > 0
+        ? spell.class_levels!.filter((cl) => classNames.includes(cl.class)).map((cl) => ({ cls: cl.class, level: cl.level }))
+        : spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
+      if (!matchingClasses.length) continue;
+
+      const sellerIds = sellersOfSpell(spell, helpers);
+      const zoneVendors = new Map<string, Map<string, GoodVendor>>();
+      for (const npcId of sellerIds) {
+        const npcNode = helpers.nodeById(npcId);
+        const locEdge = helpers.edgesFrom(npcId, "located_in")[0];
+        if (!npcNode || !locEdge) continue;
+        const zoneId = locEdge.target;
+        if (!zoneVendors.has(zoneId)) zoneVendors.set(zoneId, new Map());
+        const vendorsInZone = zoneVendors.get(zoneId)!;
+        if (!vendorsInZone.has(npcId)) {
+          const classes = helpers.edgesFrom(npcId, "sells_spells_for")
+            .map((e) => helpers.nodeById(e.target)?.label)
+            .filter((label): label is string => !!label)
+            .sort();
+          vendorsInZone.set(npcId, { id: npcNode.id, name: npcNode.label, classes });
+        }
+      }
+
+      let offerZoneIds = [...zoneVendors.keys()];
+      if (zoneSet) offerZoneIds = offerZoneIds.filter((z) => zoneSet.has(z));
+      // A specific-zone filter narrows a real vendor's offers to none --
+      // hide the spell entirely, same as the old zone-first behavior of
+      // dropping zones with nothing matching. A spell never has zero
+      // sellers to begin with (unsellable spells aren't purchasable), so
+      // unlike items there's no "no vendor" case to preserve here.
+      if (zoneSet && offerZoneIds.length === 0) continue;
+
+      const offers = offerZoneIds.map((zoneId) => toOffer(zoneId, [...zoneVendors.get(zoneId)!.values()]));
+
+      const spellDetails: SpellDetails = {};
+      for (const k of ["description", "mana", "skill", "castTime", "recastTime", "fizzleTime", "duration", "targetType", "spellType", "resist", "range"] as const) {
+        if (spell[k] !== undefined) (spellDetails as Record<string, unknown>)[k] = spell[k];
+      }
+      const line = spellLineOf(spell.id, helpers);
+      goods.push({
+        id: spell.id, name: spell.label, kind: "spell", type: SPELL_TYPE,
+        spellClasses: matchingClasses, ...(line ? { spellLine: line.label } : {}),
+        ...spellDetails, offers: sortOffers(offers),
       });
     }
-  }
+  } else {
+    let candidates = graph.nodes.filter((n) => (n.type === "item" || n.type === "container") && classifyItemType(n, helpers) === type);
 
-  // Per zone: which candidate spell ids are purchasable there (goodsCount
-  // for scoring, and the ids the client intersects against the flat
-  // `spells` pool below to work out which pool entries are reachable from
-  // the zones currently showing), and which vendors sell there. A vendor's
-  // `classes` is its real, full `sells_spells_for` roster, not narrowed to
-  // this search: a Cleric vendor surfaced only because Cure Poison is also
-  // druid-usable should still read "Cleric," not a blank badge that reads
-  // the same as a genuinely unclassified vendor.
-  const zoneSpellIds = new Map<string, Set<string>>();
-  const zoneVendors = new Map<string, Map<string, { npc: NodeData; classes: string[] }>>();
-  const spellPool = new Map<string, SpellGoodInfo>();
-
-  // Step 4 — resolve real sellers (class vendors and any remaining
-  // per-spell vendors alike, see sellersOfSpell() above) and map into
-  // zones. No level filtering here: level is a purely client-side display
-  // filter over the returned `spells` pool now (public/app.js), since a
-  // class vendor sells its class's whole spellbook regardless of level, so
-  // which zones/vendors are relevant never depends on it (decisions/
-  // class-spell-vendor-model.md). matchingClasses carries every class/level
-  // pair for a class this search cares about, all levels included.
-  for (const spell of candidates) {
-    const matchingClasses = pinnedIds.has(spell.id)
-      ? spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }))
-      : classNames.length > 0
-      ? spell.class_levels!.filter((cl) => classNames.includes(cl.class)).map((cl) => ({ cls: cl.class, level: cl.level }))
-      : spell.class_levels!.map((cl) => ({ cls: cl.class, level: cl.level }));
-    if (!matchingClasses.length) continue;
-
-    const sellerIds = sellersOfSpell(spell, helpers);
-    if (!sellerIds.length) continue;
-
-    for (const npcId of sellerIds) {
-      const npcNode = helpers.nodeById(npcId);
-      const locEdge = helpers.edgesFrom(npcId, "located_in")[0];
-      if (!npcNode || !locEdge) continue;
-      const zoneId = locEdge.target;
-
-      if (!zoneSpellIds.has(zoneId)) zoneSpellIds.set(zoneId, new Set());
-      zoneSpellIds.get(zoneId)!.add(spell.id);
-
-      if (!zoneVendors.has(zoneId)) zoneVendors.set(zoneId, new Map());
-      const vendorsInZone = zoneVendors.get(zoneId)!;
-      if (!vendorsInZone.has(npcId)) {
-        const classes = helpers.edgesFrom(npcId, "sells_spells_for")
-          .map((e) => helpers.nodeById(e.target)?.label)
-          .filter((label): label is string => !!label)
-          .sort();
-        vendorsInZone.set(npcId, { npc: npcNode, classes });
-      }
+    // Specific Items is the same exclusive override as Specific Spells --
+    // pinning an item shows it regardless of the Shopping For class
+    // selection.
+    const pinnedIds = new Set(specificIds || []);
+    if (pinnedIds.size > 0) {
+      candidates = candidates.filter((n) => pinnedIds.has(n.id));
+    } else if (classNames.length > 0) {
+      // Same "empty/absent = everyone" convention as quest.classes
+      // (decisions/no-classes-selected-means-all-classes.md,
+      // decisions/item-node-schema.md) -- an item with no class restriction
+      // (e.g. Water Flask) matches any Shopping For class selection rather
+      // than being excluded for not explicitly listing every class.
+      candidates = candidates.filter((n) => {
+        const itemClasses = n.classes as string[] | undefined;
+        return !itemClasses || itemClasses.length === 0 || itemClasses.some((c) => classNames.includes(c));
+      });
     }
 
-    if (!spellPool.has(spell.id)) {
-      const d = spell;
-      const details: SpellDetails = {};
-      for (const k of ["description","mana","skill","castTime","recastTime","fizzleTime","duration","targetType","spellType","resist","range"] as const) {
-        if (d[k] !== undefined) (details as Record<string, unknown>)[k] = d[k];
+    for (const item of candidates) {
+      const sellers = helpers.edgesTo(item.id, "sells");
+      const zoneVendors = new Map<string, GoodVendor[]>();
+      for (const seller of sellers) {
+        const npcNode = helpers.nodeById(seller.source);
+        const locEdge = helpers.edgesFrom(seller.source, "located_in")[0];
+        if (!npcNode || !locEdge) continue;
+        const zoneId = locEdge.target;
+        if (!zoneVendors.has(zoneId)) zoneVendors.set(zoneId, []);
+        const vendorsInZone = zoneVendors.get(zoneId)!;
+        if (!vendorsInZone.some((v) => v.id === npcNode.id)) {
+          vendorsInZone.push({ id: npcNode.id, name: npcNode.label, classes: [] });
+        }
       }
-      const line = spellLineOf(d.id, helpers);
-      spellPool.set(spell.id, { id: d.id, name: d.label, classes: matchingClasses, ...(line ? { spellLine: line.label } : {}), ...details });
+
+      let offerZoneIds = [...zoneVendors.keys()];
+      if (zoneSet) offerZoneIds = offerZoneIds.filter((z) => zoneSet.has(z));
+      // Only hide the item over a specific-zone filter if it actually had a
+      // real seller somewhere that got filtered out -- an item with no
+      // seller at all (drop/quest/craft-only) isn't a "zone" match/mismatch
+      // question, it stays visible regardless of the zone filter.
+      if (zoneSet && sellers.length > 0 && offerZoneIds.length === 0) continue;
+
+      const offers = offerZoneIds.map((zoneId) => toOffer(zoneId, zoneVendors.get(zoneId)!));
+
+      const { id: _id, label, ...details } = toItemSummary(item);
+      goods.push({ id: item.id, name: label, kind: "item", type, ...details, offers: sortOffers(offers) });
     }
   }
 
-  // Step 5 — narrow to specific zones (if any pinned)
-  if (specificZoneIds?.length) {
-    const zoneSet = new Set(specificZoneIds);
-    for (const zoneId of zoneSpellIds.keys()) {
-      if (!zoneSet.has(zoneId)) {
-        zoneSpellIds.delete(zoneId);
-        zoneVendors.delete(zoneId);
-      }
-    }
-  }
-
-  // Rank with split faction awareness
-  const rankings: ZoneRanking[] = [];
-  for (const [zoneId, spellIds] of zoneSpellIds) {
-    const base = buildZoneRankingBase(zoneId, spellIds.size, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
-    const vendors = [...(zoneVendors.get(zoneId)?.values() ?? [])]
-      .map((v) => ({ id: v.npc.id, name: v.npc.label, classes: v.classes }))
-      .sort((a, b) => a.name.localeCompare(b.name));
-    rankings.push({ ...base, vendors, spellIds: [...spellIds] });
-  }
+  goods.sort((a, b) => a.name.localeCompare(b.name));
 
   return {
-    zones: sortRankings(rankings),
-    spells: [...spellPool.values()].sort((a, b) =>
-      Math.min(...a.classes.map((c) => c.level)) - Math.min(...b.classes.map((c) => c.level)) ||
-      a.name.localeCompare(b.name)
-    ),
+    goods,
+    ...(raceIgnored ? { raceIgnored: true } : {}),
+    ...(classIgnored ? { classIgnored: true } : {}),
+    ...(deityIgnored ? { deityIgnored: true } : {}),
   };
-}
-
-export interface ItemVendorInfo extends ItemDetails {
-  id: string;
-  name: string;
-  vendors: string[];
-}
-
-// Non-spell counterpart to rankZones() -- ranks zones by which ones sell
-// vendor goods of the given `category` (an item/container node's own
-// `category` field, migration 400: "Armor", "Adventuring Supplies",
-// "Tradeskill Supplies") instead of spells. Shares all of rankZones()'
-// route/faction/era/scoring machinery via buildZoneRankingBase() above;
-// only candidate gathering differs, since items have no class_levels or
-// spell lines to filter by.
-//
-// Class filtering uses the item's own `classes` field with the same
-// "empty/absent = everyone" convention as quest.classes (decisions/
-// no-classes-selected-means-all-classes.md, decisions/item-node-schema.md)
-// -- an item with no class restriction (e.g. Water Flask) matches any
-// Shopping For class selection rather than being excluded for not
-// explicitly listing every class. There's no per-class level pairing for
-// items the way spell.class_levels has, so unlike rankZones() there's no
-// `levels` parameter here — the Level filter is hidden client-side
-// whenever Type isn't Spells for exactly this reason.
-export function rankZonesByCategory(
-  category: string,
-  classNames: string[],
-  currentZoneId: string,
-  race?: string,
-  primaryClass?: string,
-  deity?: string,
-  specificItemIds?: string[],
-  specificZoneIds?: string[],
-  includePorts = false
-): ZoneRanking[] {
-  const graph = load();
-  const helpers = graphIndexHelpers(graph);
-
-  const raceIgnored = race === "any";
-  const classIgnored = primaryClass === "any";
-  const deityIgnored = deity === "any";
-
-  let candidates = graph.nodes.filter(
-    (n) => (n.type === "item" || n.type === "container") && n.category === category
-  );
-
-  // Specific Items is the same exclusive override as rankZones()' Specific
-  // Spells -- pinning an item shows it regardless of the Shopping For class
-  // selection.
-  const pinnedIds = new Set(specificItemIds || []);
-  if (pinnedIds.size > 0) {
-    candidates = candidates.filter((n) => pinnedIds.has(n.id));
-  } else if (classNames.length > 0) {
-    candidates = candidates.filter((n) => {
-      const itemClasses = n.classes as string[] | undefined;
-      return !itemClasses || itemClasses.length === 0 || itemClasses.some((c) => classNames.includes(c));
-    });
-  }
-
-  const zoneItems = new Map<string, ItemVendorInfo[]>();
-  for (const item of candidates) {
-    const sellers = helpers.edgesTo(item.id, "sells");
-    for (const seller of sellers) {
-      const npcNode = helpers.nodeById(seller.source);
-      const locEdge = helpers.edgesFrom(seller.source, "located_in")[0];
-      if (!locEdge || !npcNode) continue;
-      const zoneId = locEdge.target;
-      if (!zoneItems.has(zoneId)) zoneItems.set(zoneId, []);
-      const existing = zoneItems.get(zoneId)!;
-      const entry = existing.find((it) => it.id === item.id);
-      if (entry) {
-        if (!entry.vendors.includes(npcNode.label)) entry.vendors.push(npcNode.label);
-      } else {
-        const { label, ...details } = toItemSummary(item);
-        existing.push({ ...details, id: item.id, name: label, vendors: [npcNode.label] });
-      }
-    }
-  }
-
-  if (specificZoneIds?.length) {
-    const zoneSet = new Set(specificZoneIds);
-    for (const zoneId of zoneItems.keys()) {
-      if (!zoneSet.has(zoneId)) zoneItems.delete(zoneId);
-    }
-  }
-
-  const rankings: ZoneRanking[] = [];
-  for (const [zoneId, items] of zoneItems) {
-    const base = buildZoneRankingBase(zoneId, items.length, currentZoneId, race, primaryClass, deity, raceIgnored, classIgnored, deityIgnored, includePorts, helpers);
-    rankings.push({ ...base, items: items.sort((a, b) => a.name.localeCompare(b.name)) });
-  }
-
-  return sortRankings(rankings);
 }
 
 export interface ZoneVendorInfo {
