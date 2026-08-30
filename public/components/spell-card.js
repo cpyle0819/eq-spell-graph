@@ -210,7 +210,7 @@ class SpellCard extends CardBase {
         ${stats.length ? `<div class="spell-stats">${stats.join("")}</div>` : ""}
         <div class="spell-card-actions">
           <span class="vendor-hint">Click to show vendors</span>
-          <a class="spell-finder-link" href="${this.#pinUrl}">Find in Spells →</a>
+          <a class="spell-finder-link" href="${this.#pinUrl}">Find in Items →</a>
         </div>
       </div>
     `;
